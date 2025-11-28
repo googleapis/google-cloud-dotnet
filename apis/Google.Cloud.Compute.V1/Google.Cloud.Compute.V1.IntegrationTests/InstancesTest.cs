@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -28,9 +29,10 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
         public InstancesTest(ComputeFixture fixture, ITestOutputHelper output) =>
             (_fixture, _output) = (fixture, output);
 
-        [Fact]
+        [SkippableFact]
         public void CreateInstance()
         {
+            TestEnvironment.SkipOnRestrictedEnvironment();
             string projectId = _fixture.ProjectId;
             string zone = _fixture.Zone;
             string machineType =
@@ -66,6 +68,8 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                 };
                 var insertOp = instancesClient.Insert(projectId, zone, instanceResource);
                 var completed = insertOp.PollUntilCompleted(metadataCallback: metadata => _output.WriteLine($"Called back; metadata name={metadata.Name}"));
+                Assert.True(completed.Exception is null, completed.Exception?.Status?.ToString());
+                Assert.True(completed.IsCompleted);
                 _output.WriteLine($"Polling completed with result {completed.RpcMessage}");
             }
 

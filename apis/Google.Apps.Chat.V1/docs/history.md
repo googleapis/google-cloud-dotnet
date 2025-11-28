@@ -1,5 +1,71 @@
 # Version history
 
+## Version 1.0.0-beta19, released 2025-11-03
+
+### New features
+
+- Update dependencies
+
+## Version 1.0.0-beta18, released 2025-10-24
+
+### New features
+
+- Add ROLE_ASSISTANT_MANAGER to the MembershipRole enum in the Membership proto and assistant_managers_allowed to the PermissionSetting
+
+### Documentation improvements
+
+- Update field documentations for space.proto and membership.proto
+
+## Version 1.0.0-beta17, released 2025-08-28
+
+### Bug fixes
+
+- Changed field behavior for an existing field `name` in message `.google.chat.v1.QuotedMessageMetadata`
+- Changed field behavior for an existing field `last_update_time` in message `.google.chat.v1.QuotedMessageMetadata`
+
+### Documentation improvements
+
+- A comment for field `quoted_message_metadata` in message `.google.chat.v1.Message` is changed
+- A comment for message `QuotedMessageMetadata` is changed
+- A comment for field `name` in message `.google.chat.v1.QuotedMessageMetadata` is changed
+- A comment for field `last_update_time` in message `.google.chat.v1.QuotedMessageMetadata` is changed
+- A comment for field `update_mask` in message `.google.chat.v1.UpdateMessageRequest` is changed
+- A comment for field `customer` in message `.google.chat.v1.Space` is changed
+
+## Version 1.0.0-beta16, released 2025-08-04
+
+### New features
+
+- Addition of app auth support for chat api
+
+### Documentation improvements
+
+- Update reference documentation for createSpace,updateSpace,deleteSpace,createMembership,updateMembership,deleteMembership and the newly added field -customer- in space.proto
+
+## Version 1.0.0-beta15, released 2025-07-28
+
+### New features
+
+- Exposing 1p integration message content (drive, calendar, huddle, meet chips)
+
+### Documentation improvements
+
+- Update reference documentation for annotations. Introduce new richlink metadata types
+
+## Version 1.0.0-beta14, released 2025-05-06
+
+### New features
+
+- A new method `customEmojis.create` is added
+- A new method `customEmojis.delete` is added
+- A new method `customEmojis.get` is added
+- A new method `customEmojis.list` is added
+
+### Documentation improvements
+
+- A comment for message `CustomEmoji` is changed
+- A comment for field `filter` in message `.google.chat.v1.ListReactionsRequest` is changed
+
 ## Version 1.0.0-beta13, released 2025-03-10
 
 ### New features

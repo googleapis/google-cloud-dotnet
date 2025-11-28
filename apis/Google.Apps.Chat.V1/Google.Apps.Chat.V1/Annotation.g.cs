@@ -25,58 +25,73 @@ namespace Google.Apps.Chat.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9nb29nbGUvY2hhdC92MS9hbm5vdGF0aW9uLnByb3RvEg5nb29nbGUuY2hh",
-            "dC52MRoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxofZ29vZ2xlL2NoYXQv",
-            "djEvYXR0YWNobWVudC5wcm90bxodZ29vZ2xlL2NoYXQvdjEvcmVhY3Rpb24u",
-            "cHJvdG8aGWdvb2dsZS9jaGF0L3YxL3VzZXIucHJvdG8iggMKCkFubm90YXRp",
-            "b24SLAoEdHlwZRgBIAEoDjIeLmdvb2dsZS5jaGF0LnYxLkFubm90YXRpb25U",
-            "eXBlEhgKC3N0YXJ0X2luZGV4GAIgASgFSAGIAQESDgoGbGVuZ3RoGAMgASgF",
-            "EjsKDHVzZXJfbWVudGlvbhgEIAEoCzIjLmdvb2dsZS5jaGF0LnYxLlVzZXJN",
-            "ZW50aW9uTWV0YWRhdGFIABI9Cg1zbGFzaF9jb21tYW5kGAUgASgLMiQuZ29v",
-            "Z2xlLmNoYXQudjEuU2xhc2hDb21tYW5kTWV0YWRhdGFIABI+ChJyaWNoX2xp",
-            "bmtfbWV0YWRhdGEYBiABKAsyIC5nb29nbGUuY2hhdC52MS5SaWNoTGlua01l",
-            "dGFkYXRhSAASRAoVY3VzdG9tX2Vtb2ppX21ldGFkYXRhGAcgASgLMiMuZ29v",
-            "Z2xlLmNoYXQudjEuQ3VzdG9tRW1vamlNZXRhZGF0YUgAQgoKCG1ldGFkYXRh",
-            "Qg4KDF9zdGFydF9pbmRleCKlAQoTVXNlck1lbnRpb25NZXRhZGF0YRIiCgR1",
-            "c2VyGAEgASgLMhQuZ29vZ2xlLmNoYXQudjEuVXNlchI2CgR0eXBlGAIgASgO",
-            "MiguZ29vZ2xlLmNoYXQudjEuVXNlck1lbnRpb25NZXRhZGF0YS5UeXBlIjIK",
-            "BFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEgcKA0FERBABEgsKB01FTlRJ",
-            "T04QAiLoAQoUU2xhc2hDb21tYW5kTWV0YWRhdGESIQoDYm90GAEgASgLMhQu",
-            "Z29vZ2xlLmNoYXQudjEuVXNlchI3CgR0eXBlGAIgASgOMikuZ29vZ2xlLmNo",
-            "YXQudjEuU2xhc2hDb21tYW5kTWV0YWRhdGEuVHlwZRIUCgxjb21tYW5kX25h",
-            "bWUYAyABKAkSEgoKY29tbWFuZF9pZBgEIAEoAxIXCg90cmlnZ2Vyc19kaWFs",
-            "b2cYBSABKAgiMQoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASBwoDQURE",
-            "EAESCgoGSU5WT0tFEAIiuwIKEFJpY2hMaW5rTWV0YWRhdGESCwoDdXJpGAEg",
-            "ASgJEkUKDnJpY2hfbGlua190eXBlGAIgASgOMi0uZ29vZ2xlLmNoYXQudjEu",
-            "UmljaExpbmtNZXRhZGF0YS5SaWNoTGlua1R5cGUSOAoPZHJpdmVfbGlua19k",
-            "YXRhGAMgASgLMh0uZ29vZ2xlLmNoYXQudjEuRHJpdmVMaW5rRGF0YUgAEkEK",
-            "FGNoYXRfc3BhY2VfbGlua19kYXRhGAQgASgLMiEuZ29vZ2xlLmNoYXQudjEu",
-            "Q2hhdFNwYWNlTGlua0RhdGFIACJOCgxSaWNoTGlua1R5cGUSHgoaUklDSF9M",
-            "SU5LX1RZUEVfVU5TUEVDSUZJRUQQABIOCgpEUklWRV9GSUxFEAESDgoKQ0hB",
-            "VF9TUEFDRRACQgYKBGRhdGEiSAoTQ3VzdG9tRW1vamlNZXRhZGF0YRIxCgxj",
-            "dXN0b21fZW1vamkYASABKAsyGy5nb29nbGUuY2hhdC52MS5DdXN0b21FbW9q",
-            "aSJYCg1Ecml2ZUxpbmtEYXRhEjQKDmRyaXZlX2RhdGFfcmVmGAEgASgLMhwu",
-            "Z29vZ2xlLmNoYXQudjEuRHJpdmVEYXRhUmVmEhEKCW1pbWVfdHlwZRgCIAEo",
-            "CSKmAQoRQ2hhdFNwYWNlTGlua0RhdGESLQoFc3BhY2UYASABKAlCHvpBGwoZ",
-            "Y2hhdC5nb29nbGVhcGlzLmNvbS9TcGFjZRIvCgZ0aHJlYWQYAiABKAlCH/pB",
-            "HAoaY2hhdC5nb29nbGVhcGlzLmNvbS9UaHJlYWQSMQoHbWVzc2FnZRgDIAEo",
-            "CUIg+kEdChtjaGF0Lmdvb2dsZWFwaXMuY29tL01lc3NhZ2UqdwoOQW5ub3Rh",
-            "dGlvblR5cGUSHwobQU5OT1RBVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASEAoM",
-            "VVNFUl9NRU5USU9OEAESEQoNU0xBU0hfQ09NTUFORBACEg0KCVJJQ0hfTElO",
-            "SxADEhAKDENVU1RPTV9FTU9KSRAEQqgBChJjb20uZ29vZ2xlLmNoYXQudjFC",
-            "D0Fubm90YXRpb25Qcm90b1ABWixjbG91ZC5nb29nbGUuY29tL2dvL2NoYXQv",
-            "YXBpdjEvY2hhdHBiO2NoYXRwYqICC0RZTkFQSVByb3RvqgITR29vZ2xlLkFw",
-            "cHMuQ2hhdC5WMcoCE0dvb2dsZVxBcHBzXENoYXRcVjHqAhZHb29nbGU6OkFw",
-            "cHM6OkNoYXQ6OlYxYgZwcm90bzM="));
+            "dC52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xl",
+            "L2FwaS9yZXNvdXJjZS5wcm90bxofZ29vZ2xlL2NoYXQvdjEvYXR0YWNobWVu",
+            "dC5wcm90bxodZ29vZ2xlL2NoYXQvdjEvcmVhY3Rpb24ucHJvdG8aGWdvb2ds",
+            "ZS9jaGF0L3YxL3VzZXIucHJvdG8iggMKCkFubm90YXRpb24SLAoEdHlwZRgB",
+            "IAEoDjIeLmdvb2dsZS5jaGF0LnYxLkFubm90YXRpb25UeXBlEhgKC3N0YXJ0",
+            "X2luZGV4GAIgASgFSAGIAQESDgoGbGVuZ3RoGAMgASgFEjsKDHVzZXJfbWVu",
+            "dGlvbhgEIAEoCzIjLmdvb2dsZS5jaGF0LnYxLlVzZXJNZW50aW9uTWV0YWRh",
+            "dGFIABI9Cg1zbGFzaF9jb21tYW5kGAUgASgLMiQuZ29vZ2xlLmNoYXQudjEu",
+            "U2xhc2hDb21tYW5kTWV0YWRhdGFIABI+ChJyaWNoX2xpbmtfbWV0YWRhdGEY",
+            "BiABKAsyIC5nb29nbGUuY2hhdC52MS5SaWNoTGlua01ldGFkYXRhSAASRAoV",
+            "Y3VzdG9tX2Vtb2ppX21ldGFkYXRhGAcgASgLMiMuZ29vZ2xlLmNoYXQudjEu",
+            "Q3VzdG9tRW1vamlNZXRhZGF0YUgAQgoKCG1ldGFkYXRhQg4KDF9zdGFydF9p",
+            "bmRleCKlAQoTVXNlck1lbnRpb25NZXRhZGF0YRIiCgR1c2VyGAEgASgLMhQu",
+            "Z29vZ2xlLmNoYXQudjEuVXNlchI2CgR0eXBlGAIgASgOMiguZ29vZ2xlLmNo",
+            "YXQudjEuVXNlck1lbnRpb25NZXRhZGF0YS5UeXBlIjIKBFR5cGUSFAoQVFlQ",
+            "RV9VTlNQRUNJRklFRBAAEgcKA0FERBABEgsKB01FTlRJT04QAiLoAQoUU2xh",
+            "c2hDb21tYW5kTWV0YWRhdGESIQoDYm90GAEgASgLMhQuZ29vZ2xlLmNoYXQu",
+            "djEuVXNlchI3CgR0eXBlGAIgASgOMikuZ29vZ2xlLmNoYXQudjEuU2xhc2hD",
+            "b21tYW5kTWV0YWRhdGEuVHlwZRIUCgxjb21tYW5kX25hbWUYAyABKAkSEgoK",
+            "Y29tbWFuZF9pZBgEIAEoAxIXCg90cmlnZ2Vyc19kaWFsb2cYBSABKAgiMQoE",
+            "VHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASBwoDQUREEAESCgoGSU5WT0tF",
+            "EAIi7QMKEFJpY2hMaW5rTWV0YWRhdGESCwoDdXJpGAEgASgJEkUKDnJpY2hf",
+            "bGlua190eXBlGAIgASgOMi0uZ29vZ2xlLmNoYXQudjEuUmljaExpbmtNZXRh",
+            "ZGF0YS5SaWNoTGlua1R5cGUSOAoPZHJpdmVfbGlua19kYXRhGAMgASgLMh0u",
+            "Z29vZ2xlLmNoYXQudjEuRHJpdmVMaW5rRGF0YUgAEkEKFGNoYXRfc3BhY2Vf",
+            "bGlua19kYXRhGAQgASgLMiEuZ29vZ2xlLmNoYXQudjEuQ2hhdFNwYWNlTGlu",
+            "a0RhdGFIABJBChRtZWV0X3NwYWNlX2xpbmtfZGF0YRgFIAEoCzIhLmdvb2ds",
+            "ZS5jaGF0LnYxLk1lZXRTcGFjZUxpbmtEYXRhSAASSQoYY2FsZW5kYXJfZXZl",
+            "bnRfbGlua19kYXRhGAYgASgLMiUuZ29vZ2xlLmNoYXQudjEuQ2FsZW5kYXJF",
+            "dmVudExpbmtEYXRhSAAicgoMUmljaExpbmtUeXBlEh4KGlJJQ0hfTElOS19U",
+            "WVBFX1VOU1BFQ0lGSUVEEAASDgoKRFJJVkVfRklMRRABEg4KCkNIQVRfU1BB",
+            "Q0UQAhIOCgpNRUVUX1NQQUNFEAQSEgoOQ0FMRU5EQVJfRVZFTlQQBUIGCgRk",
+            "YXRhIkgKE0N1c3RvbUVtb2ppTWV0YWRhdGESMQoMY3VzdG9tX2Vtb2ppGAEg",
+            "ASgLMhsuZ29vZ2xlLmNoYXQudjEuQ3VzdG9tRW1vamkiWAoNRHJpdmVMaW5r",
+            "RGF0YRI0Cg5kcml2ZV9kYXRhX3JlZhgBIAEoCzIcLmdvb2dsZS5jaGF0LnYx",
+            "LkRyaXZlRGF0YVJlZhIRCgltaW1lX3R5cGUYAiABKAkipgEKEUNoYXRTcGFj",
+            "ZUxpbmtEYXRhEi0KBXNwYWNlGAEgASgJQh76QRsKGWNoYXQuZ29vZ2xlYXBp",
+            "cy5jb20vU3BhY2USLwoGdGhyZWFkGAIgASgJQh/6QRwKGmNoYXQuZ29vZ2xl",
+            "YXBpcy5jb20vVGhyZWFkEjEKB21lc3NhZ2UYAyABKAlCIPpBHQobY2hhdC5n",
+            "b29nbGVhcGlzLmNvbS9NZXNzYWdlIrgCChFNZWV0U3BhY2VMaW5rRGF0YRIU",
+            "CgxtZWV0aW5nX2NvZGUYASABKAkSNAoEdHlwZRgCIAEoDjImLmdvb2dsZS5j",
+            "aGF0LnYxLk1lZXRTcGFjZUxpbmtEYXRhLlR5cGUSTQoNaHVkZGxlX3N0YXR1",
+            "cxgDIAEoDjIuLmdvb2dsZS5jaGF0LnYxLk1lZXRTcGFjZUxpbmtEYXRhLkh1",
+            "ZGRsZVN0YXR1c0IG4EEB4EEDIjUKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklF",
+            "RBAAEgsKB01FRVRJTkcQARIKCgZIVURETEUQAiJRCgxIdWRkbGVTdGF0dXMS",
+            "HQoZSFVERExFX1NUQVRVU19VTlNQRUNJRklFRBAAEgsKB1NUQVJURUQQARIJ",
+            "CgVFTkRFRBACEgoKBk1JU1NFRBADIj4KFUNhbGVuZGFyRXZlbnRMaW5rRGF0",
+            "YRITCgtjYWxlbmRhcl9pZBgBIAEoCRIQCghldmVudF9pZBgCIAEoCSp3Cg5B",
+            "bm5vdGF0aW9uVHlwZRIfChtBTk5PVEFUSU9OX1RZUEVfVU5TUEVDSUZJRUQQ",
+            "ABIQCgxVU0VSX01FTlRJT04QARIRCg1TTEFTSF9DT01NQU5EEAISDQoJUklD",
+            "SF9MSU5LEAMSEAoMQ1VTVE9NX0VNT0pJEARCqAEKEmNvbS5nb29nbGUuY2hh",
+            "dC52MUIPQW5ub3RhdGlvblByb3RvUAFaLGNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "Y2hhdC9hcGl2MS9jaGF0cGI7Y2hhdHBiogILRFlOQVBJUHJvdG+qAhNHb29n",
+            "bGUuQXBwcy5DaGF0LlYxygITR29vZ2xlXEFwcHNcQ2hhdFxWMeoCFkdvb2ds",
+            "ZTo6QXBwczo6Q2hhdDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.AttachmentReflection.Descriptor, global::Google.Apps.Chat.V1.ReactionReflection.Descriptor, global::Google.Apps.Chat.V1.UserReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.AttachmentReflection.Descriptor, global::Google.Apps.Chat.V1.ReactionReflection.Descriptor, global::Google.Apps.Chat.V1.UserReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Apps.Chat.V1.AnnotationType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Annotation), global::Google.Apps.Chat.V1.Annotation.Parser, new[]{ "Type", "StartIndex", "Length", "UserMention", "SlashCommand", "RichLinkMetadata", "CustomEmojiMetadata" }, new[]{ "Metadata", "StartIndex" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.UserMentionMetadata), global::Google.Apps.Chat.V1.UserMentionMetadata.Parser, new[]{ "User", "Type" }, null, new[]{ typeof(global::Google.Apps.Chat.V1.UserMentionMetadata.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.SlashCommandMetadata), global::Google.Apps.Chat.V1.SlashCommandMetadata.Parser, new[]{ "Bot", "Type", "CommandName", "CommandId", "TriggersDialog" }, null, new[]{ typeof(global::Google.Apps.Chat.V1.SlashCommandMetadata.Types.Type) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.RichLinkMetadata), global::Google.Apps.Chat.V1.RichLinkMetadata.Parser, new[]{ "Uri", "RichLinkType", "DriveLinkData", "ChatSpaceLinkData" }, new[]{ "Data" }, new[]{ typeof(global::Google.Apps.Chat.V1.RichLinkMetadata.Types.RichLinkType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.RichLinkMetadata), global::Google.Apps.Chat.V1.RichLinkMetadata.Parser, new[]{ "Uri", "RichLinkType", "DriveLinkData", "ChatSpaceLinkData", "MeetSpaceLinkData", "CalendarEventLinkData" }, new[]{ "Data" }, new[]{ typeof(global::Google.Apps.Chat.V1.RichLinkMetadata.Types.RichLinkType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.CustomEmojiMetadata), global::Google.Apps.Chat.V1.CustomEmojiMetadata.Parser, new[]{ "CustomEmoji" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.DriveLinkData), global::Google.Apps.Chat.V1.DriveLinkData.Parser, new[]{ "DriveDataRef", "MimeType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.ChatSpaceLinkData), global::Google.Apps.Chat.V1.ChatSpaceLinkData.Parser, new[]{ "Space", "Thread", "Message" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.ChatSpaceLinkData), global::Google.Apps.Chat.V1.ChatSpaceLinkData.Parser, new[]{ "Space", "Thread", "Message" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.MeetSpaceLinkData), global::Google.Apps.Chat.V1.MeetSpaceLinkData.Parser, new[]{ "MeetingCode", "Type", "HuddleStatus" }, null, new[]{ typeof(global::Google.Apps.Chat.V1.MeetSpaceLinkData.Types.Type), typeof(global::Google.Apps.Chat.V1.MeetSpaceLinkData.Types.HuddleStatus) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.CalendarEventLinkData), global::Google.Apps.Chat.V1.CalendarEventLinkData.Parser, new[]{ "CalendarId", "EventId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -113,9 +128,10 @@ namespace Google.Apps.Chat.V1 {
 
   #region Messages
   /// <summary>
-  /// Output only. Annotations associated with the plain-text body of the message.
-  /// To add basic formatting to a text message, see
-  /// [Format text
+  /// Output only. Annotations can be associated with the plain-text body of the
+  /// message or with chips that link to Google Workspace resources like Google
+  /// Docs or Sheets with `start_index` and `length` of 0. To add basic formatting
+  /// to a text message, see [Format text
   /// messages](https://developers.google.com/workspace/chat/format-messages).
   ///
   /// Example plain-text message body:
@@ -256,7 +272,7 @@ namespace Google.Apps.Chat.V1 {
     private int length_;
     /// <summary>
     /// Length of the substring in the plain-text message body this annotation
-    /// corresponds to.
+    /// corresponds to. If not present, indicates a length of 0.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1341,7 +1357,10 @@ namespace Google.Apps.Chat.V1 {
   }
 
   /// <summary>
-  /// A rich link to a resource.
+  /// A rich link to a resource. Rich links can be associated with the plain-text
+  /// body of the message or represent chips that link to Google Workspace
+  /// resources like Google Docs or Sheets with `start_index` and `length`
+  /// of 0.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RichLinkMetadata : pb::IMessage<RichLinkMetadata>
@@ -1386,6 +1405,12 @@ namespace Google.Apps.Chat.V1 {
           break;
         case DataOneofCase.ChatSpaceLinkData:
           ChatSpaceLinkData = other.ChatSpaceLinkData.Clone();
+          break;
+        case DataOneofCase.MeetSpaceLinkData:
+          MeetSpaceLinkData = other.MeetSpaceLinkData.Clone();
+          break;
+        case DataOneofCase.CalendarEventLinkData:
+          CalendarEventLinkData = other.CalendarEventLinkData.Clone();
           break;
       }
 
@@ -1458,12 +1483,44 @@ namespace Google.Apps.Chat.V1 {
       }
     }
 
+    /// <summary>Field number for the "meet_space_link_data" field.</summary>
+    public const int MeetSpaceLinkDataFieldNumber = 5;
+    /// <summary>
+    /// Data for a Meet space link.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Chat.V1.MeetSpaceLinkData MeetSpaceLinkData {
+      get { return dataCase_ == DataOneofCase.MeetSpaceLinkData ? (global::Google.Apps.Chat.V1.MeetSpaceLinkData) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.MeetSpaceLinkData;
+      }
+    }
+
+    /// <summary>Field number for the "calendar_event_link_data" field.</summary>
+    public const int CalendarEventLinkDataFieldNumber = 6;
+    /// <summary>
+    /// Data for a Calendar event link.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Chat.V1.CalendarEventLinkData CalendarEventLinkData {
+      get { return dataCase_ == DataOneofCase.CalendarEventLinkData ? (global::Google.Apps.Chat.V1.CalendarEventLinkData) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.CalendarEventLinkData;
+      }
+    }
+
     private object data_;
     /// <summary>Enum of possible cases for the "data" oneof.</summary>
     public enum DataOneofCase {
       None = 0,
       DriveLinkData = 3,
       ChatSpaceLinkData = 4,
+      MeetSpaceLinkData = 5,
+      CalendarEventLinkData = 6,
     }
     private DataOneofCase dataCase_ = DataOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1498,6 +1555,8 @@ namespace Google.Apps.Chat.V1 {
       if (RichLinkType != other.RichLinkType) return false;
       if (!object.Equals(DriveLinkData, other.DriveLinkData)) return false;
       if (!object.Equals(ChatSpaceLinkData, other.ChatSpaceLinkData)) return false;
+      if (!object.Equals(MeetSpaceLinkData, other.MeetSpaceLinkData)) return false;
+      if (!object.Equals(CalendarEventLinkData, other.CalendarEventLinkData)) return false;
       if (DataCase != other.DataCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1510,6 +1569,8 @@ namespace Google.Apps.Chat.V1 {
       if (RichLinkType != global::Google.Apps.Chat.V1.RichLinkMetadata.Types.RichLinkType.Unspecified) hash ^= RichLinkType.GetHashCode();
       if (dataCase_ == DataOneofCase.DriveLinkData) hash ^= DriveLinkData.GetHashCode();
       if (dataCase_ == DataOneofCase.ChatSpaceLinkData) hash ^= ChatSpaceLinkData.GetHashCode();
+      if (dataCase_ == DataOneofCase.MeetSpaceLinkData) hash ^= MeetSpaceLinkData.GetHashCode();
+      if (dataCase_ == DataOneofCase.CalendarEventLinkData) hash ^= CalendarEventLinkData.GetHashCode();
       hash ^= (int) dataCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1545,6 +1606,14 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(ChatSpaceLinkData);
       }
+      if (dataCase_ == DataOneofCase.MeetSpaceLinkData) {
+        output.WriteRawTag(42);
+        output.WriteMessage(MeetSpaceLinkData);
+      }
+      if (dataCase_ == DataOneofCase.CalendarEventLinkData) {
+        output.WriteRawTag(50);
+        output.WriteMessage(CalendarEventLinkData);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1571,6 +1640,14 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(ChatSpaceLinkData);
       }
+      if (dataCase_ == DataOneofCase.MeetSpaceLinkData) {
+        output.WriteRawTag(42);
+        output.WriteMessage(MeetSpaceLinkData);
+      }
+      if (dataCase_ == DataOneofCase.CalendarEventLinkData) {
+        output.WriteRawTag(50);
+        output.WriteMessage(CalendarEventLinkData);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1592,6 +1669,12 @@ namespace Google.Apps.Chat.V1 {
       }
       if (dataCase_ == DataOneofCase.ChatSpaceLinkData) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ChatSpaceLinkData);
+      }
+      if (dataCase_ == DataOneofCase.MeetSpaceLinkData) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MeetSpaceLinkData);
+      }
+      if (dataCase_ == DataOneofCase.CalendarEventLinkData) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CalendarEventLinkData);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1623,6 +1706,18 @@ namespace Google.Apps.Chat.V1 {
             ChatSpaceLinkData = new global::Google.Apps.Chat.V1.ChatSpaceLinkData();
           }
           ChatSpaceLinkData.MergeFrom(other.ChatSpaceLinkData);
+          break;
+        case DataOneofCase.MeetSpaceLinkData:
+          if (MeetSpaceLinkData == null) {
+            MeetSpaceLinkData = new global::Google.Apps.Chat.V1.MeetSpaceLinkData();
+          }
+          MeetSpaceLinkData.MergeFrom(other.MeetSpaceLinkData);
+          break;
+        case DataOneofCase.CalendarEventLinkData:
+          if (CalendarEventLinkData == null) {
+            CalendarEventLinkData = new global::Google.Apps.Chat.V1.CalendarEventLinkData();
+          }
+          CalendarEventLinkData.MergeFrom(other.CalendarEventLinkData);
           break;
       }
 
@@ -1667,6 +1762,24 @@ namespace Google.Apps.Chat.V1 {
             ChatSpaceLinkData = subBuilder;
             break;
           }
+          case 42: {
+            global::Google.Apps.Chat.V1.MeetSpaceLinkData subBuilder = new global::Google.Apps.Chat.V1.MeetSpaceLinkData();
+            if (dataCase_ == DataOneofCase.MeetSpaceLinkData) {
+              subBuilder.MergeFrom(MeetSpaceLinkData);
+            }
+            input.ReadMessage(subBuilder);
+            MeetSpaceLinkData = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Apps.Chat.V1.CalendarEventLinkData subBuilder = new global::Google.Apps.Chat.V1.CalendarEventLinkData();
+            if (dataCase_ == DataOneofCase.CalendarEventLinkData) {
+              subBuilder.MergeFrom(CalendarEventLinkData);
+            }
+            input.ReadMessage(subBuilder);
+            CalendarEventLinkData = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -1708,6 +1821,24 @@ namespace Google.Apps.Chat.V1 {
             ChatSpaceLinkData = subBuilder;
             break;
           }
+          case 42: {
+            global::Google.Apps.Chat.V1.MeetSpaceLinkData subBuilder = new global::Google.Apps.Chat.V1.MeetSpaceLinkData();
+            if (dataCase_ == DataOneofCase.MeetSpaceLinkData) {
+              subBuilder.MergeFrom(MeetSpaceLinkData);
+            }
+            input.ReadMessage(subBuilder);
+            MeetSpaceLinkData = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Apps.Chat.V1.CalendarEventLinkData subBuilder = new global::Google.Apps.Chat.V1.CalendarEventLinkData();
+            if (dataCase_ == DataOneofCase.CalendarEventLinkData) {
+              subBuilder.MergeFrom(CalendarEventLinkData);
+            }
+            input.ReadMessage(subBuilder);
+            CalendarEventLinkData = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -1734,6 +1865,14 @@ namespace Google.Apps.Chat.V1 {
         /// A Chat space rich link type. For example, a space smart chip.
         /// </summary>
         [pbr::OriginalName("CHAT_SPACE")] ChatSpace = 2,
+        /// <summary>
+        /// A Meet message rich link type. For example, a Meet chip.
+        /// </summary>
+        [pbr::OriginalName("MEET_SPACE")] MeetSpace = 4,
+        /// <summary>
+        /// A Calendar message rich link type. For example, a Calendar chip.
+        /// </summary>
+        [pbr::OriginalName("CALENDAR_EVENT")] CalendarEvent = 5,
       }
 
     }
@@ -2466,6 +2605,573 @@ namespace Google.Apps.Chat.V1 {
           }
           case 26: {
             Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Data for Meet space links.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class MeetSpaceLinkData : pb::IMessage<MeetSpaceLinkData>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MeetSpaceLinkData> _parser = new pb::MessageParser<MeetSpaceLinkData>(() => new MeetSpaceLinkData());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MeetSpaceLinkData> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Apps.Chat.V1.AnnotationReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MeetSpaceLinkData() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MeetSpaceLinkData(MeetSpaceLinkData other) : this() {
+      meetingCode_ = other.meetingCode_;
+      type_ = other.type_;
+      huddleStatus_ = other.huddleStatus_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MeetSpaceLinkData Clone() {
+      return new MeetSpaceLinkData(this);
+    }
+
+    /// <summary>Field number for the "meeting_code" field.</summary>
+    public const int MeetingCodeFieldNumber = 1;
+    private string meetingCode_ = "";
+    /// <summary>
+    /// Meeting code of the linked Meet space.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MeetingCode {
+      get { return meetingCode_; }
+      set {
+        meetingCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 2;
+    private global::Google.Apps.Chat.V1.MeetSpaceLinkData.Types.Type type_ = global::Google.Apps.Chat.V1.MeetSpaceLinkData.Types.Type.Unspecified;
+    /// <summary>
+    /// Indicates the type of the Meet space.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Chat.V1.MeetSpaceLinkData.Types.Type Type {
+      get { return type_; }
+      set {
+        type_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "huddle_status" field.</summary>
+    public const int HuddleStatusFieldNumber = 3;
+    private global::Google.Apps.Chat.V1.MeetSpaceLinkData.Types.HuddleStatus huddleStatus_ = global::Google.Apps.Chat.V1.MeetSpaceLinkData.Types.HuddleStatus.Unspecified;
+    /// <summary>
+    /// Optional. Output only. If the Meet is a Huddle, indicates the status of the
+    /// huddle. Otherwise, this is unset.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Chat.V1.MeetSpaceLinkData.Types.HuddleStatus HuddleStatus {
+      get { return huddleStatus_; }
+      set {
+        huddleStatus_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MeetSpaceLinkData);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MeetSpaceLinkData other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (MeetingCode != other.MeetingCode) return false;
+      if (Type != other.Type) return false;
+      if (HuddleStatus != other.HuddleStatus) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (MeetingCode.Length != 0) hash ^= MeetingCode.GetHashCode();
+      if (Type != global::Google.Apps.Chat.V1.MeetSpaceLinkData.Types.Type.Unspecified) hash ^= Type.GetHashCode();
+      if (HuddleStatus != global::Google.Apps.Chat.V1.MeetSpaceLinkData.Types.HuddleStatus.Unspecified) hash ^= HuddleStatus.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (MeetingCode.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(MeetingCode);
+      }
+      if (Type != global::Google.Apps.Chat.V1.MeetSpaceLinkData.Types.Type.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Type);
+      }
+      if (HuddleStatus != global::Google.Apps.Chat.V1.MeetSpaceLinkData.Types.HuddleStatus.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) HuddleStatus);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (MeetingCode.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(MeetingCode);
+      }
+      if (Type != global::Google.Apps.Chat.V1.MeetSpaceLinkData.Types.Type.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Type);
+      }
+      if (HuddleStatus != global::Google.Apps.Chat.V1.MeetSpaceLinkData.Types.HuddleStatus.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) HuddleStatus);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (MeetingCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MeetingCode);
+      }
+      if (Type != global::Google.Apps.Chat.V1.MeetSpaceLinkData.Types.Type.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (HuddleStatus != global::Google.Apps.Chat.V1.MeetSpaceLinkData.Types.HuddleStatus.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) HuddleStatus);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MeetSpaceLinkData other) {
+      if (other == null) {
+        return;
+      }
+      if (other.MeetingCode.Length != 0) {
+        MeetingCode = other.MeetingCode;
+      }
+      if (other.Type != global::Google.Apps.Chat.V1.MeetSpaceLinkData.Types.Type.Unspecified) {
+        Type = other.Type;
+      }
+      if (other.HuddleStatus != global::Google.Apps.Chat.V1.MeetSpaceLinkData.Types.HuddleStatus.Unspecified) {
+        HuddleStatus = other.HuddleStatus;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            MeetingCode = input.ReadString();
+            break;
+          }
+          case 16: {
+            Type = (global::Google.Apps.Chat.V1.MeetSpaceLinkData.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            HuddleStatus = (global::Google.Apps.Chat.V1.MeetSpaceLinkData.Types.HuddleStatus) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            MeetingCode = input.ReadString();
+            break;
+          }
+          case 16: {
+            Type = (global::Google.Apps.Chat.V1.MeetSpaceLinkData.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            HuddleStatus = (global::Google.Apps.Chat.V1.MeetSpaceLinkData.Types.HuddleStatus) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the MeetSpaceLinkData message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The type of the Meet space.
+      /// </summary>
+      public enum Type {
+        /// <summary>
+        /// Default value for the enum. Don't use.
+        /// </summary>
+        [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The Meet space is a meeting.
+        /// </summary>
+        [pbr::OriginalName("MEETING")] Meeting = 1,
+        /// <summary>
+        /// The Meet space is a huddle.
+        /// </summary>
+        [pbr::OriginalName("HUDDLE")] Huddle = 2,
+      }
+
+      /// <summary>
+      /// The status of the huddle
+      /// </summary>
+      public enum HuddleStatus {
+        /// <summary>
+        /// Default value for the enum. Don't use.
+        /// </summary>
+        [pbr::OriginalName("HUDDLE_STATUS_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The huddle has started.
+        /// </summary>
+        [pbr::OriginalName("STARTED")] Started = 1,
+        /// <summary>
+        /// The huddle has ended. In this case the Meet space URI and identifiers
+        /// will no longer be valid.
+        /// </summary>
+        [pbr::OriginalName("ENDED")] Ended = 2,
+        /// <summary>
+        /// The huddle has been missed. In this case the Meet space URI and
+        /// identifiers will no longer be valid.
+        /// </summary>
+        [pbr::OriginalName("MISSED")] Missed = 3,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Data for Calendar event links.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CalendarEventLinkData : pb::IMessage<CalendarEventLinkData>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CalendarEventLinkData> _parser = new pb::MessageParser<CalendarEventLinkData>(() => new CalendarEventLinkData());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CalendarEventLinkData> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Apps.Chat.V1.AnnotationReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CalendarEventLinkData() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CalendarEventLinkData(CalendarEventLinkData other) : this() {
+      calendarId_ = other.calendarId_;
+      eventId_ = other.eventId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CalendarEventLinkData Clone() {
+      return new CalendarEventLinkData(this);
+    }
+
+    /// <summary>Field number for the "calendar_id" field.</summary>
+    public const int CalendarIdFieldNumber = 1;
+    private string calendarId_ = "";
+    /// <summary>
+    /// The [Calendar
+    /// identifier](https://developers.google.com/workspace/calendar/api/v3/reference/calendars)
+    /// of the linked Calendar.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CalendarId {
+      get { return calendarId_; }
+      set {
+        calendarId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "event_id" field.</summary>
+    public const int EventIdFieldNumber = 2;
+    private string eventId_ = "";
+    /// <summary>
+    /// The [Event
+    /// identifier](https://developers.google.com/workspace/calendar/api/v3/reference/events)
+    /// of the linked Calendar event.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EventId {
+      get { return eventId_; }
+      set {
+        eventId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CalendarEventLinkData);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CalendarEventLinkData other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (CalendarId != other.CalendarId) return false;
+      if (EventId != other.EventId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (CalendarId.Length != 0) hash ^= CalendarId.GetHashCode();
+      if (EventId.Length != 0) hash ^= EventId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (CalendarId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(CalendarId);
+      }
+      if (EventId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(EventId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CalendarId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(CalendarId);
+      }
+      if (EventId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(EventId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (CalendarId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CalendarId);
+      }
+      if (EventId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(EventId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CalendarEventLinkData other) {
+      if (other == null) {
+        return;
+      }
+      if (other.CalendarId.Length != 0) {
+        CalendarId = other.CalendarId;
+      }
+      if (other.EventId.Length != 0) {
+        EventId = other.EventId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            CalendarId = input.ReadString();
+            break;
+          }
+          case 18: {
+            EventId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            CalendarId = input.ReadString();
+            break;
+          }
+          case 18: {
+            EventId = input.ReadString();
             break;
           }
         }

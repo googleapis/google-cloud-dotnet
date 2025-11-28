@@ -526,10 +526,10 @@ namespace Google.Cloud.Bigtable.V2
             ReadModifyWriteRowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
         /// Returns the current list of partitions that make up the table's
         /// change stream. The union of partitions will cover the entire keyspace.
         /// Partitions can be read with `ReadChangeStream`.
+        /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="GenerateInitialChangeStreamPartitionsRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -538,10 +538,10 @@ namespace Google.Cloud.Bigtable.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
         /// Returns the current list of partitions that make up the table's
         /// change stream. The union of partitions will cover the entire keyspace.
         /// Partitions can be read with `ReadChangeStream`.
+        /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
         /// </summary>
         /// <param name="tableName">
         /// Required. The unique name of the table from which to get change stream
@@ -558,10 +558,10 @@ namespace Google.Cloud.Bigtable.V2
             }, callSettings);
 
         /// <summary>
-        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
         /// Returns the current list of partitions that make up the table's
         /// change stream. The union of partitions will cover the entire keyspace.
         /// Partitions can be read with `ReadChangeStream`.
+        /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
         /// </summary>
         /// <param name="tableName">
         /// Required. The unique name of the table from which to get change stream
@@ -578,10 +578,10 @@ namespace Google.Cloud.Bigtable.V2
             }, callSettings);
 
         /// <summary>
-        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
         /// Returns the current list of partitions that make up the table's
         /// change stream. The union of partitions will cover the entire keyspace.
         /// Partitions can be read with `ReadChangeStream`.
+        /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
         /// </summary>
         /// <param name="tableName">
         /// Required. The unique name of the table from which to get change stream
@@ -604,10 +604,10 @@ namespace Google.Cloud.Bigtable.V2
             }, callSettings);
 
         /// <summary>
-        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
         /// Returns the current list of partitions that make up the table's
         /// change stream. The union of partitions will cover the entire keyspace.
         /// Partitions can be read with `ReadChangeStream`.
+        /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
         /// </summary>
         /// <param name="tableName">
         /// Required. The unique name of the table from which to get change stream
@@ -630,10 +630,10 @@ namespace Google.Cloud.Bigtable.V2
             }, callSettings);
 
         /// <summary>
-        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
         /// Reads changes from a table's change stream. Changes will
         /// reflect both user-initiated mutations and mutations that are caused by
         /// garbage collection.
+        /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="ReadChangeStreamRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -642,10 +642,10 @@ namespace Google.Cloud.Bigtable.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
         /// Reads changes from a table's change stream. Changes will
         /// reflect both user-initiated mutations and mutations that are caused by
         /// garbage collection.
+        /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
         /// </summary>
         /// <param name="tableName">
         /// Required. The unique name of the table from which to read a change stream.
@@ -662,10 +662,10 @@ namespace Google.Cloud.Bigtable.V2
             }, callSettings);
 
         /// <summary>
-        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
         /// Reads changes from a table's change stream. Changes will
         /// reflect both user-initiated mutations and mutations that are caused by
         /// garbage collection.
+        /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
         /// </summary>
         /// <param name="tableName">
         /// Required. The unique name of the table from which to read a change stream.
@@ -682,10 +682,10 @@ namespace Google.Cloud.Bigtable.V2
             }, callSettings);
 
         /// <summary>
-        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
         /// Reads changes from a table's change stream. Changes will
         /// reflect both user-initiated mutations and mutations that are caused by
         /// garbage collection.
+        /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
         /// </summary>
         /// <param name="tableName">
         /// Required. The unique name of the table from which to read a change stream.
@@ -708,10 +708,10 @@ namespace Google.Cloud.Bigtable.V2
             }, callSettings);
 
         /// <summary>
-        /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
         /// Reads changes from a table's change stream. Changes will
         /// reflect both user-initiated mutations and mutations that are caused by
         /// garbage collection.
+        /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
         /// </summary>
         /// <param name="tableName">
         /// Required. The unique name of the table from which to read a change stream.

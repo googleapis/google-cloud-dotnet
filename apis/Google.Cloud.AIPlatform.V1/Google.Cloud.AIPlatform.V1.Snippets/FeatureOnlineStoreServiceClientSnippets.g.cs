@@ -16,6 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
+    using Google.Api.Gax.Grpc;
     using Google.Cloud.AIPlatform.V1;
     using System.Threading.Tasks;
 
@@ -151,6 +152,90 @@ namespace GoogleCSharpSnippets
             };
             // Make the request
             SearchNearestEntitiesResponse response = await featureOnlineStoreServiceClient.SearchNearestEntitiesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FeatureViewDirectWrite</summary>
+        public async Task FeatureViewDirectWrite()
+        {
+            // Snippet: FeatureViewDirectWrite(CallSettings, BidirectionalStreamingSettings)
+            // Create client
+            FeatureOnlineStoreServiceClient featureOnlineStoreServiceClient = FeatureOnlineStoreServiceClient.Create();
+            // Initialize streaming call, retrieving the stream object
+            using FeatureOnlineStoreServiceClient.FeatureViewDirectWriteStream response = featureOnlineStoreServiceClient.FeatureViewDirectWrite();
+
+            // Sending requests and retrieving responses can be arbitrarily interleaved
+            // Exact sequence will depend on client/server behavior
+
+            // Create task to do something with responses from server
+            Task responseHandlerTask = Task.Run(async () =>
+            {
+                // Note that C# 8 code can use await foreach
+                AsyncResponseStream<FeatureViewDirectWriteResponse> responseStream = response.GetResponseStream();
+                while (await responseStream.MoveNextAsync())
+                {
+                    FeatureViewDirectWriteResponse responseItem = responseStream.Current;
+                    // Do something with streamed response
+                }
+                // The response stream has completed
+            });
+
+            // Send requests to the server
+            bool done = false;
+            while (!done)
+            {
+                // Initialize a request
+                FeatureViewDirectWriteRequest request = new FeatureViewDirectWriteRequest
+                {
+                    FeatureViewAsFeatureViewName = FeatureViewName.FromProjectLocationFeatureOnlineStoreFeatureView("[PROJECT]", "[LOCATION]", "[FEATURE_ONLINE_STORE]", "[FEATURE_VIEW]"),
+                    DataKeyAndFeatureValues =
+                    {
+                        new FeatureViewDirectWriteRequest.Types.DataKeyAndFeatureValues(),
+                    },
+                };
+                // Stream a request to the server
+                await response.WriteAsync(request);
+                // Set "done" to true when sending requests is complete
+            }
+
+            // Complete writing requests to the stream
+            await response.WriteCompleteAsync();
+            // Await the response handler
+            // This will complete once all server responses have been processed
+            await responseHandlerTask;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateFetchAccessToken</summary>
+        public void GenerateFetchAccessTokenRequestObject()
+        {
+            // Snippet: GenerateFetchAccessToken(GenerateFetchAccessTokenRequest, CallSettings)
+            // Create client
+            FeatureOnlineStoreServiceClient featureOnlineStoreServiceClient = FeatureOnlineStoreServiceClient.Create();
+            // Initialize request argument(s)
+            GenerateFetchAccessTokenRequest request = new GenerateFetchAccessTokenRequest
+            {
+                FeatureViewAsFeatureViewName = FeatureViewName.FromProjectLocationFeatureOnlineStoreFeatureView("[PROJECT]", "[LOCATION]", "[FEATURE_ONLINE_STORE]", "[FEATURE_VIEW]"),
+            };
+            // Make the request
+            GenerateFetchAccessTokenResponse response = featureOnlineStoreServiceClient.GenerateFetchAccessToken(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateFetchAccessTokenAsync</summary>
+        public async Task GenerateFetchAccessTokenRequestObjectAsync()
+        {
+            // Snippet: GenerateFetchAccessTokenAsync(GenerateFetchAccessTokenRequest, CallSettings)
+            // Additional: GenerateFetchAccessTokenAsync(GenerateFetchAccessTokenRequest, CancellationToken)
+            // Create client
+            FeatureOnlineStoreServiceClient featureOnlineStoreServiceClient = await FeatureOnlineStoreServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GenerateFetchAccessTokenRequest request = new GenerateFetchAccessTokenRequest
+            {
+                FeatureViewAsFeatureViewName = FeatureViewName.FromProjectLocationFeatureOnlineStoreFeatureView("[PROJECT]", "[LOCATION]", "[FEATURE_ONLINE_STORE]", "[FEATURE_VIEW]"),
+            };
+            // Make the request
+            GenerateFetchAccessTokenResponse response = await featureOnlineStoreServiceClient.GenerateFetchAccessTokenAsync(request);
             // End snippet
         }
     }

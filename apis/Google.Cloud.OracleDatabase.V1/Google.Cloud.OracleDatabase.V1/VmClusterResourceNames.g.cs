@@ -313,5 +313,32 @@ namespace Google.Cloud.OracleDatabase.V1
             get => string.IsNullOrEmpty(Network) ? null : NetworkName.Parse(Network, allowUnparsed: true);
             set => Network = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="OdbNetworkName"/>-typed view over the <see cref="OdbNetwork"/> resource name property.
+        /// </summary>
+        public OdbNetworkName OdbNetworkAsOdbNetworkName
+        {
+            get => string.IsNullOrEmpty(OdbNetwork) ? null : OdbNetworkName.Parse(OdbNetwork, allowUnparsed: true);
+            set => OdbNetwork = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="OdbSubnetName"/>-typed view over the <see cref="OdbSubnet"/> resource name property.
+        /// </summary>
+        public OdbSubnetName OdbSubnetAsOdbSubnetName
+        {
+            get => string.IsNullOrEmpty(OdbSubnet) ? null : OdbSubnetName.Parse(OdbSubnet, allowUnparsed: true);
+            set => OdbSubnet = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="OdbSubnetName"/>-typed view over the <see cref="BackupOdbSubnet"/> resource name property.
+        /// </summary>
+        public OdbSubnetName BackupOdbSubnetAsOdbSubnetName
+        {
+            get => string.IsNullOrEmpty(BackupOdbSubnet) ? null : OdbSubnetName.Parse(BackupOdbSubnet, allowUnparsed: true);
+            set => BackupOdbSubnet = value?.ToString() ?? "";
+        }
     }
 }

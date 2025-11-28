@@ -297,7 +297,31 @@ namespace Google.Cloud.CloudControlsPartner.V1
         }
     }
 
+    public partial class CreateCustomerRequest
+    {
+        /// <summary>
+        /// <see cref="OrganizationLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public OrganizationLocationName ParentAsOrganizationLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : OrganizationLocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetCustomerRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::CustomerName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::CustomerName CustomerName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::CustomerName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteCustomerRequest
     {
         /// <summary>
         /// <see cref="gccv::CustomerName"/>-typed view over the <see cref="Name"/> resource name property.

@@ -996,6 +996,290 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for FetchStorageInventory</summary>
+        public void FetchStorageInventoryRequestObject()
+        {
+            // Snippet: FetchStorageInventory(FetchStorageInventoryRequest, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            FetchStorageInventoryRequest request = new FetchStorageInventoryRequest
+            {
+                SourceAsSourceName = SourceName.FromProjectLocationSource("[PROJECT]", "[LOCATION]", "[SOURCE]"),
+                Type = FetchStorageInventoryRequest.Types.StorageType.Unspecified,
+                ForceRefresh = false,
+            };
+            // Make the request
+            PagedEnumerable<FetchStorageInventoryResponse, SourceStorageResource> response = vmMigrationClient.FetchStorageInventory(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SourceStorageResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchStorageInventoryResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SourceStorageResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SourceStorageResource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SourceStorageResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchStorageInventoryAsync</summary>
+        public async Task FetchStorageInventoryRequestObjectAsync()
+        {
+            // Snippet: FetchStorageInventoryAsync(FetchStorageInventoryRequest, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            FetchStorageInventoryRequest request = new FetchStorageInventoryRequest
+            {
+                SourceAsSourceName = SourceName.FromProjectLocationSource("[PROJECT]", "[LOCATION]", "[SOURCE]"),
+                Type = FetchStorageInventoryRequest.Types.StorageType.Unspecified,
+                ForceRefresh = false,
+            };
+            // Make the request
+            PagedAsyncEnumerable<FetchStorageInventoryResponse, SourceStorageResource> response = vmMigrationClient.FetchStorageInventoryAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SourceStorageResource item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((FetchStorageInventoryResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SourceStorageResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SourceStorageResource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SourceStorageResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchStorageInventory</summary>
+        public void FetchStorageInventory()
+        {
+            // Snippet: FetchStorageInventory(string, FetchStorageInventoryRequest.Types.StorageType, string, int?, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            string source = "projects/[PROJECT]/locations/[LOCATION]/sources/[SOURCE]";
+            FetchStorageInventoryRequest.Types.StorageType type = FetchStorageInventoryRequest.Types.StorageType.Unspecified;
+            // Make the request
+            PagedEnumerable<FetchStorageInventoryResponse, SourceStorageResource> response = vmMigrationClient.FetchStorageInventory(source, type);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SourceStorageResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchStorageInventoryResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SourceStorageResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SourceStorageResource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SourceStorageResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchStorageInventoryAsync</summary>
+        public async Task FetchStorageInventoryAsync()
+        {
+            // Snippet: FetchStorageInventoryAsync(string, FetchStorageInventoryRequest.Types.StorageType, string, int?, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            string source = "projects/[PROJECT]/locations/[LOCATION]/sources/[SOURCE]";
+            FetchStorageInventoryRequest.Types.StorageType type = FetchStorageInventoryRequest.Types.StorageType.Unspecified;
+            // Make the request
+            PagedAsyncEnumerable<FetchStorageInventoryResponse, SourceStorageResource> response = vmMigrationClient.FetchStorageInventoryAsync(source, type);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SourceStorageResource item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((FetchStorageInventoryResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SourceStorageResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SourceStorageResource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SourceStorageResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchStorageInventory</summary>
+        public void FetchStorageInventoryResourceNames()
+        {
+            // Snippet: FetchStorageInventory(SourceName, FetchStorageInventoryRequest.Types.StorageType, string, int?, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            SourceName source = SourceName.FromProjectLocationSource("[PROJECT]", "[LOCATION]", "[SOURCE]");
+            FetchStorageInventoryRequest.Types.StorageType type = FetchStorageInventoryRequest.Types.StorageType.Unspecified;
+            // Make the request
+            PagedEnumerable<FetchStorageInventoryResponse, SourceStorageResource> response = vmMigrationClient.FetchStorageInventory(source, type);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SourceStorageResource item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchStorageInventoryResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SourceStorageResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SourceStorageResource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SourceStorageResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchStorageInventoryAsync</summary>
+        public async Task FetchStorageInventoryResourceNamesAsync()
+        {
+            // Snippet: FetchStorageInventoryAsync(SourceName, FetchStorageInventoryRequest.Types.StorageType, string, int?, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            SourceName source = SourceName.FromProjectLocationSource("[PROJECT]", "[LOCATION]", "[SOURCE]");
+            FetchStorageInventoryRequest.Types.StorageType type = FetchStorageInventoryRequest.Types.StorageType.Unspecified;
+            // Make the request
+            PagedAsyncEnumerable<FetchStorageInventoryResponse, SourceStorageResource> response = vmMigrationClient.FetchStorageInventoryAsync(source, type);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SourceStorageResource item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((FetchStorageInventoryResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SourceStorageResource item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SourceStorageResource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SourceStorageResource item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for ListUtilizationReports</summary>
         public void ListUtilizationReportsRequestObject()
         {
@@ -3938,6 +4222,71 @@ namespace GoogleCSharpSnippets
             {
                 // If it has completed, then access the result
                 FinalizeMigrationResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExtendMigration</summary>
+        public void ExtendMigrationRequestObject()
+        {
+            // Snippet: ExtendMigration(ExtendMigrationRequest, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            ExtendMigrationRequest request = new ExtendMigrationRequest
+            {
+                MigratingVmAsMigratingVmName = MigratingVmName.FromProjectLocationSourceMigratingVm("[PROJECT]", "[LOCATION]", "[SOURCE]", "[MIGRATING_VM]"),
+            };
+            // Make the request
+            Operation<ExtendMigrationResponse, OperationMetadata> response = vmMigrationClient.ExtendMigration(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExtendMigrationResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExtendMigrationResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExtendMigrationResponse, OperationMetadata> retrievedResponse = vmMigrationClient.PollOnceExtendMigration(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExtendMigrationResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExtendMigrationAsync</summary>
+        public async Task ExtendMigrationRequestObjectAsync()
+        {
+            // Snippet: ExtendMigrationAsync(ExtendMigrationRequest, CallSettings)
+            // Additional: ExtendMigrationAsync(ExtendMigrationRequest, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            ExtendMigrationRequest request = new ExtendMigrationRequest
+            {
+                MigratingVmAsMigratingVmName = MigratingVmName.FromProjectLocationSourceMigratingVm("[PROJECT]", "[LOCATION]", "[SOURCE]", "[MIGRATING_VM]"),
+            };
+            // Make the request
+            Operation<ExtendMigrationResponse, OperationMetadata> response = await vmMigrationClient.ExtendMigrationAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExtendMigrationResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExtendMigrationResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExtendMigrationResponse, OperationMetadata> retrievedResponse = await vmMigrationClient.PollOnceExtendMigrationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExtendMigrationResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -7928,6 +8277,2430 @@ namespace GoogleCSharpSnippets
             ReplicationCycleName name = ReplicationCycleName.FromProjectLocationSourceMigratingVmReplicationCycle("[PROJECT]", "[LOCATION]", "[SOURCE]", "[MIGRATING_VM]", "[REPLICATION_CYCLE]");
             // Make the request
             ReplicationCycle response = await vmMigrationClient.GetReplicationCycleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListImageImports</summary>
+        public void ListImageImportsRequestObject()
+        {
+            // Snippet: ListImageImports(ListImageImportsRequest, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            ListImageImportsRequest request = new ListImageImportsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListImageImportsResponse, ImageImport> response = vmMigrationClient.ListImageImports(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ImageImport item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListImageImportsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ImageImport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ImageImport> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ImageImport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListImageImportsAsync</summary>
+        public async Task ListImageImportsRequestObjectAsync()
+        {
+            // Snippet: ListImageImportsAsync(ListImageImportsRequest, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            ListImageImportsRequest request = new ListImageImportsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListImageImportsResponse, ImageImport> response = vmMigrationClient.ListImageImportsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ImageImport item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListImageImportsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ImageImport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ImageImport> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ImageImport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListImageImports</summary>
+        public void ListImageImports()
+        {
+            // Snippet: ListImageImports(string, string, int?, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListImageImportsResponse, ImageImport> response = vmMigrationClient.ListImageImports(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ImageImport item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListImageImportsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ImageImport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ImageImport> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ImageImport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListImageImportsAsync</summary>
+        public async Task ListImageImportsAsync()
+        {
+            // Snippet: ListImageImportsAsync(string, string, int?, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListImageImportsResponse, ImageImport> response = vmMigrationClient.ListImageImportsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ImageImport item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListImageImportsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ImageImport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ImageImport> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ImageImport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListImageImports</summary>
+        public void ListImageImportsResourceNames()
+        {
+            // Snippet: ListImageImports(LocationName, string, int?, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListImageImportsResponse, ImageImport> response = vmMigrationClient.ListImageImports(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ImageImport item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListImageImportsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ImageImport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ImageImport> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ImageImport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListImageImportsAsync</summary>
+        public async Task ListImageImportsResourceNamesAsync()
+        {
+            // Snippet: ListImageImportsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListImageImportsResponse, ImageImport> response = vmMigrationClient.ListImageImportsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ImageImport item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListImageImportsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ImageImport item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ImageImport> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ImageImport item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetImageImport</summary>
+        public void GetImageImportRequestObject()
+        {
+            // Snippet: GetImageImport(GetImageImportRequest, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            GetImageImportRequest request = new GetImageImportRequest
+            {
+                ImageImportName = ImageImportName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+            };
+            // Make the request
+            ImageImport response = vmMigrationClient.GetImageImport(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetImageImportAsync</summary>
+        public async Task GetImageImportRequestObjectAsync()
+        {
+            // Snippet: GetImageImportAsync(GetImageImportRequest, CallSettings)
+            // Additional: GetImageImportAsync(GetImageImportRequest, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            GetImageImportRequest request = new GetImageImportRequest
+            {
+                ImageImportName = ImageImportName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+            };
+            // Make the request
+            ImageImport response = await vmMigrationClient.GetImageImportAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetImageImport</summary>
+        public void GetImageImport()
+        {
+            // Snippet: GetImageImport(string, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/imageImports/[JOB]";
+            // Make the request
+            ImageImport response = vmMigrationClient.GetImageImport(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetImageImportAsync</summary>
+        public async Task GetImageImportAsync()
+        {
+            // Snippet: GetImageImportAsync(string, CallSettings)
+            // Additional: GetImageImportAsync(string, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/imageImports/[JOB]";
+            // Make the request
+            ImageImport response = await vmMigrationClient.GetImageImportAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetImageImport</summary>
+        public void GetImageImportResourceNames()
+        {
+            // Snippet: GetImageImport(ImageImportName, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            ImageImportName name = ImageImportName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
+            // Make the request
+            ImageImport response = vmMigrationClient.GetImageImport(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetImageImportAsync</summary>
+        public async Task GetImageImportResourceNamesAsync()
+        {
+            // Snippet: GetImageImportAsync(ImageImportName, CallSettings)
+            // Additional: GetImageImportAsync(ImageImportName, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            ImageImportName name = ImageImportName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
+            // Make the request
+            ImageImport response = await vmMigrationClient.GetImageImportAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateImageImport</summary>
+        public void CreateImageImportRequestObject()
+        {
+            // Snippet: CreateImageImport(CreateImageImportRequest, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            CreateImageImportRequest request = new CreateImageImportRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ImageImportId = "",
+                ImageImport = new ImageImport(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ImageImport, OperationMetadata> response = vmMigrationClient.CreateImageImport(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImageImport, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImageImport result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImageImport, OperationMetadata> retrievedResponse = vmMigrationClient.PollOnceCreateImageImport(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImageImport retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateImageImportAsync</summary>
+        public async Task CreateImageImportRequestObjectAsync()
+        {
+            // Snippet: CreateImageImportAsync(CreateImageImportRequest, CallSettings)
+            // Additional: CreateImageImportAsync(CreateImageImportRequest, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateImageImportRequest request = new CreateImageImportRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ImageImportId = "",
+                ImageImport = new ImageImport(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<ImageImport, OperationMetadata> response = await vmMigrationClient.CreateImageImportAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImageImport, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImageImport result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImageImport, OperationMetadata> retrievedResponse = await vmMigrationClient.PollOnceCreateImageImportAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImageImport retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateImageImport</summary>
+        public void CreateImageImport()
+        {
+            // Snippet: CreateImageImport(string, ImageImport, string, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            ImageImport imageImport = new ImageImport();
+            string imageImportId = "";
+            // Make the request
+            Operation<ImageImport, OperationMetadata> response = vmMigrationClient.CreateImageImport(parent, imageImport, imageImportId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImageImport, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImageImport result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImageImport, OperationMetadata> retrievedResponse = vmMigrationClient.PollOnceCreateImageImport(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImageImport retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateImageImportAsync</summary>
+        public async Task CreateImageImportAsync()
+        {
+            // Snippet: CreateImageImportAsync(string, ImageImport, string, CallSettings)
+            // Additional: CreateImageImportAsync(string, ImageImport, string, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            ImageImport imageImport = new ImageImport();
+            string imageImportId = "";
+            // Make the request
+            Operation<ImageImport, OperationMetadata> response = await vmMigrationClient.CreateImageImportAsync(parent, imageImport, imageImportId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImageImport, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImageImport result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImageImport, OperationMetadata> retrievedResponse = await vmMigrationClient.PollOnceCreateImageImportAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImageImport retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateImageImport</summary>
+        public void CreateImageImportResourceNames()
+        {
+            // Snippet: CreateImageImport(LocationName, ImageImport, string, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ImageImport imageImport = new ImageImport();
+            string imageImportId = "";
+            // Make the request
+            Operation<ImageImport, OperationMetadata> response = vmMigrationClient.CreateImageImport(parent, imageImport, imageImportId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImageImport, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImageImport result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImageImport, OperationMetadata> retrievedResponse = vmMigrationClient.PollOnceCreateImageImport(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImageImport retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateImageImportAsync</summary>
+        public async Task CreateImageImportResourceNamesAsync()
+        {
+            // Snippet: CreateImageImportAsync(LocationName, ImageImport, string, CallSettings)
+            // Additional: CreateImageImportAsync(LocationName, ImageImport, string, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ImageImport imageImport = new ImageImport();
+            string imageImportId = "";
+            // Make the request
+            Operation<ImageImport, OperationMetadata> response = await vmMigrationClient.CreateImageImportAsync(parent, imageImport, imageImportId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImageImport, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImageImport result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImageImport, OperationMetadata> retrievedResponse = await vmMigrationClient.PollOnceCreateImageImportAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImageImport retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteImageImport</summary>
+        public void DeleteImageImportRequestObject()
+        {
+            // Snippet: DeleteImageImport(DeleteImageImportRequest, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            DeleteImageImportRequest request = new DeleteImageImportRequest
+            {
+                ImageImportName = ImageImportName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = vmMigrationClient.DeleteImageImport(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = vmMigrationClient.PollOnceDeleteImageImport(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteImageImportAsync</summary>
+        public async Task DeleteImageImportRequestObjectAsync()
+        {
+            // Snippet: DeleteImageImportAsync(DeleteImageImportRequest, CallSettings)
+            // Additional: DeleteImageImportAsync(DeleteImageImportRequest, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteImageImportRequest request = new DeleteImageImportRequest
+            {
+                ImageImportName = ImageImportName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await vmMigrationClient.DeleteImageImportAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await vmMigrationClient.PollOnceDeleteImageImportAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteImageImport</summary>
+        public void DeleteImageImport()
+        {
+            // Snippet: DeleteImageImport(string, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/imageImports/[JOB]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = vmMigrationClient.DeleteImageImport(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = vmMigrationClient.PollOnceDeleteImageImport(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteImageImportAsync</summary>
+        public async Task DeleteImageImportAsync()
+        {
+            // Snippet: DeleteImageImportAsync(string, CallSettings)
+            // Additional: DeleteImageImportAsync(string, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/imageImports/[JOB]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await vmMigrationClient.DeleteImageImportAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await vmMigrationClient.PollOnceDeleteImageImportAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteImageImport</summary>
+        public void DeleteImageImportResourceNames()
+        {
+            // Snippet: DeleteImageImport(ImageImportName, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            ImageImportName name = ImageImportName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = vmMigrationClient.DeleteImageImport(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = vmMigrationClient.PollOnceDeleteImageImport(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteImageImportAsync</summary>
+        public async Task DeleteImageImportResourceNamesAsync()
+        {
+            // Snippet: DeleteImageImportAsync(ImageImportName, CallSettings)
+            // Additional: DeleteImageImportAsync(ImageImportName, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            ImageImportName name = ImageImportName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await vmMigrationClient.DeleteImageImportAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await vmMigrationClient.PollOnceDeleteImageImportAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListImageImportJobs</summary>
+        public void ListImageImportJobsRequestObject()
+        {
+            // Snippet: ListImageImportJobs(ListImageImportJobsRequest, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            ListImageImportJobsRequest request = new ListImageImportJobsRequest
+            {
+                ParentAsImageImportName = ImageImportName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListImageImportJobsResponse, ImageImportJob> response = vmMigrationClient.ListImageImportJobs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ImageImportJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListImageImportJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ImageImportJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ImageImportJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ImageImportJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListImageImportJobsAsync</summary>
+        public async Task ListImageImportJobsRequestObjectAsync()
+        {
+            // Snippet: ListImageImportJobsAsync(ListImageImportJobsRequest, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            ListImageImportJobsRequest request = new ListImageImportJobsRequest
+            {
+                ParentAsImageImportName = ImageImportName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListImageImportJobsResponse, ImageImportJob> response = vmMigrationClient.ListImageImportJobsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ImageImportJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListImageImportJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ImageImportJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ImageImportJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ImageImportJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListImageImportJobs</summary>
+        public void ListImageImportJobs()
+        {
+            // Snippet: ListImageImportJobs(string, string, int?, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/imageImports/[JOB]";
+            // Make the request
+            PagedEnumerable<ListImageImportJobsResponse, ImageImportJob> response = vmMigrationClient.ListImageImportJobs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ImageImportJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListImageImportJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ImageImportJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ImageImportJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ImageImportJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListImageImportJobsAsync</summary>
+        public async Task ListImageImportJobsAsync()
+        {
+            // Snippet: ListImageImportJobsAsync(string, string, int?, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/imageImports/[JOB]";
+            // Make the request
+            PagedAsyncEnumerable<ListImageImportJobsResponse, ImageImportJob> response = vmMigrationClient.ListImageImportJobsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ImageImportJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListImageImportJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ImageImportJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ImageImportJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ImageImportJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListImageImportJobs</summary>
+        public void ListImageImportJobsResourceNames()
+        {
+            // Snippet: ListImageImportJobs(ImageImportName, string, int?, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            ImageImportName parent = ImageImportName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
+            // Make the request
+            PagedEnumerable<ListImageImportJobsResponse, ImageImportJob> response = vmMigrationClient.ListImageImportJobs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ImageImportJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListImageImportJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ImageImportJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ImageImportJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ImageImportJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListImageImportJobsAsync</summary>
+        public async Task ListImageImportJobsResourceNamesAsync()
+        {
+            // Snippet: ListImageImportJobsAsync(ImageImportName, string, int?, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            ImageImportName parent = ImageImportName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
+            // Make the request
+            PagedAsyncEnumerable<ListImageImportJobsResponse, ImageImportJob> response = vmMigrationClient.ListImageImportJobsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ImageImportJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListImageImportJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ImageImportJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ImageImportJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ImageImportJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetImageImportJob</summary>
+        public void GetImageImportJobRequestObject()
+        {
+            // Snippet: GetImageImportJob(GetImageImportJobRequest, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            GetImageImportJobRequest request = new GetImageImportJobRequest
+            {
+                ImageImportJobName = ImageImportJobName.FromProjectLocationJobResult("[PROJECT]", "[LOCATION]", "[JOB]", "[RESULT]"),
+            };
+            // Make the request
+            ImageImportJob response = vmMigrationClient.GetImageImportJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetImageImportJobAsync</summary>
+        public async Task GetImageImportJobRequestObjectAsync()
+        {
+            // Snippet: GetImageImportJobAsync(GetImageImportJobRequest, CallSettings)
+            // Additional: GetImageImportJobAsync(GetImageImportJobRequest, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            GetImageImportJobRequest request = new GetImageImportJobRequest
+            {
+                ImageImportJobName = ImageImportJobName.FromProjectLocationJobResult("[PROJECT]", "[LOCATION]", "[JOB]", "[RESULT]"),
+            };
+            // Make the request
+            ImageImportJob response = await vmMigrationClient.GetImageImportJobAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetImageImportJob</summary>
+        public void GetImageImportJob()
+        {
+            // Snippet: GetImageImportJob(string, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/imageImports/[JOB]/imageImportJobs/[RESULT]";
+            // Make the request
+            ImageImportJob response = vmMigrationClient.GetImageImportJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetImageImportJobAsync</summary>
+        public async Task GetImageImportJobAsync()
+        {
+            // Snippet: GetImageImportJobAsync(string, CallSettings)
+            // Additional: GetImageImportJobAsync(string, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/imageImports/[JOB]/imageImportJobs/[RESULT]";
+            // Make the request
+            ImageImportJob response = await vmMigrationClient.GetImageImportJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetImageImportJob</summary>
+        public void GetImageImportJobResourceNames()
+        {
+            // Snippet: GetImageImportJob(ImageImportJobName, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            ImageImportJobName name = ImageImportJobName.FromProjectLocationJobResult("[PROJECT]", "[LOCATION]", "[JOB]", "[RESULT]");
+            // Make the request
+            ImageImportJob response = vmMigrationClient.GetImageImportJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetImageImportJobAsync</summary>
+        public async Task GetImageImportJobResourceNamesAsync()
+        {
+            // Snippet: GetImageImportJobAsync(ImageImportJobName, CallSettings)
+            // Additional: GetImageImportJobAsync(ImageImportJobName, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            ImageImportJobName name = ImageImportJobName.FromProjectLocationJobResult("[PROJECT]", "[LOCATION]", "[JOB]", "[RESULT]");
+            // Make the request
+            ImageImportJob response = await vmMigrationClient.GetImageImportJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelImageImportJob</summary>
+        public void CancelImageImportJobRequestObject()
+        {
+            // Snippet: CancelImageImportJob(CancelImageImportJobRequest, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            CancelImageImportJobRequest request = new CancelImageImportJobRequest
+            {
+                ImageImportJobName = ImageImportJobName.FromProjectLocationJobResult("[PROJECT]", "[LOCATION]", "[JOB]", "[RESULT]"),
+            };
+            // Make the request
+            Operation<CancelImageImportJobResponse, OperationMetadata> response = vmMigrationClient.CancelImageImportJob(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CancelImageImportJobResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CancelImageImportJobResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CancelImageImportJobResponse, OperationMetadata> retrievedResponse = vmMigrationClient.PollOnceCancelImageImportJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CancelImageImportJobResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelImageImportJobAsync</summary>
+        public async Task CancelImageImportJobRequestObjectAsync()
+        {
+            // Snippet: CancelImageImportJobAsync(CancelImageImportJobRequest, CallSettings)
+            // Additional: CancelImageImportJobAsync(CancelImageImportJobRequest, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            CancelImageImportJobRequest request = new CancelImageImportJobRequest
+            {
+                ImageImportJobName = ImageImportJobName.FromProjectLocationJobResult("[PROJECT]", "[LOCATION]", "[JOB]", "[RESULT]"),
+            };
+            // Make the request
+            Operation<CancelImageImportJobResponse, OperationMetadata> response = await vmMigrationClient.CancelImageImportJobAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CancelImageImportJobResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CancelImageImportJobResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CancelImageImportJobResponse, OperationMetadata> retrievedResponse = await vmMigrationClient.PollOnceCancelImageImportJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CancelImageImportJobResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelImageImportJob</summary>
+        public void CancelImageImportJob()
+        {
+            // Snippet: CancelImageImportJob(string, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/imageImports/[JOB]/imageImportJobs/[RESULT]";
+            // Make the request
+            Operation<CancelImageImportJobResponse, OperationMetadata> response = vmMigrationClient.CancelImageImportJob(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CancelImageImportJobResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CancelImageImportJobResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CancelImageImportJobResponse, OperationMetadata> retrievedResponse = vmMigrationClient.PollOnceCancelImageImportJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CancelImageImportJobResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelImageImportJobAsync</summary>
+        public async Task CancelImageImportJobAsync()
+        {
+            // Snippet: CancelImageImportJobAsync(string, CallSettings)
+            // Additional: CancelImageImportJobAsync(string, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/imageImports/[JOB]/imageImportJobs/[RESULT]";
+            // Make the request
+            Operation<CancelImageImportJobResponse, OperationMetadata> response = await vmMigrationClient.CancelImageImportJobAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CancelImageImportJobResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CancelImageImportJobResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CancelImageImportJobResponse, OperationMetadata> retrievedResponse = await vmMigrationClient.PollOnceCancelImageImportJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CancelImageImportJobResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelImageImportJob</summary>
+        public void CancelImageImportJobResourceNames()
+        {
+            // Snippet: CancelImageImportJob(ImageImportJobName, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            ImageImportJobName name = ImageImportJobName.FromProjectLocationJobResult("[PROJECT]", "[LOCATION]", "[JOB]", "[RESULT]");
+            // Make the request
+            Operation<CancelImageImportJobResponse, OperationMetadata> response = vmMigrationClient.CancelImageImportJob(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CancelImageImportJobResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CancelImageImportJobResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CancelImageImportJobResponse, OperationMetadata> retrievedResponse = vmMigrationClient.PollOnceCancelImageImportJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CancelImageImportJobResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelImageImportJobAsync</summary>
+        public async Task CancelImageImportJobResourceNamesAsync()
+        {
+            // Snippet: CancelImageImportJobAsync(ImageImportJobName, CallSettings)
+            // Additional: CancelImageImportJobAsync(ImageImportJobName, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            ImageImportJobName name = ImageImportJobName.FromProjectLocationJobResult("[PROJECT]", "[LOCATION]", "[JOB]", "[RESULT]");
+            // Make the request
+            Operation<CancelImageImportJobResponse, OperationMetadata> response = await vmMigrationClient.CancelImageImportJobAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CancelImageImportJobResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CancelImageImportJobResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CancelImageImportJobResponse, OperationMetadata> retrievedResponse = await vmMigrationClient.PollOnceCancelImageImportJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CancelImageImportJobResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDiskMigrationJob</summary>
+        public void CreateDiskMigrationJobRequestObject()
+        {
+            // Snippet: CreateDiskMigrationJob(CreateDiskMigrationJobRequest, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            CreateDiskMigrationJobRequest request = new CreateDiskMigrationJobRequest
+            {
+                ParentAsSourceName = SourceName.FromProjectLocationSource("[PROJECT]", "[LOCATION]", "[SOURCE]"),
+                DiskMigrationJobId = "",
+                DiskMigrationJob = new DiskMigrationJob(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DiskMigrationJob, OperationMetadata> response = vmMigrationClient.CreateDiskMigrationJob(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DiskMigrationJob, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DiskMigrationJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DiskMigrationJob, OperationMetadata> retrievedResponse = vmMigrationClient.PollOnceCreateDiskMigrationJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DiskMigrationJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDiskMigrationJobAsync</summary>
+        public async Task CreateDiskMigrationJobRequestObjectAsync()
+        {
+            // Snippet: CreateDiskMigrationJobAsync(CreateDiskMigrationJobRequest, CallSettings)
+            // Additional: CreateDiskMigrationJobAsync(CreateDiskMigrationJobRequest, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateDiskMigrationJobRequest request = new CreateDiskMigrationJobRequest
+            {
+                ParentAsSourceName = SourceName.FromProjectLocationSource("[PROJECT]", "[LOCATION]", "[SOURCE]"),
+                DiskMigrationJobId = "",
+                DiskMigrationJob = new DiskMigrationJob(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DiskMigrationJob, OperationMetadata> response = await vmMigrationClient.CreateDiskMigrationJobAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DiskMigrationJob, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DiskMigrationJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DiskMigrationJob, OperationMetadata> retrievedResponse = await vmMigrationClient.PollOnceCreateDiskMigrationJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DiskMigrationJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDiskMigrationJob</summary>
+        public void CreateDiskMigrationJob()
+        {
+            // Snippet: CreateDiskMigrationJob(string, DiskMigrationJob, string, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/sources/[SOURCE]";
+            DiskMigrationJob diskMigrationJob = new DiskMigrationJob();
+            string diskMigrationJobId = "";
+            // Make the request
+            Operation<DiskMigrationJob, OperationMetadata> response = vmMigrationClient.CreateDiskMigrationJob(parent, diskMigrationJob, diskMigrationJobId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DiskMigrationJob, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DiskMigrationJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DiskMigrationJob, OperationMetadata> retrievedResponse = vmMigrationClient.PollOnceCreateDiskMigrationJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DiskMigrationJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDiskMigrationJobAsync</summary>
+        public async Task CreateDiskMigrationJobAsync()
+        {
+            // Snippet: CreateDiskMigrationJobAsync(string, DiskMigrationJob, string, CallSettings)
+            // Additional: CreateDiskMigrationJobAsync(string, DiskMigrationJob, string, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/sources/[SOURCE]";
+            DiskMigrationJob diskMigrationJob = new DiskMigrationJob();
+            string diskMigrationJobId = "";
+            // Make the request
+            Operation<DiskMigrationJob, OperationMetadata> response = await vmMigrationClient.CreateDiskMigrationJobAsync(parent, diskMigrationJob, diskMigrationJobId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DiskMigrationJob, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DiskMigrationJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DiskMigrationJob, OperationMetadata> retrievedResponse = await vmMigrationClient.PollOnceCreateDiskMigrationJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DiskMigrationJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDiskMigrationJob</summary>
+        public void CreateDiskMigrationJobResourceNames()
+        {
+            // Snippet: CreateDiskMigrationJob(SourceName, DiskMigrationJob, string, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            SourceName parent = SourceName.FromProjectLocationSource("[PROJECT]", "[LOCATION]", "[SOURCE]");
+            DiskMigrationJob diskMigrationJob = new DiskMigrationJob();
+            string diskMigrationJobId = "";
+            // Make the request
+            Operation<DiskMigrationJob, OperationMetadata> response = vmMigrationClient.CreateDiskMigrationJob(parent, diskMigrationJob, diskMigrationJobId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DiskMigrationJob, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DiskMigrationJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DiskMigrationJob, OperationMetadata> retrievedResponse = vmMigrationClient.PollOnceCreateDiskMigrationJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DiskMigrationJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDiskMigrationJobAsync</summary>
+        public async Task CreateDiskMigrationJobResourceNamesAsync()
+        {
+            // Snippet: CreateDiskMigrationJobAsync(SourceName, DiskMigrationJob, string, CallSettings)
+            // Additional: CreateDiskMigrationJobAsync(SourceName, DiskMigrationJob, string, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            SourceName parent = SourceName.FromProjectLocationSource("[PROJECT]", "[LOCATION]", "[SOURCE]");
+            DiskMigrationJob diskMigrationJob = new DiskMigrationJob();
+            string diskMigrationJobId = "";
+            // Make the request
+            Operation<DiskMigrationJob, OperationMetadata> response = await vmMigrationClient.CreateDiskMigrationJobAsync(parent, diskMigrationJob, diskMigrationJobId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DiskMigrationJob, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DiskMigrationJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DiskMigrationJob, OperationMetadata> retrievedResponse = await vmMigrationClient.PollOnceCreateDiskMigrationJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DiskMigrationJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDiskMigrationJobs</summary>
+        public void ListDiskMigrationJobsRequestObject()
+        {
+            // Snippet: ListDiskMigrationJobs(ListDiskMigrationJobsRequest, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            ListDiskMigrationJobsRequest request = new ListDiskMigrationJobsRequest
+            {
+                ParentAsSourceName = SourceName.FromProjectLocationSource("[PROJECT]", "[LOCATION]", "[SOURCE]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListDiskMigrationJobsResponse, DiskMigrationJob> response = vmMigrationClient.ListDiskMigrationJobs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DiskMigrationJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDiskMigrationJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DiskMigrationJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DiskMigrationJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DiskMigrationJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDiskMigrationJobsAsync</summary>
+        public async Task ListDiskMigrationJobsRequestObjectAsync()
+        {
+            // Snippet: ListDiskMigrationJobsAsync(ListDiskMigrationJobsRequest, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            ListDiskMigrationJobsRequest request = new ListDiskMigrationJobsRequest
+            {
+                ParentAsSourceName = SourceName.FromProjectLocationSource("[PROJECT]", "[LOCATION]", "[SOURCE]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListDiskMigrationJobsResponse, DiskMigrationJob> response = vmMigrationClient.ListDiskMigrationJobsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DiskMigrationJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDiskMigrationJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DiskMigrationJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DiskMigrationJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DiskMigrationJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDiskMigrationJobs</summary>
+        public void ListDiskMigrationJobs()
+        {
+            // Snippet: ListDiskMigrationJobs(string, string, int?, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/sources/[SOURCE]";
+            // Make the request
+            PagedEnumerable<ListDiskMigrationJobsResponse, DiskMigrationJob> response = vmMigrationClient.ListDiskMigrationJobs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DiskMigrationJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDiskMigrationJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DiskMigrationJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DiskMigrationJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DiskMigrationJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDiskMigrationJobsAsync</summary>
+        public async Task ListDiskMigrationJobsAsync()
+        {
+            // Snippet: ListDiskMigrationJobsAsync(string, string, int?, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/sources/[SOURCE]";
+            // Make the request
+            PagedAsyncEnumerable<ListDiskMigrationJobsResponse, DiskMigrationJob> response = vmMigrationClient.ListDiskMigrationJobsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DiskMigrationJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDiskMigrationJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DiskMigrationJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DiskMigrationJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DiskMigrationJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDiskMigrationJobs</summary>
+        public void ListDiskMigrationJobsResourceNames()
+        {
+            // Snippet: ListDiskMigrationJobs(SourceName, string, int?, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            SourceName parent = SourceName.FromProjectLocationSource("[PROJECT]", "[LOCATION]", "[SOURCE]");
+            // Make the request
+            PagedEnumerable<ListDiskMigrationJobsResponse, DiskMigrationJob> response = vmMigrationClient.ListDiskMigrationJobs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DiskMigrationJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDiskMigrationJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DiskMigrationJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DiskMigrationJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DiskMigrationJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDiskMigrationJobsAsync</summary>
+        public async Task ListDiskMigrationJobsResourceNamesAsync()
+        {
+            // Snippet: ListDiskMigrationJobsAsync(SourceName, string, int?, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            SourceName parent = SourceName.FromProjectLocationSource("[PROJECT]", "[LOCATION]", "[SOURCE]");
+            // Make the request
+            PagedAsyncEnumerable<ListDiskMigrationJobsResponse, DiskMigrationJob> response = vmMigrationClient.ListDiskMigrationJobsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DiskMigrationJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDiskMigrationJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DiskMigrationJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DiskMigrationJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DiskMigrationJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDiskMigrationJob</summary>
+        public void GetDiskMigrationJobRequestObject()
+        {
+            // Snippet: GetDiskMigrationJob(GetDiskMigrationJobRequest, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            GetDiskMigrationJobRequest request = new GetDiskMigrationJobRequest
+            {
+                DiskMigrationJobName = DiskMigrationJobName.FromProjectLocationSourceDiskMigrationJob("[PROJECT]", "[LOCATION]", "[SOURCE]", "[DISK_MIGRATION_JOB]"),
+            };
+            // Make the request
+            DiskMigrationJob response = vmMigrationClient.GetDiskMigrationJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDiskMigrationJobAsync</summary>
+        public async Task GetDiskMigrationJobRequestObjectAsync()
+        {
+            // Snippet: GetDiskMigrationJobAsync(GetDiskMigrationJobRequest, CallSettings)
+            // Additional: GetDiskMigrationJobAsync(GetDiskMigrationJobRequest, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDiskMigrationJobRequest request = new GetDiskMigrationJobRequest
+            {
+                DiskMigrationJobName = DiskMigrationJobName.FromProjectLocationSourceDiskMigrationJob("[PROJECT]", "[LOCATION]", "[SOURCE]", "[DISK_MIGRATION_JOB]"),
+            };
+            // Make the request
+            DiskMigrationJob response = await vmMigrationClient.GetDiskMigrationJobAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDiskMigrationJob</summary>
+        public void GetDiskMigrationJob()
+        {
+            // Snippet: GetDiskMigrationJob(string, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/sources/[SOURCE]/diskMigrationJobs/[DISK_MIGRATION_JOB]";
+            // Make the request
+            DiskMigrationJob response = vmMigrationClient.GetDiskMigrationJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDiskMigrationJobAsync</summary>
+        public async Task GetDiskMigrationJobAsync()
+        {
+            // Snippet: GetDiskMigrationJobAsync(string, CallSettings)
+            // Additional: GetDiskMigrationJobAsync(string, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/sources/[SOURCE]/diskMigrationJobs/[DISK_MIGRATION_JOB]";
+            // Make the request
+            DiskMigrationJob response = await vmMigrationClient.GetDiskMigrationJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDiskMigrationJob</summary>
+        public void GetDiskMigrationJobResourceNames()
+        {
+            // Snippet: GetDiskMigrationJob(DiskMigrationJobName, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            DiskMigrationJobName name = DiskMigrationJobName.FromProjectLocationSourceDiskMigrationJob("[PROJECT]", "[LOCATION]", "[SOURCE]", "[DISK_MIGRATION_JOB]");
+            // Make the request
+            DiskMigrationJob response = vmMigrationClient.GetDiskMigrationJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDiskMigrationJobAsync</summary>
+        public async Task GetDiskMigrationJobResourceNamesAsync()
+        {
+            // Snippet: GetDiskMigrationJobAsync(DiskMigrationJobName, CallSettings)
+            // Additional: GetDiskMigrationJobAsync(DiskMigrationJobName, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            DiskMigrationJobName name = DiskMigrationJobName.FromProjectLocationSourceDiskMigrationJob("[PROJECT]", "[LOCATION]", "[SOURCE]", "[DISK_MIGRATION_JOB]");
+            // Make the request
+            DiskMigrationJob response = await vmMigrationClient.GetDiskMigrationJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDiskMigrationJob</summary>
+        public void UpdateDiskMigrationJobRequestObject()
+        {
+            // Snippet: UpdateDiskMigrationJob(UpdateDiskMigrationJobRequest, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            UpdateDiskMigrationJobRequest request = new UpdateDiskMigrationJobRequest
+            {
+                UpdateMask = new FieldMask(),
+                DiskMigrationJob = new DiskMigrationJob(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DiskMigrationJob, OperationMetadata> response = vmMigrationClient.UpdateDiskMigrationJob(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DiskMigrationJob, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DiskMigrationJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DiskMigrationJob, OperationMetadata> retrievedResponse = vmMigrationClient.PollOnceUpdateDiskMigrationJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DiskMigrationJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDiskMigrationJobAsync</summary>
+        public async Task UpdateDiskMigrationJobRequestObjectAsync()
+        {
+            // Snippet: UpdateDiskMigrationJobAsync(UpdateDiskMigrationJobRequest, CallSettings)
+            // Additional: UpdateDiskMigrationJobAsync(UpdateDiskMigrationJobRequest, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateDiskMigrationJobRequest request = new UpdateDiskMigrationJobRequest
+            {
+                UpdateMask = new FieldMask(),
+                DiskMigrationJob = new DiskMigrationJob(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DiskMigrationJob, OperationMetadata> response = await vmMigrationClient.UpdateDiskMigrationJobAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DiskMigrationJob, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DiskMigrationJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DiskMigrationJob, OperationMetadata> retrievedResponse = await vmMigrationClient.PollOnceUpdateDiskMigrationJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DiskMigrationJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDiskMigrationJob</summary>
+        public void UpdateDiskMigrationJob()
+        {
+            // Snippet: UpdateDiskMigrationJob(DiskMigrationJob, FieldMask, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            DiskMigrationJob diskMigrationJob = new DiskMigrationJob();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<DiskMigrationJob, OperationMetadata> response = vmMigrationClient.UpdateDiskMigrationJob(diskMigrationJob, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DiskMigrationJob, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DiskMigrationJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DiskMigrationJob, OperationMetadata> retrievedResponse = vmMigrationClient.PollOnceUpdateDiskMigrationJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DiskMigrationJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDiskMigrationJobAsync</summary>
+        public async Task UpdateDiskMigrationJobAsync()
+        {
+            // Snippet: UpdateDiskMigrationJobAsync(DiskMigrationJob, FieldMask, CallSettings)
+            // Additional: UpdateDiskMigrationJobAsync(DiskMigrationJob, FieldMask, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            DiskMigrationJob diskMigrationJob = new DiskMigrationJob();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<DiskMigrationJob, OperationMetadata> response = await vmMigrationClient.UpdateDiskMigrationJobAsync(diskMigrationJob, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DiskMigrationJob, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DiskMigrationJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DiskMigrationJob, OperationMetadata> retrievedResponse = await vmMigrationClient.PollOnceUpdateDiskMigrationJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DiskMigrationJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDiskMigrationJob</summary>
+        public void DeleteDiskMigrationJobRequestObject()
+        {
+            // Snippet: DeleteDiskMigrationJob(DeleteDiskMigrationJobRequest, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            DeleteDiskMigrationJobRequest request = new DeleteDiskMigrationJobRequest
+            {
+                DiskMigrationJobName = DiskMigrationJobName.FromProjectLocationSourceDiskMigrationJob("[PROJECT]", "[LOCATION]", "[SOURCE]", "[DISK_MIGRATION_JOB]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = vmMigrationClient.DeleteDiskMigrationJob(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = vmMigrationClient.PollOnceDeleteDiskMigrationJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDiskMigrationJobAsync</summary>
+        public async Task DeleteDiskMigrationJobRequestObjectAsync()
+        {
+            // Snippet: DeleteDiskMigrationJobAsync(DeleteDiskMigrationJobRequest, CallSettings)
+            // Additional: DeleteDiskMigrationJobAsync(DeleteDiskMigrationJobRequest, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteDiskMigrationJobRequest request = new DeleteDiskMigrationJobRequest
+            {
+                DiskMigrationJobName = DiskMigrationJobName.FromProjectLocationSourceDiskMigrationJob("[PROJECT]", "[LOCATION]", "[SOURCE]", "[DISK_MIGRATION_JOB]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await vmMigrationClient.DeleteDiskMigrationJobAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await vmMigrationClient.PollOnceDeleteDiskMigrationJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDiskMigrationJob</summary>
+        public void DeleteDiskMigrationJob()
+        {
+            // Snippet: DeleteDiskMigrationJob(string, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/sources/[SOURCE]/diskMigrationJobs/[DISK_MIGRATION_JOB]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = vmMigrationClient.DeleteDiskMigrationJob(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = vmMigrationClient.PollOnceDeleteDiskMigrationJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDiskMigrationJobAsync</summary>
+        public async Task DeleteDiskMigrationJobAsync()
+        {
+            // Snippet: DeleteDiskMigrationJobAsync(string, CallSettings)
+            // Additional: DeleteDiskMigrationJobAsync(string, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/sources/[SOURCE]/diskMigrationJobs/[DISK_MIGRATION_JOB]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await vmMigrationClient.DeleteDiskMigrationJobAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await vmMigrationClient.PollOnceDeleteDiskMigrationJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDiskMigrationJob</summary>
+        public void DeleteDiskMigrationJobResourceNames()
+        {
+            // Snippet: DeleteDiskMigrationJob(DiskMigrationJobName, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            DiskMigrationJobName name = DiskMigrationJobName.FromProjectLocationSourceDiskMigrationJob("[PROJECT]", "[LOCATION]", "[SOURCE]", "[DISK_MIGRATION_JOB]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = vmMigrationClient.DeleteDiskMigrationJob(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = vmMigrationClient.PollOnceDeleteDiskMigrationJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDiskMigrationJobAsync</summary>
+        public async Task DeleteDiskMigrationJobResourceNamesAsync()
+        {
+            // Snippet: DeleteDiskMigrationJobAsync(DiskMigrationJobName, CallSettings)
+            // Additional: DeleteDiskMigrationJobAsync(DiskMigrationJobName, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            DiskMigrationJobName name = DiskMigrationJobName.FromProjectLocationSourceDiskMigrationJob("[PROJECT]", "[LOCATION]", "[SOURCE]", "[DISK_MIGRATION_JOB]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await vmMigrationClient.DeleteDiskMigrationJobAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await vmMigrationClient.PollOnceDeleteDiskMigrationJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunDiskMigrationJob</summary>
+        public void RunDiskMigrationJobRequestObject()
+        {
+            // Snippet: RunDiskMigrationJob(RunDiskMigrationJobRequest, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            RunDiskMigrationJobRequest request = new RunDiskMigrationJobRequest
+            {
+                DiskMigrationJobName = DiskMigrationJobName.FromProjectLocationSourceDiskMigrationJob("[PROJECT]", "[LOCATION]", "[SOURCE]", "[DISK_MIGRATION_JOB]"),
+            };
+            // Make the request
+            Operation<RunDiskMigrationJobResponse, OperationMetadata> response = vmMigrationClient.RunDiskMigrationJob(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RunDiskMigrationJobResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RunDiskMigrationJobResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RunDiskMigrationJobResponse, OperationMetadata> retrievedResponse = vmMigrationClient.PollOnceRunDiskMigrationJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RunDiskMigrationJobResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunDiskMigrationJobAsync</summary>
+        public async Task RunDiskMigrationJobRequestObjectAsync()
+        {
+            // Snippet: RunDiskMigrationJobAsync(RunDiskMigrationJobRequest, CallSettings)
+            // Additional: RunDiskMigrationJobAsync(RunDiskMigrationJobRequest, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            RunDiskMigrationJobRequest request = new RunDiskMigrationJobRequest
+            {
+                DiskMigrationJobName = DiskMigrationJobName.FromProjectLocationSourceDiskMigrationJob("[PROJECT]", "[LOCATION]", "[SOURCE]", "[DISK_MIGRATION_JOB]"),
+            };
+            // Make the request
+            Operation<RunDiskMigrationJobResponse, OperationMetadata> response = await vmMigrationClient.RunDiskMigrationJobAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RunDiskMigrationJobResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RunDiskMigrationJobResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RunDiskMigrationJobResponse, OperationMetadata> retrievedResponse = await vmMigrationClient.PollOnceRunDiskMigrationJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RunDiskMigrationJobResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunDiskMigrationJob</summary>
+        public void RunDiskMigrationJob()
+        {
+            // Snippet: RunDiskMigrationJob(string, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/sources/[SOURCE]/diskMigrationJobs/[DISK_MIGRATION_JOB]";
+            // Make the request
+            Operation<RunDiskMigrationJobResponse, OperationMetadata> response = vmMigrationClient.RunDiskMigrationJob(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RunDiskMigrationJobResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RunDiskMigrationJobResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RunDiskMigrationJobResponse, OperationMetadata> retrievedResponse = vmMigrationClient.PollOnceRunDiskMigrationJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RunDiskMigrationJobResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunDiskMigrationJobAsync</summary>
+        public async Task RunDiskMigrationJobAsync()
+        {
+            // Snippet: RunDiskMigrationJobAsync(string, CallSettings)
+            // Additional: RunDiskMigrationJobAsync(string, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/sources/[SOURCE]/diskMigrationJobs/[DISK_MIGRATION_JOB]";
+            // Make the request
+            Operation<RunDiskMigrationJobResponse, OperationMetadata> response = await vmMigrationClient.RunDiskMigrationJobAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RunDiskMigrationJobResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RunDiskMigrationJobResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RunDiskMigrationJobResponse, OperationMetadata> retrievedResponse = await vmMigrationClient.PollOnceRunDiskMigrationJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RunDiskMigrationJobResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunDiskMigrationJob</summary>
+        public void RunDiskMigrationJobResourceNames()
+        {
+            // Snippet: RunDiskMigrationJob(DiskMigrationJobName, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            DiskMigrationJobName name = DiskMigrationJobName.FromProjectLocationSourceDiskMigrationJob("[PROJECT]", "[LOCATION]", "[SOURCE]", "[DISK_MIGRATION_JOB]");
+            // Make the request
+            Operation<RunDiskMigrationJobResponse, OperationMetadata> response = vmMigrationClient.RunDiskMigrationJob(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RunDiskMigrationJobResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RunDiskMigrationJobResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RunDiskMigrationJobResponse, OperationMetadata> retrievedResponse = vmMigrationClient.PollOnceRunDiskMigrationJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RunDiskMigrationJobResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunDiskMigrationJobAsync</summary>
+        public async Task RunDiskMigrationJobResourceNamesAsync()
+        {
+            // Snippet: RunDiskMigrationJobAsync(DiskMigrationJobName, CallSettings)
+            // Additional: RunDiskMigrationJobAsync(DiskMigrationJobName, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            DiskMigrationJobName name = DiskMigrationJobName.FromProjectLocationSourceDiskMigrationJob("[PROJECT]", "[LOCATION]", "[SOURCE]", "[DISK_MIGRATION_JOB]");
+            // Make the request
+            Operation<RunDiskMigrationJobResponse, OperationMetadata> response = await vmMigrationClient.RunDiskMigrationJobAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RunDiskMigrationJobResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RunDiskMigrationJobResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RunDiskMigrationJobResponse, OperationMetadata> retrievedResponse = await vmMigrationClient.PollOnceRunDiskMigrationJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RunDiskMigrationJobResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelDiskMigrationJob</summary>
+        public void CancelDiskMigrationJobRequestObject()
+        {
+            // Snippet: CancelDiskMigrationJob(CancelDiskMigrationJobRequest, CallSettings)
+            // Create client
+            VmMigrationClient vmMigrationClient = VmMigrationClient.Create();
+            // Initialize request argument(s)
+            CancelDiskMigrationJobRequest request = new CancelDiskMigrationJobRequest
+            {
+                DiskMigrationJobName = DiskMigrationJobName.FromProjectLocationSourceDiskMigrationJob("[PROJECT]", "[LOCATION]", "[SOURCE]", "[DISK_MIGRATION_JOB]"),
+            };
+            // Make the request
+            Operation<CancelDiskMigrationJobResponse, OperationMetadata> response = vmMigrationClient.CancelDiskMigrationJob(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CancelDiskMigrationJobResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CancelDiskMigrationJobResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CancelDiskMigrationJobResponse, OperationMetadata> retrievedResponse = vmMigrationClient.PollOnceCancelDiskMigrationJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CancelDiskMigrationJobResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelDiskMigrationJobAsync</summary>
+        public async Task CancelDiskMigrationJobRequestObjectAsync()
+        {
+            // Snippet: CancelDiskMigrationJobAsync(CancelDiskMigrationJobRequest, CallSettings)
+            // Additional: CancelDiskMigrationJobAsync(CancelDiskMigrationJobRequest, CancellationToken)
+            // Create client
+            VmMigrationClient vmMigrationClient = await VmMigrationClient.CreateAsync();
+            // Initialize request argument(s)
+            CancelDiskMigrationJobRequest request = new CancelDiskMigrationJobRequest
+            {
+                DiskMigrationJobName = DiskMigrationJobName.FromProjectLocationSourceDiskMigrationJob("[PROJECT]", "[LOCATION]", "[SOURCE]", "[DISK_MIGRATION_JOB]"),
+            };
+            // Make the request
+            Operation<CancelDiskMigrationJobResponse, OperationMetadata> response = await vmMigrationClient.CancelDiskMigrationJobAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CancelDiskMigrationJobResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CancelDiskMigrationJobResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CancelDiskMigrationJobResponse, OperationMetadata> retrievedResponse = await vmMigrationClient.PollOnceCancelDiskMigrationJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CancelDiskMigrationJobResponse retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

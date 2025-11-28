@@ -25,15 +25,27 @@ using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 
+/// <summary>
+/// Packages a library (which may contain a set of packages) ready for publication.
+/// Note that all information required for later publication must be included here,
+/// as we don't have repo context at publication time.
+/// </summary>
 internal class PackageLibraryCommand : IContainerCommand
 {
+    internal const string PackageOwnerFile = "package-owner.txt";
+
     public int Execute(ContainerOptions options)
     {
         var repoRoot = options.RequireOption(options.RepoRoot);
+        using var _ = SourceLinkFixer.Create(repoRoot);
+
         var outputDirectory = options.RequireOption(options.Output);
         var rootLayout = RootLayout.ForRepositoryRoot(repoRoot);
         var catalog = ApiCatalog.Load(rootLayout);
         var apis = options.GetApisFromLibraryId(catalog);
+
+        // We assume all the packages in the library are for the same owner.
+        File.WriteAllText(Path.Combine(outputDirectory, PackageOwnerFile), apis.First().EffectivePackageOwner);
 
         foreach (var api in apis)
         {
@@ -46,12 +58,13 @@ internal class PackageLibraryCommand : IContainerCommand
                 "-o", outputDirectory,
                 $"apis/{api.Id}/{api.Id}");
 
-            // Run with a working directory of the repo root so we have access to generate-sbom,
-            // but pass the full filename in.
-            Processes.RunDotnet(repoRoot, "generate-sbom", Path.Combine(outputDirectory, $"{api.Id}.{api.Version}.nupkg"));
+            // Run from the container directory to use the tool configuration from there.
+            Processes.RunDotnet("/app", "generate-sbom", Path.Combine(outputDirectory, $"{api.Id}.{api.Version}.nupkg"));
         }
+        Console.WriteLine("Building documentation");
         Processes.RunBashScript(Path.Combine(repoRoot, "docs"), "builddocs.sh", apis.Select(api => api.Id));
 
+        Console.WriteLine("Packaging documentation");
         foreach (var api in apis)
         {
             PackageDocumentation(rootLayout, api, outputDirectory);
@@ -65,13 +78,18 @@ internal class PackageLibraryCommand : IContainerCommand
     private static void PackageDocumentation(RootLayout rootLayout, ApiMetadata api, string outputDirectory)
     {
         var docsDir = rootLayout.CreateDocsLayout(api.Id).OutputDirectory;
+        if (!Directory.Exists(docsDir))
+        {
+            return;
+        }
         // Note: a comment in uploaddocs.sh claims we don't generate documentation for all packages.
         // I believe this is no longer true.
         var siteDir = Path.Combine(docsDir, "site");
         FixDocfxOutput(siteDir, api);
 
         var devSiteDir = Path.Combine(docsDir, "devsite");
-
+        // The output prefix will be used later on to work out which bucket to write to.
+        // The output prefix will be replaced (on upload) with "dotnet" to create the appropriate file for processing.
         BundleDocumentation(siteDir, api, outputDirectory, "googleapisdev");
         if (Directory.Exists(devSiteDir))
         {
@@ -97,15 +115,13 @@ internal class PackageLibraryCommand : IContainerCommand
         // Insert a baseUrl at the start of xrefmap.yml
         var xrefmapFile = Path.Combine(directory, "xrefmap.yml");
         var xrefmapLines = File.ReadLines(xrefmapFile).ToList();
-        if (xrefmapLines[0].StartsWith("baseUrl"))
+        if (!xrefmapLines[0].StartsWith("baseUrl"))
         {
             xrefmapLines.Insert(0, $"baseUrl: https://googleapis.dev/dotnet/{api.Id}/{api.Version}/");
             File.WriteAllLines(xrefmapFile, xrefmapLines);
         }
-    }
 
-    private static void BundleDocumentation(string inputDirectory, ApiMetadata api, string outputDirectory, string outputPrefix)
-    {
+        // Create a docs.metadata.json file for googleapis.dev - this will already be present in the devsite directory.
         var metadata = new Metadata
         {
             UpdateTime = Timestamp.FromDateTimeOffset(DateTimeOffset.UtcNow).ToString().Trim('\"'),
@@ -115,7 +131,11 @@ internal class PackageLibraryCommand : IContainerCommand
             GithubRepository = Environment.GetEnvironmentVariable("DOCS_METADATA_REPO") ?? ""
         };
         var json = JsonConvert.SerializeObject(metadata, Formatting.Indented);
-        File.WriteAllText("docs.metadata.json", json);
+        File.WriteAllText(Path.Combine(directory, "docs.metadata.json"), json);
+    }
+
+    private static void BundleDocumentation(string inputDirectory, ApiMetadata api, string outputDirectory, string outputPrefix)
+    {
         using var tgz = File.Create(Path.Combine(outputDirectory, $"{outputPrefix}-{api.Id}-{api.Version}.tar.gz"));
         CompressDirectory(inputDirectory, tgz);
     }

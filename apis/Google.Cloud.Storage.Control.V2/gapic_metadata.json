@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "StorageControlClient",
           "rpcs": {
+            "CreateAnywhereCache": {
+              "methods": [
+                "CreateAnywhereCache",
+                "CreateAnywhereCacheAsync"
+              ]
+            },
             "CreateFolder": {
               "methods": [
                 "CreateFolder",
@@ -34,10 +40,34 @@
                 "DeleteManagedFolderAsync"
               ]
             },
+            "DisableAnywhereCache": {
+              "methods": [
+                "DisableAnywhereCache",
+                "DisableAnywhereCacheAsync"
+              ]
+            },
+            "GetAnywhereCache": {
+              "methods": [
+                "GetAnywhereCache",
+                "GetAnywhereCacheAsync"
+              ]
+            },
             "GetFolder": {
               "methods": [
                 "GetFolder",
                 "GetFolderAsync"
+              ]
+            },
+            "GetFolderIntelligenceConfig": {
+              "methods": [
+                "GetFolderIntelligenceConfig",
+                "GetFolderIntelligenceConfigAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
               ]
             },
             "GetManagedFolder": {
@@ -46,10 +76,28 @@
                 "GetManagedFolderAsync"
               ]
             },
+            "GetOrganizationIntelligenceConfig": {
+              "methods": [
+                "GetOrganizationIntelligenceConfig",
+                "GetOrganizationIntelligenceConfigAsync"
+              ]
+            },
+            "GetProjectIntelligenceConfig": {
+              "methods": [
+                "GetProjectIntelligenceConfig",
+                "GetProjectIntelligenceConfigAsync"
+              ]
+            },
             "GetStorageLayout": {
               "methods": [
                 "GetStorageLayout",
                 "GetStorageLayoutAsync"
+              ]
+            },
+            "ListAnywhereCaches": {
+              "methods": [
+                "ListAnywhereCaches",
+                "ListAnywhereCachesAsync"
               ]
             },
             "ListFolders": {
@@ -64,10 +112,58 @@
                 "ListManagedFoldersAsync"
               ]
             },
+            "PauseAnywhereCache": {
+              "methods": [
+                "PauseAnywhereCache",
+                "PauseAnywhereCacheAsync"
+              ]
+            },
             "RenameFolder": {
               "methods": [
                 "RenameFolder",
                 "RenameFolderAsync"
+              ]
+            },
+            "ResumeAnywhereCache": {
+              "methods": [
+                "ResumeAnywhereCache",
+                "ResumeAnywhereCacheAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            },
+            "UpdateAnywhereCache": {
+              "methods": [
+                "UpdateAnywhereCache",
+                "UpdateAnywhereCacheAsync"
+              ]
+            },
+            "UpdateFolderIntelligenceConfig": {
+              "methods": [
+                "UpdateFolderIntelligenceConfig",
+                "UpdateFolderIntelligenceConfigAsync"
+              ]
+            },
+            "UpdateOrganizationIntelligenceConfig": {
+              "methods": [
+                "UpdateOrganizationIntelligenceConfig",
+                "UpdateOrganizationIntelligenceConfigAsync"
+              ]
+            },
+            "UpdateProjectIntelligenceConfig": {
+              "methods": [
+                "UpdateProjectIntelligenceConfig",
+                "UpdateProjectIntelligenceConfigAsync"
               ]
             }
           }

@@ -42,7 +42,7 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
             "bnQucmV2aWV3cy52MWJldGEuTWVyY2hhbnRSZXZpZXdBdHRyaWJ1dGVzLkNv",
             "bGxlY3Rpb25NZXRob2RCA+BBAUgMiAEBEjkKC3Jldmlld190aW1lGA4gASgL",
             "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EECSA2IAQESIQoPcmV2",
-            "aWV3X2xhbmd1YWdlGA8gASgJQgPgQQJIDogBARIgCg5yZXZpZXdfY291bnRy",
+            "aWV3X2xhbmd1YWdlGA8gASgJQgPgQQFIDogBARIgCg5yZXZpZXdfY291bnRy",
             "eRgQIAEoCUID4EEBSA+IAQEieQoQQ29sbGVjdGlvbk1ldGhvZBIhCh1DT0xM",
             "RUNUSU9OX01FVEhPRF9VTlNQRUNJRklFRBAAEhgKFE1FUkNIQU5UX1VOU09M",
             "SUNJVEVEEAESEQoNUE9JTlRfT0ZfU0FMRRACEhUKEUFGVEVSX0ZVTEZJTExN",
@@ -573,7 +573,7 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
 
     private string reviewLanguage_;
     /// <summary>
-    /// Required. The language of the review defined by BCP-47 language code.
+    /// Optional. The language of the review defined by BCP-47 language code.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

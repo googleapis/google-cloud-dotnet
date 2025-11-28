@@ -1,5 +1,27 @@
 # Version history
 
+## Version 3.19.0, released 2025-11-10
+
+### New features
+
+- Support picosecond timestamp precision in BigQuery Storage API
+
+### Documentation improvements
+
+- A comment for method `ReadRows` in service `BigQueryRead` is changed
+- A comment for message `AppendRowsRequest` is changed
+- A comment for field `writer_schema` in message `.google.cloud.bigquery.storage.v1.AppendRowsRequest` is changed
+- A comment for field `rows` in message `.google.cloud.bigquery.storage.v1.AppendRowsRequest` is changed
+- A comment for field `arrow_rows` in message `.google.cloud.bigquery.storage.v1.AppendRowsRequest` is changed
+- A comment for field `default_missing_value_interpretation` in message `.google.cloud.bigquery.storage.v1.AppendRowsRequest` is changed
+- A comment for field `location` in message `.google.cloud.bigquery.storage.v1.WriteStream` is changed
+
+## Version 3.18.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
 ## Version 3.17.0, released 2024-10-14
 
 ### New features

@@ -39,7 +39,7 @@ namespace Google.Cloud.Retail.V2 {
             "cm9kdWN0QXR0cmlidXRlVmFsdWVIABJWChpwcm9kdWN0X2F0dHJpYnV0ZV9p",
             "bnRlcnZhbBgCIAEoCzIwLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUHJvZHVj",
             "dEF0dHJpYnV0ZUludGVydmFsSAASIQoZcmVwcmVzZW50YXRpdmVfcHJvZHVj",
-            "dF9pZBgDIAEoCUITChFwcm9kdWN0X2F0dHJpYnV0ZSKMGgoNU2VhcmNoUmVx",
+            "dF9pZBgDIAEoCUITChFwcm9kdWN0X2F0dHJpYnV0ZSKNHAoNU2VhcmNoUmVx",
             "dWVzdBIWCglwbGFjZW1lbnQYASABKAlCA+BBAhIxCgZicmFuY2gYAiABKAlC",
             "IfpBHgoccmV0YWlsLmdvb2dsZWFwaXMuY29tL0JyYW5jaBINCgVxdWVyeRgD",
             "IAEoCRIXCgp2aXNpdG9yX2lkGAQgASgJQgPgQQISMwoJdXNlcl9pbmZvGAUg",
@@ -66,137 +66,148 @@ namespace Google.Cloud.Retail.V2 {
             "b2dsZS5jbG91ZC5yZXRhaWwudjIuU2VhcmNoUmVxdWVzdC5Db252ZXJzYXRp",
             "b25hbFNlYXJjaFNwZWNCA+BBARJbChR0aWxlX25hdmlnYXRpb25fc3BlYxgp",
             "IAEoCzI4Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuU2VhcmNoUmVxdWVzdC5U",
-            "aWxlTmF2aWdhdGlvblNwZWNCA+BBARqRAwoJRmFjZXRTcGVjElAKCWZhY2V0",
-            "X2tleRgBIAEoCzI4Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuU2VhcmNoUmVx",
-            "dWVzdC5GYWNldFNwZWMuRmFjZXRLZXlCA+BBAhINCgVsaW1pdBgCIAEoBRIc",
-            "ChRleGNsdWRlZF9maWx0ZXJfa2V5cxgDIAMoCRIfChdlbmFibGVfZHluYW1p",
-            "Y19wb3NpdGlvbhgEIAEoCBrjAQoIRmFjZXRLZXkSEAoDa2V5GAEgASgJQgPg",
-            "QQISMwoJaW50ZXJ2YWxzGAIgAygLMiAuZ29vZ2xlLmNsb3VkLnJldGFpbC52",
-            "Mi5JbnRlcnZhbBIZChFyZXN0cmljdGVkX3ZhbHVlcxgDIAMoCRIQCghwcmVm",
-            "aXhlcxgIIAMoCRIQCghjb250YWlucxgJIAMoCRIYChBjYXNlX2luc2Vuc2l0",
-            "aXZlGAogASgIEhAKCG9yZGVyX2J5GAQgASgJEg0KBXF1ZXJ5GAUgASgJEhYK",
-            "DnJldHVybl9taW5fbWF4GAsgASgIGpYBChBEeW5hbWljRmFjZXRTcGVjEkkK",
-            "BG1vZGUYASABKA4yOy5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlNlYXJjaFJl",
-            "cXVlc3QuRHluYW1pY0ZhY2V0U3BlYy5Nb2RlIjcKBE1vZGUSFAoQTU9ERV9V",
-            "TlNQRUNJRklFRBAAEgwKCERJU0FCTEVEEAESCwoHRU5BQkxFRBACGu4BCglC",
-            "b29zdFNwZWMSYQoVY29uZGl0aW9uX2Jvb3N0X3NwZWNzGAEgAygLMkIuZ29v",
-            "Z2xlLmNsb3VkLnJldGFpbC52Mi5TZWFyY2hSZXF1ZXN0LkJvb3N0U3BlYy5D",
-            "b25kaXRpb25Cb29zdFNwZWMSJwoac2tpcF9ib29zdF9zcGVjX3ZhbGlkYXRp",
-            "b24YAiABKAhIAIgBARo2ChJDb25kaXRpb25Cb29zdFNwZWMSEQoJY29uZGl0",
-            "aW9uGAEgASgJEg0KBWJvb3N0GAIgASgCQh0KG19za2lwX2Jvb3N0X3NwZWNf",
-            "dmFsaWRhdGlvbhrLAQoSUXVlcnlFeHBhbnNpb25TcGVjElUKCWNvbmRpdGlv",
-            "bhgBIAEoDjJCLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuU2VhcmNoUmVxdWVz",
-            "dC5RdWVyeUV4cGFuc2lvblNwZWMuQ29uZGl0aW9uEh4KFnBpbl91bmV4cGFu",
-            "ZGVkX3Jlc3VsdHMYAiABKAgiPgoJQ29uZGl0aW9uEhkKFUNPTkRJVElPTl9V",
-            "TlNQRUNJRklFRBAAEgwKCERJU0FCTEVEEAESCAoEQVVUTxADGpkBChNQZXJz",
-            "b25hbGl6YXRpb25TcGVjEkwKBG1vZGUYASABKA4yPi5nb29nbGUuY2xvdWQu",
-            "cmV0YWlsLnYyLlNlYXJjaFJlcXVlc3QuUGVyc29uYWxpemF0aW9uU3BlYy5N",
-            "b2RlIjQKBE1vZGUSFAoQTU9ERV9VTlNQRUNJRklFRBAAEggKBEFVVE8QARIM",
-            "CghESVNBQkxFRBACGqABChNTcGVsbENvcnJlY3Rpb25TcGVjEkwKBG1vZGUY",
-            "ASABKA4yPi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlNlYXJjaFJlcXVlc3Qu",
-            "U3BlbGxDb3JyZWN0aW9uU3BlYy5Nb2RlIjsKBE1vZGUSFAoQTU9ERV9VTlNQ",
-            "RUNJRklFRBAAEhMKD1NVR0dFU1RJT05fT05MWRABEggKBEFVVE8QAhqXBAoY",
-            "Q29udmVyc2F0aW9uYWxTZWFyY2hTcGVjEicKH2ZvbGxvd3VwX2NvbnZlcnNh",
-            "dGlvbl9yZXF1ZXN0ZWQYASABKAgSFwoPY29udmVyc2F0aW9uX2lkGAIgASgJ",
-            "El4KC3VzZXJfYW5zd2VyGAMgASgLMkkuZ29vZ2xlLmNsb3VkLnJldGFpbC52",
-            "Mi5TZWFyY2hSZXF1ZXN0LkNvbnZlcnNhdGlvbmFsU2VhcmNoU3BlYy5Vc2Vy",
-            "QW5zd2VyGtgCCgpVc2VyQW5zd2VyEhUKC3RleHRfYW5zd2VyGAEgASgJSAAS",
-            "cwoPc2VsZWN0ZWRfYW5zd2VyGAIgASgLMlguZ29vZ2xlLmNsb3VkLnJldGFp",
-            "bC52Mi5TZWFyY2hSZXF1ZXN0LkNvbnZlcnNhdGlvbmFsU2VhcmNoU3BlYy5V",
-            "c2VyQW5zd2VyLlNlbGVjdGVkQW5zd2VySAAatQEKDlNlbGVjdGVkQW5zd2Vy",
-            "ElMKGHByb2R1Y3RfYXR0cmlidXRlX3ZhbHVlcxgBIAMoCzItLmdvb2dsZS5j",
-            "bG91ZC5yZXRhaWwudjIuUHJvZHVjdEF0dHJpYnV0ZVZhbHVlQgIYARJOChdw",
-            "cm9kdWN0X2F0dHJpYnV0ZV92YWx1ZRgCIAEoCzItLmdvb2dsZS5jbG91ZC5y",
-            "ZXRhaWwudjIuUHJvZHVjdEF0dHJpYnV0ZVZhbHVlQgYKBHR5cGUabAoSVGls",
-            "ZU5hdmlnYXRpb25TcGVjEiEKGXRpbGVfbmF2aWdhdGlvbl9yZXF1ZXN0ZWQY",
-            "ASABKAgSMwoNYXBwbGllZF90aWxlcxgCIAMoCzIcLmdvb2dsZS5jbG91ZC5y",
-            "ZXRhaWwudjIuVGlsZRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoF",
-            "dmFsdWUYAiABKAk6AjgBIlsKClNlYXJjaE1vZGUSGwoXU0VBUkNIX01PREVf",
-            "VU5TUEVDSUZJRUQQABIXChNQUk9EVUNUX1NFQVJDSF9PTkxZEAESFwoTRkFD",
-            "RVRFRF9TRUFSQ0hfT05MWRACQhgKFl9zcGVsbF9jb3JyZWN0aW9uX3NwZWMi",
-            "pxIKDlNlYXJjaFJlc3BvbnNlEkQKB3Jlc3VsdHMYASADKAsyMy5nb29nbGUu",
-            "Y2xvdWQucmV0YWlsLnYyLlNlYXJjaFJlc3BvbnNlLlNlYXJjaFJlc3VsdBI8",
-            "CgZmYWNldHMYAiADKAsyLC5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlNlYXJj",
-            "aFJlc3BvbnNlLkZhY2V0EhIKCnRvdGFsX3NpemUYAyABKAUSFwoPY29ycmVj",
-            "dGVkX3F1ZXJ5GAQgASgJEhkKEWF0dHJpYnV0aW9uX3Rva2VuGAUgASgJEhcK",
-            "D25leHRfcGFnZV90b2tlbhgGIAEoCRJXChRxdWVyeV9leHBhbnNpb25faW5m",
-            "bxgHIAEoCzI5Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuU2VhcmNoUmVzcG9u",
-            "c2UuUXVlcnlFeHBhbnNpb25JbmZvEhQKDHJlZGlyZWN0X3VyaRgKIAEoCRIY",
-            "ChBhcHBsaWVkX2NvbnRyb2xzGAwgAygJEmkKHWludmFsaWRfY29uZGl0aW9u",
-            "X2Jvb3N0X3NwZWNzGA4gAygLMkIuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5T",
-            "ZWFyY2hSZXF1ZXN0LkJvb3N0U3BlYy5Db25kaXRpb25Cb29zdFNwZWMSPwoP",
-            "ZXhwZXJpbWVudF9pbmZvGBEgAygLMiYuZ29vZ2xlLmNsb3VkLnJldGFpbC52",
-            "Mi5FeHBlcmltZW50SW5mbxJnChxjb252ZXJzYXRpb25hbF9zZWFyY2hfcmVz",
-            "dWx0GBIgASgLMkEuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5TZWFyY2hSZXNw",
-            "b25zZS5Db252ZXJzYXRpb25hbFNlYXJjaFJlc3VsdBJbChZ0aWxlX25hdmln",
-            "YXRpb25fcmVzdWx0GBMgASgLMjsuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5T",
-            "ZWFyY2hSZXNwb25zZS5UaWxlTmF2aWdhdGlvblJlc3VsdBqRBAoMU2VhcmNo",
-            "UmVzdWx0EgoKAmlkGAEgASgJEjAKB3Byb2R1Y3QYAiABKAsyHy5nb29nbGUu",
-            "Y2xvdWQucmV0YWlsLnYyLlByb2R1Y3QSHgoWbWF0Y2hpbmdfdmFyaWFudF9j",
-            "b3VudBgDIAEoBRJvChdtYXRjaGluZ192YXJpYW50X2ZpZWxkcxgEIAMoCzJO",
-            "Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuU2VhcmNoUmVzcG9uc2UuU2VhcmNo",
-            "UmVzdWx0Lk1hdGNoaW5nVmFyaWFudEZpZWxkc0VudHJ5EmsKFXZhcmlhbnRf",
-            "cm9sbHVwX3ZhbHVlcxgFIAMoCzJMLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIu",
-            "U2VhcmNoUmVzcG9uc2UuU2VhcmNoUmVzdWx0LlZhcmlhbnRSb2xsdXBWYWx1",
-            "ZXNFbnRyeRIXCg9wZXJzb25hbF9sYWJlbHMYByADKAkaWAoaTWF0Y2hpbmdW",
-            "YXJpYW50RmllbGRzRW50cnkSCwoDa2V5GAEgASgJEikKBXZhbHVlGAIgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzazoCOAEaUgoYVmFyaWFudFJv",
-            "bGx1cFZhbHVlc0VudHJ5EgsKA2tleRgBIAEoCRIlCgV2YWx1ZRgCIAEoCzIW",
-            "Lmdvb2dsZS5wcm90b2J1Zi5WYWx1ZToCOAEajgIKBUZhY2V0EgsKA2tleRgB",
-            "IAEoCRJHCgZ2YWx1ZXMYAiADKAsyNy5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
-            "LlNlYXJjaFJlc3BvbnNlLkZhY2V0LkZhY2V0VmFsdWUSFQoNZHluYW1pY19m",
-            "YWNldBgDIAEoCBqXAQoKRmFjZXRWYWx1ZRIPCgV2YWx1ZRgBIAEoCUgAEjQK",
-            "CGludGVydmFsGAIgASgLMiAuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5JbnRl",
-            "cnZhbEgAEg0KBWNvdW50GAMgASgDEhEKCW1pbl92YWx1ZRgFIAEoARIRCglt",
-            "YXhfdmFsdWUYBiABKAFCDQoLZmFjZXRfdmFsdWUaSQoSUXVlcnlFeHBhbnNp",
-            "b25JbmZvEhYKDmV4cGFuZGVkX3F1ZXJ5GAEgASgIEhsKE3Bpbm5lZF9yZXN1",
-            "bHRfY291bnQYAiABKAMa/wQKGkNvbnZlcnNhdGlvbmFsU2VhcmNoUmVzdWx0",
-            "EhcKD2NvbnZlcnNhdGlvbl9pZBgBIAEoCRIVCg1yZWZpbmVkX3F1ZXJ5GAIg",
-            "ASgJEnIKEmFkZGl0aW9uYWxfZmlsdGVycxgDIAMoCzJSLmdvb2dsZS5jbG91",
-            "ZC5yZXRhaWwudjIuU2VhcmNoUmVzcG9uc2UuQ29udmVyc2F0aW9uYWxTZWFy",
-            "Y2hSZXN1bHQuQWRkaXRpb25hbEZpbHRlckICGAESGQoRZm9sbG93dXBfcXVl",
-            "c3Rpb24YBCABKAkSbAoRc3VnZ2VzdGVkX2Fuc3dlcnMYBSADKAsyUS5nb29n",
-            "bGUuY2xvdWQucmV0YWlsLnYyLlNlYXJjaFJlc3BvbnNlLkNvbnZlcnNhdGlv",
-            "bmFsU2VhcmNoUmVzdWx0LlN1Z2dlc3RlZEFuc3dlchJtChFhZGRpdGlvbmFs",
-            "X2ZpbHRlchgGIAEoCzJSLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuU2VhcmNo",
-            "UmVzcG9uc2UuQ29udmVyc2F0aW9uYWxTZWFyY2hSZXN1bHQuQWRkaXRpb25h",
-            "bEZpbHRlchphCg9TdWdnZXN0ZWRBbnN3ZXISTgoXcHJvZHVjdF9hdHRyaWJ1",
-            "dGVfdmFsdWUYASABKAsyLS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlByb2R1",
-            "Y3RBdHRyaWJ1dGVWYWx1ZRpiChBBZGRpdGlvbmFsRmlsdGVyEk4KF3Byb2R1",
-            "Y3RfYXR0cmlidXRlX3ZhbHVlGAEgASgLMi0uZ29vZ2xlLmNsb3VkLnJldGFp",
-            "bC52Mi5Qcm9kdWN0QXR0cmlidXRlVmFsdWUaQwoUVGlsZU5hdmlnYXRpb25S",
-            "ZXN1bHQSKwoFdGlsZXMYASADKAsyHC5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
-            "LlRpbGUi+wIKDkV4cGVyaW1lbnRJbmZvEmMKGXNlcnZpbmdfY29uZmlnX2V4",
-            "cGVyaW1lbnQYAiABKAsyPi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkV4cGVy",
-            "aW1lbnRJbmZvLlNlcnZpbmdDb25maWdFeHBlcmltZW50SAASOQoKZXhwZXJp",
-            "bWVudBgBIAEoCUIl+kEiCiByZXRhaWwuZ29vZ2xlYXBpcy5jb20vRXhwZXJp",
-            "bWVudBqxAQoXU2VydmluZ0NvbmZpZ0V4cGVyaW1lbnQSSQoXb3JpZ2luYWxf",
-            "c2VydmluZ19jb25maWcYASABKAlCKPpBJQojcmV0YWlsLmdvb2dsZWFwaXMu",
-            "Y29tL1NlcnZpbmdDb25maWcSSwoZZXhwZXJpbWVudF9zZXJ2aW5nX2NvbmZp",
-            "ZxgCIAEoCUIo+kElCiNyZXRhaWwuZ29vZ2xlYXBpcy5jb20vU2VydmluZ0Nv",
-            "bmZpZ0IVChNleHBlcmltZW50X21ldGFkYXRhMtgCCg1TZWFyY2hTZXJ2aWNl",
-            "EvsBCgZTZWFyY2gSJS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlNlYXJjaFJl",
-            "cXVlc3QaJi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlNlYXJjaFJlc3BvbnNl",
-            "IqEBgtPkkwKaASJFL3YyL3twbGFjZW1lbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi9jYXRhbG9ncy8qL3BsYWNlbWVudHMvKn06c2VhcmNoOgEqWk4iSS92",
-            "Mi97cGxhY2VtZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovY2F0YWxvZ3Mv",
-            "Ki9zZXJ2aW5nQ29uZmlncy8qfTpzZWFyY2g6ASoaScpBFXJldGFpbC5nb29n",
-            "bGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
-            "Y2xvdWQtcGxhdGZvcm1CtwIKGmNvbS5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
-            "QhJTZWFyY2hTZXJ2aWNlUHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9y",
-            "ZXRhaWwvYXBpdjIvcmV0YWlscGI7cmV0YWlscGKiAgZSRVRBSUyqAhZHb29n",
-            "bGUuQ2xvdWQuUmV0YWlsLlYyygIWR29vZ2xlXENsb3VkXFJldGFpbFxWMuoC",
-            "GUdvb2dsZTo6Q2xvdWQ6OlJldGFpbDo6VjLqQXcKIHJldGFpbC5nb29nbGVh",
-            "cGlzLmNvbS9FeHBlcmltZW50ElNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
-            "b25zL3tsb2NhdGlvbn0vY2F0YWxvZ3Mve2NhdGFsb2d9L2V4cGVyaW1lbnRz",
-            "L3tleHBlcmltZW50fWIGcHJvdG8z"));
+            "aWxlTmF2aWdhdGlvblNwZWNCA+BBARIaCg1sYW5ndWFnZV9jb2RlGCsgASgJ",
+            "QgPgQQESGAoLcmVnaW9uX2NvZGUYLCABKAlCA+BBARIVCghwbGFjZV9pZBgu",
+            "IAEoCUID4EEBElcKD3VzZXJfYXR0cmlidXRlcxgvIAMoCzI5Lmdvb2dsZS5j",
+            "bG91ZC5yZXRhaWwudjIuU2VhcmNoUmVxdWVzdC5Vc2VyQXR0cmlidXRlc0Vu",
+            "dHJ5QgPgQQEakQMKCUZhY2V0U3BlYxJQCglmYWNldF9rZXkYASABKAsyOC5n",
+            "b29nbGUuY2xvdWQucmV0YWlsLnYyLlNlYXJjaFJlcXVlc3QuRmFjZXRTcGVj",
+            "LkZhY2V0S2V5QgPgQQISDQoFbGltaXQYAiABKAUSHAoUZXhjbHVkZWRfZmls",
+            "dGVyX2tleXMYAyADKAkSHwoXZW5hYmxlX2R5bmFtaWNfcG9zaXRpb24YBCAB",
+            "KAga4wEKCEZhY2V0S2V5EhAKA2tleRgBIAEoCUID4EECEjMKCWludGVydmFs",
+            "cxgCIAMoCzIgLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuSW50ZXJ2YWwSGQoR",
+            "cmVzdHJpY3RlZF92YWx1ZXMYAyADKAkSEAoIcHJlZml4ZXMYCCADKAkSEAoI",
+            "Y29udGFpbnMYCSADKAkSGAoQY2FzZV9pbnNlbnNpdGl2ZRgKIAEoCBIQCghv",
+            "cmRlcl9ieRgEIAEoCRINCgVxdWVyeRgFIAEoCRIWCg5yZXR1cm5fbWluX21h",
+            "eBgLIAEoCBqWAQoQRHluYW1pY0ZhY2V0U3BlYxJJCgRtb2RlGAEgASgOMjsu",
+            "Z29vZ2xlLmNsb3VkLnJldGFpbC52Mi5TZWFyY2hSZXF1ZXN0LkR5bmFtaWNG",
+            "YWNldFNwZWMuTW9kZSI3CgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJRUQQABIM",
+            "CghESVNBQkxFRBABEgsKB0VOQUJMRUQQAhruAQoJQm9vc3RTcGVjEmEKFWNv",
+            "bmRpdGlvbl9ib29zdF9zcGVjcxgBIAMoCzJCLmdvb2dsZS5jbG91ZC5yZXRh",
+            "aWwudjIuU2VhcmNoUmVxdWVzdC5Cb29zdFNwZWMuQ29uZGl0aW9uQm9vc3RT",
+            "cGVjEicKGnNraXBfYm9vc3Rfc3BlY192YWxpZGF0aW9uGAIgASgISACIAQEa",
+            "NgoSQ29uZGl0aW9uQm9vc3RTcGVjEhEKCWNvbmRpdGlvbhgBIAEoCRINCgVi",
+            "b29zdBgCIAEoAkIdChtfc2tpcF9ib29zdF9zcGVjX3ZhbGlkYXRpb24aywEK",
+            "ElF1ZXJ5RXhwYW5zaW9uU3BlYxJVCgljb25kaXRpb24YASABKA4yQi5nb29n",
+            "bGUuY2xvdWQucmV0YWlsLnYyLlNlYXJjaFJlcXVlc3QuUXVlcnlFeHBhbnNp",
+            "b25TcGVjLkNvbmRpdGlvbhIeChZwaW5fdW5leHBhbmRlZF9yZXN1bHRzGAIg",
+            "ASgIIj4KCUNvbmRpdGlvbhIZChVDT05ESVRJT05fVU5TUEVDSUZJRUQQABIM",
+            "CghESVNBQkxFRBABEggKBEFVVE8QAxqZAQoTUGVyc29uYWxpemF0aW9uU3Bl",
+            "YxJMCgRtb2RlGAEgASgOMj4uZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5TZWFy",
+            "Y2hSZXF1ZXN0LlBlcnNvbmFsaXphdGlvblNwZWMuTW9kZSI0CgRNb2RlEhQK",
+            "EE1PREVfVU5TUEVDSUZJRUQQABIICgRBVVRPEAESDAoIRElTQUJMRUQQAhqg",
+            "AQoTU3BlbGxDb3JyZWN0aW9uU3BlYxJMCgRtb2RlGAEgASgOMj4uZ29vZ2xl",
+            "LmNsb3VkLnJldGFpbC52Mi5TZWFyY2hSZXF1ZXN0LlNwZWxsQ29ycmVjdGlv",
+            "blNwZWMuTW9kZSI7CgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJRUQQABITCg9T",
+            "VUdHRVNUSU9OX09OTFkQARIICgRBVVRPEAIalwQKGENvbnZlcnNhdGlvbmFs",
+            "U2VhcmNoU3BlYxInCh9mb2xsb3d1cF9jb252ZXJzYXRpb25fcmVxdWVzdGVk",
+            "GAEgASgIEhcKD2NvbnZlcnNhdGlvbl9pZBgCIAEoCRJeCgt1c2VyX2Fuc3dl",
+            "chgDIAEoCzJJLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuU2VhcmNoUmVxdWVz",
+            "dC5Db252ZXJzYXRpb25hbFNlYXJjaFNwZWMuVXNlckFuc3dlchrYAgoKVXNl",
+            "ckFuc3dlchIVCgt0ZXh0X2Fuc3dlchgBIAEoCUgAEnMKD3NlbGVjdGVkX2Fu",
+            "c3dlchgCIAEoCzJYLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuU2VhcmNoUmVx",
+            "dWVzdC5Db252ZXJzYXRpb25hbFNlYXJjaFNwZWMuVXNlckFuc3dlci5TZWxl",
+            "Y3RlZEFuc3dlckgAGrUBCg5TZWxlY3RlZEFuc3dlchJTChhwcm9kdWN0X2F0",
+            "dHJpYnV0ZV92YWx1ZXMYASADKAsyLS5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
+            "LlByb2R1Y3RBdHRyaWJ1dGVWYWx1ZUICGAESTgoXcHJvZHVjdF9hdHRyaWJ1",
+            "dGVfdmFsdWUYAiABKAsyLS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlByb2R1",
+            "Y3RBdHRyaWJ1dGVWYWx1ZUIGCgR0eXBlGmwKElRpbGVOYXZpZ2F0aW9uU3Bl",
+            "YxIhChl0aWxlX25hdmlnYXRpb25fcmVxdWVzdGVkGAEgASgIEjMKDWFwcGxp",
+            "ZWRfdGlsZXMYAiADKAsyHC5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlRpbGUa",
+            "LQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
+            "ARpZChNVc2VyQXR0cmlidXRlc0VudHJ5EgsKA2tleRgBIAEoCRIxCgV2YWx1",
+            "ZRgCIAEoCzIiLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuU3RyaW5nTGlzdDoC",
+            "OAEiWwoKU2VhcmNoTW9kZRIbChdTRUFSQ0hfTU9ERV9VTlNQRUNJRklFRBAA",
+            "EhcKE1BST0RVQ1RfU0VBUkNIX09OTFkQARIXChNGQUNFVEVEX1NFQVJDSF9P",
+            "TkxZEAJCGAoWX3NwZWxsX2NvcnJlY3Rpb25fc3BlYyKlFAoOU2VhcmNoUmVz",
+            "cG9uc2USRAoHcmVzdWx0cxgBIAMoCzIzLmdvb2dsZS5jbG91ZC5yZXRhaWwu",
+            "djIuU2VhcmNoUmVzcG9uc2UuU2VhcmNoUmVzdWx0EjwKBmZhY2V0cxgCIAMo",
+            "CzIsLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuU2VhcmNoUmVzcG9uc2UuRmFj",
+            "ZXQSEgoKdG90YWxfc2l6ZRgDIAEoBRIXCg9jb3JyZWN0ZWRfcXVlcnkYBCAB",
+            "KAkSGQoRYXR0cmlidXRpb25fdG9rZW4YBSABKAkSFwoPbmV4dF9wYWdlX3Rv",
+            "a2VuGAYgASgJElcKFHF1ZXJ5X2V4cGFuc2lvbl9pbmZvGAcgASgLMjkuZ29v",
+            "Z2xlLmNsb3VkLnJldGFpbC52Mi5TZWFyY2hSZXNwb25zZS5RdWVyeUV4cGFu",
+            "c2lvbkluZm8SFAoMcmVkaXJlY3RfdXJpGAogASgJEhgKEGFwcGxpZWRfY29u",
+            "dHJvbHMYDCADKAkSSAoUcGluX2NvbnRyb2xfbWV0YWRhdGEYFiABKAsyKi5n",
+            "b29nbGUuY2xvdWQucmV0YWlsLnYyLlBpbkNvbnRyb2xNZXRhZGF0YRJpCh1p",
+            "bnZhbGlkX2NvbmRpdGlvbl9ib29zdF9zcGVjcxgOIAMoCzJCLmdvb2dsZS5j",
+            "bG91ZC5yZXRhaWwudjIuU2VhcmNoUmVxdWVzdC5Cb29zdFNwZWMuQ29uZGl0",
+            "aW9uQm9vc3RTcGVjEj8KD2V4cGVyaW1lbnRfaW5mbxgRIAMoCzImLmdvb2ds",
+            "ZS5jbG91ZC5yZXRhaWwudjIuRXhwZXJpbWVudEluZm8SZwocY29udmVyc2F0",
+            "aW9uYWxfc2VhcmNoX3Jlc3VsdBgSIAEoCzJBLmdvb2dsZS5jbG91ZC5yZXRh",
+            "aWwudjIuU2VhcmNoUmVzcG9uc2UuQ29udmVyc2F0aW9uYWxTZWFyY2hSZXN1",
+            "bHQSWwoWdGlsZV9uYXZpZ2F0aW9uX3Jlc3VsdBgTIAEoCzI7Lmdvb2dsZS5j",
+            "bG91ZC5yZXRhaWwudjIuU2VhcmNoUmVzcG9uc2UuVGlsZU5hdmlnYXRpb25S",
+            "ZXN1bHQaxQUKDFNlYXJjaFJlc3VsdBIKCgJpZBgBIAEoCRIwCgdwcm9kdWN0",
+            "GAIgASgLMh8uZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Qcm9kdWN0Eh4KFm1h",
+            "dGNoaW5nX3ZhcmlhbnRfY291bnQYAyABKAUSbwoXbWF0Y2hpbmdfdmFyaWFu",
+            "dF9maWVsZHMYBCADKAsyTi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlNlYXJj",
+            "aFJlc3BvbnNlLlNlYXJjaFJlc3VsdC5NYXRjaGluZ1ZhcmlhbnRGaWVsZHNF",
+            "bnRyeRJrChV2YXJpYW50X3JvbGx1cF92YWx1ZXMYBSADKAsyTC5nb29nbGUu",
+            "Y2xvdWQucmV0YWlsLnYyLlNlYXJjaFJlc3BvbnNlLlNlYXJjaFJlc3VsdC5W",
+            "YXJpYW50Um9sbHVwVmFsdWVzRW50cnkSFwoPcGVyc29uYWxfbGFiZWxzGAcg",
+            "AygJEloKDG1vZGVsX3Njb3JlcxgIIAMoCzJELmdvb2dsZS5jbG91ZC5yZXRh",
+            "aWwudjIuU2VhcmNoUmVzcG9uc2UuU2VhcmNoUmVzdWx0Lk1vZGVsU2NvcmVz",
+            "RW50cnkaWAoaTWF0Y2hpbmdWYXJpYW50RmllbGRzRW50cnkSCwoDa2V5GAEg",
+            "ASgJEikKBXZhbHVlGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFz",
+            "azoCOAEaUgoYVmFyaWFudFJvbGx1cFZhbHVlc0VudHJ5EgsKA2tleRgBIAEo",
+            "CRIlCgV2YWx1ZRgCIAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZToCOAEa",
+            "VgoQTW9kZWxTY29yZXNFbnRyeRILCgNrZXkYASABKAkSMQoFdmFsdWUYAiAB",
+            "KAsyIi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkRvdWJsZUxpc3Q6AjgBGo4C",
+            "CgVGYWNldBILCgNrZXkYASABKAkSRwoGdmFsdWVzGAIgAygLMjcuZ29vZ2xl",
+            "LmNsb3VkLnJldGFpbC52Mi5TZWFyY2hSZXNwb25zZS5GYWNldC5GYWNldFZh",
+            "bHVlEhUKDWR5bmFtaWNfZmFjZXQYAyABKAgalwEKCkZhY2V0VmFsdWUSDwoF",
+            "dmFsdWUYASABKAlIABI0CghpbnRlcnZhbBgCIAEoCzIgLmdvb2dsZS5jbG91",
+            "ZC5yZXRhaWwudjIuSW50ZXJ2YWxIABINCgVjb3VudBgDIAEoAxIRCgltaW5f",
+            "dmFsdWUYBSABKAESEQoJbWF4X3ZhbHVlGAYgASgBQg0KC2ZhY2V0X3ZhbHVl",
+            "GkkKElF1ZXJ5RXhwYW5zaW9uSW5mbxIWCg5leHBhbmRlZF9xdWVyeRgBIAEo",
+            "CBIbChNwaW5uZWRfcmVzdWx0X2NvdW50GAIgASgDGv8EChpDb252ZXJzYXRp",
+            "b25hbFNlYXJjaFJlc3VsdBIXCg9jb252ZXJzYXRpb25faWQYASABKAkSFQoN",
+            "cmVmaW5lZF9xdWVyeRgCIAEoCRJyChJhZGRpdGlvbmFsX2ZpbHRlcnMYAyAD",
+            "KAsyUi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlNlYXJjaFJlc3BvbnNlLkNv",
+            "bnZlcnNhdGlvbmFsU2VhcmNoUmVzdWx0LkFkZGl0aW9uYWxGaWx0ZXJCAhgB",
+            "EhkKEWZvbGxvd3VwX3F1ZXN0aW9uGAQgASgJEmwKEXN1Z2dlc3RlZF9hbnN3",
+            "ZXJzGAUgAygLMlEuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5TZWFyY2hSZXNw",
+            "b25zZS5Db252ZXJzYXRpb25hbFNlYXJjaFJlc3VsdC5TdWdnZXN0ZWRBbnN3",
+            "ZXISbQoRYWRkaXRpb25hbF9maWx0ZXIYBiABKAsyUi5nb29nbGUuY2xvdWQu",
+            "cmV0YWlsLnYyLlNlYXJjaFJlc3BvbnNlLkNvbnZlcnNhdGlvbmFsU2VhcmNo",
+            "UmVzdWx0LkFkZGl0aW9uYWxGaWx0ZXIaYQoPU3VnZ2VzdGVkQW5zd2VyEk4K",
+            "F3Byb2R1Y3RfYXR0cmlidXRlX3ZhbHVlGAEgASgLMi0uZ29vZ2xlLmNsb3Vk",
+            "LnJldGFpbC52Mi5Qcm9kdWN0QXR0cmlidXRlVmFsdWUaYgoQQWRkaXRpb25h",
+            "bEZpbHRlchJOChdwcm9kdWN0X2F0dHJpYnV0ZV92YWx1ZRgBIAEoCzItLmdv",
+            "b2dsZS5jbG91ZC5yZXRhaWwudjIuUHJvZHVjdEF0dHJpYnV0ZVZhbHVlGkMK",
+            "FFRpbGVOYXZpZ2F0aW9uUmVzdWx0EisKBXRpbGVzGAEgAygLMhwuZ29vZ2xl",
+            "LmNsb3VkLnJldGFpbC52Mi5UaWxlIvsCCg5FeHBlcmltZW50SW5mbxJjChlz",
+            "ZXJ2aW5nX2NvbmZpZ19leHBlcmltZW50GAIgASgLMj4uZ29vZ2xlLmNsb3Vk",
+            "LnJldGFpbC52Mi5FeHBlcmltZW50SW5mby5TZXJ2aW5nQ29uZmlnRXhwZXJp",
+            "bWVudEgAEjkKCmV4cGVyaW1lbnQYASABKAlCJfpBIgogcmV0YWlsLmdvb2ds",
+            "ZWFwaXMuY29tL0V4cGVyaW1lbnQasQEKF1NlcnZpbmdDb25maWdFeHBlcmlt",
+            "ZW50EkkKF29yaWdpbmFsX3NlcnZpbmdfY29uZmlnGAEgASgJQij6QSUKI3Jl",
+            "dGFpbC5nb29nbGVhcGlzLmNvbS9TZXJ2aW5nQ29uZmlnEksKGWV4cGVyaW1l",
+            "bnRfc2VydmluZ19jb25maWcYAiABKAlCKPpBJQojcmV0YWlsLmdvb2dsZWFw",
+            "aXMuY29tL1NlcnZpbmdDb25maWdCFQoTZXhwZXJpbWVudF9tZXRhZGF0YTLY",
+            "AgoNU2VhcmNoU2VydmljZRL7AQoGU2VhcmNoEiUuZ29vZ2xlLmNsb3VkLnJl",
+            "dGFpbC52Mi5TZWFyY2hSZXF1ZXN0GiYuZ29vZ2xlLmNsb3VkLnJldGFpbC52",
+            "Mi5TZWFyY2hSZXNwb25zZSKhAYLT5JMCmgEiRS92Mi97cGxhY2VtZW50PXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyovY2F0YWxvZ3MvKi9wbGFjZW1lbnRzLyp9",
+            "OnNlYXJjaDoBKlpOIkkvdjIve3BsYWNlbWVudD1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL2NhdGFsb2dzLyovc2VydmluZ0NvbmZpZ3MvKn06c2VhcmNoOgEq",
+            "GknKQRVyZXRhaWwuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29n",
+            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQrcCChpjb20uZ29vZ2xl",
+            "LmNsb3VkLnJldGFpbC52MkISU2VhcmNoU2VydmljZVByb3RvUAFaMmNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vcmV0YWlsL2FwaXYyL3JldGFpbHBiO3JldGFpbHBi",
+            "ogIGUkVUQUlMqgIWR29vZ2xlLkNsb3VkLlJldGFpbC5WMsoCFkdvb2dsZVxD",
+            "bG91ZFxSZXRhaWxcVjLqAhlHb29nbGU6OkNsb3VkOjpSZXRhaWw6OlYy6kF3",
+            "CiByZXRhaWwuZ29vZ2xlYXBpcy5jb20vRXhwZXJpbWVudBJTcHJvamVjdHMv",
+            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NhdGFsb2dzL3tjYXRh",
+            "bG9nfS9leHBlcmltZW50cy97ZXhwZXJpbWVudH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.CommonReflection.Descriptor, global::Google.Cloud.Retail.V2.ProductReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ProductAttributeValue), global::Google.Cloud.Retail.V2.ProductAttributeValue.Parser, new[]{ "Name", "Value" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ProductAttributeInterval), global::Google.Cloud.Retail.V2.ProductAttributeInterval.Parser, new[]{ "Name", "Interval" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Tile), global::Google.Cloud.Retail.V2.Tile.Parser, new[]{ "ProductAttributeValue", "ProductAttributeInterval", "RepresentativeProductId" }, new[]{ "ProductAttribute" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchRequest), global::Google.Cloud.Retail.V2.SearchRequest.Parser, new[]{ "Placement", "Branch", "Query", "VisitorId", "UserInfo", "PageSize", "PageToken", "Offset", "Filter", "CanonicalFilter", "OrderBy", "FacetSpecs", "DynamicFacetSpec", "BoostSpec", "QueryExpansionSpec", "VariantRollupKeys", "PageCategories", "SearchMode", "PersonalizationSpec", "Labels", "SpellCorrectionSpec", "Entity", "ConversationalSearchSpec", "TileNavigationSpec" }, new[]{ "SpellCorrectionSpec" }, new[]{ typeof(global::Google.Cloud.Retail.V2.SearchRequest.Types.SearchMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchRequest.Types.FacetSpec), global::Google.Cloud.Retail.V2.SearchRequest.Types.FacetSpec.Parser, new[]{ "FacetKey", "Limit", "ExcludedFilterKeys", "EnableDynamicPosition" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchRequest.Types.FacetSpec.Types.FacetKey), global::Google.Cloud.Retail.V2.SearchRequest.Types.FacetSpec.Types.FacetKey.Parser, new[]{ "Key", "Intervals", "RestrictedValues", "Prefixes", "Contains", "CaseInsensitive", "OrderBy", "Query", "ReturnMinMax" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchRequest), global::Google.Cloud.Retail.V2.SearchRequest.Parser, new[]{ "Placement", "Branch", "Query", "VisitorId", "UserInfo", "PageSize", "PageToken", "Offset", "Filter", "CanonicalFilter", "OrderBy", "FacetSpecs", "DynamicFacetSpec", "BoostSpec", "QueryExpansionSpec", "VariantRollupKeys", "PageCategories", "SearchMode", "PersonalizationSpec", "Labels", "SpellCorrectionSpec", "Entity", "ConversationalSearchSpec", "TileNavigationSpec", "LanguageCode", "RegionCode", "PlaceId", "UserAttributes" }, new[]{ "SpellCorrectionSpec" }, new[]{ typeof(global::Google.Cloud.Retail.V2.SearchRequest.Types.SearchMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchRequest.Types.FacetSpec), global::Google.Cloud.Retail.V2.SearchRequest.Types.FacetSpec.Parser, new[]{ "FacetKey", "Limit", "ExcludedFilterKeys", "EnableDynamicPosition" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchRequest.Types.FacetSpec.Types.FacetKey), global::Google.Cloud.Retail.V2.SearchRequest.Types.FacetSpec.Types.FacetKey.Parser, new[]{ "Key", "Intervals", "RestrictedValues", "Prefixes", "Contains", "CaseInsensitive", "OrderBy", "Query", "ReturnMinMax" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchRequest.Types.DynamicFacetSpec), global::Google.Cloud.Retail.V2.SearchRequest.Types.DynamicFacetSpec.Parser, new[]{ "Mode" }, null, new[]{ typeof(global::Google.Cloud.Retail.V2.SearchRequest.Types.DynamicFacetSpec.Types.Mode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchRequest.Types.BoostSpec), global::Google.Cloud.Retail.V2.SearchRequest.Types.BoostSpec.Parser, new[]{ "ConditionBoostSpecs", "SkipBoostSpecValidation" }, new[]{ "SkipBoostSpecValidation" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchRequest.Types.BoostSpec.Types.ConditionBoostSpec), global::Google.Cloud.Retail.V2.SearchRequest.Types.BoostSpec.Types.ConditionBoostSpec.Parser, new[]{ "Condition", "Boost" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchRequest.Types.QueryExpansionSpec), global::Google.Cloud.Retail.V2.SearchRequest.Types.QueryExpansionSpec.Parser, new[]{ "Condition", "PinUnexpandedResults" }, null, new[]{ typeof(global::Google.Cloud.Retail.V2.SearchRequest.Types.QueryExpansionSpec.Types.Condition) }, null, null),
@@ -204,8 +215,8 @@ namespace Google.Cloud.Retail.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchRequest.Types.SpellCorrectionSpec), global::Google.Cloud.Retail.V2.SearchRequest.Types.SpellCorrectionSpec.Parser, new[]{ "Mode" }, null, new[]{ typeof(global::Google.Cloud.Retail.V2.SearchRequest.Types.SpellCorrectionSpec.Types.Mode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchRequest.Types.ConversationalSearchSpec), global::Google.Cloud.Retail.V2.SearchRequest.Types.ConversationalSearchSpec.Parser, new[]{ "FollowupConversationRequested", "ConversationId", "UserAnswer" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchRequest.Types.ConversationalSearchSpec.Types.UserAnswer), global::Google.Cloud.Retail.V2.SearchRequest.Types.ConversationalSearchSpec.Types.UserAnswer.Parser, new[]{ "TextAnswer", "SelectedAnswer" }, new[]{ "Type" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchRequest.Types.ConversationalSearchSpec.Types.UserAnswer.Types.SelectedAnswer), global::Google.Cloud.Retail.V2.SearchRequest.Types.ConversationalSearchSpec.Types.UserAnswer.Types.SelectedAnswer.Parser, new[]{ "ProductAttributeValues", "ProductAttributeValue" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchRequest.Types.TileNavigationSpec), global::Google.Cloud.Retail.V2.SearchRequest.Types.TileNavigationSpec.Parser, new[]{ "TileNavigationRequested", "AppliedTiles" }, null, null, null, null),
-            null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchResponse), global::Google.Cloud.Retail.V2.SearchResponse.Parser, new[]{ "Results", "Facets", "TotalSize", "CorrectedQuery", "AttributionToken", "NextPageToken", "QueryExpansionInfo", "RedirectUri", "AppliedControls", "InvalidConditionBoostSpecs", "ExperimentInfo", "ConversationalSearchResult", "TileNavigationResult" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchResponse.Types.SearchResult), global::Google.Cloud.Retail.V2.SearchResponse.Types.SearchResult.Parser, new[]{ "Id", "Product", "MatchingVariantCount", "MatchingVariantFields", "VariantRollupValues", "PersonalLabels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchResponse), global::Google.Cloud.Retail.V2.SearchResponse.Parser, new[]{ "Results", "Facets", "TotalSize", "CorrectedQuery", "AttributionToken", "NextPageToken", "QueryExpansionInfo", "RedirectUri", "AppliedControls", "PinControlMetadata", "InvalidConditionBoostSpecs", "ExperimentInfo", "ConversationalSearchResult", "TileNavigationResult" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchResponse.Types.SearchResult), global::Google.Cloud.Retail.V2.SearchResponse.Types.SearchResult.Parser, new[]{ "Id", "Product", "MatchingVariantCount", "MatchingVariantFields", "VariantRollupValues", "PersonalLabels", "ModelScores" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchResponse.Types.Facet), global::Google.Cloud.Retail.V2.SearchResponse.Types.Facet.Parser, new[]{ "Key", "Values", "DynamicFacet" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchResponse.Types.Facet.Types.FacetValue), global::Google.Cloud.Retail.V2.SearchResponse.Types.Facet.Types.FacetValue.Parser, new[]{ "Value", "Interval", "Count", "MinValue", "MaxValue" }, new[]{ "FacetValue" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchResponse.Types.QueryExpansionInfo), global::Google.Cloud.Retail.V2.SearchResponse.Types.QueryExpansionInfo.Parser, new[]{ "ExpandedQuery", "PinnedResultCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchResponse.Types.ConversationalSearchResult), global::Google.Cloud.Retail.V2.SearchResponse.Types.ConversationalSearchResult.Parser, new[]{ "ConversationId", "RefinedQuery", "AdditionalFilters", "FollowupQuestion", "SuggestedAnswers", "AdditionalFilter" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.SearchResponse.Types.ConversationalSearchResult.Types.SuggestedAnswer), global::Google.Cloud.Retail.V2.SearchResponse.Types.ConversationalSearchResult.Types.SuggestedAnswer.Parser, new[]{ "ProductAttributeValue" }, null, null, null, null),
@@ -1101,6 +1112,10 @@ namespace Google.Cloud.Retail.V2 {
       entity_ = other.entity_;
       conversationalSearchSpec_ = other.conversationalSearchSpec_ != null ? other.conversationalSearchSpec_.Clone() : null;
       tileNavigationSpec_ = other.tileNavigationSpec_ != null ? other.tileNavigationSpec_.Clone() : null;
+      languageCode_ = other.languageCode_;
+      regionCode_ = other.regionCode_;
+      placeId_ = other.placeId_;
+      userAttributes_ = other.userAttributes_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1662,6 +1677,96 @@ namespace Google.Cloud.Retail.V2 {
       }
     }
 
+    /// <summary>Field number for the "language_code" field.</summary>
+    public const int LanguageCodeFieldNumber = 43;
+    private string languageCode_ = "";
+    /// <summary>
+    /// Optional. The BCP-47 language code, such as "en-US" or "sr-Latn"
+    /// [list](https://www.unicode.org/cldr/charts/46/summary/root.html). For more
+    /// information, see [Standardized codes](https://google.aip.dev/143). This
+    /// field helps to better interpret the query. If a value isn't specified, the
+    /// query language code is automatically detected, which may not be accurate.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LanguageCode {
+      get { return languageCode_; }
+      set {
+        languageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "region_code" field.</summary>
+    public const int RegionCodeFieldNumber = 44;
+    private string regionCode_ = "";
+    /// <summary>
+    /// Optional. The Unicode country/region code (CLDR) of a location, such as
+    /// "US" and "419"
+    /// [list](https://www.unicode.org/cldr/charts/46/supplemental/territory_information.html).
+    /// For more information, see [Standardized codes](https://google.aip.dev/143).
+    /// If set, then results will be boosted based on the region_code provided.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RegionCode {
+      get { return regionCode_; }
+      set {
+        regionCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "place_id" field.</summary>
+    public const int PlaceIdFieldNumber = 46;
+    private string placeId_ = "";
+    /// <summary>
+    /// Optional. An id corresponding to a place, such as a store id or region id.
+    /// When specified, we use the price from the local inventory with the matching
+    /// product's
+    /// [LocalInventory.place_id][google.cloud.retail.v2.LocalInventory.place_id]
+    /// for revenue optimization.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PlaceId {
+      get { return placeId_; }
+      set {
+        placeId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "user_attributes" field.</summary>
+    public const int UserAttributesFieldNumber = 47;
+    private static readonly pbc::MapField<string, global::Google.Cloud.Retail.V2.StringList>.Codec _map_userAttributes_codec
+        = new pbc::MapField<string, global::Google.Cloud.Retail.V2.StringList>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Retail.V2.StringList.Parser), 378);
+    private readonly pbc::MapField<string, global::Google.Cloud.Retail.V2.StringList> userAttributes_ = new pbc::MapField<string, global::Google.Cloud.Retail.V2.StringList>();
+    /// <summary>
+    /// Optional. The user attributes that could be used for personalization of
+    /// search results.
+    /// * Populate at most 100 key-value pairs per query.
+    /// * Only supports string keys and repeated string values.
+    /// * Duplcate keys are not allowed within a single query.
+    ///
+    /// Example:
+    ///    user_attributes: [
+    ///     { key: "pets"
+    ///       value {
+    ///         values: "dog"
+    ///         values: "cat"
+    ///       }
+    ///     },
+    ///     { key: "state"
+    ///       value {
+    ///         values: "CA"
+    ///       }
+    ///     }
+    ///    ]
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, global::Google.Cloud.Retail.V2.StringList> UserAttributes {
+      get { return userAttributes_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1701,6 +1806,10 @@ namespace Google.Cloud.Retail.V2 {
       if (Entity != other.Entity) return false;
       if (!object.Equals(ConversationalSearchSpec, other.ConversationalSearchSpec)) return false;
       if (!object.Equals(TileNavigationSpec, other.TileNavigationSpec)) return false;
+      if (LanguageCode != other.LanguageCode) return false;
+      if (RegionCode != other.RegionCode) return false;
+      if (PlaceId != other.PlaceId) return false;
+      if (!UserAttributes.Equals(other.UserAttributes)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1732,6 +1841,10 @@ namespace Google.Cloud.Retail.V2 {
       if (Entity.Length != 0) hash ^= Entity.GetHashCode();
       if (conversationalSearchSpec_ != null) hash ^= ConversationalSearchSpec.GetHashCode();
       if (tileNavigationSpec_ != null) hash ^= TileNavigationSpec.GetHashCode();
+      if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
+      if (RegionCode.Length != 0) hash ^= RegionCode.GetHashCode();
+      if (PlaceId.Length != 0) hash ^= PlaceId.GetHashCode();
+      hash ^= UserAttributes.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1834,6 +1947,19 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(202, 2);
         output.WriteMessage(TileNavigationSpec);
       }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(218, 2);
+        output.WriteString(LanguageCode);
+      }
+      if (RegionCode.Length != 0) {
+        output.WriteRawTag(226, 2);
+        output.WriteString(RegionCode);
+      }
+      if (PlaceId.Length != 0) {
+        output.WriteRawTag(242, 2);
+        output.WriteString(PlaceId);
+      }
+      userAttributes_.WriteTo(output, _map_userAttributes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1928,6 +2054,19 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(202, 2);
         output.WriteMessage(TileNavigationSpec);
       }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(218, 2);
+        output.WriteString(LanguageCode);
+      }
+      if (RegionCode.Length != 0) {
+        output.WriteRawTag(226, 2);
+        output.WriteString(RegionCode);
+      }
+      if (PlaceId.Length != 0) {
+        output.WriteRawTag(242, 2);
+        output.WriteString(PlaceId);
+      }
+      userAttributes_.WriteTo(ref output, _map_userAttributes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2002,6 +2141,16 @@ namespace Google.Cloud.Retail.V2 {
       if (tileNavigationSpec_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(TileNavigationSpec);
       }
+      if (LanguageCode.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
+      }
+      if (RegionCode.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(RegionCode);
+      }
+      if (PlaceId.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(PlaceId);
+      }
+      size += userAttributes_.CalculateSize(_map_userAttributes_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2102,6 +2251,16 @@ namespace Google.Cloud.Retail.V2 {
         }
         TileNavigationSpec.MergeFrom(other.TileNavigationSpec);
       }
+      if (other.LanguageCode.Length != 0) {
+        LanguageCode = other.LanguageCode;
+      }
+      if (other.RegionCode.Length != 0) {
+        RegionCode = other.RegionCode;
+      }
+      if (other.PlaceId.Length != 0) {
+        PlaceId = other.PlaceId;
+      }
+      userAttributes_.MergeFrom(other.userAttributes_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2237,6 +2396,22 @@ namespace Google.Cloud.Retail.V2 {
             input.ReadMessage(TileNavigationSpec);
             break;
           }
+          case 346: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 354: {
+            RegionCode = input.ReadString();
+            break;
+          }
+          case 370: {
+            PlaceId = input.ReadString();
+            break;
+          }
+          case 378: {
+            userAttributes_.AddEntriesFrom(input, _map_userAttributes_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2370,6 +2545,22 @@ namespace Google.Cloud.Retail.V2 {
               TileNavigationSpec = new global::Google.Cloud.Retail.V2.SearchRequest.Types.TileNavigationSpec();
             }
             input.ReadMessage(TileNavigationSpec);
+            break;
+          }
+          case 346: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 354: {
+            RegionCode = input.ReadString();
+            break;
+          }
+          case 370: {
+            PlaceId = input.ReadString();
+            break;
+          }
+          case 378: {
+            userAttributes_.AddEntriesFrom(ref input, _map_userAttributes_codec);
             break;
           }
         }
@@ -3687,7 +3878,7 @@ namespace Google.Cloud.Retail.V2 {
         private readonly pbc::RepeatedField<global::Google.Cloud.Retail.V2.SearchRequest.Types.BoostSpec.Types.ConditionBoostSpec> conditionBoostSpecs_ = new pbc::RepeatedField<global::Google.Cloud.Retail.V2.SearchRequest.Types.BoostSpec.Types.ConditionBoostSpec>();
         /// <summary>
         /// Condition boost specifications. If a product matches multiple conditions
-        /// in the specifictions, boost scores from these specifications are all
+        /// in the specifications, boost scores from these specifications are all
         /// applied and combined in a non-linear way. Maximum number of
         /// specifications is 20.
         /// </summary>
@@ -4220,7 +4411,8 @@ namespace Google.Cloud.Retail.V2 {
         public const int PinUnexpandedResultsFieldNumber = 2;
         private bool pinUnexpandedResults_;
         /// <summary>
-        /// Whether to pin unexpanded results. If this field is set to true,
+        /// Whether to pin unexpanded results. The default value is false. If this
+        /// field is set to true,
         /// unexpanded products are always at the top of the search results, followed
         /// by the expanded results.
         /// </summary>
@@ -5794,9 +5986,14 @@ namespace Google.Cloud.Retail.V2 {
             = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Retail.V2.Tile.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.Retail.V2.Tile> appliedTiles_ = new pbc::RepeatedField<global::Google.Cloud.Retail.V2.Tile>();
         /// <summary>
-        /// This field specifies the tiles which are already clicked in client side.
-        /// NOTE: This field is not being used for filtering search products. Client
-        /// side should also put all the applied tiles in
+        /// This optional field specifies the tiles which are already clicked in
+        /// client side. While the feature works without this field set, particularly
+        /// for an initial query, it is highly recommended to set this field because
+        /// it can improve the quality of the search response and removes possible
+        /// duplicate tiles.
+        ///
+        /// NOTE: This field is not being used for filtering search
+        /// products. Client side should also put all the applied tiles in
         /// [SearchRequest.filter][google.cloud.retail.v2.SearchRequest.filter].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6005,6 +6202,7 @@ namespace Google.Cloud.Retail.V2 {
       queryExpansionInfo_ = other.queryExpansionInfo_ != null ? other.queryExpansionInfo_.Clone() : null;
       redirectUri_ = other.redirectUri_;
       appliedControls_ = other.appliedControls_.Clone();
+      pinControlMetadata_ = other.pinControlMetadata_ != null ? other.pinControlMetadata_.Clone() : null;
       invalidConditionBoostSpecs_ = other.invalidConditionBoostSpecs_.Clone();
       experimentInfo_ = other.experimentInfo_.Clone();
       conversationalSearchResult_ = other.conversationalSearchResult_ != null ? other.conversationalSearchResult_.Clone() : null;
@@ -6166,6 +6364,26 @@ namespace Google.Cloud.Retail.V2 {
       get { return appliedControls_; }
     }
 
+    /// <summary>Field number for the "pin_control_metadata" field.</summary>
+    public const int PinControlMetadataFieldNumber = 22;
+    private global::Google.Cloud.Retail.V2.PinControlMetadata pinControlMetadata_;
+    /// <summary>
+    /// Metadata for pin controls which were applicable to the request.
+    /// This contains two map fields, one for all matched pins and one for pins
+    /// which were matched but not applied.
+    ///
+    /// The two maps are keyed by pin position, and the values are the product ids
+    /// which were matched to that pin.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Retail.V2.PinControlMetadata PinControlMetadata {
+      get { return pinControlMetadata_; }
+      set {
+        pinControlMetadata_ = value;
+      }
+    }
+
     /// <summary>Field number for the "invalid_condition_boost_specs" field.</summary>
     public const int InvalidConditionBoostSpecsFieldNumber = 14;
     private static readonly pb::FieldCodec<global::Google.Cloud.Retail.V2.SearchRequest.Types.BoostSpec.Types.ConditionBoostSpec> _repeated_invalidConditionBoostSpecs_codec
@@ -6188,7 +6406,7 @@ namespace Google.Cloud.Retail.V2 {
         = pb::FieldCodec.ForMessage(138, global::Google.Cloud.Retail.V2.ExperimentInfo.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Retail.V2.ExperimentInfo> experimentInfo_ = new pbc::RepeatedField<global::Google.Cloud.Retail.V2.ExperimentInfo>();
     /// <summary>
-    /// Metadata related to A/B testing [Experiment][] associated with this
+    /// Metadata related to A/B testing experiment associated with this
     /// response. Only exists when an experiment is triggered.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6253,6 +6471,7 @@ namespace Google.Cloud.Retail.V2 {
       if (!object.Equals(QueryExpansionInfo, other.QueryExpansionInfo)) return false;
       if (RedirectUri != other.RedirectUri) return false;
       if(!appliedControls_.Equals(other.appliedControls_)) return false;
+      if (!object.Equals(PinControlMetadata, other.PinControlMetadata)) return false;
       if(!invalidConditionBoostSpecs_.Equals(other.invalidConditionBoostSpecs_)) return false;
       if(!experimentInfo_.Equals(other.experimentInfo_)) return false;
       if (!object.Equals(ConversationalSearchResult, other.ConversationalSearchResult)) return false;
@@ -6273,6 +6492,7 @@ namespace Google.Cloud.Retail.V2 {
       if (queryExpansionInfo_ != null) hash ^= QueryExpansionInfo.GetHashCode();
       if (RedirectUri.Length != 0) hash ^= RedirectUri.GetHashCode();
       hash ^= appliedControls_.GetHashCode();
+      if (pinControlMetadata_ != null) hash ^= PinControlMetadata.GetHashCode();
       hash ^= invalidConditionBoostSpecs_.GetHashCode();
       hash ^= experimentInfo_.GetHashCode();
       if (conversationalSearchResult_ != null) hash ^= ConversationalSearchResult.GetHashCode();
@@ -6332,6 +6552,10 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(154, 1);
         output.WriteMessage(TileNavigationResult);
       }
+      if (pinControlMetadata_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(PinControlMetadata);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6379,6 +6603,10 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(154, 1);
         output.WriteMessage(TileNavigationResult);
       }
+      if (pinControlMetadata_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(PinControlMetadata);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6410,6 +6638,9 @@ namespace Google.Cloud.Retail.V2 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RedirectUri);
       }
       size += appliedControls_.CalculateSize(_repeated_appliedControls_codec);
+      if (pinControlMetadata_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(PinControlMetadata);
+      }
       size += invalidConditionBoostSpecs_.CalculateSize(_repeated_invalidConditionBoostSpecs_codec);
       size += experimentInfo_.CalculateSize(_repeated_experimentInfo_codec);
       if (conversationalSearchResult_ != null) {
@@ -6454,6 +6685,12 @@ namespace Google.Cloud.Retail.V2 {
         RedirectUri = other.RedirectUri;
       }
       appliedControls_.Add(other.appliedControls_);
+      if (other.pinControlMetadata_ != null) {
+        if (pinControlMetadata_ == null) {
+          PinControlMetadata = new global::Google.Cloud.Retail.V2.PinControlMetadata();
+        }
+        PinControlMetadata.MergeFrom(other.PinControlMetadata);
+      }
       invalidConditionBoostSpecs_.Add(other.invalidConditionBoostSpecs_);
       experimentInfo_.Add(other.experimentInfo_);
       if (other.conversationalSearchResult_ != null) {
@@ -6544,6 +6781,13 @@ namespace Google.Cloud.Retail.V2 {
             input.ReadMessage(TileNavigationResult);
             break;
           }
+          case 178: {
+            if (pinControlMetadata_ == null) {
+              PinControlMetadata = new global::Google.Cloud.Retail.V2.PinControlMetadata();
+            }
+            input.ReadMessage(PinControlMetadata);
+            break;
+          }
         }
       }
     #endif
@@ -6620,6 +6864,13 @@ namespace Google.Cloud.Retail.V2 {
             input.ReadMessage(TileNavigationResult);
             break;
           }
+          case 178: {
+            if (pinControlMetadata_ == null) {
+              PinControlMetadata = new global::Google.Cloud.Retail.V2.PinControlMetadata();
+            }
+            input.ReadMessage(PinControlMetadata);
+            break;
+          }
         }
       }
     }
@@ -6674,6 +6925,7 @@ namespace Google.Cloud.Retail.V2 {
           matchingVariantFields_ = other.matchingVariantFields_.Clone();
           variantRollupValues_ = other.variantRollupValues_.Clone();
           personalLabels_ = other.personalLabels_.Clone();
+          modelScores_ = other.modelScores_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -6838,6 +7090,20 @@ namespace Google.Cloud.Retail.V2 {
           get { return personalLabels_; }
         }
 
+        /// <summary>Field number for the "model_scores" field.</summary>
+        public const int ModelScoresFieldNumber = 8;
+        private static readonly pbc::MapField<string, global::Google.Cloud.Retail.V2.DoubleList>.Codec _map_modelScores_codec
+            = new pbc::MapField<string, global::Google.Cloud.Retail.V2.DoubleList>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Retail.V2.DoubleList.Parser), 66);
+        private readonly pbc::MapField<string, global::Google.Cloud.Retail.V2.DoubleList> modelScores_ = new pbc::MapField<string, global::Google.Cloud.Retail.V2.DoubleList>();
+        /// <summary>
+        /// Google provided available scores.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::MapField<string, global::Google.Cloud.Retail.V2.DoubleList> ModelScores {
+          get { return modelScores_; }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -6859,6 +7125,7 @@ namespace Google.Cloud.Retail.V2 {
           if (!MatchingVariantFields.Equals(other.MatchingVariantFields)) return false;
           if (!VariantRollupValues.Equals(other.VariantRollupValues)) return false;
           if(!personalLabels_.Equals(other.personalLabels_)) return false;
+          if (!ModelScores.Equals(other.ModelScores)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -6872,6 +7139,7 @@ namespace Google.Cloud.Retail.V2 {
           hash ^= MatchingVariantFields.GetHashCode();
           hash ^= VariantRollupValues.GetHashCode();
           hash ^= personalLabels_.GetHashCode();
+          hash ^= ModelScores.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -6905,6 +7173,7 @@ namespace Google.Cloud.Retail.V2 {
           matchingVariantFields_.WriteTo(output, _map_matchingVariantFields_codec);
           variantRollupValues_.WriteTo(output, _map_variantRollupValues_codec);
           personalLabels_.WriteTo(output, _repeated_personalLabels_codec);
+          modelScores_.WriteTo(output, _map_modelScores_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -6930,6 +7199,7 @@ namespace Google.Cloud.Retail.V2 {
           matchingVariantFields_.WriteTo(ref output, _map_matchingVariantFields_codec);
           variantRollupValues_.WriteTo(ref output, _map_variantRollupValues_codec);
           personalLabels_.WriteTo(ref output, _repeated_personalLabels_codec);
+          modelScores_.WriteTo(ref output, _map_modelScores_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -6952,6 +7222,7 @@ namespace Google.Cloud.Retail.V2 {
           size += matchingVariantFields_.CalculateSize(_map_matchingVariantFields_codec);
           size += variantRollupValues_.CalculateSize(_map_variantRollupValues_codec);
           size += personalLabels_.CalculateSize(_repeated_personalLabels_codec);
+          size += modelScores_.CalculateSize(_map_modelScores_codec);
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -6979,6 +7250,7 @@ namespace Google.Cloud.Retail.V2 {
           matchingVariantFields_.MergeFrom(other.matchingVariantFields_);
           variantRollupValues_.MergeFrom(other.variantRollupValues_);
           personalLabels_.Add(other.personalLabels_);
+          modelScores_.MergeFrom(other.modelScores_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -7021,6 +7293,10 @@ namespace Google.Cloud.Retail.V2 {
                 personalLabels_.AddEntriesFrom(input, _repeated_personalLabels_codec);
                 break;
               }
+              case 66: {
+                modelScores_.AddEntriesFrom(input, _map_modelScores_codec);
+                break;
+              }
             }
           }
         #endif
@@ -7061,6 +7337,10 @@ namespace Google.Cloud.Retail.V2 {
               }
               case 58: {
                 personalLabels_.AddEntriesFrom(ref input, _repeated_personalLabels_codec);
+                break;
+              }
+              case 66: {
+                modelScores_.AddEntriesFrom(ref input, _map_modelScores_codec);
                 break;
               }
             }
@@ -9023,7 +9303,7 @@ namespace Google.Cloud.Retail.V2 {
   }
 
   /// <summary>
-  /// Metadata for active A/B testing [Experiment][].
+  /// Metadata for active A/B testing experiment.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExperimentInfo : pb::IMessage<ExperimentInfo>
@@ -9379,7 +9659,7 @@ namespace Google.Cloud.Retail.V2 {
         private string experimentServingConfig_ = "";
         /// <summary>
         /// The fully qualified resource name of the serving config
-        /// [Experiment.VariantArm.serving_config_id][] responsible for generating
+        /// `Experiment.VariantArm.serving_config_id` responsible for generating
         /// the search response. For example:
         /// `projects/*/locations/*/catalogs/*/servingConfigs/*`.
         /// </summary>

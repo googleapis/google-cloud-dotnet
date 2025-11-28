@@ -25,17 +25,18 @@ namespace Google.Cloud.Bigtable.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cihnb29nbGUvYmlndGFibGUvdjIvcmVzcG9uc2VfcGFyYW1zLnByb3RvEhJn",
-            "b29nbGUuYmlndGFibGUudjIiWgoOUmVzcG9uc2VQYXJhbXMSFAoHem9uZV9p",
-            "ZBgBIAEoCUgAiAEBEhcKCmNsdXN0ZXJfaWQYAiABKAlIAYgBAUIKCghfem9u",
-            "ZV9pZEINCgtfY2x1c3Rlcl9pZEK9AQoWY29tLmdvb2dsZS5iaWd0YWJsZS52",
-            "MkITUmVzcG9uc2VQYXJhbXNQcm90b1ABWjhjbG91ZC5nb29nbGUuY29tL2dv",
-            "L2JpZ3RhYmxlL2FwaXYyL2JpZ3RhYmxlcGI7YmlndGFibGVwYqoCGEdvb2ds",
-            "ZS5DbG91ZC5CaWd0YWJsZS5WMsoCGEdvb2dsZVxDbG91ZFxCaWd0YWJsZVxW",
-            "MuoCG0dvb2dsZTo6Q2xvdWQ6OkJpZ3RhYmxlOjpWMmIGcHJvdG8z"));
+            "b29nbGUuYmlndGFibGUudjIiegoOUmVzcG9uc2VQYXJhbXMSFAoHem9uZV9p",
+            "ZBgBIAEoCUgAiAEBEhcKCmNsdXN0ZXJfaWQYAiABKAlIAYgBARITCgZhZmVf",
+            "aWQYAyABKANIAogBAUIKCghfem9uZV9pZEINCgtfY2x1c3Rlcl9pZEIJCgdf",
+            "YWZlX2lkQr0BChZjb20uZ29vZ2xlLmJpZ3RhYmxlLnYyQhNSZXNwb25zZVBh",
+            "cmFtc1Byb3RvUAFaOGNsb3VkLmdvb2dsZS5jb20vZ28vYmlndGFibGUvYXBp",
+            "djIvYmlndGFibGVwYjtiaWd0YWJsZXBiqgIYR29vZ2xlLkNsb3VkLkJpZ3Rh",
+            "YmxlLlYyygIYR29vZ2xlXENsb3VkXEJpZ3RhYmxlXFYy6gIbR29vZ2xlOjpD",
+            "bG91ZDo6QmlndGFibGU6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ResponseParams), global::Google.Cloud.Bigtable.V2.ResponseParams.Parser, new[]{ "ZoneId", "ClusterId" }, new[]{ "ZoneId", "ClusterId" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ResponseParams), global::Google.Cloud.Bigtable.V2.ResponseParams.Parser, new[]{ "ZoneId", "ClusterId", "AfeId" }, new[]{ "ZoneId", "ClusterId", "AfeId" }, null, null, null)
           }));
     }
     #endregion
@@ -44,9 +45,6 @@ namespace Google.Cloud.Bigtable.V2 {
   #region Messages
   /// <summary>
   /// Response metadata proto
-  /// This is an experimental feature that will be used to get zone_id and
-  /// cluster_id from response trailers to tag the metrics. This should not be
-  /// used by customers directly
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResponseParams : pb::IMessage<ResponseParams>
@@ -56,6 +54,7 @@ namespace Google.Cloud.Bigtable.V2 {
   {
     private static readonly pb::MessageParser<ResponseParams> _parser = new pb::MessageParser<ResponseParams>(() => new ResponseParams());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ResponseParams> Parser { get { return _parser; } }
@@ -83,8 +82,10 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ResponseParams(ResponseParams other) : this() {
+      _hasBits0 = other._hasBits0;
       zoneId_ = other.zoneId_;
       clusterId_ = other.clusterId_;
+      afeId_ = other.afeId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -153,6 +154,36 @@ namespace Google.Cloud.Bigtable.V2 {
       clusterId_ = null;
     }
 
+    /// <summary>Field number for the "afe_id" field.</summary>
+    public const int AfeIdFieldNumber = 3;
+    private readonly static long AfeIdDefaultValue = 0L;
+
+    private long afeId_;
+    /// <summary>
+    /// The AFE ID for the AFE that is served this request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long AfeId {
+      get { if ((_hasBits0 & 1) != 0) { return afeId_; } else { return AfeIdDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        afeId_ = value;
+      }
+    }
+    /// <summary>Gets whether the "afe_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAfeId {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "afe_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAfeId() {
+      _hasBits0 &= ~1;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -170,6 +201,7 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (ZoneId != other.ZoneId) return false;
       if (ClusterId != other.ClusterId) return false;
+      if (AfeId != other.AfeId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -179,6 +211,7 @@ namespace Google.Cloud.Bigtable.V2 {
       int hash = 1;
       if (HasZoneId) hash ^= ZoneId.GetHashCode();
       if (HasClusterId) hash ^= ClusterId.GetHashCode();
+      if (HasAfeId) hash ^= AfeId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -205,6 +238,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(18);
         output.WriteString(ClusterId);
       }
+      if (HasAfeId) {
+        output.WriteRawTag(24);
+        output.WriteInt64(AfeId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -223,6 +260,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(18);
         output.WriteString(ClusterId);
       }
+      if (HasAfeId) {
+        output.WriteRawTag(24);
+        output.WriteInt64(AfeId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -238,6 +279,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (HasClusterId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ClusterId);
+      }
+      if (HasAfeId) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(AfeId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -256,6 +300,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (other.HasClusterId) {
         ClusterId = other.ClusterId;
+      }
+      if (other.HasAfeId) {
+        AfeId = other.AfeId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -280,6 +327,10 @@ namespace Google.Cloud.Bigtable.V2 {
             ClusterId = input.ReadString();
             break;
           }
+          case 24: {
+            AfeId = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -301,6 +352,10 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           case 18: {
             ClusterId = input.ReadString();
+            break;
+          }
+          case 24: {
+            AfeId = input.ReadInt64();
             break;
           }
         }

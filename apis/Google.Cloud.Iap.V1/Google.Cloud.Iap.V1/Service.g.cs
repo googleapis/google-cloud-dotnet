@@ -3251,7 +3251,8 @@ namespace Google.Cloud.Iap.V1 {
   }
 
   /// <summary>
-  /// Allows customers to configure tenant_id for GCIP instance per-app.
+  /// Allows customers to configure tenant IDs for a Cloud Identity Platform (GCIP)
+  /// instance for each application.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcipSettings : pb::IMessage<GcipSettings>
@@ -3305,12 +3306,12 @@ namespace Google.Cloud.Iap.V1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> tenantIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. GCIP tenant ids that are linked to the IAP resource.
-    /// tenant_ids could be a string beginning with a number character to indicate
-    /// authenticating with GCIP tenant flow, or in the format of _&lt;ProjectNumber>
-    /// to indicate authenticating with GCIP agent flow.
-    /// If agent flow is used, tenant_ids should only contain one single element,
-    /// while for tenant flow, tenant_ids can contain multiple elements.
+    /// Optional. GCIP tenant IDs that are linked to the IAP resource. `tenant_ids`
+    /// could be a string beginning with a number character to indicate
+    /// authenticating with GCIP tenant flow, or in the format of
+    /// `_&lt;ProjectNumber>` to indicate authenticating with GCIP agent flow. If
+    /// agent flow is used, `tenant_ids` should only contain one single element,
+    /// while for tenant flow, `tenant_ids` can contain multiple elements.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3491,8 +3492,8 @@ namespace Google.Cloud.Iap.V1 {
   }
 
   /// <summary>
-  /// Allows customers to configure HTTP request paths that'll allow HTTP OPTIONS
-  /// call to bypass authentication and authorization.
+  /// Allows customers to configure HTTP request paths that'll allow HTTP
+  /// `OPTIONS` call to bypass authentication and authorization.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CorsSettings : pb::IMessage<CorsSettings>
@@ -3544,8 +3545,9 @@ namespace Google.Cloud.Iap.V1 {
     private static readonly pb::FieldCodec<bool?> _single_allowHttpOptions_codec = pb::FieldCodec.ForStructWrapper<bool>(10);
     private bool? allowHttpOptions_;
     /// <summary>
-    /// Configuration to allow HTTP OPTIONS calls to skip authorization. If
-    /// undefined, IAP will not apply any special logic to OPTIONS requests.
+    /// Configuration to allow HTTP `OPTIONS` calls to skip
+    /// authentication and authorization. If undefined, IAP will not apply any
+    /// special logic to `OPTIONS` requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

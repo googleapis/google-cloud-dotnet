@@ -30,7 +30,7 @@ namespace Google.Cloud.NetworkServices.V1 {
             "ZXNvdXJjZS5wcm90bxosZ29vZ2xlL2Nsb3VkL25ldHdvcmtzZXJ2aWNlcy92",
             "MS9jb21tb24ucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnBy",
             "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIowICg5FbmRw",
-            "b2ludFBvbGljeRIRCgRuYW1lGAEgASgJQgPgQQISNAoLY3JlYXRlX3RpbWUY",
+            "b2ludFBvbGljeRIRCgRuYW1lGAEgASgJQgPgQQgSNAoLY3JlYXRlX3RpbWUY",
             "AiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBk",
             "YXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
             "QQMSUAoGbGFiZWxzGAQgAygLMjsuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2",
@@ -52,47 +52,48 @@ namespace Google.Cloud.NetworkServices.V1 {
             "U1BFQ0lGSUVEEAASEQoNU0lERUNBUl9QUk9YWRABEg8KC0dSUENfU0VSVkVS",
             "EAI6fupBewotbmV0d29ya3NlcnZpY2VzLmdvb2dsZWFwaXMuY29tL0VuZHBv",
             "aW50UG9saWN5Ekpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
-            "dGlvbn0vZW5kcG9pbnRQb2xpY2llcy97ZW5kcG9pbnRfcG9saWN5fSKLAQob",
+            "dGlvbn0vZW5kcG9pbnRQb2xpY2llcy97ZW5kcG9pbnRfcG9saWN5fSKwAQob",
             "TGlzdEVuZHBvaW50UG9saWNpZXNSZXF1ZXN0EkUKBnBhcmVudBgBIAEoCUI1",
             "4EEC+kEvEi1uZXR3b3Jrc2VydmljZXMuZ29vZ2xlYXBpcy5jb20vRW5kcG9p",
             "bnRQb2xpY3kSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyAB",
-            "KAkigwEKHExpc3RFbmRwb2ludFBvbGljaWVzUmVzcG9uc2USSgoRZW5kcG9p",
-            "bnRfcG9saWNpZXMYASADKAsyLy5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZp",
-            "Y2VzLnYxLkVuZHBvaW50UG9saWN5EhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
-            "CSJfChhHZXRFbmRwb2ludFBvbGljeVJlcXVlc3QSQwoEbmFtZRgBIAEoCUI1",
-            "4EEC+kEvCi1uZXR3b3Jrc2VydmljZXMuZ29vZ2xlYXBpcy5jb20vRW5kcG9p",
-            "bnRQb2xpY3ki1AEKG0NyZWF0ZUVuZHBvaW50UG9saWN5UmVxdWVzdBJFCgZw",
-            "YXJlbnQYASABKAlCNeBBAvpBLxItbmV0d29ya3NlcnZpY2VzLmdvb2dsZWFw",
-            "aXMuY29tL0VuZHBvaW50UG9saWN5Eh8KEmVuZHBvaW50X3BvbGljeV9pZBgC",
-            "IAEoCUID4EECEk0KD2VuZHBvaW50X3BvbGljeRgDIAEoCzIvLmdvb2dsZS5j",
-            "bG91ZC5uZXR3b3Jrc2VydmljZXMudjEuRW5kcG9pbnRQb2xpY3lCA+BBAiKi",
-            "AQobVXBkYXRlRW5kcG9pbnRQb2xpY3lSZXF1ZXN0EjQKC3VwZGF0ZV9tYXNr",
-            "GAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EEBEk0KD2Vu",
-            "ZHBvaW50X3BvbGljeRgCIAEoCzIvLmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2Vy",
-            "dmljZXMudjEuRW5kcG9pbnRQb2xpY3lCA+BBAiJiChtEZWxldGVFbmRwb2lu",
-            "dFBvbGljeVJlcXVlc3QSQwoEbmFtZRgBIAEoCUI14EEC+kEvCi1uZXR3b3Jr",
-            "c2VydmljZXMuZ29vZ2xlYXBpcy5jb20vRW5kcG9pbnRQb2xpY3lChgUKI2Nv",
-            "bS5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYxQhNFbmRwb2ludFBv",
-            "bGljeVByb3RvUAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vbmV0d29ya3NlcnZp",
-            "Y2VzL2FwaXYxL25ldHdvcmtzZXJ2aWNlc3BiO25ldHdvcmtzZXJ2aWNlc3Bi",
-            "qgIfR29vZ2xlLkNsb3VkLk5ldHdvcmtTZXJ2aWNlcy5WMcoCH0dvb2dsZVxD",
-            "bG91ZFxOZXR3b3JrU2VydmljZXNcVjHqAiJHb29nbGU6OkNsb3VkOjpOZXR3",
-            "b3JrU2VydmljZXM6OlYx6kGKAQoybmV0d29ya3NlY3VyaXR5Lmdvb2dsZWFw",
-            "aXMuY29tL0F1dGhvcml6YXRpb25Qb2xpY3kSVHByb2plY3RzL3twcm9qZWN0",
-            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9hdXRob3JpemF0aW9uUG9saWNpZXMv",
-            "e2F1dGhvcml6YXRpb25fcG9saWN5fepBfwoubmV0d29ya3NlY3VyaXR5Lmdv",
-            "b2dsZWFwaXMuY29tL1NlcnZlclRsc1BvbGljeRJNcHJvamVjdHMve3Byb2pl",
-            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3NlcnZlclRsc1BvbGljaWVzL3tz",
-            "ZXJ2ZXJfdGxzX3BvbGljeX3qQX8KLm5ldHdvcmtzZWN1cml0eS5nb29nbGVh",
-            "cGlzLmNvbS9DbGllbnRUbHNQb2xpY3kSTXByb2plY3RzL3twcm9qZWN0fS9s",
-            "b2NhdGlvbnMve2xvY2F0aW9ufS9jbGllbnRUbHNQb2xpY2llcy97Y2xpZW50",
-            "X3Rsc19wb2xpY3l9YgZwcm90bzM="));
+            "KAkSIwoWcmV0dXJuX3BhcnRpYWxfc3VjY2VzcxgEIAEoCEID4EEBIpgBChxM",
+            "aXN0RW5kcG9pbnRQb2xpY2llc1Jlc3BvbnNlEkoKEWVuZHBvaW50X3BvbGlj",
+            "aWVzGAEgAygLMi8uZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MS5F",
+            "bmRwb2ludFBvbGljeRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEwoLdW5y",
+            "ZWFjaGFibGUYAyADKAkiXwoYR2V0RW5kcG9pbnRQb2xpY3lSZXF1ZXN0EkMK",
+            "BG5hbWUYASABKAlCNeBBAvpBLwotbmV0d29ya3NlcnZpY2VzLmdvb2dsZWFw",
+            "aXMuY29tL0VuZHBvaW50UG9saWN5ItQBChtDcmVhdGVFbmRwb2ludFBvbGlj",
+            "eVJlcXVlc3QSRQoGcGFyZW50GAEgASgJQjXgQQL6QS8SLW5ldHdvcmtzZXJ2",
+            "aWNlcy5nb29nbGVhcGlzLmNvbS9FbmRwb2ludFBvbGljeRIfChJlbmRwb2lu",
+            "dF9wb2xpY3lfaWQYAiABKAlCA+BBAhJNCg9lbmRwb2ludF9wb2xpY3kYAyAB",
+            "KAsyLy5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYxLkVuZHBvaW50",
+            "UG9saWN5QgPgQQIiogEKG1VwZGF0ZUVuZHBvaW50UG9saWN5UmVxdWVzdBI0",
+            "Cgt1cGRhdGVfbWFzaxgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1h",
+            "c2tCA+BBARJNCg9lbmRwb2ludF9wb2xpY3kYAiABKAsyLy5nb29nbGUuY2xv",
+            "dWQubmV0d29ya3NlcnZpY2VzLnYxLkVuZHBvaW50UG9saWN5QgPgQQIiYgob",
+            "RGVsZXRlRW5kcG9pbnRQb2xpY3lSZXF1ZXN0EkMKBG5hbWUYASABKAlCNeBB",
+            "AvpBLwotbmV0d29ya3NlcnZpY2VzLmdvb2dsZWFwaXMuY29tL0VuZHBvaW50",
+            "UG9saWN5QoYFCiNjb20uZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52",
+            "MUITRW5kcG9pbnRQb2xpY3lQcm90b1ABWk1jbG91ZC5nb29nbGUuY29tL2dv",
+            "L25ldHdvcmtzZXJ2aWNlcy9hcGl2MS9uZXR3b3Jrc2VydmljZXNwYjtuZXR3",
+            "b3Jrc2VydmljZXNwYqoCH0dvb2dsZS5DbG91ZC5OZXR3b3JrU2VydmljZXMu",
+            "VjHKAh9Hb29nbGVcQ2xvdWRcTmV0d29ya1NlcnZpY2VzXFYx6gIiR29vZ2xl",
+            "OjpDbG91ZDo6TmV0d29ya1NlcnZpY2VzOjpWMepBigEKMm5ldHdvcmtzZWN1",
+            "cml0eS5nb29nbGVhcGlzLmNvbS9BdXRob3JpemF0aW9uUG9saWN5ElRwcm9q",
+            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYXV0aG9yaXph",
+            "dGlvblBvbGljaWVzL3thdXRob3JpemF0aW9uX3BvbGljeX3qQX8KLm5ldHdv",
+            "cmtzZWN1cml0eS5nb29nbGVhcGlzLmNvbS9TZXJ2ZXJUbHNQb2xpY3kSTXBy",
+            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9zZXJ2ZXJU",
+            "bHNQb2xpY2llcy97c2VydmVyX3Rsc19wb2xpY3l96kF/Ci5uZXR3b3Jrc2Vj",
+            "dXJpdHkuZ29vZ2xlYXBpcy5jb20vQ2xpZW50VGxzUG9saWN5Ek1wcm9qZWN0",
+            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2xpZW50VGxzUG9s",
+            "aWNpZXMve2NsaWVudF90bHNfcG9saWN5fWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetworkServices.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.EndpointPolicy), global::Google.Cloud.NetworkServices.V1.EndpointPolicy.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Type", "AuthorizationPolicy", "EndpointMatcher", "TrafficPortSelector", "Description", "ServerTlsPolicy", "ClientTlsPolicy" }, null, new[]{ typeof(global::Google.Cloud.NetworkServices.V1.EndpointPolicy.Types.EndpointPolicyType) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ListEndpointPoliciesRequest), global::Google.Cloud.NetworkServices.V1.ListEndpointPoliciesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ListEndpointPoliciesResponse), global::Google.Cloud.NetworkServices.V1.ListEndpointPoliciesResponse.Parser, new[]{ "EndpointPolicies", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ListEndpointPoliciesRequest), global::Google.Cloud.NetworkServices.V1.ListEndpointPoliciesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "ReturnPartialSuccess" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ListEndpointPoliciesResponse), global::Google.Cloud.NetworkServices.V1.ListEndpointPoliciesResponse.Parser, new[]{ "EndpointPolicies", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.GetEndpointPolicyRequest), global::Google.Cloud.NetworkServices.V1.GetEndpointPolicyRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.CreateEndpointPolicyRequest), global::Google.Cloud.NetworkServices.V1.CreateEndpointPolicyRequest.Parser, new[]{ "Parent", "EndpointPolicyId", "EndpointPolicy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.UpdateEndpointPolicyRequest), global::Google.Cloud.NetworkServices.V1.UpdateEndpointPolicyRequest.Parser, new[]{ "UpdateMask", "EndpointPolicy" }, null, null, null, null),
@@ -168,7 +169,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Name of the EndpointPolicy resource. It matches pattern
+    /// Identifier. Name of the EndpointPolicy resource. It matches pattern
     /// `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -813,6 +814,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       parent_ = other.parent_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
+      returnPartialSuccess_ = other.returnPartialSuccess_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -871,6 +873,23 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
     }
 
+    /// <summary>Field number for the "return_partial_success" field.</summary>
+    public const int ReturnPartialSuccessFieldNumber = 4;
+    private bool returnPartialSuccess_;
+    /// <summary>
+    /// Optional. If true, allow partial responses for multi-regional Aggregated
+    /// List requests. Otherwise if one of the locations is down or unreachable,
+    /// the Aggregated List request will fail.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ReturnPartialSuccess {
+      get { return returnPartialSuccess_; }
+      set {
+        returnPartialSuccess_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -889,6 +908,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (Parent != other.Parent) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
+      if (ReturnPartialSuccess != other.ReturnPartialSuccess) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -899,6 +919,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (ReturnPartialSuccess != false) hash ^= ReturnPartialSuccess.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -929,6 +950,10 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (ReturnPartialSuccess != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ReturnPartialSuccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -951,6 +976,10 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (ReturnPartialSuccess != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ReturnPartialSuccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -969,6 +998,9 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
       if (PageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (ReturnPartialSuccess != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -990,6 +1022,9 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
       if (other.PageToken.Length != 0) {
         PageToken = other.PageToken;
+      }
+      if (other.ReturnPartialSuccess != false) {
+        ReturnPartialSuccess = other.ReturnPartialSuccess;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1018,6 +1053,10 @@ namespace Google.Cloud.NetworkServices.V1 {
             PageToken = input.ReadString();
             break;
           }
+          case 32: {
+            ReturnPartialSuccess = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1043,6 +1082,10 @@ namespace Google.Cloud.NetworkServices.V1 {
           }
           case 26: {
             PageToken = input.ReadString();
+            break;
+          }
+          case 32: {
+            ReturnPartialSuccess = input.ReadBool();
             break;
           }
         }
@@ -1092,6 +1135,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     public ListEndpointPoliciesResponse(ListEndpointPoliciesResponse other) : this() {
       endpointPolicies_ = other.endpointPolicies_.Clone();
       nextPageToken_ = other.nextPageToken_;
+      unreachable_ = other.unreachable_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1132,6 +1176,23 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
     }
 
+    /// <summary>Field number for the "unreachable" field.</summary>
+    public const int UnreachableFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_unreachable_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Unreachable resources. Populated when the request opts into
+    /// [return_partial_success][google.cloud.networkservices.v1.ListEndpointPoliciesRequest.return_partial_success]
+    /// and reading across collections e.g. when
+    /// attempting to list all resources across all supported locations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Unreachable {
+      get { return unreachable_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1149,6 +1210,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
       if(!endpointPolicies_.Equals(other.endpointPolicies_)) return false;
       if (NextPageToken != other.NextPageToken) return false;
+      if(!unreachable_.Equals(other.unreachable_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1158,6 +1220,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       int hash = 1;
       hash ^= endpointPolicies_.GetHashCode();
       if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= unreachable_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1181,6 +1244,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1196,6 +1260,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(ref output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1210,6 +1275,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (NextPageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
       }
+      size += unreachable_.CalculateSize(_repeated_unreachable_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1226,6 +1292,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (other.NextPageToken.Length != 0) {
         NextPageToken = other.NextPageToken;
       }
+      unreachable_.Add(other.unreachable_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1249,6 +1316,10 @@ namespace Google.Cloud.NetworkServices.V1 {
             NextPageToken = input.ReadString();
             break;
           }
+          case 26: {
+            unreachable_.AddEntriesFrom(input, _repeated_unreachable_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1270,6 +1341,10 @@ namespace Google.Cloud.NetworkServices.V1 {
           }
           case 18: {
             NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(ref input, _repeated_unreachable_codec);
             break;
           }
         }

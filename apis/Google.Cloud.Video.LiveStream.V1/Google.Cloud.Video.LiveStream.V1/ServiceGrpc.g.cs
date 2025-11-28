@@ -88,6 +88,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.StopChannelRequest> __Marshaller_google_cloud_video_livestream_v1_StopChannelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.StopChannelRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.StartDistributionRequest> __Marshaller_google_cloud_video_livestream_v1_StartDistributionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.StartDistributionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.StopDistributionRequest> __Marshaller_google_cloud_video_livestream_v1_StopDistributionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.StopDistributionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.CreateInputRequest> __Marshaller_google_cloud_video_livestream_v1_CreateInputRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.CreateInputRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.ListInputsRequest> __Marshaller_google_cloud_video_livestream_v1_ListInputsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.ListInputsRequest.Parser));
@@ -101,6 +105,10 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.DeleteInputRequest> __Marshaller_google_cloud_video_livestream_v1_DeleteInputRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.DeleteInputRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.UpdateInputRequest> __Marshaller_google_cloud_video_livestream_v1_UpdateInputRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.UpdateInputRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.PreviewInputRequest> __Marshaller_google_cloud_video_livestream_v1_PreviewInputRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.PreviewInputRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.PreviewInputResponse> __Marshaller_google_cloud_video_livestream_v1_PreviewInputResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.PreviewInputResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.CreateEventRequest> __Marshaller_google_cloud_video_livestream_v1_CreateEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.CreateEventRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -127,6 +135,20 @@ namespace Google.Cloud.Video.LiveStream.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.CreateClipRequest> __Marshaller_google_cloud_video_livestream_v1_CreateClipRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.CreateClipRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.DeleteClipRequest> __Marshaller_google_cloud_video_livestream_v1_DeleteClipRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.DeleteClipRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.CreateDvrSessionRequest> __Marshaller_google_cloud_video_livestream_v1_CreateDvrSessionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.CreateDvrSessionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.ListDvrSessionsRequest> __Marshaller_google_cloud_video_livestream_v1_ListDvrSessionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.ListDvrSessionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.ListDvrSessionsResponse> __Marshaller_google_cloud_video_livestream_v1_ListDvrSessionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.ListDvrSessionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.GetDvrSessionRequest> __Marshaller_google_cloud_video_livestream_v1_GetDvrSessionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.GetDvrSessionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.DvrSession> __Marshaller_google_cloud_video_livestream_v1_DvrSession = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.DvrSession.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.DeleteDvrSessionRequest> __Marshaller_google_cloud_video_livestream_v1_DeleteDvrSessionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.DeleteDvrSessionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.UpdateDvrSessionRequest> __Marshaller_google_cloud_video_livestream_v1_UpdateDvrSessionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.UpdateDvrSessionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Video.LiveStream.V1.CreateAssetRequest> __Marshaller_google_cloud_video_livestream_v1_CreateAssetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.LiveStream.V1.CreateAssetRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -203,6 +225,22 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Video.LiveStream.V1.StartDistributionRequest, global::Google.LongRunning.Operation> __Method_StartDistribution = new grpc::Method<global::Google.Cloud.Video.LiveStream.V1.StartDistributionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "StartDistribution",
+        __Marshaller_google_cloud_video_livestream_v1_StartDistributionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Video.LiveStream.V1.StopDistributionRequest, global::Google.LongRunning.Operation> __Method_StopDistribution = new grpc::Method<global::Google.Cloud.Video.LiveStream.V1.StopDistributionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "StopDistribution",
+        __Marshaller_google_cloud_video_livestream_v1_StopDistributionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Video.LiveStream.V1.CreateInputRequest, global::Google.LongRunning.Operation> __Method_CreateInput = new grpc::Method<global::Google.Cloud.Video.LiveStream.V1.CreateInputRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -241,6 +279,14 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         "UpdateInput",
         __Marshaller_google_cloud_video_livestream_v1_UpdateInputRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Video.LiveStream.V1.PreviewInputRequest, global::Google.Cloud.Video.LiveStream.V1.PreviewInputResponse> __Method_PreviewInput = new grpc::Method<global::Google.Cloud.Video.LiveStream.V1.PreviewInputRequest, global::Google.Cloud.Video.LiveStream.V1.PreviewInputResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "PreviewInput",
+        __Marshaller_google_cloud_video_livestream_v1_PreviewInputRequest,
+        __Marshaller_google_cloud_video_livestream_v1_PreviewInputResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Video.LiveStream.V1.CreateEventRequest, global::Google.Cloud.Video.LiveStream.V1.Event> __Method_CreateEvent = new grpc::Method<global::Google.Cloud.Video.LiveStream.V1.CreateEventRequest, global::Google.Cloud.Video.LiveStream.V1.Event>(
@@ -304,6 +350,46 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         __ServiceName,
         "DeleteClip",
         __Marshaller_google_cloud_video_livestream_v1_DeleteClipRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Video.LiveStream.V1.CreateDvrSessionRequest, global::Google.LongRunning.Operation> __Method_CreateDvrSession = new grpc::Method<global::Google.Cloud.Video.LiveStream.V1.CreateDvrSessionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateDvrSession",
+        __Marshaller_google_cloud_video_livestream_v1_CreateDvrSessionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Video.LiveStream.V1.ListDvrSessionsRequest, global::Google.Cloud.Video.LiveStream.V1.ListDvrSessionsResponse> __Method_ListDvrSessions = new grpc::Method<global::Google.Cloud.Video.LiveStream.V1.ListDvrSessionsRequest, global::Google.Cloud.Video.LiveStream.V1.ListDvrSessionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListDvrSessions",
+        __Marshaller_google_cloud_video_livestream_v1_ListDvrSessionsRequest,
+        __Marshaller_google_cloud_video_livestream_v1_ListDvrSessionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Video.LiveStream.V1.GetDvrSessionRequest, global::Google.Cloud.Video.LiveStream.V1.DvrSession> __Method_GetDvrSession = new grpc::Method<global::Google.Cloud.Video.LiveStream.V1.GetDvrSessionRequest, global::Google.Cloud.Video.LiveStream.V1.DvrSession>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDvrSession",
+        __Marshaller_google_cloud_video_livestream_v1_GetDvrSessionRequest,
+        __Marshaller_google_cloud_video_livestream_v1_DvrSession);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Video.LiveStream.V1.DeleteDvrSessionRequest, global::Google.LongRunning.Operation> __Method_DeleteDvrSession = new grpc::Method<global::Google.Cloud.Video.LiveStream.V1.DeleteDvrSessionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteDvrSession",
+        __Marshaller_google_cloud_video_livestream_v1_DeleteDvrSessionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Video.LiveStream.V1.UpdateDvrSessionRequest, global::Google.LongRunning.Operation> __Method_UpdateDvrSession = new grpc::Method<global::Google.Cloud.Video.LiveStream.V1.UpdateDvrSessionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateDvrSession",
+        __Marshaller_google_cloud_video_livestream_v1_UpdateDvrSessionRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -452,6 +538,31 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       }
 
       /// <summary>
+      /// Starts distribution which delivers outputs to the destination indicated by
+      /// the Distribution configuration.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> StartDistribution(global::Google.Cloud.Video.LiveStream.V1.StartDistributionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Stops the specified distribution.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> StopDistribution(global::Google.Cloud.Video.LiveStream.V1.StopDistributionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Creates an input with the provided unique ID in the specified region.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -507,6 +618,18 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateInput(global::Google.Cloud.Video.LiveStream.V1.UpdateInputRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Preview the streaming content of the specified input.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Video.LiveStream.V1.PreviewInputResponse> PreviewInput(global::Google.Cloud.Video.LiveStream.V1.PreviewInputRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -597,13 +720,73 @@ namespace Google.Cloud.Video.LiveStream.V1 {
 
       /// <summary>
       /// Deletes the specified clip job resource. This method only deletes the clip
-      /// job and does not delete the VOD clip stored in the GCS.
+      /// job and does not delete the VOD clip stored in Cloud Storage.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteClip(global::Google.Cloud.Video.LiveStream.V1.DeleteClipRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a DVR session with the provided unique ID in the specified channel.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateDvrSession(global::Google.Cloud.Video.LiveStream.V1.CreateDvrSessionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns a list of all DVR sessions in the specified channel.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Video.LiveStream.V1.ListDvrSessionsResponse> ListDvrSessions(global::Google.Cloud.Video.LiveStream.V1.ListDvrSessionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the specified DVR session.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Video.LiveStream.V1.DvrSession> GetDvrSession(global::Google.Cloud.Video.LiveStream.V1.GetDvrSessionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes the specified DVR session.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteDvrSession(global::Google.Cloud.Video.LiveStream.V1.DeleteDvrSessionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the specified DVR session.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateDvrSession(global::Google.Cloud.Video.LiveStream.V1.UpdateDvrSessionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1059,6 +1242,106 @@ namespace Google.Cloud.Video.LiveStream.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_StopChannel, null, options, request);
       }
       /// <summary>
+      /// Starts distribution which delivers outputs to the destination indicated by
+      /// the Distribution configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation StartDistribution(global::Google.Cloud.Video.LiveStream.V1.StartDistributionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StartDistribution(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Starts distribution which delivers outputs to the destination indicated by
+      /// the Distribution configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation StartDistribution(global::Google.Cloud.Video.LiveStream.V1.StartDistributionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_StartDistribution, null, options, request);
+      }
+      /// <summary>
+      /// Starts distribution which delivers outputs to the destination indicated by
+      /// the Distribution configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StartDistributionAsync(global::Google.Cloud.Video.LiveStream.V1.StartDistributionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StartDistributionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Starts distribution which delivers outputs to the destination indicated by
+      /// the Distribution configuration.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StartDistributionAsync(global::Google.Cloud.Video.LiveStream.V1.StartDistributionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_StartDistribution, null, options, request);
+      }
+      /// <summary>
+      /// Stops the specified distribution.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation StopDistribution(global::Google.Cloud.Video.LiveStream.V1.StopDistributionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StopDistribution(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Stops the specified distribution.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation StopDistribution(global::Google.Cloud.Video.LiveStream.V1.StopDistributionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_StopDistribution, null, options, request);
+      }
+      /// <summary>
+      /// Stops the specified distribution.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StopDistributionAsync(global::Google.Cloud.Video.LiveStream.V1.StopDistributionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StopDistributionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Stops the specified distribution.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StopDistributionAsync(global::Google.Cloud.Video.LiveStream.V1.StopDistributionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_StopDistribution, null, options, request);
+      }
+      /// <summary>
       /// Creates an input with the provided unique ID in the specified region.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1297,6 +1580,54 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateInputAsync(global::Google.Cloud.Video.LiveStream.V1.UpdateInputRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateInput, null, options, request);
+      }
+      /// <summary>
+      /// Preview the streaming content of the specified input.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Video.LiveStream.V1.PreviewInputResponse PreviewInput(global::Google.Cloud.Video.LiveStream.V1.PreviewInputRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PreviewInput(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Preview the streaming content of the specified input.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Video.LiveStream.V1.PreviewInputResponse PreviewInput(global::Google.Cloud.Video.LiveStream.V1.PreviewInputRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_PreviewInput, null, options, request);
+      }
+      /// <summary>
+      /// Preview the streaming content of the specified input.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.LiveStream.V1.PreviewInputResponse> PreviewInputAsync(global::Google.Cloud.Video.LiveStream.V1.PreviewInputRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PreviewInputAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Preview the streaming content of the specified input.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.LiveStream.V1.PreviewInputResponse> PreviewInputAsync(global::Google.Cloud.Video.LiveStream.V1.PreviewInputRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_PreviewInput, null, options, request);
       }
       /// <summary>
       /// Creates an event with the provided unique ID in the specified channel.
@@ -1636,7 +1967,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       }
       /// <summary>
       /// Deletes the specified clip job resource. This method only deletes the clip
-      /// job and does not delete the VOD clip stored in the GCS.
+      /// job and does not delete the VOD clip stored in Cloud Storage.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1650,7 +1981,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       }
       /// <summary>
       /// Deletes the specified clip job resource. This method only deletes the clip
-      /// job and does not delete the VOD clip stored in the GCS.
+      /// job and does not delete the VOD clip stored in Cloud Storage.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1662,7 +1993,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       }
       /// <summary>
       /// Deletes the specified clip job resource. This method only deletes the clip
-      /// job and does not delete the VOD clip stored in the GCS.
+      /// job and does not delete the VOD clip stored in Cloud Storage.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1676,7 +2007,7 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       }
       /// <summary>
       /// Deletes the specified clip job resource. This method only deletes the clip
-      /// job and does not delete the VOD clip stored in the GCS.
+      /// job and does not delete the VOD clip stored in Cloud Storage.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1685,6 +2016,246 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteClipAsync(global::Google.Cloud.Video.LiveStream.V1.DeleteClipRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteClip, null, options, request);
+      }
+      /// <summary>
+      /// Creates a DVR session with the provided unique ID in the specified channel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateDvrSession(global::Google.Cloud.Video.LiveStream.V1.CreateDvrSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDvrSession(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a DVR session with the provided unique ID in the specified channel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateDvrSession(global::Google.Cloud.Video.LiveStream.V1.CreateDvrSessionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateDvrSession, null, options, request);
+      }
+      /// <summary>
+      /// Creates a DVR session with the provided unique ID in the specified channel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDvrSessionAsync(global::Google.Cloud.Video.LiveStream.V1.CreateDvrSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDvrSessionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a DVR session with the provided unique ID in the specified channel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDvrSessionAsync(global::Google.Cloud.Video.LiveStream.V1.CreateDvrSessionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateDvrSession, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of all DVR sessions in the specified channel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Video.LiveStream.V1.ListDvrSessionsResponse ListDvrSessions(global::Google.Cloud.Video.LiveStream.V1.ListDvrSessionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDvrSessions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of all DVR sessions in the specified channel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Video.LiveStream.V1.ListDvrSessionsResponse ListDvrSessions(global::Google.Cloud.Video.LiveStream.V1.ListDvrSessionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListDvrSessions, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of all DVR sessions in the specified channel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.LiveStream.V1.ListDvrSessionsResponse> ListDvrSessionsAsync(global::Google.Cloud.Video.LiveStream.V1.ListDvrSessionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDvrSessionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of all DVR sessions in the specified channel.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.LiveStream.V1.ListDvrSessionsResponse> ListDvrSessionsAsync(global::Google.Cloud.Video.LiveStream.V1.ListDvrSessionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListDvrSessions, null, options, request);
+      }
+      /// <summary>
+      /// Returns the specified DVR session.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Video.LiveStream.V1.DvrSession GetDvrSession(global::Google.Cloud.Video.LiveStream.V1.GetDvrSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDvrSession(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the specified DVR session.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Video.LiveStream.V1.DvrSession GetDvrSession(global::Google.Cloud.Video.LiveStream.V1.GetDvrSessionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDvrSession, null, options, request);
+      }
+      /// <summary>
+      /// Returns the specified DVR session.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.LiveStream.V1.DvrSession> GetDvrSessionAsync(global::Google.Cloud.Video.LiveStream.V1.GetDvrSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDvrSessionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the specified DVR session.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.LiveStream.V1.DvrSession> GetDvrSessionAsync(global::Google.Cloud.Video.LiveStream.V1.GetDvrSessionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDvrSession, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the specified DVR session.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteDvrSession(global::Google.Cloud.Video.LiveStream.V1.DeleteDvrSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDvrSession(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the specified DVR session.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteDvrSession(global::Google.Cloud.Video.LiveStream.V1.DeleteDvrSessionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteDvrSession, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the specified DVR session.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDvrSessionAsync(global::Google.Cloud.Video.LiveStream.V1.DeleteDvrSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDvrSessionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the specified DVR session.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDvrSessionAsync(global::Google.Cloud.Video.LiveStream.V1.DeleteDvrSessionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteDvrSession, null, options, request);
+      }
+      /// <summary>
+      /// Updates the specified DVR session.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateDvrSession(global::Google.Cloud.Video.LiveStream.V1.UpdateDvrSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDvrSession(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the specified DVR session.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateDvrSession(global::Google.Cloud.Video.LiveStream.V1.UpdateDvrSessionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateDvrSession, null, options, request);
+      }
+      /// <summary>
+      /// Updates the specified DVR session.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDvrSessionAsync(global::Google.Cloud.Video.LiveStream.V1.UpdateDvrSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDvrSessionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the specified DVR session.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDvrSessionAsync(global::Google.Cloud.Video.LiveStream.V1.UpdateDvrSessionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateDvrSession, null, options, request);
       }
       /// <summary>
       /// Creates a Asset with the provided unique ID in the specified
@@ -1999,11 +2570,14 @@ namespace Google.Cloud.Video.LiveStream.V1 {
           .AddMethod(__Method_UpdateChannel, serviceImpl.UpdateChannel)
           .AddMethod(__Method_StartChannel, serviceImpl.StartChannel)
           .AddMethod(__Method_StopChannel, serviceImpl.StopChannel)
+          .AddMethod(__Method_StartDistribution, serviceImpl.StartDistribution)
+          .AddMethod(__Method_StopDistribution, serviceImpl.StopDistribution)
           .AddMethod(__Method_CreateInput, serviceImpl.CreateInput)
           .AddMethod(__Method_ListInputs, serviceImpl.ListInputs)
           .AddMethod(__Method_GetInput, serviceImpl.GetInput)
           .AddMethod(__Method_DeleteInput, serviceImpl.DeleteInput)
           .AddMethod(__Method_UpdateInput, serviceImpl.UpdateInput)
+          .AddMethod(__Method_PreviewInput, serviceImpl.PreviewInput)
           .AddMethod(__Method_CreateEvent, serviceImpl.CreateEvent)
           .AddMethod(__Method_ListEvents, serviceImpl.ListEvents)
           .AddMethod(__Method_GetEvent, serviceImpl.GetEvent)
@@ -2012,6 +2586,11 @@ namespace Google.Cloud.Video.LiveStream.V1 {
           .AddMethod(__Method_GetClip, serviceImpl.GetClip)
           .AddMethod(__Method_CreateClip, serviceImpl.CreateClip)
           .AddMethod(__Method_DeleteClip, serviceImpl.DeleteClip)
+          .AddMethod(__Method_CreateDvrSession, serviceImpl.CreateDvrSession)
+          .AddMethod(__Method_ListDvrSessions, serviceImpl.ListDvrSessions)
+          .AddMethod(__Method_GetDvrSession, serviceImpl.GetDvrSession)
+          .AddMethod(__Method_DeleteDvrSession, serviceImpl.DeleteDvrSession)
+          .AddMethod(__Method_UpdateDvrSession, serviceImpl.UpdateDvrSession)
           .AddMethod(__Method_CreateAsset, serviceImpl.CreateAsset)
           .AddMethod(__Method_DeleteAsset, serviceImpl.DeleteAsset)
           .AddMethod(__Method_GetAsset, serviceImpl.GetAsset)
@@ -2034,11 +2613,14 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       serviceBinder.AddMethod(__Method_UpdateChannel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.UpdateChannelRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateChannel));
       serviceBinder.AddMethod(__Method_StartChannel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.StartChannelRequest, global::Google.LongRunning.Operation>(serviceImpl.StartChannel));
       serviceBinder.AddMethod(__Method_StopChannel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.StopChannelRequest, global::Google.LongRunning.Operation>(serviceImpl.StopChannel));
+      serviceBinder.AddMethod(__Method_StartDistribution, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.StartDistributionRequest, global::Google.LongRunning.Operation>(serviceImpl.StartDistribution));
+      serviceBinder.AddMethod(__Method_StopDistribution, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.StopDistributionRequest, global::Google.LongRunning.Operation>(serviceImpl.StopDistribution));
       serviceBinder.AddMethod(__Method_CreateInput, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.CreateInputRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateInput));
       serviceBinder.AddMethod(__Method_ListInputs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.ListInputsRequest, global::Google.Cloud.Video.LiveStream.V1.ListInputsResponse>(serviceImpl.ListInputs));
       serviceBinder.AddMethod(__Method_GetInput, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.GetInputRequest, global::Google.Cloud.Video.LiveStream.V1.Input>(serviceImpl.GetInput));
       serviceBinder.AddMethod(__Method_DeleteInput, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.DeleteInputRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteInput));
       serviceBinder.AddMethod(__Method_UpdateInput, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.UpdateInputRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateInput));
+      serviceBinder.AddMethod(__Method_PreviewInput, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.PreviewInputRequest, global::Google.Cloud.Video.LiveStream.V1.PreviewInputResponse>(serviceImpl.PreviewInput));
       serviceBinder.AddMethod(__Method_CreateEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.CreateEventRequest, global::Google.Cloud.Video.LiveStream.V1.Event>(serviceImpl.CreateEvent));
       serviceBinder.AddMethod(__Method_ListEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.ListEventsRequest, global::Google.Cloud.Video.LiveStream.V1.ListEventsResponse>(serviceImpl.ListEvents));
       serviceBinder.AddMethod(__Method_GetEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.GetEventRequest, global::Google.Cloud.Video.LiveStream.V1.Event>(serviceImpl.GetEvent));
@@ -2047,6 +2629,11 @@ namespace Google.Cloud.Video.LiveStream.V1 {
       serviceBinder.AddMethod(__Method_GetClip, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.GetClipRequest, global::Google.Cloud.Video.LiveStream.V1.Clip>(serviceImpl.GetClip));
       serviceBinder.AddMethod(__Method_CreateClip, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.CreateClipRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateClip));
       serviceBinder.AddMethod(__Method_DeleteClip, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.DeleteClipRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteClip));
+      serviceBinder.AddMethod(__Method_CreateDvrSession, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.CreateDvrSessionRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateDvrSession));
+      serviceBinder.AddMethod(__Method_ListDvrSessions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.ListDvrSessionsRequest, global::Google.Cloud.Video.LiveStream.V1.ListDvrSessionsResponse>(serviceImpl.ListDvrSessions));
+      serviceBinder.AddMethod(__Method_GetDvrSession, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.GetDvrSessionRequest, global::Google.Cloud.Video.LiveStream.V1.DvrSession>(serviceImpl.GetDvrSession));
+      serviceBinder.AddMethod(__Method_DeleteDvrSession, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.DeleteDvrSessionRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteDvrSession));
+      serviceBinder.AddMethod(__Method_UpdateDvrSession, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.UpdateDvrSessionRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDvrSession));
       serviceBinder.AddMethod(__Method_CreateAsset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.CreateAssetRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateAsset));
       serviceBinder.AddMethod(__Method_DeleteAsset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.DeleteAssetRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteAsset));
       serviceBinder.AddMethod(__Method_GetAsset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.LiveStream.V1.GetAssetRequest, global::Google.Cloud.Video.LiveStream.V1.Asset>(serviceImpl.GetAsset));

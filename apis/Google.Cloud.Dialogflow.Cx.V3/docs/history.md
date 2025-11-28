@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.25.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+## Version 2.24.0, released 2025-07-07
+
+### New features
+
+- Add support for generator settings on fulfillment
+
 ## Version 2.23.0, released 2025-03-10
 
 ### New features

@@ -98,51 +98,52 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "GAEgASgJQgPgQQIiewoPUHJlZGljdFNjaGVtYXRhEiAKE2luc3RhbmNlX3Nj",
             "aGVtYV91cmkYASABKAlCA+BBBRIiChVwYXJhbWV0ZXJzX3NjaGVtYV91cmkY",
             "AiABKAlCA+BBBRIiChVwcmVkaWN0aW9uX3NjaGVtYV91cmkYAyABKAlCA+BB",
-            "BSLxBAoSTW9kZWxDb250YWluZXJTcGVjEhkKCWltYWdlX3VyaRgBIAEoCUIG",
+            "BSKTBQoSTW9kZWxDb250YWluZXJTcGVjEhkKCWltYWdlX3VyaRgBIAEoCUIG",
             "4EEC4EEFEhQKB2NvbW1hbmQYAiADKAlCA+BBBRIRCgRhcmdzGAMgAygJQgPg",
             "QQUSOQoDZW52GAQgAygLMicuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFi",
             "ZXRhMS5FbnZWYXJCA+BBBRI5CgVwb3J0cxgFIAMoCzIlLmdvb2dsZS5jbG91",
             "ZC5haXBsYXRmb3JtLnYxYmV0YTEuUG9ydEID4EEFEhoKDXByZWRpY3Rfcm91",
-            "dGUYBiABKAlCA+BBBRIZCgxoZWFsdGhfcm91dGUYByABKAlCA+BBBRI+Cgpn",
-            "cnBjX3BvcnRzGAkgAygLMiUuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFi",
-            "ZXRhMS5Qb3J0QgPgQQUSOgoSZGVwbG95bWVudF90aW1lb3V0GAogASgLMhku",
-            "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQUSIgoVc2hhcmVkX21lbW9y",
-            "eV9zaXplX21iGAsgASgDQgPgQQUSQgoNc3RhcnR1cF9wcm9iZRgMIAEoCzIm",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUHJvYmVCA+BBBRJB",
-            "CgxoZWFsdGhfcHJvYmUYDSABKAsyJi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MWJldGExLlByb2JlQgPgQQUSQwoObGl2ZW5lc3NfcHJvYmUYDiABKAsy",
-            "Ji5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlByb2JlQgPgQQUi",
-            "HgoEUG9ydBIWCg5jb250YWluZXJfcG9ydBgDIAEoBSKYAgoPTW9kZWxTb3Vy",
-            "Y2VJbmZvElUKC3NvdXJjZV90eXBlGAEgASgOMkAuZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjFiZXRhMS5Nb2RlbFNvdXJjZUluZm8uTW9kZWxTb3VyY2VU",
-            "eXBlEgwKBGNvcHkYAiABKAginwEKD01vZGVsU291cmNlVHlwZRIhCh1NT0RF",
-            "TF9TT1VSQ0VfVFlQRV9VTlNQRUNJRklFRBAAEgoKBkFVVE9NTBABEgoKBkNV",
-            "U1RPTRACEggKBEJRTUwQAxIQCgxNT0RFTF9HQVJERU4QBBIJCgVHRU5JRRAF",
-            "EhkKFUNVU1RPTV9URVhUX0VNQkVERElORxAGEg8KC01BUktFVFBMQUNFEAci",
-            "9AUKBVByb2JlEkEKBGV4ZWMYASABKAsyMS5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MWJldGExLlByb2JlLkV4ZWNBY3Rpb25IABJICghodHRwX2dldBgE",
-            "IAEoCzI0Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUHJvYmUu",
-            "SHR0cEdldEFjdGlvbkgAEkEKBGdycGMYBSABKAsyMS5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MWJldGExLlByb2JlLkdycGNBY3Rpb25IABJMCgp0Y3Bf",
-            "c29ja2V0GAYgASgLMjYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRh",
-            "MS5Qcm9iZS5UY3BTb2NrZXRBY3Rpb25IABIWCg5wZXJpb2Rfc2Vjb25kcxgC",
-            "IAEoBRIXCg90aW1lb3V0X3NlY29uZHMYAyABKAUSGQoRZmFpbHVyZV90aHJl",
-            "c2hvbGQYByABKAUSGQoRc3VjY2Vzc190aHJlc2hvbGQYCCABKAUSHQoVaW5p",
-            "dGlhbF9kZWxheV9zZWNvbmRzGAkgASgFGh0KCkV4ZWNBY3Rpb24SDwoHY29t",
-            "bWFuZBgBIAMoCRqSAQoNSHR0cEdldEFjdGlvbhIMCgRwYXRoGAEgASgJEgwK",
-            "BHBvcnQYAiABKAUSDAoEaG9zdBgDIAEoCRIOCgZzY2hlbWUYBCABKAkSRwoM",
-            "aHR0cF9oZWFkZXJzGAUgAygLMjEuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djFiZXRhMS5Qcm9iZS5IdHRwSGVhZGVyGisKCkdycGNBY3Rpb24SDAoEcG9y",
-            "dBgBIAEoBRIPCgdzZXJ2aWNlGAIgASgJGi0KD1RjcFNvY2tldEFjdGlvbhIM",
-            "CgRwb3J0GAEgASgFEgwKBGhvc3QYAiABKAkaKQoKSHR0cEhlYWRlchIMCgRu",
-            "YW1lGAEgASgJEg0KBXZhbHVlGAIgASgJQgwKCnByb2JlX3R5cGUiQAoKQ2hl",
-            "Y2twb2ludBIVCg1jaGVja3BvaW50X2lkGAEgASgJEg0KBWVwb2NoGAIgASgD",
-            "EgwKBHN0ZXAYAyABKANC4QEKI2NvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MWJldGExQgpNb2RlbFByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28v",
-            "YWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxhdGZvcm1wYjthaXBsYXRmb3Jt",
-            "cGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMUJldGExygIfR29vZ2xl",
-            "XENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoCIkdvb2dsZTo6Q2xvdWQ6OkFJ",
-            "UGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
+            "dGUYBiABKAlCA+BBBRIZCgxoZWFsdGhfcm91dGUYByABKAlCA+BBBRIgChNp",
+            "bnZva2Vfcm91dGVfcHJlZml4GA8gASgJQgPgQQUSPgoKZ3JwY19wb3J0cxgJ",
+            "IAMoCzIlLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUG9ydEID",
+            "4EEFEjoKEmRlcGxveW1lbnRfdGltZW91dBgKIAEoCzIZLmdvb2dsZS5wcm90",
+            "b2J1Zi5EdXJhdGlvbkID4EEFEiIKFXNoYXJlZF9tZW1vcnlfc2l6ZV9tYhgL",
+            "IAEoA0ID4EEFEkIKDXN0YXJ0dXBfcHJvYmUYDCABKAsyJi5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MWJldGExLlByb2JlQgPgQQUSQQoMaGVhbHRoX3By",
+            "b2JlGA0gASgLMiYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5Q",
+            "cm9iZUID4EEFEkMKDmxpdmVuZXNzX3Byb2JlGA4gASgLMiYuZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjFiZXRhMS5Qcm9iZUID4EEFIh4KBFBvcnQSFgoO",
+            "Y29udGFpbmVyX3BvcnQYAyABKAUimAIKD01vZGVsU291cmNlSW5mbxJVCgtz",
+            "b3VyY2VfdHlwZRgBIAEoDjJALmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "YmV0YTEuTW9kZWxTb3VyY2VJbmZvLk1vZGVsU291cmNlVHlwZRIMCgRjb3B5",
+            "GAIgASgIIp8BCg9Nb2RlbFNvdXJjZVR5cGUSIQodTU9ERUxfU09VUkNFX1RZ",
+            "UEVfVU5TUEVDSUZJRUQQABIKCgZBVVRPTUwQARIKCgZDVVNUT00QAhIICgRC",
+            "UU1MEAMSEAoMTU9ERUxfR0FSREVOEAQSCQoFR0VOSUUQBRIZChVDVVNUT01f",
+            "VEVYVF9FTUJFRERJTkcQBhIPCgtNQVJLRVRQTEFDRRAHIvQFCgVQcm9iZRJB",
+            "CgRleGVjGAEgASgLMjEuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRh",
+            "MS5Qcm9iZS5FeGVjQWN0aW9uSAASSAoIaHR0cF9nZXQYBCABKAsyNC5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlByb2JlLkh0dHBHZXRBY3Rp",
+            "b25IABJBCgRncnBjGAUgASgLMjEuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djFiZXRhMS5Qcm9iZS5HcnBjQWN0aW9uSAASTAoKdGNwX3NvY2tldBgGIAEo",
+            "CzI2Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUHJvYmUuVGNw",
+            "U29ja2V0QWN0aW9uSAASFgoOcGVyaW9kX3NlY29uZHMYAiABKAUSFwoPdGlt",
+            "ZW91dF9zZWNvbmRzGAMgASgFEhkKEWZhaWx1cmVfdGhyZXNob2xkGAcgASgF",
+            "EhkKEXN1Y2Nlc3NfdGhyZXNob2xkGAggASgFEh0KFWluaXRpYWxfZGVsYXlf",
+            "c2Vjb25kcxgJIAEoBRodCgpFeGVjQWN0aW9uEg8KB2NvbW1hbmQYASADKAka",
+            "kgEKDUh0dHBHZXRBY3Rpb24SDAoEcGF0aBgBIAEoCRIMCgRwb3J0GAIgASgF",
+            "EgwKBGhvc3QYAyABKAkSDgoGc2NoZW1lGAQgASgJEkcKDGh0dHBfaGVhZGVy",
+            "cxgFIAMoCzIxLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUHJv",
+            "YmUuSHR0cEhlYWRlchorCgpHcnBjQWN0aW9uEgwKBHBvcnQYASABKAUSDwoH",
+            "c2VydmljZRgCIAEoCRotCg9UY3BTb2NrZXRBY3Rpb24SDAoEcG9ydBgBIAEo",
+            "BRIMCgRob3N0GAIgASgJGikKCkh0dHBIZWFkZXISDAoEbmFtZRgBIAEoCRIN",
+            "CgV2YWx1ZRgCIAEoCUIMCgpwcm9iZV90eXBlIkAKCkNoZWNrcG9pbnQSFQoN",
+            "Y2hlY2twb2ludF9pZBgBIAEoCRINCgVlcG9jaBgCIAEoAxIMCgRzdGVwGAMg",
+            "ASgDQuEBCiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMUIK",
+            "TW9kZWxQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0v",
+            "YXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIfR29vZ2xl",
+            "LkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRhMcoCH0dvb2dsZVxDbG91ZFxBSVBs",
+            "YXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpW",
+            "MWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.DeployedModelRefReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ExplanationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -154,7 +155,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ModelGardenSource), global::Google.Cloud.AIPlatform.V1Beta1.ModelGardenSource.Parser, new[]{ "PublicModelName", "VersionId", "SkipHfModelCache" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GenieSource), global::Google.Cloud.AIPlatform.V1Beta1.GenieSource.Parser, new[]{ "BaseModelUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PredictSchemata), global::Google.Cloud.AIPlatform.V1Beta1.PredictSchemata.Parser, new[]{ "InstanceSchemaUri", "ParametersSchemaUri", "PredictionSchemaUri" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ModelContainerSpec), global::Google.Cloud.AIPlatform.V1Beta1.ModelContainerSpec.Parser, new[]{ "ImageUri", "Command", "Args", "Env", "Ports", "PredictRoute", "HealthRoute", "GrpcPorts", "DeploymentTimeout", "SharedMemorySizeMb", "StartupProbe", "HealthProbe", "LivenessProbe" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ModelContainerSpec), global::Google.Cloud.AIPlatform.V1Beta1.ModelContainerSpec.Parser, new[]{ "ImageUri", "Command", "Args", "Env", "Ports", "PredictRoute", "HealthRoute", "InvokeRoutePrefix", "GrpcPorts", "DeploymentTimeout", "SharedMemorySizeMb", "StartupProbe", "HealthProbe", "LivenessProbe" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Port), global::Google.Cloud.AIPlatform.V1Beta1.Port.Parser, new[]{ "ContainerPort" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ModelSourceInfo), global::Google.Cloud.AIPlatform.V1Beta1.ModelSourceInfo.Parser, new[]{ "SourceType", "Copy" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.ModelSourceInfo.Types.ModelSourceType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Probe), global::Google.Cloud.AIPlatform.V1Beta1.Probe.Parser, new[]{ "Exec", "HttpGet", "Grpc", "TcpSocket", "PeriodSeconds", "TimeoutSeconds", "FailureThreshold", "SuccessThreshold", "InitialDelaySeconds" }, new[]{ "ProbeType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Probe.Types.ExecAction), global::Google.Cloud.AIPlatform.V1Beta1.Probe.Types.ExecAction.Parser, new[]{ "Command" }, null, null, null, null),
@@ -3693,6 +3694,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       ports_ = other.ports_.Clone();
       predictRoute_ = other.predictRoute_;
       healthRoute_ = other.healthRoute_;
+      invokeRoutePrefix_ = other.invokeRoutePrefix_;
       grpcPorts_ = other.grpcPorts_.Clone();
       deploymentTimeout_ = other.deploymentTimeout_ != null ? other.deploymentTimeout_.Clone() : null;
       sharedMemorySizeMb_ = other.sharedMemorySizeMb_;
@@ -4006,6 +4008,28 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "invoke_route_prefix" field.</summary>
+    public const int InvokeRoutePrefixFieldNumber = 15;
+    private string invokeRoutePrefix_ = "";
+    /// <summary>
+    /// Immutable. Invoke route prefix for the custom container. "/*" is the only
+    /// supported value right now. By setting this field, any non-root route on
+    /// this model will be accessible with [PredictionService.Invoke] eg:
+    /// "/invoke/foo/bar".
+    ///
+    /// Only one of `predict_route` or `invoke_route_prefix` can be set, and we
+    /// default to using `predict_route` if this field is not set. If this field
+    /// is set, the Model can only be deployed to dedicated endpoint.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string InvokeRoutePrefix {
+      get { return invokeRoutePrefix_; }
+      set {
+        invokeRoutePrefix_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "grpc_ports" field.</summary>
     public const int GrpcPortsFieldNumber = 9;
     private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1Beta1.Port> _repeated_grpcPorts_codec
@@ -4127,6 +4151,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if(!ports_.Equals(other.ports_)) return false;
       if (PredictRoute != other.PredictRoute) return false;
       if (HealthRoute != other.HealthRoute) return false;
+      if (InvokeRoutePrefix != other.InvokeRoutePrefix) return false;
       if(!grpcPorts_.Equals(other.grpcPorts_)) return false;
       if (!object.Equals(DeploymentTimeout, other.DeploymentTimeout)) return false;
       if (SharedMemorySizeMb != other.SharedMemorySizeMb) return false;
@@ -4147,6 +4172,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       hash ^= ports_.GetHashCode();
       if (PredictRoute.Length != 0) hash ^= PredictRoute.GetHashCode();
       if (HealthRoute.Length != 0) hash ^= HealthRoute.GetHashCode();
+      if (InvokeRoutePrefix.Length != 0) hash ^= InvokeRoutePrefix.GetHashCode();
       hash ^= grpcPorts_.GetHashCode();
       if (deploymentTimeout_ != null) hash ^= DeploymentTimeout.GetHashCode();
       if (SharedMemorySizeMb != 0L) hash ^= SharedMemorySizeMb.GetHashCode();
@@ -4208,6 +4234,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(114);
         output.WriteMessage(LivenessProbe);
       }
+      if (InvokeRoutePrefix.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(InvokeRoutePrefix);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4255,6 +4285,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(114);
         output.WriteMessage(LivenessProbe);
       }
+      if (InvokeRoutePrefix.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(InvokeRoutePrefix);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4277,6 +4311,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (HealthRoute.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(HealthRoute);
+      }
+      if (InvokeRoutePrefix.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(InvokeRoutePrefix);
       }
       size += grpcPorts_.CalculateSize(_repeated_grpcPorts_codec);
       if (deploymentTimeout_ != null) {
@@ -4318,6 +4355,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (other.HealthRoute.Length != 0) {
         HealthRoute = other.HealthRoute;
+      }
+      if (other.InvokeRoutePrefix.Length != 0) {
+        InvokeRoutePrefix = other.InvokeRoutePrefix;
       }
       grpcPorts_.Add(other.grpcPorts_);
       if (other.deploymentTimeout_ != null) {
@@ -4426,6 +4466,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             input.ReadMessage(LivenessProbe);
             break;
           }
+          case 122: {
+            InvokeRoutePrefix = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -4503,6 +4547,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               LivenessProbe = new global::Google.Cloud.AIPlatform.V1Beta1.Probe();
             }
             input.ReadMessage(LivenessProbe);
+            break;
+          }
+          case 122: {
+            InvokeRoutePrefix = input.ReadString();
             break;
           }
         }

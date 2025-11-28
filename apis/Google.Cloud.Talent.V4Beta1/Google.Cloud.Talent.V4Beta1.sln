@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Talent.V4Beta1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Talent.V4Beta1.GeneratedSnippets", "Google.Cloud.Talent.V4Beta1.GeneratedSnippets\Google.Cloud.Talent.V4Beta1.GeneratedSnippets.csproj", "{6B568303-551F-468A-88A7-CB336026B83C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Talent.V4Beta1.CleanTestData", "Google.Cloud.Talent.V4Beta1.CleanTestData\Google.Cloud.Talent.V4Beta1.CleanTestData.csproj", "{24311A7E-EE2E-497D-74C2-D807E68A0E56}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{29974B0C-A7B0-8CA8-AE32-99F622C89044}"
 EndProject
 Global
@@ -31,10 +29,6 @@ Global
 		{6B568303-551F-468A-88A7-CB336026B83C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B568303-551F-468A-88A7-CB336026B83C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B568303-551F-468A-88A7-CB336026B83C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{24311A7E-EE2E-497D-74C2-D807E68A0E56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{24311A7E-EE2E-497D-74C2-D807E68A0E56}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{24311A7E-EE2E-497D-74C2-D807E68A0E56}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{24311A7E-EE2E-497D-74C2-D807E68A0E56}.Release|Any CPU.Build.0 = Release|Any CPU
 		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -2621,6 +2621,416 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateCustomEmoji</summary>
+        public void CreateCustomEmojiRequestObject()
+        {
+            // Snippet: CreateCustomEmoji(CreateCustomEmojiRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            CreateCustomEmojiRequest request = new CreateCustomEmojiRequest
+            {
+                CustomEmoji = new CustomEmoji(),
+            };
+            // Make the request
+            CustomEmoji response = chatServiceClient.CreateCustomEmoji(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomEmojiAsync</summary>
+        public async Task CreateCustomEmojiRequestObjectAsync()
+        {
+            // Snippet: CreateCustomEmojiAsync(CreateCustomEmojiRequest, CallSettings)
+            // Additional: CreateCustomEmojiAsync(CreateCustomEmojiRequest, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateCustomEmojiRequest request = new CreateCustomEmojiRequest
+            {
+                CustomEmoji = new CustomEmoji(),
+            };
+            // Make the request
+            CustomEmoji response = await chatServiceClient.CreateCustomEmojiAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomEmoji</summary>
+        public void CreateCustomEmoji()
+        {
+            // Snippet: CreateCustomEmoji(CustomEmoji, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            CustomEmoji customEmoji = new CustomEmoji();
+            // Make the request
+            CustomEmoji response = chatServiceClient.CreateCustomEmoji(customEmoji);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomEmojiAsync</summary>
+        public async Task CreateCustomEmojiAsync()
+        {
+            // Snippet: CreateCustomEmojiAsync(CustomEmoji, CallSettings)
+            // Additional: CreateCustomEmojiAsync(CustomEmoji, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CustomEmoji customEmoji = new CustomEmoji();
+            // Make the request
+            CustomEmoji response = await chatServiceClient.CreateCustomEmojiAsync(customEmoji);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCustomEmoji</summary>
+        public void GetCustomEmojiRequestObject()
+        {
+            // Snippet: GetCustomEmoji(GetCustomEmojiRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            GetCustomEmojiRequest request = new GetCustomEmojiRequest
+            {
+                CustomEmojiName = CustomEmojiName.FromCustomEmoji("[CUSTOM_EMOJI]"),
+            };
+            // Make the request
+            CustomEmoji response = chatServiceClient.GetCustomEmoji(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCustomEmojiAsync</summary>
+        public async Task GetCustomEmojiRequestObjectAsync()
+        {
+            // Snippet: GetCustomEmojiAsync(GetCustomEmojiRequest, CallSettings)
+            // Additional: GetCustomEmojiAsync(GetCustomEmojiRequest, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetCustomEmojiRequest request = new GetCustomEmojiRequest
+            {
+                CustomEmojiName = CustomEmojiName.FromCustomEmoji("[CUSTOM_EMOJI]"),
+            };
+            // Make the request
+            CustomEmoji response = await chatServiceClient.GetCustomEmojiAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCustomEmoji</summary>
+        public void GetCustomEmoji()
+        {
+            // Snippet: GetCustomEmoji(string, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "customEmojis/[CUSTOM_EMOJI]";
+            // Make the request
+            CustomEmoji response = chatServiceClient.GetCustomEmoji(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCustomEmojiAsync</summary>
+        public async Task GetCustomEmojiAsync()
+        {
+            // Snippet: GetCustomEmojiAsync(string, CallSettings)
+            // Additional: GetCustomEmojiAsync(string, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "customEmojis/[CUSTOM_EMOJI]";
+            // Make the request
+            CustomEmoji response = await chatServiceClient.GetCustomEmojiAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCustomEmoji</summary>
+        public void GetCustomEmojiResourceNames()
+        {
+            // Snippet: GetCustomEmoji(CustomEmojiName, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            CustomEmojiName name = CustomEmojiName.FromCustomEmoji("[CUSTOM_EMOJI]");
+            // Make the request
+            CustomEmoji response = chatServiceClient.GetCustomEmoji(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCustomEmojiAsync</summary>
+        public async Task GetCustomEmojiResourceNamesAsync()
+        {
+            // Snippet: GetCustomEmojiAsync(CustomEmojiName, CallSettings)
+            // Additional: GetCustomEmojiAsync(CustomEmojiName, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CustomEmojiName name = CustomEmojiName.FromCustomEmoji("[CUSTOM_EMOJI]");
+            // Make the request
+            CustomEmoji response = await chatServiceClient.GetCustomEmojiAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCustomEmojis</summary>
+        public void ListCustomEmojisRequestObject()
+        {
+            // Snippet: ListCustomEmojis(ListCustomEmojisRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            ListCustomEmojisRequest request = new ListCustomEmojisRequest { Filter = "", };
+            // Make the request
+            PagedEnumerable<ListCustomEmojisResponse, CustomEmoji> response = chatServiceClient.ListCustomEmojis(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (CustomEmoji item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListCustomEmojisResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CustomEmoji item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CustomEmoji> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CustomEmoji item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCustomEmojisAsync</summary>
+        public async Task ListCustomEmojisRequestObjectAsync()
+        {
+            // Snippet: ListCustomEmojisAsync(ListCustomEmojisRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListCustomEmojisRequest request = new ListCustomEmojisRequest { Filter = "", };
+            // Make the request
+            PagedAsyncEnumerable<ListCustomEmojisResponse, CustomEmoji> response = chatServiceClient.ListCustomEmojisAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((CustomEmoji item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListCustomEmojisResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CustomEmoji item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CustomEmoji> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CustomEmoji item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCustomEmojis</summary>
+        public void ListCustomEmojis()
+        {
+            // Snippet: ListCustomEmojis(string, int?, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Make the request
+            PagedEnumerable<ListCustomEmojisResponse, CustomEmoji> response = chatServiceClient.ListCustomEmojis();
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (CustomEmoji item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListCustomEmojisResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CustomEmoji item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CustomEmoji> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CustomEmoji item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCustomEmojisAsync</summary>
+        public async Task ListCustomEmojisAsync()
+        {
+            // Snippet: ListCustomEmojisAsync(string, int?, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Make the request
+            PagedAsyncEnumerable<ListCustomEmojisResponse, CustomEmoji> response = chatServiceClient.ListCustomEmojisAsync();
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((CustomEmoji item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListCustomEmojisResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CustomEmoji item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CustomEmoji> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CustomEmoji item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomEmoji</summary>
+        public void DeleteCustomEmojiRequestObject()
+        {
+            // Snippet: DeleteCustomEmoji(DeleteCustomEmojiRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteCustomEmojiRequest request = new DeleteCustomEmojiRequest
+            {
+                CustomEmojiName = CustomEmojiName.FromCustomEmoji("[CUSTOM_EMOJI]"),
+            };
+            // Make the request
+            chatServiceClient.DeleteCustomEmoji(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomEmojiAsync</summary>
+        public async Task DeleteCustomEmojiRequestObjectAsync()
+        {
+            // Snippet: DeleteCustomEmojiAsync(DeleteCustomEmojiRequest, CallSettings)
+            // Additional: DeleteCustomEmojiAsync(DeleteCustomEmojiRequest, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteCustomEmojiRequest request = new DeleteCustomEmojiRequest
+            {
+                CustomEmojiName = CustomEmojiName.FromCustomEmoji("[CUSTOM_EMOJI]"),
+            };
+            // Make the request
+            await chatServiceClient.DeleteCustomEmojiAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomEmoji</summary>
+        public void DeleteCustomEmoji()
+        {
+            // Snippet: DeleteCustomEmoji(string, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "customEmojis/[CUSTOM_EMOJI]";
+            // Make the request
+            chatServiceClient.DeleteCustomEmoji(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomEmojiAsync</summary>
+        public async Task DeleteCustomEmojiAsync()
+        {
+            // Snippet: DeleteCustomEmojiAsync(string, CallSettings)
+            // Additional: DeleteCustomEmojiAsync(string, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "customEmojis/[CUSTOM_EMOJI]";
+            // Make the request
+            await chatServiceClient.DeleteCustomEmojiAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomEmoji</summary>
+        public void DeleteCustomEmojiResourceNames()
+        {
+            // Snippet: DeleteCustomEmoji(CustomEmojiName, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            CustomEmojiName name = CustomEmojiName.FromCustomEmoji("[CUSTOM_EMOJI]");
+            // Make the request
+            chatServiceClient.DeleteCustomEmoji(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomEmojiAsync</summary>
+        public async Task DeleteCustomEmojiResourceNamesAsync()
+        {
+            // Snippet: DeleteCustomEmojiAsync(CustomEmojiName, CallSettings)
+            // Additional: DeleteCustomEmojiAsync(CustomEmojiName, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CustomEmojiName name = CustomEmojiName.FromCustomEmoji("[CUSTOM_EMOJI]");
+            // Make the request
+            await chatServiceClient.DeleteCustomEmojiAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetSpaceReadState</summary>
         public void GetSpaceReadStateRequestObject()
         {

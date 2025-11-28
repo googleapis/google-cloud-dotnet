@@ -31,398 +31,469 @@ namespace Google.Maps.RouteOptimization.V1 {
             "aW9yLnByb3RvGiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90",
             "bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJv",
             "dG9idWYvdGltZXN0YW1wLnByb3RvGhhnb29nbGUvdHlwZS9sYXRsbmcucHJv",
-            "dG8i4AIKGUJhdGNoT3B0aW1pemVUb3Vyc1JlcXVlc3QSEwoGcGFyZW50GAEg",
-            "ASgJQgPgQQISaAoNbW9kZWxfY29uZmlncxgCIAMoCzJMLmdvb2dsZS5tYXBz",
-            "LnJvdXRlb3B0aW1pemF0aW9uLnYxLkJhdGNoT3B0aW1pemVUb3Vyc1JlcXVl",
-            "c3QuQXN5bmNNb2RlbENvbmZpZ0ID4EECGsMBChBBc3luY01vZGVsQ29uZmln",
-            "EhkKDGRpc3BsYXlfbmFtZRgBIAEoCUID4EEBEkgKDGlucHV0X2NvbmZpZxgC",
-            "IAEoCzItLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLklucHV0",
-            "Q29uZmlnQgPgQQISSgoNb3V0cHV0X2NvbmZpZxgDIAEoCzIuLmdvb2dsZS5t",
-            "YXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLk91dHB1dENvbmZpZ0ID4EECIhwK",
-            "GkJhdGNoT3B0aW1pemVUb3Vyc1Jlc3BvbnNlIhwKGkJhdGNoT3B0aW1pemVU",
-            "b3Vyc01ldGFkYXRhIpAJChRPcHRpbWl6ZVRvdXJzUmVxdWVzdBITCgZwYXJl",
-            "bnQYASABKAlCA+BBAhIqCgd0aW1lb3V0GAIgASgLMhkuZ29vZ2xlLnByb3Rv",
-            "YnVmLkR1cmF0aW9uEj4KBW1vZGVsGAMgASgLMi8uZ29vZ2xlLm1hcHMucm91",
-            "dGVvcHRpbWl6YXRpb24udjEuU2hpcG1lbnRNb2RlbBJYCgxzb2x2aW5nX21v",
-            "ZGUYBCABKA4yQi5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5P",
-            "cHRpbWl6ZVRvdXJzUmVxdWVzdC5Tb2x2aW5nTW9kZRJWCgtzZWFyY2hfbW9k",
-            "ZRgGIAEoDjJBLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLk9w",
-            "dGltaXplVG91cnNSZXF1ZXN0LlNlYXJjaE1vZGUSVwoeaW5qZWN0ZWRfZmly",
-            "c3Rfc29sdXRpb25fcm91dGVzGAcgAygLMi8uZ29vZ2xlLm1hcHMucm91dGVv",
-            "cHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0ZRJiChxpbmplY3RlZF9zb2x1",
-            "dGlvbl9jb25zdHJhaW50GAggASgLMjwuZ29vZ2xlLm1hcHMucm91dGVvcHRp",
-            "bWl6YXRpb24udjEuSW5qZWN0ZWRTb2x1dGlvbkNvbnN0cmFpbnQSTwoWcmVm",
-            "cmVzaF9kZXRhaWxzX3JvdXRlcxgJIAMoCzIvLmdvb2dsZS5tYXBzLnJvdXRl",
-            "b3B0aW1pemF0aW9uLnYxLlNoaXBtZW50Um91dGUSMQopaW50ZXJwcmV0X2lu",
-            "amVjdGVkX3NvbHV0aW9uc191c2luZ19sYWJlbHMYCiABKAgSHQoVY29uc2lk",
-            "ZXJfcm9hZF90cmFmZmljGAsgASgIEhoKEnBvcHVsYXRlX3BvbHlsaW5lcxgM",
-            "IAEoCBIlCh1wb3B1bGF0ZV90cmFuc2l0aW9uX3BvbHlsaW5lcxgNIAEoCBI2",
-            "Ci5hbGxvd19sYXJnZV9kZWFkbGluZV9kZXNwaXRlX2ludGVycnVwdGlvbl9y",
-            "aXNrGA4gASgIEh4KFnVzZV9nZW9kZXNpY19kaXN0YW5jZXMYDyABKAgSJwoa",
-            "Z2VvZGVzaWNfbWV0ZXJzX3Blcl9zZWNvbmQYECABKAFIAIgBARIiChVtYXhf",
-            "dmFsaWRhdGlvbl9lcnJvcnMYBSABKAVIAYgBARINCgVsYWJlbBgRIAEoCSJZ",
-            "CgtTb2x2aW5nTW9kZRIRCg1ERUZBVUxUX1NPTFZFEAASEQoNVkFMSURBVEVf",
-            "T05MWRABEiQKIERFVEVDVF9TT01FX0lORkVBU0lCTEVfU0hJUE1FTlRTEAIi",
-            "WgoKU2VhcmNoTW9kZRIbChdTRUFSQ0hfTU9ERV9VTlNQRUNJRklFRBAAEg8K",
-            "C1JFVFVSTl9GQVNUEAESHgoaQ09OU1VNRV9BTExfQVZBSUxBQkxFX1RJTUUQ",
-            "AkIdChtfZ2VvZGVzaWNfbWV0ZXJzX3Blcl9zZWNvbmRCGAoWX21heF92YWxp",
-            "ZGF0aW9uX2Vycm9ycyKuBgoVT3B0aW1pemVUb3Vyc1Jlc3BvbnNlEj8KBnJv",
-            "dXRlcxgBIAMoCzIvLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYx",
-            "LlNoaXBtZW50Um91dGUSFQoNcmVxdWVzdF9sYWJlbBgDIAEoCRJMChFza2lw",
-            "cGVkX3NoaXBtZW50cxgEIAMoCzIxLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1p",
-            "emF0aW9uLnYxLlNraXBwZWRTaGlwbWVudBJZChF2YWxpZGF0aW9uX2Vycm9y",
-            "cxgFIAMoCzI+Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLk9w",
-            "dGltaXplVG91cnNWYWxpZGF0aW9uRXJyb3ISUAoHbWV0cmljcxgGIAEoCzI/",
-            "Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLk9wdGltaXplVG91",
-            "cnNSZXNwb25zZS5NZXRyaWNzGsEDCgdNZXRyaWNzElUKGGFnZ3JlZ2F0ZWRf",
-            "cm91dGVfbWV0cmljcxgBIAEoCzIzLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1p",
-            "emF0aW9uLnYxLkFnZ3JlZ2F0ZWRNZXRyaWNzEigKIHNraXBwZWRfbWFuZGF0",
-            "b3J5X3NoaXBtZW50X2NvdW50GAIgASgFEhoKEnVzZWRfdmVoaWNsZV9jb3Vu",
-            "dBgDIAEoBRI/ChtlYXJsaWVzdF92ZWhpY2xlX3N0YXJ0X3RpbWUYBCABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjsKF2xhdGVzdF92ZWhpY2xl",
-            "X2VuZF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJZ",
-            "CgVjb3N0cxgKIAMoCzJKLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9u",
-            "LnYxLk9wdGltaXplVG91cnNSZXNwb25zZS5NZXRyaWNzLkNvc3RzRW50cnkS",
-            "EgoKdG90YWxfY29zdBgGIAEoARosCgpDb3N0c0VudHJ5EgsKA2tleRgBIAEo",
-            "CRINCgV2YWx1ZRgCIAEoAToCOAEiuwoKDVNoaXBtZW50TW9kZWwSPQoJc2hp",
-            "cG1lbnRzGAEgAygLMiouZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24u",
-            "djEuU2hpcG1lbnQSOwoIdmVoaWNsZXMYAiADKAsyKS5nb29nbGUubWFwcy5y",
-            "b3V0ZW9wdGltaXphdGlvbi52MS5WZWhpY2xlEiAKE21heF9hY3RpdmVfdmVo",
-            "aWNsZXMYBCABKAVIAIgBARI1ChFnbG9iYWxfc3RhcnRfdGltZRgFIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMwoPZ2xvYmFsX2VuZF90aW1l",
-            "GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIlCh1nbG9iYWxf",
-            "ZHVyYXRpb25fY29zdF9wZXJfaG91chgHIAEoARJqChpkdXJhdGlvbl9kaXN0",
-            "YW5jZV9tYXRyaWNlcxgIIAMoCzJGLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1p",
-            "emF0aW9uLnYxLlNoaXBtZW50TW9kZWwuRHVyYXRpb25EaXN0YW5jZU1hdHJp",
-            "eBIpCiFkdXJhdGlvbl9kaXN0YW5jZV9tYXRyaXhfc3JjX3RhZ3MYCSADKAkS",
-            "KQohZHVyYXRpb25fZGlzdGFuY2VfbWF0cml4X2RzdF90YWdzGAogAygJElUK",
-            "FXRyYW5zaXRpb25fYXR0cmlidXRlcxgLIAMoCzI2Lmdvb2dsZS5tYXBzLnJv",
-            "dXRlb3B0aW1pemF0aW9uLnYxLlRyYW5zaXRpb25BdHRyaWJ1dGVzEmYKH3No",
-            "aXBtZW50X3R5cGVfaW5jb21wYXRpYmlsaXRpZXMYDCADKAsyPS5nb29nbGUu",
-            "bWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5TaGlwbWVudFR5cGVJbmNvbXBh",
-            "dGliaWxpdHkSXQoac2hpcG1lbnRfdHlwZV9yZXF1aXJlbWVudHMYDSADKAsy",
-            "OS5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5TaGlwbWVudFR5",
-            "cGVSZXF1aXJlbWVudBJYChBwcmVjZWRlbmNlX3J1bGVzGA4gAygLMj4uZ29v",
-            "Z2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuU2hpcG1lbnRNb2RlbC5Q",
-            "cmVjZWRlbmNlUnVsZRrSAQoWRHVyYXRpb25EaXN0YW5jZU1hdHJpeBJYCgRy",
-            "b3dzGAEgAygLMkouZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEu",
-            "U2hpcG1lbnRNb2RlbC5EdXJhdGlvbkRpc3RhbmNlTWF0cml4LlJvdxIZChF2",
-            "ZWhpY2xlX3N0YXJ0X3RhZxgCIAEoCRpDCgNSb3cSLAoJZHVyYXRpb25zGAEg",
-            "AygLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEg4KBm1ldGVycxgCIAMo",
-            "ARrRAQoOUHJlY2VkZW5jZVJ1bGUSGAoLZmlyc3RfaW5kZXgYASABKAVIAIgB",
-            "ARIZChFmaXJzdF9pc19kZWxpdmVyeRgDIAEoCBIZCgxzZWNvbmRfaW5kZXgY",
-            "AiABKAVIAYgBARIaChJzZWNvbmRfaXNfZGVsaXZlcnkYBCABKAgSMgoPb2Zm",
-            "c2V0X2R1cmF0aW9uGAUgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
-            "Qg4KDF9maXJzdF9pbmRleEIPCg1fc2Vjb25kX2luZGV4QhYKFF9tYXhfYWN0",
-            "aXZlX3ZlaGljbGVzIrALCghTaGlwbWVudBIUCgxkaXNwbGF5X25hbWUYECAB",
-            "KAkSSAoHcGlja3VwcxgBIAMoCzI3Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1p",
-            "emF0aW9uLnYxLlNoaXBtZW50LlZpc2l0UmVxdWVzdBJLCgpkZWxpdmVyaWVz",
-            "GAIgAygLMjcuZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuU2hp",
-            "cG1lbnQuVmlzaXRSZXF1ZXN0ElEKDGxvYWRfZGVtYW5kcxgOIAMoCzI7Lmdv",
-            "b2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlNoaXBtZW50LkxvYWRE",
-            "ZW1hbmRzRW50cnkSGQoMcGVuYWx0eV9jb3N0GAQgASgBSACIAQESHwoXYWxs",
-            "b3dlZF92ZWhpY2xlX2luZGljZXMYBSADKAUSGQoRY29zdHNfcGVyX3ZlaGlj",
-            "bGUYBiADKAESIQoZY29zdHNfcGVyX3ZlaGljbGVfaW5kaWNlcxgHIAMoBRI1",
-            "CihwaWNrdXBfdG9fZGVsaXZlcnlfcmVsYXRpdmVfZGV0b3VyX2xpbWl0GAgg",
-            "ASgBSAGIAQESSwoocGlja3VwX3RvX2RlbGl2ZXJ5X2Fic29sdXRlX2RldG91",
-            "cl9saW1pdBgJIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhJACh1w",
-            "aWNrdXBfdG9fZGVsaXZlcnlfdGltZV9saW1pdBgKIAEoCzIZLmdvb2dsZS5w",
-            "cm90b2J1Zi5EdXJhdGlvbhIVCg1zaGlwbWVudF90eXBlGAsgASgJEg0KBWxh",
-            "YmVsGAwgASgJEg4KBmlnbm9yZRgNIAEoCBryBAoMVmlzaXRSZXF1ZXN0Ei0K",
-            "EGFycml2YWxfbG9jYXRpb24YASABKAsyEy5nb29nbGUudHlwZS5MYXRMbmcS",
-            "RAoQYXJyaXZhbF93YXlwb2ludBgCIAEoCzIqLmdvb2dsZS5tYXBzLnJvdXRl",
-            "b3B0aW1pemF0aW9uLnYxLldheXBvaW50Ei8KEmRlcGFydHVyZV9sb2NhdGlv",
-            "bhgDIAEoCzITLmdvb2dsZS50eXBlLkxhdExuZxJGChJkZXBhcnR1cmVfd2F5",
-            "cG9pbnQYBCABKAsyKi5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52",
-            "MS5XYXlwb2ludBIMCgR0YWdzGAUgAygJEkIKDHRpbWVfd2luZG93cxgGIAMo",
-            "CzIsLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlRpbWVXaW5k",
-            "b3cSKwoIZHVyYXRpb24YByABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRp",
-            "b24SDAoEY29zdBgIIAEoARJeCgxsb2FkX2RlbWFuZHMYDCADKAsySC5nb29n",
-            "bGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5TaGlwbWVudC5WaXNpdFJl",
-            "cXVlc3QuTG9hZERlbWFuZHNFbnRyeRITCgt2aXNpdF90eXBlcxgKIAMoCRIN",
-            "CgVsYWJlbBgLIAEoCRpjChBMb2FkRGVtYW5kc0VudHJ5EgsKA2tleRgBIAEo",
-            "CRI+CgV2YWx1ZRgCIAEoCzIvLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0",
-            "aW9uLnYxLlNoaXBtZW50LkxvYWQ6AjgBGhYKBExvYWQSDgoGYW1vdW50GAIg",
-            "ASgDGmMKEExvYWREZW1hbmRzRW50cnkSCwoDa2V5GAEgASgJEj4KBXZhbHVl",
-            "GAIgASgLMi8uZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuU2hp",
-            "cG1lbnQuTG9hZDoCOAFCDwoNX3BlbmFsdHlfY29zdEIrCilfcGlja3VwX3Rv",
-            "X2RlbGl2ZXJ5X3JlbGF0aXZlX2RldG91cl9saW1pdCKmAgobU2hpcG1lbnRU",
-            "eXBlSW5jb21wYXRpYmlsaXR5Eg0KBXR5cGVzGAEgAygJEm8KFGluY29tcGF0",
-            "aWJpbGl0eV9tb2RlGAIgASgOMlEuZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6",
-            "YXRpb24udjEuU2hpcG1lbnRUeXBlSW5jb21wYXRpYmlsaXR5LkluY29tcGF0",
-            "aWJpbGl0eU1vZGUihgEKE0luY29tcGF0aWJpbGl0eU1vZGUSJAogSU5DT01Q",
-            "QVRJQklMSVRZX01PREVfVU5TUEVDSUZJRUQQABIhCh1OT1RfUEVSRk9STUVE",
-            "X0JZX1NBTUVfVkVISUNMRRABEiYKIk5PVF9JTl9TQU1FX1ZFSElDTEVfU0lN",
-            "VUxUQU5FT1VTTFkQAiLsAgoXU2hpcG1lbnRUeXBlUmVxdWlyZW1lbnQSKwoj",
-            "cmVxdWlyZWRfc2hpcG1lbnRfdHlwZV9hbHRlcm5hdGl2ZXMYASADKAkSIAoY",
-            "ZGVwZW5kZW50X3NoaXBtZW50X3R5cGVzGAIgAygJEmMKEHJlcXVpcmVtZW50",
-            "X21vZGUYAyABKA4ySS5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52",
-            "MS5TaGlwbWVudFR5cGVSZXF1aXJlbWVudC5SZXF1aXJlbWVudE1vZGUinAEK",
-            "D1JlcXVpcmVtZW50TW9kZRIgChxSRVFVSVJFTUVOVF9NT0RFX1VOU1BFQ0lG",
-            "SUVEEAASHQoZUEVSRk9STUVEX0JZX1NBTUVfVkVISUNMRRABEiIKHklOX1NB",
-            "TUVfVkVISUNMRV9BVF9QSUNLVVBfVElNRRACEiQKIElOX1NBTUVfVkVISUNM",
-            "RV9BVF9ERUxJVkVSWV9USU1FEAMibwoOUm91dGVNb2RpZmllcnMSEwoLYXZv",
-            "aWRfdG9sbHMYAiABKAgSFgoOYXZvaWRfaGlnaHdheXMYAyABKAgSFQoNYXZv",
-            "aWRfZmVycmllcxgEIAEoCBIZCgxhdm9pZF9pbmRvb3IYBSABKAhCA+BBASLR",
-            "EwoHVmVoaWNsZRIUCgxkaXNwbGF5X25hbWUYICABKAkSSQoLdHJhdmVsX21v",
-            "ZGUYASABKA4yNC5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5W",
-            "ZWhpY2xlLlRyYXZlbE1vZGUSSQoPcm91dGVfbW9kaWZpZXJzGAIgASgLMjAu",
-            "Z29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuUm91dGVNb2RpZmll",
-            "cnMSKwoOc3RhcnRfbG9jYXRpb24YAyABKAsyEy5nb29nbGUudHlwZS5MYXRM",
-            "bmcSQgoOc3RhcnRfd2F5cG9pbnQYBCABKAsyKi5nb29nbGUubWFwcy5yb3V0",
-            "ZW9wdGltaXphdGlvbi52MS5XYXlwb2ludBIpCgxlbmRfbG9jYXRpb24YBSAB",
-            "KAsyEy5nb29nbGUudHlwZS5MYXRMbmcSQAoMZW5kX3dheXBvaW50GAYgASgL",
-            "MiouZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuV2F5cG9pbnQS",
-            "EgoKc3RhcnRfdGFncxgHIAMoCRIQCghlbmRfdGFncxgIIAMoCRJIChJzdGFy",
-            "dF90aW1lX3dpbmRvd3MYCSADKAsyLC5nb29nbGUubWFwcy5yb3V0ZW9wdGlt",
-            "aXphdGlvbi52MS5UaW1lV2luZG93EkYKEGVuZF90aW1lX3dpbmRvd3MYCiAD",
-            "KAsyLC5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5UaW1lV2lu",
-            "ZG93EiUKGHRyYXZlbF9kdXJhdGlvbl9tdWx0aXBsZRgLIAEoAUgAiAEBElMK",
-            "EHVubG9hZGluZ19wb2xpY3kYDCABKA4yOS5nb29nbGUubWFwcy5yb3V0ZW9w",
-            "dGltaXphdGlvbi52MS5WZWhpY2xlLlVubG9hZGluZ1BvbGljeRJOCgtsb2Fk",
-            "X2xpbWl0cxgeIAMoCzI5Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9u",
-            "LnYxLlZlaGljbGUuTG9hZExpbWl0c0VudHJ5EhUKDWNvc3RfcGVyX2hvdXIY",
-            "ECABKAESHgoWY29zdF9wZXJfdHJhdmVsZWRfaG91chgRIAEoARIaChJjb3N0",
-            "X3Blcl9raWxvbWV0ZXIYEiABKAESEgoKZml4ZWRfY29zdBgTIAEoARIeChZ1",
-            "c2VkX2lmX3JvdXRlX2lzX2VtcHR5GBQgASgIElUKFHJvdXRlX2R1cmF0aW9u",
-            "X2xpbWl0GBUgASgLMjcuZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24u",
-            "djEuVmVoaWNsZS5EdXJhdGlvbkxpbWl0ElYKFXRyYXZlbF9kdXJhdGlvbl9s",
-            "aW1pdBgWIAEoCzI3Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYx",
-            "LlZlaGljbGUuRHVyYXRpb25MaW1pdBJNChRyb3V0ZV9kaXN0YW5jZV9saW1p",
-            "dBgXIAEoCzIvLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLkRp",
-            "c3RhbmNlTGltaXQSegojZXh0cmFfdmlzaXRfZHVyYXRpb25fZm9yX3Zpc2l0",
-            "X3R5cGUYGCADKAsyTS5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52",
-            "MS5WZWhpY2xlLkV4dHJhVmlzaXREdXJhdGlvbkZvclZpc2l0VHlwZUVudHJ5",
-            "Ej8KCmJyZWFrX3J1bGUYGSABKAsyKy5nb29nbGUubWFwcy5yb3V0ZW9wdGlt",
-            "aXphdGlvbi52MS5CcmVha1J1bGUSDQoFbGFiZWwYGyABKAkSDgoGaWdub3Jl",
-            "GBwgASgIGtMCCglMb2FkTGltaXQSFQoIbWF4X2xvYWQYASABKANIAIgBARIV",
-            "Cg1zb2Z0X21heF9sb2FkGAIgASgDEiQKHGNvc3RfcGVyX3VuaXRfYWJvdmVf",
-            "c29mdF9tYXgYAyABKAESWQoTc3RhcnRfbG9hZF9pbnRlcnZhbBgEIAEoCzI8",
-            "Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlZlaGljbGUuTG9h",
-            "ZExpbWl0LkludGVydmFsElcKEWVuZF9sb2FkX2ludGVydmFsGAUgASgLMjwu",
-            "Z29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuVmVoaWNsZS5Mb2Fk",
-            "TGltaXQuSW50ZXJ2YWwaMQoISW50ZXJ2YWwSCwoDbWluGAEgASgDEhAKA21h",
-            "eBgCIAEoA0gAiAEBQgYKBF9tYXhCCwoJX21heF9sb2FkGvACCg1EdXJhdGlv",
-            "bkxpbWl0Ei8KDG1heF9kdXJhdGlvbhgBIAEoCzIZLmdvb2dsZS5wcm90b2J1",
-            "Zi5EdXJhdGlvbhI0ChFzb2Z0X21heF9kdXJhdGlvbhgCIAEoCzIZLmdvb2ds",
-            "ZS5wcm90b2J1Zi5EdXJhdGlvbhIpChxjb3N0X3Blcl9ob3VyX2FmdGVyX3Nv",
-            "ZnRfbWF4GAMgASgBSACIAQESPgobcXVhZHJhdGljX3NvZnRfbWF4X2R1cmF0",
-            "aW9uGAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjoKLWNvc3Rf",
-            "cGVyX3NxdWFyZV9ob3VyX2FmdGVyX3F1YWRyYXRpY19zb2Z0X21heBgFIAEo",
-            "AUgBiAEBQh8KHV9jb3N0X3Blcl9ob3VyX2FmdGVyX3NvZnRfbWF4QjAKLl9j",
-            "b3N0X3Blcl9zcXVhcmVfaG91cl9hZnRlcl9xdWFkcmF0aWNfc29mdF9tYXga",
-            "ZgoPTG9hZExpbWl0c0VudHJ5EgsKA2tleRgBIAEoCRJCCgV2YWx1ZRgCIAEo",
-            "CzIzLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlZlaGljbGUu",
-            "TG9hZExpbWl0OgI4ARpgCiNFeHRyYVZpc2l0RHVyYXRpb25Gb3JWaXNpdFR5",
-            "cGVFbnRyeRILCgNrZXkYASABKAkSKAoFdmFsdWUYAiABKAsyGS5nb29nbGUu",
-            "cHJvdG9idWYuRHVyYXRpb246AjgBIkMKClRyYXZlbE1vZGUSGwoXVFJBVkVM",
-            "X01PREVfVU5TUEVDSUZJRUQQABILCgdEUklWSU5HEAESCwoHV0FMS0lORxAC",
-            "ImIKD1VubG9hZGluZ1BvbGljeRIgChxVTkxPQURJTkdfUE9MSUNZX1VOU1BF",
-            "Q0lGSUVEEAASFQoRTEFTVF9JTl9GSVJTVF9PVVQQARIWChJGSVJTVF9JTl9G",
-            "SVJTVF9PVVQQAkIbChlfdHJhdmVsX2R1cmF0aW9uX211bHRpcGxlIoQDCgpU",
-            "aW1lV2luZG93Ei4KCnN0YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcBIzCg9zb2Z0X3N0YXJ0X3RpbWUYAyABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wEjEKDXNvZnRfZW5kX3RpbWUYBCABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjEKJGNvc3RfcGVyX2hvdXJf",
-            "YmVmb3JlX3NvZnRfc3RhcnRfdGltZRgFIAEoAUgAiAEBEi4KIWNvc3RfcGVy",
-            "X2hvdXJfYWZ0ZXJfc29mdF9lbmRfdGltZRgGIAEoAUgBiAEBQicKJV9jb3N0",
-            "X3Blcl9ob3VyX2JlZm9yZV9zb2Z0X3N0YXJ0X3RpbWVCJAoiX2Nvc3RfcGVy",
-            "X2hvdXJfYWZ0ZXJfc29mdF9lbmRfdGltZSKVAgoNRGlzdGFuY2VMaW1pdBIX",
-            "CgptYXhfbWV0ZXJzGAEgASgDSACIAQESHAoPc29mdF9tYXhfbWV0ZXJzGAIg",
-            "ASgDSAGIAQESLgohY29zdF9wZXJfa2lsb21ldGVyX2JlbG93X3NvZnRfbWF4",
-            "GAQgASgBSAKIAQESLgohY29zdF9wZXJfa2lsb21ldGVyX2Fib3ZlX3NvZnRf",
-            "bWF4GAMgASgBSAOIAQFCDQoLX21heF9tZXRlcnNCEgoQX3NvZnRfbWF4X21l",
-            "dGVyc0IkCiJfY29zdF9wZXJfa2lsb21ldGVyX2JlbG93X3NvZnRfbWF4QiQK",
-            "Il9jb3N0X3Blcl9raWxvbWV0ZXJfYWJvdmVfc29mdF9tYXgiiQIKFFRyYW5z",
-            "aXRpb25BdHRyaWJ1dGVzEg8KB3NyY190YWcYASABKAkSGAoQZXhjbHVkZWRf",
-            "c3JjX3RhZxgCIAEoCRIPCgdkc3RfdGFnGAMgASgJEhgKEGV4Y2x1ZGVkX2Rz",
-            "dF90YWcYBCABKAkSDAoEY29zdBgFIAEoARIaChJjb3N0X3Blcl9raWxvbWV0",
-            "ZXIYBiABKAESRwoOZGlzdGFuY2VfbGltaXQYByABKAsyLy5nb29nbGUubWFw",
-            "cy5yb3V0ZW9wdGltaXphdGlvbi52MS5EaXN0YW5jZUxpbWl0EigKBWRlbGF5",
-            "GAggASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIooBCghXYXlwb2lu",
-            "dBI+Cghsb2NhdGlvbhgBIAEoCzIqLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1p",
-            "emF0aW9uLnYxLkxvY2F0aW9uSAASEgoIcGxhY2VfaWQYAiABKAlIABIZCgxz",
-            "aWRlX29mX3JvYWQYAyABKAhCA+BBAUIPCg1sb2NhdGlvbl90eXBlIlIKCExv",
-            "Y2F0aW9uEiQKB2xhdF9sbmcYASABKAsyEy5nb29nbGUudHlwZS5MYXRMbmcS",
-            "FAoHaGVhZGluZxgCIAEoBUgAiAEBQgoKCF9oZWFkaW5nIpQECglCcmVha1J1",
-            "bGUSUAoOYnJlYWtfcmVxdWVzdHMYASADKAsyOC5nb29nbGUubWFwcy5yb3V0",
-            "ZW9wdGltaXphdGlvbi52MS5CcmVha1J1bGUuQnJlYWtSZXF1ZXN0El4KFWZy",
-            "ZXF1ZW5jeV9jb25zdHJhaW50cxgCIAMoCzI/Lmdvb2dsZS5tYXBzLnJvdXRl",
-            "b3B0aW1pemF0aW9uLnYxLkJyZWFrUnVsZS5GcmVxdWVuY3lDb25zdHJhaW50",
-            "Gr4BCgxCcmVha1JlcXVlc3QSPAoTZWFybGllc3Rfc3RhcnRfdGltZRgBIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAhI6ChFsYXRlc3Rf",
-            "c3RhcnRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
-            "A+BBAhI0CgxtaW5fZHVyYXRpb24YAyABKAsyGS5nb29nbGUucHJvdG9idWYu",
-            "RHVyYXRpb25CA+BBAhqTAQoTRnJlcXVlbmN5Q29uc3RyYWludBI6ChJtaW5f",
-            "YnJlYWtfZHVyYXRpb24YASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRp",
-            "b25CA+BBAhJAChhtYXhfaW50ZXJfYnJlYWtfZHVyYXRpb24YAiABKAsyGS5n",
-            "b29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAiKAEAoNU2hpcG1lbnRSb3V0",
-            "ZRIVCg12ZWhpY2xlX2luZGV4GAEgASgFEhUKDXZlaGljbGVfbGFiZWwYAiAB",
-            "KAkSNgoSdmVoaWNsZV9zdGFydF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcBI0ChB2ZWhpY2xlX2VuZF90aW1lGAYgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBJFCgZ2aXNpdHMYByADKAsyNS5nb29n",
-            "bGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5TaGlwbWVudFJvdXRlLlZp",
-            "c2l0Ek8KC3RyYW5zaXRpb25zGAggAygLMjouZ29vZ2xlLm1hcHMucm91dGVv",
-            "cHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0ZS5UcmFuc2l0aW9uEiMKG2hh",
-            "c190cmFmZmljX2luZmVhc2liaWxpdGllcxgJIAEoCBJXCg5yb3V0ZV9wb2x5",
-            "bGluZRgKIAEoCzI/Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYx",
-            "LlNoaXBtZW50Um91dGUuRW5jb2RlZFBvbHlsaW5lEkUKBmJyZWFrcxgLIAMo",
-            "CzI1Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlNoaXBtZW50",
-            "Um91dGUuQnJlYWsSRAoHbWV0cmljcxgMIAEoCzIzLmdvb2dsZS5tYXBzLnJv",
-            "dXRlb3B0aW1pemF0aW9uLnYxLkFnZ3JlZ2F0ZWRNZXRyaWNzElQKC3JvdXRl",
-            "X2Nvc3RzGBEgAygLMj8uZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24u",
-            "djEuU2hpcG1lbnRSb3V0ZS5Sb3V0ZUNvc3RzRW50cnkSGAoQcm91dGVfdG90",
-            "YWxfY29zdBgSIAEoARqaAwoFVmlzaXQSFgoOc2hpcG1lbnRfaW5kZXgYASAB",
-            "KAUSEQoJaXNfcGlja3VwGAIgASgIEhsKE3Zpc2l0X3JlcXVlc3RfaW5kZXgY",
-            "AyABKAUSLgoKc3RhcnRfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXASXAoMbG9hZF9kZW1hbmRzGAsgAygLMkYuZ29vZ2xlLm1hcHMu",
-            "cm91dGVvcHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0ZS5WaXNpdC5Mb2Fk",
-            "RGVtYW5kc0VudHJ5EikKBmRldG91chgGIAEoCzIZLmdvb2dsZS5wcm90b2J1",
-            "Zi5EdXJhdGlvbhIWCg5zaGlwbWVudF9sYWJlbBgHIAEoCRITCgt2aXNpdF9s",
-            "YWJlbBgIIAEoCRpjChBMb2FkRGVtYW5kc0VudHJ5EgsKA2tleRgBIAEoCRI+",
-            "CgV2YWx1ZRgCIAEoCzIvLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9u",
-            "LnYxLlNoaXBtZW50LkxvYWQ6AjgBGscFCgpUcmFuc2l0aW9uEjIKD3RyYXZl",
-            "bF9kdXJhdGlvbhgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIe",
-            "ChZ0cmF2ZWxfZGlzdGFuY2VfbWV0ZXJzGAIgASgBEiAKGHRyYWZmaWNfaW5m",
-            "b191bmF2YWlsYWJsZRgDIAEoCBIxCg5kZWxheV9kdXJhdGlvbhgEIAEoCzIZ",
-            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIxCg5icmVha19kdXJhdGlvbhgF",
-            "IAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIwCg13YWl0X2R1cmF0",
-            "aW9uGAYgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjEKDnRvdGFs",
-            "X2R1cmF0aW9uGAcgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEi4K",
-            "CnN0YXJ0X3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "ElcKDnJvdXRlX3BvbHlsaW5lGAkgASgLMj8uZ29vZ2xlLm1hcHMucm91dGVv",
-            "cHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0ZS5FbmNvZGVkUG9seWxpbmUS",
-            "GAoLcm91dGVfdG9rZW4YDCABKAlCA+BBAxJjCg12ZWhpY2xlX2xvYWRzGAsg",
-            "AygLMkwuZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuU2hpcG1l",
-            "bnRSb3V0ZS5UcmFuc2l0aW9uLlZlaGljbGVMb2Fkc0VudHJ5GnAKEVZlaGlj",
-            "bGVMb2Fkc0VudHJ5EgsKA2tleRgBIAEoCRJKCgV2YWx1ZRgCIAEoCzI7Lmdv",
-            "b2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlNoaXBtZW50Um91dGUu",
-            "VmVoaWNsZUxvYWQ6AjgBGh0KC1ZlaGljbGVMb2FkEg4KBmFtb3VudBgBIAEo",
-            "AxohCg9FbmNvZGVkUG9seWxpbmUSDgoGcG9pbnRzGAEgASgJGmQKBUJyZWFr",
-            "Ei4KCnN0YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wEisKCGR1cmF0aW9uGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0",
-            "aW9uGjEKD1JvdXRlQ29zdHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
-            "AiABKAE6AjgBIoYFCg9Ta2lwcGVkU2hpcG1lbnQSDQoFaW5kZXgYASABKAUS",
-            "DQoFbGFiZWwYAiABKAkSSQoHcmVhc29ucxgDIAMoCzI4Lmdvb2dsZS5tYXBz",
-            "LnJvdXRlb3B0aW1pemF0aW9uLnYxLlNraXBwZWRTaGlwbWVudC5SZWFzb24a",
-            "iQQKBlJlYXNvbhJLCgRjb2RlGAEgASgOMj0uZ29vZ2xlLm1hcHMucm91dGVv",
-            "cHRpbWl6YXRpb24udjEuU2tpcHBlZFNoaXBtZW50LlJlYXNvbi5Db2RlEiIK",
-            "FWV4YW1wbGVfdmVoaWNsZV9pbmRleBgCIAEoBUgAiAEBEiYKHmV4YW1wbGVf",
-            "ZXhjZWVkZWRfY2FwYWNpdHlfdHlwZRgDIAEoCSLLAgoEQ29kZRIUChBDT0RF",
-            "X1VOU1BFQ0lGSUVEEAASDgoKTk9fVkVISUNMRRABEiMKH0RFTUFORF9FWENF",
-            "RURTX1ZFSElDTEVfQ0FQQUNJVFkQAhI1CjFDQU5OT1RfQkVfUEVSRk9STUVE",
-            "X1dJVEhJTl9WRUhJQ0xFX0RJU1RBTkNFX0xJTUlUEAMSNQoxQ0FOTk9UX0JF",
-            "X1BFUkZPUk1FRF9XSVRISU5fVkVISUNMRV9EVVJBVElPTl9MSU1JVBAEEjwK",
-            "OENBTk5PVF9CRV9QRVJGT1JNRURfV0lUSElOX1ZFSElDTEVfVFJBVkVMX0RV",
-            "UkFUSU9OX0xJTUlUEAUSMwovQ0FOTk9UX0JFX1BFUkZPUk1FRF9XSVRISU5f",
-            "VkVISUNMRV9USU1FX1dJTkRPV1MQBhIXChNWRUhJQ0xFX05PVF9BTExPV0VE",
-            "EAdCGAoWX2V4YW1wbGVfdmVoaWNsZV9pbmRleCLLBAoRQWdncmVnYXRlZE1l",
-            "dHJpY3MSIAoYcGVyZm9ybWVkX3NoaXBtZW50X2NvdW50GAEgASgFEjIKD3Ry",
-            "YXZlbF9kdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
-            "bhIwCg13YWl0X2R1cmF0aW9uGAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
-            "cmF0aW9uEjEKDmRlbGF5X2R1cmF0aW9uGAQgASgLMhkuZ29vZ2xlLnByb3Rv",
-            "YnVmLkR1cmF0aW9uEjEKDmJyZWFrX2R1cmF0aW9uGAUgASgLMhkuZ29vZ2xl",
-            "LnByb3RvYnVmLkR1cmF0aW9uEjEKDnZpc2l0X2R1cmF0aW9uGAYgASgLMhku",
-            "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjEKDnRvdGFsX2R1cmF0aW9uGAcg",
+            "dG8iEgoDVXJpEgsKA3VyaRgBIAEoCSKlAQoXT3B0aW1pemVUb3Vyc1VyaVJl",
+            "cXVlc3QSEwoGcGFyZW50GAEgASgJQgPgQQISOQoFaW5wdXQYAiABKAsyJS5n",
+            "b29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5VcmlCA+BBAhI6CgZv",
+            "dXRwdXQYAyABKAsyJS5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52",
+            "MS5VcmlCA+BBAiJWChhPcHRpbWl6ZVRvdXJzVXJpUmVzcG9uc2USOgoGb3V0",
+            "cHV0GAEgASgLMiUuZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEu",
+            "VXJpQgPgQQEiGgoYT3B0aW1pemVUb3Vyc1VyaU1ldGFkYXRhIuACChlCYXRj",
+            "aE9wdGltaXplVG91cnNSZXF1ZXN0EhMKBnBhcmVudBgBIAEoCUID4EECEmgK",
+            "DW1vZGVsX2NvbmZpZ3MYAiADKAsyTC5nb29nbGUubWFwcy5yb3V0ZW9wdGlt",
+            "aXphdGlvbi52MS5CYXRjaE9wdGltaXplVG91cnNSZXF1ZXN0LkFzeW5jTW9k",
+            "ZWxDb25maWdCA+BBAhrDAQoQQXN5bmNNb2RlbENvbmZpZxIZCgxkaXNwbGF5",
+            "X25hbWUYASABKAlCA+BBARJICgxpbnB1dF9jb25maWcYAiABKAsyLS5nb29n",
+            "bGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5JbnB1dENvbmZpZ0ID4EEC",
+            "EkoKDW91dHB1dF9jb25maWcYAyABKAsyLi5nb29nbGUubWFwcy5yb3V0ZW9w",
+            "dGltaXphdGlvbi52MS5PdXRwdXRDb25maWdCA+BBAiIcChpCYXRjaE9wdGlt",
+            "aXplVG91cnNSZXNwb25zZSIcChpCYXRjaE9wdGltaXplVG91cnNNZXRhZGF0",
+            "YSIiCiBPcHRpbWl6ZVRvdXJzTG9uZ1J1bm5pbmdNZXRhZGF0YSKyCQoUT3B0",
+            "aW1pemVUb3Vyc1JlcXVlc3QSEwoGcGFyZW50GAEgASgJQgPgQQISKgoHdGlt",
+            "ZW91dBgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhI+CgVtb2Rl",
+            "bBgDIAEoCzIvLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlNo",
+            "aXBtZW50TW9kZWwSWAoMc29sdmluZ19tb2RlGAQgASgOMkIuZ29vZ2xlLm1h",
+            "cHMucm91dGVvcHRpbWl6YXRpb24udjEuT3B0aW1pemVUb3Vyc1JlcXVlc3Qu",
+            "U29sdmluZ01vZGUSVgoLc2VhcmNoX21vZGUYBiABKA4yQS5nb29nbGUubWFw",
+            "cy5yb3V0ZW9wdGltaXphdGlvbi52MS5PcHRpbWl6ZVRvdXJzUmVxdWVzdC5T",
+            "ZWFyY2hNb2RlElcKHmluamVjdGVkX2ZpcnN0X3NvbHV0aW9uX3JvdXRlcxgH",
+            "IAMoCzIvLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlNoaXBt",
+            "ZW50Um91dGUSYgocaW5qZWN0ZWRfc29sdXRpb25fY29uc3RyYWludBgIIAEo",
+            "CzI8Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLkluamVjdGVk",
+            "U29sdXRpb25Db25zdHJhaW50Ek8KFnJlZnJlc2hfZGV0YWlsc19yb3V0ZXMY",
+            "CSADKAsyLy5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5TaGlw",
+            "bWVudFJvdXRlEjEKKWludGVycHJldF9pbmplY3RlZF9zb2x1dGlvbnNfdXNp",
+            "bmdfbGFiZWxzGAogASgIEh0KFWNvbnNpZGVyX3JvYWRfdHJhZmZpYxgLIAEo",
+            "CBIaChJwb3B1bGF0ZV9wb2x5bGluZXMYDCABKAgSJQodcG9wdWxhdGVfdHJh",
+            "bnNpdGlvbl9wb2x5bGluZXMYDSABKAgSNgouYWxsb3dfbGFyZ2VfZGVhZGxp",
+            "bmVfZGVzcGl0ZV9pbnRlcnJ1cHRpb25fcmlzaxgOIAEoCBIeChZ1c2VfZ2Vv",
+            "ZGVzaWNfZGlzdGFuY2VzGA8gASgIEicKGmdlb2Rlc2ljX21ldGVyc19wZXJf",
+            "c2Vjb25kGBAgASgBSACIAQESIgoVbWF4X3ZhbGlkYXRpb25fZXJyb3JzGAUg",
+            "ASgFSAGIAQESDQoFbGFiZWwYESABKAkiewoLU29sdmluZ01vZGUSEQoNREVG",
+            "QVVMVF9TT0xWRRAAEhEKDVZBTElEQVRFX09OTFkQARIkCiBERVRFQ1RfU09N",
+            "RV9JTkZFQVNJQkxFX1NISVBNRU5UUxACEiAKHFRSQU5TRk9STV9BTkRfUkVU",
+            "VVJOX1JFUVVFU1QQAyJaCgpTZWFyY2hNb2RlEhsKF1NFQVJDSF9NT0RFX1VO",
+            "U1BFQ0lGSUVEEAASDwoLUkVUVVJOX0ZBU1QQARIeChpDT05TVU1FX0FMTF9B",
+            "VkFJTEFCTEVfVElNRRACQh0KG19nZW9kZXNpY19tZXRlcnNfcGVyX3NlY29u",
+            "ZEIYChZfbWF4X3ZhbGlkYXRpb25fZXJyb3JzIoEHChVPcHRpbWl6ZVRvdXJz",
+            "UmVzcG9uc2USPwoGcm91dGVzGAEgAygLMi8uZ29vZ2xlLm1hcHMucm91dGVv",
+            "cHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0ZRIVCg1yZXF1ZXN0X2xhYmVs",
+            "GAMgASgJEkwKEXNraXBwZWRfc2hpcG1lbnRzGAQgAygLMjEuZ29vZ2xlLm1h",
+            "cHMucm91dGVvcHRpbWl6YXRpb24udjEuU2tpcHBlZFNoaXBtZW50ElkKEXZh",
+            "bGlkYXRpb25fZXJyb3JzGAUgAygLMj4uZ29vZ2xlLm1hcHMucm91dGVvcHRp",
+            "bWl6YXRpb24udjEuT3B0aW1pemVUb3Vyc1ZhbGlkYXRpb25FcnJvchJRChFw",
+            "cm9jZXNzZWRfcmVxdWVzdBgVIAEoCzI2Lmdvb2dsZS5tYXBzLnJvdXRlb3B0",
+            "aW1pemF0aW9uLnYxLk9wdGltaXplVG91cnNSZXF1ZXN0ElAKB21ldHJpY3MY",
+            "BiABKAsyPy5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5PcHRp",
+            "bWl6ZVRvdXJzUmVzcG9uc2UuTWV0cmljcxrBAwoHTWV0cmljcxJVChhhZ2dy",
+            "ZWdhdGVkX3JvdXRlX21ldHJpY3MYASABKAsyMy5nb29nbGUubWFwcy5yb3V0",
+            "ZW9wdGltaXphdGlvbi52MS5BZ2dyZWdhdGVkTWV0cmljcxIoCiBza2lwcGVk",
+            "X21hbmRhdG9yeV9zaGlwbWVudF9jb3VudBgCIAEoBRIaChJ1c2VkX3ZlaGlj",
+            "bGVfY291bnQYAyABKAUSPwobZWFybGllc3RfdmVoaWNsZV9zdGFydF90aW1l",
+            "GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI7ChdsYXRlc3Rf",
+            "dmVoaWNsZV9lbmRfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXASWQoFY29zdHMYCiADKAsySi5nb29nbGUubWFwcy5yb3V0ZW9wdGlt",
+            "aXphdGlvbi52MS5PcHRpbWl6ZVRvdXJzUmVzcG9uc2UuTWV0cmljcy5Db3N0",
+            "c0VudHJ5EhIKCnRvdGFsX2Nvc3QYBiABKAEaLAoKQ29zdHNFbnRyeRILCgNr",
+            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAE6AjgBIvwMCg1TaGlwbWVudE1vZGVs",
+            "Ej0KCXNoaXBtZW50cxgBIAMoCzIqLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1p",
+            "emF0aW9uLnYxLlNoaXBtZW50EjsKCHZlaGljbGVzGAIgAygLMikuZ29vZ2xl",
+            "Lm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuVmVoaWNsZRJNCgpvYmplY3Rp",
+            "dmVzGBEgAygLMjkuZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEu",
+            "U2hpcG1lbnRNb2RlbC5PYmplY3RpdmUSIAoTbWF4X2FjdGl2ZV92ZWhpY2xl",
+            "cxgEIAEoBUgAiAEBEjUKEWdsb2JhbF9zdGFydF90aW1lGAUgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIzCg9nbG9iYWxfZW5kX3RpbWUYBiAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiUKHWdsb2JhbF9kdXJh",
+            "dGlvbl9jb3N0X3Blcl9ob3VyGAcgASgBEmoKGmR1cmF0aW9uX2Rpc3RhbmNl",
+            "X21hdHJpY2VzGAggAygLMkYuZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRp",
+            "b24udjEuU2hpcG1lbnRNb2RlbC5EdXJhdGlvbkRpc3RhbmNlTWF0cml4EikK",
+            "IWR1cmF0aW9uX2Rpc3RhbmNlX21hdHJpeF9zcmNfdGFncxgJIAMoCRIpCiFk",
+            "dXJhdGlvbl9kaXN0YW5jZV9tYXRyaXhfZHN0X3RhZ3MYCiADKAkSVQoVdHJh",
+            "bnNpdGlvbl9hdHRyaWJ1dGVzGAsgAygLMjYuZ29vZ2xlLm1hcHMucm91dGVv",
+            "cHRpbWl6YXRpb24udjEuVHJhbnNpdGlvbkF0dHJpYnV0ZXMSZgofc2hpcG1l",
+            "bnRfdHlwZV9pbmNvbXBhdGliaWxpdGllcxgMIAMoCzI9Lmdvb2dsZS5tYXBz",
+            "LnJvdXRlb3B0aW1pemF0aW9uLnYxLlNoaXBtZW50VHlwZUluY29tcGF0aWJp",
+            "bGl0eRJdChpzaGlwbWVudF90eXBlX3JlcXVpcmVtZW50cxgNIAMoCzI5Lmdv",
+            "b2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlNoaXBtZW50VHlwZVJl",
+            "cXVpcmVtZW50ElgKEHByZWNlZGVuY2VfcnVsZXMYDiADKAsyPi5nb29nbGUu",
+            "bWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5TaGlwbWVudE1vZGVsLlByZWNl",
+            "ZGVuY2VSdWxlGu8BCglPYmplY3RpdmUSUQoEdHlwZRgBIAEoDjI+Lmdvb2ds",
+            "ZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlNoaXBtZW50TW9kZWwuT2Jq",
+            "ZWN0aXZlLlR5cGVIAIgBARITCgZ3ZWlnaHQYAiABKAFIAYgBASJmCgRUeXBl",
+            "EgsKB0RFRkFVTFQQABIQCgxNSU5fRElTVEFOQ0UQChIUChBNSU5fV09SS0lO",
+            "R19USU1FEAsSEwoPTUlOX1RSQVZFTF9USU1FEAwSFAoQTUlOX05VTV9WRUhJ",
+            "Q0xFUxANQgcKBV90eXBlQgkKB193ZWlnaHQa0gEKFkR1cmF0aW9uRGlzdGFu",
+            "Y2VNYXRyaXgSWAoEcm93cxgBIAMoCzJKLmdvb2dsZS5tYXBzLnJvdXRlb3B0",
+            "aW1pemF0aW9uLnYxLlNoaXBtZW50TW9kZWwuRHVyYXRpb25EaXN0YW5jZU1h",
+            "dHJpeC5Sb3cSGQoRdmVoaWNsZV9zdGFydF90YWcYAiABKAkaQwoDUm93EiwK",
+            "CWR1cmF0aW9ucxgBIAMoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIO",
+            "CgZtZXRlcnMYAiADKAEa0QEKDlByZWNlZGVuY2VSdWxlEhgKC2ZpcnN0X2lu",
+            "ZGV4GAEgASgFSACIAQESGQoRZmlyc3RfaXNfZGVsaXZlcnkYAyABKAgSGQoM",
+            "c2Vjb25kX2luZGV4GAIgASgFSAGIAQESGgoSc2Vjb25kX2lzX2RlbGl2ZXJ5",
+            "GAQgASgIEjIKD29mZnNldF9kdXJhdGlvbhgFIAEoCzIZLmdvb2dsZS5wcm90",
+            "b2J1Zi5EdXJhdGlvbkIOCgxfZmlyc3RfaW5kZXhCDwoNX3NlY29uZF9pbmRl",
+            "eEIWChRfbWF4X2FjdGl2ZV92ZWhpY2xlcyLeCwoIU2hpcG1lbnQSFAoMZGlz",
+            "cGxheV9uYW1lGBAgASgJEkgKB3BpY2t1cHMYASADKAsyNy5nb29nbGUubWFw",
+            "cy5yb3V0ZW9wdGltaXphdGlvbi52MS5TaGlwbWVudC5WaXNpdFJlcXVlc3QS",
+            "SwoKZGVsaXZlcmllcxgCIAMoCzI3Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1p",
+            "emF0aW9uLnYxLlNoaXBtZW50LlZpc2l0UmVxdWVzdBJRCgxsb2FkX2RlbWFu",
+            "ZHMYDiADKAsyOy5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5T",
+            "aGlwbWVudC5Mb2FkRGVtYW5kc0VudHJ5EhkKDHBlbmFsdHlfY29zdBgEIAEo",
+            "AUgAiAEBEh8KF2FsbG93ZWRfdmVoaWNsZV9pbmRpY2VzGAUgAygFEhkKEWNv",
+            "c3RzX3Blcl92ZWhpY2xlGAYgAygBEiEKGWNvc3RzX3Blcl92ZWhpY2xlX2lu",
+            "ZGljZXMYByADKAUSNQoocGlja3VwX3RvX2RlbGl2ZXJ5X3JlbGF0aXZlX2Rl",
+            "dG91cl9saW1pdBgIIAEoAUgBiAEBEksKKHBpY2t1cF90b19kZWxpdmVyeV9h",
+            "YnNvbHV0ZV9kZXRvdXJfbGltaXQYCSABKAsyGS5nb29nbGUucHJvdG9idWYu",
+            "RHVyYXRpb24SQAodcGlja3VwX3RvX2RlbGl2ZXJ5X3RpbWVfbGltaXQYCiAB",
+            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SFQoNc2hpcG1lbnRfdHlw",
+            "ZRgLIAEoCRINCgVsYWJlbBgMIAEoCRIOCgZpZ25vcmUYDSABKAgaoAUKDFZp",
+            "c2l0UmVxdWVzdBItChBhcnJpdmFsX2xvY2F0aW9uGAEgASgLMhMuZ29vZ2xl",
+            "LnR5cGUuTGF0TG5nEkQKEGFycml2YWxfd2F5cG9pbnQYAiABKAsyKi5nb29n",
+            "bGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5XYXlwb2ludBIvChJkZXBh",
+            "cnR1cmVfbG9jYXRpb24YAyABKAsyEy5nb29nbGUudHlwZS5MYXRMbmcSRgoS",
+            "ZGVwYXJ0dXJlX3dheXBvaW50GAQgASgLMiouZ29vZ2xlLm1hcHMucm91dGVv",
+            "cHRpbWl6YXRpb24udjEuV2F5cG9pbnQSDAoEdGFncxgFIAMoCRJCCgx0aW1l",
+            "X3dpbmRvd3MYBiADKAsyLC5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlv",
+            "bi52MS5UaW1lV2luZG93EisKCGR1cmF0aW9uGAcgASgLMhkuZ29vZ2xlLnBy",
+            "b3RvYnVmLkR1cmF0aW9uEgwKBGNvc3QYCCABKAESXgoMbG9hZF9kZW1hbmRz",
+            "GAwgAygLMkguZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuU2hp",
+            "cG1lbnQuVmlzaXRSZXF1ZXN0LkxvYWREZW1hbmRzRW50cnkSEwoLdmlzaXRf",
+            "dHlwZXMYCiADKAkSDQoFbGFiZWwYCyABKAkSGgoNYXZvaWRfdV90dXJucxgN",
+            "IAEoCEgAiAEBGmMKEExvYWREZW1hbmRzRW50cnkSCwoDa2V5GAEgASgJEj4K",
+            "BXZhbHVlGAIgASgLMi8uZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24u",
+            "djEuU2hpcG1lbnQuTG9hZDoCOAFCEAoOX2F2b2lkX3VfdHVybnMaFgoETG9h",
+            "ZBIOCgZhbW91bnQYAiABKAMaYwoQTG9hZERlbWFuZHNFbnRyeRILCgNrZXkY",
+            "ASABKAkSPgoFdmFsdWUYAiABKAsyLy5nb29nbGUubWFwcy5yb3V0ZW9wdGlt",
+            "aXphdGlvbi52MS5TaGlwbWVudC5Mb2FkOgI4AUIPCg1fcGVuYWx0eV9jb3N0",
+            "QisKKV9waWNrdXBfdG9fZGVsaXZlcnlfcmVsYXRpdmVfZGV0b3VyX2xpbWl0",
+            "IqYCChtTaGlwbWVudFR5cGVJbmNvbXBhdGliaWxpdHkSDQoFdHlwZXMYASAD",
+            "KAkSbwoUaW5jb21wYXRpYmlsaXR5X21vZGUYAiABKA4yUS5nb29nbGUubWFw",
+            "cy5yb3V0ZW9wdGltaXphdGlvbi52MS5TaGlwbWVudFR5cGVJbmNvbXBhdGli",
+            "aWxpdHkuSW5jb21wYXRpYmlsaXR5TW9kZSKGAQoTSW5jb21wYXRpYmlsaXR5",
+            "TW9kZRIkCiBJTkNPTVBBVElCSUxJVFlfTU9ERV9VTlNQRUNJRklFRBAAEiEK",
+            "HU5PVF9QRVJGT1JNRURfQllfU0FNRV9WRUhJQ0xFEAESJgoiTk9UX0lOX1NB",
+            "TUVfVkVISUNMRV9TSU1VTFRBTkVPVVNMWRACIuwCChdTaGlwbWVudFR5cGVS",
+            "ZXF1aXJlbWVudBIrCiNyZXF1aXJlZF9zaGlwbWVudF90eXBlX2FsdGVybmF0",
+            "aXZlcxgBIAMoCRIgChhkZXBlbmRlbnRfc2hpcG1lbnRfdHlwZXMYAiADKAkS",
+            "YwoQcmVxdWlyZW1lbnRfbW9kZRgDIAEoDjJJLmdvb2dsZS5tYXBzLnJvdXRl",
+            "b3B0aW1pemF0aW9uLnYxLlNoaXBtZW50VHlwZVJlcXVpcmVtZW50LlJlcXVp",
+            "cmVtZW50TW9kZSKcAQoPUmVxdWlyZW1lbnRNb2RlEiAKHFJFUVVJUkVNRU5U",
+            "X01PREVfVU5TUEVDSUZJRUQQABIdChlQRVJGT1JNRURfQllfU0FNRV9WRUhJ",
+            "Q0xFEAESIgoeSU5fU0FNRV9WRUhJQ0xFX0FUX1BJQ0tVUF9USU1FEAISJAog",
+            "SU5fU0FNRV9WRUhJQ0xFX0FUX0RFTElWRVJZX1RJTUUQAyJvCg5Sb3V0ZU1v",
+            "ZGlmaWVycxITCgthdm9pZF90b2xscxgCIAEoCBIWCg5hdm9pZF9oaWdod2F5",
+            "cxgDIAEoCBIVCg1hdm9pZF9mZXJyaWVzGAQgASgIEhkKDGF2b2lkX2luZG9v",
+            "chgFIAEoCEID4EEBIp4XCgdWZWhpY2xlEhQKDGRpc3BsYXlfbmFtZRggIAEo",
+            "CRJJCgt0cmF2ZWxfbW9kZRgBIAEoDjI0Lmdvb2dsZS5tYXBzLnJvdXRlb3B0",
+            "aW1pemF0aW9uLnYxLlZlaGljbGUuVHJhdmVsTW9kZRJJCg9yb3V0ZV9tb2Rp",
+            "ZmllcnMYAiABKAsyMC5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52",
+            "MS5Sb3V0ZU1vZGlmaWVycxIrCg5zdGFydF9sb2NhdGlvbhgDIAEoCzITLmdv",
+            "b2dsZS50eXBlLkxhdExuZxJCCg5zdGFydF93YXlwb2ludBgEIAEoCzIqLmdv",
+            "b2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLldheXBvaW50EikKDGVu",
+            "ZF9sb2NhdGlvbhgFIAEoCzITLmdvb2dsZS50eXBlLkxhdExuZxJACgxlbmRf",
+            "d2F5cG9pbnQYBiABKAsyKi5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlv",
+            "bi52MS5XYXlwb2ludBISCgpzdGFydF90YWdzGAcgAygJEhAKCGVuZF90YWdz",
+            "GAggAygJEkgKEnN0YXJ0X3RpbWVfd2luZG93cxgJIAMoCzIsLmdvb2dsZS5t",
+            "YXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlRpbWVXaW5kb3cSRgoQZW5kX3Rp",
+            "bWVfd2luZG93cxgKIAMoCzIsLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0",
+            "aW9uLnYxLlRpbWVXaW5kb3cSJQoYdHJhdmVsX2R1cmF0aW9uX211bHRpcGxl",
+            "GAsgASgBSACIAQESUwoQdW5sb2FkaW5nX3BvbGljeRgMIAEoDjI5Lmdvb2ds",
+            "ZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlZlaGljbGUuVW5sb2FkaW5n",
+            "UG9saWN5Ek4KC2xvYWRfbGltaXRzGB4gAygLMjkuZ29vZ2xlLm1hcHMucm91",
+            "dGVvcHRpbWl6YXRpb24udjEuVmVoaWNsZS5Mb2FkTGltaXRzRW50cnkSFQoN",
+            "Y29zdF9wZXJfaG91chgQIAEoARIeChZjb3N0X3Blcl90cmF2ZWxlZF9ob3Vy",
+            "GBEgASgBEhoKEmNvc3RfcGVyX2tpbG9tZXRlchgSIAEoARISCgpmaXhlZF9j",
+            "b3N0GBMgASgBEh4KFnVzZWRfaWZfcm91dGVfaXNfZW1wdHkYFCABKAgSVQoU",
+            "cm91dGVfZHVyYXRpb25fbGltaXQYFSABKAsyNy5nb29nbGUubWFwcy5yb3V0",
+            "ZW9wdGltaXphdGlvbi52MS5WZWhpY2xlLkR1cmF0aW9uTGltaXQSVgoVdHJh",
+            "dmVsX2R1cmF0aW9uX2xpbWl0GBYgASgLMjcuZ29vZ2xlLm1hcHMucm91dGVv",
+            "cHRpbWl6YXRpb24udjEuVmVoaWNsZS5EdXJhdGlvbkxpbWl0Ek0KFHJvdXRl",
+            "X2Rpc3RhbmNlX2xpbWl0GBcgASgLMi8uZ29vZ2xlLm1hcHMucm91dGVvcHRp",
+            "bWl6YXRpb24udjEuRGlzdGFuY2VMaW1pdBJ6CiNleHRyYV92aXNpdF9kdXJh",
+            "dGlvbl9mb3JfdmlzaXRfdHlwZRgYIAMoCzJNLmdvb2dsZS5tYXBzLnJvdXRl",
+            "b3B0aW1pemF0aW9uLnYxLlZlaGljbGUuRXh0cmFWaXNpdER1cmF0aW9uRm9y",
+            "VmlzaXRUeXBlRW50cnkSPwoKYnJlYWtfcnVsZRgZIAEoCzIrLmdvb2dsZS5t",
+            "YXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLkJyZWFrUnVsZRINCgVsYWJlbBgb",
+            "IAEoCRIOCgZpZ25vcmUYHCABKAgaoAYKCUxvYWRMaW1pdBIVCghtYXhfbG9h",
+            "ZBgBIAEoA0gAiAEBEhUKDXNvZnRfbWF4X2xvYWQYAiABKAMSJAocY29zdF9w",
+            "ZXJfdW5pdF9hYm92ZV9zb2Z0X21heBgDIAEoARJZChNzdGFydF9sb2FkX2lu",
+            "dGVydmFsGAQgASgLMjwuZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24u",
+            "djEuVmVoaWNsZS5Mb2FkTGltaXQuSW50ZXJ2YWwSVwoRZW5kX2xvYWRfaW50",
+            "ZXJ2YWwYBSABKAsyPC5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52",
+            "MS5WZWhpY2xlLkxvYWRMaW1pdC5JbnRlcnZhbBJdChJjb3N0X3Blcl9raWxv",
+            "bWV0ZXIYBiABKAsyPC5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52",
+            "MS5WZWhpY2xlLkxvYWRMaW1pdC5Mb2FkQ29zdEgBiAEBEmEKFmNvc3RfcGVy",
+            "X3RyYXZlbGVkX2hvdXIYByABKAsyPC5nb29nbGUubWFwcy5yb3V0ZW9wdGlt",
+            "aXphdGlvbi52MS5WZWhpY2xlLkxvYWRMaW1pdC5Mb2FkQ29zdEgCiAEBGjEK",
+            "CEludGVydmFsEgsKA21pbhgBIAEoAxIQCgNtYXgYAiABKANIAIgBAUIGCgRf",
+            "bWF4GtYBCghMb2FkQ29zdBIbCg5sb2FkX3RocmVzaG9sZBgBIAEoA0gAiAEB",
+            "EioKHWNvc3RfcGVyX3VuaXRfYmVsb3dfdGhyZXNob2xkGAIgASgBSAGIAQES",
+            "KgodY29zdF9wZXJfdW5pdF9hYm92ZV90aHJlc2hvbGQYAyABKAFIAogBAUIR",
+            "Cg9fbG9hZF90aHJlc2hvbGRCIAoeX2Nvc3RfcGVyX3VuaXRfYmVsb3dfdGhy",
+            "ZXNob2xkQiAKHl9jb3N0X3Blcl91bml0X2Fib3ZlX3RocmVzaG9sZEILCglf",
+            "bWF4X2xvYWRCFQoTX2Nvc3RfcGVyX2tpbG9tZXRlckIZChdfY29zdF9wZXJf",
+            "dHJhdmVsZWRfaG91chrwAgoNRHVyYXRpb25MaW1pdBIvCgxtYXhfZHVyYXRp",
+            "b24YASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SNAoRc29mdF9t",
+            "YXhfZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24S",
+            "KQocY29zdF9wZXJfaG91cl9hZnRlcl9zb2Z0X21heBgDIAEoAUgAiAEBEj4K",
+            "G3F1YWRyYXRpY19zb2Z0X21heF9kdXJhdGlvbhgEIAEoCzIZLmdvb2dsZS5w",
+            "cm90b2J1Zi5EdXJhdGlvbhI6Ci1jb3N0X3Blcl9zcXVhcmVfaG91cl9hZnRl",
+            "cl9xdWFkcmF0aWNfc29mdF9tYXgYBSABKAFIAYgBAUIfCh1fY29zdF9wZXJf",
+            "aG91cl9hZnRlcl9zb2Z0X21heEIwCi5fY29zdF9wZXJfc3F1YXJlX2hvdXJf",
+            "YWZ0ZXJfcXVhZHJhdGljX3NvZnRfbWF4GmYKD0xvYWRMaW1pdHNFbnRyeRIL",
+            "CgNrZXkYASABKAkSQgoFdmFsdWUYAiABKAsyMy5nb29nbGUubWFwcy5yb3V0",
+            "ZW9wdGltaXphdGlvbi52MS5WZWhpY2xlLkxvYWRMaW1pdDoCOAEaYAojRXh0",
+            "cmFWaXNpdER1cmF0aW9uRm9yVmlzaXRUeXBlRW50cnkSCwoDa2V5GAEgASgJ",
+            "EigKBXZhbHVlGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uOgI4",
+            "ASJDCgpUcmF2ZWxNb2RlEhsKF1RSQVZFTF9NT0RFX1VOU1BFQ0lGSUVEEAAS",
+            "CwoHRFJJVklORxABEgsKB1dBTEtJTkcQAiJiCg9VbmxvYWRpbmdQb2xpY3kS",
+            "IAocVU5MT0FESU5HX1BPTElDWV9VTlNQRUNJRklFRBAAEhUKEUxBU1RfSU5f",
+            "RklSU1RfT1VUEAESFgoSRklSU1RfSU5fRklSU1RfT1VUEAJCGwoZX3RyYXZl",
+            "bF9kdXJhdGlvbl9tdWx0aXBsZSKEAwoKVGltZVdpbmRvdxIuCgpzdGFydF90",
+            "aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRf",
+            "dGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMwoPc29m",
+            "dF9zdGFydF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cBIxCg1zb2Z0X2VuZF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcBIxCiRjb3N0X3Blcl9ob3VyX2JlZm9yZV9zb2Z0X3N0YXJ0X3Rp",
+            "bWUYBSABKAFIAIgBARIuCiFjb3N0X3Blcl9ob3VyX2FmdGVyX3NvZnRfZW5k",
+            "X3RpbWUYBiABKAFIAYgBAUInCiVfY29zdF9wZXJfaG91cl9iZWZvcmVfc29m",
+            "dF9zdGFydF90aW1lQiQKIl9jb3N0X3Blcl9ob3VyX2FmdGVyX3NvZnRfZW5k",
+            "X3RpbWUilQIKDURpc3RhbmNlTGltaXQSFwoKbWF4X21ldGVycxgBIAEoA0gA",
+            "iAEBEhwKD3NvZnRfbWF4X21ldGVycxgCIAEoA0gBiAEBEi4KIWNvc3RfcGVy",
+            "X2tpbG9tZXRlcl9iZWxvd19zb2Z0X21heBgEIAEoAUgCiAEBEi4KIWNvc3Rf",
+            "cGVyX2tpbG9tZXRlcl9hYm92ZV9zb2Z0X21heBgDIAEoAUgDiAEBQg0KC19t",
+            "YXhfbWV0ZXJzQhIKEF9zb2Z0X21heF9tZXRlcnNCJAoiX2Nvc3RfcGVyX2tp",
+            "bG9tZXRlcl9iZWxvd19zb2Z0X21heEIkCiJfY29zdF9wZXJfa2lsb21ldGVy",
+            "X2Fib3ZlX3NvZnRfbWF4IokCChRUcmFuc2l0aW9uQXR0cmlidXRlcxIPCgdz",
+            "cmNfdGFnGAEgASgJEhgKEGV4Y2x1ZGVkX3NyY190YWcYAiABKAkSDwoHZHN0",
+            "X3RhZxgDIAEoCRIYChBleGNsdWRlZF9kc3RfdGFnGAQgASgJEgwKBGNvc3QY",
+            "BSABKAESGgoSY29zdF9wZXJfa2lsb21ldGVyGAYgASgBEkcKDmRpc3RhbmNl",
+            "X2xpbWl0GAcgASgLMi8uZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24u",
+            "djEuRGlzdGFuY2VMaW1pdBIoCgVkZWxheRgIIAEoCzIZLmdvb2dsZS5wcm90",
+            "b2J1Zi5EdXJhdGlvbiKkAQoIV2F5cG9pbnQSPgoIbG9jYXRpb24YASABKAsy",
+            "Ki5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5Mb2NhdGlvbkgA",
+            "EhIKCHBsYWNlX2lkGAIgASgJSAASGQoMc2lkZV9vZl9yb2FkGAMgASgIQgPg",
+            "QQESGAoQdmVoaWNsZV9zdG9wb3ZlchgEIAEoCEIPCg1sb2NhdGlvbl90eXBl",
+            "IlIKCExvY2F0aW9uEiQKB2xhdF9sbmcYASABKAsyEy5nb29nbGUudHlwZS5M",
+            "YXRMbmcSFAoHaGVhZGluZxgCIAEoBUgAiAEBQgoKCF9oZWFkaW5nIpQECglC",
+            "cmVha1J1bGUSUAoOYnJlYWtfcmVxdWVzdHMYASADKAsyOC5nb29nbGUubWFw",
+            "cy5yb3V0ZW9wdGltaXphdGlvbi52MS5CcmVha1J1bGUuQnJlYWtSZXF1ZXN0",
+            "El4KFWZyZXF1ZW5jeV9jb25zdHJhaW50cxgCIAMoCzI/Lmdvb2dsZS5tYXBz",
+            "LnJvdXRlb3B0aW1pemF0aW9uLnYxLkJyZWFrUnVsZS5GcmVxdWVuY3lDb25z",
+            "dHJhaW50Gr4BCgxCcmVha1JlcXVlc3QSPAoTZWFybGllc3Rfc3RhcnRfdGlt",
+            "ZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAhI6ChFs",
+            "YXRlc3Rfc3RhcnRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAhI0CgxtaW5fZHVyYXRpb24YAyABKAsyGS5nb29nbGUucHJv",
+            "dG9idWYuRHVyYXRpb25CA+BBAhqTAQoTRnJlcXVlbmN5Q29uc3RyYWludBI6",
+            "ChJtaW5fYnJlYWtfZHVyYXRpb24YASABKAsyGS5nb29nbGUucHJvdG9idWYu",
+            "RHVyYXRpb25CA+BBAhJAChhtYXhfaW50ZXJfYnJlYWtfZHVyYXRpb24YAiAB",
+            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAiKhEQoNU2hpcG1l",
+            "bnRSb3V0ZRIVCg12ZWhpY2xlX2luZGV4GAEgASgFEhUKDXZlaGljbGVfbGFi",
+            "ZWwYAiABKAkSNgoSdmVoaWNsZV9zdGFydF90aW1lGAUgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcBI0ChB2ZWhpY2xlX2VuZF90aW1lGAYgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJFCgZ2aXNpdHMYByADKAsy",
+            "NS5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5TaGlwbWVudFJv",
+            "dXRlLlZpc2l0Ek8KC3RyYW5zaXRpb25zGAggAygLMjouZ29vZ2xlLm1hcHMu",
+            "cm91dGVvcHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0ZS5UcmFuc2l0aW9u",
+            "EiMKG2hhc190cmFmZmljX2luZmVhc2liaWxpdGllcxgJIAEoCBJXCg5yb3V0",
+            "ZV9wb2x5bGluZRgKIAEoCzI/Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0",
+            "aW9uLnYxLlNoaXBtZW50Um91dGUuRW5jb2RlZFBvbHlsaW5lEkUKBmJyZWFr",
+            "cxgLIAMoCzI1Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLlNo",
+            "aXBtZW50Um91dGUuQnJlYWsSRAoHbWV0cmljcxgMIAEoCzIzLmdvb2dsZS5t",
+            "YXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLkFnZ3JlZ2F0ZWRNZXRyaWNzEksK",
+            "EHZlaGljbGVfZnVsbG5lc3MYFCABKAsyMS5nb29nbGUubWFwcy5yb3V0ZW9w",
+            "dGltaXphdGlvbi52MS5WZWhpY2xlRnVsbG5lc3MSVAoLcm91dGVfY29zdHMY",
+            "ESADKAsyPy5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5TaGlw",
+            "bWVudFJvdXRlLlJvdXRlQ29zdHNFbnRyeRIYChByb3V0ZV90b3RhbF9jb3N0",
+            "GBIgASgBGu4DCgVWaXNpdBIWCg5zaGlwbWVudF9pbmRleBgBIAEoBRIRCglp",
+            "c19waWNrdXAYAiABKAgSGwoTdmlzaXRfcmVxdWVzdF9pbmRleBgDIAEoBRIu",
+            "CgpzdGFydF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cBJcCgxsb2FkX2RlbWFuZHMYCyADKAsyRi5nb29nbGUubWFwcy5yb3V0ZW9w",
+            "dGltaXphdGlvbi52MS5TaGlwbWVudFJvdXRlLlZpc2l0LkxvYWREZW1hbmRz",
+            "RW50cnkSKQoGZGV0b3VyGAYgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0",
+            "aW9uEhYKDnNoaXBtZW50X2xhYmVsGAcgASgJEhMKC3Zpc2l0X2xhYmVsGAgg",
+            "ASgJEi0KIGluamVjdGVkX3NvbHV0aW9uX2xvY2F0aW9uX3Rva2VuGA0gASgF",
+            "SACIAQEaYwoQTG9hZERlbWFuZHNFbnRyeRILCgNrZXkYASABKAkSPgoFdmFs",
+            "dWUYAiABKAsyLy5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5T",
+            "aGlwbWVudC5Mb2FkOgI4AUIjCiFfaW5qZWN0ZWRfc29sdXRpb25fbG9jYXRp",
+            "b25fdG9rZW4axwUKClRyYW5zaXRpb24SMgoPdHJhdmVsX2R1cmF0aW9uGAEg",
             "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEh4KFnRyYXZlbF9kaXN0",
-            "YW5jZV9tZXRlcnMYCCABKAESVAoJbWF4X2xvYWRzGAkgAygLMkEuZ29vZ2xl",
-            "Lm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuQWdncmVnYXRlZE1ldHJpY3Mu",
-            "TWF4TG9hZHNFbnRyeRpsCg1NYXhMb2Fkc0VudHJ5EgsKA2tleRgBIAEoCRJK",
-            "CgV2YWx1ZRgCIAEoCzI7Lmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9u",
-            "LnYxLlNoaXBtZW50Um91dGUuVmVoaWNsZUxvYWQ6AjgBIrMGChpJbmplY3Rl",
-            "ZFNvbHV0aW9uQ29uc3RyYWludBI/CgZyb3V0ZXMYASADKAsyLy5nb29nbGUu",
-            "bWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5TaGlwbWVudFJvdXRlEkwKEXNr",
-            "aXBwZWRfc2hpcG1lbnRzGAIgAygLMjEuZ29vZ2xlLm1hcHMucm91dGVvcHRp",
-            "bWl6YXRpb24udjEuU2tpcHBlZFNoaXBtZW50EnEKFmNvbnN0cmFpbnRfcmVs",
-            "YXhhdGlvbnMYAyADKAsyUS5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlv",
-            "bi52MS5JbmplY3RlZFNvbHV0aW9uQ29uc3RyYWludC5Db25zdHJhaW50UmVs",
-            "YXhhdGlvbhqSBAoUQ29uc3RyYWludFJlbGF4YXRpb24ScQoLcmVsYXhhdGlv",
-            "bnMYASADKAsyXC5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5J",
-            "bmplY3RlZFNvbHV0aW9uQ29uc3RyYWludC5Db25zdHJhaW50UmVsYXhhdGlv",
-            "bi5SZWxheGF0aW9uEhcKD3ZlaGljbGVfaW5kaWNlcxgCIAMoBRrtAgoKUmVs",
-            "YXhhdGlvbhJxCgVsZXZlbBgBIAEoDjJiLmdvb2dsZS5tYXBzLnJvdXRlb3B0",
-            "aW1pemF0aW9uLnYxLkluamVjdGVkU29sdXRpb25Db25zdHJhaW50LkNvbnN0",
-            "cmFpbnRSZWxheGF0aW9uLlJlbGF4YXRpb24uTGV2ZWwSMgoOdGhyZXNob2xk",
-            "X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEh0KFXRo",
-            "cmVzaG9sZF92aXNpdF9jb3VudBgDIAEoBSKYAQoFTGV2ZWwSFQoRTEVWRUxf",
-            "VU5TUEVDSUZJRUQQABIlCiFSRUxBWF9WSVNJVF9USU1FU19BRlRFUl9USFJF",
-            "U0hPTEQQARIyCi5SRUxBWF9WSVNJVF9USU1FU19BTkRfU0VRVUVOQ0VfQUZU",
-            "RVJfVEhSRVNIT0xEEAISHQoZUkVMQVhfQUxMX0FGVEVSX1RIUkVTSE9MRBAD",
-            "IoUDChxPcHRpbWl6ZVRvdXJzVmFsaWRhdGlvbkVycm9yEgwKBGNvZGUYASAB",
-            "KAUSFAoMZGlzcGxheV9uYW1lGAIgASgJEl0KBmZpZWxkcxgDIAMoCzJNLmdv",
-            "b2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLk9wdGltaXplVG91cnNW",
-            "YWxpZGF0aW9uRXJyb3IuRmllbGRSZWZlcmVuY2USFQoNZXJyb3JfbWVzc2Fn",
-            "ZRgEIAEoCRIYChBvZmZlbmRpbmdfdmFsdWVzGAUgASgJGrABCg5GaWVsZFJl",
-            "ZmVyZW5jZRIMCgRuYW1lGAEgASgJEg8KBWluZGV4GAIgASgFSAASDQoDa2V5",
-            "GAQgASgJSAASYAoJc3ViX2ZpZWxkGAMgASgLMk0uZ29vZ2xlLm1hcHMucm91",
-            "dGVvcHRpbWl6YXRpb24udjEuT3B0aW1pemVUb3Vyc1ZhbGlkYXRpb25FcnJv",
-            "ci5GaWVsZFJlZmVyZW5jZUIOCgxpbmRleF9vcl9rZXkiogEKC0lucHV0Q29u",
-            "ZmlnEkEKCmdjc19zb3VyY2UYASABKAsyKy5nb29nbGUubWFwcy5yb3V0ZW9w",
-            "dGltaXphdGlvbi52MS5HY3NTb3VyY2VIABJGCgtkYXRhX2Zvcm1hdBgCIAEo",
-            "DjIsLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLkRhdGFGb3Jt",
-            "YXRCA+BBAkIICgZzb3VyY2UisgEKDE91dHB1dENvbmZpZxJLCg9nY3NfZGVz",
-            "dGluYXRpb24YASABKAsyMC5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlv",
-            "bi52MS5HY3NEZXN0aW5hdGlvbkgAEkYKC2RhdGFfZm9ybWF0GAIgASgOMiwu",
-            "Z29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuRGF0YUZvcm1hdEID",
-            "4EECQg0KC2Rlc3RpbmF0aW9uIh0KCUdjc1NvdXJjZRIQCgN1cmkYASABKAlC",
-            "A+BBAiIiCg5HY3NEZXN0aW5hdGlvbhIQCgN1cmkYASABKAlCA+BBAipDCgpE",
-            "YXRhRm9ybWF0EhsKF0RBVEFfRk9STUFUX1VOU1BFQ0lGSUVEEAASCAoESlNP",
-            "ThABEg4KClBST1RPX1RFWFQQAjL5BAoRUm91dGVPcHRpbWl6YXRpb24S6gEK",
-            "DU9wdGltaXplVG91cnMSNi5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlv",
-            "bi52MS5PcHRpbWl6ZVRvdXJzUmVxdWVzdBo3Lmdvb2dsZS5tYXBzLnJvdXRl",
-            "b3B0aW1pemF0aW9uLnYxLk9wdGltaXplVG91cnNSZXNwb25zZSJogtPkkwJi",
-            "IjEvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfTpvcHRpbWl6",
-            "ZVRvdXJzOgEqWioiJS92MS97cGFyZW50PXByb2plY3RzLyp9Om9wdGltaXpl",
-            "VG91cnM6ASoSoAIKEkJhdGNoT3B0aW1pemVUb3VycxI7Lmdvb2dsZS5tYXBz",
-            "LnJvdXRlb3B0aW1pemF0aW9uLnYxLkJhdGNoT3B0aW1pemVUb3Vyc1JlcXVl",
-            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIq0BykE4ChpCYXRj",
-            "aE9wdGltaXplVG91cnNSZXNwb25zZRIaQmF0Y2hPcHRpbWl6ZVRvdXJzTWV0",
-            "YWRhdGGC0+STAmwiNi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
-            "Lyp9OmJhdGNoT3B0aW1pemVUb3VyczoBKlovIiovdjEve3BhcmVudD1wcm9q",
-            "ZWN0cy8qfTpiYXRjaE9wdGltaXplVG91cnM6ASoaVMpBIHJvdXRlb3B0aW1p",
-            "emF0aW9uLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
-            "cy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKNAgokY29tLmdvb2dsZS5tYXBz",
-            "LnJvdXRlb3B0aW1pemF0aW9uLnYxQh1Sb3V0ZU9wdGltaXphdGlvblNlcnZp",
-            "Y2VQcm90b1ABWlhjbG91ZC5nb29nbGUuY29tL2dvL21hcHMvcm91dGVvcHRp",
-            "bWl6YXRpb24vYXBpdjEvcm91dGVvcHRpbWl6YXRpb25wYjtyb3V0ZW9wdGlt",
-            "aXphdGlvbnBiqgIgR29vZ2xlLk1hcHMuUm91dGVPcHRpbWl6YXRpb24uVjHK",
-            "AiBHb29nbGVcTWFwc1xSb3V0ZU9wdGltaXphdGlvblxWMeoCI0dvb2dsZTo6",
-            "TWFwczo6Um91dGVPcHRpbWl6YXRpb246OlYxYgZwcm90bzM="));
+            "YW5jZV9tZXRlcnMYAiABKAESIAoYdHJhZmZpY19pbmZvX3VuYXZhaWxhYmxl",
+            "GAMgASgIEjEKDmRlbGF5X2R1cmF0aW9uGAQgASgLMhkuZ29vZ2xlLnByb3Rv",
+            "YnVmLkR1cmF0aW9uEjEKDmJyZWFrX2R1cmF0aW9uGAUgASgLMhkuZ29vZ2xl",
+            "LnByb3RvYnVmLkR1cmF0aW9uEjAKDXdhaXRfZHVyYXRpb24YBiABKAsyGS5n",
+            "b29nbGUucHJvdG9idWYuRHVyYXRpb24SMQoOdG90YWxfZHVyYXRpb24YByAB",
+            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SLgoKc3RhcnRfdGltZRgI",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASVwoOcm91dGVfcG9s",
+            "eWxpbmUYCSABKAsyPy5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52",
+            "MS5TaGlwbWVudFJvdXRlLkVuY29kZWRQb2x5bGluZRIYCgtyb3V0ZV90b2tl",
+            "bhgMIAEoCUID4EEDEmMKDXZlaGljbGVfbG9hZHMYCyADKAsyTC5nb29nbGUu",
+            "bWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5TaGlwbWVudFJvdXRlLlRyYW5z",
+            "aXRpb24uVmVoaWNsZUxvYWRzRW50cnkacAoRVmVoaWNsZUxvYWRzRW50cnkS",
+            "CwoDa2V5GAEgASgJEkoKBXZhbHVlGAIgASgLMjsuZ29vZ2xlLm1hcHMucm91",
+            "dGVvcHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0ZS5WZWhpY2xlTG9hZDoC",
+            "OAEaHQoLVmVoaWNsZUxvYWQSDgoGYW1vdW50GAEgASgDGiEKD0VuY29kZWRQ",
+            "b2x5bGluZRIOCgZwb2ludHMYASABKAkaZAoFQnJlYWsSLgoKc3RhcnRfdGlt",
+            "ZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKwoIZHVyYXRp",
+            "b24YAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24aMQoPUm91dGVD",
+            "b3N0c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoAToCOAEizwcK",
+            "D1NraXBwZWRTaGlwbWVudBINCgVpbmRleBgBIAEoBRINCgVsYWJlbBgCIAEo",
+            "CRIZCgxwZW5hbHR5X2Nvc3QYBiABKAFIAIgBARIxCiRlc3RpbWF0ZWRfaW5j",
+            "b21wYXRpYmxlX3ZlaGljbGVfcmF0aW8YBSABKAFIAYgBARJJCgdyZWFzb25z",
+            "GAMgAygLMjguZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuU2tp",
+            "cHBlZFNoaXBtZW50LlJlYXNvbhrKBQoGUmVhc29uEksKBGNvZGUYASABKA4y",
+            "PS5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5Ta2lwcGVkU2hp",
+            "cG1lbnQuUmVhc29uLkNvZGUSIgoVZXhhbXBsZV92ZWhpY2xlX2luZGV4GAIg",
+            "ASgFSACIAQESHwoXZXhhbXBsZV92ZWhpY2xlX2luZGljZXMYBSADKAUSJgoe",
+            "ZXhhbXBsZV9leGNlZWRlZF9jYXBhY2l0eV90eXBlGAMgASgJIusDCgRDb2Rl",
+            "EhQKEENPREVfVU5TUEVDSUZJRUQQABIOCgpOT19WRUhJQ0xFEAESIwofREVN",
+            "QU5EX0VYQ0VFRFNfVkVISUNMRV9DQVBBQ0lUWRACEjUKMUNBTk5PVF9CRV9Q",
+            "RVJGT1JNRURfV0lUSElOX1ZFSElDTEVfRElTVEFOQ0VfTElNSVQQAxI1CjFD",
+            "QU5OT1RfQkVfUEVSRk9STUVEX1dJVEhJTl9WRUhJQ0xFX0RVUkFUSU9OX0xJ",
+            "TUlUEAQSPAo4Q0FOTk9UX0JFX1BFUkZPUk1FRF9XSVRISU5fVkVISUNMRV9U",
+            "UkFWRUxfRFVSQVRJT05fTElNSVQQBRIzCi9DQU5OT1RfQkVfUEVSRk9STUVE",
+            "X1dJVEhJTl9WRUhJQ0xFX1RJTUVfV0lORE9XUxAGEhcKE1ZFSElDTEVfTk9U",
+            "X0FMTE9XRUQQBxITCg9WRUhJQ0xFX0lHTk9SRUQQCBIUChBTSElQTUVOVF9J",
+            "R05PUkVEEAkSKwonU0tJUFBFRF9JTl9JTkpFQ1RFRF9TT0xVVElPTl9DT05T",
+            "VFJBSU5UEAoSLworVkVISUNMRV9ST1VURV9JU19GVUxMWV9TRVFVRU5DRV9D",
+            "T05TVFJBSU5FRBALEhUKEVpFUk9fUEVOQUxUWV9DT1NUEA1CGAoWX2V4YW1w",
+            "bGVfdmVoaWNsZV9pbmRleEIPCg1fcGVuYWx0eV9jb3N0QicKJV9lc3RpbWF0",
+            "ZWRfaW5jb21wYXRpYmxlX3ZlaGljbGVfcmF0aW8i/QUKEUFnZ3JlZ2F0ZWRN",
+            "ZXRyaWNzEiAKGHBlcmZvcm1lZF9zaGlwbWVudF9jb3VudBgBIAEoBRIvCiJw",
+            "ZXJmb3JtZWRfbWFuZGF0b3J5X3NoaXBtZW50X2NvdW50GAwgASgFSACIAQES",
+            "MAojcGVyZm9ybWVkX3NoaXBtZW50X3BlbmFsdHlfY29zdF9zdW0YDSABKAFI",
+            "AYgBARIyCg90cmF2ZWxfZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9i",
+            "dWYuRHVyYXRpb24SMAoNd2FpdF9kdXJhdGlvbhgDIAEoCzIZLmdvb2dsZS5w",
+            "cm90b2J1Zi5EdXJhdGlvbhIxCg5kZWxheV9kdXJhdGlvbhgEIAEoCzIZLmdv",
+            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIxCg5icmVha19kdXJhdGlvbhgFIAEo",
+            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIxCg52aXNpdF9kdXJhdGlv",
+            "bhgGIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIxCg50b3RhbF9k",
+            "dXJhdGlvbhgHIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIeChZ0",
+            "cmF2ZWxfZGlzdGFuY2VfbWV0ZXJzGAggASgBElQKCW1heF9sb2FkcxgJIAMo",
+            "CzJBLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLkFnZ3JlZ2F0",
+            "ZWRNZXRyaWNzLk1heExvYWRzRW50cnkabAoNTWF4TG9hZHNFbnRyeRILCgNr",
+            "ZXkYASABKAkSSgoFdmFsdWUYAiABKAsyOy5nb29nbGUubWFwcy5yb3V0ZW9w",
+            "dGltaXphdGlvbi52MS5TaGlwbWVudFJvdXRlLlZlaGljbGVMb2FkOgI4AUIl",
+            "CiNfcGVyZm9ybWVkX21hbmRhdG9yeV9zaGlwbWVudF9jb3VudEImCiRfcGVy",
+            "Zm9ybWVkX3NoaXBtZW50X3BlbmFsdHlfY29zdF9zdW0ikwIKD1ZlaGljbGVG",
+            "dWxsbmVzcxIZCgxtYXhfZnVsbG5lc3MYASABKAFIAIgBARIVCghkaXN0YW5j",
+            "ZRgCIAEoAUgBiAEBEhwKD3RyYXZlbF9kdXJhdGlvbhgDIAEoAUgCiAEBEhwK",
+            "D2FjdGl2ZV9kdXJhdGlvbhgEIAEoAUgDiAEBEhUKCG1heF9sb2FkGAUgASgB",
+            "SASIAQESGAoLYWN0aXZlX3NwYW4YBiABKAFIBYgBAUIPCg1fbWF4X2Z1bGxu",
+            "ZXNzQgsKCV9kaXN0YW5jZUISChBfdHJhdmVsX2R1cmF0aW9uQhIKEF9hY3Rp",
+            "dmVfZHVyYXRpb25CCwoJX21heF9sb2FkQg4KDF9hY3RpdmVfc3BhbiKzBgoa",
+            "SW5qZWN0ZWRTb2x1dGlvbkNvbnN0cmFpbnQSPwoGcm91dGVzGAEgAygLMi8u",
+            "Z29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0",
+            "ZRJMChFza2lwcGVkX3NoaXBtZW50cxgCIAMoCzIxLmdvb2dsZS5tYXBzLnJv",
+            "dXRlb3B0aW1pemF0aW9uLnYxLlNraXBwZWRTaGlwbWVudBJxChZjb25zdHJh",
+            "aW50X3JlbGF4YXRpb25zGAMgAygLMlEuZ29vZ2xlLm1hcHMucm91dGVvcHRp",
+            "bWl6YXRpb24udjEuSW5qZWN0ZWRTb2x1dGlvbkNvbnN0cmFpbnQuQ29uc3Ry",
+            "YWludFJlbGF4YXRpb24akgQKFENvbnN0cmFpbnRSZWxheGF0aW9uEnEKC3Jl",
+            "bGF4YXRpb25zGAEgAygLMlwuZ29vZ2xlLm1hcHMucm91dGVvcHRpbWl6YXRp",
+            "b24udjEuSW5qZWN0ZWRTb2x1dGlvbkNvbnN0cmFpbnQuQ29uc3RyYWludFJl",
+            "bGF4YXRpb24uUmVsYXhhdGlvbhIXCg92ZWhpY2xlX2luZGljZXMYAiADKAUa",
+            "7QIKClJlbGF4YXRpb24ScQoFbGV2ZWwYASABKA4yYi5nb29nbGUubWFwcy5y",
+            "b3V0ZW9wdGltaXphdGlvbi52MS5JbmplY3RlZFNvbHV0aW9uQ29uc3RyYWlu",
+            "dC5Db25zdHJhaW50UmVsYXhhdGlvbi5SZWxheGF0aW9uLkxldmVsEjIKDnRo",
+            "cmVzaG9sZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cBIdChV0aHJlc2hvbGRfdmlzaXRfY291bnQYAyABKAUimAEKBUxldmVsEhUK",
+            "EUxFVkVMX1VOU1BFQ0lGSUVEEAASJQohUkVMQVhfVklTSVRfVElNRVNfQUZU",
+            "RVJfVEhSRVNIT0xEEAESMgouUkVMQVhfVklTSVRfVElNRVNfQU5EX1NFUVVF",
+            "TkNFX0FGVEVSX1RIUkVTSE9MRBACEh0KGVJFTEFYX0FMTF9BRlRFUl9USFJF",
+            "U0hPTEQQAyKFAwocT3B0aW1pemVUb3Vyc1ZhbGlkYXRpb25FcnJvchIMCgRj",
+            "b2RlGAEgASgFEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRJdCgZmaWVsZHMYAyAD",
+            "KAsyTS5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5PcHRpbWl6",
+            "ZVRvdXJzVmFsaWRhdGlvbkVycm9yLkZpZWxkUmVmZXJlbmNlEhUKDWVycm9y",
+            "X21lc3NhZ2UYBCABKAkSGAoQb2ZmZW5kaW5nX3ZhbHVlcxgFIAEoCRqwAQoO",
+            "RmllbGRSZWZlcmVuY2USDAoEbmFtZRgBIAEoCRIPCgVpbmRleBgCIAEoBUgA",
+            "Eg0KA2tleRgEIAEoCUgAEmAKCXN1Yl9maWVsZBgDIAEoCzJNLmdvb2dsZS5t",
+            "YXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLk9wdGltaXplVG91cnNWYWxpZGF0",
+            "aW9uRXJyb3IuRmllbGRSZWZlcmVuY2VCDgoMaW5kZXhfb3Jfa2V5IqIBCgtJ",
+            "bnB1dENvbmZpZxJBCgpnY3Nfc291cmNlGAEgASgLMisuZ29vZ2xlLm1hcHMu",
+            "cm91dGVvcHRpbWl6YXRpb24udjEuR2NzU291cmNlSAASRgoLZGF0YV9mb3Jt",
+            "YXQYAiABKA4yLC5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5E",
+            "YXRhRm9ybWF0QgPgQQJCCAoGc291cmNlIrIBCgxPdXRwdXRDb25maWcSSwoP",
+            "Z2NzX2Rlc3RpbmF0aW9uGAEgASgLMjAuZ29vZ2xlLm1hcHMucm91dGVvcHRp",
+            "bWl6YXRpb24udjEuR2NzRGVzdGluYXRpb25IABJGCgtkYXRhX2Zvcm1hdBgC",
+            "IAEoDjIsLmdvb2dsZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxLkRhdGFG",
+            "b3JtYXRCA+BBAkINCgtkZXN0aW5hdGlvbiIdCglHY3NTb3VyY2USEAoDdXJp",
+            "GAEgASgJQgPgQQIiIgoOR2NzRGVzdGluYXRpb24SEAoDdXJpGAEgASgJQgPg",
+            "QQIqQwoKRGF0YUZvcm1hdBIbChdEQVRBX0ZPUk1BVF9VTlNQRUNJRklFRBAA",
+            "EggKBEpTT04QARIOCgpQUk9UT19URVhUEAIywQkKEVJvdXRlT3B0aW1pemF0",
+            "aW9uEuoBCg1PcHRpbWl6ZVRvdXJzEjYuZ29vZ2xlLm1hcHMucm91dGVvcHRp",
+            "bWl6YXRpb24udjEuT3B0aW1pemVUb3Vyc1JlcXVlc3QaNy5nb29nbGUubWFw",
+            "cy5yb3V0ZW9wdGltaXphdGlvbi52MS5PcHRpbWl6ZVRvdXJzUmVzcG9uc2Ui",
+            "aILT5JMCYiIxL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn06",
+            "b3B0aW1pemVUb3VyczoBKloqIiUvdjEve3BhcmVudD1wcm9qZWN0cy8qfTpv",
+            "cHRpbWl6ZVRvdXJzOgEqEqACChJCYXRjaE9wdGltaXplVG91cnMSOy5nb29n",
+            "bGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5CYXRjaE9wdGltaXplVG91",
+            "cnNSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKtAcpB",
+            "OAoaQmF0Y2hPcHRpbWl6ZVRvdXJzUmVzcG9uc2USGkJhdGNoT3B0aW1pemVU",
+            "b3Vyc01ldGFkYXRhgtPkkwJsIjYvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qfTpiYXRjaE9wdGltaXplVG91cnM6ASpaLyIqL3YxL3twYXJl",
+            "bnQ9cHJvamVjdHMvKn06YmF0Y2hPcHRpbWl6ZVRvdXJzOgEqEq4CChhPcHRp",
+            "bWl6ZVRvdXJzTG9uZ1J1bm5pbmcSNi5nb29nbGUubWFwcy5yb3V0ZW9wdGlt",
+            "aXphdGlvbi52MS5PcHRpbWl6ZVRvdXJzUmVxdWVzdBodLmdvb2dsZS5sb25n",
+            "cnVubmluZy5PcGVyYXRpb24iugHKQTkKFU9wdGltaXplVG91cnNSZXNwb25z",
+            "ZRIgT3B0aW1pemVUb3Vyc0xvbmdSdW5uaW5nTWV0YWRhdGGC0+STAngiPC92",
+            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9Om9wdGltaXplVG91",
+            "cnNMb25nUnVubmluZzoBKlo1IjAvdjEve3BhcmVudD1wcm9qZWN0cy8qfTpv",
+            "cHRpbWl6ZVRvdXJzTG9uZ1J1bm5pbmc6ASoSlAIKEE9wdGltaXplVG91cnNV",
+            "cmkSOS5nb29nbGUubWFwcy5yb3V0ZW9wdGltaXphdGlvbi52MS5PcHRpbWl6",
+            "ZVRvdXJzVXJpUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
+            "b24ipQHKQTQKGE9wdGltaXplVG91cnNVcmlSZXNwb25zZRIYT3B0aW1pemVU",
+            "b3Vyc1VyaU1ldGFkYXRhgtPkkwJoIjQvdjEve3BhcmVudD1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qfTpPcHRpbWl6ZVRvdXJzVXJpOgEqWi0iKC92MS97cGFy",
+            "ZW50PXByb2plY3RzLyp9Ok9wdGltaXplVG91cnNVcmk6ASoaVMpBIHJvdXRl",
+            "b3B0aW1pemF0aW9uLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29v",
+            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKNAgokY29tLmdvb2ds",
+            "ZS5tYXBzLnJvdXRlb3B0aW1pemF0aW9uLnYxQh1Sb3V0ZU9wdGltaXphdGlv",
+            "blNlcnZpY2VQcm90b1ABWlhjbG91ZC5nb29nbGUuY29tL2dvL21hcHMvcm91",
+            "dGVvcHRpbWl6YXRpb24vYXBpdjEvcm91dGVvcHRpbWl6YXRpb25wYjtyb3V0",
+            "ZW9wdGltaXphdGlvbnBiqgIgR29vZ2xlLk1hcHMuUm91dGVPcHRpbWl6YXRp",
+            "b24uVjHKAiBHb29nbGVcTWFwc1xSb3V0ZU9wdGltaXphdGlvblxWMeoCI0dv",
+            "b2dsZTo6TWFwczo6Um91dGVPcHRpbWl6YXRpb246OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.RouteOptimization.V1.DataFormat), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Uri), global::Google.Maps.RouteOptimization.V1.Uri.Parser, new[]{ "Uri_" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.OptimizeToursUriRequest), global::Google.Maps.RouteOptimization.V1.OptimizeToursUriRequest.Parser, new[]{ "Parent", "Input", "Output" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.OptimizeToursUriResponse), global::Google.Maps.RouteOptimization.V1.OptimizeToursUriResponse.Parser, new[]{ "Output" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.OptimizeToursUriMetadata), global::Google.Maps.RouteOptimization.V1.OptimizeToursUriMetadata.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.BatchOptimizeToursRequest), global::Google.Maps.RouteOptimization.V1.BatchOptimizeToursRequest.Parser, new[]{ "Parent", "ModelConfigs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.BatchOptimizeToursRequest.Types.AsyncModelConfig), global::Google.Maps.RouteOptimization.V1.BatchOptimizeToursRequest.Types.AsyncModelConfig.Parser, new[]{ "DisplayName", "InputConfig", "OutputConfig" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.BatchOptimizeToursResponse), global::Google.Maps.RouteOptimization.V1.BatchOptimizeToursResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.BatchOptimizeToursMetadata), global::Google.Maps.RouteOptimization.V1.BatchOptimizeToursMetadata.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.OptimizeToursLongRunningMetadata), global::Google.Maps.RouteOptimization.V1.OptimizeToursLongRunningMetadata.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.OptimizeToursRequest), global::Google.Maps.RouteOptimization.V1.OptimizeToursRequest.Parser, new[]{ "Parent", "Timeout", "Model", "SolvingMode", "SearchMode", "InjectedFirstSolutionRoutes", "InjectedSolutionConstraint", "RefreshDetailsRoutes", "InterpretInjectedSolutionsUsingLabels", "ConsiderRoadTraffic", "PopulatePolylines", "PopulateTransitionPolylines", "AllowLargeDeadlineDespiteInterruptionRisk", "UseGeodesicDistances", "GeodesicMetersPerSecond", "MaxValidationErrors", "Label" }, new[]{ "GeodesicMetersPerSecond", "MaxValidationErrors" }, new[]{ typeof(global::Google.Maps.RouteOptimization.V1.OptimizeToursRequest.Types.SolvingMode), typeof(global::Google.Maps.RouteOptimization.V1.OptimizeToursRequest.Types.SearchMode) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.OptimizeToursResponse), global::Google.Maps.RouteOptimization.V1.OptimizeToursResponse.Parser, new[]{ "Routes", "RequestLabel", "SkippedShipments", "ValidationErrors", "Metrics" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.OptimizeToursResponse.Types.Metrics), global::Google.Maps.RouteOptimization.V1.OptimizeToursResponse.Types.Metrics.Parser, new[]{ "AggregatedRouteMetrics", "SkippedMandatoryShipmentCount", "UsedVehicleCount", "EarliestVehicleStartTime", "LatestVehicleEndTime", "Costs", "TotalCost" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentModel), global::Google.Maps.RouteOptimization.V1.ShipmentModel.Parser, new[]{ "Shipments", "Vehicles", "MaxActiveVehicles", "GlobalStartTime", "GlobalEndTime", "GlobalDurationCostPerHour", "DurationDistanceMatrices", "DurationDistanceMatrixSrcTags", "DurationDistanceMatrixDstTags", "TransitionAttributes", "ShipmentTypeIncompatibilities", "ShipmentTypeRequirements", "PrecedenceRules" }, new[]{ "MaxActiveVehicles" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.DurationDistanceMatrix), global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.DurationDistanceMatrix.Parser, new[]{ "Rows", "VehicleStartTag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.DurationDistanceMatrix.Types.Row), global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.DurationDistanceMatrix.Types.Row.Parser, new[]{ "Durations", "Meters" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.OptimizeToursResponse), global::Google.Maps.RouteOptimization.V1.OptimizeToursResponse.Parser, new[]{ "Routes", "RequestLabel", "SkippedShipments", "ValidationErrors", "ProcessedRequest", "Metrics" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.OptimizeToursResponse.Types.Metrics), global::Google.Maps.RouteOptimization.V1.OptimizeToursResponse.Types.Metrics.Parser, new[]{ "AggregatedRouteMetrics", "SkippedMandatoryShipmentCount", "UsedVehicleCount", "EarliestVehicleStartTime", "LatestVehicleEndTime", "Costs", "TotalCost" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentModel), global::Google.Maps.RouteOptimization.V1.ShipmentModel.Parser, new[]{ "Shipments", "Vehicles", "Objectives", "MaxActiveVehicles", "GlobalStartTime", "GlobalEndTime", "GlobalDurationCostPerHour", "DurationDistanceMatrices", "DurationDistanceMatrixSrcTags", "DurationDistanceMatrixDstTags", "TransitionAttributes", "ShipmentTypeIncompatibilities", "ShipmentTypeRequirements", "PrecedenceRules" }, new[]{ "MaxActiveVehicles" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.Objective), global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.Objective.Parser, new[]{ "Type", "Weight" }, new[]{ "Type", "Weight" }, new[]{ typeof(global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.Objective.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.DurationDistanceMatrix), global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.DurationDistanceMatrix.Parser, new[]{ "Rows", "VehicleStartTag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.DurationDistanceMatrix.Types.Row), global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.DurationDistanceMatrix.Types.Row.Parser, new[]{ "Durations", "Meters" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.PrecedenceRule), global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.PrecedenceRule.Parser, new[]{ "FirstIndex", "FirstIsDelivery", "SecondIndex", "SecondIsDelivery", "OffsetDuration" }, new[]{ "FirstIndex", "SecondIndex" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Shipment), global::Google.Maps.RouteOptimization.V1.Shipment.Parser, new[]{ "DisplayName", "Pickups", "Deliveries", "LoadDemands", "PenaltyCost", "AllowedVehicleIndices", "CostsPerVehicle", "CostsPerVehicleIndices", "PickupToDeliveryRelativeDetourLimit", "PickupToDeliveryAbsoluteDetourLimit", "PickupToDeliveryTimeLimit", "ShipmentType", "Label", "Ignore" }, new[]{ "PenaltyCost", "PickupToDeliveryRelativeDetourLimit" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Shipment.Types.VisitRequest), global::Google.Maps.RouteOptimization.V1.Shipment.Types.VisitRequest.Parser, new[]{ "ArrivalLocation", "ArrivalWaypoint", "DepartureLocation", "DepartureWaypoint", "Tags", "TimeWindows", "Duration", "Cost", "LoadDemands", "VisitTypes", "Label" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Shipment), global::Google.Maps.RouteOptimization.V1.Shipment.Parser, new[]{ "DisplayName", "Pickups", "Deliveries", "LoadDemands", "PenaltyCost", "AllowedVehicleIndices", "CostsPerVehicle", "CostsPerVehicleIndices", "PickupToDeliveryRelativeDetourLimit", "PickupToDeliveryAbsoluteDetourLimit", "PickupToDeliveryTimeLimit", "ShipmentType", "Label", "Ignore" }, new[]{ "PenaltyCost", "PickupToDeliveryRelativeDetourLimit" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Shipment.Types.VisitRequest), global::Google.Maps.RouteOptimization.V1.Shipment.Types.VisitRequest.Parser, new[]{ "ArrivalLocation", "ArrivalWaypoint", "DepartureLocation", "DepartureWaypoint", "Tags", "TimeWindows", "Duration", "Cost", "LoadDemands", "VisitTypes", "Label", "AvoidUTurns" }, new[]{ "AvoidUTurns" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Shipment.Types.Load), global::Google.Maps.RouteOptimization.V1.Shipment.Types.Load.Parser, new[]{ "Amount" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentTypeIncompatibility), global::Google.Maps.RouteOptimization.V1.ShipmentTypeIncompatibility.Parser, new[]{ "Types_", "IncompatibilityMode" }, null, new[]{ typeof(global::Google.Maps.RouteOptimization.V1.ShipmentTypeIncompatibility.Types.IncompatibilityMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentTypeRequirement), global::Google.Maps.RouteOptimization.V1.ShipmentTypeRequirement.Parser, new[]{ "RequiredShipmentTypeAlternatives", "DependentShipmentTypes", "RequirementMode" }, null, new[]{ typeof(global::Google.Maps.RouteOptimization.V1.ShipmentTypeRequirement.Types.RequirementMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.RouteModifiers), global::Google.Maps.RouteOptimization.V1.RouteModifiers.Parser, new[]{ "AvoidTolls", "AvoidHighways", "AvoidFerries", "AvoidIndoor" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Vehicle), global::Google.Maps.RouteOptimization.V1.Vehicle.Parser, new[]{ "DisplayName", "TravelMode", "RouteModifiers", "StartLocation", "StartWaypoint", "EndLocation", "EndWaypoint", "StartTags", "EndTags", "StartTimeWindows", "EndTimeWindows", "TravelDurationMultiple", "UnloadingPolicy", "LoadLimits", "CostPerHour", "CostPerTraveledHour", "CostPerKilometer", "FixedCost", "UsedIfRouteIsEmpty", "RouteDurationLimit", "TravelDurationLimit", "RouteDistanceLimit", "ExtraVisitDurationForVisitType", "BreakRule", "Label", "Ignore" }, new[]{ "TravelDurationMultiple" }, new[]{ typeof(global::Google.Maps.RouteOptimization.V1.Vehicle.Types.TravelMode), typeof(global::Google.Maps.RouteOptimization.V1.Vehicle.Types.UnloadingPolicy) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit), global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Parser, new[]{ "MaxLoad", "SoftMaxLoad", "CostPerUnitAboveSoftMax", "StartLoadInterval", "EndLoadInterval" }, new[]{ "MaxLoad" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Types.Interval), global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Types.Interval.Parser, new[]{ "Min", "Max" }, new[]{ "Max" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Vehicle), global::Google.Maps.RouteOptimization.V1.Vehicle.Parser, new[]{ "DisplayName", "TravelMode", "RouteModifiers", "StartLocation", "StartWaypoint", "EndLocation", "EndWaypoint", "StartTags", "EndTags", "StartTimeWindows", "EndTimeWindows", "TravelDurationMultiple", "UnloadingPolicy", "LoadLimits", "CostPerHour", "CostPerTraveledHour", "CostPerKilometer", "FixedCost", "UsedIfRouteIsEmpty", "RouteDurationLimit", "TravelDurationLimit", "RouteDistanceLimit", "ExtraVisitDurationForVisitType", "BreakRule", "Label", "Ignore" }, new[]{ "TravelDurationMultiple" }, new[]{ typeof(global::Google.Maps.RouteOptimization.V1.Vehicle.Types.TravelMode), typeof(global::Google.Maps.RouteOptimization.V1.Vehicle.Types.UnloadingPolicy) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit), global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Parser, new[]{ "MaxLoad", "SoftMaxLoad", "CostPerUnitAboveSoftMax", "StartLoadInterval", "EndLoadInterval", "CostPerKilometer", "CostPerTraveledHour" }, new[]{ "MaxLoad", "CostPerKilometer", "CostPerTraveledHour" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Types.Interval), global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Types.Interval.Parser, new[]{ "Min", "Max" }, new[]{ "Max" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Types.LoadCost), global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Types.LoadCost.Parser, new[]{ "LoadThreshold", "CostPerUnitBelowThreshold", "CostPerUnitAboveThreshold" }, new[]{ "LoadThreshold", "CostPerUnitBelowThreshold", "CostPerUnitAboveThreshold" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Vehicle.Types.DurationLimit), global::Google.Maps.RouteOptimization.V1.Vehicle.Types.DurationLimit.Parser, new[]{ "MaxDuration", "SoftMaxDuration", "CostPerHourAfterSoftMax", "QuadraticSoftMaxDuration", "CostPerSquareHourAfterQuadraticSoftMax" }, new[]{ "CostPerHourAfterSoftMax", "CostPerSquareHourAfterQuadraticSoftMax" }, null, null, null),
             null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.TimeWindow), global::Google.Maps.RouteOptimization.V1.TimeWindow.Parser, new[]{ "StartTime", "EndTime", "SoftStartTime", "SoftEndTime", "CostPerHourBeforeSoftStartTime", "CostPerHourAfterSoftEndTime" }, new[]{ "CostPerHourBeforeSoftStartTime", "CostPerHourAfterSoftEndTime" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.DistanceLimit), global::Google.Maps.RouteOptimization.V1.DistanceLimit.Parser, new[]{ "MaxMeters", "SoftMaxMeters", "CostPerKilometerBelowSoftMax", "CostPerKilometerAboveSoftMax" }, new[]{ "MaxMeters", "SoftMaxMeters", "CostPerKilometerBelowSoftMax", "CostPerKilometerAboveSoftMax" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.TransitionAttributes), global::Google.Maps.RouteOptimization.V1.TransitionAttributes.Parser, new[]{ "SrcTag", "ExcludedSrcTag", "DstTag", "ExcludedDstTag", "Cost", "CostPerKilometer", "DistanceLimit", "Delay" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Waypoint), global::Google.Maps.RouteOptimization.V1.Waypoint.Parser, new[]{ "Location", "PlaceId", "SideOfRoad" }, new[]{ "LocationType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Waypoint), global::Google.Maps.RouteOptimization.V1.Waypoint.Parser, new[]{ "Location", "PlaceId", "SideOfRoad", "VehicleStopover" }, new[]{ "LocationType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.Location), global::Google.Maps.RouteOptimization.V1.Location.Parser, new[]{ "LatLng", "Heading" }, new[]{ "Heading" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.BreakRule), global::Google.Maps.RouteOptimization.V1.BreakRule.Parser, new[]{ "BreakRequests", "FrequencyConstraints" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.BreakRule.Types.BreakRequest), global::Google.Maps.RouteOptimization.V1.BreakRule.Types.BreakRequest.Parser, new[]{ "EarliestStartTime", "LatestStartTime", "MinDuration" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.BreakRule.Types.FrequencyConstraint), global::Google.Maps.RouteOptimization.V1.BreakRule.Types.FrequencyConstraint.Parser, new[]{ "MinBreakDuration", "MaxInterBreakDuration" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentRoute), global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Parser, new[]{ "VehicleIndex", "VehicleLabel", "VehicleStartTime", "VehicleEndTime", "Visits", "Transitions", "HasTrafficInfeasibilities", "RoutePolyline", "Breaks", "Metrics", "RouteCosts", "RouteTotalCost" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.Visit), global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.Visit.Parser, new[]{ "ShipmentIndex", "IsPickup", "VisitRequestIndex", "StartTime", "LoadDemands", "Detour", "ShipmentLabel", "VisitLabel" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentRoute), global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Parser, new[]{ "VehicleIndex", "VehicleLabel", "VehicleStartTime", "VehicleEndTime", "Visits", "Transitions", "HasTrafficInfeasibilities", "RoutePolyline", "Breaks", "Metrics", "VehicleFullness", "RouteCosts", "RouteTotalCost" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.Visit), global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.Visit.Parser, new[]{ "ShipmentIndex", "IsPickup", "VisitRequestIndex", "StartTime", "LoadDemands", "Detour", "ShipmentLabel", "VisitLabel", "InjectedSolutionLocationToken" }, new[]{ "InjectedSolutionLocationToken" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.Transition), global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.Transition.Parser, new[]{ "TravelDuration", "TravelDistanceMeters", "TrafficInfoUnavailable", "DelayDuration", "BreakDuration", "WaitDuration", "TotalDuration", "StartTime", "RoutePolyline", "RouteToken", "VehicleLoads" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.VehicleLoad), global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.VehicleLoad.Parser, new[]{ "Amount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.EncodedPolyline), global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.EncodedPolyline.Parser, new[]{ "Points" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.Break), global::Google.Maps.RouteOptimization.V1.ShipmentRoute.Types.Break.Parser, new[]{ "StartTime", "Duration" }, null, null, null, null),
             null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.SkippedShipment), global::Google.Maps.RouteOptimization.V1.SkippedShipment.Parser, new[]{ "Index", "Label", "Reasons" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.SkippedShipment.Types.Reason), global::Google.Maps.RouteOptimization.V1.SkippedShipment.Types.Reason.Parser, new[]{ "Code", "ExampleVehicleIndex", "ExampleExceededCapacityType" }, new[]{ "ExampleVehicleIndex" }, new[]{ typeof(global::Google.Maps.RouteOptimization.V1.SkippedShipment.Types.Reason.Types.Code) }, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.AggregatedMetrics), global::Google.Maps.RouteOptimization.V1.AggregatedMetrics.Parser, new[]{ "PerformedShipmentCount", "TravelDuration", "WaitDuration", "DelayDuration", "BreakDuration", "VisitDuration", "TotalDuration", "TravelDistanceMeters", "MaxLoads" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.SkippedShipment), global::Google.Maps.RouteOptimization.V1.SkippedShipment.Parser, new[]{ "Index", "Label", "PenaltyCost", "EstimatedIncompatibleVehicleRatio", "Reasons" }, new[]{ "PenaltyCost", "EstimatedIncompatibleVehicleRatio" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.SkippedShipment.Types.Reason), global::Google.Maps.RouteOptimization.V1.SkippedShipment.Types.Reason.Parser, new[]{ "Code", "ExampleVehicleIndex", "ExampleVehicleIndices", "ExampleExceededCapacityType" }, new[]{ "ExampleVehicleIndex" }, new[]{ typeof(global::Google.Maps.RouteOptimization.V1.SkippedShipment.Types.Reason.Types.Code) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.AggregatedMetrics), global::Google.Maps.RouteOptimization.V1.AggregatedMetrics.Parser, new[]{ "PerformedShipmentCount", "PerformedMandatoryShipmentCount", "PerformedShipmentPenaltyCostSum", "TravelDuration", "WaitDuration", "DelayDuration", "BreakDuration", "VisitDuration", "TotalDuration", "TravelDistanceMeters", "MaxLoads" }, new[]{ "PerformedMandatoryShipmentCount", "PerformedShipmentPenaltyCostSum" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.VehicleFullness), global::Google.Maps.RouteOptimization.V1.VehicleFullness.Parser, new[]{ "MaxFullness", "Distance", "TravelDuration", "ActiveDuration", "MaxLoad", "ActiveSpan" }, new[]{ "MaxFullness", "Distance", "TravelDuration", "ActiveDuration", "MaxLoad", "ActiveSpan" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.InjectedSolutionConstraint), global::Google.Maps.RouteOptimization.V1.InjectedSolutionConstraint.Parser, new[]{ "Routes", "SkippedShipments", "ConstraintRelaxations" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.InjectedSolutionConstraint.Types.ConstraintRelaxation), global::Google.Maps.RouteOptimization.V1.InjectedSolutionConstraint.Types.ConstraintRelaxation.Parser, new[]{ "Relaxations", "VehicleIndices" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.InjectedSolutionConstraint.Types.ConstraintRelaxation.Types.Relaxation), global::Google.Maps.RouteOptimization.V1.InjectedSolutionConstraint.Types.ConstraintRelaxation.Types.Relaxation.Parser, new[]{ "Level", "ThresholdTime", "ThresholdVisitCount" }, null, new[]{ typeof(global::Google.Maps.RouteOptimization.V1.InjectedSolutionConstraint.Types.ConstraintRelaxation.Types.Relaxation.Types.Level) }, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.OptimizeToursValidationError), global::Google.Maps.RouteOptimization.V1.OptimizeToursValidationError.Parser, new[]{ "Code", "DisplayName", "Fields", "ErrorMessage", "OffendingValues" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.OptimizeToursValidationError.Types.FieldReference), global::Google.Maps.RouteOptimization.V1.OptimizeToursValidationError.Types.FieldReference.Parser, new[]{ "Name", "Index", "Key", "SubField" }, new[]{ "IndexOrKey" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.RouteOptimization.V1.InputConfig), global::Google.Maps.RouteOptimization.V1.InputConfig.Parser, new[]{ "GcsSource", "DataFormat" }, new[]{ "Source" }, null, null, null),
@@ -458,6 +529,880 @@ namespace Google.Maps.RouteOptimization.V1 {
 
   #region Messages
   /// <summary>
+  /// A Universal Resource Identifier that points to a resource that can be read
+  /// and written by the Route Optimization API.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Uri : pb::IMessage<Uri>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Uri> _parser = new pb::MessageParser<Uri>(() => new Uri());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Uri> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Uri() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Uri(Uri other) : this() {
+      uri_ = other.uri_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Uri Clone() {
+      return new Uri(this);
+    }
+
+    /// <summary>Field number for the "uri" field.</summary>
+    public const int Uri_FieldNumber = 1;
+    private string uri_ = "";
+    /// <summary>
+    /// The URI of the resource. The resource may not yet exist.
+    ///
+    /// The contents of the resource are encoded as either JSON
+    /// or textproto. Only Google Cloud Storage resources are supported. If the
+    /// resource is encoded as JSON, the resource name must be suffixed with
+    /// `.json`. If the resource is encoded as textproto, the resource name must
+    /// be suffixed with `.txtpb`. For example, a Google Cloud Storage URI to
+    /// a JSON encoded file might look like: `gs://bucket/path/input/object.json`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uri_ {
+      get { return uri_; }
+      set {
+        uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Uri);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Uri other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Uri_ != other.Uri_) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Uri_.Length != 0) hash ^= Uri_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Uri_.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Uri_);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Uri_.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Uri_);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Uri_.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri_);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Uri other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Uri_.Length != 0) {
+        Uri_ = other.Uri_;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Uri_ = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Uri_ = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A request used by the `OptimizeToursUri` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class OptimizeToursUriRequest : pb::IMessage<OptimizeToursUriRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<OptimizeToursUriRequest> _parser = new pb::MessageParser<OptimizeToursUriRequest>(() => new OptimizeToursUriRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<OptimizeToursUriRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OptimizeToursUriRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OptimizeToursUriRequest(OptimizeToursUriRequest other) : this() {
+      parent_ = other.parent_;
+      input_ = other.input_ != null ? other.input_.Clone() : null;
+      output_ = other.output_ != null ? other.output_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OptimizeToursUriRequest Clone() {
+      return new OptimizeToursUriRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. Target project or location to make a call.
+    ///
+    /// Format:
+    /// * `projects/{project-id}`
+    /// * `projects/{project-id}/locations/{location-id}`
+    ///
+    /// If no location is specified, a region will be chosen automatically.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "input" field.</summary>
+    public const int InputFieldNumber = 2;
+    private global::Google.Maps.RouteOptimization.V1.Uri input_;
+    /// <summary>
+    /// Required. The URI of the Cloud Storage object containing the
+    /// `OptimizeToursRequest`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.RouteOptimization.V1.Uri Input {
+      get { return input_; }
+      set {
+        input_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "output" field.</summary>
+    public const int OutputFieldNumber = 3;
+    private global::Google.Maps.RouteOptimization.V1.Uri output_;
+    /// <summary>
+    /// Required. The URI of the Cloud Storage object that will contain the
+    /// `OptimizeToursResponse`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.RouteOptimization.V1.Uri Output {
+      get { return output_; }
+      set {
+        output_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as OptimizeToursUriRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(OptimizeToursUriRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (!object.Equals(Input, other.Input)) return false;
+      if (!object.Equals(Output, other.Output)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (input_ != null) hash ^= Input.GetHashCode();
+      if (output_ != null) hash ^= Output.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (input_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Input);
+      }
+      if (output_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Output);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (input_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Input);
+      }
+      if (output_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Output);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (input_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Input);
+      }
+      if (output_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Output);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(OptimizeToursUriRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.input_ != null) {
+        if (input_ == null) {
+          Input = new global::Google.Maps.RouteOptimization.V1.Uri();
+        }
+        Input.MergeFrom(other.Input);
+      }
+      if (other.output_ != null) {
+        if (output_ == null) {
+          Output = new global::Google.Maps.RouteOptimization.V1.Uri();
+        }
+        Output.MergeFrom(other.Output);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (input_ == null) {
+              Input = new global::Google.Maps.RouteOptimization.V1.Uri();
+            }
+            input.ReadMessage(Input);
+            break;
+          }
+          case 26: {
+            if (output_ == null) {
+              Output = new global::Google.Maps.RouteOptimization.V1.Uri();
+            }
+            input.ReadMessage(Output);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (input_ == null) {
+              Input = new global::Google.Maps.RouteOptimization.V1.Uri();
+            }
+            input.ReadMessage(Input);
+            break;
+          }
+          case 26: {
+            if (output_ == null) {
+              Output = new global::Google.Maps.RouteOptimization.V1.Uri();
+            }
+            input.ReadMessage(Output);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A response returned by the `OptimizeToursUri` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class OptimizeToursUriResponse : pb::IMessage<OptimizeToursUriResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<OptimizeToursUriResponse> _parser = new pb::MessageParser<OptimizeToursUriResponse>(() => new OptimizeToursUriResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<OptimizeToursUriResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OptimizeToursUriResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OptimizeToursUriResponse(OptimizeToursUriResponse other) : this() {
+      output_ = other.output_ != null ? other.output_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OptimizeToursUriResponse Clone() {
+      return new OptimizeToursUriResponse(this);
+    }
+
+    /// <summary>Field number for the "output" field.</summary>
+    public const int OutputFieldNumber = 1;
+    private global::Google.Maps.RouteOptimization.V1.Uri output_;
+    /// <summary>
+    /// Optional. The URI of the Cloud Storage object containing the
+    /// `OptimizeToursResponse` encoded as either JSON or textproto. If the object
+    /// was encoded as JSON, the extension of the object name will be
+    /// `.json`. If the object was encoded as textproto, the extension of the
+    /// object name will be `.txtpb`.
+    ///
+    /// The `crc32_checksum` of the resource can be used to verify the contents of
+    /// the resource have not been modified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.RouteOptimization.V1.Uri Output {
+      get { return output_; }
+      set {
+        output_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as OptimizeToursUriResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(OptimizeToursUriResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Output, other.Output)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (output_ != null) hash ^= Output.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (output_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Output);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (output_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Output);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (output_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Output);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(OptimizeToursUriResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.output_ != null) {
+        if (output_ == null) {
+          Output = new global::Google.Maps.RouteOptimization.V1.Uri();
+        }
+        Output.MergeFrom(other.Output);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (output_ == null) {
+              Output = new global::Google.Maps.RouteOptimization.V1.Uri();
+            }
+            input.ReadMessage(Output);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (output_ == null) {
+              Output = new global::Google.Maps.RouteOptimization.V1.Uri();
+            }
+            input.ReadMessage(Output);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Operation metadata for `OptimizeToursUri` calls.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class OptimizeToursUriMetadata : pb::IMessage<OptimizeToursUriMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<OptimizeToursUriMetadata> _parser = new pb::MessageParser<OptimizeToursUriMetadata>(() => new OptimizeToursUriMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<OptimizeToursUriMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OptimizeToursUriMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OptimizeToursUriMetadata(OptimizeToursUriMetadata other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OptimizeToursUriMetadata Clone() {
+      return new OptimizeToursUriMetadata(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as OptimizeToursUriMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(OptimizeToursUriMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(OptimizeToursUriMetadata other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request to batch optimize tours as an asynchronous operation.
   /// Each input file should contain one `OptimizeToursRequest`, and each output
   /// file will contain one `OptimizeToursResponse`. The request contains
@@ -479,7 +1424,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1015,7 +1960,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1171,7 +2116,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1310,6 +2255,162 @@ namespace Google.Maps.RouteOptimization.V1 {
   }
 
   /// <summary>
+  /// Operation metadata for `OptimizeToursLongRunning` calls.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class OptimizeToursLongRunningMetadata : pb::IMessage<OptimizeToursLongRunningMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<OptimizeToursLongRunningMetadata> _parser = new pb::MessageParser<OptimizeToursLongRunningMetadata>(() => new OptimizeToursLongRunningMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<OptimizeToursLongRunningMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OptimizeToursLongRunningMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OptimizeToursLongRunningMetadata(OptimizeToursLongRunningMetadata other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OptimizeToursLongRunningMetadata Clone() {
+      return new OptimizeToursLongRunningMetadata(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as OptimizeToursLongRunningMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(OptimizeToursLongRunningMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(OptimizeToursLongRunningMetadata other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request to be given to a tour optimization solver which defines the
   /// shipment model to solve as well as optimization parameters.
   /// </summary>
@@ -1329,7 +2430,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2371,6 +3472,18 @@ namespace Google.Maps.RouteOptimization.V1 {
         /// ones that are detected as infeasible during preprocessing.
         /// </summary>
         [pbr::OriginalName("DETECT_SOME_INFEASIBLE_SHIPMENTS")] DetectSomeInfeasibleShipments = 2,
+        /// <summary>
+        /// This mode only works if `ShipmentModel.objectives` is not empty. The
+        /// request is not solved. It is only validated and filled with costs
+        /// corresponding to the given objectives. Also see the documentation of
+        /// `ShipmentModel.objectives`. The resulting request is returned as
+        /// `OptimizeToursResponse.processed_request`.
+        ///
+        /// Experimental: See
+        /// https://developers.google.com/maps/tt/route-optimization/experimental/objectives/make-request
+        /// for more details.
+        /// </summary>
+        [pbr::OriginalName("TRANSFORM_AND_RETURN_REQUEST")] TransformAndReturnRequest = 3,
       }
 
       /// <summary>
@@ -2417,7 +3530,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2441,6 +3554,7 @@ namespace Google.Maps.RouteOptimization.V1 {
       requestLabel_ = other.requestLabel_;
       skippedShipments_ = other.skippedShipments_.Clone();
       validationErrors_ = other.validationErrors_.Clone();
+      processedRequest_ = other.processedRequest_ != null ? other.processedRequest_.Clone() : null;
       metrics_ = other.metrics_ != null ? other.metrics_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2515,6 +3629,27 @@ namespace Google.Maps.RouteOptimization.V1 {
       get { return validationErrors_; }
     }
 
+    /// <summary>Field number for the "processed_request" field.</summary>
+    public const int ProcessedRequestFieldNumber = 21;
+    private global::Google.Maps.RouteOptimization.V1.OptimizeToursRequest processedRequest_;
+    /// <summary>
+    /// In some cases we modify the incoming request before solving it, i.e. adding
+    /// costs. If solving_mode == TRANSFORM_AND_RETURN_REQUEST, the
+    /// modified request is returned here.
+    ///
+    /// Experimental: See
+    /// https://developers.google.com/maps/tt/route-optimization/experimental/objectives/make-request
+    /// for more details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.RouteOptimization.V1.OptimizeToursRequest ProcessedRequest {
+      get { return processedRequest_; }
+      set {
+        processedRequest_ = value;
+      }
+    }
+
     /// <summary>Field number for the "metrics" field.</summary>
     public const int MetricsFieldNumber = 6;
     private global::Google.Maps.RouteOptimization.V1.OptimizeToursResponse.Types.Metrics metrics_;
@@ -2549,6 +3684,7 @@ namespace Google.Maps.RouteOptimization.V1 {
       if (RequestLabel != other.RequestLabel) return false;
       if(!skippedShipments_.Equals(other.skippedShipments_)) return false;
       if(!validationErrors_.Equals(other.validationErrors_)) return false;
+      if (!object.Equals(ProcessedRequest, other.ProcessedRequest)) return false;
       if (!object.Equals(Metrics, other.Metrics)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2561,6 +3697,7 @@ namespace Google.Maps.RouteOptimization.V1 {
       if (RequestLabel.Length != 0) hash ^= RequestLabel.GetHashCode();
       hash ^= skippedShipments_.GetHashCode();
       hash ^= validationErrors_.GetHashCode();
+      if (processedRequest_ != null) hash ^= ProcessedRequest.GetHashCode();
       if (metrics_ != null) hash ^= Metrics.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2591,6 +3728,10 @@ namespace Google.Maps.RouteOptimization.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(Metrics);
       }
+      if (processedRequest_ != null) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(ProcessedRequest);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2612,6 +3753,10 @@ namespace Google.Maps.RouteOptimization.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(Metrics);
       }
+      if (processedRequest_ != null) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(ProcessedRequest);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2628,6 +3773,9 @@ namespace Google.Maps.RouteOptimization.V1 {
       }
       size += skippedShipments_.CalculateSize(_repeated_skippedShipments_codec);
       size += validationErrors_.CalculateSize(_repeated_validationErrors_codec);
+      if (processedRequest_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ProcessedRequest);
+      }
       if (metrics_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Metrics);
       }
@@ -2649,6 +3797,12 @@ namespace Google.Maps.RouteOptimization.V1 {
       }
       skippedShipments_.Add(other.skippedShipments_);
       validationErrors_.Add(other.validationErrors_);
+      if (other.processedRequest_ != null) {
+        if (processedRequest_ == null) {
+          ProcessedRequest = new global::Google.Maps.RouteOptimization.V1.OptimizeToursRequest();
+        }
+        ProcessedRequest.MergeFrom(other.ProcessedRequest);
+      }
       if (other.metrics_ != null) {
         if (metrics_ == null) {
           Metrics = new global::Google.Maps.RouteOptimization.V1.OptimizeToursResponse.Types.Metrics();
@@ -2693,6 +3847,13 @@ namespace Google.Maps.RouteOptimization.V1 {
             input.ReadMessage(Metrics);
             break;
           }
+          case 170: {
+            if (processedRequest_ == null) {
+              ProcessedRequest = new global::Google.Maps.RouteOptimization.V1.OptimizeToursRequest();
+            }
+            input.ReadMessage(ProcessedRequest);
+            break;
+          }
         }
       }
     #endif
@@ -2729,6 +3890,13 @@ namespace Google.Maps.RouteOptimization.V1 {
               Metrics = new global::Google.Maps.RouteOptimization.V1.OptimizeToursResponse.Types.Metrics();
             }
             input.ReadMessage(Metrics);
+            break;
+          }
+          case 170: {
+            if (processedRequest_ == null) {
+              ProcessedRequest = new global::Google.Maps.RouteOptimization.V1.OptimizeToursRequest();
+            }
+            input.ReadMessage(ProcessedRequest);
             break;
           }
         }
@@ -3240,7 +4408,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3263,6 +4431,7 @@ namespace Google.Maps.RouteOptimization.V1 {
       _hasBits0 = other._hasBits0;
       shipments_ = other.shipments_.Clone();
       vehicles_ = other.vehicles_.Clone();
+      objectives_ = other.objectives_.Clone();
       maxActiveVehicles_ = other.maxActiveVehicles_;
       globalStartTime_ = other.globalStartTime_ != null ? other.globalStartTime_.Clone() : null;
       globalEndTime_ = other.globalEndTime_ != null ? other.globalEndTime_.Clone() : null;
@@ -3309,6 +4478,28 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Maps.RouteOptimization.V1.Vehicle> Vehicles {
       get { return vehicles_; }
+    }
+
+    /// <summary>Field number for the "objectives" field.</summary>
+    public const int ObjectivesFieldNumber = 17;
+    private static readonly pb::FieldCodec<global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.Objective> _repeated_objectives_codec
+        = pb::FieldCodec.ForMessage(138, global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.Objective.Parser);
+    private readonly pbc::RepeatedField<global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.Objective> objectives_ = new pbc::RepeatedField<global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.Objective>();
+    /// <summary>
+    /// The set of objectives for this model, that we will transform into costs.
+    /// If not empty, the input model has to be costless.
+    /// To obtain the modified request, please use `solving_mode` =
+    /// TRANSFORM_AND_RETURN_REQUEST. Note that the request will not
+    /// be solved in this case. See corresponding documentation.
+    ///
+    /// Experimental: See
+    /// https://developers.google.com/maps/tt/route-optimization/experimental/objectives/make-request
+    /// for more details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.Objective> Objectives {
+      get { return objectives_; }
     }
 
     /// <summary>Field number for the "max_active_vehicles" field.</summary>
@@ -3611,6 +4802,10 @@ namespace Google.Maps.RouteOptimization.V1 {
     private readonly pbc::RepeatedField<global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.PrecedenceRule> precedenceRules_ = new pbc::RepeatedField<global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.PrecedenceRule>();
     /// <summary>
     /// Set of precedence rules which must be enforced in the model.
+    ///
+    /// *IMPORTANT*: Use of precedence rules limits the size of problem that can be
+    /// optimized. Requests using precedence rules that include many shipments may
+    /// be rejected.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3635,6 +4830,7 @@ namespace Google.Maps.RouteOptimization.V1 {
       }
       if(!shipments_.Equals(other.shipments_)) return false;
       if(!vehicles_.Equals(other.vehicles_)) return false;
+      if(!objectives_.Equals(other.objectives_)) return false;
       if (MaxActiveVehicles != other.MaxActiveVehicles) return false;
       if (!object.Equals(GlobalStartTime, other.GlobalStartTime)) return false;
       if (!object.Equals(GlobalEndTime, other.GlobalEndTime)) return false;
@@ -3655,6 +4851,7 @@ namespace Google.Maps.RouteOptimization.V1 {
       int hash = 1;
       hash ^= shipments_.GetHashCode();
       hash ^= vehicles_.GetHashCode();
+      hash ^= objectives_.GetHashCode();
       if (HasMaxActiveVehicles) hash ^= MaxActiveVehicles.GetHashCode();
       if (globalStartTime_ != null) hash ^= GlobalStartTime.GetHashCode();
       if (globalEndTime_ != null) hash ^= GlobalEndTime.GetHashCode();
@@ -3709,6 +4906,7 @@ namespace Google.Maps.RouteOptimization.V1 {
       shipmentTypeIncompatibilities_.WriteTo(output, _repeated_shipmentTypeIncompatibilities_codec);
       shipmentTypeRequirements_.WriteTo(output, _repeated_shipmentTypeRequirements_codec);
       precedenceRules_.WriteTo(output, _repeated_precedenceRules_codec);
+      objectives_.WriteTo(output, _repeated_objectives_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3744,6 +4942,7 @@ namespace Google.Maps.RouteOptimization.V1 {
       shipmentTypeIncompatibilities_.WriteTo(ref output, _repeated_shipmentTypeIncompatibilities_codec);
       shipmentTypeRequirements_.WriteTo(ref output, _repeated_shipmentTypeRequirements_codec);
       precedenceRules_.WriteTo(ref output, _repeated_precedenceRules_codec);
+      objectives_.WriteTo(ref output, _repeated_objectives_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3756,6 +4955,7 @@ namespace Google.Maps.RouteOptimization.V1 {
       int size = 0;
       size += shipments_.CalculateSize(_repeated_shipments_codec);
       size += vehicles_.CalculateSize(_repeated_vehicles_codec);
+      size += objectives_.CalculateSize(_repeated_objectives_codec);
       if (HasMaxActiveVehicles) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxActiveVehicles);
       }
@@ -3789,6 +4989,7 @@ namespace Google.Maps.RouteOptimization.V1 {
       }
       shipments_.Add(other.shipments_);
       vehicles_.Add(other.vehicles_);
+      objectives_.Add(other.objectives_);
       if (other.HasMaxActiveVehicles) {
         MaxActiveVehicles = other.MaxActiveVehicles;
       }
@@ -3887,6 +5088,10 @@ namespace Google.Maps.RouteOptimization.V1 {
             precedenceRules_.AddEntriesFrom(input, _repeated_precedenceRules_codec);
             break;
           }
+          case 138: {
+            objectives_.AddEntriesFrom(input, _repeated_objectives_codec);
+            break;
+          }
         }
       }
     #endif
@@ -3960,6 +5165,10 @@ namespace Google.Maps.RouteOptimization.V1 {
             precedenceRules_.AddEntriesFrom(ref input, _repeated_precedenceRules_codec);
             break;
           }
+          case 138: {
+            objectives_.AddEntriesFrom(ref input, _repeated_objectives_codec);
+            break;
+          }
         }
       }
     }
@@ -3970,6 +5179,320 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// Objectives replace the cost model completely, and are therefore
+      /// incompatible with pre-existing costs. Each objective maps to a number of
+      /// pre-defined costs for, e.g., vehicles, shipments or transition attributes.
+      ///
+      /// Experimental: See
+      /// https://developers.google.com/maps/tt/route-optimization/experimental/objectives/make-request
+      /// for more details.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Objective : pb::IMessage<Objective>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Objective> _parser = new pb::MessageParser<Objective>(() => new Objective());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Objective> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Maps.RouteOptimization.V1.ShipmentModel.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Objective() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Objective(Objective other) : this() {
+          _hasBits0 = other._hasBits0;
+          type_ = other.type_;
+          weight_ = other.weight_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Objective Clone() {
+          return new Objective(this);
+        }
+
+        /// <summary>Field number for the "type" field.</summary>
+        public const int TypeFieldNumber = 1;
+        private readonly static global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.Objective.Types.Type TypeDefaultValue = global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.Objective.Types.Type.Default;
+
+        private global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.Objective.Types.Type type_;
+        /// <summary>
+        /// The type of the objective.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.Objective.Types.Type Type {
+          get { if ((_hasBits0 & 1) != 0) { return type_; } else { return TypeDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            type_ = value;
+          }
+        }
+        /// <summary>Gets whether the "type" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasType {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "type" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearType() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "weight" field.</summary>
+        public const int WeightFieldNumber = 2;
+        private readonly static double WeightDefaultValue = 0D;
+
+        private double weight_;
+        /// <summary>
+        /// How much this objective should count relatively to the others. This can
+        /// be any non-negative number, weights do not have to sum to 1. Weights
+        /// default to 1.0.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double Weight {
+          get { if ((_hasBits0 & 2) != 0) { return weight_; } else { return WeightDefaultValue; } }
+          set {
+            _hasBits0 |= 2;
+            weight_ = value;
+          }
+        }
+        /// <summary>Gets whether the "weight" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasWeight {
+          get { return (_hasBits0 & 2) != 0; }
+        }
+        /// <summary>Clears the value of the "weight" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearWeight() {
+          _hasBits0 &= ~2;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Objective);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Objective other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Type != other.Type) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Weight, other.Weight)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasType) hash ^= Type.GetHashCode();
+          if (HasWeight) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Weight);
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasType) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Type);
+          }
+          if (HasWeight) {
+            output.WriteRawTag(17);
+            output.WriteDouble(Weight);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasType) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Type);
+          }
+          if (HasWeight) {
+            output.WriteRawTag(17);
+            output.WriteDouble(Weight);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasType) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+          }
+          if (HasWeight) {
+            size += 1 + 8;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Objective other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasType) {
+            Type = other.Type;
+          }
+          if (other.HasWeight) {
+            Weight = other.Weight;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Type = (global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.Objective.Types.Type) input.ReadEnum();
+                break;
+              }
+              case 17: {
+                Weight = input.ReadDouble();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Type = (global::Google.Maps.RouteOptimization.V1.ShipmentModel.Types.Objective.Types.Type) input.ReadEnum();
+                break;
+              }
+              case 17: {
+                Weight = input.ReadDouble();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the Objective message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The objective type that will be mapped to a set of costs.
+          /// </summary>
+          public enum Type {
+            /// <summary>
+            /// A default set of costs will be used, to ensure a reasonable solution.
+            /// Note: this objective can be used on its own, but will also always be
+            /// added with weight 1.0, as a baseline, to the objectives specified by
+            /// the user, if it's not already present.
+            /// </summary>
+            [pbr::OriginalName("DEFAULT")] Default = 0,
+            /// <summary>
+            /// "MIN" objectives.
+            /// Minimize the total distance traveled.
+            /// </summary>
+            [pbr::OriginalName("MIN_DISTANCE")] MinDistance = 10,
+            /// <summary>
+            /// Minimize the total working time, summed over all vehicles.
+            /// </summary>
+            [pbr::OriginalName("MIN_WORKING_TIME")] MinWorkingTime = 11,
+            /// <summary>
+            /// Same as above but focusing on travel time only.
+            /// </summary>
+            [pbr::OriginalName("MIN_TRAVEL_TIME")] MinTravelTime = 12,
+            /// <summary>
+            /// Minimize the number of vehicles used.
+            /// </summary>
+            [pbr::OriginalName("MIN_NUM_VEHICLES")] MinNumVehicles = 13,
+          }
+
+        }
+        #endregion
+
+      }
+
       /// <summary>
       /// Specifies a duration and distance matrix from visit and vehicle start
       /// locations to visit and vehicle end locations.
@@ -3989,7 +5512,7 @@ namespace Google.Maps.RouteOptimization.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Maps.RouteOptimization.V1.ShipmentModel.Descriptor.NestedTypes[0]; }
+          get { return global::Google.Maps.RouteOptimization.V1.ShipmentModel.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4461,7 +5984,7 @@ namespace Google.Maps.RouteOptimization.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Maps.RouteOptimization.V1.ShipmentModel.Descriptor.NestedTypes[1]; }
+          get { return global::Google.Maps.RouteOptimization.V1.ShipmentModel.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4867,7 +6390,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5655,6 +7178,7 @@ namespace Google.Maps.RouteOptimization.V1 {
       {
         private static readonly pb::MessageParser<VisitRequest> _parser = new pb::MessageParser<VisitRequest>(() => new VisitRequest());
         private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<VisitRequest> Parser { get { return _parser; } }
@@ -5682,6 +7206,7 @@ namespace Google.Maps.RouteOptimization.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public VisitRequest(VisitRequest other) : this() {
+          _hasBits0 = other._hasBits0;
           arrivalLocation_ = other.arrivalLocation_ != null ? other.arrivalLocation_.Clone() : null;
           arrivalWaypoint_ = other.arrivalWaypoint_ != null ? other.arrivalWaypoint_.Clone() : null;
           departureLocation_ = other.departureLocation_ != null ? other.departureLocation_.Clone() : null;
@@ -5693,6 +7218,7 @@ namespace Google.Maps.RouteOptimization.V1 {
           loadDemands_ = other.loadDemands_.Clone();
           visitTypes_ = other.visitTypes_.Clone();
           label_ = other.label_;
+          avoidUTurns_ = other.avoidUTurns_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -5905,6 +7431,43 @@ namespace Google.Maps.RouteOptimization.V1 {
           }
         }
 
+        /// <summary>Field number for the "avoid_u_turns" field.</summary>
+        public const int AvoidUTurnsFieldNumber = 13;
+        private readonly static bool AvoidUTurnsDefaultValue = false;
+
+        private bool avoidUTurns_;
+        /// <summary>
+        /// Specifies whether U-turns should be avoided in driving routes at this
+        /// location.
+        /// U-turn avoidance is best effort and complete avoidance is not guaranteed.
+        /// This is an experimental feature and behavior is subject to change.
+        ///
+        /// Experimental: See
+        /// https://developers.google.com/maps/tt/route-optimization/experimental/u-turn-avoidance/make-request
+        /// for more details.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool AvoidUTurns {
+          get { if ((_hasBits0 & 1) != 0) { return avoidUTurns_; } else { return AvoidUTurnsDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            avoidUTurns_ = value;
+          }
+        }
+        /// <summary>Gets whether the "avoid_u_turns" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasAvoidUTurns {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "avoid_u_turns" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAvoidUTurns() {
+          _hasBits0 &= ~1;
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -5931,6 +7494,7 @@ namespace Google.Maps.RouteOptimization.V1 {
           if (!LoadDemands.Equals(other.LoadDemands)) return false;
           if(!visitTypes_.Equals(other.visitTypes_)) return false;
           if (Label != other.Label) return false;
+          if (AvoidUTurns != other.AvoidUTurns) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -5949,6 +7513,7 @@ namespace Google.Maps.RouteOptimization.V1 {
           hash ^= LoadDemands.GetHashCode();
           hash ^= visitTypes_.GetHashCode();
           if (Label.Length != 0) hash ^= Label.GetHashCode();
+          if (HasAvoidUTurns) hash ^= AvoidUTurns.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -5999,6 +7564,10 @@ namespace Google.Maps.RouteOptimization.V1 {
             output.WriteString(Label);
           }
           loadDemands_.WriteTo(output, _map_loadDemands_codec);
+          if (HasAvoidUTurns) {
+            output.WriteRawTag(104);
+            output.WriteBool(AvoidUTurns);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -6041,6 +7610,10 @@ namespace Google.Maps.RouteOptimization.V1 {
             output.WriteString(Label);
           }
           loadDemands_.WriteTo(ref output, _map_loadDemands_codec);
+          if (HasAvoidUTurns) {
+            output.WriteRawTag(104);
+            output.WriteBool(AvoidUTurns);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -6075,6 +7648,9 @@ namespace Google.Maps.RouteOptimization.V1 {
           size += visitTypes_.CalculateSize(_repeated_visitTypes_codec);
           if (Label.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Label);
+          }
+          if (HasAvoidUTurns) {
+            size += 1 + 1;
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -6127,6 +7703,9 @@ namespace Google.Maps.RouteOptimization.V1 {
           visitTypes_.Add(other.visitTypes_);
           if (other.Label.Length != 0) {
             Label = other.Label;
+          }
+          if (other.HasAvoidUTurns) {
+            AvoidUTurns = other.AvoidUTurns;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -6202,6 +7781,10 @@ namespace Google.Maps.RouteOptimization.V1 {
                 loadDemands_.AddEntriesFrom(input, _map_loadDemands_codec);
                 break;
               }
+              case 104: {
+                AvoidUTurns = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -6274,6 +7857,10 @@ namespace Google.Maps.RouteOptimization.V1 {
               }
               case 98: {
                 loadDemands_.AddEntriesFrom(ref input, _map_loadDemands_codec);
+                break;
+              }
+              case 104: {
+                AvoidUTurns = input.ReadBool();
                 break;
               }
             }
@@ -6509,7 +8096,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6735,14 +8322,12 @@ namespace Google.Maps.RouteOptimization.V1 {
         /// </summary>
         [pbr::OriginalName("NOT_PERFORMED_BY_SAME_VEHICLE")] NotPerformedBySameVehicle = 1,
         /// <summary>
-        /// For two shipments with incompatible types with the
-        /// `NOT_IN_SAME_VEHICLE_SIMULTANEOUSLY` incompatibility mode:
-        ///
-        /// * If both are pickups only (no deliveries) or deliveries only (no
-        ///   pickups), they cannot share the same vehicle at all.
-        /// * If one of the shipments has a delivery and the other a pickup, the two
-        ///   shipments can share the same vehicle iff the former shipment is
-        ///   delivered before the latter is picked up.
+        /// In this mode, two shipments with incompatible types can never be on the
+        /// same vehicle at the same time:
+        /// * They can share the same vehicle only if one is delivered before the
+        ///   other is picked up.
+        /// * When both shipments are pickups-only (no deliveries) or deliveries-only
+        ///   (no pickups), they can't share the same vehicle at all.
         /// </summary>
         [pbr::OriginalName("NOT_IN_SAME_VEHICLE_SIMULTANEOUSLY")] NotInSameVehicleSimultaneously = 2,
       }
@@ -6771,7 +8356,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7075,7 +8660,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7402,7 +8987,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8732,9 +10317,13 @@ namespace Google.Maps.RouteOptimization.V1 {
       /// <summary>
       /// Travel modes which can be used by vehicles.
       ///
-      /// These should be a subset of the Google Maps Platform Routes Preferred API
-      /// travel modes, see:
-      /// https://developers.google.com/maps/documentation/routes_preferred/reference/rest/Shared.Types/RouteTravelMode.
+      /// These should be a subset of the Google Maps Platform Routes API travel
+      /// modes, see:
+      /// https://developers.google.com/maps/documentation/routes/reference/rest/v2/RouteTravelMode
+      ///
+      /// Note: `WALKING` routes are in beta and might sometimes be missing clear
+      /// sidewalks or pedestrian paths. You must display this warning to the user
+      /// for all walking routes that you display in your app.
       /// </summary>
       public enum TravelMode {
         /// <summary>
@@ -8821,6 +10410,8 @@ namespace Google.Maps.RouteOptimization.V1 {
           costPerUnitAboveSoftMax_ = other.costPerUnitAboveSoftMax_;
           startLoadInterval_ = other.startLoadInterval_ != null ? other.startLoadInterval_.Clone() : null;
           endLoadInterval_ = other.endLoadInterval_ != null ? other.endLoadInterval_.Clone() : null;
+          costPerKilometer_ = other.costPerKilometer_ != null ? other.costPerKilometer_.Clone() : null;
+          costPerTraveledHour_ = other.costPerTraveledHour_ != null ? other.costPerTraveledHour_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -8888,6 +10479,8 @@ namespace Google.Maps.RouteOptimization.V1 {
         /// * [cost_per_unit_above_soft_max][google.maps.routeoptimization.v1.Vehicle.LoadLimit.cost_per_unit_above_soft_max]. All costs
         /// add up and must be in the same unit as
         /// [Shipment.penalty_cost][google.maps.routeoptimization.v1.Shipment.penalty_cost].
+        /// Soft limits may only be defined on types that apply to either pickups
+        /// only or deliveries only throughout the model.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8928,6 +10521,46 @@ namespace Google.Maps.RouteOptimization.V1 {
           }
         }
 
+        /// <summary>Field number for the "cost_per_kilometer" field.</summary>
+        public const int CostPerKilometerFieldNumber = 6;
+        private global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Types.LoadCost costPerKilometer_;
+        /// <summary>
+        /// Cost of moving one unit of load over one kilometer for this vehicle.
+        /// This can be used as a proxy for fuel consumption: if the load is a weight
+        /// (in Newtons), then load*kilometer has the dimension of an energy.
+        ///
+        /// Experimental: See
+        /// https://developers.google.com/maps/tt/route-optimization/experimental/load-cost/make-request
+        /// for more details.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Types.LoadCost CostPerKilometer {
+          get { return costPerKilometer_; }
+          set {
+            costPerKilometer_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "cost_per_traveled_hour" field.</summary>
+        public const int CostPerTraveledHourFieldNumber = 7;
+        private global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Types.LoadCost costPerTraveledHour_;
+        /// <summary>
+        /// Cost of traveling with a unit of load during one hour for this vehicle.
+        ///
+        /// Experimental: See
+        /// https://developers.google.com/maps/tt/route-optimization/experimental/load-cost/make-request
+        /// for more details.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Types.LoadCost CostPerTraveledHour {
+          get { return costPerTraveledHour_; }
+          set {
+            costPerTraveledHour_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -8948,6 +10581,8 @@ namespace Google.Maps.RouteOptimization.V1 {
           if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(CostPerUnitAboveSoftMax, other.CostPerUnitAboveSoftMax)) return false;
           if (!object.Equals(StartLoadInterval, other.StartLoadInterval)) return false;
           if (!object.Equals(EndLoadInterval, other.EndLoadInterval)) return false;
+          if (!object.Equals(CostPerKilometer, other.CostPerKilometer)) return false;
+          if (!object.Equals(CostPerTraveledHour, other.CostPerTraveledHour)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -8960,6 +10595,8 @@ namespace Google.Maps.RouteOptimization.V1 {
           if (CostPerUnitAboveSoftMax != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(CostPerUnitAboveSoftMax);
           if (startLoadInterval_ != null) hash ^= StartLoadInterval.GetHashCode();
           if (endLoadInterval_ != null) hash ^= EndLoadInterval.GetHashCode();
+          if (costPerKilometer_ != null) hash ^= CostPerKilometer.GetHashCode();
+          if (costPerTraveledHour_ != null) hash ^= CostPerTraveledHour.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -8998,6 +10635,14 @@ namespace Google.Maps.RouteOptimization.V1 {
             output.WriteRawTag(42);
             output.WriteMessage(EndLoadInterval);
           }
+          if (costPerKilometer_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(CostPerKilometer);
+          }
+          if (costPerTraveledHour_ != null) {
+            output.WriteRawTag(58);
+            output.WriteMessage(CostPerTraveledHour);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -9028,6 +10673,14 @@ namespace Google.Maps.RouteOptimization.V1 {
             output.WriteRawTag(42);
             output.WriteMessage(EndLoadInterval);
           }
+          if (costPerKilometer_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(CostPerKilometer);
+          }
+          if (costPerTraveledHour_ != null) {
+            output.WriteRawTag(58);
+            output.WriteMessage(CostPerTraveledHour);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -9052,6 +10705,12 @@ namespace Google.Maps.RouteOptimization.V1 {
           }
           if (endLoadInterval_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndLoadInterval);
+          }
+          if (costPerKilometer_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CostPerKilometer);
+          }
+          if (costPerTraveledHour_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CostPerTraveledHour);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -9085,6 +10744,18 @@ namespace Google.Maps.RouteOptimization.V1 {
               EndLoadInterval = new global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Types.Interval();
             }
             EndLoadInterval.MergeFrom(other.EndLoadInterval);
+          }
+          if (other.costPerKilometer_ != null) {
+            if (costPerKilometer_ == null) {
+              CostPerKilometer = new global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Types.LoadCost();
+            }
+            CostPerKilometer.MergeFrom(other.CostPerKilometer);
+          }
+          if (other.costPerTraveledHour_ != null) {
+            if (costPerTraveledHour_ == null) {
+              CostPerTraveledHour = new global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Types.LoadCost();
+            }
+            CostPerTraveledHour.MergeFrom(other.CostPerTraveledHour);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -9127,6 +10798,20 @@ namespace Google.Maps.RouteOptimization.V1 {
                 input.ReadMessage(EndLoadInterval);
                 break;
               }
+              case 50: {
+                if (costPerKilometer_ == null) {
+                  CostPerKilometer = new global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Types.LoadCost();
+                }
+                input.ReadMessage(CostPerKilometer);
+                break;
+              }
+              case 58: {
+                if (costPerTraveledHour_ == null) {
+                  CostPerTraveledHour = new global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Types.LoadCost();
+                }
+                input.ReadMessage(CostPerTraveledHour);
+                break;
+              }
             }
           }
         #endif
@@ -9166,6 +10851,20 @@ namespace Google.Maps.RouteOptimization.V1 {
                   EndLoadInterval = new global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Types.Interval();
                 }
                 input.ReadMessage(EndLoadInterval);
+                break;
+              }
+              case 50: {
+                if (costPerKilometer_ == null) {
+                  CostPerKilometer = new global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Types.LoadCost();
+                }
+                input.ReadMessage(CostPerKilometer);
+                break;
+              }
+              case 58: {
+                if (costPerTraveledHour_ == null) {
+                  CostPerTraveledHour = new global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Types.LoadCost();
+                }
+                input.ReadMessage(CostPerTraveledHour);
                 break;
               }
             }
@@ -9431,6 +11130,408 @@ namespace Google.Maps.RouteOptimization.V1 {
                   }
                   case 16: {
                     Max = input.ReadInt64();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Cost of moving one unit of load during a `Transition`.
+          /// For a given load, the cost is the sum of two parts:
+          ///
+          /// - min(load, `load_threshold`) * `cost_per_unit_below_threshold`
+          /// - max(0, load - `load_threshold`) * `cost_per_unit_above_threshold`
+          ///
+          /// With this cost, solutions prefer to deliver high demands first,
+          /// or equivalently pickup high demands last.
+          /// For example, if a vehicle has
+          ///
+          ///     load_limit {
+          ///       key: "weight"
+          ///       value {
+          ///         cost_per_kilometer {
+          ///           load_threshold: 15
+          ///           cost_per_unit_below_threshold: 2.0
+          ///           cost_per_unit_above_threshold: 10.0
+          ///         }
+          ///       }
+          ///     }
+          ///
+          /// and its route is start,pickup,pickup,delivery,delivery,end with
+          /// transitions:
+          ///
+          ///     transition { vehicle_load['weight'] { amount: 0 }
+          ///                  travel_distance_meters: 1000.0 }
+          ///     transition { vehicle_load['weight'] { amount: 10 }
+          ///                  travel_distance_meters: 1000.0 }
+          ///     transition { vehicle_load['weight'] { amount: 20 }
+          ///                  travel_distance_meters: 1000.0 }
+          ///     transition { vehicle_load['weight'] { amount: 10 }
+          ///                  travel_distance_meters: 1000.0 }
+          ///     transition { vehicle_load['weight'] { amount: 0 }
+          ///                  travel_distance_meters: 1000.0 }
+          ///
+          /// then the cost incurred by this `LoadCost` is
+          /// (cost_below * load_below * kilometers + cost_above * load_above * kms)
+          ///
+          /// - transition 0: 0.0
+          /// - transition 1: 2.0 * 10 * 1.0 + 10.0 * 0 * 1.0 = 20.0
+          /// - transition 2: 2.0 * 15 * 1.0 + 10.0 * (20 - 15) * 1.0 = 80.0
+          /// - transition 3: 2.0 * 10 * 1.0 + 10.0 * 0 * 1.0 = 20.0
+          /// - transition 4: 0.0
+          ///
+          /// So the `LoadCost` over the route is 120.0.
+          ///
+          /// However, if the route is start,pickup,delivery,pickup,delivery,end
+          /// with transitions:
+          ///
+          ///     transition { vehicle_load['weight'] { amount: 0 }
+          ///                  travel_distance_meters: 1000.0 }
+          ///     transition { vehicle_load['weight'] { amount: 10 }
+          ///                  travel_distance_meters: 1000.0 }
+          ///     transition { vehicle_load['weight'] { amount: 0 }
+          ///                  travel_distance_meters: 1000.0 }
+          ///     transition { vehicle_load['weight'] { amount: 10 }
+          ///                  travel_distance_meters: 1000.0 }
+          ///     transition { vehicle_load['weight'] { amount: 0 }
+          ///                  travel_distance_meters: 1000.0 }
+          ///
+          /// then the cost incurred by this `LoadCost` is
+          ///
+          /// - transition 0: 0.0
+          /// - transition 1: 2.0 * 10 * 1.0 + 10.0 * 0 * 1.0 = 20.0
+          /// - transition 2: 0.0
+          /// - transition 3: 2.0 * 10 * 1.0 + 10.0 * 0 * 1.0 = 20.0
+          /// - transition 4: 0.0
+          ///
+          /// Here the `LoadCost` over the route is 40.0.
+          ///
+          /// `LoadCost` makes solutions with heavy-loaded transitions more expensive.
+          ///
+          /// Experimental: See
+          /// https://developers.google.com/maps/tt/route-optimization/experimental/load-cost/make-request
+          /// for more details.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class LoadCost : pb::IMessage<LoadCost>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<LoadCost> _parser = new pb::MessageParser<LoadCost>(() => new LoadCost());
+            private pb::UnknownFieldSet _unknownFields;
+            private int _hasBits0;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<LoadCost> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Maps.RouteOptimization.V1.Vehicle.Types.LoadLimit.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public LoadCost() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public LoadCost(LoadCost other) : this() {
+              _hasBits0 = other._hasBits0;
+              loadThreshold_ = other.loadThreshold_;
+              costPerUnitBelowThreshold_ = other.costPerUnitBelowThreshold_;
+              costPerUnitAboveThreshold_ = other.costPerUnitAboveThreshold_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public LoadCost Clone() {
+              return new LoadCost(this);
+            }
+
+            /// <summary>Field number for the "load_threshold" field.</summary>
+            public const int LoadThresholdFieldNumber = 1;
+            private readonly static long LoadThresholdDefaultValue = 0L;
+
+            private long loadThreshold_;
+            /// <summary>
+            /// Amount of load above which the cost of moving a unit of load changes
+            /// from cost_per_unit_below_threshold to cost_per_unit_above_threshold.
+            /// Must be >= 0.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public long LoadThreshold {
+              get { if ((_hasBits0 & 1) != 0) { return loadThreshold_; } else { return LoadThresholdDefaultValue; } }
+              set {
+                _hasBits0 |= 1;
+                loadThreshold_ = value;
+              }
+            }
+            /// <summary>Gets whether the "load_threshold" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasLoadThreshold {
+              get { return (_hasBits0 & 1) != 0; }
+            }
+            /// <summary>Clears the value of the "load_threshold" field</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearLoadThreshold() {
+              _hasBits0 &= ~1;
+            }
+
+            /// <summary>Field number for the "cost_per_unit_below_threshold" field.</summary>
+            public const int CostPerUnitBelowThresholdFieldNumber = 2;
+            private readonly static double CostPerUnitBelowThresholdDefaultValue = 0D;
+
+            private double costPerUnitBelowThreshold_;
+            /// <summary>
+            /// Cost of moving a unit of load, for each unit between 0 and threshold.
+            /// Must be a finite value, and >= 0.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public double CostPerUnitBelowThreshold {
+              get { if ((_hasBits0 & 2) != 0) { return costPerUnitBelowThreshold_; } else { return CostPerUnitBelowThresholdDefaultValue; } }
+              set {
+                _hasBits0 |= 2;
+                costPerUnitBelowThreshold_ = value;
+              }
+            }
+            /// <summary>Gets whether the "cost_per_unit_below_threshold" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasCostPerUnitBelowThreshold {
+              get { return (_hasBits0 & 2) != 0; }
+            }
+            /// <summary>Clears the value of the "cost_per_unit_below_threshold" field</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearCostPerUnitBelowThreshold() {
+              _hasBits0 &= ~2;
+            }
+
+            /// <summary>Field number for the "cost_per_unit_above_threshold" field.</summary>
+            public const int CostPerUnitAboveThresholdFieldNumber = 3;
+            private readonly static double CostPerUnitAboveThresholdDefaultValue = 0D;
+
+            private double costPerUnitAboveThreshold_;
+            /// <summary>
+            /// Cost of moving a unit of load, for each unit above threshold.
+            /// In the special case threshold = 0, this is a fixed cost per unit.
+            /// Must be a finite value, and >= 0.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public double CostPerUnitAboveThreshold {
+              get { if ((_hasBits0 & 4) != 0) { return costPerUnitAboveThreshold_; } else { return CostPerUnitAboveThresholdDefaultValue; } }
+              set {
+                _hasBits0 |= 4;
+                costPerUnitAboveThreshold_ = value;
+              }
+            }
+            /// <summary>Gets whether the "cost_per_unit_above_threshold" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasCostPerUnitAboveThreshold {
+              get { return (_hasBits0 & 4) != 0; }
+            }
+            /// <summary>Clears the value of the "cost_per_unit_above_threshold" field</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearCostPerUnitAboveThreshold() {
+              _hasBits0 &= ~4;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as LoadCost);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(LoadCost other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (LoadThreshold != other.LoadThreshold) return false;
+              if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(CostPerUnitBelowThreshold, other.CostPerUnitBelowThreshold)) return false;
+              if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(CostPerUnitAboveThreshold, other.CostPerUnitAboveThreshold)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (HasLoadThreshold) hash ^= LoadThreshold.GetHashCode();
+              if (HasCostPerUnitBelowThreshold) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(CostPerUnitBelowThreshold);
+              if (HasCostPerUnitAboveThreshold) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(CostPerUnitAboveThreshold);
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (HasLoadThreshold) {
+                output.WriteRawTag(8);
+                output.WriteInt64(LoadThreshold);
+              }
+              if (HasCostPerUnitBelowThreshold) {
+                output.WriteRawTag(17);
+                output.WriteDouble(CostPerUnitBelowThreshold);
+              }
+              if (HasCostPerUnitAboveThreshold) {
+                output.WriteRawTag(25);
+                output.WriteDouble(CostPerUnitAboveThreshold);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (HasLoadThreshold) {
+                output.WriteRawTag(8);
+                output.WriteInt64(LoadThreshold);
+              }
+              if (HasCostPerUnitBelowThreshold) {
+                output.WriteRawTag(17);
+                output.WriteDouble(CostPerUnitBelowThreshold);
+              }
+              if (HasCostPerUnitAboveThreshold) {
+                output.WriteRawTag(25);
+                output.WriteDouble(CostPerUnitAboveThreshold);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (HasLoadThreshold) {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(LoadThreshold);
+              }
+              if (HasCostPerUnitBelowThreshold) {
+                size += 1 + 8;
+              }
+              if (HasCostPerUnitAboveThreshold) {
+                size += 1 + 8;
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(LoadCost other) {
+              if (other == null) {
+                return;
+              }
+              if (other.HasLoadThreshold) {
+                LoadThreshold = other.LoadThreshold;
+              }
+              if (other.HasCostPerUnitBelowThreshold) {
+                CostPerUnitBelowThreshold = other.CostPerUnitBelowThreshold;
+              }
+              if (other.HasCostPerUnitAboveThreshold) {
+                CostPerUnitAboveThreshold = other.CostPerUnitAboveThreshold;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 8: {
+                    LoadThreshold = input.ReadInt64();
+                    break;
+                  }
+                  case 17: {
+                    CostPerUnitBelowThreshold = input.ReadDouble();
+                    break;
+                  }
+                  case 25: {
+                    CostPerUnitAboveThreshold = input.ReadDouble();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    LoadThreshold = input.ReadInt64();
+                    break;
+                  }
+                  case 17: {
+                    CostPerUnitBelowThreshold = input.ReadDouble();
+                    break;
+                  }
+                  case 25: {
+                    CostPerUnitAboveThreshold = input.ReadDouble();
                     break;
                   }
                 }
@@ -9940,7 +12041,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10430,7 +12531,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10829,7 +12930,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11348,7 +13449,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11369,6 +13470,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Waypoint(Waypoint other) : this() {
       sideOfRoad_ = other.sideOfRoad_;
+      vehicleStopover_ = other.vehicleStopover_;
       switch (other.LocationTypeCase) {
         case LocationTypeOneofCase.Location:
           Location = other.Location.Clone();
@@ -11406,7 +13508,13 @@ namespace Google.Maps.RouteOptimization.V1 {
     /// <summary>Field number for the "place_id" field.</summary>
     public const int PlaceIdFieldNumber = 2;
     /// <summary>
-    /// The POI Place ID associated with the waypoint.
+    /// The POI place ID associated with the waypoint.
+    ///
+    /// When using a place ID to specify arrival or departure location of a
+    /// VisitRequest, use a place ID that is specific enough to determine a
+    /// LatLng location for navigation to the place.
+    /// For example, a place ID representing a building is suitable, but a place
+    /// ID representing a road is discouraged.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11452,6 +13560,25 @@ namespace Google.Maps.RouteOptimization.V1 {
       }
     }
 
+    /// <summary>Field number for the "vehicle_stopover" field.</summary>
+    public const int VehicleStopoverFieldNumber = 4;
+    private bool vehicleStopover_;
+    /// <summary>
+    /// Indicates that the waypoint is meant for vehicles to stop at, where the
+    /// intention is to either pick up or drop off. This option works only for the
+    /// 'DRIVING' travel mode, and when the 'location_type' is 'location'.
+    ///
+    /// Experimental: This field's behavior or existence may change in future.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool VehicleStopover {
+      get { return vehicleStopover_; }
+      set {
+        vehicleStopover_ = value;
+      }
+    }
+
     private object locationType_;
     /// <summary>Enum of possible cases for the "location_type" oneof.</summary>
     public enum LocationTypeOneofCase {
@@ -11491,6 +13618,7 @@ namespace Google.Maps.RouteOptimization.V1 {
       if (!object.Equals(Location, other.Location)) return false;
       if (PlaceId != other.PlaceId) return false;
       if (SideOfRoad != other.SideOfRoad) return false;
+      if (VehicleStopover != other.VehicleStopover) return false;
       if (LocationTypeCase != other.LocationTypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -11502,6 +13630,7 @@ namespace Google.Maps.RouteOptimization.V1 {
       if (locationTypeCase_ == LocationTypeOneofCase.Location) hash ^= Location.GetHashCode();
       if (HasPlaceId) hash ^= PlaceId.GetHashCode();
       if (SideOfRoad != false) hash ^= SideOfRoad.GetHashCode();
+      if (VehicleStopover != false) hash ^= VehicleStopover.GetHashCode();
       hash ^= (int) locationTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -11533,6 +13662,10 @@ namespace Google.Maps.RouteOptimization.V1 {
         output.WriteRawTag(24);
         output.WriteBool(SideOfRoad);
       }
+      if (VehicleStopover != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(VehicleStopover);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -11555,6 +13688,10 @@ namespace Google.Maps.RouteOptimization.V1 {
         output.WriteRawTag(24);
         output.WriteBool(SideOfRoad);
       }
+      if (VehicleStopover != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(VehicleStopover);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -11574,6 +13711,9 @@ namespace Google.Maps.RouteOptimization.V1 {
       if (SideOfRoad != false) {
         size += 1 + 1;
       }
+      if (VehicleStopover != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -11588,6 +13728,9 @@ namespace Google.Maps.RouteOptimization.V1 {
       }
       if (other.SideOfRoad != false) {
         SideOfRoad = other.SideOfRoad;
+      }
+      if (other.VehicleStopover != false) {
+        VehicleStopover = other.VehicleStopover;
       }
       switch (other.LocationTypeCase) {
         case LocationTypeOneofCase.Location:
@@ -11633,6 +13776,10 @@ namespace Google.Maps.RouteOptimization.V1 {
             SideOfRoad = input.ReadBool();
             break;
           }
+          case 32: {
+            VehicleStopover = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -11665,6 +13812,10 @@ namespace Google.Maps.RouteOptimization.V1 {
             SideOfRoad = input.ReadBool();
             break;
           }
+          case 32: {
+            VehicleStopover = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -11691,7 +13842,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11964,7 +14115,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12866,7 +15017,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12896,6 +15047,7 @@ namespace Google.Maps.RouteOptimization.V1 {
       routePolyline_ = other.routePolyline_ != null ? other.routePolyline_.Clone() : null;
       breaks_ = other.breaks_.Clone();
       metrics_ = other.metrics_ != null ? other.metrics_.Clone() : null;
+      vehicleFullness_ = other.vehicleFullness_ != null ? other.vehicleFullness_.Clone() : null;
       routeCosts_ = other.routeCosts_.Clone();
       routeTotalCost_ = other.routeTotalCost_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -13086,6 +15238,28 @@ namespace Google.Maps.RouteOptimization.V1 {
       }
     }
 
+    /// <summary>Field number for the "vehicle_fullness" field.</summary>
+    public const int VehicleFullnessFieldNumber = 20;
+    private global::Google.Maps.RouteOptimization.V1.VehicleFullness vehicleFullness_;
+    /// <summary>
+    /// [VehicleFullness][google.maps.routeoptimization.v1.VehicleFullness] field
+    /// for computing how close the capped metrics are to their respective vehicle
+    /// limits. Its fields are ratios between a capped metric field (e.g.
+    /// [AggregatedMetrics.travel_distance_meters][google.maps.routeoptimization.v1.AggregatedMetrics.travel_distance_meters])
+    /// and the related vehicle limit (e.g.
+    /// [Vehicle.route_distance_limit][google.maps.routeoptimization.v1.Vehicle.route_distance_limit]).
+    ///
+    /// Experimental: This field's behavior or existence may change in future.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.RouteOptimization.V1.VehicleFullness VehicleFullness {
+      get { return vehicleFullness_; }
+      set {
+        vehicleFullness_ = value;
+      }
+    }
+
     /// <summary>Field number for the "route_costs" field.</summary>
     public const int RouteCostsFieldNumber = 17;
     private static readonly pbc::MapField<string, double>.Codec _map_routeCosts_codec
@@ -13147,6 +15321,7 @@ namespace Google.Maps.RouteOptimization.V1 {
       if (!object.Equals(RoutePolyline, other.RoutePolyline)) return false;
       if(!breaks_.Equals(other.breaks_)) return false;
       if (!object.Equals(Metrics, other.Metrics)) return false;
+      if (!object.Equals(VehicleFullness, other.VehicleFullness)) return false;
       if (!RouteCosts.Equals(other.RouteCosts)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(RouteTotalCost, other.RouteTotalCost)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -13166,6 +15341,7 @@ namespace Google.Maps.RouteOptimization.V1 {
       if (routePolyline_ != null) hash ^= RoutePolyline.GetHashCode();
       hash ^= breaks_.GetHashCode();
       if (metrics_ != null) hash ^= Metrics.GetHashCode();
+      if (vehicleFullness_ != null) hash ^= VehicleFullness.GetHashCode();
       hash ^= RouteCosts.GetHashCode();
       if (RouteTotalCost != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(RouteTotalCost);
       if (_unknownFields != null) {
@@ -13222,6 +15398,10 @@ namespace Google.Maps.RouteOptimization.V1 {
         output.WriteRawTag(145, 1);
         output.WriteDouble(RouteTotalCost);
       }
+      if (vehicleFullness_ != null) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(VehicleFullness);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -13268,6 +15448,10 @@ namespace Google.Maps.RouteOptimization.V1 {
         output.WriteRawTag(145, 1);
         output.WriteDouble(RouteTotalCost);
       }
+      if (vehicleFullness_ != null) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(VehicleFullness);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -13301,6 +15485,9 @@ namespace Google.Maps.RouteOptimization.V1 {
       size += breaks_.CalculateSize(_repeated_breaks_codec);
       if (metrics_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Metrics);
+      }
+      if (vehicleFullness_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(VehicleFullness);
       }
       size += routeCosts_.CalculateSize(_map_routeCosts_codec);
       if (RouteTotalCost != 0D) {
@@ -13353,6 +15540,12 @@ namespace Google.Maps.RouteOptimization.V1 {
           Metrics = new global::Google.Maps.RouteOptimization.V1.AggregatedMetrics();
         }
         Metrics.MergeFrom(other.Metrics);
+      }
+      if (other.vehicleFullness_ != null) {
+        if (vehicleFullness_ == null) {
+          VehicleFullness = new global::Google.Maps.RouteOptimization.V1.VehicleFullness();
+        }
+        VehicleFullness.MergeFrom(other.VehicleFullness);
       }
       routeCosts_.MergeFrom(other.routeCosts_);
       if (other.RouteTotalCost != 0D) {
@@ -13433,6 +15626,13 @@ namespace Google.Maps.RouteOptimization.V1 {
             RouteTotalCost = input.ReadDouble();
             break;
           }
+          case 162: {
+            if (vehicleFullness_ == null) {
+              VehicleFullness = new global::Google.Maps.RouteOptimization.V1.VehicleFullness();
+            }
+            input.ReadMessage(VehicleFullness);
+            break;
+          }
         }
       }
     #endif
@@ -13508,6 +15708,13 @@ namespace Google.Maps.RouteOptimization.V1 {
             RouteTotalCost = input.ReadDouble();
             break;
           }
+          case 162: {
+            if (vehicleFullness_ == null) {
+              VehicleFullness = new global::Google.Maps.RouteOptimization.V1.VehicleFullness();
+            }
+            input.ReadMessage(VehicleFullness);
+            break;
+          }
         }
       }
     }
@@ -13530,6 +15737,7 @@ namespace Google.Maps.RouteOptimization.V1 {
       {
         private static readonly pb::MessageParser<Visit> _parser = new pb::MessageParser<Visit>(() => new Visit());
         private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Visit> Parser { get { return _parser; } }
@@ -13557,6 +15765,7 @@ namespace Google.Maps.RouteOptimization.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Visit(Visit other) : this() {
+          _hasBits0 = other._hasBits0;
           shipmentIndex_ = other.shipmentIndex_;
           isPickup_ = other.isPickup_;
           visitRequestIndex_ = other.visitRequestIndex_;
@@ -13565,6 +15774,7 @@ namespace Google.Maps.RouteOptimization.V1 {
           detour_ = other.detour_ != null ? other.detour_.Clone() : null;
           shipmentLabel_ = other.shipmentLabel_;
           visitLabel_ = other.visitLabel_;
+          injectedSolutionLocationToken_ = other.injectedSolutionLocationToken_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -13719,6 +15929,47 @@ namespace Google.Maps.RouteOptimization.V1 {
           }
         }
 
+        /// <summary>Field number for the "injected_solution_location_token" field.</summary>
+        public const int InjectedSolutionLocationTokenFieldNumber = 13;
+        private readonly static int InjectedSolutionLocationTokenDefaultValue = 0;
+
+        private int injectedSolutionLocationToken_;
+        /// <summary>
+        /// An opaque token representing information about a visit location.
+        ///
+        /// This field may be populated in the result routes' visits when
+        /// [VisitRequest.avoid_u_turns][google.maps.routeoptimization.v1.Shipment.VisitRequest.avoid_u_turns]
+        /// was set to true for this visit or if
+        /// [ShipmentModel.avoid_u_turns][google.maps.routeoptimization.v1.ShipmentModel.avoid_u_turns]
+        /// was set to true in the request
+        /// [OptimizeToursRequest][google.maps.routeoptimization.v1.OptimizeToursRequest].
+        ///
+        /// Experimental: See
+        /// https://developers.google.com/maps/tt/route-optimization/experimental/u-turn-avoidance/make-request
+        /// for more details.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int InjectedSolutionLocationToken {
+          get { if ((_hasBits0 & 1) != 0) { return injectedSolutionLocationToken_; } else { return InjectedSolutionLocationTokenDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            injectedSolutionLocationToken_ = value;
+          }
+        }
+        /// <summary>Gets whether the "injected_solution_location_token" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasInjectedSolutionLocationToken {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "injected_solution_location_token" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearInjectedSolutionLocationToken() {
+          _hasBits0 &= ~1;
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -13742,6 +15993,7 @@ namespace Google.Maps.RouteOptimization.V1 {
           if (!object.Equals(Detour, other.Detour)) return false;
           if (ShipmentLabel != other.ShipmentLabel) return false;
           if (VisitLabel != other.VisitLabel) return false;
+          if (InjectedSolutionLocationToken != other.InjectedSolutionLocationToken) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -13757,6 +16009,7 @@ namespace Google.Maps.RouteOptimization.V1 {
           if (detour_ != null) hash ^= Detour.GetHashCode();
           if (ShipmentLabel.Length != 0) hash ^= ShipmentLabel.GetHashCode();
           if (VisitLabel.Length != 0) hash ^= VisitLabel.GetHashCode();
+          if (HasInjectedSolutionLocationToken) hash ^= InjectedSolutionLocationToken.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -13804,6 +16057,10 @@ namespace Google.Maps.RouteOptimization.V1 {
             output.WriteString(VisitLabel);
           }
           loadDemands_.WriteTo(output, _map_loadDemands_codec);
+          if (HasInjectedSolutionLocationToken) {
+            output.WriteRawTag(104);
+            output.WriteInt32(InjectedSolutionLocationToken);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -13843,6 +16100,10 @@ namespace Google.Maps.RouteOptimization.V1 {
             output.WriteString(VisitLabel);
           }
           loadDemands_.WriteTo(ref output, _map_loadDemands_codec);
+          if (HasInjectedSolutionLocationToken) {
+            output.WriteRawTag(104);
+            output.WriteInt32(InjectedSolutionLocationToken);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -13874,6 +16135,9 @@ namespace Google.Maps.RouteOptimization.V1 {
           }
           if (VisitLabel.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(VisitLabel);
+          }
+          if (HasInjectedSolutionLocationToken) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(InjectedSolutionLocationToken);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -13914,6 +16178,9 @@ namespace Google.Maps.RouteOptimization.V1 {
           }
           if (other.VisitLabel.Length != 0) {
             VisitLabel = other.VisitLabel;
+          }
+          if (other.HasInjectedSolutionLocationToken) {
+            InjectedSolutionLocationToken = other.InjectedSolutionLocationToken;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -13968,6 +16235,10 @@ namespace Google.Maps.RouteOptimization.V1 {
                 loadDemands_.AddEntriesFrom(input, _map_loadDemands_codec);
                 break;
               }
+              case 104: {
+                InjectedSolutionLocationToken = input.ReadInt32();
+                break;
+              }
             }
           }
         #endif
@@ -14019,6 +16290,10 @@ namespace Google.Maps.RouteOptimization.V1 {
               }
               case 90: {
                 loadDemands_.AddEntriesFrom(ref input, _map_loadDemands_codec);
+                break;
+              }
+              case 104: {
+                InjectedSolutionLocationToken = input.ReadInt32();
                 break;
               }
             }
@@ -15392,6 +17667,7 @@ namespace Google.Maps.RouteOptimization.V1 {
   {
     private static readonly pb::MessageParser<SkippedShipment> _parser = new pb::MessageParser<SkippedShipment>(() => new SkippedShipment());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SkippedShipment> Parser { get { return _parser; } }
@@ -15399,7 +17675,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15419,8 +17695,11 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SkippedShipment(SkippedShipment other) : this() {
+      _hasBits0 = other._hasBits0;
       index_ = other.index_;
       label_ = other.label_;
+      penaltyCost_ = other.penaltyCost_;
+      estimatedIncompatibleVehicleRatio_ = other.estimatedIncompatibleVehicleRatio_;
       reasons_ = other.reasons_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -15464,6 +17743,74 @@ namespace Google.Maps.RouteOptimization.V1 {
       }
     }
 
+    /// <summary>Field number for the "penalty_cost" field.</summary>
+    public const int PenaltyCostFieldNumber = 6;
+    private readonly static double PenaltyCostDefaultValue = 0D;
+
+    private double penaltyCost_;
+    /// <summary>
+    /// This is a copy of the
+    /// [Shipment.penalty_cost][google.maps.routeoptimization.v1.Shipment.penalty_cost],
+    /// included here to make it easier to see the severity of a skipped shipment.
+    ///
+    /// Experimental: This field's behavior or existence may change in future.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double PenaltyCost {
+      get { if ((_hasBits0 & 2) != 0) { return penaltyCost_; } else { return PenaltyCostDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        penaltyCost_ = value;
+      }
+    }
+    /// <summary>Gets whether the "penalty_cost" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPenaltyCost {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "penalty_cost" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPenaltyCost() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "estimated_incompatible_vehicle_ratio" field.</summary>
+    public const int EstimatedIncompatibleVehicleRatioFieldNumber = 5;
+    private readonly static double EstimatedIncompatibleVehicleRatioDefaultValue = 0D;
+
+    private double estimatedIncompatibleVehicleRatio_;
+    /// <summary>
+    /// Estimated ratio of vehicles that cannot perform this shipment for at least
+    /// one of the reasons below.
+    /// Note: this is only filled when reasons involve a vehicle.
+    ///
+    /// Experimental: This field's behavior or existence may change in future.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double EstimatedIncompatibleVehicleRatio {
+      get { if ((_hasBits0 & 1) != 0) { return estimatedIncompatibleVehicleRatio_; } else { return EstimatedIncompatibleVehicleRatioDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        estimatedIncompatibleVehicleRatio_ = value;
+      }
+    }
+    /// <summary>Gets whether the "estimated_incompatible_vehicle_ratio" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEstimatedIncompatibleVehicleRatio {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "estimated_incompatible_vehicle_ratio" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEstimatedIncompatibleVehicleRatio() {
+      _hasBits0 &= ~1;
+    }
+
     /// <summary>Field number for the "reasons" field.</summary>
     public const int ReasonsFieldNumber = 3;
     private static readonly pb::FieldCodec<global::Google.Maps.RouteOptimization.V1.SkippedShipment.Types.Reason> _repeated_reasons_codec
@@ -15497,6 +17844,8 @@ namespace Google.Maps.RouteOptimization.V1 {
       }
       if (Index != other.Index) return false;
       if (Label != other.Label) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(PenaltyCost, other.PenaltyCost)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(EstimatedIncompatibleVehicleRatio, other.EstimatedIncompatibleVehicleRatio)) return false;
       if(!reasons_.Equals(other.reasons_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -15507,6 +17856,8 @@ namespace Google.Maps.RouteOptimization.V1 {
       int hash = 1;
       if (Index != 0) hash ^= Index.GetHashCode();
       if (Label.Length != 0) hash ^= Label.GetHashCode();
+      if (HasPenaltyCost) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(PenaltyCost);
+      if (HasEstimatedIncompatibleVehicleRatio) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(EstimatedIncompatibleVehicleRatio);
       hash ^= reasons_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -15535,6 +17886,14 @@ namespace Google.Maps.RouteOptimization.V1 {
         output.WriteString(Label);
       }
       reasons_.WriteTo(output, _repeated_reasons_codec);
+      if (HasEstimatedIncompatibleVehicleRatio) {
+        output.WriteRawTag(41);
+        output.WriteDouble(EstimatedIncompatibleVehicleRatio);
+      }
+      if (HasPenaltyCost) {
+        output.WriteRawTag(49);
+        output.WriteDouble(PenaltyCost);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -15554,6 +17913,14 @@ namespace Google.Maps.RouteOptimization.V1 {
         output.WriteString(Label);
       }
       reasons_.WriteTo(ref output, _repeated_reasons_codec);
+      if (HasEstimatedIncompatibleVehicleRatio) {
+        output.WriteRawTag(41);
+        output.WriteDouble(EstimatedIncompatibleVehicleRatio);
+      }
+      if (HasPenaltyCost) {
+        output.WriteRawTag(49);
+        output.WriteDouble(PenaltyCost);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -15569,6 +17936,12 @@ namespace Google.Maps.RouteOptimization.V1 {
       }
       if (Label.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Label);
+      }
+      if (HasPenaltyCost) {
+        size += 1 + 8;
+      }
+      if (HasEstimatedIncompatibleVehicleRatio) {
+        size += 1 + 8;
       }
       size += reasons_.CalculateSize(_repeated_reasons_codec);
       if (_unknownFields != null) {
@@ -15588,6 +17961,12 @@ namespace Google.Maps.RouteOptimization.V1 {
       }
       if (other.Label.Length != 0) {
         Label = other.Label;
+      }
+      if (other.HasPenaltyCost) {
+        PenaltyCost = other.PenaltyCost;
+      }
+      if (other.HasEstimatedIncompatibleVehicleRatio) {
+        EstimatedIncompatibleVehicleRatio = other.EstimatedIncompatibleVehicleRatio;
       }
       reasons_.Add(other.reasons_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -15617,6 +17996,14 @@ namespace Google.Maps.RouteOptimization.V1 {
             reasons_.AddEntriesFrom(input, _repeated_reasons_codec);
             break;
           }
+          case 41: {
+            EstimatedIncompatibleVehicleRatio = input.ReadDouble();
+            break;
+          }
+          case 49: {
+            PenaltyCost = input.ReadDouble();
+            break;
+          }
         }
       }
     #endif
@@ -15642,6 +18029,14 @@ namespace Google.Maps.RouteOptimization.V1 {
           }
           case 26: {
             reasons_.AddEntriesFrom(ref input, _repeated_reasons_codec);
+            break;
+          }
+          case 41: {
+            EstimatedIncompatibleVehicleRatio = input.ReadDouble();
+            break;
+          }
+          case 49: {
+            PenaltyCost = input.ReadDouble();
             break;
           }
         }
@@ -15721,6 +18116,7 @@ namespace Google.Maps.RouteOptimization.V1 {
           _hasBits0 = other._hasBits0;
           code_ = other.code_;
           exampleVehicleIndex_ = other.exampleVehicleIndex_;
+          exampleVehicleIndices_ = other.exampleVehicleIndices_.Clone();
           exampleExceededCapacityType_ = other.exampleExceededCapacityType_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
@@ -15777,6 +18173,26 @@ namespace Google.Maps.RouteOptimization.V1 {
           _hasBits0 &= ~1;
         }
 
+        /// <summary>Field number for the "example_vehicle_indices" field.</summary>
+        public const int ExampleVehicleIndicesFieldNumber = 5;
+        private static readonly pb::FieldCodec<int> _repeated_exampleVehicleIndices_codec
+            = pb::FieldCodec.ForInt32(42);
+        private readonly pbc::RepeatedField<int> exampleVehicleIndices_ = new pbc::RepeatedField<int>();
+        /// <summary>
+        /// Same as
+        /// [example_vehicle_index][google.maps.routeoptimization.v1.SkippedShipment.Reason.example_vehicle_index]
+        /// except that we provide the list of multiple identified vehicles. This
+        /// list is not necessarily exhaustive. This is only filled if
+        /// [fill_example_vehicle_indices_in_skipped_reasons][] is true.
+        ///
+        /// Experimental: This field's behavior or existence may change in future.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<int> ExampleVehicleIndices {
+          get { return exampleVehicleIndices_; }
+        }
+
         /// <summary>Field number for the "example_exceeded_capacity_type" field.</summary>
         public const int ExampleExceededCapacityTypeFieldNumber = 3;
         private string exampleExceededCapacityType_ = "";
@@ -15810,6 +18226,7 @@ namespace Google.Maps.RouteOptimization.V1 {
           }
           if (Code != other.Code) return false;
           if (ExampleVehicleIndex != other.ExampleVehicleIndex) return false;
+          if(!exampleVehicleIndices_.Equals(other.exampleVehicleIndices_)) return false;
           if (ExampleExceededCapacityType != other.ExampleExceededCapacityType) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -15820,6 +18237,7 @@ namespace Google.Maps.RouteOptimization.V1 {
           int hash = 1;
           if (Code != global::Google.Maps.RouteOptimization.V1.SkippedShipment.Types.Reason.Types.Code.Unspecified) hash ^= Code.GetHashCode();
           if (HasExampleVehicleIndex) hash ^= ExampleVehicleIndex.GetHashCode();
+          hash ^= exampleVehicleIndices_.GetHashCode();
           if (ExampleExceededCapacityType.Length != 0) hash ^= ExampleExceededCapacityType.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -15851,6 +18269,7 @@ namespace Google.Maps.RouteOptimization.V1 {
             output.WriteRawTag(26);
             output.WriteString(ExampleExceededCapacityType);
           }
+          exampleVehicleIndices_.WriteTo(output, _repeated_exampleVehicleIndices_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -15873,6 +18292,7 @@ namespace Google.Maps.RouteOptimization.V1 {
             output.WriteRawTag(26);
             output.WriteString(ExampleExceededCapacityType);
           }
+          exampleVehicleIndices_.WriteTo(ref output, _repeated_exampleVehicleIndices_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -15889,6 +18309,7 @@ namespace Google.Maps.RouteOptimization.V1 {
           if (HasExampleVehicleIndex) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(ExampleVehicleIndex);
           }
+          size += exampleVehicleIndices_.CalculateSize(_repeated_exampleVehicleIndices_codec);
           if (ExampleExceededCapacityType.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(ExampleExceededCapacityType);
           }
@@ -15910,6 +18331,7 @@ namespace Google.Maps.RouteOptimization.V1 {
           if (other.HasExampleVehicleIndex) {
             ExampleVehicleIndex = other.ExampleVehicleIndex;
           }
+          exampleVehicleIndices_.Add(other.exampleVehicleIndices_);
           if (other.ExampleExceededCapacityType.Length != 0) {
             ExampleExceededCapacityType = other.ExampleExceededCapacityType;
           }
@@ -15940,6 +18362,11 @@ namespace Google.Maps.RouteOptimization.V1 {
                 ExampleExceededCapacityType = input.ReadString();
                 break;
               }
+              case 42:
+              case 40: {
+                exampleVehicleIndices_.AddEntriesFrom(input, _repeated_exampleVehicleIndices_codec);
+                break;
+              }
             }
           }
         #endif
@@ -15965,6 +18392,11 @@ namespace Google.Maps.RouteOptimization.V1 {
               }
               case 26: {
                 ExampleExceededCapacityType = input.ReadString();
+                break;
+              }
+              case 42:
+              case 40: {
+                exampleVehicleIndices_.AddEntriesFrom(ref input, _repeated_exampleVehicleIndices_codec);
                 break;
               }
             }
@@ -16031,6 +18463,39 @@ namespace Google.Maps.RouteOptimization.V1 {
             /// this vehicle does not belong to it.
             /// </summary>
             [pbr::OriginalName("VEHICLE_NOT_ALLOWED")] VehicleNotAllowed = 7,
+            /// <summary>
+            /// The vehicle's `ignore` field is true.
+            ///
+            /// Experimental: This field's behavior or existence may change in future.
+            /// </summary>
+            [pbr::OriginalName("VEHICLE_IGNORED")] VehicleIgnored = 8,
+            /// <summary>
+            /// The shipment's `ignore` field is true.
+            ///
+            /// Experimental: This field's behavior or existence may change in future.
+            /// </summary>
+            [pbr::OriginalName("SHIPMENT_IGNORED")] ShipmentIgnored = 9,
+            /// <summary>
+            /// The shipment is skipped in the `injected_solution_constraint`.
+            ///
+            /// Experimental: This field's behavior or existence may change in future.
+            /// </summary>
+            [pbr::OriginalName("SKIPPED_IN_INJECTED_SOLUTION_CONSTRAINT")] SkippedInInjectedSolutionConstraint = 10,
+            /// <summary>
+            /// The vehicle route relaxation specified in the
+            /// `injected_solution_constraint` doesn't permit any visit to be inserted.
+            ///
+            /// Experimental: This field's behavior or existence may change in future.
+            /// </summary>
+            [pbr::OriginalName("VEHICLE_ROUTE_IS_FULLY_SEQUENCE_CONSTRAINED")] VehicleRouteIsFullySequenceConstrained = 11,
+            /// <summary>
+            /// The shipment has a zero penalty cost. While this can be useful as an
+            /// advanced modelling choice, it may also explain after the fact why a
+            /// shipment was skipped.
+            ///
+            /// Experimental: This field's behavior or existence may change in future.
+            /// </summary>
+            [pbr::OriginalName("ZERO_PENALTY_COST")] ZeroPenaltyCost = 13,
           }
 
         }
@@ -16061,6 +18526,7 @@ namespace Google.Maps.RouteOptimization.V1 {
   {
     private static readonly pb::MessageParser<AggregatedMetrics> _parser = new pb::MessageParser<AggregatedMetrics>(() => new AggregatedMetrics());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AggregatedMetrics> Parser { get { return _parser; } }
@@ -16068,7 +18534,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16088,7 +18554,10 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AggregatedMetrics(AggregatedMetrics other) : this() {
+      _hasBits0 = other._hasBits0;
       performedShipmentCount_ = other.performedShipmentCount_;
+      performedMandatoryShipmentCount_ = other.performedMandatoryShipmentCount_;
+      performedShipmentPenaltyCostSum_ = other.performedShipmentPenaltyCostSum_;
       travelDuration_ = other.travelDuration_ != null ? other.travelDuration_.Clone() : null;
       waitDuration_ = other.waitDuration_ != null ? other.waitDuration_.Clone() : null;
       delayDuration_ = other.delayDuration_ != null ? other.delayDuration_.Clone() : null;
@@ -16120,6 +18589,72 @@ namespace Google.Maps.RouteOptimization.V1 {
       set {
         performedShipmentCount_ = value;
       }
+    }
+
+    /// <summary>Field number for the "performed_mandatory_shipment_count" field.</summary>
+    public const int PerformedMandatoryShipmentCountFieldNumber = 12;
+    private readonly static int PerformedMandatoryShipmentCountDefaultValue = 0;
+
+    private int performedMandatoryShipmentCount_;
+    /// <summary>
+    /// Number of mandatory shipments performed.
+    ///
+    /// Experimental: This field's behavior or existence may change in future.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PerformedMandatoryShipmentCount {
+      get { if ((_hasBits0 & 1) != 0) { return performedMandatoryShipmentCount_; } else { return PerformedMandatoryShipmentCountDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        performedMandatoryShipmentCount_ = value;
+      }
+    }
+    /// <summary>Gets whether the "performed_mandatory_shipment_count" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPerformedMandatoryShipmentCount {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "performed_mandatory_shipment_count" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPerformedMandatoryShipmentCount() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "performed_shipment_penalty_cost_sum" field.</summary>
+    public const int PerformedShipmentPenaltyCostSumFieldNumber = 13;
+    private readonly static double PerformedShipmentPenaltyCostSumDefaultValue = 0D;
+
+    private double performedShipmentPenaltyCostSum_;
+    /// <summary>
+    /// The sum of the
+    /// [Shipment.penalty_cost][google.maps.routeoptimization.v1.Shipment.penalty_cost]
+    /// of the performed shipments.
+    ///
+    /// Experimental: This field's behavior or existence may change in future.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double PerformedShipmentPenaltyCostSum {
+      get { if ((_hasBits0 & 2) != 0) { return performedShipmentPenaltyCostSum_; } else { return PerformedShipmentPenaltyCostSumDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        performedShipmentPenaltyCostSum_ = value;
+      }
+    }
+    /// <summary>Gets whether the "performed_shipment_penalty_cost_sum" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPerformedShipmentPenaltyCostSum {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "performed_shipment_penalty_cost_sum" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPerformedShipmentPenaltyCostSum() {
+      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "travel_duration" field.</summary>
@@ -16268,6 +18803,8 @@ namespace Google.Maps.RouteOptimization.V1 {
         return true;
       }
       if (PerformedShipmentCount != other.PerformedShipmentCount) return false;
+      if (PerformedMandatoryShipmentCount != other.PerformedMandatoryShipmentCount) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(PerformedShipmentPenaltyCostSum, other.PerformedShipmentPenaltyCostSum)) return false;
       if (!object.Equals(TravelDuration, other.TravelDuration)) return false;
       if (!object.Equals(WaitDuration, other.WaitDuration)) return false;
       if (!object.Equals(DelayDuration, other.DelayDuration)) return false;
@@ -16284,6 +18821,8 @@ namespace Google.Maps.RouteOptimization.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (PerformedShipmentCount != 0) hash ^= PerformedShipmentCount.GetHashCode();
+      if (HasPerformedMandatoryShipmentCount) hash ^= PerformedMandatoryShipmentCount.GetHashCode();
+      if (HasPerformedShipmentPenaltyCostSum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(PerformedShipmentPenaltyCostSum);
       if (travelDuration_ != null) hash ^= TravelDuration.GetHashCode();
       if (waitDuration_ != null) hash ^= WaitDuration.GetHashCode();
       if (delayDuration_ != null) hash ^= DelayDuration.GetHashCode();
@@ -16343,6 +18882,14 @@ namespace Google.Maps.RouteOptimization.V1 {
         output.WriteDouble(TravelDistanceMeters);
       }
       maxLoads_.WriteTo(output, _map_maxLoads_codec);
+      if (HasPerformedMandatoryShipmentCount) {
+        output.WriteRawTag(96);
+        output.WriteInt32(PerformedMandatoryShipmentCount);
+      }
+      if (HasPerformedShipmentPenaltyCostSum) {
+        output.WriteRawTag(105);
+        output.WriteDouble(PerformedShipmentPenaltyCostSum);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -16386,6 +18933,14 @@ namespace Google.Maps.RouteOptimization.V1 {
         output.WriteDouble(TravelDistanceMeters);
       }
       maxLoads_.WriteTo(ref output, _map_maxLoads_codec);
+      if (HasPerformedMandatoryShipmentCount) {
+        output.WriteRawTag(96);
+        output.WriteInt32(PerformedMandatoryShipmentCount);
+      }
+      if (HasPerformedShipmentPenaltyCostSum) {
+        output.WriteRawTag(105);
+        output.WriteDouble(PerformedShipmentPenaltyCostSum);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -16398,6 +18953,12 @@ namespace Google.Maps.RouteOptimization.V1 {
       int size = 0;
       if (PerformedShipmentCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(PerformedShipmentCount);
+      }
+      if (HasPerformedMandatoryShipmentCount) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PerformedMandatoryShipmentCount);
+      }
+      if (HasPerformedShipmentPenaltyCostSum) {
+        size += 1 + 8;
       }
       if (travelDuration_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TravelDuration);
@@ -16435,6 +18996,12 @@ namespace Google.Maps.RouteOptimization.V1 {
       }
       if (other.PerformedShipmentCount != 0) {
         PerformedShipmentCount = other.PerformedShipmentCount;
+      }
+      if (other.HasPerformedMandatoryShipmentCount) {
+        PerformedMandatoryShipmentCount = other.PerformedMandatoryShipmentCount;
+      }
+      if (other.HasPerformedShipmentPenaltyCostSum) {
+        PerformedShipmentPenaltyCostSum = other.PerformedShipmentPenaltyCostSum;
       }
       if (other.travelDuration_ != null) {
         if (travelDuration_ == null) {
@@ -16545,6 +19112,14 @@ namespace Google.Maps.RouteOptimization.V1 {
             maxLoads_.AddEntriesFrom(input, _map_maxLoads_codec);
             break;
           }
+          case 96: {
+            PerformedMandatoryShipmentCount = input.ReadInt32();
+            break;
+          }
+          case 105: {
+            PerformedShipmentPenaltyCostSum = input.ReadDouble();
+            break;
+          }
         }
       }
     #endif
@@ -16614,6 +19189,538 @@ namespace Google.Maps.RouteOptimization.V1 {
             maxLoads_.AddEntriesFrom(ref input, _map_maxLoads_codec);
             break;
           }
+          case 96: {
+            PerformedMandatoryShipmentCount = input.ReadInt32();
+            break;
+          }
+          case 105: {
+            PerformedShipmentPenaltyCostSum = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// [VehicleFullness][google.maps.routeoptimization.v1.VehicleFullness] is a
+  /// metric which computes how full a vehicle is. Each
+  /// [VehicleFullness][google.maps.routeoptimization.v1.VehicleFullness] field is
+  /// between 0 and 1, computed as the ratio between a capped metric field (e.g.
+  /// [AggregatedMetrics.travel_distance_meters][google.maps.routeoptimization.v1.AggregatedMetrics.travel_distance_meters])
+  /// and its related vehicle limit (e.g.
+  /// [Vehicle.route_distance_limit][google.maps.routeoptimization.v1.Vehicle.route_distance_limit]),
+  /// if it exists. Otherwise the fullness ratio stays unset. If the limit is 0,
+  /// the field is set to 1. Note: when a route is subject to traffic
+  /// infeasibilities, some raw fullness ratios might exceed 1.0, e.g. the vehicle
+  /// might exceed its distance limit. In these cases, we cap the fullness values
+  /// at 1.0.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class VehicleFullness : pb::IMessage<VehicleFullness>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<VehicleFullness> _parser = new pb::MessageParser<VehicleFullness>(() => new VehicleFullness());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<VehicleFullness> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[25]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VehicleFullness() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VehicleFullness(VehicleFullness other) : this() {
+      _hasBits0 = other._hasBits0;
+      maxFullness_ = other.maxFullness_;
+      distance_ = other.distance_;
+      travelDuration_ = other.travelDuration_;
+      activeDuration_ = other.activeDuration_;
+      maxLoad_ = other.maxLoad_;
+      activeSpan_ = other.activeSpan_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VehicleFullness Clone() {
+      return new VehicleFullness(this);
+    }
+
+    /// <summary>Field number for the "max_fullness" field.</summary>
+    public const int MaxFullnessFieldNumber = 1;
+    private readonly static double MaxFullnessDefaultValue = 0D;
+
+    private double maxFullness_;
+    /// <summary>
+    /// Maximum of all other fields in this message.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double MaxFullness {
+      get { if ((_hasBits0 & 1) != 0) { return maxFullness_; } else { return MaxFullnessDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        maxFullness_ = value;
+      }
+    }
+    /// <summary>Gets whether the "max_fullness" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaxFullness {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "max_fullness" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxFullness() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "distance" field.</summary>
+    public const int DistanceFieldNumber = 2;
+    private readonly static double DistanceDefaultValue = 0D;
+
+    private double distance_;
+    /// <summary>
+    /// The ratio between
+    /// [AggregatedMetrics.travel_distance_meters][google.maps.routeoptimization.v1.AggregatedMetrics.travel_distance_meters]
+    /// and
+    /// [Vehicle.route_distance_limit][google.maps.routeoptimization.v1.Vehicle.route_distance_limit].
+    /// If
+    /// [Vehicle.route_distance_limit][google.maps.routeoptimization.v1.Vehicle.route_distance_limit]
+    /// is unset, this field will be unset.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double Distance {
+      get { if ((_hasBits0 & 2) != 0) { return distance_; } else { return DistanceDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        distance_ = value;
+      }
+    }
+    /// <summary>Gets whether the "distance" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDistance {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "distance" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDistance() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "travel_duration" field.</summary>
+    public const int TravelDurationFieldNumber = 3;
+    private readonly static double TravelDurationDefaultValue = 0D;
+
+    private double travelDuration_;
+    /// <summary>
+    /// The ratio between [AggregatedMetrics.travel_duration_seconds][] and
+    /// [Vehicle.travel_duration_limit][google.maps.routeoptimization.v1.Vehicle.travel_duration_limit].
+    /// If
+    /// [Vehicle.travel_duration_limit][google.maps.routeoptimization.v1.Vehicle.travel_duration_limit]
+    /// is unset, this field will be unset.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double TravelDuration {
+      get { if ((_hasBits0 & 4) != 0) { return travelDuration_; } else { return TravelDurationDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        travelDuration_ = value;
+      }
+    }
+    /// <summary>Gets whether the "travel_duration" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTravelDuration {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "travel_duration" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTravelDuration() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "active_duration" field.</summary>
+    public const int ActiveDurationFieldNumber = 4;
+    private readonly static double ActiveDurationDefaultValue = 0D;
+
+    private double activeDuration_;
+    /// <summary>
+    /// The ratio between [AggregatedMetrics.total_duration_seconds][] and
+    /// [Vehicle.route_duration_limit][google.maps.routeoptimization.v1.Vehicle.route_duration_limit].
+    /// If
+    /// [Vehicle.route_duration_limit][google.maps.routeoptimization.v1.Vehicle.route_duration_limit]
+    /// is unset, this field will be unset.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double ActiveDuration {
+      get { if ((_hasBits0 & 8) != 0) { return activeDuration_; } else { return ActiveDurationDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        activeDuration_ = value;
+      }
+    }
+    /// <summary>Gets whether the "active_duration" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasActiveDuration {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "active_duration" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearActiveDuration() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "max_load" field.</summary>
+    public const int MaxLoadFieldNumber = 5;
+    private readonly static double MaxLoadDefaultValue = 0D;
+
+    private double maxLoad_;
+    /// <summary>
+    /// The maximum ratio among all types of [AggregatedMetrics.max_load][] and
+    /// their respective
+    /// [Vehicle.load_limits][google.maps.routeoptimization.v1.Vehicle.load_limits].
+    /// If all
+    /// [Vehicle.load_limits][google.maps.routeoptimization.v1.Vehicle.load_limits]
+    /// fields are unset, this field will be unset.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double MaxLoad {
+      get { if ((_hasBits0 & 16) != 0) { return maxLoad_; } else { return MaxLoadDefaultValue; } }
+      set {
+        _hasBits0 |= 16;
+        maxLoad_ = value;
+      }
+    }
+    /// <summary>Gets whether the "max_load" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaxLoad {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "max_load" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxLoad() {
+      _hasBits0 &= ~16;
+    }
+
+    /// <summary>Field number for the "active_span" field.</summary>
+    public const int ActiveSpanFieldNumber = 6;
+    private readonly static double ActiveSpanDefaultValue = 0D;
+
+    private double activeSpan_;
+    /// <summary>
+    /// The ratio (vehicle_end_time - vehicle_start_time) /
+    /// (latest_vehicle_end_time - earliest_vehicle_start_time) for a given
+    /// vehicle. If the denominator is not present, it uses
+    /// ([ShipmentModel.global_end_time][google.maps.routeoptimization.v1.ShipmentModel.global_end_time]
+    /// -
+    /// [ShipmentModel.global_start_time][google.maps.routeoptimization.v1.ShipmentModel.global_start_time])
+    /// instead.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double ActiveSpan {
+      get { if ((_hasBits0 & 32) != 0) { return activeSpan_; } else { return ActiveSpanDefaultValue; } }
+      set {
+        _hasBits0 |= 32;
+        activeSpan_ = value;
+      }
+    }
+    /// <summary>Gets whether the "active_span" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasActiveSpan {
+      get { return (_hasBits0 & 32) != 0; }
+    }
+    /// <summary>Clears the value of the "active_span" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearActiveSpan() {
+      _hasBits0 &= ~32;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as VehicleFullness);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(VehicleFullness other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(MaxFullness, other.MaxFullness)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Distance, other.Distance)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TravelDuration, other.TravelDuration)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(ActiveDuration, other.ActiveDuration)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(MaxLoad, other.MaxLoad)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(ActiveSpan, other.ActiveSpan)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasMaxFullness) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(MaxFullness);
+      if (HasDistance) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Distance);
+      if (HasTravelDuration) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TravelDuration);
+      if (HasActiveDuration) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ActiveDuration);
+      if (HasMaxLoad) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(MaxLoad);
+      if (HasActiveSpan) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ActiveSpan);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasMaxFullness) {
+        output.WriteRawTag(9);
+        output.WriteDouble(MaxFullness);
+      }
+      if (HasDistance) {
+        output.WriteRawTag(17);
+        output.WriteDouble(Distance);
+      }
+      if (HasTravelDuration) {
+        output.WriteRawTag(25);
+        output.WriteDouble(TravelDuration);
+      }
+      if (HasActiveDuration) {
+        output.WriteRawTag(33);
+        output.WriteDouble(ActiveDuration);
+      }
+      if (HasMaxLoad) {
+        output.WriteRawTag(41);
+        output.WriteDouble(MaxLoad);
+      }
+      if (HasActiveSpan) {
+        output.WriteRawTag(49);
+        output.WriteDouble(ActiveSpan);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasMaxFullness) {
+        output.WriteRawTag(9);
+        output.WriteDouble(MaxFullness);
+      }
+      if (HasDistance) {
+        output.WriteRawTag(17);
+        output.WriteDouble(Distance);
+      }
+      if (HasTravelDuration) {
+        output.WriteRawTag(25);
+        output.WriteDouble(TravelDuration);
+      }
+      if (HasActiveDuration) {
+        output.WriteRawTag(33);
+        output.WriteDouble(ActiveDuration);
+      }
+      if (HasMaxLoad) {
+        output.WriteRawTag(41);
+        output.WriteDouble(MaxLoad);
+      }
+      if (HasActiveSpan) {
+        output.WriteRawTag(49);
+        output.WriteDouble(ActiveSpan);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasMaxFullness) {
+        size += 1 + 8;
+      }
+      if (HasDistance) {
+        size += 1 + 8;
+      }
+      if (HasTravelDuration) {
+        size += 1 + 8;
+      }
+      if (HasActiveDuration) {
+        size += 1 + 8;
+      }
+      if (HasMaxLoad) {
+        size += 1 + 8;
+      }
+      if (HasActiveSpan) {
+        size += 1 + 8;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(VehicleFullness other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasMaxFullness) {
+        MaxFullness = other.MaxFullness;
+      }
+      if (other.HasDistance) {
+        Distance = other.Distance;
+      }
+      if (other.HasTravelDuration) {
+        TravelDuration = other.TravelDuration;
+      }
+      if (other.HasActiveDuration) {
+        ActiveDuration = other.ActiveDuration;
+      }
+      if (other.HasMaxLoad) {
+        MaxLoad = other.MaxLoad;
+      }
+      if (other.HasActiveSpan) {
+        ActiveSpan = other.ActiveSpan;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 9: {
+            MaxFullness = input.ReadDouble();
+            break;
+          }
+          case 17: {
+            Distance = input.ReadDouble();
+            break;
+          }
+          case 25: {
+            TravelDuration = input.ReadDouble();
+            break;
+          }
+          case 33: {
+            ActiveDuration = input.ReadDouble();
+            break;
+          }
+          case 41: {
+            MaxLoad = input.ReadDouble();
+            break;
+          }
+          case 49: {
+            ActiveSpan = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 9: {
+            MaxFullness = input.ReadDouble();
+            break;
+          }
+          case 17: {
+            Distance = input.ReadDouble();
+            break;
+          }
+          case 25: {
+            TravelDuration = input.ReadDouble();
+            break;
+          }
+          case 33: {
+            ActiveDuration = input.ReadDouble();
+            break;
+          }
+          case 41: {
+            MaxLoad = input.ReadDouble();
+            break;
+          }
+          case 49: {
+            ActiveSpan = input.ReadDouble();
+            break;
+          }
         }
       }
     }
@@ -16640,7 +19747,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17507,7 +20614,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18287,7 +21394,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18568,7 +21675,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18847,7 +21954,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19045,7 +22152,7 @@ namespace Google.Maps.RouteOptimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Maps.RouteOptimization.V1.RouteOptimizationServiceReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

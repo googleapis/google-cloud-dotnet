@@ -1,0 +1,16 @@
+command: build-raw
+args:
+- '--api-path=google/test/v1'
+- '--generator-output=/test/output'
+commonFiles:
+  - source: Google.Test.V1
+    target: output/google/test/v1
+  - source: Google.Test.V2
+    target: output/google/test/v2
+fileExpectations:
+  present:
+  - output/google/test/v1/Google.Test.V1/bin
+  - output/google/test/v1/Google.Test.V1/obj
+  absent:
+  - output/google/test/v2/Google.Test.V2/bin
+  - output/google/test/v2/Google.Test.V2/obj

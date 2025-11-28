@@ -34,53 +34,53 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
             "VXNlclN0YWdlVG9Db21wdXRhdGlvbk5hbWVNYXBFbnRyeRIbChNmb3J3YXJk",
             "aW5nX2tleV9iaXRzGAQgASgFEiAKGHBlcnNpc3RlbnRfc3RhdGVfdmVyc2lv",
             "bhgFIAEoBRpECiJVc2VyU3RhZ2VUb0NvbXB1dGF0aW9uTmFtZU1hcEVudHJ5",
-            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEisAEKDlB1YnN1Ykxv",
+            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEizgEKDlB1YnN1Ykxv",
             "Y2F0aW9uEg0KBXRvcGljGAEgASgJEhQKDHN1YnNjcmlwdGlvbhgCIAEoCRIX",
             "Cg90aW1lc3RhbXBfbGFiZWwYAyABKAkSEAoIaWRfbGFiZWwYBCABKAkSFgoO",
             "ZHJvcF9sYXRlX2RhdGEYBSABKAgSHQoVdHJhY2tpbmdfc3Vic2NyaXB0aW9u",
-            "GAYgASgJEhcKD3dpdGhfYXR0cmlidXRlcxgHIAEoCCIrChZTdHJlYW1pbmdT",
-            "dGFnZUxvY2F0aW9uEhEKCXN0cmVhbV9pZBgBIAEoCSI/ChpTdHJlYW1pbmdT",
-            "aWRlSW5wdXRMb2NhdGlvbhILCgN0YWcYASABKAkSFAoMc3RhdGVfZmFtaWx5",
-            "GAIgASgJIigKFEN1c3RvbVNvdXJjZUxvY2F0aW9uEhAKCHN0YXRlZnVsGAEg",
-            "ASgIItoCCg5TdHJlYW1Mb2NhdGlvbhJTChhzdHJlYW1pbmdfc3RhZ2VfbG9j",
-            "YXRpb24YASABKAsyLy5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5TdHJlYW1p",
-            "bmdTdGFnZUxvY2F0aW9uSAASQgoPcHVic3ViX2xvY2F0aW9uGAIgASgLMicu",
-            "Z29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuUHVic3ViTG9jYXRpb25IABJSChNz",
-            "aWRlX2lucHV0X2xvY2F0aW9uGAMgASgLMjMuZ29vZ2xlLmRhdGFmbG93LnYx",
-            "YmV0YTMuU3RyZWFtaW5nU2lkZUlucHV0TG9jYXRpb25IABJPChZjdXN0b21f",
-            "c291cmNlX2xvY2F0aW9uGAQgASgLMi0uZ29vZ2xlLmRhdGFmbG93LnYxYmV0",
-            "YTMuQ3VzdG9tU291cmNlTG9jYXRpb25IAEIKCghsb2NhdGlvbiI6ChFTdGF0",
-            "ZUZhbWlseUNvbmZpZxIUCgxzdGF0ZV9mYW1pbHkYASABKAkSDwoHaXNfcmVh",
-            "ZBgCIAEoCCK+AgoTQ29tcHV0YXRpb25Ub3BvbG9neRIZChFzeXN0ZW1fc3Rh",
-            "Z2VfbmFtZRgBIAEoCRIWCg5jb21wdXRhdGlvbl9pZBgFIAEoCRI9CgprZXlf",
-            "cmFuZ2VzGAIgAygLMikuZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuS2V5UmFu",
-            "Z2VMb2NhdGlvbhI3CgZpbnB1dHMYAyADKAsyJy5nb29nbGUuZGF0YWZsb3cu",
-            "djFiZXRhMy5TdHJlYW1Mb2NhdGlvbhI4CgdvdXRwdXRzGAQgAygLMicuZ29v",
-            "Z2xlLmRhdGFmbG93LnYxYmV0YTMuU3RyZWFtTG9jYXRpb24SQgoOc3RhdGVf",
-            "ZmFtaWxpZXMYByADKAsyKi5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5TdGF0",
-            "ZUZhbWlseUNvbmZpZyKJAQoQS2V5UmFuZ2VMb2NhdGlvbhINCgVzdGFydBgB",
-            "IAEoCRILCgNlbmQYAiABKAkSGQoRZGVsaXZlcnlfZW5kcG9pbnQYAyABKAkS",
-            "EQoJZGF0YV9kaXNrGAUgASgJEisKH2RlcHJlY2F0ZWRfcGVyc2lzdGVudF9k",
-            "aXJlY3RvcnkYBCABKAlCAhgBIiQKD01vdW50ZWREYXRhRGlzaxIRCglkYXRh",
-            "X2Rpc2sYASABKAkiPQoSRGF0YURpc2tBc3NpZ25tZW50EhMKC3ZtX2luc3Rh",
-            "bmNlGAEgASgJEhIKCmRhdGFfZGlza3MYAiADKAkiSwoaS2V5UmFuZ2VEYXRh",
-            "RGlza0Fzc2lnbm1lbnQSDQoFc3RhcnQYASABKAkSCwoDZW5kGAIgASgJEhEK",
-            "CWRhdGFfZGlzaxgDIAEoCSKEAQoaU3RyZWFtaW5nQ29tcHV0YXRpb25SYW5n",
-            "ZXMSFgoOY29tcHV0YXRpb25faWQYASABKAkSTgoRcmFuZ2VfYXNzaWdubWVu",
-            "dHMYAiADKAsyMy5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5LZXlSYW5nZURh",
-            "dGFEaXNrQXNzaWdubWVudCJWCiBTdHJlYW1pbmdBcHBsaWFuY2VTbmFwc2hv",
-            "dENvbmZpZxITCgtzbmFwc2hvdF9pZBgBIAEoCRIdChVpbXBvcnRfc3RhdGVf",
-            "ZW5kcG9pbnQYAiABKAlC0QEKG2NvbS5nb29nbGUuZGF0YWZsb3cudjFiZXRh",
-            "M0IOU3RyZWFtaW5nUHJvdG9QAVo9Y2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRh",
-            "Zmxvdy9hcGl2MWJldGEzL2RhdGFmbG93cGI7ZGF0YWZsb3dwYqoCHUdvb2ds",
-            "ZS5DbG91ZC5EYXRhZmxvdy5WMUJldGEzygIdR29vZ2xlXENsb3VkXERhdGFm",
-            "bG93XFYxYmV0YTPqAiBHb29nbGU6OkNsb3VkOjpEYXRhZmxvdzo6VjFiZXRh",
-            "M2IGcHJvdG8z"));
+            "GAYgASgJEhcKD3dpdGhfYXR0cmlidXRlcxgHIAEoCBIcChRkeW5hbWljX2Rl",
+            "c3RpbmF0aW9ucxgIIAEoCCIrChZTdHJlYW1pbmdTdGFnZUxvY2F0aW9uEhEK",
+            "CXN0cmVhbV9pZBgBIAEoCSI/ChpTdHJlYW1pbmdTaWRlSW5wdXRMb2NhdGlv",
+            "bhILCgN0YWcYASABKAkSFAoMc3RhdGVfZmFtaWx5GAIgASgJIigKFEN1c3Rv",
+            "bVNvdXJjZUxvY2F0aW9uEhAKCHN0YXRlZnVsGAEgASgIItoCCg5TdHJlYW1M",
+            "b2NhdGlvbhJTChhzdHJlYW1pbmdfc3RhZ2VfbG9jYXRpb24YASABKAsyLy5n",
+            "b29nbGUuZGF0YWZsb3cudjFiZXRhMy5TdHJlYW1pbmdTdGFnZUxvY2F0aW9u",
+            "SAASQgoPcHVic3ViX2xvY2F0aW9uGAIgASgLMicuZ29vZ2xlLmRhdGFmbG93",
+            "LnYxYmV0YTMuUHVic3ViTG9jYXRpb25IABJSChNzaWRlX2lucHV0X2xvY2F0",
+            "aW9uGAMgASgLMjMuZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuU3RyZWFtaW5n",
+            "U2lkZUlucHV0TG9jYXRpb25IABJPChZjdXN0b21fc291cmNlX2xvY2F0aW9u",
+            "GAQgASgLMi0uZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuQ3VzdG9tU291cmNl",
+            "TG9jYXRpb25IAEIKCghsb2NhdGlvbiI6ChFTdGF0ZUZhbWlseUNvbmZpZxIU",
+            "CgxzdGF0ZV9mYW1pbHkYASABKAkSDwoHaXNfcmVhZBgCIAEoCCK+AgoTQ29t",
+            "cHV0YXRpb25Ub3BvbG9neRIZChFzeXN0ZW1fc3RhZ2VfbmFtZRgBIAEoCRIW",
+            "Cg5jb21wdXRhdGlvbl9pZBgFIAEoCRI9CgprZXlfcmFuZ2VzGAIgAygLMiku",
+            "Z29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuS2V5UmFuZ2VMb2NhdGlvbhI3CgZp",
+            "bnB1dHMYAyADKAsyJy5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5TdHJlYW1M",
+            "b2NhdGlvbhI4CgdvdXRwdXRzGAQgAygLMicuZ29vZ2xlLmRhdGFmbG93LnYx",
+            "YmV0YTMuU3RyZWFtTG9jYXRpb24SQgoOc3RhdGVfZmFtaWxpZXMYByADKAsy",
+            "Ki5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5TdGF0ZUZhbWlseUNvbmZpZyKJ",
+            "AQoQS2V5UmFuZ2VMb2NhdGlvbhINCgVzdGFydBgBIAEoCRILCgNlbmQYAiAB",
+            "KAkSGQoRZGVsaXZlcnlfZW5kcG9pbnQYAyABKAkSEQoJZGF0YV9kaXNrGAUg",
+            "ASgJEisKH2RlcHJlY2F0ZWRfcGVyc2lzdGVudF9kaXJlY3RvcnkYBCABKAlC",
+            "AhgBIiQKD01vdW50ZWREYXRhRGlzaxIRCglkYXRhX2Rpc2sYASABKAkiPQoS",
+            "RGF0YURpc2tBc3NpZ25tZW50EhMKC3ZtX2luc3RhbmNlGAEgASgJEhIKCmRh",
+            "dGFfZGlza3MYAiADKAkiSwoaS2V5UmFuZ2VEYXRhRGlza0Fzc2lnbm1lbnQS",
+            "DQoFc3RhcnQYASABKAkSCwoDZW5kGAIgASgJEhEKCWRhdGFfZGlzaxgDIAEo",
+            "CSKEAQoaU3RyZWFtaW5nQ29tcHV0YXRpb25SYW5nZXMSFgoOY29tcHV0YXRp",
+            "b25faWQYASABKAkSTgoRcmFuZ2VfYXNzaWdubWVudHMYAiADKAsyMy5nb29n",
+            "bGUuZGF0YWZsb3cudjFiZXRhMy5LZXlSYW5nZURhdGFEaXNrQXNzaWdubWVu",
+            "dCJWCiBTdHJlYW1pbmdBcHBsaWFuY2VTbmFwc2hvdENvbmZpZxITCgtzbmFw",
+            "c2hvdF9pZBgBIAEoCRIdChVpbXBvcnRfc3RhdGVfZW5kcG9pbnQYAiABKAlC",
+            "0QEKG2NvbS5nb29nbGUuZGF0YWZsb3cudjFiZXRhM0IOU3RyZWFtaW5nUHJv",
+            "dG9QAVo9Y2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhZmxvdy9hcGl2MWJldGEz",
+            "L2RhdGFmbG93cGI7ZGF0YWZsb3dwYqoCHUdvb2dsZS5DbG91ZC5EYXRhZmxv",
+            "dy5WMUJldGEzygIdR29vZ2xlXENsb3VkXERhdGFmbG93XFYxYmV0YTPqAiBH",
+            "b29nbGU6OkNsb3VkOjpEYXRhZmxvdzo6VjFiZXRhM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.TopologyConfig), global::Google.Cloud.Dataflow.V1Beta3.TopologyConfig.Parser, new[]{ "Computations", "DataDiskAssignments", "UserStageToComputationNameMap", "ForwardingKeyBits", "PersistentStateVersion" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.PubsubLocation), global::Google.Cloud.Dataflow.V1Beta3.PubsubLocation.Parser, new[]{ "Topic", "Subscription", "TimestampLabel", "IdLabel", "DropLateData", "TrackingSubscription", "WithAttributes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.PubsubLocation), global::Google.Cloud.Dataflow.V1Beta3.PubsubLocation.Parser, new[]{ "Topic", "Subscription", "TimestampLabel", "IdLabel", "DropLateData", "TrackingSubscription", "WithAttributes", "DynamicDestinations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.StreamingStageLocation), global::Google.Cloud.Dataflow.V1Beta3.StreamingStageLocation.Parser, new[]{ "StreamId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.StreamingSideInputLocation), global::Google.Cloud.Dataflow.V1Beta3.StreamingSideInputLocation.Parser, new[]{ "Tag", "StateFamily" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.CustomSourceLocation), global::Google.Cloud.Dataflow.V1Beta3.CustomSourceLocation.Parser, new[]{ "Stateful" }, null, null, null, null),
@@ -469,6 +469,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       dropLateData_ = other.dropLateData_;
       trackingSubscription_ = other.trackingSubscription_;
       withAttributes_ = other.withAttributes_;
+      dynamicDestinations_ = other.dynamicDestinations_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -588,6 +589,21 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "dynamic_destinations" field.</summary>
+    public const int DynamicDestinationsFieldNumber = 8;
+    private bool dynamicDestinations_;
+    /// <summary>
+    /// If true, then this location represents dynamic topics.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool DynamicDestinations {
+      get { return dynamicDestinations_; }
+      set {
+        dynamicDestinations_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -610,6 +626,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (DropLateData != other.DropLateData) return false;
       if (TrackingSubscription != other.TrackingSubscription) return false;
       if (WithAttributes != other.WithAttributes) return false;
+      if (DynamicDestinations != other.DynamicDestinations) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -624,6 +641,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (DropLateData != false) hash ^= DropLateData.GetHashCode();
       if (TrackingSubscription.Length != 0) hash ^= TrackingSubscription.GetHashCode();
       if (WithAttributes != false) hash ^= WithAttributes.GetHashCode();
+      if (DynamicDestinations != false) hash ^= DynamicDestinations.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -670,6 +688,10 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(56);
         output.WriteBool(WithAttributes);
       }
+      if (DynamicDestinations != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(DynamicDestinations);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -708,6 +730,10 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(56);
         output.WriteBool(WithAttributes);
       }
+      if (DynamicDestinations != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(DynamicDestinations);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -737,6 +763,9 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TrackingSubscription);
       }
       if (WithAttributes != false) {
+        size += 1 + 1;
+      }
+      if (DynamicDestinations != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -771,6 +800,9 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       }
       if (other.WithAttributes != false) {
         WithAttributes = other.WithAttributes;
+      }
+      if (other.DynamicDestinations != false) {
+        DynamicDestinations = other.DynamicDestinations;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -815,6 +847,10 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
             WithAttributes = input.ReadBool();
             break;
           }
+          case 64: {
+            DynamicDestinations = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -856,6 +892,10 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
           }
           case 56: {
             WithAttributes = input.ReadBool();
+            break;
+          }
+          case 64: {
+            DynamicDestinations = input.ReadBool();
             break;
           }
         }

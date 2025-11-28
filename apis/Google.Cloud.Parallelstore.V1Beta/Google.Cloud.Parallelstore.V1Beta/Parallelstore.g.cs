@@ -511,8 +511,8 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     public const int DaosVersionFieldNumber = 9;
     private string daosVersion_ = "";
     /// <summary>
-    /// Output only. Deprecated 'daos_version' field.
-    /// Output only. The version of DAOS software running in the instance.
+    /// Output only. Deprecated: The version of DAOS software running in the
+    /// instance.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1442,7 +1442,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The UID perservation behavior.
+      /// The UID preservation behavior.
       /// </summary>
       public enum Uid {
         /// <summary>
@@ -2426,8 +2426,8 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     /// ignore the request if it has already been completed. The server will
     /// guarantee that for at least 60 minutes since the first request.
     ///
-    /// For example, consider a situation where you make an initial request and t
-    /// he request times out. If you make the request again with the same request
+    /// For example, consider a situation where you make an initial request and
+    /// the request times out. If you make the request again with the same request
     /// ID, the server can check if original operation with the same request ID
     /// was received, and if so, will ignore the second request. This prevents
     /// clients from accidentally creating duplicate commitments.
@@ -2750,8 +2750,8 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     /// ignore the request if it has already been completed. The server will
     /// guarantee that for at least 60 minutes since the first request.
     ///
-    /// For example, consider a situation where you make an initial request and t
-    /// he request times out. If you make the request again with the same request
+    /// For example, consider a situation where you make an initial request and
+    /// the request times out. If you make the request again with the same request
     /// ID, the server can check if original operation with the same request ID
     /// was received, and if so, will ignore the second request. This prevents
     /// clients from accidentally creating duplicate commitments.
@@ -3040,8 +3040,8 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     /// ignore the request if it has already been completed. The server will
     /// guarantee that for at least 60 minutes after the first request.
     ///
-    /// For example, consider a situation where you make an initial request and t
-    /// he request times out. If you make the request again with the same request
+    /// For example, consider a situation where you make an initial request and
+    /// the request times out. If you make the request again with the same request
     /// ID, the server can check if original operation with the same request ID
     /// was received, and if so, will ignore the second request. This prevents
     /// clients from accidentally creating duplicate commitments.
@@ -4580,8 +4580,8 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     /// ignore the request if it has already been completed. The server will
     /// guarantee that for at least 60 minutes since the first request.
     ///
-    /// For example, consider a situation where you make an initial request and t
-    /// he request times out. If you make the request again with the same request
+    /// For example, consider a situation where you make an initial request and
+    /// the request times out. If you make the request again with the same request
     /// ID, the server can check if original operation with the same request ID
     /// was received, and if so, will ignore the second request. This prevents
     /// clients from accidentally creating duplicate commitments.
@@ -5093,8 +5093,8 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     /// ignore the request if it has already been completed. The server will
     /// guarantee that for at least 60 minutes since the first request.
     ///
-    /// For example, consider a situation where you make an initial request and t
-    /// he request times out. If you make the request again with the same request
+    /// For example, consider a situation where you make an initial request and
+    /// the request times out. If you make the request again with the same request
     /// ID, the server can check if original operation with the same request ID
     /// was received, and if so, will ignore the second request. This prevents
     /// clients from accidentally creating duplicate commitments.
@@ -8014,7 +8014,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     public const int ObjectsFailedFieldNumber = 7;
     private long objectsFailed_;
     /// <summary>
-    /// Objects that are failed to write to the data destination.
+    /// Objects that failed to be written to the data destination.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8029,7 +8029,7 @@ namespace Google.Cloud.Parallelstore.V1Beta {
     public const int BytesFailedFieldNumber = 8;
     private long bytesFailed_;
     /// <summary>
-    /// Bytes that are failed to write to the data destination.
+    /// Bytes that failed to be written to the data destination.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

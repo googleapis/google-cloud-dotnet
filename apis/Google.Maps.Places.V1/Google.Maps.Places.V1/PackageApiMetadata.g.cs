@@ -30,6 +30,7 @@ namespace Google.Maps.Places.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return AddressDescriptorReflection.Descriptor;
             yield return AttributionReflection.Descriptor;
             yield return ContentBlockReflection.Descriptor;
             yield return ContextualContentReflection.Descriptor;

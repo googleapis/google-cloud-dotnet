@@ -27,25 +27,25 @@ namespace Google.Ads.AdManager.V1 {
             "Cj1nb29nbGUvYWRzL2FkbWFuYWdlci92MS9lbnRpdHlfc2lnbmFsc19tYXBw",
             "aW5nX21lc3NhZ2VzLnByb3RvEhdnb29nbGUuYWRzLmFkbWFuYWdlci52MRof",
             "Z29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9y",
-            "ZXNvdXJjZS5wcm90byKLAwoURW50aXR5U2lnbmFsc01hcHBpbmcSHQoTYXVk",
+            "ZXNvdXJjZS5wcm90byKuAwoURW50aXR5U2lnbmFsc01hcHBpbmcSHQoTYXVk",
             "aWVuY2Vfc2VnbWVudF9pZBgDIAEoA0gAEhsKEWNvbnRlbnRfYnVuZGxlX2lk",
             "GAQgASgDSAASIwoZY3VzdG9tX3RhcmdldGluZ192YWx1ZV9pZBgFIAEoA0gA",
-            "EhEKBG5hbWUYASABKAlCA+BBCBImChllbnRpdHlfc2lnbmFsc19tYXBwaW5n",
-            "X2lkGAIgASgDQgPgQQMSIgoVdGF4b25vbXlfY2F0ZWdvcnlfaWRzGAYgAygD",
-            "QgPgQQI6qAHqQaQBCi1hZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vRW50aXR5",
-            "U2lnbmFsc01hcHBpbmcSRm5ldHdvcmtzL3tuZXR3b3JrX2NvZGV9L2VudGl0",
-            "eVNpZ25hbHNNYXBwaW5ncy97ZW50aXR5X3NpZ25hbHNfbWFwcGluZ30qFWVu",
-            "dGl0eVNpZ25hbHNNYXBwaW5nczIUZW50aXR5U2lnbmFsc01hcHBpbmdCCAoG",
-            "ZW50aXR5QtUBChtjb20uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjFCIUVudGl0",
-            "eVNpZ25hbHNNYXBwaW5nTWVzc2FnZXNQcm90b1ABWkBnb29nbGUuZ29sYW5n",
-            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRt",
-            "YW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRz",
-            "XEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZw",
-            "cm90bzM="));
+            "EhEKBG5hbWUYASABKAlCA+BBCBIrChllbnRpdHlfc2lnbmFsc19tYXBwaW5n",
+            "X2lkGAIgASgDQgPgQQNIAYgBARIiChV0YXhvbm9teV9jYXRlZ29yeV9pZHMY",
+            "BiADKANCA+BBATqoAepBpAEKLWFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9F",
+            "bnRpdHlTaWduYWxzTWFwcGluZxJGbmV0d29ya3Mve25ldHdvcmtfY29kZX0v",
+            "ZW50aXR5U2lnbmFsc01hcHBpbmdzL3tlbnRpdHlfc2lnbmFsc19tYXBwaW5n",
+            "fSoVZW50aXR5U2lnbmFsc01hcHBpbmdzMhRlbnRpdHlTaWduYWxzTWFwcGlu",
+            "Z0IICgZlbnRpdHlCHAoaX2VudGl0eV9zaWduYWxzX21hcHBpbmdfaWRC1QEK",
+            "G2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUIhRW50aXR5U2lnbmFsc01h",
+            "cHBpbmdNZXNzYWdlc1Byb3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
+            "b3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92MTthZG1hbmFnZXKqAhdH",
+            "b29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2dsZVxBZHNcQWRNYW5hZ2Vy",
+            "XFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.EntitySignalsMapping), global::Google.Ads.AdManager.V1.EntitySignalsMapping.Parser, new[]{ "AudienceSegmentId", "ContentBundleId", "CustomTargetingValueId", "Name", "EntitySignalsMappingId", "TaxonomyCategoryIds" }, new[]{ "Entity" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.EntitySignalsMapping), global::Google.Ads.AdManager.V1.EntitySignalsMapping.Parser, new[]{ "AudienceSegmentId", "ContentBundleId", "CustomTargetingValueId", "Name", "EntitySignalsMappingId", "TaxonomyCategoryIds" }, new[]{ "Entity", "EntitySignalsMappingId" }, null, null, null)
           }));
     }
     #endregion
@@ -63,6 +63,7 @@ namespace Google.Ads.AdManager.V1 {
   {
     private static readonly pb::MessageParser<EntitySignalsMapping> _parser = new pb::MessageParser<EntitySignalsMapping>(() => new EntitySignalsMapping());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<EntitySignalsMapping> Parser { get { return _parser; } }
@@ -90,6 +91,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EntitySignalsMapping(EntitySignalsMapping other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
       entitySignalsMappingId_ = other.entitySignalsMappingId_;
       taxonomyCategoryIds_ = other.taxonomyCategoryIds_.Clone();
@@ -220,6 +222,8 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "entity_signals_mapping_id" field.</summary>
     public const int EntitySignalsMappingIdFieldNumber = 2;
+    private readonly static long EntitySignalsMappingIdDefaultValue = 0L;
+
     private long entitySignalsMappingId_;
     /// <summary>
     /// Output only. `EntitySignalsMapping` ID.
@@ -227,10 +231,23 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long EntitySignalsMappingId {
-      get { return entitySignalsMappingId_; }
+      get { if ((_hasBits0 & 1) != 0) { return entitySignalsMappingId_; } else { return EntitySignalsMappingIdDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         entitySignalsMappingId_ = value;
       }
+    }
+    /// <summary>Gets whether the "entity_signals_mapping_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEntitySignalsMappingId {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "entity_signals_mapping_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEntitySignalsMappingId() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "taxonomy_category_ids" field.</summary>
@@ -239,7 +256,7 @@ namespace Google.Ads.AdManager.V1 {
         = pb::FieldCodec.ForInt64(50);
     private readonly pbc::RepeatedField<long> taxonomyCategoryIds_ = new pbc::RepeatedField<long>();
     /// <summary>
-    /// Required. The IDs of the categories that are associated with the
+    /// Optional. The IDs of the categories that are associated with the
     /// referencing entity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -303,7 +320,7 @@ namespace Google.Ads.AdManager.V1 {
       if (HasContentBundleId) hash ^= ContentBundleId.GetHashCode();
       if (HasCustomTargetingValueId) hash ^= CustomTargetingValueId.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (EntitySignalsMappingId != 0L) hash ^= EntitySignalsMappingId.GetHashCode();
+      if (HasEntitySignalsMappingId) hash ^= EntitySignalsMappingId.GetHashCode();
       hash ^= taxonomyCategoryIds_.GetHashCode();
       hash ^= (int) entityCase_;
       if (_unknownFields != null) {
@@ -328,7 +345,7 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (EntitySignalsMappingId != 0L) {
+      if (HasEntitySignalsMappingId) {
         output.WriteRawTag(16);
         output.WriteInt64(EntitySignalsMappingId);
       }
@@ -359,7 +376,7 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (EntitySignalsMappingId != 0L) {
+      if (HasEntitySignalsMappingId) {
         output.WriteRawTag(16);
         output.WriteInt64(EntitySignalsMappingId);
       }
@@ -398,7 +415,7 @@ namespace Google.Ads.AdManager.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (EntitySignalsMappingId != 0L) {
+      if (HasEntitySignalsMappingId) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(EntitySignalsMappingId);
       }
       size += taxonomyCategoryIds_.CalculateSize(_repeated_taxonomyCategoryIds_codec);
@@ -417,7 +434,7 @@ namespace Google.Ads.AdManager.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.EntitySignalsMappingId != 0L) {
+      if (other.HasEntitySignalsMappingId) {
         EntitySignalsMappingId = other.EntitySignalsMappingId;
       }
       taxonomyCategoryIds_.Add(other.taxonomyCategoryIds_);

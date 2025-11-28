@@ -134,7 +134,7 @@ namespace Google.Cloud.Tools.VersionCompat
             }
             else if (tfm is null)
             {
-                var tfmsToFind = new string[] { "netstandard2.1", "netstandard2.0", "net6.0", "netcoreapp3.1", "netcoreapp2.1", "net462", "net461", "net452" };
+                var tfmsToFind = new string[] { "netstandard2.1", "netstandard2.0", "net8.0", "net6.0", "netcoreapp3.1", "netcoreapp2.1", "net462", "net461", "net452" };
                 tfm = tfmsToFind.Intersect(tfms).FirstOrDefault();
                 if (tfm is null)
                 {

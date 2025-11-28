@@ -131,7 +131,7 @@ namespace Google.Cloud.Support.V2
 
     /// <summary>CaseAttachmentService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// A service to manage file attachment for Google Cloud support cases.
+    /// A service to manage file attachments for Google Cloud support cases.
     /// </remarks>
     public abstract partial class CaseAttachmentServiceClient
     {
@@ -217,7 +217,7 @@ namespace Google.Cloud.Support.V2
         public virtual CaseAttachmentService.CaseAttachmentServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieve all attachments associated with a support case.
+        /// List all the attachments associated with a support case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -226,7 +226,7 @@ namespace Google.Cloud.Support.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieve all attachments associated with a support case.
+        /// List all the attachments associated with a support case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -235,11 +235,10 @@ namespace Google.Cloud.Support.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieve all attachments associated with a support case.
+        /// List all the attachments associated with a support case.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of Case object for which attachments should be
-        /// listed.
+        /// Required. The name of the case for which attachments should be listed.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -269,11 +268,10 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Retrieve all attachments associated with a support case.
+        /// List all the attachments associated with a support case.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of Case object for which attachments should be
-        /// listed.
+        /// Required. The name of the case for which attachments should be listed.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -303,11 +301,10 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Retrieve all attachments associated with a support case.
+        /// List all the attachments associated with a support case.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of Case object for which attachments should be
-        /// listed.
+        /// Required. The name of the case for which attachments should be listed.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -337,11 +334,10 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Retrieve all attachments associated with a support case.
+        /// List all the attachments associated with a support case.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of Case object for which attachments should be
-        /// listed.
+        /// Required. The name of the case for which attachments should be listed.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -373,7 +369,7 @@ namespace Google.Cloud.Support.V2
 
     /// <summary>CaseAttachmentService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// A service to manage file attachment for Google Cloud support cases.
+    /// A service to manage file attachments for Google Cloud support cases.
     /// </remarks>
     public sealed partial class CaseAttachmentServiceClientImpl : CaseAttachmentServiceClient
     {
@@ -413,7 +409,7 @@ namespace Google.Cloud.Support.V2
         partial void Modify_ListAttachmentsRequest(ref ListAttachmentsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Retrieve all attachments associated with a support case.
+        /// List all the attachments associated with a support case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -425,7 +421,7 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Retrieve all attachments associated with a support case.
+        /// List all the attachments associated with a support case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.6.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+## Version 1.5.0, released 2025-05-07
+
+### New features
+
+- Add EmitNumericTypes option for format parameters and scopes
+
 ## Version 1.4.0, released 2025-03-03
 
 ### New features

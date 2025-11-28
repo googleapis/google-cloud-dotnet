@@ -27,75 +27,103 @@ namespace Google.Cloud.BackupDR.V1 {
             "Cilnb29nbGUvY2xvdWQvYmFja3VwZHIvdjEvYmFja3VwcGxhbi5wcm90bxIY",
             "Z29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2Jl",
             "aGF2aW9yLnByb3RvGhtnb29nbGUvYXBpL2ZpZWxkX2luZm8ucHJvdG8aGWdv",
-            "b2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1l",
-            "c3RhbXAucHJvdG8aG2dvb2dsZS90eXBlL2RheW9md2Vlay5wcm90bxoXZ29v",
-            "Z2xlL3R5cGUvbW9udGgucHJvdG8imQYKCkJhY2t1cFBsYW4SFAoEbmFtZRgB",
-            "IAEoCUIG4EED4EEIEhgKC2Rlc2NyaXB0aW9uGAIgASgJQgPgQQESRQoGbGFi",
-            "ZWxzGAMgAygLMjAuZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxLkJhY2t1cFBs",
-            "YW4uTGFiZWxzRW50cnlCA+BBARI0CgtjcmVhdGVfdGltZRgEIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgF",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI/CgxiYWNr",
-            "dXBfcnVsZXMYBiADKAsyJC5nb29nbGUuY2xvdWQuYmFja3VwZHIudjEuQmFj",
-            "a3VwUnVsZUID4EECEj4KBXN0YXRlGAcgASgOMiouZ29vZ2xlLmNsb3VkLmJh",
-            "Y2t1cGRyLnYxLkJhY2t1cFBsYW4uU3RhdGVCA+BBAxIaCg1yZXNvdXJjZV90",
-            "eXBlGAggASgJQgPgQQISEQoEZXRhZxgJIAEoCUID4EEBEkEKDGJhY2t1cF92",
-            "YXVsdBgKIAEoCUIr4EEC+kElCiNiYWNrdXBkci5nb29nbGVhcGlzLmNvbS9C",
-            "YWNrdXBWYXVsdBIpChxiYWNrdXBfdmF1bHRfc2VydmljZV9hY2NvdW50GAsg",
-            "ASgJQgPgQQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
-            "GAIgASgJOgI4ASJUCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwK",
-            "CENSRUFUSU5HEAESCgoGQUNUSVZFEAISDAoIREVMRVRJTkcQAxIMCghJTkFD",
-            "VElWRRAEOoQB6kGAAQoiYmFja3VwZHIuZ29vZ2xlYXBpcy5jb20vQmFja3Vw",
-            "UGxhbhJBcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
-            "L2JhY2t1cFBsYW5zL3tiYWNrdXBfcGxhbn0qC2JhY2t1cFBsYW5zMgpiYWNr",
-            "dXBQbGFuIrABCgpCYWNrdXBSdWxlEhcKB3J1bGVfaWQYASABKAlCBuBBAuBB",
-            "BRIiChViYWNrdXBfcmV0ZW50aW9uX2RheXMYBCABKAVCA+BBAhJMChFzdGFu",
-            "ZGFyZF9zY2hlZHVsZRgFIAEoCzIqLmdvb2dsZS5jbG91ZC5iYWNrdXBkci52",
-            "MS5TdGFuZGFyZFNjaGVkdWxlQgPgQQJIAEIXChViYWNrdXBfc2NoZWR1bGVf",
-            "b25lb2YilwQKEFN0YW5kYXJkU2NoZWR1bGUSVwoPcmVjdXJyZW5jZV90eXBl",
-            "GAEgASgOMjkuZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxLlN0YW5kYXJkU2No",
-            "ZWR1bGUuUmVjdXJyZW5jZVR5cGVCA+BBAhIdChBob3VybHlfZnJlcXVlbmN5",
-            "GAIgASgFQgPgQQESMQoMZGF5c19vZl93ZWVrGAMgAygOMhYuZ29vZ2xlLnR5",
-            "cGUuRGF5T2ZXZWVrQgPgQQESGgoNZGF5c19vZl9tb250aBgEIAMoBUID4EEB",
-            "EkgKEXdlZWtfZGF5X29mX21vbnRoGAUgASgLMiguZ29vZ2xlLmNsb3VkLmJh",
-            "Y2t1cGRyLnYxLldlZWtEYXlPZk1vbnRoQgPgQQESJwoGbW9udGhzGAYgAygO",
-            "MhIuZ29vZ2xlLnR5cGUuTW9udGhCA+BBARJCCg1iYWNrdXBfd2luZG93GAcg",
-            "ASgLMiYuZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxLkJhY2t1cFdpbmRvd0ID",
-            "4EECEhYKCXRpbWVfem9uZRgIIAEoCUID4EECIm0KDlJlY3VycmVuY2VUeXBl",
-            "Eh8KG1JFQ1VSUkVOQ0VfVFlQRV9VTlNQRUNJRklFRBAAEgoKBkhPVVJMWRAB",
-            "EgkKBURBSUxZEAISCgoGV0VFS0xZEAMSCwoHTU9OVEhMWRAEEgoKBllFQVJM",
-            "WRAFIkwKDEJhY2t1cFdpbmRvdxIeChFzdGFydF9ob3VyX29mX2RheRgBIAEo",
-            "BUID4EECEhwKD2VuZF9ob3VyX29mX2RheRgCIAEoBUID4EECIvoBCg5XZWVr",
-            "RGF5T2ZNb250aBJQCg13ZWVrX29mX21vbnRoGAEgASgOMjQuZ29vZ2xlLmNs",
-            "b3VkLmJhY2t1cGRyLnYxLldlZWtEYXlPZk1vbnRoLldlZWtPZk1vbnRoQgPg",
-            "QQISMAoLZGF5X29mX3dlZWsYAiABKA4yFi5nb29nbGUudHlwZS5EYXlPZldl",
-            "ZWtCA+BBAiJkCgtXZWVrT2ZNb250aBIdChlXRUVLX09GX01PTlRIX1VOU1BF",
-            "Q0lGSUVEEAASCQoFRklSU1QQARIKCgZTRUNPTkQQAhIJCgVUSElSRBADEgoK",
-            "BkZPVVJUSBAEEggKBExBU1QQBSLTAQoXQ3JlYXRlQmFja3VwUGxhblJlcXVl",
-            "c3QSOgoGcGFyZW50GAEgASgJQirgQQL6QSQSImJhY2t1cGRyLmdvb2dsZWFw",
-            "aXMuY29tL0JhY2t1cFBsYW4SGwoOYmFja3VwX3BsYW5faWQYAiABKAlCA+BB",
-            "AhI+CgtiYWNrdXBfcGxhbhgDIAEoCzIkLmdvb2dsZS5jbG91ZC5iYWNrdXBk",
-            "ci52MS5CYWNrdXBQbGFuQgPgQQISHwoKcmVxdWVzdF9pZBgEIAEoCUIL4EEB",
-            "4ozP1wgCCAEisQEKFkxpc3RCYWNrdXBQbGFuc1JlcXVlc3QSOgoGcGFyZW50",
-            "GAEgASgJQirgQQL6QSQSImJhY2t1cGRyLmdvb2dsZWFwaXMuY29tL0JhY2t1",
-            "cFBsYW4SFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgD",
-            "IAEoCUID4EEBEhMKBmZpbHRlchgEIAEoCUID4EEBEhUKCG9yZGVyX2J5GAUg",
-            "ASgJQgPgQQEigwEKF0xpc3RCYWNrdXBQbGFuc1Jlc3BvbnNlEjoKDGJhY2t1",
-            "cF9wbGFucxgBIAMoCzIkLmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MS5CYWNr",
-            "dXBQbGFuEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRITCgt1bnJlYWNoYWJs",
-            "ZRgDIAMoCSJQChRHZXRCYWNrdXBQbGFuUmVxdWVzdBI4CgRuYW1lGAEgASgJ",
-            "QirgQQL6QSQKImJhY2t1cGRyLmdvb2dsZWFwaXMuY29tL0JhY2t1cFBsYW4i",
-            "dAoXRGVsZXRlQmFja3VwUGxhblJlcXVlc3QSOAoEbmFtZRgBIAEoCUIq4EEC",
-            "+kEkCiJiYWNrdXBkci5nb29nbGVhcGlzLmNvbS9CYWNrdXBQbGFuEh8KCnJl",
-            "cXVlc3RfaWQYAiABKAlCC+BBAeKMz9cIAggBQr8BChxjb20uZ29vZ2xlLmNs",
-            "b3VkLmJhY2t1cGRyLnYxQg9CYWNrdXBQbGFuUHJvdG9QAVo4Y2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby9iYWNrdXBkci9hcGl2MS9iYWNrdXBkcnBiO2JhY2t1cGRy",
-            "cGKqAhhHb29nbGUuQ2xvdWQuQmFja3VwRFIuVjHKAhhHb29nbGVcQ2xvdWRc",
-            "QmFja3VwRFJcVjHqAhtHb29nbGU6OkNsb3VkOjpCYWNrdXBEUjo6VjFiBnBy",
-            "b3RvMw=="));
+            "b2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVs",
+            "ZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
+            "Ghtnb29nbGUvdHlwZS9kYXlvZndlZWsucHJvdG8aF2dvb2dsZS90eXBlL21v",
+            "bnRoLnByb3RvIqUHCgpCYWNrdXBQbGFuEhQKBG5hbWUYASABKAlCBuBBA+BB",
+            "CBIYCgtkZXNjcmlwdGlvbhgCIAEoCUID4EEBEkUKBmxhYmVscxgDIAMoCzIw",
+            "Lmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MS5CYWNrdXBQbGFuLkxhYmVsc0Vu",
+            "dHJ5QgPgQQESNAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBSABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSPwoMYmFja3VwX3J1bGVzGAYg",
+            "AygLMiQuZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxLkJhY2t1cFJ1bGVCA+BB",
+            "AhI+CgVzdGF0ZRgHIAEoDjIqLmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MS5C",
+            "YWNrdXBQbGFuLlN0YXRlQgPgQQMSGgoNcmVzb3VyY2VfdHlwZRgIIAEoCUID",
+            "4EECEhEKBGV0YWcYCSABKAlCA+BBARJBCgxiYWNrdXBfdmF1bHQYCiABKAlC",
+            "K+BBAvpBJQojYmFja3VwZHIuZ29vZ2xlYXBpcy5jb20vQmFja3VwVmF1bHQS",
+            "KQocYmFja3VwX3ZhdWx0X3NlcnZpY2VfYWNjb3VudBgLIAEoCUID4EEDEh8K",
+            "EmxvZ19yZXRlbnRpb25fZGF5cxgMIAEoA0ID4EEBEiUKGHN1cHBvcnRlZF9y",
+            "ZXNvdXJjZV90eXBlcxgNIAMoCUID4EEDEhgKC3JldmlzaW9uX2lkGA4gASgJ",
+            "QgPgQQMSGgoNcmV2aXNpb25fbmFtZRgPIAEoCUID4EEDGi0KC0xhYmVsc0Vu",
+            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiYgoFU3RhdGUS",
+            "FQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEgoKBkFDVElW",
+            "RRACEgwKCERFTEVUSU5HEAMSDAoISU5BQ1RJVkUQBBIMCghVUERBVElORxAF",
+            "OoQB6kGAAQoiYmFja3VwZHIuZ29vZ2xlYXBpcy5jb20vQmFja3VwUGxhbhJB",
+            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2JhY2t1",
+            "cFBsYW5zL3tiYWNrdXBfcGxhbn0qC2JhY2t1cFBsYW5zMgpiYWNrdXBQbGFu",
+            "IrABCgpCYWNrdXBSdWxlEhcKB3J1bGVfaWQYASABKAlCBuBBAuBBBRIiChVi",
+            "YWNrdXBfcmV0ZW50aW9uX2RheXMYBCABKAVCA+BBAhJMChFzdGFuZGFyZF9z",
+            "Y2hlZHVsZRgFIAEoCzIqLmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MS5TdGFu",
+            "ZGFyZFNjaGVkdWxlQgPgQQFIAEIXChViYWNrdXBfc2NoZWR1bGVfb25lb2Yi",
+            "lwQKEFN0YW5kYXJkU2NoZWR1bGUSVwoPcmVjdXJyZW5jZV90eXBlGAEgASgO",
+            "MjkuZ29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxLlN0YW5kYXJkU2NoZWR1bGUu",
+            "UmVjdXJyZW5jZVR5cGVCA+BBAhIdChBob3VybHlfZnJlcXVlbmN5GAIgASgF",
+            "QgPgQQESMQoMZGF5c19vZl93ZWVrGAMgAygOMhYuZ29vZ2xlLnR5cGUuRGF5",
+            "T2ZXZWVrQgPgQQESGgoNZGF5c19vZl9tb250aBgEIAMoBUID4EEBEkgKEXdl",
+            "ZWtfZGF5X29mX21vbnRoGAUgASgLMiguZ29vZ2xlLmNsb3VkLmJhY2t1cGRy",
+            "LnYxLldlZWtEYXlPZk1vbnRoQgPgQQESJwoGbW9udGhzGAYgAygOMhIuZ29v",
+            "Z2xlLnR5cGUuTW9udGhCA+BBARJCCg1iYWNrdXBfd2luZG93GAcgASgLMiYu",
+            "Z29vZ2xlLmNsb3VkLmJhY2t1cGRyLnYxLkJhY2t1cFdpbmRvd0ID4EECEhYK",
+            "CXRpbWVfem9uZRgIIAEoCUID4EECIm0KDlJlY3VycmVuY2VUeXBlEh8KG1JF",
+            "Q1VSUkVOQ0VfVFlQRV9VTlNQRUNJRklFRBAAEgoKBkhPVVJMWRABEgkKBURB",
+            "SUxZEAISCgoGV0VFS0xZEAMSCwoHTU9OVEhMWRAEEgoKBllFQVJMWRAFIkwK",
+            "DEJhY2t1cFdpbmRvdxIeChFzdGFydF9ob3VyX29mX2RheRgBIAEoBUID4EEC",
+            "EhwKD2VuZF9ob3VyX29mX2RheRgCIAEoBUID4EECIvoBCg5XZWVrRGF5T2ZN",
+            "b250aBJQCg13ZWVrX29mX21vbnRoGAEgASgOMjQuZ29vZ2xlLmNsb3VkLmJh",
+            "Y2t1cGRyLnYxLldlZWtEYXlPZk1vbnRoLldlZWtPZk1vbnRoQgPgQQISMAoL",
+            "ZGF5X29mX3dlZWsYAiABKA4yFi5nb29nbGUudHlwZS5EYXlPZldlZWtCA+BB",
+            "AiJkCgtXZWVrT2ZNb250aBIdChlXRUVLX09GX01PTlRIX1VOU1BFQ0lGSUVE",
+            "EAASCQoFRklSU1QQARIKCgZTRUNPTkQQAhIJCgVUSElSRBADEgoKBkZPVVJU",
+            "SBAEEggKBExBU1QQBSLTAQoXQ3JlYXRlQmFja3VwUGxhblJlcXVlc3QSOgoG",
+            "cGFyZW50GAEgASgJQirgQQL6QSQSImJhY2t1cGRyLmdvb2dsZWFwaXMuY29t",
+            "L0JhY2t1cFBsYW4SGwoOYmFja3VwX3BsYW5faWQYAiABKAlCA+BBAhI+Cgti",
+            "YWNrdXBfcGxhbhgDIAEoCzIkLmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MS5C",
+            "YWNrdXBQbGFuQgPgQQISHwoKcmVxdWVzdF9pZBgEIAEoCUIL4EEB4ozP1wgC",
+            "CAEisQEKFkxpc3RCYWNrdXBQbGFuc1JlcXVlc3QSOgoGcGFyZW50GAEgASgJ",
+            "QirgQQL6QSQSImJhY2t1cGRyLmdvb2dsZWFwaXMuY29tL0JhY2t1cFBsYW4S",
+            "FgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID",
+            "4EEBEhMKBmZpbHRlchgEIAEoCUID4EEBEhUKCG9yZGVyX2J5GAUgASgJQgPg",
+            "QQEigwEKF0xpc3RCYWNrdXBQbGFuc1Jlc3BvbnNlEjoKDGJhY2t1cF9wbGFu",
+            "cxgBIAMoCzIkLmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MS5CYWNrdXBQbGFu",
+            "EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRITCgt1bnJlYWNoYWJsZRgDIAMo",
+            "CSJQChRHZXRCYWNrdXBQbGFuUmVxdWVzdBI4CgRuYW1lGAEgASgJQirgQQL6",
+            "QSQKImJhY2t1cGRyLmdvb2dsZWFwaXMuY29tL0JhY2t1cFBsYW4idAoXRGVs",
+            "ZXRlQmFja3VwUGxhblJlcXVlc3QSOAoEbmFtZRgBIAEoCUIq4EEC+kEkCiJi",
+            "YWNrdXBkci5nb29nbGVhcGlzLmNvbS9CYWNrdXBQbGFuEh8KCnJlcXVlc3Rf",
+            "aWQYAiABKAlCC+BBAeKMz9cIAggBIrABChdVcGRhdGVCYWNrdXBQbGFuUmVx",
+            "dWVzdBI+CgtiYWNrdXBfcGxhbhgBIAEoCzIkLmdvb2dsZS5jbG91ZC5iYWNr",
+            "dXBkci52MS5CYWNrdXBQbGFuQgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQISHwoKcmVxdWVzdF9p",
+            "ZBgDIAEoCUIL4EEB4ozP1wgCCAEikAQKEkJhY2t1cFBsYW5SZXZpc2lvbhIU",
+            "CgRuYW1lGAEgASgJQgbgQQPgQQgSGAoLcmV2aXNpb25faWQYAiABKAlCA+BB",
+            "AxJGCgVzdGF0ZRgDIAEoDjIyLmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MS5C",
+            "YWNrdXBQbGFuUmV2aXNpb24uU3RhdGVCA+BBAxJCChRiYWNrdXBfcGxhbl9z",
+            "bmFwc2hvdBgEIAEoCzIkLmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MS5CYWNr",
+            "dXBQbGFuEjQKC2NyZWF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcEID4EEDIlQKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVE",
+            "EAASDAoIQ1JFQVRJTkcQARIKCgZBQ1RJVkUQAhIMCghERUxFVElORxADEgwK",
+            "CElOQUNUSVZFEAQ6sQHqQa0BCipiYWNrdXBkci5nb29nbGVhcGlzLmNvbS9C",
+            "YWNrdXBQbGFuUmV2aXNpb24SVnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
+            "bnMve2xvY2F0aW9ufS9iYWNrdXBQbGFucy97YmFja3VwX3BsYW59L3Jldmlz",
+            "aW9ucy97cmV2aXNpb259KhNiYWNrdXBQbGFuUmV2aXNpb25zMhJiYWNrdXBQ",
+            "bGFuUmV2aXNpb24iYAocR2V0QmFja3VwUGxhblJldmlzaW9uUmVxdWVzdBJA",
+            "CgRuYW1lGAEgASgJQjLgQQL6QSwKKmJhY2t1cGRyLmdvb2dsZWFwaXMuY29t",
+            "L0JhY2t1cFBsYW5SZXZpc2lvbiKVAQoeTGlzdEJhY2t1cFBsYW5SZXZpc2lv",
+            "bnNSZXF1ZXN0EkIKBnBhcmVudBgBIAEoCUIy4EEC+kEsEipiYWNrdXBkci5n",
+            "b29nbGVhcGlzLmNvbS9CYWNrdXBQbGFuUmV2aXNpb24SFgoJcGFnZV9zaXpl",
+            "GAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBIpwBCh9MaXN0",
+            "QmFja3VwUGxhblJldmlzaW9uc1Jlc3BvbnNlEksKFWJhY2t1cF9wbGFuX3Jl",
+            "dmlzaW9ucxgBIAMoCzIsLmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MS5CYWNr",
+            "dXBQbGFuUmV2aXNpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3Vu",
+            "cmVhY2hhYmxlGAMgAygJQr8BChxjb20uZ29vZ2xlLmNsb3VkLmJhY2t1cGRy",
+            "LnYxQg9CYWNrdXBQbGFuUHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNvbS9nby9i",
+            "YWNrdXBkci9hcGl2MS9iYWNrdXBkcnBiO2JhY2t1cGRycGKqAhhHb29nbGUu",
+            "Q2xvdWQuQmFja3VwRFIuVjHKAhhHb29nbGVcQ2xvdWRcQmFja3VwRFJcVjHq",
+            "AhtHb29nbGU6OkNsb3VkOjpCYWNrdXBEUjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.MonthReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.MonthReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.BackupPlan), global::Google.Cloud.BackupDR.V1.BackupPlan.Parser, new[]{ "Name", "Description", "Labels", "CreateTime", "UpdateTime", "BackupRules", "State", "ResourceType", "Etag", "BackupVault", "BackupVaultServiceAccount" }, null, new[]{ typeof(global::Google.Cloud.BackupDR.V1.BackupPlan.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.BackupPlan), global::Google.Cloud.BackupDR.V1.BackupPlan.Parser, new[]{ "Name", "Description", "Labels", "CreateTime", "UpdateTime", "BackupRules", "State", "ResourceType", "Etag", "BackupVault", "BackupVaultServiceAccount", "LogRetentionDays", "SupportedResourceTypes", "RevisionId", "RevisionName" }, null, new[]{ typeof(global::Google.Cloud.BackupDR.V1.BackupPlan.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.BackupRule), global::Google.Cloud.BackupDR.V1.BackupRule.Parser, new[]{ "RuleId", "BackupRetentionDays", "StandardSchedule" }, new[]{ "BackupScheduleOneof" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.StandardSchedule), global::Google.Cloud.BackupDR.V1.StandardSchedule.Parser, new[]{ "RecurrenceType", "HourlyFrequency", "DaysOfWeek", "DaysOfMonth", "WeekDayOfMonth", "Months", "BackupWindow", "TimeZone" }, null, new[]{ typeof(global::Google.Cloud.BackupDR.V1.StandardSchedule.Types.RecurrenceType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.BackupWindow), global::Google.Cloud.BackupDR.V1.BackupWindow.Parser, new[]{ "StartHourOfDay", "EndHourOfDay" }, null, null, null, null),
@@ -104,7 +132,12 @@ namespace Google.Cloud.BackupDR.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.ListBackupPlansRequest), global::Google.Cloud.BackupDR.V1.ListBackupPlansRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.ListBackupPlansResponse), global::Google.Cloud.BackupDR.V1.ListBackupPlansResponse.Parser, new[]{ "BackupPlans", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.GetBackupPlanRequest), global::Google.Cloud.BackupDR.V1.GetBackupPlanRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.DeleteBackupPlanRequest), global::Google.Cloud.BackupDR.V1.DeleteBackupPlanRequest.Parser, new[]{ "Name", "RequestId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.DeleteBackupPlanRequest), global::Google.Cloud.BackupDR.V1.DeleteBackupPlanRequest.Parser, new[]{ "Name", "RequestId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.UpdateBackupPlanRequest), global::Google.Cloud.BackupDR.V1.UpdateBackupPlanRequest.Parser, new[]{ "BackupPlan", "UpdateMask", "RequestId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.BackupPlanRevision), global::Google.Cloud.BackupDR.V1.BackupPlanRevision.Parser, new[]{ "Name", "RevisionId", "State", "BackupPlanSnapshot", "CreateTime" }, null, new[]{ typeof(global::Google.Cloud.BackupDR.V1.BackupPlanRevision.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.GetBackupPlanRevisionRequest), global::Google.Cloud.BackupDR.V1.GetBackupPlanRevisionRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsRequest), global::Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsResponse), global::Google.Cloud.BackupDR.V1.ListBackupPlanRevisionsResponse.Parser, new[]{ "BackupPlanRevisions", "NextPageToken", "Unreachable" }, null, null, null, null)
           }));
     }
     #endregion
@@ -163,6 +196,10 @@ namespace Google.Cloud.BackupDR.V1 {
       etag_ = other.etag_;
       backupVault_ = other.backupVault_;
       backupVaultServiceAccount_ = other.backupVaultServiceAccount_;
+      logRetentionDays_ = other.logRetentionDays_;
+      supportedResourceTypes_ = other.supportedResourceTypes_.Clone();
+      revisionId_ = other.revisionId_;
+      revisionName_ = other.revisionName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -290,7 +327,8 @@ namespace Google.Cloud.BackupDR.V1 {
     /// <summary>
     /// Required. The resource type to which the `BackupPlan` will be applied.
     /// Examples include, "compute.googleapis.com/Instance",
-    /// "sqladmin.googleapis.com/Instance", or "alloydb.googleapis.com/Cluster".
+    /// "sqladmin.googleapis.com/Instance", "alloydb.googleapis.com/Cluster",
+    /// "compute.googleapis.com/Disk".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -352,6 +390,74 @@ namespace Google.Cloud.BackupDR.V1 {
       }
     }
 
+    /// <summary>Field number for the "log_retention_days" field.</summary>
+    public const int LogRetentionDaysFieldNumber = 12;
+    private long logRetentionDays_;
+    /// <summary>
+    /// Optional. Applicable only for CloudSQL resource_type.
+    ///
+    /// Configures how long logs will be stored. It is defined in “days”. This
+    /// value should be greater than or equal to minimum enforced log retention
+    /// duration of the backup vault.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long LogRetentionDays {
+      get { return logRetentionDays_; }
+      set {
+        logRetentionDays_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "supported_resource_types" field.</summary>
+    public const int SupportedResourceTypesFieldNumber = 13;
+    private static readonly pb::FieldCodec<string> _repeated_supportedResourceTypes_codec
+        = pb::FieldCodec.ForString(106);
+    private readonly pbc::RepeatedField<string> supportedResourceTypes_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. All resource types to which backupPlan can be applied.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> SupportedResourceTypes {
+      get { return supportedResourceTypes_; }
+    }
+
+    /// <summary>Field number for the "revision_id" field.</summary>
+    public const int RevisionIdFieldNumber = 14;
+    private string revisionId_ = "";
+    /// <summary>
+    /// Output only. The user friendly revision ID of the `BackupPlanRevision`.
+    ///
+    /// Example: v0, v1, v2, etc.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RevisionId {
+      get { return revisionId_; }
+      set {
+        revisionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "revision_name" field.</summary>
+    public const int RevisionNameFieldNumber = 15;
+    private string revisionName_ = "";
+    /// <summary>
+    /// Output only. The resource id of the `BackupPlanRevision`.
+    ///
+    /// Format:
+    /// `projects/{project}/locations/{location}/backupPlans/{backup_plan}/revisions/{revision_id}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RevisionName {
+      get { return revisionName_; }
+      set {
+        revisionName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -378,6 +484,10 @@ namespace Google.Cloud.BackupDR.V1 {
       if (Etag != other.Etag) return false;
       if (BackupVault != other.BackupVault) return false;
       if (BackupVaultServiceAccount != other.BackupVaultServiceAccount) return false;
+      if (LogRetentionDays != other.LogRetentionDays) return false;
+      if(!supportedResourceTypes_.Equals(other.supportedResourceTypes_)) return false;
+      if (RevisionId != other.RevisionId) return false;
+      if (RevisionName != other.RevisionName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -396,6 +506,10 @@ namespace Google.Cloud.BackupDR.V1 {
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (BackupVault.Length != 0) hash ^= BackupVault.GetHashCode();
       if (BackupVaultServiceAccount.Length != 0) hash ^= BackupVaultServiceAccount.GetHashCode();
+      if (LogRetentionDays != 0L) hash ^= LogRetentionDays.GetHashCode();
+      hash ^= supportedResourceTypes_.GetHashCode();
+      if (RevisionId.Length != 0) hash ^= RevisionId.GetHashCode();
+      if (RevisionName.Length != 0) hash ^= RevisionName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -452,6 +566,19 @@ namespace Google.Cloud.BackupDR.V1 {
         output.WriteRawTag(90);
         output.WriteString(BackupVaultServiceAccount);
       }
+      if (LogRetentionDays != 0L) {
+        output.WriteRawTag(96);
+        output.WriteInt64(LogRetentionDays);
+      }
+      supportedResourceTypes_.WriteTo(output, _repeated_supportedResourceTypes_codec);
+      if (RevisionId.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(RevisionId);
+      }
+      if (RevisionName.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(RevisionName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -500,6 +627,19 @@ namespace Google.Cloud.BackupDR.V1 {
         output.WriteRawTag(90);
         output.WriteString(BackupVaultServiceAccount);
       }
+      if (LogRetentionDays != 0L) {
+        output.WriteRawTag(96);
+        output.WriteInt64(LogRetentionDays);
+      }
+      supportedResourceTypes_.WriteTo(ref output, _repeated_supportedResourceTypes_codec);
+      if (RevisionId.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(RevisionId);
+      }
+      if (RevisionName.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(RevisionName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -538,6 +678,16 @@ namespace Google.Cloud.BackupDR.V1 {
       }
       if (BackupVaultServiceAccount.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(BackupVaultServiceAccount);
+      }
+      if (LogRetentionDays != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(LogRetentionDays);
+      }
+      size += supportedResourceTypes_.CalculateSize(_repeated_supportedResourceTypes_codec);
+      if (RevisionId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RevisionId);
+      }
+      if (RevisionName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RevisionName);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -585,6 +735,16 @@ namespace Google.Cloud.BackupDR.V1 {
       }
       if (other.BackupVaultServiceAccount.Length != 0) {
         BackupVaultServiceAccount = other.BackupVaultServiceAccount;
+      }
+      if (other.LogRetentionDays != 0L) {
+        LogRetentionDays = other.LogRetentionDays;
+      }
+      supportedResourceTypes_.Add(other.supportedResourceTypes_);
+      if (other.RevisionId.Length != 0) {
+        RevisionId = other.RevisionId;
+      }
+      if (other.RevisionName.Length != 0) {
+        RevisionName = other.RevisionName;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -649,6 +809,22 @@ namespace Google.Cloud.BackupDR.V1 {
           }
           case 90: {
             BackupVaultServiceAccount = input.ReadString();
+            break;
+          }
+          case 96: {
+            LogRetentionDays = input.ReadInt64();
+            break;
+          }
+          case 106: {
+            supportedResourceTypes_.AddEntriesFrom(input, _repeated_supportedResourceTypes_codec);
+            break;
+          }
+          case 114: {
+            RevisionId = input.ReadString();
+            break;
+          }
+          case 122: {
+            RevisionName = input.ReadString();
             break;
           }
         }
@@ -716,6 +892,22 @@ namespace Google.Cloud.BackupDR.V1 {
             BackupVaultServiceAccount = input.ReadString();
             break;
           }
+          case 96: {
+            LogRetentionDays = input.ReadInt64();
+            break;
+          }
+          case 106: {
+            supportedResourceTypes_.AddEntriesFrom(ref input, _repeated_supportedResourceTypes_codec);
+            break;
+          }
+          case 114: {
+            RevisionId = input.ReadString();
+            break;
+          }
+          case 122: {
+            RevisionName = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -750,6 +942,10 @@ namespace Google.Cloud.BackupDR.V1 {
         /// The resource has been created but is not usable.
         /// </summary>
         [pbr::OriginalName("INACTIVE")] Inactive = 4,
+        /// <summary>
+        /// The resource is being updated.
+        /// </summary>
+        [pbr::OriginalName("UPDATING")] Updating = 5,
       }
 
     }
@@ -838,11 +1034,9 @@ namespace Google.Cloud.BackupDR.V1 {
     /// defined in “days”. The value should be greater than or equal to minimum
     /// enforced retention of the backup vault.
     ///
-    /// Minimum value is 1 and maximum value is 90 for hourly backups.
-    /// Minimum value is 1 and maximum value is 90 for daily backups.
-    /// Minimum value is 7 and maximum value is 186 for weekly backups.
-    /// Minimum value is 30 and maximum value is 732 for monthly backups.
-    /// Minimum value is 365 and maximum value is 36159 for yearly backups.
+    /// Minimum value is 1 and maximum value is 36159 for custom retention
+    /// on-demand backup.
+    /// Minimum and maximum values are workload specific for all other rules.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -856,7 +1050,7 @@ namespace Google.Cloud.BackupDR.V1 {
     /// <summary>Field number for the "standard_schedule" field.</summary>
     public const int StandardScheduleFieldNumber = 5;
     /// <summary>
-    /// Required. Defines a schedule that runs within the confines of a defined
+    /// Optional. Defines a schedule that runs within the confines of a defined
     /// window of time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1171,7 +1365,7 @@ namespace Google.Cloud.BackupDR.V1 {
     /// otherwise. A validation error will occur if a value is supplied and
     /// `recurrence_type` is not `HOURLY`.
     ///
-    /// Value of hourly frequency should be between 6 and 23.
+    /// Value of hourly frequency should be between 4 and 23.
     ///
     /// Reason for limit : We found that there is bandwidth limitation of 3GB/S for
     /// GMI while taking a backup and 5GB/S while doing a restore. Given the amount
@@ -3571,6 +3765,1486 @@ namespace Google.Cloud.BackupDR.V1 {
           }
           case 18: {
             RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for updating a backup plan.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateBackupPlanRequest : pb::IMessage<UpdateBackupPlanRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateBackupPlanRequest> _parser = new pb::MessageParser<UpdateBackupPlanRequest>(() => new UpdateBackupPlanRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateBackupPlanRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BackupDR.V1.BackupplanReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateBackupPlanRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateBackupPlanRequest(UpdateBackupPlanRequest other) : this() {
+      backupPlan_ = other.backupPlan_ != null ? other.backupPlan_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      requestId_ = other.requestId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateBackupPlanRequest Clone() {
+      return new UpdateBackupPlanRequest(this);
+    }
+
+    /// <summary>Field number for the "backup_plan" field.</summary>
+    public const int BackupPlanFieldNumber = 1;
+    private global::Google.Cloud.BackupDR.V1.BackupPlan backupPlan_;
+    /// <summary>
+    /// Required. The resource being updated
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BackupDR.V1.BackupPlan BackupPlan {
+      get { return backupPlan_; }
+      set {
+        backupPlan_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Required. The list of fields to update.
+    /// Field mask is used to specify the fields to be overwritten in the
+    /// BackupPlan resource by the update.
+    /// The fields specified in the update_mask are relative to the resource, not
+    /// the full request. A field will be overwritten if it is in the mask. If the
+    /// user does not provide a mask then the request will fail.
+    /// Currently, these fields are supported in update: description, schedules,
+    /// retention period, adding and removing Backup Rules.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 3;
+    private string requestId_ = "";
+    /// <summary>
+    /// Optional. An optional request ID to identify requests. Specify a unique
+    /// request ID so that if you must retry your request, the server will know to
+    /// ignore the request if it has already been completed. The server will
+    /// guarantee that for at least 60 minutes since the first request.
+    ///
+    /// For example, consider a situation where you make an initial request and t
+    /// he request times out. If you make the request again with the same request
+    /// ID, the server can check if original operation with the same request ID
+    /// was received, and if so, will ignore the second request. This prevents
+    /// clients from accidentally creating duplicate commitments.
+    ///
+    /// The request ID must be a valid UUID with the exception that zero UUID is
+    /// not supported (00000000-0000-0000-0000-000000000000).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateBackupPlanRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateBackupPlanRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(BackupPlan, other.BackupPlan)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      if (RequestId != other.RequestId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (backupPlan_ != null) hash ^= BackupPlan.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (backupPlan_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(BackupPlan);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (backupPlan_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(BackupPlan);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (backupPlan_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BackupPlan);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateBackupPlanRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.backupPlan_ != null) {
+        if (backupPlan_ == null) {
+          BackupPlan = new global::Google.Cloud.BackupDR.V1.BackupPlan();
+        }
+        BackupPlan.MergeFrom(other.BackupPlan);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (backupPlan_ == null) {
+              BackupPlan = new global::Google.Cloud.BackupDR.V1.BackupPlan();
+            }
+            input.ReadMessage(BackupPlan);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 26: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (backupPlan_ == null) {
+              BackupPlan = new global::Google.Cloud.BackupDR.V1.BackupPlan();
+            }
+            input.ReadMessage(BackupPlan);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 26: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// `BackupPlanRevision` represents a snapshot of a `BackupPlan` at a point in
+  /// time.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BackupPlanRevision : pb::IMessage<BackupPlanRevision>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BackupPlanRevision> _parser = new pb::MessageParser<BackupPlanRevision>(() => new BackupPlanRevision());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BackupPlanRevision> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BackupDR.V1.BackupplanReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BackupPlanRevision() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BackupPlanRevision(BackupPlanRevision other) : this() {
+      name_ = other.name_;
+      revisionId_ = other.revisionId_;
+      state_ = other.state_;
+      backupPlanSnapshot_ = other.backupPlanSnapshot_ != null ? other.backupPlanSnapshot_.Clone() : null;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BackupPlanRevision Clone() {
+      return new BackupPlanRevision(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. Identifier. The resource name of the `BackupPlanRevision`.
+    ///
+    /// Format:
+    /// `projects/{project}/locations/{location}/backupPlans/{backup_plan}/revisions/{revision}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "revision_id" field.</summary>
+    public const int RevisionIdFieldNumber = 2;
+    private string revisionId_ = "";
+    /// <summary>
+    /// Output only. The user friendly revision ID of the `BackupPlanRevision`.
+    ///
+    /// Example: v0, v1, v2, etc.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RevisionId {
+      get { return revisionId_; }
+      set {
+        revisionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 3;
+    private global::Google.Cloud.BackupDR.V1.BackupPlanRevision.Types.State state_ = global::Google.Cloud.BackupDR.V1.BackupPlanRevision.Types.State.Unspecified;
+    /// <summary>
+    /// Output only. Resource State
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BackupDR.V1.BackupPlanRevision.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "backup_plan_snapshot" field.</summary>
+    public const int BackupPlanSnapshotFieldNumber = 4;
+    private global::Google.Cloud.BackupDR.V1.BackupPlan backupPlanSnapshot_;
+    /// <summary>
+    /// The Backup Plan being encompassed by this revision.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BackupDR.V1.BackupPlan BackupPlanSnapshot {
+      get { return backupPlanSnapshot_; }
+      set {
+        backupPlanSnapshot_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. The timestamp that the revision was created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BackupPlanRevision);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BackupPlanRevision other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (RevisionId != other.RevisionId) return false;
+      if (State != other.State) return false;
+      if (!object.Equals(BackupPlanSnapshot, other.BackupPlanSnapshot)) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (RevisionId.Length != 0) hash ^= RevisionId.GetHashCode();
+      if (State != global::Google.Cloud.BackupDR.V1.BackupPlanRevision.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (backupPlanSnapshot_ != null) hash ^= BackupPlanSnapshot.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (RevisionId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(RevisionId);
+      }
+      if (State != global::Google.Cloud.BackupDR.V1.BackupPlanRevision.Types.State.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) State);
+      }
+      if (backupPlanSnapshot_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(BackupPlanSnapshot);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CreateTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (RevisionId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(RevisionId);
+      }
+      if (State != global::Google.Cloud.BackupDR.V1.BackupPlanRevision.Types.State.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) State);
+      }
+      if (backupPlanSnapshot_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(BackupPlanSnapshot);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CreateTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (RevisionId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RevisionId);
+      }
+      if (State != global::Google.Cloud.BackupDR.V1.BackupPlanRevision.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (backupPlanSnapshot_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BackupPlanSnapshot);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BackupPlanRevision other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.RevisionId.Length != 0) {
+        RevisionId = other.RevisionId;
+      }
+      if (other.State != global::Google.Cloud.BackupDR.V1.BackupPlanRevision.Types.State.Unspecified) {
+        State = other.State;
+      }
+      if (other.backupPlanSnapshot_ != null) {
+        if (backupPlanSnapshot_ == null) {
+          BackupPlanSnapshot = new global::Google.Cloud.BackupDR.V1.BackupPlan();
+        }
+        BackupPlanSnapshot.MergeFrom(other.BackupPlanSnapshot);
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            RevisionId = input.ReadString();
+            break;
+          }
+          case 24: {
+            State = (global::Google.Cloud.BackupDR.V1.BackupPlanRevision.Types.State) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            if (backupPlanSnapshot_ == null) {
+              BackupPlanSnapshot = new global::Google.Cloud.BackupDR.V1.BackupPlan();
+            }
+            input.ReadMessage(BackupPlanSnapshot);
+            break;
+          }
+          case 42: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            RevisionId = input.ReadString();
+            break;
+          }
+          case 24: {
+            State = (global::Google.Cloud.BackupDR.V1.BackupPlanRevision.Types.State) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            if (backupPlanSnapshot_ == null) {
+              BackupPlanSnapshot = new global::Google.Cloud.BackupDR.V1.BackupPlan();
+            }
+            input.ReadMessage(BackupPlanSnapshot);
+            break;
+          }
+          case 42: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the BackupPlanRevision message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The state of the `BackupPlanRevision`.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// State not set.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The resource is being created.
+        /// </summary>
+        [pbr::OriginalName("CREATING")] Creating = 1,
+        /// <summary>
+        /// The resource has been created and is fully usable.
+        /// </summary>
+        [pbr::OriginalName("ACTIVE")] Active = 2,
+        /// <summary>
+        /// The resource is being deleted.
+        /// </summary>
+        [pbr::OriginalName("DELETING")] Deleting = 3,
+        /// <summary>
+        /// The resource has been created but is not usable.
+        /// </summary>
+        [pbr::OriginalName("INACTIVE")] Inactive = 4,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// The request message for getting a `BackupPlanRevision`.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GetBackupPlanRevisionRequest : pb::IMessage<GetBackupPlanRevisionRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetBackupPlanRevisionRequest> _parser = new pb::MessageParser<GetBackupPlanRevisionRequest>(() => new GetBackupPlanRevisionRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetBackupPlanRevisionRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BackupDR.V1.BackupplanReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetBackupPlanRevisionRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetBackupPlanRevisionRequest(GetBackupPlanRevisionRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetBackupPlanRevisionRequest Clone() {
+      return new GetBackupPlanRevisionRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource name of the `BackupPlanRevision` to retrieve.
+    ///
+    /// Format:
+    /// `projects/{project}/locations/{location}/backupPlans/{backup_plan}/revisions/{revision}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetBackupPlanRevisionRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetBackupPlanRevisionRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetBackupPlanRevisionRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request message for getting a list of `BackupPlanRevision`.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListBackupPlanRevisionsRequest : pb::IMessage<ListBackupPlanRevisionsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListBackupPlanRevisionsRequest> _parser = new pb::MessageParser<ListBackupPlanRevisionsRequest>(() => new ListBackupPlanRevisionsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListBackupPlanRevisionsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BackupDR.V1.BackupplanReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListBackupPlanRevisionsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListBackupPlanRevisionsRequest(ListBackupPlanRevisionsRequest other) : this() {
+      parent_ = other.parent_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListBackupPlanRevisionsRequest Clone() {
+      return new ListBackupPlanRevisionsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The project and location for which to retrieve
+    /// `BackupPlanRevisions` information. Format:
+    /// `projects/{project}/locations/{location}/backupPlans/{backup_plan}`. In
+    /// Cloud BackupDR, locations map to GCP regions, for e.g. **us-central1**.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    /// <summary>
+    /// Optional. The maximum number of `BackupPlans` to return in a single
+    /// response. If not specified, a default value will be chosen by the service.
+    /// Note that the response may include a partial list and a caller should
+    /// only rely on the response's
+    /// [next_page_token][google.cloud.backupdr.v1.ListBackupPlansResponse.next_page_token]
+    /// to determine if there are more instances left to be queried.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 3;
+    private string pageToken_ = "";
+    /// <summary>
+    /// Optional. The value of
+    /// [next_page_token][google.cloud.backupdr.v1.ListBackupPlansResponse.next_page_token]
+    /// received from a previous `ListBackupPlans` call.
+    /// Provide this to retrieve the subsequent page in a multi-page list of
+    /// results. When paginating, all other parameters provided to
+    /// `ListBackupPlans` must match the call that provided the page token.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListBackupPlanRevisionsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListBackupPlanRevisionsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListBackupPlanRevisionsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The response message for getting a list of `BackupPlanRevision`.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListBackupPlanRevisionsResponse : pb::IMessage<ListBackupPlanRevisionsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListBackupPlanRevisionsResponse> _parser = new pb::MessageParser<ListBackupPlanRevisionsResponse>(() => new ListBackupPlanRevisionsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListBackupPlanRevisionsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BackupDR.V1.BackupplanReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListBackupPlanRevisionsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListBackupPlanRevisionsResponse(ListBackupPlanRevisionsResponse other) : this() {
+      backupPlanRevisions_ = other.backupPlanRevisions_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      unreachable_ = other.unreachable_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListBackupPlanRevisionsResponse Clone() {
+      return new ListBackupPlanRevisionsResponse(this);
+    }
+
+    /// <summary>Field number for the "backup_plan_revisions" field.</summary>
+    public const int BackupPlanRevisionsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.BackupDR.V1.BackupPlanRevision> _repeated_backupPlanRevisions_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.BackupDR.V1.BackupPlanRevision.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.BackupDR.V1.BackupPlanRevision> backupPlanRevisions_ = new pbc::RepeatedField<global::Google.Cloud.BackupDR.V1.BackupPlanRevision>();
+    /// <summary>
+    /// The list of `BackupPlanRevisions` in the project for the specified
+    /// location.
+    ///
+    /// If the `{location}` value in the request is "-", the response contains a
+    /// list of resources from all locations. In case any location is unreachable,
+    /// the response will only return backup plans in reachable locations and
+    /// the 'unreachable' field will be populated with a list of unreachable
+    /// locations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.BackupDR.V1.BackupPlanRevision> BackupPlanRevisions {
+      get { return backupPlanRevisions_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// A token which may be sent as
+    /// [page_token][google.cloud.backupdr.v1.ListBackupPlanRevisionsRequest.page_token]
+    /// in a subsequent `ListBackupPlanRevisions` call to retrieve the next page of
+    /// results. If this field is omitted or empty, then there are no more results
+    /// to return.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "unreachable" field.</summary>
+    public const int UnreachableFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_unreachable_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Locations that could not be reached.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Unreachable {
+      get { return unreachable_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListBackupPlanRevisionsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListBackupPlanRevisionsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!backupPlanRevisions_.Equals(other.backupPlanRevisions_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      if(!unreachable_.Equals(other.unreachable_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= backupPlanRevisions_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= unreachable_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      backupPlanRevisions_.WriteTo(output, _repeated_backupPlanRevisions_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      unreachable_.WriteTo(output, _repeated_unreachable_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      backupPlanRevisions_.WriteTo(ref output, _repeated_backupPlanRevisions_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      unreachable_.WriteTo(ref output, _repeated_unreachable_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += backupPlanRevisions_.CalculateSize(_repeated_backupPlanRevisions_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      size += unreachable_.CalculateSize(_repeated_unreachable_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListBackupPlanRevisionsResponse other) {
+      if (other == null) {
+        return;
+      }
+      backupPlanRevisions_.Add(other.backupPlanRevisions_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      unreachable_.Add(other.unreachable_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            backupPlanRevisions_.AddEntriesFrom(input, _repeated_backupPlanRevisions_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(input, _repeated_unreachable_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            backupPlanRevisions_.AddEntriesFrom(ref input, _repeated_backupPlanRevisions_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(ref input, _repeated_unreachable_codec);
             break;
           }
         }

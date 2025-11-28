@@ -4,7 +4,7 @@
     <IsPackable>false</IsPackable>
     <Description>Console app to process a build timing log</Description>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
   </PropertyGroup>
 

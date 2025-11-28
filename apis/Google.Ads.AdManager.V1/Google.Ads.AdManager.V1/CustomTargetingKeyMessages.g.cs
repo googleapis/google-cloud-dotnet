@@ -28,30 +28,33 @@ namespace Google.Ads.AdManager.V1 {
             "eV9tZXNzYWdlcy5wcm90bxIXZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEaOGdv",
             "b2dsZS9hZHMvYWRtYW5hZ2VyL3YxL2N1c3RvbV90YXJnZXRpbmdfa2V5X2Vu",
             "dW1zLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhln",
-            "b29nbGUvYXBpL3Jlc291cmNlLnByb3RvIuUEChJDdXN0b21UYXJnZXRpbmdL",
-            "ZXkSEQoEbmFtZRgBIAEoCUID4EEIEiQKF2N1c3RvbV90YXJnZXRpbmdfa2V5",
-            "X2lkGAIgASgDQgPgQQMSGAoLYWRfdGFnX25hbWUYAyABKAlCA+BBBRIZCgxk",
-            "aXNwbGF5X25hbWUYBCABKAlCA+BBARJdCgR0eXBlGAUgASgOMkouZ29vZ2xl",
-            "LmFkcy5hZG1hbmFnZXIudjEuQ3VzdG9tVGFyZ2V0aW5nS2V5VHlwZUVudW0u",
-            "Q3VzdG9tVGFyZ2V0aW5nS2V5VHlwZUID4EECEmMKBnN0YXR1cxgGIAEoDjJO",
-            "Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkN1c3RvbVRhcmdldGluZ0tleVN0",
-            "YXR1c0VudW0uQ3VzdG9tVGFyZ2V0aW5nS2V5U3RhdHVzQgPgQQMSfAoPcmVw",
-            "b3J0YWJsZV90eXBlGAcgASgOMl4uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEu",
-            "Q3VzdG9tVGFyZ2V0aW5nS2V5UmVwb3J0YWJsZVR5cGVFbnVtLkN1c3RvbVRh",
-            "cmdldGluZ0tleVJlcG9ydGFibGVUeXBlQgPgQQI6ngHqQZoBCithZG1hbmFn",
-            "ZXIuZ29vZ2xlYXBpcy5jb20vQ3VzdG9tVGFyZ2V0aW5nS2V5EkJuZXR3b3Jr",
-            "cy97bmV0d29ya19jb2RlfS9jdXN0b21UYXJnZXRpbmdLZXlzL3tjdXN0b21f",
-            "dGFyZ2V0aW5nX2tleX0qE2N1c3RvbVRhcmdldGluZ0tleXMyEmN1c3RvbVRh",
-            "cmdldGluZ0tleULTAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQh9D",
-            "dXN0b21UYXJnZXRpbmdLZXlNZXNzYWdlc1Byb3RvUAFaQGdvb2dsZS5nb2xh",
-            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92MTth",
-            "ZG1hbmFnZXKqAhdHb29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2dsZVxB",
-            "ZHNcQWRNYW5hZ2VyXFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6VjFi",
-            "BnByb3RvMw=="));
+            "b29nbGUvYXBpL3Jlc291cmNlLnByb3RvIukFChJDdXN0b21UYXJnZXRpbmdL",
+            "ZXkSEQoEbmFtZRgBIAEoCUID4EEIEikKF2N1c3RvbV90YXJnZXRpbmdfa2V5",
+            "X2lkGAIgASgDQgPgQQNIAIgBARIdCgthZF90YWdfbmFtZRgDIAEoCUID4EEF",
+            "SAGIAQESHgoMZGlzcGxheV9uYW1lGAQgASgJQgPgQQFIAogBARJiCgR0eXBl",
+            "GAUgASgOMkouZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3VzdG9tVGFyZ2V0",
+            "aW5nS2V5VHlwZUVudW0uQ3VzdG9tVGFyZ2V0aW5nS2V5VHlwZUID4EECSAOI",
+            "AQESaAoGc3RhdHVzGAYgASgOMk4uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEu",
+            "Q3VzdG9tVGFyZ2V0aW5nS2V5U3RhdHVzRW51bS5DdXN0b21UYXJnZXRpbmdL",
+            "ZXlTdGF0dXNCA+BBA0gEiAEBEoEBCg9yZXBvcnRhYmxlX3R5cGUYByABKA4y",
+            "Xi5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5DdXN0b21UYXJnZXRpbmdLZXlS",
+            "ZXBvcnRhYmxlVHlwZUVudW0uQ3VzdG9tVGFyZ2V0aW5nS2V5UmVwb3J0YWJs",
+            "ZVR5cGVCA+BBAkgFiAEBOp4B6kGaAQorYWRtYW5hZ2VyLmdvb2dsZWFwaXMu",
+            "Y29tL0N1c3RvbVRhcmdldGluZ0tleRJCbmV0d29ya3Mve25ldHdvcmtfY29k",
+            "ZX0vY3VzdG9tVGFyZ2V0aW5nS2V5cy97Y3VzdG9tX3RhcmdldGluZ19rZXl9",
+            "KhNjdXN0b21UYXJnZXRpbmdLZXlzMhJjdXN0b21UYXJnZXRpbmdLZXlCGgoY",
+            "X2N1c3RvbV90YXJnZXRpbmdfa2V5X2lkQg4KDF9hZF90YWdfbmFtZUIPCg1f",
+            "ZGlzcGxheV9uYW1lQgcKBV90eXBlQgkKB19zdGF0dXNCEgoQX3JlcG9ydGFi",
+            "bGVfdHlwZULTAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQh9DdXN0",
+            "b21UYXJnZXRpbmdLZXlNZXNzYWdlc1Byb3RvUAFaQGdvb2dsZS5nb2xhbmcu",
+            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92MTthZG1h",
+            "bmFnZXKqAhdHb29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2dsZVxBZHNc",
+            "QWRNYW5hZ2VyXFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6VjFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.CustomTargetingKeyEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.CustomTargetingKey), global::Google.Ads.AdManager.V1.CustomTargetingKey.Parser, new[]{ "Name", "CustomTargetingKeyId", "AdTagName", "DisplayName", "Type", "Status", "ReportableType" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.CustomTargetingKey), global::Google.Ads.AdManager.V1.CustomTargetingKey.Parser, new[]{ "Name", "CustomTargetingKeyId", "AdTagName", "DisplayName", "Type", "Status", "ReportableType" }, new[]{ "CustomTargetingKeyId", "AdTagName", "DisplayName", "Type", "Status", "ReportableType" }, null, null, null)
           }));
     }
     #endregion
@@ -69,6 +72,7 @@ namespace Google.Ads.AdManager.V1 {
   {
     private static readonly pb::MessageParser<CustomTargetingKey> _parser = new pb::MessageParser<CustomTargetingKey>(() => new CustomTargetingKey());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CustomTargetingKey> Parser { get { return _parser; } }
@@ -96,6 +100,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CustomTargetingKey(CustomTargetingKey other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
       customTargetingKeyId_ = other.customTargetingKeyId_;
       adTagName_ = other.adTagName_;
@@ -131,6 +136,8 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "custom_targeting_key_id" field.</summary>
     public const int CustomTargetingKeyIdFieldNumber = 2;
+    private readonly static long CustomTargetingKeyIdDefaultValue = 0L;
+
     private long customTargetingKeyId_;
     /// <summary>
     /// Output only. `CustomTargetingKey` ID.
@@ -138,15 +145,30 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long CustomTargetingKeyId {
-      get { return customTargetingKeyId_; }
+      get { if ((_hasBits0 & 1) != 0) { return customTargetingKeyId_; } else { return CustomTargetingKeyIdDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         customTargetingKeyId_ = value;
       }
+    }
+    /// <summary>Gets whether the "custom_targeting_key_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCustomTargetingKeyId {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "custom_targeting_key_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCustomTargetingKeyId() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "ad_tag_name" field.</summary>
     public const int AdTagNameFieldNumber = 3;
-    private string adTagName_ = "";
+    private readonly static string AdTagNameDefaultValue = "";
+
+    private string adTagName_;
     /// <summary>
     /// Immutable. Name of the key. Keys can contain up to 10 characters each. You
     /// can use alphanumeric characters and symbols other than the following:
@@ -155,30 +177,58 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AdTagName {
-      get { return adTagName_; }
+      get { return adTagName_ ?? AdTagNameDefaultValue; }
       set {
         adTagName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "ad_tag_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAdTagName {
+      get { return adTagName_ != null; }
+    }
+    /// <summary>Clears the value of the "ad_tag_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAdTagName() {
+      adTagName_ = null;
+    }
 
     /// <summary>Field number for the "display_name" field.</summary>
     public const int DisplayNameFieldNumber = 4;
-    private string displayName_ = "";
+    private readonly static string DisplayNameDefaultValue = "";
+
+    private string displayName_;
     /// <summary>
     /// Optional. Descriptive name for the `CustomTargetingKey`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
-      get { return displayName_; }
+      get { return displayName_ ?? DisplayNameDefaultValue; }
       set {
         displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return displayName_ != null; }
+    }
+    /// <summary>Clears the value of the "display_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      displayName_ = null;
+    }
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 5;
-    private global::Google.Ads.AdManager.V1.CustomTargetingKeyTypeEnum.Types.CustomTargetingKeyType type_ = global::Google.Ads.AdManager.V1.CustomTargetingKeyTypeEnum.Types.CustomTargetingKeyType.Unspecified;
+    private readonly static global::Google.Ads.AdManager.V1.CustomTargetingKeyTypeEnum.Types.CustomTargetingKeyType TypeDefaultValue = global::Google.Ads.AdManager.V1.CustomTargetingKeyTypeEnum.Types.CustomTargetingKeyType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CustomTargetingKeyTypeEnum.Types.CustomTargetingKeyType type_;
     /// <summary>
     /// Required. Indicates whether users will select from predefined values or
     /// create new targeting values, while specifying targeting criteria for a line
@@ -187,40 +237,83 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Ads.AdManager.V1.CustomTargetingKeyTypeEnum.Types.CustomTargetingKeyType Type {
-      get { return type_; }
+      get { if ((_hasBits0 & 2) != 0) { return type_; } else { return TypeDefaultValue; } }
       set {
+        _hasBits0 |= 2;
         type_ = value;
       }
+    }
+    /// <summary>Gets whether the "type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasType {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearType() {
+      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 6;
-    private global::Google.Ads.AdManager.V1.CustomTargetingKeyStatusEnum.Types.CustomTargetingKeyStatus status_ = global::Google.Ads.AdManager.V1.CustomTargetingKeyStatusEnum.Types.CustomTargetingKeyStatus.Unspecified;
+    private readonly static global::Google.Ads.AdManager.V1.CustomTargetingKeyStatusEnum.Types.CustomTargetingKeyStatus StatusDefaultValue = global::Google.Ads.AdManager.V1.CustomTargetingKeyStatusEnum.Types.CustomTargetingKeyStatus.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CustomTargetingKeyStatusEnum.Types.CustomTargetingKeyStatus status_;
     /// <summary>
     /// Output only. Status of the `CustomTargetingKey`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Ads.AdManager.V1.CustomTargetingKeyStatusEnum.Types.CustomTargetingKeyStatus Status {
-      get { return status_; }
+      get { if ((_hasBits0 & 4) != 0) { return status_; } else { return StatusDefaultValue; } }
       set {
+        _hasBits0 |= 4;
         status_ = value;
       }
+    }
+    /// <summary>Gets whether the "status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStatus {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "status" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStatus() {
+      _hasBits0 &= ~4;
     }
 
     /// <summary>Field number for the "reportable_type" field.</summary>
     public const int ReportableTypeFieldNumber = 7;
-    private global::Google.Ads.AdManager.V1.CustomTargetingKeyReportableTypeEnum.Types.CustomTargetingKeyReportableType reportableType_ = global::Google.Ads.AdManager.V1.CustomTargetingKeyReportableTypeEnum.Types.CustomTargetingKeyReportableType.Unspecified;
+    private readonly static global::Google.Ads.AdManager.V1.CustomTargetingKeyReportableTypeEnum.Types.CustomTargetingKeyReportableType ReportableTypeDefaultValue = global::Google.Ads.AdManager.V1.CustomTargetingKeyReportableTypeEnum.Types.CustomTargetingKeyReportableType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CustomTargetingKeyReportableTypeEnum.Types.CustomTargetingKeyReportableType reportableType_;
     /// <summary>
     /// Required. Reportable state of the `CustomTargetingKey`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Ads.AdManager.V1.CustomTargetingKeyReportableTypeEnum.Types.CustomTargetingKeyReportableType ReportableType {
-      get { return reportableType_; }
+      get { if ((_hasBits0 & 8) != 0) { return reportableType_; } else { return ReportableTypeDefaultValue; } }
       set {
+        _hasBits0 |= 8;
         reportableType_ = value;
       }
+    }
+    /// <summary>Gets whether the "reportable_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasReportableType {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "reportable_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearReportableType() {
+      _hasBits0 &= ~8;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -253,12 +346,12 @@ namespace Google.Ads.AdManager.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (CustomTargetingKeyId != 0L) hash ^= CustomTargetingKeyId.GetHashCode();
-      if (AdTagName.Length != 0) hash ^= AdTagName.GetHashCode();
-      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (Type != global::Google.Ads.AdManager.V1.CustomTargetingKeyTypeEnum.Types.CustomTargetingKeyType.Unspecified) hash ^= Type.GetHashCode();
-      if (Status != global::Google.Ads.AdManager.V1.CustomTargetingKeyStatusEnum.Types.CustomTargetingKeyStatus.Unspecified) hash ^= Status.GetHashCode();
-      if (ReportableType != global::Google.Ads.AdManager.V1.CustomTargetingKeyReportableTypeEnum.Types.CustomTargetingKeyReportableType.Unspecified) hash ^= ReportableType.GetHashCode();
+      if (HasCustomTargetingKeyId) hash ^= CustomTargetingKeyId.GetHashCode();
+      if (HasAdTagName) hash ^= AdTagName.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasType) hash ^= Type.GetHashCode();
+      if (HasStatus) hash ^= Status.GetHashCode();
+      if (HasReportableType) hash ^= ReportableType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -281,27 +374,27 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (CustomTargetingKeyId != 0L) {
+      if (HasCustomTargetingKeyId) {
         output.WriteRawTag(16);
         output.WriteInt64(CustomTargetingKeyId);
       }
-      if (AdTagName.Length != 0) {
+      if (HasAdTagName) {
         output.WriteRawTag(26);
         output.WriteString(AdTagName);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         output.WriteRawTag(34);
         output.WriteString(DisplayName);
       }
-      if (Type != global::Google.Ads.AdManager.V1.CustomTargetingKeyTypeEnum.Types.CustomTargetingKeyType.Unspecified) {
+      if (HasType) {
         output.WriteRawTag(40);
         output.WriteEnum((int) Type);
       }
-      if (Status != global::Google.Ads.AdManager.V1.CustomTargetingKeyStatusEnum.Types.CustomTargetingKeyStatus.Unspecified) {
+      if (HasStatus) {
         output.WriteRawTag(48);
         output.WriteEnum((int) Status);
       }
-      if (ReportableType != global::Google.Ads.AdManager.V1.CustomTargetingKeyReportableTypeEnum.Types.CustomTargetingKeyReportableType.Unspecified) {
+      if (HasReportableType) {
         output.WriteRawTag(56);
         output.WriteEnum((int) ReportableType);
       }
@@ -319,27 +412,27 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (CustomTargetingKeyId != 0L) {
+      if (HasCustomTargetingKeyId) {
         output.WriteRawTag(16);
         output.WriteInt64(CustomTargetingKeyId);
       }
-      if (AdTagName.Length != 0) {
+      if (HasAdTagName) {
         output.WriteRawTag(26);
         output.WriteString(AdTagName);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         output.WriteRawTag(34);
         output.WriteString(DisplayName);
       }
-      if (Type != global::Google.Ads.AdManager.V1.CustomTargetingKeyTypeEnum.Types.CustomTargetingKeyType.Unspecified) {
+      if (HasType) {
         output.WriteRawTag(40);
         output.WriteEnum((int) Type);
       }
-      if (Status != global::Google.Ads.AdManager.V1.CustomTargetingKeyStatusEnum.Types.CustomTargetingKeyStatus.Unspecified) {
+      if (HasStatus) {
         output.WriteRawTag(48);
         output.WriteEnum((int) Status);
       }
-      if (ReportableType != global::Google.Ads.AdManager.V1.CustomTargetingKeyReportableTypeEnum.Types.CustomTargetingKeyReportableType.Unspecified) {
+      if (HasReportableType) {
         output.WriteRawTag(56);
         output.WriteEnum((int) ReportableType);
       }
@@ -356,22 +449,22 @@ namespace Google.Ads.AdManager.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (CustomTargetingKeyId != 0L) {
+      if (HasCustomTargetingKeyId) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(CustomTargetingKeyId);
       }
-      if (AdTagName.Length != 0) {
+      if (HasAdTagName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AdTagName);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
-      if (Type != global::Google.Ads.AdManager.V1.CustomTargetingKeyTypeEnum.Types.CustomTargetingKeyType.Unspecified) {
+      if (HasType) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
-      if (Status != global::Google.Ads.AdManager.V1.CustomTargetingKeyStatusEnum.Types.CustomTargetingKeyStatus.Unspecified) {
+      if (HasStatus) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
-      if (ReportableType != global::Google.Ads.AdManager.V1.CustomTargetingKeyReportableTypeEnum.Types.CustomTargetingKeyReportableType.Unspecified) {
+      if (HasReportableType) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReportableType);
       }
       if (_unknownFields != null) {
@@ -389,22 +482,22 @@ namespace Google.Ads.AdManager.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.CustomTargetingKeyId != 0L) {
+      if (other.HasCustomTargetingKeyId) {
         CustomTargetingKeyId = other.CustomTargetingKeyId;
       }
-      if (other.AdTagName.Length != 0) {
+      if (other.HasAdTagName) {
         AdTagName = other.AdTagName;
       }
-      if (other.DisplayName.Length != 0) {
+      if (other.HasDisplayName) {
         DisplayName = other.DisplayName;
       }
-      if (other.Type != global::Google.Ads.AdManager.V1.CustomTargetingKeyTypeEnum.Types.CustomTargetingKeyType.Unspecified) {
+      if (other.HasType) {
         Type = other.Type;
       }
-      if (other.Status != global::Google.Ads.AdManager.V1.CustomTargetingKeyStatusEnum.Types.CustomTargetingKeyStatus.Unspecified) {
+      if (other.HasStatus) {
         Status = other.Status;
       }
-      if (other.ReportableType != global::Google.Ads.AdManager.V1.CustomTargetingKeyReportableTypeEnum.Types.CustomTargetingKeyReportableType.Unspecified) {
+      if (other.HasReportableType) {
         ReportableType = other.ReportableType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

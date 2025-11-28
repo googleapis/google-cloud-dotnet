@@ -36,4 +36,16 @@ namespace Google.Cloud.Firestore.Admin.V1
             set => Backup = value?.ToString() ?? "";
         }
     }
+
+    public partial class CloneDatabaseMetadata
+    {
+        /// <summary>
+        /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// </summary>
+        public DatabaseName DatabaseAsDatabaseName
+        {
+            get => string.IsNullOrEmpty(Database) ? null : DatabaseName.Parse(Database, allowUnparsed: true);
+            set => Database = value?.ToString() ?? "";
+        }
+    }
 }

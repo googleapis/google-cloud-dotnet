@@ -18,6 +18,7 @@ using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using Grpc.Core;
 using System;
+using System.Data;
 using System.Data.Common;
 using System.Globalization;
 using System.Threading.Tasks;
@@ -31,6 +32,9 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     public sealed class SpannerConnectionStringBuilder : DbConnectionStringBuilder
     {
+        internal const string DefaultDomain = "googleapis.com";
+        internal const int DefaultPort = 443;
+
         /// <summary>
         /// The default value for <see cref="Timeout"/>.
         /// </summary>
@@ -55,6 +59,7 @@ namespace Google.Cloud.Spanner.Data
         private const string ClrToSpannerTypeDefaultMappingsKeyword = "ClrToSpannerTypeDefaultMappings";
         private const string SpannerToClrTypeDefaultMappingsKeyword = "SpannerToClrTypeDefaultMappings";
         private const string DatabaseRoleKeyword = "DatabaseRole";
+        private const string IsolationLevelKeyword = "IsolationLevel";
         private const string EnableLeaderRoutingKeyword = "EnableLeaderRouting";
 
         private InstanceName _instanceName;
@@ -67,6 +72,16 @@ namespace Google.Cloud.Spanner.Data
         {
             get => GetValueOrDefault(DatabaseRoleKeyword);
             set => this[DatabaseRoleKeyword] = value;
+        }
+
+        /// <summary>
+        /// Option to set the default for <see cref="System.Data.IsolationLevel"/> for all transactions executed on this connection.
+        /// Override on a per-transaction basis using <see cref="SpannerTransactionCreationOptions" />.
+        /// </summary>
+        public IsolationLevel IsolationLevel
+        {
+            get => GetEnumValueOrDefault(IsolationLevelKeyword, IsolationLevel.Unspecified);
+            set => this[IsolationLevelKeyword] = value.ToString();
         }
 
         /// <summary>
@@ -261,7 +276,7 @@ namespace Google.Cloud.Spanner.Data
             // TODO: Now that ServiceEndpoint has been removed, we don't have separate host/port for the default endpoint.
             // This is currently hardcoded for convenience; it's unlikely to ever change, but ideally we'd parse it from the
             // SpannerClient.DefaultEndpoint;
-            get => GetValueOrDefault(nameof(Host), "spanner.googleapis.com");
+            get => GetValueOrDefault(nameof(Host), $"spanner.{UniverseDomain}");
             set => this[nameof(Host)] = value;
         }
 
@@ -274,8 +289,28 @@ namespace Google.Cloud.Spanner.Data
             // TODO: Now that ServiceEndpoint has been removed, we don't have separate host/port for the default endpoint.
             // This is currently hardcoded for convenience; it's unlikely to ever change, but ideally we'd parse it from the
             // SpannerClient.DefaultEndpoint;
-            get => GetInt32OrDefault(nameof(Port), 1, 65535, 443);
+            get => GetInt32OrDefault(nameof(Port), 1, 65535, DefaultPort);
             set => SetInt32WithValidation(nameof(Port), 1, 65535, value);
+        }
+
+        /// <summary>
+        /// The universe domain to connect to, or null to use the default universe domain <see cref="DefaultDomain"/>.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// <see cref="UniverseDomain"/> is used to build the endpoint to connect to, unless <see cref="EndPoint"/> or <see cref="Host"/>
+        /// are explicitly set, in which case <see cref="EndPoint"/> will be used without further modification.
+        /// </para>
+        /// <para>
+        /// If default credentials or one of <see cref="GoogleCredential"/> or <see cref="CredentialFile"/>
+        /// is used, <see cref="GoogleCredential.GetUniverseDomain"/> should be:
+        /// The same as <see cref="UniverseDomain"/> if <see cref="UniverseDomain"/> has been set otherwise should be same as <see cref="DefaultDomain"/>
+        /// </para>
+        /// </remarks>
+        public string UniverseDomain
+        {
+            get => GetValueOrDefault(nameof(UniverseDomain), DefaultDomain);
+            set => this[nameof(UniverseDomain)] = value;
         }
 
         /// <summary>
@@ -594,6 +629,16 @@ namespace Google.Cloud.Spanner.Data
             }
 
             return defaultValue;
+        }
+
+        private TEnum GetEnumValueOrDefault<TEnum>(string key, TEnum defaultValue)
+        where TEnum : struct
+        {
+            return TryGetValue(key, out object value)
+                && (value is TEnum parsed
+                || (value is string text && Enum.TryParse<TEnum>(text, out parsed)))
+            ? parsed
+            : defaultValue;
         }
 
         /// <inheritdoc />

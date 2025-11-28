@@ -1,5 +1,28 @@
 # Version history
 
+## Version 1.4.0, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+## Version 1.3.0, released 2025-09-16
+
+### New features
+
+- Add GCE to DeploymentPlatform enum
+
+## Version 1.2.0, released 2025-07-07
+
+### New features
+
+- Add AffectedResources proto
+- Add AiModel proto
+- Add ChokePoint proto
+- Add IpRules proto
+- Add Job proto
+- Add Network proto
+
 ## Version 1.1.0, released 2025-02-18
 
 ### New features

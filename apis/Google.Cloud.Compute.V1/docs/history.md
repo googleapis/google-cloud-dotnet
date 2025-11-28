@@ -1,5 +1,68 @@
 # Version history
 
+## Version 3.19.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+## Version 3.18.0, released 2025-10-14
+
+### New features
+
+- Update Compute Engine v1 API to revision 20250916 (#1107)
+
+## Version 3.17.0, released 2025-09-29
+
+### New features
+
+- Update Compute Engine v1 API to revision 20250909
+
+## Version 3.16.0, released 2025-09-16
+
+### New features
+
+- Update Compute Engine v1 API to revision 20250902
+
+## Version 3.15.0, released 2025-09-03
+
+### New features
+
+- Update Compute Engine v1 API to revision 20250810 (#1091)
+
+## Version 3.14.0, released 2025-08-28
+
+### New features
+
+- Update Compute Engine v1 API to revision 20250807
+
+## Version 3.13.0, released 2025-08-08
+
+### New features
+
+- Update Compute Engine v1 API to revision 20250729 (#1085)
+- Update Compute Engine v1 API to revision 20250728 (#1081)
+
+## Version 3.12.0, released 2025-08-04
+
+### New features
+
+- Update Compute Engine v1 API to revision 20250717 (#1074)
+
+## Version 3.11.0, released 2025-07-22
+
+### New features
+
+- Update Compute Engine v1 API to revision 20250708 (#1073)
+
+## Version 3.10.0, released 2025-07-09
+
+### New features
+
+- Update Compute Engine v1 API to revision 20250626
+- Update Compute Engine v1 API to revision 20250511 (#1047)
+- Update Compute Engine v1 API to revision 20250601 (#1052)
+
 ## Version 3.9.0, released 2025-04-23
 
 ### New features

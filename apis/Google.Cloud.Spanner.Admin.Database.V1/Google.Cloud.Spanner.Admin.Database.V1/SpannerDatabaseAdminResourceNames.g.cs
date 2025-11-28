@@ -773,4 +773,16 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             set => Database = value?.ToString() ?? "";
         }
     }
+
+    public partial class InternalUpdateGraphOperationRequest
+    {
+        /// <summary>
+        /// <see cref="gcscv::DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// </summary>
+        public gcscv::DatabaseName DatabaseAsDatabaseName
+        {
+            get => string.IsNullOrEmpty(Database) ? null : gcscv::DatabaseName.Parse(Database, allowUnparsed: true);
+            set => Database = value?.ToString() ?? "";
+        }
+    }
 }

@@ -27,46 +27,57 @@ namespace Google.Cloud.NetworkServices.V1 {
             "CjVnb29nbGUvY2xvdWQvbmV0d29ya3NlcnZpY2VzL3YxL3NlcnZpY2VfYmlu",
             "ZGluZy5wcm90bxIfZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MRof",
             "Z29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9y",
-            "ZXNvdXJjZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90",
-            "byK/AwoOU2VydmljZUJpbmRpbmcSEQoEbmFtZRgBIAEoCUID4EECEhgKC2Rl",
-            "c2NyaXB0aW9uGAIgASgJQgPgQQESNAoLY3JlYXRlX3RpbWUYAyABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUY",
-            "BCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSFAoHc2Vy",
-            "dmljZRgFIAEoCUID4EECElAKBmxhYmVscxgHIAMoCzI7Lmdvb2dsZS5jbG91",
-            "ZC5uZXR3b3Jrc2VydmljZXMudjEuU2VydmljZUJpbmRpbmcuTGFiZWxzRW50",
-            "cnlCA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
-            "AiABKAk6AjgBOn3qQXoKLW5ldHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNv",
-            "bS9TZXJ2aWNlQmluZGluZxJJcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
-            "cy97bG9jYXRpb259L3NlcnZpY2VCaW5kaW5ncy97c2VydmljZV9iaW5kaW5n",
-            "fSKKAQoaTGlzdFNlcnZpY2VCaW5kaW5nc1JlcXVlc3QSRQoGcGFyZW50GAEg",
-            "ASgJQjXgQQL6QS8SLW5ldHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNvbS9T",
-            "ZXJ2aWNlQmluZGluZxIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tl",
-            "bhgDIAEoCSKBAQobTGlzdFNlcnZpY2VCaW5kaW5nc1Jlc3BvbnNlEkkKEHNl",
-            "cnZpY2VfYmluZGluZ3MYASADKAsyLy5nb29nbGUuY2xvdWQubmV0d29ya3Nl",
-            "cnZpY2VzLnYxLlNlcnZpY2VCaW5kaW5nEhcKD25leHRfcGFnZV90b2tlbhgC",
-            "IAEoCSJfChhHZXRTZXJ2aWNlQmluZGluZ1JlcXVlc3QSQwoEbmFtZRgBIAEo",
-            "CUI14EEC+kEvCi1uZXR3b3Jrc2VydmljZXMuZ29vZ2xlYXBpcy5jb20vU2Vy",
-            "dmljZUJpbmRpbmci1AEKG0NyZWF0ZVNlcnZpY2VCaW5kaW5nUmVxdWVzdBJF",
-            "CgZwYXJlbnQYASABKAlCNeBBAvpBLxItbmV0d29ya3NlcnZpY2VzLmdvb2ds",
-            "ZWFwaXMuY29tL1NlcnZpY2VCaW5kaW5nEh8KEnNlcnZpY2VfYmluZGluZ19p",
-            "ZBgCIAEoCUID4EECEk0KD3NlcnZpY2VfYmluZGluZxgDIAEoCzIvLmdvb2ds",
-            "ZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjEuU2VydmljZUJpbmRpbmdCA+BB",
-            "AiJiChtEZWxldGVTZXJ2aWNlQmluZGluZ1JlcXVlc3QSQwoEbmFtZRgBIAEo",
-            "CUI14EEC+kEvCi1uZXR3b3Jrc2VydmljZXMuZ29vZ2xlYXBpcy5jb20vU2Vy",
-            "dmljZUJpbmRpbmdC9AEKI2NvbS5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZp",
-            "Y2VzLnYxQhNTZXJ2aWNlQmluZGluZ1Byb3RvUAFaTWNsb3VkLmdvb2dsZS5j",
-            "b20vZ28vbmV0d29ya3NlcnZpY2VzL2FwaXYxL25ldHdvcmtzZXJ2aWNlc3Bi",
-            "O25ldHdvcmtzZXJ2aWNlc3BiqgIfR29vZ2xlLkNsb3VkLk5ldHdvcmtTZXJ2",
-            "aWNlcy5WMcoCH0dvb2dsZVxDbG91ZFxOZXR3b3JrU2VydmljZXNcVjHqAiJH",
-            "b29nbGU6OkNsb3VkOjpOZXR3b3JrU2VydmljZXM6OlYxYgZwcm90bzM="));
+            "ZXNvdXJjZS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJv",
+            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iiAQKDlNlcnZp",
+            "Y2VCaW5kaW5nEhEKBG5hbWUYASABKAlCA+BBCBIYCgtkZXNjcmlwdGlvbhgC",
+            "IAEoCUID4EEBEjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAQgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkIKB3NlcnZpY2UYBSABKAlC",
+            "MRgB4EEB+kEpCidzZXJ2aWNlZGlyZWN0b3J5Lmdvb2dsZWFwaXMuY29tL1Nl",
+            "cnZpY2USGQoKc2VydmljZV9pZBgIIAEoCUIFGAHgQQMSUAoGbGFiZWxzGAcg",
+            "AygLMjsuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MS5TZXJ2aWNl",
+            "QmluZGluZy5MYWJlbHNFbnRyeUID4EEBGi0KC0xhYmVsc0VudHJ5EgsKA2tl",
+            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6fepBegotbmV0d29ya3NlcnZp",
+            "Y2VzLmdvb2dsZWFwaXMuY29tL1NlcnZpY2VCaW5kaW5nEklwcm9qZWN0cy97",
+            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vc2VydmljZUJpbmRpbmdz",
+            "L3tzZXJ2aWNlX2JpbmRpbmd9IooBChpMaXN0U2VydmljZUJpbmRpbmdzUmVx",
+            "dWVzdBJFCgZwYXJlbnQYASABKAlCNeBBAvpBLxItbmV0d29ya3NlcnZpY2Vz",
+            "Lmdvb2dsZWFwaXMuY29tL1NlcnZpY2VCaW5kaW5nEhEKCXBhZ2Vfc2l6ZRgC",
+            "IAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIpYBChtMaXN0U2VydmljZUJpbmRp",
+            "bmdzUmVzcG9uc2USSQoQc2VydmljZV9iaW5kaW5ncxgBIAMoCzIvLmdvb2ds",
+            "ZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjEuU2VydmljZUJpbmRpbmcSFwoP",
+            "bmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3VucmVhY2hhYmxlGAMgAygJIl8K",
+            "GEdldFNlcnZpY2VCaW5kaW5nUmVxdWVzdBJDCgRuYW1lGAEgASgJQjXgQQL6",
+            "QS8KLW5ldHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlQmlu",
+            "ZGluZyLUAQobQ3JlYXRlU2VydmljZUJpbmRpbmdSZXF1ZXN0EkUKBnBhcmVu",
+            "dBgBIAEoCUI14EEC+kEvEi1uZXR3b3Jrc2VydmljZXMuZ29vZ2xlYXBpcy5j",
+            "b20vU2VydmljZUJpbmRpbmcSHwoSc2VydmljZV9iaW5kaW5nX2lkGAIgASgJ",
+            "QgPgQQISTQoPc2VydmljZV9iaW5kaW5nGAMgASgLMi8uZ29vZ2xlLmNsb3Vk",
+            "Lm5ldHdvcmtzZXJ2aWNlcy52MS5TZXJ2aWNlQmluZGluZ0ID4EECIqIBChtV",
+            "cGRhdGVTZXJ2aWNlQmluZGluZ1JlcXVlc3QSNAoLdXBkYXRlX21hc2sYASAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQESTQoPc2Vydmlj",
+            "ZV9iaW5kaW5nGAIgASgLMi8uZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNl",
+            "cy52MS5TZXJ2aWNlQmluZGluZ0ID4EECImIKG0RlbGV0ZVNlcnZpY2VCaW5k",
+            "aW5nUmVxdWVzdBJDCgRuYW1lGAEgASgJQjXgQQL6QS8KLW5ldHdvcmtzZXJ2",
+            "aWNlcy5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlQmluZGluZ0LzAgojY29tLmdv",
+            "b2dsZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjFCE1NlcnZpY2VCaW5kaW5n",
+            "UHJvdG9QAVpNY2xvdWQuZ29vZ2xlLmNvbS9nby9uZXR3b3Jrc2VydmljZXMv",
+            "YXBpdjEvbmV0d29ya3NlcnZpY2VzcGI7bmV0d29ya3NlcnZpY2VzcGKqAh9H",
+            "b29nbGUuQ2xvdWQuTmV0d29ya1NlcnZpY2VzLlYxygIfR29vZ2xlXENsb3Vk",
+            "XE5ldHdvcmtTZXJ2aWNlc1xWMeoCIkdvb2dsZTo6Q2xvdWQ6Ok5ldHdvcmtT",
+            "ZXJ2aWNlczo6VjHqQXwKJ3NlcnZpY2VkaXJlY3RvcnkuZ29vZ2xlYXBpcy5j",
+            "b20vU2VydmljZRJRcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L25hbWVzcGFjZXMve25hbWVzcGFjZX0vc2VydmljZXMve3NlcnZp",
+            "Y2V9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ServiceBinding), global::Google.Cloud.NetworkServices.V1.ServiceBinding.Parser, new[]{ "Name", "Description", "CreateTime", "UpdateTime", "Service", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ServiceBinding), global::Google.Cloud.NetworkServices.V1.ServiceBinding.Parser, new[]{ "Name", "Description", "CreateTime", "UpdateTime", "Service", "ServiceId", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ListServiceBindingsRequest), global::Google.Cloud.NetworkServices.V1.ListServiceBindingsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ListServiceBindingsResponse), global::Google.Cloud.NetworkServices.V1.ListServiceBindingsResponse.Parser, new[]{ "ServiceBindings", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ListServiceBindingsResponse), global::Google.Cloud.NetworkServices.V1.ListServiceBindingsResponse.Parser, new[]{ "ServiceBindings", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.GetServiceBindingRequest), global::Google.Cloud.NetworkServices.V1.GetServiceBindingRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.CreateServiceBindingRequest), global::Google.Cloud.NetworkServices.V1.CreateServiceBindingRequest.Parser, new[]{ "Parent", "ServiceBindingId", "ServiceBinding" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.UpdateServiceBindingRequest), global::Google.Cloud.NetworkServices.V1.UpdateServiceBindingRequest.Parser, new[]{ "UpdateMask", "ServiceBinding" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.DeleteServiceBindingRequest), global::Google.Cloud.NetworkServices.V1.DeleteServiceBindingRequest.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
@@ -75,8 +86,13 @@ namespace Google.Cloud.NetworkServices.V1 {
   }
   #region Messages
   /// <summary>
-  /// ServiceBinding is the resource that defines a Service Directory Service to
-  /// be used in a BackendService resource.
+  /// ServiceBinding can be used to:
+  /// - Bind a Service Directory Service to be used in a BackendService resource.
+  ///   This feature will be deprecated soon.
+  /// - Bind a Private Service Connect producer service to be used in consumer
+  ///   Cloud Service Mesh or Application Load Balancers.
+  /// - Bind a Cloud Run service to be used in consumer Cloud Service Mesh or
+  ///   Application Load Balancers.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ServiceBinding : pb::IMessage<ServiceBinding>
@@ -118,6 +134,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       service_ = other.service_;
+      serviceId_ = other.serviceId_;
       labels_ = other.labels_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -132,8 +149,8 @@ namespace Google.Cloud.NetworkServices.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Name of the ServiceBinding resource. It matches pattern
-    /// `projects/*/locations/global/serviceBindings/service_binding_name`.
+    /// Identifier. Name of the ServiceBinding resource. It matches pattern
+    /// `projects/*/locations/*/serviceBindings/&lt;service_binding_name>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -194,15 +211,38 @@ namespace Google.Cloud.NetworkServices.V1 {
     public const int ServiceFieldNumber = 5;
     private string service_ = "";
     /// <summary>
-    /// Required. The full service directory service name of the format
-    /// /projects/*/locations/*/namespaces/*/services/*
+    /// Optional. The full Service Directory Service name of the format
+    /// `projects/*/locations/*/namespaces/*/services/*`.
+    /// This field is for Service Directory integration which will be deprecated
+    /// soon.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Service {
       get { return service_; }
       set {
         service_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "service_id" field.</summary>
+    public const int ServiceIdFieldNumber = 8;
+    private string serviceId_ = "";
+    /// <summary>
+    /// Output only. The unique identifier of the Service Directory Service against
+    /// which the ServiceBinding resource is validated. This is populated when the
+    /// Service Binding resource is used in another resource (like Backend
+    /// Service). This is of the UUID4 format. This field is for Service Directory
+    /// integration which will be deprecated soon.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ServiceId {
+      get { return serviceId_; }
+      set {
+        serviceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -240,6 +280,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (Service != other.Service) return false;
+      if (ServiceId != other.ServiceId) return false;
       if (!Labels.Equals(other.Labels)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -253,6 +294,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (Service.Length != 0) hash ^= Service.GetHashCode();
+      if (ServiceId.Length != 0) hash ^= ServiceId.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -293,6 +335,10 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteString(Service);
       }
       labels_.WriteTo(output, _map_labels_codec);
+      if (ServiceId.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(ServiceId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -324,6 +370,10 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteString(Service);
       }
       labels_.WriteTo(ref output, _map_labels_codec);
+      if (ServiceId.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(ServiceId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -348,6 +398,9 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
       if (Service.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Service);
+      }
+      if (ServiceId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceId);
       }
       size += labels_.CalculateSize(_map_labels_codec);
       if (_unknownFields != null) {
@@ -382,6 +435,9 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
       if (other.Service.Length != 0) {
         Service = other.Service;
+      }
+      if (other.ServiceId.Length != 0) {
+        ServiceId = other.ServiceId;
       }
       labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -429,6 +485,10 @@ namespace Google.Cloud.NetworkServices.V1 {
             labels_.AddEntriesFrom(input, _map_labels_codec);
             break;
           }
+          case 66: {
+            ServiceId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -472,6 +532,10 @@ namespace Google.Cloud.NetworkServices.V1 {
           }
           case 58: {
             labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 66: {
+            ServiceId = input.ReadString();
             break;
           }
         }
@@ -536,7 +600,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The project and location from which the ServiceBindings should be
-    /// listed, specified in the format `projects/*/locations/global`.
+    /// listed, specified in the format `projects/*/locations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -800,6 +864,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     public ListServiceBindingsResponse(ListServiceBindingsResponse other) : this() {
       serviceBindings_ = other.serviceBindings_.Clone();
       nextPageToken_ = other.nextPageToken_;
+      unreachable_ = other.unreachable_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -840,6 +905,22 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
     }
 
+    /// <summary>Field number for the "unreachable" field.</summary>
+    public const int UnreachableFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_unreachable_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Unreachable resources. Populated when the request attempts to list all
+    /// resources across all supported locations, while some locations are
+    /// temporarily unavailable.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Unreachable {
+      get { return unreachable_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -857,6 +938,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
       if(!serviceBindings_.Equals(other.serviceBindings_)) return false;
       if (NextPageToken != other.NextPageToken) return false;
+      if(!unreachable_.Equals(other.unreachable_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -866,6 +948,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       int hash = 1;
       hash ^= serviceBindings_.GetHashCode();
       if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= unreachable_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -889,6 +972,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -904,6 +988,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(ref output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -918,6 +1003,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (NextPageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
       }
+      size += unreachable_.CalculateSize(_repeated_unreachable_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -934,6 +1020,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (other.NextPageToken.Length != 0) {
         NextPageToken = other.NextPageToken;
       }
+      unreachable_.Add(other.unreachable_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -957,6 +1044,10 @@ namespace Google.Cloud.NetworkServices.V1 {
             NextPageToken = input.ReadString();
             break;
           }
+          case 26: {
+            unreachable_.AddEntriesFrom(input, _repeated_unreachable_codec);
+            break;
+          }
         }
       }
     #endif
@@ -978,6 +1069,10 @@ namespace Google.Cloud.NetworkServices.V1 {
           }
           case 18: {
             NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(ref input, _repeated_unreachable_codec);
             break;
           }
         }
@@ -1040,7 +1135,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. A name of the ServiceBinding to get. Must be in the format
-    /// `projects/*/locations/global/serviceBindings/*`.
+    /// `projects/*/locations/*/serviceBindings/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1239,7 +1334,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent resource of the ServiceBinding. Must be in the
-    /// format `projects/*/locations/global`.
+    /// format `projects/*/locations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1471,6 +1566,264 @@ namespace Google.Cloud.NetworkServices.V1 {
   }
 
   /// <summary>
+  /// Request used by the UpdateServiceBinding method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateServiceBindingRequest : pb::IMessage<UpdateServiceBindingRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateServiceBindingRequest> _parser = new pb::MessageParser<UpdateServiceBindingRequest>(() => new UpdateServiceBindingRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateServiceBindingRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.NetworkServices.V1.ServiceBindingReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateServiceBindingRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateServiceBindingRequest(UpdateServiceBindingRequest other) : this() {
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      serviceBinding_ = other.serviceBinding_ != null ? other.serviceBinding_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateServiceBindingRequest Clone() {
+      return new UpdateServiceBindingRequest(this);
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Optional. Field mask is used to specify the fields to be overwritten in the
+    /// ServiceBinding resource by the update.
+    /// The fields specified in the update_mask are relative to the resource, not
+    /// the full request. A field will be overwritten if it is in the mask. If the
+    /// user does not provide a mask then all fields will be overwritten.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "service_binding" field.</summary>
+    public const int ServiceBindingFieldNumber = 2;
+    private global::Google.Cloud.NetworkServices.V1.ServiceBinding serviceBinding_;
+    /// <summary>
+    /// Required. Updated ServiceBinding resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetworkServices.V1.ServiceBinding ServiceBinding {
+      get { return serviceBinding_; }
+      set {
+        serviceBinding_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateServiceBindingRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateServiceBindingRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      if (!object.Equals(ServiceBinding, other.ServiceBinding)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (serviceBinding_ != null) hash ^= ServiceBinding.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (updateMask_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(UpdateMask);
+      }
+      if (serviceBinding_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ServiceBinding);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (updateMask_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(UpdateMask);
+      }
+      if (serviceBinding_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ServiceBinding);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (serviceBinding_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ServiceBinding);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateServiceBindingRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      if (other.serviceBinding_ != null) {
+        if (serviceBinding_ == null) {
+          ServiceBinding = new global::Google.Cloud.NetworkServices.V1.ServiceBinding();
+        }
+        ServiceBinding.MergeFrom(other.ServiceBinding);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 18: {
+            if (serviceBinding_ == null) {
+              ServiceBinding = new global::Google.Cloud.NetworkServices.V1.ServiceBinding();
+            }
+            input.ReadMessage(ServiceBinding);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 18: {
+            if (serviceBinding_ == null) {
+              ServiceBinding = new global::Google.Cloud.NetworkServices.V1.ServiceBinding();
+            }
+            input.ReadMessage(ServiceBinding);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request used by the DeleteServiceBinding method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1488,7 +1841,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkServices.V1.ServiceBindingReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.NetworkServices.V1.ServiceBindingReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1523,7 +1876,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. A name of the ServiceBinding to delete. Must be in the format
-    /// `projects/*/locations/global/serviceBindings/*`.
+    /// `projects/*/locations/*/serviceBindings/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

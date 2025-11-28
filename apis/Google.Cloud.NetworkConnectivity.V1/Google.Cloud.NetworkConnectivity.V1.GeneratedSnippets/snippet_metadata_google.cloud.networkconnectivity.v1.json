@@ -5140,6 +5140,3436 @@
       ]
     },
     {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_ListMulticloudDataTransferConfigs_sync",
+      "title": "ListMulticloudDataTransferConfigsRequestObject",
+      "description": "Snippet for ListMulticloudDataTransferConfigs",
+      "file": "DataTransferServiceClient.ListMulticloudDataTransferConfigsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMulticloudDataTransferConfigs",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.ListMulticloudDataTransferConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.ListMulticloudDataTransferConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListMulticloudDataTransferConfigsResponse, Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "ListMulticloudDataTransferConfigs",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.ListMulticloudDataTransferConfigs",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_ListMulticloudDataTransferConfigs_async",
+      "title": "ListMulticloudDataTransferConfigsRequestObjectAsync",
+      "description": "Snippet for ListMulticloudDataTransferConfigsAsync",
+      "file": "DataTransferServiceClient.ListMulticloudDataTransferConfigsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMulticloudDataTransferConfigsAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.ListMulticloudDataTransferConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.ListMulticloudDataTransferConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListMulticloudDataTransferConfigsResponse, Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "ListMulticloudDataTransferConfigs",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.ListMulticloudDataTransferConfigs",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_ListMulticloudDataTransferConfigs_sync_flattened",
+      "title": "ListMulticloudDataTransferConfigs",
+      "description": "Snippet for ListMulticloudDataTransferConfigs",
+      "file": "DataTransferServiceClient.ListMulticloudDataTransferConfigsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMulticloudDataTransferConfigs",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.ListMulticloudDataTransferConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListMulticloudDataTransferConfigsResponse, Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "ListMulticloudDataTransferConfigs",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.ListMulticloudDataTransferConfigs",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_ListMulticloudDataTransferConfigs_async_flattened",
+      "title": "ListMulticloudDataTransferConfigsAsync",
+      "description": "Snippet for ListMulticloudDataTransferConfigsAsync",
+      "file": "DataTransferServiceClient.ListMulticloudDataTransferConfigsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMulticloudDataTransferConfigsAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.ListMulticloudDataTransferConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListMulticloudDataTransferConfigsResponse, Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "ListMulticloudDataTransferConfigs",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.ListMulticloudDataTransferConfigs",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_ListMulticloudDataTransferConfigs_sync_flattened_resourceNames",
+      "title": "ListMulticloudDataTransferConfigsResourceNames",
+      "description": "Snippet for ListMulticloudDataTransferConfigs",
+      "file": "DataTransferServiceClient.ListMulticloudDataTransferConfigsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMulticloudDataTransferConfigs",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.ListMulticloudDataTransferConfigs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListMulticloudDataTransferConfigsResponse, Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "ListMulticloudDataTransferConfigs",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.ListMulticloudDataTransferConfigs",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_ListMulticloudDataTransferConfigs_async_flattened_resourceNames",
+      "title": "ListMulticloudDataTransferConfigsResourceNamesAsync",
+      "description": "Snippet for ListMulticloudDataTransferConfigsAsync",
+      "file": "DataTransferServiceClient.ListMulticloudDataTransferConfigsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMulticloudDataTransferConfigsAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.ListMulticloudDataTransferConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListMulticloudDataTransferConfigsResponse, Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "ListMulticloudDataTransferConfigs",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.ListMulticloudDataTransferConfigs",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_GetMulticloudDataTransferConfig_sync",
+      "title": "GetMulticloudDataTransferConfigRequestObject",
+      "description": "Snippet for GetMulticloudDataTransferConfig",
+      "file": "DataTransferServiceClient.GetMulticloudDataTransferConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMulticloudDataTransferConfig",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.GetMulticloudDataTransferConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GetMulticloudDataTransferConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "GetMulticloudDataTransferConfig",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.GetMulticloudDataTransferConfig",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_GetMulticloudDataTransferConfig_async",
+      "title": "GetMulticloudDataTransferConfigRequestObjectAsync",
+      "description": "Snippet for GetMulticloudDataTransferConfigAsync",
+      "file": "DataTransferServiceClient.GetMulticloudDataTransferConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMulticloudDataTransferConfigAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.GetMulticloudDataTransferConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GetMulticloudDataTransferConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "GetMulticloudDataTransferConfig",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.GetMulticloudDataTransferConfig",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_GetMulticloudDataTransferConfig_sync_flattened",
+      "title": "GetMulticloudDataTransferConfig",
+      "description": "Snippet for GetMulticloudDataTransferConfig",
+      "file": "DataTransferServiceClient.GetMulticloudDataTransferConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMulticloudDataTransferConfig",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.GetMulticloudDataTransferConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "GetMulticloudDataTransferConfig",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.GetMulticloudDataTransferConfig",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_GetMulticloudDataTransferConfig_async_flattened",
+      "title": "GetMulticloudDataTransferConfigAsync",
+      "description": "Snippet for GetMulticloudDataTransferConfigAsync",
+      "file": "DataTransferServiceClient.GetMulticloudDataTransferConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMulticloudDataTransferConfigAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.GetMulticloudDataTransferConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "GetMulticloudDataTransferConfig",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.GetMulticloudDataTransferConfig",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_GetMulticloudDataTransferConfig_sync_flattened_resourceNames",
+      "title": "GetMulticloudDataTransferConfigResourceNames",
+      "description": "Snippet for GetMulticloudDataTransferConfig",
+      "file": "DataTransferServiceClient.GetMulticloudDataTransferConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMulticloudDataTransferConfig",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.GetMulticloudDataTransferConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "GetMulticloudDataTransferConfig",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.GetMulticloudDataTransferConfig",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_GetMulticloudDataTransferConfig_async_flattened_resourceNames",
+      "title": "GetMulticloudDataTransferConfigResourceNamesAsync",
+      "description": "Snippet for GetMulticloudDataTransferConfigAsync",
+      "file": "DataTransferServiceClient.GetMulticloudDataTransferConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMulticloudDataTransferConfigAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.GetMulticloudDataTransferConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "GetMulticloudDataTransferConfig",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.GetMulticloudDataTransferConfig",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_CreateMulticloudDataTransferConfig_sync",
+      "title": "CreateMulticloudDataTransferConfigRequestObject",
+      "description": "Snippet for CreateMulticloudDataTransferConfig",
+      "file": "DataTransferServiceClient.CreateMulticloudDataTransferConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMulticloudDataTransferConfig",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.CreateMulticloudDataTransferConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.CreateMulticloudDataTransferConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMulticloudDataTransferConfig",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.CreateMulticloudDataTransferConfig",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_CreateMulticloudDataTransferConfig_async",
+      "title": "CreateMulticloudDataTransferConfigRequestObjectAsync",
+      "description": "Snippet for CreateMulticloudDataTransferConfigAsync",
+      "file": "DataTransferServiceClient.CreateMulticloudDataTransferConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMulticloudDataTransferConfigAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.CreateMulticloudDataTransferConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.CreateMulticloudDataTransferConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMulticloudDataTransferConfig",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.CreateMulticloudDataTransferConfig",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_CreateMulticloudDataTransferConfig_sync_flattened",
+      "title": "CreateMulticloudDataTransferConfig",
+      "description": "Snippet for CreateMulticloudDataTransferConfig",
+      "file": "DataTransferServiceClient.CreateMulticloudDataTransferConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMulticloudDataTransferConfig",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.CreateMulticloudDataTransferConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig",
+            "name": "multicloudDataTransferConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "multicloudDataTransferConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMulticloudDataTransferConfig",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.CreateMulticloudDataTransferConfig",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_CreateMulticloudDataTransferConfig_async_flattened",
+      "title": "CreateMulticloudDataTransferConfigAsync",
+      "description": "Snippet for CreateMulticloudDataTransferConfigAsync",
+      "file": "DataTransferServiceClient.CreateMulticloudDataTransferConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMulticloudDataTransferConfigAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.CreateMulticloudDataTransferConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig",
+            "name": "multicloudDataTransferConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "multicloudDataTransferConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMulticloudDataTransferConfig",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.CreateMulticloudDataTransferConfig",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_CreateMulticloudDataTransferConfig_sync_flattened_resourceNames",
+      "title": "CreateMulticloudDataTransferConfigResourceNames",
+      "description": "Snippet for CreateMulticloudDataTransferConfig",
+      "file": "DataTransferServiceClient.CreateMulticloudDataTransferConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMulticloudDataTransferConfig",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.CreateMulticloudDataTransferConfig",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig",
+            "name": "multicloudDataTransferConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "multicloudDataTransferConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMulticloudDataTransferConfig",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.CreateMulticloudDataTransferConfig",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_CreateMulticloudDataTransferConfig_async_flattened_resourceNames",
+      "title": "CreateMulticloudDataTransferConfigResourceNamesAsync",
+      "description": "Snippet for CreateMulticloudDataTransferConfigAsync",
+      "file": "DataTransferServiceClient.CreateMulticloudDataTransferConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMulticloudDataTransferConfigAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.CreateMulticloudDataTransferConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig",
+            "name": "multicloudDataTransferConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "multicloudDataTransferConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMulticloudDataTransferConfig",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.CreateMulticloudDataTransferConfig",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_UpdateMulticloudDataTransferConfig_sync",
+      "title": "UpdateMulticloudDataTransferConfigRequestObject",
+      "description": "Snippet for UpdateMulticloudDataTransferConfig",
+      "file": "DataTransferServiceClient.UpdateMulticloudDataTransferConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMulticloudDataTransferConfig",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.UpdateMulticloudDataTransferConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.UpdateMulticloudDataTransferConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateMulticloudDataTransferConfig",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.UpdateMulticloudDataTransferConfig",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_UpdateMulticloudDataTransferConfig_async",
+      "title": "UpdateMulticloudDataTransferConfigRequestObjectAsync",
+      "description": "Snippet for UpdateMulticloudDataTransferConfigAsync",
+      "file": "DataTransferServiceClient.UpdateMulticloudDataTransferConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMulticloudDataTransferConfigAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.UpdateMulticloudDataTransferConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.UpdateMulticloudDataTransferConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateMulticloudDataTransferConfig",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.UpdateMulticloudDataTransferConfig",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_UpdateMulticloudDataTransferConfig_sync_flattened",
+      "title": "UpdateMulticloudDataTransferConfig",
+      "description": "Snippet for UpdateMulticloudDataTransferConfig",
+      "file": "DataTransferServiceClient.UpdateMulticloudDataTransferConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMulticloudDataTransferConfig",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.UpdateMulticloudDataTransferConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig",
+            "name": "multicloudDataTransferConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateMulticloudDataTransferConfig",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.UpdateMulticloudDataTransferConfig",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_UpdateMulticloudDataTransferConfig_async_flattened",
+      "title": "UpdateMulticloudDataTransferConfigAsync",
+      "description": "Snippet for UpdateMulticloudDataTransferConfigAsync",
+      "file": "DataTransferServiceClient.UpdateMulticloudDataTransferConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMulticloudDataTransferConfigAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.UpdateMulticloudDataTransferConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig",
+            "name": "multicloudDataTransferConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfig, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateMulticloudDataTransferConfig",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.UpdateMulticloudDataTransferConfig",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_DeleteMulticloudDataTransferConfig_sync",
+      "title": "DeleteMulticloudDataTransferConfigRequestObject",
+      "description": "Snippet for DeleteMulticloudDataTransferConfig",
+      "file": "DataTransferServiceClient.DeleteMulticloudDataTransferConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMulticloudDataTransferConfig",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.DeleteMulticloudDataTransferConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.DeleteMulticloudDataTransferConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMulticloudDataTransferConfig",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.DeleteMulticloudDataTransferConfig",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_DeleteMulticloudDataTransferConfig_async",
+      "title": "DeleteMulticloudDataTransferConfigRequestObjectAsync",
+      "description": "Snippet for DeleteMulticloudDataTransferConfigAsync",
+      "file": "DataTransferServiceClient.DeleteMulticloudDataTransferConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMulticloudDataTransferConfigAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.DeleteMulticloudDataTransferConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.DeleteMulticloudDataTransferConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMulticloudDataTransferConfig",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.DeleteMulticloudDataTransferConfig",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_DeleteMulticloudDataTransferConfig_sync_flattened",
+      "title": "DeleteMulticloudDataTransferConfig",
+      "description": "Snippet for DeleteMulticloudDataTransferConfig",
+      "file": "DataTransferServiceClient.DeleteMulticloudDataTransferConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMulticloudDataTransferConfig",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.DeleteMulticloudDataTransferConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMulticloudDataTransferConfig",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.DeleteMulticloudDataTransferConfig",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_DeleteMulticloudDataTransferConfig_async_flattened",
+      "title": "DeleteMulticloudDataTransferConfigAsync",
+      "description": "Snippet for DeleteMulticloudDataTransferConfigAsync",
+      "file": "DataTransferServiceClient.DeleteMulticloudDataTransferConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMulticloudDataTransferConfigAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.DeleteMulticloudDataTransferConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMulticloudDataTransferConfig",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.DeleteMulticloudDataTransferConfig",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_DeleteMulticloudDataTransferConfig_sync_flattened_resourceNames",
+      "title": "DeleteMulticloudDataTransferConfigResourceNames",
+      "description": "Snippet for DeleteMulticloudDataTransferConfig",
+      "file": "DataTransferServiceClient.DeleteMulticloudDataTransferConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMulticloudDataTransferConfig",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.DeleteMulticloudDataTransferConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMulticloudDataTransferConfig",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.DeleteMulticloudDataTransferConfig",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_DeleteMulticloudDataTransferConfig_async_flattened_resourceNames",
+      "title": "DeleteMulticloudDataTransferConfigResourceNamesAsync",
+      "description": "Snippet for DeleteMulticloudDataTransferConfigAsync",
+      "file": "DataTransferServiceClient.DeleteMulticloudDataTransferConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMulticloudDataTransferConfigAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.DeleteMulticloudDataTransferConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMulticloudDataTransferConfig",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.DeleteMulticloudDataTransferConfig",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_ListDestinations_sync",
+      "title": "ListDestinationsRequestObject",
+      "description": "Snippet for ListDestinations",
+      "file": "DataTransferServiceClient.ListDestinationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDestinations",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.ListDestinations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.ListDestinationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListDestinationsResponse, Google.Cloud.NetworkConnectivity.V1.Destination>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "ListDestinations",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.ListDestinations",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_ListDestinations_async",
+      "title": "ListDestinationsRequestObjectAsync",
+      "description": "Snippet for ListDestinationsAsync",
+      "file": "DataTransferServiceClient.ListDestinationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDestinationsAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.ListDestinationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.ListDestinationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListDestinationsResponse, Google.Cloud.NetworkConnectivity.V1.Destination>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "ListDestinations",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.ListDestinations",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_ListDestinations_sync_flattened",
+      "title": "ListDestinations",
+      "description": "Snippet for ListDestinations",
+      "file": "DataTransferServiceClient.ListDestinationsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDestinations",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.ListDestinations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListDestinationsResponse, Google.Cloud.NetworkConnectivity.V1.Destination>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "ListDestinations",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.ListDestinations",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_ListDestinations_async_flattened",
+      "title": "ListDestinationsAsync",
+      "description": "Snippet for ListDestinationsAsync",
+      "file": "DataTransferServiceClient.ListDestinationsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDestinationsAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.ListDestinationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListDestinationsResponse, Google.Cloud.NetworkConnectivity.V1.Destination>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "ListDestinations",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.ListDestinations",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_ListDestinations_sync_flattened_resourceNames",
+      "title": "ListDestinationsResourceNames",
+      "description": "Snippet for ListDestinations",
+      "file": "DataTransferServiceClient.ListDestinationsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDestinations",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.ListDestinations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfigName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListDestinationsResponse, Google.Cloud.NetworkConnectivity.V1.Destination>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "ListDestinations",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.ListDestinations",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_ListDestinations_async_flattened_resourceNames",
+      "title": "ListDestinationsResourceNamesAsync",
+      "description": "Snippet for ListDestinationsAsync",
+      "file": "DataTransferServiceClient.ListDestinationsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDestinationsAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.ListDestinationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfigName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListDestinationsResponse, Google.Cloud.NetworkConnectivity.V1.Destination>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "ListDestinations",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.ListDestinations",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_GetDestination_sync",
+      "title": "GetDestinationRequestObject",
+      "description": "Snippet for GetDestination",
+      "file": "DataTransferServiceClient.GetDestinationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDestination",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.GetDestination",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GetDestinationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkConnectivity.V1.Destination",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "GetDestination",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.GetDestination",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_GetDestination_async",
+      "title": "GetDestinationRequestObjectAsync",
+      "description": "Snippet for GetDestinationAsync",
+      "file": "DataTransferServiceClient.GetDestinationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDestinationAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.GetDestinationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GetDestinationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.Destination>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "GetDestination",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.GetDestination",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_GetDestination_sync_flattened",
+      "title": "GetDestination",
+      "description": "Snippet for GetDestination",
+      "file": "DataTransferServiceClient.GetDestinationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDestination",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.GetDestination",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkConnectivity.V1.Destination",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "GetDestination",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.GetDestination",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_GetDestination_async_flattened",
+      "title": "GetDestinationAsync",
+      "description": "Snippet for GetDestinationAsync",
+      "file": "DataTransferServiceClient.GetDestinationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDestinationAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.GetDestinationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.Destination>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "GetDestination",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.GetDestination",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_GetDestination_sync_flattened_resourceNames",
+      "title": "GetDestinationResourceNames",
+      "description": "Snippet for GetDestination",
+      "file": "DataTransferServiceClient.GetDestinationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDestination",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.GetDestination",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.DestinationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkConnectivity.V1.Destination",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "GetDestination",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.GetDestination",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_GetDestination_async_flattened_resourceNames",
+      "title": "GetDestinationResourceNamesAsync",
+      "description": "Snippet for GetDestinationAsync",
+      "file": "DataTransferServiceClient.GetDestinationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDestinationAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.GetDestinationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.DestinationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.Destination>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "GetDestination",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.GetDestination",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_CreateDestination_sync",
+      "title": "CreateDestinationRequestObject",
+      "description": "Snippet for CreateDestination",
+      "file": "DataTransferServiceClient.CreateDestinationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDestination",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.CreateDestination",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.CreateDestinationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Destination, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDestination",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.CreateDestination",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_CreateDestination_async",
+      "title": "CreateDestinationRequestObjectAsync",
+      "description": "Snippet for CreateDestinationAsync",
+      "file": "DataTransferServiceClient.CreateDestinationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDestinationAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.CreateDestinationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.CreateDestinationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Destination, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDestination",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.CreateDestination",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_CreateDestination_sync_flattened",
+      "title": "CreateDestination",
+      "description": "Snippet for CreateDestination",
+      "file": "DataTransferServiceClient.CreateDestinationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDestination",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.CreateDestination",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.Destination",
+            "name": "destination"
+          },
+          {
+            "type": "System.String",
+            "name": "destinationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Destination, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDestination",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.CreateDestination",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_CreateDestination_async_flattened",
+      "title": "CreateDestinationAsync",
+      "description": "Snippet for CreateDestinationAsync",
+      "file": "DataTransferServiceClient.CreateDestinationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDestinationAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.CreateDestinationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.Destination",
+            "name": "destination"
+          },
+          {
+            "type": "System.String",
+            "name": "destinationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Destination, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDestination",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.CreateDestination",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_CreateDestination_sync_flattened_resourceNames",
+      "title": "CreateDestinationResourceNames",
+      "description": "Snippet for CreateDestination",
+      "file": "DataTransferServiceClient.CreateDestinationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDestination",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.CreateDestination",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfigName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.Destination",
+            "name": "destination"
+          },
+          {
+            "type": "System.String",
+            "name": "destinationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Destination, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDestination",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.CreateDestination",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_CreateDestination_async_flattened_resourceNames",
+      "title": "CreateDestinationResourceNamesAsync",
+      "description": "Snippet for CreateDestinationAsync",
+      "file": "DataTransferServiceClient.CreateDestinationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDestinationAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.CreateDestinationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferConfigName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.Destination",
+            "name": "destination"
+          },
+          {
+            "type": "System.String",
+            "name": "destinationId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Destination, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDestination",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.CreateDestination",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_UpdateDestination_sync",
+      "title": "UpdateDestinationRequestObject",
+      "description": "Snippet for UpdateDestination",
+      "file": "DataTransferServiceClient.UpdateDestinationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDestination",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.UpdateDestination",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.UpdateDestinationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Destination, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDestination",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.UpdateDestination",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_UpdateDestination_async",
+      "title": "UpdateDestinationRequestObjectAsync",
+      "description": "Snippet for UpdateDestinationAsync",
+      "file": "DataTransferServiceClient.UpdateDestinationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDestinationAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.UpdateDestinationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.UpdateDestinationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Destination, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDestination",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.UpdateDestination",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_UpdateDestination_sync_flattened",
+      "title": "UpdateDestination",
+      "description": "Snippet for UpdateDestination",
+      "file": "DataTransferServiceClient.UpdateDestinationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDestination",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.UpdateDestination",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.Destination",
+            "name": "destination"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Destination, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDestination",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.UpdateDestination",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_UpdateDestination_async_flattened",
+      "title": "UpdateDestinationAsync",
+      "description": "Snippet for UpdateDestinationAsync",
+      "file": "DataTransferServiceClient.UpdateDestinationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDestinationAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.UpdateDestinationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.Destination",
+            "name": "destination"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.Destination, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDestination",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.UpdateDestination",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_DeleteDestination_sync",
+      "title": "DeleteDestinationRequestObject",
+      "description": "Snippet for DeleteDestination",
+      "file": "DataTransferServiceClient.DeleteDestinationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDestination",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.DeleteDestination",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.DeleteDestinationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDestination",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.DeleteDestination",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_DeleteDestination_async",
+      "title": "DeleteDestinationRequestObjectAsync",
+      "description": "Snippet for DeleteDestinationAsync",
+      "file": "DataTransferServiceClient.DeleteDestinationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDestinationAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.DeleteDestinationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.DeleteDestinationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDestination",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.DeleteDestination",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_DeleteDestination_sync_flattened",
+      "title": "DeleteDestination",
+      "description": "Snippet for DeleteDestination",
+      "file": "DataTransferServiceClient.DeleteDestinationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDestination",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.DeleteDestination",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDestination",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.DeleteDestination",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_DeleteDestination_async_flattened",
+      "title": "DeleteDestinationAsync",
+      "description": "Snippet for DeleteDestinationAsync",
+      "file": "DataTransferServiceClient.DeleteDestinationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDestinationAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.DeleteDestinationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDestination",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.DeleteDestination",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_DeleteDestination_sync_flattened_resourceNames",
+      "title": "DeleteDestinationResourceNames",
+      "description": "Snippet for DeleteDestination",
+      "file": "DataTransferServiceClient.DeleteDestinationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDestination",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.DeleteDestination",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.DestinationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDestination",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.DeleteDestination",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_DeleteDestination_async_flattened_resourceNames",
+      "title": "DeleteDestinationResourceNamesAsync",
+      "description": "Snippet for DeleteDestinationAsync",
+      "file": "DataTransferServiceClient.DeleteDestinationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDestinationAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.DeleteDestinationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.DestinationName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDestination",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.DeleteDestination",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_GetMulticloudDataTransferSupportedService_sync",
+      "title": "GetMulticloudDataTransferSupportedServiceRequestObject",
+      "description": "Snippet for GetMulticloudDataTransferSupportedService",
+      "file": "DataTransferServiceClient.GetMulticloudDataTransferSupportedServiceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMulticloudDataTransferSupportedService",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.GetMulticloudDataTransferSupportedService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GetMulticloudDataTransferSupportedServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferSupportedService",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "GetMulticloudDataTransferSupportedService",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.GetMulticloudDataTransferSupportedService",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_GetMulticloudDataTransferSupportedService_async",
+      "title": "GetMulticloudDataTransferSupportedServiceRequestObjectAsync",
+      "description": "Snippet for GetMulticloudDataTransferSupportedServiceAsync",
+      "file": "DataTransferServiceClient.GetMulticloudDataTransferSupportedServiceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMulticloudDataTransferSupportedServiceAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.GetMulticloudDataTransferSupportedServiceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GetMulticloudDataTransferSupportedServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferSupportedService>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "GetMulticloudDataTransferSupportedService",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.GetMulticloudDataTransferSupportedService",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_GetMulticloudDataTransferSupportedService_sync_flattened",
+      "title": "GetMulticloudDataTransferSupportedService",
+      "description": "Snippet for GetMulticloudDataTransferSupportedService",
+      "file": "DataTransferServiceClient.GetMulticloudDataTransferSupportedServiceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMulticloudDataTransferSupportedService",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.GetMulticloudDataTransferSupportedService",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferSupportedService",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "GetMulticloudDataTransferSupportedService",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.GetMulticloudDataTransferSupportedService",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_GetMulticloudDataTransferSupportedService_async_flattened",
+      "title": "GetMulticloudDataTransferSupportedServiceAsync",
+      "description": "Snippet for GetMulticloudDataTransferSupportedServiceAsync",
+      "file": "DataTransferServiceClient.GetMulticloudDataTransferSupportedServiceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMulticloudDataTransferSupportedServiceAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.GetMulticloudDataTransferSupportedServiceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferSupportedService>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "GetMulticloudDataTransferSupportedService",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.GetMulticloudDataTransferSupportedService",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_GetMulticloudDataTransferSupportedService_sync_flattened_resourceNames",
+      "title": "GetMulticloudDataTransferSupportedServiceResourceNames",
+      "description": "Snippet for GetMulticloudDataTransferSupportedService",
+      "file": "DataTransferServiceClient.GetMulticloudDataTransferSupportedServiceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMulticloudDataTransferSupportedService",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.GetMulticloudDataTransferSupportedService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferSupportedServiceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferSupportedService",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "GetMulticloudDataTransferSupportedService",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.GetMulticloudDataTransferSupportedService",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_GetMulticloudDataTransferSupportedService_async_flattened_resourceNames",
+      "title": "GetMulticloudDataTransferSupportedServiceResourceNamesAsync",
+      "description": "Snippet for GetMulticloudDataTransferSupportedServiceAsync",
+      "file": "DataTransferServiceClient.GetMulticloudDataTransferSupportedServiceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMulticloudDataTransferSupportedServiceAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.GetMulticloudDataTransferSupportedServiceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferSupportedServiceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferSupportedService>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "GetMulticloudDataTransferSupportedService",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.GetMulticloudDataTransferSupportedService",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_ListMulticloudDataTransferSupportedServices_sync",
+      "title": "ListMulticloudDataTransferSupportedServicesRequestObject",
+      "description": "Snippet for ListMulticloudDataTransferSupportedServices",
+      "file": "DataTransferServiceClient.ListMulticloudDataTransferSupportedServicesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMulticloudDataTransferSupportedServices",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.ListMulticloudDataTransferSupportedServices",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.ListMulticloudDataTransferSupportedServicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListMulticloudDataTransferSupportedServicesResponse, Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferSupportedService>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "ListMulticloudDataTransferSupportedServices",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.ListMulticloudDataTransferSupportedServices",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_ListMulticloudDataTransferSupportedServices_async",
+      "title": "ListMulticloudDataTransferSupportedServicesRequestObjectAsync",
+      "description": "Snippet for ListMulticloudDataTransferSupportedServicesAsync",
+      "file": "DataTransferServiceClient.ListMulticloudDataTransferSupportedServicesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMulticloudDataTransferSupportedServicesAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.ListMulticloudDataTransferSupportedServicesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.ListMulticloudDataTransferSupportedServicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListMulticloudDataTransferSupportedServicesResponse, Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferSupportedService>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "ListMulticloudDataTransferSupportedServices",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.ListMulticloudDataTransferSupportedServices",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_ListMulticloudDataTransferSupportedServices_sync_flattened",
+      "title": "ListMulticloudDataTransferSupportedServices",
+      "description": "Snippet for ListMulticloudDataTransferSupportedServices",
+      "file": "DataTransferServiceClient.ListMulticloudDataTransferSupportedServicesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMulticloudDataTransferSupportedServices",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.ListMulticloudDataTransferSupportedServices",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListMulticloudDataTransferSupportedServicesResponse, Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferSupportedService>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "ListMulticloudDataTransferSupportedServices",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.ListMulticloudDataTransferSupportedServices",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_ListMulticloudDataTransferSupportedServices_async_flattened",
+      "title": "ListMulticloudDataTransferSupportedServicesAsync",
+      "description": "Snippet for ListMulticloudDataTransferSupportedServicesAsync",
+      "file": "DataTransferServiceClient.ListMulticloudDataTransferSupportedServicesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMulticloudDataTransferSupportedServicesAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.ListMulticloudDataTransferSupportedServicesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListMulticloudDataTransferSupportedServicesResponse, Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferSupportedService>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "ListMulticloudDataTransferSupportedServices",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.ListMulticloudDataTransferSupportedServices",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_ListMulticloudDataTransferSupportedServices_sync_flattened_resourceNames",
+      "title": "ListMulticloudDataTransferSupportedServicesResourceNames",
+      "description": "Snippet for ListMulticloudDataTransferSupportedServices",
+      "file": "DataTransferServiceClient.ListMulticloudDataTransferSupportedServicesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMulticloudDataTransferSupportedServices",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.ListMulticloudDataTransferSupportedServices",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListMulticloudDataTransferSupportedServicesResponse, Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferSupportedService>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "ListMulticloudDataTransferSupportedServices",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.ListMulticloudDataTransferSupportedServices",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_DataTransferService_ListMulticloudDataTransferSupportedServices_async_flattened_resourceNames",
+      "title": "ListMulticloudDataTransferSupportedServicesResourceNamesAsync",
+      "description": "Snippet for ListMulticloudDataTransferSupportedServicesAsync",
+      "file": "DataTransferServiceClient.ListMulticloudDataTransferSupportedServicesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMulticloudDataTransferSupportedServicesAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient.ListMulticloudDataTransferSupportedServicesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListMulticloudDataTransferSupportedServicesResponse, Google.Cloud.NetworkConnectivity.V1.MulticloudDataTransferSupportedService>",
+        "client": {
+          "shortName": "DataTransferServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.DataTransferServiceClient"
+        },
+        "method": {
+          "shortName": "ListMulticloudDataTransferSupportedServices",
+          "fullName": "google.cloud.networkconnectivity.v1.DataTransferService.ListMulticloudDataTransferSupportedServices",
+          "service": {
+            "shortName": "DataTransferService",
+            "fullName": "google.cloud.networkconnectivity.v1.DataTransferService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "networkconnectivity_v1_generated_HubService_ListHubs_sync",
       "title": "ListHubsRequestObject",
       "description": "Snippet for ListHubs",
@@ -11859,6 +15289,1418 @@
         {
           "start": 37,
           "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_ListInternalRanges_sync",
+      "title": "ListInternalRangesRequestObject",
+      "description": "Snippet for ListInternalRanges",
+      "file": "InternalRangeServiceClient.ListInternalRangesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInternalRanges",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.ListInternalRanges",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.ListInternalRangesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListInternalRangesResponse, Google.Cloud.NetworkConnectivity.V1.InternalRange>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "ListInternalRanges",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.ListInternalRanges",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_ListInternalRanges_async",
+      "title": "ListInternalRangesRequestObjectAsync",
+      "description": "Snippet for ListInternalRangesAsync",
+      "file": "InternalRangeServiceClient.ListInternalRangesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInternalRangesAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.ListInternalRangesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.ListInternalRangesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListInternalRangesResponse, Google.Cloud.NetworkConnectivity.V1.InternalRange>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "ListInternalRanges",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.ListInternalRanges",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_ListInternalRanges_sync_flattened",
+      "title": "ListInternalRanges",
+      "description": "Snippet for ListInternalRanges",
+      "file": "InternalRangeServiceClient.ListInternalRangesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInternalRanges",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.ListInternalRanges",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListInternalRangesResponse, Google.Cloud.NetworkConnectivity.V1.InternalRange>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "ListInternalRanges",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.ListInternalRanges",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_ListInternalRanges_async_flattened",
+      "title": "ListInternalRangesAsync",
+      "description": "Snippet for ListInternalRangesAsync",
+      "file": "InternalRangeServiceClient.ListInternalRangesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInternalRangesAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.ListInternalRangesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListInternalRangesResponse, Google.Cloud.NetworkConnectivity.V1.InternalRange>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "ListInternalRanges",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.ListInternalRanges",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_ListInternalRanges_sync_flattened_resourceNames",
+      "title": "ListInternalRangesResourceNames",
+      "description": "Snippet for ListInternalRanges",
+      "file": "InternalRangeServiceClient.ListInternalRangesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInternalRanges",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.ListInternalRanges",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkConnectivity.V1.ListInternalRangesResponse, Google.Cloud.NetworkConnectivity.V1.InternalRange>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "ListInternalRanges",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.ListInternalRanges",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_ListInternalRanges_async_flattened_resourceNames",
+      "title": "ListInternalRangesResourceNamesAsync",
+      "description": "Snippet for ListInternalRangesAsync",
+      "file": "InternalRangeServiceClient.ListInternalRangesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListInternalRangesAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.ListInternalRangesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkConnectivity.V1.ListInternalRangesResponse, Google.Cloud.NetworkConnectivity.V1.InternalRange>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "ListInternalRanges",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.ListInternalRanges",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_GetInternalRange_sync",
+      "title": "GetInternalRangeRequestObject",
+      "description": "Snippet for GetInternalRange",
+      "file": "InternalRangeServiceClient.GetInternalRangeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInternalRange",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.GetInternalRange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GetInternalRangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkConnectivity.V1.InternalRange",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "GetInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.GetInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_GetInternalRange_async",
+      "title": "GetInternalRangeRequestObjectAsync",
+      "description": "Snippet for GetInternalRangeAsync",
+      "file": "InternalRangeServiceClient.GetInternalRangeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInternalRangeAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.GetInternalRangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.GetInternalRangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.InternalRange>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "GetInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.GetInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_GetInternalRange_sync_flattened",
+      "title": "GetInternalRange",
+      "description": "Snippet for GetInternalRange",
+      "file": "InternalRangeServiceClient.GetInternalRangeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInternalRange",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.GetInternalRange",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkConnectivity.V1.InternalRange",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "GetInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.GetInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_GetInternalRange_async_flattened",
+      "title": "GetInternalRangeAsync",
+      "description": "Snippet for GetInternalRangeAsync",
+      "file": "InternalRangeServiceClient.GetInternalRangeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInternalRangeAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.GetInternalRangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.InternalRange>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "GetInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.GetInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_GetInternalRange_sync_flattened_resourceNames",
+      "title": "GetInternalRangeResourceNames",
+      "description": "Snippet for GetInternalRange",
+      "file": "InternalRangeServiceClient.GetInternalRangeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInternalRange",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.GetInternalRange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.InternalRangeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkConnectivity.V1.InternalRange",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "GetInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.GetInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_GetInternalRange_async_flattened_resourceNames",
+      "title": "GetInternalRangeResourceNamesAsync",
+      "description": "Snippet for GetInternalRangeAsync",
+      "file": "InternalRangeServiceClient.GetInternalRangeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetInternalRangeAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.GetInternalRangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.InternalRangeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1.InternalRange>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "GetInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.GetInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_CreateInternalRange_sync",
+      "title": "CreateInternalRangeRequestObject",
+      "description": "Snippet for CreateInternalRange",
+      "file": "InternalRangeServiceClient.CreateInternalRangeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInternalRange",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.CreateInternalRange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.CreateInternalRangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.InternalRange, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "CreateInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.CreateInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_CreateInternalRange_async",
+      "title": "CreateInternalRangeRequestObjectAsync",
+      "description": "Snippet for CreateInternalRangeAsync",
+      "file": "InternalRangeServiceClient.CreateInternalRangeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInternalRangeAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.CreateInternalRangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.CreateInternalRangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.InternalRange, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "CreateInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.CreateInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_CreateInternalRange_sync_flattened",
+      "title": "CreateInternalRange",
+      "description": "Snippet for CreateInternalRange",
+      "file": "InternalRangeServiceClient.CreateInternalRangeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInternalRange",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.CreateInternalRange",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.InternalRange",
+            "name": "internalRange"
+          },
+          {
+            "type": "System.String",
+            "name": "internalRangeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.InternalRange, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "CreateInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.CreateInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_CreateInternalRange_async_flattened",
+      "title": "CreateInternalRangeAsync",
+      "description": "Snippet for CreateInternalRangeAsync",
+      "file": "InternalRangeServiceClient.CreateInternalRangeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInternalRangeAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.CreateInternalRangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.InternalRange",
+            "name": "internalRange"
+          },
+          {
+            "type": "System.String",
+            "name": "internalRangeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.InternalRange, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "CreateInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.CreateInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_CreateInternalRange_sync_flattened_resourceNames",
+      "title": "CreateInternalRangeResourceNames",
+      "description": "Snippet for CreateInternalRange",
+      "file": "InternalRangeServiceClient.CreateInternalRangeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInternalRange",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.CreateInternalRange",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.InternalRange",
+            "name": "internalRange"
+          },
+          {
+            "type": "System.String",
+            "name": "internalRangeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.InternalRange, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "CreateInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.CreateInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_CreateInternalRange_async_flattened_resourceNames",
+      "title": "CreateInternalRangeResourceNamesAsync",
+      "description": "Snippet for CreateInternalRangeAsync",
+      "file": "InternalRangeServiceClient.CreateInternalRangeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateInternalRangeAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.CreateInternalRangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.InternalRange",
+            "name": "internalRange"
+          },
+          {
+            "type": "System.String",
+            "name": "internalRangeId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.InternalRange, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "CreateInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.CreateInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_UpdateInternalRange_sync",
+      "title": "UpdateInternalRangeRequestObject",
+      "description": "Snippet for UpdateInternalRange",
+      "file": "InternalRangeServiceClient.UpdateInternalRangeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInternalRange",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.UpdateInternalRange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.UpdateInternalRangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.InternalRange, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.UpdateInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_UpdateInternalRange_async",
+      "title": "UpdateInternalRangeRequestObjectAsync",
+      "description": "Snippet for UpdateInternalRangeAsync",
+      "file": "InternalRangeServiceClient.UpdateInternalRangeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInternalRangeAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.UpdateInternalRangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.UpdateInternalRangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.InternalRange, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.UpdateInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_UpdateInternalRange_sync_flattened",
+      "title": "UpdateInternalRange",
+      "description": "Snippet for UpdateInternalRange",
+      "file": "InternalRangeServiceClient.UpdateInternalRangeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInternalRange",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.UpdateInternalRange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.InternalRange",
+            "name": "internalRange"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.InternalRange, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.UpdateInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_UpdateInternalRange_async_flattened",
+      "title": "UpdateInternalRangeAsync",
+      "description": "Snippet for UpdateInternalRangeAsync",
+      "file": "InternalRangeServiceClient.UpdateInternalRangeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateInternalRangeAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.UpdateInternalRangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.InternalRange",
+            "name": "internalRange"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkConnectivity.V1.InternalRange, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.UpdateInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_DeleteInternalRange_sync",
+      "title": "DeleteInternalRangeRequestObject",
+      "description": "Snippet for DeleteInternalRange",
+      "file": "InternalRangeServiceClient.DeleteInternalRangeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInternalRange",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.DeleteInternalRange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.DeleteInternalRangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.DeleteInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_DeleteInternalRange_async",
+      "title": "DeleteInternalRangeRequestObjectAsync",
+      "description": "Snippet for DeleteInternalRangeAsync",
+      "file": "InternalRangeServiceClient.DeleteInternalRangeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInternalRangeAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.DeleteInternalRangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.DeleteInternalRangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.DeleteInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_DeleteInternalRange_sync_flattened",
+      "title": "DeleteInternalRange",
+      "description": "Snippet for DeleteInternalRange",
+      "file": "InternalRangeServiceClient.DeleteInternalRangeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInternalRange",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.DeleteInternalRange",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.DeleteInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_DeleteInternalRange_async_flattened",
+      "title": "DeleteInternalRangeAsync",
+      "description": "Snippet for DeleteInternalRangeAsync",
+      "file": "InternalRangeServiceClient.DeleteInternalRangeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInternalRangeAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.DeleteInternalRangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.DeleteInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_DeleteInternalRange_sync_flattened_resourceNames",
+      "title": "DeleteInternalRangeResourceNames",
+      "description": "Snippet for DeleteInternalRange",
+      "file": "InternalRangeServiceClient.DeleteInternalRangeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInternalRange",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.DeleteInternalRange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.InternalRangeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.DeleteInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1_generated_InternalRangeService_DeleteInternalRange_async_flattened_resourceNames",
+      "title": "DeleteInternalRangeResourceNamesAsync",
+      "description": "Snippet for DeleteInternalRangeAsync",
+      "file": "InternalRangeServiceClient.DeleteInternalRangeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteInternalRangeAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient.DeleteInternalRangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1.InternalRangeName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkConnectivity.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "InternalRangeServiceClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1.InternalRangeServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteInternalRange",
+          "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService.DeleteInternalRange",
+          "service": {
+            "shortName": "InternalRangeService",
+            "fullName": "google.cloud.networkconnectivity.v1.InternalRangeService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
           "type": "SHORT"
         }
       ]

@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 CapacityCommitmentIds = { "", },
+                CapacityCommitmentId = "",
             };
             // Make the request
             CapacityCommitment response = await reservationServiceClient.MergeCapacityCommitmentsAsync(request);

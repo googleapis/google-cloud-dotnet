@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.2.0, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+### Documentation improvements
+
+- A comment for field `daos_version` in message `.google.cloud.parallelstore.v1.Instance` is changed
+- A comment for field `objects_failed` in message `.google.cloud.parallelstore.v1.TransferCounters` is changed
+- A comment for field `bytes_failed` in message `.google.cloud.parallelstore.v1.TransferCounters` is changed
+
 ## Version 1.1.0, released 2025-02-18
 
 ### New features

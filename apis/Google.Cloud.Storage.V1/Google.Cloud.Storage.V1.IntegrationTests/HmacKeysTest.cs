@@ -40,7 +40,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         {
             var client = _fixture.Client;
             var projectId = _fixture.ProjectId;
-            var serviceAccountEmail = GetServiceAccountEmail();
+            var serviceAccountEmail = await GetServiceAccountEmailAsync();
             // This is generally a valid service account for a project.
             string alternativeServiceAccountEmail = $"{projectId}@appspot.gserviceaccount.com";
 
@@ -107,7 +107,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         {
             var client = _fixture.Client;
             var projectId = _fixture.ProjectId;
-            var serviceAccountEmail = GetServiceAccountEmail();
+            var serviceAccountEmail = await GetServiceAccountEmailAsync();
             string alternativeServiceAccountEmail = $"{projectId}@appspot.gserviceaccount.com";
 
             // If we find this fails in CI, we'll need to work out an alternative plan.
@@ -166,17 +166,15 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             });
         }
 
-        private static string GetServiceAccountEmail()
+        private static async Task<string> GetServiceAccountEmailAsync()
         {
             var cred = GoogleCredential.GetApplicationDefault().UnderlyingCredential;
-            switch (cred)
+            return cred switch
             {
-                case ServiceAccountCredential sac:
-                    return sac.Id;
-                // TODO: We may well need to handle ComputeCredential for Kokoro.
-                default:
-                    throw new InvalidOperationException($"Unable to retrieve service account email address for credential type {cred.GetType()}");
-            }
+                ServiceAccountCredential sa => sa.Id,
+                ComputeCredential comp => await comp.GetDefaultServiceAccountEmailAsync(),
+                _ => throw new InvalidOperationException($"Unable to retrieve service account email address for credential type {cred.GetType()}")
+            };
         }
     }
 }

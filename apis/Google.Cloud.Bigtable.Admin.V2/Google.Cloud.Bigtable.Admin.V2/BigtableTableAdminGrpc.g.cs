@@ -154,6 +154,20 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CreateSchemaBundleRequest> __Marshaller_google_bigtable_admin_v2_CreateSchemaBundleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.CreateSchemaBundleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.UpdateSchemaBundleRequest> __Marshaller_google_bigtable_admin_v2_UpdateSchemaBundleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.UpdateSchemaBundleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GetSchemaBundleRequest> __Marshaller_google_bigtable_admin_v2_GetSchemaBundleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.GetSchemaBundleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.SchemaBundle> __Marshaller_google_bigtable_admin_v2_SchemaBundle = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.SchemaBundle.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesRequest> __Marshaller_google_bigtable_admin_v2_ListSchemaBundlesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesResponse> __Marshaller_google_bigtable_admin_v2_ListSchemaBundlesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DeleteSchemaBundleRequest> __Marshaller_google_bigtable_admin_v2_DeleteSchemaBundleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.DeleteSchemaBundleRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest, global::Google.Cloud.Bigtable.Admin.V2.Table> __Method_CreateTable = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest, global::Google.Cloud.Bigtable.Admin.V2.Table>(
@@ -394,6 +408,46 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         "TestIamPermissions",
         __Marshaller_google_iam_v1_TestIamPermissionsRequest,
         __Marshaller_google_iam_v1_TestIamPermissionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateSchemaBundleRequest, global::Google.LongRunning.Operation> __Method_CreateSchemaBundle = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateSchemaBundleRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateSchemaBundle",
+        __Marshaller_google_bigtable_admin_v2_CreateSchemaBundleRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.UpdateSchemaBundleRequest, global::Google.LongRunning.Operation> __Method_UpdateSchemaBundle = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.UpdateSchemaBundleRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateSchemaBundle",
+        __Marshaller_google_bigtable_admin_v2_UpdateSchemaBundleRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetSchemaBundleRequest, global::Google.Cloud.Bigtable.Admin.V2.SchemaBundle> __Method_GetSchemaBundle = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetSchemaBundleRequest, global::Google.Cloud.Bigtable.Admin.V2.SchemaBundle>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSchemaBundle",
+        __Marshaller_google_bigtable_admin_v2_GetSchemaBundleRequest,
+        __Marshaller_google_bigtable_admin_v2_SchemaBundle);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesRequest, global::Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesResponse> __Method_ListSchemaBundles = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesRequest, global::Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSchemaBundles",
+        __Marshaller_google_bigtable_admin_v2_ListSchemaBundlesRequest,
+        __Marshaller_google_bigtable_admin_v2_ListSchemaBundlesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteSchemaBundleRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSchemaBundle = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteSchemaBundleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteSchemaBundle",
+        __Marshaller_google_bigtable_admin_v2_DeleteSchemaBundleRequest,
+        __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -789,7 +843,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// Gets the access control policy for a Table or Backup resource.
+      /// Gets the access control policy for a Bigtable resource.
       /// Returns an empty policy if the resource exists but does not have a policy
       /// set.
       /// </summary>
@@ -803,7 +857,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// Sets the access control policy on a Table or Backup resource.
+      /// Sets the access control policy on a Bigtable resource.
       /// Replaces any existing policy.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -816,7 +870,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// Returns permissions that the caller has on the specified Table or Backup
+      /// Returns permissions that the caller has on the specified Bigtable
       /// resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -824,6 +878,66 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new schema bundle in the specified table.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateSchemaBundle(global::Google.Cloud.Bigtable.Admin.V2.CreateSchemaBundleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a schema bundle in the specified table.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateSchemaBundle(global::Google.Cloud.Bigtable.Admin.V2.UpdateSchemaBundleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets metadata information about the specified schema bundle.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.SchemaBundle> GetSchemaBundle(global::Google.Cloud.Bigtable.Admin.V2.GetSchemaBundleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all schema bundles associated with the specified table.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesResponse> ListSchemaBundles(global::Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a schema bundle in the specified table.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSchemaBundle(global::Google.Cloud.Bigtable.Admin.V2.DeleteSchemaBundleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2390,7 +2504,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_CopyBackup, null, options, request);
       }
       /// <summary>
-      /// Gets the access control policy for a Table or Backup resource.
+      /// Gets the access control policy for a Bigtable resource.
       /// Returns an empty policy if the resource exists but does not have a policy
       /// set.
       /// </summary>
@@ -2405,7 +2519,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets the access control policy for a Table or Backup resource.
+      /// Gets the access control policy for a Bigtable resource.
       /// Returns an empty policy if the resource exists but does not have a policy
       /// set.
       /// </summary>
@@ -2418,7 +2532,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Gets the access control policy for a Table or Backup resource.
+      /// Gets the access control policy for a Bigtable resource.
       /// Returns an empty policy if the resource exists but does not have a policy
       /// set.
       /// </summary>
@@ -2433,7 +2547,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets the access control policy for a Table or Backup resource.
+      /// Gets the access control policy for a Bigtable resource.
       /// Returns an empty policy if the resource exists but does not have a policy
       /// set.
       /// </summary>
@@ -2446,7 +2560,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Sets the access control policy on a Table or Backup resource.
+      /// Sets the access control policy on a Bigtable resource.
       /// Replaces any existing policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2460,7 +2574,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return SetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the access control policy on a Table or Backup resource.
+      /// Sets the access control policy on a Bigtable resource.
       /// Replaces any existing policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2472,7 +2586,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Sets the access control policy on a Table or Backup resource.
+      /// Sets the access control policy on a Bigtable resource.
       /// Replaces any existing policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2486,7 +2600,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return SetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the access control policy on a Table or Backup resource.
+      /// Sets the access control policy on a Bigtable resource.
       /// Replaces any existing policy.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2498,7 +2612,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Returns permissions that the caller has on the specified Table or Backup
+      /// Returns permissions that the caller has on the specified Bigtable
       /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2512,7 +2626,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return TestIamPermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns permissions that the caller has on the specified Table or Backup
+      /// Returns permissions that the caller has on the specified Bigtable
       /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2524,7 +2638,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
       /// <summary>
-      /// Returns permissions that the caller has on the specified Table or Backup
+      /// Returns permissions that the caller has on the specified Bigtable
       /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2538,7 +2652,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return TestIamPermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns permissions that the caller has on the specified Table or Backup
+      /// Returns permissions that the caller has on the specified Bigtable
       /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2548,6 +2662,246 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissions, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new schema bundle in the specified table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateSchemaBundle(global::Google.Cloud.Bigtable.Admin.V2.CreateSchemaBundleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSchemaBundle(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new schema bundle in the specified table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateSchemaBundle(global::Google.Cloud.Bigtable.Admin.V2.CreateSchemaBundleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateSchemaBundle, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new schema bundle in the specified table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateSchemaBundleAsync(global::Google.Cloud.Bigtable.Admin.V2.CreateSchemaBundleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSchemaBundleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new schema bundle in the specified table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateSchemaBundleAsync(global::Google.Cloud.Bigtable.Admin.V2.CreateSchemaBundleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateSchemaBundle, null, options, request);
+      }
+      /// <summary>
+      /// Updates a schema bundle in the specified table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateSchemaBundle(global::Google.Cloud.Bigtable.Admin.V2.UpdateSchemaBundleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSchemaBundle(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a schema bundle in the specified table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateSchemaBundle(global::Google.Cloud.Bigtable.Admin.V2.UpdateSchemaBundleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateSchemaBundle, null, options, request);
+      }
+      /// <summary>
+      /// Updates a schema bundle in the specified table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateSchemaBundleAsync(global::Google.Cloud.Bigtable.Admin.V2.UpdateSchemaBundleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSchemaBundleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a schema bundle in the specified table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateSchemaBundleAsync(global::Google.Cloud.Bigtable.Admin.V2.UpdateSchemaBundleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateSchemaBundle, null, options, request);
+      }
+      /// <summary>
+      /// Gets metadata information about the specified schema bundle.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.SchemaBundle GetSchemaBundle(global::Google.Cloud.Bigtable.Admin.V2.GetSchemaBundleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSchemaBundle(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets metadata information about the specified schema bundle.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.SchemaBundle GetSchemaBundle(global::Google.Cloud.Bigtable.Admin.V2.GetSchemaBundleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSchemaBundle, null, options, request);
+      }
+      /// <summary>
+      /// Gets metadata information about the specified schema bundle.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.SchemaBundle> GetSchemaBundleAsync(global::Google.Cloud.Bigtable.Admin.V2.GetSchemaBundleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSchemaBundleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets metadata information about the specified schema bundle.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.SchemaBundle> GetSchemaBundleAsync(global::Google.Cloud.Bigtable.Admin.V2.GetSchemaBundleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSchemaBundle, null, options, request);
+      }
+      /// <summary>
+      /// Lists all schema bundles associated with the specified table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesResponse ListSchemaBundles(global::Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSchemaBundles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all schema bundles associated with the specified table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesResponse ListSchemaBundles(global::Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSchemaBundles, null, options, request);
+      }
+      /// <summary>
+      /// Lists all schema bundles associated with the specified table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesResponse> ListSchemaBundlesAsync(global::Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSchemaBundlesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all schema bundles associated with the specified table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesResponse> ListSchemaBundlesAsync(global::Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSchemaBundles, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a schema bundle in the specified table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSchemaBundle(global::Google.Cloud.Bigtable.Admin.V2.DeleteSchemaBundleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSchemaBundle(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a schema bundle in the specified table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSchemaBundle(global::Google.Cloud.Bigtable.Admin.V2.DeleteSchemaBundleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteSchemaBundle, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a schema bundle in the specified table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSchemaBundleAsync(global::Google.Cloud.Bigtable.Admin.V2.DeleteSchemaBundleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSchemaBundleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a schema bundle in the specified table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSchemaBundleAsync(global::Google.Cloud.Bigtable.Admin.V2.DeleteSchemaBundleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteSchemaBundle, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -2592,7 +2946,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           .AddMethod(__Method_CopyBackup, serviceImpl.CopyBackup)
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
           .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy)
-          .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions).Build();
+          .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions)
+          .AddMethod(__Method_CreateSchemaBundle, serviceImpl.CreateSchemaBundle)
+          .AddMethod(__Method_UpdateSchemaBundle, serviceImpl.UpdateSchemaBundle)
+          .AddMethod(__Method_GetSchemaBundle, serviceImpl.GetSchemaBundle)
+          .AddMethod(__Method_ListSchemaBundles, serviceImpl.ListSchemaBundles)
+          .AddMethod(__Method_DeleteSchemaBundle, serviceImpl.DeleteSchemaBundle).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2632,6 +2991,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
       serviceBinder.AddMethod(__Method_SetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicy));
       serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));
+      serviceBinder.AddMethod(__Method_CreateSchemaBundle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.CreateSchemaBundleRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateSchemaBundle));
+      serviceBinder.AddMethod(__Method_UpdateSchemaBundle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.UpdateSchemaBundleRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateSchemaBundle));
+      serviceBinder.AddMethod(__Method_GetSchemaBundle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.GetSchemaBundleRequest, global::Google.Cloud.Bigtable.Admin.V2.SchemaBundle>(serviceImpl.GetSchemaBundle));
+      serviceBinder.AddMethod(__Method_ListSchemaBundles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesRequest, global::Google.Cloud.Bigtable.Admin.V2.ListSchemaBundlesResponse>(serviceImpl.ListSchemaBundles));
+      serviceBinder.AddMethod(__Method_DeleteSchemaBundle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.DeleteSchemaBundleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSchemaBundle));
     }
 
   }

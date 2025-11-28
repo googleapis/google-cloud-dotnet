@@ -28,28 +28,31 @@ namespace Google.Ads.AdManager.V1 {
             "bHVlX21lc3NhZ2VzLnByb3RvEhdnb29nbGUuYWRzLmFkbWFuYWdlci52MRo6",
             "Z29vZ2xlL2Fkcy9hZG1hbmFnZXIvdjEvY3VzdG9tX3RhcmdldGluZ192YWx1",
             "ZV9lbnVtcy5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
-            "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byKTBAoUQ3VzdG9tVGFyZ2V0",
-            "aW5nVmFsdWUSEQoEbmFtZRgBIAEoCUID4EEIEhgKC2FkX3RhZ19uYW1lGAQg",
-            "ASgJQgPgQQUSGQoMZGlzcGxheV9uYW1lGAUgASgJQgPgQQESdAoKbWF0Y2hf",
-            "dHlwZRgGIAEoDjJYLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkN1c3RvbVRh",
-            "cmdldGluZ1ZhbHVlTWF0Y2hUeXBlRW51bS5DdXN0b21UYXJnZXRpbmdWYWx1",
-            "ZU1hdGNoVHlwZUIG4EEF4EECEmcKBnN0YXR1cxgHIAEoDjJSLmdvb2dsZS5h",
-            "ZHMuYWRtYW5hZ2VyLnYxLkN1c3RvbVRhcmdldGluZ1ZhbHVlU3RhdHVzRW51",
-            "bS5DdXN0b21UYXJnZXRpbmdWYWx1ZVN0YXR1c0ID4EEDOtMB6kHPAQotYWRt",
-            "YW5hZ2VyLmdvb2dsZWFwaXMuY29tL0N1c3RvbVRhcmdldGluZ1ZhbHVlEnFu",
-            "ZXR3b3Jrcy97bmV0d29ya19jb2RlfS9jdXN0b21UYXJnZXRpbmdLZXlzL3tj",
-            "dXN0b21fdGFyZ2V0aW5nX2tleX0vY3VzdG9tVGFyZ2V0aW5nVmFsdWVzL3tj",
-            "dXN0b21fdGFyZ2V0aW5nX3ZhbHVlfSoVY3VzdG9tVGFyZ2V0aW5nVmFsdWVz",
-            "MhRjdXN0b21UYXJnZXRpbmdWYWx1ZULVAQobY29tLmdvb2dsZS5hZHMuYWRt",
-            "YW5hZ2VyLnYxQiFDdXN0b21UYXJnZXRpbmdWYWx1ZU1lc3NhZ2VzUHJvdG9Q",
-            "AVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMv",
-            "YWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoCF0dvb2dsZS5BZHMuQWRNYW5hZ2Vy",
-            "LlYxygIXR29vZ2xlXEFkc1xBZE1hbmFnZXJcVjHqAhpHb29nbGU6OkFkczo6",
-            "QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byKrBQoUQ3VzdG9tVGFyZ2V0",
+            "aW5nVmFsdWUSEQoEbmFtZRgBIAEoCUID4EEIElkKFGN1c3RvbV90YXJnZXRp",
+            "bmdfa2V5GAggASgJQjbgQQLgQQX6QS0KK2FkbWFuYWdlci5nb29nbGVhcGlz",
+            "LmNvbS9DdXN0b21UYXJnZXRpbmdLZXlIAIgBARIdCgthZF90YWdfbmFtZRgE",
+            "IAEoCUID4EEFSAGIAQESHgoMZGlzcGxheV9uYW1lGAUgASgJQgPgQQFIAogB",
+            "ARJ5CgptYXRjaF90eXBlGAYgASgOMlguZ29vZ2xlLmFkcy5hZG1hbmFnZXIu",
+            "djEuQ3VzdG9tVGFyZ2V0aW5nVmFsdWVNYXRjaFR5cGVFbnVtLkN1c3RvbVRh",
+            "cmdldGluZ1ZhbHVlTWF0Y2hUeXBlQgbgQQXgQQJIA4gBARJsCgZzdGF0dXMY",
+            "ByABKA4yUi5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5DdXN0b21UYXJnZXRp",
+            "bmdWYWx1ZVN0YXR1c0VudW0uQ3VzdG9tVGFyZ2V0aW5nVmFsdWVTdGF0dXNC",
+            "A+BBA0gEiAEBOqgB6kGkAQotYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0N1",
+            "c3RvbVRhcmdldGluZ1ZhbHVlEkZuZXR3b3Jrcy97bmV0d29ya19jb2RlfS9j",
+            "dXN0b21UYXJnZXRpbmdWYWx1ZXMve2N1c3RvbV90YXJnZXRpbmdfdmFsdWV9",
+            "KhVjdXN0b21UYXJnZXRpbmdWYWx1ZXMyFGN1c3RvbVRhcmdldGluZ1ZhbHVl",
+            "QhcKFV9jdXN0b21fdGFyZ2V0aW5nX2tleUIOCgxfYWRfdGFnX25hbWVCDwoN",
+            "X2Rpc3BsYXlfbmFtZUINCgtfbWF0Y2hfdHlwZUIJCgdfc3RhdHVzQtUBChtj",
+            "b20uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjFCIUN1c3RvbVRhcmdldGluZ1Zh",
+            "bHVlTWVzc2FnZXNQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
+            "by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29v",
+            "Z2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFuYWdlclxW",
+            "MeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.CustomTargetingValueEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.CustomTargetingValue), global::Google.Ads.AdManager.V1.CustomTargetingValue.Parser, new[]{ "Name", "AdTagName", "DisplayName", "MatchType", "Status" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.CustomTargetingValue), global::Google.Ads.AdManager.V1.CustomTargetingValue.Parser, new[]{ "Name", "CustomTargetingKey", "AdTagName", "DisplayName", "MatchType", "Status" }, new[]{ "CustomTargetingKey", "AdTagName", "DisplayName", "MatchType", "Status" }, null, null, null)
           }));
     }
     #endregion
@@ -67,6 +70,7 @@ namespace Google.Ads.AdManager.V1 {
   {
     private static readonly pb::MessageParser<CustomTargetingValue> _parser = new pb::MessageParser<CustomTargetingValue>(() => new CustomTargetingValue());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CustomTargetingValue> Parser { get { return _parser; } }
@@ -94,7 +98,9 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CustomTargetingValue(CustomTargetingValue other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
+      customTargetingKey_ = other.customTargetingKey_;
       adTagName_ = other.adTagName_;
       displayName_ = other.displayName_;
       matchType_ = other.matchType_;
@@ -114,7 +120,7 @@ namespace Google.Ads.AdManager.V1 {
     /// <summary>
     /// Identifier. The resource name of the `CustomTargetingValue`.
     /// Format:
-    /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}/customTargetingValues/{custom_targeting_value_id}`
+    /// `networks/{network_code}/customTargetingValues/{custom_targeting_value_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -125,9 +131,42 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "custom_targeting_key" field.</summary>
+    public const int CustomTargetingKeyFieldNumber = 8;
+    private readonly static string CustomTargetingKeyDefaultValue = "";
+
+    private string customTargetingKey_;
+    /// <summary>
+    /// Required. Immutable. The resource name of the `CustomTargetingKey`.
+    /// Format:
+    /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CustomTargetingKey {
+      get { return customTargetingKey_ ?? CustomTargetingKeyDefaultValue; }
+      set {
+        customTargetingKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "custom_targeting_key" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCustomTargetingKey {
+      get { return customTargetingKey_ != null; }
+    }
+    /// <summary>Clears the value of the "custom_targeting_key" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCustomTargetingKey() {
+      customTargetingKey_ = null;
+    }
+
     /// <summary>Field number for the "ad_tag_name" field.</summary>
     public const int AdTagNameFieldNumber = 4;
-    private string adTagName_ = "";
+    private readonly static string AdTagNameDefaultValue = "";
+
+    private string adTagName_;
     /// <summary>
     /// Immutable. Name of the `CustomTargetingValue`. Values can contain up to 40
     /// characters each. You can use alphanumeric characters and symbols other than
@@ -138,30 +177,58 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AdTagName {
-      get { return adTagName_; }
+      get { return adTagName_ ?? AdTagNameDefaultValue; }
       set {
         adTagName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "ad_tag_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAdTagName {
+      get { return adTagName_ != null; }
+    }
+    /// <summary>Clears the value of the "ad_tag_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAdTagName() {
+      adTagName_ = null;
+    }
 
     /// <summary>Field number for the "display_name" field.</summary>
     public const int DisplayNameFieldNumber = 5;
-    private string displayName_ = "";
+    private readonly static string DisplayNameDefaultValue = "";
+
+    private string displayName_;
     /// <summary>
     /// Optional. Descriptive name for the `CustomTargetingValue`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
-      get { return displayName_; }
+      get { return displayName_ ?? DisplayNameDefaultValue; }
       set {
         displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return displayName_ != null; }
+    }
+    /// <summary>Clears the value of the "display_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      displayName_ = null;
+    }
 
     /// <summary>Field number for the "match_type" field.</summary>
     public const int MatchTypeFieldNumber = 6;
-    private global::Google.Ads.AdManager.V1.CustomTargetingValueMatchTypeEnum.Types.CustomTargetingValueMatchType matchType_ = global::Google.Ads.AdManager.V1.CustomTargetingValueMatchTypeEnum.Types.CustomTargetingValueMatchType.Unspecified;
+    private readonly static global::Google.Ads.AdManager.V1.CustomTargetingValueMatchTypeEnum.Types.CustomTargetingValueMatchType MatchTypeDefaultValue = global::Google.Ads.AdManager.V1.CustomTargetingValueMatchTypeEnum.Types.CustomTargetingValueMatchType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CustomTargetingValueMatchTypeEnum.Types.CustomTargetingValueMatchType matchType_;
     /// <summary>
     /// Required. Immutable. The way in which the CustomTargetingValue.name strings
     /// will be matched.
@@ -169,25 +236,53 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Ads.AdManager.V1.CustomTargetingValueMatchTypeEnum.Types.CustomTargetingValueMatchType MatchType {
-      get { return matchType_; }
+      get { if ((_hasBits0 & 1) != 0) { return matchType_; } else { return MatchTypeDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         matchType_ = value;
       }
+    }
+    /// <summary>Gets whether the "match_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMatchType {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "match_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMatchType() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 7;
-    private global::Google.Ads.AdManager.V1.CustomTargetingValueStatusEnum.Types.CustomTargetingValueStatus status_ = global::Google.Ads.AdManager.V1.CustomTargetingValueStatusEnum.Types.CustomTargetingValueStatus.Unspecified;
+    private readonly static global::Google.Ads.AdManager.V1.CustomTargetingValueStatusEnum.Types.CustomTargetingValueStatus StatusDefaultValue = global::Google.Ads.AdManager.V1.CustomTargetingValueStatusEnum.Types.CustomTargetingValueStatus.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.CustomTargetingValueStatusEnum.Types.CustomTargetingValueStatus status_;
     /// <summary>
     /// Output only. Status of the `CustomTargetingValue`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Ads.AdManager.V1.CustomTargetingValueStatusEnum.Types.CustomTargetingValueStatus Status {
-      get { return status_; }
+      get { if ((_hasBits0 & 2) != 0) { return status_; } else { return StatusDefaultValue; } }
       set {
+        _hasBits0 |= 2;
         status_ = value;
       }
+    }
+    /// <summary>Gets whether the "status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStatus {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "status" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStatus() {
+      _hasBits0 &= ~2;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -206,6 +301,7 @@ namespace Google.Ads.AdManager.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (CustomTargetingKey != other.CustomTargetingKey) return false;
       if (AdTagName != other.AdTagName) return false;
       if (DisplayName != other.DisplayName) return false;
       if (MatchType != other.MatchType) return false;
@@ -218,10 +314,11 @@ namespace Google.Ads.AdManager.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (AdTagName.Length != 0) hash ^= AdTagName.GetHashCode();
-      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (MatchType != global::Google.Ads.AdManager.V1.CustomTargetingValueMatchTypeEnum.Types.CustomTargetingValueMatchType.Unspecified) hash ^= MatchType.GetHashCode();
-      if (Status != global::Google.Ads.AdManager.V1.CustomTargetingValueStatusEnum.Types.CustomTargetingValueStatus.Unspecified) hash ^= Status.GetHashCode();
+      if (HasCustomTargetingKey) hash ^= CustomTargetingKey.GetHashCode();
+      if (HasAdTagName) hash ^= AdTagName.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasMatchType) hash ^= MatchType.GetHashCode();
+      if (HasStatus) hash ^= Status.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -244,21 +341,25 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (AdTagName.Length != 0) {
+      if (HasAdTagName) {
         output.WriteRawTag(34);
         output.WriteString(AdTagName);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         output.WriteRawTag(42);
         output.WriteString(DisplayName);
       }
-      if (MatchType != global::Google.Ads.AdManager.V1.CustomTargetingValueMatchTypeEnum.Types.CustomTargetingValueMatchType.Unspecified) {
+      if (HasMatchType) {
         output.WriteRawTag(48);
         output.WriteEnum((int) MatchType);
       }
-      if (Status != global::Google.Ads.AdManager.V1.CustomTargetingValueStatusEnum.Types.CustomTargetingValueStatus.Unspecified) {
+      if (HasStatus) {
         output.WriteRawTag(56);
         output.WriteEnum((int) Status);
+      }
+      if (HasCustomTargetingKey) {
+        output.WriteRawTag(66);
+        output.WriteString(CustomTargetingKey);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -274,21 +375,25 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (AdTagName.Length != 0) {
+      if (HasAdTagName) {
         output.WriteRawTag(34);
         output.WriteString(AdTagName);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         output.WriteRawTag(42);
         output.WriteString(DisplayName);
       }
-      if (MatchType != global::Google.Ads.AdManager.V1.CustomTargetingValueMatchTypeEnum.Types.CustomTargetingValueMatchType.Unspecified) {
+      if (HasMatchType) {
         output.WriteRawTag(48);
         output.WriteEnum((int) MatchType);
       }
-      if (Status != global::Google.Ads.AdManager.V1.CustomTargetingValueStatusEnum.Types.CustomTargetingValueStatus.Unspecified) {
+      if (HasStatus) {
         output.WriteRawTag(56);
         output.WriteEnum((int) Status);
+      }
+      if (HasCustomTargetingKey) {
+        output.WriteRawTag(66);
+        output.WriteString(CustomTargetingKey);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -303,16 +408,19 @@ namespace Google.Ads.AdManager.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (AdTagName.Length != 0) {
+      if (HasCustomTargetingKey) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomTargetingKey);
+      }
+      if (HasAdTagName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AdTagName);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
-      if (MatchType != global::Google.Ads.AdManager.V1.CustomTargetingValueMatchTypeEnum.Types.CustomTargetingValueMatchType.Unspecified) {
+      if (HasMatchType) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MatchType);
       }
-      if (Status != global::Google.Ads.AdManager.V1.CustomTargetingValueStatusEnum.Types.CustomTargetingValueStatus.Unspecified) {
+      if (HasStatus) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (_unknownFields != null) {
@@ -330,16 +438,19 @@ namespace Google.Ads.AdManager.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.AdTagName.Length != 0) {
+      if (other.HasCustomTargetingKey) {
+        CustomTargetingKey = other.CustomTargetingKey;
+      }
+      if (other.HasAdTagName) {
         AdTagName = other.AdTagName;
       }
-      if (other.DisplayName.Length != 0) {
+      if (other.HasDisplayName) {
         DisplayName = other.DisplayName;
       }
-      if (other.MatchType != global::Google.Ads.AdManager.V1.CustomTargetingValueMatchTypeEnum.Types.CustomTargetingValueMatchType.Unspecified) {
+      if (other.HasMatchType) {
         MatchType = other.MatchType;
       }
-      if (other.Status != global::Google.Ads.AdManager.V1.CustomTargetingValueStatusEnum.Types.CustomTargetingValueStatus.Unspecified) {
+      if (other.HasStatus) {
         Status = other.Status;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -377,6 +488,10 @@ namespace Google.Ads.AdManager.V1 {
             Status = (global::Google.Ads.AdManager.V1.CustomTargetingValueStatusEnum.Types.CustomTargetingValueStatus) input.ReadEnum();
             break;
           }
+          case 66: {
+            CustomTargetingKey = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -410,6 +525,10 @@ namespace Google.Ads.AdManager.V1 {
           }
           case 56: {
             Status = (global::Google.Ads.AdManager.V1.CustomTargetingValueStatusEnum.Types.CustomTargetingValueStatus) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            CustomTargetingKey = input.ReadString();
             break;
           }
         }

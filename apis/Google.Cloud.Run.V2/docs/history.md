@@ -1,5 +1,37 @@
 # Version history
 
+## Version 2.17.0, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+## Version 2.16.0, released 2025-08-08
+
+### New features
+
+- Adding new resource tpye run.googleapis.com/WorkerPool.
+
+### Bug fixes
+
+- An existing resource_definition `cloudbuild.googleapis.com/WorkerPool` is removed
+- A type of an existing resource_reference option of the field `worker_pool` in message `.google.cloud.run.v2.SubmitBuildRequest` is changed from `cloudbuild.googleapis.com/WorkerPool` to `cloudbuild.googleapis.com/BuildWorkerPool`
+- A type of an existing resource_reference option of the field `worker_pool` in message `.google.cloud.run.v2.BuildConfig` is changed from `cloudbuild.googleapis.com/WorkerPool` to `cloudbuild.googleapis.com/BuildWorkerPool`
+
+## Version 2.15.0, released 2025-07-22
+
+### New features
+
+- Support GPU zonal redundancy setting for Cloud Run jobs
+- Add new field `term_signal` to `.google.cloud.run.v2.TaskAttemptResult`
+
+## Version 2.14.0, released 2025-05-15
+
+### New features
+
+- Support node selector in Cloud Run jobs for GPU setting
+- Support GPU zonal redundancy setting in Cloud Run services
+
 ## Version 2.13.0, released 2025-02-10
 
 ### New features

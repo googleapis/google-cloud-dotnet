@@ -26,19 +26,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           string.Concat(
             "CjZnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MWJldGExL2FjY2VsZXJhdG9y",
             "X3R5cGUucHJvdG8SH2dvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEq",
-            "zgIKD0FjY2VsZXJhdG9yVHlwZRIgChxBQ0NFTEVSQVRPUl9UWVBFX1VOU1BF",
+            "oQMKD0FjY2VsZXJhdG9yVHlwZRIgChxBQ0NFTEVSQVRPUl9UWVBFX1VOU1BF",
             "Q0lGSUVEEAASGAoQTlZJRElBX1RFU0xBX0s4MBABGgIIARIVChFOVklESUFf",
             "VEVTTEFfUDEwMBACEhUKEU5WSURJQV9URVNMQV9WMTAwEAMSEwoPTlZJRElB",
             "X1RFU0xBX1A0EAQSEwoPTlZJRElBX1RFU0xBX1Q0EAUSFQoRTlZJRElBX1RF",
             "U0xBX0ExMDAQCBIUChBOVklESUFfQTEwMF84MEdCEAkSDQoJTlZJRElBX0w0",
             "EAsSFAoQTlZJRElBX0gxMDBfODBHQhANEhkKFU5WSURJQV9IMTAwX01FR0Ff",
-            "ODBHQhAOEgoKBlRQVV9WMhAGEgoKBlRQVV9WMxAHEg4KClRQVV9WNF9QT0QQ",
-            "ChISCg5UUFVfVjVfTElURVBPRBAMQusBCiNjb20uZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjFiZXRhMUIUQWNjZWxlcmF0b3JUeXBlUHJvdG9QAVpDY2xv",
-            "dWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxYmV0YTEvYWlwbGF0",
-            "Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dvb2dsZS5DbG91ZC5BSVBsYXRmb3Jt",
-            "LlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMWJldGEx6gIi",
-            "R29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiZXRhMWIGcHJvdG8z"));
+            "ODBHQhAOEhUKEU5WSURJQV9IMjAwXzE0MUdCEA8SDwoLTlZJRElBX0IyMDAQ",
+            "EBIQCgxOVklESUFfR0IyMDAQERIXChNOVklESUFfUlRYX1BST182MDAwEBIS",
+            "CgoGVFBVX1YyEAYSCgoGVFBVX1YzEAcSDgoKVFBVX1Y0X1BPRBAKEhIKDlRQ",
+            "VV9WNV9MSVRFUE9EEAxC6wEKI2NvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MWJldGExQhRBY2NlbGVyYXRvclR5cGVQcm90b1ABWkNjbG91ZC5nb29n",
+            "bGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7",
+            "YWlwbGF0Zm9ybXBiqgIfR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRh",
+            "McoCH0dvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6",
+            "OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1Beta1.AcceleratorType), }, null, null));
@@ -97,6 +99,22 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     /// Nvidia H100 Mega 80Gb GPU.
     /// </summary>
     [pbr::OriginalName("NVIDIA_H100_MEGA_80GB")] NvidiaH100Mega80Gb = 14,
+    /// <summary>
+    /// Nvidia H200 141Gb GPU.
+    /// </summary>
+    [pbr::OriginalName("NVIDIA_H200_141GB")] NvidiaH200141Gb = 15,
+    /// <summary>
+    /// Nvidia B200 GPU.
+    /// </summary>
+    [pbr::OriginalName("NVIDIA_B200")] NvidiaB200 = 16,
+    /// <summary>
+    /// Nvidia GB200 GPU.
+    /// </summary>
+    [pbr::OriginalName("NVIDIA_GB200")] NvidiaGb200 = 17,
+    /// <summary>
+    /// Nvidia RTX Pro 6000 GPU.
+    /// </summary>
+    [pbr::OriginalName("NVIDIA_RTX_PRO_6000")] NvidiaRtxPro6000 = 18,
     /// <summary>
     /// TPU v2.
     /// </summary>

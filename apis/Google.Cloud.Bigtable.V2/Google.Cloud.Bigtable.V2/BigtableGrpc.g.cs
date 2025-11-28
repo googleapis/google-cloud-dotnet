@@ -309,10 +309,10 @@ namespace Google.Cloud.Bigtable.V2 {
       }
 
       /// <summary>
-      /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
       /// Returns the current list of partitions that make up the table's
       /// change stream. The union of partitions will cover the entire keyspace.
       /// Partitions can be read with `ReadChangeStream`.
+      /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="responseStream">Used for sending responses back to the client.</param>
@@ -325,10 +325,10 @@ namespace Google.Cloud.Bigtable.V2 {
       }
 
       /// <summary>
-      /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
       /// Reads changes from a table's change stream. Changes will
       /// reflect both user-initiated mutations and mutations that are caused by
       /// garbage collection.
+      /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="responseStream">Used for sending responses back to the client.</param>
@@ -701,10 +701,10 @@ namespace Google.Cloud.Bigtable.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ReadModifyWriteRow, null, options, request);
       }
       /// <summary>
-      /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
       /// Returns the current list of partitions that make up the table's
       /// change stream. The union of partitions will cover the entire keyspace.
       /// Partitions can be read with `ReadChangeStream`.
+      /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -717,10 +717,10 @@ namespace Google.Cloud.Bigtable.V2 {
         return GenerateInitialChangeStreamPartitions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
       /// Returns the current list of partitions that make up the table's
       /// change stream. The union of partitions will cover the entire keyspace.
       /// Partitions can be read with `ReadChangeStream`.
+      /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -731,10 +731,10 @@ namespace Google.Cloud.Bigtable.V2 {
         return CallInvoker.AsyncServerStreamingCall(__Method_GenerateInitialChangeStreamPartitions, null, options, request);
       }
       /// <summary>
-      /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
       /// Reads changes from a table's change stream. Changes will
       /// reflect both user-initiated mutations and mutations that are caused by
       /// garbage collection.
+      /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -747,10 +747,10 @@ namespace Google.Cloud.Bigtable.V2 {
         return ReadChangeStream(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// NOTE: This API is intended to be used by Apache Beam BigtableIO.
       /// Reads changes from a table's change stream. Changes will
       /// reflect both user-initiated mutations and mutations that are caused by
       /// garbage collection.
+      /// NOTE: This API is only intended to be used by Apache Beam BigtableIO.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

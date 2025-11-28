@@ -112,6 +112,131 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListOrganizations</summary>
+        public void ListOrganizationsRequestObject()
+        {
+            // Snippet: ListOrganizations(ListOrganizationsRequest, CallSettings)
+            // Create client
+            MarketingplatformAdminServiceClient marketingplatformAdminServiceClient = MarketingplatformAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ListOrganizationsRequest request = new ListOrganizationsRequest { };
+            // Make the request
+            PagedEnumerable<ListOrganizationsResponse, Organization> response = marketingplatformAdminServiceClient.ListOrganizations(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Organization item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListOrganizationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Organization item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Organization> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Organization item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListOrganizationsAsync</summary>
+        public async Task ListOrganizationsRequestObjectAsync()
+        {
+            // Snippet: ListOrganizationsAsync(ListOrganizationsRequest, CallSettings)
+            // Create client
+            MarketingplatformAdminServiceClient marketingplatformAdminServiceClient = await MarketingplatformAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListOrganizationsRequest request = new ListOrganizationsRequest { };
+            // Make the request
+            PagedAsyncEnumerable<ListOrganizationsResponse, Organization> response = marketingplatformAdminServiceClient.ListOrganizationsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Organization item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListOrganizationsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Organization item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Organization> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Organization item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FindSalesPartnerManagedClients</summary>
+        public void FindSalesPartnerManagedClientsRequestObject()
+        {
+            // Snippet: FindSalesPartnerManagedClients(FindSalesPartnerManagedClientsRequest, CallSettings)
+            // Create client
+            MarketingplatformAdminServiceClient marketingplatformAdminServiceClient = MarketingplatformAdminServiceClient.Create();
+            // Initialize request argument(s)
+            FindSalesPartnerManagedClientsRequest request = new FindSalesPartnerManagedClientsRequest
+            {
+                OrganizationAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
+                IsActive = false,
+            };
+            // Make the request
+            FindSalesPartnerManagedClientsResponse response = marketingplatformAdminServiceClient.FindSalesPartnerManagedClients(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FindSalesPartnerManagedClientsAsync</summary>
+        public async Task FindSalesPartnerManagedClientsRequestObjectAsync()
+        {
+            // Snippet: FindSalesPartnerManagedClientsAsync(FindSalesPartnerManagedClientsRequest, CallSettings)
+            // Additional: FindSalesPartnerManagedClientsAsync(FindSalesPartnerManagedClientsRequest, CancellationToken)
+            // Create client
+            MarketingplatformAdminServiceClient marketingplatformAdminServiceClient = await MarketingplatformAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FindSalesPartnerManagedClientsRequest request = new FindSalesPartnerManagedClientsRequest
+            {
+                OrganizationAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
+                IsActive = false,
+            };
+            // Make the request
+            FindSalesPartnerManagedClientsResponse response = await marketingplatformAdminServiceClient.FindSalesPartnerManagedClientsAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for ListAnalyticsAccountLinks</summary>
         public void ListAnalyticsAccountLinksRequestObject()
         {
@@ -629,6 +754,68 @@ namespace GoogleCSharpSnippets
             string analyticsAccountLink = "";
             // Make the request
             SetPropertyServiceLevelResponse response = await marketingplatformAdminServiceClient.SetPropertyServiceLevelAsync(analyticsAccountLink);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReportPropertyUsage</summary>
+        public void ReportPropertyUsageRequestObject()
+        {
+            // Snippet: ReportPropertyUsage(ReportPropertyUsageRequest, CallSettings)
+            // Create client
+            MarketingplatformAdminServiceClient marketingplatformAdminServiceClient = MarketingplatformAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ReportPropertyUsageRequest request = new ReportPropertyUsageRequest
+            {
+                Organization = "",
+                Month = "",
+            };
+            // Make the request
+            ReportPropertyUsageResponse response = marketingplatformAdminServiceClient.ReportPropertyUsage(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReportPropertyUsageAsync</summary>
+        public async Task ReportPropertyUsageRequestObjectAsync()
+        {
+            // Snippet: ReportPropertyUsageAsync(ReportPropertyUsageRequest, CallSettings)
+            // Additional: ReportPropertyUsageAsync(ReportPropertyUsageRequest, CancellationToken)
+            // Create client
+            MarketingplatformAdminServiceClient marketingplatformAdminServiceClient = await MarketingplatformAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ReportPropertyUsageRequest request = new ReportPropertyUsageRequest
+            {
+                Organization = "",
+                Month = "",
+            };
+            // Make the request
+            ReportPropertyUsageResponse response = await marketingplatformAdminServiceClient.ReportPropertyUsageAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReportPropertyUsage</summary>
+        public void ReportPropertyUsage()
+        {
+            // Snippet: ReportPropertyUsage(string, CallSettings)
+            // Create client
+            MarketingplatformAdminServiceClient marketingplatformAdminServiceClient = MarketingplatformAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string organization = "";
+            // Make the request
+            ReportPropertyUsageResponse response = marketingplatformAdminServiceClient.ReportPropertyUsage(organization);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReportPropertyUsageAsync</summary>
+        public async Task ReportPropertyUsageAsync()
+        {
+            // Snippet: ReportPropertyUsageAsync(string, CallSettings)
+            // Additional: ReportPropertyUsageAsync(string, CancellationToken)
+            // Create client
+            MarketingplatformAdminServiceClient marketingplatformAdminServiceClient = await MarketingplatformAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string organization = "";
+            // Make the request
+            ReportPropertyUsageResponse response = await marketingplatformAdminServiceClient.ReportPropertyUsageAsync(organization);
             // End snippet
         }
     }

@@ -29,6 +29,7 @@ using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.ApiHub.V1
 {
@@ -49,6 +50,8 @@ namespace Google.Cloud.ApiHub.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             CreateApiHubInstanceSettings = existing.CreateApiHubInstanceSettings;
             CreateApiHubInstanceOperationsSettings = existing.CreateApiHubInstanceOperationsSettings.Clone();
+            DeleteApiHubInstanceSettings = existing.DeleteApiHubInstanceSettings;
+            DeleteApiHubInstanceOperationsSettings = existing.DeleteApiHubInstanceOperationsSettings.Clone();
             GetApiHubInstanceSettings = existing.GetApiHubInstanceSettings;
             LookupApiHubInstanceSettings = existing.LookupApiHubInstanceSettings;
             LocationsSettings = existing.LocationsSettings;
@@ -83,6 +86,36 @@ namespace Google.Cloud.ApiHub.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings CreateApiHubInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ProvisioningClient.DeleteApiHubInstance</c> and <c>ProvisioningClient.DeleteApiHubInstanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteApiHubInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ProvisioningClient.DeleteApiHubInstance</c> and
+        /// <c>ProvisioningClient.DeleteApiHubInstanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteApiHubInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -484,6 +517,150 @@ namespace Google.Cloud.ApiHub.V1
             CreateApiHubInstanceAsync(parent, apiHubInstance, apiHubInstanceId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deletes the API hub instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteApiHubInstance(DeleteApiHubInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the API hub instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteApiHubInstanceAsync(DeleteApiHubInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the API hub instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteApiHubInstanceAsync(DeleteApiHubInstanceRequest request, st::CancellationToken cancellationToken) =>
+            DeleteApiHubInstanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteApiHubInstance</c>.</summary>
+        public virtual lro::OperationsClient DeleteApiHubInstanceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteApiHubInstance</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteApiHubInstance(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteApiHubInstanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteApiHubInstance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteApiHubInstanceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteApiHubInstanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes the API hub instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Api Hub instance to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apiHubInstances/{apiHubInstance}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteApiHubInstance(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteApiHubInstance(new DeleteApiHubInstanceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the API hub instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Api Hub instance to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apiHubInstances/{apiHubInstance}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteApiHubInstanceAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteApiHubInstanceAsync(new DeleteApiHubInstanceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the API hub instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Api Hub instance to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apiHubInstances/{apiHubInstance}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteApiHubInstanceAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteApiHubInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the API hub instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Api Hub instance to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apiHubInstances/{apiHubInstance}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteApiHubInstance(ApiHubInstanceName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteApiHubInstance(new DeleteApiHubInstanceRequest
+            {
+                ApiHubInstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the API hub instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Api Hub instance to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apiHubInstances/{apiHubInstance}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteApiHubInstanceAsync(ApiHubInstanceName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteApiHubInstanceAsync(new DeleteApiHubInstanceRequest
+            {
+                ApiHubInstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the API hub instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Api Hub instance to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apiHubInstances/{apiHubInstance}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteApiHubInstanceAsync(ApiHubInstanceName name, st::CancellationToken cancellationToken) =>
+            DeleteApiHubInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets details of a single API Hub instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -741,6 +918,8 @@ namespace Google.Cloud.ApiHub.V1
     {
         private readonly gaxgrpc::ApiCall<CreateApiHubInstanceRequest, lro::Operation> _callCreateApiHubInstance;
 
+        private readonly gaxgrpc::ApiCall<DeleteApiHubInstanceRequest, lro::Operation> _callDeleteApiHubInstance;
+
         private readonly gaxgrpc::ApiCall<GetApiHubInstanceRequest, ApiHubInstance> _callGetApiHubInstance;
 
         private readonly gaxgrpc::ApiCall<LookupApiHubInstanceRequest, LookupApiHubInstanceResponse> _callLookupApiHubInstance;
@@ -761,10 +940,14 @@ namespace Google.Cloud.ApiHub.V1
                 Logger = logger,
             });
             CreateApiHubInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateApiHubInstanceOperationsSettings, logger);
+            DeleteApiHubInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteApiHubInstanceOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callCreateApiHubInstance = clientHelper.BuildApiCall<CreateApiHubInstanceRequest, lro::Operation>("CreateApiHubInstance", grpcClient.CreateApiHubInstanceAsync, grpcClient.CreateApiHubInstance, effectiveSettings.CreateApiHubInstanceSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateApiHubInstance);
             Modify_CreateApiHubInstanceApiCall(ref _callCreateApiHubInstance);
+            _callDeleteApiHubInstance = clientHelper.BuildApiCall<DeleteApiHubInstanceRequest, lro::Operation>("DeleteApiHubInstance", grpcClient.DeleteApiHubInstanceAsync, grpcClient.DeleteApiHubInstance, effectiveSettings.DeleteApiHubInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteApiHubInstance);
+            Modify_DeleteApiHubInstanceApiCall(ref _callDeleteApiHubInstance);
             _callGetApiHubInstance = clientHelper.BuildApiCall<GetApiHubInstanceRequest, ApiHubInstance>("GetApiHubInstance", grpcClient.GetApiHubInstanceAsync, grpcClient.GetApiHubInstance, effectiveSettings.GetApiHubInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetApiHubInstance);
             Modify_GetApiHubInstanceApiCall(ref _callGetApiHubInstance);
@@ -777,6 +960,8 @@ namespace Google.Cloud.ApiHub.V1
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
         partial void Modify_CreateApiHubInstanceApiCall(ref gaxgrpc::ApiCall<CreateApiHubInstanceRequest, lro::Operation> call);
+
+        partial void Modify_DeleteApiHubInstanceApiCall(ref gaxgrpc::ApiCall<DeleteApiHubInstanceRequest, lro::Operation> call);
 
         partial void Modify_GetApiHubInstanceApiCall(ref gaxgrpc::ApiCall<GetApiHubInstanceRequest, ApiHubInstance> call);
 
@@ -791,6 +976,8 @@ namespace Google.Cloud.ApiHub.V1
         public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_CreateApiHubInstanceRequest(ref CreateApiHubInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteApiHubInstanceRequest(ref DeleteApiHubInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetApiHubInstanceRequest(ref GetApiHubInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -821,6 +1008,33 @@ namespace Google.Cloud.ApiHub.V1
         {
             Modify_CreateApiHubInstanceRequest(ref request, ref callSettings);
             return new lro::Operation<ApiHubInstance, OperationMetadata>(await _callCreateApiHubInstance.Async(request, callSettings).ConfigureAwait(false), CreateApiHubInstanceOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteApiHubInstance</c>.</summary>
+        public override lro::OperationsClient DeleteApiHubInstanceOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes the API hub instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteApiHubInstance(DeleteApiHubInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteApiHubInstanceRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteApiHubInstance.Sync(request, callSettings), DeleteApiHubInstanceOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes the API hub instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteApiHubInstanceAsync(DeleteApiHubInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteApiHubInstanceRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteApiHubInstance.Async(request, callSettings).ConfigureAwait(false), DeleteApiHubInstanceOperationsClient);
         }
 
         /// <summary>

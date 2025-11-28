@@ -2,6 +2,7 @@
   {
     "method": "ListPolicies",
     "client": "PoliciesClient",
+    "restrictedSkip": "Requires permission iam.googleapis.com/denypolicies.list",
     "arguments": {
       "parent": "policies/cloudresourcemanager.googleapis.com%2Fprojects%2F${PROJECT_ID}/denypolicies"
     }

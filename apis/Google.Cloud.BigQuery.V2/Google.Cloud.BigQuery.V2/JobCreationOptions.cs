@@ -12,7 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Bigquery.v2.Data;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Google.Cloud.BigQuery.V2
 {
@@ -59,5 +62,28 @@ namespace Google.Cloud.BigQuery.V2
         /// Label keys must start with a letter.
         /// </summary>
         public IDictionary<string, string> Labels { get; set; }
+
+        /// <summary>
+        /// Optional action to perform after preparing the request. If this property is non-null,
+        /// the <see cref="JobConfiguration"/> used for a request will be passed to the delegate
+        /// before the request is executed. This allows for fine-grained modifications which aren't
+        /// otherwise directly supported by the properties in this options type or derived option types.
+        /// </summary>
+        /// <remarks>
+        /// Prefer the properties on this type over this modifier to prepare the request.
+        /// Only use this modifier to configure aspects for which there are no properties available.
+        /// This modifier is applied to the request after all properties on this type have been applied.
+        /// The delegate is only called once per operation, even if the request is automatically retried.
+        /// </remarks>
+        public Action<JobConfiguration> JobConfigurationModifier { get; set; }
+
+        internal virtual void ModifyJobConfiguration(JobConfiguration jobConfiguration)
+        {
+            if (Labels is not null && Labels.Count > 0)
+            {
+                jobConfiguration.Labels = Labels;
+            }
+            JobConfigurationModifier?.Invoke(jobConfiguration);
+        }
     }
 }

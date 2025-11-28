@@ -36,8 +36,12 @@ while (( "$#" )); do
     runtests=false
   elif [[ "$1" == "--diff" ]]
   then
-    apis+=($(git diff main --name-only | grep -e 'apis/.*/' | cut -d/ -f 2 | uniq))
-    diff=true
+    if git diff main --name-only | grep -q "Directory.Packages.prop" | grep -q "Directory.Build.props" | grep -q "Directory.Build.targets" | grep -q "global.json"; then
+      secho "Top level dependencies changed. Building and testing everything. Note that --regex parameter is still respected, but it will be applied to the full API list and not just to those that changed."
+    else
+      apis+=($(git diff main --name-only | grep -e 'apis/.*/' | cut -d/ -f 2 | uniq))
+      diff=true
+    fi
   elif [[ "$1" == "--regex" ]]
   then
     shift

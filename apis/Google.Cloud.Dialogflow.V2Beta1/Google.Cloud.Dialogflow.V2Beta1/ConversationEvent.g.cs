@@ -26,27 +26,28 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
           string.Concat(
             "Cjhnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92MmJldGExL2NvbnZlcnNhdGlv",
             "bl9ldmVudC5wcm90bxIfZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRh",
-            "MRoxZ29vZ2xlL2Nsb3VkL2RpYWxvZ2Zsb3cvdjJiZXRhMS9wYXJ0aWNpcGFu",
-            "dC5wcm90bxotZ29vZ2xlL2Nsb3VkL2RpYWxvZ2Zsb3cvdjJiZXRhMS9zZXNz",
-            "aW9uLnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90byKOBAoRQ29udmVy",
-            "c2F0aW9uRXZlbnQSFAoMY29udmVyc2F0aW9uGAEgASgJEkUKBHR5cGUYAiAB",
-            "KA4yNy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLkNvbnZlcnNh",
-            "dGlvbkV2ZW50LlR5cGUSKAoMZXJyb3Jfc3RhdHVzGAMgASgLMhIuZ29vZ2xl",
-            "LnJwYy5TdGF0dXMSRwoTbmV3X21lc3NhZ2VfcGF5bG9hZBgEIAEoCzIoLmdv",
-            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuTWVzc2FnZUgAEmUKHm5l",
-            "d19yZWNvZ25pdGlvbl9yZXN1bHRfcGF5bG9hZBgFIAEoCzI7Lmdvb2dsZS5j",
-            "bG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuU3RyZWFtaW5nUmVjb2duaXRpb25S",
-            "ZXN1bHRIACK2AQoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASGAoUQ09O",
-            "VkVSU0FUSU9OX1NUQVJURUQQARIZChVDT05WRVJTQVRJT05fRklOSVNIRUQQ",
-            "AhIdChlIVU1BTl9JTlRFUlZFTlRJT05fTkVFREVEEAMSDwoLTkVXX01FU1NB",
-            "R0UQBRIaChZORVdfUkVDT0dOSVRJT05fUkVTVUxUEAcSFwoTVU5SRUNPVkVS",
-            "QUJMRV9FUlJPUhAEQgkKB3BheWxvYWRCqwEKI2NvbS5nb29nbGUuY2xvdWQu",
-            "ZGlhbG9nZmxvdy52MmJldGExQhZDb252ZXJzYXRpb25FdmVudFByb3RvUAFa",
-            "Q2Nsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxvdy9hcGl2MmJldGExL2Rp",
-            "YWxvZ2Zsb3dwYjtkaWFsb2dmbG93cGKiAgJERqoCH0dvb2dsZS5DbG91ZC5E",
-            "aWFsb2dmbG93LlYyQmV0YTFiBnByb3RvMw=="));
+            "MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2Fw",
+            "aS9yZXNvdXJjZS5wcm90bxoxZ29vZ2xlL2Nsb3VkL2RpYWxvZ2Zsb3cvdjJi",
+            "ZXRhMS9wYXJ0aWNpcGFudC5wcm90bxotZ29vZ2xlL2Nsb3VkL2RpYWxvZ2Zs",
+            "b3cvdjJiZXRhMS9zZXNzaW9uLnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5w",
+            "cm90byKOBAoRQ29udmVyc2F0aW9uRXZlbnQSFAoMY29udmVyc2F0aW9uGAEg",
+            "ASgJEkUKBHR5cGUYAiABKA4yNy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
+            "MmJldGExLkNvbnZlcnNhdGlvbkV2ZW50LlR5cGUSKAoMZXJyb3Jfc3RhdHVz",
+            "GAMgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXMSRwoTbmV3X21lc3NhZ2VfcGF5",
+            "bG9hZBgEIAEoCzIoLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEu",
+            "TWVzc2FnZUgAEmUKHm5ld19yZWNvZ25pdGlvbl9yZXN1bHRfcGF5bG9hZBgF",
+            "IAEoCzI7Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuU3RyZWFt",
+            "aW5nUmVjb2duaXRpb25SZXN1bHRIACK2AQoEVHlwZRIUChBUWVBFX1VOU1BF",
+            "Q0lGSUVEEAASGAoUQ09OVkVSU0FUSU9OX1NUQVJURUQQARIZChVDT05WRVJT",
+            "QVRJT05fRklOSVNIRUQQAhIdChlIVU1BTl9JTlRFUlZFTlRJT05fTkVFREVE",
+            "EAMSDwoLTkVXX01FU1NBR0UQBRIaChZORVdfUkVDT0dOSVRJT05fUkVTVUxU",
+            "EAcSFwoTVU5SRUNPVkVSQUJMRV9FUlJPUhAEQgkKB3BheWxvYWRCqwEKI2Nv",
+            "bS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExQhZDb252ZXJzYXRp",
+            "b25FdmVudFByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxv",
+            "dy9hcGl2MmJldGExL2RpYWxvZ2Zsb3dwYjtkaWFsb2dmbG93cGKiAgJERqoC",
+            "H0dvb2dsZS5DbG91ZC5EaWFsb2dmbG93LlYyQmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.Dialogflow.V2Beta1.ParticipantReflection.Descriptor, global::Google.Cloud.Dialogflow.V2Beta1.SessionReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.V2Beta1.ParticipantReflection.Descriptor, global::Google.Cloud.Dialogflow.V2Beta1.SessionReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.ConversationEvent), global::Google.Cloud.Dialogflow.V2Beta1.ConversationEvent.Parser, new[]{ "Conversation", "Type", "ErrorStatus", "NewMessagePayload", "NewRecognitionResultPayload" }, new[]{ "Payload" }, new[]{ typeof(global::Google.Cloud.Dialogflow.V2Beta1.ConversationEvent.Types.Type) }, null, null)
           }));
@@ -502,6 +503,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         /// <summary>
         /// An existing conversation has closed. This is fired when a telephone call
         /// is terminated, or a conversation is closed via the API.
+        /// The event is fired for every CompleteConversation call, even if the
+        /// conversation is already closed.
         /// </summary>
         [pbr::OriginalName("CONVERSATION_FINISHED")] ConversationFinished = 2,
         /// <summary>

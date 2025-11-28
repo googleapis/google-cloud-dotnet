@@ -1,5 +1,114 @@
 # Version history
 
+## Version 3.36.0, released 2025-10-23
+
+### New features
+
+- Add node_kernel_module_loading field to LinuxNodeConfig
+- Add network_tier_config field to NodeNetworkConfig
+- Add writable_cgroups field to ContainerdConfig
+- Deprecate enable_legacy_lustre_port field in LustreCsiDriverConfig
+- Add network_tier_config field to IPAllocationPolicy
+- Deprecate enterprise_config field in Cluster
+- Deprecate desired_enterprise_config field in ClusterUpdate
+- Add autoscaled_rollout_policy field to BlueGreenSettings
+- Add end_time_behavior field to MaintenanceExclusionOptions
+- Add privileged_admission_config field to Autopilot
+- Add membership_type field to Fleet
+- Add rotation_config field to SecretManagerConfig
+
+### Documentation improvements
+
+- Various documentation fixes
+
+## Version 3.35.0, released 2025-07-22
+
+### New features
+
+- A new enum `TransparentHugepageEnabled` is added
+- A new enum `TransparentHugepageDefrag` is added
+- A new field `transparent_hugepage_enabled` is added to message `.google.container.v1.LinuxNodeConfig`
+- A new field `transparent_hugepage_defrag` is added to message `.google.container.v1.LinuxNodeConfig`
+- A new field `eviction_soft` is added to message `.google.container.v1.NodeKubeletConfig`
+- A new field `eviction_soft_grace_period` is added to message `.google.container.v1.NodeKubeletConfig`
+- A new field `eviction_minimum_reclaim` is added to message `.google.container.v1.NodeKubeletConfig`
+- A new field `eviction_max_pod_grace_period_seconds` is added to message `.google.container.v1.NodeKubeletConfig`
+- A new field `max_parallel_image_pulls` is added to message `.google.container.v1.NodeKubeletConfig`
+- A new field `single_process_oom_kill` is added to message `.google.container.v1.NodeKubeletConfig`
+- A new message `EvictionSignals` is added
+- A new message `EvictionGracePeriod` is added
+- A new message `EvictionMinimumReclaim` is added
+- A new field `boot_disk` is added to message `.google.container.v1.NodeConfig`
+- A new field `subnetwork` is added to message `.google.container.v1.NodeNetworkConfig`
+- A new field `min_node_cpus` is added to message `.google.container.v1.SoleTenantConfig`
+- A new field `lustre_csi_driver_config` is added to message `.google.container.v1.AddonsConfig`
+- A new message `LustreCsiDriverConfig` is added
+- A new field `additional_ip_ranges_configs` is added to message `.google.container.v1.IPAllocationPolicy`
+- A new field `auto_ipam_config` is added to message `.google.container.v1.IPAllocationPolicy`
+- A new field `gke_auto_upgrade_config` is added to message `.google.container.v1.Cluster`
+- A new enum `Mode` is added
+- A new field `mode` is added to message `.google.container.v1.AnonymousAuthenticationConfig`
+- A new field `desired_additional_ip_ranges_config` is added to message `.google.container.v1.ClusterUpdate`
+- A new field `desired_auto_ipam_config` is added to message `.google.container.v1.ClusterUpdate`
+- A new field `desired_user_managed_keys_config` is added to message `.google.container.v1.ClusterUpdate`
+- A new field `gke_auto_upgrade_config` is added to message `.google.container.v1.ClusterUpdate`
+- A new message `AdditionalIPRangesConfig` is added
+- A new message `DesiredAdditionalIPRangesConfig` is added
+- A new message `AutoIpamConfig` is added
+- A new field `boot_disk` is added to message `.google.container.v1.UpdateNodePoolRequest`
+- A new field `default_compute_class_config` is added to message `.google.container.v1.ClusterAutoscaling`
+- A new message `DefaultComputeClassConfig` is added
+- A new value `CLOUD_KMS_KEY_DESTROYED` is added to enum `Code`
+- A new message `BootDisk` is added
+- A new message `GkeAutoUpgradeConfig` is added
+
+## Version 3.34.0, released 2025-05-28
+
+### New features
+
+- Add topology_manager in NodeKubeletConfig
+- Add image_gc_low_threshold_percent in NodeKubeletConfig
+- Add image_gc_high_threshold_percent in NodeKubeletConfig
+- Add image_minimum_gc_age in NodeKubeletConfig
+- Add image_maximum_gc_age in NodeKubeletConfig
+- Add container_log_max_size in NodeKubeletConfig
+- Add container_log_max_files in NodeKubeletConfig
+- Add allowed_unsafe_sysctls in NodeKubeletConfig
+- Add max_run_duration in NodeConfig
+- Add flex_start in NodeConfig
+- Add performance_monitoring_unit in AdvancedMachineFeatures
+- Add high_scale_checkpointing_config in AddonsConfig
+- Add alpha_cluster_feature_gates in Cluster
+- Add pod_autoscaling in Cluster
+- Add desired_pod_autoscaling in ClusterUpdate
+- Add desired_disable_l4_lb_firewall_reconciliation in ClusterUpdate
+- Add desired_anonymous_authentication_config in ClusterUpdate
+- Add max_run_duration in UpdateNodePoolRequest
+- Add flex_start in UpdateNodePoolRequest
+- Add NODE_SERVICE_ACCOUNT_MISSING_PERMISSIONS in StatusCondition.Code
+- Add disable_l4_lb_firewall_reconciliation in NetworkConfig
+- Add UPGRADE_INFO_EVENT in NotificationConfig.EventType
+- Add confidential_instance_type in ConfidentialNodes
+- Add event_type in UpgradeInfoEvent
+- Add standard_support_end_time in UpgradeInfoEvent
+- Add extended_support_end_time in UpgradeInfoEvent
+- Add mitigated_versions in SecurityBulletinEvent
+- Add autopilot_compatibility_auditing_enabled in WorkloadPolicyConfig
+- Add KCP_HPA in LoggingComponentConfig.Component
+- Add JOBSET in MonitoringComponentConfig.Component
+- Add auto_monitoring_config in ManagedPrometheusConfig
+- Add data_cache_count in EphemeralStorageLocalSsdConfig
+- Add FetchClusterUpgradeInfoRequest
+- Add ClusterUpgradeInfo
+- Add UpgradeDetails
+- Add FetchNodePoolUpgradeInfoRequest
+- Add NodePoolUpgradeInfo
+
+### Documentation improvements
+
+- Minor documentation updates
+- Broken (or ambiguous) markdown link
+
 ## Version 3.33.0, released 2024-11-18
 
 ### New features

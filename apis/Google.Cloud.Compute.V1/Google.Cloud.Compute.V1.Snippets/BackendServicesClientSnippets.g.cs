@@ -687,6 +687,70 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetEffectiveSecurityPolicies</summary>
+        public void GetEffectiveSecurityPoliciesRequestObject()
+        {
+            // Snippet: GetEffectiveSecurityPolicies(GetEffectiveSecurityPoliciesBackendServiceRequest, CallSettings)
+            // Create client
+            BackendServicesClient backendServicesClient = BackendServicesClient.Create();
+            // Initialize request argument(s)
+            GetEffectiveSecurityPoliciesBackendServiceRequest request = new GetEffectiveSecurityPoliciesBackendServiceRequest
+            {
+                Project = "",
+                BackendService = "",
+            };
+            // Make the request
+            GetEffectiveSecurityPoliciesBackendServiceResponse response = backendServicesClient.GetEffectiveSecurityPolicies(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEffectiveSecurityPoliciesAsync</summary>
+        public async Task GetEffectiveSecurityPoliciesRequestObjectAsync()
+        {
+            // Snippet: GetEffectiveSecurityPoliciesAsync(GetEffectiveSecurityPoliciesBackendServiceRequest, CallSettings)
+            // Additional: GetEffectiveSecurityPoliciesAsync(GetEffectiveSecurityPoliciesBackendServiceRequest, CancellationToken)
+            // Create client
+            BackendServicesClient backendServicesClient = await BackendServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            GetEffectiveSecurityPoliciesBackendServiceRequest request = new GetEffectiveSecurityPoliciesBackendServiceRequest
+            {
+                Project = "",
+                BackendService = "",
+            };
+            // Make the request
+            GetEffectiveSecurityPoliciesBackendServiceResponse response = await backendServicesClient.GetEffectiveSecurityPoliciesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEffectiveSecurityPolicies</summary>
+        public void GetEffectiveSecurityPolicies()
+        {
+            // Snippet: GetEffectiveSecurityPolicies(string, string, CallSettings)
+            // Create client
+            BackendServicesClient backendServicesClient = BackendServicesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string backendService = "";
+            // Make the request
+            GetEffectiveSecurityPoliciesBackendServiceResponse response = backendServicesClient.GetEffectiveSecurityPolicies(project, backendService);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetEffectiveSecurityPoliciesAsync</summary>
+        public async Task GetEffectiveSecurityPoliciesAsync()
+        {
+            // Snippet: GetEffectiveSecurityPoliciesAsync(string, string, CallSettings)
+            // Additional: GetEffectiveSecurityPoliciesAsync(string, string, CancellationToken)
+            // Create client
+            BackendServicesClient backendServicesClient = await BackendServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string backendService = "";
+            // Make the request
+            GetEffectiveSecurityPoliciesBackendServiceResponse response = await backendServicesClient.GetEffectiveSecurityPoliciesAsync(project, backendService);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetHealth</summary>
         public void GetHealthRequestObject()
         {

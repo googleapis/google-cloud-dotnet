@@ -21,6 +21,18 @@
                 "VerifyAttestation",
                 "VerifyAttestationAsync"
               ]
+            },
+            "VerifyConfidentialGke": {
+              "methods": [
+                "VerifyConfidentialGke",
+                "VerifyConfidentialGkeAsync"
+              ]
+            },
+            "VerifyConfidentialSpace": {
+              "methods": [
+                "VerifyConfidentialSpace",
+                "VerifyConfidentialSpaceAsync"
+              ]
             }
           }
         }

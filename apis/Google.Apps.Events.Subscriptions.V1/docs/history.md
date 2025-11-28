@@ -1,5 +1,28 @@
 # Version history
 
+## Version 1.1.0, released 2025-11-03
+
+### New features
+
+- Update dependencies
+
+## Version 1.0.0, released 2025-05-15
+
+No API changes; just promoting the library to GA (1.0.0).
+
+## Version 1.0.0-beta05, released 2025-05-09
+
+Re-release of changes in 1.0.0-beta04.
+
+## Version 1.0.0-beta04, released 2025-05-09
+
+Note: the release process failed for this release; a new release
+will be created shortly.
+
+### Bug fixes
+
+- An existing oauth_scope https://www.googleapis.com/auth/chat.bot is removed from SubscriptionsService
+
 ## Version 1.0.0-beta03, released 2024-05-08
 
 ### New features

@@ -1,5 +1,24 @@
 # Version history
 
+## Version 2.12.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+## Version 2.11.0, released 2025-08-08
+
+### New features
+
+- Add new field `salesforce_org` to message `DiscoverConnectionProfileRequest`
+- Add new field `mongodb_cluster` to message `DiscoverConnectionProfileRequest`
+- Add new field `validate_only` to message `CreatePrivateConnectionRequest`
+- Add new field `psc_interface_config` to message `PrivateConnection`
+- Add new field for server certificate  to message `OracleSslConfig`
+- Add new field for server certificate to message `PostgresqlSslConfig`
+- Add new field `mongodb_profile` to message `ConnectionProfile`
+- Add new field `project_id` to message `BigQueryDestinationConfig`
+
 ## Version 2.10.0, released 2025-03-31
 
 ### New features

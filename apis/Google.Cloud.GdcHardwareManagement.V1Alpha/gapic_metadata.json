@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "GDCHardwareManagementClient",
           "rpcs": {
+            "CancelOrder": {
+              "methods": [
+                "CancelOrder",
+                "CancelOrderAsync"
+              ]
+            },
             "CreateComment": {
               "methods": [
                 "CreateComment",
@@ -176,6 +182,12 @@
               "methods": [
                 "RecordActionOnComment",
                 "RecordActionOnCommentAsync"
+              ]
+            },
+            "RequestOrderDateChange": {
+              "methods": [
+                "RequestOrderDateChange",
+                "RequestOrderDateChangeAsync"
               ]
             },
             "SignalZoneState": {

@@ -41,4 +41,28 @@ namespace Google.Cloud.AIPlatform.V1
             set => FeatureView = value?.ToString() ?? "";
         }
     }
+
+    public partial class FeatureViewDirectWriteRequest
+    {
+        /// <summary>
+        /// <see cref="FeatureViewName"/>-typed view over the <see cref="FeatureView"/> resource name property.
+        /// </summary>
+        public FeatureViewName FeatureViewAsFeatureViewName
+        {
+            get => string.IsNullOrEmpty(FeatureView) ? null : FeatureViewName.Parse(FeatureView, allowUnparsed: true);
+            set => FeatureView = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GenerateFetchAccessTokenRequest
+    {
+        /// <summary>
+        /// <see cref="FeatureViewName"/>-typed view over the <see cref="FeatureView"/> resource name property.
+        /// </summary>
+        public FeatureViewName FeatureViewAsFeatureViewName
+        {
+            get => string.IsNullOrEmpty(FeatureView) ? null : FeatureViewName.Parse(FeatureView, allowUnparsed: true);
+            set => FeatureView = value?.ToString() ?? "";
+        }
+    }
 }

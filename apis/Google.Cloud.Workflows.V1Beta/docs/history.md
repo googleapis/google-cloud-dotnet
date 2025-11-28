@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.0.0-beta06, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+### Documentation improvements
+
+- A comment for field `revision_id` in message `.google.cloud.workflows.v1beta.Workflow` is changed
+- A comment for field `service_account` in message `.google.cloud.workflows.v1beta.Workflow` is changed
+- A comment for field `source_contents` in message `.google.cloud.workflows.v1beta.Workflow` is changed
+
 ## Version 2.0.0-beta05, released 2024-05-08
 
 ### New features

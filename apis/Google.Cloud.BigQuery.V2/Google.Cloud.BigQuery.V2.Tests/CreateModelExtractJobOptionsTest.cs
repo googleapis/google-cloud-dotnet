@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,11 +24,13 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var options = new CreateModelExtractJobOptions
             {
-                DestinationFormat = ModelFormat.XGBoostBooster
+                DestinationFormat = ModelFormat.XGBoostBooster,
+                ConfigurationModifier = job => job.UseAvroLogicalTypes = true
             };
             JobConfigurationExtract extract = new JobConfigurationExtract();
             options.ModifyRequest(extract);
             Assert.Equal("ML_XGBOOST_BOOSTER", extract.DestinationFormat);
+            Assert.True(extract.UseAvroLogicalTypes);
         }
     }
 }

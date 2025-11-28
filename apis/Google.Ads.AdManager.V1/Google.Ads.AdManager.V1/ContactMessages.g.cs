@@ -25,21 +25,32 @@ namespace Google.Ads.AdManager.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci5nb29nbGUvYWRzL2FkbWFuYWdlci92MS9jb250YWN0X21lc3NhZ2VzLnBy",
-            "b3RvEhdnb29nbGUuYWRzLmFkbWFuYWdlci52MRofZ29vZ2xlL2FwaS9maWVs",
-            "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byKb",
-            "AQoHQ29udGFjdBIRCgRuYW1lGAEgASgJQgPgQQgSFwoKY29udGFjdF9pZBgC",
-            "IAEoA0ID4EEDOmTqQWEKIGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Db250",
-            "YWN0EipuZXR3b3Jrcy97bmV0d29ya19jb2RlfS9jb250YWN0cy97Y29udGFj",
-            "dH0qCGNvbnRhY3RzMgdjb250YWN0QsgBChtjb20uZ29vZ2xlLmFkcy5hZG1h",
-            "bmFnZXIudjFCFENvbnRhY3RNZXNzYWdlc1Byb3RvUAFaQGdvb2dsZS5nb2xh",
-            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92MTth",
-            "ZG1hbmFnZXKqAhdHb29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2dsZVxB",
-            "ZHNcQWRNYW5hZ2VyXFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6VjFi",
-            "BnByb3RvMw=="));
+            "b3RvEhdnb29nbGUuYWRzLmFkbWFuYWdlci52MRorZ29vZ2xlL2Fkcy9hZG1h",
+            "bmFnZXIvdjEvY29udGFjdF9lbnVtcy5wcm90bxofZ29vZ2xlL2FwaS9maWVs",
+            "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byLu",
+            "BAoHQ29udGFjdBIRCgRuYW1lGAEgASgJQgPgQQgSHgoMZGlzcGxheV9uYW1l",
+            "GAMgASgJQgPgQQJIAIgBARJBCgdjb21wYW55GAUgASgJQivgQQLgQQX6QSIK",
+            "IGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Db21wYW55SAGIAQESUgoGc3Rh",
+            "dHVzGAYgASgOMjguZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ29udGFjdFN0",
+            "YXR1c0VudW0uQ29udGFjdFN0YXR1c0ID4EEDSAKIAQESGQoHYWRkcmVzcxgH",
+            "IAEoCUID4EEBSAOIAQESHAoKY2VsbF9waG9uZRgIIAEoCUID4EEBSASIAQES",
+            "GQoHY29tbWVudBgJIAEoCUID4EEBSAWIAQESFwoFZW1haWwYCiABKAlCA+BB",
+            "AUgGiAEBEhUKA2ZheBgLIAEoCUID4EEBSAeIAQESFwoFdGl0bGUYDCABKAlC",
+            "A+BBAUgIiAEBEhwKCndvcmtfcGhvbmUYDSABKAlCA+BBAUgJiAEBOmTqQWEK",
+            "IGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Db250YWN0EipuZXR3b3Jrcy97",
+            "bmV0d29ya19jb2RlfS9jb250YWN0cy97Y29udGFjdH0qCGNvbnRhY3RzMgdj",
+            "b250YWN0Qg8KDV9kaXNwbGF5X25hbWVCCgoIX2NvbXBhbnlCCQoHX3N0YXR1",
+            "c0IKCghfYWRkcmVzc0INCgtfY2VsbF9waG9uZUIKCghfY29tbWVudEIICgZf",
+            "ZW1haWxCBgoEX2ZheEIICgZfdGl0bGVCDQoLX3dvcmtfcGhvbmVCyAEKG2Nv",
+            "bS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUIUQ29udGFjdE1lc3NhZ2VzUHJv",
+            "dG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9h",
+            "ZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoCF0dvb2dsZS5BZHMuQWRNYW5h",
+            "Z2VyLlYxygIXR29vZ2xlXEFkc1xBZE1hbmFnZXJcVjHqAhpHb29nbGU6OkFk",
+            "czo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.ContactEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Contact), global::Google.Ads.AdManager.V1.Contact.Parser, new[]{ "Name", "ContactId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Contact), global::Google.Ads.AdManager.V1.Contact.Parser, new[]{ "Name", "DisplayName", "Company", "Status", "Address", "CellPhone", "Comment", "Email", "Fax", "Title", "WorkPhone" }, new[]{ "DisplayName", "Company", "Status", "Address", "CellPhone", "Comment", "Email", "Fax", "Title", "WorkPhone" }, null, null, null)
           }));
     }
     #endregion
@@ -60,6 +71,7 @@ namespace Google.Ads.AdManager.V1 {
   {
     private static readonly pb::MessageParser<Contact> _parser = new pb::MessageParser<Contact>(() => new Contact());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Contact> Parser { get { return _parser; } }
@@ -87,8 +99,18 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Contact(Contact other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
-      contactId_ = other.contactId_;
+      displayName_ = other.displayName_;
+      company_ = other.company_;
+      status_ = other.status_;
+      address_ = other.address_;
+      cellPhone_ = other.cellPhone_;
+      comment_ = other.comment_;
+      email_ = other.email_;
+      fax_ = other.fax_;
+      title_ = other.title_;
+      workPhone_ = other.workPhone_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -114,20 +136,304 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
 
-    /// <summary>Field number for the "contact_id" field.</summary>
-    public const int ContactIdFieldNumber = 2;
-    private long contactId_;
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 3;
+    private readonly static string DisplayNameDefaultValue = "";
+
+    private string displayName_;
     /// <summary>
-    /// Output only. The unique ID of the contact. This value is readonly and is
-    /// assigned by Google.
+    /// Required. The name of the contact. This attribute has a maximum length of
+    /// 127 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long ContactId {
-      get { return contactId_; }
+    public string DisplayName {
+      get { return displayName_ ?? DisplayNameDefaultValue; }
       set {
-        contactId_ = value;
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return displayName_ != null; }
+    }
+    /// <summary>Clears the value of the "display_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      displayName_ = null;
+    }
+
+    /// <summary>Field number for the "company" field.</summary>
+    public const int CompanyFieldNumber = 5;
+    private readonly static string CompanyDefaultValue = "";
+
+    private string company_;
+    /// <summary>
+    /// Required. Immutable. The resource name of the Company.
+    /// Format: "networks/{network_code}/companies/{company_id}"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Company {
+      get { return company_ ?? CompanyDefaultValue; }
+      set {
+        company_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "company" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCompany {
+      get { return company_ != null; }
+    }
+    /// <summary>Clears the value of the "company" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCompany() {
+      company_ = null;
+    }
+
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 6;
+    private readonly static global::Google.Ads.AdManager.V1.ContactStatusEnum.Types.ContactStatus StatusDefaultValue = global::Google.Ads.AdManager.V1.ContactStatusEnum.Types.ContactStatus.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.ContactStatusEnum.Types.ContactStatus status_;
+    /// <summary>
+    /// Output only. The status of the contact. This attribute is assigned by
+    /// Google.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.ContactStatusEnum.Types.ContactStatus Status {
+      get { if ((_hasBits0 & 1) != 0) { return status_; } else { return StatusDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        status_ = value;
+      }
+    }
+    /// <summary>Gets whether the "status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStatus {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "status" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStatus() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "address" field.</summary>
+    public const int AddressFieldNumber = 7;
+    private readonly static string AddressDefaultValue = "";
+
+    private string address_;
+    /// <summary>
+    /// Optional. The address of the contact. This attribute has a maximum length
+    /// of 1024 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Address {
+      get { return address_ ?? AddressDefaultValue; }
+      set {
+        address_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "address" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAddress {
+      get { return address_ != null; }
+    }
+    /// <summary>Clears the value of the "address" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAddress() {
+      address_ = null;
+    }
+
+    /// <summary>Field number for the "cell_phone" field.</summary>
+    public const int CellPhoneFieldNumber = 8;
+    private readonly static string CellPhoneDefaultValue = "";
+
+    private string cellPhone_;
+    /// <summary>
+    /// Optional. The cell phone number where the contact can be reached.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CellPhone {
+      get { return cellPhone_ ?? CellPhoneDefaultValue; }
+      set {
+        cellPhone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "cell_phone" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCellPhone {
+      get { return cellPhone_ != null; }
+    }
+    /// <summary>Clears the value of the "cell_phone" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCellPhone() {
+      cellPhone_ = null;
+    }
+
+    /// <summary>Field number for the "comment" field.</summary>
+    public const int CommentFieldNumber = 9;
+    private readonly static string CommentDefaultValue = "";
+
+    private string comment_;
+    /// <summary>
+    /// Optional. A free-form text comment for the contact. This attribute has a
+    /// maximum length of 1024 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Comment {
+      get { return comment_ ?? CommentDefaultValue; }
+      set {
+        comment_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "comment" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasComment {
+      get { return comment_ != null; }
+    }
+    /// <summary>Clears the value of the "comment" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearComment() {
+      comment_ = null;
+    }
+
+    /// <summary>Field number for the "email" field.</summary>
+    public const int EmailFieldNumber = 10;
+    private readonly static string EmailDefaultValue = "";
+
+    private string email_;
+    /// <summary>
+    /// Optional. The e-mail address where the contact can be reached. This
+    /// attribute has a maximum length of 128 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Email {
+      get { return email_ ?? EmailDefaultValue; }
+      set {
+        email_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "email" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEmail {
+      get { return email_ != null; }
+    }
+    /// <summary>Clears the value of the "email" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEmail() {
+      email_ = null;
+    }
+
+    /// <summary>Field number for the "fax" field.</summary>
+    public const int FaxFieldNumber = 11;
+    private readonly static string FaxDefaultValue = "";
+
+    private string fax_;
+    /// <summary>
+    /// Optional. The fax number where the contact can be reached. This attribute
+    /// has a maximum length of 1024 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Fax {
+      get { return fax_ ?? FaxDefaultValue; }
+      set {
+        fax_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "fax" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFax {
+      get { return fax_ != null; }
+    }
+    /// <summary>Clears the value of the "fax" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFax() {
+      fax_ = null;
+    }
+
+    /// <summary>Field number for the "title" field.</summary>
+    public const int TitleFieldNumber = 12;
+    private readonly static string TitleDefaultValue = "";
+
+    private string title_;
+    /// <summary>
+    /// Optional. The job title of the contact. This attribute has a maximum length
+    /// of 1024 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Title {
+      get { return title_ ?? TitleDefaultValue; }
+      set {
+        title_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "title" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTitle {
+      get { return title_ != null; }
+    }
+    /// <summary>Clears the value of the "title" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTitle() {
+      title_ = null;
+    }
+
+    /// <summary>Field number for the "work_phone" field.</summary>
+    public const int WorkPhoneFieldNumber = 13;
+    private readonly static string WorkPhoneDefaultValue = "";
+
+    private string workPhone_;
+    /// <summary>
+    /// Optional. The work phone number where the contact can be reached. This
+    /// attribute has a maximum length of 1024 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string WorkPhone {
+      get { return workPhone_ ?? WorkPhoneDefaultValue; }
+      set {
+        workPhone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "work_phone" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasWorkPhone {
+      get { return workPhone_ != null; }
+    }
+    /// <summary>Clears the value of the "work_phone" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearWorkPhone() {
+      workPhone_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -146,7 +452,16 @@ namespace Google.Ads.AdManager.V1 {
         return true;
       }
       if (Name != other.Name) return false;
-      if (ContactId != other.ContactId) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (Company != other.Company) return false;
+      if (Status != other.Status) return false;
+      if (Address != other.Address) return false;
+      if (CellPhone != other.CellPhone) return false;
+      if (Comment != other.Comment) return false;
+      if (Email != other.Email) return false;
+      if (Fax != other.Fax) return false;
+      if (Title != other.Title) return false;
+      if (WorkPhone != other.WorkPhone) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -155,7 +470,16 @@ namespace Google.Ads.AdManager.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (ContactId != 0L) hash ^= ContactId.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasCompany) hash ^= Company.GetHashCode();
+      if (HasStatus) hash ^= Status.GetHashCode();
+      if (HasAddress) hash ^= Address.GetHashCode();
+      if (HasCellPhone) hash ^= CellPhone.GetHashCode();
+      if (HasComment) hash ^= Comment.GetHashCode();
+      if (HasEmail) hash ^= Email.GetHashCode();
+      if (HasFax) hash ^= Fax.GetHashCode();
+      if (HasTitle) hash ^= Title.GetHashCode();
+      if (HasWorkPhone) hash ^= WorkPhone.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -178,9 +502,45 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (ContactId != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(ContactId);
+      if (HasDisplayName) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (HasCompany) {
+        output.WriteRawTag(42);
+        output.WriteString(Company);
+      }
+      if (HasStatus) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Status);
+      }
+      if (HasAddress) {
+        output.WriteRawTag(58);
+        output.WriteString(Address);
+      }
+      if (HasCellPhone) {
+        output.WriteRawTag(66);
+        output.WriteString(CellPhone);
+      }
+      if (HasComment) {
+        output.WriteRawTag(74);
+        output.WriteString(Comment);
+      }
+      if (HasEmail) {
+        output.WriteRawTag(82);
+        output.WriteString(Email);
+      }
+      if (HasFax) {
+        output.WriteRawTag(90);
+        output.WriteString(Fax);
+      }
+      if (HasTitle) {
+        output.WriteRawTag(98);
+        output.WriteString(Title);
+      }
+      if (HasWorkPhone) {
+        output.WriteRawTag(106);
+        output.WriteString(WorkPhone);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -196,9 +556,45 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (ContactId != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(ContactId);
+      if (HasDisplayName) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (HasCompany) {
+        output.WriteRawTag(42);
+        output.WriteString(Company);
+      }
+      if (HasStatus) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Status);
+      }
+      if (HasAddress) {
+        output.WriteRawTag(58);
+        output.WriteString(Address);
+      }
+      if (HasCellPhone) {
+        output.WriteRawTag(66);
+        output.WriteString(CellPhone);
+      }
+      if (HasComment) {
+        output.WriteRawTag(74);
+        output.WriteString(Comment);
+      }
+      if (HasEmail) {
+        output.WriteRawTag(82);
+        output.WriteString(Email);
+      }
+      if (HasFax) {
+        output.WriteRawTag(90);
+        output.WriteString(Fax);
+      }
+      if (HasTitle) {
+        output.WriteRawTag(98);
+        output.WriteString(Title);
+      }
+      if (HasWorkPhone) {
+        output.WriteRawTag(106);
+        output.WriteString(WorkPhone);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -213,8 +609,35 @@ namespace Google.Ads.AdManager.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (ContactId != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ContactId);
+      if (HasDisplayName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (HasCompany) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Company);
+      }
+      if (HasStatus) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
+      if (HasAddress) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Address);
+      }
+      if (HasCellPhone) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CellPhone);
+      }
+      if (HasComment) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Comment);
+      }
+      if (HasEmail) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Email);
+      }
+      if (HasFax) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Fax);
+      }
+      if (HasTitle) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Title);
+      }
+      if (HasWorkPhone) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(WorkPhone);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -231,8 +654,35 @@ namespace Google.Ads.AdManager.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.ContactId != 0L) {
-        ContactId = other.ContactId;
+      if (other.HasDisplayName) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.HasCompany) {
+        Company = other.Company;
+      }
+      if (other.HasStatus) {
+        Status = other.Status;
+      }
+      if (other.HasAddress) {
+        Address = other.Address;
+      }
+      if (other.HasCellPhone) {
+        CellPhone = other.CellPhone;
+      }
+      if (other.HasComment) {
+        Comment = other.Comment;
+      }
+      if (other.HasEmail) {
+        Email = other.Email;
+      }
+      if (other.HasFax) {
+        Fax = other.Fax;
+      }
+      if (other.HasTitle) {
+        Title = other.Title;
+      }
+      if (other.HasWorkPhone) {
+        WorkPhone = other.WorkPhone;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -253,8 +703,44 @@ namespace Google.Ads.AdManager.V1 {
             Name = input.ReadString();
             break;
           }
-          case 16: {
-            ContactId = input.ReadInt64();
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 42: {
+            Company = input.ReadString();
+            break;
+          }
+          case 48: {
+            Status = (global::Google.Ads.AdManager.V1.ContactStatusEnum.Types.ContactStatus) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            Address = input.ReadString();
+            break;
+          }
+          case 66: {
+            CellPhone = input.ReadString();
+            break;
+          }
+          case 74: {
+            Comment = input.ReadString();
+            break;
+          }
+          case 82: {
+            Email = input.ReadString();
+            break;
+          }
+          case 90: {
+            Fax = input.ReadString();
+            break;
+          }
+          case 98: {
+            Title = input.ReadString();
+            break;
+          }
+          case 106: {
+            WorkPhone = input.ReadString();
             break;
           }
         }
@@ -276,8 +762,44 @@ namespace Google.Ads.AdManager.V1 {
             Name = input.ReadString();
             break;
           }
-          case 16: {
-            ContactId = input.ReadInt64();
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 42: {
+            Company = input.ReadString();
+            break;
+          }
+          case 48: {
+            Status = (global::Google.Ads.AdManager.V1.ContactStatusEnum.Types.ContactStatus) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            Address = input.ReadString();
+            break;
+          }
+          case 66: {
+            CellPhone = input.ReadString();
+            break;
+          }
+          case 74: {
+            Comment = input.ReadString();
+            break;
+          }
+          case 82: {
+            Email = input.ReadString();
+            break;
+          }
+          case 90: {
+            Fax = input.ReadString();
+            break;
+          }
+          case 98: {
+            Title = input.ReadString();
+            break;
+          }
+          case 106: {
+            WorkPhone = input.ReadString();
             break;
           }
         }

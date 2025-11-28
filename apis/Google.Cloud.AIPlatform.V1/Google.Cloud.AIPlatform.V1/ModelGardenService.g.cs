@@ -28,32 +28,83 @@ namespace Google.Cloud.AIPlatform.V1 {
             "dmljZS5wcm90bxIaZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaHGdvb2ds",
             "ZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnBy",
             "b3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUv",
-            "YXBpL3Jlc291cmNlLnByb3RvGjBnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92",
-            "MS9wdWJsaXNoZXJfbW9kZWwucHJvdG8i/gEKGEdldFB1Ymxpc2hlck1vZGVs",
-            "UmVxdWVzdBI+CgRuYW1lGAEgASgJQjDgQQL6QSoKKGFpcGxhdGZvcm0uZ29v",
-            "Z2xlYXBpcy5jb20vUHVibGlzaGVyTW9kZWwSGgoNbGFuZ3VhZ2VfY29kZRgC",
-            "IAEoCUID4EEBEkEKBHZpZXcYAyABKA4yLi5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MS5QdWJsaXNoZXJNb2RlbFZpZXdCA+BBARIiChVpc19odWdnaW5n",
-            "X2ZhY2VfbW9kZWwYBSABKAhCA+BBARIfChJodWdnaW5nX2ZhY2VfdG9rZW4Y",
-            "BiABKAlCA+BBASqhAQoSUHVibGlzaGVyTW9kZWxWaWV3EiQKIFBVQkxJU0hF",
-            "Ul9NT0RFTF9WSUVXX1VOU1BFQ0lGSUVEEAASHgoaUFVCTElTSEVSX01PREVM",
-            "X1ZJRVdfQkFTSUMQARIdChlQVUJMSVNIRVJfTU9ERUxfVklFV19GVUxMEAIS",
-            "JgoiUFVCTElTSEVSX01PREVMX1ZFUlNJT05fVklFV19CQVNJQxADMowCChJN",
-            "b2RlbEdhcmRlblNlcnZpY2USpgEKEUdldFB1Ymxpc2hlck1vZGVsEjQuZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2V0UHVibGlzaGVyTW9kZWxSZXF1",
-            "ZXN0GiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUHVibGlzaGVyTW9k",
-            "ZWwiL9pBBG5hbWWC0+STAiISIC92MS97bmFtZT1wdWJsaXNoZXJzLyovbW9k",
-            "ZWxzLyp9Gk3KQRlhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6",
-            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULVAQoe",
-            "Y29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhdNb2RlbEdhcmRlblNl",
-            "cnZpY2VQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0v",
-            "YXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91",
-            "ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHq",
-            "Ah1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "YXBpL3Jlc291cmNlLnByb3RvGjJnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92",
+            "MS9tYWNoaW5lX3Jlc291cmNlcy5wcm90bxomZ29vZ2xlL2Nsb3VkL2FpcGxh",
+            "dGZvcm0vdjEvbW9kZWwucHJvdG8aKmdvb2dsZS9jbG91ZC9haXBsYXRmb3Jt",
+            "L3YxL29wZXJhdGlvbi5wcm90bxowZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0v",
+            "djEvcHVibGlzaGVyX21vZGVsLnByb3RvGiNnb29nbGUvbG9uZ3J1bm5pbmcv",
+            "b3BlcmF0aW9ucy5wcm90byL+AQoYR2V0UHVibGlzaGVyTW9kZWxSZXF1ZXN0",
+            "Ej4KBG5hbWUYASABKAlCMOBBAvpBKgooYWlwbGF0Zm9ybS5nb29nbGVhcGlz",
+            "LmNvbS9QdWJsaXNoZXJNb2RlbBIaCg1sYW5ndWFnZV9jb2RlGAIgASgJQgPg",
+            "QQESQQoEdmlldxgDIAEoDjIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "LlB1Ymxpc2hlck1vZGVsVmlld0ID4EEBEiIKFWlzX2h1Z2dpbmdfZmFjZV9t",
+            "b2RlbBgFIAEoCEID4EEBEh8KEmh1Z2dpbmdfZmFjZV90b2tlbhgGIAEoCUID",
+            "4EEBIp0JCg1EZXBsb3lSZXF1ZXN0Ek0KFHB1Ymxpc2hlcl9tb2RlbF9uYW1l",
+            "GAEgASgJQi36QSoKKGFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vUHVibGlz",
+            "aGVyTW9kZWxIABIfChVodWdnaW5nX2ZhY2VfbW9kZWxfaWQYAiABKAlIABI+",
+            "CgtkZXN0aW5hdGlvbhgEIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xl",
+            "YXBpcy5jb20vTG9jYXRpb24SUAoMbW9kZWxfY29uZmlnGAUgASgLMjUuZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRGVwbG95UmVxdWVzdC5Nb2RlbENv",
+            "bmZpZ0ID4EEBElYKD2VuZHBvaW50X2NvbmZpZxgGIAEoCzI4Lmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLkRlcGxveVJlcXVlc3QuRW5kcG9pbnRDb25m",
+            "aWdCA+BBARJSCg1kZXBsb3lfY29uZmlnGAcgASgLMjYuZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjEuRGVwbG95UmVxdWVzdC5EZXBsb3lDb25maWdCA+BB",
+            "ARqCAgoLTW9kZWxDb25maWcSGAoLYWNjZXB0X2V1bGEYASABKAhCA+BBARIm",
+            "ChlodWdnaW5nX2ZhY2VfYWNjZXNzX3Rva2VuGAIgASgJQgPgQQESJwoaaHVn",
+            "Z2luZ19mYWNlX2NhY2hlX2VuYWJsZWQYAyABKAhCA+BBARIfChJtb2RlbF9k",
+            "aXNwbGF5X25hbWUYBCABKAlCA+BBARJLCg5jb250YWluZXJfc3BlYxgFIAEo",
+            "CzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1vZGVsQ29udGFpbmVy",
+            "U3BlY0ID4EEBEhoKDW1vZGVsX3VzZXJfaWQYBiABKAlCA+BBARqrAQoORW5k",
+            "cG9pbnRDb25maWcSIgoVZW5kcG9pbnRfZGlzcGxheV9uYW1lGAEgASgJQgPg",
+            "QQESKQoaZGVkaWNhdGVkX2VuZHBvaW50X2VuYWJsZWQYAiABKAhCBRgB4EEB",
+            "EigKG2RlZGljYXRlZF9lbmRwb2ludF9kaXNhYmxlZBgEIAEoCEID4EEBEiAK",
+            "EGVuZHBvaW50X3VzZXJfaWQYAyABKAlCBuBBBeBBARqdAgoMRGVwbG95Q29u",
+            "ZmlnElAKE2RlZGljYXRlZF9yZXNvdXJjZXMYASABKAsyLi5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MS5EZWRpY2F0ZWRSZXNvdXJjZXNCA+BBARIgChNm",
+            "YXN0X3RyeW91dF9lbmFibGVkGAIgASgIQgPgQQESZAoNc3lzdGVtX2xhYmVs",
+            "cxgDIAMoCzJILmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRlcGxveVJl",
+            "cXVlc3QuRGVwbG95Q29uZmlnLlN5c3RlbUxhYmVsc0VudHJ5QgPgQQEaMwoR",
+            "U3lzdGVtTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
+            "OgI4AUILCglhcnRpZmFjdHMi0QEKDkRlcGxveVJlc3BvbnNlEkkKD3B1Ymxp",
+            "c2hlcl9tb2RlbBgBIAEoCUIw4EED+kEqCihhaXBsYXRmb3JtLmdvb2dsZWFw",
+            "aXMuY29tL1B1Ymxpc2hlck1vZGVsEjwKCGVuZHBvaW50GAIgASgJQirgQQP6",
+            "QSQKImFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRW5kcG9pbnQSNgoFbW9k",
+            "ZWwYAyABKAlCJ+BBA/pBIQofYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9N",
+            "b2RlbCKoAgoXRGVwbG95T3BlcmF0aW9uTWV0YWRhdGESTgoQZ2VuZXJpY19t",
+            "ZXRhZGF0YRgBIAEoCzI0Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdl",
+            "bmVyaWNPcGVyYXRpb25NZXRhZGF0YRJJCg9wdWJsaXNoZXJfbW9kZWwYAiAB",
+            "KAlCMOBBA/pBKgooYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9QdWJsaXNo",
+            "ZXJNb2RlbBI+CgtkZXN0aW5hdGlvbhgDIAEoCUIp4EED+kEjCiFsb2NhdGlv",
+            "bnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SGwoOcHJvamVjdF9udW1iZXIY",
+            "BCABKANCA+BBAxIVCghtb2RlbF9pZBgFIAEoCUID4EEDKqEBChJQdWJsaXNo",
+            "ZXJNb2RlbFZpZXcSJAogUFVCTElTSEVSX01PREVMX1ZJRVdfVU5TUEVDSUZJ",
+            "RUQQABIeChpQVUJMSVNIRVJfTU9ERUxfVklFV19CQVNJQxABEh0KGVBVQkxJ",
+            "U0hFUl9NT0RFTF9WSUVXX0ZVTEwQAhImCiJQVUJMSVNIRVJfTU9ERUxfVkVS",
+            "U0lPTl9WSUVXX0JBU0lDEAMyyQMKEk1vZGVsR2FyZGVuU2VydmljZRKmAQoR",
+            "R2V0UHVibGlzaGVyTW9kZWwSNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5HZXRQdWJsaXNoZXJNb2RlbFJlcXVlc3QaKi5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MS5QdWJsaXNoZXJNb2RlbCIv2kEEbmFtZYLT5JMCIhIgL3Yx",
+            "L3tuYW1lPXB1Ymxpc2hlcnMvKi9tb2RlbHMvKn0SugEKBkRlcGxveRIpLmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRlcGxveVJlcXVlc3QaHS5nb29n",
+            "bGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImbKQSkKDkRlcGxveVJlc3BvbnNl",
+            "EhdEZXBsb3lPcGVyYXRpb25NZXRhZGF0YYLT5JMCNCIvL3YxL3tkZXN0aW5h",
+            "dGlvbj1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfTpkZXBsb3k6ASoaTcpBGWFp",
+            "cGxhdGZvcm0uZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVh",
+            "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQtUBCh5jb20uZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjFCF01vZGVsR2FyZGVuU2VydmljZVByb3RvUAFa",
+            "PmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRm",
+            "b3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0u",
+            "VjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xv",
+            "dWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.PublisherModelReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.OperationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.PublisherModelReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.PublisherModelView), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GetPublisherModelRequest), global::Google.Cloud.AIPlatform.V1.GetPublisherModelRequest.Parser, new[]{ "Name", "LanguageCode", "View", "IsHuggingFaceModel", "HuggingFaceToken" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GetPublisherModelRequest), global::Google.Cloud.AIPlatform.V1.GetPublisherModelRequest.Parser, new[]{ "Name", "LanguageCode", "View", "IsHuggingFaceModel", "HuggingFaceToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployRequest), global::Google.Cloud.AIPlatform.V1.DeployRequest.Parser, new[]{ "PublisherModelName", "HuggingFaceModelId", "Destination", "ModelConfig", "EndpointConfig", "DeployConfig" }, new[]{ "Artifacts" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.ModelConfig), global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.ModelConfig.Parser, new[]{ "AcceptEula", "HuggingFaceAccessToken", "HuggingFaceCacheEnabled", "ModelDisplayName", "ContainerSpec", "ModelUserId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.EndpointConfig), global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.EndpointConfig.Parser, new[]{ "EndpointDisplayName", "DedicatedEndpointEnabled", "DedicatedEndpointDisabled", "EndpointUserId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.DeployConfig), global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.DeployConfig.Parser, new[]{ "DedicatedResources", "FastTryoutEnabled", "SystemLabels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployResponse), global::Google.Cloud.AIPlatform.V1.DeployResponse.Parser, new[]{ "PublisherModel", "Endpoint", "Model" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployOperationMetadata), global::Google.Cloud.AIPlatform.V1.DeployOperationMetadata.Parser, new[]{ "GenericMetadata", "PublisherModel", "Destination", "ProjectNumber", "ModelId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -438,6 +489,2198 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 50: {
             HuggingFaceToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for
+  /// [ModelGardenService.Deploy][google.cloud.aiplatform.v1.ModelGardenService.Deploy].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeployRequest : pb::IMessage<DeployRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeployRequest> _parser = new pb::MessageParser<DeployRequest>(() => new DeployRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeployRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.ModelGardenServiceReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeployRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeployRequest(DeployRequest other) : this() {
+      destination_ = other.destination_;
+      modelConfig_ = other.modelConfig_ != null ? other.modelConfig_.Clone() : null;
+      endpointConfig_ = other.endpointConfig_ != null ? other.endpointConfig_.Clone() : null;
+      deployConfig_ = other.deployConfig_ != null ? other.deployConfig_.Clone() : null;
+      switch (other.ArtifactsCase) {
+        case ArtifactsOneofCase.PublisherModelName:
+          PublisherModelName = other.PublisherModelName;
+          break;
+        case ArtifactsOneofCase.HuggingFaceModelId:
+          HuggingFaceModelId = other.HuggingFaceModelId;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeployRequest Clone() {
+      return new DeployRequest(this);
+    }
+
+    /// <summary>Field number for the "publisher_model_name" field.</summary>
+    public const int PublisherModelNameFieldNumber = 1;
+    /// <summary>
+    /// The Model Garden model to deploy.
+    /// Format:
+    /// `publishers/{publisher}/models/{publisher_model}@{version_id}`, or
+    /// `publishers/hf-{hugging-face-author}/models/{hugging-face-model-name}@001`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PublisherModelName {
+      get { return HasPublisherModelName ? (string) artifacts_ : ""; }
+      set {
+        artifacts_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        artifactsCase_ = ArtifactsOneofCase.PublisherModelName;
+      }
+    }
+    /// <summary>Gets whether the "publisher_model_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPublisherModelName {
+      get { return artifactsCase_ == ArtifactsOneofCase.PublisherModelName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "publisher_model_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPublisherModelName() {
+      if (HasPublisherModelName) {
+        ClearArtifacts();
+      }
+    }
+
+    /// <summary>Field number for the "hugging_face_model_id" field.</summary>
+    public const int HuggingFaceModelIdFieldNumber = 2;
+    /// <summary>
+    /// The Hugging Face model to deploy.
+    /// Format: Hugging Face model ID like `google/gemma-2-2b-it`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string HuggingFaceModelId {
+      get { return HasHuggingFaceModelId ? (string) artifacts_ : ""; }
+      set {
+        artifacts_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        artifactsCase_ = ArtifactsOneofCase.HuggingFaceModelId;
+      }
+    }
+    /// <summary>Gets whether the "hugging_face_model_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasHuggingFaceModelId {
+      get { return artifactsCase_ == ArtifactsOneofCase.HuggingFaceModelId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "hugging_face_model_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearHuggingFaceModelId() {
+      if (HasHuggingFaceModelId) {
+        ClearArtifacts();
+      }
+    }
+
+    /// <summary>Field number for the "destination" field.</summary>
+    public const int DestinationFieldNumber = 4;
+    private string destination_ = "";
+    /// <summary>
+    /// Required. The resource name of the Location to deploy the model in.
+    /// Format: `projects/{project}/locations/{location}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Destination {
+      get { return destination_; }
+      set {
+        destination_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "model_config" field.</summary>
+    public const int ModelConfigFieldNumber = 5;
+    private global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.ModelConfig modelConfig_;
+    /// <summary>
+    /// Optional. The model config to use for the deployment.
+    /// If not specified, the default model config will be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.ModelConfig ModelConfig {
+      get { return modelConfig_; }
+      set {
+        modelConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "endpoint_config" field.</summary>
+    public const int EndpointConfigFieldNumber = 6;
+    private global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.EndpointConfig endpointConfig_;
+    /// <summary>
+    /// Optional. The endpoint config to use for the deployment.
+    /// If not specified, the default endpoint config will be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.EndpointConfig EndpointConfig {
+      get { return endpointConfig_; }
+      set {
+        endpointConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "deploy_config" field.</summary>
+    public const int DeployConfigFieldNumber = 7;
+    private global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.DeployConfig deployConfig_;
+    /// <summary>
+    /// Optional. The deploy config to use for the deployment.
+    /// If not specified, the default deploy config will be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.DeployConfig DeployConfig {
+      get { return deployConfig_; }
+      set {
+        deployConfig_ = value;
+      }
+    }
+
+    private object artifacts_;
+    /// <summary>Enum of possible cases for the "artifacts" oneof.</summary>
+    public enum ArtifactsOneofCase {
+      None = 0,
+      PublisherModelName = 1,
+      HuggingFaceModelId = 2,
+    }
+    private ArtifactsOneofCase artifactsCase_ = ArtifactsOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ArtifactsOneofCase ArtifactsCase {
+      get { return artifactsCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearArtifacts() {
+      artifactsCase_ = ArtifactsOneofCase.None;
+      artifacts_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeployRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeployRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PublisherModelName != other.PublisherModelName) return false;
+      if (HuggingFaceModelId != other.HuggingFaceModelId) return false;
+      if (Destination != other.Destination) return false;
+      if (!object.Equals(ModelConfig, other.ModelConfig)) return false;
+      if (!object.Equals(EndpointConfig, other.EndpointConfig)) return false;
+      if (!object.Equals(DeployConfig, other.DeployConfig)) return false;
+      if (ArtifactsCase != other.ArtifactsCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasPublisherModelName) hash ^= PublisherModelName.GetHashCode();
+      if (HasHuggingFaceModelId) hash ^= HuggingFaceModelId.GetHashCode();
+      if (Destination.Length != 0) hash ^= Destination.GetHashCode();
+      if (modelConfig_ != null) hash ^= ModelConfig.GetHashCode();
+      if (endpointConfig_ != null) hash ^= EndpointConfig.GetHashCode();
+      if (deployConfig_ != null) hash ^= DeployConfig.GetHashCode();
+      hash ^= (int) artifactsCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasPublisherModelName) {
+        output.WriteRawTag(10);
+        output.WriteString(PublisherModelName);
+      }
+      if (HasHuggingFaceModelId) {
+        output.WriteRawTag(18);
+        output.WriteString(HuggingFaceModelId);
+      }
+      if (Destination.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Destination);
+      }
+      if (modelConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ModelConfig);
+      }
+      if (endpointConfig_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(EndpointConfig);
+      }
+      if (deployConfig_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(DeployConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasPublisherModelName) {
+        output.WriteRawTag(10);
+        output.WriteString(PublisherModelName);
+      }
+      if (HasHuggingFaceModelId) {
+        output.WriteRawTag(18);
+        output.WriteString(HuggingFaceModelId);
+      }
+      if (Destination.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Destination);
+      }
+      if (modelConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ModelConfig);
+      }
+      if (endpointConfig_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(EndpointConfig);
+      }
+      if (deployConfig_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(DeployConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasPublisherModelName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PublisherModelName);
+      }
+      if (HasHuggingFaceModelId) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(HuggingFaceModelId);
+      }
+      if (Destination.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Destination);
+      }
+      if (modelConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModelConfig);
+      }
+      if (endpointConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndpointConfig);
+      }
+      if (deployConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeployConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeployRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Destination.Length != 0) {
+        Destination = other.Destination;
+      }
+      if (other.modelConfig_ != null) {
+        if (modelConfig_ == null) {
+          ModelConfig = new global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.ModelConfig();
+        }
+        ModelConfig.MergeFrom(other.ModelConfig);
+      }
+      if (other.endpointConfig_ != null) {
+        if (endpointConfig_ == null) {
+          EndpointConfig = new global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.EndpointConfig();
+        }
+        EndpointConfig.MergeFrom(other.EndpointConfig);
+      }
+      if (other.deployConfig_ != null) {
+        if (deployConfig_ == null) {
+          DeployConfig = new global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.DeployConfig();
+        }
+        DeployConfig.MergeFrom(other.DeployConfig);
+      }
+      switch (other.ArtifactsCase) {
+        case ArtifactsOneofCase.PublisherModelName:
+          PublisherModelName = other.PublisherModelName;
+          break;
+        case ArtifactsOneofCase.HuggingFaceModelId:
+          HuggingFaceModelId = other.HuggingFaceModelId;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            PublisherModelName = input.ReadString();
+            break;
+          }
+          case 18: {
+            HuggingFaceModelId = input.ReadString();
+            break;
+          }
+          case 34: {
+            Destination = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (modelConfig_ == null) {
+              ModelConfig = new global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.ModelConfig();
+            }
+            input.ReadMessage(ModelConfig);
+            break;
+          }
+          case 50: {
+            if (endpointConfig_ == null) {
+              EndpointConfig = new global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.EndpointConfig();
+            }
+            input.ReadMessage(EndpointConfig);
+            break;
+          }
+          case 58: {
+            if (deployConfig_ == null) {
+              DeployConfig = new global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.DeployConfig();
+            }
+            input.ReadMessage(DeployConfig);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            PublisherModelName = input.ReadString();
+            break;
+          }
+          case 18: {
+            HuggingFaceModelId = input.ReadString();
+            break;
+          }
+          case 34: {
+            Destination = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (modelConfig_ == null) {
+              ModelConfig = new global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.ModelConfig();
+            }
+            input.ReadMessage(ModelConfig);
+            break;
+          }
+          case 50: {
+            if (endpointConfig_ == null) {
+              EndpointConfig = new global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.EndpointConfig();
+            }
+            input.ReadMessage(EndpointConfig);
+            break;
+          }
+          case 58: {
+            if (deployConfig_ == null) {
+              DeployConfig = new global::Google.Cloud.AIPlatform.V1.DeployRequest.Types.DeployConfig();
+            }
+            input.ReadMessage(DeployConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the DeployRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The model config to use for the deployment.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ModelConfig : pb::IMessage<ModelConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ModelConfig> _parser = new pb::MessageParser<ModelConfig>(() => new ModelConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ModelConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.DeployRequest.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ModelConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ModelConfig(ModelConfig other) : this() {
+          acceptEula_ = other.acceptEula_;
+          huggingFaceAccessToken_ = other.huggingFaceAccessToken_;
+          huggingFaceCacheEnabled_ = other.huggingFaceCacheEnabled_;
+          modelDisplayName_ = other.modelDisplayName_;
+          containerSpec_ = other.containerSpec_ != null ? other.containerSpec_.Clone() : null;
+          modelUserId_ = other.modelUserId_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ModelConfig Clone() {
+          return new ModelConfig(this);
+        }
+
+        /// <summary>Field number for the "accept_eula" field.</summary>
+        public const int AcceptEulaFieldNumber = 1;
+        private bool acceptEula_;
+        /// <summary>
+        /// Optional. Whether the user accepts the End User License Agreement (EULA)
+        /// for the model.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool AcceptEula {
+          get { return acceptEula_; }
+          set {
+            acceptEula_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "hugging_face_access_token" field.</summary>
+        public const int HuggingFaceAccessTokenFieldNumber = 2;
+        private string huggingFaceAccessToken_ = "";
+        /// <summary>
+        /// Optional. The Hugging Face read access token used to access the model
+        /// artifacts of gated models.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string HuggingFaceAccessToken {
+          get { return huggingFaceAccessToken_; }
+          set {
+            huggingFaceAccessToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "hugging_face_cache_enabled" field.</summary>
+        public const int HuggingFaceCacheEnabledFieldNumber = 3;
+        private bool huggingFaceCacheEnabled_;
+        /// <summary>
+        /// Optional. If true, the model will deploy with a cached version instead of
+        /// directly downloading the model artifacts from Hugging Face. This is
+        /// suitable for VPC-SC users with limited internet access.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HuggingFaceCacheEnabled {
+          get { return huggingFaceCacheEnabled_; }
+          set {
+            huggingFaceCacheEnabled_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "model_display_name" field.</summary>
+        public const int ModelDisplayNameFieldNumber = 4;
+        private string modelDisplayName_ = "";
+        /// <summary>
+        /// Optional. The user-specified display name of the uploaded model. If not
+        /// set, a default name will be used.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ModelDisplayName {
+          get { return modelDisplayName_; }
+          set {
+            modelDisplayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "container_spec" field.</summary>
+        public const int ContainerSpecFieldNumber = 5;
+        private global::Google.Cloud.AIPlatform.V1.ModelContainerSpec containerSpec_;
+        /// <summary>
+        /// Optional. The specification of the container that is to be used when
+        /// deploying. If not set, the default container spec will be used.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1.ModelContainerSpec ContainerSpec {
+          get { return containerSpec_; }
+          set {
+            containerSpec_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "model_user_id" field.</summary>
+        public const int ModelUserIdFieldNumber = 6;
+        private string modelUserId_ = "";
+        /// <summary>
+        /// Optional. The ID to use for the uploaded Model, which will become the
+        /// final component of the model resource name. When not provided, Vertex AI
+        /// will generate a value for this ID. When Model Registry model is provided,
+        /// this field will be ignored.
+        ///
+        /// This value may be up to 63 characters, and valid characters are
+        /// `[a-z0-9_-]`. The first character cannot be a number or hyphen.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ModelUserId {
+          get { return modelUserId_; }
+          set {
+            modelUserId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ModelConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ModelConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (AcceptEula != other.AcceptEula) return false;
+          if (HuggingFaceAccessToken != other.HuggingFaceAccessToken) return false;
+          if (HuggingFaceCacheEnabled != other.HuggingFaceCacheEnabled) return false;
+          if (ModelDisplayName != other.ModelDisplayName) return false;
+          if (!object.Equals(ContainerSpec, other.ContainerSpec)) return false;
+          if (ModelUserId != other.ModelUserId) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (AcceptEula != false) hash ^= AcceptEula.GetHashCode();
+          if (HuggingFaceAccessToken.Length != 0) hash ^= HuggingFaceAccessToken.GetHashCode();
+          if (HuggingFaceCacheEnabled != false) hash ^= HuggingFaceCacheEnabled.GetHashCode();
+          if (ModelDisplayName.Length != 0) hash ^= ModelDisplayName.GetHashCode();
+          if (containerSpec_ != null) hash ^= ContainerSpec.GetHashCode();
+          if (ModelUserId.Length != 0) hash ^= ModelUserId.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (AcceptEula != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(AcceptEula);
+          }
+          if (HuggingFaceAccessToken.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(HuggingFaceAccessToken);
+          }
+          if (HuggingFaceCacheEnabled != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(HuggingFaceCacheEnabled);
+          }
+          if (ModelDisplayName.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(ModelDisplayName);
+          }
+          if (containerSpec_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(ContainerSpec);
+          }
+          if (ModelUserId.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteString(ModelUserId);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (AcceptEula != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(AcceptEula);
+          }
+          if (HuggingFaceAccessToken.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(HuggingFaceAccessToken);
+          }
+          if (HuggingFaceCacheEnabled != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(HuggingFaceCacheEnabled);
+          }
+          if (ModelDisplayName.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(ModelDisplayName);
+          }
+          if (containerSpec_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(ContainerSpec);
+          }
+          if (ModelUserId.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteString(ModelUserId);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (AcceptEula != false) {
+            size += 1 + 1;
+          }
+          if (HuggingFaceAccessToken.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(HuggingFaceAccessToken);
+          }
+          if (HuggingFaceCacheEnabled != false) {
+            size += 1 + 1;
+          }
+          if (ModelDisplayName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelDisplayName);
+          }
+          if (containerSpec_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ContainerSpec);
+          }
+          if (ModelUserId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelUserId);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ModelConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.AcceptEula != false) {
+            AcceptEula = other.AcceptEula;
+          }
+          if (other.HuggingFaceAccessToken.Length != 0) {
+            HuggingFaceAccessToken = other.HuggingFaceAccessToken;
+          }
+          if (other.HuggingFaceCacheEnabled != false) {
+            HuggingFaceCacheEnabled = other.HuggingFaceCacheEnabled;
+          }
+          if (other.ModelDisplayName.Length != 0) {
+            ModelDisplayName = other.ModelDisplayName;
+          }
+          if (other.containerSpec_ != null) {
+            if (containerSpec_ == null) {
+              ContainerSpec = new global::Google.Cloud.AIPlatform.V1.ModelContainerSpec();
+            }
+            ContainerSpec.MergeFrom(other.ContainerSpec);
+          }
+          if (other.ModelUserId.Length != 0) {
+            ModelUserId = other.ModelUserId;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                AcceptEula = input.ReadBool();
+                break;
+              }
+              case 18: {
+                HuggingFaceAccessToken = input.ReadString();
+                break;
+              }
+              case 24: {
+                HuggingFaceCacheEnabled = input.ReadBool();
+                break;
+              }
+              case 34: {
+                ModelDisplayName = input.ReadString();
+                break;
+              }
+              case 42: {
+                if (containerSpec_ == null) {
+                  ContainerSpec = new global::Google.Cloud.AIPlatform.V1.ModelContainerSpec();
+                }
+                input.ReadMessage(ContainerSpec);
+                break;
+              }
+              case 50: {
+                ModelUserId = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                AcceptEula = input.ReadBool();
+                break;
+              }
+              case 18: {
+                HuggingFaceAccessToken = input.ReadString();
+                break;
+              }
+              case 24: {
+                HuggingFaceCacheEnabled = input.ReadBool();
+                break;
+              }
+              case 34: {
+                ModelDisplayName = input.ReadString();
+                break;
+              }
+              case 42: {
+                if (containerSpec_ == null) {
+                  ContainerSpec = new global::Google.Cloud.AIPlatform.V1.ModelContainerSpec();
+                }
+                input.ReadMessage(ContainerSpec);
+                break;
+              }
+              case 50: {
+                ModelUserId = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// The endpoint config to use for the deployment.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class EndpointConfig : pb::IMessage<EndpointConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<EndpointConfig> _parser = new pb::MessageParser<EndpointConfig>(() => new EndpointConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<EndpointConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.DeployRequest.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EndpointConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EndpointConfig(EndpointConfig other) : this() {
+          endpointDisplayName_ = other.endpointDisplayName_;
+          dedicatedEndpointEnabled_ = other.dedicatedEndpointEnabled_;
+          dedicatedEndpointDisabled_ = other.dedicatedEndpointDisabled_;
+          endpointUserId_ = other.endpointUserId_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EndpointConfig Clone() {
+          return new EndpointConfig(this);
+        }
+
+        /// <summary>Field number for the "endpoint_display_name" field.</summary>
+        public const int EndpointDisplayNameFieldNumber = 1;
+        private string endpointDisplayName_ = "";
+        /// <summary>
+        /// Optional. The user-specified display name of the endpoint. If not set, a
+        /// default name will be used.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string EndpointDisplayName {
+          get { return endpointDisplayName_; }
+          set {
+            endpointDisplayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "dedicated_endpoint_enabled" field.</summary>
+        public const int DedicatedEndpointEnabledFieldNumber = 2;
+        private bool dedicatedEndpointEnabled_;
+        /// <summary>
+        /// Optional. Deprecated. Use dedicated_endpoint_disabled instead.
+        /// If true, the endpoint will be exposed through a
+        /// dedicated DNS [Endpoint.dedicated_endpoint_dns]. Your request to the
+        /// dedicated DNS will be isolated from other users' traffic and will have
+        /// better performance and reliability. Note: Once you enabled dedicated
+        /// endpoint, you won't be able to send request to the shared DNS
+        /// {region}-aiplatform.googleapis.com. The limitations will be removed soon.
+        /// </summary>
+        [global::System.ObsoleteAttribute]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool DedicatedEndpointEnabled {
+          get { return dedicatedEndpointEnabled_; }
+          set {
+            dedicatedEndpointEnabled_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "dedicated_endpoint_disabled" field.</summary>
+        public const int DedicatedEndpointDisabledFieldNumber = 4;
+        private bool dedicatedEndpointDisabled_;
+        /// <summary>
+        /// Optional. By default, if dedicated endpoint is enabled, the endpoint will
+        /// be exposed through a dedicated DNS [Endpoint.dedicated_endpoint_dns].
+        /// Your request to the dedicated DNS will be isolated from other users'
+        /// traffic and will have better performance and reliability. Note: Once you
+        /// enabled dedicated endpoint, you won't be able to send request to the
+        /// shared DNS {region}-aiplatform.googleapis.com. The limitations will be
+        /// removed soon.
+        ///
+        /// If this field is set to true, the dedicated endpoint will be disabled
+        /// and the deployed model will be exposed through the shared DNS
+        /// {region}-aiplatform.googleapis.com.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool DedicatedEndpointDisabled {
+          get { return dedicatedEndpointDisabled_; }
+          set {
+            dedicatedEndpointDisabled_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "endpoint_user_id" field.</summary>
+        public const int EndpointUserIdFieldNumber = 3;
+        private string endpointUserId_ = "";
+        /// <summary>
+        /// Optional. Immutable. The ID to use for endpoint, which will become the
+        /// final component of the endpoint resource name. If not provided, Vertex AI
+        /// will generate a value for this ID.
+        ///
+        /// If the first character is a letter, this value may be up to 63
+        /// characters, and valid characters are `[a-z0-9-]`. The last character must
+        /// be a letter or number.
+        ///
+        /// If the first character is a number, this value may be up to 9 characters,
+        /// and valid characters are `[0-9]` with no leading zeros.
+        ///
+        /// When using HTTP/JSON, this field is populated
+        /// based on a query string argument, such as `?endpoint_id=12345`. This is
+        /// the fallback for fields that are not included in either the URI or the
+        /// body.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string EndpointUserId {
+          get { return endpointUserId_; }
+          set {
+            endpointUserId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as EndpointConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(EndpointConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (EndpointDisplayName != other.EndpointDisplayName) return false;
+          if (DedicatedEndpointEnabled != other.DedicatedEndpointEnabled) return false;
+          if (DedicatedEndpointDisabled != other.DedicatedEndpointDisabled) return false;
+          if (EndpointUserId != other.EndpointUserId) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (EndpointDisplayName.Length != 0) hash ^= EndpointDisplayName.GetHashCode();
+          if (DedicatedEndpointEnabled != false) hash ^= DedicatedEndpointEnabled.GetHashCode();
+          if (DedicatedEndpointDisabled != false) hash ^= DedicatedEndpointDisabled.GetHashCode();
+          if (EndpointUserId.Length != 0) hash ^= EndpointUserId.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (EndpointDisplayName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(EndpointDisplayName);
+          }
+          if (DedicatedEndpointEnabled != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(DedicatedEndpointEnabled);
+          }
+          if (EndpointUserId.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(EndpointUserId);
+          }
+          if (DedicatedEndpointDisabled != false) {
+            output.WriteRawTag(32);
+            output.WriteBool(DedicatedEndpointDisabled);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (EndpointDisplayName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(EndpointDisplayName);
+          }
+          if (DedicatedEndpointEnabled != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(DedicatedEndpointEnabled);
+          }
+          if (EndpointUserId.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(EndpointUserId);
+          }
+          if (DedicatedEndpointDisabled != false) {
+            output.WriteRawTag(32);
+            output.WriteBool(DedicatedEndpointDisabled);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (EndpointDisplayName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(EndpointDisplayName);
+          }
+          if (DedicatedEndpointEnabled != false) {
+            size += 1 + 1;
+          }
+          if (DedicatedEndpointDisabled != false) {
+            size += 1 + 1;
+          }
+          if (EndpointUserId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(EndpointUserId);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(EndpointConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.EndpointDisplayName.Length != 0) {
+            EndpointDisplayName = other.EndpointDisplayName;
+          }
+          if (other.DedicatedEndpointEnabled != false) {
+            DedicatedEndpointEnabled = other.DedicatedEndpointEnabled;
+          }
+          if (other.DedicatedEndpointDisabled != false) {
+            DedicatedEndpointDisabled = other.DedicatedEndpointDisabled;
+          }
+          if (other.EndpointUserId.Length != 0) {
+            EndpointUserId = other.EndpointUserId;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                EndpointDisplayName = input.ReadString();
+                break;
+              }
+              case 16: {
+                DedicatedEndpointEnabled = input.ReadBool();
+                break;
+              }
+              case 26: {
+                EndpointUserId = input.ReadString();
+                break;
+              }
+              case 32: {
+                DedicatedEndpointDisabled = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                EndpointDisplayName = input.ReadString();
+                break;
+              }
+              case 16: {
+                DedicatedEndpointEnabled = input.ReadBool();
+                break;
+              }
+              case 26: {
+                EndpointUserId = input.ReadString();
+                break;
+              }
+              case 32: {
+                DedicatedEndpointDisabled = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// The deploy config to use for the deployment.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DeployConfig : pb::IMessage<DeployConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DeployConfig> _parser = new pb::MessageParser<DeployConfig>(() => new DeployConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DeployConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.DeployRequest.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DeployConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DeployConfig(DeployConfig other) : this() {
+          dedicatedResources_ = other.dedicatedResources_ != null ? other.dedicatedResources_.Clone() : null;
+          fastTryoutEnabled_ = other.fastTryoutEnabled_;
+          systemLabels_ = other.systemLabels_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DeployConfig Clone() {
+          return new DeployConfig(this);
+        }
+
+        /// <summary>Field number for the "dedicated_resources" field.</summary>
+        public const int DedicatedResourcesFieldNumber = 1;
+        private global::Google.Cloud.AIPlatform.V1.DedicatedResources dedicatedResources_;
+        /// <summary>
+        /// Optional. The dedicated resources to use for the endpoint. If not set,
+        /// the default resources will be used.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1.DedicatedResources DedicatedResources {
+          get { return dedicatedResources_; }
+          set {
+            dedicatedResources_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "fast_tryout_enabled" field.</summary>
+        public const int FastTryoutEnabledFieldNumber = 2;
+        private bool fastTryoutEnabled_;
+        /// <summary>
+        /// Optional. If true, enable the QMT fast tryout feature for this model if
+        /// possible.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool FastTryoutEnabled {
+          get { return fastTryoutEnabled_; }
+          set {
+            fastTryoutEnabled_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "system_labels" field.</summary>
+        public const int SystemLabelsFieldNumber = 3;
+        private static readonly pbc::MapField<string, string>.Codec _map_systemLabels_codec
+            = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
+        private readonly pbc::MapField<string, string> systemLabels_ = new pbc::MapField<string, string>();
+        /// <summary>
+        /// Optional. System labels for Model Garden deployments.
+        /// These labels are managed by Google and for tracking purposes only.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::MapField<string, string> SystemLabels {
+          get { return systemLabels_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DeployConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DeployConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(DedicatedResources, other.DedicatedResources)) return false;
+          if (FastTryoutEnabled != other.FastTryoutEnabled) return false;
+          if (!SystemLabels.Equals(other.SystemLabels)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (dedicatedResources_ != null) hash ^= DedicatedResources.GetHashCode();
+          if (FastTryoutEnabled != false) hash ^= FastTryoutEnabled.GetHashCode();
+          hash ^= SystemLabels.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (dedicatedResources_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(DedicatedResources);
+          }
+          if (FastTryoutEnabled != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(FastTryoutEnabled);
+          }
+          systemLabels_.WriteTo(output, _map_systemLabels_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (dedicatedResources_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(DedicatedResources);
+          }
+          if (FastTryoutEnabled != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(FastTryoutEnabled);
+          }
+          systemLabels_.WriteTo(ref output, _map_systemLabels_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (dedicatedResources_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(DedicatedResources);
+          }
+          if (FastTryoutEnabled != false) {
+            size += 1 + 1;
+          }
+          size += systemLabels_.CalculateSize(_map_systemLabels_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DeployConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.dedicatedResources_ != null) {
+            if (dedicatedResources_ == null) {
+              DedicatedResources = new global::Google.Cloud.AIPlatform.V1.DedicatedResources();
+            }
+            DedicatedResources.MergeFrom(other.DedicatedResources);
+          }
+          if (other.FastTryoutEnabled != false) {
+            FastTryoutEnabled = other.FastTryoutEnabled;
+          }
+          systemLabels_.MergeFrom(other.systemLabels_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (dedicatedResources_ == null) {
+                  DedicatedResources = new global::Google.Cloud.AIPlatform.V1.DedicatedResources();
+                }
+                input.ReadMessage(DedicatedResources);
+                break;
+              }
+              case 16: {
+                FastTryoutEnabled = input.ReadBool();
+                break;
+              }
+              case 26: {
+                systemLabels_.AddEntriesFrom(input, _map_systemLabels_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (dedicatedResources_ == null) {
+                  DedicatedResources = new global::Google.Cloud.AIPlatform.V1.DedicatedResources();
+                }
+                input.ReadMessage(DedicatedResources);
+                break;
+              }
+              case 16: {
+                FastTryoutEnabled = input.ReadBool();
+                break;
+              }
+              case 26: {
+                systemLabels_.AddEntriesFrom(ref input, _map_systemLabels_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Response message for
+  /// [ModelGardenService.Deploy][google.cloud.aiplatform.v1.ModelGardenService.Deploy].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeployResponse : pb::IMessage<DeployResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeployResponse> _parser = new pb::MessageParser<DeployResponse>(() => new DeployResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeployResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.ModelGardenServiceReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeployResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeployResponse(DeployResponse other) : this() {
+      publisherModel_ = other.publisherModel_;
+      endpoint_ = other.endpoint_;
+      model_ = other.model_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeployResponse Clone() {
+      return new DeployResponse(this);
+    }
+
+    /// <summary>Field number for the "publisher_model" field.</summary>
+    public const int PublisherModelFieldNumber = 1;
+    private string publisherModel_ = "";
+    /// <summary>
+    /// Output only. The name of the PublisherModel resource.
+    /// Format:
+    /// `publishers/{publisher}/models/{publisher_model}@{version_id}`, or
+    /// `publishers/hf-{hugging-face-author}/models/{hugging-face-model-name}@001`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PublisherModel {
+      get { return publisherModel_; }
+      set {
+        publisherModel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "endpoint" field.</summary>
+    public const int EndpointFieldNumber = 2;
+    private string endpoint_ = "";
+    /// <summary>
+    /// Output only. The name of the Endpoint created.
+    /// Format: `projects/{project}/locations/{location}/endpoints/{endpoint}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Endpoint {
+      get { return endpoint_; }
+      set {
+        endpoint_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "model" field.</summary>
+    public const int ModelFieldNumber = 3;
+    private string model_ = "";
+    /// <summary>
+    /// Output only. The name of the Model created.
+    /// Format: `projects/{project}/locations/{location}/models/{model}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Model {
+      get { return model_; }
+      set {
+        model_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeployResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeployResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PublisherModel != other.PublisherModel) return false;
+      if (Endpoint != other.Endpoint) return false;
+      if (Model != other.Model) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PublisherModel.Length != 0) hash ^= PublisherModel.GetHashCode();
+      if (Endpoint.Length != 0) hash ^= Endpoint.GetHashCode();
+      if (Model.Length != 0) hash ^= Model.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PublisherModel.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PublisherModel);
+      }
+      if (Endpoint.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Endpoint);
+      }
+      if (Model.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Model);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PublisherModel.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PublisherModel);
+      }
+      if (Endpoint.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Endpoint);
+      }
+      if (Model.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Model);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (PublisherModel.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PublisherModel);
+      }
+      if (Endpoint.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Endpoint);
+      }
+      if (Model.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Model);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeployResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PublisherModel.Length != 0) {
+        PublisherModel = other.PublisherModel;
+      }
+      if (other.Endpoint.Length != 0) {
+        Endpoint = other.Endpoint;
+      }
+      if (other.Model.Length != 0) {
+        Model = other.Model;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            PublisherModel = input.ReadString();
+            break;
+          }
+          case 18: {
+            Endpoint = input.ReadString();
+            break;
+          }
+          case 26: {
+            Model = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            PublisherModel = input.ReadString();
+            break;
+          }
+          case 18: {
+            Endpoint = input.ReadString();
+            break;
+          }
+          case 26: {
+            Model = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Runtime operation information for
+  /// [ModelGardenService.Deploy][google.cloud.aiplatform.v1.ModelGardenService.Deploy].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeployOperationMetadata : pb::IMessage<DeployOperationMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeployOperationMetadata> _parser = new pb::MessageParser<DeployOperationMetadata>(() => new DeployOperationMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeployOperationMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.ModelGardenServiceReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeployOperationMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeployOperationMetadata(DeployOperationMetadata other) : this() {
+      genericMetadata_ = other.genericMetadata_ != null ? other.genericMetadata_.Clone() : null;
+      publisherModel_ = other.publisherModel_;
+      destination_ = other.destination_;
+      projectNumber_ = other.projectNumber_;
+      modelId_ = other.modelId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeployOperationMetadata Clone() {
+      return new DeployOperationMetadata(this);
+    }
+
+    /// <summary>Field number for the "generic_metadata" field.</summary>
+    public const int GenericMetadataFieldNumber = 1;
+    private global::Google.Cloud.AIPlatform.V1.GenericOperationMetadata genericMetadata_;
+    /// <summary>
+    /// The operation generic information.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.GenericOperationMetadata GenericMetadata {
+      get { return genericMetadata_; }
+      set {
+        genericMetadata_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "publisher_model" field.</summary>
+    public const int PublisherModelFieldNumber = 2;
+    private string publisherModel_ = "";
+    /// <summary>
+    /// Output only. The name of the model resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PublisherModel {
+      get { return publisherModel_; }
+      set {
+        publisherModel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "destination" field.</summary>
+    public const int DestinationFieldNumber = 3;
+    private string destination_ = "";
+    /// <summary>
+    /// Output only. The resource name of the Location to deploy the model in.
+    /// Format: `projects/{project}/locations/{location}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Destination {
+      get { return destination_; }
+      set {
+        destination_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "project_number" field.</summary>
+    public const int ProjectNumberFieldNumber = 4;
+    private long projectNumber_;
+    /// <summary>
+    /// Output only. The project number where the deploy model request is sent.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long ProjectNumber {
+      get { return projectNumber_; }
+      set {
+        projectNumber_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "model_id" field.</summary>
+    public const int ModelIdFieldNumber = 5;
+    private string modelId_ = "";
+    /// <summary>
+    /// Output only. The model id to be used at query time.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ModelId {
+      get { return modelId_; }
+      set {
+        modelId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeployOperationMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeployOperationMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(GenericMetadata, other.GenericMetadata)) return false;
+      if (PublisherModel != other.PublisherModel) return false;
+      if (Destination != other.Destination) return false;
+      if (ProjectNumber != other.ProjectNumber) return false;
+      if (ModelId != other.ModelId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (genericMetadata_ != null) hash ^= GenericMetadata.GetHashCode();
+      if (PublisherModel.Length != 0) hash ^= PublisherModel.GetHashCode();
+      if (Destination.Length != 0) hash ^= Destination.GetHashCode();
+      if (ProjectNumber != 0L) hash ^= ProjectNumber.GetHashCode();
+      if (ModelId.Length != 0) hash ^= ModelId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (genericMetadata_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GenericMetadata);
+      }
+      if (PublisherModel.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PublisherModel);
+      }
+      if (Destination.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Destination);
+      }
+      if (ProjectNumber != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(ProjectNumber);
+      }
+      if (ModelId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ModelId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (genericMetadata_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GenericMetadata);
+      }
+      if (PublisherModel.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PublisherModel);
+      }
+      if (Destination.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Destination);
+      }
+      if (ProjectNumber != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(ProjectNumber);
+      }
+      if (ModelId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ModelId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (genericMetadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GenericMetadata);
+      }
+      if (PublisherModel.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PublisherModel);
+      }
+      if (Destination.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Destination);
+      }
+      if (ProjectNumber != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ProjectNumber);
+      }
+      if (ModelId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeployOperationMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.genericMetadata_ != null) {
+        if (genericMetadata_ == null) {
+          GenericMetadata = new global::Google.Cloud.AIPlatform.V1.GenericOperationMetadata();
+        }
+        GenericMetadata.MergeFrom(other.GenericMetadata);
+      }
+      if (other.PublisherModel.Length != 0) {
+        PublisherModel = other.PublisherModel;
+      }
+      if (other.Destination.Length != 0) {
+        Destination = other.Destination;
+      }
+      if (other.ProjectNumber != 0L) {
+        ProjectNumber = other.ProjectNumber;
+      }
+      if (other.ModelId.Length != 0) {
+        ModelId = other.ModelId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (genericMetadata_ == null) {
+              GenericMetadata = new global::Google.Cloud.AIPlatform.V1.GenericOperationMetadata();
+            }
+            input.ReadMessage(GenericMetadata);
+            break;
+          }
+          case 18: {
+            PublisherModel = input.ReadString();
+            break;
+          }
+          case 26: {
+            Destination = input.ReadString();
+            break;
+          }
+          case 32: {
+            ProjectNumber = input.ReadInt64();
+            break;
+          }
+          case 42: {
+            ModelId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (genericMetadata_ == null) {
+              GenericMetadata = new global::Google.Cloud.AIPlatform.V1.GenericOperationMetadata();
+            }
+            input.ReadMessage(GenericMetadata);
+            break;
+          }
+          case 18: {
+            PublisherModel = input.ReadString();
+            break;
+          }
+          case 26: {
+            Destination = input.ReadString();
+            break;
+          }
+          case 32: {
+            ProjectNumber = input.ReadInt64();
+            break;
+          }
+          case 42: {
+            ModelId = input.ReadString();
             break;
           }
         }

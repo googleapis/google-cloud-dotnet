@@ -2033,5 +2033,804 @@ namespace GoogleCSharpSnippets
             await managedKafkaClient.DeleteConsumerGroupAsync(name);
             // End snippet
         }
+
+        /// <summary>Snippet for ListAcls</summary>
+        public void ListAclsRequestObject()
+        {
+            // Snippet: ListAcls(ListAclsRequest, CallSettings)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = ManagedKafkaClient.Create();
+            // Initialize request argument(s)
+            ListAclsRequest request = new ListAclsRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+            };
+            // Make the request
+            PagedEnumerable<ListAclsResponse, Acl> response = managedKafkaClient.ListAcls(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Acl item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAclsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Acl item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Acl> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Acl item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclsAsync</summary>
+        public async Task ListAclsRequestObjectAsync()
+        {
+            // Snippet: ListAclsAsync(ListAclsRequest, CallSettings)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = await ManagedKafkaClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAclsRequest request = new ListAclsRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAclsResponse, Acl> response = managedKafkaClient.ListAclsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Acl item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAclsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Acl item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Acl> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Acl item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAcls</summary>
+        public void ListAcls()
+        {
+            // Snippet: ListAcls(string, string, int?, CallSettings)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = ManagedKafkaClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            // Make the request
+            PagedEnumerable<ListAclsResponse, Acl> response = managedKafkaClient.ListAcls(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Acl item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAclsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Acl item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Acl> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Acl item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclsAsync</summary>
+        public async Task ListAclsAsync()
+        {
+            // Snippet: ListAclsAsync(string, string, int?, CallSettings)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = await ManagedKafkaClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            // Make the request
+            PagedAsyncEnumerable<ListAclsResponse, Acl> response = managedKafkaClient.ListAclsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Acl item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAclsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Acl item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Acl> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Acl item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAcls</summary>
+        public void ListAclsResourceNames()
+        {
+            // Snippet: ListAcls(ClusterName, string, int?, CallSettings)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = ManagedKafkaClient.Create();
+            // Initialize request argument(s)
+            ClusterName parent = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            // Make the request
+            PagedEnumerable<ListAclsResponse, Acl> response = managedKafkaClient.ListAcls(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Acl item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAclsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Acl item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Acl> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Acl item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAclsAsync</summary>
+        public async Task ListAclsResourceNamesAsync()
+        {
+            // Snippet: ListAclsAsync(ClusterName, string, int?, CallSettings)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = await ManagedKafkaClient.CreateAsync();
+            // Initialize request argument(s)
+            ClusterName parent = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            // Make the request
+            PagedAsyncEnumerable<ListAclsResponse, Acl> response = managedKafkaClient.ListAclsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Acl item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAclsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Acl item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Acl> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Acl item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAcl</summary>
+        public void GetAclRequestObject()
+        {
+            // Snippet: GetAcl(GetAclRequest, CallSettings)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = ManagedKafkaClient.Create();
+            // Initialize request argument(s)
+            GetAclRequest request = new GetAclRequest
+            {
+                AclName = AclName.FromProjectLocationClusterAcl("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[ACL]"),
+            };
+            // Make the request
+            Acl response = managedKafkaClient.GetAcl(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclAsync</summary>
+        public async Task GetAclRequestObjectAsync()
+        {
+            // Snippet: GetAclAsync(GetAclRequest, CallSettings)
+            // Additional: GetAclAsync(GetAclRequest, CancellationToken)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = await ManagedKafkaClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAclRequest request = new GetAclRequest
+            {
+                AclName = AclName.FromProjectLocationClusterAcl("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[ACL]"),
+            };
+            // Make the request
+            Acl response = await managedKafkaClient.GetAclAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAcl</summary>
+        public void GetAcl()
+        {
+            // Snippet: GetAcl(string, CallSettings)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = ManagedKafkaClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]/acls/[ACL]";
+            // Make the request
+            Acl response = managedKafkaClient.GetAcl(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclAsync</summary>
+        public async Task GetAclAsync()
+        {
+            // Snippet: GetAclAsync(string, CallSettings)
+            // Additional: GetAclAsync(string, CancellationToken)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = await ManagedKafkaClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]/acls/[ACL]";
+            // Make the request
+            Acl response = await managedKafkaClient.GetAclAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAcl</summary>
+        public void GetAclResourceNames()
+        {
+            // Snippet: GetAcl(AclName, CallSettings)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = ManagedKafkaClient.Create();
+            // Initialize request argument(s)
+            AclName name = AclName.FromProjectLocationClusterAcl("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[ACL]");
+            // Make the request
+            Acl response = managedKafkaClient.GetAcl(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAclAsync</summary>
+        public async Task GetAclResourceNamesAsync()
+        {
+            // Snippet: GetAclAsync(AclName, CallSettings)
+            // Additional: GetAclAsync(AclName, CancellationToken)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = await ManagedKafkaClient.CreateAsync();
+            // Initialize request argument(s)
+            AclName name = AclName.FromProjectLocationClusterAcl("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[ACL]");
+            // Make the request
+            Acl response = await managedKafkaClient.GetAclAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAcl</summary>
+        public void CreateAclRequestObject()
+        {
+            // Snippet: CreateAcl(CreateAclRequest, CallSettings)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = ManagedKafkaClient.Create();
+            // Initialize request argument(s)
+            CreateAclRequest request = new CreateAclRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                AclId = "",
+                Acl = new Acl(),
+            };
+            // Make the request
+            Acl response = managedKafkaClient.CreateAcl(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAclAsync</summary>
+        public async Task CreateAclRequestObjectAsync()
+        {
+            // Snippet: CreateAclAsync(CreateAclRequest, CallSettings)
+            // Additional: CreateAclAsync(CreateAclRequest, CancellationToken)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = await ManagedKafkaClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateAclRequest request = new CreateAclRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                AclId = "",
+                Acl = new Acl(),
+            };
+            // Make the request
+            Acl response = await managedKafkaClient.CreateAclAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAcl</summary>
+        public void CreateAcl()
+        {
+            // Snippet: CreateAcl(string, Acl, string, CallSettings)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = ManagedKafkaClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            Acl acl = new Acl();
+            string aclId = "";
+            // Make the request
+            Acl response = managedKafkaClient.CreateAcl(parent, acl, aclId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAclAsync</summary>
+        public async Task CreateAclAsync()
+        {
+            // Snippet: CreateAclAsync(string, Acl, string, CallSettings)
+            // Additional: CreateAclAsync(string, Acl, string, CancellationToken)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = await ManagedKafkaClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            Acl acl = new Acl();
+            string aclId = "";
+            // Make the request
+            Acl response = await managedKafkaClient.CreateAclAsync(parent, acl, aclId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAcl</summary>
+        public void CreateAclResourceNames()
+        {
+            // Snippet: CreateAcl(ClusterName, Acl, string, CallSettings)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = ManagedKafkaClient.Create();
+            // Initialize request argument(s)
+            ClusterName parent = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            Acl acl = new Acl();
+            string aclId = "";
+            // Make the request
+            Acl response = managedKafkaClient.CreateAcl(parent, acl, aclId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAclAsync</summary>
+        public async Task CreateAclResourceNamesAsync()
+        {
+            // Snippet: CreateAclAsync(ClusterName, Acl, string, CallSettings)
+            // Additional: CreateAclAsync(ClusterName, Acl, string, CancellationToken)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = await ManagedKafkaClient.CreateAsync();
+            // Initialize request argument(s)
+            ClusterName parent = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            Acl acl = new Acl();
+            string aclId = "";
+            // Make the request
+            Acl response = await managedKafkaClient.CreateAclAsync(parent, acl, aclId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAcl</summary>
+        public void UpdateAclRequestObject()
+        {
+            // Snippet: UpdateAcl(UpdateAclRequest, CallSettings)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = ManagedKafkaClient.Create();
+            // Initialize request argument(s)
+            UpdateAclRequest request = new UpdateAclRequest
+            {
+                Acl = new Acl(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Acl response = managedKafkaClient.UpdateAcl(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAclAsync</summary>
+        public async Task UpdateAclRequestObjectAsync()
+        {
+            // Snippet: UpdateAclAsync(UpdateAclRequest, CallSettings)
+            // Additional: UpdateAclAsync(UpdateAclRequest, CancellationToken)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = await ManagedKafkaClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateAclRequest request = new UpdateAclRequest
+            {
+                Acl = new Acl(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Acl response = await managedKafkaClient.UpdateAclAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAcl</summary>
+        public void UpdateAcl()
+        {
+            // Snippet: UpdateAcl(Acl, FieldMask, CallSettings)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = ManagedKafkaClient.Create();
+            // Initialize request argument(s)
+            Acl acl = new Acl();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Acl response = managedKafkaClient.UpdateAcl(acl, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAclAsync</summary>
+        public async Task UpdateAclAsync()
+        {
+            // Snippet: UpdateAclAsync(Acl, FieldMask, CallSettings)
+            // Additional: UpdateAclAsync(Acl, FieldMask, CancellationToken)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = await ManagedKafkaClient.CreateAsync();
+            // Initialize request argument(s)
+            Acl acl = new Acl();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Acl response = await managedKafkaClient.UpdateAclAsync(acl, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAcl</summary>
+        public void DeleteAclRequestObject()
+        {
+            // Snippet: DeleteAcl(DeleteAclRequest, CallSettings)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = ManagedKafkaClient.Create();
+            // Initialize request argument(s)
+            DeleteAclRequest request = new DeleteAclRequest
+            {
+                AclName = AclName.FromProjectLocationClusterAcl("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[ACL]"),
+            };
+            // Make the request
+            managedKafkaClient.DeleteAcl(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAclAsync</summary>
+        public async Task DeleteAclRequestObjectAsync()
+        {
+            // Snippet: DeleteAclAsync(DeleteAclRequest, CallSettings)
+            // Additional: DeleteAclAsync(DeleteAclRequest, CancellationToken)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = await ManagedKafkaClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteAclRequest request = new DeleteAclRequest
+            {
+                AclName = AclName.FromProjectLocationClusterAcl("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[ACL]"),
+            };
+            // Make the request
+            await managedKafkaClient.DeleteAclAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAcl</summary>
+        public void DeleteAcl()
+        {
+            // Snippet: DeleteAcl(string, CallSettings)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = ManagedKafkaClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]/acls/[ACL]";
+            // Make the request
+            managedKafkaClient.DeleteAcl(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAclAsync</summary>
+        public async Task DeleteAclAsync()
+        {
+            // Snippet: DeleteAclAsync(string, CallSettings)
+            // Additional: DeleteAclAsync(string, CancellationToken)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = await ManagedKafkaClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]/acls/[ACL]";
+            // Make the request
+            await managedKafkaClient.DeleteAclAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAcl</summary>
+        public void DeleteAclResourceNames()
+        {
+            // Snippet: DeleteAcl(AclName, CallSettings)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = ManagedKafkaClient.Create();
+            // Initialize request argument(s)
+            AclName name = AclName.FromProjectLocationClusterAcl("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[ACL]");
+            // Make the request
+            managedKafkaClient.DeleteAcl(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAclAsync</summary>
+        public async Task DeleteAclResourceNamesAsync()
+        {
+            // Snippet: DeleteAclAsync(AclName, CallSettings)
+            // Additional: DeleteAclAsync(AclName, CancellationToken)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = await ManagedKafkaClient.CreateAsync();
+            // Initialize request argument(s)
+            AclName name = AclName.FromProjectLocationClusterAcl("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[ACL]");
+            // Make the request
+            await managedKafkaClient.DeleteAclAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddAclEntry</summary>
+        public void AddAclEntryRequestObject()
+        {
+            // Snippet: AddAclEntry(AddAclEntryRequest, CallSettings)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = ManagedKafkaClient.Create();
+            // Initialize request argument(s)
+            AddAclEntryRequest request = new AddAclEntryRequest
+            {
+                AclAsAclName = AclName.FromProjectLocationClusterAcl("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[ACL]"),
+                AclEntry = new AclEntry(),
+            };
+            // Make the request
+            AddAclEntryResponse response = managedKafkaClient.AddAclEntry(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddAclEntryAsync</summary>
+        public async Task AddAclEntryRequestObjectAsync()
+        {
+            // Snippet: AddAclEntryAsync(AddAclEntryRequest, CallSettings)
+            // Additional: AddAclEntryAsync(AddAclEntryRequest, CancellationToken)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = await ManagedKafkaClient.CreateAsync();
+            // Initialize request argument(s)
+            AddAclEntryRequest request = new AddAclEntryRequest
+            {
+                AclAsAclName = AclName.FromProjectLocationClusterAcl("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[ACL]"),
+                AclEntry = new AclEntry(),
+            };
+            // Make the request
+            AddAclEntryResponse response = await managedKafkaClient.AddAclEntryAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddAclEntry</summary>
+        public void AddAclEntry()
+        {
+            // Snippet: AddAclEntry(string, AclEntry, CallSettings)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = ManagedKafkaClient.Create();
+            // Initialize request argument(s)
+            string acl = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]/acls/[ACL]";
+            AclEntry aclEntry = new AclEntry();
+            // Make the request
+            AddAclEntryResponse response = managedKafkaClient.AddAclEntry(acl, aclEntry);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddAclEntryAsync</summary>
+        public async Task AddAclEntryAsync()
+        {
+            // Snippet: AddAclEntryAsync(string, AclEntry, CallSettings)
+            // Additional: AddAclEntryAsync(string, AclEntry, CancellationToken)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = await ManagedKafkaClient.CreateAsync();
+            // Initialize request argument(s)
+            string acl = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]/acls/[ACL]";
+            AclEntry aclEntry = new AclEntry();
+            // Make the request
+            AddAclEntryResponse response = await managedKafkaClient.AddAclEntryAsync(acl, aclEntry);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddAclEntry</summary>
+        public void AddAclEntryResourceNames()
+        {
+            // Snippet: AddAclEntry(AclName, AclEntry, CallSettings)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = ManagedKafkaClient.Create();
+            // Initialize request argument(s)
+            AclName acl = AclName.FromProjectLocationClusterAcl("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[ACL]");
+            AclEntry aclEntry = new AclEntry();
+            // Make the request
+            AddAclEntryResponse response = managedKafkaClient.AddAclEntry(acl, aclEntry);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddAclEntryAsync</summary>
+        public async Task AddAclEntryResourceNamesAsync()
+        {
+            // Snippet: AddAclEntryAsync(AclName, AclEntry, CallSettings)
+            // Additional: AddAclEntryAsync(AclName, AclEntry, CancellationToken)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = await ManagedKafkaClient.CreateAsync();
+            // Initialize request argument(s)
+            AclName acl = AclName.FromProjectLocationClusterAcl("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[ACL]");
+            AclEntry aclEntry = new AclEntry();
+            // Make the request
+            AddAclEntryResponse response = await managedKafkaClient.AddAclEntryAsync(acl, aclEntry);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveAclEntry</summary>
+        public void RemoveAclEntryRequestObject()
+        {
+            // Snippet: RemoveAclEntry(RemoveAclEntryRequest, CallSettings)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = ManagedKafkaClient.Create();
+            // Initialize request argument(s)
+            RemoveAclEntryRequest request = new RemoveAclEntryRequest
+            {
+                AclAsAclName = AclName.FromProjectLocationClusterAcl("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[ACL]"),
+                AclEntry = new AclEntry(),
+            };
+            // Make the request
+            RemoveAclEntryResponse response = managedKafkaClient.RemoveAclEntry(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveAclEntryAsync</summary>
+        public async Task RemoveAclEntryRequestObjectAsync()
+        {
+            // Snippet: RemoveAclEntryAsync(RemoveAclEntryRequest, CallSettings)
+            // Additional: RemoveAclEntryAsync(RemoveAclEntryRequest, CancellationToken)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = await ManagedKafkaClient.CreateAsync();
+            // Initialize request argument(s)
+            RemoveAclEntryRequest request = new RemoveAclEntryRequest
+            {
+                AclAsAclName = AclName.FromProjectLocationClusterAcl("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[ACL]"),
+                AclEntry = new AclEntry(),
+            };
+            // Make the request
+            RemoveAclEntryResponse response = await managedKafkaClient.RemoveAclEntryAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveAclEntry</summary>
+        public void RemoveAclEntry()
+        {
+            // Snippet: RemoveAclEntry(string, AclEntry, CallSettings)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = ManagedKafkaClient.Create();
+            // Initialize request argument(s)
+            string acl = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]/acls/[ACL]";
+            AclEntry aclEntry = new AclEntry();
+            // Make the request
+            RemoveAclEntryResponse response = managedKafkaClient.RemoveAclEntry(acl, aclEntry);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveAclEntryAsync</summary>
+        public async Task RemoveAclEntryAsync()
+        {
+            // Snippet: RemoveAclEntryAsync(string, AclEntry, CallSettings)
+            // Additional: RemoveAclEntryAsync(string, AclEntry, CancellationToken)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = await ManagedKafkaClient.CreateAsync();
+            // Initialize request argument(s)
+            string acl = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]/acls/[ACL]";
+            AclEntry aclEntry = new AclEntry();
+            // Make the request
+            RemoveAclEntryResponse response = await managedKafkaClient.RemoveAclEntryAsync(acl, aclEntry);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveAclEntry</summary>
+        public void RemoveAclEntryResourceNames()
+        {
+            // Snippet: RemoveAclEntry(AclName, AclEntry, CallSettings)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = ManagedKafkaClient.Create();
+            // Initialize request argument(s)
+            AclName acl = AclName.FromProjectLocationClusterAcl("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[ACL]");
+            AclEntry aclEntry = new AclEntry();
+            // Make the request
+            RemoveAclEntryResponse response = managedKafkaClient.RemoveAclEntry(acl, aclEntry);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveAclEntryAsync</summary>
+        public async Task RemoveAclEntryResourceNamesAsync()
+        {
+            // Snippet: RemoveAclEntryAsync(AclName, AclEntry, CallSettings)
+            // Additional: RemoveAclEntryAsync(AclName, AclEntry, CancellationToken)
+            // Create client
+            ManagedKafkaClient managedKafkaClient = await ManagedKafkaClient.CreateAsync();
+            // Initialize request argument(s)
+            AclName acl = AclName.FromProjectLocationClusterAcl("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[ACL]");
+            AclEntry aclEntry = new AclEntry();
+            // Make the request
+            RemoveAclEntryResponse response = await managedKafkaClient.RemoveAclEntryAsync(acl, aclEntry);
+            // End snippet
+        }
     }
 }

@@ -1,5 +1,62 @@
 # Version history
 
+## Version 2.0.0-alpha28, released 2025-11-03
+
+### New features
+
+- Update dependencies
+
+## Version 2.0.0-alpha27, released 2025-08-20
+
+### New features
+
+- Add the `GetReportingIdentitySettings` method
+- Add the `GetReportingIdentitySettingsRequest` resource
+- Add the `REPORTING_IDENTITY_SETTINGS` resource type to the `ChangeHistoryResourceType` enum
+- Add reporting_identity_settings` fields to the `ChangeHistoryResource` resource
+- Add the `ReportingIdentitySettings` resource
+
+### Bug fixes
+
+- Remove the `SetAutomatedGa4ConfigurationOptOut` method
+- Remove the `FetchAutomatedGa4ConfigurationOptOut` method
+- Remove the `CreateConnectedSiteTag` method
+- Remove the `DeleteConnectedSiteTag` method
+- Remove the `ListConnectedSiteTags` method
+- Remove the `FetchConnectedGa4Property` method
+- Remove the `SetAutomatedGa4ConfigurationOptOutRequest` resource
+- Remove the `SetAutomatedGa4ConfigurationOptOutResponse` resource
+- Remove the `FetchAutomatedGa4ConfigurationOptOutRequest` resource
+- Remove the `FetchAutomatedGa4ConfigurationOptOutResponse` resource
+- Remove the `CreateConnectedSiteTagRequest` resource
+- Remove the `CreateConnectedSiteTagResponse` resource
+- Remove the `DeleteConnectedSiteTagRequest` resource
+- Remove the `ListConnectedSiteTagsRequest` resource
+- Remove the `ListConnectedSiteTagsResponse` resource
+- Remove the `FetchConnectedGa4PropertyRequest` resource
+- Remove the `FetchConnectedGa4PropertyResponse` resource
+- Remove the `ConnectedSiteTag` resource
+
+### Documentation improvements
+
+- Provide additional guidelines for the `user_provided_data` field in the `SubmitUserDeletionRequest` resource
+
+## Version 2.0.0-alpha26, released 2025-06-16
+
+### New features
+
+- Add the `GetSubpropertySyncConfigRequest` method
+- Add the `ListSubpropertySyncConfigsRequest` method
+- Add the `UpdateSubpropertySyncConfigRequest` method
+
+## Version 2.0.0-alpha25, released 2025-05-16
+
+Test release only; still no change from 2.0.0-alpha23.
+
+## Version 2.0.0-alpha24, released 2025-05-08
+
+Test release only; no change from 2.0.0-alpha23.
+
 ## Version 2.0.0-alpha23, released 2025-04-23
 
 ### Bug fixes

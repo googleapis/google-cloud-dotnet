@@ -36,7 +36,7 @@ namespace GoogleCSharpSnippets
             // Create client
             CustomTargetingValueServiceClient customTargetingValueServiceClient = CustomTargetingValueServiceClient.Create();
             // Initialize request argument(s)
-            CustomTargetingKeyName parent = CustomTargetingKeyName.FromNetworkCodeCustomTargetingKey("[NETWORK_CODE]", "[CUSTOM_TARGETING_KEY]");
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
             // Make the request
             PagedEnumerable<ListCustomTargetingValuesResponse, CustomTargetingValue> response = customTargetingValueServiceClient.ListCustomTargetingValues(parent);
 

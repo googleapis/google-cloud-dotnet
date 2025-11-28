@@ -614,6 +614,30 @@ namespace Google.Cloud.Video.LiveStream.V1
         }
     }
 
+    public partial class StartDistributionRequest
+    {
+        /// <summary>
+        /// <see cref="gcvlv::ChannelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvlv::ChannelName ChannelName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvlv::ChannelName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class StopDistributionRequest
+    {
+        /// <summary>
+        /// <see cref="gcvlv::ChannelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvlv::ChannelName ChannelName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvlv::ChannelName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CreateInputRequest
     {
         /// <summary>
@@ -758,6 +782,54 @@ namespace Google.Cloud.Video.LiveStream.V1
         }
     }
 
+    public partial class ListDvrSessionsRequest
+    {
+        /// <summary>
+        /// <see cref="ChannelName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ChannelName ParentAsChannelName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ChannelName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetDvrSessionRequest
+    {
+        /// <summary>
+        /// <see cref="gcvlv::DvrSessionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvlv::DvrSessionName DvrSessionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvlv::DvrSessionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateDvrSessionRequest
+    {
+        /// <summary>
+        /// <see cref="ChannelName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ChannelName ParentAsChannelName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ChannelName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteDvrSessionRequest
+    {
+        /// <summary>
+        /// <see cref="gcvlv::DvrSessionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvlv::DvrSessionName DvrSessionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvlv::DvrSessionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetPoolRequest
     {
         /// <summary>
@@ -766,6 +838,18 @@ namespace Google.Cloud.Video.LiveStream.V1
         public gcvlv::PoolName PoolName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcvlv::PoolName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class PreviewInputRequest
+    {
+        /// <summary>
+        /// <see cref="gcvlv::InputName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcvlv::InputName InputName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcvlv::InputName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

@@ -1,5 +1,22 @@
 # Version history
 
+## Version 2.7.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+## Version 2.6.0, released 2025-09-16
+
+### New features
+
+- Add `k8s_git_version` field
+
+### Documentation improvements
+
+- Correct comment for `k8s_version` field
+- Reformat comments for several messages, including ListFeaturesRequest, CreateFeatureRequest, and OperationMetadata
+
 ## Version 2.5.0, released 2024-05-14
 
 ### New features

@@ -1081,7 +1081,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the lake location, of the form:
         /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="lake">
         /// Required. Lake resource
@@ -1112,7 +1112,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the lake location, of the form:
         /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="lake">
         /// Required. Lake resource
@@ -1143,7 +1143,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the lake location, of the form:
         /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="lake">
         /// Required. Lake resource
@@ -1169,7 +1169,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the lake location, of the form:
         /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="lake">
         /// Required. Lake resource
@@ -1200,7 +1200,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the lake location, of the form:
         /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="lake">
         /// Required. Lake resource
@@ -1231,7 +1231,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the lake location, of the form:
         /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="lake">
         /// Required. Lake resource
@@ -1527,7 +1527,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the lake location, of the form:
         /// `projects/{project_number}/locations/{location_id}`
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1562,7 +1562,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the lake location, of the form:
         /// `projects/{project_number}/locations/{location_id}`
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1597,7 +1597,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the lake location, of the form:
         /// `projects/{project_number}/locations/{location_id}`
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1632,7 +1632,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="parent">
         /// Required. The resource name of the lake location, of the form:
         /// `projects/{project_number}/locations/{location_id}`
-        /// where `location_id` refers to a GCP region.
+        /// where `location_id` refers to a Google Cloud region.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first

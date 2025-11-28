@@ -31,335 +31,389 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             "bG95ZGIvdjFiZXRhL2NzcWxfcmVzb3VyY2VzLnByb3RvGihnb29nbGUvY2xv",
             "dWQvYWxsb3lkYi92MWJldGEvZ2VtaW5pLnByb3RvGh5nb29nbGUvcHJvdG9i",
             "dWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAu",
-            "cHJvdG8aHmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5wcm90bxobZ29vZ2xl",
-            "L3R5cGUvZGF5b2Z3ZWVrLnByb3RvGhtnb29nbGUvdHlwZS90aW1lb2ZkYXku",
-            "cHJvdG8iLgoMVXNlclBhc3N3b3JkEgwKBHVzZXIYASABKAkSEAoIcGFzc3dv",
-            "cmQYAiABKAki5wEKD01pZ3JhdGlvblNvdXJjZRIWCglob3N0X3BvcnQYASAB",
-            "KAlCA+BBAxIZCgxyZWZlcmVuY2VfaWQYAiABKAlCA+BBAxJaCgtzb3VyY2Vf",
-            "dHlwZRgDIAEoDjJALmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxYmV0YS5NaWdy",
-            "YXRpb25Tb3VyY2UuTWlncmF0aW9uU291cmNlVHlwZUID4EEDIkUKE01pZ3Jh",
-            "dGlvblNvdXJjZVR5cGUSJQohTUlHUkFUSU9OX1NPVVJDRV9UWVBFX1VOU1BF",
-            "Q0lGSUVEEAASBwoDRE1TEAEiKAoQRW5jcnlwdGlvbkNvbmZpZxIUCgxrbXNf",
-            "a2V5X25hbWUYASABKAkiigIKDkVuY3J5cHRpb25JbmZvEk4KD2VuY3J5cHRp",
-            "b25fdHlwZRgBIAEoDjIwLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxYmV0YS5F",
-            "bmNyeXB0aW9uSW5mby5UeXBlQgPgQQMSSgoQa21zX2tleV92ZXJzaW9ucxgC",
-            "IAMoCUIw4EED+kEqCihjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9L",
-            "ZXlWZXJzaW9uIlwKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEh0KGUdP",
-            "T0dMRV9ERUZBVUxUX0VOQ1JZUFRJT04QARIfChtDVVNUT01FUl9NQU5BR0VE",
-            "X0VOQ1JZUFRJT04QAiKGAwoJU3NsQ29uZmlnEkUKCHNzbF9tb2RlGAEgASgO",
-            "Mi4uZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjFiZXRhLlNzbENvbmZpZy5Tc2xN",
-            "b2RlQgPgQQESRwoJY2Ffc291cmNlGAIgASgOMi8uZ29vZ2xlLmNsb3VkLmFs",
-            "bG95ZGIudjFiZXRhLlNzbENvbmZpZy5DYVNvdXJjZUID4EEBIqoBCgdTc2xN",
-            "b2RlEhgKFFNTTF9NT0RFX1VOU1BFQ0lGSUVEEAASFgoOU1NMX01PREVfQUxM",
-            "T1cQARoCCAESGAoQU1NMX01PREVfUkVRVUlSRRACGgIIARIaChJTU0xfTU9E",
-            "RV9WRVJJRllfQ0EQAxoCCAESIwofQUxMT1dfVU5FTkNSWVBURURfQU5EX0VO",
-            "Q1JZUFRFRBAEEhIKDkVOQ1JZUFRFRF9PTkxZEAUiPAoIQ2FTb3VyY2USGQoV",
-            "Q0FfU09VUkNFX1VOU1BFQ0lGSUVEEAASFQoRQ0FfU09VUkNFX01BTkFHRUQQ",
-            "ASL5BgoVQXV0b21hdGVkQmFja3VwUG9saWN5ElwKD3dlZWtseV9zY2hlZHVs",
-            "ZRgCIAEoCzJBLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxYmV0YS5BdXRvbWF0",
-            "ZWRCYWNrdXBQb2xpY3kuV2Vla2x5U2NoZWR1bGVIABJlChR0aW1lX2Jhc2Vk",
-            "X3JldGVudGlvbhgEIAEoCzJFLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxYmV0",
-            "YS5BdXRvbWF0ZWRCYWNrdXBQb2xpY3kuVGltZUJhc2VkUmV0ZW50aW9uSAES",
-            "bQoYcXVhbnRpdHlfYmFzZWRfcmV0ZW50aW9uGAUgASgLMkkuZ29vZ2xlLmNs",
-            "b3VkLmFsbG95ZGIudjFiZXRhLkF1dG9tYXRlZEJhY2t1cFBvbGljeS5RdWFu",
-            "dGl0eUJhc2VkUmV0ZW50aW9uSAESFAoHZW5hYmxlZBgBIAEoCEgCiAEBEjAK",
-            "DWJhY2t1cF93aW5kb3cYAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRp",
-            "b24STQoRZW5jcnlwdGlvbl9jb25maWcYCCABKAsyLS5nb29nbGUuY2xvdWQu",
-            "YWxsb3lkYi52MWJldGEuRW5jcnlwdGlvbkNvbmZpZ0ID4EEBEhAKCGxvY2F0",
-            "aW9uGAYgASgJEk4KBmxhYmVscxgHIAMoCzI+Lmdvb2dsZS5jbG91ZC5hbGxv",
-            "eWRiLnYxYmV0YS5BdXRvbWF0ZWRCYWNrdXBQb2xpY3kuTGFiZWxzRW50cnka",
-            "awoOV2Vla2x5U2NoZWR1bGUSKwoLc3RhcnRfdGltZXMYASADKAsyFi5nb29n",
-            "bGUudHlwZS5UaW1lT2ZEYXkSLAoMZGF5c19vZl93ZWVrGAIgAygOMhYuZ29v",
-            "Z2xlLnR5cGUuRGF5T2ZXZWVrGkkKElRpbWVCYXNlZFJldGVudGlvbhIzChBy",
-            "ZXRlbnRpb25fcGVyaW9kGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0",
-            "aW9uGicKFlF1YW50aXR5QmFzZWRSZXRlbnRpb24SDQoFY291bnQYASABKAUa",
-            "LQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
-            "AUIKCghzY2hlZHVsZUILCglyZXRlbnRpb25CCgoIX2VuYWJsZWQiogEKFkNv",
-            "bnRpbnVvdXNCYWNrdXBDb25maWcSFAoHZW5hYmxlZBgBIAEoCEgAiAEBEhwK",
-            "FHJlY292ZXJ5X3dpbmRvd19kYXlzGAQgASgFEkgKEWVuY3J5cHRpb25fY29u",
-            "ZmlnGAMgASgLMi0uZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjFiZXRhLkVuY3J5",
-            "cHRpb25Db25maWdCCgoIX2VuYWJsZWQiigIKFENvbnRpbnVvdXNCYWNrdXBJ",
-            "bmZvEkkKD2VuY3J5cHRpb25faW5mbxgBIAEoCzIrLmdvb2dsZS5jbG91ZC5h",
-            "bGxveWRiLnYxYmV0YS5FbmNyeXB0aW9uSW5mb0ID4EEDEjUKDGVuYWJsZWRf",
-            "dGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIt",
-            "CghzY2hlZHVsZRgDIAMoDjIWLmdvb2dsZS50eXBlLkRheU9mV2Vla0ID4EED",
-            "EkEKGGVhcmxpZXN0X3Jlc3RvcmFibGVfdGltZRgEIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAyJjCgxCYWNrdXBTb3VyY2USFwoKYmFj",
-            "a3VwX3VpZBgCIAEoCUID4EEDEjoKC2JhY2t1cF9uYW1lGAEgASgJQiXgQQL6",
-            "QR8KHWFsbG95ZGIuZ29vZ2xlYXBpcy5jb20vQmFja3VwImYKFkNvbnRpbnVv",
-            "dXNCYWNrdXBTb3VyY2USFAoHY2x1c3RlchgBIAEoCUID4EECEjYKDXBvaW50",
-            "X2luX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
-            "QQIi5AEKF01haW50ZW5hbmNlVXBkYXRlUG9saWN5EmMKE21haW50ZW5hbmNl",
-            "X3dpbmRvd3MYASADKAsyRi5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGEu",
-            "TWFpbnRlbmFuY2VVcGRhdGVQb2xpY3kuTWFpbnRlbmFuY2VXaW5kb3caZAoR",
-            "TWFpbnRlbmFuY2VXaW5kb3cSIwoDZGF5GAEgASgOMhYuZ29vZ2xlLnR5cGUu",
-            "RGF5T2ZXZWVrEioKCnN0YXJ0X3RpbWUYAiABKAsyFi5nb29nbGUudHlwZS5U",
-            "aW1lT2ZEYXkiSgoTTWFpbnRlbmFuY2VTY2hlZHVsZRIzCgpzdGFydF90aW1l",
-            "GAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDIt0ZCgdD",
-            "bHVzdGVyEkcKDWJhY2t1cF9zb3VyY2UYDyABKAsyKS5nb29nbGUuY2xvdWQu",
-            "YWxsb3lkYi52MWJldGEuQmFja3VwU291cmNlQgPgQQNIABJNChBtaWdyYXRp",
-            "b25fc291cmNlGBAgASgLMiwuZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjFiZXRh",
-            "Lk1pZ3JhdGlvblNvdXJjZUID4EEDSAASXwoaY2xvdWRzcWxfYmFja3VwX3J1",
-            "bl9zb3VyY2UYKiABKAsyNC5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGEu",
-            "Q2xvdWRTUUxCYWNrdXBSdW5Tb3VyY2VCA+BBA0gAEhEKBG5hbWUYASABKAlC",
-            "A+BBAxIUCgxkaXNwbGF5X25hbWUYAiABKAkSEAoDdWlkGAMgASgJQgPgQQMS",
-            "NAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQMSNAoLZGVsZXRlX3RpbWUYBiABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSQAoGbGFiZWxzGAcgAygLMjAu",
-            "Z29vZ2xlLmNsb3VkLmFsbG95ZGIudjFiZXRhLkNsdXN0ZXIuTGFiZWxzRW50",
-            "cnkSPgoFc3RhdGUYCCABKA4yKi5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJl",
-            "dGEuQ2x1c3Rlci5TdGF0ZUID4EEDEksKDGNsdXN0ZXJfdHlwZRgYIAEoDjIw",
-            "Lmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxYmV0YS5DbHVzdGVyLkNsdXN0ZXJU",
-            "eXBlQgPgQQMSSwoQZGF0YWJhc2VfdmVyc2lvbhgJIAEoDjIsLmdvb2dsZS5j",
-            "bG91ZC5hbGxveWRiLnYxYmV0YS5EYXRhYmFzZVZlcnNpb25CA+BBARJPCg5u",
-            "ZXR3b3JrX2NvbmZpZxgdIAEoCzIyLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYx",
-            "YmV0YS5DbHVzdGVyLk5ldHdvcmtDb25maWdCA+BBARI5CgduZXR3b3JrGAog",
-            "ASgJQigYAeBBAvpBIAoeY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9OZXR3b3Jr",
-            "EgwKBGV0YWcYCyABKAkSSgoLYW5ub3RhdGlvbnMYDCADKAsyNS5nb29nbGUu",
-            "Y2xvdWQuYWxsb3lkYi52MWJldGEuQ2x1c3Rlci5Bbm5vdGF0aW9uc0VudHJ5",
-            "EhgKC3JlY29uY2lsaW5nGA0gASgIQgPgQQMSRAoMaW5pdGlhbF91c2VyGA4g",
-            "ASgLMikuZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjFiZXRhLlVzZXJQYXNzd29y",
-            "ZEID4EEEElMKF2F1dG9tYXRlZF9iYWNrdXBfcG9saWN5GBEgASgLMjIuZ29v",
-            "Z2xlLmNsb3VkLmFsbG95ZGIudjFiZXRhLkF1dG9tYXRlZEJhY2t1cFBvbGlj",
-            "eRI+Cgpzc2xfY29uZmlnGBIgASgLMiYuZ29vZ2xlLmNsb3VkLmFsbG95ZGIu",
-            "djFiZXRhLlNzbENvbmZpZ0ICGAESTQoRZW5jcnlwdGlvbl9jb25maWcYEyAB",
-            "KAsyLS5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGEuRW5jcnlwdGlvbkNv",
-            "bmZpZ0ID4EEBEkkKD2VuY3J5cHRpb25faW5mbxgUIAEoCzIrLmdvb2dsZS5j",
-            "bG91ZC5hbGxveWRiLnYxYmV0YS5FbmNyeXB0aW9uSW5mb0ID4EEDEloKGGNv",
-            "bnRpbnVvdXNfYmFja3VwX2NvbmZpZxgbIAEoCzIzLmdvb2dsZS5jbG91ZC5h",
-            "bGxveWRiLnYxYmV0YS5Db250aW51b3VzQmFja3VwQ29uZmlnQgPgQQESVgoW",
-            "Y29udGludW91c19iYWNrdXBfaW5mbxgcIAEoCzIxLmdvb2dsZS5jbG91ZC5h",
-            "bGxveWRiLnYxYmV0YS5Db250aW51b3VzQmFja3VwSW5mb0ID4EEDEk4KEHNl",
-            "Y29uZGFyeV9jb25maWcYFiABKAsyNC5nb29nbGUuY2xvdWQuYWxsb3lkYi52",
-            "MWJldGEuQ2x1c3Rlci5TZWNvbmRhcnlDb25maWcSTwoOcHJpbWFyeV9jb25m",
-            "aWcYFyABKAsyMi5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGEuQ2x1c3Rl",
-            "ci5QcmltYXJ5Q29uZmlnQgPgQQMSGgoNc2F0aXNmaWVzX3B6cxgeIAEoCEID",
-            "4EEDEkcKCnBzY19jb25maWcYHyABKAsyLi5nb29nbGUuY2xvdWQuYWxsb3lk",
-            "Yi52MWJldGEuQ2x1c3Rlci5Qc2NDb25maWdCA+BBARJcChltYWludGVuYW5j",
-            "ZV91cGRhdGVfcG9saWN5GCAgASgLMjQuZ29vZ2xlLmNsb3VkLmFsbG95ZGIu",
-            "djFiZXRhLk1haW50ZW5hbmNlVXBkYXRlUG9saWN5QgPgQQESUwoUbWFpbnRl",
-            "bmFuY2Vfc2NoZWR1bGUYJSABKAsyMC5nb29nbGUuY2xvdWQuYWxsb3lkYi52",
-            "MWJldGEuTWFpbnRlbmFuY2VTY2hlZHVsZUID4EEDEkwKDWdlbWluaV9jb25m",
-            "aWcYJCABKAsyMC5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGEuR2VtaW5p",
-            "Q2x1c3RlckNvbmZpZ0ID4EEBEk0KEXN1YnNjcmlwdGlvbl90eXBlGCYgASgO",
-            "Mi0uZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjFiZXRhLlN1YnNjcmlwdGlvblR5",
-            "cGVCA+BBARJPCg50cmlhbF9tZXRhZGF0YRgnIAEoCzIyLmdvb2dsZS5jbG91",
-            "ZC5hbGxveWRiLnYxYmV0YS5DbHVzdGVyLlRyaWFsTWV0YWRhdGFCA+BBAxJH",
-            "CgR0YWdzGCkgAygLMi4uZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjFiZXRhLkNs",
-            "dXN0ZXIuVGFnc0VudHJ5QgngQQTgQQXgQQEaaQoNTmV0d29ya0NvbmZpZxI3",
-            "CgduZXR3b3JrGAEgASgJQibgQQH6QSAKHmNvbXB1dGUuZ29vZ2xlYXBpcy5j",
-            "b20vTmV0d29yaxIfChJhbGxvY2F0ZWRfaXBfcmFuZ2UYAiABKAlCA+BBARov",
-            "Cg9TZWNvbmRhcnlDb25maWcSHAoUcHJpbWFyeV9jbHVzdGVyX25hbWUYASAB",
-            "KAkaNQoNUHJpbWFyeUNvbmZpZxIkChdzZWNvbmRhcnlfY2x1c3Rlcl9uYW1l",
-            "cxgBIAMoCUID4EEDGiUKCVBzY0NvbmZpZxIYCgtwc2NfZW5hYmxlZBgBIAEo",
-            "CEID4EEBGtMBCg1UcmlhbE1ldGFkYXRhEi4KCnN0YXJ0X3RpbWUYASABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAIgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIwCgx1cGdyYWRlX3RpbWUY",
-            "AyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjIKDmdyYWNlX2Vu",
-            "ZF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBotCgtM",
-            "YWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGjIK",
-            "EEFubm90YXRpb25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
-            "OgI4ARorCglUYWdzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
-            "OgI4ASKcAQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIJCgVSRUFE",
-            "WRABEgsKB1NUT1BQRUQQAhIJCgVFTVBUWRADEgwKCENSRUFUSU5HEAQSDAoI",
-            "REVMRVRJTkcQBRIKCgZGQUlMRUQQBhIRCg1CT09UU1RSQVBQSU5HEAcSDwoL",
-            "TUFJTlRFTkFOQ0UQCBINCglQUk9NT1RJTkcQCSJHCgtDbHVzdGVyVHlwZRIc",
-            "ChhDTFVTVEVSX1RZUEVfVU5TUEVDSUZJRUQQABILCgdQUklNQVJZEAESDQoJ",
-            "U0VDT05EQVJZEAI6depBcgoeYWxsb3lkYi5nb29nbGVhcGlzLmNvbS9DbHVz",
-            "dGVyEjpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "Y2x1c3RlcnMve2NsdXN0ZXJ9KghjbHVzdGVyczIHY2x1c3RlclIBAUIICgZz",
-            "b3VyY2Ui4R8KCEluc3RhbmNlEhEKBG5hbWUYASABKAlCA+BBAxIUCgxkaXNw",
-            "bGF5X25hbWUYAiABKAkSEAoDdWlkGAMgASgJQgPgQQMSNAoLY3JlYXRlX3Rp",
-            "bWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoL",
-            "dXBkYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "QgPgQQMSNAoLZGVsZXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgPgQQMSQQoGbGFiZWxzGAcgAygLMjEuZ29vZ2xlLmNsb3Vk",
-            "LmFsbG95ZGIudjFiZXRhLkluc3RhbmNlLkxhYmVsc0VudHJ5Ej8KBXN0YXRl",
-            "GAggASgOMisuZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjFiZXRhLkluc3RhbmNl",
-            "LlN0YXRlQgPgQQMSTgoNaW5zdGFuY2VfdHlwZRgJIAEoDjIyLmdvb2dsZS5j",
-            "bG91ZC5hbGxveWRiLnYxYmV0YS5JbnN0YW5jZS5JbnN0YW5jZVR5cGVCA+BB",
-            "AhJLCg5tYWNoaW5lX2NvbmZpZxgKIAEoCzIzLmdvb2dsZS5jbG91ZC5hbGxv",
-            "eWRiLnYxYmV0YS5JbnN0YW5jZS5NYWNoaW5lQ29uZmlnElEKEWF2YWlsYWJp",
-            "bGl0eV90eXBlGAsgASgOMjYuZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjFiZXRh",
-            "Lkluc3RhbmNlLkF2YWlsYWJpbGl0eVR5cGUSEAoIZ2NlX3pvbmUYDCABKAkS",
-            "UAoOZGF0YWJhc2VfZmxhZ3MYDSADKAsyOC5nb29nbGUuY2xvdWQuYWxsb3lk",
-            "Yi52MWJldGEuSW5zdGFuY2UuRGF0YWJhc2VGbGFnc0VudHJ5EkYKDXdyaXRh",
-            "YmxlX25vZGUYEyABKAsyKi5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGEu",
-            "SW5zdGFuY2UuTm9kZUID4EEDEj4KBW5vZGVzGBQgAygLMiouZ29vZ2xlLmNs",
-            "b3VkLmFsbG95ZGIudjFiZXRhLkluc3RhbmNlLk5vZGVCA+BBAxJgChVxdWVy",
-            "eV9pbnNpZ2h0c19jb25maWcYFSABKAsyQS5nb29nbGUuY2xvdWQuYWxsb3lk",
-            "Yi52MWJldGEuSW5zdGFuY2UuUXVlcnlJbnNpZ2h0c0luc3RhbmNlQ29uZmln",
-            "El8KFG9ic2VydmFiaWxpdHlfY29uZmlnGBogASgLMkEuZ29vZ2xlLmNsb3Vk",
-            "LmFsbG95ZGIudjFiZXRhLkluc3RhbmNlLk9ic2VydmFiaWxpdHlJbnN0YW5j",
-            "ZUNvbmZpZxJOChByZWFkX3Bvb2xfY29uZmlnGA4gASgLMjQuZ29vZ2xlLmNs",
-            "b3VkLmFsbG95ZGIudjFiZXRhLkluc3RhbmNlLlJlYWRQb29sQ29uZmlnEhcK",
-            "CmlwX2FkZHJlc3MYDyABKAlCA+BBAxImChFwdWJsaWNfaXBfYWRkcmVzcxgb",
-            "IAEoCUIL4EED4ozP1wgCCAISGAoLcmVjb25jaWxpbmcYECABKAhCA+BBAxIM",
-            "CgRldGFnGBEgASgJEksKC2Fubm90YXRpb25zGBIgAygLMjYuZ29vZ2xlLmNs",
-            "b3VkLmFsbG95ZGIudjFiZXRhLkluc3RhbmNlLkFubm90YXRpb25zRW50cnkS",
-            "SQoNdXBkYXRlX3BvbGljeRgWIAEoCzIyLmdvb2dsZS5jbG91ZC5hbGxveWRi",
-            "LnYxYmV0YS5JbnN0YW5jZS5VcGRhdGVQb2xpY3kSYwoYY2xpZW50X2Nvbm5l",
-            "Y3Rpb25fY29uZmlnGBcgASgLMjwuZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjFi",
-            "ZXRhLkluc3RhbmNlLkNsaWVudENvbm5lY3Rpb25Db25maWdCA+BBARIaCg1z",
-            "YXRpc2ZpZXNfcHpzGBggASgIQgPgQQMSWQoTcHNjX2luc3RhbmNlX2NvbmZp",
-            "ZxgcIAEoCzI3Lmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxYmV0YS5JbnN0YW5j",
-            "ZS5Qc2NJbnN0YW5jZUNvbmZpZ0ID4EEBElgKDm5ldHdvcmtfY29uZmlnGB0g",
-            "ASgLMjsuZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjFiZXRhLkluc3RhbmNlLklu",
-            "c3RhbmNlTmV0d29ya0NvbmZpZ0ID4EEBEk0KDWdlbWluaV9jb25maWcYISAB",
-            "KAsyMS5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGEuR2VtaW5pSW5zdGFu",
-            "Y2VDb25maWdCA+BBARIxChxvdXRib3VuZF9wdWJsaWNfaXBfYWRkcmVzc2Vz",
-            "GCIgAygJQgvgQQPijM/XCAIIAhoiCg1NYWNoaW5lQ29uZmlnEhEKCWNwdV9j",
-            "b3VudBgBIAEoBRpSCgROb2RlEhQKB3pvbmVfaWQYASABKAlCA+BBAxIPCgJp",
-            "ZBgCIAEoCUID4EEDEg8KAmlwGAMgASgJQgPgQQMSEgoFc3RhdGUYBCABKAlC",
-            "A+BBAxr6AQobUXVlcnlJbnNpZ2h0c0luc3RhbmNlQ29uZmlnEiQKF3JlY29y",
-            "ZF9hcHBsaWNhdGlvbl90YWdzGAIgASgISACIAQESIgoVcmVjb3JkX2NsaWVu",
-            "dF9hZGRyZXNzGAMgASgISAGIAQESGwoTcXVlcnlfc3RyaW5nX2xlbmd0aBgE",
-            "IAEoDRIjChZxdWVyeV9wbGFuc19wZXJfbWludXRlGAUgASgNSAKIAQFCGgoY",
-            "X3JlY29yZF9hcHBsaWNhdGlvbl90YWdzQhgKFl9yZWNvcmRfY2xpZW50X2Fk",
-            "ZHJlc3NCGQoXX3F1ZXJ5X3BsYW5zX3Blcl9taW51dGUarAQKG09ic2VydmFi",
-            "aWxpdHlJbnN0YW5jZUNvbmZpZxIUCgdlbmFibGVkGAEgASgISACIAQESHgoR",
-            "cHJlc2VydmVfY29tbWVudHMYAiABKAhIAYgBARIeChF0cmFja193YWl0X2V2",
-            "ZW50cxgDIAEoCEgCiAEBEigKFnRyYWNrX3dhaXRfZXZlbnRfdHlwZXMYBCAB",
-            "KAhCA+BBA0gDiAEBEiQKF21heF9xdWVyeV9zdHJpbmdfbGVuZ3RoGAUgASgF",
-            "SASIAQESJAoXcmVjb3JkX2FwcGxpY2F0aW9uX3RhZ3MYBiABKAhIBYgBARIj",
-            "ChZxdWVyeV9wbGFuc19wZXJfbWludXRlGAcgASgFSAaIAQESIQoUdHJhY2tf",
-            "YWN0aXZlX3F1ZXJpZXMYCCABKAhIB4gBARIhChR0cmFja19jbGllbnRfYWRk",
-            "cmVzcxgJIAEoCEgIiAEBQgoKCF9lbmFibGVkQhQKEl9wcmVzZXJ2ZV9jb21t",
-            "ZW50c0IUChJfdHJhY2tfd2FpdF9ldmVudHNCGQoXX3RyYWNrX3dhaXRfZXZl",
-            "bnRfdHlwZXNCGgoYX21heF9xdWVyeV9zdHJpbmdfbGVuZ3RoQhoKGF9yZWNv",
-            "cmRfYXBwbGljYXRpb25fdGFnc0IZChdfcXVlcnlfcGxhbnNfcGVyX21pbnV0",
-            "ZUIXChVfdHJhY2tfYWN0aXZlX3F1ZXJpZXNCFwoVX3RyYWNrX2NsaWVudF9h",
-            "ZGRyZXNzGiQKDlJlYWRQb29sQ29uZmlnEhIKCm5vZGVfY291bnQYASABKAUa",
-            "kQEKDFVwZGF0ZVBvbGljeRJFCgRtb2RlGAEgASgOMjcuZ29vZ2xlLmNsb3Vk",
-            "LmFsbG95ZGIudjFiZXRhLkluc3RhbmNlLlVwZGF0ZVBvbGljeS5Nb2RlIjoK",
-            "BE1vZGUSFAoQTU9ERV9VTlNQRUNJRklFRBAAEgsKB0RFRkFVTFQQARIPCgtG",
-            "T1JDRV9BUFBMWRACGnoKFkNsaWVudENvbm5lY3Rpb25Db25maWcSHwoScmVx",
-            "dWlyZV9jb25uZWN0b3JzGAEgASgIQgPgQQESPwoKc3NsX2NvbmZpZxgCIAEo",
-            "CzImLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxYmV0YS5Tc2xDb25maWdCA+BB",
-            "ARp8ChFQc2NJbnN0YW5jZUNvbmZpZxIkChdzZXJ2aWNlX2F0dGFjaG1lbnRf",
-            "bGluaxgBIAEoCUID4EEDEiYKGWFsbG93ZWRfY29uc3VtZXJfcHJvamVjdHMY",
-            "AiADKAlCA+BBARIZCgxwc2NfZG5zX25hbWUYByABKAlCA+BBAxqLAgoVSW5z",
-            "dGFuY2VOZXR3b3JrQ29uZmlnEngKHGF1dGhvcml6ZWRfZXh0ZXJuYWxfbmV0",
-            "d29ya3MYASADKAsyTS5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGEuSW5z",
-            "dGFuY2UuSW5zdGFuY2VOZXR3b3JrQ29uZmlnLkF1dGhvcml6ZWROZXR3b3Jr",
-            "QgPgQQESHQoQZW5hYmxlX3B1YmxpY19pcBgCIAEoCEID4EEBEiYKGWVuYWJs",
-            "ZV9vdXRib3VuZF9wdWJsaWNfaXAYAyABKAhCA+BBARoxChFBdXRob3JpemVk",
-            "TmV0d29yaxIcCgpjaWRyX3JhbmdlGAEgASgJQgjijM/XCAIIAhotCgtMYWJl",
-            "bHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGjQKEkRh",
-            "dGFiYXNlRmxhZ3NFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
-            "AjgBGjIKEEFubm90YXRpb25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
-            "GAIgASgJOgI4ASKRAQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIJ",
-            "CgVSRUFEWRABEgsKB1NUT1BQRUQQAhIMCghDUkVBVElORxADEgwKCERFTEVU",
-            "SU5HEAQSDwoLTUFJTlRFTkFOQ0UQBRIKCgZGQUlMRUQQBhIRCg1CT09UU1RS",
-            "QVBQSU5HEAgSDQoJUFJPTU9USU5HEAkiWAoMSW5zdGFuY2VUeXBlEh0KGUlO",
-            "U1RBTkNFX1RZUEVfVU5TUEVDSUZJRUQQABILCgdQUklNQVJZEAESDQoJUkVB",
-            "RF9QT09MEAISDQoJU0VDT05EQVJZEAMiTgoQQXZhaWxhYmlsaXR5VHlwZRIh",
-            "Ch1BVkFJTEFCSUxJVFlfVFlQRV9VTlNQRUNJRklFRBAAEgkKBVpPTkFMEAES",
-            "DAoIUkVHSU9OQUwQAjqOAepBigEKH2FsbG95ZGIuZ29vZ2xlYXBpcy5jb20v",
-            "SW5zdGFuY2UST3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
-            "aW9ufS9jbHVzdGVycy97Y2x1c3Rlcn0vaW5zdGFuY2VzL3tpbnN0YW5jZX0q",
-            "CWluc3RhbmNlczIIaW5zdGFuY2VSAQEi6gIKDkNvbm5lY3Rpb25JbmZvEgwK",
-            "BG5hbWUYASABKAkSFwoKaXBfYWRkcmVzcxgCIAEoCUID4EEDEiYKEXB1Ymxp",
-            "Y19pcF9hZGRyZXNzGAUgASgJQgvgQQPijM/XCAIIAhIkChVwZW1fY2VydGlm",
-            "aWNhdGVfY2hhaW4YAyADKAlCBRgB4EEDEhkKDGluc3RhbmNlX3VpZBgEIAEo",
-            "CUID4EEDEhkKDHBzY19kbnNfbmFtZRgGIAEoCUID4EEDOqwB6kGoAQolYWxs",
-            "b3lkYi5nb29nbGVhcGlzLmNvbS9Db25uZWN0aW9uSW5mbxJecHJvamVjdHMv",
-            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NsdXN0ZXJzL3tjbHVz",
-            "dGVyfS9pbnN0YW5jZXMve2luc3RhbmNlfS9jb25uZWN0aW9uSW5mbyoPY29u",
-            "bmVjdGlvbkluZm9zMg5jb25uZWN0aW9uSW5mbyLoDAoGQmFja3VwEhEKBG5h",
-            "bWUYASABKAlCA+BBAxIUCgxkaXNwbGF5X25hbWUYAiABKAkSEAoDdWlkGAMg",
-            "ASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBSABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLZGVsZXRlX3RpbWUYDyAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSPwoGbGFiZWxz",
-            "GAYgAygLMi8uZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjFiZXRhLkJhY2t1cC5M",
-            "YWJlbHNFbnRyeRI9CgVzdGF0ZRgHIAEoDjIpLmdvb2dsZS5jbG91ZC5hbGxv",
-            "eWRiLnYxYmV0YS5CYWNrdXAuU3RhdGVCA+BBAxI2CgR0eXBlGAggASgOMigu",
-            "Z29vZ2xlLmNsb3VkLmFsbG95ZGIudjFiZXRhLkJhY2t1cC5UeXBlEhMKC2Rl",
-            "c2NyaXB0aW9uGAkgASgJEhgKC2NsdXN0ZXJfdWlkGBIgASgJQgPgQQMSPAoM",
-            "Y2x1c3Rlcl9uYW1lGAogASgJQibgQQL6QSAKHmFsbG95ZGIuZ29vZ2xlYXBp",
-            "cy5jb20vQ2x1c3RlchIYCgtyZWNvbmNpbGluZxgLIAEoCEID4EEDEk0KEWVu",
-            "Y3J5cHRpb25fY29uZmlnGAwgASgLMi0uZ29vZ2xlLmNsb3VkLmFsbG95ZGIu",
-            "djFiZXRhLkVuY3J5cHRpb25Db25maWdCA+BBARJJCg9lbmNyeXB0aW9uX2lu",
-            "Zm8YDSABKAsyKy5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGEuRW5jcnlw",
-            "dGlvbkluZm9CA+BBAxIMCgRldGFnGA4gASgJEkkKC2Fubm90YXRpb25zGBAg",
-            "AygLMjQuZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjFiZXRhLkJhY2t1cC5Bbm5v",
-            "dGF0aW9uc0VudHJ5EhcKCnNpemVfYnl0ZXMYESABKANCA+BBAxI0CgtleHBp",
-            "cnlfdGltZRgTIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "AxJVCg9leHBpcnlfcXVhbnRpdHkYFCABKAsyNy5nb29nbGUuY2xvdWQuYWxs",
-            "b3lkYi52MWJldGEuQmFja3VwLlF1YW50aXR5QmFzZWRFeHBpcnlCA+BBAxIa",
-            "Cg1zYXRpc2ZpZXNfcHpzGBUgASgIQgPgQQMSSwoQZGF0YWJhc2VfdmVyc2lv",
-            "bhgWIAEoDjIsLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxYmV0YS5EYXRhYmFz",
-            "ZVZlcnNpb25CA+BBAxJGCgR0YWdzGBkgAygLMi0uZ29vZ2xlLmNsb3VkLmFs",
-            "bG95ZGIudjFiZXRhLkJhY2t1cC5UYWdzRW50cnlCCeBBBOBBBeBBARpXChNR",
-            "dWFudGl0eUJhc2VkRXhwaXJ5EhwKD3JldGVudGlvbl9jb3VudBgBIAEoBUID",
-            "4EEDEiIKFXRvdGFsX3JldGVudGlvbl9jb3VudBgCIAEoBUID4EEDGi0KC0xh",
-            "YmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaMgoQ",
-            "QW5ub3RhdGlvbnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
-            "AjgBGisKCVRhZ3NFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
-            "AjgBIlEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCQoFUkVBRFkQ",
-            "ARIMCghDUkVBVElORxACEgoKBkZBSUxFRBADEgwKCERFTEVUSU5HEAQiSgoE",
-            "VHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASDQoJT05fREVNQU5EEAESDQoJ",
-            "QVVUT01BVEVEEAISDgoKQ09OVElOVU9VUxADOnDqQW0KHWFsbG95ZGIuZ29v",
-            "Z2xlYXBpcy5jb20vQmFja3VwEjhwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
-            "b25zL3tsb2NhdGlvbn0vYmFja3Vwcy97YmFja3VwfSoHYmFja3VwczIGYmFj",
-            "a3VwUgEBIokHChVTdXBwb3J0ZWREYXRhYmFzZUZsYWcSZAoTc3RyaW5nX3Jl",
-            "c3RyaWN0aW9ucxgHIAEoCzJFLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxYmV0",
-            "YS5TdXBwb3J0ZWREYXRhYmFzZUZsYWcuU3RyaW5nUmVzdHJpY3Rpb25zSAAS",
-            "ZgoUaW50ZWdlcl9yZXN0cmljdGlvbnMYCCABKAsyRi5nb29nbGUuY2xvdWQu",
-            "YWxsb3lkYi52MWJldGEuU3VwcG9ydGVkRGF0YWJhc2VGbGFnLkludGVnZXJS",
-            "ZXN0cmljdGlvbnNIABIMCgRuYW1lGAEgASgJEhEKCWZsYWdfbmFtZRgCIAEo",
-            "CRJQCgp2YWx1ZV90eXBlGAMgASgOMjwuZ29vZ2xlLmNsb3VkLmFsbG95ZGIu",
-            "djFiZXRhLlN1cHBvcnRlZERhdGFiYXNlRmxhZy5WYWx1ZVR5cGUSHwoXYWNj",
-            "ZXB0c19tdWx0aXBsZV92YWx1ZXMYBCABKAgSSwoVc3VwcG9ydGVkX2RiX3Zl",
-            "cnNpb25zGAUgAygOMiwuZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjFiZXRhLkRh",
-            "dGFiYXNlVmVyc2lvbhIbChNyZXF1aXJlc19kYl9yZXN0YXJ0GAYgASgIGiwK",
-            "ElN0cmluZ1Jlc3RyaWN0aW9ucxIWCg5hbGxvd2VkX3ZhbHVlcxgBIAMoCRp1",
-            "ChNJbnRlZ2VyUmVzdHJpY3Rpb25zEi4KCW1pbl92YWx1ZRgBIAEoCzIbLmdv",
-            "b2dsZS5wcm90b2J1Zi5JbnQ2NFZhbHVlEi4KCW1heF92YWx1ZRgCIAEoCzIb",
-            "Lmdvb2dsZS5wcm90b2J1Zi5JbnQ2NFZhbHVlIlUKCVZhbHVlVHlwZRIaChZW",
-            "QUxVRV9UWVBFX1VOU1BFQ0lGSUVEEAASCgoGU1RSSU5HEAESCwoHSU5URUdF",
-            "UhACEgkKBUZMT0FUEAMSCAoETk9ORRAEOpcB6kGTAQosYWxsb3lkYi5nb29n",
-            "bGVhcGlzLmNvbS9TdXBwb3J0ZWREYXRhYmFzZUZsYWcSNHByb2plY3RzL3tw",
-            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9mbGFncy97ZmxhZ30qFnN1",
-            "cHBvcnRlZERhdGFiYXNlRmxhZ3MyFXN1cHBvcnRlZERhdGFiYXNlRmxhZ0IO",
-            "CgxyZXN0cmljdGlvbnMi/gIKBFVzZXISEQoEbmFtZRgBIAEoCUID4EEDEhUK",
-            "CHBhc3N3b3JkGAIgASgJQgPgQQQSGwoOZGF0YWJhc2Vfcm9sZXMYBCADKAlC",
-            "A+BBARJCCgl1c2VyX3R5cGUYBSABKA4yKi5nb29nbGUuY2xvdWQuYWxsb3lk",
-            "Yi52MWJldGEuVXNlci5Vc2VyVHlwZUID4EEBEh0KEGtlZXBfZXh0cmFfcm9s",
-            "ZXMYBiABKAhCA+BBBCJRCghVc2VyVHlwZRIZChVVU0VSX1RZUEVfVU5TUEVD",
-            "SUZJRUQQABIUChBBTExPWURCX0JVSUxUX0lOEAESFAoQQUxMT1lEQl9JQU1f",
-            "VVNFUhACOnnqQXYKG2FsbG95ZGIuZ29vZ2xlYXBpcy5jb20vVXNlchJHcHJv",
-            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NsdXN0ZXJz",
-            "L3tjbHVzdGVyfS91c2Vycy97dXNlcn0qBXVzZXJzMgR1c2VyUgEBItwBCghE",
-            "YXRhYmFzZRIRCgRuYW1lGAEgASgJQgPgQQgSFAoHY2hhcnNldBgCIAEoCUID",
-            "4EEBEhYKCWNvbGxhdGlvbhgDIAEoCUID4EEBOo4B6kGKAQofYWxsb3lkYi5n",
-            "b29nbGVhcGlzLmNvbS9EYXRhYmFzZRJPcHJvamVjdHMve3Byb2plY3R9L2xv",
-            "Y2F0aW9ucy97bG9jYXRpb259L2NsdXN0ZXJzL3tjbHVzdGVyfS9kYXRhYmFz",
-            "ZXMve2RhdGFiYXNlfSoJZGF0YWJhc2VzMghkYXRhYmFzZVIBASpeCgxJbnN0",
-            "YW5jZVZpZXcSHQoZSU5TVEFOQ0VfVklFV19VTlNQRUNJRklFRBAAEhcKE0lO",
-            "U1RBTkNFX1ZJRVdfQkFTSUMQARIWChJJTlNUQU5DRV9WSUVXX0ZVTEwQAipn",
-            "CgtDbHVzdGVyVmlldxIcChhDTFVTVEVSX1ZJRVdfVU5TUEVDSUZJRUQQABIW",
-            "ChJDTFVTVEVSX1ZJRVdfQkFTSUMQARIiCh5DTFVTVEVSX1ZJRVdfQ09OVElO",
-            "VU9VU19CQUNLVVAQAip7Cg9EYXRhYmFzZVZlcnNpb24SIAocREFUQUJBU0Vf",
-            "VkVSU0lPTl9VTlNQRUNJRklFRBAAEhMKC1BPU1RHUkVTXzEzEAEaAggBEg8K",
-            "C1BPU1RHUkVTXzE0EAISDwoLUE9TVEdSRVNfMTUQAxIPCgtQT1NUR1JFU18x",
-            "NhAEKk4KEFN1YnNjcmlwdGlvblR5cGUSIQodU1VCU0NSSVBUSU9OX1RZUEVf",
-            "VU5TUEVDSUZJRUQQABIMCghTVEFOREFSRBABEgkKBVRSSUFMEAJCxgMKH2Nv",
-            "bS5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGFCDlJlc291cmNlc1Byb3Rv",
-            "UAFaOWNsb3VkLmdvb2dsZS5jb20vZ28vYWxsb3lkYi9hcGl2MWJldGEvYWxs",
-            "b3lkYnBiO2FsbG95ZGJwYqoCG0dvb2dsZS5DbG91ZC5BbGxveURiLlYxQmV0",
-            "YcoCG0dvb2dsZVxDbG91ZFxBbGxveURiXFYxYmV0YeoCHkdvb2dsZTo6Q2xv",
-            "dWQ6OkFsbG95REI6OlYxYmV0YepBpgEKKGNsb3Vka21zLmdvb2dsZWFwaXMu",
-            "Y29tL0NyeXB0b0tleVZlcnNpb24SenByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
-            "dGlvbnMve2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9L2NyeXB0b0tl",
-            "eXMve2NyeXB0b19rZXl9L2NyeXB0b0tleVZlcnNpb25zL3tjcnlwdG9fa2V5",
-            "X3ZlcnNpb2596kFOCh5jb21wdXRlLmdvb2dsZWFwaXMuY29tL05ldHdvcmsS",
-            "LHByb2plY3RzL3twcm9qZWN0fS9nbG9iYWwvbmV0d29ya3Mve25ldHdvcmt9",
-            "YgZwcm90bzM="));
+            "cHJvdG8aHmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5wcm90bxoWZ29vZ2xl",
+            "L3R5cGUvZGF0ZS5wcm90bxobZ29vZ2xlL3R5cGUvZGF5b2Z3ZWVrLnByb3Rv",
+            "Ghtnb29nbGUvdHlwZS90aW1lb2ZkYXkucHJvdG8iLgoMVXNlclBhc3N3b3Jk",
+            "EgwKBHVzZXIYASABKAkSEAoIcGFzc3dvcmQYAiABKAki5wEKD01pZ3JhdGlv",
+            "blNvdXJjZRIWCglob3N0X3BvcnQYASABKAlCA+BBAxIZCgxyZWZlcmVuY2Vf",
+            "aWQYAiABKAlCA+BBAxJaCgtzb3VyY2VfdHlwZRgDIAEoDjJALmdvb2dsZS5j",
+            "bG91ZC5hbGxveWRiLnYxYmV0YS5NaWdyYXRpb25Tb3VyY2UuTWlncmF0aW9u",
+            "U291cmNlVHlwZUID4EEDIkUKE01pZ3JhdGlvblNvdXJjZVR5cGUSJQohTUlH",
+            "UkFUSU9OX1NPVVJDRV9UWVBFX1VOU1BFQ0lGSUVEEAASBwoDRE1TEAEiUAoQ",
+            "RW5jcnlwdGlvbkNvbmZpZxI8CgxrbXNfa2V5X25hbWUYASABKAlCJvpBIwoh",
+            "Y2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5IooCCg5FbmNyeXB0",
+            "aW9uSW5mbxJOCg9lbmNyeXB0aW9uX3R5cGUYASABKA4yMC5nb29nbGUuY2xv",
+            "dWQuYWxsb3lkYi52MWJldGEuRW5jcnlwdGlvbkluZm8uVHlwZUID4EEDEkoK",
+            "EGttc19rZXlfdmVyc2lvbnMYAiADKAlCMOBBA/pBKgooY2xvdWRrbXMuZ29v",
+            "Z2xlYXBpcy5jb20vQ3J5cHRvS2V5VmVyc2lvbiJcCgRUeXBlEhQKEFRZUEVf",
+            "VU5TUEVDSUZJRUQQABIdChlHT09HTEVfREVGQVVMVF9FTkNSWVBUSU9OEAES",
+            "HwobQ1VTVE9NRVJfTUFOQUdFRF9FTkNSWVBUSU9OEAIihgMKCVNzbENvbmZp",
+            "ZxJFCghzc2xfbW9kZRgBIAEoDjIuLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYx",
+            "YmV0YS5Tc2xDb25maWcuU3NsTW9kZUID4EEBEkcKCWNhX3NvdXJjZRgCIAEo",
+            "DjIvLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxYmV0YS5Tc2xDb25maWcuQ2FT",
+            "b3VyY2VCA+BBASKqAQoHU3NsTW9kZRIYChRTU0xfTU9ERV9VTlNQRUNJRklF",
+            "RBAAEhYKDlNTTF9NT0RFX0FMTE9XEAEaAggBEhgKEFNTTF9NT0RFX1JFUVVJ",
+            "UkUQAhoCCAESGgoSU1NMX01PREVfVkVSSUZZX0NBEAMaAggBEiMKH0FMTE9X",
+            "X1VORU5DUllQVEVEX0FORF9FTkNSWVBURUQQBBISCg5FTkNSWVBURURfT05M",
+            "WRAFIjwKCENhU291cmNlEhkKFUNBX1NPVVJDRV9VTlNQRUNJRklFRBAAEhUK",
+            "EUNBX1NPVVJDRV9NQU5BR0VEEAEi+QYKFUF1dG9tYXRlZEJhY2t1cFBvbGlj",
+            "eRJcCg93ZWVrbHlfc2NoZWR1bGUYAiABKAsyQS5nb29nbGUuY2xvdWQuYWxs",
+            "b3lkYi52MWJldGEuQXV0b21hdGVkQmFja3VwUG9saWN5LldlZWtseVNjaGVk",
+            "dWxlSAASZQoUdGltZV9iYXNlZF9yZXRlbnRpb24YBCABKAsyRS5nb29nbGUu",
+            "Y2xvdWQuYWxsb3lkYi52MWJldGEuQXV0b21hdGVkQmFja3VwUG9saWN5LlRp",
+            "bWVCYXNlZFJldGVudGlvbkgBEm0KGHF1YW50aXR5X2Jhc2VkX3JldGVudGlv",
+            "bhgFIAEoCzJJLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxYmV0YS5BdXRvbWF0",
+            "ZWRCYWNrdXBQb2xpY3kuUXVhbnRpdHlCYXNlZFJldGVudGlvbkgBEhQKB2Vu",
+            "YWJsZWQYASABKAhIAogBARIwCg1iYWNrdXBfd2luZG93GAMgASgLMhkuZ29v",
+            "Z2xlLnByb3RvYnVmLkR1cmF0aW9uEk0KEWVuY3J5cHRpb25fY29uZmlnGAgg",
+            "ASgLMi0uZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjFiZXRhLkVuY3J5cHRpb25D",
+            "b25maWdCA+BBARIQCghsb2NhdGlvbhgGIAEoCRJOCgZsYWJlbHMYByADKAsy",
+            "Pi5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGEuQXV0b21hdGVkQmFja3Vw",
+            "UG9saWN5LkxhYmVsc0VudHJ5GmsKDldlZWtseVNjaGVkdWxlEisKC3N0YXJ0",
+            "X3RpbWVzGAEgAygLMhYuZ29vZ2xlLnR5cGUuVGltZU9mRGF5EiwKDGRheXNf",
+            "b2Zfd2VlaxgCIAMoDjIWLmdvb2dsZS50eXBlLkRheU9mV2VlaxpJChJUaW1l",
+            "QmFzZWRSZXRlbnRpb24SMwoQcmV0ZW50aW9uX3BlcmlvZBgBIAEoCzIZLmdv",
+            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbhonChZRdWFudGl0eUJhc2VkUmV0ZW50",
+            "aW9uEg0KBWNvdW50GAEgASgFGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEo",
+            "CRINCgV2YWx1ZRgCIAEoCToCOAFCCgoIc2NoZWR1bGVCCwoJcmV0ZW50aW9u",
+            "QgoKCF9lbmFibGVkIqIBChZDb250aW51b3VzQmFja3VwQ29uZmlnEhQKB2Vu",
+            "YWJsZWQYASABKAhIAIgBARIcChRyZWNvdmVyeV93aW5kb3dfZGF5cxgEIAEo",
+            "BRJIChFlbmNyeXB0aW9uX2NvbmZpZxgDIAEoCzItLmdvb2dsZS5jbG91ZC5h",
+            "bGxveWRiLnYxYmV0YS5FbmNyeXB0aW9uQ29uZmlnQgoKCF9lbmFibGVkIooC",
+            "ChRDb250aW51b3VzQmFja3VwSW5mbxJJCg9lbmNyeXB0aW9uX2luZm8YASAB",
+            "KAsyKy5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGEuRW5jcnlwdGlvbklu",
+            "Zm9CA+BBAxI1CgxlbmFibGVkX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wQgPgQQMSLQoIc2NoZWR1bGUYAyADKA4yFi5nb29nbGUu",
+            "dHlwZS5EYXlPZldlZWtCA+BBAxJBChhlYXJsaWVzdF9yZXN0b3JhYmxlX3Rp",
+            "bWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMiYwoM",
+            "QmFja3VwU291cmNlEhcKCmJhY2t1cF91aWQYAiABKAlCA+BBAxI6CgtiYWNr",
+            "dXBfbmFtZRgBIAEoCUIl4EEC+kEfCh1hbGxveWRiLmdvb2dsZWFwaXMuY29t",
+            "L0JhY2t1cCJmChZDb250aW51b3VzQmFja3VwU291cmNlEhQKB2NsdXN0ZXIY",
+            "ASABKAlCA+BBAhI2Cg1wb2ludF9pbl90aW1lGAIgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEID4EECIt4DChdNYWludGVuYW5jZVVwZGF0ZVBv",
+            "bGljeRJjChNtYWludGVuYW5jZV93aW5kb3dzGAEgAygLMkYuZ29vZ2xlLmNs",
+            "b3VkLmFsbG95ZGIudjFiZXRhLk1haW50ZW5hbmNlVXBkYXRlUG9saWN5Lk1h",
+            "aW50ZW5hbmNlV2luZG93EmwKGGRlbnlfbWFpbnRlbmFuY2VfcGVyaW9kcxgC",
+            "IAMoCzJKLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxYmV0YS5NYWludGVuYW5j",
+            "ZVVwZGF0ZVBvbGljeS5EZW55TWFpbnRlbmFuY2VQZXJpb2QaZAoRTWFpbnRl",
+            "bmFuY2VXaW5kb3cSIwoDZGF5GAEgASgOMhYuZ29vZ2xlLnR5cGUuRGF5T2ZX",
+            "ZWVrEioKCnN0YXJ0X3RpbWUYAiABKAsyFi5nb29nbGUudHlwZS5UaW1lT2ZE",
+            "YXkaiQEKFURlbnlNYWludGVuYW5jZVBlcmlvZBIlCgpzdGFydF9kYXRlGAEg",
+            "ASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRIjCghlbmRfZGF0ZRgCIAEoCzIRLmdv",
+            "b2dsZS50eXBlLkRhdGUSJAoEdGltZRgDIAEoCzIWLmdvb2dsZS50eXBlLlRp",
+            "bWVPZkRheSJKChNNYWludGVuYW5jZVNjaGVkdWxlEjMKCnN0YXJ0X3RpbWUY",
+            "ASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMi9hoKB0Ns",
+            "dXN0ZXISRwoNYmFja3VwX3NvdXJjZRgPIAEoCzIpLmdvb2dsZS5jbG91ZC5h",
+            "bGxveWRiLnYxYmV0YS5CYWNrdXBTb3VyY2VCA+BBA0gAEk0KEG1pZ3JhdGlv",
+            "bl9zb3VyY2UYECABKAsyLC5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGEu",
+            "TWlncmF0aW9uU291cmNlQgPgQQNIABJfChpjbG91ZHNxbF9iYWNrdXBfcnVu",
+            "X3NvdXJjZRgqIAEoCzI0Lmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxYmV0YS5D",
+            "bG91ZFNRTEJhY2t1cFJ1blNvdXJjZUID4EEDSAASEQoEbmFtZRgBIAEoCUID",
+            "4EEDEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRIQCgN1aWQYAyABKAlCA+BBAxI0",
+            "CgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCA+BBAxI0CgtkZWxldGVfdGltZRgGIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJACgZsYWJlbHMYByADKAsyMC5n",
+            "b29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGEuQ2x1c3Rlci5MYWJlbHNFbnRy",
+            "eRI+CgVzdGF0ZRgIIAEoDjIqLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxYmV0",
+            "YS5DbHVzdGVyLlN0YXRlQgPgQQMSSwoMY2x1c3Rlcl90eXBlGBggASgOMjAu",
+            "Z29vZ2xlLmNsb3VkLmFsbG95ZGIudjFiZXRhLkNsdXN0ZXIuQ2x1c3RlclR5",
+            "cGVCA+BBAxJLChBkYXRhYmFzZV92ZXJzaW9uGAkgASgOMiwuZ29vZ2xlLmNs",
+            "b3VkLmFsbG95ZGIudjFiZXRhLkRhdGFiYXNlVmVyc2lvbkID4EEBEk8KDm5l",
+            "dHdvcmtfY29uZmlnGB0gASgLMjIuZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjFi",
+            "ZXRhLkNsdXN0ZXIuTmV0d29ya0NvbmZpZ0ID4EEBEjkKB25ldHdvcmsYCiAB",
+            "KAlCKBgB4EEC+kEgCh5jb21wdXRlLmdvb2dsZWFwaXMuY29tL05ldHdvcmsS",
+            "DAoEZXRhZxgLIAEoCRJKCgthbm5vdGF0aW9ucxgMIAMoCzI1Lmdvb2dsZS5j",
+            "bG91ZC5hbGxveWRiLnYxYmV0YS5DbHVzdGVyLkFubm90YXRpb25zRW50cnkS",
+            "GAoLcmVjb25jaWxpbmcYDSABKAhCA+BBAxJECgxpbml0aWFsX3VzZXIYDiAB",
+            "KAsyKS5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGEuVXNlclBhc3N3b3Jk",
+            "QgPgQQQSUwoXYXV0b21hdGVkX2JhY2t1cF9wb2xpY3kYESABKAsyMi5nb29n",
+            "bGUuY2xvdWQuYWxsb3lkYi52MWJldGEuQXV0b21hdGVkQmFja3VwUG9saWN5",
+            "Ej4KCnNzbF9jb25maWcYEiABKAsyJi5nb29nbGUuY2xvdWQuYWxsb3lkYi52",
+            "MWJldGEuU3NsQ29uZmlnQgIYARJNChFlbmNyeXB0aW9uX2NvbmZpZxgTIAEo",
+            "CzItLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxYmV0YS5FbmNyeXB0aW9uQ29u",
+            "ZmlnQgPgQQESSQoPZW5jcnlwdGlvbl9pbmZvGBQgASgLMisuZ29vZ2xlLmNs",
+            "b3VkLmFsbG95ZGIudjFiZXRhLkVuY3J5cHRpb25JbmZvQgPgQQMSWgoYY29u",
+            "dGludW91c19iYWNrdXBfY29uZmlnGBsgASgLMjMuZ29vZ2xlLmNsb3VkLmFs",
+            "bG95ZGIudjFiZXRhLkNvbnRpbnVvdXNCYWNrdXBDb25maWdCA+BBARJWChZj",
+            "b250aW51b3VzX2JhY2t1cF9pbmZvGBwgASgLMjEuZ29vZ2xlLmNsb3VkLmFs",
+            "bG95ZGIudjFiZXRhLkNvbnRpbnVvdXNCYWNrdXBJbmZvQgPgQQMSTgoQc2Vj",
+            "b25kYXJ5X2NvbmZpZxgWIAEoCzI0Lmdvb2dsZS5jbG91ZC5hbGxveWRiLnYx",
+            "YmV0YS5DbHVzdGVyLlNlY29uZGFyeUNvbmZpZxJPCg5wcmltYXJ5X2NvbmZp",
+            "ZxgXIAEoCzIyLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxYmV0YS5DbHVzdGVy",
+            "LlByaW1hcnlDb25maWdCA+BBAxIaCg1zYXRpc2ZpZXNfcHpzGB4gASgIQgPg",
+            "QQMSRwoKcHNjX2NvbmZpZxgfIAEoCzIuLmdvb2dsZS5jbG91ZC5hbGxveWRi",
+            "LnYxYmV0YS5DbHVzdGVyLlBzY0NvbmZpZ0ID4EEBElwKGW1haW50ZW5hbmNl",
+            "X3VwZGF0ZV9wb2xpY3kYICABKAsyNC5nb29nbGUuY2xvdWQuYWxsb3lkYi52",
+            "MWJldGEuTWFpbnRlbmFuY2VVcGRhdGVQb2xpY3lCA+BBARJTChRtYWludGVu",
+            "YW5jZV9zY2hlZHVsZRglIAEoCzIwLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYx",
+            "YmV0YS5NYWludGVuYW5jZVNjaGVkdWxlQgPgQQMSTgoNZ2VtaW5pX2NvbmZp",
+            "ZxgkIAEoCzIwLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxYmV0YS5HZW1pbmlD",
+            "bHVzdGVyQ29uZmlnQgUYAeBBARJNChFzdWJzY3JpcHRpb25fdHlwZRgmIAEo",
+            "DjItLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxYmV0YS5TdWJzY3JpcHRpb25U",
+            "eXBlQgPgQQESTwoOdHJpYWxfbWV0YWRhdGEYJyABKAsyMi5nb29nbGUuY2xv",
+            "dWQuYWxsb3lkYi52MWJldGEuQ2x1c3Rlci5UcmlhbE1ldGFkYXRhQgPgQQMS",
+            "RwoEdGFncxgpIAMoCzIuLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxYmV0YS5D",
+            "bHVzdGVyLlRhZ3NFbnRyeUIJ4EEE4EEF4EEBEiIKFXNlcnZpY2VfYWNjb3Vu",
+            "dF9lbWFpbBguIAEoCUID4EEDGmkKDU5ldHdvcmtDb25maWcSNwoHbmV0d29y",
+            "axgBIAEoCUIm4EEB+kEgCh5jb21wdXRlLmdvb2dsZWFwaXMuY29tL05ldHdv",
+            "cmsSHwoSYWxsb2NhdGVkX2lwX3JhbmdlGAIgASgJQgPgQQEaVAoPU2Vjb25k",
+            "YXJ5Q29uZmlnEkEKFHByaW1hcnlfY2x1c3Rlcl9uYW1lGAEgASgJQiP6QSAK",
+            "HmFsbG95ZGIuZ29vZ2xlYXBpcy5jb20vQ2x1c3RlchpYCg1QcmltYXJ5Q29u",
+            "ZmlnEkcKF3NlY29uZGFyeV9jbHVzdGVyX25hbWVzGAEgAygJQibgQQP6QSAK",
+            "HmFsbG95ZGIuZ29vZ2xlYXBpcy5jb20vQ2x1c3RlchpQCglQc2NDb25maWcS",
+            "GAoLcHNjX2VuYWJsZWQYASABKAhCA+BBARIpChxzZXJ2aWNlX293bmVkX3By",
+            "b2plY3RfbnVtYmVyGAMgASgDQgPgQQMa0wEKDVRyaWFsTWV0YWRhdGESLgoK",
+            "c3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
+            "LAoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "EjAKDHVwZ3JhZGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXASMgoOZ3JhY2VfZW5kX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
+            "YWx1ZRgCIAEoCToCOAEaMgoQQW5ub3RhdGlvbnNFbnRyeRILCgNrZXkYASAB",
+            "KAkSDQoFdmFsdWUYAiABKAk6AjgBGisKCVRhZ3NFbnRyeRILCgNrZXkYASAB",
+            "KAkSDQoFdmFsdWUYAiABKAk6AjgBIpwBCgVTdGF0ZRIVChFTVEFURV9VTlNQ",
+            "RUNJRklFRBAAEgkKBVJFQURZEAESCwoHU1RPUFBFRBACEgkKBUVNUFRZEAMS",
+            "DAoIQ1JFQVRJTkcQBBIMCghERUxFVElORxAFEgoKBkZBSUxFRBAGEhEKDUJP",
+            "T1RTVFJBUFBJTkcQBxIPCgtNQUlOVEVOQU5DRRAIEg0KCVBST01PVElORxAJ",
+            "IkcKC0NsdXN0ZXJUeXBlEhwKGENMVVNURVJfVFlQRV9VTlNQRUNJRklFRBAA",
+            "EgsKB1BSSU1BUlkQARINCglTRUNPTkRBUlkQAjp16kFyCh5hbGxveWRiLmdv",
+            "b2dsZWFwaXMuY29tL0NsdXN0ZXISOnByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
+            "dGlvbnMve2xvY2F0aW9ufS9jbHVzdGVycy97Y2x1c3Rlcn0qCGNsdXN0ZXJz",
+            "MgdjbHVzdGVyUgEBQggKBnNvdXJjZSKiKQoISW5zdGFuY2USEQoEbmFtZRgB",
+            "IAEoCUID4EEDEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRIQCgN1aWQYAyABKAlC",
+            "A+BBAxI0CgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0CgtkZWxldGVfdGltZRgGIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJBCgZsYWJlbHMYByAD",
+            "KAsyMS5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGEuSW5zdGFuY2UuTGFi",
+            "ZWxzRW50cnkSPwoFc3RhdGUYCCABKA4yKy5nb29nbGUuY2xvdWQuYWxsb3lk",
+            "Yi52MWJldGEuSW5zdGFuY2UuU3RhdGVCA+BBAxJOCg1pbnN0YW5jZV90eXBl",
+            "GAkgASgOMjIuZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjFiZXRhLkluc3RhbmNl",
+            "Lkluc3RhbmNlVHlwZUID4EECEksKDm1hY2hpbmVfY29uZmlnGAogASgLMjMu",
+            "Z29vZ2xlLmNsb3VkLmFsbG95ZGIudjFiZXRhLkluc3RhbmNlLk1hY2hpbmVD",
+            "b25maWcSUQoRYXZhaWxhYmlsaXR5X3R5cGUYCyABKA4yNi5nb29nbGUuY2xv",
+            "dWQuYWxsb3lkYi52MWJldGEuSW5zdGFuY2UuQXZhaWxhYmlsaXR5VHlwZRIQ",
+            "CghnY2Vfem9uZRgMIAEoCRJQCg5kYXRhYmFzZV9mbGFncxgNIAMoCzI4Lmdv",
+            "b2dsZS5jbG91ZC5hbGxveWRiLnYxYmV0YS5JbnN0YW5jZS5EYXRhYmFzZUZs",
+            "YWdzRW50cnkSRgoNd3JpdGFibGVfbm9kZRgTIAEoCzIqLmdvb2dsZS5jbG91",
+            "ZC5hbGxveWRiLnYxYmV0YS5JbnN0YW5jZS5Ob2RlQgPgQQMSPgoFbm9kZXMY",
+            "FCADKAsyKi5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGEuSW5zdGFuY2Uu",
+            "Tm9kZUID4EEDEmAKFXF1ZXJ5X2luc2lnaHRzX2NvbmZpZxgVIAEoCzJBLmdv",
+            "b2dsZS5jbG91ZC5hbGxveWRiLnYxYmV0YS5JbnN0YW5jZS5RdWVyeUluc2ln",
+            "aHRzSW5zdGFuY2VDb25maWcSXwoUb2JzZXJ2YWJpbGl0eV9jb25maWcYGiAB",
+            "KAsyQS5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGEuSW5zdGFuY2UuT2Jz",
+            "ZXJ2YWJpbGl0eUluc3RhbmNlQ29uZmlnEk4KEHJlYWRfcG9vbF9jb25maWcY",
+            "DiABKAsyNC5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGEuSW5zdGFuY2Uu",
+            "UmVhZFBvb2xDb25maWcSFwoKaXBfYWRkcmVzcxgPIAEoCUID4EEDEiYKEXB1",
+            "YmxpY19pcF9hZGRyZXNzGBsgASgJQgvgQQPijM/XCAIIAhIYCgtyZWNvbmNp",
+            "bGluZxgQIAEoCEID4EEDEgwKBGV0YWcYESABKAkSSwoLYW5ub3RhdGlvbnMY",
+            "EiADKAsyNi5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGEuSW5zdGFuY2Uu",
+            "QW5ub3RhdGlvbnNFbnRyeRJJCg11cGRhdGVfcG9saWN5GBYgASgLMjIuZ29v",
+            "Z2xlLmNsb3VkLmFsbG95ZGIudjFiZXRhLkluc3RhbmNlLlVwZGF0ZVBvbGlj",
+            "eRJjChhjbGllbnRfY29ubmVjdGlvbl9jb25maWcYFyABKAsyPC5nb29nbGUu",
+            "Y2xvdWQuYWxsb3lkYi52MWJldGEuSW5zdGFuY2UuQ2xpZW50Q29ubmVjdGlv",
+            "bkNvbmZpZ0ID4EEBEhoKDXNhdGlzZmllc19wenMYGCABKAhCA+BBAxJZChNw",
+            "c2NfaW5zdGFuY2VfY29uZmlnGBwgASgLMjcuZ29vZ2xlLmNsb3VkLmFsbG95",
+            "ZGIudjFiZXRhLkluc3RhbmNlLlBzY0luc3RhbmNlQ29uZmlnQgPgQQESWAoO",
+            "bmV0d29ya19jb25maWcYHSABKAsyOy5nb29nbGUuY2xvdWQuYWxsb3lkYi52",
+            "MWJldGEuSW5zdGFuY2UuSW5zdGFuY2VOZXR3b3JrQ29uZmlnQgPgQQESTwoN",
+            "Z2VtaW5pX2NvbmZpZxghIAEoCzIxLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYx",
+            "YmV0YS5HZW1pbmlJbnN0YW5jZUNvbmZpZ0IFGAHgQQESMQocb3V0Ym91bmRf",
+            "cHVibGljX2lwX2FkZHJlc3NlcxgiIAMoCUIL4EED4ozP1wgCCAISVgoRYWN0",
+            "aXZhdGlvbl9wb2xpY3kYIyABKA4yNi5nb29nbGUuY2xvdWQuYWxsb3lkYi52",
+            "MWJldGEuSW5zdGFuY2UuQWN0aXZhdGlvblBvbGljeUID4EEBEl8KFmNvbm5l",
+            "Y3Rpb25fcG9vbF9jb25maWcYJSABKAsyOi5nb29nbGUuY2xvdWQuYWxsb3lk",
+            "Yi52MWJldGEuSW5zdGFuY2UuQ29ubmVjdGlvblBvb2xDb25maWdCA+BBARJH",
+            "CgpnY2FfY29uZmlnGCYgASgLMi4uZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjFi",
+            "ZXRhLkdDQUluc3RhbmNlQ29uZmlnQgPgQQMaOAoNTWFjaGluZUNvbmZpZxIR",
+            "CgljcHVfY291bnQYASABKAUSFAoMbWFjaGluZV90eXBlGAQgASgJGlIKBE5v",
+            "ZGUSFAoHem9uZV9pZBgBIAEoCUID4EEDEg8KAmlkGAIgASgJQgPgQQMSDwoC",
+            "aXAYAyABKAlCA+BBAxISCgVzdGF0ZRgEIAEoCUID4EEDGvoBChtRdWVyeUlu",
+            "c2lnaHRzSW5zdGFuY2VDb25maWcSJAoXcmVjb3JkX2FwcGxpY2F0aW9uX3Rh",
+            "Z3MYAiABKAhIAIgBARIiChVyZWNvcmRfY2xpZW50X2FkZHJlc3MYAyABKAhI",
+            "AYgBARIbChNxdWVyeV9zdHJpbmdfbGVuZ3RoGAQgASgNEiMKFnF1ZXJ5X3Bs",
+            "YW5zX3Blcl9taW51dGUYBSABKA1IAogBAUIaChhfcmVjb3JkX2FwcGxpY2F0",
+            "aW9uX3RhZ3NCGAoWX3JlY29yZF9jbGllbnRfYWRkcmVzc0IZChdfcXVlcnlf",
+            "cGxhbnNfcGVyX21pbnV0ZRr6BAobT2JzZXJ2YWJpbGl0eUluc3RhbmNlQ29u",
+            "ZmlnEhQKB2VuYWJsZWQYASABKAhIAIgBARIeChFwcmVzZXJ2ZV9jb21tZW50",
+            "cxgCIAEoCEgBiAEBEh4KEXRyYWNrX3dhaXRfZXZlbnRzGAMgASgISAKIAQES",
+            "KAoWdHJhY2tfd2FpdF9ldmVudF90eXBlcxgEIAEoCEID4EEDSAOIAQESJAoX",
+            "bWF4X3F1ZXJ5X3N0cmluZ19sZW5ndGgYBSABKAVIBIgBARIkChdyZWNvcmRf",
+            "YXBwbGljYXRpb25fdGFncxgGIAEoCEgFiAEBEiMKFnF1ZXJ5X3BsYW5zX3Bl",
+            "cl9taW51dGUYByABKAVIBogBARIhChR0cmFja19hY3RpdmVfcXVlcmllcxgI",
+            "IAEoCEgHiAEBEiEKFHRyYWNrX2NsaWVudF9hZGRyZXNzGAkgASgISAiIAQES",
+            "KgodYXNzaXN0aXZlX2V4cGVyaWVuY2VzX2VuYWJsZWQYCiABKAhICYgBAUIK",
+            "CghfZW5hYmxlZEIUChJfcHJlc2VydmVfY29tbWVudHNCFAoSX3RyYWNrX3dh",
+            "aXRfZXZlbnRzQhkKF190cmFja193YWl0X2V2ZW50X3R5cGVzQhoKGF9tYXhf",
+            "cXVlcnlfc3RyaW5nX2xlbmd0aEIaChhfcmVjb3JkX2FwcGxpY2F0aW9uX3Rh",
+            "Z3NCGQoXX3F1ZXJ5X3BsYW5zX3Blcl9taW51dGVCFwoVX3RyYWNrX2FjdGl2",
+            "ZV9xdWVyaWVzQhcKFV90cmFja19jbGllbnRfYWRkcmVzc0IgCh5fYXNzaXN0",
+            "aXZlX2V4cGVyaWVuY2VzX2VuYWJsZWQaJAoOUmVhZFBvb2xDb25maWcSEgoK",
+            "bm9kZV9jb3VudBgBIAEoBRqRAQoMVXBkYXRlUG9saWN5EkUKBG1vZGUYASAB",
+            "KA4yNy5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGEuSW5zdGFuY2UuVXBk",
+            "YXRlUG9saWN5Lk1vZGUiOgoETW9kZRIUChBNT0RFX1VOU1BFQ0lGSUVEEAAS",
+            "CwoHREVGQVVMVBABEg8KC0ZPUkNFX0FQUExZEAIaegoWQ2xpZW50Q29ubmVj",
+            "dGlvbkNvbmZpZxIfChJyZXF1aXJlX2Nvbm5lY3RvcnMYASABKAhCA+BBARI/",
+            "Cgpzc2xfY29uZmlnGAIgASgLMiYuZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjFi",
+            "ZXRhLlNzbENvbmZpZ0ID4EEBGjkKElBzY0ludGVyZmFjZUNvbmZpZxIjChtu",
+            "ZXR3b3JrX2F0dGFjaG1lbnRfcmVzb3VyY2UYASABKAkaqQEKF1BzY0F1dG9D",
+            "b25uZWN0aW9uQ29uZmlnEhgKEGNvbnN1bWVyX3Byb2plY3QYASABKAkSGAoQ",
+            "Y29uc3VtZXJfbmV0d29yaxgCIAEoCRIfCgppcF9hZGRyZXNzGAMgASgJQgvg",
+            "QQPijM/XCAIIAhITCgZzdGF0dXMYBCABKAlCA+BBAxIkChdjb25zdW1lcl9u",
+            "ZXR3b3JrX3N0YXR1cxgFIAEoCUID4EEDGukCChFQc2NJbnN0YW5jZUNvbmZp",
+            "ZxJRChdzZXJ2aWNlX2F0dGFjaG1lbnRfbGluaxgBIAEoCUIw4EED+kEqCihj",
+            "b21wdXRlLmdvb2dsZWFwaXMuY29tL1NlcnZpY2VBdHRhY2htZW50EiYKGWFs",
+            "bG93ZWRfY29uc3VtZXJfcHJvamVjdHMYAiADKAlCA+BBARIZCgxwc2NfZG5z",
+            "X25hbWUYByABKAlCA+BBAxJcChVwc2NfaW50ZXJmYWNlX2NvbmZpZ3MYCCAD",
+            "KAsyOC5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGEuSW5zdGFuY2UuUHNj",
+            "SW50ZXJmYWNlQ29uZmlnQgPgQQESYAoUcHNjX2F1dG9fY29ubmVjdGlvbnMY",
+            "CSADKAsyPS5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGEuSW5zdGFuY2Uu",
+            "UHNjQXV0b0Nvbm5lY3Rpb25Db25maWdCA+BBARruAgoVSW5zdGFuY2VOZXR3",
+            "b3JrQ29uZmlnEngKHGF1dGhvcml6ZWRfZXh0ZXJuYWxfbmV0d29ya3MYASAD",
+            "KAsyTS5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGEuSW5zdGFuY2UuSW5z",
+            "dGFuY2VOZXR3b3JrQ29uZmlnLkF1dGhvcml6ZWROZXR3b3JrQgPgQQESHQoQ",
+            "ZW5hYmxlX3B1YmxpY19pcBgCIAEoCEID4EEBEiYKGWVuYWJsZV9vdXRib3Vu",
+            "ZF9wdWJsaWNfaXAYAyABKAhCA+BBARI3CgduZXR3b3JrGAQgASgJQibgQQP6",
+            "QSAKHmNvbXB1dGUuZ29vZ2xlYXBpcy5jb20vTmV0d29yaxIoChthbGxvY2F0",
+            "ZWRfaXBfcmFuZ2Vfb3ZlcnJpZGUYBSABKAlCA+BBARoxChFBdXRob3JpemVk",
+            "TmV0d29yaxIcCgpjaWRyX3JhbmdlGAEgASgJQgjijM/XCAIIAhrQAQoUQ29u",
+            "bmVjdGlvblBvb2xDb25maWcSFAoHZW5hYmxlZBgMIAEoCEID4EEBElkKBWZs",
+            "YWdzGA0gAygLMkUuZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjFiZXRhLkluc3Rh",
+            "bmNlLkNvbm5lY3Rpb25Qb29sQ29uZmlnLkZsYWdzRW50cnlCA+BBARIZCgxw",
+            "b29sZXJfY291bnQYDiABKAVCA+BBAxosCgpGbGFnc0VudHJ5EgsKA2tleRgB",
+            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaLQoLTGFiZWxzRW50cnkSCwoDa2V5",
+            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARo0ChJEYXRhYmFzZUZsYWdzRW50",
+            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARoyChBBbm5vdGF0",
+            "aW9uc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEikQEK",
+            "BVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCQoFUkVBRFkQARILCgdT",
+            "VE9QUEVEEAISDAoIQ1JFQVRJTkcQAxIMCghERUxFVElORxAEEg8KC01BSU5U",
+            "RU5BTkNFEAUSCgoGRkFJTEVEEAYSEQoNQk9PVFNUUkFQUElORxAIEg0KCVBS",
+            "T01PVElORxAJIlgKDEluc3RhbmNlVHlwZRIdChlJTlNUQU5DRV9UWVBFX1VO",
+            "U1BFQ0lGSUVEEAASCwoHUFJJTUFSWRABEg0KCVJFQURfUE9PTBACEg0KCVNF",
+            "Q09OREFSWRADIk4KEEF2YWlsYWJpbGl0eVR5cGUSIQodQVZBSUxBQklMSVRZ",
+            "X1RZUEVfVU5TUEVDSUZJRUQQABIJCgVaT05BTBABEgwKCFJFR0lPTkFMEAIi",
+            "TAoQQWN0aXZhdGlvblBvbGljeRIhCh1BQ1RJVkFUSU9OX1BPTElDWV9VTlNQ",
+            "RUNJRklFRBAAEgoKBkFMV0FZUxABEgkKBU5FVkVSEAI6jgHqQYoBCh9hbGxv",
+            "eWRiLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEk9wcm9qZWN0cy97cHJvamVj",
+            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2x1c3RlcnMve2NsdXN0ZXJ9L2lu",
+            "c3RhbmNlcy97aW5zdGFuY2V9KglpbnN0YW5jZXMyCGluc3RhbmNlUgEBIuoC",
+            "Cg5Db25uZWN0aW9uSW5mbxIMCgRuYW1lGAEgASgJEhcKCmlwX2FkZHJlc3MY",
+            "AiABKAlCA+BBAxImChFwdWJsaWNfaXBfYWRkcmVzcxgFIAEoCUIL4EED4ozP",
+            "1wgCCAISJAoVcGVtX2NlcnRpZmljYXRlX2NoYWluGAMgAygJQgUYAeBBAxIZ",
+            "CgxpbnN0YW5jZV91aWQYBCABKAlCA+BBAxIZCgxwc2NfZG5zX25hbWUYBiAB",
+            "KAlCA+BBAzqsAepBqAEKJWFsbG95ZGIuZ29vZ2xlYXBpcy5jb20vQ29ubmVj",
+            "dGlvbkluZm8SXnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
+            "aW9ufS9jbHVzdGVycy97Y2x1c3Rlcn0vaW5zdGFuY2VzL3tpbnN0YW5jZX0v",
+            "Y29ubmVjdGlvbkluZm8qD2Nvbm5lY3Rpb25JbmZvczIOY29ubmVjdGlvbklu",
+            "Zm8iqQ0KBkJhY2t1cBIRCgRuYW1lGAEgASgJQgPgQQMSFAoMZGlzcGxheV9u",
+            "YW1lGAIgASgJEhAKA3VpZBgDIAEoCUID4EEDEjQKC2NyZWF0ZV90aW1lGAQg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0",
+            "ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
+            "EjQKC2RlbGV0ZV90aW1lGA8gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEID4EEDEj8KFmNyZWF0ZV9jb21wbGV0aW9uX3RpbWUYGiABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSPwoGbGFiZWxzGAYgAygL",
+            "Mi8uZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjFiZXRhLkJhY2t1cC5MYWJlbHNF",
+            "bnRyeRI9CgVzdGF0ZRgHIAEoDjIpLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYx",
+            "YmV0YS5CYWNrdXAuU3RhdGVCA+BBAxI2CgR0eXBlGAggASgOMiguZ29vZ2xl",
+            "LmNsb3VkLmFsbG95ZGIudjFiZXRhLkJhY2t1cC5UeXBlEhMKC2Rlc2NyaXB0",
+            "aW9uGAkgASgJEhgKC2NsdXN0ZXJfdWlkGBIgASgJQgPgQQMSPAoMY2x1c3Rl",
+            "cl9uYW1lGAogASgJQibgQQL6QSAKHmFsbG95ZGIuZ29vZ2xlYXBpcy5jb20v",
+            "Q2x1c3RlchIYCgtyZWNvbmNpbGluZxgLIAEoCEID4EEDEk0KEWVuY3J5cHRp",
+            "b25fY29uZmlnGAwgASgLMi0uZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjFiZXRh",
+            "LkVuY3J5cHRpb25Db25maWdCA+BBARJJCg9lbmNyeXB0aW9uX2luZm8YDSAB",
+            "KAsyKy5nb29nbGUuY2xvdWQuYWxsb3lkYi52MWJldGEuRW5jcnlwdGlvbklu",
+            "Zm9CA+BBAxIMCgRldGFnGA4gASgJEkkKC2Fubm90YXRpb25zGBAgAygLMjQu",
+            "Z29vZ2xlLmNsb3VkLmFsbG95ZGIudjFiZXRhLkJhY2t1cC5Bbm5vdGF0aW9u",
+            "c0VudHJ5EhcKCnNpemVfYnl0ZXMYESABKANCA+BBAxI0CgtleHBpcnlfdGlt",
+            "ZRgTIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJVCg9l",
+            "eHBpcnlfcXVhbnRpdHkYFCABKAsyNy5nb29nbGUuY2xvdWQuYWxsb3lkYi52",
+            "MWJldGEuQmFja3VwLlF1YW50aXR5QmFzZWRFeHBpcnlCA+BBAxIaCg1zYXRp",
+            "c2ZpZXNfcHpzGBUgASgIQgPgQQMSSwoQZGF0YWJhc2VfdmVyc2lvbhgWIAEo",
+            "DjIsLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxYmV0YS5EYXRhYmFzZVZlcnNp",
+            "b25CA+BBAxJGCgR0YWdzGBkgAygLMi0uZ29vZ2xlLmNsb3VkLmFsbG95ZGIu",
+            "djFiZXRhLkJhY2t1cC5UYWdzRW50cnlCCeBBBOBBBeBBARpXChNRdWFudGl0",
+            "eUJhc2VkRXhwaXJ5EhwKD3JldGVudGlvbl9jb3VudBgBIAEoBUID4EEDEiIK",
+            "FXRvdGFsX3JldGVudGlvbl9jb3VudBgCIAEoBUID4EEDGi0KC0xhYmVsc0Vu",
+            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaMgoQQW5ub3Rh",
+            "dGlvbnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGisK",
+            "CVRhZ3NFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIlEK",
+            "BVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCQoFUkVBRFkQARIMCghD",
+            "UkVBVElORxACEgoKBkZBSUxFRBADEgwKCERFTEVUSU5HEAQiSgoEVHlwZRIU",
+            "ChBUWVBFX1VOU1BFQ0lGSUVEEAASDQoJT05fREVNQU5EEAESDQoJQVVUT01B",
+            "VEVEEAISDgoKQ09OVElOVU9VUxADOnDqQW0KHWFsbG95ZGIuZ29vZ2xlYXBp",
+            "cy5jb20vQmFja3VwEjhwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0vYmFja3Vwcy97YmFja3VwfSoHYmFja3VwczIGYmFja3VwUgEB",
+            "IpAJChVTdXBwb3J0ZWREYXRhYmFzZUZsYWcSZAoTc3RyaW5nX3Jlc3RyaWN0",
+            "aW9ucxgHIAEoCzJFLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxYmV0YS5TdXBw",
+            "b3J0ZWREYXRhYmFzZUZsYWcuU3RyaW5nUmVzdHJpY3Rpb25zSAASZgoUaW50",
+            "ZWdlcl9yZXN0cmljdGlvbnMYCCABKAsyRi5nb29nbGUuY2xvdWQuYWxsb3lk",
+            "Yi52MWJldGEuU3VwcG9ydGVkRGF0YWJhc2VGbGFnLkludGVnZXJSZXN0cmlj",
+            "dGlvbnNIABIiChhyZWNvbW1lbmRlZF9zdHJpbmdfdmFsdWUYCiABKAlIARJA",
+            "ChlyZWNvbW1lbmRlZF9pbnRlZ2VyX3ZhbHVlGAsgASgLMhsuZ29vZ2xlLnBy",
+            "b3RvYnVmLkludDY0VmFsdWVIARIMCgRuYW1lGAEgASgJEhEKCWZsYWdfbmFt",
+            "ZRgCIAEoCRJQCgp2YWx1ZV90eXBlGAMgASgOMjwuZ29vZ2xlLmNsb3VkLmFs",
+            "bG95ZGIudjFiZXRhLlN1cHBvcnRlZERhdGFiYXNlRmxhZy5WYWx1ZVR5cGUS",
+            "HwoXYWNjZXB0c19tdWx0aXBsZV92YWx1ZXMYBCABKAgSSwoVc3VwcG9ydGVk",
+            "X2RiX3ZlcnNpb25zGAUgAygOMiwuZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjFi",
+            "ZXRhLkRhdGFiYXNlVmVyc2lvbhIbChNyZXF1aXJlc19kYl9yZXN0YXJ0GAYg",
+            "ASgIEkcKBXNjb3BlGAkgASgOMjguZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjFi",
+            "ZXRhLlN1cHBvcnRlZERhdGFiYXNlRmxhZy5TY29wZRosChJTdHJpbmdSZXN0",
+            "cmljdGlvbnMSFgoOYWxsb3dlZF92YWx1ZXMYASADKAkadQoTSW50ZWdlclJl",
+            "c3RyaWN0aW9ucxIuCgltaW5fdmFsdWUYASABKAsyGy5nb29nbGUucHJvdG9i",
+            "dWYuSW50NjRWYWx1ZRIuCgltYXhfdmFsdWUYAiABKAsyGy5nb29nbGUucHJv",
+            "dG9idWYuSW50NjRWYWx1ZSJVCglWYWx1ZVR5cGUSGgoWVkFMVUVfVFlQRV9V",
+            "TlNQRUNJRklFRBAAEgoKBlNUUklORxABEgsKB0lOVEVHRVIQAhIJCgVGTE9B",
+            "VBADEggKBE5PTkUQBCJBCgVTY29wZRIVChFTQ09QRV9VTlNQRUNJRklFRBAA",
+            "EgwKCERBVEFCQVNFEAESEwoPQ09OTkVDVElPTl9QT09MEAI6lwHqQZMBCixh",
+            "bGxveWRiLmdvb2dsZWFwaXMuY29tL1N1cHBvcnRlZERhdGFiYXNlRmxhZxI0",
+            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2ZsYWdz",
+            "L3tmbGFnfSoWc3VwcG9ydGVkRGF0YWJhc2VGbGFnczIVc3VwcG9ydGVkRGF0",
+            "YWJhc2VGbGFnQg4KDHJlc3RyaWN0aW9uc0ITChFyZWNvbW1lbmRlZF92YWx1",
+            "ZSL+AgoEVXNlchIRCgRuYW1lGAEgASgJQgPgQQMSFQoIcGFzc3dvcmQYAiAB",
+            "KAlCA+BBBBIbCg5kYXRhYmFzZV9yb2xlcxgEIAMoCUID4EEBEkIKCXVzZXJf",
+            "dHlwZRgFIAEoDjIqLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxYmV0YS5Vc2Vy",
+            "LlVzZXJUeXBlQgPgQQESHQoQa2VlcF9leHRyYV9yb2xlcxgGIAEoCEID4EEE",
+            "IlEKCFVzZXJUeXBlEhkKFVVTRVJfVFlQRV9VTlNQRUNJRklFRBAAEhQKEEFM",
+            "TE9ZREJfQlVJTFRfSU4QARIUChBBTExPWURCX0lBTV9VU0VSEAI6eepBdgob",
+            "YWxsb3lkYi5nb29nbGVhcGlzLmNvbS9Vc2VyEkdwcm9qZWN0cy97cHJvamVj",
+            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2x1c3RlcnMve2NsdXN0ZXJ9L3Vz",
+            "ZXJzL3t1c2VyfSoFdXNlcnMyBHVzZXJSAQEiggMKCERhdGFiYXNlEhEKBG5h",
+            "bWUYASABKAlCA+BBCBIXCgdjaGFyc2V0GAIgASgJQgbgQQHgQQUSGQoJY29s",
+            "bGF0aW9uGAMgASgJQgbgQQHgQQUSHgoOY2hhcmFjdGVyX3R5cGUYBCABKAlC",
+            "BuBBAeBBBRIaCgtpc190ZW1wbGF0ZRgFIAEoCEIFGAHgQQESIQoRZGF0YWJh",
+            "c2VfdGVtcGxhdGUYBiABKAlCBuBBBOBBBRImChRpc190ZW1wbGF0ZV9kYXRh",
+            "YmFzZRgHIAEoCEID4EEBSACIAQE6jgHqQYoBCh9hbGxveWRiLmdvb2dsZWFw",
+            "aXMuY29tL0RhdGFiYXNlEk9wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vY2x1c3RlcnMve2NsdXN0ZXJ9L2RhdGFiYXNlcy97ZGF0",
+            "YWJhc2V9KglkYXRhYmFzZXMyCGRhdGFiYXNlUgEBQhcKFV9pc190ZW1wbGF0",
+            "ZV9kYXRhYmFzZSpeCgxJbnN0YW5jZVZpZXcSHQoZSU5TVEFOQ0VfVklFV19V",
+            "TlNQRUNJRklFRBAAEhcKE0lOU1RBTkNFX1ZJRVdfQkFTSUMQARIWChJJTlNU",
+            "QU5DRV9WSUVXX0ZVTEwQAipnCgtDbHVzdGVyVmlldxIcChhDTFVTVEVSX1ZJ",
+            "RVdfVU5TUEVDSUZJRUQQABIWChJDTFVTVEVSX1ZJRVdfQkFTSUMQARIiCh5D",
+            "TFVTVEVSX1ZJRVdfQ09OVElOVU9VU19CQUNLVVAQAiqMAQoPRGF0YWJhc2VW",
+            "ZXJzaW9uEiAKHERBVEFCQVNFX1ZFUlNJT05fVU5TUEVDSUZJRUQQABITCgtQ",
+            "T1NUR1JFU18xMxABGgIIARIPCgtQT1NUR1JFU18xNBACEg8KC1BPU1RHUkVT",
+            "XzE1EAMSDwoLUE9TVEdSRVNfMTYQBBIPCgtQT1NUR1JFU18xNxAFKk4KEFN1",
+            "YnNjcmlwdGlvblR5cGUSIQodU1VCU0NSSVBUSU9OX1RZUEVfVU5TUEVDSUZJ",
+            "RUQQABIMCghTVEFOREFSRBABEgkKBVRSSUFMEAJCuwUKH2NvbS5nb29nbGUu",
+            "Y2xvdWQuYWxsb3lkYi52MWJldGFCDlJlc291cmNlc1Byb3RvUAFaOWNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vYWxsb3lkYi9hcGl2MWJldGEvYWxsb3lkYnBiO2Fs",
+            "bG95ZGJwYqoCG0dvb2dsZS5DbG91ZC5BbGxveURiLlYxQmV0YcoCG0dvb2ds",
+            "ZVxDbG91ZFxBbGxveURiXFYxYmV0YeoCHkdvb2dsZTo6Q2xvdWQ6OkFsbG95",
+            "REI6OlYxYmV0YepBpgEKKGNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0",
+            "b0tleVZlcnNpb24SenByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
+            "Y2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0",
+            "b19rZXl9L2NyeXB0b0tleVZlcnNpb25zL3tjcnlwdG9fa2V5X3ZlcnNpb259",
+            "6kFOCh5jb21wdXRlLmdvb2dsZWFwaXMuY29tL05ldHdvcmsSLHByb2plY3Rz",
+            "L3twcm9qZWN0fS9nbG9iYWwvbmV0d29ya3Mve25ldHdvcmt96kF4CiFjbG91",
+            "ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXkSU3Byb2plY3RzL3twcm9q",
+            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9",
+            "L2NyeXB0b0tleXMve2NyeXB0b19rZXl96kF3Cihjb21wdXRlLmdvb2dsZWFw",
+            "aXMuY29tL1NlcnZpY2VBdHRhY2htZW50Ektwcm9qZWN0cy97cHJvamVjdH0v",
+            "cmVnaW9ucy97cmVnaW9ufS9zZXJ2aWNlQXR0YWNobWVudHMve3NlcnZpY2Vf",
+            "YXR0YWNobWVudH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AlloyDb.V1Beta.CsqlResourcesReflection.Descriptor, global::Google.Cloud.AlloyDb.V1Beta.GeminiReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AlloyDb.V1Beta.CsqlResourcesReflection.Descriptor, global::Google.Cloud.AlloyDb.V1Beta.GeminiReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AlloyDb.V1Beta.InstanceView), typeof(global::Google.Cloud.AlloyDb.V1Beta.ClusterView), typeof(global::Google.Cloud.AlloyDb.V1Beta.DatabaseVersion), typeof(global::Google.Cloud.AlloyDb.V1Beta.SubscriptionType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.UserPassword), global::Google.Cloud.AlloyDb.V1Beta.UserPassword.Parser, new[]{ "User", "Password" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.MigrationSource), global::Google.Cloud.AlloyDb.V1Beta.MigrationSource.Parser, new[]{ "HostPort", "ReferenceId", "SourceType" }, null, new[]{ typeof(global::Google.Cloud.AlloyDb.V1Beta.MigrationSource.Types.MigrationSourceType) }, null, null),
@@ -374,31 +428,35 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.ContinuousBackupInfo), global::Google.Cloud.AlloyDb.V1Beta.ContinuousBackupInfo.Parser, new[]{ "EncryptionInfo", "EnabledTime", "Schedule", "EarliestRestorableTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.BackupSource), global::Google.Cloud.AlloyDb.V1Beta.BackupSource.Parser, new[]{ "BackupUid", "BackupName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.ContinuousBackupSource), global::Google.Cloud.AlloyDb.V1Beta.ContinuousBackupSource.Parser, new[]{ "Cluster", "PointInTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.MaintenanceUpdatePolicy), global::Google.Cloud.AlloyDb.V1Beta.MaintenanceUpdatePolicy.Parser, new[]{ "MaintenanceWindows" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.MaintenanceUpdatePolicy.Types.MaintenanceWindow), global::Google.Cloud.AlloyDb.V1Beta.MaintenanceUpdatePolicy.Types.MaintenanceWindow.Parser, new[]{ "Day", "StartTime" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.MaintenanceUpdatePolicy), global::Google.Cloud.AlloyDb.V1Beta.MaintenanceUpdatePolicy.Parser, new[]{ "MaintenanceWindows", "DenyMaintenancePeriods" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.MaintenanceUpdatePolicy.Types.MaintenanceWindow), global::Google.Cloud.AlloyDb.V1Beta.MaintenanceUpdatePolicy.Types.MaintenanceWindow.Parser, new[]{ "Day", "StartTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.MaintenanceUpdatePolicy.Types.DenyMaintenancePeriod), global::Google.Cloud.AlloyDb.V1Beta.MaintenanceUpdatePolicy.Types.DenyMaintenancePeriod.Parser, new[]{ "StartDate", "EndDate", "Time" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.MaintenanceSchedule), global::Google.Cloud.AlloyDb.V1Beta.MaintenanceSchedule.Parser, new[]{ "StartTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Cluster), global::Google.Cloud.AlloyDb.V1Beta.Cluster.Parser, new[]{ "BackupSource", "MigrationSource", "CloudsqlBackupRunSource", "Name", "DisplayName", "Uid", "CreateTime", "UpdateTime", "DeleteTime", "Labels", "State", "ClusterType", "DatabaseVersion", "NetworkConfig", "Network", "Etag", "Annotations", "Reconciling", "InitialUser", "AutomatedBackupPolicy", "SslConfig", "EncryptionConfig", "EncryptionInfo", "ContinuousBackupConfig", "ContinuousBackupInfo", "SecondaryConfig", "PrimaryConfig", "SatisfiesPzs", "PscConfig", "MaintenanceUpdatePolicy", "MaintenanceSchedule", "GeminiConfig", "SubscriptionType", "TrialMetadata", "Tags" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.AlloyDb.V1Beta.Cluster.Types.State), typeof(global::Google.Cloud.AlloyDb.V1Beta.Cluster.Types.ClusterType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Cluster.Types.NetworkConfig), global::Google.Cloud.AlloyDb.V1Beta.Cluster.Types.NetworkConfig.Parser, new[]{ "Network", "AllocatedIpRange" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Cluster), global::Google.Cloud.AlloyDb.V1Beta.Cluster.Parser, new[]{ "BackupSource", "MigrationSource", "CloudsqlBackupRunSource", "Name", "DisplayName", "Uid", "CreateTime", "UpdateTime", "DeleteTime", "Labels", "State", "ClusterType", "DatabaseVersion", "NetworkConfig", "Network", "Etag", "Annotations", "Reconciling", "InitialUser", "AutomatedBackupPolicy", "SslConfig", "EncryptionConfig", "EncryptionInfo", "ContinuousBackupConfig", "ContinuousBackupInfo", "SecondaryConfig", "PrimaryConfig", "SatisfiesPzs", "PscConfig", "MaintenanceUpdatePolicy", "MaintenanceSchedule", "GeminiConfig", "SubscriptionType", "TrialMetadata", "Tags", "ServiceAccountEmail" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.AlloyDb.V1Beta.Cluster.Types.State), typeof(global::Google.Cloud.AlloyDb.V1Beta.Cluster.Types.ClusterType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Cluster.Types.NetworkConfig), global::Google.Cloud.AlloyDb.V1Beta.Cluster.Types.NetworkConfig.Parser, new[]{ "Network", "AllocatedIpRange" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Cluster.Types.SecondaryConfig), global::Google.Cloud.AlloyDb.V1Beta.Cluster.Types.SecondaryConfig.Parser, new[]{ "PrimaryClusterName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Cluster.Types.PrimaryConfig), global::Google.Cloud.AlloyDb.V1Beta.Cluster.Types.PrimaryConfig.Parser, new[]{ "SecondaryClusterNames" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Cluster.Types.PscConfig), global::Google.Cloud.AlloyDb.V1Beta.Cluster.Types.PscConfig.Parser, new[]{ "PscEnabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Cluster.Types.PscConfig), global::Google.Cloud.AlloyDb.V1Beta.Cluster.Types.PscConfig.Parser, new[]{ "PscEnabled", "ServiceOwnedProjectNumber" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Cluster.Types.TrialMetadata), global::Google.Cloud.AlloyDb.V1Beta.Cluster.Types.TrialMetadata.Parser, new[]{ "StartTime", "EndTime", "UpgradeTime", "GraceEndTime" }, null, null, null, null),
             null, null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance), global::Google.Cloud.AlloyDb.V1Beta.Instance.Parser, new[]{ "Name", "DisplayName", "Uid", "CreateTime", "UpdateTime", "DeleteTime", "Labels", "State", "InstanceType", "MachineConfig", "AvailabilityType", "GceZone", "DatabaseFlags", "WritableNode", "Nodes", "QueryInsightsConfig", "ObservabilityConfig", "ReadPoolConfig", "IpAddress", "PublicIpAddress", "Reconciling", "Etag", "Annotations", "UpdatePolicy", "ClientConnectionConfig", "SatisfiesPzs", "PscInstanceConfig", "NetworkConfig", "GeminiConfig", "OutboundPublicIpAddresses" }, null, new[]{ typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.State), typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.InstanceType), typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.AvailabilityType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.MachineConfig), global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.MachineConfig.Parser, new[]{ "CpuCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance), global::Google.Cloud.AlloyDb.V1Beta.Instance.Parser, new[]{ "Name", "DisplayName", "Uid", "CreateTime", "UpdateTime", "DeleteTime", "Labels", "State", "InstanceType", "MachineConfig", "AvailabilityType", "GceZone", "DatabaseFlags", "WritableNode", "Nodes", "QueryInsightsConfig", "ObservabilityConfig", "ReadPoolConfig", "IpAddress", "PublicIpAddress", "Reconciling", "Etag", "Annotations", "UpdatePolicy", "ClientConnectionConfig", "SatisfiesPzs", "PscInstanceConfig", "NetworkConfig", "GeminiConfig", "OutboundPublicIpAddresses", "ActivationPolicy", "ConnectionPoolConfig", "GcaConfig" }, null, new[]{ typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.State), typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.InstanceType), typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.AvailabilityType), typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ActivationPolicy) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.MachineConfig), global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.MachineConfig.Parser, new[]{ "CpuCount", "MachineType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.Node), global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.Node.Parser, new[]{ "ZoneId", "Id", "Ip", "State" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.QueryInsightsInstanceConfig), global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.QueryInsightsInstanceConfig.Parser, new[]{ "RecordApplicationTags", "RecordClientAddress", "QueryStringLength", "QueryPlansPerMinute" }, new[]{ "RecordApplicationTags", "RecordClientAddress", "QueryPlansPerMinute" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ObservabilityInstanceConfig), global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ObservabilityInstanceConfig.Parser, new[]{ "Enabled", "PreserveComments", "TrackWaitEvents", "TrackWaitEventTypes", "MaxQueryStringLength", "RecordApplicationTags", "QueryPlansPerMinute", "TrackActiveQueries", "TrackClientAddress" }, new[]{ "Enabled", "PreserveComments", "TrackWaitEvents", "TrackWaitEventTypes", "MaxQueryStringLength", "RecordApplicationTags", "QueryPlansPerMinute", "TrackActiveQueries", "TrackClientAddress" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ObservabilityInstanceConfig), global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ObservabilityInstanceConfig.Parser, new[]{ "Enabled", "PreserveComments", "TrackWaitEvents", "TrackWaitEventTypes", "MaxQueryStringLength", "RecordApplicationTags", "QueryPlansPerMinute", "TrackActiveQueries", "TrackClientAddress", "AssistiveExperiencesEnabled" }, new[]{ "Enabled", "PreserveComments", "TrackWaitEvents", "TrackWaitEventTypes", "MaxQueryStringLength", "RecordApplicationTags", "QueryPlansPerMinute", "TrackActiveQueries", "TrackClientAddress", "AssistiveExperiencesEnabled" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ReadPoolConfig), global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ReadPoolConfig.Parser, new[]{ "NodeCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.UpdatePolicy), global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.UpdatePolicy.Parser, new[]{ "Mode" }, null, new[]{ typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.UpdatePolicy.Types.Mode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ClientConnectionConfig), global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ClientConnectionConfig.Parser, new[]{ "RequireConnectors", "SslConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.PscInstanceConfig), global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.PscInstanceConfig.Parser, new[]{ "ServiceAttachmentLink", "AllowedConsumerProjects", "PscDnsName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.InstanceNetworkConfig), global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.InstanceNetworkConfig.Parser, new[]{ "AuthorizedExternalNetworks", "EnablePublicIp", "EnableOutboundPublicIp" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.InstanceNetworkConfig.Types.AuthorizedNetwork), global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.InstanceNetworkConfig.Types.AuthorizedNetwork.Parser, new[]{ "CidrRange" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.PscInterfaceConfig), global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.PscInterfaceConfig.Parser, new[]{ "NetworkAttachmentResource" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.PscAutoConnectionConfig), global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.PscAutoConnectionConfig.Parser, new[]{ "ConsumerProject", "ConsumerNetwork", "IpAddress", "Status", "ConsumerNetworkStatus" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.PscInstanceConfig), global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.PscInstanceConfig.Parser, new[]{ "ServiceAttachmentLink", "AllowedConsumerProjects", "PscDnsName", "PscInterfaceConfigs", "PscAutoConnections" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.InstanceNetworkConfig), global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.InstanceNetworkConfig.Parser, new[]{ "AuthorizedExternalNetworks", "EnablePublicIp", "EnableOutboundPublicIp", "Network", "AllocatedIpRangeOverride" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.InstanceNetworkConfig.Types.AuthorizedNetwork), global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.InstanceNetworkConfig.Types.AuthorizedNetwork.Parser, new[]{ "CidrRange" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ConnectionPoolConfig), global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ConnectionPoolConfig.Parser, new[]{ "Enabled", "Flags", "PoolerCount" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.ConnectionInfo), global::Google.Cloud.AlloyDb.V1Beta.ConnectionInfo.Parser, new[]{ "Name", "IpAddress", "PublicIpAddress", "PemCertificateChain", "InstanceUid", "PscDnsName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Backup), global::Google.Cloud.AlloyDb.V1Beta.Backup.Parser, new[]{ "Name", "DisplayName", "Uid", "CreateTime", "UpdateTime", "DeleteTime", "Labels", "State", "Type", "Description", "ClusterUid", "ClusterName", "Reconciling", "EncryptionConfig", "EncryptionInfo", "Etag", "Annotations", "SizeBytes", "ExpiryTime", "ExpiryQuantity", "SatisfiesPzs", "DatabaseVersion", "Tags" }, null, new[]{ typeof(global::Google.Cloud.AlloyDb.V1Beta.Backup.Types.State), typeof(global::Google.Cloud.AlloyDb.V1Beta.Backup.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Backup.Types.QuantityBasedExpiry), global::Google.Cloud.AlloyDb.V1Beta.Backup.Types.QuantityBasedExpiry.Parser, new[]{ "RetentionCount", "TotalRetentionCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Backup), global::Google.Cloud.AlloyDb.V1Beta.Backup.Parser, new[]{ "Name", "DisplayName", "Uid", "CreateTime", "UpdateTime", "DeleteTime", "CreateCompletionTime", "Labels", "State", "Type", "Description", "ClusterUid", "ClusterName", "Reconciling", "EncryptionConfig", "EncryptionInfo", "Etag", "Annotations", "SizeBytes", "ExpiryTime", "ExpiryQuantity", "SatisfiesPzs", "DatabaseVersion", "Tags" }, null, new[]{ typeof(global::Google.Cloud.AlloyDb.V1Beta.Backup.Types.State), typeof(global::Google.Cloud.AlloyDb.V1Beta.Backup.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Backup.Types.QuantityBasedExpiry), global::Google.Cloud.AlloyDb.V1Beta.Backup.Types.QuantityBasedExpiry.Parser, new[]{ "RetentionCount", "TotalRetentionCount" }, null, null, null, null),
             null, null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag), global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag.Parser, new[]{ "StringRestrictions", "IntegerRestrictions", "Name", "FlagName", "ValueType", "AcceptsMultipleValues", "SupportedDbVersions", "RequiresDbRestart" }, new[]{ "Restrictions" }, new[]{ typeof(global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag.Types.ValueType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag.Types.StringRestrictions), global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag.Types.StringRestrictions.Parser, new[]{ "AllowedValues" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag), global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag.Parser, new[]{ "StringRestrictions", "IntegerRestrictions", "RecommendedStringValue", "RecommendedIntegerValue", "Name", "FlagName", "ValueType", "AcceptsMultipleValues", "SupportedDbVersions", "RequiresDbRestart", "Scope" }, new[]{ "Restrictions", "RecommendedValue" }, new[]{ typeof(global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag.Types.ValueType), typeof(global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag.Types.Scope) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag.Types.StringRestrictions), global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag.Types.StringRestrictions.Parser, new[]{ "AllowedValues" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag.Types.IntegerRestrictions), global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag.Types.IntegerRestrictions.Parser, new[]{ "MinValue", "MaxValue" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.User), global::Google.Cloud.AlloyDb.V1Beta.User.Parser, new[]{ "Name", "Password", "DatabaseRoles", "UserType", "KeepExtraRoles" }, null, new[]{ typeof(global::Google.Cloud.AlloyDb.V1Beta.User.Types.UserType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Database), global::Google.Cloud.AlloyDb.V1Beta.Database.Parser, new[]{ "Name", "Charset", "Collation" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Beta.Database), global::Google.Cloud.AlloyDb.V1Beta.Database.Parser, new[]{ "Name", "Charset", "Collation", "CharacterType", "IsTemplate", "DatabaseTemplate", "IsTemplateDatabase" }, new[]{ "IsTemplateDatabase" }, null, null, null)
           }));
     }
     #endregion
@@ -475,6 +533,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
     /// The database version is Postgres 16.
     /// </summary>
     [pbr::OriginalName("POSTGRES_16")] Postgres16 = 4,
+    /// <summary>
+    /// The database version is Postgres 17.
+    /// </summary>
+    [pbr::OriginalName("POSTGRES_17")] Postgres17 = 5,
   }
 
   /// <summary>
@@ -1963,8 +2025,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
     /// <summary>
     /// Optional. The encryption config can be specified to encrypt the
     /// backups with a customer-managed encryption key (CMEK). When this field is
-    /// not specified, the backup will then use default encryption scheme to
-    /// protect the user data.
+    /// not specified, the backup will use the cluster's encryption config.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3152,8 +3213,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
     /// <summary>
     /// The encryption config can be specified to encrypt the
     /// backups with a customer-managed encryption key (CMEK). When this field is
-    /// not specified, the backup will then use default encryption scheme to
-    /// protect the user data.
+    /// not specified, the backup will use the cluster's encryption config.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3444,8 +3504,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         = pb::FieldCodec.ForEnum(26, x => (int) x, x => (global::Google.Type.DayOfWeek) x);
     private readonly pbc::RepeatedField<global::Google.Type.DayOfWeek> schedule_ = new pbc::RepeatedField<global::Google.Type.DayOfWeek>();
     /// <summary>
-    /// Output only. Days of the week on which a continuous backup is taken. Output
-    /// only field. Ignored if passed into the request.
+    /// Output only. Days of the week on which a continuous backup is taken.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3457,8 +3516,16 @@ namespace Google.Cloud.AlloyDb.V1Beta {
     public const int EarliestRestorableTimeFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Timestamp earliestRestorableTime_;
     /// <summary>
-    /// Output only. The earliest restorable time that can be restored to. Output
-    /// only field.
+    /// Output only. The earliest restorable time that can be restored to. If
+    /// continuous backups and recovery was recently enabled, the earliest
+    /// restorable time is the creation time of the earliest eligible backup within
+    /// this cluster's continuous backup recovery window. After a cluster has had
+    /// continuous backups enabled for the duration of its recovery window, the
+    /// earliest restorable time becomes "now minus the recovery window". For
+    /// example, assuming a point in time recovery is attempted at 04/16/2025
+    /// 3:23:00PM with a 14d recovery window, the earliest restorable time would be
+    /// 04/02/2025 3:23:00PM. This field is only visible if the
+    /// CLUSTER_VIEW_CONTINUOUS_BACKUP cluster view is provided.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4218,6 +4285,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MaintenanceUpdatePolicy(MaintenanceUpdatePolicy other) : this() {
       maintenanceWindows_ = other.maintenanceWindows_.Clone();
+      denyMaintenancePeriods_ = other.denyMaintenancePeriods_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4241,6 +4309,20 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       get { return maintenanceWindows_; }
     }
 
+    /// <summary>Field number for the "deny_maintenance_periods" field.</summary>
+    public const int DenyMaintenancePeriodsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AlloyDb.V1Beta.MaintenanceUpdatePolicy.Types.DenyMaintenancePeriod> _repeated_denyMaintenancePeriods_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.AlloyDb.V1Beta.MaintenanceUpdatePolicy.Types.DenyMaintenancePeriod.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AlloyDb.V1Beta.MaintenanceUpdatePolicy.Types.DenyMaintenancePeriod> denyMaintenancePeriods_ = new pbc::RepeatedField<global::Google.Cloud.AlloyDb.V1Beta.MaintenanceUpdatePolicy.Types.DenyMaintenancePeriod>();
+    /// <summary>
+    /// Periods to deny maintenance. Currently limited to 1.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AlloyDb.V1Beta.MaintenanceUpdatePolicy.Types.DenyMaintenancePeriod> DenyMaintenancePeriods {
+      get { return denyMaintenancePeriods_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4257,6 +4339,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         return true;
       }
       if(!maintenanceWindows_.Equals(other.maintenanceWindows_)) return false;
+      if(!denyMaintenancePeriods_.Equals(other.denyMaintenancePeriods_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4265,6 +4348,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= maintenanceWindows_.GetHashCode();
+      hash ^= denyMaintenancePeriods_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4284,6 +4368,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       output.WriteRawMessage(this);
     #else
       maintenanceWindows_.WriteTo(output, _repeated_maintenanceWindows_codec);
+      denyMaintenancePeriods_.WriteTo(output, _repeated_denyMaintenancePeriods_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4295,6 +4380,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       maintenanceWindows_.WriteTo(ref output, _repeated_maintenanceWindows_codec);
+      denyMaintenancePeriods_.WriteTo(ref output, _repeated_denyMaintenancePeriods_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4306,6 +4392,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
     public int CalculateSize() {
       int size = 0;
       size += maintenanceWindows_.CalculateSize(_repeated_maintenanceWindows_codec);
+      size += denyMaintenancePeriods_.CalculateSize(_repeated_denyMaintenancePeriods_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4319,6 +4406,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         return;
       }
       maintenanceWindows_.Add(other.maintenanceWindows_);
+      denyMaintenancePeriods_.Add(other.denyMaintenancePeriods_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4338,6 +4426,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             maintenanceWindows_.AddEntriesFrom(input, _repeated_maintenanceWindows_codec);
             break;
           }
+          case 18: {
+            denyMaintenancePeriods_.AddEntriesFrom(input, _repeated_denyMaintenancePeriods_codec);
+            break;
+          }
         }
       }
     #endif
@@ -4355,6 +4447,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             break;
           case 10: {
             maintenanceWindows_.AddEntriesFrom(ref input, _repeated_maintenanceWindows_codec);
+            break;
+          }
+          case 18: {
+            denyMaintenancePeriods_.AddEntriesFrom(ref input, _repeated_denyMaintenancePeriods_codec);
             break;
           }
         }
@@ -4604,6 +4700,320 @@ namespace Google.Cloud.AlloyDb.V1Beta {
                   StartTime = new global::Google.Type.TimeOfDay();
                 }
                 input.ReadMessage(StartTime);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// DenyMaintenancePeriod definition. Excepting emergencies, maintenance
+      /// will not be scheduled to start within this deny period. The start_date must
+      /// be less than the end_date.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DenyMaintenancePeriod : pb::IMessage<DenyMaintenancePeriod>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DenyMaintenancePeriod> _parser = new pb::MessageParser<DenyMaintenancePeriod>(() => new DenyMaintenancePeriod());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DenyMaintenancePeriod> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AlloyDb.V1Beta.MaintenanceUpdatePolicy.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DenyMaintenancePeriod() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DenyMaintenancePeriod(DenyMaintenancePeriod other) : this() {
+          startDate_ = other.startDate_ != null ? other.startDate_.Clone() : null;
+          endDate_ = other.endDate_ != null ? other.endDate_.Clone() : null;
+          time_ = other.time_ != null ? other.time_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DenyMaintenancePeriod Clone() {
+          return new DenyMaintenancePeriod(this);
+        }
+
+        /// <summary>Field number for the "start_date" field.</summary>
+        public const int StartDateFieldNumber = 1;
+        private global::Google.Type.Date startDate_;
+        /// <summary>
+        /// Deny period start date.
+        /// This can be:
+        /// * A full date, with non-zero year, month and day values OR
+        /// * A month and day value, with a zero year for recurring
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.Date StartDate {
+          get { return startDate_; }
+          set {
+            startDate_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "end_date" field.</summary>
+        public const int EndDateFieldNumber = 2;
+        private global::Google.Type.Date endDate_;
+        /// <summary>
+        /// Deny period end date.
+        /// This can be:
+        /// * A full date, with non-zero year, month and day values OR
+        /// * A month and day value, with a zero year for recurring
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.Date EndDate {
+          get { return endDate_; }
+          set {
+            endDate_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "time" field.</summary>
+        public const int TimeFieldNumber = 3;
+        private global::Google.Type.TimeOfDay time_;
+        /// <summary>
+        /// Time in UTC when the deny period starts on start_date and ends on
+        /// end_date. This can be:
+        /// * Full time OR
+        /// * All zeros for 00:00:00 UTC
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.TimeOfDay Time {
+          get { return time_; }
+          set {
+            time_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DenyMaintenancePeriod);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DenyMaintenancePeriod other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(StartDate, other.StartDate)) return false;
+          if (!object.Equals(EndDate, other.EndDate)) return false;
+          if (!object.Equals(Time, other.Time)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (startDate_ != null) hash ^= StartDate.GetHashCode();
+          if (endDate_ != null) hash ^= EndDate.GetHashCode();
+          if (time_ != null) hash ^= Time.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (startDate_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(StartDate);
+          }
+          if (endDate_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(EndDate);
+          }
+          if (time_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Time);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (startDate_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(StartDate);
+          }
+          if (endDate_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(EndDate);
+          }
+          if (time_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Time);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (startDate_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartDate);
+          }
+          if (endDate_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndDate);
+          }
+          if (time_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Time);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DenyMaintenancePeriod other) {
+          if (other == null) {
+            return;
+          }
+          if (other.startDate_ != null) {
+            if (startDate_ == null) {
+              StartDate = new global::Google.Type.Date();
+            }
+            StartDate.MergeFrom(other.StartDate);
+          }
+          if (other.endDate_ != null) {
+            if (endDate_ == null) {
+              EndDate = new global::Google.Type.Date();
+            }
+            EndDate.MergeFrom(other.EndDate);
+          }
+          if (other.time_ != null) {
+            if (time_ == null) {
+              Time = new global::Google.Type.TimeOfDay();
+            }
+            Time.MergeFrom(other.Time);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (startDate_ == null) {
+                  StartDate = new global::Google.Type.Date();
+                }
+                input.ReadMessage(StartDate);
+                break;
+              }
+              case 18: {
+                if (endDate_ == null) {
+                  EndDate = new global::Google.Type.Date();
+                }
+                input.ReadMessage(EndDate);
+                break;
+              }
+              case 26: {
+                if (time_ == null) {
+                  Time = new global::Google.Type.TimeOfDay();
+                }
+                input.ReadMessage(Time);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (startDate_ == null) {
+                  StartDate = new global::Google.Type.Date();
+                }
+                input.ReadMessage(StartDate);
+                break;
+              }
+              case 18: {
+                if (endDate_ == null) {
+                  EndDate = new global::Google.Type.Date();
+                }
+                input.ReadMessage(EndDate);
+                break;
+              }
+              case 26: {
+                if (time_ == null) {
+                  Time = new global::Google.Type.TimeOfDay();
+                }
+                input.ReadMessage(Time);
                 break;
               }
             }
@@ -4899,6 +5309,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       subscriptionType_ = other.subscriptionType_;
       trialMetadata_ = other.trialMetadata_ != null ? other.trialMetadata_.Clone() : null;
       tags_ = other.tags_.Clone();
+      serviceAccountEmail_ = other.serviceAccountEmail_;
       switch (other.SourceCase) {
         case SourceOneofCase.BackupSource:
           BackupSource = other.BackupSource.Clone();
@@ -5422,9 +5833,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
     public const int GeminiConfigFieldNumber = 36;
     private global::Google.Cloud.AlloyDb.V1Beta.GeminiClusterConfig geminiConfig_;
     /// <summary>
-    /// Optional. Configuration parameters related to the Gemini in Databases
-    /// add-on.
+    /// Optional. Deprecated and unused. This field will be removed in the near
+    /// future.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AlloyDb.V1Beta.GeminiClusterConfig GeminiConfig {
@@ -5481,6 +5893,24 @@ namespace Google.Cloud.AlloyDb.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Tags {
       get { return tags_; }
+    }
+
+    /// <summary>Field number for the "service_account_email" field.</summary>
+    public const int ServiceAccountEmailFieldNumber = 46;
+    private string serviceAccountEmail_ = "";
+    /// <summary>
+    /// Output only. AlloyDB per-cluster service account. This service account is
+    /// created per-cluster per-project, and is different from the per-project
+    /// service account. The per-cluster service account naming format is subject
+    /// to change.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ServiceAccountEmail {
+      get { return serviceAccountEmail_; }
+      set {
+        serviceAccountEmail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     private object source_;
@@ -5555,6 +5985,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       if (SubscriptionType != other.SubscriptionType) return false;
       if (!object.Equals(TrialMetadata, other.TrialMetadata)) return false;
       if (!Tags.Equals(other.Tags)) return false;
+      if (ServiceAccountEmail != other.ServiceAccountEmail) return false;
       if (SourceCase != other.SourceCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -5598,6 +6029,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       if (SubscriptionType != global::Google.Cloud.AlloyDb.V1Beta.SubscriptionType.Unspecified) hash ^= SubscriptionType.GetHashCode();
       if (trialMetadata_ != null) hash ^= TrialMetadata.GetHashCode();
       hash ^= Tags.GetHashCode();
+      if (ServiceAccountEmail.Length != 0) hash ^= ServiceAccountEmail.GetHashCode();
       hash ^= (int) sourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -5748,6 +6180,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         output.WriteRawTag(210, 2);
         output.WriteMessage(CloudsqlBackupRunSource);
       }
+      if (ServiceAccountEmail.Length != 0) {
+        output.WriteRawTag(242, 2);
+        output.WriteString(ServiceAccountEmail);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5889,6 +6325,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         output.WriteRawTag(210, 2);
         output.WriteMessage(CloudsqlBackupRunSource);
       }
+      if (ServiceAccountEmail.Length != 0) {
+        output.WriteRawTag(242, 2);
+        output.WriteString(ServiceAccountEmail);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5998,6 +6438,9 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(TrialMetadata);
       }
       size += tags_.CalculateSize(_map_tags_codec);
+      if (ServiceAccountEmail.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ServiceAccountEmail);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -6154,6 +6597,9 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         TrialMetadata.MergeFrom(other.TrialMetadata);
       }
       tags_.MergeFrom(other.tags_);
+      if (other.ServiceAccountEmail.Length != 0) {
+        ServiceAccountEmail = other.ServiceAccountEmail;
+      }
       switch (other.SourceCase) {
         case SourceOneofCase.BackupSource:
           if (BackupSource == null) {
@@ -6399,6 +6845,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             CloudsqlBackupRunSource = subBuilder;
             break;
           }
+          case 370: {
+            ServiceAccountEmail = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -6623,6 +7073,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             CloudsqlBackupRunSource = subBuilder;
             break;
           }
+          case 370: {
+            ServiceAccountEmail = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -6646,11 +7100,8 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         /// </summary>
         [pbr::OriginalName("READY")] Ready = 1,
         /// <summary>
-        /// The cluster is stopped. All instances in the cluster are stopped.
-        /// Customers can start a stopped cluster at any point and all their
-        /// instances will come back to life with same names and IP resources. In
-        /// this state, customer pays for storage.
-        /// Associated backups could also be present in a stopped cluster.
+        /// This is unused. Even when all instances in the cluster are stopped, the
+        /// cluster remains in READY state.
         /// </summary>
         [pbr::OriginalName("STOPPED")] Stopped = 2,
         /// <summary>
@@ -7378,6 +7829,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public PscConfig(PscConfig other) : this() {
           pscEnabled_ = other.pscEnabled_;
+          serviceOwnedProjectNumber_ = other.serviceOwnedProjectNumber_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -7403,6 +7855,22 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           }
         }
 
+        /// <summary>Field number for the "service_owned_project_number" field.</summary>
+        public const int ServiceOwnedProjectNumberFieldNumber = 3;
+        private long serviceOwnedProjectNumber_;
+        /// <summary>
+        /// Output only. The project number that needs to be allowlisted on the
+        /// network attachment to enable outbound connectivity.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long ServiceOwnedProjectNumber {
+          get { return serviceOwnedProjectNumber_; }
+          set {
+            serviceOwnedProjectNumber_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -7419,6 +7887,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             return true;
           }
           if (PscEnabled != other.PscEnabled) return false;
+          if (ServiceOwnedProjectNumber != other.ServiceOwnedProjectNumber) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -7427,6 +7896,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         public override int GetHashCode() {
           int hash = 1;
           if (PscEnabled != false) hash ^= PscEnabled.GetHashCode();
+          if (ServiceOwnedProjectNumber != 0L) hash ^= ServiceOwnedProjectNumber.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -7449,6 +7919,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             output.WriteRawTag(8);
             output.WriteBool(PscEnabled);
           }
+          if (ServiceOwnedProjectNumber != 0L) {
+            output.WriteRawTag(24);
+            output.WriteInt64(ServiceOwnedProjectNumber);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -7463,6 +7937,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             output.WriteRawTag(8);
             output.WriteBool(PscEnabled);
           }
+          if (ServiceOwnedProjectNumber != 0L) {
+            output.WriteRawTag(24);
+            output.WriteInt64(ServiceOwnedProjectNumber);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -7475,6 +7953,9 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           int size = 0;
           if (PscEnabled != false) {
             size += 1 + 1;
+          }
+          if (ServiceOwnedProjectNumber != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(ServiceOwnedProjectNumber);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -7490,6 +7971,9 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           }
           if (other.PscEnabled != false) {
             PscEnabled = other.PscEnabled;
+          }
+          if (other.ServiceOwnedProjectNumber != 0L) {
+            ServiceOwnedProjectNumber = other.ServiceOwnedProjectNumber;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -7510,6 +7994,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
                 PscEnabled = input.ReadBool();
                 break;
               }
+              case 24: {
+                ServiceOwnedProjectNumber = input.ReadInt64();
+                break;
+              }
             }
           }
         #endif
@@ -7527,6 +8015,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
                 break;
               case 8: {
                 PscEnabled = input.ReadBool();
+                break;
+              }
+              case 24: {
+                ServiceOwnedProjectNumber = input.ReadInt64();
                 break;
               }
             }
@@ -7962,6 +8454,9 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       networkConfig_ = other.networkConfig_ != null ? other.networkConfig_.Clone() : null;
       geminiConfig_ = other.geminiConfig_ != null ? other.geminiConfig_.Clone() : null;
       outboundPublicIpAddresses_ = other.outboundPublicIpAddresses_.Clone();
+      activationPolicy_ = other.activationPolicy_;
+      connectionPoolConfig_ = other.connectionPoolConfig_ != null ? other.connectionPoolConfig_.Clone() : null;
+      gcaConfig_ = other.gcaConfig_ != null ? other.gcaConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8441,9 +8936,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
     public const int GeminiConfigFieldNumber = 33;
     private global::Google.Cloud.AlloyDb.V1Beta.GeminiInstanceConfig geminiConfig_;
     /// <summary>
-    /// Optional. Configuration parameters related to the Gemini in Databases
-    /// add-on.
+    /// Optional. Deprecated and unused. This field will be removed in the near
+    /// future.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AlloyDb.V1Beta.GeminiInstanceConfig GeminiConfig {
@@ -8465,6 +8961,57 @@ namespace Google.Cloud.AlloyDb.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> OutboundPublicIpAddresses {
       get { return outboundPublicIpAddresses_; }
+    }
+
+    /// <summary>Field number for the "activation_policy" field.</summary>
+    public const int ActivationPolicyFieldNumber = 35;
+    private global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ActivationPolicy activationPolicy_ = global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ActivationPolicy.Unspecified;
+    /// <summary>
+    /// Optional. Specifies whether an instance needs to spin up. Once the instance
+    /// is active, the activation policy can be updated to the `NEVER` to stop the
+    /// instance. Likewise, the activation policy can be updated to `ALWAYS` to
+    /// start the instance.
+    /// There are restrictions around when an instance can/cannot be activated (for
+    /// example, a read pool instance should be stopped before stopping primary
+    /// etc.). Please refer to the API documentation for more details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ActivationPolicy ActivationPolicy {
+      get { return activationPolicy_; }
+      set {
+        activationPolicy_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "connection_pool_config" field.</summary>
+    public const int ConnectionPoolConfigFieldNumber = 37;
+    private global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ConnectionPoolConfig connectionPoolConfig_;
+    /// <summary>
+    /// Optional. The configuration for Managed Connection Pool (MCP).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ConnectionPoolConfig ConnectionPoolConfig {
+      get { return connectionPoolConfig_; }
+      set {
+        connectionPoolConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "gca_config" field.</summary>
+    public const int GcaConfigFieldNumber = 38;
+    private global::Google.Cloud.AlloyDb.V1Beta.GCAInstanceConfig gcaConfig_;
+    /// <summary>
+    /// Output only. Configuration parameters related to Gemini Cloud Assist.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AlloyDb.V1Beta.GCAInstanceConfig GcaConfig {
+      get { return gcaConfig_; }
+      set {
+        gcaConfig_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8512,6 +9059,9 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       if (!object.Equals(NetworkConfig, other.NetworkConfig)) return false;
       if (!object.Equals(GeminiConfig, other.GeminiConfig)) return false;
       if(!outboundPublicIpAddresses_.Equals(other.outboundPublicIpAddresses_)) return false;
+      if (ActivationPolicy != other.ActivationPolicy) return false;
+      if (!object.Equals(ConnectionPoolConfig, other.ConnectionPoolConfig)) return false;
+      if (!object.Equals(GcaConfig, other.GcaConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8549,6 +9099,9 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       if (networkConfig_ != null) hash ^= NetworkConfig.GetHashCode();
       if (geminiConfig_ != null) hash ^= GeminiConfig.GetHashCode();
       hash ^= outboundPublicIpAddresses_.GetHashCode();
+      if (ActivationPolicy != global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ActivationPolicy.Unspecified) hash ^= ActivationPolicy.GetHashCode();
+      if (connectionPoolConfig_ != null) hash ^= ConnectionPoolConfig.GetHashCode();
+      if (gcaConfig_ != null) hash ^= GcaConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8672,6 +9225,18 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         output.WriteMessage(GeminiConfig);
       }
       outboundPublicIpAddresses_.WriteTo(output, _repeated_outboundPublicIpAddresses_codec);
+      if (ActivationPolicy != global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ActivationPolicy.Unspecified) {
+        output.WriteRawTag(152, 2);
+        output.WriteEnum((int) ActivationPolicy);
+      }
+      if (connectionPoolConfig_ != null) {
+        output.WriteRawTag(170, 2);
+        output.WriteMessage(ConnectionPoolConfig);
+      }
+      if (gcaConfig_ != null) {
+        output.WriteRawTag(178, 2);
+        output.WriteMessage(GcaConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8787,6 +9352,18 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         output.WriteMessage(GeminiConfig);
       }
       outboundPublicIpAddresses_.WriteTo(ref output, _repeated_outboundPublicIpAddresses_codec);
+      if (ActivationPolicy != global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ActivationPolicy.Unspecified) {
+        output.WriteRawTag(152, 2);
+        output.WriteEnum((int) ActivationPolicy);
+      }
+      if (connectionPoolConfig_ != null) {
+        output.WriteRawTag(170, 2);
+        output.WriteMessage(ConnectionPoolConfig);
+      }
+      if (gcaConfig_ != null) {
+        output.WriteRawTag(178, 2);
+        output.WriteMessage(GcaConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8877,6 +9454,15 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(GeminiConfig);
       }
       size += outboundPublicIpAddresses_.CalculateSize(_repeated_outboundPublicIpAddresses_codec);
+      if (ActivationPolicy != global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ActivationPolicy.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) ActivationPolicy);
+      }
+      if (connectionPoolConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ConnectionPoolConfig);
+      }
+      if (gcaConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(GcaConfig);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -9008,6 +9594,21 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         GeminiConfig.MergeFrom(other.GeminiConfig);
       }
       outboundPublicIpAddresses_.Add(other.outboundPublicIpAddresses_);
+      if (other.ActivationPolicy != global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ActivationPolicy.Unspecified) {
+        ActivationPolicy = other.ActivationPolicy;
+      }
+      if (other.connectionPoolConfig_ != null) {
+        if (connectionPoolConfig_ == null) {
+          ConnectionPoolConfig = new global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ConnectionPoolConfig();
+        }
+        ConnectionPoolConfig.MergeFrom(other.ConnectionPoolConfig);
+      }
+      if (other.gcaConfig_ != null) {
+        if (gcaConfig_ == null) {
+          GcaConfig = new global::Google.Cloud.AlloyDb.V1Beta.GCAInstanceConfig();
+        }
+        GcaConfig.MergeFrom(other.GcaConfig);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -9180,6 +9781,24 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           }
           case 274: {
             outboundPublicIpAddresses_.AddEntriesFrom(input, _repeated_outboundPublicIpAddresses_codec);
+            break;
+          }
+          case 280: {
+            ActivationPolicy = (global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ActivationPolicy) input.ReadEnum();
+            break;
+          }
+          case 298: {
+            if (connectionPoolConfig_ == null) {
+              ConnectionPoolConfig = new global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ConnectionPoolConfig();
+            }
+            input.ReadMessage(ConnectionPoolConfig);
+            break;
+          }
+          case 306: {
+            if (gcaConfig_ == null) {
+              GcaConfig = new global::Google.Cloud.AlloyDb.V1Beta.GCAInstanceConfig();
+            }
+            input.ReadMessage(GcaConfig);
             break;
           }
         }
@@ -9356,6 +9975,24 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             outboundPublicIpAddresses_.AddEntriesFrom(ref input, _repeated_outboundPublicIpAddresses_codec);
             break;
           }
+          case 280: {
+            ActivationPolicy = (global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ActivationPolicy) input.ReadEnum();
+            break;
+          }
+          case 298: {
+            if (connectionPoolConfig_ == null) {
+              ConnectionPoolConfig = new global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.ConnectionPoolConfig();
+            }
+            input.ReadMessage(ConnectionPoolConfig);
+            break;
+          }
+          case 306: {
+            if (gcaConfig_ == null) {
+              GcaConfig = new global::Google.Cloud.AlloyDb.V1Beta.GCAInstanceConfig();
+            }
+            input.ReadMessage(GcaConfig);
+            break;
+          }
         }
       }
     }
@@ -9465,6 +10102,24 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       }
 
       /// <summary>
+      /// Specifies whether an instance needs to spin up.
+      /// </summary>
+      public enum ActivationPolicy {
+        /// <summary>
+        /// The policy is not specified.
+        /// </summary>
+        [pbr::OriginalName("ACTIVATION_POLICY_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The instance is running.
+        /// </summary>
+        [pbr::OriginalName("ALWAYS")] Always = 1,
+        /// <summary>
+        /// The instance is not running.
+        /// </summary>
+        [pbr::OriginalName("NEVER")] Never = 2,
+      }
+
+      /// <summary>
       /// MachineConfig describes the configuration of a machine.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -9503,6 +10158,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public MachineConfig(MachineConfig other) : this() {
           cpuCount_ = other.cpuCount_;
+          machineType_ = other.machineType_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -9527,6 +10183,23 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           }
         }
 
+        /// <summary>Field number for the "machine_type" field.</summary>
+        public const int MachineTypeFieldNumber = 4;
+        private string machineType_ = "";
+        /// <summary>
+        /// Machine type of the VM instance. E.g. "n2-highmem-4",
+        /// "n2-highmem-8", "c4a-highmem-4-lssd".
+        /// cpu_count must match the number of vCPUs in the machine type.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string MachineType {
+          get { return machineType_; }
+          set {
+            machineType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -9543,6 +10216,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             return true;
           }
           if (CpuCount != other.CpuCount) return false;
+          if (MachineType != other.MachineType) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -9551,6 +10225,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         public override int GetHashCode() {
           int hash = 1;
           if (CpuCount != 0) hash ^= CpuCount.GetHashCode();
+          if (MachineType.Length != 0) hash ^= MachineType.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -9573,6 +10248,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             output.WriteRawTag(8);
             output.WriteInt32(CpuCount);
           }
+          if (MachineType.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(MachineType);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -9587,6 +10266,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             output.WriteRawTag(8);
             output.WriteInt32(CpuCount);
           }
+          if (MachineType.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(MachineType);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -9599,6 +10282,9 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           int size = 0;
           if (CpuCount != 0) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(CpuCount);
+          }
+          if (MachineType.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(MachineType);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -9614,6 +10300,9 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           }
           if (other.CpuCount != 0) {
             CpuCount = other.CpuCount;
+          }
+          if (other.MachineType.Length != 0) {
+            MachineType = other.MachineType;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -9632,6 +10321,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
                 break;
               case 8: {
                 CpuCount = input.ReadInt32();
+                break;
+              }
+              case 34: {
+                MachineType = input.ReadString();
                 break;
               }
             }
@@ -9653,6 +10346,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
                 CpuCount = input.ReadInt32();
                 break;
               }
+              case 34: {
+                MachineType = input.ReadString();
+                break;
+              }
             }
           }
         }
@@ -9662,7 +10359,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
 
       /// <summary>
       /// Details of a single node in the instance.
-      /// Nodes in an AlloyDB instance are ephemereal, they can change during
+      /// Nodes in an AlloyDB instance are ephemeral, they can change during
       /// update, failover, autohealing and resize operations.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -10399,6 +11096,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           queryPlansPerMinute_ = other.queryPlansPerMinute_;
           trackActiveQueries_ = other.trackActiveQueries_;
           trackClientAddress_ = other.trackClientAddress_;
+          assistiveExperiencesEnabled_ = other.assistiveExperiencesEnabled_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -10511,7 +11209,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         /// Output only. Track wait event types during query execution for an
         /// instance. This flag is turned "on" by default but tracking is enabled
         /// only after observability enabled flag is also turned on. This is
-        /// read-only flag and only modifiable by producer API.
+        /// read-only flag and only modifiable by internal API.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10690,6 +11388,36 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           _hasBits0 &= ~256;
         }
 
+        /// <summary>Field number for the "assistive_experiences_enabled" field.</summary>
+        public const int AssistiveExperiencesEnabledFieldNumber = 10;
+        private readonly static bool AssistiveExperiencesEnabledDefaultValue = false;
+
+        private bool assistiveExperiencesEnabled_;
+        /// <summary>
+        /// Whether assistive experiences are enabled for this AlloyDB instance.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool AssistiveExperiencesEnabled {
+          get { if ((_hasBits0 & 512) != 0) { return assistiveExperiencesEnabled_; } else { return AssistiveExperiencesEnabledDefaultValue; } }
+          set {
+            _hasBits0 |= 512;
+            assistiveExperiencesEnabled_ = value;
+          }
+        }
+        /// <summary>Gets whether the "assistive_experiences_enabled" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasAssistiveExperiencesEnabled {
+          get { return (_hasBits0 & 512) != 0; }
+        }
+        /// <summary>Clears the value of the "assistive_experiences_enabled" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAssistiveExperiencesEnabled() {
+          _hasBits0 &= ~512;
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -10714,6 +11442,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           if (QueryPlansPerMinute != other.QueryPlansPerMinute) return false;
           if (TrackActiveQueries != other.TrackActiveQueries) return false;
           if (TrackClientAddress != other.TrackClientAddress) return false;
+          if (AssistiveExperiencesEnabled != other.AssistiveExperiencesEnabled) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -10730,6 +11459,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           if (HasQueryPlansPerMinute) hash ^= QueryPlansPerMinute.GetHashCode();
           if (HasTrackActiveQueries) hash ^= TrackActiveQueries.GetHashCode();
           if (HasTrackClientAddress) hash ^= TrackClientAddress.GetHashCode();
+          if (HasAssistiveExperiencesEnabled) hash ^= AssistiveExperiencesEnabled.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -10784,6 +11514,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             output.WriteRawTag(72);
             output.WriteBool(TrackClientAddress);
           }
+          if (HasAssistiveExperiencesEnabled) {
+            output.WriteRawTag(80);
+            output.WriteBool(AssistiveExperiencesEnabled);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -10830,6 +11564,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             output.WriteRawTag(72);
             output.WriteBool(TrackClientAddress);
           }
+          if (HasAssistiveExperiencesEnabled) {
+            output.WriteRawTag(80);
+            output.WriteBool(AssistiveExperiencesEnabled);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -10865,6 +11603,9 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             size += 1 + 1;
           }
           if (HasTrackClientAddress) {
+            size += 1 + 1;
+          }
+          if (HasAssistiveExperiencesEnabled) {
             size += 1 + 1;
           }
           if (_unknownFields != null) {
@@ -10905,6 +11646,9 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           }
           if (other.HasTrackClientAddress) {
             TrackClientAddress = other.TrackClientAddress;
+          }
+          if (other.HasAssistiveExperiencesEnabled) {
+            AssistiveExperiencesEnabled = other.AssistiveExperiencesEnabled;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -10957,6 +11701,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
                 TrackClientAddress = input.ReadBool();
                 break;
               }
+              case 80: {
+                AssistiveExperiencesEnabled = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -11006,6 +11754,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
               }
               case 72: {
                 TrackClientAddress = input.ReadBool();
+                break;
+              }
+              case 80: {
+                AssistiveExperiencesEnabled = input.ReadBool();
                 break;
               }
             }
@@ -11681,6 +12433,591 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       }
 
       /// <summary>
+      /// Configuration for setting up a PSC interface to enable outbound
+      /// connectivity.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class PscInterfaceConfig : pb::IMessage<PscInterfaceConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<PscInterfaceConfig> _parser = new pb::MessageParser<PscInterfaceConfig>(() => new PscInterfaceConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<PscInterfaceConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AlloyDb.V1Beta.Instance.Descriptor.NestedTypes[7]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PscInterfaceConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PscInterfaceConfig(PscInterfaceConfig other) : this() {
+          networkAttachmentResource_ = other.networkAttachmentResource_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PscInterfaceConfig Clone() {
+          return new PscInterfaceConfig(this);
+        }
+
+        /// <summary>Field number for the "network_attachment_resource" field.</summary>
+        public const int NetworkAttachmentResourceFieldNumber = 1;
+        private string networkAttachmentResource_ = "";
+        /// <summary>
+        /// The network attachment resource created in the consumer network to which
+        /// the PSC interface will be linked. This is of the format:
+        /// "projects/${CONSUMER_PROJECT}/regions/${REGION}/networkAttachments/${NETWORK_ATTACHMENT_NAME}".
+        /// The network attachment must be in the same region as the instance.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string NetworkAttachmentResource {
+          get { return networkAttachmentResource_; }
+          set {
+            networkAttachmentResource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as PscInterfaceConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(PscInterfaceConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (NetworkAttachmentResource != other.NetworkAttachmentResource) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (NetworkAttachmentResource.Length != 0) hash ^= NetworkAttachmentResource.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (NetworkAttachmentResource.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(NetworkAttachmentResource);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (NetworkAttachmentResource.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(NetworkAttachmentResource);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (NetworkAttachmentResource.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(NetworkAttachmentResource);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(PscInterfaceConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.NetworkAttachmentResource.Length != 0) {
+            NetworkAttachmentResource = other.NetworkAttachmentResource;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                NetworkAttachmentResource = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                NetworkAttachmentResource = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Configuration for setting up PSC service automation. Consumer projects in
+      /// the configs will be allowlisted automatically for the instance.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class PscAutoConnectionConfig : pb::IMessage<PscAutoConnectionConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<PscAutoConnectionConfig> _parser = new pb::MessageParser<PscAutoConnectionConfig>(() => new PscAutoConnectionConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<PscAutoConnectionConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AlloyDb.V1Beta.Instance.Descriptor.NestedTypes[8]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PscAutoConnectionConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PscAutoConnectionConfig(PscAutoConnectionConfig other) : this() {
+          consumerProject_ = other.consumerProject_;
+          consumerNetwork_ = other.consumerNetwork_;
+          ipAddress_ = other.ipAddress_;
+          status_ = other.status_;
+          consumerNetworkStatus_ = other.consumerNetworkStatus_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PscAutoConnectionConfig Clone() {
+          return new PscAutoConnectionConfig(this);
+        }
+
+        /// <summary>Field number for the "consumer_project" field.</summary>
+        public const int ConsumerProjectFieldNumber = 1;
+        private string consumerProject_ = "";
+        /// <summary>
+        /// The consumer project to which the PSC service automation endpoint will
+        /// be created.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ConsumerProject {
+          get { return consumerProject_; }
+          set {
+            consumerProject_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "consumer_network" field.</summary>
+        public const int ConsumerNetworkFieldNumber = 2;
+        private string consumerNetwork_ = "";
+        /// <summary>
+        /// The consumer network for the PSC service automation, example:
+        /// "projects/vpc-host-project/global/networks/default".
+        /// The consumer network might be hosted a different project than the
+        /// consumer project.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ConsumerNetwork {
+          get { return consumerNetwork_; }
+          set {
+            consumerNetwork_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "ip_address" field.</summary>
+        public const int IpAddressFieldNumber = 3;
+        private string ipAddress_ = "";
+        /// <summary>
+        /// Output only. The IP address of the PSC service automation endpoint.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string IpAddress {
+          get { return ipAddress_; }
+          set {
+            ipAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "status" field.</summary>
+        public const int StatusFieldNumber = 4;
+        private string status_ = "";
+        /// <summary>
+        /// Output only. The status of the PSC service automation connection.
+        /// Possible values:
+        ///   "STATE_UNSPECIFIED" - An invalid state as the default case.
+        ///   "ACTIVE" - The connection has been created successfully.
+        ///   "FAILED" - The connection is not functional since some resources on the
+        /// connection fail to be created.
+        ///   "CREATING" - The connection is being created.
+        ///   "DELETING" - The connection is being deleted.
+        ///   "CREATE_REPAIRING" - The connection is being repaired to complete
+        /// creation.
+        ///   "DELETE_REPAIRING" - The connection is being repaired to complete
+        /// deletion.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Status {
+          get { return status_; }
+          set {
+            status_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "consumer_network_status" field.</summary>
+        public const int ConsumerNetworkStatusFieldNumber = 5;
+        private string consumerNetworkStatus_ = "";
+        /// <summary>
+        /// Output only. The status of the service connection policy.
+        /// Possible values:
+        ///   "STATE_UNSPECIFIED" - Default state, when Connection Map is created
+        /// initially.
+        ///   "VALID" - Set when policy and map configuration is valid, and their
+        /// matching can lead to allowing creation of PSC Connections subject to
+        /// other constraints like connections limit.
+        ///   "CONNECTION_POLICY_MISSING" - No Service Connection Policy found for
+        /// this network and Service Class
+        ///   "POLICY_LIMIT_REACHED" - Service Connection Policy limit reached for
+        ///   this network and Service Class
+        ///   "CONSUMER_INSTANCE_PROJECT_NOT_ALLOWLISTED" - The consumer instance
+        /// project is not in AllowedGoogleProducersResourceHierarchyLevels of the
+        /// matching ServiceConnectionPolicy.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ConsumerNetworkStatus {
+          get { return consumerNetworkStatus_; }
+          set {
+            consumerNetworkStatus_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as PscAutoConnectionConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(PscAutoConnectionConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ConsumerProject != other.ConsumerProject) return false;
+          if (ConsumerNetwork != other.ConsumerNetwork) return false;
+          if (IpAddress != other.IpAddress) return false;
+          if (Status != other.Status) return false;
+          if (ConsumerNetworkStatus != other.ConsumerNetworkStatus) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ConsumerProject.Length != 0) hash ^= ConsumerProject.GetHashCode();
+          if (ConsumerNetwork.Length != 0) hash ^= ConsumerNetwork.GetHashCode();
+          if (IpAddress.Length != 0) hash ^= IpAddress.GetHashCode();
+          if (Status.Length != 0) hash ^= Status.GetHashCode();
+          if (ConsumerNetworkStatus.Length != 0) hash ^= ConsumerNetworkStatus.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ConsumerProject.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ConsumerProject);
+          }
+          if (ConsumerNetwork.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(ConsumerNetwork);
+          }
+          if (IpAddress.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(IpAddress);
+          }
+          if (Status.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(Status);
+          }
+          if (ConsumerNetworkStatus.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(ConsumerNetworkStatus);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ConsumerProject.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ConsumerProject);
+          }
+          if (ConsumerNetwork.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(ConsumerNetwork);
+          }
+          if (IpAddress.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(IpAddress);
+          }
+          if (Status.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(Status);
+          }
+          if (ConsumerNetworkStatus.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(ConsumerNetworkStatus);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ConsumerProject.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ConsumerProject);
+          }
+          if (ConsumerNetwork.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ConsumerNetwork);
+          }
+          if (IpAddress.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(IpAddress);
+          }
+          if (Status.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Status);
+          }
+          if (ConsumerNetworkStatus.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ConsumerNetworkStatus);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(PscAutoConnectionConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ConsumerProject.Length != 0) {
+            ConsumerProject = other.ConsumerProject;
+          }
+          if (other.ConsumerNetwork.Length != 0) {
+            ConsumerNetwork = other.ConsumerNetwork;
+          }
+          if (other.IpAddress.Length != 0) {
+            IpAddress = other.IpAddress;
+          }
+          if (other.Status.Length != 0) {
+            Status = other.Status;
+          }
+          if (other.ConsumerNetworkStatus.Length != 0) {
+            ConsumerNetworkStatus = other.ConsumerNetworkStatus;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                ConsumerProject = input.ReadString();
+                break;
+              }
+              case 18: {
+                ConsumerNetwork = input.ReadString();
+                break;
+              }
+              case 26: {
+                IpAddress = input.ReadString();
+                break;
+              }
+              case 34: {
+                Status = input.ReadString();
+                break;
+              }
+              case 42: {
+                ConsumerNetworkStatus = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                ConsumerProject = input.ReadString();
+                break;
+              }
+              case 18: {
+                ConsumerNetwork = input.ReadString();
+                break;
+              }
+              case 26: {
+                IpAddress = input.ReadString();
+                break;
+              }
+              case 34: {
+                Status = input.ReadString();
+                break;
+              }
+              case 42: {
+                ConsumerNetworkStatus = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// PscInstanceConfig contains PSC related configuration at an
       /// instance level.
       /// </summary>
@@ -11699,7 +13036,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.AlloyDb.V1Beta.Instance.Descriptor.NestedTypes[7]; }
+          get { return global::Google.Cloud.AlloyDb.V1Beta.Instance.Descriptor.NestedTypes[9]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11722,6 +13059,8 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           serviceAttachmentLink_ = other.serviceAttachmentLink_;
           allowedConsumerProjects_ = other.allowedConsumerProjects_.Clone();
           pscDnsName_ = other.pscDnsName_;
+          pscInterfaceConfigs_ = other.pscInterfaceConfigs_.Clone();
+          pscAutoConnections_ = other.pscAutoConnections_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -11780,6 +13119,37 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           }
         }
 
+        /// <summary>Field number for the "psc_interface_configs" field.</summary>
+        public const int PscInterfaceConfigsFieldNumber = 8;
+        private static readonly pb::FieldCodec<global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.PscInterfaceConfig> _repeated_pscInterfaceConfigs_codec
+            = pb::FieldCodec.ForMessage(66, global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.PscInterfaceConfig.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.PscInterfaceConfig> pscInterfaceConfigs_ = new pbc::RepeatedField<global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.PscInterfaceConfig>();
+        /// <summary>
+        /// Optional. Configurations for setting up PSC interfaces attached to the
+        /// instance which are used for outbound connectivity. Only primary instances
+        /// can have PSC interface attached. Currently we only support 0 or 1 PSC
+        /// interface.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.PscInterfaceConfig> PscInterfaceConfigs {
+          get { return pscInterfaceConfigs_; }
+        }
+
+        /// <summary>Field number for the "psc_auto_connections" field.</summary>
+        public const int PscAutoConnectionsFieldNumber = 9;
+        private static readonly pb::FieldCodec<global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.PscAutoConnectionConfig> _repeated_pscAutoConnections_codec
+            = pb::FieldCodec.ForMessage(74, global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.PscAutoConnectionConfig.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.PscAutoConnectionConfig> pscAutoConnections_ = new pbc::RepeatedField<global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.PscAutoConnectionConfig>();
+        /// <summary>
+        /// Optional. Configurations for setting up PSC service automation.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.AlloyDb.V1Beta.Instance.Types.PscAutoConnectionConfig> PscAutoConnections {
+          get { return pscAutoConnections_; }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -11798,6 +13168,8 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           if (ServiceAttachmentLink != other.ServiceAttachmentLink) return false;
           if(!allowedConsumerProjects_.Equals(other.allowedConsumerProjects_)) return false;
           if (PscDnsName != other.PscDnsName) return false;
+          if(!pscInterfaceConfigs_.Equals(other.pscInterfaceConfigs_)) return false;
+          if(!pscAutoConnections_.Equals(other.pscAutoConnections_)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -11808,6 +13180,8 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           if (ServiceAttachmentLink.Length != 0) hash ^= ServiceAttachmentLink.GetHashCode();
           hash ^= allowedConsumerProjects_.GetHashCode();
           if (PscDnsName.Length != 0) hash ^= PscDnsName.GetHashCode();
+          hash ^= pscInterfaceConfigs_.GetHashCode();
+          hash ^= pscAutoConnections_.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -11835,6 +13209,8 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             output.WriteRawTag(58);
             output.WriteString(PscDnsName);
           }
+          pscInterfaceConfigs_.WriteTo(output, _repeated_pscInterfaceConfigs_codec);
+          pscAutoConnections_.WriteTo(output, _repeated_pscAutoConnections_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -11854,6 +13230,8 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             output.WriteRawTag(58);
             output.WriteString(PscDnsName);
           }
+          pscInterfaceConfigs_.WriteTo(ref output, _repeated_pscInterfaceConfigs_codec);
+          pscAutoConnections_.WriteTo(ref output, _repeated_pscAutoConnections_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -11871,6 +13249,8 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           if (PscDnsName.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(PscDnsName);
           }
+          size += pscInterfaceConfigs_.CalculateSize(_repeated_pscInterfaceConfigs_codec);
+          size += pscAutoConnections_.CalculateSize(_repeated_pscAutoConnections_codec);
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -11890,6 +13270,8 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           if (other.PscDnsName.Length != 0) {
             PscDnsName = other.PscDnsName;
           }
+          pscInterfaceConfigs_.Add(other.pscInterfaceConfigs_);
+          pscAutoConnections_.Add(other.pscAutoConnections_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -11915,6 +13297,14 @@ namespace Google.Cloud.AlloyDb.V1Beta {
               }
               case 58: {
                 PscDnsName = input.ReadString();
+                break;
+              }
+              case 66: {
+                pscInterfaceConfigs_.AddEntriesFrom(input, _repeated_pscInterfaceConfigs_codec);
+                break;
+              }
+              case 74: {
+                pscAutoConnections_.AddEntriesFrom(input, _repeated_pscAutoConnections_codec);
                 break;
               }
             }
@@ -11944,6 +13334,14 @@ namespace Google.Cloud.AlloyDb.V1Beta {
                 PscDnsName = input.ReadString();
                 break;
               }
+              case 66: {
+                pscInterfaceConfigs_.AddEntriesFrom(ref input, _repeated_pscInterfaceConfigs_codec);
+                break;
+              }
+              case 74: {
+                pscAutoConnections_.AddEntriesFrom(ref input, _repeated_pscAutoConnections_codec);
+                break;
+              }
             }
           }
         }
@@ -11969,7 +13367,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.AlloyDb.V1Beta.Instance.Descriptor.NestedTypes[8]; }
+          get { return global::Google.Cloud.AlloyDb.V1Beta.Instance.Descriptor.NestedTypes[10]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11992,6 +13390,8 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           authorizedExternalNetworks_ = other.authorizedExternalNetworks_.Clone();
           enablePublicIp_ = other.enablePublicIp_;
           enableOutboundPublicIp_ = other.enableOutboundPublicIp_;
+          network_ = other.network_;
+          allocatedIpRangeOverride_ = other.allocatedIpRangeOverride_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -12046,6 +13446,46 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           }
         }
 
+        /// <summary>Field number for the "network" field.</summary>
+        public const int NetworkFieldNumber = 4;
+        private string network_ = "";
+        /// <summary>
+        /// Output only. The resource link for the VPC network in which instance
+        /// resources are created and from which they are accessible via Private IP.
+        /// This will be the same value as the parent cluster's network. It is
+        /// specified in the form: //
+        /// `projects/{project_number}/global/networks/{network_id}`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Network {
+          get { return network_; }
+          set {
+            network_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "allocated_ip_range_override" field.</summary>
+        public const int AllocatedIpRangeOverrideFieldNumber = 5;
+        private string allocatedIpRangeOverride_ = "";
+        /// <summary>
+        /// Optional. Name of the allocated IP range for the private IP AlloyDB
+        /// instance, for example: "google-managed-services-default". If set, the
+        /// instance IPs will be created from this allocated range and will override
+        /// the IP range used by the parent cluster. The range name must comply with
+        /// [RFC 1035](http://datatracker.ietf.org/doc/html/rfc1035). Specifically,
+        /// the name must be 1-63 characters long and match the regular expression
+        /// [a-z]([-a-z0-9]*[a-z0-9])?.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string AllocatedIpRangeOverride {
+          get { return allocatedIpRangeOverride_; }
+          set {
+            allocatedIpRangeOverride_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -12064,6 +13504,8 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           if(!authorizedExternalNetworks_.Equals(other.authorizedExternalNetworks_)) return false;
           if (EnablePublicIp != other.EnablePublicIp) return false;
           if (EnableOutboundPublicIp != other.EnableOutboundPublicIp) return false;
+          if (Network != other.Network) return false;
+          if (AllocatedIpRangeOverride != other.AllocatedIpRangeOverride) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -12074,6 +13516,8 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           hash ^= authorizedExternalNetworks_.GetHashCode();
           if (EnablePublicIp != false) hash ^= EnablePublicIp.GetHashCode();
           if (EnableOutboundPublicIp != false) hash ^= EnableOutboundPublicIp.GetHashCode();
+          if (Network.Length != 0) hash ^= Network.GetHashCode();
+          if (AllocatedIpRangeOverride.Length != 0) hash ^= AllocatedIpRangeOverride.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -12101,6 +13545,14 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             output.WriteRawTag(24);
             output.WriteBool(EnableOutboundPublicIp);
           }
+          if (Network.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(Network);
+          }
+          if (AllocatedIpRangeOverride.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(AllocatedIpRangeOverride);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -12120,6 +13572,14 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             output.WriteRawTag(24);
             output.WriteBool(EnableOutboundPublicIp);
           }
+          if (Network.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(Network);
+          }
+          if (AllocatedIpRangeOverride.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(AllocatedIpRangeOverride);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -12136,6 +13596,12 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           }
           if (EnableOutboundPublicIp != false) {
             size += 1 + 1;
+          }
+          if (Network.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Network);
+          }
+          if (AllocatedIpRangeOverride.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(AllocatedIpRangeOverride);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -12155,6 +13621,12 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           }
           if (other.EnableOutboundPublicIp != false) {
             EnableOutboundPublicIp = other.EnableOutboundPublicIp;
+          }
+          if (other.Network.Length != 0) {
+            Network = other.Network;
+          }
+          if (other.AllocatedIpRangeOverride.Length != 0) {
+            AllocatedIpRangeOverride = other.AllocatedIpRangeOverride;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -12183,6 +13655,14 @@ namespace Google.Cloud.AlloyDb.V1Beta {
                 EnableOutboundPublicIp = input.ReadBool();
                 break;
               }
+              case 34: {
+                Network = input.ReadString();
+                break;
+              }
+              case 42: {
+                AllocatedIpRangeOverride = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -12208,6 +13688,14 @@ namespace Google.Cloud.AlloyDb.V1Beta {
               }
               case 24: {
                 EnableOutboundPublicIp = input.ReadBool();
+                break;
+              }
+              case 34: {
+                Network = input.ReadString();
+                break;
+              }
+              case 42: {
+                AllocatedIpRangeOverride = input.ReadString();
                 break;
               }
             }
@@ -12418,6 +13906,271 @@ namespace Google.Cloud.AlloyDb.V1Beta {
 
         }
         #endregion
+
+      }
+
+      /// <summary>
+      /// Configuration for Managed Connection Pool (MCP).
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ConnectionPoolConfig : pb::IMessage<ConnectionPoolConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ConnectionPoolConfig> _parser = new pb::MessageParser<ConnectionPoolConfig>(() => new ConnectionPoolConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ConnectionPoolConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AlloyDb.V1Beta.Instance.Descriptor.NestedTypes[11]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConnectionPoolConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConnectionPoolConfig(ConnectionPoolConfig other) : this() {
+          enabled_ = other.enabled_;
+          flags_ = other.flags_.Clone();
+          poolerCount_ = other.poolerCount_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConnectionPoolConfig Clone() {
+          return new ConnectionPoolConfig(this);
+        }
+
+        /// <summary>Field number for the "enabled" field.</summary>
+        public const int EnabledFieldNumber = 12;
+        private bool enabled_;
+        /// <summary>
+        /// Optional. Whether to enable Managed Connection Pool (MCP).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Enabled {
+          get { return enabled_; }
+          set {
+            enabled_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "flags" field.</summary>
+        public const int FlagsFieldNumber = 13;
+        private static readonly pbc::MapField<string, string>.Codec _map_flags_codec
+            = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 106);
+        private readonly pbc::MapField<string, string> flags_ = new pbc::MapField<string, string>();
+        /// <summary>
+        /// Optional. Connection Pool flags, as a list of "key": "value" pairs.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::MapField<string, string> Flags {
+          get { return flags_; }
+        }
+
+        /// <summary>Field number for the "pooler_count" field.</summary>
+        public const int PoolerCountFieldNumber = 14;
+        private int poolerCount_;
+        /// <summary>
+        /// Output only. The number of running poolers per instance.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int PoolerCount {
+          get { return poolerCount_; }
+          set {
+            poolerCount_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ConnectionPoolConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ConnectionPoolConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Enabled != other.Enabled) return false;
+          if (!Flags.Equals(other.Flags)) return false;
+          if (PoolerCount != other.PoolerCount) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Enabled != false) hash ^= Enabled.GetHashCode();
+          hash ^= Flags.GetHashCode();
+          if (PoolerCount != 0) hash ^= PoolerCount.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Enabled != false) {
+            output.WriteRawTag(96);
+            output.WriteBool(Enabled);
+          }
+          flags_.WriteTo(output, _map_flags_codec);
+          if (PoolerCount != 0) {
+            output.WriteRawTag(112);
+            output.WriteInt32(PoolerCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Enabled != false) {
+            output.WriteRawTag(96);
+            output.WriteBool(Enabled);
+          }
+          flags_.WriteTo(ref output, _map_flags_codec);
+          if (PoolerCount != 0) {
+            output.WriteRawTag(112);
+            output.WriteInt32(PoolerCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Enabled != false) {
+            size += 1 + 1;
+          }
+          size += flags_.CalculateSize(_map_flags_codec);
+          if (PoolerCount != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(PoolerCount);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ConnectionPoolConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Enabled != false) {
+            Enabled = other.Enabled;
+          }
+          flags_.MergeFrom(other.flags_);
+          if (other.PoolerCount != 0) {
+            PoolerCount = other.PoolerCount;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 96: {
+                Enabled = input.ReadBool();
+                break;
+              }
+              case 106: {
+                flags_.AddEntriesFrom(input, _map_flags_codec);
+                break;
+              }
+              case 112: {
+                PoolerCount = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 96: {
+                Enabled = input.ReadBool();
+                break;
+              }
+              case 106: {
+                flags_.AddEntriesFrom(ref input, _map_flags_codec);
+                break;
+              }
+              case 112: {
+                PoolerCount = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -12864,6 +14617,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       deleteTime_ = other.deleteTime_ != null ? other.deleteTime_.Clone() : null;
+      createCompletionTime_ = other.createCompletionTime_ != null ? other.createCompletionTime_.Clone() : null;
       labels_ = other.labels_.Clone();
       state_ = other.state_;
       type_ = other.type_;
@@ -12964,6 +14718,9 @@ namespace Google.Cloud.AlloyDb.V1Beta {
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
     /// Output only. Update time stamp
+    ///
+    /// Users should not infer any meaning from this field. Its value is generally
+    /// unrelated to the timing of the backup creation operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12986,6 +14743,21 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       get { return deleteTime_; }
       set {
         deleteTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "create_completion_time" field.</summary>
+    public const int CreateCompletionTimeFieldNumber = 26;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createCompletionTime_;
+    /// <summary>
+    /// Output only. Timestamp when the resource finished being created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateCompletionTime {
+      get { return createCompletionTime_; }
+      set {
+        createCompletionTime_ = value;
       }
     }
 
@@ -13283,6 +15055,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (!object.Equals(DeleteTime, other.DeleteTime)) return false;
+      if (!object.Equals(CreateCompletionTime, other.CreateCompletionTime)) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (State != other.State) return false;
       if (Type != other.Type) return false;
@@ -13313,6 +15086,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (deleteTime_ != null) hash ^= DeleteTime.GetHashCode();
+      if (createCompletionTime_ != null) hash ^= CreateCompletionTime.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (State != global::Google.Cloud.AlloyDb.V1Beta.Backup.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (Type != global::Google.Cloud.AlloyDb.V1Beta.Backup.Types.Type.Unspecified) hash ^= Type.GetHashCode();
@@ -13431,6 +15205,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         output.WriteEnum((int) DatabaseVersion);
       }
       tags_.WriteTo(output, _map_tags_codec);
+      if (createCompletionTime_ != null) {
+        output.WriteRawTag(210, 1);
+        output.WriteMessage(CreateCompletionTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -13524,6 +15302,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         output.WriteEnum((int) DatabaseVersion);
       }
       tags_.WriteTo(ref output, _map_tags_codec);
+      if (createCompletionTime_ != null) {
+        output.WriteRawTag(210, 1);
+        output.WriteMessage(CreateCompletionTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -13551,6 +15333,9 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       }
       if (deleteTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeleteTime);
+      }
+      if (createCompletionTime_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(CreateCompletionTime);
       }
       size += labels_.CalculateSize(_map_labels_codec);
       if (State != global::Google.Cloud.AlloyDb.V1Beta.Backup.Types.State.Unspecified) {
@@ -13635,6 +15420,12 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         DeleteTime.MergeFrom(other.DeleteTime);
+      }
+      if (other.createCompletionTime_ != null) {
+        if (createCompletionTime_ == null) {
+          CreateCompletionTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateCompletionTime.MergeFrom(other.CreateCompletionTime);
       }
       labels_.MergeFrom(other.labels_);
       if (other.State != global::Google.Cloud.AlloyDb.V1Beta.Backup.Types.State.Unspecified) {
@@ -13821,6 +15612,13 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             tags_.AddEntriesFrom(input, _map_tags_codec);
             break;
           }
+          case 210: {
+            if (createCompletionTime_ == null) {
+              CreateCompletionTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateCompletionTime);
+            break;
+          }
         }
       }
     #endif
@@ -13947,6 +15745,13 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           }
           case 202: {
             tags_.AddEntriesFrom(ref input, _map_tags_codec);
+            break;
+          }
+          case 210: {
+            if (createCompletionTime_ == null) {
+              CreateCompletionTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateCompletionTime);
             break;
           }
         }
@@ -14313,12 +16118,22 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       acceptsMultipleValues_ = other.acceptsMultipleValues_;
       supportedDbVersions_ = other.supportedDbVersions_.Clone();
       requiresDbRestart_ = other.requiresDbRestart_;
+      scope_ = other.scope_;
       switch (other.RestrictionsCase) {
         case RestrictionsOneofCase.StringRestrictions:
           StringRestrictions = other.StringRestrictions.Clone();
           break;
         case RestrictionsOneofCase.IntegerRestrictions:
           IntegerRestrictions = other.IntegerRestrictions.Clone();
+          break;
+      }
+
+      switch (other.RecommendedValueCase) {
+        case RecommendedValueOneofCase.RecommendedStringValue:
+          RecommendedStringValue = other.RecommendedStringValue;
+          break;
+        case RecommendedValueOneofCase.RecommendedIntegerValue:
+          RecommendedIntegerValue = other.RecommendedIntegerValue;
           break;
       }
 
@@ -14358,6 +16173,51 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       set {
         restrictions_ = value;
         restrictionsCase_ = value == null ? RestrictionsOneofCase.None : RestrictionsOneofCase.IntegerRestrictions;
+      }
+    }
+
+    /// <summary>Field number for the "recommended_string_value" field.</summary>
+    public const int RecommendedStringValueFieldNumber = 10;
+    /// <summary>
+    /// The recommended value for a STRING flag.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RecommendedStringValue {
+      get { return HasRecommendedStringValue ? (string) recommendedValue_ : ""; }
+      set {
+        recommendedValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        recommendedValueCase_ = RecommendedValueOneofCase.RecommendedStringValue;
+      }
+    }
+    /// <summary>Gets whether the "recommended_string_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRecommendedStringValue {
+      get { return recommendedValueCase_ == RecommendedValueOneofCase.RecommendedStringValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "recommended_string_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRecommendedStringValue() {
+      if (HasRecommendedStringValue) {
+        ClearRecommendedValue();
+      }
+    }
+
+    /// <summary>Field number for the "recommended_integer_value" field.</summary>
+    public const int RecommendedIntegerValueFieldNumber = 11;
+    private static readonly pb::FieldCodec<long?> _oneof_recommendedIntegerValue_codec = pb::FieldCodec.ForStructWrapper<long>(90);
+    /// <summary>
+    /// The recommended value for an INTEGER flag.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long? RecommendedIntegerValue {
+      get { return recommendedValueCase_ == RecommendedValueOneofCase.RecommendedIntegerValue ? (long?) recommendedValue_ : (long?) null; }
+      set {
+        recommendedValue_ = value;
+        recommendedValueCase_ = value == null ? RecommendedValueOneofCase.None : RecommendedValueOneofCase.RecommendedIntegerValue;
       }
     }
 
@@ -14454,6 +16314,21 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "scope" field.</summary>
+    public const int ScopeFieldNumber = 9;
+    private global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag.Types.Scope scope_ = global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag.Types.Scope.Unspecified;
+    /// <summary>
+    /// The scope of the flag.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag.Types.Scope Scope {
+      get { return scope_; }
+      set {
+        scope_ = value;
+      }
+    }
+
     private object restrictions_;
     /// <summary>Enum of possible cases for the "restrictions" oneof.</summary>
     public enum RestrictionsOneofCase {
@@ -14475,6 +16350,27 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       restrictions_ = null;
     }
 
+    private object recommendedValue_;
+    /// <summary>Enum of possible cases for the "recommended_value" oneof.</summary>
+    public enum RecommendedValueOneofCase {
+      None = 0,
+      RecommendedStringValue = 10,
+      RecommendedIntegerValue = 11,
+    }
+    private RecommendedValueOneofCase recommendedValueCase_ = RecommendedValueOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RecommendedValueOneofCase RecommendedValueCase {
+      get { return recommendedValueCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRecommendedValue() {
+      recommendedValueCase_ = RecommendedValueOneofCase.None;
+      recommendedValue_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -14492,13 +16388,17 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       }
       if (!object.Equals(StringRestrictions, other.StringRestrictions)) return false;
       if (!object.Equals(IntegerRestrictions, other.IntegerRestrictions)) return false;
+      if (RecommendedStringValue != other.RecommendedStringValue) return false;
+      if (RecommendedIntegerValue != other.RecommendedIntegerValue) return false;
       if (Name != other.Name) return false;
       if (FlagName != other.FlagName) return false;
       if (ValueType != other.ValueType) return false;
       if (AcceptsMultipleValues != other.AcceptsMultipleValues) return false;
       if(!supportedDbVersions_.Equals(other.supportedDbVersions_)) return false;
       if (RequiresDbRestart != other.RequiresDbRestart) return false;
+      if (Scope != other.Scope) return false;
       if (RestrictionsCase != other.RestrictionsCase) return false;
+      if (RecommendedValueCase != other.RecommendedValueCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -14508,13 +16408,17 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       int hash = 1;
       if (restrictionsCase_ == RestrictionsOneofCase.StringRestrictions) hash ^= StringRestrictions.GetHashCode();
       if (restrictionsCase_ == RestrictionsOneofCase.IntegerRestrictions) hash ^= IntegerRestrictions.GetHashCode();
+      if (HasRecommendedStringValue) hash ^= RecommendedStringValue.GetHashCode();
+      if (recommendedValueCase_ == RecommendedValueOneofCase.RecommendedIntegerValue) hash ^= RecommendedIntegerValue.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (FlagName.Length != 0) hash ^= FlagName.GetHashCode();
       if (ValueType != global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag.Types.ValueType.Unspecified) hash ^= ValueType.GetHashCode();
       if (AcceptsMultipleValues != false) hash ^= AcceptsMultipleValues.GetHashCode();
       hash ^= supportedDbVersions_.GetHashCode();
       if (RequiresDbRestart != false) hash ^= RequiresDbRestart.GetHashCode();
+      if (Scope != global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag.Types.Scope.Unspecified) hash ^= Scope.GetHashCode();
       hash ^= (int) restrictionsCase_;
+      hash ^= (int) recommendedValueCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -14562,6 +16466,17 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         output.WriteRawTag(66);
         output.WriteMessage(IntegerRestrictions);
       }
+      if (Scope != global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag.Types.Scope.Unspecified) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) Scope);
+      }
+      if (HasRecommendedStringValue) {
+        output.WriteRawTag(82);
+        output.WriteString(RecommendedStringValue);
+      }
+      if (recommendedValueCase_ == RecommendedValueOneofCase.RecommendedIntegerValue) {
+        _oneof_recommendedIntegerValue_codec.WriteTagAndValue(output, (long?) recommendedValue_);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -14601,6 +16516,17 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         output.WriteRawTag(66);
         output.WriteMessage(IntegerRestrictions);
       }
+      if (Scope != global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag.Types.Scope.Unspecified) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) Scope);
+      }
+      if (HasRecommendedStringValue) {
+        output.WriteRawTag(82);
+        output.WriteString(RecommendedStringValue);
+      }
+      if (recommendedValueCase_ == RecommendedValueOneofCase.RecommendedIntegerValue) {
+        _oneof_recommendedIntegerValue_codec.WriteTagAndValue(ref output, (long?) recommendedValue_);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -14617,6 +16543,12 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       if (restrictionsCase_ == RestrictionsOneofCase.IntegerRestrictions) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(IntegerRestrictions);
       }
+      if (HasRecommendedStringValue) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RecommendedStringValue);
+      }
+      if (recommendedValueCase_ == RecommendedValueOneofCase.RecommendedIntegerValue) {
+        size += _oneof_recommendedIntegerValue_codec.CalculateSizeWithTag(RecommendedIntegerValue);
+      }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
@@ -14632,6 +16564,9 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       size += supportedDbVersions_.CalculateSize(_repeated_supportedDbVersions_codec);
       if (RequiresDbRestart != false) {
         size += 1 + 1;
+      }
+      if (Scope != global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag.Types.Scope.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Scope);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -14661,6 +16596,9 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       if (other.RequiresDbRestart != false) {
         RequiresDbRestart = other.RequiresDbRestart;
       }
+      if (other.Scope != global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag.Types.Scope.Unspecified) {
+        Scope = other.Scope;
+      }
       switch (other.RestrictionsCase) {
         case RestrictionsOneofCase.StringRestrictions:
           if (StringRestrictions == null) {
@@ -14673,6 +16611,15 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             IntegerRestrictions = new global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag.Types.IntegerRestrictions();
           }
           IntegerRestrictions.MergeFrom(other.IntegerRestrictions);
+          break;
+      }
+
+      switch (other.RecommendedValueCase) {
+        case RecommendedValueOneofCase.RecommendedStringValue:
+          RecommendedStringValue = other.RecommendedStringValue;
+          break;
+        case RecommendedValueOneofCase.RecommendedIntegerValue:
+          RecommendedIntegerValue = other.RecommendedIntegerValue;
           break;
       }
 
@@ -14734,6 +16681,18 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             IntegerRestrictions = subBuilder;
             break;
           }
+          case 72: {
+            Scope = (global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag.Types.Scope) input.ReadEnum();
+            break;
+          }
+          case 82: {
+            RecommendedStringValue = input.ReadString();
+            break;
+          }
+          case 90: {
+            RecommendedIntegerValue = _oneof_recommendedIntegerValue_codec.Read(input);
+            break;
+          }
         }
       }
     #endif
@@ -14792,6 +16751,18 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             IntegerRestrictions = subBuilder;
             break;
           }
+          case 72: {
+            Scope = (global::Google.Cloud.AlloyDb.V1Beta.SupportedDatabaseFlag.Types.Scope) input.ReadEnum();
+            break;
+          }
+          case 82: {
+            RecommendedStringValue = input.ReadString();
+            break;
+          }
+          case 90: {
+            RecommendedIntegerValue = _oneof_recommendedIntegerValue_codec.Read(ref input);
+            break;
+          }
         }
       }
     }
@@ -14828,6 +16799,24 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         /// Denotes that the flag does not accept any values.
         /// </summary>
         [pbr::OriginalName("NONE")] None = 4,
+      }
+
+      /// <summary>
+      /// The scope of the flag.
+      /// </summary>
+      public enum Scope {
+        /// <summary>
+        /// The scope of the flag is not specified. Default is DATABASE.
+        /// </summary>
+        [pbr::OriginalName("SCOPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The flag is a database flag.
+        /// </summary>
+        [pbr::OriginalName("DATABASE")] Database = 1,
+        /// <summary>
+        /// The flag is a connection pool flag.
+        /// </summary>
+        [pbr::OriginalName("CONNECTION_POOL")] ConnectionPool = 2,
       }
 
       /// <summary>
@@ -15659,6 +17648,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
   {
     private static readonly pb::MessageParser<Database> _parser = new pb::MessageParser<Database>(() => new Database());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Database> Parser { get { return _parser; } }
@@ -15686,9 +17676,14 @@ namespace Google.Cloud.AlloyDb.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Database(Database other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
       charset_ = other.charset_;
       collation_ = other.collation_;
+      characterType_ = other.characterType_;
+      isTemplate_ = other.isTemplate_;
+      databaseTemplate_ = other.databaseTemplate_;
+      isTemplateDatabase_ = other.isTemplateDatabase_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -15718,7 +17713,7 @@ namespace Google.Cloud.AlloyDb.V1Beta {
     public const int CharsetFieldNumber = 2;
     private string charset_ = "";
     /// <summary>
-    /// Optional. Charset for the database.
+    /// Optional. Immutable. Charset for the database.
     /// This field can contain any PostgreSQL supported charset name.
     /// Example values include "UTF8", "SQL_ASCII", etc.
     /// </summary>
@@ -15735,9 +17730,9 @@ namespace Google.Cloud.AlloyDb.V1Beta {
     public const int CollationFieldNumber = 3;
     private string collation_ = "";
     /// <summary>
-    /// Optional. Collation for the database.
-    /// Name of the custom or native collation for postgres.
-    /// Example values include "C", "POSIX", etc
+    /// Optional. Immutable. lc_collate for the database.
+    /// String sort order.
+    /// Example values include "C", "POSIX", etc.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -15746,6 +17741,86 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       set {
         collation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "character_type" field.</summary>
+    public const int CharacterTypeFieldNumber = 4;
+    private string characterType_ = "";
+    /// <summary>
+    /// Optional. Immutable. lc_ctype for the database.
+    /// Character classification (What is a letter? The upper-case equivalent?).
+    /// Example values include "C", "POSIX", etc.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CharacterType {
+      get { return characterType_; }
+      set {
+        characterType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "is_template" field.</summary>
+    public const int IsTemplateFieldNumber = 5;
+    private bool isTemplate_;
+    /// <summary>
+    /// Optional. Whether the database is a template database.
+    /// Deprecated in favor of is_template_database.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsTemplate {
+      get { return isTemplate_; }
+      set {
+        isTemplate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "database_template" field.</summary>
+    public const int DatabaseTemplateFieldNumber = 6;
+    private string databaseTemplate_ = "";
+    /// <summary>
+    /// Input only. Immutable. Template of the database to be used for creating a
+    /// new database.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DatabaseTemplate {
+      get { return databaseTemplate_; }
+      set {
+        databaseTemplate_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "is_template_database" field.</summary>
+    public const int IsTemplateDatabaseFieldNumber = 7;
+    private readonly static bool IsTemplateDatabaseDefaultValue = false;
+
+    private bool isTemplateDatabase_;
+    /// <summary>
+    /// Optional. Whether the database is a template database.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsTemplateDatabase {
+      get { if ((_hasBits0 & 1) != 0) { return isTemplateDatabase_; } else { return IsTemplateDatabaseDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        isTemplateDatabase_ = value;
+      }
+    }
+    /// <summary>Gets whether the "is_template_database" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIsTemplateDatabase {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "is_template_database" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIsTemplateDatabase() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15766,6 +17841,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       if (Name != other.Name) return false;
       if (Charset != other.Charset) return false;
       if (Collation != other.Collation) return false;
+      if (CharacterType != other.CharacterType) return false;
+      if (IsTemplate != other.IsTemplate) return false;
+      if (DatabaseTemplate != other.DatabaseTemplate) return false;
+      if (IsTemplateDatabase != other.IsTemplateDatabase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -15776,6 +17855,10 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Charset.Length != 0) hash ^= Charset.GetHashCode();
       if (Collation.Length != 0) hash ^= Collation.GetHashCode();
+      if (CharacterType.Length != 0) hash ^= CharacterType.GetHashCode();
+      if (IsTemplate != false) hash ^= IsTemplate.GetHashCode();
+      if (DatabaseTemplate.Length != 0) hash ^= DatabaseTemplate.GetHashCode();
+      if (HasIsTemplateDatabase) hash ^= IsTemplateDatabase.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -15806,6 +17889,22 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         output.WriteRawTag(26);
         output.WriteString(Collation);
       }
+      if (CharacterType.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(CharacterType);
+      }
+      if (IsTemplate != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(IsTemplate);
+      }
+      if (DatabaseTemplate.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(DatabaseTemplate);
+      }
+      if (HasIsTemplateDatabase) {
+        output.WriteRawTag(56);
+        output.WriteBool(IsTemplateDatabase);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -15828,6 +17927,22 @@ namespace Google.Cloud.AlloyDb.V1Beta {
         output.WriteRawTag(26);
         output.WriteString(Collation);
       }
+      if (CharacterType.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(CharacterType);
+      }
+      if (IsTemplate != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(IsTemplate);
+      }
+      if (DatabaseTemplate.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(DatabaseTemplate);
+      }
+      if (HasIsTemplateDatabase) {
+        output.WriteRawTag(56);
+        output.WriteBool(IsTemplateDatabase);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -15846,6 +17961,18 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       }
       if (Collation.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Collation);
+      }
+      if (CharacterType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CharacterType);
+      }
+      if (IsTemplate != false) {
+        size += 1 + 1;
+      }
+      if (DatabaseTemplate.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatabaseTemplate);
+      }
+      if (HasIsTemplateDatabase) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -15867,6 +17994,18 @@ namespace Google.Cloud.AlloyDb.V1Beta {
       }
       if (other.Collation.Length != 0) {
         Collation = other.Collation;
+      }
+      if (other.CharacterType.Length != 0) {
+        CharacterType = other.CharacterType;
+      }
+      if (other.IsTemplate != false) {
+        IsTemplate = other.IsTemplate;
+      }
+      if (other.DatabaseTemplate.Length != 0) {
+        DatabaseTemplate = other.DatabaseTemplate;
+      }
+      if (other.HasIsTemplateDatabase) {
+        IsTemplateDatabase = other.IsTemplateDatabase;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -15895,6 +18034,22 @@ namespace Google.Cloud.AlloyDb.V1Beta {
             Collation = input.ReadString();
             break;
           }
+          case 34: {
+            CharacterType = input.ReadString();
+            break;
+          }
+          case 40: {
+            IsTemplate = input.ReadBool();
+            break;
+          }
+          case 50: {
+            DatabaseTemplate = input.ReadString();
+            break;
+          }
+          case 56: {
+            IsTemplateDatabase = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -15920,6 +18075,22 @@ namespace Google.Cloud.AlloyDb.V1Beta {
           }
           case 26: {
             Collation = input.ReadString();
+            break;
+          }
+          case 34: {
+            CharacterType = input.ReadString();
+            break;
+          }
+          case 40: {
+            IsTemplate = input.ReadBool();
+            break;
+          }
+          case 50: {
+            DatabaseTemplate = input.ReadString();
+            break;
+          }
+          case 56: {
+            IsTemplateDatabase = input.ReadBool();
             break;
           }
         }

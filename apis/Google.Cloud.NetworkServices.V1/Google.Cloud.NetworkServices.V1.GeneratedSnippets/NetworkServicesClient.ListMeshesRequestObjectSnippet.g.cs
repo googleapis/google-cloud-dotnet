@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             ListMeshesRequest request = new ListMeshesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ListMeshesResponse, Mesh> response = networkServicesClient.ListMeshes(request);

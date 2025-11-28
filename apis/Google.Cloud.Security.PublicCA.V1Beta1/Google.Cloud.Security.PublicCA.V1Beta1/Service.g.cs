@@ -43,13 +43,13 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1 {
             "PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2V4dGVybmFsQWNjb3VudEtleXM6",
             "FGV4dGVybmFsX2FjY291bnRfa2V5GkvKQRdwdWJsaWNjYS5nb29nbGVhcGlz",
             "LmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQt",
-            "cGxhdGZvcm1ChgIKKmNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHkucHVibGlj",
+            "cGxhdGZvcm1CgwIKKmNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHkucHVibGlj",
             "Y2EudjFiZXRhMUIMU2VydmljZVByb3RvUAFaRmNsb3VkLmdvb2dsZS5jb20v",
             "Z28vc2VjdXJpdHkvcHVibGljY2EvYXBpdjFiZXRhMS9wdWJsaWNjYXBiO3B1",
-            "YmxpY2NhcGL4AQGqAiZHb29nbGUuQ2xvdWQuU2VjdXJpdHkuUHVibGljQ0Eu",
-            "VjFCZXRhMcoCJkdvb2dsZVxDbG91ZFxTZWN1cml0eVxQdWJsaWNDQVxWMWJl",
-            "dGEx6gIqR29vZ2xlOjpDbG91ZDo6U2VjdXJpdHk6OlB1YmxpY0NBOjpWMWJl",
-            "dGExYgZwcm90bzM="));
+            "YmxpY2NhcGKqAiZHb29nbGUuQ2xvdWQuU2VjdXJpdHkuUHVibGljQ0EuVjFC",
+            "ZXRhMcoCJkdvb2dsZVxDbG91ZFxTZWN1cml0eVxQdWJsaWNDQVxWMWJldGEx",
+            "6gIqR29vZ2xlOjpDbG91ZDo6U2VjdXJpdHk6OlB1YmxpY0NBOjpWMWJldGEx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Security.PublicCA.V1Beta1.ResourcesReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -61,7 +61,9 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1 {
   }
   #region Messages
   /// <summary>
-  /// Creates a new [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey] in a given project.
+  /// Creates a new
+  /// [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey]
+  /// in a given project.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateExternalAccountKeyRequest : pb::IMessage<CreateExternalAccountKeyRequest>
@@ -113,9 +115,9 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent resource where this external_account_key will be created.
-    /// Format: projects/[project_id]/locations/[location].
-    /// At present only the "global" location is supported.
+    /// Required. The parent resource where this external_account_key will be
+    /// created. Format: projects/[project_id]/locations/[location]. At present
+    /// only the "global" location is supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -130,9 +132,9 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1 {
     public const int ExternalAccountKeyFieldNumber = 2;
     private global::Google.Cloud.Security.PublicCA.V1Beta1.ExternalAccountKey externalAccountKey_;
     /// <summary>
-    /// Required. The external account key to create. This field only exists to future-proof
-    /// the API. At present, all fields in ExternalAccountKey are output only and
-    /// all values are ignored. For the purpose of the
+    /// Required. The external account key to create. This field only exists to
+    /// future-proof the API. At present, all fields in ExternalAccountKey are
+    /// output only and all values are ignored. For the purpose of the
     /// CreateExternalAccountKeyRequest, set it to a default/empty value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

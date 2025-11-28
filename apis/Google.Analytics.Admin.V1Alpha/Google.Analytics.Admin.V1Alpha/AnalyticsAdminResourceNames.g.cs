@@ -1362,30 +1362,6 @@ namespace Google.Analytics.Admin.V1Alpha
         }
     }
 
-    public partial class FetchConnectedGa4PropertyRequest
-    {
-        /// <summary>
-        /// <see cref="PropertyName"/>-typed view over the <see cref="Property"/> resource name property.
-        /// </summary>
-        public PropertyName PropertyAsPropertyName
-        {
-            get => string.IsNullOrEmpty(Property) ? null : PropertyName.Parse(Property, allowUnparsed: true);
-            set => Property = value?.ToString() ?? "";
-        }
-    }
-
-    public partial class FetchConnectedGa4PropertyResponse
-    {
-        /// <summary>
-        /// <see cref="PropertyName"/>-typed view over the <see cref="Property"/> resource name property.
-        /// </summary>
-        public PropertyName PropertyAsPropertyName
-        {
-            get => string.IsNullOrEmpty(Property) ? null : PropertyName.Parse(Property, allowUnparsed: true);
-            set => Property = value?.ToString() ?? "";
-        }
-    }
-
     public partial class CreateEventCreateRuleRequest
     {
         /// <summary>
@@ -1652,6 +1628,43 @@ namespace Google.Analytics.Admin.V1Alpha
         public gaav::PropertyName PropertyName
         {
             get => string.IsNullOrEmpty(Name) ? null : gaav::PropertyName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetSubpropertySyncConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::SubpropertySyncConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::SubpropertySyncConfigName SubpropertySyncConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::SubpropertySyncConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListSubpropertySyncConfigsRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetReportingIdentitySettingsRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::ReportingIdentitySettingsName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gaav::ReportingIdentitySettingsName ReportingIdentitySettingsName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::ReportingIdentitySettingsName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

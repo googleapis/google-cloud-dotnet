@@ -1,5 +1,24 @@
 # Version history
 
+## Version 2.9.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+## Version 2.8.0, released 2025-05-15
+
+### New features
+
+- Add BackupChannel field in BackupPlan
+- Add RestoreChannel field in RestorePlan
+- Add BackupConfig of Backups in BackupPlanBinding
+- Add support for Project ID in BackupChannel and RestoreChannel
+
+### Documentation improvements
+
+- Minor documentation fixes
+
 ## Version 2.7.0, released 2025-04-23
 
 ### New features

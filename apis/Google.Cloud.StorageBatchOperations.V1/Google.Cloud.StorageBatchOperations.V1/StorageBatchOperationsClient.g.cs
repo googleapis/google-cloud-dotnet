@@ -315,7 +315,7 @@ namespace Google.Cloud.StorageBatchOperations.V1
         public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Jobs in a given project and location.
+        /// Lists Jobs in a given project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -324,7 +324,7 @@ namespace Google.Cloud.StorageBatchOperations.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Jobs in a given project and location.
+        /// Lists Jobs in a given project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -333,10 +333,10 @@ namespace Google.Cloud.StorageBatchOperations.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Jobs in a given project and location.
+        /// Lists Jobs in a given project.
         /// </summary>
         /// <param name="parent">
-        /// Required. Format: projects/{project_id}/locations/{location_id} .
+        /// Required. Format: projects/{project_id}/locations/global.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -366,10 +366,10 @@ namespace Google.Cloud.StorageBatchOperations.V1
         }
 
         /// <summary>
-        /// Lists Jobs in a given project and location.
+        /// Lists Jobs in a given project.
         /// </summary>
         /// <param name="parent">
-        /// Required. Format: projects/{project_id}/locations/{location_id} .
+        /// Required. Format: projects/{project_id}/locations/global.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -399,10 +399,10 @@ namespace Google.Cloud.StorageBatchOperations.V1
         }
 
         /// <summary>
-        /// Lists Jobs in a given project and location.
+        /// Lists Jobs in a given project.
         /// </summary>
         /// <param name="parent">
-        /// Required. Format: projects/{project_id}/locations/{location_id} .
+        /// Required. Format: projects/{project_id}/locations/global.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -432,10 +432,10 @@ namespace Google.Cloud.StorageBatchOperations.V1
         }
 
         /// <summary>
-        /// Lists Jobs in a given project and location.
+        /// Lists Jobs in a given project.
         /// </summary>
         /// <param name="parent">
-        /// Required. Format: projects/{project_id}/locations/{location_id} .
+        /// Required. Format: projects/{project_id}/locations/global.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -496,7 +496,7 @@ namespace Google.Cloud.StorageBatchOperations.V1
         /// </summary>
         /// <param name="name">
         /// Required. `name` of the job to retrieve.
-        /// Format: projects/{project_id}/locations/{location_id}/jobs/{job_id} .
+        /// Format: projects/{project_id}/locations/global/jobs/{job_id} .
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -511,7 +511,7 @@ namespace Google.Cloud.StorageBatchOperations.V1
         /// </summary>
         /// <param name="name">
         /// Required. `name` of the job to retrieve.
-        /// Format: projects/{project_id}/locations/{location_id}/jobs/{job_id} .
+        /// Format: projects/{project_id}/locations/global/jobs/{job_id} .
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -526,7 +526,7 @@ namespace Google.Cloud.StorageBatchOperations.V1
         /// </summary>
         /// <param name="name">
         /// Required. `name` of the job to retrieve.
-        /// Format: projects/{project_id}/locations/{location_id}/jobs/{job_id} .
+        /// Format: projects/{project_id}/locations/global/jobs/{job_id} .
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -538,7 +538,7 @@ namespace Google.Cloud.StorageBatchOperations.V1
         /// </summary>
         /// <param name="name">
         /// Required. `name` of the job to retrieve.
-        /// Format: projects/{project_id}/locations/{location_id}/jobs/{job_id} .
+        /// Format: projects/{project_id}/locations/global/jobs/{job_id} .
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -553,7 +553,7 @@ namespace Google.Cloud.StorageBatchOperations.V1
         /// </summary>
         /// <param name="name">
         /// Required. `name` of the job to retrieve.
-        /// Format: projects/{project_id}/locations/{location_id}/jobs/{job_id} .
+        /// Format: projects/{project_id}/locations/global/jobs/{job_id} .
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -568,7 +568,7 @@ namespace Google.Cloud.StorageBatchOperations.V1
         /// </summary>
         /// <param name="name">
         /// Required. `name` of the job to retrieve.
-        /// Format: projects/{project_id}/locations/{location_id}/jobs/{job_id} .
+        /// Format: projects/{project_id}/locations/global/jobs/{job_id} .
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -800,7 +800,7 @@ namespace Google.Cloud.StorageBatchOperations.V1
         /// </summary>
         /// <param name="name">
         /// Required. The `name` of the job to delete.
-        /// Format: projects/{project_id}/locations/{location_id}/jobs/{job_id} .
+        /// Format: projects/{project_id}/locations/global/jobs/{job_id} .
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -815,7 +815,7 @@ namespace Google.Cloud.StorageBatchOperations.V1
         /// </summary>
         /// <param name="name">
         /// Required. The `name` of the job to delete.
-        /// Format: projects/{project_id}/locations/{location_id}/jobs/{job_id} .
+        /// Format: projects/{project_id}/locations/global/jobs/{job_id} .
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -830,7 +830,7 @@ namespace Google.Cloud.StorageBatchOperations.V1
         /// </summary>
         /// <param name="name">
         /// Required. The `name` of the job to delete.
-        /// Format: projects/{project_id}/locations/{location_id}/jobs/{job_id} .
+        /// Format: projects/{project_id}/locations/global/jobs/{job_id} .
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -842,7 +842,7 @@ namespace Google.Cloud.StorageBatchOperations.V1
         /// </summary>
         /// <param name="name">
         /// Required. The `name` of the job to delete.
-        /// Format: projects/{project_id}/locations/{location_id}/jobs/{job_id} .
+        /// Format: projects/{project_id}/locations/global/jobs/{job_id} .
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -857,7 +857,7 @@ namespace Google.Cloud.StorageBatchOperations.V1
         /// </summary>
         /// <param name="name">
         /// Required. The `name` of the job to delete.
-        /// Format: projects/{project_id}/locations/{location_id}/jobs/{job_id} .
+        /// Format: projects/{project_id}/locations/global/jobs/{job_id} .
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -872,7 +872,7 @@ namespace Google.Cloud.StorageBatchOperations.V1
         /// </summary>
         /// <param name="name">
         /// Required. The `name` of the job to delete.
-        /// Format: projects/{project_id}/locations/{location_id}/jobs/{job_id} .
+        /// Format: projects/{project_id}/locations/global/jobs/{job_id} .
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -911,7 +911,7 @@ namespace Google.Cloud.StorageBatchOperations.V1
         /// </summary>
         /// <param name="name">
         /// Required. The `name` of the job to cancel.
-        /// Format: projects/{project_id}/locations/{location_id}/jobs/{job_id}.
+        /// Format: projects/{project_id}/locations/global/jobs/{job_id}.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -926,7 +926,7 @@ namespace Google.Cloud.StorageBatchOperations.V1
         /// </summary>
         /// <param name="name">
         /// Required. The `name` of the job to cancel.
-        /// Format: projects/{project_id}/locations/{location_id}/jobs/{job_id}.
+        /// Format: projects/{project_id}/locations/global/jobs/{job_id}.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -941,7 +941,7 @@ namespace Google.Cloud.StorageBatchOperations.V1
         /// </summary>
         /// <param name="name">
         /// Required. The `name` of the job to cancel.
-        /// Format: projects/{project_id}/locations/{location_id}/jobs/{job_id}.
+        /// Format: projects/{project_id}/locations/global/jobs/{job_id}.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -953,7 +953,7 @@ namespace Google.Cloud.StorageBatchOperations.V1
         /// </summary>
         /// <param name="name">
         /// Required. The `name` of the job to cancel.
-        /// Format: projects/{project_id}/locations/{location_id}/jobs/{job_id}.
+        /// Format: projects/{project_id}/locations/global/jobs/{job_id}.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -968,7 +968,7 @@ namespace Google.Cloud.StorageBatchOperations.V1
         /// </summary>
         /// <param name="name">
         /// Required. The `name` of the job to cancel.
-        /// Format: projects/{project_id}/locations/{location_id}/jobs/{job_id}.
+        /// Format: projects/{project_id}/locations/global/jobs/{job_id}.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -983,7 +983,7 @@ namespace Google.Cloud.StorageBatchOperations.V1
         /// </summary>
         /// <param name="name">
         /// Required. The `name` of the job to cancel.
-        /// Format: projects/{project_id}/locations/{location_id}/jobs/{job_id}.
+        /// Format: projects/{project_id}/locations/global/jobs/{job_id}.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1079,7 +1079,7 @@ namespace Google.Cloud.StorageBatchOperations.V1
         partial void Modify_CancelJobRequest(ref CancelJobRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Lists Jobs in a given project and location.
+        /// Lists Jobs in a given project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1091,7 +1091,7 @@ namespace Google.Cloud.StorageBatchOperations.V1
         }
 
         /// <summary>
-        /// Lists Jobs in a given project and location.
+        /// Lists Jobs in a given project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

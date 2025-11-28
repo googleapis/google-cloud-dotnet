@@ -1,5 +1,35 @@
 # Version history
 
+## Version 2.16.0, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+## Version 2.15.0, released 2025-09-08
+
+### New features
+
+- Release the conversational search public SDK
+
+## Version 2.14.0, released 2025-06-25
+
+### New features
+
+- Add a user_attributes field in SearchRequest that can be used for personalization
+- Add a model_scores field in SearchResponse.results to expose model quality signals
+
+## Version 2.13.0, released 2025-05-06
+
+### New features
+
+- add language_code, region_code and place_id to SearchRequest
+- add pin_control_metadata to SearchResponse
+
+### Documentation improvements
+
+- keep the API doc up-to-date with recent changes
+
 ## Version 2.12.0, released 2024-10-14
 
 ### New features

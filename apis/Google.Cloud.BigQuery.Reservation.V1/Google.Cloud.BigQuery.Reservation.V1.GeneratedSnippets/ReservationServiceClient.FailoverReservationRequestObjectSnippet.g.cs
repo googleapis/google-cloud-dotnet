@@ -37,6 +37,7 @@ namespace GoogleCSharpSnippets
             FailoverReservationRequest request = new FailoverReservationRequest
             {
                 ReservationName = ReservationName.FromProjectLocationReservation("[PROJECT]", "[LOCATION]", "[RESERVATION]"),
+                FailoverMode = FailoverMode.Unspecified,
             };
             // Make the request
             Reservation response = reservationServiceClient.FailoverReservation(request);

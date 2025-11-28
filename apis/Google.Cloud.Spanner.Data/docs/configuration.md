@@ -193,7 +193,7 @@ the default `SessionPoolManager`. For example, to change the minimum
 number of sessions in each session pool:
 
 ```csharp
-SessionPoolManager.Default.SessionOptions.MinimumPooledSessions = 100;
+SessionPoolManager.Default.SessionPoolOptions.MinimumPooledSessions = 100;
 ```
 
 Any changes to the options should be made before the first Spanner
@@ -208,6 +208,7 @@ An alternative to modifying the options used by the default
 `SessionPoolManager` is to create a new manager object with a new
 set of options. The `SessionPoolManager` can then be set in
 `SpannerConnectionStringBuilder` which is then used to build a
-`SpannerConnection`. For example:
+`SpannerConnection`. Typically, a single `SessionPoolManager` can be reused
+by connections throughout the application. For example:
 
 {{sample:SpannerConnection.CustomSessionPoolManager}}

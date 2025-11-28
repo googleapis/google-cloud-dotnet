@@ -1,0 +1,28 @@
+proto_library(
+    name = "service_proto",
+    srcs = [
+        "service.proto"
+    ]
+)
+
+proto_library_with_info(
+    name = "service_proto_with_info",
+    deps = [
+        ":service_proto"
+    ],
+)
+
+##############################################################################
+# C#
+##############################################################################
+load(
+    "@com_google_googleapis_imports//:imports.bzl",
+    "csharp_gapic_library",
+)
+
+csharp_gapic_library(
+    name = "service_csharp_gapic",
+    srcs = [":service_proto_with_info"],
+    rest_numeric_enums = True,
+    service_yaml = ":service.yaml",
+)

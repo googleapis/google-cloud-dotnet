@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             DeleteListingRequest request = new DeleteListingRequest
             {
                 ListingName = ListingName.FromProjectLocationDataExchangeListing("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[LISTING]"),
+                DeleteCommercial = false,
             };
             // Make the request
             await analyticsHubServiceClient.DeleteListingAsync(request);

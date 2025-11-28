@@ -1,5 +1,39 @@
 # Version history
 
+## Version 1.12.0, released 2025-11-05
+
+### New features
+
+- Add Stored Procedure Sharing support for analyticshub listings
+- Add tags support for Pub/Sub subscriptions
+
+## Version 1.11.0, released 2025-11-03
+
+### New features
+
+- Update dependencies
+
+## Version 1.10.0, released 2025-09-03
+
+### New features
+
+- You can now configure listings for multiple regions for shared datasets and linked dataset replicas in BigQuery sharing
+
+### Documentation improvements
+
+- Add new category GOOGLE EARTH ENGINE and Increase limit of max Categories per Listing to 5
+
+## Version 1.9.0, released 2025-05-15
+
+### New features
+
+- Add support for Analytics Hub & Marketplace Integration
+- Adding CommercialInfo message to the Listing and Subscription resources
+- Adding allow_only_metadata_sharing to Listing resource
+- Adding routine field to the SharedResource message
+- Adding DestinationDataset to the Subscription resource
+- Adding delete_commercial and revoke_commercial to DeleteListingRequest and RevokeSubscriptionRequest
+
 ## Version 1.8.0, released 2025-03-31
 
 ### New features

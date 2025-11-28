@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
                 Name = "",
                 ResourceType = "",
                 RequestId = "",
+                CloudSqlInstanceInitializationConfig = new CloudSqlInstanceInitializationConfig(),
             };
             // Make the request
             Operation<InitializeServiceResponse, OperationMetadata> response = backupDRClient.InitializeService(request);

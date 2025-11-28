@@ -134,7 +134,7 @@ namespace Google.Ads.AdManager.V1
 
     /// <summary>NetworkService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Provides methods for handling Network objects.
+    /// Provides methods for handling `Network` objects.
     /// </remarks>
     public abstract partial class NetworkServiceClient
     {
@@ -145,8 +145,16 @@ namespace Google.Ads.AdManager.V1
         public static string DefaultEndpoint { get; } = "admanager.googleapis.com:443";
 
         /// <summary>The default NetworkService scopes.</summary>
-        /// <remarks>The default NetworkService scopes are:<list type="bullet"></list></remarks>
-        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] { });
+        /// <remarks>
+        /// The default NetworkService scopes are:
+        /// <list type="bullet">
+        /// <item><description>https://www.googleapis.com/auth/admanager</description></item>
+        /// </list>
+        /// </remarks>
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
+        {
+            "https://www.googleapis.com/auth/admanager",
+        });
 
         /// <summary>The service metadata associated with this client type.</summary>
         public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(NetworkService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
@@ -349,7 +357,7 @@ namespace Google.Ads.AdManager.V1
 
     /// <summary>NetworkService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Provides methods for handling Network objects.
+    /// Provides methods for handling `Network` objects.
     /// </remarks>
     public sealed partial class NetworkServiceClientImpl : NetworkServiceClient
     {

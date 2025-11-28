@@ -27,44 +27,51 @@ namespace Google.Cloud.NetworkServices.V1 {
             "Cipnb29nbGUvY2xvdWQvbmV0d29ya3NlcnZpY2VzL3YxL21lc2gucHJvdG8S",
             "H2dvb2dsZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjEaH2dvb2dsZS9hcGkv",
             "ZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJv",
-            "dG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUv",
-            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvIq8DCgRNZXNoEhEKBG5hbWUYASAB",
-            "KAlCA+BBAhIWCglzZWxmX2xpbmsYCSABKAlCA+BBAxI0CgtjcmVhdGVfdGlt",
-            "ZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1",
-            "cGRhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
-            "A+BBAxJGCgZsYWJlbHMYBCADKAsyMS5nb29nbGUuY2xvdWQubmV0d29ya3Nl",
-            "cnZpY2VzLnYxLk1lc2guTGFiZWxzRW50cnlCA+BBARIYCgtkZXNjcmlwdGlv",
-            "bhgFIAEoCUID4EEBEh4KEWludGVyY2VwdGlvbl9wb3J0GAggASgFQgPgQQEa",
-            "LQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
-            "ATpf6kFcCiNuZXR3b3Jrc2VydmljZXMuZ29vZ2xlYXBpcy5jb20vTWVzaBI1",
-            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L21lc2hl",
-            "cy97bWVzaH0idwoRTGlzdE1lc2hlc1JlcXVlc3QSOwoGcGFyZW50GAEgASgJ",
-            "QivgQQL6QSUSI25ldHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNvbS9NZXNo",
-            "EhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJImQKEkxp",
-            "c3RNZXNoZXNSZXNwb25zZRI1CgZtZXNoZXMYASADKAsyJS5nb29nbGUuY2xv",
-            "dWQubmV0d29ya3NlcnZpY2VzLnYxLk1lc2gSFwoPbmV4dF9wYWdlX3Rva2Vu",
-            "GAIgASgJIksKDkdldE1lc2hSZXF1ZXN0EjkKBG5hbWUYASABKAlCK+BBAvpB",
-            "JQojbmV0d29ya3NlcnZpY2VzLmdvb2dsZWFwaXMuY29tL01lc2gioAEKEUNy",
-            "ZWF0ZU1lc2hSZXF1ZXN0EjsKBnBhcmVudBgBIAEoCUIr4EEC+kElEiNuZXR3",
-            "b3Jrc2VydmljZXMuZ29vZ2xlYXBpcy5jb20vTWVzaBIUCgdtZXNoX2lkGAIg",
-            "ASgJQgPgQQISOAoEbWVzaBgDIAEoCzIlLmdvb2dsZS5jbG91ZC5uZXR3b3Jr",
-            "c2VydmljZXMudjEuTWVzaEID4EECIoMBChFVcGRhdGVNZXNoUmVxdWVzdBI0",
-            "Cgt1cGRhdGVfbWFzaxgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1h",
-            "c2tCA+BBARI4CgRtZXNoGAIgASgLMiUuZ29vZ2xlLmNsb3VkLm5ldHdvcmtz",
-            "ZXJ2aWNlcy52MS5NZXNoQgPgQQIiTgoRRGVsZXRlTWVzaFJlcXVlc3QSOQoE",
-            "bmFtZRgBIAEoCUIr4EEC+kElCiNuZXR3b3Jrc2VydmljZXMuZ29vZ2xlYXBp",
-            "cy5jb20vTWVzaELqAQojY29tLmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2Vydmlj",
-            "ZXMudjFCCU1lc2hQcm90b1ABWk1jbG91ZC5nb29nbGUuY29tL2dvL25ldHdv",
-            "cmtzZXJ2aWNlcy9hcGl2MS9uZXR3b3Jrc2VydmljZXNwYjtuZXR3b3Jrc2Vy",
-            "dmljZXNwYqoCH0dvb2dsZS5DbG91ZC5OZXR3b3JrU2VydmljZXMuVjHKAh9H",
-            "b29nbGVcQ2xvdWRcTmV0d29ya1NlcnZpY2VzXFYx6gIiR29vZ2xlOjpDbG91",
-            "ZDo6TmV0d29ya1NlcnZpY2VzOjpWMWIGcHJvdG8z"));
+            "dG8aLGdvb2dsZS9jbG91ZC9uZXR3b3Jrc2VydmljZXMvdjEvY29tbW9uLnBy",
+            "b3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90bxofZ29vZ2xl",
+            "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKRBAoETWVzaBIRCgRuYW1lGAEg",
+            "ASgJQgPgQQgSFgoJc2VsZl9saW5rGAkgASgJQgPgQQMSNAoLY3JlYXRlX3Rp",
+            "bWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoL",
+            "dXBkYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgPgQQMSRgoGbGFiZWxzGAQgAygLMjEuZ29vZ2xlLmNsb3VkLm5ldHdvcmtz",
+            "ZXJ2aWNlcy52MS5NZXNoLkxhYmVsc0VudHJ5QgPgQQESGAoLZGVzY3JpcHRp",
+            "b24YBSABKAlCA+BBARIeChFpbnRlcmNlcHRpb25fcG9ydBgIIAEoBUID4EEB",
+            "Ek4KDWVudm95X2hlYWRlcnMYECABKA4yLS5nb29nbGUuY2xvdWQubmV0d29y",
+            "a3NlcnZpY2VzLnYxLkVudm95SGVhZGVyc0ID4EEBSACIAQEaLQoLTGFiZWxz",
+            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATpf6kFcCiNu",
+            "ZXR3b3Jrc2VydmljZXMuZ29vZ2xlYXBpcy5jb20vTWVzaBI1cHJvamVjdHMv",
+            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L21lc2hlcy97bWVzaH1C",
+            "EAoOX2Vudm95X2hlYWRlcnMinAEKEUxpc3RNZXNoZXNSZXF1ZXN0EjsKBnBh",
+            "cmVudBgBIAEoCUIr4EEC+kElEiNuZXR3b3Jrc2VydmljZXMuZ29vZ2xlYXBp",
+            "cy5jb20vTWVzaBIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgD",
+            "IAEoCRIjChZyZXR1cm5fcGFydGlhbF9zdWNjZXNzGAQgASgIQgPgQQEieQoS",
+            "TGlzdE1lc2hlc1Jlc3BvbnNlEjUKBm1lc2hlcxgBIAMoCzIlLmdvb2dsZS5j",
+            "bG91ZC5uZXR3b3Jrc2VydmljZXMudjEuTWVzaBIXCg9uZXh0X3BhZ2VfdG9r",
+            "ZW4YAiABKAkSEwoLdW5yZWFjaGFibGUYAyADKAkiSwoOR2V0TWVzaFJlcXVl",
+            "c3QSOQoEbmFtZRgBIAEoCUIr4EEC+kElCiNuZXR3b3Jrc2VydmljZXMuZ29v",
+            "Z2xlYXBpcy5jb20vTWVzaCKgAQoRQ3JlYXRlTWVzaFJlcXVlc3QSOwoGcGFy",
+            "ZW50GAEgASgJQivgQQL6QSUSI25ldHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlz",
+            "LmNvbS9NZXNoEhQKB21lc2hfaWQYAiABKAlCA+BBAhI4CgRtZXNoGAMgASgL",
+            "MiUuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MS5NZXNoQgPgQQIi",
+            "gwEKEVVwZGF0ZU1lc2hSZXF1ZXN0EjQKC3VwZGF0ZV9tYXNrGAEgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EEBEjgKBG1lc2gYAiABKAsy",
+            "JS5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYxLk1lc2hCA+BBAiJO",
+            "ChFEZWxldGVNZXNoUmVxdWVzdBI5CgRuYW1lGAEgASgJQivgQQL6QSUKI25l",
+            "dHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNvbS9NZXNoQuQCCiNjb20uZ29v",
+            "Z2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MUIJTWVzaFByb3RvUAFaTWNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vbmV0d29ya3NlcnZpY2VzL2FwaXYxL25ldHdv",
+            "cmtzZXJ2aWNlc3BiO25ldHdvcmtzZXJ2aWNlc3BiqgIfR29vZ2xlLkNsb3Vk",
+            "Lk5ldHdvcmtTZXJ2aWNlcy5WMcoCH0dvb2dsZVxDbG91ZFxOZXR3b3JrU2Vy",
+            "dmljZXNcVjHqAiJHb29nbGU6OkNsb3VkOjpOZXR3b3JrU2VydmljZXM6OlYx",
+            "6kF3Cihjb21wdXRlLmdvb2dsZWFwaXMuY29tL1NlcnZpY2VBdHRhY2htZW50",
+            "Ektwcm9qZWN0cy97cHJvamVjdH0vcmVnaW9ucy97cmVnaW9ufS9zZXJ2aWNl",
+            "QXR0YWNobWVudHMve3NlcnZpY2VfYXR0YWNobWVudH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetworkServices.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.Mesh), global::Google.Cloud.NetworkServices.V1.Mesh.Parser, new[]{ "Name", "SelfLink", "CreateTime", "UpdateTime", "Labels", "Description", "InterceptionPort" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ListMeshesRequest), global::Google.Cloud.NetworkServices.V1.ListMeshesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ListMeshesResponse), global::Google.Cloud.NetworkServices.V1.ListMeshesResponse.Parser, new[]{ "Meshes", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.Mesh), global::Google.Cloud.NetworkServices.V1.Mesh.Parser, new[]{ "Name", "SelfLink", "CreateTime", "UpdateTime", "Labels", "Description", "InterceptionPort", "EnvoyHeaders" }, new[]{ "EnvoyHeaders" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ListMeshesRequest), global::Google.Cloud.NetworkServices.V1.ListMeshesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "ReturnPartialSuccess" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ListMeshesResponse), global::Google.Cloud.NetworkServices.V1.ListMeshesResponse.Parser, new[]{ "Meshes", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.GetMeshRequest), global::Google.Cloud.NetworkServices.V1.GetMeshRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.CreateMeshRequest), global::Google.Cloud.NetworkServices.V1.CreateMeshRequest.Parser, new[]{ "Parent", "MeshId", "Mesh" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.UpdateMeshRequest), global::Google.Cloud.NetworkServices.V1.UpdateMeshRequest.Parser, new[]{ "UpdateMask", "Mesh" }, null, null, null, null),
@@ -88,6 +95,7 @@ namespace Google.Cloud.NetworkServices.V1 {
   {
     private static readonly pb::MessageParser<Mesh> _parser = new pb::MessageParser<Mesh>(() => new Mesh());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Mesh> Parser { get { return _parser; } }
@@ -115,6 +123,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Mesh(Mesh other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
       selfLink_ = other.selfLink_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
@@ -122,6 +131,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       labels_ = other.labels_.Clone();
       description_ = other.description_;
       interceptionPort_ = other.interceptionPort_;
+      envoyHeaders_ = other.envoyHeaders_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -135,7 +145,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Name of the Mesh resource. It matches pattern
+    /// Identifier. Name of the Mesh resource. It matches pattern
     /// `projects/*/locations/global/meshes/&lt;mesh_name>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -242,6 +252,38 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
     }
 
+    /// <summary>Field number for the "envoy_headers" field.</summary>
+    public const int EnvoyHeadersFieldNumber = 16;
+    private readonly static global::Google.Cloud.NetworkServices.V1.EnvoyHeaders EnvoyHeadersDefaultValue = global::Google.Cloud.NetworkServices.V1.EnvoyHeaders.Unspecified;
+
+    private global::Google.Cloud.NetworkServices.V1.EnvoyHeaders envoyHeaders_;
+    /// <summary>
+    /// Optional. Determines if envoy will insert internal debug headers into
+    /// upstream requests. Other Envoy headers may still be injected. By default,
+    /// envoy will not insert any debug headers.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetworkServices.V1.EnvoyHeaders EnvoyHeaders {
+      get { if ((_hasBits0 & 1) != 0) { return envoyHeaders_; } else { return EnvoyHeadersDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        envoyHeaders_ = value;
+      }
+    }
+    /// <summary>Gets whether the "envoy_headers" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEnvoyHeaders {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "envoy_headers" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEnvoyHeaders() {
+      _hasBits0 &= ~1;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -264,6 +306,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (!Labels.Equals(other.Labels)) return false;
       if (Description != other.Description) return false;
       if (InterceptionPort != other.InterceptionPort) return false;
+      if (EnvoyHeaders != other.EnvoyHeaders) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -278,6 +321,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       hash ^= Labels.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (InterceptionPort != 0) hash ^= InterceptionPort.GetHashCode();
+      if (HasEnvoyHeaders) hash ^= EnvoyHeaders.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -321,6 +365,10 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteRawTag(74);
         output.WriteString(SelfLink);
       }
+      if (HasEnvoyHeaders) {
+        output.WriteRawTag(128, 1);
+        output.WriteEnum((int) EnvoyHeaders);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -356,6 +404,10 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteRawTag(74);
         output.WriteString(SelfLink);
       }
+      if (HasEnvoyHeaders) {
+        output.WriteRawTag(128, 1);
+        output.WriteEnum((int) EnvoyHeaders);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -384,6 +436,9 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
       if (InterceptionPort != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(InterceptionPort);
+      }
+      if (HasEnvoyHeaders) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) EnvoyHeaders);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -421,6 +476,9 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
       if (other.InterceptionPort != 0) {
         InterceptionPort = other.InterceptionPort;
+      }
+      if (other.HasEnvoyHeaders) {
+        EnvoyHeaders = other.EnvoyHeaders;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -469,6 +527,10 @@ namespace Google.Cloud.NetworkServices.V1 {
           }
           case 74: {
             SelfLink = input.ReadString();
+            break;
+          }
+          case 128: {
+            EnvoyHeaders = (global::Google.Cloud.NetworkServices.V1.EnvoyHeaders) input.ReadEnum();
             break;
           }
         }
@@ -520,6 +582,10 @@ namespace Google.Cloud.NetworkServices.V1 {
             SelfLink = input.ReadString();
             break;
           }
+          case 128: {
+            EnvoyHeaders = (global::Google.Cloud.NetworkServices.V1.EnvoyHeaders) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -568,6 +634,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       parent_ = other.parent_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
+      returnPartialSuccess_ = other.returnPartialSuccess_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -625,6 +692,23 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
     }
 
+    /// <summary>Field number for the "return_partial_success" field.</summary>
+    public const int ReturnPartialSuccessFieldNumber = 4;
+    private bool returnPartialSuccess_;
+    /// <summary>
+    /// Optional. If true, allow partial responses for multi-regional Aggregated
+    /// List requests. Otherwise if one of the locations is down or unreachable,
+    /// the Aggregated List request will fail.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ReturnPartialSuccess {
+      get { return returnPartialSuccess_; }
+      set {
+        returnPartialSuccess_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -643,6 +727,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (Parent != other.Parent) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
+      if (ReturnPartialSuccess != other.ReturnPartialSuccess) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -653,6 +738,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (ReturnPartialSuccess != false) hash ^= ReturnPartialSuccess.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -683,6 +769,10 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (ReturnPartialSuccess != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ReturnPartialSuccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -705,6 +795,10 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (ReturnPartialSuccess != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ReturnPartialSuccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -723,6 +817,9 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
       if (PageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (ReturnPartialSuccess != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -744,6 +841,9 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
       if (other.PageToken.Length != 0) {
         PageToken = other.PageToken;
+      }
+      if (other.ReturnPartialSuccess != false) {
+        ReturnPartialSuccess = other.ReturnPartialSuccess;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -772,6 +872,10 @@ namespace Google.Cloud.NetworkServices.V1 {
             PageToken = input.ReadString();
             break;
           }
+          case 32: {
+            ReturnPartialSuccess = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -797,6 +901,10 @@ namespace Google.Cloud.NetworkServices.V1 {
           }
           case 26: {
             PageToken = input.ReadString();
+            break;
+          }
+          case 32: {
+            ReturnPartialSuccess = input.ReadBool();
             break;
           }
         }
@@ -846,6 +954,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     public ListMeshesResponse(ListMeshesResponse other) : this() {
       meshes_ = other.meshes_.Clone();
       nextPageToken_ = other.nextPageToken_;
+      unreachable_ = other.unreachable_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -886,6 +995,22 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
     }
 
+    /// <summary>Field number for the "unreachable" field.</summary>
+    public const int UnreachableFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_unreachable_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Unreachable resources. Populated when the request opts into
+    /// `return_partial_success` and reading across collections e.g. when
+    /// attempting to list all resources across all supported locations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Unreachable {
+      get { return unreachable_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -903,6 +1028,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
       if(!meshes_.Equals(other.meshes_)) return false;
       if (NextPageToken != other.NextPageToken) return false;
+      if(!unreachable_.Equals(other.unreachable_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -912,6 +1038,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       int hash = 1;
       hash ^= meshes_.GetHashCode();
       if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= unreachable_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -935,6 +1062,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -950,6 +1078,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(ref output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -964,6 +1093,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (NextPageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
       }
+      size += unreachable_.CalculateSize(_repeated_unreachable_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -980,6 +1110,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (other.NextPageToken.Length != 0) {
         NextPageToken = other.NextPageToken;
       }
+      unreachable_.Add(other.unreachable_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1003,6 +1134,10 @@ namespace Google.Cloud.NetworkServices.V1 {
             NextPageToken = input.ReadString();
             break;
           }
+          case 26: {
+            unreachable_.AddEntriesFrom(input, _repeated_unreachable_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1024,6 +1159,10 @@ namespace Google.Cloud.NetworkServices.V1 {
           }
           case 18: {
             NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(ref input, _repeated_unreachable_codec);
             break;
           }
         }

@@ -1,0 +1,42 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.ads.datamanager.v1",
+  "libraryPackage": "Google.Ads.DataManager.V1",
+  "services": {
+    "IngestionService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "IngestionServiceClient",
+          "rpcs": {
+            "IngestAudienceMembers": {
+              "methods": [
+                "IngestAudienceMembers",
+                "IngestAudienceMembersAsync"
+              ]
+            },
+            "IngestEvents": {
+              "methods": [
+                "IngestEvents",
+                "IngestEventsAsync"
+              ]
+            },
+            "RemoveAudienceMembers": {
+              "methods": [
+                "RemoveAudienceMembers",
+                "RemoveAudienceMembersAsync"
+              ]
+            },
+            "RetrieveRequestStatus": {
+              "methods": [
+                "RetrieveRequestStatus",
+                "RetrieveRequestStatusAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

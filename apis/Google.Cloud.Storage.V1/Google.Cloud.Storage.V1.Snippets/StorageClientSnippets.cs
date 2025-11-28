@@ -318,10 +318,7 @@ namespace Google.Cloud.Storage.V1.Snippets
                   p => Console.WriteLine($"bytes: {p.BytesSent}, status: {p.Status}")
                 );
 
-                // var acl = PredefinedAcl.PublicRead // public
-                var acl = PredefinedObjectAcl.AuthenticatedRead; // private
-                var options = new UploadObjectOptions { PredefinedAcl = acl };
-                var obj = client.UploadObject(bucketName, destination, contentType, stream, options, progress);
+                var obj = client.UploadObject(bucketName, destination, contentType, stream, progress: progress);
             }
             // End snippet
 
@@ -654,7 +651,7 @@ namespace Google.Cloud.Storage.V1.Snippets
             Console.WriteLine($"Response code before setting policy: {response1.StatusCode}");
 
             // Fetch the current IAM policy, and modify it in memory to allow all users
-            // to view objects.
+            // of a certain domain to view objects.
             Policy policy = client.GetBucketIamPolicy(bucketName);
             string role = "roles/storage.objectViewer";
             Policy.BindingsData binding = policy.Bindings
@@ -665,7 +662,7 @@ namespace Google.Cloud.Storage.V1.Snippets
                 binding = new Policy.BindingsData { Role = role, Members = new List<string>() };
                 policy.Bindings.Add(binding);
             }
-            binding.Members.Add("allUsers");
+            binding.Members.Add("domain:google.com");
 
             // Update the IAM policy on the bucket.
             client.SetBucketIamPolicy(bucketName, policy);

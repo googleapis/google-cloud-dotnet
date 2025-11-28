@@ -54,11 +54,13 @@ public sealed class PrepareLibraryReleaseCommand : IContainerCommand
         var releaseDate = DateTime.UtcNow.Date;
 
         var rootLayout = RootLayout.ForRepositoryRoot(repoRoot);
-        var apiCatalog = ApiCatalog.Load(rootLayout);
+        var nonSourceGenerator = new NonSourceGenerator(rootLayout);
+        // Use the same API catalog object as the non-source generator, so
+        // that version changes we make here are reflected consistently.
+        var apiCatalog = nonSourceGenerator.ApiCatalog;
 
         var packageGroup = apiCatalog.PackageGroups.FirstOrDefault(pg => pg.Id == libraryId);
         var packageIds = packageGroup?.PackageIds ?? new() { libraryId };
-        var nonSourceGenerator = new NonSourceGenerator(rootLayout);
         var structuredVersion = StructuredVersion.FromString(version);
 
         foreach (var packageId in packageIds)

@@ -254,9 +254,14 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         public virtual ProductInputsService.ProductInputsServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Uploads a product input to your Merchant Center account. If an input
-        /// with the same contentLanguage, offerId, and dataSource already exists,
-        /// this method replaces that entry.
+        /// [Uploads a product input to your Merchant Center
+        /// account](/merchant/api/guides/products/overview#upload-product-input). You
+        /// must have a products data source to be able to insert a product. The unique
+        /// identifier of the data source is passed as a query parameter in the request
+        /// URL.
+        /// 
+        /// If an input with the same contentLanguage, offerId, and dataSource already
+        /// exists, this method replaces that entry.
         /// 
         /// After inserting, updating, or deleting a product input, it may take several
         /// minutes before the processed product can be retrieved.
@@ -268,9 +273,14 @@ namespace Google.Shopping.Merchant.Products.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Uploads a product input to your Merchant Center account. If an input
-        /// with the same contentLanguage, offerId, and dataSource already exists,
-        /// this method replaces that entry.
+        /// [Uploads a product input to your Merchant Center
+        /// account](/merchant/api/guides/products/overview#upload-product-input). You
+        /// must have a products data source to be able to insert a product. The unique
+        /// identifier of the data source is passed as a query parameter in the request
+        /// URL.
+        /// 
+        /// If an input with the same contentLanguage, offerId, and dataSource already
+        /// exists, this method replaces that entry.
         /// 
         /// After inserting, updating, or deleting a product input, it may take several
         /// minutes before the processed product can be retrieved.
@@ -282,9 +292,14 @@ namespace Google.Shopping.Merchant.Products.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Uploads a product input to your Merchant Center account. If an input
-        /// with the same contentLanguage, offerId, and dataSource already exists,
-        /// this method replaces that entry.
+        /// [Uploads a product input to your Merchant Center
+        /// account](/merchant/api/guides/products/overview#upload-product-input). You
+        /// must have a products data source to be able to insert a product. The unique
+        /// identifier of the data source is passed as a query parameter in the request
+        /// URL.
+        /// 
+        /// If an input with the same contentLanguage, offerId, and dataSource already
+        /// exists, this method replaces that entry.
         /// 
         /// After inserting, updating, or deleting a product input, it may take several
         /// minutes before the processed product can be retrieved.
@@ -479,11 +494,11 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. The name of the product input resource to delete.
-        /// Format: accounts/{account}/productInputs/{product}
+        /// Format: `accounts/{account}/productInputs/{product}`
         /// where the last section `product` consists of 4 parts:
-        /// channel~content_language~feed_label~offer_id
+        /// `channel~content_language~feed_label~offer_id`
         /// example for product name is
-        /// "accounts/123/productInputs/online~en~US~sku123"
+        /// `accounts/123/productInputs/online~en~US~sku123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -501,11 +516,11 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. The name of the product input resource to delete.
-        /// Format: accounts/{account}/productInputs/{product}
+        /// Format: `accounts/{account}/productInputs/{product}`
         /// where the last section `product` consists of 4 parts:
-        /// channel~content_language~feed_label~offer_id
+        /// `channel~content_language~feed_label~offer_id`
         /// example for product name is
-        /// "accounts/123/productInputs/online~en~US~sku123"
+        /// `accounts/123/productInputs/online~en~US~sku123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -523,11 +538,11 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. The name of the product input resource to delete.
-        /// Format: accounts/{account}/productInputs/{product}
+        /// Format: `accounts/{account}/productInputs/{product}`
         /// where the last section `product` consists of 4 parts:
-        /// channel~content_language~feed_label~offer_id
+        /// `channel~content_language~feed_label~offer_id`
         /// example for product name is
-        /// "accounts/123/productInputs/online~en~US~sku123"
+        /// `accounts/123/productInputs/online~en~US~sku123`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -542,11 +557,11 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. The name of the product input resource to delete.
-        /// Format: accounts/{account}/productInputs/{product}
+        /// Format: `accounts/{account}/productInputs/{product}`
         /// where the last section `product` consists of 4 parts:
-        /// channel~content_language~feed_label~offer_id
+        /// `channel~content_language~feed_label~offer_id`
         /// example for product name is
-        /// "accounts/123/productInputs/online~en~US~sku123"
+        /// `accounts/123/productInputs/online~en~US~sku123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -564,11 +579,11 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. The name of the product input resource to delete.
-        /// Format: accounts/{account}/productInputs/{product}
+        /// Format: `accounts/{account}/productInputs/{product}`
         /// where the last section `product` consists of 4 parts:
-        /// channel~content_language~feed_label~offer_id
+        /// `channel~content_language~feed_label~offer_id`
         /// example for product name is
-        /// "accounts/123/productInputs/online~en~US~sku123"
+        /// `accounts/123/productInputs/online~en~US~sku123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -586,11 +601,11 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         /// </summary>
         /// <param name="name">
         /// Required. The name of the product input resource to delete.
-        /// Format: accounts/{account}/productInputs/{product}
+        /// Format: `accounts/{account}/productInputs/{product}`
         /// where the last section `product` consists of 4 parts:
-        /// channel~content_language~feed_label~offer_id
+        /// `channel~content_language~feed_label~offer_id`
         /// example for product name is
-        /// "accounts/123/productInputs/online~en~US~sku123"
+        /// `accounts/123/productInputs/online~en~US~sku123`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -659,9 +674,14 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         partial void Modify_DeleteProductInputRequest(ref DeleteProductInputRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Uploads a product input to your Merchant Center account. If an input
-        /// with the same contentLanguage, offerId, and dataSource already exists,
-        /// this method replaces that entry.
+        /// [Uploads a product input to your Merchant Center
+        /// account](/merchant/api/guides/products/overview#upload-product-input). You
+        /// must have a products data source to be able to insert a product. The unique
+        /// identifier of the data source is passed as a query parameter in the request
+        /// URL.
+        /// 
+        /// If an input with the same contentLanguage, offerId, and dataSource already
+        /// exists, this method replaces that entry.
         /// 
         /// After inserting, updating, or deleting a product input, it may take several
         /// minutes before the processed product can be retrieved.
@@ -676,9 +696,14 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         }
 
         /// <summary>
-        /// Uploads a product input to your Merchant Center account. If an input
-        /// with the same contentLanguage, offerId, and dataSource already exists,
-        /// this method replaces that entry.
+        /// [Uploads a product input to your Merchant Center
+        /// account](/merchant/api/guides/products/overview#upload-product-input). You
+        /// must have a products data source to be able to insert a product. The unique
+        /// identifier of the data source is passed as a query parameter in the request
+        /// URL.
+        /// 
+        /// If an input with the same contentLanguage, offerId, and dataSource already
+        /// exists, this method replaces that entry.
         /// 
         /// After inserting, updating, or deleting a product input, it may take several
         /// minutes before the processed product can be retrieved.

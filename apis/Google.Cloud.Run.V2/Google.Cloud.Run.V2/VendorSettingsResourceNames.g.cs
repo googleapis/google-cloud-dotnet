@@ -796,11 +796,11 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// <see cref="WorkerPoolName"/>-typed view over the <see cref="WorkerPool"/> resource name property.
+        /// <see cref="BuildWorkerPoolName"/>-typed view over the <see cref="WorkerPool"/> resource name property.
         /// </summary>
-        public WorkerPoolName WorkerPoolAsWorkerPoolName
+        public BuildWorkerPoolName WorkerPoolAsBuildWorkerPoolName
         {
-            get => string.IsNullOrEmpty(WorkerPool) ? null : WorkerPoolName.Parse(WorkerPool, allowUnparsed: true);
+            get => string.IsNullOrEmpty(WorkerPool) ? null : BuildWorkerPoolName.Parse(WorkerPool, allowUnparsed: true);
             set => WorkerPool = value?.ToString() ?? "";
         }
     }

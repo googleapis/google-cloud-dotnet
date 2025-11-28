@@ -69,6 +69,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <list type="bullet">
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="StatusCode.Aborted"/></description></item>
         /// </list>
         /// </remarks>
         /// <seealso cref="ReadRowsSettings"/>
@@ -78,7 +79,7 @@ namespace Google.Cloud.Bigtable.V2
                 initialBackoff: TimeSpan.FromMilliseconds(10),
                 maxBackoff: TimeSpan.FromMinutes(1),
                 backoffMultiplier: 2,
-                retryFilter: RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable));
+                retryFilter: RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable, StatusCode.Aborted));
 
         /// <summary>
         /// This value specifies routing for replication. If not specified, the

@@ -1,0 +1,786 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.CapacityPlanner.V1Beta",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.capacityplanner.v1beta",
+        "version": "v1beta"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "capacityplanner_v1beta_generated_UsageService_QueryUsageHistories_sync",
+      "title": "QueryUsageHistoriesRequestObject",
+      "description": "Snippet for QueryUsageHistories",
+      "file": "UsageServiceClient.QueryUsageHistoriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryUsageHistories",
+        "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient.QueryUsageHistories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CapacityPlanner.V1Beta.QueryUsageHistoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CapacityPlanner.V1Beta.QueryUsageHistoriesResponse",
+        "client": {
+          "shortName": "UsageServiceClient",
+          "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient"
+        },
+        "method": {
+          "shortName": "QueryUsageHistories",
+          "fullName": "google.cloud.capacityplanner.v1beta.UsageService.QueryUsageHistories",
+          "service": {
+            "shortName": "UsageService",
+            "fullName": "google.cloud.capacityplanner.v1beta.UsageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "capacityplanner_v1beta_generated_UsageService_QueryUsageHistories_async",
+      "title": "QueryUsageHistoriesRequestObjectAsync",
+      "description": "Snippet for QueryUsageHistoriesAsync",
+      "file": "UsageServiceClient.QueryUsageHistoriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryUsageHistoriesAsync",
+        "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient.QueryUsageHistoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CapacityPlanner.V1Beta.QueryUsageHistoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CapacityPlanner.V1Beta.QueryUsageHistoriesResponse>",
+        "client": {
+          "shortName": "UsageServiceClient",
+          "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient"
+        },
+        "method": {
+          "shortName": "QueryUsageHistories",
+          "fullName": "google.cloud.capacityplanner.v1beta.UsageService.QueryUsageHistories",
+          "service": {
+            "shortName": "UsageService",
+            "fullName": "google.cloud.capacityplanner.v1beta.UsageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "capacityplanner_v1beta_generated_UsageService_QueryForecasts_sync",
+      "title": "QueryForecastsRequestObject",
+      "description": "Snippet for QueryForecasts",
+      "file": "UsageServiceClient.QueryForecastsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryForecasts",
+        "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient.QueryForecasts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CapacityPlanner.V1Beta.QueryForecastsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CapacityPlanner.V1Beta.QueryForecastsResponse",
+        "client": {
+          "shortName": "UsageServiceClient",
+          "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient"
+        },
+        "method": {
+          "shortName": "QueryForecasts",
+          "fullName": "google.cloud.capacityplanner.v1beta.UsageService.QueryForecasts",
+          "service": {
+            "shortName": "UsageService",
+            "fullName": "google.cloud.capacityplanner.v1beta.UsageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 55,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 53,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "capacityplanner_v1beta_generated_UsageService_QueryForecasts_async",
+      "title": "QueryForecastsRequestObjectAsync",
+      "description": "Snippet for QueryForecastsAsync",
+      "file": "UsageServiceClient.QueryForecastsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryForecastsAsync",
+        "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient.QueryForecastsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CapacityPlanner.V1Beta.QueryForecastsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CapacityPlanner.V1Beta.QueryForecastsResponse>",
+        "client": {
+          "shortName": "UsageServiceClient",
+          "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient"
+        },
+        "method": {
+          "shortName": "QueryForecasts",
+          "fullName": "google.cloud.capacityplanner.v1beta.UsageService.QueryForecasts",
+          "service": {
+            "shortName": "UsageService",
+            "fullName": "google.cloud.capacityplanner.v1beta.UsageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 56,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 54,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "capacityplanner_v1beta_generated_UsageService_QueryReservations_sync",
+      "title": "QueryReservationsRequestObject",
+      "description": "Snippet for QueryReservations",
+      "file": "UsageServiceClient.QueryReservationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryReservations",
+        "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient.QueryReservations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CapacityPlanner.V1Beta.QueryReservationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CapacityPlanner.V1Beta.QueryReservationsResponse",
+        "client": {
+          "shortName": "UsageServiceClient",
+          "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient"
+        },
+        "method": {
+          "shortName": "QueryReservations",
+          "fullName": "google.cloud.capacityplanner.v1beta.UsageService.QueryReservations",
+          "service": {
+            "shortName": "UsageService",
+            "fullName": "google.cloud.capacityplanner.v1beta.UsageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "capacityplanner_v1beta_generated_UsageService_QueryReservations_async",
+      "title": "QueryReservationsRequestObjectAsync",
+      "description": "Snippet for QueryReservationsAsync",
+      "file": "UsageServiceClient.QueryReservationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryReservationsAsync",
+        "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient.QueryReservationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CapacityPlanner.V1Beta.QueryReservationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CapacityPlanner.V1Beta.QueryReservationsResponse>",
+        "client": {
+          "shortName": "UsageServiceClient",
+          "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient"
+        },
+        "method": {
+          "shortName": "QueryReservations",
+          "fullName": "google.cloud.capacityplanner.v1beta.UsageService.QueryReservations",
+          "service": {
+            "shortName": "UsageService",
+            "fullName": "google.cloud.capacityplanner.v1beta.UsageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "capacityplanner_v1beta_generated_UsageService_QueryReservations_sync_flattened",
+      "title": "QueryReservations",
+      "description": "Snippet for QueryReservations",
+      "file": "UsageServiceClient.QueryReservationsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryReservations",
+        "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient.QueryReservations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CapacityPlanner.V1Beta.QueryReservationsResponse",
+        "client": {
+          "shortName": "UsageServiceClient",
+          "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient"
+        },
+        "method": {
+          "shortName": "QueryReservations",
+          "fullName": "google.cloud.capacityplanner.v1beta.UsageService.QueryReservations",
+          "service": {
+            "shortName": "UsageService",
+            "fullName": "google.cloud.capacityplanner.v1beta.UsageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "capacityplanner_v1beta_generated_UsageService_QueryReservations_async_flattened",
+      "title": "QueryReservationsAsync",
+      "description": "Snippet for QueryReservationsAsync",
+      "file": "UsageServiceClient.QueryReservationsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryReservationsAsync",
+        "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient.QueryReservationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CapacityPlanner.V1Beta.QueryReservationsResponse>",
+        "client": {
+          "shortName": "UsageServiceClient",
+          "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient"
+        },
+        "method": {
+          "shortName": "QueryReservations",
+          "fullName": "google.cloud.capacityplanner.v1beta.UsageService.QueryReservations",
+          "service": {
+            "shortName": "UsageService",
+            "fullName": "google.cloud.capacityplanner.v1beta.UsageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "capacityplanner_v1beta_generated_UsageService_QueryReservations_sync_flattened_resourceNames",
+      "title": "QueryReservationsResourceNames",
+      "description": "Snippet for QueryReservations",
+      "file": "UsageServiceClient.QueryReservationsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryReservations",
+        "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient.QueryReservations",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CapacityPlanner.V1Beta.QueryReservationsResponse",
+        "client": {
+          "shortName": "UsageServiceClient",
+          "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient"
+        },
+        "method": {
+          "shortName": "QueryReservations",
+          "fullName": "google.cloud.capacityplanner.v1beta.UsageService.QueryReservations",
+          "service": {
+            "shortName": "UsageService",
+            "fullName": "google.cloud.capacityplanner.v1beta.UsageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "capacityplanner_v1beta_generated_UsageService_QueryReservations_async_flattened_resourceNames",
+      "title": "QueryReservationsResourceNamesAsync",
+      "description": "Snippet for QueryReservationsAsync",
+      "file": "UsageServiceClient.QueryReservationsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryReservationsAsync",
+        "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient.QueryReservationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CapacityPlanner.V1Beta.QueryReservationsResponse>",
+        "client": {
+          "shortName": "UsageServiceClient",
+          "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient"
+        },
+        "method": {
+          "shortName": "QueryReservations",
+          "fullName": "google.cloud.capacityplanner.v1beta.UsageService.QueryReservations",
+          "service": {
+            "shortName": "UsageService",
+            "fullName": "google.cloud.capacityplanner.v1beta.UsageService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "capacityplanner_v1beta_generated_UsageService_ExportUsageHistories_sync",
+      "title": "ExportUsageHistoriesRequestObject",
+      "description": "Snippet for ExportUsageHistories",
+      "file": "UsageServiceClient.ExportUsageHistoriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportUsageHistories",
+        "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient.ExportUsageHistories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CapacityPlanner.V1Beta.ExportUsageHistoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CapacityPlanner.V1Beta.ExportUsageHistoriesResponse, Google.Cloud.CapacityPlanner.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "UsageServiceClient",
+          "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient"
+        },
+        "method": {
+          "shortName": "ExportUsageHistories",
+          "fullName": "google.cloud.capacityplanner.v1beta.UsageService.ExportUsageHistories",
+          "service": {
+            "shortName": "UsageService",
+            "fullName": "google.cloud.capacityplanner.v1beta.UsageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 74,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 72,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "capacityplanner_v1beta_generated_UsageService_ExportUsageHistories_async",
+      "title": "ExportUsageHistoriesRequestObjectAsync",
+      "description": "Snippet for ExportUsageHistoriesAsync",
+      "file": "UsageServiceClient.ExportUsageHistoriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportUsageHistoriesAsync",
+        "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient.ExportUsageHistoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CapacityPlanner.V1Beta.ExportUsageHistoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CapacityPlanner.V1Beta.ExportUsageHistoriesResponse, Google.Cloud.CapacityPlanner.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "UsageServiceClient",
+          "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient"
+        },
+        "method": {
+          "shortName": "ExportUsageHistories",
+          "fullName": "google.cloud.capacityplanner.v1beta.UsageService.ExportUsageHistories",
+          "service": {
+            "shortName": "UsageService",
+            "fullName": "google.cloud.capacityplanner.v1beta.UsageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "capacityplanner_v1beta_generated_UsageService_ExportForecasts_sync",
+      "title": "ExportForecastsRequestObject",
+      "description": "Snippet for ExportForecasts",
+      "file": "UsageServiceClient.ExportForecastsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportForecasts",
+        "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient.ExportForecasts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CapacityPlanner.V1Beta.ExportForecastsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CapacityPlanner.V1Beta.ExportForecastsResponse, Google.Cloud.CapacityPlanner.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "UsageServiceClient",
+          "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient"
+        },
+        "method": {
+          "shortName": "ExportForecasts",
+          "fullName": "google.cloud.capacityplanner.v1beta.UsageService.ExportForecasts",
+          "service": {
+            "shortName": "UsageService",
+            "fullName": "google.cloud.capacityplanner.v1beta.UsageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 74,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 72,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "capacityplanner_v1beta_generated_UsageService_ExportForecasts_async",
+      "title": "ExportForecastsRequestObjectAsync",
+      "description": "Snippet for ExportForecastsAsync",
+      "file": "UsageServiceClient.ExportForecastsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportForecastsAsync",
+        "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient.ExportForecastsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CapacityPlanner.V1Beta.ExportForecastsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CapacityPlanner.V1Beta.ExportForecastsResponse, Google.Cloud.CapacityPlanner.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "UsageServiceClient",
+          "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient"
+        },
+        "method": {
+          "shortName": "ExportForecasts",
+          "fullName": "google.cloud.capacityplanner.v1beta.UsageService.ExportForecasts",
+          "service": {
+            "shortName": "UsageService",
+            "fullName": "google.cloud.capacityplanner.v1beta.UsageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "capacityplanner_v1beta_generated_UsageService_ExportReservationsUsage_sync",
+      "title": "ExportReservationsUsageRequestObject",
+      "description": "Snippet for ExportReservationsUsage",
+      "file": "UsageServiceClient.ExportReservationsUsageRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportReservationsUsage",
+        "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient.ExportReservationsUsage",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CapacityPlanner.V1Beta.ExportReservationsUsageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.CapacityPlanner.V1Beta.ExportReservationsUsageResponse, Google.Cloud.CapacityPlanner.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "UsageServiceClient",
+          "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient"
+        },
+        "method": {
+          "shortName": "ExportReservationsUsage",
+          "fullName": "google.cloud.capacityplanner.v1beta.UsageService.ExportReservationsUsage",
+          "service": {
+            "shortName": "UsageService",
+            "fullName": "google.cloud.capacityplanner.v1beta.UsageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 71,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 69,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "capacityplanner_v1beta_generated_UsageService_ExportReservationsUsage_async",
+      "title": "ExportReservationsUsageRequestObjectAsync",
+      "description": "Snippet for ExportReservationsUsageAsync",
+      "file": "UsageServiceClient.ExportReservationsUsageRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportReservationsUsageAsync",
+        "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient.ExportReservationsUsageAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CapacityPlanner.V1Beta.ExportReservationsUsageRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.CapacityPlanner.V1Beta.ExportReservationsUsageResponse, Google.Cloud.CapacityPlanner.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "UsageServiceClient",
+          "fullName": "Google.Cloud.CapacityPlanner.V1Beta.UsageServiceClient"
+        },
+        "method": {
+          "shortName": "ExportReservationsUsage",
+          "fullName": "google.cloud.capacityplanner.v1beta.UsageService.ExportReservationsUsage",
+          "service": {
+            "shortName": "UsageService",
+            "fullName": "google.cloud.capacityplanner.v1beta.UsageService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 72,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 70,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

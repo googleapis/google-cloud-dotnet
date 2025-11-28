@@ -58,6 +58,18 @@
                 "DeleteNodePoolAsync"
               ]
             },
+            "FetchClusterUpgradeInfo": {
+              "methods": [
+                "FetchClusterUpgradeInfo",
+                "FetchClusterUpgradeInfoAsync"
+              ]
+            },
+            "FetchNodePoolUpgradeInfo": {
+              "methods": [
+                "FetchNodePoolUpgradeInfo",
+                "FetchNodePoolUpgradeInfoAsync"
+              ]
+            },
             "GetCluster": {
               "methods": [
                 "GetCluster",

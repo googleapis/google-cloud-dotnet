@@ -11489,68 +11489,6 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
-        /// <summary>Snippet for SetAutomatedGa4ConfigurationOptOut</summary>
-        public void SetAutomatedGa4ConfigurationOptOutRequestObject()
-        {
-            // Snippet: SetAutomatedGa4ConfigurationOptOut(SetAutomatedGa4ConfigurationOptOutRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            SetAutomatedGa4ConfigurationOptOutRequest request = new SetAutomatedGa4ConfigurationOptOutRequest
-            {
-                Property = "",
-                OptOut = false,
-            };
-            // Make the request
-            SetAutomatedGa4ConfigurationOptOutResponse response = analyticsAdminServiceClient.SetAutomatedGa4ConfigurationOptOut(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for SetAutomatedGa4ConfigurationOptOutAsync</summary>
-        public async Task SetAutomatedGa4ConfigurationOptOutRequestObjectAsync()
-        {
-            // Snippet: SetAutomatedGa4ConfigurationOptOutAsync(SetAutomatedGa4ConfigurationOptOutRequest, CallSettings)
-            // Additional: SetAutomatedGa4ConfigurationOptOutAsync(SetAutomatedGa4ConfigurationOptOutRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            SetAutomatedGa4ConfigurationOptOutRequest request = new SetAutomatedGa4ConfigurationOptOutRequest
-            {
-                Property = "",
-                OptOut = false,
-            };
-            // Make the request
-            SetAutomatedGa4ConfigurationOptOutResponse response = await analyticsAdminServiceClient.SetAutomatedGa4ConfigurationOptOutAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for FetchAutomatedGa4ConfigurationOptOut</summary>
-        public void FetchAutomatedGa4ConfigurationOptOutRequestObject()
-        {
-            // Snippet: FetchAutomatedGa4ConfigurationOptOut(FetchAutomatedGa4ConfigurationOptOutRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            FetchAutomatedGa4ConfigurationOptOutRequest request = new FetchAutomatedGa4ConfigurationOptOutRequest { Property = "", };
-            // Make the request
-            FetchAutomatedGa4ConfigurationOptOutResponse response = analyticsAdminServiceClient.FetchAutomatedGa4ConfigurationOptOut(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for FetchAutomatedGa4ConfigurationOptOutAsync</summary>
-        public async Task FetchAutomatedGa4ConfigurationOptOutRequestObjectAsync()
-        {
-            // Snippet: FetchAutomatedGa4ConfigurationOptOutAsync(FetchAutomatedGa4ConfigurationOptOutRequest, CallSettings)
-            // Additional: FetchAutomatedGa4ConfigurationOptOutAsync(FetchAutomatedGa4ConfigurationOptOutRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            FetchAutomatedGa4ConfigurationOptOutRequest request = new FetchAutomatedGa4ConfigurationOptOutRequest { Property = "", };
-            // Make the request
-            FetchAutomatedGa4ConfigurationOptOutResponse response = await analyticsAdminServiceClient.FetchAutomatedGa4ConfigurationOptOutAsync(request);
-            // End snippet
-        }
-
         /// <summary>Snippet for CreateBigQueryLink</summary>
         public void CreateBigQueryLinkRequestObject()
         {
@@ -12306,136 +12244,6 @@ namespace GoogleCSharpSnippets
             FieldMask updateMask = new FieldMask();
             // Make the request
             EnhancedMeasurementSettings response = await analyticsAdminServiceClient.UpdateEnhancedMeasurementSettingsAsync(enhancedMeasurementSettings, updateMask);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateConnectedSiteTag</summary>
-        public void CreateConnectedSiteTagRequestObject()
-        {
-            // Snippet: CreateConnectedSiteTag(CreateConnectedSiteTagRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            CreateConnectedSiteTagRequest request = new CreateConnectedSiteTagRequest
-            {
-                Property = "",
-                ConnectedSiteTag = new ConnectedSiteTag(),
-            };
-            // Make the request
-            CreateConnectedSiteTagResponse response = analyticsAdminServiceClient.CreateConnectedSiteTag(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateConnectedSiteTagAsync</summary>
-        public async Task CreateConnectedSiteTagRequestObjectAsync()
-        {
-            // Snippet: CreateConnectedSiteTagAsync(CreateConnectedSiteTagRequest, CallSettings)
-            // Additional: CreateConnectedSiteTagAsync(CreateConnectedSiteTagRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            CreateConnectedSiteTagRequest request = new CreateConnectedSiteTagRequest
-            {
-                Property = "",
-                ConnectedSiteTag = new ConnectedSiteTag(),
-            };
-            // Make the request
-            CreateConnectedSiteTagResponse response = await analyticsAdminServiceClient.CreateConnectedSiteTagAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteConnectedSiteTag</summary>
-        public void DeleteConnectedSiteTagRequestObject()
-        {
-            // Snippet: DeleteConnectedSiteTag(DeleteConnectedSiteTagRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            DeleteConnectedSiteTagRequest request = new DeleteConnectedSiteTagRequest
-            {
-                Property = "",
-                TagId = "",
-            };
-            // Make the request
-            analyticsAdminServiceClient.DeleteConnectedSiteTag(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteConnectedSiteTagAsync</summary>
-        public async Task DeleteConnectedSiteTagRequestObjectAsync()
-        {
-            // Snippet: DeleteConnectedSiteTagAsync(DeleteConnectedSiteTagRequest, CallSettings)
-            // Additional: DeleteConnectedSiteTagAsync(DeleteConnectedSiteTagRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            DeleteConnectedSiteTagRequest request = new DeleteConnectedSiteTagRequest
-            {
-                Property = "",
-                TagId = "",
-            };
-            // Make the request
-            await analyticsAdminServiceClient.DeleteConnectedSiteTagAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListConnectedSiteTags</summary>
-        public void ListConnectedSiteTagsRequestObject()
-        {
-            // Snippet: ListConnectedSiteTags(ListConnectedSiteTagsRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            ListConnectedSiteTagsRequest request = new ListConnectedSiteTagsRequest { Property = "", };
-            // Make the request
-            ListConnectedSiteTagsResponse response = analyticsAdminServiceClient.ListConnectedSiteTags(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListConnectedSiteTagsAsync</summary>
-        public async Task ListConnectedSiteTagsRequestObjectAsync()
-        {
-            // Snippet: ListConnectedSiteTagsAsync(ListConnectedSiteTagsRequest, CallSettings)
-            // Additional: ListConnectedSiteTagsAsync(ListConnectedSiteTagsRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            ListConnectedSiteTagsRequest request = new ListConnectedSiteTagsRequest { Property = "", };
-            // Make the request
-            ListConnectedSiteTagsResponse response = await analyticsAdminServiceClient.ListConnectedSiteTagsAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for FetchConnectedGa4Property</summary>
-        public void FetchConnectedGa4PropertyRequestObject()
-        {
-            // Snippet: FetchConnectedGa4Property(FetchConnectedGa4PropertyRequest, CallSettings)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
-            // Initialize request argument(s)
-            FetchConnectedGa4PropertyRequest request = new FetchConnectedGa4PropertyRequest
-            {
-                PropertyAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            // Make the request
-            FetchConnectedGa4PropertyResponse response = analyticsAdminServiceClient.FetchConnectedGa4Property(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for FetchConnectedGa4PropertyAsync</summary>
-        public async Task FetchConnectedGa4PropertyRequestObjectAsync()
-        {
-            // Snippet: FetchConnectedGa4PropertyAsync(FetchConnectedGa4PropertyRequest, CallSettings)
-            // Additional: FetchConnectedGa4PropertyAsync(FetchConnectedGa4PropertyRequest, CancellationToken)
-            // Create client
-            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            FetchConnectedGa4PropertyRequest request = new FetchConnectedGa4PropertyRequest
-            {
-                PropertyAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            // Make the request
-            FetchConnectedGa4PropertyResponse response = await analyticsAdminServiceClient.FetchConnectedGa4PropertyAsync(request);
             // End snippet
         }
 
@@ -15584,6 +15392,7 @@ namespace GoogleCSharpSnippets
             {
                 Subproperty = new Property(),
                 SubpropertyEventFilter = new SubpropertyEventFilter(),
+                CustomDimensionAndMetricSynchronizationMode = SubpropertySyncConfig.Types.SynchronizationMode.Unspecified,
             };
             // Make the request
             ProvisionSubpropertyResponse response = analyticsAdminServiceClient.ProvisionSubproperty(request);
@@ -15602,6 +15411,7 @@ namespace GoogleCSharpSnippets
             {
                 Subproperty = new Property(),
                 SubpropertyEventFilter = new SubpropertyEventFilter(),
+                CustomDimensionAndMetricSynchronizationMode = SubpropertySyncConfig.Types.SynchronizationMode.Unspecified,
             };
             // Make the request
             ProvisionSubpropertyResponse response = await analyticsAdminServiceClient.ProvisionSubpropertyAsync(request);
@@ -16910,6 +16720,520 @@ namespace GoogleCSharpSnippets
             PropertyName name = PropertyName.FromProperty("[PROPERTY]");
             // Make the request
             SubmitUserDeletionResponse response = await analyticsAdminServiceClient.SubmitUserDeletionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubpropertySyncConfigs</summary>
+        public void ListSubpropertySyncConfigsRequestObject()
+        {
+            // Snippet: ListSubpropertySyncConfigs(ListSubpropertySyncConfigsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ListSubpropertySyncConfigsRequest request = new ListSubpropertySyncConfigsRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedEnumerable<ListSubpropertySyncConfigsResponse, SubpropertySyncConfig> response = analyticsAdminServiceClient.ListSubpropertySyncConfigs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SubpropertySyncConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSubpropertySyncConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SubpropertySyncConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SubpropertySyncConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SubpropertySyncConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubpropertySyncConfigsAsync</summary>
+        public async Task ListSubpropertySyncConfigsRequestObjectAsync()
+        {
+            // Snippet: ListSubpropertySyncConfigsAsync(ListSubpropertySyncConfigsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListSubpropertySyncConfigsRequest request = new ListSubpropertySyncConfigsRequest
+            {
+                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListSubpropertySyncConfigsResponse, SubpropertySyncConfig> response = analyticsAdminServiceClient.ListSubpropertySyncConfigsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SubpropertySyncConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSubpropertySyncConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SubpropertySyncConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SubpropertySyncConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SubpropertySyncConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubpropertySyncConfigs</summary>
+        public void ListSubpropertySyncConfigs()
+        {
+            // Snippet: ListSubpropertySyncConfigs(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedEnumerable<ListSubpropertySyncConfigsResponse, SubpropertySyncConfig> response = analyticsAdminServiceClient.ListSubpropertySyncConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SubpropertySyncConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSubpropertySyncConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SubpropertySyncConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SubpropertySyncConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SubpropertySyncConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubpropertySyncConfigsAsync</summary>
+        public async Task ListSubpropertySyncConfigsAsync()
+        {
+            // Snippet: ListSubpropertySyncConfigsAsync(string, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "properties/[PROPERTY]";
+            // Make the request
+            PagedAsyncEnumerable<ListSubpropertySyncConfigsResponse, SubpropertySyncConfig> response = analyticsAdminServiceClient.ListSubpropertySyncConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SubpropertySyncConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSubpropertySyncConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SubpropertySyncConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SubpropertySyncConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SubpropertySyncConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubpropertySyncConfigs</summary>
+        public void ListSubpropertySyncConfigsResourceNames()
+        {
+            // Snippet: ListSubpropertySyncConfigs(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedEnumerable<ListSubpropertySyncConfigsResponse, SubpropertySyncConfig> response = analyticsAdminServiceClient.ListSubpropertySyncConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SubpropertySyncConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSubpropertySyncConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SubpropertySyncConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SubpropertySyncConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SubpropertySyncConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubpropertySyncConfigsAsync</summary>
+        public async Task ListSubpropertySyncConfigsResourceNamesAsync()
+        {
+            // Snippet: ListSubpropertySyncConfigsAsync(PropertyName, string, int?, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PropertyName parent = PropertyName.FromProperty("[PROPERTY]");
+            // Make the request
+            PagedAsyncEnumerable<ListSubpropertySyncConfigsResponse, SubpropertySyncConfig> response = analyticsAdminServiceClient.ListSubpropertySyncConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SubpropertySyncConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSubpropertySyncConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SubpropertySyncConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SubpropertySyncConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SubpropertySyncConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSubpropertySyncConfig</summary>
+        public void UpdateSubpropertySyncConfigRequestObject()
+        {
+            // Snippet: UpdateSubpropertySyncConfig(UpdateSubpropertySyncConfigRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateSubpropertySyncConfigRequest request = new UpdateSubpropertySyncConfigRequest
+            {
+                SubpropertySyncConfig = new SubpropertySyncConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            SubpropertySyncConfig response = analyticsAdminServiceClient.UpdateSubpropertySyncConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSubpropertySyncConfigAsync</summary>
+        public async Task UpdateSubpropertySyncConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateSubpropertySyncConfigAsync(UpdateSubpropertySyncConfigRequest, CallSettings)
+            // Additional: UpdateSubpropertySyncConfigAsync(UpdateSubpropertySyncConfigRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateSubpropertySyncConfigRequest request = new UpdateSubpropertySyncConfigRequest
+            {
+                SubpropertySyncConfig = new SubpropertySyncConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            SubpropertySyncConfig response = await analyticsAdminServiceClient.UpdateSubpropertySyncConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSubpropertySyncConfig</summary>
+        public void UpdateSubpropertySyncConfig()
+        {
+            // Snippet: UpdateSubpropertySyncConfig(SubpropertySyncConfig, FieldMask, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            SubpropertySyncConfig subpropertySyncConfig = new SubpropertySyncConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            SubpropertySyncConfig response = analyticsAdminServiceClient.UpdateSubpropertySyncConfig(subpropertySyncConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSubpropertySyncConfigAsync</summary>
+        public async Task UpdateSubpropertySyncConfigAsync()
+        {
+            // Snippet: UpdateSubpropertySyncConfigAsync(SubpropertySyncConfig, FieldMask, CallSettings)
+            // Additional: UpdateSubpropertySyncConfigAsync(SubpropertySyncConfig, FieldMask, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SubpropertySyncConfig subpropertySyncConfig = new SubpropertySyncConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            SubpropertySyncConfig response = await analyticsAdminServiceClient.UpdateSubpropertySyncConfigAsync(subpropertySyncConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubpropertySyncConfig</summary>
+        public void GetSubpropertySyncConfigRequestObject()
+        {
+            // Snippet: GetSubpropertySyncConfig(GetSubpropertySyncConfigRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            GetSubpropertySyncConfigRequest request = new GetSubpropertySyncConfigRequest
+            {
+                SubpropertySyncConfigName = SubpropertySyncConfigName.FromPropertySubpropertySyncConfig("[PROPERTY]", "[SUBPROPERTY_SYNC_CONFIG]"),
+            };
+            // Make the request
+            SubpropertySyncConfig response = analyticsAdminServiceClient.GetSubpropertySyncConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubpropertySyncConfigAsync</summary>
+        public async Task GetSubpropertySyncConfigRequestObjectAsync()
+        {
+            // Snippet: GetSubpropertySyncConfigAsync(GetSubpropertySyncConfigRequest, CallSettings)
+            // Additional: GetSubpropertySyncConfigAsync(GetSubpropertySyncConfigRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetSubpropertySyncConfigRequest request = new GetSubpropertySyncConfigRequest
+            {
+                SubpropertySyncConfigName = SubpropertySyncConfigName.FromPropertySubpropertySyncConfig("[PROPERTY]", "[SUBPROPERTY_SYNC_CONFIG]"),
+            };
+            // Make the request
+            SubpropertySyncConfig response = await analyticsAdminServiceClient.GetSubpropertySyncConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubpropertySyncConfig</summary>
+        public void GetSubpropertySyncConfig()
+        {
+            // Snippet: GetSubpropertySyncConfig(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/subpropertySyncConfigs/[SUBPROPERTY_SYNC_CONFIG]";
+            // Make the request
+            SubpropertySyncConfig response = analyticsAdminServiceClient.GetSubpropertySyncConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubpropertySyncConfigAsync</summary>
+        public async Task GetSubpropertySyncConfigAsync()
+        {
+            // Snippet: GetSubpropertySyncConfigAsync(string, CallSettings)
+            // Additional: GetSubpropertySyncConfigAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/subpropertySyncConfigs/[SUBPROPERTY_SYNC_CONFIG]";
+            // Make the request
+            SubpropertySyncConfig response = await analyticsAdminServiceClient.GetSubpropertySyncConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubpropertySyncConfig</summary>
+        public void GetSubpropertySyncConfigResourceNames()
+        {
+            // Snippet: GetSubpropertySyncConfig(SubpropertySyncConfigName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            SubpropertySyncConfigName name = SubpropertySyncConfigName.FromPropertySubpropertySyncConfig("[PROPERTY]", "[SUBPROPERTY_SYNC_CONFIG]");
+            // Make the request
+            SubpropertySyncConfig response = analyticsAdminServiceClient.GetSubpropertySyncConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSubpropertySyncConfigAsync</summary>
+        public async Task GetSubpropertySyncConfigResourceNamesAsync()
+        {
+            // Snippet: GetSubpropertySyncConfigAsync(SubpropertySyncConfigName, CallSettings)
+            // Additional: GetSubpropertySyncConfigAsync(SubpropertySyncConfigName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SubpropertySyncConfigName name = SubpropertySyncConfigName.FromPropertySubpropertySyncConfig("[PROPERTY]", "[SUBPROPERTY_SYNC_CONFIG]");
+            // Make the request
+            SubpropertySyncConfig response = await analyticsAdminServiceClient.GetSubpropertySyncConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReportingIdentitySettings</summary>
+        public void GetReportingIdentitySettingsRequestObject()
+        {
+            // Snippet: GetReportingIdentitySettings(GetReportingIdentitySettingsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            GetReportingIdentitySettingsRequest request = new GetReportingIdentitySettingsRequest
+            {
+                ReportingIdentitySettingsName = ReportingIdentitySettingsName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            ReportingIdentitySettings response = analyticsAdminServiceClient.GetReportingIdentitySettings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReportingIdentitySettingsAsync</summary>
+        public async Task GetReportingIdentitySettingsRequestObjectAsync()
+        {
+            // Snippet: GetReportingIdentitySettingsAsync(GetReportingIdentitySettingsRequest, CallSettings)
+            // Additional: GetReportingIdentitySettingsAsync(GetReportingIdentitySettingsRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetReportingIdentitySettingsRequest request = new GetReportingIdentitySettingsRequest
+            {
+                ReportingIdentitySettingsName = ReportingIdentitySettingsName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            ReportingIdentitySettings response = await analyticsAdminServiceClient.GetReportingIdentitySettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReportingIdentitySettings</summary>
+        public void GetReportingIdentitySettings()
+        {
+            // Snippet: GetReportingIdentitySettings(string, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/reportingIdentitySettings";
+            // Make the request
+            ReportingIdentitySettings response = analyticsAdminServiceClient.GetReportingIdentitySettings(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReportingIdentitySettingsAsync</summary>
+        public async Task GetReportingIdentitySettingsAsync()
+        {
+            // Snippet: GetReportingIdentitySettingsAsync(string, CallSettings)
+            // Additional: GetReportingIdentitySettingsAsync(string, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/reportingIdentitySettings";
+            // Make the request
+            ReportingIdentitySettings response = await analyticsAdminServiceClient.GetReportingIdentitySettingsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReportingIdentitySettings</summary>
+        public void GetReportingIdentitySettingsResourceNames()
+        {
+            // Snippet: GetReportingIdentitySettings(ReportingIdentitySettingsName, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ReportingIdentitySettingsName name = ReportingIdentitySettingsName.FromProperty("[PROPERTY]");
+            // Make the request
+            ReportingIdentitySettings response = analyticsAdminServiceClient.GetReportingIdentitySettings(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReportingIdentitySettingsAsync</summary>
+        public async Task GetReportingIdentitySettingsResourceNamesAsync()
+        {
+            // Snippet: GetReportingIdentitySettingsAsync(ReportingIdentitySettingsName, CallSettings)
+            // Additional: GetReportingIdentitySettingsAsync(ReportingIdentitySettingsName, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ReportingIdentitySettingsName name = ReportingIdentitySettingsName.FromProperty("[PROPERTY]");
+            // Make the request
+            ReportingIdentitySettings response = await analyticsAdminServiceClient.GetReportingIdentitySettingsAsync(name);
             // End snippet
         }
     }

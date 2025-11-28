@@ -291,5 +291,14 @@ namespace Google.Cloud.GkeBackup.V1
             get => string.IsNullOrEmpty(Cluster) ? null : ClusterName.Parse(Cluster, allowUnparsed: true);
             set => Cluster = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="BackupChannelName"/>-typed view over the <see cref="BackupChannel"/> resource name property.
+        /// </summary>
+        public BackupChannelName BackupChannelAsBackupChannelName
+        {
+            get => string.IsNullOrEmpty(BackupChannel) ? null : BackupChannelName.Parse(BackupChannel, allowUnparsed: true);
+            set => BackupChannel = value?.ToString() ?? "";
+        }
     }
 }

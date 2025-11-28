@@ -27,36 +27,73 @@ namespace Google.Cloud.AIPlatform.V1 {
             "CjNnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9zZXJ2aWNlX25ldHdvcmtp",
             "bmcucHJvdG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGh9nb29nbGUv",
             "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNl",
-            "LnByb3RvIkQKE1BTQ0F1dG9tYXRpb25Db25maWcSFwoKcHJvamVjdF9pZBgB",
-            "IAEoCUID4EECEhQKB25ldHdvcmsYAiABKAlCA+BBAiKGAQobUHJpdmF0ZVNl",
-            "cnZpY2VDb25uZWN0Q29uZmlnEisKHmVuYWJsZV9wcml2YXRlX3NlcnZpY2Vf",
-            "Y29ubmVjdBgBIAEoCEID4EECEhkKEXByb2plY3RfYWxsb3dsaXN0GAIgAygJ",
-            "Eh8KEnNlcnZpY2VfYXR0YWNobWVudBgFIAEoCUID4EEDIlMKFVBzY0F1dG9t",
-            "YXRlZEVuZHBvaW50cxISCgpwcm9qZWN0X2lkGAEgASgJEg8KB25ldHdvcmsY",
-            "AiABKAkSFQoNbWF0Y2hfYWRkcmVzcxgDIAEoCULNAgoeY29tLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxQhZTZXJ2aWNlTmV0d29ya2luZ1Byb3RvUAFa",
-            "PmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRm",
-            "b3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0u",
-            "VjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xv",
-            "dWQ6OkFJUGxhdGZvcm06OlYx6kF2Cihjb21wdXRlLmdvb2dsZWFwaXMuY29t",
-            "L05ldHdvcmtBdHRhY2htZW50Ekpwcm9qZWN0cy97cHJvamVjdH0vcmVnaW9u",
-            "cy97cmVnaW9ufS9uZXR3b3JrQXR0YWNobWVudHMve25ldHdvcmthdHRhY2ht",
-            "ZW50fWIGcHJvdG8z"));
+            "LnByb3RvItsBChNQU0NBdXRvbWF0aW9uQ29uZmlnEhcKCnByb2plY3RfaWQY",
+            "ASABKAlCA+BBAhIUCgduZXR3b3JrGAIgASgJQgPgQQISFwoKaXBfYWRkcmVz",
+            "cxgDIAEoCUID4EEDEhwKD2ZvcndhcmRpbmdfcnVsZRgEIAEoCUID4EEDEkIK",
+            "BXN0YXRlGAUgASgOMi4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUFND",
+            "QXV0b21hdGlvblN0YXRlQgPgQQMSGgoNZXJyb3JfbWVzc2FnZRgGIAEoCUID",
+            "4EEDItwBChtQcml2YXRlU2VydmljZUNvbm5lY3RDb25maWcSKwoeZW5hYmxl",
+            "X3ByaXZhdGVfc2VydmljZV9jb25uZWN0GAEgASgIQgPgQQISGQoRcHJvamVj",
+            "dF9hbGxvd2xpc3QYAiADKAkSVAoWcHNjX2F1dG9tYXRpb25fY29uZmlncxgD",
+            "IAMoCzIvLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlBTQ0F1dG9tYXRp",
+            "b25Db25maWdCA+BBARIfChJzZXJ2aWNlX2F0dGFjaG1lbnQYBSABKAlCA+BB",
+            "AyJTChVQc2NBdXRvbWF0ZWRFbmRwb2ludHMSEgoKcHJvamVjdF9pZBgBIAEo",
+            "CRIPCgduZXR3b3JrGAIgASgJEhUKDW1hdGNoX2FkZHJlc3MYAyABKAkisgEK",
+            "ElBzY0ludGVyZmFjZUNvbmZpZxJMChJuZXR3b3JrX2F0dGFjaG1lbnQYASAB",
+            "KAlCMOBBAfpBKgooY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9OZXR3b3JrQXR0",
+            "YWNobWVudBJOChNkbnNfcGVlcmluZ19jb25maWdzGAIgAygLMiwuZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjEuRG5zUGVlcmluZ0NvbmZpZ0ID4EEBImEK",
+            "EERuc1BlZXJpbmdDb25maWcSEwoGZG9tYWluGAEgASgJQgPgQQISGwoOdGFy",
+            "Z2V0X3Byb2plY3QYAiABKAlCA+BBAhIbCg50YXJnZXRfbmV0d29yaxgDIAEo",
+            "CUID4EECKoABChJQU0NBdXRvbWF0aW9uU3RhdGUSJAogUFNDX0FVVE9NQVRJ",
+            "T05fU1RBVEVfVU5TUEVDSUZJRUQQABIjCh9QU0NfQVVUT01BVElPTl9TVEFU",
+            "RV9TVUNDRVNTRlVMEAESHwobUFNDX0FVVE9NQVRJT05fU1RBVEVfRkFJTEVE",
+            "EAJCzQIKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIWU2Vydmlj",
+            "ZU5ldHdvcmtpbmdQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxh",
+            "dGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2ds",
+            "ZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZv",
+            "cm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMepBdgooY29t",
+            "cHV0ZS5nb29nbGVhcGlzLmNvbS9OZXR3b3JrQXR0YWNobWVudBJKcHJvamVj",
+            "dHMve3Byb2plY3R9L3JlZ2lvbnMve3JlZ2lvbn0vbmV0d29ya0F0dGFjaG1l",
+            "bnRzL3tuZXR3b3JrYXR0YWNobWVudH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PSCAutomationConfig), global::Google.Cloud.AIPlatform.V1.PSCAutomationConfig.Parser, new[]{ "ProjectId", "Network" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PrivateServiceConnectConfig), global::Google.Cloud.AIPlatform.V1.PrivateServiceConnectConfig.Parser, new[]{ "EnablePrivateServiceConnect", "ProjectAllowlist", "ServiceAttachment" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PscAutomatedEndpoints), global::Google.Cloud.AIPlatform.V1.PscAutomatedEndpoints.Parser, new[]{ "ProjectId", "Network", "MatchAddress" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.PSCAutomationState), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PSCAutomationConfig), global::Google.Cloud.AIPlatform.V1.PSCAutomationConfig.Parser, new[]{ "ProjectId", "Network", "IpAddress", "ForwardingRule", "State", "ErrorMessage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PrivateServiceConnectConfig), global::Google.Cloud.AIPlatform.V1.PrivateServiceConnectConfig.Parser, new[]{ "EnablePrivateServiceConnect", "ProjectAllowlist", "PscAutomationConfigs", "ServiceAttachment" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PscAutomatedEndpoints), global::Google.Cloud.AIPlatform.V1.PscAutomatedEndpoints.Parser, new[]{ "ProjectId", "Network", "MatchAddress" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PscInterfaceConfig), global::Google.Cloud.AIPlatform.V1.PscInterfaceConfig.Parser, new[]{ "NetworkAttachment", "DnsPeeringConfigs" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DnsPeeringConfig), global::Google.Cloud.AIPlatform.V1.DnsPeeringConfig.Parser, new[]{ "Domain", "TargetProject", "TargetNetwork" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// The state of the PSC service automation.
+  /// </summary>
+  public enum PSCAutomationState {
+    /// <summary>
+    /// Should not be used.
+    /// </summary>
+    [pbr::OriginalName("PSC_AUTOMATION_STATE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// The PSC service automation is successful.
+    /// </summary>
+    [pbr::OriginalName("PSC_AUTOMATION_STATE_SUCCESSFUL")] Successful = 1,
+    /// <summary>
+    /// The PSC service automation has failed.
+    /// </summary>
+    [pbr::OriginalName("PSC_AUTOMATION_STATE_FAILED")] Failed = 2,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
-  /// PSC config that is used to automatically create forwarding rule via
-  /// ServiceConnectionMap.
+  /// PSC config that is used to automatically create PSC endpoints in the user
+  /// projects.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PSCAutomationConfig : pb::IMessage<PSCAutomationConfig>
@@ -95,6 +132,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     public PSCAutomationConfig(PSCAutomationConfig other) : this() {
       projectId_ = other.projectId_;
       network_ = other.network_;
+      ipAddress_ = other.ipAddress_;
+      forwardingRule_ = other.forwardingRule_;
+      state_ = other.state_;
+      errorMessage_ = other.errorMessage_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -125,10 +166,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Required. The full name of the Google Compute Engine
     /// [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
-    /// [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
+    /// [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/get):
     /// `projects/{project}/global/networks/{network}`.
-    /// Where {project} is a project number, as in '12345', and {network} is
-    /// network name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,6 +175,66 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return network_; }
       set {
         network_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ip_address" field.</summary>
+    public const int IpAddressFieldNumber = 3;
+    private string ipAddress_ = "";
+    /// <summary>
+    /// Output only. IP address rule created by the PSC service automation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string IpAddress {
+      get { return ipAddress_; }
+      set {
+        ipAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "forwarding_rule" field.</summary>
+    public const int ForwardingRuleFieldNumber = 4;
+    private string forwardingRule_ = "";
+    /// <summary>
+    /// Output only. Forwarding rule created by the PSC service automation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ForwardingRule {
+      get { return forwardingRule_; }
+      set {
+        forwardingRule_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 5;
+    private global::Google.Cloud.AIPlatform.V1.PSCAutomationState state_ = global::Google.Cloud.AIPlatform.V1.PSCAutomationState.Unspecified;
+    /// <summary>
+    /// Output only. The state of the PSC service automation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.PSCAutomationState State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "error_message" field.</summary>
+    public const int ErrorMessageFieldNumber = 6;
+    private string errorMessage_ = "";
+    /// <summary>
+    /// Output only. Error message if the PSC service automation failed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ErrorMessage {
+      get { return errorMessage_; }
+      set {
+        errorMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -156,6 +255,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (ProjectId != other.ProjectId) return false;
       if (Network != other.Network) return false;
+      if (IpAddress != other.IpAddress) return false;
+      if (ForwardingRule != other.ForwardingRule) return false;
+      if (State != other.State) return false;
+      if (ErrorMessage != other.ErrorMessage) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -165,6 +268,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (Network.Length != 0) hash ^= Network.GetHashCode();
+      if (IpAddress.Length != 0) hash ^= IpAddress.GetHashCode();
+      if (ForwardingRule.Length != 0) hash ^= ForwardingRule.GetHashCode();
+      if (State != global::Google.Cloud.AIPlatform.V1.PSCAutomationState.Unspecified) hash ^= State.GetHashCode();
+      if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -191,6 +298,22 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(18);
         output.WriteString(Network);
       }
+      if (IpAddress.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(IpAddress);
+      }
+      if (ForwardingRule.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ForwardingRule);
+      }
+      if (State != global::Google.Cloud.AIPlatform.V1.PSCAutomationState.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) State);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ErrorMessage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -209,6 +332,22 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(18);
         output.WriteString(Network);
       }
+      if (IpAddress.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(IpAddress);
+      }
+      if (ForwardingRule.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ForwardingRule);
+      }
+      if (State != global::Google.Cloud.AIPlatform.V1.PSCAutomationState.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) State);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ErrorMessage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -224,6 +363,18 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (Network.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Network);
+      }
+      if (IpAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IpAddress);
+      }
+      if (ForwardingRule.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ForwardingRule);
+      }
+      if (State != global::Google.Cloud.AIPlatform.V1.PSCAutomationState.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (ErrorMessage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -242,6 +393,18 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.Network.Length != 0) {
         Network = other.Network;
+      }
+      if (other.IpAddress.Length != 0) {
+        IpAddress = other.IpAddress;
+      }
+      if (other.ForwardingRule.Length != 0) {
+        ForwardingRule = other.ForwardingRule;
+      }
+      if (other.State != global::Google.Cloud.AIPlatform.V1.PSCAutomationState.Unspecified) {
+        State = other.State;
+      }
+      if (other.ErrorMessage.Length != 0) {
+        ErrorMessage = other.ErrorMessage;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -266,6 +429,22 @@ namespace Google.Cloud.AIPlatform.V1 {
             Network = input.ReadString();
             break;
           }
+          case 26: {
+            IpAddress = input.ReadString();
+            break;
+          }
+          case 34: {
+            ForwardingRule = input.ReadString();
+            break;
+          }
+          case 40: {
+            State = (global::Google.Cloud.AIPlatform.V1.PSCAutomationState) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            ErrorMessage = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -287,6 +466,22 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 18: {
             Network = input.ReadString();
+            break;
+          }
+          case 26: {
+            IpAddress = input.ReadString();
+            break;
+          }
+          case 34: {
+            ForwardingRule = input.ReadString();
+            break;
+          }
+          case 40: {
+            State = (global::Google.Cloud.AIPlatform.V1.PSCAutomationState) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            ErrorMessage = input.ReadString();
             break;
           }
         }
@@ -336,6 +531,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public PrivateServiceConnectConfig(PrivateServiceConnectConfig other) : this() {
       enablePrivateServiceConnect_ = other.enablePrivateServiceConnect_;
       projectAllowlist_ = other.projectAllowlist_.Clone();
+      pscAutomationConfigs_ = other.pscAutomationConfigs_.Clone();
       serviceAttachment_ = other.serviceAttachment_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -376,6 +572,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return projectAllowlist_; }
     }
 
+    /// <summary>Field number for the "psc_automation_configs" field.</summary>
+    public const int PscAutomationConfigsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.PSCAutomationConfig> _repeated_pscAutomationConfigs_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.AIPlatform.V1.PSCAutomationConfig.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.PSCAutomationConfig> pscAutomationConfigs_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.PSCAutomationConfig>();
+    /// <summary>
+    /// Optional. List of projects and networks where the PSC endpoints will be
+    /// created. This field is used by Online Inference(Prediction) only.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.PSCAutomationConfig> PscAutomationConfigs {
+      get { return pscAutomationConfigs_; }
+    }
+
     /// <summary>Field number for the "service_attachment" field.</summary>
     public const int ServiceAttachmentFieldNumber = 5;
     private string serviceAttachment_ = "";
@@ -410,6 +621,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (EnablePrivateServiceConnect != other.EnablePrivateServiceConnect) return false;
       if(!projectAllowlist_.Equals(other.projectAllowlist_)) return false;
+      if(!pscAutomationConfigs_.Equals(other.pscAutomationConfigs_)) return false;
       if (ServiceAttachment != other.ServiceAttachment) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -420,6 +632,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       if (EnablePrivateServiceConnect != false) hash ^= EnablePrivateServiceConnect.GetHashCode();
       hash ^= projectAllowlist_.GetHashCode();
+      hash ^= pscAutomationConfigs_.GetHashCode();
       if (ServiceAttachment.Length != 0) hash ^= ServiceAttachment.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -444,6 +657,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteBool(EnablePrivateServiceConnect);
       }
       projectAllowlist_.WriteTo(output, _repeated_projectAllowlist_codec);
+      pscAutomationConfigs_.WriteTo(output, _repeated_pscAutomationConfigs_codec);
       if (ServiceAttachment.Length != 0) {
         output.WriteRawTag(42);
         output.WriteString(ServiceAttachment);
@@ -463,6 +677,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteBool(EnablePrivateServiceConnect);
       }
       projectAllowlist_.WriteTo(ref output, _repeated_projectAllowlist_codec);
+      pscAutomationConfigs_.WriteTo(ref output, _repeated_pscAutomationConfigs_codec);
       if (ServiceAttachment.Length != 0) {
         output.WriteRawTag(42);
         output.WriteString(ServiceAttachment);
@@ -481,6 +696,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         size += 1 + 1;
       }
       size += projectAllowlist_.CalculateSize(_repeated_projectAllowlist_codec);
+      size += pscAutomationConfigs_.CalculateSize(_repeated_pscAutomationConfigs_codec);
       if (ServiceAttachment.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAttachment);
       }
@@ -500,6 +716,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         EnablePrivateServiceConnect = other.EnablePrivateServiceConnect;
       }
       projectAllowlist_.Add(other.projectAllowlist_);
+      pscAutomationConfigs_.Add(other.pscAutomationConfigs_);
       if (other.ServiceAttachment.Length != 0) {
         ServiceAttachment = other.ServiceAttachment;
       }
@@ -524,6 +741,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 18: {
             projectAllowlist_.AddEntriesFrom(input, _repeated_projectAllowlist_codec);
+            break;
+          }
+          case 26: {
+            pscAutomationConfigs_.AddEntriesFrom(input, _repeated_pscAutomationConfigs_codec);
             break;
           }
           case 42: {
@@ -551,6 +772,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 18: {
             projectAllowlist_.AddEntriesFrom(ref input, _repeated_projectAllowlist_codec);
+            break;
+          }
+          case 26: {
+            pscAutomationConfigs_.AddEntriesFrom(ref input, _repeated_pscAutomationConfigs_codec);
             break;
           }
           case 42: {
@@ -832,6 +1057,525 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 26: {
             MatchAddress = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Configuration for PSC-I.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PscInterfaceConfig : pb::IMessage<PscInterfaceConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PscInterfaceConfig> _parser = new pb::MessageParser<PscInterfaceConfig>(() => new PscInterfaceConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PscInterfaceConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.ServiceNetworkingReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PscInterfaceConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PscInterfaceConfig(PscInterfaceConfig other) : this() {
+      networkAttachment_ = other.networkAttachment_;
+      dnsPeeringConfigs_ = other.dnsPeeringConfigs_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PscInterfaceConfig Clone() {
+      return new PscInterfaceConfig(this);
+    }
+
+    /// <summary>Field number for the "network_attachment" field.</summary>
+    public const int NetworkAttachmentFieldNumber = 1;
+    private string networkAttachment_ = "";
+    /// <summary>
+    /// Optional. The name of the Compute Engine
+    /// [network
+    /// attachment](https://cloud.google.com/vpc/docs/about-network-attachments) to
+    /// attach to the resource within the region and user project.
+    /// To specify this field, you must have already [created a network attachment]
+    /// (https://cloud.google.com/vpc/docs/create-manage-network-attachments#create-network-attachments).
+    /// This field is only used for resources using PSC-I.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NetworkAttachment {
+      get { return networkAttachment_; }
+      set {
+        networkAttachment_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "dns_peering_configs" field.</summary>
+    public const int DnsPeeringConfigsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.DnsPeeringConfig> _repeated_dnsPeeringConfigs_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.AIPlatform.V1.DnsPeeringConfig.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.DnsPeeringConfig> dnsPeeringConfigs_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.DnsPeeringConfig>();
+    /// <summary>
+    /// Optional. DNS peering configurations. When specified, Vertex AI will
+    /// attempt to configure DNS peering zones in the tenant project VPC
+    /// to resolve the specified domains using the target network's Cloud DNS.
+    /// The user must grant the dns.peer role to the Vertex AI Service Agent
+    /// on the target project.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.DnsPeeringConfig> DnsPeeringConfigs {
+      get { return dnsPeeringConfigs_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PscInterfaceConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PscInterfaceConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (NetworkAttachment != other.NetworkAttachment) return false;
+      if(!dnsPeeringConfigs_.Equals(other.dnsPeeringConfigs_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (NetworkAttachment.Length != 0) hash ^= NetworkAttachment.GetHashCode();
+      hash ^= dnsPeeringConfigs_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (NetworkAttachment.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NetworkAttachment);
+      }
+      dnsPeeringConfigs_.WriteTo(output, _repeated_dnsPeeringConfigs_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (NetworkAttachment.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NetworkAttachment);
+      }
+      dnsPeeringConfigs_.WriteTo(ref output, _repeated_dnsPeeringConfigs_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (NetworkAttachment.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NetworkAttachment);
+      }
+      size += dnsPeeringConfigs_.CalculateSize(_repeated_dnsPeeringConfigs_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PscInterfaceConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.NetworkAttachment.Length != 0) {
+        NetworkAttachment = other.NetworkAttachment;
+      }
+      dnsPeeringConfigs_.Add(other.dnsPeeringConfigs_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            NetworkAttachment = input.ReadString();
+            break;
+          }
+          case 18: {
+            dnsPeeringConfigs_.AddEntriesFrom(input, _repeated_dnsPeeringConfigs_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            NetworkAttachment = input.ReadString();
+            break;
+          }
+          case 18: {
+            dnsPeeringConfigs_.AddEntriesFrom(ref input, _repeated_dnsPeeringConfigs_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// DNS peering configuration. These configurations are used to create
+  /// DNS peering zones in the Vertex tenant project VPC, enabling resolution
+  /// of records within the specified domain hosted in the target network's
+  /// Cloud DNS.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DnsPeeringConfig : pb::IMessage<DnsPeeringConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DnsPeeringConfig> _parser = new pb::MessageParser<DnsPeeringConfig>(() => new DnsPeeringConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DnsPeeringConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.ServiceNetworkingReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DnsPeeringConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DnsPeeringConfig(DnsPeeringConfig other) : this() {
+      domain_ = other.domain_;
+      targetProject_ = other.targetProject_;
+      targetNetwork_ = other.targetNetwork_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DnsPeeringConfig Clone() {
+      return new DnsPeeringConfig(this);
+    }
+
+    /// <summary>Field number for the "domain" field.</summary>
+    public const int DomainFieldNumber = 1;
+    private string domain_ = "";
+    /// <summary>
+    /// Required. The DNS name suffix of the zone being peered to, e.g.,
+    /// "my-internal-domain.corp.". Must end with a dot.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Domain {
+      get { return domain_; }
+      set {
+        domain_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "target_project" field.</summary>
+    public const int TargetProjectFieldNumber = 2;
+    private string targetProject_ = "";
+    /// <summary>
+    /// Required. The project ID hosting the Cloud DNS managed zone that
+    /// contains the 'domain'. The Vertex AI Service Agent requires the
+    /// dns.peer role on this project.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TargetProject {
+      get { return targetProject_; }
+      set {
+        targetProject_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "target_network" field.</summary>
+    public const int TargetNetworkFieldNumber = 3;
+    private string targetNetwork_ = "";
+    /// <summary>
+    /// Required. The VPC network name
+    /// in the target_project where the DNS zone specified by 'domain' is
+    /// visible.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TargetNetwork {
+      get { return targetNetwork_; }
+      set {
+        targetNetwork_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DnsPeeringConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DnsPeeringConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Domain != other.Domain) return false;
+      if (TargetProject != other.TargetProject) return false;
+      if (TargetNetwork != other.TargetNetwork) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Domain.Length != 0) hash ^= Domain.GetHashCode();
+      if (TargetProject.Length != 0) hash ^= TargetProject.GetHashCode();
+      if (TargetNetwork.Length != 0) hash ^= TargetNetwork.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Domain.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Domain);
+      }
+      if (TargetProject.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(TargetProject);
+      }
+      if (TargetNetwork.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(TargetNetwork);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Domain.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Domain);
+      }
+      if (TargetProject.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(TargetProject);
+      }
+      if (TargetNetwork.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(TargetNetwork);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Domain.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Domain);
+      }
+      if (TargetProject.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetProject);
+      }
+      if (TargetNetwork.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetNetwork);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DnsPeeringConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Domain.Length != 0) {
+        Domain = other.Domain;
+      }
+      if (other.TargetProject.Length != 0) {
+        TargetProject = other.TargetProject;
+      }
+      if (other.TargetNetwork.Length != 0) {
+        TargetNetwork = other.TargetNetwork;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Domain = input.ReadString();
+            break;
+          }
+          case 18: {
+            TargetProject = input.ReadString();
+            break;
+          }
+          case 26: {
+            TargetNetwork = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Domain = input.ReadString();
+            break;
+          }
+          case 18: {
+            TargetProject = input.ReadString();
+            break;
+          }
+          case 26: {
+            TargetNetwork = input.ReadString();
             break;
           }
         }

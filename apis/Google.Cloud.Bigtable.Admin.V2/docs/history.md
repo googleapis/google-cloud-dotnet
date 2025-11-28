@@ -1,5 +1,39 @@
 # Version history
 
+## Version 3.30.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+## Version 3.29.0, released 2025-08-08
+
+### New features
+
+- Add tags field to Instance proto (stable branch)
+
+## Version 3.28.0, released 2025-07-22
+
+### New features
+
+- Add type support for Proto and Enum
+
+## Version 3.27.0, released 2025-06-25
+
+### New features
+
+- Add SchemaBundles API
+
+### Documentation improvements
+
+- Improved comment formatting and product naming
+
+## Version 3.26.0, released 2025-04-28
+
+### New features
+
+- Add deletion_protection support for LVs ([commit 1fd088c](https://github.com/googleapis/google-cloud-dotnet/commit/1fd088c1e42f8cfba8d32bc2e90a44bfc1515db0))
+
 ## Version 3.25.0, released 2025-03-17
 
 ### New features

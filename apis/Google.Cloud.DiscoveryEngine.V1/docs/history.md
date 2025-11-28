@@ -1,5 +1,64 @@
 # Version history
 
+## Version 1.12.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+## Version 1.11.0, released 2025-10-20
+
+### Bug fixes
+
+- Include AssistAnswer as a part of the Session
+- Add labels for additional Sessions identification
+
+## Version 1.10.0, released 2025-09-16
+
+### New features
+
+- Added `ranking_expression_backed` and `rank_signals` fields related to the Custom Ranking feature
+
+### Documentation improvements
+
+- A comment for field `ranking_expression` in messages `.google.cloud.discoveryengine.v1alpha.SearchRequest` and `.google.cloud.discoveryengine.v1beta.SearchRequest` is changed to support the Custom Ranking use case
+
+## Version 1.9.0, released 2025-07-28
+
+### New features
+
+- Add SessionService
+- Add AssistantService
+
+### Documentation improvements
+
+- A comment for field `filter` in message `.google.cloud.discoveryengine.v1.ListSessionsRequest` is changed
+- A comment for field `session` in message `.google.cloud.discoveryengine.v1.SearchRequest` is changed
+- A comment for field `query` in message `.google.cloud.discoveryengine.v1.Session` is changed
+- A comment for field `answer` in message `.google.cloud.discoveryengine.v1.Session` is changed
+- A comment for field `query_id` in message `.google.cloud.discoveryengine.v1.Query` is changed
+
+## Version 1.8.0, released 2025-06-09
+
+### New features
+
+- Add CMEK config service
+- Add identity mapping service
+- Add user license config service
+- Add HealthcareFhirConfig to FHIR data store
+- Add ConnectorRunErrorContext to error log
+- Support structured content for chunk
+- Support ACL data store and document
+- Add more options for layout parser config
+- Support media recommendation engine
+- Enable claim level score for grounding
+- Add custom search operators for Workspace search
+- Add more indexing state for site search engine
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes
+
 ## Version 1.7.0, released 2025-03-31
 
 ### New features

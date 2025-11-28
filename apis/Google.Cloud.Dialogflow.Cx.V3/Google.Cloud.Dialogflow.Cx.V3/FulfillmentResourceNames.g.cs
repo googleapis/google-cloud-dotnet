@@ -28,5 +28,20 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             get => string.IsNullOrEmpty(Webhook) ? null : WebhookName.Parse(Webhook, allowUnparsed: true);
             set => Webhook = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class GeneratorSettings
+            {
+                /// <summary>
+                /// <see cref="GeneratorName"/>-typed view over the <see cref="Generator"/> resource name property.
+                /// </summary>
+                public GeneratorName GeneratorAsGeneratorName
+                {
+                    get => string.IsNullOrEmpty(Generator) ? null : GeneratorName.Parse(Generator, allowUnparsed: true);
+                    set => Generator = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 }

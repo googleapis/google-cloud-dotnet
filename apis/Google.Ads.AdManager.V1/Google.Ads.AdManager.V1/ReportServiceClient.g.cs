@@ -219,8 +219,16 @@ namespace Google.Ads.AdManager.V1
         public static string DefaultEndpoint { get; } = "admanager.googleapis.com:443";
 
         /// <summary>The default ReportService scopes.</summary>
-        /// <remarks>The default ReportService scopes are:<list type="bullet"></list></remarks>
-        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] { });
+        /// <remarks>
+        /// The default ReportService scopes are:
+        /// <list type="bullet">
+        /// <item><description>https://www.googleapis.com/auth/admanager</description></item>
+        /// </list>
+        /// </remarks>
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
+        {
+            "https://www.googleapis.com/auth/admanager",
+        });
 
         /// <summary>The service metadata associated with this client type.</summary>
         public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ReportService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
@@ -759,7 +767,7 @@ namespace Google.Ads.AdManager.V1
 
         /// <summary>
         /// Initiates the execution of an existing report asynchronously. Users can
-        /// get the report by polling this operation via
+        /// get the report by polling this operation using
         /// `OperationsService.GetOperation`.
         /// Poll every 5 seconds initially, with an exponential
         /// backoff. Once a report is complete, the operation will contain a
@@ -775,7 +783,7 @@ namespace Google.Ads.AdManager.V1
 
         /// <summary>
         /// Initiates the execution of an existing report asynchronously. Users can
-        /// get the report by polling this operation via
+        /// get the report by polling this operation using
         /// `OperationsService.GetOperation`.
         /// Poll every 5 seconds initially, with an exponential
         /// backoff. Once a report is complete, the operation will contain a
@@ -791,7 +799,7 @@ namespace Google.Ads.AdManager.V1
 
         /// <summary>
         /// Initiates the execution of an existing report asynchronously. Users can
-        /// get the report by polling this operation via
+        /// get the report by polling this operation using
         /// `OperationsService.GetOperation`.
         /// Poll every 5 seconds initially, with an exponential
         /// backoff. Once a report is complete, the operation will contain a
@@ -833,7 +841,7 @@ namespace Google.Ads.AdManager.V1
 
         /// <summary>
         /// Initiates the execution of an existing report asynchronously. Users can
-        /// get the report by polling this operation via
+        /// get the report by polling this operation using
         /// `OperationsService.GetOperation`.
         /// Poll every 5 seconds initially, with an exponential
         /// backoff. Once a report is complete, the operation will contain a
@@ -855,7 +863,7 @@ namespace Google.Ads.AdManager.V1
 
         /// <summary>
         /// Initiates the execution of an existing report asynchronously. Users can
-        /// get the report by polling this operation via
+        /// get the report by polling this operation using
         /// `OperationsService.GetOperation`.
         /// Poll every 5 seconds initially, with an exponential
         /// backoff. Once a report is complete, the operation will contain a
@@ -877,7 +885,7 @@ namespace Google.Ads.AdManager.V1
 
         /// <summary>
         /// Initiates the execution of an existing report asynchronously. Users can
-        /// get the report by polling this operation via
+        /// get the report by polling this operation using
         /// `OperationsService.GetOperation`.
         /// Poll every 5 seconds initially, with an exponential
         /// backoff. Once a report is complete, the operation will contain a
@@ -896,7 +904,7 @@ namespace Google.Ads.AdManager.V1
 
         /// <summary>
         /// Initiates the execution of an existing report asynchronously. Users can
-        /// get the report by polling this operation via
+        /// get the report by polling this operation using
         /// `OperationsService.GetOperation`.
         /// Poll every 5 seconds initially, with an exponential
         /// backoff. Once a report is complete, the operation will contain a
@@ -918,7 +926,7 @@ namespace Google.Ads.AdManager.V1
 
         /// <summary>
         /// Initiates the execution of an existing report asynchronously. Users can
-        /// get the report by polling this operation via
+        /// get the report by polling this operation using
         /// `OperationsService.GetOperation`.
         /// Poll every 5 seconds initially, with an exponential
         /// backoff. Once a report is complete, the operation will contain a
@@ -940,7 +948,7 @@ namespace Google.Ads.AdManager.V1
 
         /// <summary>
         /// Initiates the execution of an existing report asynchronously. Users can
-        /// get the report by polling this operation via
+        /// get the report by polling this operation using
         /// `OperationsService.GetOperation`.
         /// Poll every 5 seconds initially, with an exponential
         /// backoff. Once a report is complete, the operation will contain a
@@ -965,8 +973,8 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="Report.Types.DataTable.Types.Row"/> resources.</returns>
-        public virtual gax::PagedEnumerable<FetchReportResultRowsResponse, Report.Types.DataTable.Types.Row> FetchReportResultRows(FetchReportResultRowsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="ReportDataTable.Types.Row"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchReportResultRowsResponse, ReportDataTable.Types.Row> FetchReportResultRows(FetchReportResultRowsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -977,10 +985,8 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>
-        /// A pageable asynchronous sequence of <see cref="Report.Types.DataTable.Types.Row"/> resources.
-        /// </returns>
-        public virtual gax::PagedAsyncEnumerable<FetchReportResultRowsResponse, Report.Types.DataTable.Types.Row> FetchReportResultRowsAsync(FetchReportResultRowsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="ReportDataTable.Types.Row"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchReportResultRowsResponse, ReportDataTable.Types.Row> FetchReportResultRowsAsync(FetchReportResultRowsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1003,8 +1009,8 @@ namespace Google.Ads.AdManager.V1
         /// <c>null</c> or <c>0</c> uses a server-defined page size.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="Report.Types.DataTable.Types.Row"/> resources.</returns>
-        public virtual gax::PagedEnumerable<FetchReportResultRowsResponse, Report.Types.DataTable.Types.Row> FetchReportResultRows(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="ReportDataTable.Types.Row"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchReportResultRowsResponse, ReportDataTable.Types.Row> FetchReportResultRows(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             FetchReportResultRowsRequest request = new FetchReportResultRowsRequest { Name = name ?? "", };
             if (pageToken != null)
@@ -1038,10 +1044,8 @@ namespace Google.Ads.AdManager.V1
         /// <c>null</c> or <c>0</c> uses a server-defined page size.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>
-        /// A pageable asynchronous sequence of <see cref="Report.Types.DataTable.Types.Row"/> resources.
-        /// </returns>
-        public virtual gax::PagedAsyncEnumerable<FetchReportResultRowsResponse, Report.Types.DataTable.Types.Row> FetchReportResultRowsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="ReportDataTable.Types.Row"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchReportResultRowsResponse, ReportDataTable.Types.Row> FetchReportResultRowsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             FetchReportResultRowsRequest request = new FetchReportResultRowsRequest { Name = name ?? "", };
             if (pageToken != null)
@@ -1243,7 +1247,7 @@ namespace Google.Ads.AdManager.V1
 
         /// <summary>
         /// Initiates the execution of an existing report asynchronously. Users can
-        /// get the report by polling this operation via
+        /// get the report by polling this operation using
         /// `OperationsService.GetOperation`.
         /// Poll every 5 seconds initially, with an exponential
         /// backoff. Once a report is complete, the operation will contain a
@@ -1262,7 +1266,7 @@ namespace Google.Ads.AdManager.V1
 
         /// <summary>
         /// Initiates the execution of an existing report asynchronously. Users can
-        /// get the report by polling this operation via
+        /// get the report by polling this operation using
         /// `OperationsService.GetOperation`.
         /// Poll every 5 seconds initially, with an exponential
         /// backoff. Once a report is complete, the operation will contain a
@@ -1287,11 +1291,11 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="Report.Types.DataTable.Types.Row"/> resources.</returns>
-        public override gax::PagedEnumerable<FetchReportResultRowsResponse, Report.Types.DataTable.Types.Row> FetchReportResultRows(FetchReportResultRowsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="ReportDataTable.Types.Row"/> resources.</returns>
+        public override gax::PagedEnumerable<FetchReportResultRowsResponse, ReportDataTable.Types.Row> FetchReportResultRows(FetchReportResultRowsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_FetchReportResultRowsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<FetchReportResultRowsRequest, FetchReportResultRowsResponse, Report.Types.DataTable.Types.Row>(_callFetchReportResultRows, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<FetchReportResultRowsRequest, FetchReportResultRowsResponse, ReportDataTable.Types.Row>(_callFetchReportResultRows, request, callSettings);
         }
 
         /// <summary>
@@ -1302,13 +1306,11 @@ namespace Google.Ads.AdManager.V1
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>
-        /// A pageable asynchronous sequence of <see cref="Report.Types.DataTable.Types.Row"/> resources.
-        /// </returns>
-        public override gax::PagedAsyncEnumerable<FetchReportResultRowsResponse, Report.Types.DataTable.Types.Row> FetchReportResultRowsAsync(FetchReportResultRowsRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="ReportDataTable.Types.Row"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<FetchReportResultRowsResponse, ReportDataTable.Types.Row> FetchReportResultRowsAsync(FetchReportResultRowsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_FetchReportResultRowsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<FetchReportResultRowsRequest, FetchReportResultRowsResponse, Report.Types.DataTable.Types.Row>(_callFetchReportResultRows, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<FetchReportResultRowsRequest, FetchReportResultRowsResponse, ReportDataTable.Types.Row>(_callFetchReportResultRows, request, callSettings);
         }
     }
 
@@ -1328,10 +1330,10 @@ namespace Google.Ads.AdManager.V1
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
-    public partial class FetchReportResultRowsResponse : gaxgrpc::IPageResponse<Report.Types.DataTable.Types.Row>
+    public partial class FetchReportResultRowsResponse : gaxgrpc::IPageResponse<ReportDataTable.Types.Row>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
-        public scg::IEnumerator<Report.Types.DataTable.Types.Row> GetEnumerator() => Rows.GetEnumerator();
+        public scg::IEnumerator<ReportDataTable.Types.Row> GetEnumerator() => Rows.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

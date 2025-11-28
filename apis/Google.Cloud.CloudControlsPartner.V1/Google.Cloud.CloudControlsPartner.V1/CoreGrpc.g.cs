@@ -95,6 +95,14 @@ namespace Google.Cloud.CloudControlsPartner.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.CloudControlsPartner.V1.GetPartnerRequest> __Marshaller_google_cloud_cloudcontrolspartner_v1_GetPartnerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudControlsPartner.V1.GetPartnerRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudControlsPartner.V1.Partner> __Marshaller_google_cloud_cloudcontrolspartner_v1_Partner = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudControlsPartner.V1.Partner.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudControlsPartner.V1.CreateCustomerRequest> __Marshaller_google_cloud_cloudcontrolspartner_v1_CreateCustomerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudControlsPartner.V1.CreateCustomerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudControlsPartner.V1.UpdateCustomerRequest> __Marshaller_google_cloud_cloudcontrolspartner_v1_UpdateCustomerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudControlsPartner.V1.UpdateCustomerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudControlsPartner.V1.DeleteCustomerRequest> __Marshaller_google_cloud_cloudcontrolspartner_v1_DeleteCustomerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudControlsPartner.V1.DeleteCustomerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudControlsPartner.V1.GetWorkloadRequest, global::Google.Cloud.CloudControlsPartner.V1.Workload> __Method_GetWorkload = new grpc::Method<global::Google.Cloud.CloudControlsPartner.V1.GetWorkloadRequest, global::Google.Cloud.CloudControlsPartner.V1.Workload>(
@@ -159,6 +167,30 @@ namespace Google.Cloud.CloudControlsPartner.V1 {
         "GetPartner",
         __Marshaller_google_cloud_cloudcontrolspartner_v1_GetPartnerRequest,
         __Marshaller_google_cloud_cloudcontrolspartner_v1_Partner);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudControlsPartner.V1.CreateCustomerRequest, global::Google.Cloud.CloudControlsPartner.V1.Customer> __Method_CreateCustomer = new grpc::Method<global::Google.Cloud.CloudControlsPartner.V1.CreateCustomerRequest, global::Google.Cloud.CloudControlsPartner.V1.Customer>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateCustomer",
+        __Marshaller_google_cloud_cloudcontrolspartner_v1_CreateCustomerRequest,
+        __Marshaller_google_cloud_cloudcontrolspartner_v1_Customer);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudControlsPartner.V1.UpdateCustomerRequest, global::Google.Cloud.CloudControlsPartner.V1.Customer> __Method_UpdateCustomer = new grpc::Method<global::Google.Cloud.CloudControlsPartner.V1.UpdateCustomerRequest, global::Google.Cloud.CloudControlsPartner.V1.Customer>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateCustomer",
+        __Marshaller_google_cloud_cloudcontrolspartner_v1_UpdateCustomerRequest,
+        __Marshaller_google_cloud_cloudcontrolspartner_v1_Customer);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.CloudControlsPartner.V1.DeleteCustomerRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteCustomer = new grpc::Method<global::Google.Cloud.CloudControlsPartner.V1.DeleteCustomerRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteCustomer",
+        __Marshaller_google_cloud_cloudcontrolspartner_v1_DeleteCustomerRequest,
+        __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -264,6 +296,42 @@ namespace Google.Cloud.CloudControlsPartner.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudControlsPartner.V1.Partner> GetPartner(global::Google.Cloud.CloudControlsPartner.V1.GetPartnerRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new customer.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudControlsPartner.V1.Customer> CreateCustomer(global::Google.Cloud.CloudControlsPartner.V1.CreateCustomerRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Update details of a single customer
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudControlsPartner.V1.Customer> UpdateCustomer(global::Google.Cloud.CloudControlsPartner.V1.UpdateCustomerRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Delete details of a single customer
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCustomer(global::Google.Cloud.CloudControlsPartner.V1.DeleteCustomerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -689,6 +757,150 @@ namespace Google.Cloud.CloudControlsPartner.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetPartner, null, options, request);
       }
+      /// <summary>
+      /// Creates a new customer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudControlsPartner.V1.Customer CreateCustomer(global::Google.Cloud.CloudControlsPartner.V1.CreateCustomerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCustomer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new customer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudControlsPartner.V1.Customer CreateCustomer(global::Google.Cloud.CloudControlsPartner.V1.CreateCustomerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateCustomer, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new customer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudControlsPartner.V1.Customer> CreateCustomerAsync(global::Google.Cloud.CloudControlsPartner.V1.CreateCustomerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCustomerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new customer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudControlsPartner.V1.Customer> CreateCustomerAsync(global::Google.Cloud.CloudControlsPartner.V1.CreateCustomerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateCustomer, null, options, request);
+      }
+      /// <summary>
+      /// Update details of a single customer
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudControlsPartner.V1.Customer UpdateCustomer(global::Google.Cloud.CloudControlsPartner.V1.UpdateCustomerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCustomer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update details of a single customer
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.CloudControlsPartner.V1.Customer UpdateCustomer(global::Google.Cloud.CloudControlsPartner.V1.UpdateCustomerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateCustomer, null, options, request);
+      }
+      /// <summary>
+      /// Update details of a single customer
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudControlsPartner.V1.Customer> UpdateCustomerAsync(global::Google.Cloud.CloudControlsPartner.V1.UpdateCustomerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCustomerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update details of a single customer
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudControlsPartner.V1.Customer> UpdateCustomerAsync(global::Google.Cloud.CloudControlsPartner.V1.UpdateCustomerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateCustomer, null, options, request);
+      }
+      /// <summary>
+      /// Delete details of a single customer
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCustomer(global::Google.Cloud.CloudControlsPartner.V1.DeleteCustomerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteCustomer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete details of a single customer
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCustomer(global::Google.Cloud.CloudControlsPartner.V1.DeleteCustomerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteCustomer, null, options, request);
+      }
+      /// <summary>
+      /// Delete details of a single customer
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCustomerAsync(global::Google.Cloud.CloudControlsPartner.V1.DeleteCustomerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteCustomerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete details of a single customer
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCustomerAsync(global::Google.Cloud.CloudControlsPartner.V1.DeleteCustomerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteCustomer, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CloudControlsPartnerCoreClient NewInstance(ClientBaseConfiguration configuration)
@@ -710,7 +922,10 @@ namespace Google.Cloud.CloudControlsPartner.V1 {
           .AddMethod(__Method_GetEkmConnections, serviceImpl.GetEkmConnections)
           .AddMethod(__Method_GetPartnerPermissions, serviceImpl.GetPartnerPermissions)
           .AddMethod(__Method_ListAccessApprovalRequests, serviceImpl.ListAccessApprovalRequests)
-          .AddMethod(__Method_GetPartner, serviceImpl.GetPartner).Build();
+          .AddMethod(__Method_GetPartner, serviceImpl.GetPartner)
+          .AddMethod(__Method_CreateCustomer, serviceImpl.CreateCustomer)
+          .AddMethod(__Method_UpdateCustomer, serviceImpl.UpdateCustomer)
+          .AddMethod(__Method_DeleteCustomer, serviceImpl.DeleteCustomer).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -728,6 +943,9 @@ namespace Google.Cloud.CloudControlsPartner.V1 {
       serviceBinder.AddMethod(__Method_GetPartnerPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudControlsPartner.V1.GetPartnerPermissionsRequest, global::Google.Cloud.CloudControlsPartner.V1.PartnerPermissions>(serviceImpl.GetPartnerPermissions));
       serviceBinder.AddMethod(__Method_ListAccessApprovalRequests, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudControlsPartner.V1.ListAccessApprovalRequestsRequest, global::Google.Cloud.CloudControlsPartner.V1.ListAccessApprovalRequestsResponse>(serviceImpl.ListAccessApprovalRequests));
       serviceBinder.AddMethod(__Method_GetPartner, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudControlsPartner.V1.GetPartnerRequest, global::Google.Cloud.CloudControlsPartner.V1.Partner>(serviceImpl.GetPartner));
+      serviceBinder.AddMethod(__Method_CreateCustomer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudControlsPartner.V1.CreateCustomerRequest, global::Google.Cloud.CloudControlsPartner.V1.Customer>(serviceImpl.CreateCustomer));
+      serviceBinder.AddMethod(__Method_UpdateCustomer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudControlsPartner.V1.UpdateCustomerRequest, global::Google.Cloud.CloudControlsPartner.V1.Customer>(serviceImpl.UpdateCustomer));
+      serviceBinder.AddMethod(__Method_DeleteCustomer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudControlsPartner.V1.DeleteCustomerRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteCustomer));
     }
 
   }

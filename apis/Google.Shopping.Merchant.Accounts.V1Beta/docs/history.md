@@ -1,5 +1,90 @@
 # Version history
 
+## Version 1.0.0-beta11, released 2025-11-17
+
+### New features
+
+- A new field `verification_mail_settings` is added to message `.google.shopping.merchant.accounts.v1.CreateAndConfigureAccountRequest`
+- A new field `account_management` is added to message `.google.shopping.merchant.accounts.v1.CreateAndConfigureAccountRequest`
+- A new field `comparison_shopping` is added to message `.google.shopping.merchant.accounts.v1.CreateAndConfigureAccountRequest`
+- A new field `products_management` is added to message `.google.shopping.merchant.accounts.v1.CreateAndConfigureAccountRequest`
+- A new field `campaigns_management` is added to message `.google.shopping.merchant.accounts.v1.CreateAndConfigureAccountRequest`
+- A new field `external_account_id` is added to message `.google.shopping.merchant.accounts.v1.CreateAndConfigureAccountRequest`
+- A new message `SetAliasForRelationship` is added
+- A new field `set_alias` is added to message `.google.shopping.merchant.accounts.v1.CreateAndConfigureAccountRequest`
+- A new field `comparison_shopping` is added to message `.google.shopping.merchant.accounts.v1.AccountService`
+- A new message `ComparisonShopping` is added
+- A new method `GetAccountForGcpRegistration` is added to service `DeveloperRegistrationService`
+- A new message `GetAccountForGcpRegistrationResponse` is added
+- A new method `VerifySelf` is added to service `UserService`
+- A new message `VerifySelfRequest` is added
+- A new message `VerificationMailSettings` is added
+
+### Documentation improvements
+
+- A comment for enum `AccessRight` is changed
+- A comment for enum value `API_DEVELOPER` in enum `AccessRight` is changed
+- A comment for method `DeleteAccount` in service `AccountsService` is changed
+- A comment for field `developer_email` in message `.google.shopping.merchant.accounts.v1.RegisterGcpRequest` is changed
+- A comment for message `Program` is changed
+- A comment for message `User` is changed
+- A comment for enum `State` is changed
+
+## Version 1.0.0-beta10, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+## Version 1.0.0-beta09, released 2025-07-07
+
+### New features
+
+- Add CheckoutSettings service
+
+## Version 1.0.0-beta08, released 2025-05-22
+
+### New features
+
+- A new method_signature `parent,online_return_policy` is added to method `CreateOnlineReturnPolicy` in service `OnlineReturnPolicyService`
+
+### Documentation improvements
+
+- A comment for method `DeleteOnlineReturnPolicy` in service `OnlineReturnPolicyService` is changed
+- A comment for field `parent` in message `.google.shopping.merchant.accounts.v1beta.CreateOnlineReturnPolicyRequest` is changed
+- A comment for field `online_return_policy` in message `.google.shopping.merchant.accounts.v1beta.CreateOnlineReturnPolicyRequest` is changed
+- A comment for message `UpdateOnlineReturnPolicyRequest` is changed
+- A comment for field `online_return_policy` in message `.google.shopping.merchant.accounts.v1beta.UpdateOnlineReturnPolicyRequest` is changed
+- A comment for field `update_mask` in message `.google.shopping.merchant.accounts.v1beta.UpdateOnlineReturnPolicyRequest` is changed
+- A comment for field `accept_defective_only` in message `.google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy` is changed
+- A comment for field `process_refund_days` in message `.google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy` is changed
+- A comment for field `accept_exchange` in message `.google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy` is changed
+- A comment for field `return_label_source` in message `.google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy` is changed
+
+## Version 1.0.0-beta07, released 2025-05-19
+
+### New features
+
+- Add OmnichannelSetingsService, LfpProvidersService and GbpAccountsService
+
+## Version 1.0.0-beta06, released 2025-05-15
+
+### New features
+
+- Updated comments for returns sub-API publication
+
+### Documentation improvements
+
+- A comment for service `OnlineReturnPolicyService` is changed
+- A comment for method `GetOnlineReturnPolicy` in service `OnlineReturnPolicyService` is changed
+- A comment for method `ListOnlineReturnPolicies` in service `OnlineReturnPolicyService` is changed
+- A comment for field `parent` in message `.google.shopping.merchant.accounts.v1beta.ListOnlineReturnPoliciesRequest` is changed
+- A comment for field `policy` in message `.google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy` is changed
+- A comment for field `restocking_fee` in message `.google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy` is changed
+- A comment for field `return_methods` in message `.google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy` is changed
+- A comment for field `item_conditions` in message `.google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy` is changed
+- A comment for field `return_shipping_fee` in message `.google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy` is changed
+
 ## Version 1.0.0-beta05, released 2025-03-17
 
 ### New features

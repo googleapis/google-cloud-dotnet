@@ -252,7 +252,8 @@ namespace Google.Cloud.Dataplex.V1
 
     /// <summary>ContentService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// ContentService manages Notebook and SQL Scripts for Dataplex.
+    /// ContentService manages Notebook and SQL Scripts for Dataplex Universal
+    /// Catalog.
     /// </remarks>
     public abstract partial class ContentServiceClient
     {
@@ -1181,7 +1182,8 @@ namespace Google.Cloud.Dataplex.V1
 
     /// <summary>ContentService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// ContentService manages Notebook and SQL Scripts for Dataplex.
+    /// ContentService manages Notebook and SQL Scripts for Dataplex Universal
+    /// Catalog.
     /// </remarks>
     public sealed partial class ContentServiceClientImpl : ContentServiceClient
     {

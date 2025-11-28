@@ -111,6 +111,36 @@ namespace Google.Cloud.DeveloperConnect.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.FetchGitRefsRequest> __Marshaller_google_cloud_developerconnect_v1_FetchGitRefsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.FetchGitRefsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.FetchGitRefsResponse> __Marshaller_google_cloud_developerconnect_v1_FetchGitRefsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.FetchGitRefsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsRequest> __Marshaller_google_cloud_developerconnect_v1_ListAccountConnectorsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsResponse> __Marshaller_google_cloud_developerconnect_v1_ListAccountConnectorsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.GetAccountConnectorRequest> __Marshaller_google_cloud_developerconnect_v1_GetAccountConnectorRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.GetAccountConnectorRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.AccountConnector> __Marshaller_google_cloud_developerconnect_v1_AccountConnector = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.AccountConnector.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.CreateAccountConnectorRequest> __Marshaller_google_cloud_developerconnect_v1_CreateAccountConnectorRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.CreateAccountConnectorRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.UpdateAccountConnectorRequest> __Marshaller_google_cloud_developerconnect_v1_UpdateAccountConnectorRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.UpdateAccountConnectorRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.DeleteAccountConnectorRequest> __Marshaller_google_cloud_developerconnect_v1_DeleteAccountConnectorRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.DeleteAccountConnectorRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.FetchAccessTokenRequest> __Marshaller_google_cloud_developerconnect_v1_FetchAccessTokenRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.FetchAccessTokenRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.FetchAccessTokenResponse> __Marshaller_google_cloud_developerconnect_v1_FetchAccessTokenResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.FetchAccessTokenResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.ListUsersRequest> __Marshaller_google_cloud_developerconnect_v1_ListUsersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.ListUsersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.ListUsersResponse> __Marshaller_google_cloud_developerconnect_v1_ListUsersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.ListUsersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.DeleteUserRequest> __Marshaller_google_cloud_developerconnect_v1_DeleteUserRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.DeleteUserRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.FetchSelfRequest> __Marshaller_google_cloud_developerconnect_v1_FetchSelfRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.FetchSelfRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.User> __Marshaller_google_cloud_developerconnect_v1_User = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.User.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DeveloperConnect.V1.DeleteSelfRequest> __Marshaller_google_cloud_developerconnect_v1_DeleteSelfRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DeveloperConnect.V1.DeleteSelfRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.ListConnectionsRequest, global::Google.Cloud.DeveloperConnect.V1.ListConnectionsResponse> __Method_ListConnections = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.ListConnectionsRequest, global::Google.Cloud.DeveloperConnect.V1.ListConnectionsResponse>(
@@ -223,6 +253,86 @@ namespace Google.Cloud.DeveloperConnect.V1 {
         "FetchGitRefs",
         __Marshaller_google_cloud_developerconnect_v1_FetchGitRefsRequest,
         __Marshaller_google_cloud_developerconnect_v1_FetchGitRefsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsRequest, global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsResponse> __Method_ListAccountConnectors = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsRequest, global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAccountConnectors",
+        __Marshaller_google_cloud_developerconnect_v1_ListAccountConnectorsRequest,
+        __Marshaller_google_cloud_developerconnect_v1_ListAccountConnectorsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.GetAccountConnectorRequest, global::Google.Cloud.DeveloperConnect.V1.AccountConnector> __Method_GetAccountConnector = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.GetAccountConnectorRequest, global::Google.Cloud.DeveloperConnect.V1.AccountConnector>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAccountConnector",
+        __Marshaller_google_cloud_developerconnect_v1_GetAccountConnectorRequest,
+        __Marshaller_google_cloud_developerconnect_v1_AccountConnector);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.CreateAccountConnectorRequest, global::Google.LongRunning.Operation> __Method_CreateAccountConnector = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.CreateAccountConnectorRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateAccountConnector",
+        __Marshaller_google_cloud_developerconnect_v1_CreateAccountConnectorRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.UpdateAccountConnectorRequest, global::Google.LongRunning.Operation> __Method_UpdateAccountConnector = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.UpdateAccountConnectorRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateAccountConnector",
+        __Marshaller_google_cloud_developerconnect_v1_UpdateAccountConnectorRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.DeleteAccountConnectorRequest, global::Google.LongRunning.Operation> __Method_DeleteAccountConnector = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.DeleteAccountConnectorRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteAccountConnector",
+        __Marshaller_google_cloud_developerconnect_v1_DeleteAccountConnectorRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.FetchAccessTokenRequest, global::Google.Cloud.DeveloperConnect.V1.FetchAccessTokenResponse> __Method_FetchAccessToken = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.FetchAccessTokenRequest, global::Google.Cloud.DeveloperConnect.V1.FetchAccessTokenResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchAccessToken",
+        __Marshaller_google_cloud_developerconnect_v1_FetchAccessTokenRequest,
+        __Marshaller_google_cloud_developerconnect_v1_FetchAccessTokenResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.ListUsersRequest, global::Google.Cloud.DeveloperConnect.V1.ListUsersResponse> __Method_ListUsers = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.ListUsersRequest, global::Google.Cloud.DeveloperConnect.V1.ListUsersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListUsers",
+        __Marshaller_google_cloud_developerconnect_v1_ListUsersRequest,
+        __Marshaller_google_cloud_developerconnect_v1_ListUsersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.DeleteUserRequest, global::Google.LongRunning.Operation> __Method_DeleteUser = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.DeleteUserRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteUser",
+        __Marshaller_google_cloud_developerconnect_v1_DeleteUserRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.FetchSelfRequest, global::Google.Cloud.DeveloperConnect.V1.User> __Method_FetchSelf = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.FetchSelfRequest, global::Google.Cloud.DeveloperConnect.V1.User>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchSelf",
+        __Marshaller_google_cloud_developerconnect_v1_FetchSelfRequest,
+        __Marshaller_google_cloud_developerconnect_v1_User);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DeveloperConnect.V1.DeleteSelfRequest, global::Google.LongRunning.Operation> __Method_DeleteSelf = new grpc::Method<global::Google.Cloud.DeveloperConnect.V1.DeleteSelfRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteSelf",
+        __Marshaller_google_cloud_developerconnect_v1_DeleteSelfRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -406,6 +516,126 @@ namespace Google.Cloud.DeveloperConnect.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DeveloperConnect.V1.FetchGitRefsResponse> FetchGitRefs(global::Google.Cloud.DeveloperConnect.V1.FetchGitRefsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists AccountConnectors in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsResponse> ListAccountConnectors(global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single AccountConnector.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DeveloperConnect.V1.AccountConnector> GetAccountConnector(global::Google.Cloud.DeveloperConnect.V1.GetAccountConnectorRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new AccountConnector in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateAccountConnector(global::Google.Cloud.DeveloperConnect.V1.CreateAccountConnectorRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the parameters of a single AccountConnector.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateAccountConnector(global::Google.Cloud.DeveloperConnect.V1.UpdateAccountConnectorRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single AccountConnector.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteAccountConnector(global::Google.Cloud.DeveloperConnect.V1.DeleteAccountConnectorRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fetches OAuth access token based on end user credentials.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DeveloperConnect.V1.FetchAccessTokenResponse> FetchAccessToken(global::Google.Cloud.DeveloperConnect.V1.FetchAccessTokenRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists Users in a given project, location, and account_connector.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DeveloperConnect.V1.ListUsersResponse> ListUsers(global::Google.Cloud.DeveloperConnect.V1.ListUsersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single User.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteUser(global::Google.Cloud.DeveloperConnect.V1.DeleteUserRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fetch the User based on the user credentials.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DeveloperConnect.V1.User> FetchSelf(global::Google.Cloud.DeveloperConnect.V1.FetchSelfRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Delete the User based on the user credentials.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteSelf(global::Google.Cloud.DeveloperConnect.V1.DeleteSelfRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1143,6 +1373,486 @@ namespace Google.Cloud.DeveloperConnect.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_FetchGitRefs, null, options, request);
       }
+      /// <summary>
+      /// Lists AccountConnectors in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsResponse ListAccountConnectors(global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAccountConnectors(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists AccountConnectors in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsResponse ListAccountConnectors(global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAccountConnectors, null, options, request);
+      }
+      /// <summary>
+      /// Lists AccountConnectors in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsResponse> ListAccountConnectorsAsync(global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAccountConnectorsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists AccountConnectors in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsResponse> ListAccountConnectorsAsync(global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAccountConnectors, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single AccountConnector.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.AccountConnector GetAccountConnector(global::Google.Cloud.DeveloperConnect.V1.GetAccountConnectorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAccountConnector(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single AccountConnector.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.AccountConnector GetAccountConnector(global::Google.Cloud.DeveloperConnect.V1.GetAccountConnectorRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAccountConnector, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single AccountConnector.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.AccountConnector> GetAccountConnectorAsync(global::Google.Cloud.DeveloperConnect.V1.GetAccountConnectorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAccountConnectorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single AccountConnector.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.AccountConnector> GetAccountConnectorAsync(global::Google.Cloud.DeveloperConnect.V1.GetAccountConnectorRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAccountConnector, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new AccountConnector in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateAccountConnector(global::Google.Cloud.DeveloperConnect.V1.CreateAccountConnectorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAccountConnector(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new AccountConnector in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateAccountConnector(global::Google.Cloud.DeveloperConnect.V1.CreateAccountConnectorRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateAccountConnector, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new AccountConnector in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAccountConnectorAsync(global::Google.Cloud.DeveloperConnect.V1.CreateAccountConnectorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAccountConnectorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new AccountConnector in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAccountConnectorAsync(global::Google.Cloud.DeveloperConnect.V1.CreateAccountConnectorRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateAccountConnector, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single AccountConnector.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateAccountConnector(global::Google.Cloud.DeveloperConnect.V1.UpdateAccountConnectorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAccountConnector(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single AccountConnector.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateAccountConnector(global::Google.Cloud.DeveloperConnect.V1.UpdateAccountConnectorRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateAccountConnector, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single AccountConnector.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAccountConnectorAsync(global::Google.Cloud.DeveloperConnect.V1.UpdateAccountConnectorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAccountConnectorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single AccountConnector.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAccountConnectorAsync(global::Google.Cloud.DeveloperConnect.V1.UpdateAccountConnectorRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateAccountConnector, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single AccountConnector.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteAccountConnector(global::Google.Cloud.DeveloperConnect.V1.DeleteAccountConnectorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAccountConnector(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single AccountConnector.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteAccountConnector(global::Google.Cloud.DeveloperConnect.V1.DeleteAccountConnectorRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteAccountConnector, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single AccountConnector.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAccountConnectorAsync(global::Google.Cloud.DeveloperConnect.V1.DeleteAccountConnectorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAccountConnectorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single AccountConnector.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAccountConnectorAsync(global::Google.Cloud.DeveloperConnect.V1.DeleteAccountConnectorRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteAccountConnector, null, options, request);
+      }
+      /// <summary>
+      /// Fetches OAuth access token based on end user credentials.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.FetchAccessTokenResponse FetchAccessToken(global::Google.Cloud.DeveloperConnect.V1.FetchAccessTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchAccessToken(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches OAuth access token based on end user credentials.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.FetchAccessTokenResponse FetchAccessToken(global::Google.Cloud.DeveloperConnect.V1.FetchAccessTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchAccessToken, null, options, request);
+      }
+      /// <summary>
+      /// Fetches OAuth access token based on end user credentials.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.FetchAccessTokenResponse> FetchAccessTokenAsync(global::Google.Cloud.DeveloperConnect.V1.FetchAccessTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchAccessTokenAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches OAuth access token based on end user credentials.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.FetchAccessTokenResponse> FetchAccessTokenAsync(global::Google.Cloud.DeveloperConnect.V1.FetchAccessTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchAccessToken, null, options, request);
+      }
+      /// <summary>
+      /// Lists Users in a given project, location, and account_connector.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.ListUsersResponse ListUsers(global::Google.Cloud.DeveloperConnect.V1.ListUsersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListUsers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Users in a given project, location, and account_connector.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.ListUsersResponse ListUsers(global::Google.Cloud.DeveloperConnect.V1.ListUsersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListUsers, null, options, request);
+      }
+      /// <summary>
+      /// Lists Users in a given project, location, and account_connector.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.ListUsersResponse> ListUsersAsync(global::Google.Cloud.DeveloperConnect.V1.ListUsersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListUsersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Users in a given project, location, and account_connector.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.ListUsersResponse> ListUsersAsync(global::Google.Cloud.DeveloperConnect.V1.ListUsersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListUsers, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single User.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteUser(global::Google.Cloud.DeveloperConnect.V1.DeleteUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteUser(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single User.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteUser(global::Google.Cloud.DeveloperConnect.V1.DeleteUserRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteUser, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single User.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteUserAsync(global::Google.Cloud.DeveloperConnect.V1.DeleteUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteUserAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single User.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteUserAsync(global::Google.Cloud.DeveloperConnect.V1.DeleteUserRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteUser, null, options, request);
+      }
+      /// <summary>
+      /// Fetch the User based on the user credentials.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.User FetchSelf(global::Google.Cloud.DeveloperConnect.V1.FetchSelfRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchSelf(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetch the User based on the user credentials.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DeveloperConnect.V1.User FetchSelf(global::Google.Cloud.DeveloperConnect.V1.FetchSelfRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchSelf, null, options, request);
+      }
+      /// <summary>
+      /// Fetch the User based on the user credentials.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.User> FetchSelfAsync(global::Google.Cloud.DeveloperConnect.V1.FetchSelfRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchSelfAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetch the User based on the user credentials.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DeveloperConnect.V1.User> FetchSelfAsync(global::Google.Cloud.DeveloperConnect.V1.FetchSelfRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchSelf, null, options, request);
+      }
+      /// <summary>
+      /// Delete the User based on the user credentials.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteSelf(global::Google.Cloud.DeveloperConnect.V1.DeleteSelfRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSelf(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete the User based on the user credentials.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteSelf(global::Google.Cloud.DeveloperConnect.V1.DeleteSelfRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteSelf, null, options, request);
+      }
+      /// <summary>
+      /// Delete the User based on the user credentials.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteSelfAsync(global::Google.Cloud.DeveloperConnect.V1.DeleteSelfRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSelfAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Delete the User based on the user credentials.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteSelfAsync(global::Google.Cloud.DeveloperConnect.V1.DeleteSelfRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteSelf, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DeveloperConnectClient NewInstance(ClientBaseConfiguration configuration)
@@ -1170,7 +1880,17 @@ namespace Google.Cloud.DeveloperConnect.V1 {
           .AddMethod(__Method_FetchReadToken, serviceImpl.FetchReadToken)
           .AddMethod(__Method_FetchLinkableGitRepositories, serviceImpl.FetchLinkableGitRepositories)
           .AddMethod(__Method_FetchGitHubInstallations, serviceImpl.FetchGitHubInstallations)
-          .AddMethod(__Method_FetchGitRefs, serviceImpl.FetchGitRefs).Build();
+          .AddMethod(__Method_FetchGitRefs, serviceImpl.FetchGitRefs)
+          .AddMethod(__Method_ListAccountConnectors, serviceImpl.ListAccountConnectors)
+          .AddMethod(__Method_GetAccountConnector, serviceImpl.GetAccountConnector)
+          .AddMethod(__Method_CreateAccountConnector, serviceImpl.CreateAccountConnector)
+          .AddMethod(__Method_UpdateAccountConnector, serviceImpl.UpdateAccountConnector)
+          .AddMethod(__Method_DeleteAccountConnector, serviceImpl.DeleteAccountConnector)
+          .AddMethod(__Method_FetchAccessToken, serviceImpl.FetchAccessToken)
+          .AddMethod(__Method_ListUsers, serviceImpl.ListUsers)
+          .AddMethod(__Method_DeleteUser, serviceImpl.DeleteUser)
+          .AddMethod(__Method_FetchSelf, serviceImpl.FetchSelf)
+          .AddMethod(__Method_DeleteSelf, serviceImpl.DeleteSelf).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1194,6 +1914,16 @@ namespace Google.Cloud.DeveloperConnect.V1 {
       serviceBinder.AddMethod(__Method_FetchLinkableGitRepositories, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.FetchLinkableGitRepositoriesRequest, global::Google.Cloud.DeveloperConnect.V1.FetchLinkableGitRepositoriesResponse>(serviceImpl.FetchLinkableGitRepositories));
       serviceBinder.AddMethod(__Method_FetchGitHubInstallations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.FetchGitHubInstallationsRequest, global::Google.Cloud.DeveloperConnect.V1.FetchGitHubInstallationsResponse>(serviceImpl.FetchGitHubInstallations));
       serviceBinder.AddMethod(__Method_FetchGitRefs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.FetchGitRefsRequest, global::Google.Cloud.DeveloperConnect.V1.FetchGitRefsResponse>(serviceImpl.FetchGitRefs));
+      serviceBinder.AddMethod(__Method_ListAccountConnectors, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsRequest, global::Google.Cloud.DeveloperConnect.V1.ListAccountConnectorsResponse>(serviceImpl.ListAccountConnectors));
+      serviceBinder.AddMethod(__Method_GetAccountConnector, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.GetAccountConnectorRequest, global::Google.Cloud.DeveloperConnect.V1.AccountConnector>(serviceImpl.GetAccountConnector));
+      serviceBinder.AddMethod(__Method_CreateAccountConnector, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.CreateAccountConnectorRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateAccountConnector));
+      serviceBinder.AddMethod(__Method_UpdateAccountConnector, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.UpdateAccountConnectorRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateAccountConnector));
+      serviceBinder.AddMethod(__Method_DeleteAccountConnector, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.DeleteAccountConnectorRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteAccountConnector));
+      serviceBinder.AddMethod(__Method_FetchAccessToken, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.FetchAccessTokenRequest, global::Google.Cloud.DeveloperConnect.V1.FetchAccessTokenResponse>(serviceImpl.FetchAccessToken));
+      serviceBinder.AddMethod(__Method_ListUsers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.ListUsersRequest, global::Google.Cloud.DeveloperConnect.V1.ListUsersResponse>(serviceImpl.ListUsers));
+      serviceBinder.AddMethod(__Method_DeleteUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.DeleteUserRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteUser));
+      serviceBinder.AddMethod(__Method_FetchSelf, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.FetchSelfRequest, global::Google.Cloud.DeveloperConnect.V1.User>(serviceImpl.FetchSelf));
+      serviceBinder.AddMethod(__Method_DeleteSelf, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DeveloperConnect.V1.DeleteSelfRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteSelf));
     }
 
   }

@@ -2,6 +2,7 @@
   {
     "method": "ListConferenceRecords",
     "client": "ConferenceRecordsServiceClient",
+    "restrictedSkip": "Requires additional scopes",
     "arguments": {
       "request": {
       }

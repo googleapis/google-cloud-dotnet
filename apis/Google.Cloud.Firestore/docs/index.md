@@ -22,6 +22,23 @@ For customization of credentials and other settings, create a
 `FirestoreDbBuilder`, set the appropriate properties, and call
 `Build` to create a `FirestoreDb`.
 
+## Conflicts with .NET 10
+
+.NET 10 introduces the `AsyncEnumerable` class which causes
+conflicts with the `System.Linq.Async` package that
+Google.Cloud.Firestore depends on.
+
+We will release a new major version with a dependency on
+`System.Linq.AsyncEnumerable` instead, but within the current major
+version (3.x) you can follow the workaround described on the [.NET compatibility
+page](https://learn.microsoft.com/en-us/dotnet/core/compatibility/core-libraries/10.0/asyncenumerable),
+by adding a direct dependency on `System.Linq.Async` in your project
+file, with `ExcludeAssets=compile`:
+
+```xml
+<PackageReference Include="System.Linq.Async" Version="6.0.3" ExcludeAssets="compile"/>
+```
+
 ## Sample code
 
 {{sample:Index.GettingStarted}}

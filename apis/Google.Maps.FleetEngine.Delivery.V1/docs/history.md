@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.4.0, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+## Version 2.3.0, released 2025-07-11
+
+### New features
+
+- Add ability to specify trip attributes to Trip and deprecate Trip.remaining_waypoints_version
+
 ## Version 2.2.0, released 2025-03-03
 
 ### New features

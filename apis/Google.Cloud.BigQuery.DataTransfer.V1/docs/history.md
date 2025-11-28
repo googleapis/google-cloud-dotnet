@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.11.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
 ## Version 4.10.0, released 2024-10-07
 
 ### New features

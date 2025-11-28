@@ -3287,5 +3287,44 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for RecommendSpec</summary>
+        public void RecommendSpecRequestObject()
+        {
+            // Snippet: RecommendSpec(RecommendSpecRequest, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            RecommendSpecRequest request = new RecommendSpecRequest
+            {
+                GcsUri = "",
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                CheckMachineAvailability = false,
+                CheckUserQuota = false,
+            };
+            // Make the request
+            RecommendSpecResponse response = modelServiceClient.RecommendSpec(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RecommendSpecAsync</summary>
+        public async Task RecommendSpecRequestObjectAsync()
+        {
+            // Snippet: RecommendSpecAsync(RecommendSpecRequest, CallSettings)
+            // Additional: RecommendSpecAsync(RecommendSpecRequest, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RecommendSpecRequest request = new RecommendSpecRequest
+            {
+                GcsUri = "",
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                CheckMachineAvailability = false,
+                CheckUserQuota = false,
+            };
+            // Make the request
+            RecommendSpecResponse response = await modelServiceClient.RecommendSpecAsync(request);
+            // End snippet
+        }
     }
 }

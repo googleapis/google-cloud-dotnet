@@ -47,15 +47,17 @@ namespace Google.Cloud.NetworkServices.V1 {
             "YWx1ZRgCIAEoCUID4EECImkKGk1ldGFkYXRhTGFiZWxNYXRjaENyaXRlcmlh",
             "Ei0KKU1FVEFEQVRBX0xBQkVMX01BVENIX0NSSVRFUklBX1VOU1BFQ0lGSUVE",
             "EAASDQoJTUFUQ0hfQU5ZEAESDQoJTUFUQ0hfQUxMEAJCDgoMbWF0Y2hlcl90",
-            "eXBlQuwBCiNjb20uZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MUIL",
-            "Q29tbW9uUHJvdG9QAVpNY2xvdWQuZ29vZ2xlLmNvbS9nby9uZXR3b3Jrc2Vy",
-            "dmljZXMvYXBpdjEvbmV0d29ya3NlcnZpY2VzcGI7bmV0d29ya3NlcnZpY2Vz",
-            "cGKqAh9Hb29nbGUuQ2xvdWQuTmV0d29ya1NlcnZpY2VzLlYxygIfR29vZ2xl",
-            "XENsb3VkXE5ldHdvcmtTZXJ2aWNlc1xWMeoCIkdvb2dsZTo6Q2xvdWQ6Ok5l",
-            "dHdvcmtTZXJ2aWNlczo6VjFiBnByb3RvMw=="));
+            "eXBlKkoKDEVudm95SGVhZGVycxIdChlFTlZPWV9IRUFERVJTX1VOU1BFQ0lG",
+            "SUVEEAASCAoETk9ORRABEhEKDURFQlVHX0hFQURFUlMQAkLsAQojY29tLmdv",
+            "b2dsZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjFCC0NvbW1vblByb3RvUAFa",
+            "TWNsb3VkLmdvb2dsZS5jb20vZ28vbmV0d29ya3NlcnZpY2VzL2FwaXYxL25l",
+            "dHdvcmtzZXJ2aWNlc3BiO25ldHdvcmtzZXJ2aWNlc3BiqgIfR29vZ2xlLkNs",
+            "b3VkLk5ldHdvcmtTZXJ2aWNlcy5WMcoCH0dvb2dsZVxDbG91ZFxOZXR3b3Jr",
+            "U2VydmljZXNcVjHqAiJHb29nbGU6OkNsb3VkOjpOZXR3b3JrU2VydmljZXM6",
+            "OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetworkServices.V1.EnvoyHeaders), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.OperationMetadata), global::Google.Cloud.NetworkServices.V1.OperationMetadata.Parser, new[]{ "CreateTime", "EndTime", "Target", "Verb", "StatusMessage", "RequestedCancellation", "ApiVersion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.TrafficPortSelector), global::Google.Cloud.NetworkServices.V1.TrafficPortSelector.Parser, new[]{ "Ports" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.EndpointMatcher), global::Google.Cloud.NetworkServices.V1.EndpointMatcher.Parser, new[]{ "MetadataLabelMatcher" }, new[]{ "MatcherType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.EndpointMatcher.Types.MetadataLabelMatcher), global::Google.Cloud.NetworkServices.V1.EndpointMatcher.Types.MetadataLabelMatcher.Parser, new[]{ "MetadataLabelMatchCriteria", "MetadataLabels" }, null, new[]{ typeof(global::Google.Cloud.NetworkServices.V1.EndpointMatcher.Types.MetadataLabelMatcher.Types.MetadataLabelMatchCriteria) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.EndpointMatcher.Types.MetadataLabelMatcher.Types.MetadataLabels), global::Google.Cloud.NetworkServices.V1.EndpointMatcher.Types.MetadataLabelMatcher.Types.MetadataLabels.Parser, new[]{ "LabelName", "LabelValue" }, null, null, null, null)})})
@@ -64,6 +66,32 @@ namespace Google.Cloud.NetworkServices.V1 {
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// EnvoyHeader configuration for Mesh and Gateway
+  /// </summary>
+  public enum EnvoyHeaders {
+    /// <summary>
+    /// Defaults to NONE.
+    /// </summary>
+    [pbr::OriginalName("ENVOY_HEADERS_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Suppress envoy debug headers.
+    /// </summary>
+    [pbr::OriginalName("NONE")] None = 1,
+    /// <summary>
+    /// Envoy will insert default internal debug headers into upstream requests:
+    /// x-envoy-attempt-count
+    /// x-envoy-is-timeout-retry
+    /// x-envoy-expected-rq-timeout-ms
+    /// x-envoy-original-path
+    /// x-envoy-upstream-stream-duration-ms
+    /// </summary>
+    [pbr::OriginalName("DEBUG_HEADERS")] DebugHeaders = 2,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   /// Represents the metadata of the long-running operation.
@@ -1032,7 +1060,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         ///
         /// If there is more than one best match, (for example, if a
         /// config P4 with selector &lt;A:1,D:1> exists and if a client with
-        /// label &lt;A:1,B:1,D:1> connects), an error will be thrown.
+        /// label &lt;A:1,B:1,D:1> connects), pick up the one with older creation time.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

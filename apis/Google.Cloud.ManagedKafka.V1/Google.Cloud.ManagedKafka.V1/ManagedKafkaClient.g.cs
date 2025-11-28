@@ -66,6 +66,13 @@ namespace Google.Cloud.ManagedKafka.V1
             GetConsumerGroupSettings = existing.GetConsumerGroupSettings;
             UpdateConsumerGroupSettings = existing.UpdateConsumerGroupSettings;
             DeleteConsumerGroupSettings = existing.DeleteConsumerGroupSettings;
+            ListAclsSettings = existing.ListAclsSettings;
+            GetAclSettings = existing.GetAclSettings;
+            CreateAclSettings = existing.CreateAclSettings;
+            UpdateAclSettings = existing.UpdateAclSettings;
+            DeleteAclSettings = existing.DeleteAclSettings;
+            AddAclEntrySettings = existing.AddAclEntrySettings;
+            RemoveAclEntrySettings = existing.RemoveAclEntrySettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -329,6 +336,90 @@ namespace Google.Cloud.ManagedKafka.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteConsumerGroupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>ManagedKafkaClient.ListAcls</c>
+        ///  and <c>ManagedKafkaClient.ListAclsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAclsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>ManagedKafkaClient.GetAcl</c>
+        ///  and <c>ManagedKafkaClient.GetAclAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAclSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ManagedKafkaClient.CreateAcl</c> and <c>ManagedKafkaClient.CreateAclAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateAclSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ManagedKafkaClient.UpdateAcl</c> and <c>ManagedKafkaClient.UpdateAclAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateAclSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ManagedKafkaClient.DeleteAcl</c> and <c>ManagedKafkaClient.DeleteAclAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteAclSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ManagedKafkaClient.AddAclEntry</c> and <c>ManagedKafkaClient.AddAclEntryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AddAclEntrySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ManagedKafkaClient.RemoveAclEntry</c> and <c>ManagedKafkaClient.RemoveAclEntryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RemoveAclEntrySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -2325,6 +2416,1172 @@ namespace Google.Cloud.ManagedKafka.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteConsumerGroupAsync(ConsumerGroupName name, st::CancellationToken cancellationToken) =>
             DeleteConsumerGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists the acls in a given cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Acl"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAclsResponse, Acl> ListAcls(ListAclsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the acls in a given cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Acl"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAclsResponse, Acl> ListAclsAsync(ListAclsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the acls in a given cluster.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent cluster whose acls are to be listed.
+        /// Structured like
+        /// `projects/{project}/locations/{location}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Acl"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAclsResponse, Acl> ListAcls(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAclsRequest request = new ListAclsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAcls(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the acls in a given cluster.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent cluster whose acls are to be listed.
+        /// Structured like
+        /// `projects/{project}/locations/{location}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Acl"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAclsResponse, Acl> ListAclsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAclsRequest request = new ListAclsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAclsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the acls in a given cluster.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent cluster whose acls are to be listed.
+        /// Structured like
+        /// `projects/{project}/locations/{location}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Acl"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAclsResponse, Acl> ListAcls(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAclsRequest request = new ListAclsRequest
+            {
+                ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAcls(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the acls in a given cluster.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent cluster whose acls are to be listed.
+        /// Structured like
+        /// `projects/{project}/locations/{location}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Acl"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAclsResponse, Acl> ListAclsAsync(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAclsRequest request = new ListAclsRequest
+            {
+                ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAclsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the properties of a single acl.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Acl GetAcl(GetAclRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the properties of a single acl.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Acl> GetAclAsync(GetAclRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the properties of a single acl.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Acl> GetAclAsync(GetAclRequest request, st::CancellationToken cancellationToken) =>
+            GetAclAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the properties of a single acl.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the acl to return.
+        /// Structured like:
+        /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+        /// 
+        /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+        /// resource_name, pattern_type) of the acl. See `Acl.name` for
+        /// details.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Acl GetAcl(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAcl(new GetAclRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the properties of a single acl.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the acl to return.
+        /// Structured like:
+        /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+        /// 
+        /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+        /// resource_name, pattern_type) of the acl. See `Acl.name` for
+        /// details.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Acl> GetAclAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAclAsync(new GetAclRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the properties of a single acl.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the acl to return.
+        /// Structured like:
+        /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+        /// 
+        /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+        /// resource_name, pattern_type) of the acl. See `Acl.name` for
+        /// details.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Acl> GetAclAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAclAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the properties of a single acl.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the acl to return.
+        /// Structured like:
+        /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+        /// 
+        /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+        /// resource_name, pattern_type) of the acl. See `Acl.name` for
+        /// details.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Acl GetAcl(AclName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAcl(new GetAclRequest
+            {
+                AclName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the properties of a single acl.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the acl to return.
+        /// Structured like:
+        /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+        /// 
+        /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+        /// resource_name, pattern_type) of the acl. See `Acl.name` for
+        /// details.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Acl> GetAclAsync(AclName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAclAsync(new GetAclRequest
+            {
+                AclName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the properties of a single acl.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the acl to return.
+        /// Structured like:
+        /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+        /// 
+        /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+        /// resource_name, pattern_type) of the acl. See `Acl.name` for
+        /// details.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Acl> GetAclAsync(AclName name, st::CancellationToken cancellationToken) =>
+            GetAclAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new acl in the given project, location, and cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Acl CreateAcl(CreateAclRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new acl in the given project, location, and cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Acl> CreateAclAsync(CreateAclRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new acl in the given project, location, and cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Acl> CreateAclAsync(CreateAclRequest request, st::CancellationToken cancellationToken) =>
+            CreateAclAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new acl in the given project, location, and cluster.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent cluster in which to create the acl.
+        /// Structured like
+        /// `projects/{project}/locations/{location}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="acl">
+        /// Required. Configuration of the acl to create. Its `name` field is ignored.
+        /// </param>
+        /// <param name="aclId">
+        /// Required. The ID to use for the acl, which will become the final component
+        /// of the acl's name. The structure of `acl_id` defines the Resource Pattern
+        /// (resource_type, resource_name, pattern_type) of the acl. `acl_id` is
+        /// structured like one of the following:
+        /// 
+        /// For acls on the cluster:
+        /// `cluster`
+        /// 
+        /// For acls on a single resource within the cluster:
+        /// `topic/{resource_name}`
+        /// `consumerGroup/{resource_name}`
+        /// `transactionalId/{resource_name}`
+        /// 
+        /// For acls on all resources that match a prefix:
+        /// `topicPrefixed/{resource_name}`
+        /// `consumerGroupPrefixed/{resource_name}`
+        /// `transactionalIdPrefixed/{resource_name}`
+        /// 
+        /// For acls on all resources of a given type (i.e. the wildcard literal "*"):
+        /// `allTopics` (represents `topic/*`)
+        /// `allConsumerGroups` (represents `consumerGroup/*`)
+        /// `allTransactionalIds` (represents `transactionalId/*`)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Acl CreateAcl(string parent, Acl acl, string aclId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAcl(new CreateAclRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AclId = gax::GaxPreconditions.CheckNotNullOrEmpty(aclId, nameof(aclId)),
+                Acl = gax::GaxPreconditions.CheckNotNull(acl, nameof(acl)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new acl in the given project, location, and cluster.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent cluster in which to create the acl.
+        /// Structured like
+        /// `projects/{project}/locations/{location}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="acl">
+        /// Required. Configuration of the acl to create. Its `name` field is ignored.
+        /// </param>
+        /// <param name="aclId">
+        /// Required. The ID to use for the acl, which will become the final component
+        /// of the acl's name. The structure of `acl_id` defines the Resource Pattern
+        /// (resource_type, resource_name, pattern_type) of the acl. `acl_id` is
+        /// structured like one of the following:
+        /// 
+        /// For acls on the cluster:
+        /// `cluster`
+        /// 
+        /// For acls on a single resource within the cluster:
+        /// `topic/{resource_name}`
+        /// `consumerGroup/{resource_name}`
+        /// `transactionalId/{resource_name}`
+        /// 
+        /// For acls on all resources that match a prefix:
+        /// `topicPrefixed/{resource_name}`
+        /// `consumerGroupPrefixed/{resource_name}`
+        /// `transactionalIdPrefixed/{resource_name}`
+        /// 
+        /// For acls on all resources of a given type (i.e. the wildcard literal "*"):
+        /// `allTopics` (represents `topic/*`)
+        /// `allConsumerGroups` (represents `consumerGroup/*`)
+        /// `allTransactionalIds` (represents `transactionalId/*`)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Acl> CreateAclAsync(string parent, Acl acl, string aclId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAclAsync(new CreateAclRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AclId = gax::GaxPreconditions.CheckNotNullOrEmpty(aclId, nameof(aclId)),
+                Acl = gax::GaxPreconditions.CheckNotNull(acl, nameof(acl)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new acl in the given project, location, and cluster.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent cluster in which to create the acl.
+        /// Structured like
+        /// `projects/{project}/locations/{location}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="acl">
+        /// Required. Configuration of the acl to create. Its `name` field is ignored.
+        /// </param>
+        /// <param name="aclId">
+        /// Required. The ID to use for the acl, which will become the final component
+        /// of the acl's name. The structure of `acl_id` defines the Resource Pattern
+        /// (resource_type, resource_name, pattern_type) of the acl. `acl_id` is
+        /// structured like one of the following:
+        /// 
+        /// For acls on the cluster:
+        /// `cluster`
+        /// 
+        /// For acls on a single resource within the cluster:
+        /// `topic/{resource_name}`
+        /// `consumerGroup/{resource_name}`
+        /// `transactionalId/{resource_name}`
+        /// 
+        /// For acls on all resources that match a prefix:
+        /// `topicPrefixed/{resource_name}`
+        /// `consumerGroupPrefixed/{resource_name}`
+        /// `transactionalIdPrefixed/{resource_name}`
+        /// 
+        /// For acls on all resources of a given type (i.e. the wildcard literal "*"):
+        /// `allTopics` (represents `topic/*`)
+        /// `allConsumerGroups` (represents `consumerGroup/*`)
+        /// `allTransactionalIds` (represents `transactionalId/*`)
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Acl> CreateAclAsync(string parent, Acl acl, string aclId, st::CancellationToken cancellationToken) =>
+            CreateAclAsync(parent, acl, aclId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new acl in the given project, location, and cluster.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent cluster in which to create the acl.
+        /// Structured like
+        /// `projects/{project}/locations/{location}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="acl">
+        /// Required. Configuration of the acl to create. Its `name` field is ignored.
+        /// </param>
+        /// <param name="aclId">
+        /// Required. The ID to use for the acl, which will become the final component
+        /// of the acl's name. The structure of `acl_id` defines the Resource Pattern
+        /// (resource_type, resource_name, pattern_type) of the acl. `acl_id` is
+        /// structured like one of the following:
+        /// 
+        /// For acls on the cluster:
+        /// `cluster`
+        /// 
+        /// For acls on a single resource within the cluster:
+        /// `topic/{resource_name}`
+        /// `consumerGroup/{resource_name}`
+        /// `transactionalId/{resource_name}`
+        /// 
+        /// For acls on all resources that match a prefix:
+        /// `topicPrefixed/{resource_name}`
+        /// `consumerGroupPrefixed/{resource_name}`
+        /// `transactionalIdPrefixed/{resource_name}`
+        /// 
+        /// For acls on all resources of a given type (i.e. the wildcard literal "*"):
+        /// `allTopics` (represents `topic/*`)
+        /// `allConsumerGroups` (represents `consumerGroup/*`)
+        /// `allTransactionalIds` (represents `transactionalId/*`)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Acl CreateAcl(ClusterName parent, Acl acl, string aclId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAcl(new CreateAclRequest
+            {
+                ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AclId = gax::GaxPreconditions.CheckNotNullOrEmpty(aclId, nameof(aclId)),
+                Acl = gax::GaxPreconditions.CheckNotNull(acl, nameof(acl)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new acl in the given project, location, and cluster.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent cluster in which to create the acl.
+        /// Structured like
+        /// `projects/{project}/locations/{location}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="acl">
+        /// Required. Configuration of the acl to create. Its `name` field is ignored.
+        /// </param>
+        /// <param name="aclId">
+        /// Required. The ID to use for the acl, which will become the final component
+        /// of the acl's name. The structure of `acl_id` defines the Resource Pattern
+        /// (resource_type, resource_name, pattern_type) of the acl. `acl_id` is
+        /// structured like one of the following:
+        /// 
+        /// For acls on the cluster:
+        /// `cluster`
+        /// 
+        /// For acls on a single resource within the cluster:
+        /// `topic/{resource_name}`
+        /// `consumerGroup/{resource_name}`
+        /// `transactionalId/{resource_name}`
+        /// 
+        /// For acls on all resources that match a prefix:
+        /// `topicPrefixed/{resource_name}`
+        /// `consumerGroupPrefixed/{resource_name}`
+        /// `transactionalIdPrefixed/{resource_name}`
+        /// 
+        /// For acls on all resources of a given type (i.e. the wildcard literal "*"):
+        /// `allTopics` (represents `topic/*`)
+        /// `allConsumerGroups` (represents `consumerGroup/*`)
+        /// `allTransactionalIds` (represents `transactionalId/*`)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Acl> CreateAclAsync(ClusterName parent, Acl acl, string aclId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAclAsync(new CreateAclRequest
+            {
+                ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AclId = gax::GaxPreconditions.CheckNotNullOrEmpty(aclId, nameof(aclId)),
+                Acl = gax::GaxPreconditions.CheckNotNull(acl, nameof(acl)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new acl in the given project, location, and cluster.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent cluster in which to create the acl.
+        /// Structured like
+        /// `projects/{project}/locations/{location}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="acl">
+        /// Required. Configuration of the acl to create. Its `name` field is ignored.
+        /// </param>
+        /// <param name="aclId">
+        /// Required. The ID to use for the acl, which will become the final component
+        /// of the acl's name. The structure of `acl_id` defines the Resource Pattern
+        /// (resource_type, resource_name, pattern_type) of the acl. `acl_id` is
+        /// structured like one of the following:
+        /// 
+        /// For acls on the cluster:
+        /// `cluster`
+        /// 
+        /// For acls on a single resource within the cluster:
+        /// `topic/{resource_name}`
+        /// `consumerGroup/{resource_name}`
+        /// `transactionalId/{resource_name}`
+        /// 
+        /// For acls on all resources that match a prefix:
+        /// `topicPrefixed/{resource_name}`
+        /// `consumerGroupPrefixed/{resource_name}`
+        /// `transactionalIdPrefixed/{resource_name}`
+        /// 
+        /// For acls on all resources of a given type (i.e. the wildcard literal "*"):
+        /// `allTopics` (represents `topic/*`)
+        /// `allConsumerGroups` (represents `consumerGroup/*`)
+        /// `allTransactionalIds` (represents `transactionalId/*`)
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Acl> CreateAclAsync(ClusterName parent, Acl acl, string aclId, st::CancellationToken cancellationToken) =>
+            CreateAclAsync(parent, acl, aclId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the properties of a single acl.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Acl UpdateAcl(UpdateAclRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the properties of a single acl.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Acl> UpdateAclAsync(UpdateAclRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the properties of a single acl.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Acl> UpdateAclAsync(UpdateAclRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAclAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the properties of a single acl.
+        /// </summary>
+        /// <param name="acl">
+        /// Required. The updated acl. Its `name` and `etag` fields must be populated.
+        /// `acl_entries` must not be empty in the updated acl; to remove all acl
+        /// entries for an acl, use DeleteAcl.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// Acl resource by the update. The fields specified in the update_mask are
+        /// relative to the resource, not the full request. A field will be overwritten
+        /// if it is in the mask.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Acl UpdateAcl(Acl acl, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAcl(new UpdateAclRequest
+            {
+                Acl = gax::GaxPreconditions.CheckNotNull(acl, nameof(acl)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the properties of a single acl.
+        /// </summary>
+        /// <param name="acl">
+        /// Required. The updated acl. Its `name` and `etag` fields must be populated.
+        /// `acl_entries` must not be empty in the updated acl; to remove all acl
+        /// entries for an acl, use DeleteAcl.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// Acl resource by the update. The fields specified in the update_mask are
+        /// relative to the resource, not the full request. A field will be overwritten
+        /// if it is in the mask.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Acl> UpdateAclAsync(Acl acl, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAclAsync(new UpdateAclRequest
+            {
+                Acl = gax::GaxPreconditions.CheckNotNull(acl, nameof(acl)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the properties of a single acl.
+        /// </summary>
+        /// <param name="acl">
+        /// Required. The updated acl. Its `name` and `etag` fields must be populated.
+        /// `acl_entries` must not be empty in the updated acl; to remove all acl
+        /// entries for an acl, use DeleteAcl.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// Acl resource by the update. The fields specified in the update_mask are
+        /// relative to the resource, not the full request. A field will be overwritten
+        /// if it is in the mask.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Acl> UpdateAclAsync(Acl acl, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateAclAsync(acl, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an acl.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAcl(DeleteAclRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an acl.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAclAsync(DeleteAclRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an acl.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAclAsync(DeleteAclRequest request, st::CancellationToken cancellationToken) =>
+            DeleteAclAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an acl.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the acl to delete.
+        /// Structured like:
+        /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+        /// 
+        /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+        /// resource_name, pattern_type) of the acl. See `Acl.name` for details.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAcl(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAcl(new DeleteAclRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an acl.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the acl to delete.
+        /// Structured like:
+        /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+        /// 
+        /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+        /// resource_name, pattern_type) of the acl. See `Acl.name` for details.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAclAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAclAsync(new DeleteAclRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an acl.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the acl to delete.
+        /// Structured like:
+        /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+        /// 
+        /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+        /// resource_name, pattern_type) of the acl. See `Acl.name` for details.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAclAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteAclAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an acl.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the acl to delete.
+        /// Structured like:
+        /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+        /// 
+        /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+        /// resource_name, pattern_type) of the acl. See `Acl.name` for details.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAcl(AclName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAcl(new DeleteAclRequest
+            {
+                AclName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an acl.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the acl to delete.
+        /// Structured like:
+        /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+        /// 
+        /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+        /// resource_name, pattern_type) of the acl. See `Acl.name` for details.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAclAsync(AclName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAclAsync(new DeleteAclRequest
+            {
+                AclName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an acl.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the acl to delete.
+        /// Structured like:
+        /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+        /// 
+        /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+        /// resource_name, pattern_type) of the acl. See `Acl.name` for details.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAclAsync(AclName name, st::CancellationToken cancellationToken) =>
+            DeleteAclAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Incremental update: Adds an acl entry to an acl. Creates the acl if it does
+        /// not exist yet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AddAclEntryResponse AddAclEntry(AddAclEntryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Incremental update: Adds an acl entry to an acl. Creates the acl if it does
+        /// not exist yet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AddAclEntryResponse> AddAclEntryAsync(AddAclEntryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Incremental update: Adds an acl entry to an acl. Creates the acl if it does
+        /// not exist yet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AddAclEntryResponse> AddAclEntryAsync(AddAclEntryRequest request, st::CancellationToken cancellationToken) =>
+            AddAclEntryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Incremental update: Adds an acl entry to an acl. Creates the acl if it does
+        /// not exist yet.
+        /// </summary>
+        /// <param name="acl">
+        /// Required. The name of the acl to add the acl entry to.
+        /// Structured like:
+        /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+        /// 
+        /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+        /// resource_name, pattern_type) of the acl. See `Acl.name` for
+        /// details.
+        /// </param>
+        /// <param name="aclEntry">
+        /// Required. The acl entry to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AddAclEntryResponse AddAclEntry(string acl, AclEntry aclEntry, gaxgrpc::CallSettings callSettings = null) =>
+            AddAclEntry(new AddAclEntryRequest
+            {
+                Acl = gax::GaxPreconditions.CheckNotNullOrEmpty(acl, nameof(acl)),
+                AclEntry = gax::GaxPreconditions.CheckNotNull(aclEntry, nameof(aclEntry)),
+            }, callSettings);
+
+        /// <summary>
+        /// Incremental update: Adds an acl entry to an acl. Creates the acl if it does
+        /// not exist yet.
+        /// </summary>
+        /// <param name="acl">
+        /// Required. The name of the acl to add the acl entry to.
+        /// Structured like:
+        /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+        /// 
+        /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+        /// resource_name, pattern_type) of the acl. See `Acl.name` for
+        /// details.
+        /// </param>
+        /// <param name="aclEntry">
+        /// Required. The acl entry to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AddAclEntryResponse> AddAclEntryAsync(string acl, AclEntry aclEntry, gaxgrpc::CallSettings callSettings = null) =>
+            AddAclEntryAsync(new AddAclEntryRequest
+            {
+                Acl = gax::GaxPreconditions.CheckNotNullOrEmpty(acl, nameof(acl)),
+                AclEntry = gax::GaxPreconditions.CheckNotNull(aclEntry, nameof(aclEntry)),
+            }, callSettings);
+
+        /// <summary>
+        /// Incremental update: Adds an acl entry to an acl. Creates the acl if it does
+        /// not exist yet.
+        /// </summary>
+        /// <param name="acl">
+        /// Required. The name of the acl to add the acl entry to.
+        /// Structured like:
+        /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+        /// 
+        /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+        /// resource_name, pattern_type) of the acl. See `Acl.name` for
+        /// details.
+        /// </param>
+        /// <param name="aclEntry">
+        /// Required. The acl entry to add.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AddAclEntryResponse> AddAclEntryAsync(string acl, AclEntry aclEntry, st::CancellationToken cancellationToken) =>
+            AddAclEntryAsync(acl, aclEntry, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Incremental update: Adds an acl entry to an acl. Creates the acl if it does
+        /// not exist yet.
+        /// </summary>
+        /// <param name="acl">
+        /// Required. The name of the acl to add the acl entry to.
+        /// Structured like:
+        /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+        /// 
+        /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+        /// resource_name, pattern_type) of the acl. See `Acl.name` for
+        /// details.
+        /// </param>
+        /// <param name="aclEntry">
+        /// Required. The acl entry to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AddAclEntryResponse AddAclEntry(AclName acl, AclEntry aclEntry, gaxgrpc::CallSettings callSettings = null) =>
+            AddAclEntry(new AddAclEntryRequest
+            {
+                AclAsAclName = gax::GaxPreconditions.CheckNotNull(acl, nameof(acl)),
+                AclEntry = gax::GaxPreconditions.CheckNotNull(aclEntry, nameof(aclEntry)),
+            }, callSettings);
+
+        /// <summary>
+        /// Incremental update: Adds an acl entry to an acl. Creates the acl if it does
+        /// not exist yet.
+        /// </summary>
+        /// <param name="acl">
+        /// Required. The name of the acl to add the acl entry to.
+        /// Structured like:
+        /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+        /// 
+        /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+        /// resource_name, pattern_type) of the acl. See `Acl.name` for
+        /// details.
+        /// </param>
+        /// <param name="aclEntry">
+        /// Required. The acl entry to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AddAclEntryResponse> AddAclEntryAsync(AclName acl, AclEntry aclEntry, gaxgrpc::CallSettings callSettings = null) =>
+            AddAclEntryAsync(new AddAclEntryRequest
+            {
+                AclAsAclName = gax::GaxPreconditions.CheckNotNull(acl, nameof(acl)),
+                AclEntry = gax::GaxPreconditions.CheckNotNull(aclEntry, nameof(aclEntry)),
+            }, callSettings);
+
+        /// <summary>
+        /// Incremental update: Adds an acl entry to an acl. Creates the acl if it does
+        /// not exist yet.
+        /// </summary>
+        /// <param name="acl">
+        /// Required. The name of the acl to add the acl entry to.
+        /// Structured like:
+        /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+        /// 
+        /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+        /// resource_name, pattern_type) of the acl. See `Acl.name` for
+        /// details.
+        /// </param>
+        /// <param name="aclEntry">
+        /// Required. The acl entry to add.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AddAclEntryResponse> AddAclEntryAsync(AclName acl, AclEntry aclEntry, st::CancellationToken cancellationToken) =>
+            AddAclEntryAsync(acl, aclEntry, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Incremental update: Removes an acl entry from an acl. Deletes the acl if
+        /// its acl entries become empty (i.e. if the removed entry was the last one in
+        /// the acl).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RemoveAclEntryResponse RemoveAclEntry(RemoveAclEntryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Incremental update: Removes an acl entry from an acl. Deletes the acl if
+        /// its acl entries become empty (i.e. if the removed entry was the last one in
+        /// the acl).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveAclEntryResponse> RemoveAclEntryAsync(RemoveAclEntryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Incremental update: Removes an acl entry from an acl. Deletes the acl if
+        /// its acl entries become empty (i.e. if the removed entry was the last one in
+        /// the acl).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveAclEntryResponse> RemoveAclEntryAsync(RemoveAclEntryRequest request, st::CancellationToken cancellationToken) =>
+            RemoveAclEntryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Incremental update: Removes an acl entry from an acl. Deletes the acl if
+        /// its acl entries become empty (i.e. if the removed entry was the last one in
+        /// the acl).
+        /// </summary>
+        /// <param name="acl">
+        /// Required. The name of the acl to remove the acl entry from.
+        /// Structured like:
+        /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+        /// 
+        /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+        /// resource_name, pattern_type) of the acl. See `Acl.name` for
+        /// details.
+        /// </param>
+        /// <param name="aclEntry">
+        /// Required. The acl entry to remove.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RemoveAclEntryResponse RemoveAclEntry(string acl, AclEntry aclEntry, gaxgrpc::CallSettings callSettings = null) =>
+            RemoveAclEntry(new RemoveAclEntryRequest
+            {
+                Acl = gax::GaxPreconditions.CheckNotNullOrEmpty(acl, nameof(acl)),
+                AclEntry = gax::GaxPreconditions.CheckNotNull(aclEntry, nameof(aclEntry)),
+            }, callSettings);
+
+        /// <summary>
+        /// Incremental update: Removes an acl entry from an acl. Deletes the acl if
+        /// its acl entries become empty (i.e. if the removed entry was the last one in
+        /// the acl).
+        /// </summary>
+        /// <param name="acl">
+        /// Required. The name of the acl to remove the acl entry from.
+        /// Structured like:
+        /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+        /// 
+        /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+        /// resource_name, pattern_type) of the acl. See `Acl.name` for
+        /// details.
+        /// </param>
+        /// <param name="aclEntry">
+        /// Required. The acl entry to remove.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveAclEntryResponse> RemoveAclEntryAsync(string acl, AclEntry aclEntry, gaxgrpc::CallSettings callSettings = null) =>
+            RemoveAclEntryAsync(new RemoveAclEntryRequest
+            {
+                Acl = gax::GaxPreconditions.CheckNotNullOrEmpty(acl, nameof(acl)),
+                AclEntry = gax::GaxPreconditions.CheckNotNull(aclEntry, nameof(aclEntry)),
+            }, callSettings);
+
+        /// <summary>
+        /// Incremental update: Removes an acl entry from an acl. Deletes the acl if
+        /// its acl entries become empty (i.e. if the removed entry was the last one in
+        /// the acl).
+        /// </summary>
+        /// <param name="acl">
+        /// Required. The name of the acl to remove the acl entry from.
+        /// Structured like:
+        /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+        /// 
+        /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+        /// resource_name, pattern_type) of the acl. See `Acl.name` for
+        /// details.
+        /// </param>
+        /// <param name="aclEntry">
+        /// Required. The acl entry to remove.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveAclEntryResponse> RemoveAclEntryAsync(string acl, AclEntry aclEntry, st::CancellationToken cancellationToken) =>
+            RemoveAclEntryAsync(acl, aclEntry, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Incremental update: Removes an acl entry from an acl. Deletes the acl if
+        /// its acl entries become empty (i.e. if the removed entry was the last one in
+        /// the acl).
+        /// </summary>
+        /// <param name="acl">
+        /// Required. The name of the acl to remove the acl entry from.
+        /// Structured like:
+        /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+        /// 
+        /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+        /// resource_name, pattern_type) of the acl. See `Acl.name` for
+        /// details.
+        /// </param>
+        /// <param name="aclEntry">
+        /// Required. The acl entry to remove.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RemoveAclEntryResponse RemoveAclEntry(AclName acl, AclEntry aclEntry, gaxgrpc::CallSettings callSettings = null) =>
+            RemoveAclEntry(new RemoveAclEntryRequest
+            {
+                AclAsAclName = gax::GaxPreconditions.CheckNotNull(acl, nameof(acl)),
+                AclEntry = gax::GaxPreconditions.CheckNotNull(aclEntry, nameof(aclEntry)),
+            }, callSettings);
+
+        /// <summary>
+        /// Incremental update: Removes an acl entry from an acl. Deletes the acl if
+        /// its acl entries become empty (i.e. if the removed entry was the last one in
+        /// the acl).
+        /// </summary>
+        /// <param name="acl">
+        /// Required. The name of the acl to remove the acl entry from.
+        /// Structured like:
+        /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+        /// 
+        /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+        /// resource_name, pattern_type) of the acl. See `Acl.name` for
+        /// details.
+        /// </param>
+        /// <param name="aclEntry">
+        /// Required. The acl entry to remove.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveAclEntryResponse> RemoveAclEntryAsync(AclName acl, AclEntry aclEntry, gaxgrpc::CallSettings callSettings = null) =>
+            RemoveAclEntryAsync(new RemoveAclEntryRequest
+            {
+                AclAsAclName = gax::GaxPreconditions.CheckNotNull(acl, nameof(acl)),
+                AclEntry = gax::GaxPreconditions.CheckNotNull(aclEntry, nameof(aclEntry)),
+            }, callSettings);
+
+        /// <summary>
+        /// Incremental update: Removes an acl entry from an acl. Deletes the acl if
+        /// its acl entries become empty (i.e. if the removed entry was the last one in
+        /// the acl).
+        /// </summary>
+        /// <param name="acl">
+        /// Required. The name of the acl to remove the acl entry from.
+        /// Structured like:
+        /// `projects/{project}/locations/{location}/clusters/{cluster}/acls/{acl_id}`.
+        /// 
+        /// The structure of `acl_id` defines the Resource Pattern (resource_type,
+        /// resource_name, pattern_type) of the acl. See `Acl.name` for
+        /// details.
+        /// </param>
+        /// <param name="aclEntry">
+        /// Required. The acl entry to remove.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveAclEntryResponse> RemoveAclEntryAsync(AclName acl, AclEntry aclEntry, st::CancellationToken cancellationToken) =>
+            RemoveAclEntryAsync(acl, aclEntry, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ManagedKafka client wrapper implementation, for convenient use.</summary>
@@ -2361,6 +3618,20 @@ namespace Google.Cloud.ManagedKafka.V1
         private readonly gaxgrpc::ApiCall<UpdateConsumerGroupRequest, ConsumerGroup> _callUpdateConsumerGroup;
 
         private readonly gaxgrpc::ApiCall<DeleteConsumerGroupRequest, wkt::Empty> _callDeleteConsumerGroup;
+
+        private readonly gaxgrpc::ApiCall<ListAclsRequest, ListAclsResponse> _callListAcls;
+
+        private readonly gaxgrpc::ApiCall<GetAclRequest, Acl> _callGetAcl;
+
+        private readonly gaxgrpc::ApiCall<CreateAclRequest, Acl> _callCreateAcl;
+
+        private readonly gaxgrpc::ApiCall<UpdateAclRequest, Acl> _callUpdateAcl;
+
+        private readonly gaxgrpc::ApiCall<DeleteAclRequest, wkt::Empty> _callDeleteAcl;
+
+        private readonly gaxgrpc::ApiCall<AddAclEntryRequest, AddAclEntryResponse> _callAddAclEntry;
+
+        private readonly gaxgrpc::ApiCall<RemoveAclEntryRequest, RemoveAclEntryResponse> _callRemoveAclEntry;
 
         /// <summary>
         /// Constructs a client wrapper for the ManagedKafka service, with the specified gRPC client and settings.
@@ -2423,6 +3694,27 @@ namespace Google.Cloud.ManagedKafka.V1
             _callDeleteConsumerGroup = clientHelper.BuildApiCall<DeleteConsumerGroupRequest, wkt::Empty>("DeleteConsumerGroup", grpcClient.DeleteConsumerGroupAsync, grpcClient.DeleteConsumerGroup, effectiveSettings.DeleteConsumerGroupSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteConsumerGroup);
             Modify_DeleteConsumerGroupApiCall(ref _callDeleteConsumerGroup);
+            _callListAcls = clientHelper.BuildApiCall<ListAclsRequest, ListAclsResponse>("ListAcls", grpcClient.ListAclsAsync, grpcClient.ListAcls, effectiveSettings.ListAclsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAcls);
+            Modify_ListAclsApiCall(ref _callListAcls);
+            _callGetAcl = clientHelper.BuildApiCall<GetAclRequest, Acl>("GetAcl", grpcClient.GetAclAsync, grpcClient.GetAcl, effectiveSettings.GetAclSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAcl);
+            Modify_GetAclApiCall(ref _callGetAcl);
+            _callCreateAcl = clientHelper.BuildApiCall<CreateAclRequest, Acl>("CreateAcl", grpcClient.CreateAclAsync, grpcClient.CreateAcl, effectiveSettings.CreateAclSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateAcl);
+            Modify_CreateAclApiCall(ref _callCreateAcl);
+            _callUpdateAcl = clientHelper.BuildApiCall<UpdateAclRequest, Acl>("UpdateAcl", grpcClient.UpdateAclAsync, grpcClient.UpdateAcl, effectiveSettings.UpdateAclSettings).WithGoogleRequestParam("acl.name", request => request.Acl?.Name);
+            Modify_ApiCall(ref _callUpdateAcl);
+            Modify_UpdateAclApiCall(ref _callUpdateAcl);
+            _callDeleteAcl = clientHelper.BuildApiCall<DeleteAclRequest, wkt::Empty>("DeleteAcl", grpcClient.DeleteAclAsync, grpcClient.DeleteAcl, effectiveSettings.DeleteAclSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteAcl);
+            Modify_DeleteAclApiCall(ref _callDeleteAcl);
+            _callAddAclEntry = clientHelper.BuildApiCall<AddAclEntryRequest, AddAclEntryResponse>("AddAclEntry", grpcClient.AddAclEntryAsync, grpcClient.AddAclEntry, effectiveSettings.AddAclEntrySettings).WithGoogleRequestParam("acl", request => request.Acl);
+            Modify_ApiCall(ref _callAddAclEntry);
+            Modify_AddAclEntryApiCall(ref _callAddAclEntry);
+            _callRemoveAclEntry = clientHelper.BuildApiCall<RemoveAclEntryRequest, RemoveAclEntryResponse>("RemoveAclEntry", grpcClient.RemoveAclEntryAsync, grpcClient.RemoveAclEntry, effectiveSettings.RemoveAclEntrySettings).WithGoogleRequestParam("acl", request => request.Acl);
+            Modify_ApiCall(ref _callRemoveAclEntry);
+            Modify_RemoveAclEntryApiCall(ref _callRemoveAclEntry);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2455,6 +3747,20 @@ namespace Google.Cloud.ManagedKafka.V1
         partial void Modify_UpdateConsumerGroupApiCall(ref gaxgrpc::ApiCall<UpdateConsumerGroupRequest, ConsumerGroup> call);
 
         partial void Modify_DeleteConsumerGroupApiCall(ref gaxgrpc::ApiCall<DeleteConsumerGroupRequest, wkt::Empty> call);
+
+        partial void Modify_ListAclsApiCall(ref gaxgrpc::ApiCall<ListAclsRequest, ListAclsResponse> call);
+
+        partial void Modify_GetAclApiCall(ref gaxgrpc::ApiCall<GetAclRequest, Acl> call);
+
+        partial void Modify_CreateAclApiCall(ref gaxgrpc::ApiCall<CreateAclRequest, Acl> call);
+
+        partial void Modify_UpdateAclApiCall(ref gaxgrpc::ApiCall<UpdateAclRequest, Acl> call);
+
+        partial void Modify_DeleteAclApiCall(ref gaxgrpc::ApiCall<DeleteAclRequest, wkt::Empty> call);
+
+        partial void Modify_AddAclEntryApiCall(ref gaxgrpc::ApiCall<AddAclEntryRequest, AddAclEntryResponse> call);
+
+        partial void Modify_RemoveAclEntryApiCall(ref gaxgrpc::ApiCall<RemoveAclEntryRequest, RemoveAclEntryResponse> call);
 
         partial void OnConstruction(ManagedKafka.ManagedKafkaClient grpcClient, ManagedKafkaSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2491,6 +3797,20 @@ namespace Google.Cloud.ManagedKafka.V1
         partial void Modify_UpdateConsumerGroupRequest(ref UpdateConsumerGroupRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteConsumerGroupRequest(ref DeleteConsumerGroupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAclsRequest(ref ListAclsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAclRequest(ref GetAclRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateAclRequest(ref CreateAclRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateAclRequest(ref UpdateAclRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteAclRequest(ref DeleteAclRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AddAclEntryRequest(ref AddAclEntryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RemoveAclEntryRequest(ref RemoveAclEntryRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists the clusters in a given project and location.
@@ -2836,6 +4156,180 @@ namespace Google.Cloud.ManagedKafka.V1
             Modify_DeleteConsumerGroupRequest(ref request, ref callSettings);
             return _callDeleteConsumerGroup.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Lists the acls in a given cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Acl"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAclsResponse, Acl> ListAcls(ListAclsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAclsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAclsRequest, ListAclsResponse, Acl>(_callListAcls, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the acls in a given cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Acl"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAclsResponse, Acl> ListAclsAsync(ListAclsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAclsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAclsRequest, ListAclsResponse, Acl>(_callListAcls, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the properties of a single acl.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Acl GetAcl(GetAclRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAclRequest(ref request, ref callSettings);
+            return _callGetAcl.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the properties of a single acl.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Acl> GetAclAsync(GetAclRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAclRequest(ref request, ref callSettings);
+            return _callGetAcl.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new acl in the given project, location, and cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Acl CreateAcl(CreateAclRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAclRequest(ref request, ref callSettings);
+            return _callCreateAcl.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new acl in the given project, location, and cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Acl> CreateAclAsync(CreateAclRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAclRequest(ref request, ref callSettings);
+            return _callCreateAcl.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the properties of a single acl.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Acl UpdateAcl(UpdateAclRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAclRequest(ref request, ref callSettings);
+            return _callUpdateAcl.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the properties of a single acl.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Acl> UpdateAclAsync(UpdateAclRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAclRequest(ref request, ref callSettings);
+            return _callUpdateAcl.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an acl.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteAcl(DeleteAclRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAclRequest(ref request, ref callSettings);
+            _callDeleteAcl.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes an acl.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteAclAsync(DeleteAclRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAclRequest(ref request, ref callSettings);
+            return _callDeleteAcl.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Incremental update: Adds an acl entry to an acl. Creates the acl if it does
+        /// not exist yet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AddAclEntryResponse AddAclEntry(AddAclEntryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddAclEntryRequest(ref request, ref callSettings);
+            return _callAddAclEntry.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Incremental update: Adds an acl entry to an acl. Creates the acl if it does
+        /// not exist yet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AddAclEntryResponse> AddAclEntryAsync(AddAclEntryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddAclEntryRequest(ref request, ref callSettings);
+            return _callAddAclEntry.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Incremental update: Removes an acl entry from an acl. Deletes the acl if
+        /// its acl entries become empty (i.e. if the removed entry was the last one in
+        /// the acl).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RemoveAclEntryResponse RemoveAclEntry(RemoveAclEntryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RemoveAclEntryRequest(ref request, ref callSettings);
+            return _callRemoveAclEntry.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Incremental update: Removes an acl entry from an acl. Deletes the acl if
+        /// its acl entries become empty (i.e. if the removed entry was the last one in
+        /// the acl).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RemoveAclEntryResponse> RemoveAclEntryAsync(RemoveAclEntryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RemoveAclEntryRequest(ref request, ref callSettings);
+            return _callRemoveAclEntry.Async(request, callSettings);
+        }
     }
 
     public partial class ListClustersRequest : gaxgrpc::IPageRequest
@@ -2847,6 +4341,10 @@ namespace Google.Cloud.ManagedKafka.V1
     }
 
     public partial class ListConsumerGroupsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAclsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -2870,6 +4368,14 @@ namespace Google.Cloud.ManagedKafka.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<ConsumerGroup> GetEnumerator() => ConsumerGroups.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAclsResponse : gaxgrpc::IPageResponse<Acl>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Acl> GetEnumerator() => Acls.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

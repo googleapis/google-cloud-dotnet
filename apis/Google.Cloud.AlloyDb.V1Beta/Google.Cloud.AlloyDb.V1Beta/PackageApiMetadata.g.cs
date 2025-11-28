@@ -68,6 +68,7 @@ namespace Google.Cloud.AlloyDb.V1Beta
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return CsqlResourcesReflection.Descriptor;
+            yield return CsqlServiceReflection.Descriptor;
             yield return DataModelReflection.Descriptor;
             yield return GeminiReflection.Descriptor;
             yield return ResourcesReflection.Descriptor;

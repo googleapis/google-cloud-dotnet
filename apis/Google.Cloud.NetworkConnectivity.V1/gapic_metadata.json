@@ -122,6 +122,87 @@
         }
       }
     },
+    "DataTransferService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataTransferServiceClient",
+          "rpcs": {
+            "CreateDestination": {
+              "methods": [
+                "CreateDestination",
+                "CreateDestinationAsync"
+              ]
+            },
+            "CreateMulticloudDataTransferConfig": {
+              "methods": [
+                "CreateMulticloudDataTransferConfig",
+                "CreateMulticloudDataTransferConfigAsync"
+              ]
+            },
+            "DeleteDestination": {
+              "methods": [
+                "DeleteDestination",
+                "DeleteDestinationAsync"
+              ]
+            },
+            "DeleteMulticloudDataTransferConfig": {
+              "methods": [
+                "DeleteMulticloudDataTransferConfig",
+                "DeleteMulticloudDataTransferConfigAsync"
+              ]
+            },
+            "GetDestination": {
+              "methods": [
+                "GetDestination",
+                "GetDestinationAsync"
+              ]
+            },
+            "GetMulticloudDataTransferConfig": {
+              "methods": [
+                "GetMulticloudDataTransferConfig",
+                "GetMulticloudDataTransferConfigAsync"
+              ]
+            },
+            "GetMulticloudDataTransferSupportedService": {
+              "methods": [
+                "GetMulticloudDataTransferSupportedService",
+                "GetMulticloudDataTransferSupportedServiceAsync"
+              ]
+            },
+            "ListDestinations": {
+              "methods": [
+                "ListDestinations",
+                "ListDestinationsAsync"
+              ]
+            },
+            "ListMulticloudDataTransferConfigs": {
+              "methods": [
+                "ListMulticloudDataTransferConfigs",
+                "ListMulticloudDataTransferConfigsAsync"
+              ]
+            },
+            "ListMulticloudDataTransferSupportedServices": {
+              "methods": [
+                "ListMulticloudDataTransferSupportedServices",
+                "ListMulticloudDataTransferSupportedServicesAsync"
+              ]
+            },
+            "UpdateDestination": {
+              "methods": [
+                "UpdateDestination",
+                "UpdateDestinationAsync"
+              ]
+            },
+            "UpdateMulticloudDataTransferConfig": {
+              "methods": [
+                "UpdateMulticloudDataTransferConfig",
+                "UpdateMulticloudDataTransferConfigAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "HubService": {
       "clients": {
         "grpc": {
@@ -263,6 +344,45 @@
               "methods": [
                 "UpdateSpoke",
                 "UpdateSpokeAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "InternalRangeService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "InternalRangeServiceClient",
+          "rpcs": {
+            "CreateInternalRange": {
+              "methods": [
+                "CreateInternalRange",
+                "CreateInternalRangeAsync"
+              ]
+            },
+            "DeleteInternalRange": {
+              "methods": [
+                "DeleteInternalRange",
+                "DeleteInternalRangeAsync"
+              ]
+            },
+            "GetInternalRange": {
+              "methods": [
+                "GetInternalRange",
+                "GetInternalRangeAsync"
+              ]
+            },
+            "ListInternalRanges": {
+              "methods": [
+                "ListInternalRanges",
+                "ListInternalRangesAsync"
+              ]
+            },
+            "UpdateInternalRange": {
+              "methods": [
+                "UpdateInternalRange",
+                "UpdateInternalRangeAsync"
               ]
             }
           }

@@ -1,5 +1,23 @@
 # Version history
 
+## Version 3.5.0, released 2025-11-03
+
+### New features
+
+- Update dependencies
+
+## Version 3.4.0, released 2025-10-09
+
+### New features
+
+- Add ListOperations partial success flag
+- Add ListOperations unreachable resources
+
+### Documentation improvements
+
+- Clarity and typo fixes for documentation
+- Fix example rpc naming
+
 ## Version 3.3.0, released 2024-05-14
 
 ### New features

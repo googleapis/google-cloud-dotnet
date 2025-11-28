@@ -26,27 +26,38 @@ namespace Google.Cloud.Spanner.V1 {
           string.Concat(
             "CiBnb29nbGUvc3Bhbm5lci92MS9tdXRhdGlvbi5wcm90bxIRZ29vZ2xlLnNw",
             "YW5uZXIudjEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aHGdv",
-            "b2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8aHGdvb2dsZS9zcGFubmVyL3Yx",
-            "L2tleXMucHJvdG8i1QMKCE11dGF0aW9uEjMKBmluc2VydBgBIAEoCzIhLmdv",
-            "b2dsZS5zcGFubmVyLnYxLk11dGF0aW9uLldyaXRlSAASMwoGdXBkYXRlGAIg",
-            "ASgLMiEuZ29vZ2xlLnNwYW5uZXIudjEuTXV0YXRpb24uV3JpdGVIABI9ChBp",
-            "bnNlcnRfb3JfdXBkYXRlGAMgASgLMiEuZ29vZ2xlLnNwYW5uZXIudjEuTXV0",
-            "YXRpb24uV3JpdGVIABI0CgdyZXBsYWNlGAQgASgLMiEuZ29vZ2xlLnNwYW5u",
-            "ZXIudjEuTXV0YXRpb24uV3JpdGVIABI0CgZkZWxldGUYBSABKAsyIi5nb29n",
-            "bGUuc3Bhbm5lci52MS5NdXRhdGlvbi5EZWxldGVIABpYCgVXcml0ZRISCgV0",
-            "YWJsZRgBIAEoCUID4EECEg8KB2NvbHVtbnMYAiADKAkSKgoGdmFsdWVzGAMg",
-            "AygLMhouZ29vZ2xlLnByb3RvYnVmLkxpc3RWYWx1ZRpNCgZEZWxldGUSEgoF",
-            "dGFibGUYASABKAlCA+BBAhIvCgdrZXlfc2V0GAIgASgLMhkuZ29vZ2xlLnNw",
-            "YW5uZXIudjEuS2V5U2V0QgPgQQJCCwoJb3BlcmF0aW9uQrABChVjb20uZ29v",
-            "Z2xlLnNwYW5uZXIudjFCDU11dGF0aW9uUHJvdG9QAVo1Y2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9zcGFubmVyL2FwaXYxL3NwYW5uZXJwYjtzcGFubmVycGKqAhdH",
-            "b29nbGUuQ2xvdWQuU3Bhbm5lci5WMcoCF0dvb2dsZVxDbG91ZFxTcGFubmVy",
-            "XFYx6gIaR29vZ2xlOjpDbG91ZDo6U3Bhbm5lcjo6VjFiBnByb3RvMw=="));
+            "b2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
+            "aW1lc3RhbXAucHJvdG8aHGdvb2dsZS9zcGFubmVyL3YxL2tleXMucHJvdG8i",
+            "wAYKCE11dGF0aW9uEjMKBmluc2VydBgBIAEoCzIhLmdvb2dsZS5zcGFubmVy",
+            "LnYxLk11dGF0aW9uLldyaXRlSAASMwoGdXBkYXRlGAIgASgLMiEuZ29vZ2xl",
+            "LnNwYW5uZXIudjEuTXV0YXRpb24uV3JpdGVIABI9ChBpbnNlcnRfb3JfdXBk",
+            "YXRlGAMgASgLMiEuZ29vZ2xlLnNwYW5uZXIudjEuTXV0YXRpb24uV3JpdGVI",
+            "ABI0CgdyZXBsYWNlGAQgASgLMiEuZ29vZ2xlLnNwYW5uZXIudjEuTXV0YXRp",
+            "b24uV3JpdGVIABI0CgZkZWxldGUYBSABKAsyIi5nb29nbGUuc3Bhbm5lci52",
+            "MS5NdXRhdGlvbi5EZWxldGVIABIwCgRzZW5kGAYgASgLMiAuZ29vZ2xlLnNw",
+            "YW5uZXIudjEuTXV0YXRpb24uU2VuZEgAEi4KA2FjaxgHIAEoCzIfLmdvb2ds",
+            "ZS5zcGFubmVyLnYxLk11dGF0aW9uLkFja0gAGlgKBVdyaXRlEhIKBXRhYmxl",
+            "GAEgASgJQgPgQQISDwoHY29sdW1ucxgCIAMoCRIqCgZ2YWx1ZXMYAyADKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuTGlzdFZhbHVlGk0KBkRlbGV0ZRISCgV0YWJs",
+            "ZRgBIAEoCUID4EECEi8KB2tleV9zZXQYAiABKAsyGS5nb29nbGUuc3Bhbm5l",
+            "ci52MS5LZXlTZXRCA+BBAhqjAQoEU2VuZBISCgVxdWV1ZRgBIAEoCUID4EEC",
+            "EiwKA2tleRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5MaXN0VmFsdWVCA+BB",
+            "AhIwCgxkZWxpdmVyX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wEicKB3BheWxvYWQYBCABKAsyFi5nb29nbGUucHJvdG9idWYuVmFs",
+            "dWUaYQoDQWNrEhIKBXF1ZXVlGAEgASgJQgPgQQISLAoDa2V5GAIgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLkxpc3RWYWx1ZUID4EECEhgKEGlnbm9yZV9ub3Rf",
+            "Zm91bmQYAyABKAhCCwoJb3BlcmF0aW9uQrABChVjb20uZ29vZ2xlLnNwYW5u",
+            "ZXIudjFCDU11dGF0aW9uUHJvdG9QAVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby9z",
+            "cGFubmVyL2FwaXYxL3NwYW5uZXJwYjtzcGFubmVycGKqAhdHb29nbGUuQ2xv",
+            "dWQuU3Bhbm5lci5WMcoCF0dvb2dsZVxDbG91ZFxTcGFubmVyXFYx6gIaR29v",
+            "Z2xlOjpDbG91ZDo6U3Bhbm5lcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Cloud.Spanner.V1.KeysReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Cloud.Spanner.V1.KeysReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Mutation), global::Google.Cloud.Spanner.V1.Mutation.Parser, new[]{ "Insert", "Update", "InsertOrUpdate", "Replace", "Delete" }, new[]{ "Operation" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Mutation.Types.Write), global::Google.Cloud.Spanner.V1.Mutation.Types.Write.Parser, new[]{ "Table", "Columns", "Values" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Mutation.Types.Delete), global::Google.Cloud.Spanner.V1.Mutation.Types.Delete.Parser, new[]{ "Table", "KeySet" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Mutation), global::Google.Cloud.Spanner.V1.Mutation.Parser, new[]{ "Insert", "Update", "InsertOrUpdate", "Replace", "Delete", "Send", "Ack" }, new[]{ "Operation" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Mutation.Types.Write), global::Google.Cloud.Spanner.V1.Mutation.Types.Write.Parser, new[]{ "Table", "Columns", "Values" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Mutation.Types.Delete), global::Google.Cloud.Spanner.V1.Mutation.Types.Delete.Parser, new[]{ "Table", "KeySet" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Mutation.Types.Send), global::Google.Cloud.Spanner.V1.Mutation.Types.Send.Parser, new[]{ "Queue", "Key", "DeliverTime", "Payload" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Mutation.Types.Ack), global::Google.Cloud.Spanner.V1.Mutation.Types.Ack.Parser, new[]{ "Queue", "Key", "IgnoreNotFound" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -109,6 +120,12 @@ namespace Google.Cloud.Spanner.V1 {
         case OperationOneofCase.Delete:
           Delete = other.Delete.Clone();
           break;
+        case OperationOneofCase.Send:
+          Send = other.Send.Clone();
+          break;
+        case OperationOneofCase.Ack:
+          Ack = other.Ack.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -155,13 +172,15 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>Field number for the "insert_or_update" field.</summary>
     public const int InsertOrUpdateFieldNumber = 3;
     /// <summary>
-    /// Like [insert][google.spanner.v1.Mutation.insert], except that if the row already exists, then
-    /// its column values are overwritten with the ones provided. Any
-    /// column values not explicitly written are preserved.
+    /// Like [insert][google.spanner.v1.Mutation.insert], except that if the row
+    /// already exists, then its column values are overwritten with the ones
+    /// provided. Any column values not explicitly written are preserved.
     ///
-    /// When using [insert_or_update][google.spanner.v1.Mutation.insert_or_update], just as when using [insert][google.spanner.v1.Mutation.insert], all `NOT
-    /// NULL` columns in the table must be given a value. This holds true
-    /// even when the row already exists and will therefore actually be updated.
+    /// When using
+    /// [insert_or_update][google.spanner.v1.Mutation.insert_or_update], just as
+    /// when using [insert][google.spanner.v1.Mutation.insert], all `NOT NULL`
+    /// columns in the table must be given a value. This holds true even when the
+    /// row already exists and will therefore actually be updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -176,10 +195,11 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>Field number for the "replace" field.</summary>
     public const int ReplaceFieldNumber = 4;
     /// <summary>
-    /// Like [insert][google.spanner.v1.Mutation.insert], except that if the row already exists, it is
-    /// deleted, and the column values provided are inserted
-    /// instead. Unlike [insert_or_update][google.spanner.v1.Mutation.insert_or_update], this means any values not
-    /// explicitly written become `NULL`.
+    /// Like [insert][google.spanner.v1.Mutation.insert], except that if the row
+    /// already exists, it is deleted, and the column values provided are
+    /// inserted instead. Unlike
+    /// [insert_or_update][google.spanner.v1.Mutation.insert_or_update], this
+    /// means any values not explicitly written become `NULL`.
     ///
     /// In an interleaved table, if you create the child table with the
     /// `ON DELETE CASCADE` annotation, then replacing a parent row
@@ -212,6 +232,36 @@ namespace Google.Cloud.Spanner.V1 {
       }
     }
 
+    /// <summary>Field number for the "send" field.</summary>
+    public const int SendFieldNumber = 6;
+    /// <summary>
+    /// Send a message to a queue.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.V1.Mutation.Types.Send Send {
+      get { return operationCase_ == OperationOneofCase.Send ? (global::Google.Cloud.Spanner.V1.Mutation.Types.Send) operation_ : null; }
+      set {
+        operation_ = value;
+        operationCase_ = value == null ? OperationOneofCase.None : OperationOneofCase.Send;
+      }
+    }
+
+    /// <summary>Field number for the "ack" field.</summary>
+    public const int AckFieldNumber = 7;
+    /// <summary>
+    /// Ack a message from a queue.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.V1.Mutation.Types.Ack Ack {
+      get { return operationCase_ == OperationOneofCase.Ack ? (global::Google.Cloud.Spanner.V1.Mutation.Types.Ack) operation_ : null; }
+      set {
+        operation_ = value;
+        operationCase_ = value == null ? OperationOneofCase.None : OperationOneofCase.Ack;
+      }
+    }
+
     private object operation_;
     /// <summary>Enum of possible cases for the "operation" oneof.</summary>
     public enum OperationOneofCase {
@@ -221,6 +271,8 @@ namespace Google.Cloud.Spanner.V1 {
       InsertOrUpdate = 3,
       Replace = 4,
       Delete = 5,
+      Send = 6,
+      Ack = 7,
     }
     private OperationOneofCase operationCase_ = OperationOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -256,6 +308,8 @@ namespace Google.Cloud.Spanner.V1 {
       if (!object.Equals(InsertOrUpdate, other.InsertOrUpdate)) return false;
       if (!object.Equals(Replace, other.Replace)) return false;
       if (!object.Equals(Delete, other.Delete)) return false;
+      if (!object.Equals(Send, other.Send)) return false;
+      if (!object.Equals(Ack, other.Ack)) return false;
       if (OperationCase != other.OperationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -269,6 +323,8 @@ namespace Google.Cloud.Spanner.V1 {
       if (operationCase_ == OperationOneofCase.InsertOrUpdate) hash ^= InsertOrUpdate.GetHashCode();
       if (operationCase_ == OperationOneofCase.Replace) hash ^= Replace.GetHashCode();
       if (operationCase_ == OperationOneofCase.Delete) hash ^= Delete.GetHashCode();
+      if (operationCase_ == OperationOneofCase.Send) hash ^= Send.GetHashCode();
+      if (operationCase_ == OperationOneofCase.Ack) hash ^= Ack.GetHashCode();
       hash ^= (int) operationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -308,6 +364,14 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(Delete);
       }
+      if (operationCase_ == OperationOneofCase.Send) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Send);
+      }
+      if (operationCase_ == OperationOneofCase.Ack) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Ack);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -338,6 +402,14 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(Delete);
       }
+      if (operationCase_ == OperationOneofCase.Send) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Send);
+      }
+      if (operationCase_ == OperationOneofCase.Ack) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Ack);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -362,6 +434,12 @@ namespace Google.Cloud.Spanner.V1 {
       }
       if (operationCase_ == OperationOneofCase.Delete) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Delete);
+      }
+      if (operationCase_ == OperationOneofCase.Send) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Send);
+      }
+      if (operationCase_ == OperationOneofCase.Ack) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Ack);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -405,6 +483,18 @@ namespace Google.Cloud.Spanner.V1 {
             Delete = new global::Google.Cloud.Spanner.V1.Mutation.Types.Delete();
           }
           Delete.MergeFrom(other.Delete);
+          break;
+        case OperationOneofCase.Send:
+          if (Send == null) {
+            Send = new global::Google.Cloud.Spanner.V1.Mutation.Types.Send();
+          }
+          Send.MergeFrom(other.Send);
+          break;
+        case OperationOneofCase.Ack:
+          if (Ack == null) {
+            Ack = new global::Google.Cloud.Spanner.V1.Mutation.Types.Ack();
+          }
+          Ack.MergeFrom(other.Ack);
           break;
       }
 
@@ -468,6 +558,24 @@ namespace Google.Cloud.Spanner.V1 {
             Delete = subBuilder;
             break;
           }
+          case 50: {
+            global::Google.Cloud.Spanner.V1.Mutation.Types.Send subBuilder = new global::Google.Cloud.Spanner.V1.Mutation.Types.Send();
+            if (operationCase_ == OperationOneofCase.Send) {
+              subBuilder.MergeFrom(Send);
+            }
+            input.ReadMessage(subBuilder);
+            Send = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.Spanner.V1.Mutation.Types.Ack subBuilder = new global::Google.Cloud.Spanner.V1.Mutation.Types.Ack();
+            if (operationCase_ == OperationOneofCase.Ack) {
+              subBuilder.MergeFrom(Ack);
+            }
+            input.ReadMessage(subBuilder);
+            Ack = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -528,6 +636,24 @@ namespace Google.Cloud.Spanner.V1 {
             Delete = subBuilder;
             break;
           }
+          case 50: {
+            global::Google.Cloud.Spanner.V1.Mutation.Types.Send subBuilder = new global::Google.Cloud.Spanner.V1.Mutation.Types.Send();
+            if (operationCase_ == OperationOneofCase.Send) {
+              subBuilder.MergeFrom(Send);
+            }
+            input.ReadMessage(subBuilder);
+            Send = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.Spanner.V1.Mutation.Types.Ack subBuilder = new global::Google.Cloud.Spanner.V1.Mutation.Types.Ack();
+            if (operationCase_ == OperationOneofCase.Ack) {
+              subBuilder.MergeFrom(Ack);
+            }
+            input.ReadMessage(subBuilder);
+            Ack = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -539,7 +665,9 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Arguments to [insert][google.spanner.v1.Mutation.insert], [update][google.spanner.v1.Mutation.update], [insert_or_update][google.spanner.v1.Mutation.insert_or_update], and
+      /// Arguments to [insert][google.spanner.v1.Mutation.insert],
+      /// [update][google.spanner.v1.Mutation.update],
+      /// [insert_or_update][google.spanner.v1.Mutation.insert_or_update], and
       /// [replace][google.spanner.v1.Mutation.replace] operations.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -610,7 +738,8 @@ namespace Google.Cloud.Spanner.V1 {
             = pb::FieldCodec.ForString(18);
         private readonly pbc::RepeatedField<string> columns_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// The names of the columns in [table][google.spanner.v1.Mutation.Write.table] to be written.
+        /// The names of the columns in
+        /// [table][google.spanner.v1.Mutation.Write.table] to be written.
         ///
         /// The list of columns must contain enough columns to allow
         /// Cloud Spanner to derive values for all primary key columns in the
@@ -631,11 +760,13 @@ namespace Google.Cloud.Spanner.V1 {
         /// The values to be written. `values` can contain more than one
         /// list of values. If it does, then multiple rows are written, one
         /// for each entry in `values`. Each list in `values` must have
-        /// exactly as many entries as there are entries in [columns][google.spanner.v1.Mutation.Write.columns]
-        /// above. Sending multiple lists is equivalent to sending multiple
-        /// `Mutation`s, each containing one `values` entry and repeating
-        /// [table][google.spanner.v1.Mutation.Write.table] and [columns][google.spanner.v1.Mutation.Write.columns]. Individual values in each list are
-        /// encoded as described [here][google.spanner.v1.TypeCode].
+        /// exactly as many entries as there are entries in
+        /// [columns][google.spanner.v1.Mutation.Write.columns] above. Sending
+        /// multiple lists is equivalent to sending multiple `Mutation`s, each
+        /// containing one `values` entry and repeating
+        /// [table][google.spanner.v1.Mutation.Write.table] and
+        /// [columns][google.spanner.v1.Mutation.Write.columns]. Individual values in
+        /// each list are encoded as described [here][google.spanner.v1.TypeCode].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -872,12 +1003,12 @@ namespace Google.Cloud.Spanner.V1 {
         public const int KeySetFieldNumber = 2;
         private global::Google.Cloud.Spanner.V1.KeySet keySet_;
         /// <summary>
-        /// Required. The primary keys of the rows within [table][google.spanner.v1.Mutation.Delete.table] to delete.  The
-        /// primary keys must be specified in the order in which they appear in the
-        /// `PRIMARY KEY()` clause of the table's equivalent DDL statement (the DDL
-        /// statement used to create the table).
-        /// Delete is idempotent. The transaction will succeed even if some or all
-        /// rows do not exist.
+        /// Required. The primary keys of the rows within
+        /// [table][google.spanner.v1.Mutation.Delete.table] to delete.  The primary
+        /// keys must be specified in the order in which they appear in the `PRIMARY
+        /// KEY()` clause of the table's equivalent DDL statement (the DDL statement
+        /// used to create the table). Delete is idempotent. The transaction will
+        /// succeed even if some or all rows do not exist.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1045,6 +1176,641 @@ namespace Google.Cloud.Spanner.V1 {
                   KeySet = new global::Google.Cloud.Spanner.V1.KeySet();
                 }
                 input.ReadMessage(KeySet);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Arguments to [send][google.spanner.v1.Mutation.send] operations.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Send : pb::IMessage<Send>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Send> _parser = new pb::MessageParser<Send>(() => new Send());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Send> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Spanner.V1.Mutation.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Send() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Send(Send other) : this() {
+          queue_ = other.queue_;
+          key_ = other.key_ != null ? other.key_.Clone() : null;
+          deliverTime_ = other.deliverTime_ != null ? other.deliverTime_.Clone() : null;
+          payload_ = other.payload_ != null ? other.payload_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Send Clone() {
+          return new Send(this);
+        }
+
+        /// <summary>Field number for the "queue" field.</summary>
+        public const int QueueFieldNumber = 1;
+        private string queue_ = "";
+        /// <summary>
+        /// Required. The queue to which the message will be sent.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Queue {
+          get { return queue_; }
+          set {
+            queue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "key" field.</summary>
+        public const int KeyFieldNumber = 2;
+        private global::Google.Protobuf.WellKnownTypes.ListValue key_;
+        /// <summary>
+        /// Required. The primary key of the message to be sent.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.ListValue Key {
+          get { return key_; }
+          set {
+            key_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "deliver_time" field.</summary>
+        public const int DeliverTimeFieldNumber = 3;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp deliverTime_;
+        /// <summary>
+        /// The time at which Spanner will begin attempting to deliver the message.
+        /// If `deliver_time` is not set, Spanner will deliver the message
+        /// immediately. If `deliver_time` is in the past, Spanner will replace it
+        /// with a value closer to the current time.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp DeliverTime {
+          get { return deliverTime_; }
+          set {
+            deliverTime_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "payload" field.</summary>
+        public const int PayloadFieldNumber = 4;
+        private global::Google.Protobuf.WellKnownTypes.Value payload_;
+        /// <summary>
+        /// The payload of the message.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Value Payload {
+          get { return payload_; }
+          set {
+            payload_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Send);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Send other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Queue != other.Queue) return false;
+          if (!object.Equals(Key, other.Key)) return false;
+          if (!object.Equals(DeliverTime, other.DeliverTime)) return false;
+          if (!object.Equals(Payload, other.Payload)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Queue.Length != 0) hash ^= Queue.GetHashCode();
+          if (key_ != null) hash ^= Key.GetHashCode();
+          if (deliverTime_ != null) hash ^= DeliverTime.GetHashCode();
+          if (payload_ != null) hash ^= Payload.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Queue.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Queue);
+          }
+          if (key_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Key);
+          }
+          if (deliverTime_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(DeliverTime);
+          }
+          if (payload_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(Payload);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Queue.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Queue);
+          }
+          if (key_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Key);
+          }
+          if (deliverTime_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(DeliverTime);
+          }
+          if (payload_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(Payload);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Queue.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Queue);
+          }
+          if (key_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Key);
+          }
+          if (deliverTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeliverTime);
+          }
+          if (payload_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Payload);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Send other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Queue.Length != 0) {
+            Queue = other.Queue;
+          }
+          if (other.key_ != null) {
+            if (key_ == null) {
+              Key = new global::Google.Protobuf.WellKnownTypes.ListValue();
+            }
+            Key.MergeFrom(other.Key);
+          }
+          if (other.deliverTime_ != null) {
+            if (deliverTime_ == null) {
+              DeliverTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            DeliverTime.MergeFrom(other.DeliverTime);
+          }
+          if (other.payload_ != null) {
+            if (payload_ == null) {
+              Payload = new global::Google.Protobuf.WellKnownTypes.Value();
+            }
+            Payload.MergeFrom(other.Payload);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Queue = input.ReadString();
+                break;
+              }
+              case 18: {
+                if (key_ == null) {
+                  Key = new global::Google.Protobuf.WellKnownTypes.ListValue();
+                }
+                input.ReadMessage(Key);
+                break;
+              }
+              case 26: {
+                if (deliverTime_ == null) {
+                  DeliverTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(DeliverTime);
+                break;
+              }
+              case 34: {
+                if (payload_ == null) {
+                  Payload = new global::Google.Protobuf.WellKnownTypes.Value();
+                }
+                input.ReadMessage(Payload);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Queue = input.ReadString();
+                break;
+              }
+              case 18: {
+                if (key_ == null) {
+                  Key = new global::Google.Protobuf.WellKnownTypes.ListValue();
+                }
+                input.ReadMessage(Key);
+                break;
+              }
+              case 26: {
+                if (deliverTime_ == null) {
+                  DeliverTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(DeliverTime);
+                break;
+              }
+              case 34: {
+                if (payload_ == null) {
+                  Payload = new global::Google.Protobuf.WellKnownTypes.Value();
+                }
+                input.ReadMessage(Payload);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Arguments to [ack][google.spanner.v1.Mutation.ack] operations.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Ack : pb::IMessage<Ack>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Ack> _parser = new pb::MessageParser<Ack>(() => new Ack());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Ack> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Spanner.V1.Mutation.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Ack() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Ack(Ack other) : this() {
+          queue_ = other.queue_;
+          key_ = other.key_ != null ? other.key_.Clone() : null;
+          ignoreNotFound_ = other.ignoreNotFound_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Ack Clone() {
+          return new Ack(this);
+        }
+
+        /// <summary>Field number for the "queue" field.</summary>
+        public const int QueueFieldNumber = 1;
+        private string queue_ = "";
+        /// <summary>
+        /// Required. The queue where the message to be acked is stored.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Queue {
+          get { return queue_; }
+          set {
+            queue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "key" field.</summary>
+        public const int KeyFieldNumber = 2;
+        private global::Google.Protobuf.WellKnownTypes.ListValue key_;
+        /// <summary>
+        /// Required. The primary key of the message to be acked.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.ListValue Key {
+          get { return key_; }
+          set {
+            key_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "ignore_not_found" field.</summary>
+        public const int IgnoreNotFoundFieldNumber = 3;
+        private bool ignoreNotFound_;
+        /// <summary>
+        /// By default, an attempt to ack a message that does not exist will fail
+        /// with a `NOT_FOUND` error. With `ignore_not_found` set to true, the ack
+        /// will succeed even if the message does not exist. This is useful for
+        /// unconditionally acking a message, even if it is missing or has already
+        /// been acked.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool IgnoreNotFound {
+          get { return ignoreNotFound_; }
+          set {
+            ignoreNotFound_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Ack);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Ack other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Queue != other.Queue) return false;
+          if (!object.Equals(Key, other.Key)) return false;
+          if (IgnoreNotFound != other.IgnoreNotFound) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Queue.Length != 0) hash ^= Queue.GetHashCode();
+          if (key_ != null) hash ^= Key.GetHashCode();
+          if (IgnoreNotFound != false) hash ^= IgnoreNotFound.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Queue.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Queue);
+          }
+          if (key_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Key);
+          }
+          if (IgnoreNotFound != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(IgnoreNotFound);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Queue.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Queue);
+          }
+          if (key_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Key);
+          }
+          if (IgnoreNotFound != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(IgnoreNotFound);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Queue.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Queue);
+          }
+          if (key_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Key);
+          }
+          if (IgnoreNotFound != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Ack other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Queue.Length != 0) {
+            Queue = other.Queue;
+          }
+          if (other.key_ != null) {
+            if (key_ == null) {
+              Key = new global::Google.Protobuf.WellKnownTypes.ListValue();
+            }
+            Key.MergeFrom(other.Key);
+          }
+          if (other.IgnoreNotFound != false) {
+            IgnoreNotFound = other.IgnoreNotFound;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Queue = input.ReadString();
+                break;
+              }
+              case 18: {
+                if (key_ == null) {
+                  Key = new global::Google.Protobuf.WellKnownTypes.ListValue();
+                }
+                input.ReadMessage(Key);
+                break;
+              }
+              case 24: {
+                IgnoreNotFound = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Queue = input.ReadString();
+                break;
+              }
+              case 18: {
+                if (key_ == null) {
+                  Key = new global::Google.Protobuf.WellKnownTypes.ListValue();
+                }
+                input.ReadMessage(Key);
+                break;
+              }
+              case 24: {
+                IgnoreNotFound = input.ReadBool();
                 break;
               }
             }

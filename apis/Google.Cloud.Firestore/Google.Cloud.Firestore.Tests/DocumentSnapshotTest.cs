@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ using System.Collections.Generic;
 using Xunit;
 using static Google.Cloud.Firestore.Tests.ProtoHelpers;
 
-using wkt = Google.Protobuf.WellKnownTypes;
+using WKT = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Firestore.Tests
 {
@@ -141,8 +141,8 @@ namespace Google.Cloud.Firestore.Tests
             var readTime = new Timestamp(10, 2);
             var snapshot = DocumentSnapshot.ForDocument(db, proto, readTime);
             // If we ask for the field twice, the results should be independent. (We clone the value.)
-            var fieldValue1 = snapshot.GetValue<wkt::Timestamp>("Timestamp");
-            var fieldValue2 = snapshot.GetValue<wkt::Timestamp>("Timestamp");
+            var fieldValue1 = snapshot.GetValue<WKT::Timestamp>("Timestamp");
+            var fieldValue2 = snapshot.GetValue<WKT::Timestamp>("Timestamp");
             Assert.NotSame(fieldValue1, fieldValue2);
             Assert.Equal(fieldValue1, fieldValue2);
 

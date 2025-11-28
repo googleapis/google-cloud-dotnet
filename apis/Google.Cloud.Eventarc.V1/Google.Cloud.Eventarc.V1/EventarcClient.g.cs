@@ -3464,7 +3464,9 @@ namespace Google.Cloud.Eventarc.V1
             DeleteChannelConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get a GoogleChannelConfig
+        /// Get a GoogleChannelConfig.
+        /// The name of the GoogleChannelConfig in the response is ALWAYS coded with
+        /// projectID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3473,7 +3475,9 @@ namespace Google.Cloud.Eventarc.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get a GoogleChannelConfig
+        /// Get a GoogleChannelConfig.
+        /// The name of the GoogleChannelConfig in the response is ALWAYS coded with
+        /// projectID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3482,7 +3486,9 @@ namespace Google.Cloud.Eventarc.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Get a GoogleChannelConfig
+        /// Get a GoogleChannelConfig.
+        /// The name of the GoogleChannelConfig in the response is ALWAYS coded with
+        /// projectID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3491,7 +3497,9 @@ namespace Google.Cloud.Eventarc.V1
             GetGoogleChannelConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get a GoogleChannelConfig
+        /// Get a GoogleChannelConfig.
+        /// The name of the GoogleChannelConfig in the response is ALWAYS coded with
+        /// projectID.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the config to get.
@@ -3505,7 +3513,9 @@ namespace Google.Cloud.Eventarc.V1
             }, callSettings);
 
         /// <summary>
-        /// Get a GoogleChannelConfig
+        /// Get a GoogleChannelConfig.
+        /// The name of the GoogleChannelConfig in the response is ALWAYS coded with
+        /// projectID.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the config to get.
@@ -3519,7 +3529,9 @@ namespace Google.Cloud.Eventarc.V1
             }, callSettings);
 
         /// <summary>
-        /// Get a GoogleChannelConfig
+        /// Get a GoogleChannelConfig.
+        /// The name of the GoogleChannelConfig in the response is ALWAYS coded with
+        /// projectID.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the config to get.
@@ -3530,7 +3542,9 @@ namespace Google.Cloud.Eventarc.V1
             GetGoogleChannelConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Get a GoogleChannelConfig
+        /// Get a GoogleChannelConfig.
+        /// The name of the GoogleChannelConfig in the response is ALWAYS coded with
+        /// projectID.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the config to get.
@@ -3544,7 +3558,9 @@ namespace Google.Cloud.Eventarc.V1
             }, callSettings);
 
         /// <summary>
-        /// Get a GoogleChannelConfig
+        /// Get a GoogleChannelConfig.
+        /// The name of the GoogleChannelConfig in the response is ALWAYS coded with
+        /// projectID.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the config to get.
@@ -3558,7 +3574,9 @@ namespace Google.Cloud.Eventarc.V1
             }, callSettings);
 
         /// <summary>
-        /// Get a GoogleChannelConfig
+        /// Get a GoogleChannelConfig.
+        /// The name of the GoogleChannelConfig in the response is ALWAYS coded with
+        /// projectID.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the config to get.
@@ -3778,7 +3796,7 @@ namespace Google.Cloud.Eventarc.V1
         /// List message buses.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection to list triggers on.
+        /// Required. The parent collection to list message buses on.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3811,7 +3829,7 @@ namespace Google.Cloud.Eventarc.V1
         /// List message buses.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection to list triggers on.
+        /// Required. The parent collection to list message buses on.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3844,7 +3862,7 @@ namespace Google.Cloud.Eventarc.V1
         /// List message buses.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection to list triggers on.
+        /// Required. The parent collection to list message buses on.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3877,7 +3895,7 @@ namespace Google.Cloud.Eventarc.V1
         /// List message buses.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent collection to list triggers on.
+        /// Required. The parent collection to list message buses on.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4120,7 +4138,7 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="messageBusId">
         /// Required. The user-provided ID to be assigned to the MessageBus. It should
-        /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$)
+        /// match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4143,7 +4161,7 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="messageBusId">
         /// Required. The user-provided ID to be assigned to the MessageBus. It should
-        /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$)
+        /// match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4166,7 +4184,7 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="messageBusId">
         /// Required. The user-provided ID to be assigned to the MessageBus. It should
-        /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$)
+        /// match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4184,7 +4202,7 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="messageBusId">
         /// Required. The user-provided ID to be assigned to the MessageBus. It should
-        /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$)
+        /// match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4207,7 +4225,7 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="messageBusId">
         /// Required. The user-provided ID to be assigned to the MessageBus. It should
-        /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$)
+        /// match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4230,7 +4248,7 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="messageBusId">
         /// Required. The user-provided ID to be assigned to the MessageBus. It should
-        /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$)
+        /// match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4824,7 +4842,7 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="enrollmentId">
         /// Required. The user-provided ID to be assigned to the Enrollment. It should
-        /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+        /// match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4847,7 +4865,7 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="enrollmentId">
         /// Required. The user-provided ID to be assigned to the Enrollment. It should
-        /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+        /// match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4870,7 +4888,7 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="enrollmentId">
         /// Required. The user-provided ID to be assigned to the Enrollment. It should
-        /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+        /// match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4888,7 +4906,7 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="enrollmentId">
         /// Required. The user-provided ID to be assigned to the Enrollment. It should
-        /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+        /// match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4911,7 +4929,7 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="enrollmentId">
         /// Required. The user-provided ID to be assigned to the Enrollment. It should
-        /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+        /// match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4934,7 +4952,7 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="enrollmentId">
         /// Required. The user-provided ID to be assigned to the Enrollment. It should
-        /// match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+        /// match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5527,7 +5545,8 @@ namespace Google.Cloud.Eventarc.V1
         /// Required. The pipeline to create.
         /// </param>
         /// <param name="pipelineId">
-        /// Required. The user-provided ID to be assigned to the Pipeline.
+        /// Required. The user-provided ID to be assigned to the Pipeline. It should
+        /// match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5549,7 +5568,8 @@ namespace Google.Cloud.Eventarc.V1
         /// Required. The pipeline to create.
         /// </param>
         /// <param name="pipelineId">
-        /// Required. The user-provided ID to be assigned to the Pipeline.
+        /// Required. The user-provided ID to be assigned to the Pipeline. It should
+        /// match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5571,7 +5591,8 @@ namespace Google.Cloud.Eventarc.V1
         /// Required. The pipeline to create.
         /// </param>
         /// <param name="pipelineId">
-        /// Required. The user-provided ID to be assigned to the Pipeline.
+        /// Required. The user-provided ID to be assigned to the Pipeline. It should
+        /// match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5588,7 +5609,8 @@ namespace Google.Cloud.Eventarc.V1
         /// Required. The pipeline to create.
         /// </param>
         /// <param name="pipelineId">
-        /// Required. The user-provided ID to be assigned to the Pipeline.
+        /// Required. The user-provided ID to be assigned to the Pipeline. It should
+        /// match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5610,7 +5632,8 @@ namespace Google.Cloud.Eventarc.V1
         /// Required. The pipeline to create.
         /// </param>
         /// <param name="pipelineId">
-        /// Required. The user-provided ID to be assigned to the Pipeline.
+        /// Required. The user-provided ID to be assigned to the Pipeline. It should
+        /// match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5632,7 +5655,8 @@ namespace Google.Cloud.Eventarc.V1
         /// Required. The pipeline to create.
         /// </param>
         /// <param name="pipelineId">
-        /// Required. The user-provided ID to be assigned to the Pipeline.
+        /// Required. The user-provided ID to be assigned to the Pipeline. It should
+        /// match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6227,7 +6251,7 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="googleApiSourceId">
         /// Required. The user-provided ID to be assigned to the GoogleApiSource. It
-        /// should match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+        /// should match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6250,7 +6274,7 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="googleApiSourceId">
         /// Required. The user-provided ID to be assigned to the GoogleApiSource. It
-        /// should match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+        /// should match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6273,7 +6297,7 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="googleApiSourceId">
         /// Required. The user-provided ID to be assigned to the GoogleApiSource. It
-        /// should match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+        /// should match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6291,7 +6315,7 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="googleApiSourceId">
         /// Required. The user-provided ID to be assigned to the GoogleApiSource. It
-        /// should match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+        /// should match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6314,7 +6338,7 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="googleApiSourceId">
         /// Required. The user-provided ID to be assigned to the GoogleApiSource. It
-        /// should match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+        /// should match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6337,7 +6361,7 @@ namespace Google.Cloud.Eventarc.V1
         /// </param>
         /// <param name="googleApiSourceId">
         /// Required. The user-provided ID to be assigned to the GoogleApiSource. It
-        /// should match the format (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+        /// should match the format `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7435,7 +7459,9 @@ namespace Google.Cloud.Eventarc.V1
         }
 
         /// <summary>
-        /// Get a GoogleChannelConfig
+        /// Get a GoogleChannelConfig.
+        /// The name of the GoogleChannelConfig in the response is ALWAYS coded with
+        /// projectID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7447,7 +7473,9 @@ namespace Google.Cloud.Eventarc.V1
         }
 
         /// <summary>
-        /// Get a GoogleChannelConfig
+        /// Get a GoogleChannelConfig.
+        /// The name of the GoogleChannelConfig in the response is ALWAYS coded with
+        /// projectID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

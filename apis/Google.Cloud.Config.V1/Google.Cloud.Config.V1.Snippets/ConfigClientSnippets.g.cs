@@ -3500,5 +3500,739 @@ namespace GoogleCSharpSnippets
             TerraformVersion response = await configClient.GetTerraformVersionAsync(name);
             // End snippet
         }
+
+        /// <summary>Snippet for ListResourceChanges</summary>
+        public void ListResourceChangesRequestObject()
+        {
+            // Snippet: ListResourceChanges(ListResourceChangesRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            ListResourceChangesRequest request = new ListResourceChangesRequest
+            {
+                ParentAsPreviewName = PreviewName.FromProjectLocationPreview("[PROJECT]", "[LOCATION]", "[PREVIEW]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListResourceChangesResponse, ResourceChange> response = configClient.ListResourceChanges(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ResourceChange item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListResourceChangesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ResourceChange item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ResourceChange> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ResourceChange item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceChangesAsync</summary>
+        public async Task ListResourceChangesRequestObjectAsync()
+        {
+            // Snippet: ListResourceChangesAsync(ListResourceChangesRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            ListResourceChangesRequest request = new ListResourceChangesRequest
+            {
+                ParentAsPreviewName = PreviewName.FromProjectLocationPreview("[PROJECT]", "[LOCATION]", "[PREVIEW]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListResourceChangesResponse, ResourceChange> response = configClient.ListResourceChangesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ResourceChange item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListResourceChangesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ResourceChange item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ResourceChange> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ResourceChange item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceChanges</summary>
+        public void ListResourceChanges()
+        {
+            // Snippet: ListResourceChanges(string, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/previews/[PREVIEW]";
+            // Make the request
+            PagedEnumerable<ListResourceChangesResponse, ResourceChange> response = configClient.ListResourceChanges(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ResourceChange item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListResourceChangesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ResourceChange item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ResourceChange> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ResourceChange item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceChangesAsync</summary>
+        public async Task ListResourceChangesAsync()
+        {
+            // Snippet: ListResourceChangesAsync(string, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/previews/[PREVIEW]";
+            // Make the request
+            PagedAsyncEnumerable<ListResourceChangesResponse, ResourceChange> response = configClient.ListResourceChangesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ResourceChange item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListResourceChangesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ResourceChange item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ResourceChange> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ResourceChange item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceChanges</summary>
+        public void ListResourceChangesResourceNames()
+        {
+            // Snippet: ListResourceChanges(PreviewName, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            PreviewName parent = PreviewName.FromProjectLocationPreview("[PROJECT]", "[LOCATION]", "[PREVIEW]");
+            // Make the request
+            PagedEnumerable<ListResourceChangesResponse, ResourceChange> response = configClient.ListResourceChanges(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ResourceChange item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListResourceChangesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ResourceChange item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ResourceChange> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ResourceChange item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceChangesAsync</summary>
+        public async Task ListResourceChangesResourceNamesAsync()
+        {
+            // Snippet: ListResourceChangesAsync(PreviewName, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            PreviewName parent = PreviewName.FromProjectLocationPreview("[PROJECT]", "[LOCATION]", "[PREVIEW]");
+            // Make the request
+            PagedAsyncEnumerable<ListResourceChangesResponse, ResourceChange> response = configClient.ListResourceChangesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ResourceChange item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListResourceChangesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ResourceChange item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ResourceChange> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ResourceChange item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetResourceChange</summary>
+        public void GetResourceChangeRequestObject()
+        {
+            // Snippet: GetResourceChange(GetResourceChangeRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            GetResourceChangeRequest request = new GetResourceChangeRequest
+            {
+                ResourceChangeName = ResourceChangeName.FromProjectLocationPreviewResourceChange("[PROJECT]", "[LOCATION]", "[PREVIEW]", "[RESOURCE_CHANGE]"),
+            };
+            // Make the request
+            ResourceChange response = configClient.GetResourceChange(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetResourceChangeAsync</summary>
+        public async Task GetResourceChangeRequestObjectAsync()
+        {
+            // Snippet: GetResourceChangeAsync(GetResourceChangeRequest, CallSettings)
+            // Additional: GetResourceChangeAsync(GetResourceChangeRequest, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            GetResourceChangeRequest request = new GetResourceChangeRequest
+            {
+                ResourceChangeName = ResourceChangeName.FromProjectLocationPreviewResourceChange("[PROJECT]", "[LOCATION]", "[PREVIEW]", "[RESOURCE_CHANGE]"),
+            };
+            // Make the request
+            ResourceChange response = await configClient.GetResourceChangeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetResourceChange</summary>
+        public void GetResourceChange()
+        {
+            // Snippet: GetResourceChange(string, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/previews/[PREVIEW]/resourceChanges/[RESOURCE_CHANGE]";
+            // Make the request
+            ResourceChange response = configClient.GetResourceChange(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetResourceChangeAsync</summary>
+        public async Task GetResourceChangeAsync()
+        {
+            // Snippet: GetResourceChangeAsync(string, CallSettings)
+            // Additional: GetResourceChangeAsync(string, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/previews/[PREVIEW]/resourceChanges/[RESOURCE_CHANGE]";
+            // Make the request
+            ResourceChange response = await configClient.GetResourceChangeAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetResourceChange</summary>
+        public void GetResourceChangeResourceNames()
+        {
+            // Snippet: GetResourceChange(ResourceChangeName, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            ResourceChangeName name = ResourceChangeName.FromProjectLocationPreviewResourceChange("[PROJECT]", "[LOCATION]", "[PREVIEW]", "[RESOURCE_CHANGE]");
+            // Make the request
+            ResourceChange response = configClient.GetResourceChange(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetResourceChangeAsync</summary>
+        public async Task GetResourceChangeResourceNamesAsync()
+        {
+            // Snippet: GetResourceChangeAsync(ResourceChangeName, CallSettings)
+            // Additional: GetResourceChangeAsync(ResourceChangeName, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            ResourceChangeName name = ResourceChangeName.FromProjectLocationPreviewResourceChange("[PROJECT]", "[LOCATION]", "[PREVIEW]", "[RESOURCE_CHANGE]");
+            // Make the request
+            ResourceChange response = await configClient.GetResourceChangeAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceDrifts</summary>
+        public void ListResourceDriftsRequestObject()
+        {
+            // Snippet: ListResourceDrifts(ListResourceDriftsRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            ListResourceDriftsRequest request = new ListResourceDriftsRequest
+            {
+                ParentAsPreviewName = PreviewName.FromProjectLocationPreview("[PROJECT]", "[LOCATION]", "[PREVIEW]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListResourceDriftsResponse, ResourceDrift> response = configClient.ListResourceDrifts(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ResourceDrift item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListResourceDriftsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ResourceDrift item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ResourceDrift> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ResourceDrift item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceDriftsAsync</summary>
+        public async Task ListResourceDriftsRequestObjectAsync()
+        {
+            // Snippet: ListResourceDriftsAsync(ListResourceDriftsRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            ListResourceDriftsRequest request = new ListResourceDriftsRequest
+            {
+                ParentAsPreviewName = PreviewName.FromProjectLocationPreview("[PROJECT]", "[LOCATION]", "[PREVIEW]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListResourceDriftsResponse, ResourceDrift> response = configClient.ListResourceDriftsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ResourceDrift item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListResourceDriftsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ResourceDrift item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ResourceDrift> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ResourceDrift item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceDrifts</summary>
+        public void ListResourceDrifts()
+        {
+            // Snippet: ListResourceDrifts(string, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/previews/[PREVIEW]";
+            // Make the request
+            PagedEnumerable<ListResourceDriftsResponse, ResourceDrift> response = configClient.ListResourceDrifts(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ResourceDrift item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListResourceDriftsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ResourceDrift item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ResourceDrift> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ResourceDrift item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceDriftsAsync</summary>
+        public async Task ListResourceDriftsAsync()
+        {
+            // Snippet: ListResourceDriftsAsync(string, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/previews/[PREVIEW]";
+            // Make the request
+            PagedAsyncEnumerable<ListResourceDriftsResponse, ResourceDrift> response = configClient.ListResourceDriftsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ResourceDrift item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListResourceDriftsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ResourceDrift item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ResourceDrift> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ResourceDrift item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceDrifts</summary>
+        public void ListResourceDriftsResourceNames()
+        {
+            // Snippet: ListResourceDrifts(PreviewName, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            PreviewName parent = PreviewName.FromProjectLocationPreview("[PROJECT]", "[LOCATION]", "[PREVIEW]");
+            // Make the request
+            PagedEnumerable<ListResourceDriftsResponse, ResourceDrift> response = configClient.ListResourceDrifts(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ResourceDrift item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListResourceDriftsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ResourceDrift item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ResourceDrift> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ResourceDrift item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListResourceDriftsAsync</summary>
+        public async Task ListResourceDriftsResourceNamesAsync()
+        {
+            // Snippet: ListResourceDriftsAsync(PreviewName, string, int?, CallSettings)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            PreviewName parent = PreviewName.FromProjectLocationPreview("[PROJECT]", "[LOCATION]", "[PREVIEW]");
+            // Make the request
+            PagedAsyncEnumerable<ListResourceDriftsResponse, ResourceDrift> response = configClient.ListResourceDriftsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ResourceDrift item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListResourceDriftsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ResourceDrift item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ResourceDrift> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ResourceDrift item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetResourceDrift</summary>
+        public void GetResourceDriftRequestObject()
+        {
+            // Snippet: GetResourceDrift(GetResourceDriftRequest, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            GetResourceDriftRequest request = new GetResourceDriftRequest
+            {
+                ResourceDriftName = ResourceDriftName.FromProjectLocationPreviewResourceDrift("[PROJECT]", "[LOCATION]", "[PREVIEW]", "[RESOURCE_DRIFT]"),
+            };
+            // Make the request
+            ResourceDrift response = configClient.GetResourceDrift(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetResourceDriftAsync</summary>
+        public async Task GetResourceDriftRequestObjectAsync()
+        {
+            // Snippet: GetResourceDriftAsync(GetResourceDriftRequest, CallSettings)
+            // Additional: GetResourceDriftAsync(GetResourceDriftRequest, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            GetResourceDriftRequest request = new GetResourceDriftRequest
+            {
+                ResourceDriftName = ResourceDriftName.FromProjectLocationPreviewResourceDrift("[PROJECT]", "[LOCATION]", "[PREVIEW]", "[RESOURCE_DRIFT]"),
+            };
+            // Make the request
+            ResourceDrift response = await configClient.GetResourceDriftAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetResourceDrift</summary>
+        public void GetResourceDrift()
+        {
+            // Snippet: GetResourceDrift(string, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/previews/[PREVIEW]/resourceDrifts/[RESOURCE_DRIFT]";
+            // Make the request
+            ResourceDrift response = configClient.GetResourceDrift(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetResourceDriftAsync</summary>
+        public async Task GetResourceDriftAsync()
+        {
+            // Snippet: GetResourceDriftAsync(string, CallSettings)
+            // Additional: GetResourceDriftAsync(string, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/previews/[PREVIEW]/resourceDrifts/[RESOURCE_DRIFT]";
+            // Make the request
+            ResourceDrift response = await configClient.GetResourceDriftAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetResourceDrift</summary>
+        public void GetResourceDriftResourceNames()
+        {
+            // Snippet: GetResourceDrift(ResourceDriftName, CallSettings)
+            // Create client
+            ConfigClient configClient = ConfigClient.Create();
+            // Initialize request argument(s)
+            ResourceDriftName name = ResourceDriftName.FromProjectLocationPreviewResourceDrift("[PROJECT]", "[LOCATION]", "[PREVIEW]", "[RESOURCE_DRIFT]");
+            // Make the request
+            ResourceDrift response = configClient.GetResourceDrift(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetResourceDriftAsync</summary>
+        public async Task GetResourceDriftResourceNamesAsync()
+        {
+            // Snippet: GetResourceDriftAsync(ResourceDriftName, CallSettings)
+            // Additional: GetResourceDriftAsync(ResourceDriftName, CancellationToken)
+            // Create client
+            ConfigClient configClient = await ConfigClient.CreateAsync();
+            // Initialize request argument(s)
+            ResourceDriftName name = ResourceDriftName.FromProjectLocationPreviewResourceDrift("[PROJECT]", "[LOCATION]", "[PREVIEW]", "[RESOURCE_DRIFT]");
+            // Make the request
+            ResourceDrift response = await configClient.GetResourceDriftAsync(name);
+            // End snippet
+        }
     }
 }

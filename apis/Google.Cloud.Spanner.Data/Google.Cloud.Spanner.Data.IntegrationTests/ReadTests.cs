@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
 using System;
@@ -694,6 +693,69 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 count++;
             }
             Assert.Equal(limit, count);
+        }
+
+        [Fact]
+        public async Task ReadInterval()
+        {
+            var expected = Interval.Parse("P1Y2M3DT4H5M6.789123456S");
+            var interval = await ExecuteAsync<Interval>("SELECT INTERVAL '1-2 3 4:5:6.789123456' YEAR TO SECOND");
+            Assert.Equal(expected, interval);
+        }
+
+        [Fact]
+        public async Task ReadInterval_Null()
+        {
+            var interval = await ExecuteAsync<object>("SELECT CAST(NULL AS INTERVAL)");
+            Assert.Equal(DBNull.Value, interval);
+        }
+
+        [Fact]
+        public async Task ReadInterval_Array()
+        {
+            var expected = Interval.Parse("P1Y2M3DT4H5M6.789123456S");
+            var intervalList = await ExecuteAsync<List<Interval>>("SELECT ARRAY<INTERVAL>[INTERVAL '1-2 3 4:5:6.789123456' YEAR TO SECOND]");
+            var interval = Assert.Single(intervalList);
+            Assert.Equal(expected, interval);
+        }
+
+        [Fact]
+        public async Task ReadWithLockHint()
+        {
+            using var connection = _fixture.GetConnection();
+
+            // LockHint only works for read-write transactions.
+            using var transaction = await connection.BeginTransactionAsync();
+
+            var readOptions = ReadOptions.FromColumns("key", "StringValue")
+                .WithLockHint(LockHint.Exclusive);
+            using var cmd = connection.CreateReadCommand(
+                _fixture.TableName, readOptions, KeySet.All);
+            cmd.Transaction = transaction;
+            using var reader = await cmd.ExecuteReaderAsync();
+            var count = 0;
+            while (await reader.ReadAsync())
+            {
+                count++;
+            }
+            Assert.Equal(_fixture.RowCount, count);
+        }
+
+        [Fact]
+        public async Task ReadWithOrderBy()
+        {
+            using var connection = _fixture.GetConnection();
+            var readOptions = ReadOptions.FromColumns("key", "StringValue")
+                .WithOrderBy(OrderBy.PrimaryKey);
+            using var cmd = connection.CreateReadCommand(
+                _fixture.TableName, readOptions, KeySet.All);
+            using var reader = await cmd.ExecuteReaderAsync();
+            var count = 0;
+            while (await reader.ReadAsync())
+            {
+                count++;
+            }
+            Assert.Equal(_fixture.RowCount, count);
         }
     }
 }

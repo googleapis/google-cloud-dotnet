@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
             ListTcpRoutesRequest request = new ListTcpRoutesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListTcpRoutesResponse, TcpRoute> response = networkServicesClient.ListTcpRoutesAsync(request);

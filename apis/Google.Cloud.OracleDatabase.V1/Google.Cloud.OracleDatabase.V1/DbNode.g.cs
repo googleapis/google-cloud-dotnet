@@ -27,33 +27,37 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "Cixnb29nbGUvY2xvdWQvb3JhY2xlZGF0YWJhc2UvdjEvZGJfbm9kZS5wcm90",
             "bxIeZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxGh9nb29nbGUvYXBp",
             "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
-            "b3RvIoICCgZEYk5vZGUSEQoEbmFtZRgBIAEoCUID4EEIEkkKCnByb3BlcnRp",
-            "ZXMYAyABKAsyMC5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuRGJO",
-            "b2RlUHJvcGVydGllc0ID4EEBOpkB6kGVAQokb3JhY2xlZGF0YWJhc2UuZ29v",
-            "Z2xlYXBpcy5jb20vRGJOb2RlElxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
-            "b25zL3tsb2NhdGlvbn0vY2xvdWRWbUNsdXN0ZXJzL3tjbG91ZF92bV9jbHVz",
-            "dGVyfS9kYk5vZGVzL3tkYl9ub2RlfSoHZGJOb2RlczIGZGJOb2RlIsADChBE",
-            "Yk5vZGVQcm9wZXJ0aWVzEhEKBG9jaWQYASABKAlCA+BBAxIXCgpvY3B1X2Nv",
-            "dW50GAIgASgFQgPgQQESFgoObWVtb3J5X3NpemVfZ2IYAyABKAUSJAoXZGJf",
-            "bm9kZV9zdG9yYWdlX3NpemVfZ2IYBCABKAVCA+BBARIbCg5kYl9zZXJ2ZXJf",
-            "b2NpZBgFIAEoCUID4EEBEhUKCGhvc3RuYW1lGAggASgJQgPgQQESSgoFc3Rh",
-            "dGUYCSABKA4yNi5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuRGJO",
-            "b2RlUHJvcGVydGllcy5TdGF0ZUID4EEDEhwKFHRvdGFsX2NwdV9jb3JlX2Nv",
-            "dW50GAogASgFIqMBCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEhAK",
-            "DFBST1ZJU0lPTklORxABEg0KCUFWQUlMQUJMRRACEgwKCFVQREFUSU5HEAMS",
-            "DAoIU1RPUFBJTkcQBBILCgdTVE9QUEVEEAUSDAoIU1RBUlRJTkcQBhIPCgtU",
-            "RVJNSU5BVElORxAHEg4KClRFUk1JTkFURUQQCBIKCgZGQUlMRUQQCULlAQoi",
-            "Y29tLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MUILRGJOb2RlUHJv",
-            "dG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9nby9vcmFjbGVkYXRhYmFzZS9hcGl2",
-            "MS9vcmFjbGVkYXRhYmFzZXBiO29yYWNsZWRhdGFiYXNlcGKqAh5Hb29nbGUu",
-            "Q2xvdWQuT3JhY2xlRGF0YWJhc2UuVjHKAh5Hb29nbGVcQ2xvdWRcT3JhY2xl",
-            "RGF0YWJhc2VcVjHqAiFHb29nbGU6OkNsb3VkOjpPcmFjbGVEYXRhYmFzZTo6",
-            "VjFiBnByb3RvMw=="));
+            "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIuACCgZEYk5v",
+            "ZGUSEQoEbmFtZRgBIAEoCUID4EEIEkkKCnByb3BlcnRpZXMYAyABKAsyMC5n",
+            "b29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuRGJOb2RlUHJvcGVydGll",
+            "c0ID4EEBOvcB6kHzAQokb3JhY2xlZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20v",
+            "RGJOb2RlElxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
+            "bn0vY2xvdWRWbUNsdXN0ZXJzL3tjbG91ZF92bV9jbHVzdGVyfS9kYk5vZGVz",
+            "L3tkYl9ub2RlfRJccHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L2V4YWRiVm1DbHVzdGVycy97ZXhhZGJfdm1fY2x1c3Rlcn0vZGJO",
+            "b2Rlcy97ZGJfbm9kZX0qB2RiTm9kZXMyBmRiTm9kZSL2AwoQRGJOb2RlUHJv",
+            "cGVydGllcxIRCgRvY2lkGAEgASgJQgPgQQMSFwoKb2NwdV9jb3VudBgCIAEo",
+            "BUID4EEBEhYKDm1lbW9yeV9zaXplX2diGAMgASgFEiQKF2RiX25vZGVfc3Rv",
+            "cmFnZV9zaXplX2diGAQgASgFQgPgQQESGwoOZGJfc2VydmVyX29jaWQYBSAB",
+            "KAlCA+BBARIVCghob3N0bmFtZRgIIAEoCUID4EEBEkoKBXN0YXRlGAkgASgO",
+            "MjYuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkRiTm9kZVByb3Bl",
+            "cnRpZXMuU3RhdGVCA+BBAxIcChR0b3RhbF9jcHVfY29yZV9jb3VudBgKIAEo",
+            "BRI0CgtjcmVhdGVfdGltZRgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAyKjAQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIQ",
+            "CgxQUk9WSVNJT05JTkcQARINCglBVkFJTEFCTEUQAhIMCghVUERBVElORxAD",
+            "EgwKCFNUT1BQSU5HEAQSCwoHU1RPUFBFRBAFEgwKCFNUQVJUSU5HEAYSDwoL",
+            "VEVSTUlOQVRJTkcQBxIOCgpURVJNSU5BVEVEEAgSCgoGRkFJTEVEEAlC5QEK",
+            "ImNvbS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjFCC0RiTm9kZVBy",
+            "b3RvUAFaSmNsb3VkLmdvb2dsZS5jb20vZ28vb3JhY2xlZGF0YWJhc2UvYXBp",
+            "djEvb3JhY2xlZGF0YWJhc2VwYjtvcmFjbGVkYXRhYmFzZXBiqgIeR29vZ2xl",
+            "LkNsb3VkLk9yYWNsZURhdGFiYXNlLlYxygIeR29vZ2xlXENsb3VkXE9yYWNs",
+            "ZURhdGFiYXNlXFYx6gIhR29vZ2xlOjpDbG91ZDo6T3JhY2xlRGF0YWJhc2U6",
+            "OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.DbNode), global::Google.Cloud.OracleDatabase.V1.DbNode.Parser, new[]{ "Name", "Properties" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.DbNodeProperties), global::Google.Cloud.OracleDatabase.V1.DbNodeProperties.Parser, new[]{ "Ocid", "OcpuCount", "MemorySizeGb", "DbNodeStorageSizeGb", "DbServerOcid", "Hostname", "State", "TotalCpuCoreCount" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.DbNodeProperties.Types.State) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.DbNodeProperties), global::Google.Cloud.OracleDatabase.V1.DbNodeProperties.Parser, new[]{ "Ocid", "OcpuCount", "MemorySizeGb", "DbNodeStorageSizeGb", "DbServerOcid", "Hostname", "State", "TotalCpuCoreCount", "CreateTime" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.DbNodeProperties.Types.State) }, null, null)
           }));
     }
     #endregion
@@ -353,6 +357,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       hostname_ = other.hostname_;
       state_ = other.state_;
       totalCpuCoreCount_ = other.totalCpuCoreCount_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -482,6 +487,21 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
     }
 
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 11;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. The date and time that the database node was created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -505,6 +525,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (Hostname != other.Hostname) return false;
       if (State != other.State) return false;
       if (TotalCpuCoreCount != other.TotalCpuCoreCount) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -520,6 +541,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (Hostname.Length != 0) hash ^= Hostname.GetHashCode();
       if (State != global::Google.Cloud.OracleDatabase.V1.DbNodeProperties.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (TotalCpuCoreCount != 0) hash ^= TotalCpuCoreCount.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -570,6 +592,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(80);
         output.WriteInt32(TotalCpuCoreCount);
       }
+      if (createTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(CreateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -612,6 +638,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(80);
         output.WriteInt32(TotalCpuCoreCount);
       }
+      if (createTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(CreateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -645,6 +675,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (TotalCpuCoreCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalCpuCoreCount);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -681,6 +714,12 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (other.TotalCpuCoreCount != 0) {
         TotalCpuCoreCount = other.TotalCpuCoreCount;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -729,6 +768,13 @@ namespace Google.Cloud.OracleDatabase.V1 {
             TotalCpuCoreCount = input.ReadInt32();
             break;
           }
+          case 90: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
         }
       }
     #endif
@@ -774,6 +820,13 @@ namespace Google.Cloud.OracleDatabase.V1 {
           }
           case 80: {
             TotalCpuCoreCount = input.ReadInt32();
+            break;
+          }
+          case 90: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
             break;
           }
         }

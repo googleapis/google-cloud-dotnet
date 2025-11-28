@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.0.0-beta08, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+### Documentation improvements
+
+- Update comment in Eventarc Publishing API
+- Minor documentation improvements
+- Documentation improvements for the Publisher service
+
 ## Version 2.0.0-beta07, released 2024-10-30
 
 ### New features

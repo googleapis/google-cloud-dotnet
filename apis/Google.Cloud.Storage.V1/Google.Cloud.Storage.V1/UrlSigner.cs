@@ -158,6 +158,14 @@ namespace Google.Cloud.Storage.V1
         /// Creates a new <see cref="UrlSigner"/> instance from the JSON configuration file of a Google credential.
         /// See <see cref="FromCredential(GoogleCredential)"/> for more information about supported credential types.
         /// </summary>
+        /// <remarks>
+        /// Important: If you accept a credential configuration (credential JSON/File/Stream) from an external source
+        /// for authentication to Google Cloud, you must validate it before providing it to any Google API or library.
+        /// Providing an unvalidated credential configuration to Google APIs can compromise the security of your
+        /// systems and data. For more information, refer to
+        /// <see href="https://cloud.google.com/docs/authentication/external/externally-sourced-credentials">Validate credential configurations from external sources</see>.
+        /// </remarks>
+        [Obsolete("This method is being deprecated because of a potential security risk. Instead use one of the FromCredential methods.")]
         public static UrlSigner FromCredentialFile(string credentialFilePath) =>
             FromCredential(GoogleCredential.FromFile(credentialFilePath));
 
@@ -166,6 +174,14 @@ namespace Google.Cloud.Storage.V1
         /// which is read asyncrhonously.
         /// See <see cref="FromCredential(GoogleCredential)"/> for more information about supported credential types.
         /// </summary>
+        /// <remarks>
+        /// Important: If you accept a credential configuration (credential JSON/File/Stream) from an external source
+        /// for authentication to Google Cloud, you must validate it before providing it to any Google API or library.
+        /// Providing an unvalidated credential configuration to Google APIs can compromise the security of your
+        /// systems and data. For more information, refer to
+        /// <see href="https://cloud.google.com/docs/authentication/external/externally-sourced-credentials">Validate credential configurations from external sources</see>.
+        /// </remarks>
+        [Obsolete("This method is being deprecated because of a potential security risk. Instead use one of the FromCredential methods.")]
         public static async Task<UrlSigner> FromCredentialFileAsync(string credentialFilePath, CancellationToken cancellationToken = default) =>
             FromCredential(await GoogleCredential.FromFileAsync(credentialFilePath, cancellationToken).ConfigureAwait(false));
 
@@ -173,6 +189,14 @@ namespace Google.Cloud.Storage.V1
         /// Creates a new <see cref="UrlSigner"/> instance from a Stream containing the JSON configuration file of a Google Credential.
         /// See <see cref="FromCredential(GoogleCredential)"/> for more information about supported credential types.
         /// </summary>
+        /// <remarks>
+        /// Important: If you accept a credential configuration (credential JSON/File/Stream) from an external source
+        /// for authentication to Google Cloud, you must validate it before providing it to any Google API or library.
+        /// Providing an unvalidated credential configuration to Google APIs can compromise the security of your
+        /// systems and data. For more information, refer to
+        /// <see href="https://cloud.google.com/docs/authentication/external/externally-sourced-credentials">Validate credential configurations from external sources</see>.
+        /// </remarks>
+        [Obsolete("This method is being deprecated because of a potential security risk. Instead use one of the FromCredential methods.")]
         public static UrlSigner FromCredentialStream(Stream credentialData) =>
             FromCredential(GoogleCredential.FromStream(GaxPreconditions.CheckNotNull(credentialData, nameof(credentialData))));
 
@@ -181,6 +205,14 @@ namespace Google.Cloud.Storage.V1
         /// The data is read asynchronously.
         /// See <see cref="FromCredential(GoogleCredential)"/> for more information about supported credential types.
         /// </summary>
+        /// <remarks>
+        /// Important: If you accept a credential configuration (credential JSON/File/Stream) from an external source
+        /// for authentication to Google Cloud, you must validate it before providing it to any Google API or library.
+        /// Providing an unvalidated credential configuration to Google APIs can compromise the security of your
+        /// systems and data. For more information, refer to
+        /// <see href="https://cloud.google.com/docs/authentication/external/externally-sourced-credentials">Validate credential configurations from external sources</see>.
+        /// </remarks>
+        [Obsolete("This method is being deprecated because of a potential security risk. Instead use one of the FromCredential methods.")]
         public static async Task<UrlSigner> FromCredentialStreamAsync(Stream credentialData, CancellationToken cancellationToken = default) =>
             FromCredential(await GoogleCredential.FromStreamAsync(GaxPreconditions.CheckNotNull(credentialData, nameof(credentialData)), cancellationToken).ConfigureAwait(false));
 

@@ -28,7 +28,7 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
             "ZHVjdHJldmlld3NfY29tbW9uLnByb3RvEidnb29nbGUuc2hvcHBpbmcubWVy",
             "Y2hhbnQucmV2aWV3cy52MWJldGEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZp",
             "b3IucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aIGdv",
-            "b2dsZS9zaG9wcGluZy90eXBlL3R5cGVzLnByb3RvIqwMChdQcm9kdWN0UmV2",
+            "b2dsZS9zaG9wcGluZy90eXBlL3R5cGVzLnByb3RvIrINChdQcm9kdWN0UmV2",
             "aWV3QXR0cmlidXRlcxIhCg9hZ2dyZWdhdG9yX25hbWUYASABKAlCA+BBAUgA",
             "iAEBEiAKDnN1YmNsaWVudF9uYW1lGAIgASgJQgPgQQFIAYgBARIgCg5wdWJs",
             "aXNoZXJfbmFtZRgDIAEoCUID4EEBSAKIAQESIwoRcHVibGlzaGVyX2Zhdmlj",
@@ -38,7 +38,7 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
             "ZXdfbGFuZ3VhZ2UYCCABKAlCA+BBAUgHiAEBEiAKDnJldmlld19jb3VudHJ5",
             "GAkgASgJQgPgQQFICIgBARI0CgtyZXZpZXdfdGltZRgKIAEoCzIaLmdvb2ds",
             "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAhIXCgV0aXRsZRgLIAEoCUID4EEB",
-            "SAmIAQESGQoHY29udGVudBgMIAEoCUID4EECSAqIAQESEQoEcHJvcxgNIAMo",
+            "SAmIAQESGQoHY29udGVudBgMIAEoCUID4EEBSAqIAQESEQoEcHJvcxgNIAMo",
             "CUID4EEBEhEKBGNvbnMYDiADKAlCA+BBARJlCgtyZXZpZXdfbGluaxgPIAEo",
             "CzJLLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5yZXZpZXdzLnYxYmV0YS5Q",
             "cm9kdWN0UmV2aWV3QXR0cmlidXRlcy5SZXZpZXdMaW5rQgPgQQESIQoUcmV2",
@@ -48,55 +48,58 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
             "KAlCA+BBARIaCg1wcm9kdWN0X2xpbmtzGBUgAygJQgPgQQESEgoFYXNpbnMY",
             "FiADKAlCA+BBARISCgVndGlucxgXIAMoCUID4EEBEhEKBG1wbnMYGCADKAlC",
             "A+BBARIRCgRza3VzGBkgAygJQgPgQQESEwoGYnJhbmRzGBogAygJQgPgQQES",
-            "GQoHaXNfc3BhbRgbIAEoCEID4EEBSA6IAQEScQoRY29sbGVjdGlvbl9tZXRo",
-            "b2QYHCABKA4yUS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucmV2aWV3cy52",
-            "MWJldGEuUHJvZHVjdFJldmlld0F0dHJpYnV0ZXMuQ29sbGVjdGlvbk1ldGhv",
-            "ZEID4EEBEhsKDnRyYW5zYWN0aW9uX2lkGB0gASgJQgPgQQEavAEKClJldmll",
-            "d0xpbmsSYwoEdHlwZRgBIAEoDjJQLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFu",
-            "dC5yZXZpZXdzLnYxYmV0YS5Qcm9kdWN0UmV2aWV3QXR0cmlidXRlcy5SZXZp",
-            "ZXdMaW5rLlR5cGVCA+BBARIRCgRsaW5rGAIgASgJQgPgQQEiNgoEVHlwZRIU",
-            "ChBUWVBFX1VOU1BFQ0lGSUVEEAASDQoJU0lOR0xFVE9OEAESCQoFR1JPVVAQ",
-            "AiJcChBDb2xsZWN0aW9uTWV0aG9kEiEKHUNPTExFQ1RJT05fTUVUSE9EX1VO",
-            "U1BFQ0lGSUVEEAASDwoLVU5TT0xJQ0lURUQQARIUChBQT1NUX0ZVTEZJTExN",
-            "RU5UEAJCEgoQX2FnZ3JlZ2F0b3JfbmFtZUIRCg9fc3ViY2xpZW50X25hbWVC",
-            "EQoPX3B1Ymxpc2hlcl9uYW1lQhQKEl9wdWJsaXNoZXJfZmF2aWNvbkIOCgxf",
-            "cmV2aWV3ZXJfaWRCGAoWX3Jldmlld2VyX2lzX2Fub255bW91c0IUChJfcmV2",
-            "aWV3ZXJfdXNlcm5hbWVCEgoQX3Jldmlld19sYW5ndWFnZUIRCg9fcmV2aWV3",
-            "X2NvdW50cnlCCAoGX3RpdGxlQgoKCF9jb250ZW50Qg0KC19taW5fcmF0aW5n",
-            "Qg0KC19tYXhfcmF0aW5nQgkKB19yYXRpbmdCCgoIX2lzX3NwYW0izgcKE1By",
-            "b2R1Y3RSZXZpZXdTdGF0dXMSfgoUZGVzdGluYXRpb25fc3RhdHVzZXMYAyAD",
-            "KAsyWy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucmV2aWV3cy52MWJldGEu",
-            "UHJvZHVjdFJldmlld1N0YXR1cy5Qcm9kdWN0UmV2aWV3RGVzdGluYXRpb25T",
-            "dGF0dXNCA+BBAxJ4ChFpdGVtX2xldmVsX2lzc3VlcxgEIAMoCzJYLmdvb2ds",
-            "ZS5zaG9wcGluZy5tZXJjaGFudC5yZXZpZXdzLnYxYmV0YS5Qcm9kdWN0UmV2",
-            "aWV3U3RhdHVzLlByb2R1Y3RSZXZpZXdJdGVtTGV2ZWxJc3N1ZUID4EEDEjQK",
-            "C2NyZWF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cEID4EEDEjkKEGxhc3RfdXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQMafQoeUHJvZHVjdFJldmlld0Rlc3RpbmF0",
-            "aW9uU3RhdHVzElsKEXJlcG9ydGluZ19jb250ZXh0GAEgASgOMjsuZ29vZ2xl",
-            "LnNob3BwaW5nLnR5cGUuUmVwb3J0aW5nQ29udGV4dC5SZXBvcnRpbmdDb250",
-            "ZXh0RW51bUID4EEDGswDChtQcm9kdWN0UmV2aWV3SXRlbUxldmVsSXNzdWUS",
-            "EQoEY29kZRgBIAEoCUID4EEDEngKCHNldmVyaXR5GAIgASgOMmEuZ29vZ2xl",
+            "GQoHaXNfc3BhbRgbIAEoCEID4EEBSA6IAQESJgoUaXNfdmVyaWZpZWRfcHVy",
+            "Y2hhc2UYHiABKAhCA+BBAUgPiAEBEigKFmlzX2luY2VudGl2aXplZF9yZXZp",
+            "ZXcYHyABKAhCA+BBAUgQiAEBEnEKEWNvbGxlY3Rpb25fbWV0aG9kGBwgASgO",
+            "MlEuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnJldmlld3MudjFiZXRhLlBy",
+            "b2R1Y3RSZXZpZXdBdHRyaWJ1dGVzLkNvbGxlY3Rpb25NZXRob2RCA+BBARIb",
+            "Cg50cmFuc2FjdGlvbl9pZBgdIAEoCUID4EEBGrwBCgpSZXZpZXdMaW5rEmMK",
+            "BHR5cGUYASABKA4yUC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucmV2aWV3",
+            "cy52MWJldGEuUHJvZHVjdFJldmlld0F0dHJpYnV0ZXMuUmV2aWV3TGluay5U",
+            "eXBlQgPgQQESEQoEbGluaxgCIAEoCUID4EEBIjYKBFR5cGUSFAoQVFlQRV9V",
+            "TlNQRUNJRklFRBAAEg0KCVNJTkdMRVRPThABEgkKBUdST1VQEAIiXAoQQ29s",
+            "bGVjdGlvbk1ldGhvZBIhCh1DT0xMRUNUSU9OX01FVEhPRF9VTlNQRUNJRklF",
+            "RBAAEg8KC1VOU09MSUNJVEVEEAESFAoQUE9TVF9GVUxGSUxMTUVOVBACQhIK",
+            "EF9hZ2dyZWdhdG9yX25hbWVCEQoPX3N1YmNsaWVudF9uYW1lQhEKD19wdWJs",
+            "aXNoZXJfbmFtZUIUChJfcHVibGlzaGVyX2Zhdmljb25CDgoMX3Jldmlld2Vy",
+            "X2lkQhgKFl9yZXZpZXdlcl9pc19hbm9ueW1vdXNCFAoSX3Jldmlld2VyX3Vz",
+            "ZXJuYW1lQhIKEF9yZXZpZXdfbGFuZ3VhZ2VCEQoPX3Jldmlld19jb3VudHJ5",
+            "QggKBl90aXRsZUIKCghfY29udGVudEINCgtfbWluX3JhdGluZ0INCgtfbWF4",
+            "X3JhdGluZ0IJCgdfcmF0aW5nQgoKCF9pc19zcGFtQhcKFV9pc192ZXJpZmll",
+            "ZF9wdXJjaGFzZUIZChdfaXNfaW5jZW50aXZpemVkX3JldmlldyLOBwoTUHJv",
+            "ZHVjdFJldmlld1N0YXR1cxJ+ChRkZXN0aW5hdGlvbl9zdGF0dXNlcxgDIAMo",
+            "CzJbLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5yZXZpZXdzLnYxYmV0YS5Q",
+            "cm9kdWN0UmV2aWV3U3RhdHVzLlByb2R1Y3RSZXZpZXdEZXN0aW5hdGlvblN0",
+            "YXR1c0ID4EEDEngKEWl0ZW1fbGV2ZWxfaXNzdWVzGAQgAygLMlguZ29vZ2xl",
             "LnNob3BwaW5nLm1lcmNoYW50LnJldmlld3MudjFiZXRhLlByb2R1Y3RSZXZp",
-            "ZXdTdGF0dXMuUHJvZHVjdFJldmlld0l0ZW1MZXZlbElzc3VlLlNldmVyaXR5",
-            "QgPgQQMSFwoKcmVzb2x1dGlvbhgDIAEoCUID4EEDEhYKCWF0dHJpYnV0ZRgE",
-            "IAEoCUID4EEDElsKEXJlcG9ydGluZ19jb250ZXh0GAUgASgOMjsuZ29vZ2xl",
-            "LnNob3BwaW5nLnR5cGUuUmVwb3J0aW5nQ29udGV4dC5SZXBvcnRpbmdDb250",
-            "ZXh0RW51bUID4EEDEhgKC2Rlc2NyaXB0aW9uGAYgASgJQgPgQQMSEwoGZGV0",
-            "YWlsGAcgASgJQgPgQQMSGgoNZG9jdW1lbnRhdGlvbhgIIAEoCUID4EEDIkcK",
-            "CFNldmVyaXR5EhgKFFNFVkVSSVRZX1VOU1BFQ0lGSUVEEAASEAoMTk9UX0lN",
-            "UEFDVEVEEAESDwoLRElTQVBQUk9WRUQQAkKZAgorY29tLmdvb2dsZS5zaG9w",
-            "cGluZy5tZXJjaGFudC5yZXZpZXdzLnYxYmV0YUIZUHJvZHVjdFJldmlld3ND",
-            "b21tb25Qcm90b1ABWktjbG91ZC5nb29nbGUuY29tL2dvL3Nob3BwaW5nL21l",
-            "cmNoYW50L3Jldmlld3MvYXBpdjFiZXRhL3Jldmlld3NwYjtyZXZpZXdzcGKq",
-            "AidHb29nbGUuU2hvcHBpbmcuTWVyY2hhbnQuUmV2aWV3cy5WMUJldGHKAidH",
-            "b29nbGVcU2hvcHBpbmdcTWVyY2hhbnRcUmV2aWV3c1xWMWJldGHqAitHb29n",
-            "bGU6OlNob3BwaW5nOjpNZXJjaGFudDo6UmV2aWV3czo6VjFiZXRhYgZwcm90",
-            "bzM="));
+            "ZXdTdGF0dXMuUHJvZHVjdFJldmlld0l0ZW1MZXZlbElzc3VlQgPgQQMSNAoL",
+            "Y3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgPgQQMSOQoQbGFzdF91cGRhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAxp9Ch5Qcm9kdWN0UmV2aWV3RGVzdGluYXRp",
+            "b25TdGF0dXMSWwoRcmVwb3J0aW5nX2NvbnRleHQYASABKA4yOy5nb29nbGUu",
+            "c2hvcHBpbmcudHlwZS5SZXBvcnRpbmdDb250ZXh0LlJlcG9ydGluZ0NvbnRl",
+            "eHRFbnVtQgPgQQMazAMKG1Byb2R1Y3RSZXZpZXdJdGVtTGV2ZWxJc3N1ZRIR",
+            "CgRjb2RlGAEgASgJQgPgQQMSeAoIc2V2ZXJpdHkYAiABKA4yYS5nb29nbGUu",
+            "c2hvcHBpbmcubWVyY2hhbnQucmV2aWV3cy52MWJldGEuUHJvZHVjdFJldmll",
+            "d1N0YXR1cy5Qcm9kdWN0UmV2aWV3SXRlbUxldmVsSXNzdWUuU2V2ZXJpdHlC",
+            "A+BBAxIXCgpyZXNvbHV0aW9uGAMgASgJQgPgQQMSFgoJYXR0cmlidXRlGAQg",
+            "ASgJQgPgQQMSWwoRcmVwb3J0aW5nX2NvbnRleHQYBSABKA4yOy5nb29nbGUu",
+            "c2hvcHBpbmcudHlwZS5SZXBvcnRpbmdDb250ZXh0LlJlcG9ydGluZ0NvbnRl",
+            "eHRFbnVtQgPgQQMSGAoLZGVzY3JpcHRpb24YBiABKAlCA+BBAxITCgZkZXRh",
+            "aWwYByABKAlCA+BBAxIaCg1kb2N1bWVudGF0aW9uGAggASgJQgPgQQMiRwoI",
+            "U2V2ZXJpdHkSGAoUU0VWRVJJVFlfVU5TUEVDSUZJRUQQABIQCgxOT1RfSU1Q",
+            "QUNURUQQARIPCgtESVNBUFBST1ZFRBACQpkCCitjb20uZ29vZ2xlLnNob3Bw",
+            "aW5nLm1lcmNoYW50LnJldmlld3MudjFiZXRhQhlQcm9kdWN0UmV2aWV3c0Nv",
+            "bW1vblByb3RvUAFaS2Nsb3VkLmdvb2dsZS5jb20vZ28vc2hvcHBpbmcvbWVy",
+            "Y2hhbnQvcmV2aWV3cy9hcGl2MWJldGEvcmV2aWV3c3BiO3Jldmlld3NwYqoC",
+            "J0dvb2dsZS5TaG9wcGluZy5NZXJjaGFudC5SZXZpZXdzLlYxQmV0YcoCJ0dv",
+            "b2dsZVxTaG9wcGluZ1xNZXJjaGFudFxSZXZpZXdzXFYxYmV0YeoCK0dvb2ds",
+            "ZTo6U2hvcHBpbmc6Ok1lcmNoYW50OjpSZXZpZXdzOjpWMWJldGFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reviews.V1Beta.ProductReviewAttributes), global::Google.Shopping.Merchant.Reviews.V1Beta.ProductReviewAttributes.Parser, new[]{ "AggregatorName", "SubclientName", "PublisherName", "PublisherFavicon", "ReviewerId", "ReviewerIsAnonymous", "ReviewerUsername", "ReviewLanguage", "ReviewCountry", "ReviewTime", "Title", "Content", "Pros", "Cons", "ReviewLink", "ReviewerImageLinks", "MinRating", "MaxRating", "Rating", "ProductNames", "ProductLinks", "Asins", "Gtins", "Mpns", "Skus", "Brands", "IsSpam", "CollectionMethod", "TransactionId" }, new[]{ "AggregatorName", "SubclientName", "PublisherName", "PublisherFavicon", "ReviewerId", "ReviewerIsAnonymous", "ReviewerUsername", "ReviewLanguage", "ReviewCountry", "Title", "Content", "MinRating", "MaxRating", "Rating", "IsSpam" }, new[]{ typeof(global::Google.Shopping.Merchant.Reviews.V1Beta.ProductReviewAttributes.Types.CollectionMethod) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reviews.V1Beta.ProductReviewAttributes.Types.ReviewLink), global::Google.Shopping.Merchant.Reviews.V1Beta.ProductReviewAttributes.Types.ReviewLink.Parser, new[]{ "Type", "Link" }, null, new[]{ typeof(global::Google.Shopping.Merchant.Reviews.V1Beta.ProductReviewAttributes.Types.ReviewLink.Types.Type) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reviews.V1Beta.ProductReviewAttributes), global::Google.Shopping.Merchant.Reviews.V1Beta.ProductReviewAttributes.Parser, new[]{ "AggregatorName", "SubclientName", "PublisherName", "PublisherFavicon", "ReviewerId", "ReviewerIsAnonymous", "ReviewerUsername", "ReviewLanguage", "ReviewCountry", "ReviewTime", "Title", "Content", "Pros", "Cons", "ReviewLink", "ReviewerImageLinks", "MinRating", "MaxRating", "Rating", "ProductNames", "ProductLinks", "Asins", "Gtins", "Mpns", "Skus", "Brands", "IsSpam", "IsVerifiedPurchase", "IsIncentivizedReview", "CollectionMethod", "TransactionId" }, new[]{ "AggregatorName", "SubclientName", "PublisherName", "PublisherFavicon", "ReviewerId", "ReviewerIsAnonymous", "ReviewerUsername", "ReviewLanguage", "ReviewCountry", "Title", "Content", "MinRating", "MaxRating", "Rating", "IsSpam", "IsVerifiedPurchase", "IsIncentivizedReview" }, new[]{ typeof(global::Google.Shopping.Merchant.Reviews.V1Beta.ProductReviewAttributes.Types.CollectionMethod) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reviews.V1Beta.ProductReviewAttributes.Types.ReviewLink), global::Google.Shopping.Merchant.Reviews.V1Beta.ProductReviewAttributes.Types.ReviewLink.Parser, new[]{ "Type", "Link" }, null, new[]{ typeof(global::Google.Shopping.Merchant.Reviews.V1Beta.ProductReviewAttributes.Types.ReviewLink.Types.Type) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reviews.V1Beta.ProductReviewStatus), global::Google.Shopping.Merchant.Reviews.V1Beta.ProductReviewStatus.Parser, new[]{ "DestinationStatuses", "ItemLevelIssues", "CreateTime", "LastUpdateTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reviews.V1Beta.ProductReviewStatus.Types.ProductReviewDestinationStatus), global::Google.Shopping.Merchant.Reviews.V1Beta.ProductReviewStatus.Types.ProductReviewDestinationStatus.Parser, new[]{ "ReportingContext" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reviews.V1Beta.ProductReviewStatus.Types.ProductReviewItemLevelIssue), global::Google.Shopping.Merchant.Reviews.V1Beta.ProductReviewStatus.Types.ProductReviewItemLevelIssue.Parser, new[]{ "Code", "Severity", "Resolution", "Attribute", "ReportingContext", "Description", "Detail", "Documentation" }, null, new[]{ typeof(global::Google.Shopping.Merchant.Reviews.V1Beta.ProductReviewStatus.Types.ProductReviewItemLevelIssue.Types.Severity) }, null, null)})
           }));
@@ -172,6 +175,8 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
       skus_ = other.skus_.Clone();
       brands_ = other.brands_.Clone();
       isSpam_ = other.isSpam_;
+      isVerifiedPurchase_ = other.isVerifiedPurchase_;
+      isIncentivizedReview_ = other.isIncentivizedReview_;
       collectionMethod_ = other.collectionMethod_;
       transactionId_ = other.transactionId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -513,7 +518,8 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
 
     private string content_;
     /// <summary>
-    /// Required. The content of the review.
+    /// Optional. The content of the review. If empty, the content might still get
+    /// populated from pros and cons.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -824,6 +830,66 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
       _hasBits0 &= ~16;
     }
 
+    /// <summary>Field number for the "is_verified_purchase" field.</summary>
+    public const int IsVerifiedPurchaseFieldNumber = 30;
+    private readonly static bool IsVerifiedPurchaseDefaultValue = false;
+
+    private bool isVerifiedPurchase_;
+    /// <summary>
+    /// Optional. Indicates whether the reviewer's purchase is verified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsVerifiedPurchase {
+      get { if ((_hasBits0 & 32) != 0) { return isVerifiedPurchase_; } else { return IsVerifiedPurchaseDefaultValue; } }
+      set {
+        _hasBits0 |= 32;
+        isVerifiedPurchase_ = value;
+      }
+    }
+    /// <summary>Gets whether the "is_verified_purchase" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIsVerifiedPurchase {
+      get { return (_hasBits0 & 32) != 0; }
+    }
+    /// <summary>Clears the value of the "is_verified_purchase" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIsVerifiedPurchase() {
+      _hasBits0 &= ~32;
+    }
+
+    /// <summary>Field number for the "is_incentivized_review" field.</summary>
+    public const int IsIncentivizedReviewFieldNumber = 31;
+    private readonly static bool IsIncentivizedReviewDefaultValue = false;
+
+    private bool isIncentivizedReview_;
+    /// <summary>
+    /// Optional. Indicates whether the review is incentivized.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsIncentivizedReview {
+      get { if ((_hasBits0 & 64) != 0) { return isIncentivizedReview_; } else { return IsIncentivizedReviewDefaultValue; } }
+      set {
+        _hasBits0 |= 64;
+        isIncentivizedReview_ = value;
+      }
+    }
+    /// <summary>Gets whether the "is_incentivized_review" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIsIncentivizedReview {
+      get { return (_hasBits0 & 64) != 0; }
+    }
+    /// <summary>Clears the value of the "is_incentivized_review" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIsIncentivizedReview() {
+      _hasBits0 &= ~64;
+    }
+
     /// <summary>Field number for the "collection_method" field.</summary>
     public const int CollectionMethodFieldNumber = 28;
     private global::Google.Shopping.Merchant.Reviews.V1Beta.ProductReviewAttributes.Types.CollectionMethod collectionMethod_ = global::Google.Shopping.Merchant.Reviews.V1Beta.ProductReviewAttributes.Types.CollectionMethod.Unspecified;
@@ -898,6 +964,8 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
       if(!skus_.Equals(other.skus_)) return false;
       if(!brands_.Equals(other.brands_)) return false;
       if (IsSpam != other.IsSpam) return false;
+      if (IsVerifiedPurchase != other.IsVerifiedPurchase) return false;
+      if (IsIncentivizedReview != other.IsIncentivizedReview) return false;
       if (CollectionMethod != other.CollectionMethod) return false;
       if (TransactionId != other.TransactionId) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -934,6 +1002,8 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
       hash ^= skus_.GetHashCode();
       hash ^= brands_.GetHashCode();
       if (HasIsSpam) hash ^= IsSpam.GetHashCode();
+      if (HasIsVerifiedPurchase) hash ^= IsVerifiedPurchase.GetHashCode();
+      if (HasIsIncentivizedReview) hash ^= IsIncentivizedReview.GetHashCode();
       if (CollectionMethod != global::Google.Shopping.Merchant.Reviews.V1Beta.ProductReviewAttributes.Types.CollectionMethod.Unspecified) hash ^= CollectionMethod.GetHashCode();
       if (TransactionId.Length != 0) hash ^= TransactionId.GetHashCode();
       if (_unknownFields != null) {
@@ -1040,6 +1110,14 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
         output.WriteRawTag(234, 1);
         output.WriteString(TransactionId);
       }
+      if (HasIsVerifiedPurchase) {
+        output.WriteRawTag(240, 1);
+        output.WriteBool(IsVerifiedPurchase);
+      }
+      if (HasIsIncentivizedReview) {
+        output.WriteRawTag(248, 1);
+        output.WriteBool(IsIncentivizedReview);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1136,6 +1214,14 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
         output.WriteRawTag(234, 1);
         output.WriteString(TransactionId);
       }
+      if (HasIsVerifiedPurchase) {
+        output.WriteRawTag(240, 1);
+        output.WriteBool(IsVerifiedPurchase);
+      }
+      if (HasIsIncentivizedReview) {
+        output.WriteRawTag(248, 1);
+        output.WriteBool(IsIncentivizedReview);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1205,6 +1291,12 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
       size += skus_.CalculateSize(_repeated_skus_codec);
       size += brands_.CalculateSize(_repeated_brands_codec);
       if (HasIsSpam) {
+        size += 2 + 1;
+      }
+      if (HasIsVerifiedPurchase) {
+        size += 2 + 1;
+      }
+      if (HasIsIncentivizedReview) {
         size += 2 + 1;
       }
       if (CollectionMethod != global::Google.Shopping.Merchant.Reviews.V1Beta.ProductReviewAttributes.Types.CollectionMethod.Unspecified) {
@@ -1291,6 +1383,12 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
       brands_.Add(other.brands_);
       if (other.HasIsSpam) {
         IsSpam = other.IsSpam;
+      }
+      if (other.HasIsVerifiedPurchase) {
+        IsVerifiedPurchase = other.IsVerifiedPurchase;
+      }
+      if (other.HasIsIncentivizedReview) {
+        IsIncentivizedReview = other.IsIncentivizedReview;
       }
       if (other.CollectionMethod != global::Google.Shopping.Merchant.Reviews.V1Beta.ProductReviewAttributes.Types.CollectionMethod.Unspecified) {
         CollectionMethod = other.CollectionMethod;
@@ -1435,6 +1533,14 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
             TransactionId = input.ReadString();
             break;
           }
+          case 240: {
+            IsVerifiedPurchase = input.ReadBool();
+            break;
+          }
+          case 248: {
+            IsIncentivizedReview = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1570,6 +1676,14 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
           }
           case 234: {
             TransactionId = input.ReadString();
+            break;
+          }
+          case 240: {
+            IsVerifiedPurchase = input.ReadBool();
+            break;
+          }
+          case 248: {
+            IsIncentivizedReview = input.ReadBool();
             break;
           }
         }

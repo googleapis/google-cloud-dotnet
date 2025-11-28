@@ -1,5 +1,26 @@
 # Version history
 
+## Version 2.12.0, released 2025-11-17
+
+### New features
+
+- Add image_manifest field in DockerImage
+- Add artifact_type field in DockerImage
+- Add Ruby format in VulnerabilityScanningConfig
+
+### Documentation improvements
+
+- A comment for field `name` in message `.google.devtools.artifactregistry.v1.DockerImage` is changed
+- A comment for enum value `ENABLEMENT_CONFIG_UNSPECIFIED` in enum `EnablementConfig` is changed
+- A comment for field `satisfies_pzs` in message `.google.devtools.artifactregistry.v1.Repository` is changed
+- A comment for field `satisfies_pzi` in message `.google.devtools.artifactregistry.v1.Repository` is changed
+
+## Version 2.11.0, released 2025-11-03
+
+### New features
+
+- Update dependencies
+
 ## Version 2.10.0, released 2025-04-14
 
 ### New features

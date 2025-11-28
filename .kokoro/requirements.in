@@ -1,4 +1,0 @@
-gcp-releasetool==1.16.0
-gcp-docuploader==0.6.5
-typing-extensions==4.7.1
-importlib-resources==5.12.0

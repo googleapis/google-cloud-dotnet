@@ -508,6 +508,12 @@
                 "FetchFeatureValuesAsync"
               ]
             },
+            "GenerateFetchAccessToken": {
+              "methods": [
+                "GenerateFetchAccessToken",
+                "GenerateFetchAccessTokenAsync"
+              ]
+            },
             "SearchNearestEntities": {
               "methods": [
                 "SearchNearestEntities",
@@ -967,6 +973,12 @@
                 "GetIndexAsync"
               ]
             },
+            "ImportIndex": {
+              "methods": [
+                "ImportIndex",
+                "ImportIndexAsync"
+              ]
+            },
             "ListIndexes": {
               "methods": [
                 "ListIndexes",
@@ -1244,6 +1256,57 @@
               "methods": [
                 "ReadIndexDatapoints",
                 "ReadIndexDatapointsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "MemoryBankService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "MemoryBankServiceClient",
+          "rpcs": {
+            "CreateMemory": {
+              "methods": [
+                "CreateMemory",
+                "CreateMemoryAsync"
+              ]
+            },
+            "DeleteMemory": {
+              "methods": [
+                "DeleteMemory",
+                "DeleteMemoryAsync"
+              ]
+            },
+            "GenerateMemories": {
+              "methods": [
+                "GenerateMemories",
+                "GenerateMemoriesAsync"
+              ]
+            },
+            "GetMemory": {
+              "methods": [
+                "GetMemory",
+                "GetMemoryAsync"
+              ]
+            },
+            "ListMemories": {
+              "methods": [
+                "ListMemories",
+                "ListMemoriesAsync"
+              ]
+            },
+            "RetrieveMemories": {
+              "methods": [
+                "RetrieveMemories",
+                "RetrieveMemoriesAsync"
+              ]
+            },
+            "UpdateMemory": {
+              "methods": [
+                "UpdateMemory",
+                "UpdateMemoryAsync"
               ]
             }
           }
@@ -1699,6 +1762,12 @@
                 "MergeVersionAliasesAsync"
               ]
             },
+            "RecommendSpec": {
+              "methods": [
+                "RecommendSpec",
+                "RecommendSpecAsync"
+              ]
+            },
             "UpdateExplanationDataset": {
               "methods": [
                 "UpdateExplanationDataset",
@@ -1979,6 +2048,12 @@
               "methods": [
                 "DirectRawPredict",
                 "DirectRawPredictAsync"
+              ]
+            },
+            "EmbedContent": {
+              "methods": [
+                "EmbedContent",
+                "EmbedContentAsync"
               ]
             },
             "Explain": {

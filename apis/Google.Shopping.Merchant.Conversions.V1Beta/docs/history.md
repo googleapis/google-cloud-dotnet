@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta03, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+### Documentation improvements
+
+- Change in wording : website -> online store
+- A comment for message `MerchantCenterDestination` is changed
+
 ## Version 1.0.0-beta02, released 2024-05-08
 
 ### New features

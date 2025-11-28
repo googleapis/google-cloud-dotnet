@@ -80,6 +80,18 @@ namespace Google.Cloud.AlloyDb.V1Beta
         }
     }
 
+    public partial class ImportClusterRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::ClusterName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::ClusterName ClusterName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::ClusterName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class UpgradeClusterRequest
     {
         /// <summary>
@@ -393,6 +405,18 @@ namespace Google.Cloud.AlloyDb.V1Beta
     }
 
     public partial class ListDatabasesRequest
+    {
+        /// <summary>
+        /// <see cref="ClusterName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ClusterName ParentAsClusterName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ClusterName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateDatabaseRequest
     {
         /// <summary>
         /// <see cref="ClusterName"/>-typed view over the <see cref="Parent"/> resource name property.

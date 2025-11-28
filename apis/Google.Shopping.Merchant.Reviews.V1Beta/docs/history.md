@@ -1,5 +1,31 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+## Version 1.0.0-beta03, released 2025-07-28
+
+### Bug fixes
+
+- An existing field `attributes` is renamed to `merchant_review_attributes` in message `.google.shopping.merchant.reviews.v1beta.MerchantReview`
+- An existing field `attributes` is renamed to `product_review_attributes` in message `.google.shopping.merchant.reviews.v1beta.ProductReview`
+
+## Version 1.0.0-beta02, released 2025-07-11
+
+### New features
+
+- A new field `is_verified_purchase` is added to message `.google.shopping.merchant.reviews.v1beta.ProductReviewAttributes`
+- A new field `is_incentivized_review` is added to message `.google.shopping.merchant.reviews.v1beta.ProductReviewAttributes`
+
+### Documentation improvements
+
+- A comment for field `custom_attributes` in message `.google.shopping.merchant.reviews.v1beta.MerchantReview` is changed
+- A comment for field `review_language` in message `.google.shopping.merchant.reviews.v1beta.MerchantReviewAttributes` is changed
+- A comment for field `content` in message `.google.shopping.merchant.reviews.v1beta.ProductReviewAttributes` is changed
+
 ## Version 1.0.0-beta01, released 2024-12-10
 
 Initial release.

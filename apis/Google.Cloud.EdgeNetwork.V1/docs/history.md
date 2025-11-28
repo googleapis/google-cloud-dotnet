@@ -1,5 +1,23 @@
 # Version history
 
+## Version 1.6.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+## Version 1.5.0, released 2025-10-28
+
+### New features
+
+- A new field `remote_peering_network_type` is added to message `google.cloud.edgenetwork.v1.Interconnect`
+- A new field `peering_type` is added to message `google.cloud.edgenetwork.v1.InterconnectAttachment`
+
+### Documentation improvements
+
+- Fix typos in comments
+- Swap comments on `BONDED` and `NON_BONDED` enums in `BondingType`
+
 ## Version 1.4.0, released 2024-07-08
 
 ### New features

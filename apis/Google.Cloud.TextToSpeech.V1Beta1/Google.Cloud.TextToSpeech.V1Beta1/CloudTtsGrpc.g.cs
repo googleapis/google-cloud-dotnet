@@ -136,7 +136,7 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
       }
 
       /// <summary>
-      /// Performs bidirectional streaming speech synthesis: receive audio while
+      /// Performs bidirectional streaming speech synthesis: receives audio while
       /// sending text.
       /// </summary>
       /// <param name="requestStream">Used for reading requests from the client.</param>
@@ -279,7 +279,7 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_SynthesizeSpeech, null, options, request);
       }
       /// <summary>
-      /// Performs bidirectional streaming speech synthesis: receive audio while
+      /// Performs bidirectional streaming speech synthesis: receives audio while
       /// sending text.
       /// </summary>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -292,7 +292,7 @@ namespace Google.Cloud.TextToSpeech.V1Beta1 {
         return StreamingSynthesize(new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Performs bidirectional streaming speech synthesis: receive audio while
+      /// Performs bidirectional streaming speech synthesis: receives audio while
       /// sending text.
       /// </summary>
       /// <param name="options">The options for the call.</param>

@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.2.0, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+## Version 1.1.0, released 2025-08-04
+
+### New features
+
+- Introducing new Grant states for Withdrawal operation
+
 ## Version 1.0.0, released 2024-12-05
 
 No API surface changes; just dependency updates and promotion to GA.

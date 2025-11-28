@@ -1457,12 +1457,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 44,
+          "end": 45,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 42,
+          "end": 43,
           "type": "SHORT"
         }
       ]
@@ -1506,12 +1506,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 45,
+          "end": 46,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 43,
+          "end": 44,
           "type": "SHORT"
         }
       ]
@@ -3250,12 +3250,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 46,
+          "end": 47,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 44,
+          "end": 45,
           "type": "SHORT"
         }
       ]
@@ -3299,12 +3299,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 47,
+          "end": 48,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 45,
+          "end": 46,
           "type": "SHORT"
         }
       ]
@@ -6077,6 +6077,1680 @@
         {
           "start": 36,
           "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_GetIamPolicy_sync",
+      "title": "GetIamPolicyRequestObject",
+      "description": "Snippet for GetIamPolicy",
+      "file": "ReservationServiceClient.GetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.GetIamPolicy",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_GetIamPolicy_async",
+      "title": "GetIamPolicyRequestObjectAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "ReservationServiceClient.GetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.GetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.GetIamPolicy",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_GetIamPolicy_sync_flattened",
+      "title": "GetIamPolicy",
+      "description": "Snippet for GetIamPolicy",
+      "file": "ReservationServiceClient.GetIamPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.GetIamPolicy",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_GetIamPolicy_async_flattened",
+      "title": "GetIamPolicyAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "ReservationServiceClient.GetIamPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.GetIamPolicy",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_GetIamPolicy_sync_flattened_resourceNames",
+      "title": "GetIamPolicyResourceNames",
+      "description": "Snippet for GetIamPolicy",
+      "file": "ReservationServiceClient.GetIamPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicy",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.GetIamPolicy",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_GetIamPolicy_async_flattened_resourceNames",
+      "title": "GetIamPolicyResourceNamesAsync",
+      "description": "Snippet for GetIamPolicyAsync",
+      "file": "ReservationServiceClient.GetIamPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIamPolicyAsync",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "GetIamPolicy",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.GetIamPolicy",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_SetIamPolicy_sync",
+      "title": "SetIamPolicyRequestObject",
+      "description": "Snippet for SetIamPolicy",
+      "file": "ReservationServiceClient.SetIamPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicy",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.SetIamPolicy",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_SetIamPolicy_async",
+      "title": "SetIamPolicyRequestObjectAsync",
+      "description": "Snippet for SetIamPolicyAsync",
+      "file": "ReservationServiceClient.SetIamPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicyAsync",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.SetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.SetIamPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.SetIamPolicy",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_SetIamPolicy_sync_flattened",
+      "title": "SetIamPolicy",
+      "description": "Snippet for SetIamPolicy",
+      "file": "ReservationServiceClient.SetIamPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicy",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.SetIamPolicy",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_SetIamPolicy_async_flattened",
+      "title": "SetIamPolicyAsync",
+      "description": "Snippet for SetIamPolicyAsync",
+      "file": "ReservationServiceClient.SetIamPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicyAsync",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.SetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.SetIamPolicy",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_SetIamPolicy_sync_flattened_resourceNames",
+      "title": "SetIamPolicyResourceNames",
+      "description": "Snippet for SetIamPolicy",
+      "file": "ReservationServiceClient.SetIamPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicy",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.SetIamPolicy",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.Policy",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.SetIamPolicy",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_SetIamPolicy_async_flattened_resourceNames",
+      "title": "SetIamPolicyResourceNamesAsync",
+      "description": "Snippet for SetIamPolicyAsync",
+      "file": "ReservationServiceClient.SetIamPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetIamPolicyAsync",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.SetIamPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.IResourceName",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Cloud.Iam.V1.Policy",
+            "name": "policy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.Policy>",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "SetIamPolicy",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.SetIamPolicy",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_TestIamPermissions_sync",
+      "title": "TestIamPermissionsRequestObject",
+      "description": "Snippet for TestIamPermissions",
+      "file": "ReservationServiceClient.TestIamPermissionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissions",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.TestIamPermissions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V1.TestIamPermissionsResponse",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.TestIamPermissions",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_TestIamPermissions_async",
+      "title": "TestIamPermissionsRequestObjectAsync",
+      "description": "Snippet for TestIamPermissionsAsync",
+      "file": "ReservationServiceClient.TestIamPermissionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "TestIamPermissionsAsync",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.TestIamPermissionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V1.TestIamPermissionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V1.TestIamPermissionsResponse>",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "TestIamPermissions",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.TestIamPermissions",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_CreateReservationGroup_sync",
+      "title": "CreateReservationGroupRequestObject",
+      "description": "Snippet for CreateReservationGroup",
+      "file": "ReservationServiceClient.CreateReservationGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateReservationGroup",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.CreateReservationGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.CreateReservationGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Reservation.V1.ReservationGroup",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateReservationGroup",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.CreateReservationGroup",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_CreateReservationGroup_async",
+      "title": "CreateReservationGroupRequestObjectAsync",
+      "description": "Snippet for CreateReservationGroupAsync",
+      "file": "ReservationServiceClient.CreateReservationGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateReservationGroupAsync",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.CreateReservationGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.CreateReservationGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.ReservationGroup>",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "CreateReservationGroup",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.CreateReservationGroup",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_GetReservationGroup_sync",
+      "title": "GetReservationGroupRequestObject",
+      "description": "Snippet for GetReservationGroup",
+      "file": "ReservationServiceClient.GetReservationGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReservationGroup",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetReservationGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.GetReservationGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Reservation.V1.ReservationGroup",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "GetReservationGroup",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.GetReservationGroup",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_GetReservationGroup_async",
+      "title": "GetReservationGroupRequestObjectAsync",
+      "description": "Snippet for GetReservationGroupAsync",
+      "file": "ReservationServiceClient.GetReservationGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReservationGroupAsync",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetReservationGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.GetReservationGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.ReservationGroup>",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "GetReservationGroup",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.GetReservationGroup",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_GetReservationGroup_sync_flattened",
+      "title": "GetReservationGroup",
+      "description": "Snippet for GetReservationGroup",
+      "file": "ReservationServiceClient.GetReservationGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReservationGroup",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetReservationGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Reservation.V1.ReservationGroup",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "GetReservationGroup",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.GetReservationGroup",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_GetReservationGroup_async_flattened",
+      "title": "GetReservationGroupAsync",
+      "description": "Snippet for GetReservationGroupAsync",
+      "file": "ReservationServiceClient.GetReservationGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReservationGroupAsync",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetReservationGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.ReservationGroup>",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "GetReservationGroup",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.GetReservationGroup",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_GetReservationGroup_sync_flattened_resourceNames",
+      "title": "GetReservationGroupResourceNames",
+      "description": "Snippet for GetReservationGroup",
+      "file": "ReservationServiceClient.GetReservationGroupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReservationGroup",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetReservationGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.ReservationGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.BigQuery.Reservation.V1.ReservationGroup",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "GetReservationGroup",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.GetReservationGroup",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_GetReservationGroup_async_flattened_resourceNames",
+      "title": "GetReservationGroupResourceNamesAsync",
+      "description": "Snippet for GetReservationGroupAsync",
+      "file": "ReservationServiceClient.GetReservationGroupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReservationGroupAsync",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.GetReservationGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.ReservationGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.BigQuery.Reservation.V1.ReservationGroup>",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "GetReservationGroup",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.GetReservationGroup",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_DeleteReservationGroup_sync",
+      "title": "DeleteReservationGroupRequestObject",
+      "description": "Snippet for DeleteReservationGroup",
+      "file": "ReservationServiceClient.DeleteReservationGroupRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReservationGroup",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.DeleteReservationGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.DeleteReservationGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteReservationGroup",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.DeleteReservationGroup",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_DeleteReservationGroup_async",
+      "title": "DeleteReservationGroupRequestObjectAsync",
+      "description": "Snippet for DeleteReservationGroupAsync",
+      "file": "ReservationServiceClient.DeleteReservationGroupRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReservationGroupAsync",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.DeleteReservationGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.DeleteReservationGroupRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteReservationGroup",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.DeleteReservationGroup",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_DeleteReservationGroup_sync_flattened",
+      "title": "DeleteReservationGroup",
+      "description": "Snippet for DeleteReservationGroup",
+      "file": "ReservationServiceClient.DeleteReservationGroupSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReservationGroup",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.DeleteReservationGroup",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteReservationGroup",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.DeleteReservationGroup",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_DeleteReservationGroup_async_flattened",
+      "title": "DeleteReservationGroupAsync",
+      "description": "Snippet for DeleteReservationGroupAsync",
+      "file": "ReservationServiceClient.DeleteReservationGroupAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReservationGroupAsync",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.DeleteReservationGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteReservationGroup",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.DeleteReservationGroup",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_DeleteReservationGroup_sync_flattened_resourceNames",
+      "title": "DeleteReservationGroupResourceNames",
+      "description": "Snippet for DeleteReservationGroup",
+      "file": "ReservationServiceClient.DeleteReservationGroupResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReservationGroup",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.DeleteReservationGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.ReservationGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteReservationGroup",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.DeleteReservationGroup",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_DeleteReservationGroup_async_flattened_resourceNames",
+      "title": "DeleteReservationGroupResourceNamesAsync",
+      "description": "Snippet for DeleteReservationGroupAsync",
+      "file": "ReservationServiceClient.DeleteReservationGroupResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReservationGroupAsync",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.DeleteReservationGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.ReservationGroupName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteReservationGroup",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.DeleteReservationGroup",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_ListReservationGroups_sync",
+      "title": "ListReservationGroupsRequestObject",
+      "description": "Snippet for ListReservationGroups",
+      "file": "ReservationServiceClient.ListReservationGroupsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReservationGroups",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.ListReservationGroups",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsResponse, Google.Cloud.BigQuery.Reservation.V1.ReservationGroup>",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "ListReservationGroups",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.ListReservationGroups",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_ListReservationGroups_async",
+      "title": "ListReservationGroupsRequestObjectAsync",
+      "description": "Snippet for ListReservationGroupsAsync",
+      "file": "ReservationServiceClient.ListReservationGroupsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReservationGroupsAsync",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.ListReservationGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsResponse, Google.Cloud.BigQuery.Reservation.V1.ReservationGroup>",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "ListReservationGroups",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.ListReservationGroups",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_ListReservationGroups_sync_flattened",
+      "title": "ListReservationGroups",
+      "description": "Snippet for ListReservationGroups",
+      "file": "ReservationServiceClient.ListReservationGroupsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReservationGroups",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.ListReservationGroups",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsResponse, Google.Cloud.BigQuery.Reservation.V1.ReservationGroup>",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "ListReservationGroups",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.ListReservationGroups",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_ListReservationGroups_async_flattened",
+      "title": "ListReservationGroupsAsync",
+      "description": "Snippet for ListReservationGroupsAsync",
+      "file": "ReservationServiceClient.ListReservationGroupsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReservationGroupsAsync",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.ListReservationGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsResponse, Google.Cloud.BigQuery.Reservation.V1.ReservationGroup>",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "ListReservationGroups",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.ListReservationGroups",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_ListReservationGroups_sync_flattened_resourceNames",
+      "title": "ListReservationGroupsResourceNames",
+      "description": "Snippet for ListReservationGroups",
+      "file": "ReservationServiceClient.ListReservationGroupsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReservationGroups",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.ListReservationGroups",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsResponse, Google.Cloud.BigQuery.Reservation.V1.ReservationGroup>",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "ListReservationGroups",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.ListReservationGroups",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigqueryreservation_v1_generated_ReservationService_ListReservationGroups_async_flattened_resourceNames",
+      "title": "ListReservationGroupsResourceNamesAsync",
+      "description": "Snippet for ListReservationGroupsAsync",
+      "file": "ReservationServiceClient.ListReservationGroupsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReservationGroupsAsync",
+        "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient.ListReservationGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsResponse, Google.Cloud.BigQuery.Reservation.V1.ReservationGroup>",
+        "client": {
+          "shortName": "ReservationServiceClient",
+          "fullName": "Google.Cloud.BigQuery.Reservation.V1.ReservationServiceClient"
+        },
+        "method": {
+          "shortName": "ListReservationGroups",
+          "fullName": "google.cloud.bigquery.reservation.v1.ReservationService.ListReservationGroups",
+          "service": {
+            "shortName": "ReservationService",
+            "fullName": "google.cloud.bigquery.reservation.v1.ReservationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
           "type": "SHORT"
         }
       ]

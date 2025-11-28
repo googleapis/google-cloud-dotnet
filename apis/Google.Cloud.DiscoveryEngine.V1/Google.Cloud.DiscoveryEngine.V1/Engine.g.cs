@@ -28,49 +28,80 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "bxIfZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MRofZ29vZ2xlL2Fw",
             "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
             "cm90bxosZ29vZ2xlL2Nsb3VkL2Rpc2NvdmVyeWVuZ2luZS92MS9jb21tb24u",
-            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ipAsKBkVu",
+            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i4RQKBkVu",
             "Z2luZRJWChJjaGF0X2VuZ2luZV9jb25maWcYCyABKAsyOC5nb29nbGUuY2xv",
             "dWQuZGlzY292ZXJ5ZW5naW5lLnYxLkVuZ2luZS5DaGF0RW5naW5lQ29uZmln",
             "SAASWgoUc2VhcmNoX2VuZ2luZV9jb25maWcYDSABKAsyOi5nb29nbGUuY2xv",
             "dWQuZGlzY292ZXJ5ZW5naW5lLnYxLkVuZ2luZS5TZWFyY2hFbmdpbmVDb25m",
-            "aWdIABJfChRjaGF0X2VuZ2luZV9tZXRhZGF0YRgMIAEoCzI6Lmdvb2dsZS5j",
-            "bG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuRW5naW5lLkNoYXRFbmdpbmVNZXRh",
-            "ZGF0YUID4EEDSAESEQoEbmFtZRgBIAEoCUID4EEFEhkKDGRpc3BsYXlfbmFt",
-            "ZRgCIAEoCUID4EECEjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAQgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhYKDmRhdGFfc3RvcmVf",
-            "aWRzGAUgAygJEkkKDXNvbHV0aW9uX3R5cGUYBiABKA4yLS5nb29nbGUuY2xv",
-            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxLlNvbHV0aW9uVHlwZUID4EECEkwKEWlu",
-            "ZHVzdHJ5X3ZlcnRpY2FsGBAgASgOMjEuZ29vZ2xlLmNsb3VkLmRpc2NvdmVy",
-            "eWVuZ2luZS52MS5JbmR1c3RyeVZlcnRpY2FsEksKDWNvbW1vbl9jb25maWcY",
-            "DyABKAsyNC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkVuZ2lu",
-            "ZS5Db21tb25Db25maWcSHgoRZGlzYWJsZV9hbmFseXRpY3MYGiABKAhCA+BB",
-            "ARqcAQoSU2VhcmNoRW5naW5lQ29uZmlnEkAKC3NlYXJjaF90aWVyGAEgASgO",
-            "MisuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hUaWVy",
-            "EkQKDnNlYXJjaF9hZGRfb25zGAIgAygOMiwuZ29vZ2xlLmNsb3VkLmRpc2Nv",
-            "dmVyeWVuZ2luZS52MS5TZWFyY2hBZGRPbhq0AgoQQ2hhdEVuZ2luZUNvbmZp",
-            "ZxJrChVhZ2VudF9jcmVhdGlvbl9jb25maWcYASABKAsyTC5nb29nbGUuY2xv",
-            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxLkVuZ2luZS5DaGF0RW5naW5lQ29uZmln",
-            "LkFnZW50Q3JlYXRpb25Db25maWcSIAoYZGlhbG9nZmxvd19hZ2VudF90b19s",
-            "aW5rGAIgASgJEh8KEmFsbG93X2Nyb3NzX3JlZ2lvbhgDIAEoCEID4EEBGnAK",
-            "E0FnZW50Q3JlYXRpb25Db25maWcSEAoIYnVzaW5lc3MYASABKAkSHQoVZGVm",
-            "YXVsdF9sYW5ndWFnZV9jb2RlGAIgASgJEhYKCXRpbWVfem9uZRgDIAEoCUID",
-            "4EECEhAKCGxvY2F0aW9uGAQgASgJGiQKDENvbW1vbkNvbmZpZxIUCgxjb21w",
-            "YW55X25hbWUYASABKAkaLgoSQ2hhdEVuZ2luZU1ldGFkYXRhEhgKEGRpYWxv",
-            "Z2Zsb3dfYWdlbnQYASABKAk6fepBegolZGlzY292ZXJ5ZW5naW5lLmdvb2ds",
-            "ZWFwaXMuY29tL0VuZ2luZRJRcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
-            "cy97bG9jYXRpb259L2NvbGxlY3Rpb25zL3tjb2xsZWN0aW9ufS9lbmdpbmVz",
-            "L3tlbmdpbmV9Qg8KDWVuZ2luZV9jb25maWdCEQoPZW5naW5lX21ldGFkYXRh",
-            "Qv4BCiNjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MUILRW5n",
-            "aW5lUHJvdG9QAVpNY2xvdWQuZ29vZ2xlLmNvbS9nby9kaXNjb3Zlcnllbmdp",
-            "bmUvYXBpdjEvZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5ZW5naW5lcGKi",
-            "Ag9ESVNDT1ZFUllFTkdJTkWqAh9Hb29nbGUuQ2xvdWQuRGlzY292ZXJ5RW5n",
-            "aW5lLlYxygIfR29vZ2xlXENsb3VkXERpc2NvdmVyeUVuZ2luZVxWMeoCIkdv",
-            "b2dsZTo6Q2xvdWQ6OkRpc2NvdmVyeUVuZ2luZTo6VjFiBnByb3RvMw=="));
+            "aWdIABJ1CiJtZWRpYV9yZWNvbW1lbmRhdGlvbl9lbmdpbmVfY29uZmlnGA4g",
+            "ASgLMkcuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5FbmdpbmUu",
+            "TWVkaWFSZWNvbW1lbmRhdGlvbkVuZ2luZUNvbmZpZ0gAEl8KFGNoYXRfZW5n",
+            "aW5lX21ldGFkYXRhGAwgASgLMjouZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVu",
+            "Z2luZS52MS5FbmdpbmUuQ2hhdEVuZ2luZU1ldGFkYXRhQgPgQQNIARIUCgRu",
+            "YW1lGAEgASgJQgbgQQXgQQgSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQIS",
+            "NAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wQgPgQQMSGwoOZGF0YV9zdG9yZV9pZHMYBSADKAlCA+BB",
+            "ARJJCg1zb2x1dGlvbl90eXBlGAYgASgOMi0uZ29vZ2xlLmNsb3VkLmRpc2Nv",
+            "dmVyeWVuZ2luZS52MS5Tb2x1dGlvblR5cGVCA+BBAhJRChFpbmR1c3RyeV92",
+            "ZXJ0aWNhbBgQIAEoDjIxLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUu",
+            "djEuSW5kdXN0cnlWZXJ0aWNhbEID4EEBEksKDWNvbW1vbl9jb25maWcYDyAB",
+            "KAsyNC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkVuZ2luZS5D",
+            "b21tb25Db25maWcSHgoRZGlzYWJsZV9hbmFseXRpY3MYGiABKAhCA+BBARqc",
+            "AQoSU2VhcmNoRW5naW5lQ29uZmlnEkAKC3NlYXJjaF90aWVyGAEgASgOMisu",
+            "Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hUaWVyEkQK",
+            "DnNlYXJjaF9hZGRfb25zGAIgAygOMiwuZ29vZ2xlLmNsb3VkLmRpc2NvdmVy",
+            "eWVuZ2luZS52MS5TZWFyY2hBZGRPbhq2CAofTWVkaWFSZWNvbW1lbmRhdGlv",
+            "bkVuZ2luZUNvbmZpZxIRCgR0eXBlGAEgASgJQgPgQQISHgoWb3B0aW1pemF0",
+            "aW9uX29iamVjdGl2ZRgCIAEoCRKKAQodb3B0aW1pemF0aW9uX29iamVjdGl2",
+            "ZV9jb25maWcYAyABKAsyYy5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5l",
+            "LnYxLkVuZ2luZS5NZWRpYVJlY29tbWVuZGF0aW9uRW5naW5lQ29uZmlnLk9w",
+            "dGltaXphdGlvbk9iamVjdGl2ZUNvbmZpZxJtCg50cmFpbmluZ19zdGF0ZRgE",
+            "IAEoDjJVLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuRW5naW5l",
+            "Lk1lZGlhUmVjb21tZW5kYXRpb25FbmdpbmVDb25maWcuVHJhaW5pbmdTdGF0",
+            "ZRKBAQoWZW5naW5lX2ZlYXR1cmVzX2NvbmZpZxgFIAEoCzJcLmdvb2dsZS5j",
+            "bG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuRW5naW5lLk1lZGlhUmVjb21tZW5k",
+            "YXRpb25FbmdpbmVDb25maWcuRW5naW5lRmVhdHVyZXNDb25maWdCA+BBARpf",
+            "ChtPcHRpbWl6YXRpb25PYmplY3RpdmVDb25maWcSGQoMdGFyZ2V0X2ZpZWxk",
+            "GAEgASgJQgPgQQISJQoYdGFyZ2V0X2ZpZWxkX3ZhbHVlX2Zsb2F0GAIgASgC",
+            "QgPgQQIavwIKFEVuZ2luZUZlYXR1cmVzQ29uZmlnEowBChpyZWNvbW1lbmRl",
+            "ZF9mb3JfeW91X2NvbmZpZxgBIAEoCzJmLmdvb2dsZS5jbG91ZC5kaXNjb3Zl",
+            "cnllbmdpbmUudjEuRW5naW5lLk1lZGlhUmVjb21tZW5kYXRpb25FbmdpbmVD",
+            "b25maWcuUmVjb21tZW5kZWRGb3JZb3VGZWF0dXJlQ29uZmlnSAASfwoTbW9z",
+            "dF9wb3B1bGFyX2NvbmZpZxgCIAEoCzJgLmdvb2dsZS5jbG91ZC5kaXNjb3Zl",
+            "cnllbmdpbmUudjEuRW5naW5lLk1lZGlhUmVjb21tZW5kYXRpb25FbmdpbmVD",
+            "b25maWcuTW9zdFBvcHVsYXJGZWF0dXJlQ29uZmlnSABCFwoVdHlwZV9kZWRp",
+            "Y2F0ZWRfY29uZmlnGjwKHlJlY29tbWVuZGVkRm9yWW91RmVhdHVyZUNvbmZp",
+            "ZxIaChJjb250ZXh0X2V2ZW50X3R5cGUYASABKAkaNAoYTW9zdFBvcHVsYXJG",
+            "ZWF0dXJlQ29uZmlnEhgKEHRpbWVfd2luZG93X2RheXMYASABKAMiSQoNVHJh",
+            "aW5pbmdTdGF0ZRIeChpUUkFJTklOR19TVEFURV9VTlNQRUNJRklFRBAAEgoK",
+            "BlBBVVNFRBABEgwKCFRSQUlOSU5HEAIatAIKEENoYXRFbmdpbmVDb25maWcS",
+            "awoVYWdlbnRfY3JlYXRpb25fY29uZmlnGAEgASgLMkwuZ29vZ2xlLmNsb3Vk",
+            "LmRpc2NvdmVyeWVuZ2luZS52MS5FbmdpbmUuQ2hhdEVuZ2luZUNvbmZpZy5B",
+            "Z2VudENyZWF0aW9uQ29uZmlnEiAKGGRpYWxvZ2Zsb3dfYWdlbnRfdG9fbGlu",
+            "axgCIAEoCRIfChJhbGxvd19jcm9zc19yZWdpb24YAyABKAhCA+BBARpwChNB",
+            "Z2VudENyZWF0aW9uQ29uZmlnEhAKCGJ1c2luZXNzGAEgASgJEh0KFWRlZmF1",
+            "bHRfbGFuZ3VhZ2VfY29kZRgCIAEoCRIWCgl0aW1lX3pvbmUYAyABKAlCA+BB",
+            "AhIQCghsb2NhdGlvbhgEIAEoCRokCgxDb21tb25Db25maWcSFAoMY29tcGFu",
+            "eV9uYW1lGAEgASgJGi4KEkNoYXRFbmdpbmVNZXRhZGF0YRIYChBkaWFsb2dm",
+            "bG93X2FnZW50GAEgASgJOn3qQXoKJWRpc2NvdmVyeWVuZ2luZS5nb29nbGVh",
+            "cGlzLmNvbS9FbmdpbmUSUXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
+            "e2xvY2F0aW9ufS9jb2xsZWN0aW9ucy97Y29sbGVjdGlvbn0vZW5naW5lcy97",
+            "ZW5naW5lfUIPCg1lbmdpbmVfY29uZmlnQhEKD2VuZ2luZV9tZXRhZGF0YUL+",
+            "AQojY29tLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFCC0VuZ2lu",
+            "ZVByb3RvUAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5l",
+            "L2FwaXYxL2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIP",
+            "RElTQ09WRVJZRU5HSU5FqgIfR29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2lu",
+            "ZS5WMcoCH0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjHqAiJHb29n",
+            "bGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine), global::Google.Cloud.DiscoveryEngine.V1.Engine.Parser, new[]{ "ChatEngineConfig", "SearchEngineConfig", "ChatEngineMetadata", "Name", "DisplayName", "CreateTime", "UpdateTime", "DataStoreIds", "SolutionType", "IndustryVertical", "CommonConfig", "DisableAnalytics" }, new[]{ "EngineConfig", "EngineMetadata" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.SearchEngineConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.SearchEngineConfig.Parser, new[]{ "SearchTier", "SearchAddOns" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine), global::Google.Cloud.DiscoveryEngine.V1.Engine.Parser, new[]{ "ChatEngineConfig", "SearchEngineConfig", "MediaRecommendationEngineConfig", "ChatEngineMetadata", "Name", "DisplayName", "CreateTime", "UpdateTime", "DataStoreIds", "SolutionType", "IndustryVertical", "CommonConfig", "DisableAnalytics" }, new[]{ "EngineConfig", "EngineMetadata" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.SearchEngineConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.SearchEngineConfig.Parser, new[]{ "SearchTier", "SearchAddOns" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Parser, new[]{ "Type", "OptimizationObjective", "OptimizationObjectiveConfig", "TrainingState", "EngineFeaturesConfig" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.TrainingState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.OptimizationObjectiveConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.OptimizationObjectiveConfig.Parser, new[]{ "TargetField", "TargetFieldValueFloat" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.EngineFeaturesConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.EngineFeaturesConfig.Parser, new[]{ "RecommendedForYouConfig", "MostPopularConfig" }, new[]{ "TypeDedicatedConfig" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.RecommendedForYouFeatureConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.RecommendedForYouFeatureConfig.Parser, new[]{ "ContextEventType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.MostPopularFeatureConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.MostPopularFeatureConfig.Parser, new[]{ "TimeWindowDays" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ChatEngineConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ChatEngineConfig.Parser, new[]{ "AgentCreationConfig", "DialogflowAgentToLink", "AllowCrossRegion" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ChatEngineConfig.Types.AgentCreationConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ChatEngineConfig.Types.AgentCreationConfig.Parser, new[]{ "Business", "DefaultLanguageCode", "TimeZone", "Location" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.CommonConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.CommonConfig.Parser, new[]{ "CompanyName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ChatEngineMetadata), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ChatEngineMetadata.Parser, new[]{ "DialogflowAgent" }, null, null, null, null)})
@@ -135,6 +166,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         case EngineConfigOneofCase.SearchEngineConfig:
           SearchEngineConfig = other.SearchEngineConfig.Clone();
           break;
+        case EngineConfigOneofCase.MediaRecommendationEngineConfig:
+          MediaRecommendationEngineConfig = other.MediaRecommendationEngineConfig.Clone();
+          break;
       }
 
       switch (other.EngineMetadataCase) {
@@ -186,6 +220,27 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "media_recommendation_engine_config" field.</summary>
+    public const int MediaRecommendationEngineConfigFieldNumber = 14;
+    /// <summary>
+    /// Configurations for the Media Engine. Only applicable on the data
+    /// stores with
+    /// [solution_type][google.cloud.discoveryengine.v1.Engine.solution_type]
+    /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1.SolutionType.SOLUTION_TYPE_RECOMMENDATION]
+    /// and
+    /// [IndustryVertical.MEDIA][google.cloud.discoveryengine.v1.IndustryVertical.MEDIA]
+    /// vertical.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig MediaRecommendationEngineConfig {
+      get { return engineConfigCase_ == EngineConfigOneofCase.MediaRecommendationEngineConfig ? (global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig) engineConfig_ : null; }
+      set {
+        engineConfig_ = value;
+        engineConfigCase_ = value == null ? EngineConfigOneofCase.None : EngineConfigOneofCase.MediaRecommendationEngineConfig;
+      }
+    }
+
     /// <summary>Field number for the "chat_engine_metadata" field.</summary>
     public const int ChatEngineMetadataFieldNumber = 12;
     /// <summary>
@@ -208,7 +263,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Immutable. The fully qualified resource name of the engine.
+    /// Immutable. Identifier. The fully qualified resource name of the engine.
     ///
     /// This field must be a UTF-8 encoded string with a length limit of 1024
     /// characters.
@@ -279,7 +334,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> dataStoreIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// The data stores associated with this engine.
+    /// Optional. The data stores associated with this engine.
     ///
     /// For
     /// [SOLUTION_TYPE_SEARCH][google.cloud.discoveryengine.v1.SolutionType.SOLUTION_TYPE_SEARCH]
@@ -323,7 +378,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public const int IndustryVerticalFieldNumber = 16;
     private global::Google.Cloud.DiscoveryEngine.V1.IndustryVertical industryVertical_ = global::Google.Cloud.DiscoveryEngine.V1.IndustryVertical.Unspecified;
     /// <summary>
-    /// The industry vertical that the engine registers.
+    /// Optional. The industry vertical that the engine registers.
     /// The restriction of the Engine industry vertical is based on
     /// [DataStore][google.cloud.discoveryengine.v1.DataStore]: Vertical on Engine
     /// has to match vertical of the DataStore linked to the engine.
@@ -374,6 +429,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       None = 0,
       ChatEngineConfig = 11,
       SearchEngineConfig = 13,
+      MediaRecommendationEngineConfig = 14,
     }
     private EngineConfigOneofCase engineConfigCase_ = EngineConfigOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -426,6 +482,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (!object.Equals(ChatEngineConfig, other.ChatEngineConfig)) return false;
       if (!object.Equals(SearchEngineConfig, other.SearchEngineConfig)) return false;
+      if (!object.Equals(MediaRecommendationEngineConfig, other.MediaRecommendationEngineConfig)) return false;
       if (!object.Equals(ChatEngineMetadata, other.ChatEngineMetadata)) return false;
       if (Name != other.Name) return false;
       if (DisplayName != other.DisplayName) return false;
@@ -447,6 +504,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       int hash = 1;
       if (engineConfigCase_ == EngineConfigOneofCase.ChatEngineConfig) hash ^= ChatEngineConfig.GetHashCode();
       if (engineConfigCase_ == EngineConfigOneofCase.SearchEngineConfig) hash ^= SearchEngineConfig.GetHashCode();
+      if (engineConfigCase_ == EngineConfigOneofCase.MediaRecommendationEngineConfig) hash ^= MediaRecommendationEngineConfig.GetHashCode();
       if (engineMetadataCase_ == EngineMetadataOneofCase.ChatEngineMetadata) hash ^= ChatEngineMetadata.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
@@ -510,6 +568,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(106);
         output.WriteMessage(SearchEngineConfig);
       }
+      if (engineConfigCase_ == EngineConfigOneofCase.MediaRecommendationEngineConfig) {
+        output.WriteRawTag(114);
+        output.WriteMessage(MediaRecommendationEngineConfig);
+      }
       if (commonConfig_ != null) {
         output.WriteRawTag(122);
         output.WriteMessage(CommonConfig);
@@ -565,6 +627,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(106);
         output.WriteMessage(SearchEngineConfig);
       }
+      if (engineConfigCase_ == EngineConfigOneofCase.MediaRecommendationEngineConfig) {
+        output.WriteRawTag(114);
+        output.WriteMessage(MediaRecommendationEngineConfig);
+      }
       if (commonConfig_ != null) {
         output.WriteRawTag(122);
         output.WriteMessage(CommonConfig);
@@ -592,6 +658,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (engineConfigCase_ == EngineConfigOneofCase.SearchEngineConfig) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SearchEngineConfig);
+      }
+      if (engineConfigCase_ == EngineConfigOneofCase.MediaRecommendationEngineConfig) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MediaRecommendationEngineConfig);
       }
       if (engineMetadataCase_ == EngineMetadataOneofCase.ChatEngineMetadata) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ChatEngineMetadata);
@@ -680,6 +749,12 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           SearchEngineConfig.MergeFrom(other.SearchEngineConfig);
           break;
+        case EngineConfigOneofCase.MediaRecommendationEngineConfig:
+          if (MediaRecommendationEngineConfig == null) {
+            MediaRecommendationEngineConfig = new global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig();
+          }
+          MediaRecommendationEngineConfig.MergeFrom(other.MediaRecommendationEngineConfig);
+          break;
       }
 
       switch (other.EngineMetadataCase) {
@@ -761,6 +836,15 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             }
             input.ReadMessage(subBuilder);
             SearchEngineConfig = subBuilder;
+            break;
+          }
+          case 114: {
+            global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig subBuilder = new global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig();
+            if (engineConfigCase_ == EngineConfigOneofCase.MediaRecommendationEngineConfig) {
+              subBuilder.MergeFrom(MediaRecommendationEngineConfig);
+            }
+            input.ReadMessage(subBuilder);
+            MediaRecommendationEngineConfig = subBuilder;
             break;
           }
           case 122: {
@@ -848,6 +932,15 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             }
             input.ReadMessage(subBuilder);
             SearchEngineConfig = subBuilder;
+            break;
+          }
+          case 114: {
+            global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig subBuilder = new global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig();
+            if (engineConfigCase_ == EngineConfigOneofCase.MediaRecommendationEngineConfig) {
+              subBuilder.MergeFrom(MediaRecommendationEngineConfig);
+            }
+            input.ReadMessage(subBuilder);
+            MediaRecommendationEngineConfig = subBuilder;
             break;
           }
           case 122: {
@@ -1110,6 +1203,1375 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
 
       /// <summary>
+      /// Additional config specs for a Media Recommendation engine.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class MediaRecommendationEngineConfig : pb::IMessage<MediaRecommendationEngineConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<MediaRecommendationEngineConfig> _parser = new pb::MessageParser<MediaRecommendationEngineConfig>(() => new MediaRecommendationEngineConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<MediaRecommendationEngineConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.DiscoveryEngine.V1.Engine.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MediaRecommendationEngineConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MediaRecommendationEngineConfig(MediaRecommendationEngineConfig other) : this() {
+          type_ = other.type_;
+          optimizationObjective_ = other.optimizationObjective_;
+          optimizationObjectiveConfig_ = other.optimizationObjectiveConfig_ != null ? other.optimizationObjectiveConfig_.Clone() : null;
+          trainingState_ = other.trainingState_;
+          engineFeaturesConfig_ = other.engineFeaturesConfig_ != null ? other.engineFeaturesConfig_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MediaRecommendationEngineConfig Clone() {
+          return new MediaRecommendationEngineConfig(this);
+        }
+
+        /// <summary>Field number for the "type" field.</summary>
+        public const int TypeFieldNumber = 1;
+        private string type_ = "";
+        /// <summary>
+        /// Required. The type of engine. e.g., `recommended-for-you`.
+        ///
+        /// This field together with
+        /// [optimization_objective][google.cloud.discoveryengine.v1.Engine.MediaRecommendationEngineConfig.optimization_objective]
+        /// describe engine metadata to use to control engine training and serving.
+        ///
+        /// Currently supported values: `recommended-for-you`, `others-you-may-like`,
+        /// `more-like-this`, `most-popular-items`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Type {
+          get { return type_; }
+          set {
+            type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "optimization_objective" field.</summary>
+        public const int OptimizationObjectiveFieldNumber = 2;
+        private string optimizationObjective_ = "";
+        /// <summary>
+        /// The optimization objective. e.g., `cvr`.
+        ///
+        /// This field together with
+        /// [optimization_objective][google.cloud.discoveryengine.v1.Engine.MediaRecommendationEngineConfig.type]
+        /// describe engine metadata to use to control engine training and serving.
+        ///
+        /// Currently supported
+        /// values: `ctr`, `cvr`.
+        ///
+        ///  If not specified, we choose default based on engine type.
+        /// Default depends on type of recommendation:
+        ///
+        /// `recommended-for-you` => `ctr`
+        ///
+        /// `others-you-may-like` => `ctr`
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string OptimizationObjective {
+          get { return optimizationObjective_; }
+          set {
+            optimizationObjective_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "optimization_objective_config" field.</summary>
+        public const int OptimizationObjectiveConfigFieldNumber = 3;
+        private global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.OptimizationObjectiveConfig optimizationObjectiveConfig_;
+        /// <summary>
+        /// Name and value of the custom threshold for cvr optimization_objective.
+        /// For target_field `watch-time`, target_field_value must be an integer
+        /// value indicating the media progress time in seconds between (0, 86400]
+        /// (excludes 0, includes 86400) (e.g., 90).
+        /// For target_field `watch-percentage`, the target_field_value must be a
+        /// valid float value between (0, 1.0] (excludes 0, includes 1.0) (e.g.,
+        /// 0.5).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.OptimizationObjectiveConfig OptimizationObjectiveConfig {
+          get { return optimizationObjectiveConfig_; }
+          set {
+            optimizationObjectiveConfig_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "training_state" field.</summary>
+        public const int TrainingStateFieldNumber = 4;
+        private global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.TrainingState trainingState_ = global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.TrainingState.Unspecified;
+        /// <summary>
+        /// The training state that the engine is in (e.g.
+        /// `TRAINING` or `PAUSED`).
+        ///
+        /// Since part of the cost of running the service
+        /// is frequency of training - this can be used to determine when to train
+        /// engine in order to control cost. If not specified: the default value for
+        /// `CreateEngine` method is `TRAINING`. The default value for
+        /// `UpdateEngine` method is to keep the state the same as before.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.TrainingState TrainingState {
+          get { return trainingState_; }
+          set {
+            trainingState_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "engine_features_config" field.</summary>
+        public const int EngineFeaturesConfigFieldNumber = 5;
+        private global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.EngineFeaturesConfig engineFeaturesConfig_;
+        /// <summary>
+        /// Optional. Additional engine features config.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.EngineFeaturesConfig EngineFeaturesConfig {
+          get { return engineFeaturesConfig_; }
+          set {
+            engineFeaturesConfig_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as MediaRecommendationEngineConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(MediaRecommendationEngineConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Type != other.Type) return false;
+          if (OptimizationObjective != other.OptimizationObjective) return false;
+          if (!object.Equals(OptimizationObjectiveConfig, other.OptimizationObjectiveConfig)) return false;
+          if (TrainingState != other.TrainingState) return false;
+          if (!object.Equals(EngineFeaturesConfig, other.EngineFeaturesConfig)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Type.Length != 0) hash ^= Type.GetHashCode();
+          if (OptimizationObjective.Length != 0) hash ^= OptimizationObjective.GetHashCode();
+          if (optimizationObjectiveConfig_ != null) hash ^= OptimizationObjectiveConfig.GetHashCode();
+          if (TrainingState != global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.TrainingState.Unspecified) hash ^= TrainingState.GetHashCode();
+          if (engineFeaturesConfig_ != null) hash ^= EngineFeaturesConfig.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Type.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Type);
+          }
+          if (OptimizationObjective.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(OptimizationObjective);
+          }
+          if (optimizationObjectiveConfig_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(OptimizationObjectiveConfig);
+          }
+          if (TrainingState != global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.TrainingState.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) TrainingState);
+          }
+          if (engineFeaturesConfig_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(EngineFeaturesConfig);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Type.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Type);
+          }
+          if (OptimizationObjective.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(OptimizationObjective);
+          }
+          if (optimizationObjectiveConfig_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(OptimizationObjectiveConfig);
+          }
+          if (TrainingState != global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.TrainingState.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) TrainingState);
+          }
+          if (engineFeaturesConfig_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(EngineFeaturesConfig);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Type.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
+          }
+          if (OptimizationObjective.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(OptimizationObjective);
+          }
+          if (optimizationObjectiveConfig_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(OptimizationObjectiveConfig);
+          }
+          if (TrainingState != global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.TrainingState.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TrainingState);
+          }
+          if (engineFeaturesConfig_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(EngineFeaturesConfig);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(MediaRecommendationEngineConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Type.Length != 0) {
+            Type = other.Type;
+          }
+          if (other.OptimizationObjective.Length != 0) {
+            OptimizationObjective = other.OptimizationObjective;
+          }
+          if (other.optimizationObjectiveConfig_ != null) {
+            if (optimizationObjectiveConfig_ == null) {
+              OptimizationObjectiveConfig = new global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.OptimizationObjectiveConfig();
+            }
+            OptimizationObjectiveConfig.MergeFrom(other.OptimizationObjectiveConfig);
+          }
+          if (other.TrainingState != global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.TrainingState.Unspecified) {
+            TrainingState = other.TrainingState;
+          }
+          if (other.engineFeaturesConfig_ != null) {
+            if (engineFeaturesConfig_ == null) {
+              EngineFeaturesConfig = new global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.EngineFeaturesConfig();
+            }
+            EngineFeaturesConfig.MergeFrom(other.EngineFeaturesConfig);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Type = input.ReadString();
+                break;
+              }
+              case 18: {
+                OptimizationObjective = input.ReadString();
+                break;
+              }
+              case 26: {
+                if (optimizationObjectiveConfig_ == null) {
+                  OptimizationObjectiveConfig = new global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.OptimizationObjectiveConfig();
+                }
+                input.ReadMessage(OptimizationObjectiveConfig);
+                break;
+              }
+              case 32: {
+                TrainingState = (global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.TrainingState) input.ReadEnum();
+                break;
+              }
+              case 42: {
+                if (engineFeaturesConfig_ == null) {
+                  EngineFeaturesConfig = new global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.EngineFeaturesConfig();
+                }
+                input.ReadMessage(EngineFeaturesConfig);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Type = input.ReadString();
+                break;
+              }
+              case 18: {
+                OptimizationObjective = input.ReadString();
+                break;
+              }
+              case 26: {
+                if (optimizationObjectiveConfig_ == null) {
+                  OptimizationObjectiveConfig = new global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.OptimizationObjectiveConfig();
+                }
+                input.ReadMessage(OptimizationObjectiveConfig);
+                break;
+              }
+              case 32: {
+                TrainingState = (global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.TrainingState) input.ReadEnum();
+                break;
+              }
+              case 42: {
+                if (engineFeaturesConfig_ == null) {
+                  EngineFeaturesConfig = new global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.EngineFeaturesConfig();
+                }
+                input.ReadMessage(EngineFeaturesConfig);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the MediaRecommendationEngineConfig message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The training state of the engine.
+          /// </summary>
+          public enum TrainingState {
+            /// <summary>
+            /// Unspecified training state.
+            /// </summary>
+            [pbr::OriginalName("TRAINING_STATE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// The engine training is paused.
+            /// </summary>
+            [pbr::OriginalName("PAUSED")] Paused = 1,
+            /// <summary>
+            /// The engine is training.
+            /// </summary>
+            [pbr::OriginalName("TRAINING")] Training = 2,
+          }
+
+          /// <summary>
+          /// Custom threshold for `cvr` optimization_objective.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class OptimizationObjectiveConfig : pb::IMessage<OptimizationObjectiveConfig>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<OptimizationObjectiveConfig> _parser = new pb::MessageParser<OptimizationObjectiveConfig>(() => new OptimizationObjectiveConfig());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<OptimizationObjectiveConfig> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public OptimizationObjectiveConfig() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public OptimizationObjectiveConfig(OptimizationObjectiveConfig other) : this() {
+              targetField_ = other.targetField_;
+              targetFieldValueFloat_ = other.targetFieldValueFloat_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public OptimizationObjectiveConfig Clone() {
+              return new OptimizationObjectiveConfig(this);
+            }
+
+            /// <summary>Field number for the "target_field" field.</summary>
+            public const int TargetFieldFieldNumber = 1;
+            private string targetField_ = "";
+            /// <summary>
+            /// Required. The name of the field to target. Currently supported
+            /// values: `watch-percentage`, `watch-time`.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string TargetField {
+              get { return targetField_; }
+              set {
+                targetField_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "target_field_value_float" field.</summary>
+            public const int TargetFieldValueFloatFieldNumber = 2;
+            private float targetFieldValueFloat_;
+            /// <summary>
+            /// Required. The threshold to be applied to the target (e.g., 0.5).
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public float TargetFieldValueFloat {
+              get { return targetFieldValueFloat_; }
+              set {
+                targetFieldValueFloat_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as OptimizationObjectiveConfig);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(OptimizationObjectiveConfig other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (TargetField != other.TargetField) return false;
+              if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(TargetFieldValueFloat, other.TargetFieldValueFloat)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (TargetField.Length != 0) hash ^= TargetField.GetHashCode();
+              if (TargetFieldValueFloat != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(TargetFieldValueFloat);
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (TargetField.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(TargetField);
+              }
+              if (TargetFieldValueFloat != 0F) {
+                output.WriteRawTag(21);
+                output.WriteFloat(TargetFieldValueFloat);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (TargetField.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(TargetField);
+              }
+              if (TargetFieldValueFloat != 0F) {
+                output.WriteRawTag(21);
+                output.WriteFloat(TargetFieldValueFloat);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (TargetField.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetField);
+              }
+              if (TargetFieldValueFloat != 0F) {
+                size += 1 + 4;
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(OptimizationObjectiveConfig other) {
+              if (other == null) {
+                return;
+              }
+              if (other.TargetField.Length != 0) {
+                TargetField = other.TargetField;
+              }
+              if (other.TargetFieldValueFloat != 0F) {
+                TargetFieldValueFloat = other.TargetFieldValueFloat;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    TargetField = input.ReadString();
+                    break;
+                  }
+                  case 21: {
+                    TargetFieldValueFloat = input.ReadFloat();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    TargetField = input.ReadString();
+                    break;
+                  }
+                  case 21: {
+                    TargetFieldValueFloat = input.ReadFloat();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// More feature configs of the selected engine type.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class EngineFeaturesConfig : pb::IMessage<EngineFeaturesConfig>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<EngineFeaturesConfig> _parser = new pb::MessageParser<EngineFeaturesConfig>(() => new EngineFeaturesConfig());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<EngineFeaturesConfig> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public EngineFeaturesConfig() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public EngineFeaturesConfig(EngineFeaturesConfig other) : this() {
+              switch (other.TypeDedicatedConfigCase) {
+                case TypeDedicatedConfigOneofCase.RecommendedForYouConfig:
+                  RecommendedForYouConfig = other.RecommendedForYouConfig.Clone();
+                  break;
+                case TypeDedicatedConfigOneofCase.MostPopularConfig:
+                  MostPopularConfig = other.MostPopularConfig.Clone();
+                  break;
+              }
+
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public EngineFeaturesConfig Clone() {
+              return new EngineFeaturesConfig(this);
+            }
+
+            /// <summary>Field number for the "recommended_for_you_config" field.</summary>
+            public const int RecommendedForYouConfigFieldNumber = 1;
+            /// <summary>
+            /// Recommended for you engine feature config.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.RecommendedForYouFeatureConfig RecommendedForYouConfig {
+              get { return typeDedicatedConfigCase_ == TypeDedicatedConfigOneofCase.RecommendedForYouConfig ? (global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.RecommendedForYouFeatureConfig) typeDedicatedConfig_ : null; }
+              set {
+                typeDedicatedConfig_ = value;
+                typeDedicatedConfigCase_ = value == null ? TypeDedicatedConfigOneofCase.None : TypeDedicatedConfigOneofCase.RecommendedForYouConfig;
+              }
+            }
+
+            /// <summary>Field number for the "most_popular_config" field.</summary>
+            public const int MostPopularConfigFieldNumber = 2;
+            /// <summary>
+            /// Most popular engine feature config.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.MostPopularFeatureConfig MostPopularConfig {
+              get { return typeDedicatedConfigCase_ == TypeDedicatedConfigOneofCase.MostPopularConfig ? (global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.MostPopularFeatureConfig) typeDedicatedConfig_ : null; }
+              set {
+                typeDedicatedConfig_ = value;
+                typeDedicatedConfigCase_ = value == null ? TypeDedicatedConfigOneofCase.None : TypeDedicatedConfigOneofCase.MostPopularConfig;
+              }
+            }
+
+            private object typeDedicatedConfig_;
+            /// <summary>Enum of possible cases for the "type_dedicated_config" oneof.</summary>
+            public enum TypeDedicatedConfigOneofCase {
+              None = 0,
+              RecommendedForYouConfig = 1,
+              MostPopularConfig = 2,
+            }
+            private TypeDedicatedConfigOneofCase typeDedicatedConfigCase_ = TypeDedicatedConfigOneofCase.None;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TypeDedicatedConfigOneofCase TypeDedicatedConfigCase {
+              get { return typeDedicatedConfigCase_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearTypeDedicatedConfig() {
+              typeDedicatedConfigCase_ = TypeDedicatedConfigOneofCase.None;
+              typeDedicatedConfig_ = null;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as EngineFeaturesConfig);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(EngineFeaturesConfig other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (!object.Equals(RecommendedForYouConfig, other.RecommendedForYouConfig)) return false;
+              if (!object.Equals(MostPopularConfig, other.MostPopularConfig)) return false;
+              if (TypeDedicatedConfigCase != other.TypeDedicatedConfigCase) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (typeDedicatedConfigCase_ == TypeDedicatedConfigOneofCase.RecommendedForYouConfig) hash ^= RecommendedForYouConfig.GetHashCode();
+              if (typeDedicatedConfigCase_ == TypeDedicatedConfigOneofCase.MostPopularConfig) hash ^= MostPopularConfig.GetHashCode();
+              hash ^= (int) typeDedicatedConfigCase_;
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (typeDedicatedConfigCase_ == TypeDedicatedConfigOneofCase.RecommendedForYouConfig) {
+                output.WriteRawTag(10);
+                output.WriteMessage(RecommendedForYouConfig);
+              }
+              if (typeDedicatedConfigCase_ == TypeDedicatedConfigOneofCase.MostPopularConfig) {
+                output.WriteRawTag(18);
+                output.WriteMessage(MostPopularConfig);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (typeDedicatedConfigCase_ == TypeDedicatedConfigOneofCase.RecommendedForYouConfig) {
+                output.WriteRawTag(10);
+                output.WriteMessage(RecommendedForYouConfig);
+              }
+              if (typeDedicatedConfigCase_ == TypeDedicatedConfigOneofCase.MostPopularConfig) {
+                output.WriteRawTag(18);
+                output.WriteMessage(MostPopularConfig);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (typeDedicatedConfigCase_ == TypeDedicatedConfigOneofCase.RecommendedForYouConfig) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(RecommendedForYouConfig);
+              }
+              if (typeDedicatedConfigCase_ == TypeDedicatedConfigOneofCase.MostPopularConfig) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(MostPopularConfig);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(EngineFeaturesConfig other) {
+              if (other == null) {
+                return;
+              }
+              switch (other.TypeDedicatedConfigCase) {
+                case TypeDedicatedConfigOneofCase.RecommendedForYouConfig:
+                  if (RecommendedForYouConfig == null) {
+                    RecommendedForYouConfig = new global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.RecommendedForYouFeatureConfig();
+                  }
+                  RecommendedForYouConfig.MergeFrom(other.RecommendedForYouConfig);
+                  break;
+                case TypeDedicatedConfigOneofCase.MostPopularConfig:
+                  if (MostPopularConfig == null) {
+                    MostPopularConfig = new global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.MostPopularFeatureConfig();
+                  }
+                  MostPopularConfig.MergeFrom(other.MostPopularConfig);
+                  break;
+              }
+
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.RecommendedForYouFeatureConfig subBuilder = new global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.RecommendedForYouFeatureConfig();
+                    if (typeDedicatedConfigCase_ == TypeDedicatedConfigOneofCase.RecommendedForYouConfig) {
+                      subBuilder.MergeFrom(RecommendedForYouConfig);
+                    }
+                    input.ReadMessage(subBuilder);
+                    RecommendedForYouConfig = subBuilder;
+                    break;
+                  }
+                  case 18: {
+                    global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.MostPopularFeatureConfig subBuilder = new global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.MostPopularFeatureConfig();
+                    if (typeDedicatedConfigCase_ == TypeDedicatedConfigOneofCase.MostPopularConfig) {
+                      subBuilder.MergeFrom(MostPopularConfig);
+                    }
+                    input.ReadMessage(subBuilder);
+                    MostPopularConfig = subBuilder;
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.RecommendedForYouFeatureConfig subBuilder = new global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.RecommendedForYouFeatureConfig();
+                    if (typeDedicatedConfigCase_ == TypeDedicatedConfigOneofCase.RecommendedForYouConfig) {
+                      subBuilder.MergeFrom(RecommendedForYouConfig);
+                    }
+                    input.ReadMessage(subBuilder);
+                    RecommendedForYouConfig = subBuilder;
+                    break;
+                  }
+                  case 18: {
+                    global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.MostPopularFeatureConfig subBuilder = new global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Types.MostPopularFeatureConfig();
+                    if (typeDedicatedConfigCase_ == TypeDedicatedConfigOneofCase.MostPopularConfig) {
+                      subBuilder.MergeFrom(MostPopularConfig);
+                    }
+                    input.ReadMessage(subBuilder);
+                    MostPopularConfig = subBuilder;
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Additional feature configurations for creating a `recommended-for-you`
+          /// engine.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class RecommendedForYouFeatureConfig : pb::IMessage<RecommendedForYouFeatureConfig>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<RecommendedForYouFeatureConfig> _parser = new pb::MessageParser<RecommendedForYouFeatureConfig>(() => new RecommendedForYouFeatureConfig());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<RecommendedForYouFeatureConfig> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Descriptor.NestedTypes[2]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public RecommendedForYouFeatureConfig() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public RecommendedForYouFeatureConfig(RecommendedForYouFeatureConfig other) : this() {
+              contextEventType_ = other.contextEventType_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public RecommendedForYouFeatureConfig Clone() {
+              return new RecommendedForYouFeatureConfig(this);
+            }
+
+            /// <summary>Field number for the "context_event_type" field.</summary>
+            public const int ContextEventTypeFieldNumber = 1;
+            private string contextEventType_ = "";
+            /// <summary>
+            /// The type of event with which the engine is queried at prediction time.
+            /// If set to `generic`, only `view-item`, `media-play`,and
+            /// `media-complete` will be used as `context-event` in engine training. If
+            /// set to `view-home-page`, `view-home-page` will also be used as
+            /// `context-events` in addition to `view-item`, `media-play`, and
+            /// `media-complete`. Currently supported for the `recommended-for-you`
+            /// engine. Currently supported values: `view-home-page`, `generic`.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string ContextEventType {
+              get { return contextEventType_; }
+              set {
+                contextEventType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as RecommendedForYouFeatureConfig);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(RecommendedForYouFeatureConfig other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (ContextEventType != other.ContextEventType) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (ContextEventType.Length != 0) hash ^= ContextEventType.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (ContextEventType.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(ContextEventType);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (ContextEventType.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(ContextEventType);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (ContextEventType.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(ContextEventType);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(RecommendedForYouFeatureConfig other) {
+              if (other == null) {
+                return;
+              }
+              if (other.ContextEventType.Length != 0) {
+                ContextEventType = other.ContextEventType;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    ContextEventType = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    ContextEventType = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Feature configurations that are required for creating a Most Popular
+          /// engine.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class MostPopularFeatureConfig : pb::IMessage<MostPopularFeatureConfig>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<MostPopularFeatureConfig> _parser = new pb::MessageParser<MostPopularFeatureConfig>(() => new MostPopularFeatureConfig());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<MostPopularFeatureConfig> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.MediaRecommendationEngineConfig.Descriptor.NestedTypes[3]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public MostPopularFeatureConfig() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public MostPopularFeatureConfig(MostPopularFeatureConfig other) : this() {
+              timeWindowDays_ = other.timeWindowDays_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public MostPopularFeatureConfig Clone() {
+              return new MostPopularFeatureConfig(this);
+            }
+
+            /// <summary>Field number for the "time_window_days" field.</summary>
+            public const int TimeWindowDaysFieldNumber = 1;
+            private long timeWindowDays_;
+            /// <summary>
+            /// The time window of which the engine is queried at training and
+            /// prediction time. Positive integers only. The value translates to the
+            /// last X days of events. Currently required for the `most-popular-items`
+            /// engine.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public long TimeWindowDays {
+              get { return timeWindowDays_; }
+              set {
+                timeWindowDays_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as MostPopularFeatureConfig);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(MostPopularFeatureConfig other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (TimeWindowDays != other.TimeWindowDays) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (TimeWindowDays != 0L) hash ^= TimeWindowDays.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (TimeWindowDays != 0L) {
+                output.WriteRawTag(8);
+                output.WriteInt64(TimeWindowDays);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (TimeWindowDays != 0L) {
+                output.WriteRawTag(8);
+                output.WriteInt64(TimeWindowDays);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (TimeWindowDays != 0L) {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(TimeWindowDays);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(MostPopularFeatureConfig other) {
+              if (other == null) {
+                return;
+              }
+              if (other.TimeWindowDays != 0L) {
+                TimeWindowDays = other.TimeWindowDays;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 8: {
+                    TimeWindowDays = input.ReadInt64();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    TimeWindowDays = input.ReadInt64();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
       /// Configurations for a Chat Engine.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1127,7 +2589,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.DiscoveryEngine.V1.Engine.Descriptor.NestedTypes[1]; }
+          get { return global::Google.Cloud.DiscoveryEngine.V1.Engine.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1785,7 +3247,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.DiscoveryEngine.V1.Engine.Descriptor.NestedTypes[2]; }
+          get { return global::Google.Cloud.DiscoveryEngine.V1.Engine.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1983,7 +3445,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.DiscoveryEngine.V1.Engine.Descriptor.NestedTypes[3]; }
+          get { return global::Google.Cloud.DiscoveryEngine.V1.Engine.Descriptor.NestedTypes[4]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

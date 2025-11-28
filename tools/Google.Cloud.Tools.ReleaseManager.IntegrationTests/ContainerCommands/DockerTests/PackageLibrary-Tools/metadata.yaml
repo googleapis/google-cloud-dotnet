@@ -1,0 +1,40 @@
+command: package-library
+args:
+- '--repo-root=/test/repo'
+- '--library-id=Google.Cloud.Tools.TestTool'
+- '--output=/test/output'
+commonFiles:
+  # This is the simplest way of creating an empty directory
+  - source: irrelevant-content
+    target: output/.ignored
+  - source: test-apis.json
+    target: repo/generator-input/apis.json
+  - source: test-state.json
+    target: repo/generator-input/pipeline-state.json
+  - source: Google.Cloud.Tools.TestTool
+    target: repo/tools/Google.Cloud.Tools.TestTool
+  - source: Google.Cloud.Tools.TestTool.Tests
+    target: repo/tools/Google.Cloud.Tools.TestTool.Tests
+repoFiles:
+  - source: global.json
+    target: repo/global.json
+  - source: runintegrationtests.sh
+    target: repo/runintegrationtests.sh
+  - source: toolversions.sh
+    target: repo/toolversions.sh
+  - source: Directory.Packages.props
+    target: repo/Directory.Packages.props
+  - source: LICENSE
+    target: repo/LICENSE
+  - source: NuGetIcon.png
+    target: repo/NuGetIcon.png
+  - source: tools
+    target: repo/tools
+fileExpectations:
+  present:
+  - output/Google.Cloud.Tools.TestTool.1.2.0.nupkg
+  - output/Google.Cloud.Tools.TestTool.1.2.0.nupkg-sbom.spdx.json
+  - output/package-owner.txt
+  containsText:
+  - file: output/package-owner.txt
+    text: google-cloud

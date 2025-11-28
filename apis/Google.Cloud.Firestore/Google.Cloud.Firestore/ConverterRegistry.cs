@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Firestore.Converters;
+using Google.Cloud.Firestore.V1;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -34,17 +35,32 @@ namespace Google.Cloud.Firestore
         private readonly Dictionary<BclType, IFirestoreInternalConverter> _converters =
             new Dictionary<BclType, IFirestoreInternalConverter>();
 
+        private readonly Dictionary<BclType, Func<IDictionary<string, Value>, BclType>> _typeDiscriminators =
+            new Dictionary<BclType, Func<IDictionary<string, Value>, BclType>>();
+
         /// <summary>
         /// Adds the given converter to the registry.
         /// </summary>
         /// <typeparam name="T">The type that <paramref name="converter"/> converts to/from.</typeparam>
-        /// <param name="converter">The converter to add.</param>
+        /// <param name="converter">The converter to add. Must not be null.</param>
         /// <exception cref="ArgumentException">There is already a converter in the registry for the given type.</exception>
         public void Add<T>(IFirestoreConverter<T> converter)
         {
             GaxPreconditions.CheckNotNull(converter, nameof(converter));
             _converters.Add(typeof(T), new CustomConverter<T>(converter));
             _converterList.Add(converter);
+        }
+
+        /// <summary>
+        /// Adds the given type discriminator to the registry.
+        /// </summary>
+        /// <typeparam name="T">The type for which <paramref name="discriminator"/> can determine a concrete type.</typeparam>
+        /// <param name="discriminator">The type discriminator to add. Must not be null.</param>
+        /// <exception cref="ArgumentException">There is already a type discriminator in the registry for the given type.</exception>
+        public void Add<T>(IFirestoreTypeDiscriminator<T> discriminator)
+        {
+            GaxPreconditions.CheckNotNull(discriminator, nameof(discriminator));
+            _typeDiscriminators.Add(typeof(T), discriminator.GetConcreteType);
         }
 
         // We only really implement IEnumerable for the sake of collection initializers, but we're at least
@@ -58,6 +74,14 @@ namespace Google.Cloud.Firestore
             // safety concerns. (We'll only be reading from the returned dictionary.)
             var clone = new Dictionary<BclType, IFirestoreInternalConverter>(_converters);
             return new ReadOnlyDictionary<BclType, IFirestoreInternalConverter>(clone);
+        }
+
+        internal IReadOnlyDictionary<BclType, Func<IDictionary<string, Value>, BclType>> ToTypeDiscriminatorDictionary()
+        {
+            // Clone the dictionary so that any further changes are ignored, and we don't have any thread
+            // safety concerns. (We'll only be reading from the returned dictionary.)
+            var clone = new Dictionary<BclType, Func<IDictionary<string, Value>, BclType>>(_typeDiscriminators);
+            return new ReadOnlyDictionary<BclType, Func<IDictionary<string, Value>, BclType>>(clone);
         }
     }
 }

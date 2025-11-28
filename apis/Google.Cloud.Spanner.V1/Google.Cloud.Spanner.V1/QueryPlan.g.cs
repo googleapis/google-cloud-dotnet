@@ -25,33 +25,40 @@ namespace Google.Cloud.Spanner.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvc3Bhbm5lci92MS9xdWVyeV9wbGFuLnByb3RvEhFnb29nbGUu",
-            "c3Bhbm5lci52MRocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90byL4BAoI",
-            "UGxhbk5vZGUSDQoFaW5kZXgYASABKAUSLgoEa2luZBgCIAEoDjIgLmdvb2ds",
-            "ZS5zcGFubmVyLnYxLlBsYW5Ob2RlLktpbmQSFAoMZGlzcGxheV9uYW1lGAMg",
-            "ASgJEjoKC2NoaWxkX2xpbmtzGAQgAygLMiUuZ29vZ2xlLnNwYW5uZXIudjEu",
-            "UGxhbk5vZGUuQ2hpbGRMaW5rEk0KFHNob3J0X3JlcHJlc2VudGF0aW9uGAUg",
-            "ASgLMi8uZ29vZ2xlLnNwYW5uZXIudjEuUGxhbk5vZGUuU2hvcnRSZXByZXNl",
-            "bnRhdGlvbhIpCghtZXRhZGF0YRgGIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5T",
-            "dHJ1Y3QSMAoPZXhlY3V0aW9uX3N0YXRzGAcgASgLMhcuZ29vZ2xlLnByb3Rv",
-            "YnVmLlN0cnVjdBpACglDaGlsZExpbmsSEwoLY2hpbGRfaW5kZXgYASABKAUS",
-            "DAoEdHlwZRgCIAEoCRIQCgh2YXJpYWJsZRgDIAEoCRqyAQoTU2hvcnRSZXBy",
-            "ZXNlbnRhdGlvbhITCgtkZXNjcmlwdGlvbhgBIAEoCRJTCgpzdWJxdWVyaWVz",
-            "GAIgAygLMj8uZ29vZ2xlLnNwYW5uZXIudjEuUGxhbk5vZGUuU2hvcnRSZXBy",
-            "ZXNlbnRhdGlvbi5TdWJxdWVyaWVzRW50cnkaMQoPU3VicXVlcmllc0VudHJ5",
-            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAEiOAoES2luZBIUChBL",
-            "SU5EX1VOU1BFQ0lGSUVEEAASDgoKUkVMQVRJT05BTBABEgoKBlNDQUxBUhAC",
-            "IjwKCVF1ZXJ5UGxhbhIvCgpwbGFuX25vZGVzGAEgAygLMhsuZ29vZ2xlLnNw",
-            "YW5uZXIudjEuUGxhbk5vZGVCsQEKFWNvbS5nb29nbGUuc3Bhbm5lci52MUIO",
-            "UXVlcnlQbGFuUHJvdG9QAVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby9zcGFubmVy",
-            "L2FwaXYxL3NwYW5uZXJwYjtzcGFubmVycGKqAhdHb29nbGUuQ2xvdWQuU3Bh",
-            "bm5lci5WMcoCF0dvb2dsZVxDbG91ZFxTcGFubmVyXFYx6gIaR29vZ2xlOjpD",
-            "bG91ZDo6U3Bhbm5lcjo6VjFiBnByb3RvMw=="));
+            "c3Bhbm5lci52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoc",
+            "Z29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90byL4BAoIUGxhbk5vZGUSDQoF",
+            "aW5kZXgYASABKAUSLgoEa2luZBgCIAEoDjIgLmdvb2dsZS5zcGFubmVyLnYx",
+            "LlBsYW5Ob2RlLktpbmQSFAoMZGlzcGxheV9uYW1lGAMgASgJEjoKC2NoaWxk",
+            "X2xpbmtzGAQgAygLMiUuZ29vZ2xlLnNwYW5uZXIudjEuUGxhbk5vZGUuQ2hp",
+            "bGRMaW5rEk0KFHNob3J0X3JlcHJlc2VudGF0aW9uGAUgASgLMi8uZ29vZ2xl",
+            "LnNwYW5uZXIudjEuUGxhbk5vZGUuU2hvcnRSZXByZXNlbnRhdGlvbhIpCght",
+            "ZXRhZGF0YRgGIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSMAoPZXhl",
+            "Y3V0aW9uX3N0YXRzGAcgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBpA",
+            "CglDaGlsZExpbmsSEwoLY2hpbGRfaW5kZXgYASABKAUSDAoEdHlwZRgCIAEo",
+            "CRIQCgh2YXJpYWJsZRgDIAEoCRqyAQoTU2hvcnRSZXByZXNlbnRhdGlvbhIT",
+            "CgtkZXNjcmlwdGlvbhgBIAEoCRJTCgpzdWJxdWVyaWVzGAIgAygLMj8uZ29v",
+            "Z2xlLnNwYW5uZXIudjEuUGxhbk5vZGUuU2hvcnRSZXByZXNlbnRhdGlvbi5T",
+            "dWJxdWVyaWVzRW50cnkaMQoPU3VicXVlcmllc0VudHJ5EgsKA2tleRgBIAEo",
+            "CRINCgV2YWx1ZRgCIAEoBToCOAEiOAoES2luZBIUChBLSU5EX1VOU1BFQ0lG",
+            "SUVEEAASDgoKUkVMQVRJT05BTBABEgoKBlNDQUxBUhACIqQBChJRdWVyeUFk",
+            "dmlzb3JSZXN1bHQSTAoMaW5kZXhfYWR2aWNlGAEgAygLMjEuZ29vZ2xlLnNw",
+            "YW5uZXIudjEuUXVlcnlBZHZpc29yUmVzdWx0LkluZGV4QWR2aWNlQgPgQQEa",
+            "QAoLSW5kZXhBZHZpY2USEAoDZGRsGAEgAygJQgPgQQESHwoSaW1wcm92ZW1l",
+            "bnRfZmFjdG9yGAIgASgBQgPgQQEifgoJUXVlcnlQbGFuEi8KCnBsYW5fbm9k",
+            "ZXMYASADKAsyGy5nb29nbGUuc3Bhbm5lci52MS5QbGFuTm9kZRJACgxxdWVy",
+            "eV9hZHZpY2UYAiABKAsyJS5nb29nbGUuc3Bhbm5lci52MS5RdWVyeUFkdmlz",
+            "b3JSZXN1bHRCA+BBAUKxAQoVY29tLmdvb2dsZS5zcGFubmVyLnYxQg5RdWVy",
+            "eVBsYW5Qcm90b1ABWjVjbG91ZC5nb29nbGUuY29tL2dvL3NwYW5uZXIvYXBp",
+            "djEvc3Bhbm5lcnBiO3NwYW5uZXJwYqoCF0dvb2dsZS5DbG91ZC5TcGFubmVy",
+            "LlYxygIXR29vZ2xlXENsb3VkXFNwYW5uZXJcVjHqAhpHb29nbGU6OkNsb3Vk",
+            "OjpTcGFubmVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PlanNode), global::Google.Cloud.Spanner.V1.PlanNode.Parser, new[]{ "Index", "Kind", "DisplayName", "ChildLinks", "ShortRepresentation", "Metadata", "ExecutionStats" }, null, new[]{ typeof(global::Google.Cloud.Spanner.V1.PlanNode.Types.Kind) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PlanNode.Types.ChildLink), global::Google.Cloud.Spanner.V1.PlanNode.Types.ChildLink.Parser, new[]{ "ChildIndex", "Type", "Variable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PlanNode.Types.ShortRepresentation), global::Google.Cloud.Spanner.V1.PlanNode.Types.ShortRepresentation.Parser, new[]{ "Description", "Subqueries" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.QueryPlan), global::Google.Cloud.Spanner.V1.QueryPlan.Parser, new[]{ "PlanNodes" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.QueryAdvisorResult), global::Google.Cloud.Spanner.V1.QueryAdvisorResult.Parser, new[]{ "IndexAdvice" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.QueryAdvisorResult.Types.IndexAdvice), global::Google.Cloud.Spanner.V1.QueryAdvisorResult.Types.IndexAdvice.Parser, new[]{ "Ddl", "ImprovementFactor" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.QueryPlan), global::Google.Cloud.Spanner.V1.QueryPlan.Parser, new[]{ "PlanNodes", "QueryAdvice" }, null, null, null, null)
           }));
     }
     #endregion
@@ -59,7 +66,8 @@ namespace Google.Cloud.Spanner.V1 {
   }
   #region Messages
   /// <summary>
-  /// Node information for nodes appearing in a [QueryPlan.plan_nodes][google.spanner.v1.QueryPlan.plan_nodes].
+  /// Node information for nodes appearing in a
+  /// [QueryPlan.plan_nodes][google.spanner.v1.QueryPlan.plan_nodes].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PlanNode : pb::IMessage<PlanNode>
@@ -116,7 +124,8 @@ namespace Google.Cloud.Spanner.V1 {
     public const int IndexFieldNumber = 1;
     private int index_;
     /// <summary>
-    /// The `PlanNode`'s index in [node list][google.spanner.v1.QueryPlan.plan_nodes].
+    /// The `PlanNode`'s index in [node
+    /// list][google.spanner.v1.QueryPlan.plan_nodes].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -133,9 +142,9 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>
     /// Used to determine the type of node. May be needed for visualizing
     /// different kinds of nodes differently. For example, If the node is a
-    /// [SCALAR][google.spanner.v1.PlanNode.Kind.SCALAR] node, it will have a condensed representation
-    /// which can be used to directly embed a description of the node in its
-    /// parent.
+    /// [SCALAR][google.spanner.v1.PlanNode.Kind.SCALAR] node, it will have a
+    /// condensed representation which can be used to directly embed a description
+    /// of the node in its parent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -179,7 +188,8 @@ namespace Google.Cloud.Spanner.V1 {
     public const int ShortRepresentationFieldNumber = 5;
     private global::Google.Cloud.Spanner.V1.PlanNode.Types.ShortRepresentation shortRepresentation_;
     /// <summary>
-    /// Condensed representation for [SCALAR][google.spanner.v1.PlanNode.Kind.SCALAR] nodes.
+    /// Condensed representation for
+    /// [SCALAR][google.spanner.v1.PlanNode.Kind.SCALAR] nodes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -528,8 +538,8 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The kind of [PlanNode][google.spanner.v1.PlanNode]. Distinguishes between the two different kinds of
-      /// nodes that can appear in a query plan.
+      /// The kind of [PlanNode][google.spanner.v1.PlanNode]. Distinguishes between
+      /// the two different kinds of nodes that can appear in a query plan.
       /// </summary>
       public enum Kind {
         /// <summary>
@@ -639,14 +649,14 @@ namespace Google.Cloud.Spanner.V1 {
         public const int VariableFieldNumber = 3;
         private string variable_ = "";
         /// <summary>
-        /// Only present if the child node is [SCALAR][google.spanner.v1.PlanNode.Kind.SCALAR] and corresponds
-        /// to an output variable of the parent node. The field carries the name of
-        /// the output variable.
-        /// For example, a `TableScan` operator that reads rows from a table will
-        /// have child links to the `SCALAR` nodes representing the output variables
-        /// created for each column that is read by the operator. The corresponding
-        /// `variable` fields will be set to the variable names assigned to the
-        /// columns.
+        /// Only present if the child node is
+        /// [SCALAR][google.spanner.v1.PlanNode.Kind.SCALAR] and corresponds to an
+        /// output variable of the parent node. The field carries the name of the
+        /// output variable. For example, a `TableScan` operator that reads rows from
+        /// a table will have child links to the `SCALAR` nodes representing the
+        /// output variables created for each column that is read by the operator.
+        /// The corresponding `variable` fields will be set to the variable names
+        /// assigned to the columns.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1074,6 +1084,428 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
+  /// Output of query advisor analysis.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class QueryAdvisorResult : pb::IMessage<QueryAdvisorResult>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<QueryAdvisorResult> _parser = new pb::MessageParser<QueryAdvisorResult>(() => new QueryAdvisorResult());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<QueryAdvisorResult> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.V1.QueryPlanReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QueryAdvisorResult() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QueryAdvisorResult(QueryAdvisorResult other) : this() {
+      indexAdvice_ = other.indexAdvice_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QueryAdvisorResult Clone() {
+      return new QueryAdvisorResult(this);
+    }
+
+    /// <summary>Field number for the "index_advice" field.</summary>
+    public const int IndexAdviceFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Spanner.V1.QueryAdvisorResult.Types.IndexAdvice> _repeated_indexAdvice_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Spanner.V1.QueryAdvisorResult.Types.IndexAdvice.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Spanner.V1.QueryAdvisorResult.Types.IndexAdvice> indexAdvice_ = new pbc::RepeatedField<global::Google.Cloud.Spanner.V1.QueryAdvisorResult.Types.IndexAdvice>();
+    /// <summary>
+    /// Optional. Index Recommendation for a query. This is an optional field and
+    /// the recommendation will only be available when the recommendation
+    /// guarantees significant improvement in query performance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Spanner.V1.QueryAdvisorResult.Types.IndexAdvice> IndexAdvice {
+      get { return indexAdvice_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as QueryAdvisorResult);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(QueryAdvisorResult other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!indexAdvice_.Equals(other.indexAdvice_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= indexAdvice_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      indexAdvice_.WriteTo(output, _repeated_indexAdvice_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      indexAdvice_.WriteTo(ref output, _repeated_indexAdvice_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += indexAdvice_.CalculateSize(_repeated_indexAdvice_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(QueryAdvisorResult other) {
+      if (other == null) {
+        return;
+      }
+      indexAdvice_.Add(other.indexAdvice_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            indexAdvice_.AddEntriesFrom(input, _repeated_indexAdvice_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            indexAdvice_.AddEntriesFrom(ref input, _repeated_indexAdvice_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the QueryAdvisorResult message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Recommendation to add new indexes to run queries more efficiently.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class IndexAdvice : pb::IMessage<IndexAdvice>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<IndexAdvice> _parser = new pb::MessageParser<IndexAdvice>(() => new IndexAdvice());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<IndexAdvice> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Spanner.V1.QueryAdvisorResult.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IndexAdvice() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IndexAdvice(IndexAdvice other) : this() {
+          ddl_ = other.ddl_.Clone();
+          improvementFactor_ = other.improvementFactor_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IndexAdvice Clone() {
+          return new IndexAdvice(this);
+        }
+
+        /// <summary>Field number for the "ddl" field.</summary>
+        public const int DdlFieldNumber = 1;
+        private static readonly pb::FieldCodec<string> _repeated_ddl_codec
+            = pb::FieldCodec.ForString(10);
+        private readonly pbc::RepeatedField<string> ddl_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Optional. DDL statements to add new indexes that will improve the query.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> Ddl {
+          get { return ddl_; }
+        }
+
+        /// <summary>Field number for the "improvement_factor" field.</summary>
+        public const int ImprovementFactorFieldNumber = 2;
+        private double improvementFactor_;
+        /// <summary>
+        /// Optional. Estimated latency improvement factor. For example if the query
+        /// currently takes 500 ms to run and the estimated latency with new indexes
+        /// is 100 ms this field will be 5.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double ImprovementFactor {
+          get { return improvementFactor_; }
+          set {
+            improvementFactor_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as IndexAdvice);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(IndexAdvice other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!ddl_.Equals(other.ddl_)) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(ImprovementFactor, other.ImprovementFactor)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= ddl_.GetHashCode();
+          if (ImprovementFactor != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ImprovementFactor);
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          ddl_.WriteTo(output, _repeated_ddl_codec);
+          if (ImprovementFactor != 0D) {
+            output.WriteRawTag(17);
+            output.WriteDouble(ImprovementFactor);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          ddl_.WriteTo(ref output, _repeated_ddl_codec);
+          if (ImprovementFactor != 0D) {
+            output.WriteRawTag(17);
+            output.WriteDouble(ImprovementFactor);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += ddl_.CalculateSize(_repeated_ddl_codec);
+          if (ImprovementFactor != 0D) {
+            size += 1 + 8;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(IndexAdvice other) {
+          if (other == null) {
+            return;
+          }
+          ddl_.Add(other.ddl_);
+          if (other.ImprovementFactor != 0D) {
+            ImprovementFactor = other.ImprovementFactor;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                ddl_.AddEntriesFrom(input, _repeated_ddl_codec);
+                break;
+              }
+              case 17: {
+                ImprovementFactor = input.ReadDouble();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                ddl_.AddEntriesFrom(ref input, _repeated_ddl_codec);
+                break;
+              }
+              case 17: {
+                ImprovementFactor = input.ReadDouble();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// Contains an ordered list of nodes appearing in the query plan.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1091,7 +1523,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.QueryPlanReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Spanner.V1.QueryPlanReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1112,6 +1544,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public QueryPlan(QueryPlan other) : this() {
       planNodes_ = other.planNodes_.Clone();
+      queryAdvice_ = other.queryAdvice_ != null ? other.queryAdvice_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1128,13 +1561,29 @@ namespace Google.Cloud.Spanner.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Spanner.V1.PlanNode> planNodes_ = new pbc::RepeatedField<global::Google.Cloud.Spanner.V1.PlanNode>();
     /// <summary>
     /// The nodes in the query plan. Plan nodes are returned in pre-order starting
-    /// with the plan root. Each [PlanNode][google.spanner.v1.PlanNode]'s `id` corresponds to its index in
-    /// `plan_nodes`.
+    /// with the plan root. Each [PlanNode][google.spanner.v1.PlanNode]'s `id`
+    /// corresponds to its index in `plan_nodes`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Spanner.V1.PlanNode> PlanNodes {
       get { return planNodes_; }
+    }
+
+    /// <summary>Field number for the "query_advice" field.</summary>
+    public const int QueryAdviceFieldNumber = 2;
+    private global::Google.Cloud.Spanner.V1.QueryAdvisorResult queryAdvice_;
+    /// <summary>
+    /// Optional. The advise/recommendations for a query. Currently this field will
+    /// be serving index recommendations for a query.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.V1.QueryAdvisorResult QueryAdvice {
+      get { return queryAdvice_; }
+      set {
+        queryAdvice_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1153,6 +1602,7 @@ namespace Google.Cloud.Spanner.V1 {
         return true;
       }
       if(!planNodes_.Equals(other.planNodes_)) return false;
+      if (!object.Equals(QueryAdvice, other.QueryAdvice)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1161,6 +1611,7 @@ namespace Google.Cloud.Spanner.V1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= planNodes_.GetHashCode();
+      if (queryAdvice_ != null) hash ^= QueryAdvice.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1180,6 +1631,10 @@ namespace Google.Cloud.Spanner.V1 {
       output.WriteRawMessage(this);
     #else
       planNodes_.WriteTo(output, _repeated_planNodes_codec);
+      if (queryAdvice_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(QueryAdvice);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1191,6 +1646,10 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       planNodes_.WriteTo(ref output, _repeated_planNodes_codec);
+      if (queryAdvice_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(QueryAdvice);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1202,6 +1661,9 @@ namespace Google.Cloud.Spanner.V1 {
     public int CalculateSize() {
       int size = 0;
       size += planNodes_.CalculateSize(_repeated_planNodes_codec);
+      if (queryAdvice_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(QueryAdvice);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1215,6 +1677,12 @@ namespace Google.Cloud.Spanner.V1 {
         return;
       }
       planNodes_.Add(other.planNodes_);
+      if (other.queryAdvice_ != null) {
+        if (queryAdvice_ == null) {
+          QueryAdvice = new global::Google.Cloud.Spanner.V1.QueryAdvisorResult();
+        }
+        QueryAdvice.MergeFrom(other.QueryAdvice);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1234,6 +1702,13 @@ namespace Google.Cloud.Spanner.V1 {
             planNodes_.AddEntriesFrom(input, _repeated_planNodes_codec);
             break;
           }
+          case 18: {
+            if (queryAdvice_ == null) {
+              QueryAdvice = new global::Google.Cloud.Spanner.V1.QueryAdvisorResult();
+            }
+            input.ReadMessage(QueryAdvice);
+            break;
+          }
         }
       }
     #endif
@@ -1251,6 +1726,13 @@ namespace Google.Cloud.Spanner.V1 {
             break;
           case 10: {
             planNodes_.AddEntriesFrom(ref input, _repeated_planNodes_codec);
+            break;
+          }
+          case 18: {
+            if (queryAdvice_ == null) {
+              QueryAdvice = new global::Google.Cloud.Spanner.V1.QueryAdvisorResult();
+            }
+            input.ReadMessage(QueryAdvice);
             break;
           }
         }

@@ -150,7 +150,7 @@ namespace Google.Cloud.Spanner.Data
                     + $"({nameof(SpannerDbType.Bool)}, {nameof(SpannerDbType.Int64)}, {nameof(SpannerDbType.Float32)} ,{nameof(SpannerDbType.Float64)},"
                     + $" {nameof(SpannerDbType.Timestamp)}, {nameof(SpannerDbType.Date)}, {nameof(SpannerDbType.String)},"
                     + $" {nameof(SpannerDbType.Bytes)}, {nameof(SpannerDbType.Json)}, {nameof(SpannerDbType.PgJsonb)}, {nameof(SpannerDbType.Numeric)},"
-                    + $" {nameof(SpannerDbType.PgNumeric)}, {nameof(SpannerDbType.PgOid)})");
+                    + $" {nameof(SpannerDbType.PgNumeric)}, {nameof(SpannerDbType.PgOid)}), {nameof(SpannerDbType.Interval)}");
             }
             return Value;
         }

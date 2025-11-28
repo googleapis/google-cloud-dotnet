@@ -3,7 +3,7 @@
 //     source: google/ads/admanager/v1/report_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2024 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -192,7 +192,7 @@ namespace Google.Ads.AdManager.V1 {
 
       /// <summary>
       /// Initiates the execution of an existing report asynchronously. Users can
-      /// get the report by polling this operation via
+      /// get the report by polling this operation using
       /// `OperationsService.GetOperation`.
       /// Poll every 5 seconds initially, with an exponential
       /// backoff. Once a report is complete, the operation will contain a
@@ -447,7 +447,7 @@ namespace Google.Ads.AdManager.V1 {
       }
       /// <summary>
       /// Initiates the execution of an existing report asynchronously. Users can
-      /// get the report by polling this operation via
+      /// get the report by polling this operation using
       /// `OperationsService.GetOperation`.
       /// Poll every 5 seconds initially, with an exponential
       /// backoff. Once a report is complete, the operation will contain a
@@ -467,7 +467,7 @@ namespace Google.Ads.AdManager.V1 {
       }
       /// <summary>
       /// Initiates the execution of an existing report asynchronously. Users can
-      /// get the report by polling this operation via
+      /// get the report by polling this operation using
       /// `OperationsService.GetOperation`.
       /// Poll every 5 seconds initially, with an exponential
       /// backoff. Once a report is complete, the operation will contain a
@@ -485,7 +485,7 @@ namespace Google.Ads.AdManager.V1 {
       }
       /// <summary>
       /// Initiates the execution of an existing report asynchronously. Users can
-      /// get the report by polling this operation via
+      /// get the report by polling this operation using
       /// `OperationsService.GetOperation`.
       /// Poll every 5 seconds initially, with an exponential
       /// backoff. Once a report is complete, the operation will contain a
@@ -505,7 +505,7 @@ namespace Google.Ads.AdManager.V1 {
       }
       /// <summary>
       /// Initiates the execution of an existing report asynchronously. Users can
-      /// get the report by polling this operation via
+      /// get the report by polling this operation using
       /// `OperationsService.GetOperation`.
       /// Poll every 5 seconds initially, with an exponential
       /// backoff. Once a report is complete, the operation will contain a

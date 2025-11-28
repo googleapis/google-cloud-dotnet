@@ -219,7 +219,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListVpcFlowLogsConfigs</summary>
-        public void ListVpcFlowLogsConfigsResourceNames()
+        public void ListVpcFlowLogsConfigsResourceNames1()
         {
             // Snippet: ListVpcFlowLogsConfigs(LocationName, string, int?, CallSettings)
             // Create client
@@ -264,13 +264,103 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListVpcFlowLogsConfigsAsync</summary>
-        public async Task ListVpcFlowLogsConfigsResourceNamesAsync()
+        public async Task ListVpcFlowLogsConfigsResourceNames1Async()
         {
             // Snippet: ListVpcFlowLogsConfigsAsync(LocationName, string, int?, CallSettings)
             // Create client
             VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = vpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((VpcFlowLogsConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListVpcFlowLogsConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VpcFlowLogsConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VpcFlowLogsConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VpcFlowLogsConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListVpcFlowLogsConfigs</summary>
+        public void ListVpcFlowLogsConfigsResourceNames2()
+        {
+            // Snippet: ListVpcFlowLogsConfigs(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = VpcFlowLogsServiceClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = vpcFlowLogsServiceClient.ListVpcFlowLogsConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (VpcFlowLogsConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListVpcFlowLogsConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VpcFlowLogsConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VpcFlowLogsConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VpcFlowLogsConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListVpcFlowLogsConfigsAsync</summary>
+        public async Task ListVpcFlowLogsConfigsResourceNames2Async()
+        {
+            // Snippet: ListVpcFlowLogsConfigsAsync(OrganizationLocationName, string, int?, CallSettings)
+            // Create client
+            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = vpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsync(parent);
 
@@ -528,7 +618,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateVpcFlowLogsConfig</summary>
-        public void CreateVpcFlowLogsConfigResourceNames()
+        public void CreateVpcFlowLogsConfigResourceNames1()
         {
             // Snippet: CreateVpcFlowLogsConfig(LocationName, VpcFlowLogsConfig, VpcFlowLogsConfigName, CallSettings)
             // Create client
@@ -559,7 +649,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateVpcFlowLogsConfigAsync</summary>
-        public async Task CreateVpcFlowLogsConfigResourceNamesAsync()
+        public async Task CreateVpcFlowLogsConfigResourceNames1Async()
         {
             // Snippet: CreateVpcFlowLogsConfigAsync(LocationName, VpcFlowLogsConfig, VpcFlowLogsConfigName, CallSettings)
             // Additional: CreateVpcFlowLogsConfigAsync(LocationName, VpcFlowLogsConfig, VpcFlowLogsConfigName, CancellationToken)
@@ -567,6 +657,69 @@ namespace GoogleCSharpSnippets
             VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            VpcFlowLogsConfig vpcFlowLogsConfig = new VpcFlowLogsConfig();
+            VpcFlowLogsConfigName vpcFlowLogsConfigId = VpcFlowLogsConfigName.FromProjectLocationVpcFlowLogsConfig("[PROJECT]", "[LOCATION]", "[VPC_FLOW_LOGS_CONFIG]");
+            // Make the request
+            Operation<VpcFlowLogsConfig, OperationMetadata> response = await vpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsync(parent, vpcFlowLogsConfig, vpcFlowLogsConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<VpcFlowLogsConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            VpcFlowLogsConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = await vpcFlowLogsServiceClient.PollOnceCreateVpcFlowLogsConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                VpcFlowLogsConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateVpcFlowLogsConfig</summary>
+        public void CreateVpcFlowLogsConfigResourceNames2()
+        {
+            // Snippet: CreateVpcFlowLogsConfig(OrganizationLocationName, VpcFlowLogsConfig, VpcFlowLogsConfigName, CallSettings)
+            // Create client
+            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = VpcFlowLogsServiceClient.Create();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
+            VpcFlowLogsConfig vpcFlowLogsConfig = new VpcFlowLogsConfig();
+            VpcFlowLogsConfigName vpcFlowLogsConfigId = VpcFlowLogsConfigName.FromProjectLocationVpcFlowLogsConfig("[PROJECT]", "[LOCATION]", "[VPC_FLOW_LOGS_CONFIG]");
+            // Make the request
+            Operation<VpcFlowLogsConfig, OperationMetadata> response = vpcFlowLogsServiceClient.CreateVpcFlowLogsConfig(parent, vpcFlowLogsConfig, vpcFlowLogsConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<VpcFlowLogsConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            VpcFlowLogsConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<VpcFlowLogsConfig, OperationMetadata> retrievedResponse = vpcFlowLogsServiceClient.PollOnceCreateVpcFlowLogsConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                VpcFlowLogsConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateVpcFlowLogsConfigAsync</summary>
+        public async Task CreateVpcFlowLogsConfigResourceNames2Async()
+        {
+            // Snippet: CreateVpcFlowLogsConfigAsync(OrganizationLocationName, VpcFlowLogsConfig, VpcFlowLogsConfigName, CallSettings)
+            // Additional: CreateVpcFlowLogsConfigAsync(OrganizationLocationName, VpcFlowLogsConfig, VpcFlowLogsConfigName, CancellationToken)
+            // Create client
+            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
             VpcFlowLogsConfig vpcFlowLogsConfig = new VpcFlowLogsConfig();
             VpcFlowLogsConfigName vpcFlowLogsConfigId = VpcFlowLogsConfigName.FromProjectLocationVpcFlowLogsConfig("[PROJECT]", "[LOCATION]", "[VPC_FLOW_LOGS_CONFIG]");
             // Make the request
@@ -898,6 +1051,204 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 Empty retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryOrgVpcFlowLogsConfigs</summary>
+        public void QueryOrgVpcFlowLogsConfigsRequestObject()
+        {
+            // Snippet: QueryOrgVpcFlowLogsConfigs(QueryOrgVpcFlowLogsConfigsRequest, CallSettings)
+            // Create client
+            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = VpcFlowLogsServiceClient.Create();
+            // Initialize request argument(s)
+            QueryOrgVpcFlowLogsConfigsRequest request = new QueryOrgVpcFlowLogsConfigsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<QueryOrgVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = vpcFlowLogsServiceClient.QueryOrgVpcFlowLogsConfigs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (VpcFlowLogsConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (QueryOrgVpcFlowLogsConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VpcFlowLogsConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VpcFlowLogsConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VpcFlowLogsConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryOrgVpcFlowLogsConfigsAsync</summary>
+        public async Task QueryOrgVpcFlowLogsConfigsRequestObjectAsync()
+        {
+            // Snippet: QueryOrgVpcFlowLogsConfigsAsync(QueryOrgVpcFlowLogsConfigsRequest, CallSettings)
+            // Create client
+            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            QueryOrgVpcFlowLogsConfigsRequest request = new QueryOrgVpcFlowLogsConfigsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<QueryOrgVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> response = vpcFlowLogsServiceClient.QueryOrgVpcFlowLogsConfigsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((VpcFlowLogsConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((QueryOrgVpcFlowLogsConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (VpcFlowLogsConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<VpcFlowLogsConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (VpcFlowLogsConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ShowEffectiveFlowLogsConfigs</summary>
+        public void ShowEffectiveFlowLogsConfigsRequestObject()
+        {
+            // Snippet: ShowEffectiveFlowLogsConfigs(ShowEffectiveFlowLogsConfigsRequest, CallSettings)
+            // Create client
+            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = VpcFlowLogsServiceClient.Create();
+            // Initialize request argument(s)
+            ShowEffectiveFlowLogsConfigsRequest request = new ShowEffectiveFlowLogsConfigsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Resource = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ShowEffectiveFlowLogsConfigsResponse, EffectiveVpcFlowLogsConfig> response = vpcFlowLogsServiceClient.ShowEffectiveFlowLogsConfigs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (EffectiveVpcFlowLogsConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ShowEffectiveFlowLogsConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EffectiveVpcFlowLogsConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EffectiveVpcFlowLogsConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EffectiveVpcFlowLogsConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ShowEffectiveFlowLogsConfigsAsync</summary>
+        public async Task ShowEffectiveFlowLogsConfigsRequestObjectAsync()
+        {
+            // Snippet: ShowEffectiveFlowLogsConfigsAsync(ShowEffectiveFlowLogsConfigsRequest, CallSettings)
+            // Create client
+            VpcFlowLogsServiceClient vpcFlowLogsServiceClient = await VpcFlowLogsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ShowEffectiveFlowLogsConfigsRequest request = new ShowEffectiveFlowLogsConfigsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Resource = "",
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ShowEffectiveFlowLogsConfigsResponse, EffectiveVpcFlowLogsConfig> response = vpcFlowLogsServiceClient.ShowEffectiveFlowLogsConfigsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((EffectiveVpcFlowLogsConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ShowEffectiveFlowLogsConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (EffectiveVpcFlowLogsConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<EffectiveVpcFlowLogsConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (EffectiveVpcFlowLogsConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
     }

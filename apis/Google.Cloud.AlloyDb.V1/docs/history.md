@@ -1,5 +1,82 @@
 # Version history
 
+## Version 1.13.0, released 2025-11-03
+
+### New features
+
+- Update dependencies
+
+## Version 1.12.0, released 2025-09-29
+
+### New features
+
+- Add CRUD APIs on Databases
+- Add PG 17 as a Database version
+- Add configuration for Managed Connection Pool
+- Update `Database.charset` to be immutable
+- Add additional fields to Database object to specify the collation type, character type, if it is a template database, and the template to use for the database
+- Add field to ExecuteSQL request to just validate the sql statement
+- Add fields on the estimated/actual start/end times for an Upgrade Cluster operation
+
+### Documentation improvements
+
+- Specify that the STOPPED state is not used for clusters anymore
+
+## Version 1.11.0, released 2025-06-25
+
+### New features
+
+- Instance.ActivationPolicy field
+- Cluster.DenyMaintenancePeriod field
+- InstanceNetworkConfig.network output field
+- InstanceNetworkConfig.allocated_ip_range_override field
+- Backup.create_completion_time output field
+
+### Documentation improvements
+
+- A comment for field `earliest_restorable_time`
+- A comment for field `status` in message `PscAutoConnectionConfig`
+
+## Version 1.10.0, released 2025-05-14
+
+### New features
+
+- Sync AlloyDB API changes from HEAD to stable
+- Add new CSQL API for supporting Cluster creation from Cloud SQL
+- Add new methods for exporting, importing and upgrade Cluster operations
+- Add new fields to support observability configurations, machine types and PSC related configs
+- Add CloudSQL support for RestoreCluster operation
+- Add new fields and methods to the AlloyDB API
+- Improve documentation of existing API fields
+- Add GCA Entitlement type
+- Add fields to PscInstanceConfig
+- Add recommended_value and scope field to SupportedDatabaseFlags
+- Make user optional in ExecuteSql API
+- Add Import and Export functionalities
+- Add machine_type field to instance config
+- Add a new GCAEntitlement field in Gemini config
+- Add the GCAInstanceConfig field in instance
+
+### Documentation improvements
+
+- A comment for field `encryption_config` in message `.google.cloud.alloydb.v1.AutomatedBackupPolicy` is changed
+- A comment for field `encryption_config` in message `.google.cloud.alloydb.v1.ContinuousBackupConfig` is changed
+- A comment for message `Instance` is changed
+- A comment for field `zone_id` in message `.google.cloud.alloydb.v1.Instance` is changed
+- A comment for field `id` in message `.google.cloud.alloydb.v1.Instance` is changed
+- A comment for field `ip` in message `.google.cloud.alloydb.v1.Instance` is changed
+- A comment for field `state` in message `.google.cloud.alloydb.v1.Instance` is changed
+- A comment for field `database_flags` in message `.google.cloud.alloydb.v1.Instance` is changed
+- A comment for field `user` in message `.google.cloud.alloydb.v1.ExecuteSqlRequest` is changed
+- A comment for field `use_metadata_exchange` in message `.google.cloud.alloydb.v1.GenerateClientCertificateRequest` is changed
+- A comment for field `requested_cancellation` in message `.google.cloud.alloydb.v1.OperationMetadata` is changed
+- A comment for field `encryption_config` in message `.google.cloud.alloydb.v1beta.AutomatedBackupPolicy` is changed
+- A comment for field `encryption_config` in message `.google.cloud.alloydb.v1beta.ContinuousBackupConfig` is changed
+- A comment for message `Instance` is changed
+- A comment for field `track_wait_event_types` in message `.google.cloud.alloydb.v1beta.Instance` is changed
+- A comment for field `user` in message `.google.cloud.alloydb.v1beta.ExecuteSqlRequest` is changed
+- A comment for field `use_metadata_exchange` in message `.google.cloud.alloydb.v1beta.GenerateClientCertificateRequest` is changed
+
 ## Version 1.9.0, released 2024-10-29
 
 ### New features

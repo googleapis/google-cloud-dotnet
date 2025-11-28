@@ -1,0 +1,24 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.databasecenter.v1beta",
+  "libraryPackage": "Google.Cloud.DatabaseCenter.V1Beta",
+  "services": {
+    "DatabaseCenter": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DatabaseCenterClient",
+          "rpcs": {
+            "QueryProducts": {
+              "methods": [
+                "QueryProducts",
+                "QueryProductsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

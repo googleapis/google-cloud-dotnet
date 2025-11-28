@@ -108,7 +108,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// Required. Patterns to identify a set of files in Google Cloud Storage.
     ///
     /// For more information, see [Wildcard Names]
-    /// (https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames).
+    /// (https://cloud.google.com/storage/docs/wildcards).
     ///
     /// Note: Currently, bucket wildcards are not supported.
     ///

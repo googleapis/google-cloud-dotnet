@@ -33,64 +33,75 @@ namespace Google.Ads.AdManager.V1 {
             "YWRzL2FkbWFuYWdlci92MS9zaXplLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxk",
             "X2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh5n",
             "b29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1",
-            "Zi90aW1lc3RhbXAucHJvdG8iiwwKBkFkVW5pdBIRCgRuYW1lGAEgASgJQgPg",
-            "QQgSFwoKYWRfdW5pdF9pZBgPIAEoA0ID4EEDEkIKDnBhcmVudF9hZF91bml0",
+            "Zi90aW1lc3RhbXAucHJvdG8igA8KBkFkVW5pdBIRCgRuYW1lGAEgASgJQgPg",
+            "QQgSFwoKYWRfdW5pdF9pZBgPIAEoA0ID4EEDEkcKDnBhcmVudF9hZF91bml0",
             "GAogASgJQirgQQLgQQX6QSEKH2FkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9B",
-            "ZFVuaXQSPwoLcGFyZW50X3BhdGgYCyADKAsyJS5nb29nbGUuYWRzLmFkbWFu",
-            "YWdlci52MS5BZFVuaXRQYXJlbnRCA+BBAxIZCgxkaXNwbGF5X25hbWUYCSAB",
-            "KAlCA+BBAhIZCgxhZF91bml0X2NvZGUYAiABKAlCA+BBBRJLCgZzdGF0dXMY",
-            "DSABKA4yNi5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5BZFVuaXRTdGF0dXNF",
-            "bnVtLkFkVW5pdFN0YXR1c0ID4EEDEloKFWFwcGxpZWRfdGFyZ2V0X3dpbmRv",
-            "dxgsIAEoDjI2Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlRhcmdldFdpbmRv",
-            "d0VudW0uVGFyZ2V0V2luZG93QgPgQQESXwoXZWZmZWN0aXZlX3RhcmdldF93",
-            "aW5kb3cYLSABKA4yNi5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5UYXJnZXRX",
-            "aW5kb3dFbnVtLlRhcmdldFdpbmRvd0IG4EEH4EEDEjwKDWFwcGxpZWRfdGVh",
-            "bXMYAyADKAlCJeBBAfpBHwodYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1Rl",
-            "YW0SNAoFdGVhbXMYBCADKAlCJeBBA/pBHwodYWRtYW5hZ2VyLmdvb2dsZWFw",
-            "aXMuY29tL1RlYW0SGAoLZGVzY3JpcHRpb24YBSABKAlCA+BBARIgChNleHBs",
-            "aWNpdGx5X3RhcmdldGVkGAYgASgIQgPgQQESGQoMaGFzX2NoaWxkcmVuGAcg",
-            "ASgIQgPgQQMSNAoLdXBkYXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQMSPwoNYWRfdW5pdF9zaXplcxgOIAMoCzIjLmdv",
-            "b2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkFkVW5pdFNpemVCA+BBARIsCh9leHRl",
-            "cm5hbF9zZXRfdG9wX2JveF9jaGFubmVsX2lkGBEgASgJQgPgQQESNQoNcmVm",
-            "cmVzaF9kZWxheRgTIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID",
-            "4EEBEkIKDmFwcGxpZWRfbGFiZWxzGBUgAygLMiUuZ29vZ2xlLmFkcy5hZG1h",
-            "bmFnZXIudjEuQXBwbGllZExhYmVsQgPgQQESTAoYZWZmZWN0aXZlX2FwcGxp",
-            "ZWRfbGFiZWxzGBYgAygLMiUuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQXBw",
-            "bGllZExhYmVsQgPgQQMSVQocYXBwbGllZF9sYWJlbF9mcmVxdWVuY3lfY2Fw",
-            "cxgXIAMoCzIqLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkxhYmVsRnJlcXVl",
-            "bmN5Q2FwQgPgQQESVwoeZWZmZWN0aXZlX2xhYmVsX2ZyZXF1ZW5jeV9jYXBz",
-            "GBggAygLMiouZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuTGFiZWxGcmVxdWVu",
-            "Y3lDYXBCA+BBAxJWCg9zbWFydF9zaXplX21vZGUYGSABKA4yOC5nb29nbGUu",
-            "YWRzLmFkbWFuYWdlci52MS5TbWFydFNpemVNb2RlRW51bS5TbWFydFNpemVN",
-            "b2RlQgPgQQESKQoXYXBwbGllZF9hZHNlbnNlX2VuYWJsZWQYGiABKAhCA+BB",
-            "AUgAiAEBEiYKGWVmZmVjdGl2ZV9hZHNlbnNlX2VuYWJsZWQYGyABKAhCA+BB",
-            "Azpg6kFdCh9hZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQWRVbml0EiluZXR3",
-            "b3Jrcy97bmV0d29ya19jb2RlfS9hZFVuaXRzL3thZF91bml0fSoHYWRVbml0",
-            "czIGYWRVbml0QhoKGF9hcHBsaWVkX2Fkc2Vuc2VfZW5hYmxlZCLOAQoKQWRV",
-            "bml0U2l6ZRIwCgRzaXplGAEgASgLMh0uZ29vZ2xlLmFkcy5hZG1hbmFnZXIu",
-            "djEuU2l6ZUID4EECElsKEGVudmlyb25tZW50X3R5cGUYAiABKA4yPC5nb29n",
-            "bGUuYWRzLmFkbWFuYWdlci52MS5FbnZpcm9ubWVudFR5cGVFbnVtLkVudmly",
-            "b25tZW50VHlwZUID4EECEjEKCmNvbXBhbmlvbnMYAyADKAsyHS5nb29nbGUu",
-            "YWRzLmFkbWFuYWdlci52MS5TaXplIoUBCgxBZFVuaXRQYXJlbnQSPwoOcGFy",
-            "ZW50X2FkX3VuaXQYASABKAlCJ+BBA/pBIQofYWRtYW5hZ2VyLmdvb2dsZWFw",
-            "aXMuY29tL0FkVW5pdBIZCgxkaXNwbGF5X25hbWUYAiABKAlCA+BBAxIZCgxh",
-            "ZF91bml0X2NvZGUYAyABKAlCA+BBAyKIAQoRTGFiZWxGcmVxdWVuY3lDYXAS",
-            "NQoFbGFiZWwYASABKAlCJuBBAvpBIAoeYWRtYW5hZ2VyLmdvb2dsZWFwaXMu",
-            "Y29tL0xhYmVsEjwKDWZyZXF1ZW5jeV9jYXAYAiABKAsyJS5nb29nbGUuYWRz",
-            "LmFkbWFuYWdlci52MS5GcmVxdWVuY3lDYXBCxwEKG2NvbS5nb29nbGUuYWRz",
-            "LmFkbWFuYWdlci52MUITQWRVbml0TWVzc2FnZXNQcm90b1ABWkBnb29nbGUu",
-            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIv",
-            "djE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29n",
-            "bGVcQWRzXEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6",
-            "OlYxYgZwcm90bzM="));
+            "ZFVuaXRIAIgBARI/CgtwYXJlbnRfcGF0aBgLIAMoCzIlLmdvb2dsZS5hZHMu",
+            "YWRtYW5hZ2VyLnYxLkFkVW5pdFBhcmVudEID4EEDEh4KDGRpc3BsYXlfbmFt",
+            "ZRgJIAEoCUID4EECSAGIAQESIQoMYWRfdW5pdF9jb2RlGAIgASgJQgbgQQHg",
+            "QQVIAogBARJQCgZzdGF0dXMYDSABKA4yNi5nb29nbGUuYWRzLmFkbWFuYWdl",
+            "ci52MS5BZFVuaXRTdGF0dXNFbnVtLkFkVW5pdFN0YXR1c0ID4EEDSAOIAQES",
+            "XwoVYXBwbGllZF90YXJnZXRfd2luZG93GCwgASgOMjYuZ29vZ2xlLmFkcy5h",
+            "ZG1hbmFnZXIudjEuVGFyZ2V0V2luZG93RW51bS5UYXJnZXRXaW5kb3dCA+BB",
+            "AUgEiAEBEmQKF2VmZmVjdGl2ZV90YXJnZXRfd2luZG93GC0gASgOMjYuZ29v",
+            "Z2xlLmFkcy5hZG1hbmFnZXIudjEuVGFyZ2V0V2luZG93RW51bS5UYXJnZXRX",
+            "aW5kb3dCBuBBB+BBA0gFiAEBEjwKDWFwcGxpZWRfdGVhbXMYAyADKAlCJeBB",
+            "AfpBHwodYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1RlYW0SNAoFdGVhbXMY",
+            "BCADKAlCJeBBA/pBHwodYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1RlYW0S",
+            "HQoLZGVzY3JpcHRpb24YBSABKAlCA+BBAUgGiAEBEiUKE2V4cGxpY2l0bHlf",
+            "dGFyZ2V0ZWQYBiABKAhCA+BBAUgHiAEBEh4KDGhhc19jaGlsZHJlbhgHIAEo",
+            "CEID4EEDSAiIAQESOQoLdXBkYXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wQgPgQQNICYgBARI/Cg1hZF91bml0X3NpemVzGA4g",
+            "AygLMiMuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQWRVbml0U2l6ZUID4EEB",
+            "EjMKH2V4dGVybmFsX3NldF90b3BfYm94X2NoYW5uZWxfaWQYESABKAlCBRgB",
+            "4EEBSAqIAQESOgoNcmVmcmVzaF9kZWxheRgTIAEoCzIZLmdvb2dsZS5wcm90",
+            "b2J1Zi5EdXJhdGlvbkID4EEBSAuIAQESQgoOYXBwbGllZF9sYWJlbHMYFSAD",
+            "KAsyJS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5BcHBsaWVkTGFiZWxCA+BB",
+            "ARJMChhlZmZlY3RpdmVfYXBwbGllZF9sYWJlbHMYFiADKAsyJS5nb29nbGUu",
+            "YWRzLmFkbWFuYWdlci52MS5BcHBsaWVkTGFiZWxCA+BBAxJVChxhcHBsaWVk",
+            "X2xhYmVsX2ZyZXF1ZW5jeV9jYXBzGBcgAygLMiouZ29vZ2xlLmFkcy5hZG1h",
+            "bmFnZXIudjEuTGFiZWxGcmVxdWVuY3lDYXBCA+BBARJXCh5lZmZlY3RpdmVf",
+            "bGFiZWxfZnJlcXVlbmN5X2NhcHMYGCADKAsyKi5nb29nbGUuYWRzLmFkbWFu",
+            "YWdlci52MS5MYWJlbEZyZXF1ZW5jeUNhcEID4EEDEl4KD3NtYXJ0X3NpemVf",
+            "bW9kZRgZIAEoDjI4Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlNtYXJ0U2l6",
+            "ZU1vZGVFbnVtLlNtYXJ0U2l6ZU1vZGVCBuBBAeBBB0gMiAEBEikKF2FwcGxp",
+            "ZWRfYWRzZW5zZV9lbmFibGVkGBogASgIQgPgQQFIDYgBARIrChllZmZlY3Rp",
+            "dmVfYWRzZW5zZV9lbmFibGVkGBsgASgIQgPgQQNIDogBATpg6kFdCh9hZG1h",
+            "bmFnZXIuZ29vZ2xlYXBpcy5jb20vQWRVbml0EiluZXR3b3Jrcy97bmV0d29y",
+            "a19jb2RlfS9hZFVuaXRzL3thZF91bml0fSoHYWRVbml0czIGYWRVbml0QhEK",
+            "D19wYXJlbnRfYWRfdW5pdEIPCg1fZGlzcGxheV9uYW1lQg8KDV9hZF91bml0",
+            "X2NvZGVCCQoHX3N0YXR1c0IYChZfYXBwbGllZF90YXJnZXRfd2luZG93QhoK",
+            "GF9lZmZlY3RpdmVfdGFyZ2V0X3dpbmRvd0IOCgxfZGVzY3JpcHRpb25CFgoU",
+            "X2V4cGxpY2l0bHlfdGFyZ2V0ZWRCDwoNX2hhc19jaGlsZHJlbkIOCgxfdXBk",
+            "YXRlX3RpbWVCIgogX2V4dGVybmFsX3NldF90b3BfYm94X2NoYW5uZWxfaWRC",
+            "EAoOX3JlZnJlc2hfZGVsYXlCEgoQX3NtYXJ0X3NpemVfbW9kZUIaChhfYXBw",
+            "bGllZF9hZHNlbnNlX2VuYWJsZWRCHAoaX2VmZmVjdGl2ZV9hZHNlbnNlX2Vu",
+            "YWJsZWQi9gEKCkFkVW5pdFNpemUSNQoEc2l6ZRgBIAEoCzIdLmdvb2dsZS5h",
+            "ZHMuYWRtYW5hZ2VyLnYxLlNpemVCA+BBAkgAiAEBEmAKEGVudmlyb25tZW50",
+            "X3R5cGUYAiABKA4yPC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5FbnZpcm9u",
+            "bWVudFR5cGVFbnVtLkVudmlyb25tZW50VHlwZUID4EECSAGIAQESMQoKY29t",
+            "cGFuaW9ucxgDIAMoCzIdLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlNpemVC",
+            "BwoFX3NpemVCEwoRX2Vudmlyb25tZW50X3R5cGUiyQEKDEFkVW5pdFBhcmVu",
+            "dBJECg5wYXJlbnRfYWRfdW5pdBgBIAEoCUIn4EED+kEhCh9hZG1hbmFnZXIu",
+            "Z29vZ2xlYXBpcy5jb20vQWRVbml0SACIAQESHgoMZGlzcGxheV9uYW1lGAIg",
+            "ASgJQgPgQQNIAYgBARIeCgxhZF91bml0X2NvZGUYAyABKAlCA+BBA0gCiAEB",
+            "QhEKD19wYXJlbnRfYWRfdW5pdEIPCg1fZGlzcGxheV9uYW1lQg8KDV9hZF91",
+            "bml0X2NvZGUirgEKEUxhYmVsRnJlcXVlbmN5Q2FwEjoKBWxhYmVsGAEgASgJ",
+            "QibgQQL6QSAKHmFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9MYWJlbEgAiAEB",
+            "EkEKDWZyZXF1ZW5jeV9jYXAYAiABKAsyJS5nb29nbGUuYWRzLmFkbWFuYWdl",
+            "ci52MS5GcmVxdWVuY3lDYXBIAYgBAUIICgZfbGFiZWxCEAoOX2ZyZXF1ZW5j",
+            "eV9jYXBCxwEKG2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUITQWRVbml0",
+            "TWVzc2FnZXNQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
+            "b29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xl",
+            "LkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFuYWdlclxWMeoC",
+            "Gkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.AdUnitEnumsReflection.Descriptor, global::Google.Ads.AdManager.V1.AppliedLabelReflection.Descriptor, global::Google.Ads.AdManager.V1.EnvironmentTypeEnumReflection.Descriptor, global::Google.Ads.AdManager.V1.FrequencyCapReflection.Descriptor, global::Google.Ads.AdManager.V1.SizeReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AdUnit), global::Google.Ads.AdManager.V1.AdUnit.Parser, new[]{ "Name", "AdUnitId", "ParentAdUnit", "ParentPath", "DisplayName", "AdUnitCode", "Status", "AppliedTargetWindow", "EffectiveTargetWindow", "AppliedTeams", "Teams", "Description", "ExplicitlyTargeted", "HasChildren", "UpdateTime", "AdUnitSizes", "ExternalSetTopBoxChannelId", "RefreshDelay", "AppliedLabels", "EffectiveAppliedLabels", "AppliedLabelFrequencyCaps", "EffectiveLabelFrequencyCaps", "SmartSizeMode", "AppliedAdsenseEnabled", "EffectiveAdsenseEnabled" }, new[]{ "AppliedAdsenseEnabled" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AdUnitSize), global::Google.Ads.AdManager.V1.AdUnitSize.Parser, new[]{ "Size", "EnvironmentType", "Companions" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AdUnitParent), global::Google.Ads.AdManager.V1.AdUnitParent.Parser, new[]{ "ParentAdUnit", "DisplayName", "AdUnitCode" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.LabelFrequencyCap), global::Google.Ads.AdManager.V1.LabelFrequencyCap.Parser, new[]{ "Label", "FrequencyCap" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AdUnit), global::Google.Ads.AdManager.V1.AdUnit.Parser, new[]{ "Name", "AdUnitId", "ParentAdUnit", "ParentPath", "DisplayName", "AdUnitCode", "Status", "AppliedTargetWindow", "EffectiveTargetWindow", "AppliedTeams", "Teams", "Description", "ExplicitlyTargeted", "HasChildren", "UpdateTime", "AdUnitSizes", "ExternalSetTopBoxChannelId", "RefreshDelay", "AppliedLabels", "EffectiveAppliedLabels", "AppliedLabelFrequencyCaps", "EffectiveLabelFrequencyCaps", "SmartSizeMode", "AppliedAdsenseEnabled", "EffectiveAdsenseEnabled" }, new[]{ "ParentAdUnit", "DisplayName", "AdUnitCode", "Status", "AppliedTargetWindow", "EffectiveTargetWindow", "Description", "ExplicitlyTargeted", "HasChildren", "UpdateTime", "ExternalSetTopBoxChannelId", "RefreshDelay", "SmartSizeMode", "AppliedAdsenseEnabled", "EffectiveAdsenseEnabled" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AdUnitSize), global::Google.Ads.AdManager.V1.AdUnitSize.Parser, new[]{ "Size", "EnvironmentType", "Companions" }, new[]{ "Size", "EnvironmentType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AdUnitParent), global::Google.Ads.AdManager.V1.AdUnitParent.Parser, new[]{ "ParentAdUnit", "DisplayName", "AdUnitCode" }, new[]{ "ParentAdUnit", "DisplayName", "AdUnitCode" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.LabelFrequencyCap), global::Google.Ads.AdManager.V1.LabelFrequencyCap.Parser, new[]{ "Label", "FrequencyCap" }, new[]{ "Label", "FrequencyCap" }, null, null, null)
           }));
     }
     #endregion
@@ -204,7 +215,9 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "parent_ad_unit" field.</summary>
     public const int ParentAdUnitFieldNumber = 10;
-    private string parentAdUnit_ = "";
+    private readonly static string ParentAdUnitDefaultValue = "";
+
+    private string parentAdUnit_;
     /// <summary>
     /// Required. Immutable. The AdUnit's parent. Every ad unit has a parent except
     /// for the root ad unit, which is created by Google. Format:
@@ -213,10 +226,22 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ParentAdUnit {
-      get { return parentAdUnit_; }
+      get { return parentAdUnit_ ?? ParentAdUnitDefaultValue; }
       set {
         parentAdUnit_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+    /// <summary>Gets whether the "parent_ad_unit" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasParentAdUnit {
+      get { return parentAdUnit_ != null; }
+    }
+    /// <summary>Clears the value of the "parent_ad_unit" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearParentAdUnit() {
+      parentAdUnit_ = null;
     }
 
     /// <summary>Field number for the "parent_path" field.</summary>
@@ -237,7 +262,9 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "display_name" field.</summary>
     public const int DisplayNameFieldNumber = 9;
-    private string displayName_ = "";
+    private readonly static string DisplayNameDefaultValue = "";
+
+    private string displayName_;
     /// <summary>
     /// Required. The display name of the ad unit. Its maximum length is 255
     /// characters.
@@ -245,48 +272,91 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
-      get { return displayName_; }
+      get { return displayName_ ?? DisplayNameDefaultValue; }
       set {
         displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return displayName_ != null; }
+    }
+    /// <summary>Clears the value of the "display_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      displayName_ = null;
+    }
 
     /// <summary>Field number for the "ad_unit_code" field.</summary>
     public const int AdUnitCodeFieldNumber = 2;
-    private string adUnitCode_ = "";
+    private readonly static string AdUnitCodeDefaultValue = "";
+
+    private string adUnitCode_;
     /// <summary>
-    /// Immutable. A string used to uniquely identify the ad unit for the purposes
-    /// of serving the ad. This attribute is optional and can be set during ad unit
+    /// Optional. Immutable. A string used to uniquely identify the ad unit for the
+    /// purposes of serving the ad. This attribute can be set during ad unit
     /// creation. If it is not provided, it will be assigned by Google based on the
     /// ad unit ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AdUnitCode {
-      get { return adUnitCode_; }
+      get { return adUnitCode_ ?? AdUnitCodeDefaultValue; }
       set {
         adUnitCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "ad_unit_code" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAdUnitCode {
+      get { return adUnitCode_ != null; }
+    }
+    /// <summary>Clears the value of the "ad_unit_code" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAdUnitCode() {
+      adUnitCode_ = null;
+    }
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 13;
-    private global::Google.Ads.AdManager.V1.AdUnitStatusEnum.Types.AdUnitStatus status_ = global::Google.Ads.AdManager.V1.AdUnitStatusEnum.Types.AdUnitStatus.Unspecified;
+    private readonly static global::Google.Ads.AdManager.V1.AdUnitStatusEnum.Types.AdUnitStatus StatusDefaultValue = global::Google.Ads.AdManager.V1.AdUnitStatusEnum.Types.AdUnitStatus.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.AdUnitStatusEnum.Types.AdUnitStatus status_;
     /// <summary>
     /// Output only. The status of this ad unit.  It defaults to ACTIVE.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Ads.AdManager.V1.AdUnitStatusEnum.Types.AdUnitStatus Status {
-      get { return status_; }
+      get { if ((_hasBits0 & 4) != 0) { return status_; } else { return StatusDefaultValue; } }
       set {
+        _hasBits0 |= 4;
         status_ = value;
       }
+    }
+    /// <summary>Gets whether the "status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStatus {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "status" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStatus() {
+      _hasBits0 &= ~4;
     }
 
     /// <summary>Field number for the "applied_target_window" field.</summary>
     public const int AppliedTargetWindowFieldNumber = 44;
-    private global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow appliedTargetWindow_ = global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow.Unspecified;
+    private readonly static global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow AppliedTargetWindowDefaultValue = global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow appliedTargetWindow_;
     /// <summary>
     /// Optional. The target window directly applied to this AdUnit.
     /// If this field is not set, this AdUnit uses the target window specified in
@@ -295,15 +365,30 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow AppliedTargetWindow {
-      get { return appliedTargetWindow_; }
+      get { if ((_hasBits0 & 64) != 0) { return appliedTargetWindow_; } else { return AppliedTargetWindowDefaultValue; } }
       set {
+        _hasBits0 |= 64;
         appliedTargetWindow_ = value;
       }
+    }
+    /// <summary>Gets whether the "applied_target_window" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAppliedTargetWindow {
+      get { return (_hasBits0 & 64) != 0; }
+    }
+    /// <summary>Clears the value of the "applied_target_window" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAppliedTargetWindow() {
+      _hasBits0 &= ~64;
     }
 
     /// <summary>Field number for the "effective_target_window" field.</summary>
     public const int EffectiveTargetWindowFieldNumber = 45;
-    private global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow effectiveTargetWindow_ = global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow.Unspecified;
+    private readonly static global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow EffectiveTargetWindowDefaultValue = global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow effectiveTargetWindow_;
     /// <summary>
     /// Output only. Non-empty default. The target window of this AdUnit. This
     /// value is inherited from ancestor AdUnits and defaults to TOP if no AdUnit
@@ -312,10 +397,23 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow EffectiveTargetWindow {
-      get { return effectiveTargetWindow_; }
+      get { if ((_hasBits0 & 128) != 0) { return effectiveTargetWindow_; } else { return EffectiveTargetWindowDefaultValue; } }
       set {
+        _hasBits0 |= 128;
         effectiveTargetWindow_ = value;
       }
+    }
+    /// <summary>Gets whether the "effective_target_window" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEffectiveTargetWindow {
+      get { return (_hasBits0 & 128) != 0; }
+    }
+    /// <summary>Clears the value of the "effective_target_window" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEffectiveTargetWindow() {
+      _hasBits0 &= ~128;
     }
 
     /// <summary>Field number for the "applied_teams" field.</summary>
@@ -351,7 +449,9 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "description" field.</summary>
     public const int DescriptionFieldNumber = 5;
-    private string description_ = "";
+    private readonly static string DescriptionDefaultValue = "";
+
+    private string description_;
     /// <summary>
     /// Optional. A description of the ad unit. The maximum length is 65,535
     /// characters.
@@ -359,14 +459,28 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Description {
-      get { return description_; }
+      get { return description_ ?? DescriptionDefaultValue; }
       set {
         description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "description" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDescription {
+      get { return description_ != null; }
+    }
+    /// <summary>Clears the value of the "description" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDescription() {
+      description_ = null;
+    }
 
     /// <summary>Field number for the "explicitly_targeted" field.</summary>
     public const int ExplicitlyTargetedFieldNumber = 6;
+    private readonly static bool ExplicitlyTargetedDefaultValue = false;
+
     private bool explicitlyTargeted_;
     /// <summary>
     /// Optional. If this field is set to true, then the AdUnit will not be
@@ -377,14 +491,29 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ExplicitlyTargeted {
-      get { return explicitlyTargeted_; }
+      get { if ((_hasBits0 & 1) != 0) { return explicitlyTargeted_; } else { return ExplicitlyTargetedDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         explicitlyTargeted_ = value;
       }
+    }
+    /// <summary>Gets whether the "explicitly_targeted" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasExplicitlyTargeted {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "explicitly_targeted" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearExplicitlyTargeted() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "has_children" field.</summary>
     public const int HasChildrenFieldNumber = 7;
+    private readonly static bool HasChildrenDefaultValue = false;
+
     private bool hasChildren_;
     /// <summary>
     /// Output only. This field is set to true if the ad unit has any children.
@@ -392,10 +521,23 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasChildren {
-      get { return hasChildren_; }
+      get { if ((_hasBits0 & 2) != 0) { return hasChildren_; } else { return HasChildrenDefaultValue; } }
       set {
+        _hasBits0 |= 2;
         hasChildren_ = value;
       }
+    }
+    /// <summary>Gets whether the "has_children" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasHasChildren {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "has_children" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearHasChildren() {
+      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "update_time" field.</summary>
@@ -429,18 +571,35 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "external_set_top_box_channel_id" field.</summary>
     public const int ExternalSetTopBoxChannelIdFieldNumber = 17;
-    private string externalSetTopBoxChannelId_ = "";
+    private readonly static string ExternalSetTopBoxChannelIdDefaultValue = "";
+
+    private string externalSetTopBoxChannelId_;
     /// <summary>
     /// Optional. Determines what set top box video on demand channel this ad unit
     /// corresponds to in an external set top box ad campaign system.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ExternalSetTopBoxChannelId {
-      get { return externalSetTopBoxChannelId_; }
+      get { return externalSetTopBoxChannelId_ ?? ExternalSetTopBoxChannelIdDefaultValue; }
       set {
         externalSetTopBoxChannelId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+    /// <summary>Gets whether the "external_set_top_box_channel_id" field is set</summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasExternalSetTopBoxChannelId {
+      get { return externalSetTopBoxChannelId_ != null; }
+    }
+    /// <summary>Clears the value of the "external_set_top_box_channel_id" field</summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearExternalSetTopBoxChannelId() {
+      externalSetTopBoxChannelId_ = null;
     }
 
     /// <summary>Field number for the "refresh_delay" field.</summary>
@@ -482,8 +641,8 @@ namespace Google.Ads.AdManager.V1 {
     /// <summary>
     /// Output only. Contains the set of labels applied directly to the ad unit as
     /// well as those inherited from the parent ad units. If a label has been
-    /// negated, only the negated label is returned. This field is readonly and is
-    /// assigned by Google.
+    /// negated, only the negated label is returned. This attribute is assigned by
+    /// Google.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -523,18 +682,33 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "smart_size_mode" field.</summary>
     public const int SmartSizeModeFieldNumber = 25;
-    private global::Google.Ads.AdManager.V1.SmartSizeModeEnum.Types.SmartSizeMode smartSizeMode_ = global::Google.Ads.AdManager.V1.SmartSizeModeEnum.Types.SmartSizeMode.Unspecified;
+    private readonly static global::Google.Ads.AdManager.V1.SmartSizeModeEnum.Types.SmartSizeMode SmartSizeModeDefaultValue = global::Google.Ads.AdManager.V1.SmartSizeModeEnum.Types.SmartSizeMode.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.SmartSizeModeEnum.Types.SmartSizeMode smartSizeMode_;
     /// <summary>
-    /// Optional. The smart size mode for this ad unit. This attribute is optional
-    /// and defaults to SmartSizeMode.NONE for fixed sizes.
+    /// Optional. Non-empty default. The smart size mode for this ad unit. This
+    /// attribute defaults to SmartSizeMode.NONE for fixed sizes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Ads.AdManager.V1.SmartSizeModeEnum.Types.SmartSizeMode SmartSizeMode {
-      get { return smartSizeMode_; }
+      get { if ((_hasBits0 & 8) != 0) { return smartSizeMode_; } else { return SmartSizeModeDefaultValue; } }
       set {
+        _hasBits0 |= 8;
         smartSizeMode_ = value;
       }
+    }
+    /// <summary>Gets whether the "smart_size_mode" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSmartSizeMode {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "smart_size_mode" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSmartSizeMode() {
+      _hasBits0 &= ~8;
     }
 
     /// <summary>Field number for the "applied_adsense_enabled" field.</summary>
@@ -543,16 +717,16 @@ namespace Google.Ads.AdManager.V1 {
 
     private bool appliedAdsenseEnabled_;
     /// <summary>
-    /// Optional. The value of AdSense enabled directly applied to this ad unit.
-    /// This attribute is optional and if not specified this ad unit will inherit
-    /// the value of effectiveAdsenseEnabled from its ancestors.
+    /// Optional. The value of AdSense enabled directly applied to this ad unit. If
+    /// not specified this ad unit will inherit the value of
+    /// effectiveAdsenseEnabled from its ancestors.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool AppliedAdsenseEnabled {
-      get { if ((_hasBits0 & 1) != 0) { return appliedAdsenseEnabled_; } else { return AppliedAdsenseEnabledDefaultValue; } }
+      get { if ((_hasBits0 & 16) != 0) { return appliedAdsenseEnabled_; } else { return AppliedAdsenseEnabledDefaultValue; } }
       set {
-        _hasBits0 |= 1;
+        _hasBits0 |= 16;
         appliedAdsenseEnabled_ = value;
       }
     }
@@ -560,17 +734,19 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasAppliedAdsenseEnabled {
-      get { return (_hasBits0 & 1) != 0; }
+      get { return (_hasBits0 & 16) != 0; }
     }
     /// <summary>Clears the value of the "applied_adsense_enabled" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearAppliedAdsenseEnabled() {
-      _hasBits0 &= ~1;
+      _hasBits0 &= ~16;
     }
 
     /// <summary>Field number for the "effective_adsense_enabled" field.</summary>
     public const int EffectiveAdsenseEnabledFieldNumber = 27;
+    private readonly static bool EffectiveAdsenseEnabledDefaultValue = false;
+
     private bool effectiveAdsenseEnabled_;
     /// <summary>
     /// Output only. Specifies whether or not the AdUnit is enabled for serving ads
@@ -581,10 +757,23 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool EffectiveAdsenseEnabled {
-      get { return effectiveAdsenseEnabled_; }
+      get { if ((_hasBits0 & 32) != 0) { return effectiveAdsenseEnabled_; } else { return EffectiveAdsenseEnabledDefaultValue; } }
       set {
+        _hasBits0 |= 32;
         effectiveAdsenseEnabled_ = value;
       }
+    }
+    /// <summary>Gets whether the "effective_adsense_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEffectiveAdsenseEnabled {
+      get { return (_hasBits0 & 32) != 0; }
+    }
+    /// <summary>Clears the value of the "effective_adsense_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEffectiveAdsenseEnabled() {
+      _hasBits0 &= ~32;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -636,29 +825,29 @@ namespace Google.Ads.AdManager.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (AdUnitId != 0L) hash ^= AdUnitId.GetHashCode();
-      if (ParentAdUnit.Length != 0) hash ^= ParentAdUnit.GetHashCode();
+      if (HasParentAdUnit) hash ^= ParentAdUnit.GetHashCode();
       hash ^= parentPath_.GetHashCode();
-      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (AdUnitCode.Length != 0) hash ^= AdUnitCode.GetHashCode();
-      if (Status != global::Google.Ads.AdManager.V1.AdUnitStatusEnum.Types.AdUnitStatus.Unspecified) hash ^= Status.GetHashCode();
-      if (AppliedTargetWindow != global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow.Unspecified) hash ^= AppliedTargetWindow.GetHashCode();
-      if (EffectiveTargetWindow != global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow.Unspecified) hash ^= EffectiveTargetWindow.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasAdUnitCode) hash ^= AdUnitCode.GetHashCode();
+      if (HasStatus) hash ^= Status.GetHashCode();
+      if (HasAppliedTargetWindow) hash ^= AppliedTargetWindow.GetHashCode();
+      if (HasEffectiveTargetWindow) hash ^= EffectiveTargetWindow.GetHashCode();
       hash ^= appliedTeams_.GetHashCode();
       hash ^= teams_.GetHashCode();
-      if (Description.Length != 0) hash ^= Description.GetHashCode();
-      if (ExplicitlyTargeted != false) hash ^= ExplicitlyTargeted.GetHashCode();
-      if (HasChildren != false) hash ^= HasChildren.GetHashCode();
+      if (HasDescription) hash ^= Description.GetHashCode();
+      if (HasExplicitlyTargeted) hash ^= ExplicitlyTargeted.GetHashCode();
+      if (HasHasChildren) hash ^= HasChildren.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       hash ^= adUnitSizes_.GetHashCode();
-      if (ExternalSetTopBoxChannelId.Length != 0) hash ^= ExternalSetTopBoxChannelId.GetHashCode();
+      if (HasExternalSetTopBoxChannelId) hash ^= ExternalSetTopBoxChannelId.GetHashCode();
       if (refreshDelay_ != null) hash ^= RefreshDelay.GetHashCode();
       hash ^= appliedLabels_.GetHashCode();
       hash ^= effectiveAppliedLabels_.GetHashCode();
       hash ^= appliedLabelFrequencyCaps_.GetHashCode();
       hash ^= effectiveLabelFrequencyCaps_.GetHashCode();
-      if (SmartSizeMode != global::Google.Ads.AdManager.V1.SmartSizeModeEnum.Types.SmartSizeMode.Unspecified) hash ^= SmartSizeMode.GetHashCode();
+      if (HasSmartSizeMode) hash ^= SmartSizeMode.GetHashCode();
       if (HasAppliedAdsenseEnabled) hash ^= AppliedAdsenseEnabled.GetHashCode();
-      if (EffectiveAdsenseEnabled != false) hash ^= EffectiveAdsenseEnabled.GetHashCode();
+      if (HasEffectiveAdsenseEnabled) hash ^= EffectiveAdsenseEnabled.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -681,21 +870,21 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (AdUnitCode.Length != 0) {
+      if (HasAdUnitCode) {
         output.WriteRawTag(18);
         output.WriteString(AdUnitCode);
       }
       appliedTeams_.WriteTo(output, _repeated_appliedTeams_codec);
       teams_.WriteTo(output, _repeated_teams_codec);
-      if (Description.Length != 0) {
+      if (HasDescription) {
         output.WriteRawTag(42);
         output.WriteString(Description);
       }
-      if (ExplicitlyTargeted != false) {
+      if (HasExplicitlyTargeted) {
         output.WriteRawTag(48);
         output.WriteBool(ExplicitlyTargeted);
       }
-      if (HasChildren != false) {
+      if (HasHasChildren) {
         output.WriteRawTag(56);
         output.WriteBool(HasChildren);
       }
@@ -703,16 +892,16 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(UpdateTime);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         output.WriteRawTag(74);
         output.WriteString(DisplayName);
       }
-      if (ParentAdUnit.Length != 0) {
+      if (HasParentAdUnit) {
         output.WriteRawTag(82);
         output.WriteString(ParentAdUnit);
       }
       parentPath_.WriteTo(output, _repeated_parentPath_codec);
-      if (Status != global::Google.Ads.AdManager.V1.AdUnitStatusEnum.Types.AdUnitStatus.Unspecified) {
+      if (HasStatus) {
         output.WriteRawTag(104);
         output.WriteEnum((int) Status);
       }
@@ -721,7 +910,7 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(120);
         output.WriteInt64(AdUnitId);
       }
-      if (ExternalSetTopBoxChannelId.Length != 0) {
+      if (HasExternalSetTopBoxChannelId) {
         output.WriteRawTag(138, 1);
         output.WriteString(ExternalSetTopBoxChannelId);
       }
@@ -733,7 +922,7 @@ namespace Google.Ads.AdManager.V1 {
       effectiveAppliedLabels_.WriteTo(output, _repeated_effectiveAppliedLabels_codec);
       appliedLabelFrequencyCaps_.WriteTo(output, _repeated_appliedLabelFrequencyCaps_codec);
       effectiveLabelFrequencyCaps_.WriteTo(output, _repeated_effectiveLabelFrequencyCaps_codec);
-      if (SmartSizeMode != global::Google.Ads.AdManager.V1.SmartSizeModeEnum.Types.SmartSizeMode.Unspecified) {
+      if (HasSmartSizeMode) {
         output.WriteRawTag(200, 1);
         output.WriteEnum((int) SmartSizeMode);
       }
@@ -741,15 +930,15 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(208, 1);
         output.WriteBool(AppliedAdsenseEnabled);
       }
-      if (EffectiveAdsenseEnabled != false) {
+      if (HasEffectiveAdsenseEnabled) {
         output.WriteRawTag(216, 1);
         output.WriteBool(EffectiveAdsenseEnabled);
       }
-      if (AppliedTargetWindow != global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow.Unspecified) {
+      if (HasAppliedTargetWindow) {
         output.WriteRawTag(224, 2);
         output.WriteEnum((int) AppliedTargetWindow);
       }
-      if (EffectiveTargetWindow != global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow.Unspecified) {
+      if (HasEffectiveTargetWindow) {
         output.WriteRawTag(232, 2);
         output.WriteEnum((int) EffectiveTargetWindow);
       }
@@ -767,21 +956,21 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (AdUnitCode.Length != 0) {
+      if (HasAdUnitCode) {
         output.WriteRawTag(18);
         output.WriteString(AdUnitCode);
       }
       appliedTeams_.WriteTo(ref output, _repeated_appliedTeams_codec);
       teams_.WriteTo(ref output, _repeated_teams_codec);
-      if (Description.Length != 0) {
+      if (HasDescription) {
         output.WriteRawTag(42);
         output.WriteString(Description);
       }
-      if (ExplicitlyTargeted != false) {
+      if (HasExplicitlyTargeted) {
         output.WriteRawTag(48);
         output.WriteBool(ExplicitlyTargeted);
       }
-      if (HasChildren != false) {
+      if (HasHasChildren) {
         output.WriteRawTag(56);
         output.WriteBool(HasChildren);
       }
@@ -789,16 +978,16 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(UpdateTime);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         output.WriteRawTag(74);
         output.WriteString(DisplayName);
       }
-      if (ParentAdUnit.Length != 0) {
+      if (HasParentAdUnit) {
         output.WriteRawTag(82);
         output.WriteString(ParentAdUnit);
       }
       parentPath_.WriteTo(ref output, _repeated_parentPath_codec);
-      if (Status != global::Google.Ads.AdManager.V1.AdUnitStatusEnum.Types.AdUnitStatus.Unspecified) {
+      if (HasStatus) {
         output.WriteRawTag(104);
         output.WriteEnum((int) Status);
       }
@@ -807,7 +996,7 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(120);
         output.WriteInt64(AdUnitId);
       }
-      if (ExternalSetTopBoxChannelId.Length != 0) {
+      if (HasExternalSetTopBoxChannelId) {
         output.WriteRawTag(138, 1);
         output.WriteString(ExternalSetTopBoxChannelId);
       }
@@ -819,7 +1008,7 @@ namespace Google.Ads.AdManager.V1 {
       effectiveAppliedLabels_.WriteTo(ref output, _repeated_effectiveAppliedLabels_codec);
       appliedLabelFrequencyCaps_.WriteTo(ref output, _repeated_appliedLabelFrequencyCaps_codec);
       effectiveLabelFrequencyCaps_.WriteTo(ref output, _repeated_effectiveLabelFrequencyCaps_codec);
-      if (SmartSizeMode != global::Google.Ads.AdManager.V1.SmartSizeModeEnum.Types.SmartSizeMode.Unspecified) {
+      if (HasSmartSizeMode) {
         output.WriteRawTag(200, 1);
         output.WriteEnum((int) SmartSizeMode);
       }
@@ -827,15 +1016,15 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(208, 1);
         output.WriteBool(AppliedAdsenseEnabled);
       }
-      if (EffectiveAdsenseEnabled != false) {
+      if (HasEffectiveAdsenseEnabled) {
         output.WriteRawTag(216, 1);
         output.WriteBool(EffectiveAdsenseEnabled);
       }
-      if (AppliedTargetWindow != global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow.Unspecified) {
+      if (HasAppliedTargetWindow) {
         output.WriteRawTag(224, 2);
         output.WriteEnum((int) AppliedTargetWindow);
       }
-      if (EffectiveTargetWindow != global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow.Unspecified) {
+      if (HasEffectiveTargetWindow) {
         output.WriteRawTag(232, 2);
         output.WriteEnum((int) EffectiveTargetWindow);
       }
@@ -855,41 +1044,41 @@ namespace Google.Ads.AdManager.V1 {
       if (AdUnitId != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(AdUnitId);
       }
-      if (ParentAdUnit.Length != 0) {
+      if (HasParentAdUnit) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ParentAdUnit);
       }
       size += parentPath_.CalculateSize(_repeated_parentPath_codec);
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
-      if (AdUnitCode.Length != 0) {
+      if (HasAdUnitCode) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AdUnitCode);
       }
-      if (Status != global::Google.Ads.AdManager.V1.AdUnitStatusEnum.Types.AdUnitStatus.Unspecified) {
+      if (HasStatus) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
-      if (AppliedTargetWindow != global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow.Unspecified) {
+      if (HasAppliedTargetWindow) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) AppliedTargetWindow);
       }
-      if (EffectiveTargetWindow != global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow.Unspecified) {
+      if (HasEffectiveTargetWindow) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) EffectiveTargetWindow);
       }
       size += appliedTeams_.CalculateSize(_repeated_appliedTeams_codec);
       size += teams_.CalculateSize(_repeated_teams_codec);
-      if (Description.Length != 0) {
+      if (HasDescription) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
       }
-      if (ExplicitlyTargeted != false) {
+      if (HasExplicitlyTargeted) {
         size += 1 + 1;
       }
-      if (HasChildren != false) {
+      if (HasHasChildren) {
         size += 1 + 1;
       }
       if (updateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
       size += adUnitSizes_.CalculateSize(_repeated_adUnitSizes_codec);
-      if (ExternalSetTopBoxChannelId.Length != 0) {
+      if (HasExternalSetTopBoxChannelId) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(ExternalSetTopBoxChannelId);
       }
       if (refreshDelay_ != null) {
@@ -899,13 +1088,13 @@ namespace Google.Ads.AdManager.V1 {
       size += effectiveAppliedLabels_.CalculateSize(_repeated_effectiveAppliedLabels_codec);
       size += appliedLabelFrequencyCaps_.CalculateSize(_repeated_appliedLabelFrequencyCaps_codec);
       size += effectiveLabelFrequencyCaps_.CalculateSize(_repeated_effectiveLabelFrequencyCaps_codec);
-      if (SmartSizeMode != global::Google.Ads.AdManager.V1.SmartSizeModeEnum.Types.SmartSizeMode.Unspecified) {
+      if (HasSmartSizeMode) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) SmartSizeMode);
       }
       if (HasAppliedAdsenseEnabled) {
         size += 2 + 1;
       }
-      if (EffectiveAdsenseEnabled != false) {
+      if (HasEffectiveAdsenseEnabled) {
         size += 2 + 1;
       }
       if (_unknownFields != null) {
@@ -926,34 +1115,34 @@ namespace Google.Ads.AdManager.V1 {
       if (other.AdUnitId != 0L) {
         AdUnitId = other.AdUnitId;
       }
-      if (other.ParentAdUnit.Length != 0) {
+      if (other.HasParentAdUnit) {
         ParentAdUnit = other.ParentAdUnit;
       }
       parentPath_.Add(other.parentPath_);
-      if (other.DisplayName.Length != 0) {
+      if (other.HasDisplayName) {
         DisplayName = other.DisplayName;
       }
-      if (other.AdUnitCode.Length != 0) {
+      if (other.HasAdUnitCode) {
         AdUnitCode = other.AdUnitCode;
       }
-      if (other.Status != global::Google.Ads.AdManager.V1.AdUnitStatusEnum.Types.AdUnitStatus.Unspecified) {
+      if (other.HasStatus) {
         Status = other.Status;
       }
-      if (other.AppliedTargetWindow != global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow.Unspecified) {
+      if (other.HasAppliedTargetWindow) {
         AppliedTargetWindow = other.AppliedTargetWindow;
       }
-      if (other.EffectiveTargetWindow != global::Google.Ads.AdManager.V1.TargetWindowEnum.Types.TargetWindow.Unspecified) {
+      if (other.HasEffectiveTargetWindow) {
         EffectiveTargetWindow = other.EffectiveTargetWindow;
       }
       appliedTeams_.Add(other.appliedTeams_);
       teams_.Add(other.teams_);
-      if (other.Description.Length != 0) {
+      if (other.HasDescription) {
         Description = other.Description;
       }
-      if (other.ExplicitlyTargeted != false) {
+      if (other.HasExplicitlyTargeted) {
         ExplicitlyTargeted = other.ExplicitlyTargeted;
       }
-      if (other.HasChildren != false) {
+      if (other.HasHasChildren) {
         HasChildren = other.HasChildren;
       }
       if (other.updateTime_ != null) {
@@ -963,7 +1152,7 @@ namespace Google.Ads.AdManager.V1 {
         UpdateTime.MergeFrom(other.UpdateTime);
       }
       adUnitSizes_.Add(other.adUnitSizes_);
-      if (other.ExternalSetTopBoxChannelId.Length != 0) {
+      if (other.HasExternalSetTopBoxChannelId) {
         ExternalSetTopBoxChannelId = other.ExternalSetTopBoxChannelId;
       }
       if (other.refreshDelay_ != null) {
@@ -976,13 +1165,13 @@ namespace Google.Ads.AdManager.V1 {
       effectiveAppliedLabels_.Add(other.effectiveAppliedLabels_);
       appliedLabelFrequencyCaps_.Add(other.appliedLabelFrequencyCaps_);
       effectiveLabelFrequencyCaps_.Add(other.effectiveLabelFrequencyCaps_);
-      if (other.SmartSizeMode != global::Google.Ads.AdManager.V1.SmartSizeModeEnum.Types.SmartSizeMode.Unspecified) {
+      if (other.HasSmartSizeMode) {
         SmartSizeMode = other.SmartSizeMode;
       }
       if (other.HasAppliedAdsenseEnabled) {
         AppliedAdsenseEnabled = other.AppliedAdsenseEnabled;
       }
-      if (other.EffectiveAdsenseEnabled != false) {
+      if (other.HasEffectiveAdsenseEnabled) {
         EffectiveAdsenseEnabled = other.EffectiveAdsenseEnabled;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1245,6 +1434,7 @@ namespace Google.Ads.AdManager.V1 {
   {
     private static readonly pb::MessageParser<AdUnitSize> _parser = new pb::MessageParser<AdUnitSize>(() => new AdUnitSize());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AdUnitSize> Parser { get { return _parser; } }
@@ -1272,6 +1462,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AdUnitSize(AdUnitSize other) : this() {
+      _hasBits0 = other._hasBits0;
       size_ = other.size_ != null ? other.size_.Clone() : null;
       environmentType_ = other.environmentType_;
       companions_ = other.companions_.Clone();
@@ -1301,17 +1492,32 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "environment_type" field.</summary>
     public const int EnvironmentTypeFieldNumber = 2;
-    private global::Google.Ads.AdManager.V1.EnvironmentTypeEnum.Types.EnvironmentType environmentType_ = global::Google.Ads.AdManager.V1.EnvironmentTypeEnum.Types.EnvironmentType.Unspecified;
+    private readonly static global::Google.Ads.AdManager.V1.EnvironmentTypeEnum.Types.EnvironmentType EnvironmentTypeDefaultValue = global::Google.Ads.AdManager.V1.EnvironmentTypeEnum.Types.EnvironmentType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.EnvironmentTypeEnum.Types.EnvironmentType environmentType_;
     /// <summary>
     /// Required. The EnvironmentType of the AdUnit
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Ads.AdManager.V1.EnvironmentTypeEnum.Types.EnvironmentType EnvironmentType {
-      get { return environmentType_; }
+      get { if ((_hasBits0 & 1) != 0) { return environmentType_; } else { return EnvironmentTypeDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         environmentType_ = value;
       }
+    }
+    /// <summary>Gets whether the "environment_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEnvironmentType {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "environment_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEnvironmentType() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "companions" field.</summary>
@@ -1356,7 +1562,7 @@ namespace Google.Ads.AdManager.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (size_ != null) hash ^= Size.GetHashCode();
-      if (EnvironmentType != global::Google.Ads.AdManager.V1.EnvironmentTypeEnum.Types.EnvironmentType.Unspecified) hash ^= EnvironmentType.GetHashCode();
+      if (HasEnvironmentType) hash ^= EnvironmentType.GetHashCode();
       hash ^= companions_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1380,7 +1586,7 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(Size);
       }
-      if (EnvironmentType != global::Google.Ads.AdManager.V1.EnvironmentTypeEnum.Types.EnvironmentType.Unspecified) {
+      if (HasEnvironmentType) {
         output.WriteRawTag(16);
         output.WriteEnum((int) EnvironmentType);
       }
@@ -1399,7 +1605,7 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(Size);
       }
-      if (EnvironmentType != global::Google.Ads.AdManager.V1.EnvironmentTypeEnum.Types.EnvironmentType.Unspecified) {
+      if (HasEnvironmentType) {
         output.WriteRawTag(16);
         output.WriteEnum((int) EnvironmentType);
       }
@@ -1417,7 +1623,7 @@ namespace Google.Ads.AdManager.V1 {
       if (size_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Size);
       }
-      if (EnvironmentType != global::Google.Ads.AdManager.V1.EnvironmentTypeEnum.Types.EnvironmentType.Unspecified) {
+      if (HasEnvironmentType) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EnvironmentType);
       }
       size += companions_.CalculateSize(_repeated_companions_codec);
@@ -1439,7 +1645,7 @@ namespace Google.Ads.AdManager.V1 {
         }
         Size.MergeFrom(other.Size);
       }
-      if (other.EnvironmentType != global::Google.Ads.AdManager.V1.EnvironmentTypeEnum.Types.EnvironmentType.Unspecified) {
+      if (other.HasEnvironmentType) {
         EnvironmentType = other.EnvironmentType;
       }
       companions_.Add(other.companions_);
@@ -1562,7 +1768,9 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "parent_ad_unit" field.</summary>
     public const int ParentAdUnitFieldNumber = 1;
-    private string parentAdUnit_ = "";
+    private readonly static string ParentAdUnitDefaultValue = "";
+
+    private string parentAdUnit_;
     /// <summary>
     /// Output only. The parent of the current AdUnit
     /// Format: `networks/{network_code}/adUnits/{ad_unit_id}`
@@ -1570,30 +1778,58 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ParentAdUnit {
-      get { return parentAdUnit_; }
+      get { return parentAdUnit_ ?? ParentAdUnitDefaultValue; }
       set {
         parentAdUnit_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "parent_ad_unit" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasParentAdUnit {
+      get { return parentAdUnit_ != null; }
+    }
+    /// <summary>Clears the value of the "parent_ad_unit" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearParentAdUnit() {
+      parentAdUnit_ = null;
+    }
 
     /// <summary>Field number for the "display_name" field.</summary>
     public const int DisplayNameFieldNumber = 2;
-    private string displayName_ = "";
+    private readonly static string DisplayNameDefaultValue = "";
+
+    private string displayName_;
     /// <summary>
     /// Output only. The display name of the parent AdUnit.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
-      get { return displayName_; }
+      get { return displayName_ ?? DisplayNameDefaultValue; }
       set {
         displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return displayName_ != null; }
+    }
+    /// <summary>Clears the value of the "display_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      displayName_ = null;
+    }
 
     /// <summary>Field number for the "ad_unit_code" field.</summary>
     public const int AdUnitCodeFieldNumber = 3;
-    private string adUnitCode_ = "";
+    private readonly static string AdUnitCodeDefaultValue = "";
+
+    private string adUnitCode_;
     /// <summary>
     /// Output only. A string used to uniquely identify the ad unit for the
     /// purposes of serving the ad.
@@ -1601,10 +1837,22 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AdUnitCode {
-      get { return adUnitCode_; }
+      get { return adUnitCode_ ?? AdUnitCodeDefaultValue; }
       set {
         adUnitCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+    /// <summary>Gets whether the "ad_unit_code" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAdUnitCode {
+      get { return adUnitCode_ != null; }
+    }
+    /// <summary>Clears the value of the "ad_unit_code" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAdUnitCode() {
+      adUnitCode_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1632,9 +1880,9 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ParentAdUnit.Length != 0) hash ^= ParentAdUnit.GetHashCode();
-      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (AdUnitCode.Length != 0) hash ^= AdUnitCode.GetHashCode();
+      if (HasParentAdUnit) hash ^= ParentAdUnit.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasAdUnitCode) hash ^= AdUnitCode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1653,15 +1901,15 @@ namespace Google.Ads.AdManager.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ParentAdUnit.Length != 0) {
+      if (HasParentAdUnit) {
         output.WriteRawTag(10);
         output.WriteString(ParentAdUnit);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         output.WriteRawTag(18);
         output.WriteString(DisplayName);
       }
-      if (AdUnitCode.Length != 0) {
+      if (HasAdUnitCode) {
         output.WriteRawTag(26);
         output.WriteString(AdUnitCode);
       }
@@ -1675,15 +1923,15 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ParentAdUnit.Length != 0) {
+      if (HasParentAdUnit) {
         output.WriteRawTag(10);
         output.WriteString(ParentAdUnit);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         output.WriteRawTag(18);
         output.WriteString(DisplayName);
       }
-      if (AdUnitCode.Length != 0) {
+      if (HasAdUnitCode) {
         output.WriteRawTag(26);
         output.WriteString(AdUnitCode);
       }
@@ -1697,13 +1945,13 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ParentAdUnit.Length != 0) {
+      if (HasParentAdUnit) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ParentAdUnit);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
-      if (AdUnitCode.Length != 0) {
+      if (HasAdUnitCode) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AdUnitCode);
       }
       if (_unknownFields != null) {
@@ -1718,13 +1966,13 @@ namespace Google.Ads.AdManager.V1 {
       if (other == null) {
         return;
       }
-      if (other.ParentAdUnit.Length != 0) {
+      if (other.HasParentAdUnit) {
         ParentAdUnit = other.ParentAdUnit;
       }
-      if (other.DisplayName.Length != 0) {
+      if (other.HasDisplayName) {
         DisplayName = other.DisplayName;
       }
-      if (other.AdUnitCode.Length != 0) {
+      if (other.HasAdUnitCode) {
         AdUnitCode = other.AdUnitCode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1839,7 +2087,9 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "label" field.</summary>
     public const int LabelFieldNumber = 1;
-    private string label_ = "";
+    private readonly static string LabelDefaultValue = "";
+
+    private string label_;
     /// <summary>
     /// Required. The label to used for frequency capping.
     /// Format: "networks/{network_code}/labels/{label_id}"
@@ -1847,10 +2097,22 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Label {
-      get { return label_; }
+      get { return label_ ?? LabelDefaultValue; }
       set {
         label_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+    /// <summary>Gets whether the "label" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLabel {
+      get { return label_ != null; }
+    }
+    /// <summary>Clears the value of the "label" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLabel() {
+      label_ = null;
     }
 
     /// <summary>Field number for the "frequency_cap" field.</summary>
@@ -1892,7 +2154,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Label.Length != 0) hash ^= Label.GetHashCode();
+      if (HasLabel) hash ^= Label.GetHashCode();
       if (frequencyCap_ != null) hash ^= FrequencyCap.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1912,7 +2174,7 @@ namespace Google.Ads.AdManager.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Label.Length != 0) {
+      if (HasLabel) {
         output.WriteRawTag(10);
         output.WriteString(Label);
       }
@@ -1930,7 +2192,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Label.Length != 0) {
+      if (HasLabel) {
         output.WriteRawTag(10);
         output.WriteString(Label);
       }
@@ -1948,7 +2210,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Label.Length != 0) {
+      if (HasLabel) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Label);
       }
       if (frequencyCap_ != null) {
@@ -1966,7 +2228,7 @@ namespace Google.Ads.AdManager.V1 {
       if (other == null) {
         return;
       }
-      if (other.Label.Length != 0) {
+      if (other.HasLabel) {
         Label = other.Label;
       }
       if (other.frequencyCap_ != null) {

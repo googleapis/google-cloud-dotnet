@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Support.V2 {
   /// <summary>
-  /// A service to manage file attachment for Google Cloud support cases.
+  /// A service to manage file attachments for Google Cloud support cases.
   /// </summary>
   public static partial class CaseAttachmentService
   {
@@ -87,7 +87,7 @@ namespace Google.Cloud.Support.V2 {
     public abstract partial class CaseAttachmentServiceBase
     {
       /// <summary>
-      /// Retrieve all attachments associated with a support case.
+      /// List all the attachments associated with a support case.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -128,7 +128,7 @@ namespace Google.Cloud.Support.V2 {
       }
 
       /// <summary>
-      /// Retrieve all attachments associated with a support case.
+      /// List all the attachments associated with a support case.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -141,7 +141,7 @@ namespace Google.Cloud.Support.V2 {
         return ListAttachments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieve all attachments associated with a support case.
+      /// List all the attachments associated with a support case.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -152,7 +152,7 @@ namespace Google.Cloud.Support.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListAttachments, null, options, request);
       }
       /// <summary>
-      /// Retrieve all attachments associated with a support case.
+      /// List all the attachments associated with a support case.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -165,7 +165,7 @@ namespace Google.Cloud.Support.V2 {
         return ListAttachmentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieve all attachments associated with a support case.
+      /// List all the attachments associated with a support case.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

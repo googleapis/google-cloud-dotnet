@@ -7176,12 +7176,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 65,
+          "end": 66,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 63,
+          "end": 64,
           "type": "SHORT"
         }
       ]
@@ -7225,12 +7225,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 66,
+          "end": 67,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 64,
+          "end": 65,
           "type": "SHORT"
         }
       ]
@@ -8592,6 +8592,103 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_CloneDatabase_sync",
+      "title": "CloneDatabaseRequestObject",
+      "description": "Snippet for CloneDatabase",
+      "file": "FirestoreAdminClient.CloneDatabaseRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CloneDatabase",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.CloneDatabase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.CloneDatabaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Database, Google.Cloud.Firestore.Admin.V1.CloneDatabaseMetadata>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "CloneDatabase",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.CloneDatabase",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_CloneDatabase_async",
+      "title": "CloneDatabaseRequestObjectAsync",
+      "description": "Snippet for CloneDatabaseAsync",
+      "file": "FirestoreAdminClient.CloneDatabaseRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CloneDatabaseAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.CloneDatabaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.CloneDatabaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Firestore.Admin.V1.Database, Google.Cloud.Firestore.Admin.V1.CloneDatabaseMetadata>>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "CloneDatabase",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.CloneDatabase",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 65,
           "type": "SHORT"
         }
       ]

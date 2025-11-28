@@ -514,29 +514,17 @@ namespace Google.Cloud.Spanner.Data
             BeginTransactionAsync(SpannerTransactionCreationOptions.ReadWrite, transactionOptions: null, cancellationToken);
 
         /// <inheritdoc />
-        protected override DbTransaction BeginDbTransaction(IsolationLevel isolationLevel)
-        {
-            if (isolationLevel != IsolationLevel.Unspecified
-                && isolationLevel != IsolationLevel.Serializable)
-            {
-                throw new NotSupportedException(
-                    $"Cloud Spanner only supports isolation levels {IsolationLevel.Serializable} and {IsolationLevel.Unspecified}.");
-            }
-            return Task.Run(() => BeginTransactionAsync()).ResultWithUnwrappedExceptions();
-        }
+        protected override DbTransaction BeginDbTransaction(IsolationLevel isolationLevel) =>
+            Task.Run(() => BeginTransactionAsync(SpannerTransactionCreationOptions.ReadWrite.WithIsolationLevel(isolationLevel),
+                transactionOptions: null, default)).ResultWithUnwrappedExceptions();
 
 #if NETSTANDARD2_1_OR_GREATER
         /// <inheritdoc />
-        protected override async ValueTask<DbTransaction> BeginDbTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken)
-        {
-            if (isolationLevel != IsolationLevel.Unspecified && isolationLevel != IsolationLevel.Serializable)
-            {
-                throw new NotSupportedException(
-                    $"Cloud Spanner only supports isolation levels {IsolationLevel.Serializable} and {IsolationLevel.Unspecified}.");
-            }
-            return await BeginTransactionAsync(cancellationToken).ConfigureAwait(false);
-        }
+        protected override async ValueTask<DbTransaction> BeginDbTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken) =>
+            await BeginTransactionAsync(SpannerTransactionCreationOptions.ReadWrite.WithIsolationLevel(isolationLevel),
+                transactionOptions: null, cancellationToken).ConfigureAwait(false);
 #endif
+
         /// <summary>
         /// Creates a <see cref="SpannerTransaction"/> with the given options.
         /// </summary>
@@ -593,17 +581,19 @@ namespace Google.Cloud.Spanner.Data
                     await OpenAsync(cancellationToken).ConfigureAwait(false);
 
                     PooledSession session;
+                    SpannerTransactionCreationOptions effectiveCreationOptions;
                     if (transactionCreationOptions.TransactionId is null)
                     {
-                        session = await AcquireSessionAsync(transactionCreationOptions, cancellationToken).ConfigureAwait(false);
+                        session = await AcquireSessionAsync(transactionCreationOptions, cancellationToken, out effectiveCreationOptions).ConfigureAwait(false);
                     }
                     else
                     {
                         SessionName sessionName = SessionName.Parse(transactionCreationOptions.TransactionId.Session);
                         ByteString transactionIdBytes = ByteString.FromBase64(transactionCreationOptions.TransactionId.Id);
                         session = _sessionPool.CreateDetachedSession(sessionName, transactionIdBytes, TransactionOptions.ModeOneofCase.ReadOnly);
+                        effectiveCreationOptions = transactionCreationOptions;
                     }
-                    return new SpannerTransaction(this, session, transactionCreationOptions, transactionOptions, isRetriable: false);
+                    return new SpannerTransaction(this, session, effectiveCreationOptions, transactionOptions, isRetriable: false);
                 }, "SpannerConnection.BeginTransactionAsync", Logger);
         }
 
@@ -855,6 +845,19 @@ namespace Google.Cloud.Spanner.Data
             primaryKeys);
 
         /// <summary>
+        /// Creates a new <see cref="SpannerCommand" /> to delete rows from a Spanner database table.
+        /// This method is thread safe.
+        /// </summary>
+        /// <param name="databaseTable">The name of the table from which to delete rows. Must not be null.</param>
+        /// <param name="keySet">The set of primary keys to delete. Must not be null.</param>
+        /// <returns>A configured <see cref="SpannerCommand" /></returns>
+        public SpannerCommand CreateDeleteCommandForKeySet(string databaseTable, KeySet keySet) =>
+            new SpannerCommand(
+                SpannerCommandTextBuilder.CreateDeleteTextBuilder(databaseTable),
+                this,
+                GaxPreconditions.CheckNotNull(keySet, nameof(keySet)));
+
+        /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to insert rows into a Spanner database table.
         /// This method is thread safe.
         /// </summary>
@@ -1002,10 +1005,12 @@ namespace Google.Cloud.Spanner.Data
             await _sessionPool.WhenPoolReady(sessionPoolSegmentKey, cancellationToken).ConfigureAwait(false);
         }
 
-        internal Task<PooledSession> AcquireSessionAsync(SpannerTransactionCreationOptions creationOptions, CancellationToken cancellationToken)
+        internal Task<PooledSession> AcquireSessionAsync(SpannerTransactionCreationOptions creationOptions, CancellationToken cancellationToken, out SpannerTransactionCreationOptions effectiveCreationOptions)
         {
             SessionPool pool;
             DatabaseName databaseName;
+            effectiveCreationOptions = MaybeWithConnectionDefaults(creationOptions);
+
             lock (_sync)
             {
                 AssertOpen("acquire session.");
@@ -1017,9 +1022,25 @@ namespace Google.Cloud.Spanner.Data
                 throw new InvalidOperationException("Unable to acquire session on connection with no database name");
             }
             var sessionPoolSegmentKey = GetSessionPoolSegmentKey(nameof(AcquireSessionAsync));
-            return creationOptions?.IsDetached == true ?
-                pool.AcquireDetachedSessionAsync(sessionPoolSegmentKey, creationOptions?.GetTransactionOptions(), creationOptions?.IsSingleUse == true, cancellationToken) :
-                pool.AcquireSessionAsync(sessionPoolSegmentKey, creationOptions?.GetTransactionOptions(), creationOptions?.IsSingleUse == true, cancellationToken);
+            return effectiveCreationOptions?.IsDetached == true ?
+                pool.AcquireDetachedSessionAsync(sessionPoolSegmentKey, effectiveCreationOptions?.GetTransactionOptions(), effectiveCreationOptions?.IsSingleUse == true, cancellationToken) :
+                pool.AcquireSessionAsync(sessionPoolSegmentKey, effectiveCreationOptions?.GetTransactionOptions(), effectiveCreationOptions?.IsSingleUse == true, cancellationToken);
+        }
+
+        private SpannerTransactionCreationOptions MaybeWithConnectionDefaults(SpannerTransactionCreationOptions transactionCreationOptions)
+        {
+            SpannerTransactionCreationOptions effectiveCreationOptions = transactionCreationOptions;
+
+            // Set the transaction IsolationLevel if specified in the ConnectionString and not already set on the SpannerTransactionCreationOptions
+            if (effectiveCreationOptions?.IsolationLevel == IsolationLevel.Unspecified
+                && Builder.IsolationLevel != IsolationLevel.Unspecified
+                && effectiveCreationOptions?.TransactionMode == TransactionMode.ReadWrite
+                && effectiveCreationOptions?.IsPartitionedDml == false)
+            {
+                effectiveCreationOptions = transactionCreationOptions.WithIsolationLevel(Builder.IsolationLevel);
+            }
+
+            return effectiveCreationOptions;
         }
 
         /// <summary>

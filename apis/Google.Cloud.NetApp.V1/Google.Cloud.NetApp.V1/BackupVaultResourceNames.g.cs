@@ -283,6 +283,44 @@ namespace Google.Cloud.NetApp.V1
             get => string.IsNullOrEmpty(Name) ? null : gcnv::BackupVaultName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="SourceRegion"/> resource name property.
+        /// </summary>
+        public gagr::LocationName SourceRegionAsLocationName
+        {
+            get => string.IsNullOrEmpty(SourceRegion) ? null : gagr::LocationName.Parse(SourceRegion, allowUnparsed: true);
+            set => SourceRegion = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="BackupRegion"/> resource name property.
+        /// </summary>
+        public gagr::LocationName BackupRegionAsLocationName
+        {
+            get => string.IsNullOrEmpty(BackupRegion) ? null : gagr::LocationName.Parse(BackupRegion, allowUnparsed: true);
+            set => BackupRegion = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gcnv::BackupVaultName"/>-typed view over the <see cref="SourceBackupVault"/> resource name
+        /// property.
+        /// </summary>
+        public gcnv::BackupVaultName SourceBackupVaultAsBackupVaultName
+        {
+            get => string.IsNullOrEmpty(SourceBackupVault) ? null : gcnv::BackupVaultName.Parse(SourceBackupVault, allowUnparsed: true);
+            set => SourceBackupVault = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gcnv::BackupVaultName"/>-typed view over the <see cref="DestinationBackupVault"/> resource name
+        /// property.
+        /// </summary>
+        public gcnv::BackupVaultName DestinationBackupVaultAsBackupVaultName
+        {
+            get => string.IsNullOrEmpty(DestinationBackupVault) ? null : gcnv::BackupVaultName.Parse(DestinationBackupVault, allowUnparsed: true);
+            set => DestinationBackupVault = value?.ToString() ?? "";
+        }
     }
 
     public partial class GetBackupVaultRequest

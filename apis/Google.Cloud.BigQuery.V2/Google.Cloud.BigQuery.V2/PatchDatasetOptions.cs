@@ -12,7 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Apis.Bigquery.v2;
+using static Google.Apis.Bigquery.v2.DatasetsResource;
+using System;
 
 namespace Google.Cloud.BigQuery.V2
 {
@@ -21,8 +22,14 @@ namespace Google.Cloud.BigQuery.V2
     /// </summary>
     public sealed class PatchDatasetOptions
     {
-        internal void ModifyRequest(DatasetsResource.PatchRequest request)
-        {
-        }
+        /// <summary>
+        /// Optional action to perform after preparing the request. If this property is non-null,
+        /// the <see cref="PatchRequest"/> used for a request will be passed to the delegate
+        /// before the request is executed. This allows for fine-grained modifications which aren't
+        /// otherwise directly supported in this options type.
+        /// </summary>
+        public Action<PatchRequest> RequestModifier { get; set; }
+
+        internal void ModifyRequest(PatchRequest request) => RequestModifier?.Invoke(request);
     }
 }

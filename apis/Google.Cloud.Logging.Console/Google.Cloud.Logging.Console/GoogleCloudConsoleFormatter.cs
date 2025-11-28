@@ -128,7 +128,7 @@ public sealed class GoogleCloudConsoleFormatter : ConsoleFormatter, IDisposable
             formatParams.Any(pair => pair.Key != "{OriginalFormat}"))
         {
             writer.WritePropertyName(s_formatParametersPropertyName);
-            WriteKeyValuePairs(writer, formatParams);
+            WriteKeyValuePairs(writer, formatParams, _options.EmitNumericTypes);
         }
     }
 
@@ -148,7 +148,7 @@ public sealed class GoogleCloudConsoleFormatter : ConsoleFormatter, IDisposable
             writer.WriteEndArray();
         }
 
-        static void WriteScope(object value, Utf8JsonWriter writer)
+        void WriteScope(object value, Utf8JsonWriter writer)
         {
             // Detect "first scope" and start the scopes array property.
             if (writer.CurrentDepth == NoScopesDepth)
@@ -159,17 +159,16 @@ public sealed class GoogleCloudConsoleFormatter : ConsoleFormatter, IDisposable
 
             if (value is IEnumerable<KeyValuePair<string, object>> kvps)
             {
-                WriteKeyValuePairs(writer, kvps);
+                WriteKeyValuePairs(writer, kvps, _options.EmitNumericTypes);
             }
             else
             {
-                // TODO: Consider special casing integers etc.
-                writer.WriteStringValue(ToInvariantString(value));
+                WriteValue(writer, value, _options.EmitNumericTypes);
             }
         }
     }
 
-    private static void WriteKeyValuePairs(Utf8JsonWriter writer, IEnumerable<KeyValuePair<string, object>> pairs)
+    private static void WriteKeyValuePairs(Utf8JsonWriter writer, IEnumerable<KeyValuePair<string, object>> pairs, bool emitNumericTypes)
     {
         writer.WriteStartObject();
         foreach (var pair in pairs)
@@ -183,9 +182,60 @@ public sealed class GoogleCloudConsoleFormatter : ConsoleFormatter, IDisposable
             {
                 key = "_" + key;
             }
-            writer.WriteString(key, ToInvariantString(pair.Value));
+            writer.WritePropertyName(key);
+            WriteValue(writer, pair.Value, emitNumericTypes);
         }
         writer.WriteEndObject();
+    }
+
+    private static void WriteValue(Utf8JsonWriter writer, object value, bool emitNumericTypes)
+    {
+        if (!emitNumericTypes)
+        {
+            writer.WriteStringValue(ToInvariantString(value));
+        }
+        else
+        {
+            try
+            {
+                switch (value)
+                {
+                    case byte x:
+                        writer.WriteNumberValue(x);
+                        break;
+                    case sbyte x:
+                        writer.WriteNumberValue(x);
+                        break;
+                    case short x:
+                        writer.WriteNumberValue(x);
+                        break;
+                    case ushort x:
+                        writer.WriteNumberValue(x);
+                        break;
+                    case int x:
+                        writer.WriteNumberValue(x);
+                        break;
+                    case uint x:
+                        writer.WriteNumberValue(x);
+                        break;
+                    case float x when !float.IsNaN(x) && !float.IsInfinity(x):
+                        writer.WriteNumberValue(x);
+                        break;
+                    case double x when !double.IsNaN(x) && !double.IsInfinity(x):
+                        writer.WriteNumberValue(x);
+                        break;
+                    default:
+                        writer.WriteStringValue(ToInvariantString(value));
+                        break;
+                }
+            }
+            // Given the checks on numeric values, we don't actually expect this
+            // to ever happen, but we'd rather log using a string than fail entirely.
+            catch (InvalidOperationException)
+            {
+                writer.WriteStringValue(ToInvariantString(value));
+            }
+        }
     }
 
     private void MaybeWriteTraceInformation(Utf8JsonWriter writer)

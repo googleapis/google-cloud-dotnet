@@ -10,16 +10,46 @@
         "grpc": {
           "libraryClient": "MemorystoreClient",
           "rpcs": {
+            "BackupInstance": {
+              "methods": [
+                "BackupInstance",
+                "BackupInstanceAsync"
+              ]
+            },
             "CreateInstance": {
               "methods": [
                 "CreateInstance",
                 "CreateInstanceAsync"
               ]
             },
+            "DeleteBackup": {
+              "methods": [
+                "DeleteBackup",
+                "DeleteBackupAsync"
+              ]
+            },
             "DeleteInstance": {
               "methods": [
                 "DeleteInstance",
                 "DeleteInstanceAsync"
+              ]
+            },
+            "ExportBackup": {
+              "methods": [
+                "ExportBackup",
+                "ExportBackupAsync"
+              ]
+            },
+            "GetBackup": {
+              "methods": [
+                "GetBackup",
+                "GetBackupAsync"
+              ]
+            },
+            "GetBackupCollection": {
+              "methods": [
+                "GetBackupCollection",
+                "GetBackupCollectionAsync"
               ]
             },
             "GetCertificateAuthority": {
@@ -34,10 +64,28 @@
                 "GetInstanceAsync"
               ]
             },
+            "ListBackupCollections": {
+              "methods": [
+                "ListBackupCollections",
+                "ListBackupCollectionsAsync"
+              ]
+            },
+            "ListBackups": {
+              "methods": [
+                "ListBackups",
+                "ListBackupsAsync"
+              ]
+            },
             "ListInstances": {
               "methods": [
                 "ListInstances",
                 "ListInstancesAsync"
+              ]
+            },
+            "RescheduleMaintenance": {
+              "methods": [
+                "RescheduleMaintenance",
+                "RescheduleMaintenanceAsync"
               ]
             },
             "UpdateInstance": {

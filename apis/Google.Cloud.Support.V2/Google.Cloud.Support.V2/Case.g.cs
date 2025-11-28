@@ -28,31 +28,32 @@ namespace Google.Cloud.Support.V2 {
             "Y2xvdWQuc3VwcG9ydC52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5w",
             "cm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxojZ29vZ2xlL2Nsb3Vk",
             "L3N1cHBvcnQvdjIvYWN0b3IucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1l",
-            "c3RhbXAucHJvdG8i4QYKBENhc2USDAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5",
-            "X25hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSQwoOY2xhc3NpZmlj",
-            "YXRpb24YBCABKAsyKy5nb29nbGUuY2xvdWQuc3VwcG9ydC52Mi5DYXNlQ2xh",
-            "c3NpZmljYXRpb24SEQoJdGltZV96b25lGAggASgJEiIKGnN1YnNjcmliZXJf",
-            "ZW1haWxfYWRkcmVzc2VzGAkgAygJEjcKBXN0YXRlGAwgASgOMiMuZ29vZ2xl",
-            "LmNsb3VkLnN1cHBvcnQudjIuQ2FzZS5TdGF0ZUID4EEDEjQKC2NyZWF0ZV90",
-            "aW1lGA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQK",
-            "C3VwZGF0ZV90aW1lGA4gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cEID4EEDEi8KB2NyZWF0b3IYDyABKAsyHi5nb29nbGUuY2xvdWQuc3VwcG9y",
-            "dC52Mi5BY3RvchIVCg1jb250YWN0X2VtYWlsGCMgASgJEhEKCWVzY2FsYXRl",
-            "ZBgRIAEoCBIRCgl0ZXN0X2Nhc2UYEyABKAgSFQoNbGFuZ3VhZ2VfY29kZRgX",
-            "IAEoCRI4Cghwcmlvcml0eRggIAEoDjImLmdvb2dsZS5jbG91ZC5zdXBwb3J0",
-            "LnYyLkNhc2UuUHJpb3JpdHkifwoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJ",
-            "RUQQABIHCgNORVcQARIeChpJTl9QUk9HUkVTU19HT09HTEVfU1VQUE9SVBAC",
-            "EhMKD0FDVElPTl9SRVFVSVJFRBADEhUKEVNPTFVUSU9OX1BST1ZJREVEEAQS",
-            "CgoGQ0xPU0VEEAUiTAoIUHJpb3JpdHkSGAoUUFJJT1JJVFlfVU5TUEVDSUZJ",
-            "RUQQABIGCgJQMBABEgYKAlAxEAISBgoCUDIQAxIGCgJQMxAEEgYKAlA0EAU6",
-            "cepBbgogY2xvdWRzdXBwb3J0Lmdvb2dsZWFwaXMuY29tL0Nhc2USKW9yZ2Fu",
-            "aXphdGlvbnMve29yZ2FuaXphdGlvbn0vY2FzZXMve2Nhc2V9Eh9wcm9qZWN0",
-            "cy97cHJvamVjdH0vY2FzZXMve2Nhc2V9IjYKEkNhc2VDbGFzc2lmaWNhdGlv",
-            "bhIKCgJpZBgDIAEoCRIUCgxkaXNwbGF5X25hbWUYBCABKAlCsgEKG2NvbS5n",
-            "b29nbGUuY2xvdWQuc3VwcG9ydC52MkIJQ2FzZVByb3RvUAFaNWNsb3VkLmdv",
-            "b2dsZS5jb20vZ28vc3VwcG9ydC9hcGl2Mi9zdXBwb3J0cGI7c3VwcG9ydHBi",
-            "qgIXR29vZ2xlLkNsb3VkLlN1cHBvcnQuVjLKAhdHb29nbGVcQ2xvdWRcU3Vw",
-            "cG9ydFxWMuoCGkdvb2dsZTo6Q2xvdWQ6OlN1cHBvcnQ6OlYyYgZwcm90bzM="));
+            "c3RhbXAucHJvdG8i5gYKBENhc2USEQoEbmFtZRgBIAEoCUID4EEIEhQKDGRp",
+            "c3BsYXlfbmFtZRgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRJDCg5jbGFz",
+            "c2lmaWNhdGlvbhgEIAEoCzIrLmdvb2dsZS5jbG91ZC5zdXBwb3J0LnYyLkNh",
+            "c2VDbGFzc2lmaWNhdGlvbhIRCgl0aW1lX3pvbmUYCCABKAkSIgoac3Vic2Ny",
+            "aWJlcl9lbWFpbF9hZGRyZXNzZXMYCSADKAkSNwoFc3RhdGUYDCABKA4yIy5n",
+            "b29nbGUuY2xvdWQuc3VwcG9ydC52Mi5DYXNlLlN0YXRlQgPgQQMSNAoLY3Jl",
+            "YXRlX3RpbWUYDSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMSNAoLdXBkYXRlX3RpbWUYDiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSLwoHY3JlYXRvchgPIAEoCzIeLmdvb2dsZS5jbG91ZC5z",
+            "dXBwb3J0LnYyLkFjdG9yEhUKDWNvbnRhY3RfZW1haWwYIyABKAkSEQoJZXNj",
+            "YWxhdGVkGBEgASgIEhEKCXRlc3RfY2FzZRgTIAEoCBIVCg1sYW5ndWFnZV9j",
+            "b2RlGBcgASgJEjgKCHByaW9yaXR5GCAgASgOMiYuZ29vZ2xlLmNsb3VkLnN1",
+            "cHBvcnQudjIuQ2FzZS5Qcmlvcml0eSJ/CgVTdGF0ZRIVChFTVEFURV9VTlNQ",
+            "RUNJRklFRBAAEgcKA05FVxABEh4KGklOX1BST0dSRVNTX0dPT0dMRV9TVVBQ",
+            "T1JUEAISEwoPQUNUSU9OX1JFUVVJUkVEEAMSFQoRU09MVVRJT05fUFJPVklE",
+            "RUQQBBIKCgZDTE9TRUQQBSJMCghQcmlvcml0eRIYChRQUklPUklUWV9VTlNQ",
+            "RUNJRklFRBAAEgYKAlAwEAESBgoCUDEQAhIGCgJQMhADEgYKAlAzEAQSBgoC",
+            "UDQQBTpx6kFuCiBjbG91ZHN1cHBvcnQuZ29vZ2xlYXBpcy5jb20vQ2FzZRIp",
+            "b3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9jYXNlcy97Y2FzZX0SH3By",
+            "b2plY3RzL3twcm9qZWN0fS9jYXNlcy97Y2FzZX0iNgoSQ2FzZUNsYXNzaWZp",
+            "Y2F0aW9uEgoKAmlkGAMgASgJEhQKDGRpc3BsYXlfbmFtZRgEIAEoCUKyAQob",
+            "Y29tLmdvb2dsZS5jbG91ZC5zdXBwb3J0LnYyQglDYXNlUHJvdG9QAVo1Y2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9zdXBwb3J0L2FwaXYyL3N1cHBvcnRwYjtzdXBw",
+            "b3J0cGKqAhdHb29nbGUuQ2xvdWQuU3VwcG9ydC5WMsoCF0dvb2dsZVxDbG91",
+            "ZFxTdXBwb3J0XFYy6gIaR29vZ2xlOjpDbG91ZDo6U3VwcG9ydDo6VjJiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Support.V2.ActorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -65,7 +66,33 @@ namespace Google.Cloud.Support.V2 {
   }
   #region Messages
   /// <summary>
-  /// A support case.
+  /// A Case is an object that contains the details of a support case. It
+  /// contains fields for the time it was created, its priority, its
+  /// classification, and more. Cases can also have comments and attachments that
+  /// get added over time.
+  ///
+  /// A case is parented by a Google Cloud organization or project.
+  ///
+  /// Organizations are identified by a number, so the name of a case parented by
+  /// an organization would look like this:
+  ///
+  /// ```
+  /// organizations/123/cases/456
+  /// ```
+  ///
+  /// Projects have two unique identifiers, an ID and a number, and they look like
+  /// this:
+  ///
+  /// ```
+  /// projects/abc/cases/456
+  /// ```
+  ///
+  /// ```
+  /// projects/123/cases/456
+  /// ```
+  ///
+  /// You can use either of them when calling the API. To learn more
+  /// about project identifiers, see [AIP-2510](https://google.aip.dev/cloud/2510).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Case : pb::IMessage<Case>
@@ -130,7 +157,7 @@ namespace Google.Cloud.Support.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name for the case.
+    /// Identifier. The resource name for the case.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -932,7 +959,12 @@ namespace Google.Cloud.Support.V2 {
   }
 
   /// <summary>
-  /// A classification object with a product type and value.
+  /// A Case Classification represents the topic that a case is about. It's very
+  /// important to use accurate classifications, because they're
+  /// used to route your cases to specialists who can help you.
+  ///
+  /// A classification always has an ID that is its unique identifier.
+  /// A valid ID is required when creating a case.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CaseClassification : pb::IMessage<CaseClassification>
@@ -988,6 +1020,11 @@ namespace Google.Cloud.Support.V2 {
     ///
     /// To retrieve valid classification IDs for case creation, use
     /// `caseClassifications.search`.
+    ///
+    /// Classification IDs returned by `caseClassifications.search` are guaranteed
+    /// to be valid for at least 6 months. If a given classification is
+    /// deactiveated, it will immediately stop being returned. After 6 months,
+    /// `case.create` requests using the classification ID will fail.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1002,7 +1039,10 @@ namespace Google.Cloud.Support.V2 {
     public const int DisplayNameFieldNumber = 4;
     private string displayName_ = "";
     /// <summary>
-    /// The display name of the classification.
+    /// A display name for the classification.
+    ///
+    /// The display name is not static and can change. To uniquely and consistently
+    /// identify classifications, use the `CaseClassification.id` field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

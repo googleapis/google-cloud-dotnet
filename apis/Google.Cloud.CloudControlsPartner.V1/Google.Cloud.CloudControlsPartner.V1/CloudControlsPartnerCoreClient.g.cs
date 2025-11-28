@@ -27,6 +27,7 @@ using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.CloudControlsPartner.V1
 {
@@ -55,6 +56,9 @@ namespace Google.Cloud.CloudControlsPartner.V1
             GetPartnerPermissionsSettings = existing.GetPartnerPermissionsSettings;
             ListAccessApprovalRequestsSettings = existing.ListAccessApprovalRequestsSettings;
             GetPartnerSettings = existing.GetPartnerSettings;
+            CreateCustomerSettings = existing.CreateCustomerSettings;
+            UpdateCustomerSettings = existing.UpdateCustomerSettings;
+            DeleteCustomerSettings = existing.DeleteCustomerSettings;
             OnCopy(existing);
         }
 
@@ -204,6 +208,45 @@ namespace Google.Cloud.CloudControlsPartner.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetPartnerSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudControlsPartnerCoreClient.CreateCustomer</c> and
+        /// <c>CloudControlsPartnerCoreClient.CreateCustomerAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateCustomerSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudControlsPartnerCoreClient.UpdateCustomer</c> and
+        /// <c>CloudControlsPartnerCoreClient.UpdateCustomerAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateCustomerSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudControlsPartnerCoreClient.DeleteCustomer</c> and
+        /// <c>CloudControlsPartnerCoreClient.DeleteCustomerAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteCustomerSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="CloudControlsPartnerCoreSettings"/> object.</returns>
@@ -1385,6 +1428,367 @@ namespace Google.Cloud.CloudControlsPartner.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Partner> GetPartnerAsync(PartnerName name, st::CancellationToken cancellationToken) =>
             GetPartnerAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new customer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Customer CreateCustomer(CreateCustomerRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new customer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Customer> CreateCustomerAsync(CreateCustomerRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new customer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Customer> CreateCustomerAsync(CreateCustomerRequest request, st::CancellationToken cancellationToken) =>
+            CreateCustomerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new customer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource
+        /// Format: `organizations/{organization}/locations/{location}`
+        /// </param>
+        /// <param name="customer">
+        /// Required. The customer to create.
+        /// </param>
+        /// <param name="customerId">
+        /// Required. The customer id to use for the customer, which will become the
+        /// final component of the customer's resource name. The specified value must
+        /// be a valid Google cloud organization id.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Customer CreateCustomer(string parent, Customer customer, string customerId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomer(new CreateCustomerRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Customer = gax::GaxPreconditions.CheckNotNull(customer, nameof(customer)),
+                CustomerId = gax::GaxPreconditions.CheckNotNullOrEmpty(customerId, nameof(customerId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new customer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource
+        /// Format: `organizations/{organization}/locations/{location}`
+        /// </param>
+        /// <param name="customer">
+        /// Required. The customer to create.
+        /// </param>
+        /// <param name="customerId">
+        /// Required. The customer id to use for the customer, which will become the
+        /// final component of the customer's resource name. The specified value must
+        /// be a valid Google cloud organization id.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Customer> CreateCustomerAsync(string parent, Customer customer, string customerId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomerAsync(new CreateCustomerRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Customer = gax::GaxPreconditions.CheckNotNull(customer, nameof(customer)),
+                CustomerId = gax::GaxPreconditions.CheckNotNullOrEmpty(customerId, nameof(customerId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new customer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource
+        /// Format: `organizations/{organization}/locations/{location}`
+        /// </param>
+        /// <param name="customer">
+        /// Required. The customer to create.
+        /// </param>
+        /// <param name="customerId">
+        /// Required. The customer id to use for the customer, which will become the
+        /// final component of the customer's resource name. The specified value must
+        /// be a valid Google cloud organization id.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Customer> CreateCustomerAsync(string parent, Customer customer, string customerId, st::CancellationToken cancellationToken) =>
+            CreateCustomerAsync(parent, customer, customerId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new customer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource
+        /// Format: `organizations/{organization}/locations/{location}`
+        /// </param>
+        /// <param name="customer">
+        /// Required. The customer to create.
+        /// </param>
+        /// <param name="customerId">
+        /// Required. The customer id to use for the customer, which will become the
+        /// final component of the customer's resource name. The specified value must
+        /// be a valid Google cloud organization id.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Customer CreateCustomer(OrganizationLocationName parent, Customer customer, string customerId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomer(new CreateCustomerRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Customer = gax::GaxPreconditions.CheckNotNull(customer, nameof(customer)),
+                CustomerId = gax::GaxPreconditions.CheckNotNullOrEmpty(customerId, nameof(customerId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new customer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource
+        /// Format: `organizations/{organization}/locations/{location}`
+        /// </param>
+        /// <param name="customer">
+        /// Required. The customer to create.
+        /// </param>
+        /// <param name="customerId">
+        /// Required. The customer id to use for the customer, which will become the
+        /// final component of the customer's resource name. The specified value must
+        /// be a valid Google cloud organization id.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Customer> CreateCustomerAsync(OrganizationLocationName parent, Customer customer, string customerId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomerAsync(new CreateCustomerRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Customer = gax::GaxPreconditions.CheckNotNull(customer, nameof(customer)),
+                CustomerId = gax::GaxPreconditions.CheckNotNullOrEmpty(customerId, nameof(customerId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new customer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource
+        /// Format: `organizations/{organization}/locations/{location}`
+        /// </param>
+        /// <param name="customer">
+        /// Required. The customer to create.
+        /// </param>
+        /// <param name="customerId">
+        /// Required. The customer id to use for the customer, which will become the
+        /// final component of the customer's resource name. The specified value must
+        /// be a valid Google cloud organization id.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Customer> CreateCustomerAsync(OrganizationLocationName parent, Customer customer, string customerId, st::CancellationToken cancellationToken) =>
+            CreateCustomerAsync(parent, customer, customerId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update details of a single customer
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Customer UpdateCustomer(UpdateCustomerRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update details of a single customer
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Customer> UpdateCustomerAsync(UpdateCustomerRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update details of a single customer
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Customer> UpdateCustomerAsync(UpdateCustomerRequest request, st::CancellationToken cancellationToken) =>
+            UpdateCustomerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update details of a single customer
+        /// </summary>
+        /// <param name="customer">
+        /// Required. The customer to update
+        /// Format:
+        /// `organizations/{organization}/locations/{location}/customers/{customer}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Customer UpdateCustomer(Customer customer, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCustomer(new UpdateCustomerRequest
+            {
+                Customer = gax::GaxPreconditions.CheckNotNull(customer, nameof(customer)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update details of a single customer
+        /// </summary>
+        /// <param name="customer">
+        /// Required. The customer to update
+        /// Format:
+        /// `organizations/{organization}/locations/{location}/customers/{customer}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Customer> UpdateCustomerAsync(Customer customer, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCustomerAsync(new UpdateCustomerRequest
+            {
+                Customer = gax::GaxPreconditions.CheckNotNull(customer, nameof(customer)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update details of a single customer
+        /// </summary>
+        /// <param name="customer">
+        /// Required. The customer to update
+        /// Format:
+        /// `organizations/{organization}/locations/{location}/customers/{customer}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Customer> UpdateCustomerAsync(Customer customer, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateCustomerAsync(customer, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete details of a single customer
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteCustomer(DeleteCustomerRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete details of a single customer
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomerAsync(DeleteCustomerRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete details of a single customer
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomerAsync(DeleteCustomerRequest request, st::CancellationToken cancellationToken) =>
+            DeleteCustomerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete details of a single customer
+        /// </summary>
+        /// <param name="name">
+        /// Required. name of the resource to be deleted
+        /// format: name=organizations/*/locations/*/customers/*
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteCustomer(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCustomer(new DeleteCustomerRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete details of a single customer
+        /// </summary>
+        /// <param name="name">
+        /// Required. name of the resource to be deleted
+        /// format: name=organizations/*/locations/*/customers/*
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomerAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCustomerAsync(new DeleteCustomerRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete details of a single customer
+        /// </summary>
+        /// <param name="name">
+        /// Required. name of the resource to be deleted
+        /// format: name=organizations/*/locations/*/customers/*
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomerAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteCustomerAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete details of a single customer
+        /// </summary>
+        /// <param name="name">
+        /// Required. name of the resource to be deleted
+        /// format: name=organizations/*/locations/*/customers/*
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteCustomer(CustomerName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCustomer(new DeleteCustomerRequest
+            {
+                CustomerName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete details of a single customer
+        /// </summary>
+        /// <param name="name">
+        /// Required. name of the resource to be deleted
+        /// format: name=organizations/*/locations/*/customers/*
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomerAsync(CustomerName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCustomerAsync(new DeleteCustomerRequest
+            {
+                CustomerName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete details of a single customer
+        /// </summary>
+        /// <param name="name">
+        /// Required. name of the resource to be deleted
+        /// format: name=organizations/*/locations/*/customers/*
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomerAsync(CustomerName name, st::CancellationToken cancellationToken) =>
+            DeleteCustomerAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CloudControlsPartnerCore client wrapper implementation, for convenient use.</summary>
@@ -1408,6 +1812,12 @@ namespace Google.Cloud.CloudControlsPartner.V1
         private readonly gaxgrpc::ApiCall<ListAccessApprovalRequestsRequest, ListAccessApprovalRequestsResponse> _callListAccessApprovalRequests;
 
         private readonly gaxgrpc::ApiCall<GetPartnerRequest, Partner> _callGetPartner;
+
+        private readonly gaxgrpc::ApiCall<CreateCustomerRequest, Customer> _callCreateCustomer;
+
+        private readonly gaxgrpc::ApiCall<UpdateCustomerRequest, Customer> _callUpdateCustomer;
+
+        private readonly gaxgrpc::ApiCall<DeleteCustomerRequest, wkt::Empty> _callDeleteCustomer;
 
         /// <summary>
         /// Constructs a client wrapper for the CloudControlsPartnerCore service, with the specified gRPC client and
@@ -1453,6 +1863,15 @@ namespace Google.Cloud.CloudControlsPartner.V1
             _callGetPartner = clientHelper.BuildApiCall<GetPartnerRequest, Partner>("GetPartner", grpcClient.GetPartnerAsync, grpcClient.GetPartner, effectiveSettings.GetPartnerSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetPartner);
             Modify_GetPartnerApiCall(ref _callGetPartner);
+            _callCreateCustomer = clientHelper.BuildApiCall<CreateCustomerRequest, Customer>("CreateCustomer", grpcClient.CreateCustomerAsync, grpcClient.CreateCustomer, effectiveSettings.CreateCustomerSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateCustomer);
+            Modify_CreateCustomerApiCall(ref _callCreateCustomer);
+            _callUpdateCustomer = clientHelper.BuildApiCall<UpdateCustomerRequest, Customer>("UpdateCustomer", grpcClient.UpdateCustomerAsync, grpcClient.UpdateCustomer, effectiveSettings.UpdateCustomerSettings).WithGoogleRequestParam("customer.name", request => request.Customer?.Name);
+            Modify_ApiCall(ref _callUpdateCustomer);
+            Modify_UpdateCustomerApiCall(ref _callUpdateCustomer);
+            _callDeleteCustomer = clientHelper.BuildApiCall<DeleteCustomerRequest, wkt::Empty>("DeleteCustomer", grpcClient.DeleteCustomerAsync, grpcClient.DeleteCustomer, effectiveSettings.DeleteCustomerSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteCustomer);
+            Modify_DeleteCustomerApiCall(ref _callDeleteCustomer);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1474,6 +1893,12 @@ namespace Google.Cloud.CloudControlsPartner.V1
 
         partial void Modify_GetPartnerApiCall(ref gaxgrpc::ApiCall<GetPartnerRequest, Partner> call);
 
+        partial void Modify_CreateCustomerApiCall(ref gaxgrpc::ApiCall<CreateCustomerRequest, Customer> call);
+
+        partial void Modify_UpdateCustomerApiCall(ref gaxgrpc::ApiCall<UpdateCustomerRequest, Customer> call);
+
+        partial void Modify_DeleteCustomerApiCall(ref gaxgrpc::ApiCall<DeleteCustomerRequest, wkt::Empty> call);
+
         partial void OnConstruction(CloudControlsPartnerCore.CloudControlsPartnerCoreClient grpcClient, CloudControlsPartnerCoreSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC CloudControlsPartnerCore client</summary>
@@ -1494,6 +1919,12 @@ namespace Google.Cloud.CloudControlsPartner.V1
         partial void Modify_ListAccessApprovalRequestsRequest(ref ListAccessApprovalRequestsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetPartnerRequest(ref GetPartnerRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateCustomerRequest(ref CreateCustomerRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateCustomerRequest(ref UpdateCustomerRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteCustomerRequest(ref DeleteCustomerRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Gets details of a single workload
@@ -1689,6 +2120,78 @@ namespace Google.Cloud.CloudControlsPartner.V1
         {
             Modify_GetPartnerRequest(ref request, ref callSettings);
             return _callGetPartner.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new customer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Customer CreateCustomer(CreateCustomerRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCustomerRequest(ref request, ref callSettings);
+            return _callCreateCustomer.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new customer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Customer> CreateCustomerAsync(CreateCustomerRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCustomerRequest(ref request, ref callSettings);
+            return _callCreateCustomer.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Update details of a single customer
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Customer UpdateCustomer(UpdateCustomerRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCustomerRequest(ref request, ref callSettings);
+            return _callUpdateCustomer.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Update details of a single customer
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Customer> UpdateCustomerAsync(UpdateCustomerRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCustomerRequest(ref request, ref callSettings);
+            return _callUpdateCustomer.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Delete details of a single customer
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteCustomer(DeleteCustomerRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteCustomerRequest(ref request, ref callSettings);
+            _callDeleteCustomer.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Delete details of a single customer
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteCustomerAsync(DeleteCustomerRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteCustomerRequest(ref request, ref callSettings);
+            return _callDeleteCustomer.Async(request, callSettings);
         }
     }
 

@@ -36,7 +36,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             var catalog = ApiCatalog.Load(RootLayout);
             using (var repo = new Repository(RootLayout.RepositoryRoot))
             {
-                var allTags = repo.Tags.OrderByDescending(GitHelpers.GetDate).ToList();
+                var allTags = repo.Tags.OrderByDescending(GetDate).ToList();
                 foreach (var api in catalog.Apis)
                 {
                     MaybeShowLagging(allTags, api);
@@ -78,13 +78,20 @@ namespace Google.Cloud.Tools.ReleaseManager
                 return;
             }
 
-            var latest = GitHelpers.GetDate(matchingReleaseTags.First());
-            var earliest = GitHelpers.GetDate(matchingReleaseTags.Last());
+            var latest = GetDate(matchingReleaseTags.First());
+            var earliest = GetDate(matchingReleaseTags.Last());
 
             string dateRange = latest == earliest
                 ? $"{latest:yyyy-MM-dd}"
                 : $"{earliest:yyyy-MM-dd} - {latest:yyyy-MM-dd}";
             Console.WriteLine($"{api.Id,-50}{api.Version,-20}{dateRange}");
         }
+
+        private static DateTimeOffset GetDate(Tag tag) =>
+            GetDate((Commit) tag.PeeledTarget);
+
+        private static DateTimeOffset GetDate(Commit commit) =>
+            (commit.Author ?? commit.Committer).When;
+
     }
 }

@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
             GetSessionRequest request = new GetSessionRequest
             {
                 SessionName = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]"),
+                IncludeAnswerDetails = false,
             };
             // Make the request
             Session response = await conversationalSearchServiceClient.GetSessionAsync(request);

@@ -1,5 +1,193 @@
 # Version history
 
+## Version 3.12.0, released 2025-11-05
+
+### New features
+
+- Allow publishing Data Profile scan results to the Dataplex Catalog
+- Add GetIamPolicy method for DataProduct resources
+- Update dependencies
+
+### Documentation improvements
+
+- Update documentation for Catalog SearchEntries filter options, including `parent_entry` and wildcard usage
+
+## Version 3.11.0, released 2025-10-24
+
+### New features
+
+- A new message `DataDocumentationSpec` is added representing Data Documentation Spec
+- A new message `DataDocumentationResult` is added representing Data Documentation Result
+- A new field `data_documentation_spec` is added for Data Documentation Spec to message `.google.cloud.dataplex.v1.DataScan`
+- A new field `data_documentation_result` is added for Data Documentation Result to message `.google.cloud.dataplex.v1.DataScan`
+- A new field `data_documentation_spec` is added for Data Documentation Spec to message `.google.cloud.dataplex.v1.DataScanJob`
+- A new field `data_documentation_result` is added for Data Documentation Result in `.google.cloud.dataplex.v1.DataScanJob`
+- A new data scan type Data documentation added.
+
+### Documentation improvements
+
+- A comment for message `DataScan` is changed
+- A comment for field `resource` in message `.google.cloud.dataplex.v1.DataSource` is changed
+
+## Version 3.10.0, released 2025-09-16
+
+### New features
+
+- A new service `BusinessGlossaryService` is added
+- A new message `Glossary` is added
+- A new resource_definition `dataplex.googleapis.com/Glossary` is added
+- A new message `GlossaryCategory` is added
+- A new resource_definition `dataplex.googleapis.com/GlossaryCategory` is added
+- A new message `GlossaryTerm` is added
+- A new resource_definition `dataplex.googleapis.com/GlossaryTerm` is added
+- A new message `CreateGlossaryRequest` is added
+- A new message `UpdateGlossaryRequest` is added
+- A new message `DeleteGlossaryRequest` is added
+- A new message `GetGlossaryRequest` is added
+- A new message `ListGlossariesRequest` is added
+- A new message `ListGlossariesResponse` is added
+- A new message `CreateGlossaryCategoryRequest` is added
+- A new message `UpdateGlossaryCategoryRequest` is added
+- A new message `DeleteGlossaryCategoryRequest` is added
+- A new message `GetGlossaryCategoryRequest` is added
+- A new message `ListGlossaryCategoriesRequest` is added
+- A new message `ListGlossaryCategoriesResponse` is added
+- A new message `CreateGlossaryTermRequest` is added
+- A new message `UpdateGlossaryTermRequest` is added
+- A new message `DeleteGlossaryTermRequest` is added
+- A new message `GetGlossaryTermRequest` is added
+- A new message `ListGlossaryTermsRequest` is added
+- A new message `ListGlossaryTermsResponse` is added
+- A new method `CreateEntryLink` is added to service `CatalogService`
+- A new method `DeleteEntryLink` is added to service `CatalogService`
+- A new method `GetEntryLink` is added to service `CatalogService`
+- A new field `entry_link` is added to message `.google.cloud.dataplex.v1.ImportItem`
+- A new field `deleted_entry_links` is added to message `.google.cloud.dataplex.v1.MetadataJob`
+- A new field `created_entry_links` is added to message `.google.cloud.dataplex.v1.MetadataJob`
+- A new field `unchanged_entry_links` is added to message `.google.cloud.dataplex.v1.MetadataJob`
+- A new field `glossaries` is added to message `.google.cloud.dataplex.v1.MetadataJob`
+- A new field `entry_link_types` is added to message `.google.cloud.dataplex.v1.MetadataJob`
+- A new field `referenced_entry_scopes` is added to message `.google.cloud.dataplex.v1.MetadataJob`
+- A new message `EntryLink` is added
+- A new resource_definition `dataplex.googleapis.com/EntryLink` is added
+- A new message `CreateEntryLinkRequest` is added
+- A new message `DeleteEntryLinkRequest` is added
+- A new message `GetEntryLinkRequest` is added
+- A new field `project` is added to message `.google.cloud.dataplex.v1.DataDiscoverySpec`
+- A new field `catalog_publishing_enabled` is added to message `.google.cloud.dataplex.v1.DataQualitySpec`
+- A new field `catalog_publishing_status` is added to message `.google.cloud.dataplex.v1.DataQualityResult`
+- A new field `passed` is added to message `.google.cloud.dataplex.v1.DataQualityColumnResult`
+- A new field `dimensions` is added to message `.google.cloud.dataplex.v1.DataQualityColumnResult`
+- A new message `DataScanCatalogPublishingStatus` is added
+- A new field `catalog_publishing_status` is added to message `.google.cloud.dataplex.v1.DataScanEvent`
+
+### Documentation improvements
+
+- A comment for field `image_version` in message `.google.cloud.dataplex.v1.Environment` is changed
+- A comment for service `CatalogService` is changed
+- A comment for method `CreateMetadataJob` in service `CatalogService` is changed
+- A comment for message `AspectType` is changed
+- A comment for field `alternate_use_permission` in message `.google.cloud.dataplex.v1.AspectType` is changed
+- A comment for field `type` in message `.google.cloud.dataplex.v1.AspectType` is changed
+- A comment for field `alternate_use_permission` in message `.google.cloud.dataplex.v1.EntryType` is changed
+- A comment for field `create_time` in message `.google.cloud.dataplex.v1.Entry` is changed
+- A comment for field `update_time` in message `.google.cloud.dataplex.v1.Entry` is changed
+- A comment for field `parent` in message `.google.cloud.dataplex.v1.CreateEntryGroupRequest` is changed
+- A comment for message `DeleteEntryTypeRequest` is changed
+- A comment for message `DeleteAspectTypeRequest` is changed
+- A comment for field `name` in message `.google.cloud.dataplex.v1.SearchEntriesRequest` is changed
+- A comment for field `query` in message `.google.cloud.dataplex.v1.SearchEntriesRequest` is changed
+- A comment for field `order_by` in message `.google.cloud.dataplex.v1.SearchEntriesRequest` is changed
+- A comment for field `update_mask` in message `.google.cloud.dataplex.v1.ImportItem` is changed
+- A comment for field `aspect_keys` in message `.google.cloud.dataplex.v1.ImportItem` is changed
+- A comment for enum value `FULL` in enum `SyncMode` is changed
+- A comment for field `output_path` in message `.google.cloud.dataplex.v1.MetadataJob` is changed
+- A comment for service `CmekService` is changed
+- A comment for service `ContentService` is changed
+- A comment for field `results_table` in message `.google.cloud.dataplex.v1.DataProfileSpec` is changed
+- A comment for field `row_filter` in message `.google.cloud.dataplex.v1.DataProfileSpec` is changed
+- A comment for field `min_length` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `max_length` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `average_length` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `average` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `standard_deviation` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `min` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `quartiles` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `max` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `average` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `standard_deviation` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `min` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `quartiles` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `max` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `value` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `count` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `ratio` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `null_ratio` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `distinct_ratio` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `top_n_values` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `name` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `type` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `mode` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `profile` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `fields` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `row_count` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `profile` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `scanned_data` in message `.google.cloud.dataplex.v1.DataProfileResult` is changed
+- A comment for field `name` in message `.google.cloud.dataplex.v1.DataQualityDimension` is changed
+- A comment for field `dimension` in message `.google.cloud.dataplex.v1.DataQualityRule` is changed
+- A comment for field `parent` in message `.google.cloud.dataplex.v1.ListDataTaxonomiesRequest` is changed
+- A comment for field `parent` in message `.google.cloud.dataplex.v1.CreateDataScanRequest` is changed
+- A comment for field `name` in message `.google.cloud.dataplex.v1.DeleteDataScanRequest` is changed
+- A comment for field `name` in message `.google.cloud.dataplex.v1.GetDataScanRequest` is changed
+- A comment for field `parent` in message `.google.cloud.dataplex.v1.ListDataScansRequest` is changed
+- A comment for field `name` in message `.google.cloud.dataplex.v1.RunDataScanRequest` is changed
+- A comment for field `name` in message `.google.cloud.dataplex.v1.GetDataScanJobRequest` is changed
+- A comment for field `parent` in message `.google.cloud.dataplex.v1.ListDataScanJobsRequest` is changed
+- A comment for field `rule` in message `.google.cloud.dataplex.v1.GenerateDataQualityRulesResponse` is changed
+- A comment for field `name` in message `.google.cloud.dataplex.v1.DataScan` is changed
+- A comment for field `name` in message `.google.cloud.dataplex.v1.DataScanJob` is changed
+- A comment for enum value `TASK_CONFIG` in enum `ExecutionTrigger` is changed
+- A comment for enum value `CREATED` in enum `State` is changed
+- A comment for field `user_managed` in message `.google.cloud.dataplex.v1.Schema` is changed
+- A comment for field `entity` in message `.google.cloud.dataplex.v1.DataSource` is changed
+- A comment for field `resource` in message `.google.cloud.dataplex.v1.DataSource` is changed
+- A comment for field `field` in message `.google.cloud.dataplex.v1.ScannedData` is changed
+- A comment for field `start` in message `.google.cloud.dataplex.v1.ScannedData` is changed
+- A comment for field `end` in message `.google.cloud.dataplex.v1.ScannedData` is changed
+- A comment for field `parent` in message `.google.cloud.dataplex.v1.CreateLakeRequest` is changed
+- A comment for field `parent` in message `.google.cloud.dataplex.v1.ListLakesRequest` is changed
+- A comment for enum value `ABORTED` in enum `State` is changed
+- A comment for enum value `TASK_CONFIG` in enum `Trigger` is changed
+
+## Version 3.9.0, released 2025-07-07
+
+### New features
+
+- A new field `semantic_search` is added to `message.google.cloud.dataplex.v1.SearchEntriesRequest`
+
+### Documentation improvements
+
+- A comment for message `MetadataJob` is changed
+- A comment for message `MetadataJob` is changed
+- A comment for message `MetadataJob` is changed
+- A comment for field `exported_entries` in message `.google.cloud.dataplex.v1.MetadataJob` is changed
+- A comment for field `error_message` in message `.google.cloud.dataplex.v1.MetadataJob` is changed
+- A comment for enum `SyncMode` is changed
+- A comment for field `source_storage_uri` in message `.google.cloud.dataplex.v1.MetadataJob` is changed
+- A comment for field `organization_level` in message `.google.cloud.dataplex.v1.MetadataJob` is changed
+- A comment for field `projects` in message `.google.cloud.dataplex.v1.MetadataJob` is changed
+- A comment for field `entry_groups` in message `.google.cloud.dataplex.v1.MetadataJob` is changed
+- A comment for field `entry_types` in message `.google.cloud.dataplex.v1.MetadataJob` is changed
+- A comment for field `aspect_types` in message `.google.cloud.dataplex.v1.MetadataJob` is changed
+- A comment for field `scope` in message `.google.cloud.dataplex.v1.MetadataJob` is changed
+- A comment for field `output_path` in message `.google.cloud.dataplex.v1.MetadataJob` is changed
+- A comment for enum value `EXPORT` in enum `Type` is changed
+- A comment for enum value `INTERNAL_ERROR` in enum `ErrorCode` is changed
+- A comment for field `encryption_config_id` in message `.google.cloud.dataplex.v1.CreateEncryptionConfigRequest` is changed
+- A comment for message `DataDiscoveryResult` is changed
+- A comment for field `scan_statistics` in message `.google.cloud.dataplex.v1.DataDiscoveryResult` is changed
+- Minor changes
+
 ## Version 3.8.0, released 2025-04-14
 
 ### New features

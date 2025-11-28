@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.0.0-beta10, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+### Documentation improvements
+
+- A comment for field `parent` in message `.google.cloud.oslogin.v1beta.SignSshPublicKeyRequest` is changed
+
 ## Version 3.0.0-beta09, released 2024-05-14
 
 ### New features

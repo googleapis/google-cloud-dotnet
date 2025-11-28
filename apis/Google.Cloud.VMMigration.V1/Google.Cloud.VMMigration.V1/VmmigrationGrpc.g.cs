@@ -84,6 +84,10 @@ namespace Google.Cloud.VMMigration.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.FetchInventoryResponse> __Marshaller_google_cloud_vmmigration_v1_FetchInventoryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.FetchInventoryResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.FetchStorageInventoryRequest> __Marshaller_google_cloud_vmmigration_v1_FetchStorageInventoryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.FetchStorageInventoryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.FetchStorageInventoryResponse> __Marshaller_google_cloud_vmmigration_v1_FetchStorageInventoryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.FetchStorageInventoryResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.ListUtilizationReportsRequest> __Marshaller_google_cloud_vmmigration_v1_ListUtilizationReportsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.ListUtilizationReportsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.ListUtilizationReportsResponse> __Marshaller_google_cloud_vmmigration_v1_ListUtilizationReportsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.ListUtilizationReportsResponse.Parser));
@@ -131,6 +135,8 @@ namespace Google.Cloud.VMMigration.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.PauseMigrationRequest> __Marshaller_google_cloud_vmmigration_v1_PauseMigrationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.PauseMigrationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.FinalizeMigrationRequest> __Marshaller_google_cloud_vmmigration_v1_FinalizeMigrationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.FinalizeMigrationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.ExtendMigrationRequest> __Marshaller_google_cloud_vmmigration_v1_ExtendMigrationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.ExtendMigrationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.CreateCloneJobRequest> __Marshaller_google_cloud_vmmigration_v1_CreateCloneJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.CreateCloneJobRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -195,6 +201,46 @@ namespace Google.Cloud.VMMigration.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.GetReplicationCycleRequest> __Marshaller_google_cloud_vmmigration_v1_GetReplicationCycleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.GetReplicationCycleRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.ReplicationCycle> __Marshaller_google_cloud_vmmigration_v1_ReplicationCycle = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.ReplicationCycle.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.ListImageImportsRequest> __Marshaller_google_cloud_vmmigration_v1_ListImageImportsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.ListImageImportsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.ListImageImportsResponse> __Marshaller_google_cloud_vmmigration_v1_ListImageImportsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.ListImageImportsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.GetImageImportRequest> __Marshaller_google_cloud_vmmigration_v1_GetImageImportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.GetImageImportRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.ImageImport> __Marshaller_google_cloud_vmmigration_v1_ImageImport = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.ImageImport.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.CreateImageImportRequest> __Marshaller_google_cloud_vmmigration_v1_CreateImageImportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.CreateImageImportRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.DeleteImageImportRequest> __Marshaller_google_cloud_vmmigration_v1_DeleteImageImportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.DeleteImageImportRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.ListImageImportJobsRequest> __Marshaller_google_cloud_vmmigration_v1_ListImageImportJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.ListImageImportJobsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.ListImageImportJobsResponse> __Marshaller_google_cloud_vmmigration_v1_ListImageImportJobsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.ListImageImportJobsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.GetImageImportJobRequest> __Marshaller_google_cloud_vmmigration_v1_GetImageImportJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.GetImageImportJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.ImageImportJob> __Marshaller_google_cloud_vmmigration_v1_ImageImportJob = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.ImageImportJob.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.CancelImageImportJobRequest> __Marshaller_google_cloud_vmmigration_v1_CancelImageImportJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.CancelImageImportJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.CreateDiskMigrationJobRequest> __Marshaller_google_cloud_vmmigration_v1_CreateDiskMigrationJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.CreateDiskMigrationJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.ListDiskMigrationJobsRequest> __Marshaller_google_cloud_vmmigration_v1_ListDiskMigrationJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.ListDiskMigrationJobsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.ListDiskMigrationJobsResponse> __Marshaller_google_cloud_vmmigration_v1_ListDiskMigrationJobsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.ListDiskMigrationJobsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.GetDiskMigrationJobRequest> __Marshaller_google_cloud_vmmigration_v1_GetDiskMigrationJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.GetDiskMigrationJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.DiskMigrationJob> __Marshaller_google_cloud_vmmigration_v1_DiskMigrationJob = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.DiskMigrationJob.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.UpdateDiskMigrationJobRequest> __Marshaller_google_cloud_vmmigration_v1_UpdateDiskMigrationJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.UpdateDiskMigrationJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.DeleteDiskMigrationJobRequest> __Marshaller_google_cloud_vmmigration_v1_DeleteDiskMigrationJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.DeleteDiskMigrationJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.RunDiskMigrationJobRequest> __Marshaller_google_cloud_vmmigration_v1_RunDiskMigrationJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.RunDiskMigrationJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.VMMigration.V1.CancelDiskMigrationJobRequest> __Marshaller_google_cloud_vmmigration_v1_CancelDiskMigrationJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.VMMigration.V1.CancelDiskMigrationJobRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.VMMigration.V1.ListSourcesRequest, global::Google.Cloud.VMMigration.V1.ListSourcesResponse> __Method_ListSources = new grpc::Method<global::Google.Cloud.VMMigration.V1.ListSourcesRequest, global::Google.Cloud.VMMigration.V1.ListSourcesResponse>(
@@ -243,6 +289,14 @@ namespace Google.Cloud.VMMigration.V1 {
         "FetchInventory",
         __Marshaller_google_cloud_vmmigration_v1_FetchInventoryRequest,
         __Marshaller_google_cloud_vmmigration_v1_FetchInventoryResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VMMigration.V1.FetchStorageInventoryRequest, global::Google.Cloud.VMMigration.V1.FetchStorageInventoryResponse> __Method_FetchStorageInventory = new grpc::Method<global::Google.Cloud.VMMigration.V1.FetchStorageInventoryRequest, global::Google.Cloud.VMMigration.V1.FetchStorageInventoryResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchStorageInventory",
+        __Marshaller_google_cloud_vmmigration_v1_FetchStorageInventoryRequest,
+        __Marshaller_google_cloud_vmmigration_v1_FetchStorageInventoryResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.VMMigration.V1.ListUtilizationReportsRequest, global::Google.Cloud.VMMigration.V1.ListUtilizationReportsResponse> __Method_ListUtilizationReports = new grpc::Method<global::Google.Cloud.VMMigration.V1.ListUtilizationReportsRequest, global::Google.Cloud.VMMigration.V1.ListUtilizationReportsResponse>(
@@ -386,6 +440,14 @@ namespace Google.Cloud.VMMigration.V1 {
         __ServiceName,
         "FinalizeMigration",
         __Marshaller_google_cloud_vmmigration_v1_FinalizeMigrationRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VMMigration.V1.ExtendMigrationRequest, global::Google.LongRunning.Operation> __Method_ExtendMigration = new grpc::Method<global::Google.Cloud.VMMigration.V1.ExtendMigrationRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExtendMigration",
+        __Marshaller_google_cloud_vmmigration_v1_ExtendMigrationRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -564,6 +626,118 @@ namespace Google.Cloud.VMMigration.V1 {
         __Marshaller_google_cloud_vmmigration_v1_GetReplicationCycleRequest,
         __Marshaller_google_cloud_vmmigration_v1_ReplicationCycle);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VMMigration.V1.ListImageImportsRequest, global::Google.Cloud.VMMigration.V1.ListImageImportsResponse> __Method_ListImageImports = new grpc::Method<global::Google.Cloud.VMMigration.V1.ListImageImportsRequest, global::Google.Cloud.VMMigration.V1.ListImageImportsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListImageImports",
+        __Marshaller_google_cloud_vmmigration_v1_ListImageImportsRequest,
+        __Marshaller_google_cloud_vmmigration_v1_ListImageImportsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VMMigration.V1.GetImageImportRequest, global::Google.Cloud.VMMigration.V1.ImageImport> __Method_GetImageImport = new grpc::Method<global::Google.Cloud.VMMigration.V1.GetImageImportRequest, global::Google.Cloud.VMMigration.V1.ImageImport>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetImageImport",
+        __Marshaller_google_cloud_vmmigration_v1_GetImageImportRequest,
+        __Marshaller_google_cloud_vmmigration_v1_ImageImport);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VMMigration.V1.CreateImageImportRequest, global::Google.LongRunning.Operation> __Method_CreateImageImport = new grpc::Method<global::Google.Cloud.VMMigration.V1.CreateImageImportRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateImageImport",
+        __Marshaller_google_cloud_vmmigration_v1_CreateImageImportRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VMMigration.V1.DeleteImageImportRequest, global::Google.LongRunning.Operation> __Method_DeleteImageImport = new grpc::Method<global::Google.Cloud.VMMigration.V1.DeleteImageImportRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteImageImport",
+        __Marshaller_google_cloud_vmmigration_v1_DeleteImageImportRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VMMigration.V1.ListImageImportJobsRequest, global::Google.Cloud.VMMigration.V1.ListImageImportJobsResponse> __Method_ListImageImportJobs = new grpc::Method<global::Google.Cloud.VMMigration.V1.ListImageImportJobsRequest, global::Google.Cloud.VMMigration.V1.ListImageImportJobsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListImageImportJobs",
+        __Marshaller_google_cloud_vmmigration_v1_ListImageImportJobsRequest,
+        __Marshaller_google_cloud_vmmigration_v1_ListImageImportJobsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VMMigration.V1.GetImageImportJobRequest, global::Google.Cloud.VMMigration.V1.ImageImportJob> __Method_GetImageImportJob = new grpc::Method<global::Google.Cloud.VMMigration.V1.GetImageImportJobRequest, global::Google.Cloud.VMMigration.V1.ImageImportJob>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetImageImportJob",
+        __Marshaller_google_cloud_vmmigration_v1_GetImageImportJobRequest,
+        __Marshaller_google_cloud_vmmigration_v1_ImageImportJob);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VMMigration.V1.CancelImageImportJobRequest, global::Google.LongRunning.Operation> __Method_CancelImageImportJob = new grpc::Method<global::Google.Cloud.VMMigration.V1.CancelImageImportJobRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CancelImageImportJob",
+        __Marshaller_google_cloud_vmmigration_v1_CancelImageImportJobRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VMMigration.V1.CreateDiskMigrationJobRequest, global::Google.LongRunning.Operation> __Method_CreateDiskMigrationJob = new grpc::Method<global::Google.Cloud.VMMigration.V1.CreateDiskMigrationJobRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateDiskMigrationJob",
+        __Marshaller_google_cloud_vmmigration_v1_CreateDiskMigrationJobRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VMMigration.V1.ListDiskMigrationJobsRequest, global::Google.Cloud.VMMigration.V1.ListDiskMigrationJobsResponse> __Method_ListDiskMigrationJobs = new grpc::Method<global::Google.Cloud.VMMigration.V1.ListDiskMigrationJobsRequest, global::Google.Cloud.VMMigration.V1.ListDiskMigrationJobsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListDiskMigrationJobs",
+        __Marshaller_google_cloud_vmmigration_v1_ListDiskMigrationJobsRequest,
+        __Marshaller_google_cloud_vmmigration_v1_ListDiskMigrationJobsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VMMigration.V1.GetDiskMigrationJobRequest, global::Google.Cloud.VMMigration.V1.DiskMigrationJob> __Method_GetDiskMigrationJob = new grpc::Method<global::Google.Cloud.VMMigration.V1.GetDiskMigrationJobRequest, global::Google.Cloud.VMMigration.V1.DiskMigrationJob>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDiskMigrationJob",
+        __Marshaller_google_cloud_vmmigration_v1_GetDiskMigrationJobRequest,
+        __Marshaller_google_cloud_vmmigration_v1_DiskMigrationJob);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VMMigration.V1.UpdateDiskMigrationJobRequest, global::Google.LongRunning.Operation> __Method_UpdateDiskMigrationJob = new grpc::Method<global::Google.Cloud.VMMigration.V1.UpdateDiskMigrationJobRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateDiskMigrationJob",
+        __Marshaller_google_cloud_vmmigration_v1_UpdateDiskMigrationJobRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VMMigration.V1.DeleteDiskMigrationJobRequest, global::Google.LongRunning.Operation> __Method_DeleteDiskMigrationJob = new grpc::Method<global::Google.Cloud.VMMigration.V1.DeleteDiskMigrationJobRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteDiskMigrationJob",
+        __Marshaller_google_cloud_vmmigration_v1_DeleteDiskMigrationJobRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VMMigration.V1.RunDiskMigrationJobRequest, global::Google.LongRunning.Operation> __Method_RunDiskMigrationJob = new grpc::Method<global::Google.Cloud.VMMigration.V1.RunDiskMigrationJobRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RunDiskMigrationJob",
+        __Marshaller_google_cloud_vmmigration_v1_RunDiskMigrationJobRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.VMMigration.V1.CancelDiskMigrationJobRequest, global::Google.LongRunning.Operation> __Method_CancelDiskMigrationJob = new grpc::Method<global::Google.Cloud.VMMigration.V1.CancelDiskMigrationJobRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CancelDiskMigrationJob",
+        __Marshaller_google_cloud_vmmigration_v1_CancelDiskMigrationJobRequest,
+        __Marshaller_google_longrunning_Operation);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -646,6 +820,23 @@ namespace Google.Cloud.VMMigration.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VMMigration.V1.FetchInventoryResponse> FetchInventory(global::Google.Cloud.VMMigration.V1.FetchInventoryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// List remote source's inventory of storage resources.
+      /// The remote source is another cloud vendor (e.g. AWS, Azure).
+      /// The inventory describes the list of existing storage resources in that
+      /// source. Note that this operation lists the resources on the remote source,
+      /// as opposed to listing the MigratingVms resources in the vmmigration
+      /// service.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VMMigration.V1.FetchStorageInventoryResponse> FetchStorageInventory(global::Google.Cloud.VMMigration.V1.FetchStorageInventoryRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -875,6 +1066,18 @@ namespace Google.Cloud.VMMigration.V1 {
       }
 
       /// <summary>
+      /// Extend the migrating VM time to live.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExtendMigration(global::Google.Cloud.VMMigration.V1.ExtendMigrationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Initiates a Clone of a specific migrating VM.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -899,7 +1102,8 @@ namespace Google.Cloud.VMMigration.V1 {
       }
 
       /// <summary>
-      /// Lists CloneJobs of a given migrating VM.
+      /// Lists the CloneJobs of a migrating VM. Only 25 most recent CloneJobs are
+      /// listed.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -949,7 +1153,8 @@ namespace Google.Cloud.VMMigration.V1 {
       }
 
       /// <summary>
-      /// Lists CutoverJobs of a given migrating VM.
+      /// Lists the CutoverJobs of a migrating VM. Only 25 most recent CutoverJobs
+      /// are listed.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1151,6 +1356,174 @@ namespace Google.Cloud.VMMigration.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VMMigration.V1.ReplicationCycle> GetReplicationCycle(global::Google.Cloud.VMMigration.V1.GetReplicationCycleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists ImageImports in a given project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VMMigration.V1.ListImageImportsResponse> ListImageImports(global::Google.Cloud.VMMigration.V1.ListImageImportsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single ImageImport.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VMMigration.V1.ImageImport> GetImageImport(global::Google.Cloud.VMMigration.V1.GetImageImportRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new ImageImport in a given project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateImageImport(global::Google.Cloud.VMMigration.V1.CreateImageImportRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single ImageImport.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteImageImport(global::Google.Cloud.VMMigration.V1.DeleteImageImportRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists ImageImportJobs in a given project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VMMigration.V1.ListImageImportJobsResponse> ListImageImportJobs(global::Google.Cloud.VMMigration.V1.ListImageImportJobsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single ImageImportJob.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VMMigration.V1.ImageImportJob> GetImageImportJob(global::Google.Cloud.VMMigration.V1.GetImageImportJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Initiates the cancellation of a running ImageImportJob.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CancelImageImportJob(global::Google.Cloud.VMMigration.V1.CancelImageImportJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new disk migration job in a given Source.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateDiskMigrationJob(global::Google.Cloud.VMMigration.V1.CreateDiskMigrationJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists DiskMigrationJobs in a given Source.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VMMigration.V1.ListDiskMigrationJobsResponse> ListDiskMigrationJobs(global::Google.Cloud.VMMigration.V1.ListDiskMigrationJobsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single DiskMigrationJob.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.VMMigration.V1.DiskMigrationJob> GetDiskMigrationJob(global::Google.Cloud.VMMigration.V1.GetDiskMigrationJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the parameters of a single DiskMigrationJob.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateDiskMigrationJob(global::Google.Cloud.VMMigration.V1.UpdateDiskMigrationJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single DiskMigrationJob.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteDiskMigrationJob(global::Google.Cloud.VMMigration.V1.DeleteDiskMigrationJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Runs the disk migration job.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RunDiskMigrationJob(global::Google.Cloud.VMMigration.V1.RunDiskMigrationJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Cancels the disk migration job.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CancelDiskMigrationJob(global::Google.Cloud.VMMigration.V1.CancelDiskMigrationJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1487,6 +1860,74 @@ namespace Google.Cloud.VMMigration.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VMMigration.V1.FetchInventoryResponse> FetchInventoryAsync(global::Google.Cloud.VMMigration.V1.FetchInventoryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_FetchInventory, null, options, request);
+      }
+      /// <summary>
+      /// List remote source's inventory of storage resources.
+      /// The remote source is another cloud vendor (e.g. AWS, Azure).
+      /// The inventory describes the list of existing storage resources in that
+      /// source. Note that this operation lists the resources on the remote source,
+      /// as opposed to listing the MigratingVms resources in the vmmigration
+      /// service.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VMMigration.V1.FetchStorageInventoryResponse FetchStorageInventory(global::Google.Cloud.VMMigration.V1.FetchStorageInventoryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchStorageInventory(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List remote source's inventory of storage resources.
+      /// The remote source is another cloud vendor (e.g. AWS, Azure).
+      /// The inventory describes the list of existing storage resources in that
+      /// source. Note that this operation lists the resources on the remote source,
+      /// as opposed to listing the MigratingVms resources in the vmmigration
+      /// service.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VMMigration.V1.FetchStorageInventoryResponse FetchStorageInventory(global::Google.Cloud.VMMigration.V1.FetchStorageInventoryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchStorageInventory, null, options, request);
+      }
+      /// <summary>
+      /// List remote source's inventory of storage resources.
+      /// The remote source is another cloud vendor (e.g. AWS, Azure).
+      /// The inventory describes the list of existing storage resources in that
+      /// source. Note that this operation lists the resources on the remote source,
+      /// as opposed to listing the MigratingVms resources in the vmmigration
+      /// service.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VMMigration.V1.FetchStorageInventoryResponse> FetchStorageInventoryAsync(global::Google.Cloud.VMMigration.V1.FetchStorageInventoryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchStorageInventoryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List remote source's inventory of storage resources.
+      /// The remote source is another cloud vendor (e.g. AWS, Azure).
+      /// The inventory describes the list of existing storage resources in that
+      /// source. Note that this operation lists the resources on the remote source,
+      /// as opposed to listing the MigratingVms resources in the vmmigration
+      /// service.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VMMigration.V1.FetchStorageInventoryResponse> FetchStorageInventoryAsync(global::Google.Cloud.VMMigration.V1.FetchStorageInventoryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchStorageInventory, null, options, request);
       }
       /// <summary>
       /// Lists Utilization Reports of the given Source.
@@ -2385,6 +2826,54 @@ namespace Google.Cloud.VMMigration.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_FinalizeMigration, null, options, request);
       }
       /// <summary>
+      /// Extend the migrating VM time to live.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ExtendMigration(global::Google.Cloud.VMMigration.V1.ExtendMigrationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExtendMigration(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Extend the migrating VM time to live.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ExtendMigration(global::Google.Cloud.VMMigration.V1.ExtendMigrationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExtendMigration, null, options, request);
+      }
+      /// <summary>
+      /// Extend the migrating VM time to live.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExtendMigrationAsync(global::Google.Cloud.VMMigration.V1.ExtendMigrationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExtendMigrationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Extend the migrating VM time to live.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExtendMigrationAsync(global::Google.Cloud.VMMigration.V1.ExtendMigrationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExtendMigration, null, options, request);
+      }
+      /// <summary>
       /// Initiates a Clone of a specific migrating VM.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2481,7 +2970,8 @@ namespace Google.Cloud.VMMigration.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CancelCloneJob, null, options, request);
       }
       /// <summary>
-      /// Lists CloneJobs of a given migrating VM.
+      /// Lists the CloneJobs of a migrating VM. Only 25 most recent CloneJobs are
+      /// listed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2494,7 +2984,8 @@ namespace Google.Cloud.VMMigration.V1 {
         return ListCloneJobs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists CloneJobs of a given migrating VM.
+      /// Lists the CloneJobs of a migrating VM. Only 25 most recent CloneJobs are
+      /// listed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2505,7 +2996,8 @@ namespace Google.Cloud.VMMigration.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListCloneJobs, null, options, request);
       }
       /// <summary>
-      /// Lists CloneJobs of a given migrating VM.
+      /// Lists the CloneJobs of a migrating VM. Only 25 most recent CloneJobs are
+      /// listed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2518,7 +3010,8 @@ namespace Google.Cloud.VMMigration.V1 {
         return ListCloneJobsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists CloneJobs of a given migrating VM.
+      /// Lists the CloneJobs of a migrating VM. Only 25 most recent CloneJobs are
+      /// listed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2681,7 +3174,8 @@ namespace Google.Cloud.VMMigration.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CancelCutoverJob, null, options, request);
       }
       /// <summary>
-      /// Lists CutoverJobs of a given migrating VM.
+      /// Lists the CutoverJobs of a migrating VM. Only 25 most recent CutoverJobs
+      /// are listed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2694,7 +3188,8 @@ namespace Google.Cloud.VMMigration.V1 {
         return ListCutoverJobs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists CutoverJobs of a given migrating VM.
+      /// Lists the CutoverJobs of a migrating VM. Only 25 most recent CutoverJobs
+      /// are listed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2705,7 +3200,8 @@ namespace Google.Cloud.VMMigration.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListCutoverJobs, null, options, request);
       }
       /// <summary>
-      /// Lists CutoverJobs of a given migrating VM.
+      /// Lists the CutoverJobs of a migrating VM. Only 25 most recent CutoverJobs
+      /// are listed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2718,7 +3214,8 @@ namespace Google.Cloud.VMMigration.V1 {
         return ListCutoverJobsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists CutoverJobs of a given migrating VM.
+      /// Lists the CutoverJobs of a migrating VM. Only 25 most recent CutoverJobs
+      /// are listed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3508,6 +4005,678 @@ namespace Google.Cloud.VMMigration.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetReplicationCycle, null, options, request);
       }
+      /// <summary>
+      /// Lists ImageImports in a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VMMigration.V1.ListImageImportsResponse ListImageImports(global::Google.Cloud.VMMigration.V1.ListImageImportsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListImageImports(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists ImageImports in a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VMMigration.V1.ListImageImportsResponse ListImageImports(global::Google.Cloud.VMMigration.V1.ListImageImportsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListImageImports, null, options, request);
+      }
+      /// <summary>
+      /// Lists ImageImports in a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VMMigration.V1.ListImageImportsResponse> ListImageImportsAsync(global::Google.Cloud.VMMigration.V1.ListImageImportsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListImageImportsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists ImageImports in a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VMMigration.V1.ListImageImportsResponse> ListImageImportsAsync(global::Google.Cloud.VMMigration.V1.ListImageImportsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListImageImports, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single ImageImport.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VMMigration.V1.ImageImport GetImageImport(global::Google.Cloud.VMMigration.V1.GetImageImportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetImageImport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single ImageImport.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VMMigration.V1.ImageImport GetImageImport(global::Google.Cloud.VMMigration.V1.GetImageImportRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetImageImport, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single ImageImport.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VMMigration.V1.ImageImport> GetImageImportAsync(global::Google.Cloud.VMMigration.V1.GetImageImportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetImageImportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single ImageImport.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VMMigration.V1.ImageImport> GetImageImportAsync(global::Google.Cloud.VMMigration.V1.GetImageImportRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetImageImport, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new ImageImport in a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateImageImport(global::Google.Cloud.VMMigration.V1.CreateImageImportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateImageImport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new ImageImport in a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateImageImport(global::Google.Cloud.VMMigration.V1.CreateImageImportRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateImageImport, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new ImageImport in a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateImageImportAsync(global::Google.Cloud.VMMigration.V1.CreateImageImportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateImageImportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new ImageImport in a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateImageImportAsync(global::Google.Cloud.VMMigration.V1.CreateImageImportRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateImageImport, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single ImageImport.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteImageImport(global::Google.Cloud.VMMigration.V1.DeleteImageImportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteImageImport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single ImageImport.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteImageImport(global::Google.Cloud.VMMigration.V1.DeleteImageImportRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteImageImport, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single ImageImport.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteImageImportAsync(global::Google.Cloud.VMMigration.V1.DeleteImageImportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteImageImportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single ImageImport.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteImageImportAsync(global::Google.Cloud.VMMigration.V1.DeleteImageImportRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteImageImport, null, options, request);
+      }
+      /// <summary>
+      /// Lists ImageImportJobs in a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VMMigration.V1.ListImageImportJobsResponse ListImageImportJobs(global::Google.Cloud.VMMigration.V1.ListImageImportJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListImageImportJobs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists ImageImportJobs in a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VMMigration.V1.ListImageImportJobsResponse ListImageImportJobs(global::Google.Cloud.VMMigration.V1.ListImageImportJobsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListImageImportJobs, null, options, request);
+      }
+      /// <summary>
+      /// Lists ImageImportJobs in a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VMMigration.V1.ListImageImportJobsResponse> ListImageImportJobsAsync(global::Google.Cloud.VMMigration.V1.ListImageImportJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListImageImportJobsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists ImageImportJobs in a given project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VMMigration.V1.ListImageImportJobsResponse> ListImageImportJobsAsync(global::Google.Cloud.VMMigration.V1.ListImageImportJobsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListImageImportJobs, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single ImageImportJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VMMigration.V1.ImageImportJob GetImageImportJob(global::Google.Cloud.VMMigration.V1.GetImageImportJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetImageImportJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single ImageImportJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VMMigration.V1.ImageImportJob GetImageImportJob(global::Google.Cloud.VMMigration.V1.GetImageImportJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetImageImportJob, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single ImageImportJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VMMigration.V1.ImageImportJob> GetImageImportJobAsync(global::Google.Cloud.VMMigration.V1.GetImageImportJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetImageImportJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single ImageImportJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VMMigration.V1.ImageImportJob> GetImageImportJobAsync(global::Google.Cloud.VMMigration.V1.GetImageImportJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetImageImportJob, null, options, request);
+      }
+      /// <summary>
+      /// Initiates the cancellation of a running ImageImportJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CancelImageImportJob(global::Google.Cloud.VMMigration.V1.CancelImageImportJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelImageImportJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Initiates the cancellation of a running ImageImportJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CancelImageImportJob(global::Google.Cloud.VMMigration.V1.CancelImageImportJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CancelImageImportJob, null, options, request);
+      }
+      /// <summary>
+      /// Initiates the cancellation of a running ImageImportJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CancelImageImportJobAsync(global::Google.Cloud.VMMigration.V1.CancelImageImportJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelImageImportJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Initiates the cancellation of a running ImageImportJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CancelImageImportJobAsync(global::Google.Cloud.VMMigration.V1.CancelImageImportJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CancelImageImportJob, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new disk migration job in a given Source.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateDiskMigrationJob(global::Google.Cloud.VMMigration.V1.CreateDiskMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDiskMigrationJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new disk migration job in a given Source.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateDiskMigrationJob(global::Google.Cloud.VMMigration.V1.CreateDiskMigrationJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateDiskMigrationJob, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new disk migration job in a given Source.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDiskMigrationJobAsync(global::Google.Cloud.VMMigration.V1.CreateDiskMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDiskMigrationJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new disk migration job in a given Source.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDiskMigrationJobAsync(global::Google.Cloud.VMMigration.V1.CreateDiskMigrationJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateDiskMigrationJob, null, options, request);
+      }
+      /// <summary>
+      /// Lists DiskMigrationJobs in a given Source.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VMMigration.V1.ListDiskMigrationJobsResponse ListDiskMigrationJobs(global::Google.Cloud.VMMigration.V1.ListDiskMigrationJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDiskMigrationJobs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists DiskMigrationJobs in a given Source.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VMMigration.V1.ListDiskMigrationJobsResponse ListDiskMigrationJobs(global::Google.Cloud.VMMigration.V1.ListDiskMigrationJobsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListDiskMigrationJobs, null, options, request);
+      }
+      /// <summary>
+      /// Lists DiskMigrationJobs in a given Source.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VMMigration.V1.ListDiskMigrationJobsResponse> ListDiskMigrationJobsAsync(global::Google.Cloud.VMMigration.V1.ListDiskMigrationJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDiskMigrationJobsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists DiskMigrationJobs in a given Source.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VMMigration.V1.ListDiskMigrationJobsResponse> ListDiskMigrationJobsAsync(global::Google.Cloud.VMMigration.V1.ListDiskMigrationJobsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListDiskMigrationJobs, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single DiskMigrationJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VMMigration.V1.DiskMigrationJob GetDiskMigrationJob(global::Google.Cloud.VMMigration.V1.GetDiskMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDiskMigrationJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single DiskMigrationJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.VMMigration.V1.DiskMigrationJob GetDiskMigrationJob(global::Google.Cloud.VMMigration.V1.GetDiskMigrationJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDiskMigrationJob, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single DiskMigrationJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VMMigration.V1.DiskMigrationJob> GetDiskMigrationJobAsync(global::Google.Cloud.VMMigration.V1.GetDiskMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDiskMigrationJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single DiskMigrationJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.VMMigration.V1.DiskMigrationJob> GetDiskMigrationJobAsync(global::Google.Cloud.VMMigration.V1.GetDiskMigrationJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDiskMigrationJob, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single DiskMigrationJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateDiskMigrationJob(global::Google.Cloud.VMMigration.V1.UpdateDiskMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDiskMigrationJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single DiskMigrationJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateDiskMigrationJob(global::Google.Cloud.VMMigration.V1.UpdateDiskMigrationJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateDiskMigrationJob, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single DiskMigrationJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDiskMigrationJobAsync(global::Google.Cloud.VMMigration.V1.UpdateDiskMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDiskMigrationJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single DiskMigrationJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDiskMigrationJobAsync(global::Google.Cloud.VMMigration.V1.UpdateDiskMigrationJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateDiskMigrationJob, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single DiskMigrationJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteDiskMigrationJob(global::Google.Cloud.VMMigration.V1.DeleteDiskMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDiskMigrationJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single DiskMigrationJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteDiskMigrationJob(global::Google.Cloud.VMMigration.V1.DeleteDiskMigrationJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteDiskMigrationJob, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single DiskMigrationJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDiskMigrationJobAsync(global::Google.Cloud.VMMigration.V1.DeleteDiskMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDiskMigrationJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single DiskMigrationJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDiskMigrationJobAsync(global::Google.Cloud.VMMigration.V1.DeleteDiskMigrationJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteDiskMigrationJob, null, options, request);
+      }
+      /// <summary>
+      /// Runs the disk migration job.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RunDiskMigrationJob(global::Google.Cloud.VMMigration.V1.RunDiskMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RunDiskMigrationJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Runs the disk migration job.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RunDiskMigrationJob(global::Google.Cloud.VMMigration.V1.RunDiskMigrationJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RunDiskMigrationJob, null, options, request);
+      }
+      /// <summary>
+      /// Runs the disk migration job.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RunDiskMigrationJobAsync(global::Google.Cloud.VMMigration.V1.RunDiskMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RunDiskMigrationJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Runs the disk migration job.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RunDiskMigrationJobAsync(global::Google.Cloud.VMMigration.V1.RunDiskMigrationJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RunDiskMigrationJob, null, options, request);
+      }
+      /// <summary>
+      /// Cancels the disk migration job.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CancelDiskMigrationJob(global::Google.Cloud.VMMigration.V1.CancelDiskMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelDiskMigrationJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Cancels the disk migration job.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CancelDiskMigrationJob(global::Google.Cloud.VMMigration.V1.CancelDiskMigrationJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CancelDiskMigrationJob, null, options, request);
+      }
+      /// <summary>
+      /// Cancels the disk migration job.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CancelDiskMigrationJobAsync(global::Google.Cloud.VMMigration.V1.CancelDiskMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelDiskMigrationJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Cancels the disk migration job.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CancelDiskMigrationJobAsync(global::Google.Cloud.VMMigration.V1.CancelDiskMigrationJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CancelDiskMigrationJob, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override VmMigrationClient NewInstance(ClientBaseConfiguration configuration)
@@ -3528,6 +4697,7 @@ namespace Google.Cloud.VMMigration.V1 {
           .AddMethod(__Method_UpdateSource, serviceImpl.UpdateSource)
           .AddMethod(__Method_DeleteSource, serviceImpl.DeleteSource)
           .AddMethod(__Method_FetchInventory, serviceImpl.FetchInventory)
+          .AddMethod(__Method_FetchStorageInventory, serviceImpl.FetchStorageInventory)
           .AddMethod(__Method_ListUtilizationReports, serviceImpl.ListUtilizationReports)
           .AddMethod(__Method_GetUtilizationReport, serviceImpl.GetUtilizationReport)
           .AddMethod(__Method_CreateUtilizationReport, serviceImpl.CreateUtilizationReport)
@@ -3546,6 +4716,7 @@ namespace Google.Cloud.VMMigration.V1 {
           .AddMethod(__Method_ResumeMigration, serviceImpl.ResumeMigration)
           .AddMethod(__Method_PauseMigration, serviceImpl.PauseMigration)
           .AddMethod(__Method_FinalizeMigration, serviceImpl.FinalizeMigration)
+          .AddMethod(__Method_ExtendMigration, serviceImpl.ExtendMigration)
           .AddMethod(__Method_CreateCloneJob, serviceImpl.CreateCloneJob)
           .AddMethod(__Method_CancelCloneJob, serviceImpl.CancelCloneJob)
           .AddMethod(__Method_ListCloneJobs, serviceImpl.ListCloneJobs)
@@ -3567,7 +4738,21 @@ namespace Google.Cloud.VMMigration.V1 {
           .AddMethod(__Method_UpdateTargetProject, serviceImpl.UpdateTargetProject)
           .AddMethod(__Method_DeleteTargetProject, serviceImpl.DeleteTargetProject)
           .AddMethod(__Method_ListReplicationCycles, serviceImpl.ListReplicationCycles)
-          .AddMethod(__Method_GetReplicationCycle, serviceImpl.GetReplicationCycle).Build();
+          .AddMethod(__Method_GetReplicationCycle, serviceImpl.GetReplicationCycle)
+          .AddMethod(__Method_ListImageImports, serviceImpl.ListImageImports)
+          .AddMethod(__Method_GetImageImport, serviceImpl.GetImageImport)
+          .AddMethod(__Method_CreateImageImport, serviceImpl.CreateImageImport)
+          .AddMethod(__Method_DeleteImageImport, serviceImpl.DeleteImageImport)
+          .AddMethod(__Method_ListImageImportJobs, serviceImpl.ListImageImportJobs)
+          .AddMethod(__Method_GetImageImportJob, serviceImpl.GetImageImportJob)
+          .AddMethod(__Method_CancelImageImportJob, serviceImpl.CancelImageImportJob)
+          .AddMethod(__Method_CreateDiskMigrationJob, serviceImpl.CreateDiskMigrationJob)
+          .AddMethod(__Method_ListDiskMigrationJobs, serviceImpl.ListDiskMigrationJobs)
+          .AddMethod(__Method_GetDiskMigrationJob, serviceImpl.GetDiskMigrationJob)
+          .AddMethod(__Method_UpdateDiskMigrationJob, serviceImpl.UpdateDiskMigrationJob)
+          .AddMethod(__Method_DeleteDiskMigrationJob, serviceImpl.DeleteDiskMigrationJob)
+          .AddMethod(__Method_RunDiskMigrationJob, serviceImpl.RunDiskMigrationJob)
+          .AddMethod(__Method_CancelDiskMigrationJob, serviceImpl.CancelDiskMigrationJob).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -3583,6 +4768,7 @@ namespace Google.Cloud.VMMigration.V1 {
       serviceBinder.AddMethod(__Method_UpdateSource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.UpdateSourceRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateSource));
       serviceBinder.AddMethod(__Method_DeleteSource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.DeleteSourceRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteSource));
       serviceBinder.AddMethod(__Method_FetchInventory, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.FetchInventoryRequest, global::Google.Cloud.VMMigration.V1.FetchInventoryResponse>(serviceImpl.FetchInventory));
+      serviceBinder.AddMethod(__Method_FetchStorageInventory, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.FetchStorageInventoryRequest, global::Google.Cloud.VMMigration.V1.FetchStorageInventoryResponse>(serviceImpl.FetchStorageInventory));
       serviceBinder.AddMethod(__Method_ListUtilizationReports, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.ListUtilizationReportsRequest, global::Google.Cloud.VMMigration.V1.ListUtilizationReportsResponse>(serviceImpl.ListUtilizationReports));
       serviceBinder.AddMethod(__Method_GetUtilizationReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.GetUtilizationReportRequest, global::Google.Cloud.VMMigration.V1.UtilizationReport>(serviceImpl.GetUtilizationReport));
       serviceBinder.AddMethod(__Method_CreateUtilizationReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.CreateUtilizationReportRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateUtilizationReport));
@@ -3601,6 +4787,7 @@ namespace Google.Cloud.VMMigration.V1 {
       serviceBinder.AddMethod(__Method_ResumeMigration, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.ResumeMigrationRequest, global::Google.LongRunning.Operation>(serviceImpl.ResumeMigration));
       serviceBinder.AddMethod(__Method_PauseMigration, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.PauseMigrationRequest, global::Google.LongRunning.Operation>(serviceImpl.PauseMigration));
       serviceBinder.AddMethod(__Method_FinalizeMigration, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.FinalizeMigrationRequest, global::Google.LongRunning.Operation>(serviceImpl.FinalizeMigration));
+      serviceBinder.AddMethod(__Method_ExtendMigration, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.ExtendMigrationRequest, global::Google.LongRunning.Operation>(serviceImpl.ExtendMigration));
       serviceBinder.AddMethod(__Method_CreateCloneJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.CreateCloneJobRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateCloneJob));
       serviceBinder.AddMethod(__Method_CancelCloneJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.CancelCloneJobRequest, global::Google.LongRunning.Operation>(serviceImpl.CancelCloneJob));
       serviceBinder.AddMethod(__Method_ListCloneJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.ListCloneJobsRequest, global::Google.Cloud.VMMigration.V1.ListCloneJobsResponse>(serviceImpl.ListCloneJobs));
@@ -3623,6 +4810,20 @@ namespace Google.Cloud.VMMigration.V1 {
       serviceBinder.AddMethod(__Method_DeleteTargetProject, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.DeleteTargetProjectRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteTargetProject));
       serviceBinder.AddMethod(__Method_ListReplicationCycles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.ListReplicationCyclesRequest, global::Google.Cloud.VMMigration.V1.ListReplicationCyclesResponse>(serviceImpl.ListReplicationCycles));
       serviceBinder.AddMethod(__Method_GetReplicationCycle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.GetReplicationCycleRequest, global::Google.Cloud.VMMigration.V1.ReplicationCycle>(serviceImpl.GetReplicationCycle));
+      serviceBinder.AddMethod(__Method_ListImageImports, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.ListImageImportsRequest, global::Google.Cloud.VMMigration.V1.ListImageImportsResponse>(serviceImpl.ListImageImports));
+      serviceBinder.AddMethod(__Method_GetImageImport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.GetImageImportRequest, global::Google.Cloud.VMMigration.V1.ImageImport>(serviceImpl.GetImageImport));
+      serviceBinder.AddMethod(__Method_CreateImageImport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.CreateImageImportRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateImageImport));
+      serviceBinder.AddMethod(__Method_DeleteImageImport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.DeleteImageImportRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteImageImport));
+      serviceBinder.AddMethod(__Method_ListImageImportJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.ListImageImportJobsRequest, global::Google.Cloud.VMMigration.V1.ListImageImportJobsResponse>(serviceImpl.ListImageImportJobs));
+      serviceBinder.AddMethod(__Method_GetImageImportJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.GetImageImportJobRequest, global::Google.Cloud.VMMigration.V1.ImageImportJob>(serviceImpl.GetImageImportJob));
+      serviceBinder.AddMethod(__Method_CancelImageImportJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.CancelImageImportJobRequest, global::Google.LongRunning.Operation>(serviceImpl.CancelImageImportJob));
+      serviceBinder.AddMethod(__Method_CreateDiskMigrationJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.CreateDiskMigrationJobRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateDiskMigrationJob));
+      serviceBinder.AddMethod(__Method_ListDiskMigrationJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.ListDiskMigrationJobsRequest, global::Google.Cloud.VMMigration.V1.ListDiskMigrationJobsResponse>(serviceImpl.ListDiskMigrationJobs));
+      serviceBinder.AddMethod(__Method_GetDiskMigrationJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.GetDiskMigrationJobRequest, global::Google.Cloud.VMMigration.V1.DiskMigrationJob>(serviceImpl.GetDiskMigrationJob));
+      serviceBinder.AddMethod(__Method_UpdateDiskMigrationJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.UpdateDiskMigrationJobRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDiskMigrationJob));
+      serviceBinder.AddMethod(__Method_DeleteDiskMigrationJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.DeleteDiskMigrationJobRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteDiskMigrationJob));
+      serviceBinder.AddMethod(__Method_RunDiskMigrationJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.RunDiskMigrationJobRequest, global::Google.LongRunning.Operation>(serviceImpl.RunDiskMigrationJob));
+      serviceBinder.AddMethod(__Method_CancelDiskMigrationJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.VMMigration.V1.CancelDiskMigrationJobRequest, global::Google.LongRunning.Operation>(serviceImpl.CancelDiskMigrationJob));
     }
 
   }

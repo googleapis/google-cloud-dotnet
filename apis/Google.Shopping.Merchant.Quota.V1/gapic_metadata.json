@@ -1,0 +1,45 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.shopping.merchant.quota.v1",
+  "libraryPackage": "Google.Shopping.Merchant.Quota.V1",
+  "services": {
+    "AccountLimitsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AccountLimitsServiceClient",
+          "rpcs": {
+            "GetAccountLimit": {
+              "methods": [
+                "GetAccountLimit",
+                "GetAccountLimitAsync"
+              ]
+            },
+            "ListAccountLimits": {
+              "methods": [
+                "ListAccountLimits",
+                "ListAccountLimitsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "QuotaService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "QuotaServiceClient",
+          "rpcs": {
+            "ListQuotaGroups": {
+              "methods": [
+                "ListQuotaGroups",
+                "ListQuotaGroupsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

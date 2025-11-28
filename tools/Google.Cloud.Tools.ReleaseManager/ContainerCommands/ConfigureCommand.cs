@@ -36,23 +36,17 @@ public class ConfigureCommand : IContainerCommand
         var generatorInput = options.RequireOption(options.GeneratorInput);
 
         var rootLayout = RootLayout.ForConfiguration(generatorInput, apiRoot);
-        var apiIndex = ApiIndex.V1.Index.LoadFromGoogleApis(rootLayout.Googleapis);
-        var targetApi = apiIndex.Apis.FirstOrDefault(api => api.Directory == apiPath);
         var catalog = ApiCatalog.Load(rootLayout);
+        var protoc = new ProtobufCompiler();
 
-        if (targetApi is null)
-        {
-            Console.WriteLine($"No API index entry for API path {apiPath}");
-            return 1;
-        }
         if (catalog.Apis.FirstOrDefault(api => api.ProtoPath == apiPath) is ApiMetadata api)
         {
             Console.WriteLine($"API path {apiPath} is already configured for {api.Id}");
             return 1;
         }
 
-        api = AddCommand.ConfigureApi(apiRoot, catalog, targetApi);
-        AddCommand.AddApiToCatalog(catalog, api);
+        api = new ApiAnalyzer(protoc, apiRoot).ConfigureApi(apiPath, catalog);
+        catalog.Add(api);
         catalog.Save(rootLayout);
 
         // Now add the new library to the 
@@ -66,7 +60,9 @@ public class ConfigureCommand : IContainerCommand
             ["generationAutomationLevel"] = "AUTOMATION_LEVEL_AUTOMATIC",
             ["releaseAutomationLevel"] = "AUTOMATION_LEVEL_BLOCKED",
             ["apiPaths"] = new JArray(apiPath),
-            ["sourcePaths"] = new JArray($"apis/{api.Id}/{api.Id}")
+            ["sourcePaths"] = new JArray($"apis/{api.Id}/{api.Id}"),
+            // Prepare for the first release with an alpha or beta.
+            ["nextVersion"] = api.Id.Split('.').Last().Contains("alpha", StringComparison.OrdinalIgnoreCase) ? "1.0.0-alpha01" : "1.0.0-beta01"
         });
 
         // Slightly fiddly serialization to mimic the indentation that Librarian uses.

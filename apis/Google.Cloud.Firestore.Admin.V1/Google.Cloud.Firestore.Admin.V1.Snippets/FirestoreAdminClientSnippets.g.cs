@@ -3310,6 +3310,7 @@ namespace GoogleCSharpSnippets
                 DatabaseId = "",
                 BackupAsBackupName = gcfav::BackupName.FromProjectLocationBackup("[PROJECT]", "[LOCATION]", "[BACKUP]"),
                 EncryptionConfig = new gcfav::Database.Types.EncryptionConfig(),
+                Tags = { { "", "" }, },
             };
             // Make the request
             Operation<gcfav::Database, gcfav::RestoreDatabaseMetadata> response = firestoreAdminClient.RestoreDatabase(request);
@@ -3346,6 +3347,7 @@ namespace GoogleCSharpSnippets
                 DatabaseId = "",
                 BackupAsBackupName = gcfav::BackupName.FromProjectLocationBackup("[PROJECT]", "[LOCATION]", "[BACKUP]"),
                 EncryptionConfig = new gcfav::Database.Types.EncryptionConfig(),
+                Tags = { { "", "" }, },
             };
             // Make the request
             Operation<gcfav::Database, gcfav::RestoreDatabaseMetadata> response = await firestoreAdminClient.RestoreDatabaseAsync(request);
@@ -3783,6 +3785,79 @@ namespace GoogleCSharpSnippets
             gcfav::BackupScheduleName name = gcfav::BackupScheduleName.FromProjectDatabaseBackupSchedule("[PROJECT]", "[DATABASE]", "[BACKUP_SCHEDULE]");
             // Make the request
             await firestoreAdminClient.DeleteBackupScheduleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CloneDatabase</summary>
+        public void CloneDatabaseRequestObject()
+        {
+            // Snippet: CloneDatabase(CloneDatabaseRequest, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::CloneDatabaseRequest request = new gcfav::CloneDatabaseRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                DatabaseId = "",
+                EncryptionConfig = new gcfav::Database.Types.EncryptionConfig(),
+                Tags = { { "", "" }, },
+                PitrSnapshot = new gcfav::PitrSnapshot(),
+            };
+            // Make the request
+            Operation<gcfav::Database, gcfav::CloneDatabaseMetadata> response = firestoreAdminClient.CloneDatabase(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::Database, gcfav::CloneDatabaseMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcfav::Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::Database, gcfav::CloneDatabaseMetadata> retrievedResponse = firestoreAdminClient.PollOnceCloneDatabase(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CloneDatabaseAsync</summary>
+        public async Task CloneDatabaseRequestObjectAsync()
+        {
+            // Snippet: CloneDatabaseAsync(CloneDatabaseRequest, CallSettings)
+            // Additional: CloneDatabaseAsync(CloneDatabaseRequest, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::CloneDatabaseRequest request = new gcfav::CloneDatabaseRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                DatabaseId = "",
+                EncryptionConfig = new gcfav::Database.Types.EncryptionConfig(),
+                Tags = { { "", "" }, },
+                PitrSnapshot = new gcfav::PitrSnapshot(),
+            };
+            // Make the request
+            Operation<gcfav::Database, gcfav::CloneDatabaseMetadata> response = await firestoreAdminClient.CloneDatabaseAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcfav::Database, gcfav::CloneDatabaseMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcfav::Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcfav::Database, gcfav::CloneDatabaseMetadata> retrievedResponse = await firestoreAdminClient.PollOnceCloneDatabaseAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcfav::Database retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

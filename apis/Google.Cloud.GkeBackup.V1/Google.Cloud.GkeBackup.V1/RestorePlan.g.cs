@@ -28,7 +28,7 @@ namespace Google.Cloud.GkeBackup.V1 {
             "bxIZZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MRofZ29vZ2xlL2FwaS9maWVs",
             "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxon",
             "Z29vZ2xlL2Nsb3VkL2drZWJhY2t1cC92MS9yZXN0b3JlLnByb3RvGh9nb29n",
-            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIrQGCgtSZXN0b3JlUGxhbhIR",
+            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIv4GCgtSZXN0b3JlUGxhbhIR",
             "CgRuYW1lGAEgASgJQgPgQQMSEAoDdWlkGAIgASgJQgPgQQMSNAoLY3JlYXRl",
             "X3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
             "NAoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
@@ -41,21 +41,23 @@ namespace Google.Cloud.GkeBackup.V1 {
             "ZWJhY2t1cC52MS5SZXN0b3JlUGxhbi5MYWJlbHNFbnRyeUID4EEBEhEKBGV0",
             "YWcYCiABKAlCA+BBAxJACgVzdGF0ZRgLIAEoDjIsLmdvb2dsZS5jbG91ZC5n",
             "a2ViYWNrdXAudjEuUmVzdG9yZVBsYW4uU3RhdGVCA+BBAxIZCgxzdGF0ZV9y",
-            "ZWFzb24YDCABKAlCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkS",
-            "DQoFdmFsdWUYAiABKAk6AjgBIlgKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lG",
-            "SUVEEAASEwoPQ0xVU1RFUl9QRU5ESU5HEAESCQoFUkVBRFkQAhIKCgZGQUlM",
-            "RUQQAxIMCghERUxFVElORxAEOm7qQWsKJGdrZWJhY2t1cC5nb29nbGVhcGlz",
-            "LmNvbS9SZXN0b3JlUGxhbhJDcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
-            "cy97bG9jYXRpb259L3Jlc3RvcmVQbGFucy97cmVzdG9yZV9wbGFufULHAQod",
-            "Y29tLmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjFCEFJlc3RvcmVQbGFuUHJv",
-            "dG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby9na2ViYWNrdXAvYXBpdjEvZ2tl",
-            "YmFja3VwcGI7Z2tlYmFja3VwcGKqAhlHb29nbGUuQ2xvdWQuR2tlQmFja3Vw",
-            "LlYxygIZR29vZ2xlXENsb3VkXEdrZUJhY2t1cFxWMeoCHEdvb2dsZTo6Q2xv",
-            "dWQ6OkdrZUJhY2t1cDo6VjFiBnByb3RvMw=="));
+            "ZWFzb24YDCABKAlCA+BBAxJICg9yZXN0b3JlX2NoYW5uZWwYDSABKAlCL+BB",
+            "A/pBKQonZ2tlYmFja3VwLmdvb2dsZWFwaXMuY29tL1Jlc3RvcmVDaGFubmVs",
+            "Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
+            "OAEiWAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABITCg9DTFVTVEVS",
+            "X1BFTkRJTkcQARIJCgVSRUFEWRACEgoKBkZBSUxFRBADEgwKCERFTEVUSU5H",
+            "EAQ6bupBawokZ2tlYmFja3VwLmdvb2dsZWFwaXMuY29tL1Jlc3RvcmVQbGFu",
+            "EkNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmVz",
+            "dG9yZVBsYW5zL3tyZXN0b3JlX3BsYW59QscBCh1jb20uZ29vZ2xlLmNsb3Vk",
+            "LmdrZWJhY2t1cC52MUIQUmVzdG9yZVBsYW5Qcm90b1ABWjtjbG91ZC5nb29n",
+            "bGUuY29tL2dvL2drZWJhY2t1cC9hcGl2MS9na2ViYWNrdXBwYjtna2ViYWNr",
+            "dXBwYqoCGUdvb2dsZS5DbG91ZC5Ha2VCYWNrdXAuVjHKAhlHb29nbGVcQ2xv",
+            "dWRcR2tlQmFja3VwXFYx6gIcR29vZ2xlOjpDbG91ZDo6R2tlQmFja3VwOjpW",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GkeBackup.V1.RestoreReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.RestorePlan), global::Google.Cloud.GkeBackup.V1.RestorePlan.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Description", "BackupPlan", "Cluster", "RestoreConfig", "Labels", "Etag", "State", "StateReason" }, null, new[]{ typeof(global::Google.Cloud.GkeBackup.V1.RestorePlan.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.RestorePlan), global::Google.Cloud.GkeBackup.V1.RestorePlan.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Description", "BackupPlan", "Cluster", "RestoreConfig", "Labels", "Etag", "State", "StateReason", "RestoreChannel" }, null, new[]{ typeof(global::Google.Cloud.GkeBackup.V1.RestorePlan.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -113,6 +115,7 @@ namespace Google.Cloud.GkeBackup.V1 {
       etag_ = other.etag_;
       state_ = other.state_;
       stateReason_ = other.stateReason_;
+      restoreChannel_ = other.restoreChannel_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -325,6 +328,24 @@ namespace Google.Cloud.GkeBackup.V1 {
       }
     }
 
+    /// <summary>Field number for the "restore_channel" field.</summary>
+    public const int RestoreChannelFieldNumber = 13;
+    private string restoreChannel_ = "";
+    /// <summary>
+    /// Output only. The fully qualified name of the RestoreChannel to be used to
+    /// create a RestorePlan. This field is set only if the `backup_plan` is in a
+    /// different project than the RestorePlan. Format:
+    /// `projects/*/locations/*/restoreChannels/*`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RestoreChannel {
+      get { return restoreChannel_; }
+      set {
+        restoreChannel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -352,6 +373,7 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (Etag != other.Etag) return false;
       if (State != other.State) return false;
       if (StateReason != other.StateReason) return false;
+      if (RestoreChannel != other.RestoreChannel) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -371,6 +393,7 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (State != global::Google.Cloud.GkeBackup.V1.RestorePlan.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (StateReason.Length != 0) hash ^= StateReason.GetHashCode();
+      if (RestoreChannel.Length != 0) hash ^= RestoreChannel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -434,6 +457,10 @@ namespace Google.Cloud.GkeBackup.V1 {
         output.WriteRawTag(98);
         output.WriteString(StateReason);
       }
+      if (RestoreChannel.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(RestoreChannel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -489,6 +516,10 @@ namespace Google.Cloud.GkeBackup.V1 {
         output.WriteRawTag(98);
         output.WriteString(StateReason);
       }
+      if (RestoreChannel.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(RestoreChannel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -532,6 +563,9 @@ namespace Google.Cloud.GkeBackup.V1 {
       }
       if (StateReason.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(StateReason);
+      }
+      if (RestoreChannel.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RestoreChannel);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -587,6 +621,9 @@ namespace Google.Cloud.GkeBackup.V1 {
       }
       if (other.StateReason.Length != 0) {
         StateReason = other.StateReason;
+      }
+      if (other.RestoreChannel.Length != 0) {
+        RestoreChannel = other.RestoreChannel;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -660,6 +697,10 @@ namespace Google.Cloud.GkeBackup.V1 {
             StateReason = input.ReadString();
             break;
           }
+          case 106: {
+            RestoreChannel = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -730,6 +771,10 @@ namespace Google.Cloud.GkeBackup.V1 {
           }
           case 98: {
             StateReason = input.ReadString();
+            break;
+          }
+          case 106: {
+            RestoreChannel = input.ReadString();
             break;
           }
         }

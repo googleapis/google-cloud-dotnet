@@ -1,5 +1,27 @@
 # Version history
 
+## Version 1.4.0, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+## Version 1.3.0, released 2025-10-20
+
+### New features
+
+- Add experimental Load Costs feature
+- Add experimental U-turn Avoidance feature
+- Add OptimizeToursLongRunning method
+- Add OptimizeToursUri method
+
+### Documentation improvements
+
+- A comment for field `duration_distance_matrices` in message `.google.maps.routeoptimization.v1.ShipmentModel` is changed
+- A comment for field `precedence_rules` in message `.google.maps.routeoptimization.v1.ShipmentModel` is changed
+- A comment for enum `TravelMode` is changed
+- A comment for field `place_id` in message `.google.maps.routeoptimization.v1.Waypoint` is changed
+
 ## Version 1.2.0, released 2024-09-26
 
 ### New features

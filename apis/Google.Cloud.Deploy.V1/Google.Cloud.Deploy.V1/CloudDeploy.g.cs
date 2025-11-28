@@ -1115,7 +1115,7 @@ namespace Google.Cloud.Deploy.V1 {
             "bmFtZYLT5JMCUiJNL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
             "ZGVsaXZlcnlQaXBlbGluZXMvKi9hdXRvbWF0aW9uUnVucy8qfTpjYW5jZWw6",
             "ASoaTspBGmNsb3VkZGVwbG95Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93",
-            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULrBwoaY29t",
+            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUL+BwoaY29t",
             "Lmdvb2dsZS5jbG91ZC5kZXBsb3kudjFCEENsb3VkRGVwbG95UHJvdG9QAVoy",
             "Y2xvdWQuZ29vZ2xlLmNvbS9nby9kZXBsb3kvYXBpdjEvZGVwbG95cGI7ZGVw",
             "bG95cGLqQVkKH2Nsb3VkYnVpbGQuZ29vZ2xlYXBpcy5jb20vQnVpbGQSNnBy",
@@ -1136,9 +1136,9 @@ namespace Google.Cloud.Deploy.V1 {
             "Ejpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vc2Vy",
             "dmljZXMve3NlcnZpY2V96kFMChZydW4uZ29vZ2xlYXBpcy5jb20vSm9iEjJw",
             "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vam9icy97",
-            "am9ifepBWwobcnVuLmdvb2dsZWFwaXMuY29tL1JldmlzaW9uEjxwcm9qZWN0",
-            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmV2aXNpb25zL3ty",
-            "ZXZpc2lvbn1iBnByb3RvMw=="));
+            "am9ifepBbgobcnVuLmdvb2dsZWFwaXMuY29tL1JldmlzaW9uEk9wcm9qZWN0",
+            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vc2VydmljZXMve3Nl",
+            "cnZpY2V9L3JldmlzaW9ucy97cmV2aXNpb259YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Deploy.V1.SkaffoldSupportState), typeof(global::Google.Cloud.Deploy.V1.BackoffMode), typeof(global::Google.Cloud.Deploy.V1.RepairState), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -3493,7 +3493,7 @@ namespace Google.Cloud.Deploy.V1 {
     public const int VerifyFieldNumber = 1;
     private bool verify_;
     /// <summary>
-    /// Optional. Whether to verify a deployment.
+    /// Optional. Whether to verify a deployment via `skaffold verify`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3509,7 +3509,7 @@ namespace Google.Cloud.Deploy.V1 {
     private global::Google.Cloud.Deploy.V1.Predeploy predeploy_;
     /// <summary>
     /// Optional. Configuration for the predeploy job. If this is not configured,
-    /// predeploy job will not be present.
+    /// the predeploy job will not be present.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3525,7 +3525,7 @@ namespace Google.Cloud.Deploy.V1 {
     private global::Google.Cloud.Deploy.V1.Postdeploy postdeploy_;
     /// <summary>
     /// Optional. Configuration for the postdeploy job. If this is not configured,
-    /// postdeploy job will not be present.
+    /// the postdeploy job will not be present.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4156,7 +4156,8 @@ namespace Google.Cloud.Deploy.V1 {
     public const int VerifyFieldNumber = 2;
     private bool verify_;
     /// <summary>
-    /// Optional. Whether to run verify tests after each percentage deployment.
+    /// Optional. Whether to run verify tests after each percentage deployment via
+    /// `skaffold verify`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4712,7 +4713,8 @@ namespace Google.Cloud.Deploy.V1 {
         public const int VerifyFieldNumber = 4;
         private bool verify_;
         /// <summary>
-        /// Optional. Whether to run verify tests after the deployment.
+        /// Optional. Whether to run verify tests after the deployment via `skaffold
+        /// verify`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -20590,7 +20592,7 @@ namespace Google.Cloud.Deploy.V1 {
     public const int EtagFieldNumber = 11;
     private string etag_ = "";
     /// <summary>
-    /// The weak etag of the `Automation` resource.
+    /// The weak etag of the `DeployPolicy` resource.
     /// This checksum is computed by the server based on the value of other
     /// fields, and may be sent on update and delete requests to ensure the
     /// client has an up-to-date value before proceeding.

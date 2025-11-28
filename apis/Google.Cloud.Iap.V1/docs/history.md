@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.9.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+### Documentation improvements
+
+- Add clarifications on IAP CorsSettings behavior
+- Minor updates on GcipSettings description
+
 ## Version 2.8.0, released 2025-04-14
 
 ### New features

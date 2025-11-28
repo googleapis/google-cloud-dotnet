@@ -93,6 +93,24 @@ namespace Google.Cloud.Spanner.Data.Tests
             EqualityTester.AssertEqual(options, new[] { equalOptions }, unequalOptions);
         }
 
+        [Theory]
+        [InlineData("UniverseDomain=test-domain.test", "test-domain.test", null)]
+        [InlineData("Host=test-host;Port=567", null, "test-host:567")]
+        [InlineData("Host=test-host", null, "test-host:443")]
+        [InlineData("Port=567", null, "spanner.googleapis.com:567")]
+        [InlineData("Host=test-host;Port=567;UniverseDomain=test-domain.test", null, "test-host:567")]
+        [InlineData("Data Source=projects/p1/instances/i1/databases/d1", null, null)]
+        public void UniverseDomainEndpoint(string connectionString, string expectedUniverseDomain, string expectedEndpoint)
+        {
+            var builder = new SpannerConnectionStringBuilder(connectionString);
+            var options = new SpannerClientCreationOptions(builder);
+
+            // These tests are only to test the correct setting null or otherwise of UniverseDomain and Endpoint in the SpannerClientCreationOptions
+            // For tests on setting the correct EffectiveEndpoint for the CallInvoker see ClientBuilderBase.EffectiveEndpoint tests in GAX
+            Assert.Equal(expectedUniverseDomain, options.ClientBuilder.UniverseDomain);
+            Assert.Equal(expectedEndpoint, options.ClientBuilder.Endpoint);
+        }
+
         // Credential tests moved from the previous SpannerConnectionStringBuilder tests
         [Fact]
         public async Task CredentialFile()
@@ -102,7 +120,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.True(File.Exists(jsonFile));
             var builder = new SpannerConnectionStringBuilder($"CredentialFile={jsonFile}");
             var options = new SpannerClientCreationOptions(builder);
-            Assert.NotNull(await options.GetCredentialsAsync());
+            Assert.NotNull(await options.CreateSpannerClientAsync(new Spanner.V1.SpannerSettings()));
         }
 
         [Fact]
@@ -110,7 +128,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var builder = new SpannerConnectionStringBuilder("CredentialFile=SpannerEF-8dfc036f6000.json");
             var options = new SpannerClientCreationOptions(builder);
-            Assert.NotNull(await options.GetCredentialsAsync());
+            Assert.NotNull(await options.CreateSpannerClientAsync(new Spanner.V1.SpannerSettings()));
         }
 
         [Fact]
@@ -118,7 +136,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var builder = new SpannerConnectionStringBuilder("CredentialFile=SpannerEF-8dfc036f6000.p12");
             var options = new SpannerClientCreationOptions(builder);
-            await Assert.ThrowsAsync<InvalidOperationException>(() => options.GetCredentialsAsync());
+            await Assert.ThrowsAsync<FileNotFoundException>(() => options.CreateSpannerClientAsync(new Spanner.V1.SpannerSettings()));
         }
 
         [Fact]
@@ -126,7 +144,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var builder = new SpannerConnectionStringBuilder("CredentialFile=..\\BadFilePath.json");
             var options = new SpannerClientCreationOptions(builder);
-            await Assert.ThrowsAsync<FileNotFoundException>(() => options.GetCredentialsAsync());
+            await Assert.ThrowsAsync<FileNotFoundException>(() => options.CreateSpannerClientAsync(new Spanner.V1.SpannerSettings()));
         }
 
         [Fact]
@@ -135,7 +153,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var credential = GoogleCredential.FromAccessToken("token", accessMethod: null);
             var builder = new SpannerConnectionStringBuilder("", credential);
             var options = new SpannerClientCreationOptions(builder);
-            Assert.NotNull(await options.GetCredentialsAsync());
+            Assert.NotNull(await options.CreateSpannerClientAsync(new Spanner.V1.SpannerSettings()));
         }
     }
 }

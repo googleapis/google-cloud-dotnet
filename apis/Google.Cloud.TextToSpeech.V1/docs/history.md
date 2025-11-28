@@ -1,5 +1,47 @@
 # Version history
 
+## Version 3.17.0, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+## Version 3.16.0, released 2025-10-20
+
+### New features
+
+- Add `relax_safety_filters` proto field for Gemini TTS
+
+## Version 3.15.0, released 2025-09-24
+
+### New features
+
+- Add Gemini TTS Multispeaker API fields
+
+## Version 3.14.0, released 2025-09-08
+
+### New features
+
+- Add prompt to SynthesisInput
+
+## Version 3.13.0, released 2025-08-28
+
+### New features
+
+- Support promptable voices by specifying a model name and a prompt
+- Add enum value M4A to enum AudioEncoding
+
+### Documentation improvements
+
+- A comment for enum value `AUDIO_ENCODING_UNSPECIFIED` in enum `AudioEncoding` is changed
+
+## Version 3.12.0, released 2025-05-22
+
+### New features
+
+- Support markup input for Cloud TTS Chirp 3: HD voice synthesis
+- Support pinyin/yomigana custom pronunciation encodings for cmn-cn/ja-jp
+
 ## Version 3.11.0, released 2025-04-14
 
 ### New features

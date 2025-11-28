@@ -1,5 +1,24 @@
 # Version history
 
+## Version 3.11.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+## Version 3.10.0, released 2025-05-08
+
+Same code as 3.9.0, just a re-release to fix process issues.
+
+## Version 3.9.0, released 2025-05-06
+
+Note: this release failed due to release process changes; we will release a 3.10.0 shortly.
+
+### New features
+
+- Support for Secrets
+- Support for Layer Details
+
 ## Version 3.8.0, released 2025-04-03
 
 ### New features

@@ -28,19 +28,19 @@ namespace Google.Cloud.Support.V2 {
             "bGUuY2xvdWQuc3VwcG9ydC52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlv",
             "ci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxojZ29vZ2xlL2Ns",
             "b3VkL3N1cHBvcnQvdjIvYWN0b3IucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
-            "aW1lc3RhbXAucHJvdG8i0gIKB0NvbW1lbnQSEQoEbmFtZRgBIAEoCUID4EED",
-            "EjQKC2NyZWF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcEID4EEDEjQKB2NyZWF0b3IYAyABKAsyHi5nb29nbGUuY2xvdWQuc3Vw",
-            "cG9ydC52Mi5BY3RvckID4EEDEgwKBGJvZHkYBCABKAkSHAoPcGxhaW5fdGV4",
-            "dF9ib2R5GAUgASgJQgPgQQM6mwHqQZcBCiNjbG91ZHN1cHBvcnQuZ29vZ2xl",
-            "YXBpcy5jb20vQ29tbWVudBI8b3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9u",
-            "fS9jYXNlcy97Y2FzZX0vY29tbWVudHMve2NvbW1lbnR9EjJwcm9qZWN0cy97",
-            "cHJvamVjdH0vY2FzZXMve2Nhc2V9L2NvbW1lbnRzL3tjb21tZW50fUK1AQob",
-            "Y29tLmdvb2dsZS5jbG91ZC5zdXBwb3J0LnYyQgxDb21tZW50UHJvdG9QAVo1",
-            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9zdXBwb3J0L2FwaXYyL3N1cHBvcnRwYjtz",
-            "dXBwb3J0cGKqAhdHb29nbGUuQ2xvdWQuU3VwcG9ydC5WMsoCF0dvb2dsZVxD",
-            "bG91ZFxTdXBwb3J0XFYy6gIaR29vZ2xlOjpDbG91ZDo6U3VwcG9ydDo6VjJi",
-            "BnByb3RvMw=="));
+            "aW1lc3RhbXAucHJvdG8i1wIKB0NvbW1lbnQSFAoEbmFtZRgBIAEoCUIG4EEI",
+            "4EEDEjQKC2NyZWF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcEID4EEDEjQKB2NyZWF0b3IYAyABKAsyHi5nb29nbGUuY2xvdWQu",
+            "c3VwcG9ydC52Mi5BY3RvckID4EEDEgwKBGJvZHkYBCABKAkSHgoPcGxhaW5f",
+            "dGV4dF9ib2R5GAUgASgJQgUYAeBBAzqbAepBlwEKI2Nsb3Vkc3VwcG9ydC5n",
+            "b29nbGVhcGlzLmNvbS9Db21tZW50Ejxvcmdhbml6YXRpb25zL3tvcmdhbml6",
+            "YXRpb259L2Nhc2VzL3tjYXNlfS9jb21tZW50cy97Y29tbWVudH0SMnByb2pl",
+            "Y3RzL3twcm9qZWN0fS9jYXNlcy97Y2FzZX0vY29tbWVudHMve2NvbW1lbnR9",
+            "QrUBChtjb20uZ29vZ2xlLmNsb3VkLnN1cHBvcnQudjJCDENvbW1lbnRQcm90",
+            "b1ABWjVjbG91ZC5nb29nbGUuY29tL2dvL3N1cHBvcnQvYXBpdjIvc3VwcG9y",
+            "dHBiO3N1cHBvcnRwYqoCF0dvb2dsZS5DbG91ZC5TdXBwb3J0LlYyygIXR29v",
+            "Z2xlXENsb3VkXFN1cHBvcnRcVjLqAhpHb29nbGU6OkNsb3VkOjpTdXBwb3J0",
+            "OjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Support.V2.ActorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -53,6 +53,10 @@ namespace Google.Cloud.Support.V2 {
   #region Messages
   /// <summary>
   /// A comment associated with a support case.
+  ///
+  /// Case comments are the primary way for Google Support to communicate with a
+  /// user who has opened a case. When a user responds to Google Support, the
+  /// user's responses also appear as comments.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Comment : pb::IMessage<Comment>
@@ -107,7 +111,7 @@ namespace Google.Cloud.Support.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name for the comment.
+    /// Output only. Identifier. The resource name of the comment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,7 +126,7 @@ namespace Google.Cloud.Support.V2 {
     public const int CreateTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. The time when this comment was created.
+    /// Output only. The time when the comment was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +141,7 @@ namespace Google.Cloud.Support.V2 {
     public const int CreatorFieldNumber = 3;
     private global::Google.Cloud.Support.V2.Actor creator_;
     /// <summary>
-    /// Output only. The user or Google Support agent created this comment.
+    /// Output only. The user or Google Support agent who created the comment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,8 +156,9 @@ namespace Google.Cloud.Support.V2 {
     public const int BodyFieldNumber = 4;
     private string body_ = "";
     /// <summary>
-    /// The full comment body. Maximum of 12800 characters. This can contain rich
-    /// text syntax.
+    /// The full comment body.
+    ///
+    /// Maximum of 12800 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -168,9 +173,13 @@ namespace Google.Cloud.Support.V2 {
     public const int PlainTextBodyFieldNumber = 5;
     private string plainTextBody_ = "";
     /// <summary>
-    /// Output only. DEPRECATED. An automatically generated plain text version of
-    /// body with all rich text syntax stripped.
+    /// Output only. DEPRECATED. DO NOT USE.
+    ///
+    /// A duplicate of the `body` field.
+    ///
+    /// This field is only present for legacy reasons.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PlainTextBody {

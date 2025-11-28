@@ -33,7 +33,6 @@ namespace Google.Cloud.Tools.ReleaseManager;
 /// - Solution files
 /// - Repo metadata
 /// - Documentation stubs
-/// - OwlBot configuration
 ///
 /// This is effectively the business logic underlying <see cref="GenerateProjectsCommand"/>,
 /// but designed for use from multiple places.
@@ -42,13 +41,6 @@ namespace Google.Cloud.Tools.ReleaseManager;
 /// </summary>
 internal sealed class NonSourceGenerator
 {
-    /// <summary>
-    /// Allows switching between OwlBot and Librarian. When this is true, OwlBot config files
-    /// are generated, and OwlBot will create PRs. When this is false, any OwlBot config files are
-    /// *deleted* by GenerateProjectsCommand, effectively disabling OwlBot.
-    /// </summary>
-    private static readonly bool GenerateOwlBotConfig = false;
-
     internal const string ProjectVersionValue = "project";
     internal const string DefaultVersionValue = "default";
     internal const string DefaultNetstandardTarget = "netstandard2.0";
@@ -84,7 +76,8 @@ internal sealed class NonSourceGenerator
         { ApiType.Other, $"{DefaultNetstandardTarget};net462" }
     };
 
-    private const string DefaultTestTargetFrameworks = "net6.0;net462";
+    private const string ConsoleTargetFramework = "net8.0";
+    private const string DefaultTestTargetFrameworks = "net8.0;net462";
 
     private static readonly Dictionary<ApiType, string[]> PackageTypeToImplicitDependencies = new Dictionary<ApiType, string[]>
     {
@@ -121,7 +114,7 @@ internal sealed class NonSourceGenerator
         { "xunit.runner.visualstudio", DefaultVersionValue },
         { "Xunit.SkippableFact", DefaultVersionValue },
         { "NSubstitute", DefaultVersionValue },
-        { "System.Linq.Async", DefaultVersionValue },
+        { "System.Linq.AsyncEnumerable", DefaultVersionValue },
     };
 
     // Hard-coded versions for dependencies for production packages that can be updated arbitrarily, as their assets are all private.
@@ -180,7 +173,6 @@ internal sealed class NonSourceGenerator
     /// - Solution files
     /// - Repo metadata
     /// - Documentation stubs
-    /// - OwlBot configuration
     /// </summary>
     /// <param name="api"></param>
     internal void GenerateApiFiles(ApiMetadata api)
@@ -194,7 +186,6 @@ internal sealed class NonSourceGenerator
 
         GenerateProjects(api, apiNames);
         GenerateSolutionFile(api);
-        GenerateOwlBotConfiguration(api);
         GenerateMetadataFile(api);
     }
 
@@ -206,6 +197,8 @@ internal sealed class NonSourceGenerator
         {
             if (!projectName.StartsWith(api.Id, StringComparison.Ordinal))
             {
+                // An explicit project, e.g. "SampleApp" in Google.Cloud.Logging.Console.
+                GenerateConsoleProject(projectName);
                 continue;
             }
             string suffix = projectName[api.Id.Length..];
@@ -219,6 +212,10 @@ internal sealed class NonSourceGenerator
                 case ".Snippets":
                 case ".GeneratedSnippets":
                     GenerateTestProject(projectName);
+                    break;
+                // Anything not covered above is expected to be a console app.
+                default:
+                    GenerateConsoleProject(projectName);
                     break;
             }
         }
@@ -264,6 +261,19 @@ internal sealed class NonSourceGenerator
             WriteProjectFile(api.Id, propertyGroup, dependenciesElement);
         }
 
+        void GenerateConsoleProject(string projectName)
+        {
+            var propertyGroup = new XElement("PropertyGroup",
+                // Build-related properties
+                new XElement("OutputType", "Exe"),
+                new XElement("TargetFramework", ConsoleTargetFramework),
+                new XElement("IsPackable", false)
+            );
+            // Each console app depends on the main project
+            XElement dependenciesElement = new XElement("ItemGroup", CreateDependencyElement(projectName, api.Id, ProjectVersionValue, null, false));
+            WriteProjectFile(projectName, propertyGroup, dependenciesElement);
+        }
+
         void GenerateTestProject(string projectName)
         {
             var dependencies = new SortedList<string, string>(CommonTestDependencies, StringComparer.Ordinal);
@@ -285,11 +295,12 @@ internal sealed class NonSourceGenerator
                     // Note: this would normally be TestTargetFrameworks, but that appears to be broken in .NET 6. I don't know why.
                     new XElement("TargetFrameworks", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), AnyDesktopFramework.Replace(testTargetFrameworks, "")),
                     new XElement("IsPackable", false),
+                    // $(NoWarn) allows Directory.Build.props in the API's root directory to add more entries.
                     // 1701, 1702 and 1705 are disabled by default.
                     // xUnit2004 prevents Assert.Equal(true, value) etc, preferring Assert.True and Assert.False, but
                     //   Assert.Equal is clearer (IMO) for comparing values rather than conditions.
                     // xUnit2013 prevents simple checks for the number of items in a collection
-                    new XElement("NoWarn", "1701;1702;1705;xUnit2004;xUnit2013")
+                    new XElement("NoWarn", "$(NoWarn);1701;1702;1705;xUnit2004;xUnit2013")
                 );
             var dependenciesElement = CreateDependenciesElement(projectName, dependencies, api.StructuredVersion, testProject: true);
             // Test service... it keeps on getting added by Visual Studio, so let's just include it everywhere.
@@ -314,7 +325,18 @@ internal sealed class NonSourceGenerator
             if (File.Exists(augmentationFile))
             {
                 var augmentationDoc = XDocument.Load(augmentationFile);
-                doc.Add(augmentationDoc.Root.Elements());
+                // Emergency escape hatch for a couple of project files which would be really painful to handle
+                // otherwise: if we have a ReplaceAll attribute in the root of the document, we ignore whatever we
+                // would have generated, and just copy the elements instead.
+                if (augmentationDoc.Root.Attribute("ReplaceAll") is XAttribute replaceAllAttr)
+                {
+                    replaceAllAttr.Remove();
+                    doc = augmentationDoc.Root;
+                }
+                else
+                {
+                    doc.Add(augmentationDoc.Root.Elements());
+                }
             }
 
             // Don't use File.CreateText as that omits the byte order mark.
@@ -524,82 +546,6 @@ internal sealed class NonSourceGenerator
         File.WriteAllLines(file, allLines);
     }
 
-    private void GenerateOwlBotConfiguration(ApiMetadata api)
-    {
-        var apiLayout = RootLayout.CreateGeneratorApiLayout(api);
-        var owlBotConfigFile = Path.Combine(apiLayout.SourceDirectory, ".OwlBot.yaml");
-        var owlBotForceRegenerationFile = Path.Combine(apiLayout.SourceDirectory, ".OwlBot-ForceRegeneration.txt");
-
-        // If we're not using OwlBot, make sure we don't have any files for it.
-        if (!GenerateOwlBotConfig)
-        {
-            File.Delete(owlBotConfigFile);
-            File.Delete(owlBotForceRegenerationFile);
-            return;
-        }
-
-        // We will recreate this if necessary.
-        File.Delete(owlBotForceRegenerationFile);
-        if (api.Generator == GeneratorType.None)
-        {
-            // Clean up any previous OwlBot configuration
-            File.Delete(owlBotConfigFile);
-            return;
-        }
-        string content =
-$@"
-# Copyright {DateTime.UtcNow.Year} Google LLC
-#
-# Licensed under the Apache License, Version 2.0 (the ""License"");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an ""AS IS"" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-squash: true
-
-deep-remove-regex:
-    - /owl-bot-staging
-
-deep-copy-regex:
-    - source: /{api.ProtoPath}/.*-csharp/{api.Id}
-      dest: /owl-bot-staging/{api.Id}/{api.Id}
-    - source: /{api.ProtoPath}/.*-csharp/{api.Id}.Snippets
-      dest: /owl-bot-staging/{api.Id}/{api.Id}.Snippets
-    - source: /{api.ProtoPath}/.*-csharp/{api.Id}.GeneratedSnippets
-      dest: /owl-bot-staging/{api.Id}/{api.Id}.GeneratedSnippets
-    - source: /{api.ProtoPath}/.*-csharp/gapic_metadata.json
-      dest: /owl-bot-staging/{api.Id}/gapic_metadata.json
-
-api-name: {api.Id}
-";
-        File.WriteAllText(owlBotConfigFile, content);
-
-        var forceRegenerationReasons = new List<string>();
-        if (File.Exists(Path.Combine(apiLayout.TweaksDirectory, "pregeneration.sh")))
-        {
-            forceRegenerationReasons.Add("API requires pre-generation tweaks.");
-        }
-        if (api.CommonResourcesConfig is object)
-        {
-            forceRegenerationReasons.Add("API uses a custom resources configuration.");
-        }
-        if (api.ForceOwlBotRegeneration is string reason)
-        {
-            forceRegenerationReasons.Add(reason);
-        }
-        if (forceRegenerationReasons.Any())
-        {
-            File.WriteAllLines(owlBotForceRegenerationFile, forceRegenerationReasons);
-        }
-    }
-
     /// <summary>
     /// Generates a metadata file (currently .repo-metadata.json; may change name later) with
     /// all the information that language-agnostic tools require.
@@ -756,14 +702,11 @@ api-name: {api.Id}
         DeleteRelative($"{api.Id}.sln");
         DeleteRelative(".repo-metadata.json");
         DeleteRelative(".repo-metadata.json");
-        DeleteRelative(".OwlBot.yaml");
-        DeleteRelative(".OwlBot-ForceRegeneration.txt");
 
-        DeleteProject(apiLayout.ProductionDirectory);
-        DeleteProject(apiLayout.UnitTestsDirectory);
-        DeleteProject(apiLayout.IntegrationTestsDirectory);
-        DeleteProject(apiLayout.GeneratedSnippetsDirectory);
-        DeleteProject(apiLayout.SnippetsDirectory);
+        foreach (var project in api.DeriveProjects())
+        {
+            DeleteProject(Path.Combine(apiLayout.SourceDirectory, project));
+        }
 
         void DeleteProject(string directory)
         {

@@ -1,0 +1,10 @@
+command: configure
+args:
+- '--api-root=/test/api-root'
+- '--generator-input=/test/generator-input'
+- '--api-path=google/test/v3'
+commonFiles:
+  - source: test-apis.json
+    target: generator-input/apis.json
+  - source: test-state.json
+    target: generator-input/pipeline-state.json

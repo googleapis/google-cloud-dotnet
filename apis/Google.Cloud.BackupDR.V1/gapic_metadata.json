@@ -64,6 +64,24 @@
                 "DeleteManagementServerAsync"
               ]
             },
+            "FetchBackupPlanAssociationsForResourceType": {
+              "methods": [
+                "FetchBackupPlanAssociationsForResourceType",
+                "FetchBackupPlanAssociationsForResourceTypeAsync"
+              ]
+            },
+            "FetchBackupsForResourceType": {
+              "methods": [
+                "FetchBackupsForResourceType",
+                "FetchBackupsForResourceTypeAsync"
+              ]
+            },
+            "FetchDataSourceReferencesForResourceType": {
+              "methods": [
+                "FetchDataSourceReferencesForResourceType",
+                "FetchDataSourceReferencesForResourceTypeAsync"
+              ]
+            },
             "FetchUsableBackupVaults": {
               "methods": [
                 "FetchUsableBackupVaults",
@@ -88,6 +106,12 @@
                 "GetBackupPlanAssociationAsync"
               ]
             },
+            "GetBackupPlanRevision": {
+              "methods": [
+                "GetBackupPlanRevision",
+                "GetBackupPlanRevisionAsync"
+              ]
+            },
             "GetBackupVault": {
               "methods": [
                 "GetBackupVault",
@@ -98,6 +122,12 @@
               "methods": [
                 "GetDataSource",
                 "GetDataSourceAsync"
+              ]
+            },
+            "GetDataSourceReference": {
+              "methods": [
+                "GetDataSourceReference",
+                "GetDataSourceReferenceAsync"
               ]
             },
             "GetManagementServer": {
@@ -118,6 +148,12 @@
                 "ListBackupPlanAssociationsAsync"
               ]
             },
+            "ListBackupPlanRevisions": {
+              "methods": [
+                "ListBackupPlanRevisions",
+                "ListBackupPlanRevisionsAsync"
+              ]
+            },
             "ListBackupPlans": {
               "methods": [
                 "ListBackupPlans",
@@ -134,6 +170,12 @@
               "methods": [
                 "ListBackups",
                 "ListBackupsAsync"
+              ]
+            },
+            "ListDataSourceReferences": {
+              "methods": [
+                "ListDataSourceReferences",
+                "ListDataSourceReferencesAsync"
               ]
             },
             "ListDataSources": {
@@ -164,6 +206,18 @@
               "methods": [
                 "UpdateBackup",
                 "UpdateBackupAsync"
+              ]
+            },
+            "UpdateBackupPlan": {
+              "methods": [
+                "UpdateBackupPlan",
+                "UpdateBackupPlanAsync"
+              ]
+            },
+            "UpdateBackupPlanAssociation": {
+              "methods": [
+                "UpdateBackupPlanAssociation",
+                "UpdateBackupPlanAssociationAsync"
               ]
             },
             "UpdateBackupVault": {

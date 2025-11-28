@@ -99,7 +99,7 @@ namespace Google.Cloud.Support.V2 {
     public abstract partial class CommentServiceBase
     {
       /// <summary>
-      /// Retrieve all Comments associated with the Case object.
+      /// List all the comments associated with a case.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -111,8 +111,9 @@ namespace Google.Cloud.Support.V2 {
       }
 
       /// <summary>
-      /// Add a new comment to the specified Case.
-      /// The comment object must have the following fields set: body.
+      /// Add a new comment to a case.
+      ///
+      /// The comment must have the following fields set: `body`.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -153,7 +154,7 @@ namespace Google.Cloud.Support.V2 {
       }
 
       /// <summary>
-      /// Retrieve all Comments associated with the Case object.
+      /// List all the comments associated with a case.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -166,7 +167,7 @@ namespace Google.Cloud.Support.V2 {
         return ListComments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieve all Comments associated with the Case object.
+      /// List all the comments associated with a case.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -177,7 +178,7 @@ namespace Google.Cloud.Support.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListComments, null, options, request);
       }
       /// <summary>
-      /// Retrieve all Comments associated with the Case object.
+      /// List all the comments associated with a case.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -190,7 +191,7 @@ namespace Google.Cloud.Support.V2 {
         return ListCommentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieve all Comments associated with the Case object.
+      /// List all the comments associated with a case.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -201,8 +202,9 @@ namespace Google.Cloud.Support.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ListComments, null, options, request);
       }
       /// <summary>
-      /// Add a new comment to the specified Case.
-      /// The comment object must have the following fields set: body.
+      /// Add a new comment to a case.
+      ///
+      /// The comment must have the following fields set: `body`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -215,8 +217,9 @@ namespace Google.Cloud.Support.V2 {
         return CreateComment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Add a new comment to the specified Case.
-      /// The comment object must have the following fields set: body.
+      /// Add a new comment to a case.
+      ///
+      /// The comment must have the following fields set: `body`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -227,8 +230,9 @@ namespace Google.Cloud.Support.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateComment, null, options, request);
       }
       /// <summary>
-      /// Add a new comment to the specified Case.
-      /// The comment object must have the following fields set: body.
+      /// Add a new comment to a case.
+      ///
+      /// The comment must have the following fields set: `body`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -241,8 +245,9 @@ namespace Google.Cloud.Support.V2 {
         return CreateCommentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Add a new comment to the specified Case.
-      /// The comment object must have the following fields set: body.
+      /// Add a new comment to a case.
+      ///
+      /// The comment must have the following fields set: `body`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

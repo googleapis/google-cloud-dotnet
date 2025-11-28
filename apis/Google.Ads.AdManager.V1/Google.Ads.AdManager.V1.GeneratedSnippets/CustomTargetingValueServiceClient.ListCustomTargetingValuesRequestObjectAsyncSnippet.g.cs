@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             ListCustomTargetingValuesRequest request = new ListCustomTargetingValuesRequest
             {
-                ParentAsCustomTargetingKeyName = CustomTargetingKeyName.FromNetworkCodeCustomTargetingKey("[NETWORK_CODE]", "[CUSTOM_TARGETING_KEY]"),
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
                 Filter = "",
                 OrderBy = "",
                 Skip = 0,

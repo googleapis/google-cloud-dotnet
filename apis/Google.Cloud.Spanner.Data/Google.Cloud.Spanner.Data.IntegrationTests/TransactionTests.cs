@@ -19,7 +19,7 @@ using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
 using System.Threading.Tasks;
 using Xunit;
-using wkt = Google.Protobuf.WellKnownTypes;
+using WKT = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
@@ -543,7 +543,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     TimestampBound.OfReadTimestamp(_oldestEntry.Timestamp).WithReturnReadTimestamp(true));
                 using (var reader = (SpannerDataReader)(await cmd.ExecuteReaderAsync()))
                 {
-                    Assert.Equal(wkt::Timestamp.FromDateTime(_oldestEntry.Timestamp), reader.GetReadTimestamp());
+                    Assert.Equal(WKT::Timestamp.FromDateTime(_oldestEntry.Timestamp), reader.GetReadTimestamp());
                     if (await reader.ReadAsync())
                     {
                         Assert.Equal(_oldestEntry.Value, reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
@@ -598,8 +598,36 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     cmd.Transaction = tx;
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
-                        Assert.Equal(wkt::Timestamp.FromDateTime(targetReadTimestamp), reader.GetReadTimestamp());
+                        Assert.Equal(WKT::Timestamp.FromDateTime(targetReadTimestamp), reader.GetReadTimestamp());
                         Assert.False(
+                            await reader.ReadAsync(),
+                            "no data should be here from yesterday!");
+                    }
+                }
+            }
+        }
+
+        [Fact]
+        public async Task CustomTransactionOptions()
+        {
+            // This test currently tests ReadLockMode and IsolationLevel
+            // More options compatible with these options can be added to this same test
+            using (var connection = _fixture.GetConnection())
+            {
+                await connection.OpenAsync();
+                var options = SpannerTransactionCreationOptions.ReadWrite
+                    .WithReadLockMode(ReadLockMode.Pessimistic)
+                    .WithIsolationLevel(System.Data.IsolationLevel.Serializable);
+
+                using (var tx = await connection.BeginTransactionAsync(options, transactionOptions: null, cancellationToken: default))
+                {
+                    Assert.Equal(TransactionMode.ReadWrite, tx.Mode);
+
+                    var cmd = CreateSelectAllCommandForKey(connection);
+                    cmd.Transaction = tx;
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        Assert.True(
                             await reader.ReadAsync(),
                             "no data should be here from yesterday!");
                     }

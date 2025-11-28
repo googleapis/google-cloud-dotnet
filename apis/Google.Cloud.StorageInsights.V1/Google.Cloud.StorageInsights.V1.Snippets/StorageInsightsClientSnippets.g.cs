@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.StorageInsights.V1;
+    using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
@@ -1010,6 +1011,1251 @@ namespace GoogleCSharpSnippets
             ReportDetailName name = ReportDetailName.FromProjectLocationReportConfigReportDetail("[PROJECT]", "[LOCATION]", "[REPORT_CONFIG]", "[REPORT_DETAIL]");
             // Make the request
             ReportDetail response = await storageInsightsClient.GetReportDetailAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatasetConfigs</summary>
+        public void ListDatasetConfigsRequestObject()
+        {
+            // Snippet: ListDatasetConfigs(ListDatasetConfigsRequest, CallSettings)
+            // Create client
+            StorageInsightsClient storageInsightsClient = StorageInsightsClient.Create();
+            // Initialize request argument(s)
+            ListDatasetConfigsRequest request = new ListDatasetConfigsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListDatasetConfigsResponse, DatasetConfig> response = storageInsightsClient.ListDatasetConfigs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DatasetConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDatasetConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatasetConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatasetConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatasetConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatasetConfigsAsync</summary>
+        public async Task ListDatasetConfigsRequestObjectAsync()
+        {
+            // Snippet: ListDatasetConfigsAsync(ListDatasetConfigsRequest, CallSettings)
+            // Create client
+            StorageInsightsClient storageInsightsClient = await StorageInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            ListDatasetConfigsRequest request = new ListDatasetConfigsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListDatasetConfigsResponse, DatasetConfig> response = storageInsightsClient.ListDatasetConfigsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DatasetConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDatasetConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatasetConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatasetConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatasetConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatasetConfigs</summary>
+        public void ListDatasetConfigs()
+        {
+            // Snippet: ListDatasetConfigs(string, string, int?, CallSettings)
+            // Create client
+            StorageInsightsClient storageInsightsClient = StorageInsightsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListDatasetConfigsResponse, DatasetConfig> response = storageInsightsClient.ListDatasetConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DatasetConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDatasetConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatasetConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatasetConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatasetConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatasetConfigsAsync</summary>
+        public async Task ListDatasetConfigsAsync()
+        {
+            // Snippet: ListDatasetConfigsAsync(string, string, int?, CallSettings)
+            // Create client
+            StorageInsightsClient storageInsightsClient = await StorageInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListDatasetConfigsResponse, DatasetConfig> response = storageInsightsClient.ListDatasetConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DatasetConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDatasetConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatasetConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatasetConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatasetConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatasetConfigs</summary>
+        public void ListDatasetConfigsResourceNames()
+        {
+            // Snippet: ListDatasetConfigs(LocationName, string, int?, CallSettings)
+            // Create client
+            StorageInsightsClient storageInsightsClient = StorageInsightsClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListDatasetConfigsResponse, DatasetConfig> response = storageInsightsClient.ListDatasetConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DatasetConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDatasetConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatasetConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatasetConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatasetConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatasetConfigsAsync</summary>
+        public async Task ListDatasetConfigsResourceNamesAsync()
+        {
+            // Snippet: ListDatasetConfigsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            StorageInsightsClient storageInsightsClient = await StorageInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListDatasetConfigsResponse, DatasetConfig> response = storageInsightsClient.ListDatasetConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DatasetConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDatasetConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatasetConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatasetConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatasetConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatasetConfig</summary>
+        public void GetDatasetConfigRequestObject()
+        {
+            // Snippet: GetDatasetConfig(GetDatasetConfigRequest, CallSettings)
+            // Create client
+            StorageInsightsClient storageInsightsClient = StorageInsightsClient.Create();
+            // Initialize request argument(s)
+            GetDatasetConfigRequest request = new GetDatasetConfigRequest
+            {
+                DatasetConfigName = DatasetConfigName.FromProjectLocationDatasetConfig("[PROJECT]", "[LOCATION]", "[DATASET_CONFIG]"),
+            };
+            // Make the request
+            DatasetConfig response = storageInsightsClient.GetDatasetConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatasetConfigAsync</summary>
+        public async Task GetDatasetConfigRequestObjectAsync()
+        {
+            // Snippet: GetDatasetConfigAsync(GetDatasetConfigRequest, CallSettings)
+            // Additional: GetDatasetConfigAsync(GetDatasetConfigRequest, CancellationToken)
+            // Create client
+            StorageInsightsClient storageInsightsClient = await StorageInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDatasetConfigRequest request = new GetDatasetConfigRequest
+            {
+                DatasetConfigName = DatasetConfigName.FromProjectLocationDatasetConfig("[PROJECT]", "[LOCATION]", "[DATASET_CONFIG]"),
+            };
+            // Make the request
+            DatasetConfig response = await storageInsightsClient.GetDatasetConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatasetConfig</summary>
+        public void GetDatasetConfig()
+        {
+            // Snippet: GetDatasetConfig(string, CallSettings)
+            // Create client
+            StorageInsightsClient storageInsightsClient = StorageInsightsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/datasetConfigs/[DATASET_CONFIG]";
+            // Make the request
+            DatasetConfig response = storageInsightsClient.GetDatasetConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatasetConfigAsync</summary>
+        public async Task GetDatasetConfigAsync()
+        {
+            // Snippet: GetDatasetConfigAsync(string, CallSettings)
+            // Additional: GetDatasetConfigAsync(string, CancellationToken)
+            // Create client
+            StorageInsightsClient storageInsightsClient = await StorageInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/datasetConfigs/[DATASET_CONFIG]";
+            // Make the request
+            DatasetConfig response = await storageInsightsClient.GetDatasetConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatasetConfig</summary>
+        public void GetDatasetConfigResourceNames()
+        {
+            // Snippet: GetDatasetConfig(DatasetConfigName, CallSettings)
+            // Create client
+            StorageInsightsClient storageInsightsClient = StorageInsightsClient.Create();
+            // Initialize request argument(s)
+            DatasetConfigName name = DatasetConfigName.FromProjectLocationDatasetConfig("[PROJECT]", "[LOCATION]", "[DATASET_CONFIG]");
+            // Make the request
+            DatasetConfig response = storageInsightsClient.GetDatasetConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatasetConfigAsync</summary>
+        public async Task GetDatasetConfigResourceNamesAsync()
+        {
+            // Snippet: GetDatasetConfigAsync(DatasetConfigName, CallSettings)
+            // Additional: GetDatasetConfigAsync(DatasetConfigName, CancellationToken)
+            // Create client
+            StorageInsightsClient storageInsightsClient = await StorageInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            DatasetConfigName name = DatasetConfigName.FromProjectLocationDatasetConfig("[PROJECT]", "[LOCATION]", "[DATASET_CONFIG]");
+            // Make the request
+            DatasetConfig response = await storageInsightsClient.GetDatasetConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatasetConfig</summary>
+        public void CreateDatasetConfigRequestObject()
+        {
+            // Snippet: CreateDatasetConfig(CreateDatasetConfigRequest, CallSettings)
+            // Create client
+            StorageInsightsClient storageInsightsClient = StorageInsightsClient.Create();
+            // Initialize request argument(s)
+            CreateDatasetConfigRequest request = new CreateDatasetConfigRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                DatasetConfigId = "",
+                DatasetConfig = new DatasetConfig(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DatasetConfig, OperationMetadata> response = storageInsightsClient.CreateDatasetConfig(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatasetConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DatasetConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatasetConfig, OperationMetadata> retrievedResponse = storageInsightsClient.PollOnceCreateDatasetConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatasetConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatasetConfigAsync</summary>
+        public async Task CreateDatasetConfigRequestObjectAsync()
+        {
+            // Snippet: CreateDatasetConfigAsync(CreateDatasetConfigRequest, CallSettings)
+            // Additional: CreateDatasetConfigAsync(CreateDatasetConfigRequest, CancellationToken)
+            // Create client
+            StorageInsightsClient storageInsightsClient = await StorageInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateDatasetConfigRequest request = new CreateDatasetConfigRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                DatasetConfigId = "",
+                DatasetConfig = new DatasetConfig(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DatasetConfig, OperationMetadata> response = await storageInsightsClient.CreateDatasetConfigAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatasetConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DatasetConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatasetConfig, OperationMetadata> retrievedResponse = await storageInsightsClient.PollOnceCreateDatasetConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatasetConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatasetConfig</summary>
+        public void CreateDatasetConfig()
+        {
+            // Snippet: CreateDatasetConfig(string, DatasetConfig, string, CallSettings)
+            // Create client
+            StorageInsightsClient storageInsightsClient = StorageInsightsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            DatasetConfig datasetConfig = new DatasetConfig();
+            string datasetConfigId = "";
+            // Make the request
+            Operation<DatasetConfig, OperationMetadata> response = storageInsightsClient.CreateDatasetConfig(parent, datasetConfig, datasetConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatasetConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DatasetConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatasetConfig, OperationMetadata> retrievedResponse = storageInsightsClient.PollOnceCreateDatasetConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatasetConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatasetConfigAsync</summary>
+        public async Task CreateDatasetConfigAsync()
+        {
+            // Snippet: CreateDatasetConfigAsync(string, DatasetConfig, string, CallSettings)
+            // Additional: CreateDatasetConfigAsync(string, DatasetConfig, string, CancellationToken)
+            // Create client
+            StorageInsightsClient storageInsightsClient = await StorageInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            DatasetConfig datasetConfig = new DatasetConfig();
+            string datasetConfigId = "";
+            // Make the request
+            Operation<DatasetConfig, OperationMetadata> response = await storageInsightsClient.CreateDatasetConfigAsync(parent, datasetConfig, datasetConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatasetConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DatasetConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatasetConfig, OperationMetadata> retrievedResponse = await storageInsightsClient.PollOnceCreateDatasetConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatasetConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatasetConfig</summary>
+        public void CreateDatasetConfigResourceNames()
+        {
+            // Snippet: CreateDatasetConfig(LocationName, DatasetConfig, string, CallSettings)
+            // Create client
+            StorageInsightsClient storageInsightsClient = StorageInsightsClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            DatasetConfig datasetConfig = new DatasetConfig();
+            string datasetConfigId = "";
+            // Make the request
+            Operation<DatasetConfig, OperationMetadata> response = storageInsightsClient.CreateDatasetConfig(parent, datasetConfig, datasetConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatasetConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DatasetConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatasetConfig, OperationMetadata> retrievedResponse = storageInsightsClient.PollOnceCreateDatasetConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatasetConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatasetConfigAsync</summary>
+        public async Task CreateDatasetConfigResourceNamesAsync()
+        {
+            // Snippet: CreateDatasetConfigAsync(LocationName, DatasetConfig, string, CallSettings)
+            // Additional: CreateDatasetConfigAsync(LocationName, DatasetConfig, string, CancellationToken)
+            // Create client
+            StorageInsightsClient storageInsightsClient = await StorageInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            DatasetConfig datasetConfig = new DatasetConfig();
+            string datasetConfigId = "";
+            // Make the request
+            Operation<DatasetConfig, OperationMetadata> response = await storageInsightsClient.CreateDatasetConfigAsync(parent, datasetConfig, datasetConfigId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatasetConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DatasetConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatasetConfig, OperationMetadata> retrievedResponse = await storageInsightsClient.PollOnceCreateDatasetConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatasetConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatasetConfig</summary>
+        public void UpdateDatasetConfigRequestObject()
+        {
+            // Snippet: UpdateDatasetConfig(UpdateDatasetConfigRequest, CallSettings)
+            // Create client
+            StorageInsightsClient storageInsightsClient = StorageInsightsClient.Create();
+            // Initialize request argument(s)
+            UpdateDatasetConfigRequest request = new UpdateDatasetConfigRequest
+            {
+                UpdateMask = new FieldMask(),
+                DatasetConfig = new DatasetConfig(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DatasetConfig, OperationMetadata> response = storageInsightsClient.UpdateDatasetConfig(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatasetConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DatasetConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatasetConfig, OperationMetadata> retrievedResponse = storageInsightsClient.PollOnceUpdateDatasetConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatasetConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatasetConfigAsync</summary>
+        public async Task UpdateDatasetConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateDatasetConfigAsync(UpdateDatasetConfigRequest, CallSettings)
+            // Additional: UpdateDatasetConfigAsync(UpdateDatasetConfigRequest, CancellationToken)
+            // Create client
+            StorageInsightsClient storageInsightsClient = await StorageInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateDatasetConfigRequest request = new UpdateDatasetConfigRequest
+            {
+                UpdateMask = new FieldMask(),
+                DatasetConfig = new DatasetConfig(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<DatasetConfig, OperationMetadata> response = await storageInsightsClient.UpdateDatasetConfigAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatasetConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DatasetConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatasetConfig, OperationMetadata> retrievedResponse = await storageInsightsClient.PollOnceUpdateDatasetConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatasetConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatasetConfig</summary>
+        public void UpdateDatasetConfig()
+        {
+            // Snippet: UpdateDatasetConfig(DatasetConfig, FieldMask, CallSettings)
+            // Create client
+            StorageInsightsClient storageInsightsClient = StorageInsightsClient.Create();
+            // Initialize request argument(s)
+            DatasetConfig datasetConfig = new DatasetConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<DatasetConfig, OperationMetadata> response = storageInsightsClient.UpdateDatasetConfig(datasetConfig, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatasetConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DatasetConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatasetConfig, OperationMetadata> retrievedResponse = storageInsightsClient.PollOnceUpdateDatasetConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatasetConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatasetConfigAsync</summary>
+        public async Task UpdateDatasetConfigAsync()
+        {
+            // Snippet: UpdateDatasetConfigAsync(DatasetConfig, FieldMask, CallSettings)
+            // Additional: UpdateDatasetConfigAsync(DatasetConfig, FieldMask, CancellationToken)
+            // Create client
+            StorageInsightsClient storageInsightsClient = await StorageInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            DatasetConfig datasetConfig = new DatasetConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<DatasetConfig, OperationMetadata> response = await storageInsightsClient.UpdateDatasetConfigAsync(datasetConfig, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatasetConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DatasetConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatasetConfig, OperationMetadata> retrievedResponse = await storageInsightsClient.PollOnceUpdateDatasetConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatasetConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatasetConfig</summary>
+        public void DeleteDatasetConfigRequestObject()
+        {
+            // Snippet: DeleteDatasetConfig(DeleteDatasetConfigRequest, CallSettings)
+            // Create client
+            StorageInsightsClient storageInsightsClient = StorageInsightsClient.Create();
+            // Initialize request argument(s)
+            DeleteDatasetConfigRequest request = new DeleteDatasetConfigRequest
+            {
+                DatasetConfigName = DatasetConfigName.FromProjectLocationDatasetConfig("[PROJECT]", "[LOCATION]", "[DATASET_CONFIG]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = storageInsightsClient.DeleteDatasetConfig(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = storageInsightsClient.PollOnceDeleteDatasetConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatasetConfigAsync</summary>
+        public async Task DeleteDatasetConfigRequestObjectAsync()
+        {
+            // Snippet: DeleteDatasetConfigAsync(DeleteDatasetConfigRequest, CallSettings)
+            // Additional: DeleteDatasetConfigAsync(DeleteDatasetConfigRequest, CancellationToken)
+            // Create client
+            StorageInsightsClient storageInsightsClient = await StorageInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteDatasetConfigRequest request = new DeleteDatasetConfigRequest
+            {
+                DatasetConfigName = DatasetConfigName.FromProjectLocationDatasetConfig("[PROJECT]", "[LOCATION]", "[DATASET_CONFIG]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await storageInsightsClient.DeleteDatasetConfigAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await storageInsightsClient.PollOnceDeleteDatasetConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatasetConfig</summary>
+        public void DeleteDatasetConfig()
+        {
+            // Snippet: DeleteDatasetConfig(string, CallSettings)
+            // Create client
+            StorageInsightsClient storageInsightsClient = StorageInsightsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/datasetConfigs/[DATASET_CONFIG]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = storageInsightsClient.DeleteDatasetConfig(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = storageInsightsClient.PollOnceDeleteDatasetConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatasetConfigAsync</summary>
+        public async Task DeleteDatasetConfigAsync()
+        {
+            // Snippet: DeleteDatasetConfigAsync(string, CallSettings)
+            // Additional: DeleteDatasetConfigAsync(string, CancellationToken)
+            // Create client
+            StorageInsightsClient storageInsightsClient = await StorageInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/datasetConfigs/[DATASET_CONFIG]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await storageInsightsClient.DeleteDatasetConfigAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await storageInsightsClient.PollOnceDeleteDatasetConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatasetConfig</summary>
+        public void DeleteDatasetConfigResourceNames()
+        {
+            // Snippet: DeleteDatasetConfig(DatasetConfigName, CallSettings)
+            // Create client
+            StorageInsightsClient storageInsightsClient = StorageInsightsClient.Create();
+            // Initialize request argument(s)
+            DatasetConfigName name = DatasetConfigName.FromProjectLocationDatasetConfig("[PROJECT]", "[LOCATION]", "[DATASET_CONFIG]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = storageInsightsClient.DeleteDatasetConfig(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = storageInsightsClient.PollOnceDeleteDatasetConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatasetConfigAsync</summary>
+        public async Task DeleteDatasetConfigResourceNamesAsync()
+        {
+            // Snippet: DeleteDatasetConfigAsync(DatasetConfigName, CallSettings)
+            // Additional: DeleteDatasetConfigAsync(DatasetConfigName, CancellationToken)
+            // Create client
+            StorageInsightsClient storageInsightsClient = await StorageInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            DatasetConfigName name = DatasetConfigName.FromProjectLocationDatasetConfig("[PROJECT]", "[LOCATION]", "[DATASET_CONFIG]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await storageInsightsClient.DeleteDatasetConfigAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await storageInsightsClient.PollOnceDeleteDatasetConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for LinkDataset</summary>
+        public void LinkDatasetRequestObject()
+        {
+            // Snippet: LinkDataset(LinkDatasetRequest, CallSettings)
+            // Create client
+            StorageInsightsClient storageInsightsClient = StorageInsightsClient.Create();
+            // Initialize request argument(s)
+            LinkDatasetRequest request = new LinkDatasetRequest
+            {
+                DatasetConfigName = DatasetConfigName.FromProjectLocationDatasetConfig("[PROJECT]", "[LOCATION]", "[DATASET_CONFIG]"),
+            };
+            // Make the request
+            Operation<LinkDatasetResponse, OperationMetadata> response = storageInsightsClient.LinkDataset(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LinkDatasetResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LinkDatasetResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LinkDatasetResponse, OperationMetadata> retrievedResponse = storageInsightsClient.PollOnceLinkDataset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LinkDatasetResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for LinkDatasetAsync</summary>
+        public async Task LinkDatasetRequestObjectAsync()
+        {
+            // Snippet: LinkDatasetAsync(LinkDatasetRequest, CallSettings)
+            // Additional: LinkDatasetAsync(LinkDatasetRequest, CancellationToken)
+            // Create client
+            StorageInsightsClient storageInsightsClient = await StorageInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            LinkDatasetRequest request = new LinkDatasetRequest
+            {
+                DatasetConfigName = DatasetConfigName.FromProjectLocationDatasetConfig("[PROJECT]", "[LOCATION]", "[DATASET_CONFIG]"),
+            };
+            // Make the request
+            Operation<LinkDatasetResponse, OperationMetadata> response = await storageInsightsClient.LinkDatasetAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LinkDatasetResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LinkDatasetResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LinkDatasetResponse, OperationMetadata> retrievedResponse = await storageInsightsClient.PollOnceLinkDatasetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LinkDatasetResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for LinkDataset</summary>
+        public void LinkDataset()
+        {
+            // Snippet: LinkDataset(string, CallSettings)
+            // Create client
+            StorageInsightsClient storageInsightsClient = StorageInsightsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/datasetConfigs/[DATASET_CONFIG]";
+            // Make the request
+            Operation<LinkDatasetResponse, OperationMetadata> response = storageInsightsClient.LinkDataset(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LinkDatasetResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LinkDatasetResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LinkDatasetResponse, OperationMetadata> retrievedResponse = storageInsightsClient.PollOnceLinkDataset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LinkDatasetResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for LinkDatasetAsync</summary>
+        public async Task LinkDatasetAsync()
+        {
+            // Snippet: LinkDatasetAsync(string, CallSettings)
+            // Additional: LinkDatasetAsync(string, CancellationToken)
+            // Create client
+            StorageInsightsClient storageInsightsClient = await StorageInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/datasetConfigs/[DATASET_CONFIG]";
+            // Make the request
+            Operation<LinkDatasetResponse, OperationMetadata> response = await storageInsightsClient.LinkDatasetAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LinkDatasetResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LinkDatasetResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LinkDatasetResponse, OperationMetadata> retrievedResponse = await storageInsightsClient.PollOnceLinkDatasetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LinkDatasetResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for LinkDataset</summary>
+        public void LinkDatasetResourceNames()
+        {
+            // Snippet: LinkDataset(DatasetConfigName, CallSettings)
+            // Create client
+            StorageInsightsClient storageInsightsClient = StorageInsightsClient.Create();
+            // Initialize request argument(s)
+            DatasetConfigName name = DatasetConfigName.FromProjectLocationDatasetConfig("[PROJECT]", "[LOCATION]", "[DATASET_CONFIG]");
+            // Make the request
+            Operation<LinkDatasetResponse, OperationMetadata> response = storageInsightsClient.LinkDataset(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LinkDatasetResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LinkDatasetResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LinkDatasetResponse, OperationMetadata> retrievedResponse = storageInsightsClient.PollOnceLinkDataset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LinkDatasetResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for LinkDatasetAsync</summary>
+        public async Task LinkDatasetResourceNamesAsync()
+        {
+            // Snippet: LinkDatasetAsync(DatasetConfigName, CallSettings)
+            // Additional: LinkDatasetAsync(DatasetConfigName, CancellationToken)
+            // Create client
+            StorageInsightsClient storageInsightsClient = await StorageInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            DatasetConfigName name = DatasetConfigName.FromProjectLocationDatasetConfig("[PROJECT]", "[LOCATION]", "[DATASET_CONFIG]");
+            // Make the request
+            Operation<LinkDatasetResponse, OperationMetadata> response = await storageInsightsClient.LinkDatasetAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LinkDatasetResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LinkDatasetResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LinkDatasetResponse, OperationMetadata> retrievedResponse = await storageInsightsClient.PollOnceLinkDatasetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LinkDatasetResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UnlinkDataset</summary>
+        public void UnlinkDatasetRequestObject()
+        {
+            // Snippet: UnlinkDataset(UnlinkDatasetRequest, CallSettings)
+            // Create client
+            StorageInsightsClient storageInsightsClient = StorageInsightsClient.Create();
+            // Initialize request argument(s)
+            UnlinkDatasetRequest request = new UnlinkDatasetRequest
+            {
+                DatasetConfigName = DatasetConfigName.FromProjectLocationDatasetConfig("[PROJECT]", "[LOCATION]", "[DATASET_CONFIG]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = storageInsightsClient.UnlinkDataset(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = storageInsightsClient.PollOnceUnlinkDataset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UnlinkDatasetAsync</summary>
+        public async Task UnlinkDatasetRequestObjectAsync()
+        {
+            // Snippet: UnlinkDatasetAsync(UnlinkDatasetRequest, CallSettings)
+            // Additional: UnlinkDatasetAsync(UnlinkDatasetRequest, CancellationToken)
+            // Create client
+            StorageInsightsClient storageInsightsClient = await StorageInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            UnlinkDatasetRequest request = new UnlinkDatasetRequest
+            {
+                DatasetConfigName = DatasetConfigName.FromProjectLocationDatasetConfig("[PROJECT]", "[LOCATION]", "[DATASET_CONFIG]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await storageInsightsClient.UnlinkDatasetAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await storageInsightsClient.PollOnceUnlinkDatasetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UnlinkDataset</summary>
+        public void UnlinkDataset()
+        {
+            // Snippet: UnlinkDataset(string, CallSettings)
+            // Create client
+            StorageInsightsClient storageInsightsClient = StorageInsightsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/datasetConfigs/[DATASET_CONFIG]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = storageInsightsClient.UnlinkDataset(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = storageInsightsClient.PollOnceUnlinkDataset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UnlinkDatasetAsync</summary>
+        public async Task UnlinkDatasetAsync()
+        {
+            // Snippet: UnlinkDatasetAsync(string, CallSettings)
+            // Additional: UnlinkDatasetAsync(string, CancellationToken)
+            // Create client
+            StorageInsightsClient storageInsightsClient = await StorageInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/datasetConfigs/[DATASET_CONFIG]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await storageInsightsClient.UnlinkDatasetAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await storageInsightsClient.PollOnceUnlinkDatasetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UnlinkDataset</summary>
+        public void UnlinkDatasetResourceNames()
+        {
+            // Snippet: UnlinkDataset(DatasetConfigName, CallSettings)
+            // Create client
+            StorageInsightsClient storageInsightsClient = StorageInsightsClient.Create();
+            // Initialize request argument(s)
+            DatasetConfigName name = DatasetConfigName.FromProjectLocationDatasetConfig("[PROJECT]", "[LOCATION]", "[DATASET_CONFIG]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = storageInsightsClient.UnlinkDataset(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = storageInsightsClient.PollOnceUnlinkDataset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UnlinkDatasetAsync</summary>
+        public async Task UnlinkDatasetResourceNamesAsync()
+        {
+            // Snippet: UnlinkDatasetAsync(DatasetConfigName, CallSettings)
+            // Additional: UnlinkDatasetAsync(DatasetConfigName, CancellationToken)
+            // Create client
+            StorageInsightsClient storageInsightsClient = await StorageInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            DatasetConfigName name = DatasetConfigName.FromProjectLocationDatasetConfig("[PROJECT]", "[LOCATION]", "[DATASET_CONFIG]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await storageInsightsClient.UnlinkDatasetAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await storageInsightsClient.PollOnceUnlinkDatasetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

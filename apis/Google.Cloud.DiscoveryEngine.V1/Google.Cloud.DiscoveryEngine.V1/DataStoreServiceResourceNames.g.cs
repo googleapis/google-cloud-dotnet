@@ -29,6 +29,15 @@ namespace Google.Cloud.DiscoveryEngine.V1
             get => string.IsNullOrEmpty(Parent) ? null : CollectionName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="gcdv::CmekConfigName"/>-typed view over the <see cref="CmekConfigName"/> resource name property.
+        /// </summary>
+        public gcdv::CmekConfigName CmekConfigNameAsCmekConfigName
+        {
+            get => string.IsNullOrEmpty(CmekConfigName) ? null : gcdv::CmekConfigName.Parse(CmekConfigName, allowUnparsed: true);
+            set => CmekConfigName = value?.ToString() ?? "";
+        }
     }
 
     public partial class GetDataStoreRequest

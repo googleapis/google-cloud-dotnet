@@ -172,7 +172,31 @@ namespace Google.Cloud.ApiHub.V1
         }
     }
 
+    public partial class CreateApiOperationRequest
+    {
+        /// <summary>
+        /// <see cref="VersionName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public VersionName ParentAsVersionName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : VersionName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetApiOperationRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::ApiOperationName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::ApiOperationName ApiOperationName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::ApiOperationName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteApiOperationRequest
     {
         /// <summary>
         /// <see cref="gcav::ApiOperationName"/>-typed view over the <see cref="Name"/> resource name property.

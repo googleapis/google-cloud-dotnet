@@ -22,18 +22,31 @@ namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 
 internal class IntegrationTestLibraryCommand : IContainerCommand
 {
+    private const string ServiceAccountJsonEnvironmentVariable = "INTEGRATION_TEST_SERVICE_ACCOUNT_JSON";
+    private const string ServiceAccountFileEnvironmentVariable = "GOOGLE_APPLICATION_CREDENTIALS";
+    private const string TestProjectEnvironmentVariable = "TEST_PROJECT";
+    private const string DefaultQuotaProjectEnvironmentVariable = "GOOGLE_CLOUD_QUOTA_PROJECT";
+
     private const int MaxAttempts = 3;
 
     public int Execute(ContainerOptions options)
     {
         MaybeSaveServiceAccount();
+        MaybeSetQuotaProject();
         var repoRoot = options.RequireOption(options.RepoRoot);
+        using var _ = SourceLinkFixer.Create(repoRoot);
+
         var rootLayout = RootLayout.ForRepositoryRoot(repoRoot);
         var catalog = ApiCatalog.Load(rootLayout);
         var apis = options.GetApisFromLibraryId(catalog);
+        Console.WriteLine($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss.fff}Z Starting integration tests for {options.LibraryId}");
         for (int attempt = 1; true; attempt++)
         {
-            var args = attempt == 1 ? apis.Select(api => api.Id) : new List<string> { "--retry" };
+            var args = attempt == 1 ? apis.Select(api => api.Id).ToList() : new List<string> { "--retry" };
+            if (Directory.Exists(Path.Combine(repoRoot, "tools", "Google.Cloud.Tools.ReleaseManager", "bin")))
+            {
+                args.Add("--no-build-releasemanager");
+            }
             try
             {
                 Processes.RunBashScript(repoRoot, "runintegrationtests.sh", args);
@@ -44,14 +57,12 @@ internal class IntegrationTestLibraryCommand : IContainerCommand
                 Console.WriteLine($"Failure running integration tests on attempt {attempt}. (Max attempts = {MaxAttempts})");
             }
         }
+        Console.WriteLine($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss.fff}Z Completed integration tests for {options.LibraryId}");
         return 0;
     }
 
     private void MaybeSaveServiceAccount()
     {
-        const string ServiceAccountJsonEnvironmentVariable = "INTEGRATION_TEST_SERVICE_ACCOUNT_JSON";
-        const string ServiceAccountFileEnvironmentVariable = "GOOGLE_APPLICATION_CREDENTIALS";
-
         var json = Environment.GetEnvironmentVariable(ServiceAccountJsonEnvironmentVariable);
         if (string.IsNullOrEmpty(json))
         {
@@ -76,6 +87,21 @@ internal class IntegrationTestLibraryCommand : IContainerCommand
             File.WriteAllText(serviceAccountFile, json);
             Environment.SetEnvironmentVariable(ServiceAccountFileEnvironmentVariable, serviceAccountFile);
             Console.WriteLine("Saved service account details for testing");
+        }
+    }
+
+    /// <summary>
+    /// If we have TEST_PROJECT set, but not GOOGLE_APPLICATION_CREDENTIALS,
+    /// then set the default project to the TEST_PROJECT.
+    /// </summary>
+    private void MaybeSetQuotaProject()
+    {
+        var testProject = Environment.GetEnvironmentVariable(TestProjectEnvironmentVariable);
+        if (!string.IsNullOrEmpty(testProject) &&
+            string.IsNullOrEmpty(Environment.GetEnvironmentVariable(ServiceAccountFileEnvironmentVariable)))
+        {
+            Environment.SetEnvironmentVariable(DefaultQuotaProjectEnvironmentVariable, testProject);
+            Console.WriteLine("Set default quota project");
         }
     }
 }

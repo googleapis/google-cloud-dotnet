@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListPolicyBindings",
+    "client": "PolicyBindingsClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  }
+]

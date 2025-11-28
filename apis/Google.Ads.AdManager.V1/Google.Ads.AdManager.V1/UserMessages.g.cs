@@ -26,24 +26,28 @@ namespace Google.Ads.AdManager.V1 {
           string.Concat(
             "Citnb29nbGUvYWRzL2FkbWFuYWdlci92MS91c2VyX21lc3NhZ2VzLnByb3Rv",
             "Ehdnb29nbGUuYWRzLmFkbWFuYWdlci52MRofZ29vZ2xlL2FwaS9maWVsZF9i",
-            "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byLfAgoE",
-            "VXNlchIRCgRuYW1lGAEgASgJQgPgQQgSFAoHdXNlcl9pZBgKIAEoA0ID4EED",
-            "EhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EECEhIKBWVtYWlsGAMgASgJQgPg",
-            "QQISMwoEcm9sZRgEIAEoCUIl4EEC+kEfCh1hZG1hbmFnZXIuZ29vZ2xlYXBp",
-            "cy5jb20vUm9sZRITCgZhY3RpdmUYBiABKAhCA+BBAxIYCgtleHRlcm5hbF9p",
-            "ZBgHIAEoCUID4EEBEhwKD3NlcnZpY2VfYWNjb3VudBgIIAEoCEID4EEDEiYK",
-            "GW9yZGVyc191aV9sb2NhbF90aW1lX3pvbmUYCSABKAlCA+BBATpV6kFSCh1h",
-            "ZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vVXNlchIkbmV0d29ya3Mve25ldHdv",
-            "cmtfY29kZX0vdXNlcnMve3VzZXJ9KgV1c2VyczIEdXNlckLFAQobY29tLmdv",
-            "b2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhFVc2VyTWVzc2FnZXNQcm90b1ABWkBn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1h",
-            "bmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHK",
-            "AhdHb29nbGVcQWRzXEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1h",
-            "bmFnZXI6OlYxYgZwcm90bzM="));
+            "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byKEBAoE",
+            "VXNlchIRCgRuYW1lGAEgASgJQgPgQQgSGQoHdXNlcl9pZBgKIAEoA0ID4EED",
+            "SACIAQESHgoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQJIAYgBARIXCgVlbWFp",
+            "bBgDIAEoCUID4EECSAKIAQESOAoEcm9sZRgEIAEoCUIl4EEC+kEfCh1hZG1h",
+            "bmFnZXIuZ29vZ2xlYXBpcy5jb20vUm9sZUgDiAEBEhgKBmFjdGl2ZRgGIAEo",
+            "CEID4EEDSASIAQESHQoLZXh0ZXJuYWxfaWQYByABKAlCA+BBAUgFiAEBEiEK",
+            "D3NlcnZpY2VfYWNjb3VudBgIIAEoCEID4EEDSAaIAQESKwoZb3JkZXJzX3Vp",
+            "X2xvY2FsX3RpbWVfem9uZRgJIAEoCUID4EEBSAeIAQE6VepBUgodYWRtYW5h",
+            "Z2VyLmdvb2dsZWFwaXMuY29tL1VzZXISJG5ldHdvcmtzL3tuZXR3b3JrX2Nv",
+            "ZGV9L3VzZXJzL3t1c2VyfSoFdXNlcnMyBHVzZXJCCgoIX3VzZXJfaWRCDwoN",
+            "X2Rpc3BsYXlfbmFtZUIICgZfZW1haWxCBwoFX3JvbGVCCQoHX2FjdGl2ZUIO",
+            "CgxfZXh0ZXJuYWxfaWRCEgoQX3NlcnZpY2VfYWNjb3VudEIcChpfb3JkZXJz",
+            "X3VpX2xvY2FsX3RpbWVfem9uZULFAQobY29tLmdvb2dsZS5hZHMuYWRtYW5h",
+            "Z2VyLnYxQhFVc2VyTWVzc2FnZXNQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9y",
+            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5h",
+            "Z2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFk",
+            "TWFuYWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.User), global::Google.Ads.AdManager.V1.User.Parser, new[]{ "Name", "UserId", "DisplayName", "Email", "Role", "Active", "ExternalId", "ServiceAccount", "OrdersUiLocalTimeZone" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.User), global::Google.Ads.AdManager.V1.User.Parser, new[]{ "Name", "UserId", "DisplayName", "Email", "Role", "Active", "ExternalId", "ServiceAccount", "OrdersUiLocalTimeZone" }, new[]{ "UserId", "DisplayName", "Email", "Role", "Active", "ExternalId", "ServiceAccount", "OrdersUiLocalTimeZone" }, null, null, null)
           }));
     }
     #endregion
@@ -61,6 +65,7 @@ namespace Google.Ads.AdManager.V1 {
   {
     private static readonly pb::MessageParser<User> _parser = new pb::MessageParser<User>(() => new User());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<User> Parser { get { return _parser; } }
@@ -88,6 +93,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public User(User other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
       userId_ = other.userId_;
       displayName_ = other.displayName_;
@@ -124,6 +130,8 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "user_id" field.</summary>
     public const int UserIdFieldNumber = 10;
+    private readonly static long UserIdDefaultValue = 0L;
+
     private long userId_;
     /// <summary>
     /// Output only. `User` ID.
@@ -131,30 +139,59 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long UserId {
-      get { return userId_; }
+      get { if ((_hasBits0 & 4) != 0) { return userId_; } else { return UserIdDefaultValue; } }
       set {
+        _hasBits0 |= 4;
         userId_ = value;
       }
+    }
+    /// <summary>Gets whether the "user_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUserId {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "user_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUserId() {
+      _hasBits0 &= ~4;
     }
 
     /// <summary>Field number for the "display_name" field.</summary>
     public const int DisplayNameFieldNumber = 2;
-    private string displayName_ = "";
+    private readonly static string DisplayNameDefaultValue = "";
+
+    private string displayName_;
     /// <summary>
     /// Required. The name of the User. It has a maximum length of 128 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
-      get { return displayName_; }
+      get { return displayName_ ?? DisplayNameDefaultValue; }
       set {
         displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return displayName_ != null; }
+    }
+    /// <summary>Clears the value of the "display_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      displayName_ = null;
+    }
 
     /// <summary>Field number for the "email" field.</summary>
     public const int EmailFieldNumber = 3;
-    private string email_ = "";
+    private readonly static string EmailDefaultValue = "";
+
+    private string email_;
     /// <summary>
     /// Required. The email or login of the User. In order to create a new user,
     /// you must already have a Google Account.
@@ -162,15 +199,29 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Email {
-      get { return email_; }
+      get { return email_ ?? EmailDefaultValue; }
       set {
         email_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "email" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEmail {
+      get { return email_ != null; }
+    }
+    /// <summary>Clears the value of the "email" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEmail() {
+      email_ = null;
+    }
 
     /// <summary>Field number for the "role" field.</summary>
     public const int RoleFieldNumber = 4;
-    private string role_ = "";
+    private readonly static string RoleDefaultValue = "";
+
+    private string role_;
     /// <summary>
     /// Required. The unique Role ID of the User. Roles that are created by Google
     /// will have negative IDs.
@@ -178,14 +229,28 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Role {
-      get { return role_; }
+      get { return role_ ?? RoleDefaultValue; }
       set {
         role_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "role" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRole {
+      get { return role_ != null; }
+    }
+    /// <summary>Clears the value of the "role" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRole() {
+      role_ = null;
+    }
 
     /// <summary>Field number for the "active" field.</summary>
     public const int ActiveFieldNumber = 6;
+    private readonly static bool ActiveDefaultValue = false;
+
     private bool active_;
     /// <summary>
     /// Output only. Specifies whether or not the User is active. An inactive user
@@ -194,15 +259,30 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Active {
-      get { return active_; }
+      get { if ((_hasBits0 & 1) != 0) { return active_; } else { return ActiveDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         active_ = value;
       }
+    }
+    /// <summary>Gets whether the "active" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasActive {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "active" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearActive() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "external_id" field.</summary>
     public const int ExternalIdFieldNumber = 7;
-    private string externalId_ = "";
+    private readonly static string ExternalIdDefaultValue = "";
+
+    private string externalId_;
     /// <summary>
     /// Optional. An identifier for the User that is meaningful to the publisher.
     /// This attribute has a maximum length of 255 characters.
@@ -210,14 +290,28 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ExternalId {
-      get { return externalId_; }
+      get { return externalId_ ?? ExternalIdDefaultValue; }
       set {
         externalId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "external_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasExternalId {
+      get { return externalId_ != null; }
+    }
+    /// <summary>Clears the value of the "external_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearExternalId() {
+      externalId_ = null;
+    }
 
     /// <summary>Field number for the "service_account" field.</summary>
     public const int ServiceAccountFieldNumber = 8;
+    private readonly static bool ServiceAccountDefaultValue = false;
+
     private bool serviceAccount_;
     /// <summary>
     /// Output only. Whether the user is an OAuth2 service account user.
@@ -226,15 +320,30 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ServiceAccount {
-      get { return serviceAccount_; }
+      get { if ((_hasBits0 & 2) != 0) { return serviceAccount_; } else { return ServiceAccountDefaultValue; } }
       set {
+        _hasBits0 |= 2;
         serviceAccount_ = value;
       }
+    }
+    /// <summary>Gets whether the "service_account" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasServiceAccount {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "service_account" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearServiceAccount() {
+      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "orders_ui_local_time_zone" field.</summary>
     public const int OrdersUiLocalTimeZoneFieldNumber = 9;
-    private string ordersUiLocalTimeZone_ = "";
+    private readonly static string OrdersUiLocalTimeZoneDefaultValue = "";
+
+    private string ordersUiLocalTimeZone_;
     /// <summary>
     /// Optional. The IANA Time Zone Database time zone, e.g. "America/New_York",
     /// used in the orders and line items UI for this User. If not provided, the UI
@@ -245,10 +354,22 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string OrdersUiLocalTimeZone {
-      get { return ordersUiLocalTimeZone_; }
+      get { return ordersUiLocalTimeZone_ ?? OrdersUiLocalTimeZoneDefaultValue; }
       set {
         ordersUiLocalTimeZone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+    /// <summary>Gets whether the "orders_ui_local_time_zone" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOrdersUiLocalTimeZone {
+      get { return ordersUiLocalTimeZone_ != null; }
+    }
+    /// <summary>Clears the value of the "orders_ui_local_time_zone" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOrdersUiLocalTimeZone() {
+      ordersUiLocalTimeZone_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -283,14 +404,14 @@ namespace Google.Ads.AdManager.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (UserId != 0L) hash ^= UserId.GetHashCode();
-      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (Email.Length != 0) hash ^= Email.GetHashCode();
-      if (Role.Length != 0) hash ^= Role.GetHashCode();
-      if (Active != false) hash ^= Active.GetHashCode();
-      if (ExternalId.Length != 0) hash ^= ExternalId.GetHashCode();
-      if (ServiceAccount != false) hash ^= ServiceAccount.GetHashCode();
-      if (OrdersUiLocalTimeZone.Length != 0) hash ^= OrdersUiLocalTimeZone.GetHashCode();
+      if (HasUserId) hash ^= UserId.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasEmail) hash ^= Email.GetHashCode();
+      if (HasRole) hash ^= Role.GetHashCode();
+      if (HasActive) hash ^= Active.GetHashCode();
+      if (HasExternalId) hash ^= ExternalId.GetHashCode();
+      if (HasServiceAccount) hash ^= ServiceAccount.GetHashCode();
+      if (HasOrdersUiLocalTimeZone) hash ^= OrdersUiLocalTimeZone.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -313,35 +434,35 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         output.WriteRawTag(18);
         output.WriteString(DisplayName);
       }
-      if (Email.Length != 0) {
+      if (HasEmail) {
         output.WriteRawTag(26);
         output.WriteString(Email);
       }
-      if (Role.Length != 0) {
+      if (HasRole) {
         output.WriteRawTag(34);
         output.WriteString(Role);
       }
-      if (Active != false) {
+      if (HasActive) {
         output.WriteRawTag(48);
         output.WriteBool(Active);
       }
-      if (ExternalId.Length != 0) {
+      if (HasExternalId) {
         output.WriteRawTag(58);
         output.WriteString(ExternalId);
       }
-      if (ServiceAccount != false) {
+      if (HasServiceAccount) {
         output.WriteRawTag(64);
         output.WriteBool(ServiceAccount);
       }
-      if (OrdersUiLocalTimeZone.Length != 0) {
+      if (HasOrdersUiLocalTimeZone) {
         output.WriteRawTag(74);
         output.WriteString(OrdersUiLocalTimeZone);
       }
-      if (UserId != 0L) {
+      if (HasUserId) {
         output.WriteRawTag(80);
         output.WriteInt64(UserId);
       }
@@ -359,35 +480,35 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         output.WriteRawTag(18);
         output.WriteString(DisplayName);
       }
-      if (Email.Length != 0) {
+      if (HasEmail) {
         output.WriteRawTag(26);
         output.WriteString(Email);
       }
-      if (Role.Length != 0) {
+      if (HasRole) {
         output.WriteRawTag(34);
         output.WriteString(Role);
       }
-      if (Active != false) {
+      if (HasActive) {
         output.WriteRawTag(48);
         output.WriteBool(Active);
       }
-      if (ExternalId.Length != 0) {
+      if (HasExternalId) {
         output.WriteRawTag(58);
         output.WriteString(ExternalId);
       }
-      if (ServiceAccount != false) {
+      if (HasServiceAccount) {
         output.WriteRawTag(64);
         output.WriteBool(ServiceAccount);
       }
-      if (OrdersUiLocalTimeZone.Length != 0) {
+      if (HasOrdersUiLocalTimeZone) {
         output.WriteRawTag(74);
         output.WriteString(OrdersUiLocalTimeZone);
       }
-      if (UserId != 0L) {
+      if (HasUserId) {
         output.WriteRawTag(80);
         output.WriteInt64(UserId);
       }
@@ -404,28 +525,28 @@ namespace Google.Ads.AdManager.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (UserId != 0L) {
+      if (HasUserId) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(UserId);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
-      if (Email.Length != 0) {
+      if (HasEmail) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Email);
       }
-      if (Role.Length != 0) {
+      if (HasRole) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Role);
       }
-      if (Active != false) {
+      if (HasActive) {
         size += 1 + 1;
       }
-      if (ExternalId.Length != 0) {
+      if (HasExternalId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ExternalId);
       }
-      if (ServiceAccount != false) {
+      if (HasServiceAccount) {
         size += 1 + 1;
       }
-      if (OrdersUiLocalTimeZone.Length != 0) {
+      if (HasOrdersUiLocalTimeZone) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(OrdersUiLocalTimeZone);
       }
       if (_unknownFields != null) {
@@ -443,28 +564,28 @@ namespace Google.Ads.AdManager.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.UserId != 0L) {
+      if (other.HasUserId) {
         UserId = other.UserId;
       }
-      if (other.DisplayName.Length != 0) {
+      if (other.HasDisplayName) {
         DisplayName = other.DisplayName;
       }
-      if (other.Email.Length != 0) {
+      if (other.HasEmail) {
         Email = other.Email;
       }
-      if (other.Role.Length != 0) {
+      if (other.HasRole) {
         Role = other.Role;
       }
-      if (other.Active != false) {
+      if (other.HasActive) {
         Active = other.Active;
       }
-      if (other.ExternalId.Length != 0) {
+      if (other.HasExternalId) {
         ExternalId = other.ExternalId;
       }
-      if (other.ServiceAccount != false) {
+      if (other.HasServiceAccount) {
         ServiceAccount = other.ServiceAccount;
       }
-      if (other.OrdersUiLocalTimeZone.Length != 0) {
+      if (other.HasOrdersUiLocalTimeZone) {
         OrdersUiLocalTimeZone = other.OrdersUiLocalTimeZone;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

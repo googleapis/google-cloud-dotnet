@@ -48,37 +48,39 @@ namespace Google.Cloud.Run.V2 {
             "ZXJ2aWNlU2NhbGluZy5TY2FsaW5nTW9kZUID4EEBEicKFW1hbnVhbF9pbnN0",
             "YW5jZV9jb3VudBgGIAEoBUID4EEBSACIAQEiRgoLU2NhbGluZ01vZGUSHAoY",
             "U0NBTElOR19NT0RFX1VOU1BFQ0lGSUVEEAASDQoJQVVUT01BVElDEAESCgoG",
-            "TUFOVUFMEAJCGAoWX21hbnVhbF9pbnN0YW5jZV9jb3VudCIoCgxOb2RlU2Vs",
-            "ZWN0b3ISGAoLYWNjZWxlcmF0b3IYASABKAlCA+BBAiLRAwoLQnVpbGRDb25m",
-            "aWcSNQoEbmFtZRgBIAEoCUIn4EED+kEhCh9jbG91ZGJ1aWxkLmdvb2dsZWFw",
-            "aXMuY29tL0J1aWxkEhcKD3NvdXJjZV9sb2NhdGlvbhgCIAEoCRIcCg9mdW5j",
-            "dGlvbl90YXJnZXQYAyABKAlCA+BBARIWCglpbWFnZV91cmkYBCABKAlCA+BB",
-            "ARIXCgpiYXNlX2ltYWdlGAUgASgJQgPgQQESJQoYZW5hYmxlX2F1dG9tYXRp",
-            "Y191cGRhdGVzGAYgASgIQgPgQQESQQoLd29ya2VyX3Bvb2wYByABKAlCLOBB",
-            "AfpBJgokY2xvdWRidWlsZC5nb29nbGVhcGlzLmNvbS9Xb3JrZXJQb29sEl4K",
-            "FWVudmlyb25tZW50X3ZhcmlhYmxlcxgIIAMoCzI6Lmdvb2dsZS5jbG91ZC5y",
-            "dW4udjIuQnVpbGRDb25maWcuRW52aXJvbm1lbnRWYXJpYWJsZXNFbnRyeUID",
-            "4EEBEhwKD3NlcnZpY2VfYWNjb3VudBgJIAEoCUID4EEBGjsKGUVudmlyb25t",
-            "ZW50VmFyaWFibGVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
-            "OgI4ASqzAQoOSW5ncmVzc1RyYWZmaWMSHwobSU5HUkVTU19UUkFGRklDX1VO",
-            "U1BFQ0lGSUVEEAASFwoTSU5HUkVTU19UUkFGRklDX0FMTBABEiEKHUlOR1JF",
-            "U1NfVFJBRkZJQ19JTlRFUk5BTF9PTkxZEAISKgomSU5HUkVTU19UUkFGRklD",
-            "X0lOVEVSTkFMX0xPQURfQkFMQU5DRVIQAxIYChRJTkdSRVNTX1RSQUZGSUNf",
-            "Tk9ORRAEKn0KFEV4ZWN1dGlvbkVudmlyb25tZW50EiUKIUVYRUNVVElPTl9F",
-            "TlZJUk9OTUVOVF9VTlNQRUNJRklFRBAAEh4KGkVYRUNVVElPTl9FTlZJUk9O",
-            "TUVOVF9HRU4xEAESHgoaRVhFQ1VUSU9OX0VOVklST05NRU5UX0dFTjIQAipw",
-            "Ch1FbmNyeXB0aW9uS2V5UmV2b2NhdGlvbkFjdGlvbhIwCixFTkNSWVBUSU9O",
-            "X0tFWV9SRVZPQ0FUSU9OX0FDVElPTl9VTlNQRUNJRklFRBAAEg8KC1BSRVZF",
-            "TlRfTkVXEAESDAoIU0hVVERPV04QAkL8AgoXY29tLmdvb2dsZS5jbG91ZC5y",
-            "dW4udjJCE1ZlbmRvclNldHRpbmdzUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNv",
-            "bS9nby9ydW4vYXBpdjIvcnVucGI7cnVucGLqQWMKKWJpbmFyeWF1dGhvcml6",
-            "YXRpb24uZ29vZ2xlYXBpcy5jb20vUG9saWN5Ehlwcm9qZWN0cy97cHJvamVj",
-            "dH0vcG9saWN5Ehtsb2NhdGlvbnMve2xvY2F0aW9ufS9wb2xpY3nqQVwKI25l",
-            "dHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNvbS9NZXNoEjVwcm9qZWN0cy97",
-            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbWVzaGVzL3ttZXNofepB",
-            "WQofY2xvdWRidWlsZC5nb29nbGVhcGlzLmNvbS9CdWlsZBI2cHJvamVjdHMv",
-            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2J1aWxkcy97YnVpbGR9",
-            "YgZwcm90bzM="));
+            "TUFOVUFMEAJCGAoWX21hbnVhbF9pbnN0YW5jZV9jb3VudCJWChFXb3JrZXJQ",
+            "b29sU2NhbGluZxInChVtYW51YWxfaW5zdGFuY2VfY291bnQYBiABKAVCA+BB",
+            "AUgAiAEBQhgKFl9tYW51YWxfaW5zdGFuY2VfY291bnQiKAoMTm9kZVNlbGVj",
+            "dG9yEhgKC2FjY2VsZXJhdG9yGAEgASgJQgPgQQIi1gMKC0J1aWxkQ29uZmln",
+            "EjUKBG5hbWUYASABKAlCJ+BBA/pBIQofY2xvdWRidWlsZC5nb29nbGVhcGlz",
+            "LmNvbS9CdWlsZBIXCg9zb3VyY2VfbG9jYXRpb24YAiABKAkSHAoPZnVuY3Rp",
+            "b25fdGFyZ2V0GAMgASgJQgPgQQESFgoJaW1hZ2VfdXJpGAQgASgJQgPgQQES",
+            "FwoKYmFzZV9pbWFnZRgFIAEoCUID4EEBEiUKGGVuYWJsZV9hdXRvbWF0aWNf",
+            "dXBkYXRlcxgGIAEoCEID4EEBEkYKC3dvcmtlcl9wb29sGAcgASgJQjHgQQH6",
+            "QSsKKWNsb3VkYnVpbGQuZ29vZ2xlYXBpcy5jb20vQnVpbGRXb3JrZXJQb29s",
+            "El4KFWVudmlyb25tZW50X3ZhcmlhYmxlcxgIIAMoCzI6Lmdvb2dsZS5jbG91",
+            "ZC5ydW4udjIuQnVpbGRDb25maWcuRW52aXJvbm1lbnRWYXJpYWJsZXNFbnRy",
+            "eUID4EEBEhwKD3NlcnZpY2VfYWNjb3VudBgJIAEoCUID4EEBGjsKGUVudmly",
+            "b25tZW50VmFyaWFibGVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
+            "ASgJOgI4ASqzAQoOSW5ncmVzc1RyYWZmaWMSHwobSU5HUkVTU19UUkFGRklD",
+            "X1VOU1BFQ0lGSUVEEAASFwoTSU5HUkVTU19UUkFGRklDX0FMTBABEiEKHUlO",
+            "R1JFU1NfVFJBRkZJQ19JTlRFUk5BTF9PTkxZEAISKgomSU5HUkVTU19UUkFG",
+            "RklDX0lOVEVSTkFMX0xPQURfQkFMQU5DRVIQAxIYChRJTkdSRVNTX1RSQUZG",
+            "SUNfTk9ORRAEKn0KFEV4ZWN1dGlvbkVudmlyb25tZW50EiUKIUVYRUNVVElP",
+            "Tl9FTlZJUk9OTUVOVF9VTlNQRUNJRklFRBAAEh4KGkVYRUNVVElPTl9FTlZJ",
+            "Uk9OTUVOVF9HRU4xEAESHgoaRVhFQ1VUSU9OX0VOVklST05NRU5UX0dFTjIQ",
+            "AipwCh1FbmNyeXB0aW9uS2V5UmV2b2NhdGlvbkFjdGlvbhIwCixFTkNSWVBU",
+            "SU9OX0tFWV9SRVZPQ0FUSU9OX0FDVElPTl9VTlNQRUNJRklFRBAAEg8KC1BS",
+            "RVZFTlRfTkVXEAESDAoIU0hVVERPV04QAkL8AgoXY29tLmdvb2dsZS5jbG91",
+            "ZC5ydW4udjJCE1ZlbmRvclNldHRpbmdzUHJvdG9QAVopY2xvdWQuZ29vZ2xl",
+            "LmNvbS9nby9ydW4vYXBpdjIvcnVucGI7cnVucGLqQWMKKWJpbmFyeWF1dGhv",
+            "cml6YXRpb24uZ29vZ2xlYXBpcy5jb20vUG9saWN5Ehlwcm9qZWN0cy97cHJv",
+            "amVjdH0vcG9saWN5Ehtsb2NhdGlvbnMve2xvY2F0aW9ufS9wb2xpY3nqQVwK",
+            "I25ldHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNvbS9NZXNoEjVwcm9qZWN0",
+            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbWVzaGVzL3ttZXNo",
+            "fepBWQofY2xvdWRidWlsZC5nb29nbGVhcGlzLmNvbS9CdWlsZBI2cHJvamVj",
+            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2J1aWxkcy97YnVp",
+            "bGR9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Run.V2.IngressTraffic), typeof(global::Google.Cloud.Run.V2.ExecutionEnvironment), typeof(global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -87,6 +89,7 @@ namespace Google.Cloud.Run.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.RevisionScaling), global::Google.Cloud.Run.V2.RevisionScaling.Parser, new[]{ "MinInstanceCount", "MaxInstanceCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ServiceMesh), global::Google.Cloud.Run.V2.ServiceMesh.Parser, new[]{ "Mesh" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ServiceScaling), global::Google.Cloud.Run.V2.ServiceScaling.Parser, new[]{ "MinInstanceCount", "ScalingMode", "ManualInstanceCount" }, new[]{ "ManualInstanceCount" }, new[]{ typeof(global::Google.Cloud.Run.V2.ServiceScaling.Types.ScalingMode) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.WorkerPoolScaling), global::Google.Cloud.Run.V2.WorkerPoolScaling.Parser, new[]{ "ManualInstanceCount" }, new[]{ "ManualInstanceCount" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.NodeSelector), global::Google.Cloud.Run.V2.NodeSelector.Parser, new[]{ "Accelerator" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.BuildConfig), global::Google.Cloud.Run.V2.BuildConfig.Parser, new[]{ "Name", "SourceLocation", "FunctionTarget", "ImageUri", "BaseImage", "EnableAutomaticUpdates", "WorkerPool", "EnvironmentVariables", "ServiceAccount" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
@@ -1838,6 +1841,219 @@ namespace Google.Cloud.Run.V2 {
   }
 
   /// <summary>
+  /// Worker pool scaling settings.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class WorkerPoolScaling : pb::IMessage<WorkerPoolScaling>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<WorkerPoolScaling> _parser = new pb::MessageParser<WorkerPoolScaling>(() => new WorkerPoolScaling());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<WorkerPoolScaling> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WorkerPoolScaling() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WorkerPoolScaling(WorkerPoolScaling other) : this() {
+      _hasBits0 = other._hasBits0;
+      manualInstanceCount_ = other.manualInstanceCount_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WorkerPoolScaling Clone() {
+      return new WorkerPoolScaling(this);
+    }
+
+    /// <summary>Field number for the "manual_instance_count" field.</summary>
+    public const int ManualInstanceCountFieldNumber = 6;
+    private readonly static int ManualInstanceCountDefaultValue = 0;
+
+    private int manualInstanceCount_;
+    /// <summary>
+    /// Optional. The total number of instances in manual scaling mode.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int ManualInstanceCount {
+      get { if ((_hasBits0 & 1) != 0) { return manualInstanceCount_; } else { return ManualInstanceCountDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        manualInstanceCount_ = value;
+      }
+    }
+    /// <summary>Gets whether the "manual_instance_count" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasManualInstanceCount {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "manual_instance_count" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearManualInstanceCount() {
+      _hasBits0 &= ~1;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as WorkerPoolScaling);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(WorkerPoolScaling other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ManualInstanceCount != other.ManualInstanceCount) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasManualInstanceCount) hash ^= ManualInstanceCount.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasManualInstanceCount) {
+        output.WriteRawTag(48);
+        output.WriteInt32(ManualInstanceCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasManualInstanceCount) {
+        output.WriteRawTag(48);
+        output.WriteInt32(ManualInstanceCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasManualInstanceCount) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ManualInstanceCount);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(WorkerPoolScaling other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasManualInstanceCount) {
+        ManualInstanceCount = other.ManualInstanceCount;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 48: {
+            ManualInstanceCount = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 48: {
+            ManualInstanceCount = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Hardware constraints configuration.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1855,7 +2071,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2052,7 +2268,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -697,6 +697,7 @@ namespace GoogleCSharpSnippets
                 DirectedReadOptions = new gcsv::DirectedReadOptions(),
                 DataBoostEnabled = false,
                 LastStatement = false,
+                RoutingHint = new gcsv::RoutingHint(),
             };
             // Make the request
             gcsv::ResultSet response = spannerClient.ExecuteSql(request);
@@ -733,6 +734,7 @@ namespace GoogleCSharpSnippets
                 DirectedReadOptions = new gcsv::DirectedReadOptions(),
                 DataBoostEnabled = false,
                 LastStatement = false,
+                RoutingHint = new gcsv::RoutingHint(),
             };
             // Make the request
             gcsv::ResultSet response = await spannerClient.ExecuteSqlAsync(request);
@@ -768,6 +770,7 @@ namespace GoogleCSharpSnippets
                 DirectedReadOptions = new gcsv::DirectedReadOptions(),
                 DataBoostEnabled = false,
                 LastStatement = false,
+                RoutingHint = new gcsv::RoutingHint(),
             };
             // Make the request, returning a streaming response
             using gcsv::SpannerClient.ExecuteStreamingSqlStream response = spannerClient.ExecuteStreamingSql(request);
@@ -856,6 +859,7 @@ namespace GoogleCSharpSnippets
                 DataBoostEnabled = false,
                 OrderBy = gcsv::ReadRequest.Types.OrderBy.Unspecified,
                 LockHint = gcsv::ReadRequest.Types.LockHint.Unspecified,
+                RoutingHint = new gcsv::RoutingHint(),
             };
             // Make the request
             gcsv::ResultSet response = spannerClient.Read(request);
@@ -886,6 +890,7 @@ namespace GoogleCSharpSnippets
                 DataBoostEnabled = false,
                 OrderBy = gcsv::ReadRequest.Types.OrderBy.Unspecified,
                 LockHint = gcsv::ReadRequest.Types.LockHint.Unspecified,
+                RoutingHint = new gcsv::RoutingHint(),
             };
             // Make the request
             gcsv::ResultSet response = await spannerClient.ReadAsync(request);
@@ -915,6 +920,7 @@ namespace GoogleCSharpSnippets
                 DataBoostEnabled = false,
                 OrderBy = gcsv::ReadRequest.Types.OrderBy.Unspecified,
                 LockHint = gcsv::ReadRequest.Types.LockHint.Unspecified,
+                RoutingHint = new gcsv::RoutingHint(),
             };
             // Make the request, returning a streaming response
             using gcsv::SpannerClient.StreamingReadStream response = spannerClient.StreamingRead(request);

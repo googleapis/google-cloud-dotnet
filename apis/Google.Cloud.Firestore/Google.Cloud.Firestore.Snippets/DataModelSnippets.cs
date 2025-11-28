@@ -13,8 +13,10 @@
 // limitations under the License.
 
 using Google.Cloud.ClientTesting;
+using Google.Cloud.Firestore.V1;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -409,5 +411,105 @@ namespace Google.Cloud.Firestore.Snippets
             public (string city, string state, string country) Location { get; set; }
         }
         // End sample
+
+        // Sample: DiscriminatedType
+        [FirestoreData]
+        public abstract class Shape
+        {
+            // We happen to use the short name of the type in all
+            // implementations, but this is just a matter of convenience.
+            // The type discriminator is not restricted in what fields
+            // of the value are used, or their types, or their values.
+            [FirestoreProperty]
+            public abstract string Type { get; }
+        }
+
+        [FirestoreData]
+        public class Circle : Shape
+        {
+            public override string Type => nameof(Circle);
+
+            [FirestoreProperty]
+            public int Radius { get; set; }
+
+            public override string ToString() => $"Circle: radius={Radius}";
+        }
+
+        [FirestoreData]
+        public class Square : Shape
+        {
+            public override string Type => nameof(Square);
+
+            [FirestoreProperty]
+            public int Side { get; set; }
+
+            public override string ToString() => $"Square: side={Side}";
+        }
+
+        [FirestoreData]
+        public class Rectangle : Shape
+        {
+            public override string Type => nameof(Rectangle);
+
+            [FirestoreProperty]
+            public int Width { get; set; }
+
+            [FirestoreProperty]
+            public int Height { get; set; }
+
+            public override string ToString() => $"Rectangle: {Width}x{Height}";
+        }
+
+        /// <summary>
+        /// Discriminator to determine which <see cref="Shape"/> concrete
+        /// type to deserialize.
+        /// </summary>
+        public class ShapeDiscriminator : IFirestoreTypeDiscriminator<Shape>
+        {
+            public System.Type GetConcreteType(IDictionary<string, Value> map)
+            {
+                if (!map.TryGetValue(nameof(Shape.Type), out var discriminator) ||
+                    discriminator?.StringValue is not string discriminatorText)
+                {
+                    throw new InvalidOperationException("Map must have a string discriminator");
+                }
+
+                return discriminatorText switch
+                {
+                    nameof(Circle) => typeof(Circle),
+                    nameof(Square) => typeof(Square),
+                    nameof(Rectangle) => typeof(Rectangle),
+                    _ => throw new InvalidOperationException($"Unexpected discriminator '{discriminatorText}'")
+                };
+            }
+        }
+        // End sample
+
+        [Fact]
+        public async Task UseDiscriminatedType()
+        {
+            string projectId = _fixture.ProjectId;
+            string databaseId = _fixture.DatabaseId;
+            // Sample: DiscriminatedTypeUse
+            FirestoreDb db = new FirestoreDbBuilder
+            {
+                ConverterRegistry = new ConverterRegistry { new ShapeDiscriminator() },
+                ProjectId = projectId,
+                DatabaseId = databaseId
+            }.Build();
+            CollectionReference collection = db.Collection("shapes");
+            await collection.AddAsync(new Circle { Radius = 5 });
+            await collection.AddAsync(new Rectangle { Height = 3, Width = 4 });
+            await collection.AddAsync(new Square { Side = 2 });
+
+            var queryResults = await collection.GetSnapshotAsync();
+            foreach (var document in queryResults.Documents)
+            {
+                var shape = document.ConvertTo<Shape>();
+                // Prints appropriate description
+                Console.WriteLine(shape);
+            }
+            // End sample
+        }
     }
 }

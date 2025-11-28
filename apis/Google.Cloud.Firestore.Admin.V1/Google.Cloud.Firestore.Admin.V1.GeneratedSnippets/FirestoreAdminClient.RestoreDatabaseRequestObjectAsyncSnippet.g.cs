@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 DatabaseId = "",
                 BackupAsBackupName = BackupName.FromProjectLocationBackup("[PROJECT]", "[LOCATION]", "[BACKUP]"),
                 EncryptionConfig = new Database.Types.EncryptionConfig(),
+                Tags = { { "", "" }, },
             };
             // Make the request
             Operation<Database, RestoreDatabaseMetadata> response = await firestoreAdminClient.RestoreDatabaseAsync(request);

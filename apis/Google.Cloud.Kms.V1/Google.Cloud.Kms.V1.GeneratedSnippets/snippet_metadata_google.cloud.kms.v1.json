@@ -10982,6 +10982,103 @@
       ]
     },
     {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_Decapsulate_sync",
+      "title": "DecapsulateRequestObject",
+      "description": "Snippet for Decapsulate",
+      "file": "KeyManagementServiceClient.DecapsulateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Decapsulate",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.Decapsulate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.DecapsulateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Kms.V1.DecapsulateResponse",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "Decapsulate",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.Decapsulate",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudkms_v1_generated_KeyManagementService_Decapsulate_async",
+      "title": "DecapsulateRequestObjectAsync",
+      "description": "Snippet for DecapsulateAsync",
+      "file": "KeyManagementServiceClient.DecapsulateRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DecapsulateAsync",
+        "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient.DecapsulateAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Kms.V1.DecapsulateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Kms.V1.DecapsulateResponse>",
+        "client": {
+          "shortName": "KeyManagementServiceClient",
+          "fullName": "Google.Cloud.Kms.V1.KeyManagementServiceClient"
+        },
+        "method": {
+          "shortName": "Decapsulate",
+          "fullName": "google.cloud.kms.v1.KeyManagementService.Decapsulate",
+          "service": {
+            "shortName": "KeyManagementService",
+            "fullName": "google.cloud.kms.v1.KeyManagementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "cloudkms_v1_generated_KeyManagementService_GenerateRandomBytes_sync",
       "title": "GenerateRandomBytesRequestObject",
       "description": "Snippet for GenerateRandomBytes",

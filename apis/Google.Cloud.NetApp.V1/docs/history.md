@@ -1,5 +1,59 @@
 # Version history
 
+## Version 1.12.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+## Version 1.11.0, released 2025-09-08
+
+### New features
+
+- Add new fields for flex auto tiering
+- Add fields for manual qos
+- Add fields for hybrid replication
+
+### Documentation improvements
+
+- Field `daily_backup_immutable` in message `.google.cloud.netapp.v1.BackupVault` is changed
+- Field `weekly_backup_immutable` in message `.google.cloud.netapp.v1.BackupVault` is changed
+- Field `monthly_backup_immutable` in message `.google.cloud.netapp.v1.BackupVault` is changed
+- Field `manual_backup_immutable` in message `.google.cloud.netapp.v1.BackupVault` is changed
+- Field `subnet_ip` in message `.google.cloud.netapp.v1.HybridPeeringDetails` is changed
+- Field `command` in message `.google.cloud.netapp.v1.HybridPeeringDetails` is changed
+- Field `command_expiry_time` in message `.google.cloud.netapp.v1.HybridPeeringDetails` is changed
+- Field `passphrase` in message `.google.cloud.netapp.v1.HybridPeeringDetails` is changed
+- Field `peer_volume_name` in message `.google.cloud.netapp.v1.HybridPeeringDetails` is changed
+- Field `peer_cluster_name` in message `.google.cloud.netapp.v1.HybridPeeringDetails` is changed
+- Field `peer_svm_name` in message `.google.cloud.netapp.v1.HybridPeeringDetails` is changed
+- Field `total_throughput_mibps` in message `.google.cloud.netapp.v1.StoragePool` is added
+- Field `total_iops` in message `.google.cloud.netapp.v1.StoragePool` is added
+- A comment for field `cold_tier_size_gib` in message `.google.cloud.netapp.v1.Volume` is changed
+
+## Version 1.10.0, released 2025-05-16
+
+### New features
+
+- A new message 'google.cloud.netapp.v1.BackupRetentionPolicy' is added in 'google.cloud.netapp.v1.BackupVault'
+- A new field 'enforced_retention_end_time' in message 'google.cloud.netapp.v1.Backup' is added
+- New fields 'custom_performance_enabled', 'total_throughput_mibps', 'total_iops' in message 'google.cloud.netapp.v1.StoragePool' are added
+
+### Documentation improvements
+
+- A comment for field `transfer_bytes` in message `.google.cloud.netapp.v1.TransferStats` is changed
+
+## Version 1.9.0, released 2025-05-06
+
+### New features
+
+- add `volume_region` and `backup_region` to backup `Backup` message
+- add `source_region`, `backup_region`, `source_backup_vault`, `destination_backup_vault`, `backupVault_type` (of new enum type `BackupVaultType`) to `BackupVault` message
+
+### Documentation improvements
+
+- A comment for field `cooling_threshold_days` in message `.google.cloud.netapp.v1.TieringPolicy` is changed
+
 ## Version 1.8.0, released 2025-02-03
 
 ### New features

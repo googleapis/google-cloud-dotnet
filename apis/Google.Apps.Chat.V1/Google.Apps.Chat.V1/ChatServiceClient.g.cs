@@ -70,6 +70,10 @@ namespace Google.Apps.Chat.V1
             CreateReactionSettings = existing.CreateReactionSettings;
             ListReactionsSettings = existing.ListReactionsSettings;
             DeleteReactionSettings = existing.DeleteReactionSettings;
+            CreateCustomEmojiSettings = existing.CreateCustomEmojiSettings;
+            GetCustomEmojiSettings = existing.GetCustomEmojiSettings;
+            ListCustomEmojisSettings = existing.ListCustomEmojisSettings;
+            DeleteCustomEmojiSettings = existing.DeleteCustomEmojiSettings;
             GetSpaceReadStateSettings = existing.GetSpaceReadStateSettings;
             UpdateSpaceReadStateSettings = existing.UpdateSpaceReadStateSettings;
             GetThreadReadStateSettings = existing.GetThreadReadStateSettings;
@@ -516,6 +520,78 @@ namespace Google.Apps.Chat.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.CreateCustomEmoji</c> and <c>ChatServiceClient.CreateCustomEmojiAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateCustomEmojiSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.GetCustomEmoji</c> and <c>ChatServiceClient.GetCustomEmojiAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetCustomEmojiSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.ListCustomEmojis</c> and <c>ChatServiceClient.ListCustomEmojisAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListCustomEmojisSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.DeleteCustomEmoji</c> and <c>ChatServiceClient.DeleteCustomEmojiAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteCustomEmojiSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ChatServiceClient.GetSpaceReadState</c> and <c>ChatServiceClient.GetSpaceReadStateAsync</c>.
         /// </summary>
         /// <remarks>
@@ -720,7 +796,13 @@ namespace Google.Apps.Chat.V1
         /// <item><description>https://www.googleapis.com/auth/chat.admin.memberships.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.admin.spaces</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.admin.spaces.readonly</description></item>
+        /// <item><description>https://www.googleapis.com/auth/chat.app.delete</description></item>
+        /// <item><description>https://www.googleapis.com/auth/chat.app.memberships</description></item>
+        /// <item><description>https://www.googleapis.com/auth/chat.app.spaces</description></item>
+        /// <item><description>https://www.googleapis.com/auth/chat.app.spaces.create</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.bot</description></item>
+        /// <item><description>https://www.googleapis.com/auth/chat.customemojis</description></item>
+        /// <item><description>https://www.googleapis.com/auth/chat.customemojis.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.delete</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.import</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.memberships</description></item>
@@ -747,7 +829,13 @@ namespace Google.Apps.Chat.V1
             "https://www.googleapis.com/auth/chat.admin.memberships.readonly",
             "https://www.googleapis.com/auth/chat.admin.spaces",
             "https://www.googleapis.com/auth/chat.admin.spaces.readonly",
+            "https://www.googleapis.com/auth/chat.app.delete",
+            "https://www.googleapis.com/auth/chat.app.memberships",
+            "https://www.googleapis.com/auth/chat.app.spaces",
+            "https://www.googleapis.com/auth/chat.app.spaces.create",
             "https://www.googleapis.com/auth/chat.bot",
+            "https://www.googleapis.com/auth/chat.customemojis",
+            "https://www.googleapis.com/auth/chat.customemojis.readonly",
             "https://www.googleapis.com/auth/chat.delete",
             "https://www.googleapis.com/auth/chat.import",
             "https://www.googleapis.com/auth/chat.memberships",
@@ -831,10 +919,21 @@ namespace Google.Apps.Chat.V1
         /// Creates a message in a Google Chat space. For an example, see [Send a
         /// message](https://developers.google.com/workspace/chat/create-messages).
         /// 
-        /// The `create()` method requires either [user
+        /// Supports the following types of
+        /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
+        /// 
+        /// - [App
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// or [app
-        /// authentication](https://developers.google.com/workspace/chat/authorize-import).
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages.create`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// 
         /// Chat attributes the message sender differently depending on the type of
         /// authentication that you use in your request.
         /// 
@@ -872,10 +971,21 @@ namespace Google.Apps.Chat.V1
         /// Creates a message in a Google Chat space. For an example, see [Send a
         /// message](https://developers.google.com/workspace/chat/create-messages).
         /// 
-        /// The `create()` method requires either [user
+        /// Supports the following types of
+        /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
+        /// 
+        /// - [App
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// or [app
-        /// authentication](https://developers.google.com/workspace/chat/authorize-import).
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages.create`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// 
         /// Chat attributes the message sender differently depending on the type of
         /// authentication that you use in your request.
         /// 
@@ -913,10 +1023,21 @@ namespace Google.Apps.Chat.V1
         /// Creates a message in a Google Chat space. For an example, see [Send a
         /// message](https://developers.google.com/workspace/chat/create-messages).
         /// 
-        /// The `create()` method requires either [user
+        /// Supports the following types of
+        /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
+        /// 
+        /// - [App
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// or [app
-        /// authentication](https://developers.google.com/workspace/chat/authorize-import).
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages.create`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// 
         /// Chat attributes the message sender differently depending on the type of
         /// authentication that you use in your request.
         /// 
@@ -954,10 +1075,21 @@ namespace Google.Apps.Chat.V1
         /// Creates a message in a Google Chat space. For an example, see [Send a
         /// message](https://developers.google.com/workspace/chat/create-messages).
         /// 
-        /// The `create()` method requires either [user
+        /// Supports the following types of
+        /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
+        /// 
+        /// - [App
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// or [app
-        /// authentication](https://developers.google.com/workspace/chat/authorize-import).
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages.create`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// 
         /// Chat attributes the message sender differently depending on the type of
         /// authentication that you use in your request.
         /// 
@@ -1024,10 +1156,21 @@ namespace Google.Apps.Chat.V1
         /// Creates a message in a Google Chat space. For an example, see [Send a
         /// message](https://developers.google.com/workspace/chat/create-messages).
         /// 
-        /// The `create()` method requires either [user
+        /// Supports the following types of
+        /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
+        /// 
+        /// - [App
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// or [app
-        /// authentication](https://developers.google.com/workspace/chat/authorize-import).
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages.create`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// 
         /// Chat attributes the message sender differently depending on the type of
         /// authentication that you use in your request.
         /// 
@@ -1094,10 +1237,21 @@ namespace Google.Apps.Chat.V1
         /// Creates a message in a Google Chat space. For an example, see [Send a
         /// message](https://developers.google.com/workspace/chat/create-messages).
         /// 
-        /// The `create()` method requires either [user
+        /// Supports the following types of
+        /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
+        /// 
+        /// - [App
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// or [app
-        /// authentication](https://developers.google.com/workspace/chat/authorize-import).
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages.create`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// 
         /// Chat attributes the message sender differently depending on the type of
         /// authentication that you use in your request.
         /// 
@@ -1159,10 +1313,21 @@ namespace Google.Apps.Chat.V1
         /// Creates a message in a Google Chat space. For an example, see [Send a
         /// message](https://developers.google.com/workspace/chat/create-messages).
         /// 
-        /// The `create()` method requires either [user
+        /// Supports the following types of
+        /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
+        /// 
+        /// - [App
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// or [app
-        /// authentication](https://developers.google.com/workspace/chat/authorize-import).
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages.create`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// 
         /// Chat attributes the message sender differently depending on the type of
         /// authentication that you use in your request.
         /// 
@@ -1229,10 +1394,21 @@ namespace Google.Apps.Chat.V1
         /// Creates a message in a Google Chat space. For an example, see [Send a
         /// message](https://developers.google.com/workspace/chat/create-messages).
         /// 
-        /// The `create()` method requires either [user
+        /// Supports the following types of
+        /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
+        /// 
+        /// - [App
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// or [app
-        /// authentication](https://developers.google.com/workspace/chat/authorize-import).
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages.create`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// 
         /// Chat attributes the message sender differently depending on the type of
         /// authentication that you use in your request.
         /// 
@@ -1299,10 +1475,21 @@ namespace Google.Apps.Chat.V1
         /// Creates a message in a Google Chat space. For an example, see [Send a
         /// message](https://developers.google.com/workspace/chat/create-messages).
         /// 
-        /// The `create()` method requires either [user
+        /// Supports the following types of
+        /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
+        /// 
+        /// - [App
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// or [app
-        /// authentication](https://developers.google.com/workspace/chat/authorize-import).
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages.create`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// 
         /// Chat attributes the message sender differently depending on the type of
         /// authentication that you use in your request.
         /// 
@@ -1370,7 +1557,13 @@ namespace Google.Apps.Chat.V1
         /// messages](https://developers.google.com/workspace/chat/api/guides/v1/messages/list).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1388,7 +1581,13 @@ namespace Google.Apps.Chat.V1
         /// messages](https://developers.google.com/workspace/chat/api/guides/v1/messages/list).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1406,7 +1605,13 @@ namespace Google.Apps.Chat.V1
         /// messages](https://developers.google.com/workspace/chat/api/guides/v1/messages/list).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the space to list messages from.
@@ -1450,7 +1655,13 @@ namespace Google.Apps.Chat.V1
         /// messages](https://developers.google.com/workspace/chat/api/guides/v1/messages/list).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the space to list messages from.
@@ -1494,7 +1705,13 @@ namespace Google.Apps.Chat.V1
         /// messages](https://developers.google.com/workspace/chat/api/guides/v1/messages/list).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the space to list messages from.
@@ -1538,7 +1755,13 @@ namespace Google.Apps.Chat.V1
         /// messages](https://developers.google.com/workspace/chat/api/guides/v1/messages/list).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the space to list messages from.
@@ -1590,11 +1813,23 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (requires
+        /// [administrator approval](https://support.google.com/a?p=chat-app-auth))
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1620,11 +1855,23 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (requires
+        /// [administrator approval](https://support.google.com/a?p=chat-app-auth))
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1650,11 +1897,23 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (requires
+        /// [administrator approval](https://support.google.com/a?p=chat-app-auth))
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the space for which to fetch a membership
@@ -1707,11 +1966,23 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (requires
+        /// [administrator approval](https://support.google.com/a?p=chat-app-auth))
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the space for which to fetch a membership
@@ -1764,11 +2035,23 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (requires
+        /// [administrator approval](https://support.google.com/a?p=chat-app-auth))
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the space for which to fetch a membership
@@ -1821,11 +2104,23 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (requires
+        /// [administrator approval](https://support.google.com/a?p=chat-app-auth))
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the space for which to fetch a membership
@@ -1870,11 +2165,21 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (requires
+        /// [administrator approval](https://support.google.com/a?p=chat-app-auth))
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1892,11 +2197,21 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (requires
+        /// [administrator approval](https://support.google.com/a?p=chat-app-auth))
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1914,11 +2229,21 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (requires
+        /// [administrator approval](https://support.google.com/a?p=chat-app-auth))
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1936,11 +2261,21 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (requires
+        /// [administrator approval](https://support.google.com/a?p=chat-app-auth))
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the membership to retrieve.
@@ -1973,11 +2308,21 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (requires
+        /// [administrator approval](https://support.google.com/a?p=chat-app-auth))
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the membership to retrieve.
@@ -2010,11 +2355,21 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (requires
+        /// [administrator approval](https://support.google.com/a?p=chat-app-auth))
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the membership to retrieve.
@@ -2044,11 +2399,21 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (requires
+        /// [administrator approval](https://support.google.com/a?p=chat-app-auth))
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the membership to retrieve.
@@ -2081,11 +2446,21 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (requires
+        /// [administrator approval](https://support.google.com/a?p=chat-app-auth))
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the membership to retrieve.
@@ -2118,11 +2493,21 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (requires
+        /// [administrator approval](https://support.google.com/a?p=chat-app-auth))
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the membership to retrieve.
@@ -2152,9 +2537,14 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
         /// 
         /// Note: Might return a message from a blocked member or space.
         /// </summary>
@@ -2174,9 +2564,14 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
         /// 
         /// Note: Might return a message from a blocked member or space.
         /// </summary>
@@ -2196,9 +2591,14 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
         /// 
         /// Note: Might return a message from a blocked member or space.
         /// </summary>
@@ -2218,9 +2618,14 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
         /// 
         /// Note: Might return a message from a blocked member or space.
         /// </summary>
@@ -2252,9 +2657,14 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
         /// 
         /// Note: Might return a message from a blocked member or space.
         /// </summary>
@@ -2286,9 +2696,14 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
         /// 
         /// Note: Might return a message from a blocked member or space.
         /// </summary>
@@ -2317,9 +2732,14 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
         /// 
         /// Note: Might return a message from a blocked member or space.
         /// </summary>
@@ -2351,9 +2771,14 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
         /// 
         /// Note: Might return a message from a blocked member or space.
         /// </summary>
@@ -2385,9 +2810,14 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
         /// 
         /// Note: Might return a message from a blocked member or space.
         /// </summary>
@@ -2419,9 +2849,15 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When using app authentication, requests can only update messages
         /// created by the calling Chat app.
@@ -2445,9 +2881,15 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When using app authentication, requests can only update messages
         /// created by the calling Chat app.
@@ -2471,9 +2913,15 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When using app authentication, requests can only update messages
         /// created by the calling Chat app.
@@ -2497,9 +2945,15 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When using app authentication, requests can only update messages
         /// created by the calling Chat app.
@@ -2525,6 +2979,8 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - `accessory_widgets`  (Requires [app
         /// authentication](/chat/api/guides/auth/service-accounts).)
+        /// 
+        /// - `quoted_message_metadata` (Only allows removal of the quoted message.)
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2548,9 +3004,15 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When using app authentication, requests can only update messages
         /// created by the calling Chat app.
@@ -2576,6 +3038,8 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - `accessory_widgets`  (Requires [app
         /// authentication](/chat/api/guides/auth/service-accounts).)
+        /// 
+        /// - `quoted_message_metadata` (Only allows removal of the quoted message.)
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2599,9 +3063,15 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When using app authentication, requests can only update messages
         /// created by the calling Chat app.
@@ -2627,6 +3097,8 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - `accessory_widgets`  (Requires [app
         /// authentication](/chat/api/guides/auth/service-accounts).)
+        /// 
+        /// - `quoted_message_metadata` (Only allows removal of the quoted message.)
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2643,9 +3115,15 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When using app authentication, requests can only delete messages
         /// created by the calling Chat app.
@@ -2666,9 +3144,15 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When using app authentication, requests can only delete messages
         /// created by the calling Chat app.
@@ -2689,9 +3173,15 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When using app authentication, requests can only delete messages
         /// created by the calling Chat app.
@@ -2712,9 +3202,15 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When using app authentication, requests can only delete messages
         /// created by the calling Chat app.
@@ -2747,9 +3243,15 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When using app authentication, requests can only delete messages
         /// created by the calling Chat app.
@@ -2782,9 +3284,15 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When using app authentication, requests can only delete messages
         /// created by the calling Chat app.
@@ -2814,9 +3322,15 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When using app authentication, requests can only delete messages
         /// created by the calling Chat app.
@@ -2849,9 +3363,15 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When using app authentication, requests can only delete messages
         /// created by the calling Chat app.
@@ -2884,9 +3404,15 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When using app authentication, requests can only delete messages
         /// created by the calling Chat app.
@@ -2913,8 +3439,13 @@ namespace Google.Apps.Chat.V1
         /// For an example, see
         /// [Get metadata about a message
         /// attachment](https://developers.google.com/workspace/chat/get-media-attachments).
+        /// 
         /// Requires [app
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2929,8 +3460,13 @@ namespace Google.Apps.Chat.V1
         /// For an example, see
         /// [Get metadata about a message
         /// attachment](https://developers.google.com/workspace/chat/get-media-attachments).
+        /// 
         /// Requires [app
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2945,8 +3481,13 @@ namespace Google.Apps.Chat.V1
         /// For an example, see
         /// [Get metadata about a message
         /// attachment](https://developers.google.com/workspace/chat/get-media-attachments).
+        /// 
         /// Requires [app
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2961,8 +3502,13 @@ namespace Google.Apps.Chat.V1
         /// For an example, see
         /// [Get metadata about a message
         /// attachment](https://developers.google.com/workspace/chat/get-media-attachments).
+        /// 
         /// Requires [app
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the attachment, in the form
@@ -2983,8 +3529,13 @@ namespace Google.Apps.Chat.V1
         /// For an example, see
         /// [Get metadata about a message
         /// attachment](https://developers.google.com/workspace/chat/get-media-attachments).
+        /// 
         /// Requires [app
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the attachment, in the form
@@ -3005,8 +3556,13 @@ namespace Google.Apps.Chat.V1
         /// For an example, see
         /// [Get metadata about a message
         /// attachment](https://developers.google.com/workspace/chat/get-media-attachments).
+        /// 
         /// Requires [app
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the attachment, in the form
@@ -3024,8 +3580,13 @@ namespace Google.Apps.Chat.V1
         /// For an example, see
         /// [Get metadata about a message
         /// attachment](https://developers.google.com/workspace/chat/get-media-attachments).
+        /// 
         /// Requires [app
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the attachment, in the form
@@ -3046,8 +3607,13 @@ namespace Google.Apps.Chat.V1
         /// For an example, see
         /// [Get metadata about a message
         /// attachment](https://developers.google.com/workspace/chat/get-media-attachments).
+        /// 
         /// Requires [app
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the attachment, in the form
@@ -3068,8 +3634,13 @@ namespace Google.Apps.Chat.V1
         /// For an example, see
         /// [Get metadata about a message
         /// attachment](https://developers.google.com/workspace/chat/get-media-attachments).
+        /// 
         /// Requires [app
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the attachment, in the form
@@ -3086,7 +3657,13 @@ namespace Google.Apps.Chat.V1
         /// attachment](https://developers.google.com/workspace/chat/upload-media-attachments).
         /// 
         /// Requires user
-        /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.create`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// 
         /// You can upload attachments up to 200 MB. Certain file types aren't
         /// supported. For details, see [File types blocked by Google
@@ -3104,7 +3681,13 @@ namespace Google.Apps.Chat.V1
         /// attachment](https://developers.google.com/workspace/chat/upload-media-attachments).
         /// 
         /// Requires user
-        /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.create`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// 
         /// You can upload attachments up to 200 MB. Certain file types aren't
         /// supported. For details, see [File types blocked by Google
@@ -3122,7 +3705,13 @@ namespace Google.Apps.Chat.V1
         /// attachment](https://developers.google.com/workspace/chat/upload-media-attachments).
         /// 
         /// Requires user
-        /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.create`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// 
         /// You can upload attachments up to 200 MB. Certain file types aren't
         /// supported. For details, see [File types blocked by Google
@@ -3145,9 +3734,14 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
         /// 
         /// To list all named spaces by Google Workspace organization, use the
         /// [`spaces.search()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/search)
@@ -3170,9 +3764,14 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
         /// 
         /// To list all named spaces by Google Workspace organization, use the
         /// [`spaces.search()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/search)
@@ -3195,9 +3794,14 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
         /// 
         /// To list all named spaces by Google Workspace organization, use the
         /// [`spaces.search()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/search)
@@ -3238,9 +3842,14 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
         /// 
         /// To list all named spaces by Google Workspace organization, use the
         /// [`spaces.search()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/search)
@@ -3276,7 +3885,13 @@ namespace Google.Apps.Chat.V1
         /// 
         /// Requires [user
         /// authentication with administrator
-        /// privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges).
+        /// privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges)
+        /// and one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
         /// In the request, set `use_admin_access` to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3291,7 +3906,13 @@ namespace Google.Apps.Chat.V1
         /// 
         /// Requires [user
         /// authentication with administrator
-        /// privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges).
+        /// privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges)
+        /// and one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
         /// In the request, set `use_admin_access` to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3306,7 +3927,13 @@ namespace Google.Apps.Chat.V1
         /// 
         /// Requires [user
         /// authentication with administrator
-        /// privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges).
+        /// privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges)
+        /// and one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
         /// In the request, set `use_admin_access` to `true`.
         /// </summary>
         /// <param name="pageToken">
@@ -3339,7 +3966,13 @@ namespace Google.Apps.Chat.V1
         /// 
         /// Requires [user
         /// authentication with administrator
-        /// privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges).
+        /// privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges)
+        /// and one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
         /// In the request, set `use_admin_access` to `true`.
         /// </summary>
         /// <param name="pageToken">
@@ -3376,11 +4009,29 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces` with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
+        /// App authentication has the following limitations:
+        /// 
+        /// - `space.access_settings` is only populated when using the
+        /// `chat.app.spaces` scope.
+        /// - `space.predefind_permission_settings` and `space.permission_settings` are
+        /// only populated when using the `chat.app.spaces` scope, and only for
+        /// spaces the app created.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3398,11 +4049,29 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces` with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
+        /// App authentication has the following limitations:
+        /// 
+        /// - `space.access_settings` is only populated when using the
+        /// `chat.app.spaces` scope.
+        /// - `space.predefind_permission_settings` and `space.permission_settings` are
+        /// only populated when using the `chat.app.spaces` scope, and only for
+        /// spaces the app created.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3420,11 +4089,29 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces` with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
+        /// App authentication has the following limitations:
+        /// 
+        /// - `space.access_settings` is only populated when using the
+        /// `chat.app.spaces` scope.
+        /// - `space.predefind_permission_settings` and `space.permission_settings` are
+        /// only populated when using the `chat.app.spaces` scope, and only for
+        /// spaces the app created.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3442,11 +4129,29 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces` with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
+        /// App authentication has the following limitations:
+        /// 
+        /// - `space.access_settings` is only populated when using the
+        /// `chat.app.spaces` scope.
+        /// - `space.predefind_permission_settings` and `space.permission_settings` are
+        /// only populated when using the `chat.app.spaces` scope, and only for
+        /// spaces the app created.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space, in the form `spaces/{space}`.
@@ -3471,11 +4176,29 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces` with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
+        /// App authentication has the following limitations:
+        /// 
+        /// - `space.access_settings` is only populated when using the
+        /// `chat.app.spaces` scope.
+        /// - `space.predefind_permission_settings` and `space.permission_settings` are
+        /// only populated when using the `chat.app.spaces` scope, and only for
+        /// spaces the app created.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space, in the form `spaces/{space}`.
@@ -3500,11 +4223,29 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces` with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
+        /// App authentication has the following limitations:
+        /// 
+        /// - `space.access_settings` is only populated when using the
+        /// `chat.app.spaces` scope.
+        /// - `space.predefind_permission_settings` and `space.permission_settings` are
+        /// only populated when using the `chat.app.spaces` scope, and only for
+        /// spaces the app created.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space, in the form `spaces/{space}`.
@@ -3526,11 +4267,29 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces` with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
+        /// App authentication has the following limitations:
+        /// 
+        /// - `space.access_settings` is only populated when using the
+        /// `chat.app.spaces` scope.
+        /// - `space.predefind_permission_settings` and `space.permission_settings` are
+        /// only populated when using the `chat.app.spaces` scope, and only for
+        /// spaces the app created.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space, in the form `spaces/{space}`.
@@ -3555,11 +4314,29 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces` with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
+        /// App authentication has the following limitations:
+        /// 
+        /// - `space.access_settings` is only populated when using the
+        /// `chat.app.spaces` scope.
+        /// - `space.predefind_permission_settings` and `space.permission_settings` are
+        /// only populated when using the `chat.app.spaces` scope, and only for
+        /// spaces the app created.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space, in the form `spaces/{space}`.
@@ -3584,11 +4361,29 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces` with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
+        /// App authentication has the following limitations:
+        /// 
+        /// - `space.access_settings` is only populated when using the
+        /// `chat.app.spaces` scope.
+        /// - `space.predefind_permission_settings` and `space.permission_settings` are
+        /// only populated when using the `chat.app.spaces` scope, and only for
+        /// spaces the app created.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space, in the form `spaces/{space}`.
@@ -3601,13 +4396,9 @@ namespace Google.Apps.Chat.V1
             GetSpaceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a space with no members. Can be used to create a named space, or a
+        /// Creates a space. Can be used to create a named space, or a
         /// group chat in `Import mode`. For an example, see [Create a
         /// space](https://developers.google.com/workspace/chat/create-spaces).
-        /// 
-        /// If you receive the error message `ALREADY_EXISTS` when creating
-        /// a space, try a different `displayName`. An existing space within
-        /// the Google Workspace organization might already use this display name.
         /// 
         /// Supports the following types of
         /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
@@ -3615,13 +4406,38 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.create`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.create`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When authenticating as an app, the `space.customer` field must be set in
         /// the request.
+        /// 
+        /// When authenticating as an app, the Chat app is added as a member of the
+        /// space. However, unlike human authentication, the Chat app is not added as a
+        /// space manager. By default, the Chat app can be removed from the space by
+        /// all space members. To allow only space managers to remove the app from a
+        /// space, set `space.permission_settings.manage_apps` to `managers_allowed`.
+        /// 
+        /// Space membership upon creation depends on whether the space is created in
+        /// `Import mode`:
+        /// 
+        /// * **Import mode:** No members are created.
+        /// * **All other modes:**  The calling user is added as a member. This is:
+        /// * The app itself when using app authentication.
+        /// * The human user when using user authentication.
+        /// 
+        /// If you receive the error message `ALREADY_EXISTS` when creating
+        /// a space, try a different `displayName`. An existing space within
+        /// the Google Workspace organization might already use this display name.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3630,13 +4446,9 @@ namespace Google.Apps.Chat.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a space with no members. Can be used to create a named space, or a
+        /// Creates a space. Can be used to create a named space, or a
         /// group chat in `Import mode`. For an example, see [Create a
         /// space](https://developers.google.com/workspace/chat/create-spaces).
-        /// 
-        /// If you receive the error message `ALREADY_EXISTS` when creating
-        /// a space, try a different `displayName`. An existing space within
-        /// the Google Workspace organization might already use this display name.
         /// 
         /// Supports the following types of
         /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
@@ -3644,13 +4456,38 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.create`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.create`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When authenticating as an app, the `space.customer` field must be set in
         /// the request.
+        /// 
+        /// When authenticating as an app, the Chat app is added as a member of the
+        /// space. However, unlike human authentication, the Chat app is not added as a
+        /// space manager. By default, the Chat app can be removed from the space by
+        /// all space members. To allow only space managers to remove the app from a
+        /// space, set `space.permission_settings.manage_apps` to `managers_allowed`.
+        /// 
+        /// Space membership upon creation depends on whether the space is created in
+        /// `Import mode`:
+        /// 
+        /// * **Import mode:** No members are created.
+        /// * **All other modes:**  The calling user is added as a member. This is:
+        /// * The app itself when using app authentication.
+        /// * The human user when using user authentication.
+        /// 
+        /// If you receive the error message `ALREADY_EXISTS` when creating
+        /// a space, try a different `displayName`. An existing space within
+        /// the Google Workspace organization might already use this display name.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3659,13 +4496,9 @@ namespace Google.Apps.Chat.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a space with no members. Can be used to create a named space, or a
+        /// Creates a space. Can be used to create a named space, or a
         /// group chat in `Import mode`. For an example, see [Create a
         /// space](https://developers.google.com/workspace/chat/create-spaces).
-        /// 
-        /// If you receive the error message `ALREADY_EXISTS` when creating
-        /// a space, try a different `displayName`. An existing space within
-        /// the Google Workspace organization might already use this display name.
         /// 
         /// Supports the following types of
         /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
@@ -3673,13 +4506,38 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.create`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.create`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When authenticating as an app, the `space.customer` field must be set in
         /// the request.
+        /// 
+        /// When authenticating as an app, the Chat app is added as a member of the
+        /// space. However, unlike human authentication, the Chat app is not added as a
+        /// space manager. By default, the Chat app can be removed from the space by
+        /// all space members. To allow only space managers to remove the app from a
+        /// space, set `space.permission_settings.manage_apps` to `managers_allowed`.
+        /// 
+        /// Space membership upon creation depends on whether the space is created in
+        /// `Import mode`:
+        /// 
+        /// * **Import mode:** No members are created.
+        /// * **All other modes:**  The calling user is added as a member. This is:
+        /// * The app itself when using app authentication.
+        /// * The human user when using user authentication.
+        /// 
+        /// If you receive the error message `ALREADY_EXISTS` when creating
+        /// a space, try a different `displayName`. An existing space within
+        /// the Google Workspace organization might already use this display name.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3688,13 +4546,9 @@ namespace Google.Apps.Chat.V1
             CreateSpaceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a space with no members. Can be used to create a named space, or a
+        /// Creates a space. Can be used to create a named space, or a
         /// group chat in `Import mode`. For an example, see [Create a
         /// space](https://developers.google.com/workspace/chat/create-spaces).
-        /// 
-        /// If you receive the error message `ALREADY_EXISTS` when creating
-        /// a space, try a different `displayName`. An existing space within
-        /// the Google Workspace organization might already use this display name.
         /// 
         /// Supports the following types of
         /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
@@ -3702,13 +4556,38 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.create`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.create`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When authenticating as an app, the `space.customer` field must be set in
         /// the request.
+        /// 
+        /// When authenticating as an app, the Chat app is added as a member of the
+        /// space. However, unlike human authentication, the Chat app is not added as a
+        /// space manager. By default, the Chat app can be removed from the space by
+        /// all space members. To allow only space managers to remove the app from a
+        /// space, set `space.permission_settings.manage_apps` to `managers_allowed`.
+        /// 
+        /// Space membership upon creation depends on whether the space is created in
+        /// `Import mode`:
+        /// 
+        /// * **Import mode:** No members are created.
+        /// * **All other modes:**  The calling user is added as a member. This is:
+        /// * The app itself when using app authentication.
+        /// * The human user when using user authentication.
+        /// 
+        /// If you receive the error message `ALREADY_EXISTS` when creating
+        /// a space, try a different `displayName`. An existing space within
+        /// the Google Workspace organization might already use this display name.
         /// </summary>
         /// <param name="space">
         /// Required. The `displayName` and `spaceType` fields must be populated.  Only
@@ -3732,13 +4611,9 @@ namespace Google.Apps.Chat.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a space with no members. Can be used to create a named space, or a
+        /// Creates a space. Can be used to create a named space, or a
         /// group chat in `Import mode`. For an example, see [Create a
         /// space](https://developers.google.com/workspace/chat/create-spaces).
-        /// 
-        /// If you receive the error message `ALREADY_EXISTS` when creating
-        /// a space, try a different `displayName`. An existing space within
-        /// the Google Workspace organization might already use this display name.
         /// 
         /// Supports the following types of
         /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
@@ -3746,13 +4621,38 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.create`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.create`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When authenticating as an app, the `space.customer` field must be set in
         /// the request.
+        /// 
+        /// When authenticating as an app, the Chat app is added as a member of the
+        /// space. However, unlike human authentication, the Chat app is not added as a
+        /// space manager. By default, the Chat app can be removed from the space by
+        /// all space members. To allow only space managers to remove the app from a
+        /// space, set `space.permission_settings.manage_apps` to `managers_allowed`.
+        /// 
+        /// Space membership upon creation depends on whether the space is created in
+        /// `Import mode`:
+        /// 
+        /// * **Import mode:** No members are created.
+        /// * **All other modes:**  The calling user is added as a member. This is:
+        /// * The app itself when using app authentication.
+        /// * The human user when using user authentication.
+        /// 
+        /// If you receive the error message `ALREADY_EXISTS` when creating
+        /// a space, try a different `displayName`. An existing space within
+        /// the Google Workspace organization might already use this display name.
         /// </summary>
         /// <param name="space">
         /// Required. The `displayName` and `spaceType` fields must be populated.  Only
@@ -3776,13 +4676,9 @@ namespace Google.Apps.Chat.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a space with no members. Can be used to create a named space, or a
+        /// Creates a space. Can be used to create a named space, or a
         /// group chat in `Import mode`. For an example, see [Create a
         /// space](https://developers.google.com/workspace/chat/create-spaces).
-        /// 
-        /// If you receive the error message `ALREADY_EXISTS` when creating
-        /// a space, try a different `displayName`. An existing space within
-        /// the Google Workspace organization might already use this display name.
         /// 
         /// Supports the following types of
         /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
@@ -3790,13 +4686,38 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.create`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.create`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When authenticating as an app, the `space.customer` field must be set in
         /// the request.
+        /// 
+        /// When authenticating as an app, the Chat app is added as a member of the
+        /// space. However, unlike human authentication, the Chat app is not added as a
+        /// space manager. By default, the Chat app can be removed from the space by
+        /// all space members. To allow only space managers to remove the app from a
+        /// space, set `space.permission_settings.manage_apps` to `managers_allowed`.
+        /// 
+        /// Space membership upon creation depends on whether the space is created in
+        /// `Import mode`:
+        /// 
+        /// * **Import mode:** No members are created.
+        /// * **All other modes:**  The calling user is added as a member. This is:
+        /// * The app itself when using app authentication.
+        /// * The human user when using user authentication.
+        /// 
+        /// If you receive the error message `ALREADY_EXISTS` when creating
+        /// a space, try a different `displayName`. An existing space within
+        /// the Google Workspace organization might already use this display name.
         /// </summary>
         /// <param name="space">
         /// Required. The `displayName` and `spaceType` fields must be populated.  Only
@@ -3868,7 +4789,12 @@ namespace Google.Apps.Chat.V1
         /// might already use this display name.
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.create`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3928,7 +4854,12 @@ namespace Google.Apps.Chat.V1
         /// might already use this display name.
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.create`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3988,7 +4919,12 @@ namespace Google.Apps.Chat.V1
         /// might already use this display name.
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.create`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4011,12 +4947,26 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.app.spaces`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
+        /// App authentication has the following limitations:
+        /// 
+        /// - To update either `space.predefined_permission_settings` or
+        /// `space.permission_settings`, the app must be the space creator.
+        /// - Updating the `space.access_settings.audience` is not supported for app
+        /// authentication.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4039,12 +4989,26 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.app.spaces`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
+        /// App authentication has the following limitations:
+        /// 
+        /// - To update either `space.predefined_permission_settings` or
+        /// `space.permission_settings`, the app must be the space creator.
+        /// - Updating the `space.access_settings.audience` is not supported for app
+        /// authentication.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4067,12 +5031,26 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.app.spaces`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
+        /// App authentication has the following limitations:
+        /// 
+        /// - To update either `space.predefined_permission_settings` or
+        /// `space.permission_settings`, the app must be the space creator.
+        /// - Updating the `space.access_settings.audience` is not supported for app
+        /// authentication.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4095,12 +5073,26 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.app.spaces`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
+        /// App authentication has the following limitations:
+        /// 
+        /// - To update either `space.predefined_permission_settings` or
+        /// `space.permission_settings`, the app must be the space creator.
+        /// - Updating the `space.access_settings.audience` is not supported for app
+        /// authentication.
         /// </summary>
         /// <param name="space">
         /// Required. Space with fields to be updated. `Space.name` must be
@@ -4194,12 +5186,26 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.app.spaces`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
+        /// App authentication has the following limitations:
+        /// 
+        /// - To update either `space.predefined_permission_settings` or
+        /// `space.permission_settings`, the app must be the space creator.
+        /// - Updating the `space.access_settings.audience` is not supported for app
+        /// authentication.
         /// </summary>
         /// <param name="space">
         /// Required. Space with fields to be updated. `Space.name` must be
@@ -4293,12 +5299,26 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.app.spaces`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
+        /// App authentication has the following limitations:
+        /// 
+        /// - To update either `space.predefined_permission_settings` or
+        /// `space.permission_settings`, the app must be the space creator.
+        /// - Updating the `space.access_settings.audience` is not supported for app
+        /// authentication.
         /// </summary>
         /// <param name="space">
         /// Required. Space with fields to be updated. `Space.name` must be
@@ -4385,13 +5405,22 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-        /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth) and the
+        /// authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.delete` (only in
+        /// spaces the app created)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.delete`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.delete`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4411,13 +5440,22 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-        /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth) and the
+        /// authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.delete` (only in
+        /// spaces the app created)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.delete`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.delete`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4437,13 +5475,22 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-        /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth) and the
+        /// authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.delete` (only in
+        /// spaces the app created)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.delete`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.delete`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4463,13 +5510,22 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-        /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth) and the
+        /// authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.delete` (only in
+        /// spaces the app created)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.delete`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.delete`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space to delete.
@@ -4496,13 +5552,22 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-        /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth) and the
+        /// authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.delete` (only in
+        /// spaces the app created)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.delete`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.delete`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space to delete.
@@ -4529,13 +5594,22 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-        /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth) and the
+        /// authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.delete` (only in
+        /// spaces the app created)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.delete`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.delete`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space to delete.
@@ -4559,13 +5633,22 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-        /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth) and the
+        /// authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.delete` (only in
+        /// spaces the app created)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.delete`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.delete`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space to delete.
@@ -4592,13 +5675,22 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-        /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth) and the
+        /// authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.delete` (only in
+        /// spaces the app created)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.delete`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.delete`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space to delete.
@@ -4625,13 +5717,22 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-        /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth) and the
+        /// authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.delete` (only in
+        /// spaces the app created)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.delete`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.delete`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space to delete.
@@ -4648,9 +5749,14 @@ namespace Google.Apps.Chat.V1
         /// [import process](https://developers.google.com/workspace/chat/import-data)
         /// for the specified space and makes it visible to users.
         /// 
-        /// Requires [app
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-        /// and domain-wide delegation. For more information, see [Authorize Google
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// and domain-wide delegation with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.import`
+        /// 
+        /// For more information, see [Authorize Google
         /// Chat apps to import
         /// data](https://developers.google.com/workspace/chat/authorize-import).
         /// </summary>
@@ -4665,9 +5771,14 @@ namespace Google.Apps.Chat.V1
         /// [import process](https://developers.google.com/workspace/chat/import-data)
         /// for the specified space and makes it visible to users.
         /// 
-        /// Requires [app
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-        /// and domain-wide delegation. For more information, see [Authorize Google
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// and domain-wide delegation with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.import`
+        /// 
+        /// For more information, see [Authorize Google
         /// Chat apps to import
         /// data](https://developers.google.com/workspace/chat/authorize-import).
         /// </summary>
@@ -4682,9 +5793,14 @@ namespace Google.Apps.Chat.V1
         /// [import process](https://developers.google.com/workspace/chat/import-data)
         /// for the specified space and makes it visible to users.
         /// 
-        /// Requires [app
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-        /// and domain-wide delegation. For more information, see [Authorize Google
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// and domain-wide delegation with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.import`
+        /// 
+        /// For more information, see [Authorize Google
         /// Chat apps to import
         /// data](https://developers.google.com/workspace/chat/authorize-import).
         /// </summary>
@@ -4710,14 +5826,19 @@ namespace Google.Apps.Chat.V1
         /// returns the direct message space between the specified user and the
         /// authenticated user.
         /// 
-        /// // Supports the following types of
+        /// Supports the following types of
         /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4741,14 +5862,19 @@ namespace Google.Apps.Chat.V1
         /// returns the direct message space between the specified user and the
         /// authenticated user.
         /// 
-        /// // Supports the following types of
+        /// Supports the following types of
         /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4772,14 +5898,19 @@ namespace Google.Apps.Chat.V1
         /// returns the direct message space between the specified user and the
         /// authenticated user.
         /// 
-        /// // Supports the following types of
+        /// Supports the following types of
         /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4801,21 +5932,35 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.memberships.app` (to add the
+        /// calling app to the space)
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
+        /// 
+        /// App authentication is not supported for the following use cases:
+        /// 
+        /// - Inviting users external to the Workspace organization that owns the
+        /// space.
+        /// - Adding a Google Group to a space.
+        /// - Adding a Chat app to a space.
         /// 
         /// For example usage, see:
         /// 
         /// - [Invite or add a user to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-user-membership).
-        /// 
         /// - [Invite or add a Google Group to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-group-membership).
-        /// 
         /// - [Add the Chat app to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-membership-calling-api).
         /// </summary>
@@ -4839,21 +5984,35 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.memberships.app` (to add the
+        /// calling app to the space)
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
+        /// 
+        /// App authentication is not supported for the following use cases:
+        /// 
+        /// - Inviting users external to the Workspace organization that owns the
+        /// space.
+        /// - Adding a Google Group to a space.
+        /// - Adding a Chat app to a space.
         /// 
         /// For example usage, see:
         /// 
         /// - [Invite or add a user to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-user-membership).
-        /// 
         /// - [Invite or add a Google Group to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-group-membership).
-        /// 
         /// - [Add the Chat app to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-membership-calling-api).
         /// </summary>
@@ -4877,21 +6036,35 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.memberships.app` (to add the
+        /// calling app to the space)
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
+        /// 
+        /// App authentication is not supported for the following use cases:
+        /// 
+        /// - Inviting users external to the Workspace organization that owns the
+        /// space.
+        /// - Adding a Google Group to a space.
+        /// - Adding a Chat app to a space.
         /// 
         /// For example usage, see:
         /// 
         /// - [Invite or add a user to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-user-membership).
-        /// 
         /// - [Invite or add a Google Group to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-group-membership).
-        /// 
         /// - [Add the Chat app to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-membership-calling-api).
         /// </summary>
@@ -4915,21 +6088,35 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.memberships.app` (to add the
+        /// calling app to the space)
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
+        /// 
+        /// App authentication is not supported for the following use cases:
+        /// 
+        /// - Inviting users external to the Workspace organization that owns the
+        /// space.
+        /// - Adding a Google Group to a space.
+        /// - Adding a Chat app to a space.
         /// 
         /// For example usage, see:
         /// 
         /// - [Invite or add a user to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-user-membership).
-        /// 
         /// - [Invite or add a Google Group to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-group-membership).
-        /// 
         /// - [Add the Chat app to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-membership-calling-api).
         /// </summary>
@@ -4956,8 +6143,6 @@ namespace Google.Apps.Chat.V1
         /// - When [authenticating as an
         /// app](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app),
         /// the `chat.app.memberships` authorization scope is required.
-        /// Authenticating as an app is available in [Developer
-        /// Preview](https://developers.google.com/workspace/preview).
         /// 
         /// - Set `user.type` to `HUMAN`, and set `user.name` with format
         /// `users/{user}`, where `{user}` can be the email address for the user. For
@@ -5001,21 +6186,35 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.memberships.app` (to add the
+        /// calling app to the space)
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
+        /// 
+        /// App authentication is not supported for the following use cases:
+        /// 
+        /// - Inviting users external to the Workspace organization that owns the
+        /// space.
+        /// - Adding a Google Group to a space.
+        /// - Adding a Chat app to a space.
         /// 
         /// For example usage, see:
         /// 
         /// - [Invite or add a user to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-user-membership).
-        /// 
         /// - [Invite or add a Google Group to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-group-membership).
-        /// 
         /// - [Add the Chat app to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-membership-calling-api).
         /// </summary>
@@ -5042,8 +6241,6 @@ namespace Google.Apps.Chat.V1
         /// - When [authenticating as an
         /// app](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app),
         /// the `chat.app.memberships` authorization scope is required.
-        /// Authenticating as an app is available in [Developer
-        /// Preview](https://developers.google.com/workspace/preview).
         /// 
         /// - Set `user.type` to `HUMAN`, and set `user.name` with format
         /// `users/{user}`, where `{user}` can be the email address for the user. For
@@ -5087,21 +6284,35 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.memberships.app` (to add the
+        /// calling app to the space)
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
+        /// 
+        /// App authentication is not supported for the following use cases:
+        /// 
+        /// - Inviting users external to the Workspace organization that owns the
+        /// space.
+        /// - Adding a Google Group to a space.
+        /// - Adding a Chat app to a space.
         /// 
         /// For example usage, see:
         /// 
         /// - [Invite or add a user to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-user-membership).
-        /// 
         /// - [Invite or add a Google Group to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-group-membership).
-        /// 
         /// - [Add the Chat app to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-membership-calling-api).
         /// </summary>
@@ -5128,8 +6339,6 @@ namespace Google.Apps.Chat.V1
         /// - When [authenticating as an
         /// app](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app),
         /// the `chat.app.memberships` authorization scope is required.
-        /// Authenticating as an app is available in [Developer
-        /// Preview](https://developers.google.com/workspace/preview).
         /// 
         /// - Set `user.type` to `HUMAN`, and set `user.name` with format
         /// `users/{user}`, where `{user}` can be the email address for the user. For
@@ -5169,21 +6378,35 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.memberships.app` (to add the
+        /// calling app to the space)
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
+        /// 
+        /// App authentication is not supported for the following use cases:
+        /// 
+        /// - Inviting users external to the Workspace organization that owns the
+        /// space.
+        /// - Adding a Google Group to a space.
+        /// - Adding a Chat app to a space.
         /// 
         /// For example usage, see:
         /// 
         /// - [Invite or add a user to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-user-membership).
-        /// 
         /// - [Invite or add a Google Group to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-group-membership).
-        /// 
         /// - [Add the Chat app to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-membership-calling-api).
         /// </summary>
@@ -5210,8 +6433,6 @@ namespace Google.Apps.Chat.V1
         /// - When [authenticating as an
         /// app](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app),
         /// the `chat.app.memberships` authorization scope is required.
-        /// Authenticating as an app is available in [Developer
-        /// Preview](https://developers.google.com/workspace/preview).
         /// 
         /// - Set `user.type` to `HUMAN`, and set `user.name` with format
         /// `users/{user}`, where `{user}` can be the email address for the user. For
@@ -5255,21 +6476,35 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.memberships.app` (to add the
+        /// calling app to the space)
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
+        /// 
+        /// App authentication is not supported for the following use cases:
+        /// 
+        /// - Inviting users external to the Workspace organization that owns the
+        /// space.
+        /// - Adding a Google Group to a space.
+        /// - Adding a Chat app to a space.
         /// 
         /// For example usage, see:
         /// 
         /// - [Invite or add a user to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-user-membership).
-        /// 
         /// - [Invite or add a Google Group to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-group-membership).
-        /// 
         /// - [Add the Chat app to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-membership-calling-api).
         /// </summary>
@@ -5296,8 +6531,6 @@ namespace Google.Apps.Chat.V1
         /// - When [authenticating as an
         /// app](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app),
         /// the `chat.app.memberships` authorization scope is required.
-        /// Authenticating as an app is available in [Developer
-        /// Preview](https://developers.google.com/workspace/preview).
         /// 
         /// - Set `user.type` to `HUMAN`, and set `user.name` with format
         /// `users/{user}`, where `{user}` can be the email address for the user. For
@@ -5341,21 +6574,35 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.memberships.app` (to add the
+        /// calling app to the space)
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
+        /// 
+        /// App authentication is not supported for the following use cases:
+        /// 
+        /// - Inviting users external to the Workspace organization that owns the
+        /// space.
+        /// - Adding a Google Group to a space.
+        /// - Adding a Chat app to a space.
         /// 
         /// For example usage, see:
         /// 
         /// - [Invite or add a user to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-user-membership).
-        /// 
         /// - [Invite or add a Google Group to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-group-membership).
-        /// 
         /// - [Add the Chat app to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-membership-calling-api).
         /// </summary>
@@ -5382,8 +6629,6 @@ namespace Google.Apps.Chat.V1
         /// - When [authenticating as an
         /// app](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app),
         /// the `chat.app.memberships` authorization scope is required.
-        /// Authenticating as an app is available in [Developer
-        /// Preview](https://developers.google.com/workspace/preview).
         /// 
         /// - Set `user.type` to `HUMAN`, and set `user.name` with format
         /// `users/{user}`, where `{user}` can be the email address for the user. For
@@ -5418,13 +6663,22 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-        /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth) and the
+        /// authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (only in
+        /// spaces the app created)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5441,13 +6695,22 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-        /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth) and the
+        /// authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (only in
+        /// spaces the app created)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5464,13 +6727,22 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-        /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth) and the
+        /// authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (only in
+        /// spaces the app created)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -5487,13 +6759,22 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-        /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth) and the
+        /// authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (only in
+        /// spaces the app created)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="membership">
         /// Required. The membership to update. Only fields specified by `update_mask`
@@ -5525,13 +6806,22 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-        /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth) and the
+        /// authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (only in
+        /// spaces the app created)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="membership">
         /// Required. The membership to update. Only fields specified by `update_mask`
@@ -5563,13 +6853,22 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-        /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth) and the
+        /// authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (only in
+        /// spaces the app created)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="membership">
         /// Required. The membership to update. Only fields specified by `update_mask`
@@ -5599,12 +6898,31 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.memberships.app` (to remove
+        /// the calling app from the space)
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
+        /// 
+        /// App authentication is not supported for the following use cases:
+        /// 
+        /// - Removing a Google Group from a space.
+        /// - Removing a Chat app from a space.
+        /// 
+        /// To delete memberships for space managers, the requester
+        /// must be a space manager. If you're using [app
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// the Chat app must be the space creator.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5623,12 +6941,31 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.memberships.app` (to remove
+        /// the calling app from the space)
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
+        /// 
+        /// App authentication is not supported for the following use cases:
+        /// 
+        /// - Removing a Google Group from a space.
+        /// - Removing a Chat app from a space.
+        /// 
+        /// To delete memberships for space managers, the requester
+        /// must be a space manager. If you're using [app
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// the Chat app must be the space creator.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5647,12 +6984,31 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.memberships.app` (to remove
+        /// the calling app from the space)
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
+        /// 
+        /// App authentication is not supported for the following use cases:
+        /// 
+        /// - Removing a Google Group from a space.
+        /// - Removing a Chat app from a space.
+        /// 
+        /// To delete memberships for space managers, the requester
+        /// must be a space manager. If you're using [app
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// the Chat app must be the space creator.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -5671,21 +7027,44 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.memberships.app` (to remove
+        /// the calling app from the space)
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
+        /// 
+        /// App authentication is not supported for the following use cases:
+        /// 
+        /// - Removing a Google Group from a space.
+        /// - Removing a Chat app from a space.
+        /// 
+        /// To delete memberships for space managers, the requester
+        /// must be a space manager. If you're using [app
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// the Chat app must be the space creator.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the membership to delete. Chat apps can delete
         /// human users' or their own memberships. Chat apps can't delete other apps'
         /// memberships.
         /// 
-        /// When deleting a human membership, requires the `chat.memberships` scope and
-        /// `spaces/{space}/members/{member}` format. You can use the email as an
-        /// alias for `{member}`. For example,
+        /// When deleting a human membership, requires the `chat.memberships` scope
+        /// with [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// or the `chat.memberships.app` scope with [app
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// and the `spaces/{space}/members/{member}` format.
+        /// You can use the email as an alias for `{member}`. For example,
         /// `spaces/{space}/members/example@gmail.com` where `example@gmail.com` is the
         /// email of the Google Chat user.
         /// 
@@ -5713,21 +7092,44 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.memberships.app` (to remove
+        /// the calling app from the space)
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
+        /// 
+        /// App authentication is not supported for the following use cases:
+        /// 
+        /// - Removing a Google Group from a space.
+        /// - Removing a Chat app from a space.
+        /// 
+        /// To delete memberships for space managers, the requester
+        /// must be a space manager. If you're using [app
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// the Chat app must be the space creator.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the membership to delete. Chat apps can delete
         /// human users' or their own memberships. Chat apps can't delete other apps'
         /// memberships.
         /// 
-        /// When deleting a human membership, requires the `chat.memberships` scope and
-        /// `spaces/{space}/members/{member}` format. You can use the email as an
-        /// alias for `{member}`. For example,
+        /// When deleting a human membership, requires the `chat.memberships` scope
+        /// with [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// or the `chat.memberships.app` scope with [app
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// and the `spaces/{space}/members/{member}` format.
+        /// You can use the email as an alias for `{member}`. For example,
         /// `spaces/{space}/members/example@gmail.com` where `example@gmail.com` is the
         /// email of the Google Chat user.
         /// 
@@ -5755,21 +7157,44 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.memberships.app` (to remove
+        /// the calling app from the space)
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
+        /// 
+        /// App authentication is not supported for the following use cases:
+        /// 
+        /// - Removing a Google Group from a space.
+        /// - Removing a Chat app from a space.
+        /// 
+        /// To delete memberships for space managers, the requester
+        /// must be a space manager. If you're using [app
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// the Chat app must be the space creator.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the membership to delete. Chat apps can delete
         /// human users' or their own memberships. Chat apps can't delete other apps'
         /// memberships.
         /// 
-        /// When deleting a human membership, requires the `chat.memberships` scope and
-        /// `spaces/{space}/members/{member}` format. You can use the email as an
-        /// alias for `{member}`. For example,
+        /// When deleting a human membership, requires the `chat.memberships` scope
+        /// with [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// or the `chat.memberships.app` scope with [app
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// and the `spaces/{space}/members/{member}` format.
+        /// You can use the email as an alias for `{member}`. For example,
         /// `spaces/{space}/members/example@gmail.com` where `example@gmail.com` is the
         /// email of the Google Chat user.
         /// 
@@ -5794,21 +7219,44 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.memberships.app` (to remove
+        /// the calling app from the space)
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
+        /// 
+        /// App authentication is not supported for the following use cases:
+        /// 
+        /// - Removing a Google Group from a space.
+        /// - Removing a Chat app from a space.
+        /// 
+        /// To delete memberships for space managers, the requester
+        /// must be a space manager. If you're using [app
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// the Chat app must be the space creator.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the membership to delete. Chat apps can delete
         /// human users' or their own memberships. Chat apps can't delete other apps'
         /// memberships.
         /// 
-        /// When deleting a human membership, requires the `chat.memberships` scope and
-        /// `spaces/{space}/members/{member}` format. You can use the email as an
-        /// alias for `{member}`. For example,
+        /// When deleting a human membership, requires the `chat.memberships` scope
+        /// with [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// or the `chat.memberships.app` scope with [app
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// and the `spaces/{space}/members/{member}` format.
+        /// You can use the email as an alias for `{member}`. For example,
         /// `spaces/{space}/members/example@gmail.com` where `example@gmail.com` is the
         /// email of the Google Chat user.
         /// 
@@ -5836,21 +7284,44 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.memberships.app` (to remove
+        /// the calling app from the space)
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
+        /// 
+        /// App authentication is not supported for the following use cases:
+        /// 
+        /// - Removing a Google Group from a space.
+        /// - Removing a Chat app from a space.
+        /// 
+        /// To delete memberships for space managers, the requester
+        /// must be a space manager. If you're using [app
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// the Chat app must be the space creator.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the membership to delete. Chat apps can delete
         /// human users' or their own memberships. Chat apps can't delete other apps'
         /// memberships.
         /// 
-        /// When deleting a human membership, requires the `chat.memberships` scope and
-        /// `spaces/{space}/members/{member}` format. You can use the email as an
-        /// alias for `{member}`. For example,
+        /// When deleting a human membership, requires the `chat.memberships` scope
+        /// with [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// or the `chat.memberships.app` scope with [app
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// and the `spaces/{space}/members/{member}` format.
+        /// You can use the email as an alias for `{member}`. For example,
         /// `spaces/{space}/members/example@gmail.com` where `example@gmail.com` is the
         /// email of the Google Chat user.
         /// 
@@ -5878,21 +7349,44 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.memberships.app` (to remove
+        /// the calling app from the space)
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
+        /// 
+        /// App authentication is not supported for the following use cases:
+        /// 
+        /// - Removing a Google Group from a space.
+        /// - Removing a Chat app from a space.
+        /// 
+        /// To delete memberships for space managers, the requester
+        /// must be a space manager. If you're using [app
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// the Chat app must be the space creator.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the membership to delete. Chat apps can delete
         /// human users' or their own memberships. Chat apps can't delete other apps'
         /// memberships.
         /// 
-        /// When deleting a human membership, requires the `chat.memberships` scope and
-        /// `spaces/{space}/members/{member}` format. You can use the email as an
-        /// alias for `{member}`. For example,
+        /// When deleting a human membership, requires the `chat.memberships` scope
+        /// with [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// or the `chat.memberships.app` scope with [app
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// and the `spaces/{space}/members/{member}` format.
+        /// You can use the email as an alias for `{member}`. For example,
         /// `spaces/{space}/members/example@gmail.com` where `example@gmail.com` is the
         /// email of the Google Chat user.
         /// 
@@ -5912,7 +7406,14 @@ namespace Google.Apps.Chat.V1
         /// message](https://developers.google.com/workspace/chat/create-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.create`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5926,7 +7427,14 @@ namespace Google.Apps.Chat.V1
         /// message](https://developers.google.com/workspace/chat/create-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.create`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5940,7 +7448,14 @@ namespace Google.Apps.Chat.V1
         /// message](https://developers.google.com/workspace/chat/create-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.create`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -5954,7 +7469,14 @@ namespace Google.Apps.Chat.V1
         /// message](https://developers.google.com/workspace/chat/create-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.create`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="parent">
         /// Required. The message where the reaction is created.
@@ -5979,7 +7501,14 @@ namespace Google.Apps.Chat.V1
         /// message](https://developers.google.com/workspace/chat/create-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.create`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="parent">
         /// Required. The message where the reaction is created.
@@ -6004,7 +7533,14 @@ namespace Google.Apps.Chat.V1
         /// message](https://developers.google.com/workspace/chat/create-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.create`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="parent">
         /// Required. The message where the reaction is created.
@@ -6025,7 +7561,14 @@ namespace Google.Apps.Chat.V1
         /// message](https://developers.google.com/workspace/chat/create-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.create`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="parent">
         /// Required. The message where the reaction is created.
@@ -6050,7 +7593,14 @@ namespace Google.Apps.Chat.V1
         /// message](https://developers.google.com/workspace/chat/create-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.create`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="parent">
         /// Required. The message where the reaction is created.
@@ -6075,7 +7625,14 @@ namespace Google.Apps.Chat.V1
         /// message](https://developers.google.com/workspace/chat/create-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.create`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="parent">
         /// Required. The message where the reaction is created.
@@ -6096,7 +7653,14 @@ namespace Google.Apps.Chat.V1
         /// message](https://developers.google.com/workspace/chat/list-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6110,7 +7674,14 @@ namespace Google.Apps.Chat.V1
         /// message](https://developers.google.com/workspace/chat/list-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6124,7 +7695,14 @@ namespace Google.Apps.Chat.V1
         /// message](https://developers.google.com/workspace/chat/list-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
         /// </summary>
         /// <param name="parent">
         /// Required. The message users reacted to.
@@ -6164,7 +7742,14 @@ namespace Google.Apps.Chat.V1
         /// message](https://developers.google.com/workspace/chat/list-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
         /// </summary>
         /// <param name="parent">
         /// Required. The message users reacted to.
@@ -6204,7 +7789,14 @@ namespace Google.Apps.Chat.V1
         /// message](https://developers.google.com/workspace/chat/list-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
         /// </summary>
         /// <param name="parent">
         /// Required. The message users reacted to.
@@ -6244,7 +7836,14 @@ namespace Google.Apps.Chat.V1
         /// message](https://developers.google.com/workspace/chat/list-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
         /// </summary>
         /// <param name="parent">
         /// Required. The message users reacted to.
@@ -6284,7 +7883,13 @@ namespace Google.Apps.Chat.V1
         /// reaction](https://developers.google.com/workspace/chat/delete-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6298,7 +7903,13 @@ namespace Google.Apps.Chat.V1
         /// reaction](https://developers.google.com/workspace/chat/delete-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6312,7 +7923,13 @@ namespace Google.Apps.Chat.V1
         /// reaction](https://developers.google.com/workspace/chat/delete-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -6326,7 +7943,13 @@ namespace Google.Apps.Chat.V1
         /// reaction](https://developers.google.com/workspace/chat/delete-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="name">
         /// Required. Name of the reaction to delete.
@@ -6347,7 +7970,13 @@ namespace Google.Apps.Chat.V1
         /// reaction](https://developers.google.com/workspace/chat/delete-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="name">
         /// Required. Name of the reaction to delete.
@@ -6368,7 +7997,13 @@ namespace Google.Apps.Chat.V1
         /// reaction](https://developers.google.com/workspace/chat/delete-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="name">
         /// Required. Name of the reaction to delete.
@@ -6386,7 +8021,13 @@ namespace Google.Apps.Chat.V1
         /// reaction](https://developers.google.com/workspace/chat/delete-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="name">
         /// Required. Name of the reaction to delete.
@@ -6407,7 +8048,13 @@ namespace Google.Apps.Chat.V1
         /// reaction](https://developers.google.com/workspace/chat/delete-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="name">
         /// Required. Name of the reaction to delete.
@@ -6428,7 +8075,13 @@ namespace Google.Apps.Chat.V1
         /// reaction](https://developers.google.com/workspace/chat/delete-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="name">
         /// Required. Name of the reaction to delete.
@@ -6441,13 +8094,879 @@ namespace Google.Apps.Chat.V1
             DeleteReactionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomEmoji CreateCustomEmoji(CreateCustomEmojiRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomEmoji> CreateCustomEmojiAsync(CreateCustomEmojiRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomEmoji> CreateCustomEmojiAsync(CreateCustomEmojiRequest request, st::CancellationToken cancellationToken) =>
+            CreateCustomEmojiAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="customEmoji">
+        /// Required. The custom emoji to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomEmoji CreateCustomEmoji(CustomEmoji customEmoji, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomEmoji(new CreateCustomEmojiRequest
+            {
+                CustomEmoji = gax::GaxPreconditions.CheckNotNull(customEmoji, nameof(customEmoji)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="customEmoji">
+        /// Required. The custom emoji to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomEmoji> CreateCustomEmojiAsync(CustomEmoji customEmoji, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomEmojiAsync(new CreateCustomEmojiRequest
+            {
+                CustomEmoji = gax::GaxPreconditions.CheckNotNull(customEmoji, nameof(customEmoji)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="customEmoji">
+        /// Required. The custom emoji to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomEmoji> CreateCustomEmojiAsync(CustomEmoji customEmoji, st::CancellationToken cancellationToken) =>
+            CreateCustomEmojiAsync(customEmoji, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns details about a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis.readonly`
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomEmoji GetCustomEmoji(GetCustomEmojiRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns details about a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis.readonly`
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomEmoji> GetCustomEmojiAsync(GetCustomEmojiRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns details about a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis.readonly`
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomEmoji> GetCustomEmojiAsync(GetCustomEmojiRequest request, st::CancellationToken cancellationToken) =>
+            GetCustomEmojiAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns details about a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis.readonly`
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom emoji.
+        /// 
+        /// Format: `customEmojis/{customEmoji}`
+        /// 
+        /// You can use the emoji name as an alias for `{customEmoji}`. For example,
+        /// `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name
+        /// for a custom emoji.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomEmoji GetCustomEmoji(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCustomEmoji(new GetCustomEmojiRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details about a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis.readonly`
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom emoji.
+        /// 
+        /// Format: `customEmojis/{customEmoji}`
+        /// 
+        /// You can use the emoji name as an alias for `{customEmoji}`. For example,
+        /// `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name
+        /// for a custom emoji.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomEmoji> GetCustomEmojiAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCustomEmojiAsync(new GetCustomEmojiRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details about a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis.readonly`
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom emoji.
+        /// 
+        /// Format: `customEmojis/{customEmoji}`
+        /// 
+        /// You can use the emoji name as an alias for `{customEmoji}`. For example,
+        /// `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name
+        /// for a custom emoji.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomEmoji> GetCustomEmojiAsync(string name, st::CancellationToken cancellationToken) =>
+            GetCustomEmojiAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns details about a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis.readonly`
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom emoji.
+        /// 
+        /// Format: `customEmojis/{customEmoji}`
+        /// 
+        /// You can use the emoji name as an alias for `{customEmoji}`. For example,
+        /// `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name
+        /// for a custom emoji.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomEmoji GetCustomEmoji(CustomEmojiName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCustomEmoji(new GetCustomEmojiRequest
+            {
+                CustomEmojiName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details about a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis.readonly`
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom emoji.
+        /// 
+        /// Format: `customEmojis/{customEmoji}`
+        /// 
+        /// You can use the emoji name as an alias for `{customEmoji}`. For example,
+        /// `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name
+        /// for a custom emoji.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomEmoji> GetCustomEmojiAsync(CustomEmojiName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetCustomEmojiAsync(new GetCustomEmojiRequest
+            {
+                CustomEmojiName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details about a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis.readonly`
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom emoji.
+        /// 
+        /// Format: `customEmojis/{customEmoji}`
+        /// 
+        /// You can use the emoji name as an alias for `{customEmoji}`. For example,
+        /// `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name
+        /// for a custom emoji.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomEmoji> GetCustomEmojiAsync(CustomEmojiName name, st::CancellationToken cancellationToken) =>
+            GetCustomEmojiAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists custom emojis visible to the authenticated user.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis.readonly`
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CustomEmoji"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListCustomEmojisResponse, CustomEmoji> ListCustomEmojis(ListCustomEmojisRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists custom emojis visible to the authenticated user.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis.readonly`
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CustomEmoji"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListCustomEmojisResponse, CustomEmoji> ListCustomEmojisAsync(ListCustomEmojisRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists custom emojis visible to the authenticated user.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis.readonly`
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CustomEmoji"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListCustomEmojisResponse, CustomEmoji> ListCustomEmojis(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomEmojisRequest request = new ListCustomEmojisRequest { };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomEmojis(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists custom emojis visible to the authenticated user.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis.readonly`
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CustomEmoji"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListCustomEmojisResponse, CustomEmoji> ListCustomEmojisAsync(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCustomEmojisRequest request = new ListCustomEmojisRequest { };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCustomEmojisAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a custom emoji. By default, users can only delete custom emoji they
+        /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+        /// assigned by the administrator can delete any custom emoji in the
+        /// organization. See [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149).
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteCustomEmoji(DeleteCustomEmojiRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a custom emoji. By default, users can only delete custom emoji they
+        /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+        /// assigned by the administrator can delete any custom emoji in the
+        /// organization. See [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149).
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomEmojiAsync(DeleteCustomEmojiRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a custom emoji. By default, users can only delete custom emoji they
+        /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+        /// assigned by the administrator can delete any custom emoji in the
+        /// organization. See [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149).
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomEmojiAsync(DeleteCustomEmojiRequest request, st::CancellationToken cancellationToken) =>
+            DeleteCustomEmojiAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a custom emoji. By default, users can only delete custom emoji they
+        /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+        /// assigned by the administrator can delete any custom emoji in the
+        /// organization. See [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149).
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom emoji to delete.
+        /// 
+        /// Format: `customEmojis/{customEmoji}`
+        /// 
+        /// You can use the emoji name as an alias for `{customEmoji}`. For example,
+        /// `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name
+        /// for a custom emoji.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteCustomEmoji(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCustomEmoji(new DeleteCustomEmojiRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a custom emoji. By default, users can only delete custom emoji they
+        /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+        /// assigned by the administrator can delete any custom emoji in the
+        /// organization. See [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149).
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom emoji to delete.
+        /// 
+        /// Format: `customEmojis/{customEmoji}`
+        /// 
+        /// You can use the emoji name as an alias for `{customEmoji}`. For example,
+        /// `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name
+        /// for a custom emoji.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomEmojiAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCustomEmojiAsync(new DeleteCustomEmojiRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a custom emoji. By default, users can only delete custom emoji they
+        /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+        /// assigned by the administrator can delete any custom emoji in the
+        /// organization. See [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149).
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom emoji to delete.
+        /// 
+        /// Format: `customEmojis/{customEmoji}`
+        /// 
+        /// You can use the emoji name as an alias for `{customEmoji}`. For example,
+        /// `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name
+        /// for a custom emoji.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomEmojiAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteCustomEmojiAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a custom emoji. By default, users can only delete custom emoji they
+        /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+        /// assigned by the administrator can delete any custom emoji in the
+        /// organization. See [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149).
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom emoji to delete.
+        /// 
+        /// Format: `customEmojis/{customEmoji}`
+        /// 
+        /// You can use the emoji name as an alias for `{customEmoji}`. For example,
+        /// `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name
+        /// for a custom emoji.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteCustomEmoji(CustomEmojiName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCustomEmoji(new DeleteCustomEmojiRequest
+            {
+                CustomEmojiName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a custom emoji. By default, users can only delete custom emoji they
+        /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+        /// assigned by the administrator can delete any custom emoji in the
+        /// organization. See [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149).
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom emoji to delete.
+        /// 
+        /// Format: `customEmojis/{customEmoji}`
+        /// 
+        /// You can use the emoji name as an alias for `{customEmoji}`. For example,
+        /// `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name
+        /// for a custom emoji.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomEmojiAsync(CustomEmojiName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteCustomEmojiAsync(new DeleteCustomEmojiRequest
+            {
+                CustomEmojiName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a custom emoji. By default, users can only delete custom emoji they
+        /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+        /// assigned by the administrator can delete any custom emoji in the
+        /// organization. See [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149).
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the custom emoji to delete.
+        /// 
+        /// Format: `customEmojis/{customEmoji}`
+        /// 
+        /// You can use the emoji name as an alias for `{customEmoji}`. For example,
+        /// `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name
+        /// for a custom emoji.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteCustomEmojiAsync(CustomEmojiName name, st::CancellationToken cancellationToken) =>
+            DeleteCustomEmojiAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Returns details about a user's read state within a space, used to identify
         /// read and unread messages. For an example, see [Get details about a user's
         /// space read
         /// state](https://developers.google.com/workspace/chat/get-space-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6462,7 +8981,12 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/get-space-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6477,7 +9001,12 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/get-space-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -6492,7 +9021,12 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/get-space-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space read state to retrieve.
@@ -6526,7 +9060,12 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/get-space-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space read state to retrieve.
@@ -6560,7 +9099,12 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/get-space-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space read state to retrieve.
@@ -6591,7 +9135,12 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/get-space-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space read state to retrieve.
@@ -6625,7 +9174,12 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/get-space-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space read state to retrieve.
@@ -6659,7 +9213,12 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/get-space-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space read state to retrieve.
@@ -6689,7 +9248,11 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/update-space-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6703,7 +9266,11 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/update-space-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6717,7 +9284,11 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/update-space-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -6731,7 +9302,11 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/update-space-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="spaceReadState">
         /// Required. The space read state and fields to update.
@@ -6780,7 +9355,11 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/update-space-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="spaceReadState">
         /// Required. The space read state and fields to update.
@@ -6829,7 +9408,11 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/update-space-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="spaceReadState">
         /// Required. The space read state and fields to update.
@@ -6875,7 +9458,12 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/get-thread-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6890,7 +9478,12 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/get-thread-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6905,7 +9498,12 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/get-thread-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -6920,7 +9518,12 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/get-thread-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the thread read state to retrieve.
@@ -6955,7 +9558,12 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/get-thread-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the thread read state to retrieve.
@@ -6990,7 +9598,12 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/get-thread-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the thread read state to retrieve.
@@ -7022,7 +9635,12 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/get-thread-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the thread read state to retrieve.
@@ -7057,7 +9675,12 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/get-thread-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the thread read state to retrieve.
@@ -7092,7 +9715,12 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/get-thread-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the thread read state to retrieve.
@@ -7129,7 +9757,20 @@ namespace Google.Apps.Chat.V1
         /// object of the Space event data for this request.
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with an [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes)
+        /// appropriate for reading the requested data:
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// 
         /// To get an event, the authenticated user must be a member of the space.
         /// 
         /// For an example, see [Get details about an
@@ -7154,7 +9795,20 @@ namespace Google.Apps.Chat.V1
         /// object of the Space event data for this request.
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with an [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes)
+        /// appropriate for reading the requested data:
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// 
         /// To get an event, the authenticated user must be a member of the space.
         /// 
         /// For an example, see [Get details about an
@@ -7179,7 +9833,20 @@ namespace Google.Apps.Chat.V1
         /// object of the Space event data for this request.
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with an [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes)
+        /// appropriate for reading the requested data:
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// 
         /// To get an event, the authenticated user must be a member of the space.
         /// 
         /// For an example, see [Get details about an
@@ -7204,7 +9871,20 @@ namespace Google.Apps.Chat.V1
         /// object of the Space event data for this request.
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with an [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes)
+        /// appropriate for reading the requested data:
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// 
         /// To get an event, the authenticated user must be a member of the space.
         /// 
         /// For an example, see [Get details about an
@@ -7236,7 +9916,20 @@ namespace Google.Apps.Chat.V1
         /// object of the Space event data for this request.
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with an [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes)
+        /// appropriate for reading the requested data:
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// 
         /// To get an event, the authenticated user must be a member of the space.
         /// 
         /// For an example, see [Get details about an
@@ -7268,7 +9961,20 @@ namespace Google.Apps.Chat.V1
         /// object of the Space event data for this request.
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with an [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes)
+        /// appropriate for reading the requested data:
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// 
         /// To get an event, the authenticated user must be a member of the space.
         /// 
         /// For an example, see [Get details about an
@@ -7297,7 +10003,20 @@ namespace Google.Apps.Chat.V1
         /// object of the Space event data for this request.
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with an [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes)
+        /// appropriate for reading the requested data:
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// 
         /// To get an event, the authenticated user must be a member of the space.
         /// 
         /// For an example, see [Get details about an
@@ -7329,7 +10048,20 @@ namespace Google.Apps.Chat.V1
         /// object of the Space event data for this request.
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with an [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes)
+        /// appropriate for reading the requested data:
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// 
         /// To get an event, the authenticated user must be a member of the space.
         /// 
         /// For an example, see [Get details about an
@@ -7361,7 +10093,20 @@ namespace Google.Apps.Chat.V1
         /// object of the Space event data for this request.
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with an [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes)
+        /// appropriate for reading the requested data:
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// 
         /// To get an event, the authenticated user must be a member of the space.
         /// 
         /// For an example, see [Get details about an
@@ -7388,7 +10133,20 @@ namespace Google.Apps.Chat.V1
         /// `Membership` resource.
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with an [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes)
+        /// appropriate for reading the requested data:
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// 
         /// To list events, the authenticated user must be a member of the space.
         /// 
         /// For an example, see [List events from a Google Chat
@@ -7410,7 +10168,20 @@ namespace Google.Apps.Chat.V1
         /// `Membership` resource.
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with an [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes)
+        /// appropriate for reading the requested data:
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// 
         /// To list events, the authenticated user must be a member of the space.
         /// 
         /// For an example, see [List events from a Google Chat
@@ -7432,7 +10203,20 @@ namespace Google.Apps.Chat.V1
         /// `Membership` resource.
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with an [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes)
+        /// appropriate for reading the requested data:
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// 
         /// To list events, the authenticated user must be a member of the space.
         /// 
         /// For an example, see [List events from a Google Chat
@@ -7537,7 +10321,20 @@ namespace Google.Apps.Chat.V1
         /// `Membership` resource.
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with an [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes)
+        /// appropriate for reading the requested data:
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// 
         /// To list events, the authenticated user must be a member of the space.
         /// 
         /// For an example, see [List events from a Google Chat
@@ -7642,7 +10439,20 @@ namespace Google.Apps.Chat.V1
         /// `Membership` resource.
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with an [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes)
+        /// appropriate for reading the requested data:
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// 
         /// To list events, the authenticated user must be a member of the space.
         /// 
         /// For an example, see [List events from a Google Chat
@@ -7747,7 +10557,20 @@ namespace Google.Apps.Chat.V1
         /// `Membership` resource.
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with an [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes)
+        /// appropriate for reading the requested data:
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// 
         /// To list events, the authenticated user must be a member of the space.
         /// 
         /// For an example, see [List events from a Google Chat
@@ -7848,7 +10671,11 @@ namespace Google.Apps.Chat.V1
         /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.spacesettings`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7862,7 +10689,11 @@ namespace Google.Apps.Chat.V1
         /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.spacesettings`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7876,7 +10707,11 @@ namespace Google.Apps.Chat.V1
         /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.spacesettings`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -7890,7 +10725,11 @@ namespace Google.Apps.Chat.V1
         /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.spacesettings`
         /// </summary>
         /// <param name="name">
         /// Required. Format: users/{user}/spaces/{space}/spaceNotificationSetting
@@ -7914,7 +10753,11 @@ namespace Google.Apps.Chat.V1
         /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.spacesettings`
         /// </summary>
         /// <param name="name">
         /// Required. Format: users/{user}/spaces/{space}/spaceNotificationSetting
@@ -7938,7 +10781,11 @@ namespace Google.Apps.Chat.V1
         /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.spacesettings`
         /// </summary>
         /// <param name="name">
         /// Required. Format: users/{user}/spaces/{space}/spaceNotificationSetting
@@ -7959,7 +10806,11 @@ namespace Google.Apps.Chat.V1
         /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.spacesettings`
         /// </summary>
         /// <param name="name">
         /// Required. Format: users/{user}/spaces/{space}/spaceNotificationSetting
@@ -7983,7 +10834,11 @@ namespace Google.Apps.Chat.V1
         /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.spacesettings`
         /// </summary>
         /// <param name="name">
         /// Required. Format: users/{user}/spaces/{space}/spaceNotificationSetting
@@ -8007,7 +10862,11 @@ namespace Google.Apps.Chat.V1
         /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.spacesettings`
         /// </summary>
         /// <param name="name">
         /// Required. Format: users/{user}/spaces/{space}/spaceNotificationSetting
@@ -8028,7 +10887,11 @@ namespace Google.Apps.Chat.V1
         /// setting](https://developers.google.com/workspace/chat/update-space-notification-setting).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.spacesettings`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8042,7 +10905,11 @@ namespace Google.Apps.Chat.V1
         /// setting](https://developers.google.com/workspace/chat/update-space-notification-setting).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.spacesettings`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8056,7 +10923,11 @@ namespace Google.Apps.Chat.V1
         /// setting](https://developers.google.com/workspace/chat/update-space-notification-setting).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.spacesettings`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -8070,7 +10941,11 @@ namespace Google.Apps.Chat.V1
         /// setting](https://developers.google.com/workspace/chat/update-space-notification-setting).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.spacesettings`
         /// </summary>
         /// <param name="spaceNotificationSetting">
         /// Required. The resource name for the space notification settings must be
@@ -8100,7 +10975,11 @@ namespace Google.Apps.Chat.V1
         /// setting](https://developers.google.com/workspace/chat/update-space-notification-setting).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.spacesettings`
         /// </summary>
         /// <param name="spaceNotificationSetting">
         /// Required. The resource name for the space notification settings must be
@@ -8130,7 +11009,11 @@ namespace Google.Apps.Chat.V1
         /// setting](https://developers.google.com/workspace/chat/update-space-notification-setting).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.spacesettings`
         /// </summary>
         /// <param name="spaceNotificationSetting">
         /// Required. The resource name for the space notification settings must be
@@ -8205,6 +11088,14 @@ namespace Google.Apps.Chat.V1
         private readonly gaxgrpc::ApiCall<ListReactionsRequest, ListReactionsResponse> _callListReactions;
 
         private readonly gaxgrpc::ApiCall<DeleteReactionRequest, wkt::Empty> _callDeleteReaction;
+
+        private readonly gaxgrpc::ApiCall<CreateCustomEmojiRequest, CustomEmoji> _callCreateCustomEmoji;
+
+        private readonly gaxgrpc::ApiCall<GetCustomEmojiRequest, CustomEmoji> _callGetCustomEmoji;
+
+        private readonly gaxgrpc::ApiCall<ListCustomEmojisRequest, ListCustomEmojisResponse> _callListCustomEmojis;
+
+        private readonly gaxgrpc::ApiCall<DeleteCustomEmojiRequest, wkt::Empty> _callDeleteCustomEmoji;
 
         private readonly gaxgrpc::ApiCall<GetSpaceReadStateRequest, SpaceReadState> _callGetSpaceReadState;
 
@@ -8307,6 +11198,18 @@ namespace Google.Apps.Chat.V1
             _callDeleteReaction = clientHelper.BuildApiCall<DeleteReactionRequest, wkt::Empty>("DeleteReaction", grpcClient.DeleteReactionAsync, grpcClient.DeleteReaction, effectiveSettings.DeleteReactionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteReaction);
             Modify_DeleteReactionApiCall(ref _callDeleteReaction);
+            _callCreateCustomEmoji = clientHelper.BuildApiCall<CreateCustomEmojiRequest, CustomEmoji>("CreateCustomEmoji", grpcClient.CreateCustomEmojiAsync, grpcClient.CreateCustomEmoji, effectiveSettings.CreateCustomEmojiSettings);
+            Modify_ApiCall(ref _callCreateCustomEmoji);
+            Modify_CreateCustomEmojiApiCall(ref _callCreateCustomEmoji);
+            _callGetCustomEmoji = clientHelper.BuildApiCall<GetCustomEmojiRequest, CustomEmoji>("GetCustomEmoji", grpcClient.GetCustomEmojiAsync, grpcClient.GetCustomEmoji, effectiveSettings.GetCustomEmojiSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetCustomEmoji);
+            Modify_GetCustomEmojiApiCall(ref _callGetCustomEmoji);
+            _callListCustomEmojis = clientHelper.BuildApiCall<ListCustomEmojisRequest, ListCustomEmojisResponse>("ListCustomEmojis", grpcClient.ListCustomEmojisAsync, grpcClient.ListCustomEmojis, effectiveSettings.ListCustomEmojisSettings);
+            Modify_ApiCall(ref _callListCustomEmojis);
+            Modify_ListCustomEmojisApiCall(ref _callListCustomEmojis);
+            _callDeleteCustomEmoji = clientHelper.BuildApiCall<DeleteCustomEmojiRequest, wkt::Empty>("DeleteCustomEmoji", grpcClient.DeleteCustomEmojiAsync, grpcClient.DeleteCustomEmoji, effectiveSettings.DeleteCustomEmojiSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteCustomEmoji);
+            Modify_DeleteCustomEmojiApiCall(ref _callDeleteCustomEmoji);
             _callGetSpaceReadState = clientHelper.BuildApiCall<GetSpaceReadStateRequest, SpaceReadState>("GetSpaceReadState", grpcClient.GetSpaceReadStateAsync, grpcClient.GetSpaceReadState, effectiveSettings.GetSpaceReadStateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSpaceReadState);
             Modify_GetSpaceReadStateApiCall(ref _callGetSpaceReadState);
@@ -8381,6 +11284,14 @@ namespace Google.Apps.Chat.V1
 
         partial void Modify_DeleteReactionApiCall(ref gaxgrpc::ApiCall<DeleteReactionRequest, wkt::Empty> call);
 
+        partial void Modify_CreateCustomEmojiApiCall(ref gaxgrpc::ApiCall<CreateCustomEmojiRequest, CustomEmoji> call);
+
+        partial void Modify_GetCustomEmojiApiCall(ref gaxgrpc::ApiCall<GetCustomEmojiRequest, CustomEmoji> call);
+
+        partial void Modify_ListCustomEmojisApiCall(ref gaxgrpc::ApiCall<ListCustomEmojisRequest, ListCustomEmojisResponse> call);
+
+        partial void Modify_DeleteCustomEmojiApiCall(ref gaxgrpc::ApiCall<DeleteCustomEmojiRequest, wkt::Empty> call);
+
         partial void Modify_GetSpaceReadStateApiCall(ref gaxgrpc::ApiCall<GetSpaceReadStateRequest, SpaceReadState> call);
 
         partial void Modify_UpdateSpaceReadStateApiCall(ref gaxgrpc::ApiCall<UpdateSpaceReadStateRequest, SpaceReadState> call);
@@ -8448,6 +11359,14 @@ namespace Google.Apps.Chat.V1
 
         partial void Modify_DeleteReactionRequest(ref DeleteReactionRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_CreateCustomEmojiRequest(ref CreateCustomEmojiRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetCustomEmojiRequest(ref GetCustomEmojiRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListCustomEmojisRequest(ref ListCustomEmojisRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteCustomEmojiRequest(ref DeleteCustomEmojiRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetSpaceReadStateRequest(ref GetSpaceReadStateRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateSpaceReadStateRequest(ref UpdateSpaceReadStateRequest request, ref gaxgrpc::CallSettings settings);
@@ -8466,10 +11385,21 @@ namespace Google.Apps.Chat.V1
         /// Creates a message in a Google Chat space. For an example, see [Send a
         /// message](https://developers.google.com/workspace/chat/create-messages).
         /// 
-        /// The `create()` method requires either [user
+        /// Supports the following types of
+        /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
+        /// 
+        /// - [App
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// or [app
-        /// authentication](https://developers.google.com/workspace/chat/authorize-import).
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages.create`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// 
         /// Chat attributes the message sender differently depending on the type of
         /// authentication that you use in your request.
         /// 
@@ -8510,10 +11440,21 @@ namespace Google.Apps.Chat.V1
         /// Creates a message in a Google Chat space. For an example, see [Send a
         /// message](https://developers.google.com/workspace/chat/create-messages).
         /// 
-        /// The `create()` method requires either [user
+        /// Supports the following types of
+        /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
+        /// 
+        /// - [App
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// or [app
-        /// authentication](https://developers.google.com/workspace/chat/authorize-import).
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages.create`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// 
         /// Chat attributes the message sender differently depending on the type of
         /// authentication that you use in your request.
         /// 
@@ -8560,7 +11501,13 @@ namespace Google.Apps.Chat.V1
         /// messages](https://developers.google.com/workspace/chat/api/guides/v1/messages/list).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8581,7 +11528,13 @@ namespace Google.Apps.Chat.V1
         /// messages](https://developers.google.com/workspace/chat/api/guides/v1/messages/list).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8610,11 +11563,23 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (requires
+        /// [administrator approval](https://support.google.com/a?p=chat-app-auth))
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8643,11 +11608,23 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (requires
+        /// [administrator approval](https://support.google.com/a?p=chat-app-auth))
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8668,11 +11645,21 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (requires
+        /// [administrator approval](https://support.google.com/a?p=chat-app-auth))
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8693,11 +11680,21 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (requires
+        /// [administrator approval](https://support.google.com/a?p=chat-app-auth))
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8718,9 +11715,14 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
         /// 
         /// Note: Might return a message from a blocked member or space.
         /// </summary>
@@ -8743,9 +11745,14 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
         /// 
         /// Note: Might return a message from a blocked member or space.
         /// </summary>
@@ -8771,9 +11778,15 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When using app authentication, requests can only update messages
         /// created by the calling Chat app.
@@ -8800,9 +11813,15 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When using app authentication, requests can only update messages
         /// created by the calling Chat app.
@@ -8826,9 +11845,15 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When using app authentication, requests can only delete messages
         /// created by the calling Chat app.
@@ -8852,9 +11877,15 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When using app authentication, requests can only delete messages
         /// created by the calling Chat app.
@@ -8875,8 +11906,13 @@ namespace Google.Apps.Chat.V1
         /// For an example, see
         /// [Get metadata about a message
         /// attachment](https://developers.google.com/workspace/chat/get-media-attachments).
+        /// 
         /// Requires [app
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8894,8 +11930,13 @@ namespace Google.Apps.Chat.V1
         /// For an example, see
         /// [Get metadata about a message
         /// attachment](https://developers.google.com/workspace/chat/get-media-attachments).
+        /// 
         /// Requires [app
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8912,7 +11953,13 @@ namespace Google.Apps.Chat.V1
         /// attachment](https://developers.google.com/workspace/chat/upload-media-attachments).
         /// 
         /// Requires user
-        /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.create`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// 
         /// You can upload attachments up to 200 MB. Certain file types aren't
         /// supported. For details, see [File types blocked by Google
@@ -8933,7 +11980,13 @@ namespace Google.Apps.Chat.V1
         /// attachment](https://developers.google.com/workspace/chat/upload-media-attachments).
         /// 
         /// Requires user
-        /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.create`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// 
         /// You can upload attachments up to 200 MB. Certain file types aren't
         /// supported. For details, see [File types blocked by Google
@@ -8959,9 +12012,14 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
         /// 
         /// To list all named spaces by Google Workspace organization, use the
         /// [`spaces.search()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/search)
@@ -8987,9 +12045,14 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
         /// 
         /// To list all named spaces by Google Workspace organization, use the
         /// [`spaces.search()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/search)
@@ -9010,7 +12073,13 @@ namespace Google.Apps.Chat.V1
         /// 
         /// Requires [user
         /// authentication with administrator
-        /// privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges).
+        /// privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges)
+        /// and one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
         /// In the request, set `use_admin_access` to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -9028,7 +12097,13 @@ namespace Google.Apps.Chat.V1
         /// 
         /// Requires [user
         /// authentication with administrator
-        /// privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges).
+        /// privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-privileges)
+        /// and one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
         /// In the request, set `use_admin_access` to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -9050,11 +12125,29 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces` with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
+        /// App authentication has the following limitations:
+        /// 
+        /// - `space.access_settings` is only populated when using the
+        /// `chat.app.spaces` scope.
+        /// - `space.predefind_permission_settings` and `space.permission_settings` are
+        /// only populated when using the `chat.app.spaces` scope, and only for
+        /// spaces the app created.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9075,11 +12168,29 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.bot`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces` with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// one of the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
+        /// App authentication has the following limitations:
+        /// 
+        /// - `space.access_settings` is only populated when using the
+        /// `chat.app.spaces` scope.
+        /// - `space.predefind_permission_settings` and `space.permission_settings` are
+        /// only populated when using the `chat.app.spaces` scope, and only for
+        /// spaces the app created.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9091,13 +12202,9 @@ namespace Google.Apps.Chat.V1
         }
 
         /// <summary>
-        /// Creates a space with no members. Can be used to create a named space, or a
+        /// Creates a space. Can be used to create a named space, or a
         /// group chat in `Import mode`. For an example, see [Create a
         /// space](https://developers.google.com/workspace/chat/create-spaces).
-        /// 
-        /// If you receive the error message `ALREADY_EXISTS` when creating
-        /// a space, try a different `displayName`. An existing space within
-        /// the Google Workspace organization might already use this display name.
         /// 
         /// Supports the following types of
         /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
@@ -9105,13 +12212,38 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.create`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.create`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When authenticating as an app, the `space.customer` field must be set in
         /// the request.
+        /// 
+        /// When authenticating as an app, the Chat app is added as a member of the
+        /// space. However, unlike human authentication, the Chat app is not added as a
+        /// space manager. By default, the Chat app can be removed from the space by
+        /// all space members. To allow only space managers to remove the app from a
+        /// space, set `space.permission_settings.manage_apps` to `managers_allowed`.
+        /// 
+        /// Space membership upon creation depends on whether the space is created in
+        /// `Import mode`:
+        /// 
+        /// * **Import mode:** No members are created.
+        /// * **All other modes:**  The calling user is added as a member. This is:
+        /// * The app itself when using app authentication.
+        /// * The human user when using user authentication.
+        /// 
+        /// If you receive the error message `ALREADY_EXISTS` when creating
+        /// a space, try a different `displayName`. An existing space within
+        /// the Google Workspace organization might already use this display name.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9123,13 +12255,9 @@ namespace Google.Apps.Chat.V1
         }
 
         /// <summary>
-        /// Creates a space with no members. Can be used to create a named space, or a
+        /// Creates a space. Can be used to create a named space, or a
         /// group chat in `Import mode`. For an example, see [Create a
         /// space](https://developers.google.com/workspace/chat/create-spaces).
-        /// 
-        /// If you receive the error message `ALREADY_EXISTS` when creating
-        /// a space, try a different `displayName`. An existing space within
-        /// the Google Workspace organization might already use this display name.
         /// 
         /// Supports the following types of
         /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
@@ -9137,13 +12265,38 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.app.spaces.create`
+        /// - `https://www.googleapis.com/auth/chat.app.spaces`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.create`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
         /// 
         /// When authenticating as an app, the `space.customer` field must be set in
         /// the request.
+        /// 
+        /// When authenticating as an app, the Chat app is added as a member of the
+        /// space. However, unlike human authentication, the Chat app is not added as a
+        /// space manager. By default, the Chat app can be removed from the space by
+        /// all space members. To allow only space managers to remove the app from a
+        /// space, set `space.permission_settings.manage_apps` to `managers_allowed`.
+        /// 
+        /// Space membership upon creation depends on whether the space is created in
+        /// `Import mode`:
+        /// 
+        /// * **Import mode:** No members are created.
+        /// * **All other modes:**  The calling user is added as a member. This is:
+        /// * The app itself when using app authentication.
+        /// * The human user when using user authentication.
+        /// 
+        /// If you receive the error message `ALREADY_EXISTS` when creating
+        /// a space, try a different `displayName`. An existing space within
+        /// the Google Workspace organization might already use this display name.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9206,7 +12359,12 @@ namespace Google.Apps.Chat.V1
         /// might already use this display name.
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.create`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9269,7 +12427,12 @@ namespace Google.Apps.Chat.V1
         /// might already use this display name.
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.create`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9295,12 +12458,26 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.app.spaces`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
+        /// App authentication has the following limitations:
+        /// 
+        /// - To update either `space.predefined_permission_settings` or
+        /// `space.permission_settings`, the app must be the space creator.
+        /// - Updating the `space.access_settings.audience` is not supported for app
+        /// authentication.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9326,12 +12503,26 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.app.spaces`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scopes is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.spaces`
+        /// 
+        /// App authentication has the following limitations:
+        /// 
+        /// - To update either `space.predefined_permission_settings` or
+        /// `space.permission_settings`, the app must be the space creator.
+        /// - Updating the `space.access_settings.audience` is not supported for app
+        /// authentication.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9354,13 +12545,22 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-        /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth) and the
+        /// authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.delete` (only in
+        /// spaces the app created)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.delete`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.delete`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9383,13 +12583,22 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-        /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth) and the
+        /// authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.delete` (only in
+        /// spaces the app created)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.delete`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.delete`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9405,9 +12614,14 @@ namespace Google.Apps.Chat.V1
         /// [import process](https://developers.google.com/workspace/chat/import-data)
         /// for the specified space and makes it visible to users.
         /// 
-        /// Requires [app
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-        /// and domain-wide delegation. For more information, see [Authorize Google
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// and domain-wide delegation with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.import`
+        /// 
+        /// For more information, see [Authorize Google
         /// Chat apps to import
         /// data](https://developers.google.com/workspace/chat/authorize-import).
         /// </summary>
@@ -9425,9 +12639,14 @@ namespace Google.Apps.Chat.V1
         /// [import process](https://developers.google.com/workspace/chat/import-data)
         /// for the specified space and makes it visible to users.
         /// 
-        /// Requires [app
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-        /// and domain-wide delegation. For more information, see [Authorize Google
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// and domain-wide delegation with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.import`
+        /// 
+        /// For more information, see [Authorize Google
         /// Chat apps to import
         /// data](https://developers.google.com/workspace/chat/authorize-import).
         /// </summary>
@@ -9456,14 +12675,19 @@ namespace Google.Apps.Chat.V1
         /// returns the direct message space between the specified user and the
         /// authenticated user.
         /// 
-        /// // Supports the following types of
+        /// Supports the following types of
         /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9490,14 +12714,19 @@ namespace Google.Apps.Chat.V1
         /// returns the direct message space between the specified user and the
         /// authenticated user.
         /// 
-        /// // Supports the following types of
+        /// Supports the following types of
         /// [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.bot`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9522,21 +12751,35 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.memberships.app` (to add the
+        /// calling app to the space)
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
+        /// 
+        /// App authentication is not supported for the following use cases:
+        /// 
+        /// - Inviting users external to the Workspace organization that owns the
+        /// space.
+        /// - Adding a Google Group to a space.
+        /// - Adding a Chat app to a space.
         /// 
         /// For example usage, see:
         /// 
         /// - [Invite or add a user to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-user-membership).
-        /// 
         /// - [Invite or add a Google Group to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-group-membership).
-        /// 
         /// - [Add the Chat app to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-membership-calling-api).
         /// </summary>
@@ -9563,21 +12806,35 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.memberships.app` (to add the
+        /// calling app to the space)
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
+        /// 
+        /// App authentication is not supported for the following use cases:
+        /// 
+        /// - Inviting users external to the Workspace organization that owns the
+        /// space.
+        /// - Adding a Google Group to a space.
+        /// - Adding a Chat app to a space.
         /// 
         /// For example usage, see:
         /// 
         /// - [Invite or add a user to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-user-membership).
-        /// 
         /// - [Invite or add a Google Group to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-group-membership).
-        /// 
         /// - [Add the Chat app to a
         /// space](https://developers.google.com/workspace/chat/create-members#create-membership-calling-api).
         /// </summary>
@@ -9599,13 +12856,22 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-        /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth) and the
+        /// authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (only in
+        /// spaces the app created)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9625,13 +12891,22 @@ namespace Google.Apps.Chat.V1
         /// 
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-        /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth) and the
+        /// authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships` (only in
+        /// spaces the app created)
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9653,12 +12928,31 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.memberships.app` (to remove
+        /// the calling app from the space)
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
+        /// 
+        /// App authentication is not supported for the following use cases:
+        /// 
+        /// - Removing a Google Group from a space.
+        /// - Removing a Chat app from a space.
+        /// 
+        /// To delete memberships for space managers, the requester
+        /// must be a space manager. If you're using [app
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// the Chat app must be the space creator.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9680,12 +12974,31 @@ namespace Google.Apps.Chat.V1
         /// - [App
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
         /// with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-        /// in [Developer Preview](https://developers.google.com/workspace/preview)
+        /// and the authorization scope:
+        /// - `https://www.googleapis.com/auth/chat.app.memberships`
         /// 
         /// - [User
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-        /// You can authenticate and authorize this method with administrator
-        /// privileges by setting the `use_admin_access` field in the request.
+        /// with one of the following authorization scopes:
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// - `https://www.googleapis.com/auth/chat.memberships.app` (to remove
+        /// the calling app from the space)
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces
+        /// only)
+        /// - User authentication grants administrator privileges when an
+        /// administrator account authenticates, `use_admin_access` is `true`, and
+        /// the following authorization scope is used:
+        /// - `https://www.googleapis.com/auth/chat.admin.memberships`
+        /// 
+        /// App authentication is not supported for the following use cases:
+        /// 
+        /// - Removing a Google Group from a space.
+        /// - Removing a Chat app from a space.
+        /// 
+        /// To delete memberships for space managers, the requester
+        /// must be a space manager. If you're using [app
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// the Chat app must be the space creator.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9702,7 +13015,14 @@ namespace Google.Apps.Chat.V1
         /// message](https://developers.google.com/workspace/chat/create-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.create`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9719,7 +13039,14 @@ namespace Google.Apps.Chat.V1
         /// message](https://developers.google.com/workspace/chat/create-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.create`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9736,7 +13063,14 @@ namespace Google.Apps.Chat.V1
         /// message](https://developers.google.com/workspace/chat/list-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9753,7 +13087,14 @@ namespace Google.Apps.Chat.V1
         /// message](https://developers.google.com/workspace/chat/list-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9770,7 +13111,13 @@ namespace Google.Apps.Chat.V1
         /// reaction](https://developers.google.com/workspace/chat/delete-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9787,7 +13134,13 @@ namespace Google.Apps.Chat.V1
         /// reaction](https://developers.google.com/workspace/chat/delete-reactions).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.import` (import mode spaces only)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9799,13 +13152,238 @@ namespace Google.Apps.Chat.V1
         }
 
         /// <summary>
+        /// Creates a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CustomEmoji CreateCustomEmoji(CreateCustomEmojiRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCustomEmojiRequest(ref request, ref callSettings);
+            return _callCreateCustomEmoji.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CustomEmoji> CreateCustomEmojiAsync(CreateCustomEmojiRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCustomEmojiRequest(ref request, ref callSettings);
+            return _callCreateCustomEmoji.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns details about a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis.readonly`
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CustomEmoji GetCustomEmoji(GetCustomEmojiRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetCustomEmojiRequest(ref request, ref callSettings);
+            return _callGetCustomEmoji.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns details about a custom emoji.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis.readonly`
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CustomEmoji> GetCustomEmojiAsync(GetCustomEmojiRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetCustomEmojiRequest(ref request, ref callSettings);
+            return _callGetCustomEmoji.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists custom emojis visible to the authenticated user.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis.readonly`
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="CustomEmoji"/> resources.</returns>
+        public override gax::PagedEnumerable<ListCustomEmojisResponse, CustomEmoji> ListCustomEmojis(ListCustomEmojisRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListCustomEmojisRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListCustomEmojisRequest, ListCustomEmojisResponse, CustomEmoji>(_callListCustomEmojis, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists custom emojis visible to the authenticated user.
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis.readonly`
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="CustomEmoji"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListCustomEmojisResponse, CustomEmoji> ListCustomEmojisAsync(ListCustomEmojisRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListCustomEmojisRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListCustomEmojisRequest, ListCustomEmojisResponse, CustomEmoji>(_callListCustomEmojis, request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a custom emoji. By default, users can only delete custom emoji they
+        /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+        /// assigned by the administrator can delete any custom emoji in the
+        /// organization. See [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149).
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteCustomEmoji(DeleteCustomEmojiRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteCustomEmojiRequest(ref request, ref callSettings);
+            _callDeleteCustomEmoji.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a custom emoji. By default, users can only delete custom emoji they
+        /// created. [Emoji managers](https://support.google.com/a/answer/12850085)
+        /// assigned by the administrator can delete any custom emoji in the
+        /// organization. See [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149).
+        /// 
+        /// Custom emojis are only available for Google Workspace accounts, and the
+        /// administrator must turn custom emojis on for the organization. For more
+        /// information, see [Learn about custom emojis in Google
+        /// Chat](https://support.google.com/chat/answer/12800149) and
+        /// [Manage custom emoji
+        /// permissions](https://support.google.com/a/answer/12850085).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.customemojis`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteCustomEmojiAsync(DeleteCustomEmojiRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteCustomEmojiRequest(ref request, ref callSettings);
+            return _callDeleteCustomEmoji.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Returns details about a user's read state within a space, used to identify
         /// read and unread messages. For an example, see [Get details about a user's
         /// space read
         /// state](https://developers.google.com/workspace/chat/get-space-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9823,7 +13401,12 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/get-space-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9840,7 +13423,11 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/update-space-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9857,7 +13444,11 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/update-space-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9875,7 +13466,12 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/get-thread-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9893,7 +13489,12 @@ namespace Google.Apps.Chat.V1
         /// state](https://developers.google.com/workspace/chat/get-thread-read-state).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.readstate.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.readstate`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9916,7 +13517,20 @@ namespace Google.Apps.Chat.V1
         /// object of the Space event data for this request.
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with an [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes)
+        /// appropriate for reading the requested data:
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// 
         /// To get an event, the authenticated user must be a member of the space.
         /// 
         /// For an example, see [Get details about an
@@ -9944,7 +13558,20 @@ namespace Google.Apps.Chat.V1
         /// object of the Space event data for this request.
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with an [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes)
+        /// appropriate for reading the requested data:
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// 
         /// To get an event, the authenticated user must be a member of the space.
         /// 
         /// For an example, see [Get details about an
@@ -9970,7 +13597,20 @@ namespace Google.Apps.Chat.V1
         /// `Membership` resource.
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with an [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes)
+        /// appropriate for reading the requested data:
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// 
         /// To list events, the authenticated user must be a member of the space.
         /// 
         /// For an example, see [List events from a Google Chat
@@ -9995,7 +13635,20 @@ namespace Google.Apps.Chat.V1
         /// `Membership` resource.
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with an [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes)
+        /// appropriate for reading the requested data:
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.spaces.readonly`
+        /// - `https://www.googleapis.com/auth/chat.spaces`
+        /// - `https://www.googleapis.com/auth/chat.messages.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions.readonly`
+        /// - `https://www.googleapis.com/auth/chat.messages.reactions`
+        /// - `https://www.googleapis.com/auth/chat.memberships.readonly`
+        /// - `https://www.googleapis.com/auth/chat.memberships`
+        /// 
         /// To list events, the authenticated user must be a member of the space.
         /// 
         /// For an example, see [List events from a Google Chat
@@ -10016,7 +13669,11 @@ namespace Google.Apps.Chat.V1
         /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.spacesettings`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -10033,7 +13690,11 @@ namespace Google.Apps.Chat.V1
         /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.spacesettings`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -10050,7 +13711,11 @@ namespace Google.Apps.Chat.V1
         /// setting](https://developers.google.com/workspace/chat/update-space-notification-setting).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.spacesettings`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -10067,7 +13732,11 @@ namespace Google.Apps.Chat.V1
         /// setting](https://developers.google.com/workspace/chat/update-space-notification-setting).
         /// 
         /// Requires [user
-        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with the [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.spacesettings`
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -10096,6 +13765,10 @@ namespace Google.Apps.Chat.V1
     }
 
     public partial class ListReactionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListCustomEmojisRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -10139,6 +13812,14 @@ namespace Google.Apps.Chat.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Reaction> GetEnumerator() => Reactions.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListCustomEmojisResponse : gaxgrpc::IPageResponse<CustomEmoji>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<CustomEmoji> GetEnumerator() => CustomEmojis.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

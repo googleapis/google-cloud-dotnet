@@ -43,6 +43,8 @@ namespace Google.Cloud.Bigtable.V2
 
         internal void IncrementRowsReadSoFar(int count = 1) => _rowsReadSoFar += count;
 
+        internal long RowsReadSoFar() => _rowsReadSoFar;
+
         /// <summary>
         /// Builds and returns updated subrequest that excludes all rowKeys that have already been found,
         /// or null if all rows have already been found.

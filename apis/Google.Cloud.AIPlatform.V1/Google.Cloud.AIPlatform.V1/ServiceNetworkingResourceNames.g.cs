@@ -282,4 +282,17 @@ namespace Google.Cloud.AIPlatform.V1
         /// </returns>
         public static bool operator !=(NetworkAttachmentName a, NetworkAttachmentName b) => !(a == b);
     }
+
+    public partial class PscInterfaceConfig
+    {
+        /// <summary>
+        /// <see cref="NetworkAttachmentName"/>-typed view over the <see cref="NetworkAttachment"/> resource name
+        /// property.
+        /// </summary>
+        public NetworkAttachmentName NetworkAttachmentAsNetworkAttachmentName
+        {
+            get => string.IsNullOrEmpty(NetworkAttachment) ? null : NetworkAttachmentName.Parse(NetworkAttachment, allowUnparsed: true);
+            set => NetworkAttachment = value?.ToString() ?? "";
+        }
+    }
 }

@@ -22,9 +22,12 @@ namespace Google.Maps.Places.V1.Snippets;
 [SnippetOutputCollector]
 public class PlacesClientSnippets
 {
-    [Fact]
+    [SkippableFact()]
     public void GettingStarted()
     {
+        // See b/414750416
+        TestEnvironment.SkipOnRestrictedEnvironment();
+
         // Sample: GettingStarted
         PlacesClient client = PlacesClient.Create();
         CallSettings callSettings = CallSettings.FromHeader("X-Goog-FieldMask", "*");

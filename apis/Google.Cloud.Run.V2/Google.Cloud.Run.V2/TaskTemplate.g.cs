@@ -29,7 +29,7 @@ namespace Google.Cloud.Run.V2 {
             "cHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aIWdvb2dsZS9jbG91",
             "ZC9ydW4vdjIvazhzLm1pbi5wcm90bxopZ29vZ2xlL2Nsb3VkL3J1bi92Mi92",
             "ZW5kb3Jfc2V0dGluZ3MucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlv",
-            "bi5wcm90byKuAwoMVGFza1RlbXBsYXRlEjIKCmNvbnRhaW5lcnMYASADKAsy",
+            "bi5wcm90byLABAoMVGFza1RlbXBsYXRlEjIKCmNvbnRhaW5lcnMYASADKAsy",
             "Hi5nb29nbGUuY2xvdWQucnVuLnYyLkNvbnRhaW5lchIxCgd2b2x1bWVzGAIg",
             "AygLMhsuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5Wb2x1bWVCA+BBARIVCgttYXhf",
             "cmV0cmllcxgDIAEoBUgAEi8KB3RpbWVvdXQYBCABKAsyGS5nb29nbGUucHJv",
@@ -38,13 +38,17 @@ namespace Google.Cloud.Run.V2 {
             "Y2xvdWQucnVuLnYyLkV4ZWN1dGlvbkVudmlyb25tZW50QgPgQQESPgoOZW5j",
             "cnlwdGlvbl9rZXkYByABKAlCJvpBIwohY2xvdWRrbXMuZ29vZ2xlYXBpcy5j",
             "b20vQ3J5cHRvS2V5EjcKCnZwY19hY2Nlc3MYCCABKAsyHi5nb29nbGUuY2xv",
-            "dWQucnVuLnYyLlZwY0FjY2Vzc0ID4EEBQgkKB3JldHJpZXNCWQoXY29tLmdv",
-            "b2dsZS5jbG91ZC5ydW4udjJCEVRhc2tUZW1wbGF0ZVByb3RvUAFaKWNsb3Vk",
-            "Lmdvb2dsZS5jb20vZ28vcnVuL2FwaXYyL3J1bnBiO3J1bnBiYgZwcm90bzM="));
+            "dWQucnVuLnYyLlZwY0FjY2Vzc0ID4EEBEj0KDW5vZGVfc2VsZWN0b3IYCyAB",
+            "KAsyIS5nb29nbGUuY2xvdWQucnVuLnYyLk5vZGVTZWxlY3RvckID4EEBEi8K",
+            "HWdwdV96b25hbF9yZWR1bmRhbmN5X2Rpc2FibGVkGAwgASgIQgPgQQFIAYgB",
+            "AUIJCgdyZXRyaWVzQiAKHl9ncHVfem9uYWxfcmVkdW5kYW5jeV9kaXNhYmxl",
+            "ZEJZChdjb20uZ29vZ2xlLmNsb3VkLnJ1bi52MkIRVGFza1RlbXBsYXRlUHJv",
+            "dG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9ydW4vYXBpdjIvcnVucGI7cnVu",
+            "cGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.TaskTemplate), global::Google.Cloud.Run.V2.TaskTemplate.Parser, new[]{ "Containers", "Volumes", "MaxRetries", "Timeout", "ServiceAccount", "ExecutionEnvironment", "EncryptionKey", "VpcAccess" }, new[]{ "Retries" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.TaskTemplate), global::Google.Cloud.Run.V2.TaskTemplate.Parser, new[]{ "Containers", "Volumes", "MaxRetries", "Timeout", "ServiceAccount", "ExecutionEnvironment", "EncryptionKey", "VpcAccess", "NodeSelector", "GpuZonalRedundancyDisabled" }, new[]{ "Retries", "GpuZonalRedundancyDisabled" }, null, null, null)
           }));
     }
     #endregion
@@ -63,6 +67,7 @@ namespace Google.Cloud.Run.V2 {
   {
     private static readonly pb::MessageParser<TaskTemplate> _parser = new pb::MessageParser<TaskTemplate>(() => new TaskTemplate());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TaskTemplate> Parser { get { return _parser; } }
@@ -90,6 +95,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TaskTemplate(TaskTemplate other) : this() {
+      _hasBits0 = other._hasBits0;
       containers_ = other.containers_.Clone();
       volumes_ = other.volumes_.Clone();
       timeout_ = other.timeout_ != null ? other.timeout_.Clone() : null;
@@ -97,6 +103,8 @@ namespace Google.Cloud.Run.V2 {
       executionEnvironment_ = other.executionEnvironment_;
       encryptionKey_ = other.encryptionKey_;
       vpcAccess_ = other.vpcAccess_ != null ? other.vpcAccess_.Clone() : null;
+      nodeSelector_ = other.nodeSelector_ != null ? other.nodeSelector_.Clone() : null;
+      gpuZonalRedundancyDisabled_ = other.gpuZonalRedundancyDisabled_;
       switch (other.RetriesCase) {
         case RetriesOneofCase.MaxRetries:
           MaxRetries = other.MaxRetries;
@@ -256,6 +264,51 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
+    /// <summary>Field number for the "node_selector" field.</summary>
+    public const int NodeSelectorFieldNumber = 11;
+    private global::Google.Cloud.Run.V2.NodeSelector nodeSelector_;
+    /// <summary>
+    /// Optional. The node selector for the task template.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.NodeSelector NodeSelector {
+      get { return nodeSelector_; }
+      set {
+        nodeSelector_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "gpu_zonal_redundancy_disabled" field.</summary>
+    public const int GpuZonalRedundancyDisabledFieldNumber = 12;
+    private readonly static bool GpuZonalRedundancyDisabledDefaultValue = false;
+
+    private bool gpuZonalRedundancyDisabled_;
+    /// <summary>
+    /// Optional. True if GPU zonal redundancy is disabled on this task template.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool GpuZonalRedundancyDisabled {
+      get { if ((_hasBits0 & 1) != 0) { return gpuZonalRedundancyDisabled_; } else { return GpuZonalRedundancyDisabledDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        gpuZonalRedundancyDisabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "gpu_zonal_redundancy_disabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGpuZonalRedundancyDisabled {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "gpu_zonal_redundancy_disabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGpuZonalRedundancyDisabled() {
+      _hasBits0 &= ~1;
+    }
+
     private object retries_;
     /// <summary>Enum of possible cases for the "retries" oneof.</summary>
     public enum RetriesOneofCase {
@@ -299,6 +352,8 @@ namespace Google.Cloud.Run.V2 {
       if (ExecutionEnvironment != other.ExecutionEnvironment) return false;
       if (EncryptionKey != other.EncryptionKey) return false;
       if (!object.Equals(VpcAccess, other.VpcAccess)) return false;
+      if (!object.Equals(NodeSelector, other.NodeSelector)) return false;
+      if (GpuZonalRedundancyDisabled != other.GpuZonalRedundancyDisabled) return false;
       if (RetriesCase != other.RetriesCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -315,6 +370,8 @@ namespace Google.Cloud.Run.V2 {
       if (ExecutionEnvironment != global::Google.Cloud.Run.V2.ExecutionEnvironment.Unspecified) hash ^= ExecutionEnvironment.GetHashCode();
       if (EncryptionKey.Length != 0) hash ^= EncryptionKey.GetHashCode();
       if (vpcAccess_ != null) hash ^= VpcAccess.GetHashCode();
+      if (nodeSelector_ != null) hash ^= NodeSelector.GetHashCode();
+      if (HasGpuZonalRedundancyDisabled) hash ^= GpuZonalRedundancyDisabled.GetHashCode();
       hash ^= (int) retriesCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -360,6 +417,14 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(66);
         output.WriteMessage(VpcAccess);
       }
+      if (nodeSelector_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(NodeSelector);
+      }
+      if (HasGpuZonalRedundancyDisabled) {
+        output.WriteRawTag(96);
+        output.WriteBool(GpuZonalRedundancyDisabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -396,6 +461,14 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(66);
         output.WriteMessage(VpcAccess);
       }
+      if (nodeSelector_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(NodeSelector);
+      }
+      if (HasGpuZonalRedundancyDisabled) {
+        output.WriteRawTag(96);
+        output.WriteBool(GpuZonalRedundancyDisabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -425,6 +498,12 @@ namespace Google.Cloud.Run.V2 {
       }
       if (vpcAccess_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(VpcAccess);
+      }
+      if (nodeSelector_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NodeSelector);
+      }
+      if (HasGpuZonalRedundancyDisabled) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -460,6 +539,15 @@ namespace Google.Cloud.Run.V2 {
           VpcAccess = new global::Google.Cloud.Run.V2.VpcAccess();
         }
         VpcAccess.MergeFrom(other.VpcAccess);
+      }
+      if (other.nodeSelector_ != null) {
+        if (nodeSelector_ == null) {
+          NodeSelector = new global::Google.Cloud.Run.V2.NodeSelector();
+        }
+        NodeSelector.MergeFrom(other.NodeSelector);
+      }
+      if (other.HasGpuZonalRedundancyDisabled) {
+        GpuZonalRedundancyDisabled = other.GpuZonalRedundancyDisabled;
       }
       switch (other.RetriesCase) {
         case RetriesOneofCase.MaxRetries:
@@ -520,6 +608,17 @@ namespace Google.Cloud.Run.V2 {
             input.ReadMessage(VpcAccess);
             break;
           }
+          case 90: {
+            if (nodeSelector_ == null) {
+              NodeSelector = new global::Google.Cloud.Run.V2.NodeSelector();
+            }
+            input.ReadMessage(NodeSelector);
+            break;
+          }
+          case 96: {
+            GpuZonalRedundancyDisabled = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -571,6 +670,17 @@ namespace Google.Cloud.Run.V2 {
               VpcAccess = new global::Google.Cloud.Run.V2.VpcAccess();
             }
             input.ReadMessage(VpcAccess);
+            break;
+          }
+          case 90: {
+            if (nodeSelector_ == null) {
+              NodeSelector = new global::Google.Cloud.Run.V2.NodeSelector();
+            }
+            input.ReadMessage(NodeSelector);
+            break;
+          }
+          case 96: {
+            GpuZonalRedundancyDisabled = input.ReadBool();
             break;
           }
         }

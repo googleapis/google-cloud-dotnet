@@ -2008,6 +2008,1992 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_ListDatasetConfigs_sync",
+      "title": "ListDatasetConfigsRequestObject",
+      "description": "Snippet for ListDatasetConfigs",
+      "file": "StorageInsightsClient.ListDatasetConfigsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetConfigs",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.ListDatasetConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.ListDatasetConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.StorageInsights.V1.ListDatasetConfigsResponse, Google.Cloud.StorageInsights.V1.DatasetConfig>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "ListDatasetConfigs",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.ListDatasetConfigs",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_ListDatasetConfigs_async",
+      "title": "ListDatasetConfigsRequestObjectAsync",
+      "description": "Snippet for ListDatasetConfigsAsync",
+      "file": "StorageInsightsClient.ListDatasetConfigsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetConfigsAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.ListDatasetConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.ListDatasetConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.StorageInsights.V1.ListDatasetConfigsResponse, Google.Cloud.StorageInsights.V1.DatasetConfig>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "ListDatasetConfigs",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.ListDatasetConfigs",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_ListDatasetConfigs_sync_flattened",
+      "title": "ListDatasetConfigs",
+      "description": "Snippet for ListDatasetConfigs",
+      "file": "StorageInsightsClient.ListDatasetConfigsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetConfigs",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.ListDatasetConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.StorageInsights.V1.ListDatasetConfigsResponse, Google.Cloud.StorageInsights.V1.DatasetConfig>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "ListDatasetConfigs",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.ListDatasetConfigs",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_ListDatasetConfigs_async_flattened",
+      "title": "ListDatasetConfigsAsync",
+      "description": "Snippet for ListDatasetConfigsAsync",
+      "file": "StorageInsightsClient.ListDatasetConfigsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetConfigsAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.ListDatasetConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.StorageInsights.V1.ListDatasetConfigsResponse, Google.Cloud.StorageInsights.V1.DatasetConfig>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "ListDatasetConfigs",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.ListDatasetConfigs",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_ListDatasetConfigs_sync_flattened_resourceNames",
+      "title": "ListDatasetConfigsResourceNames",
+      "description": "Snippet for ListDatasetConfigs",
+      "file": "StorageInsightsClient.ListDatasetConfigsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetConfigs",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.ListDatasetConfigs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.StorageInsights.V1.ListDatasetConfigsResponse, Google.Cloud.StorageInsights.V1.DatasetConfig>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "ListDatasetConfigs",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.ListDatasetConfigs",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_ListDatasetConfigs_async_flattened_resourceNames",
+      "title": "ListDatasetConfigsResourceNamesAsync",
+      "description": "Snippet for ListDatasetConfigsAsync",
+      "file": "StorageInsightsClient.ListDatasetConfigsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDatasetConfigsAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.ListDatasetConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.StorageInsights.V1.ListDatasetConfigsResponse, Google.Cloud.StorageInsights.V1.DatasetConfig>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "ListDatasetConfigs",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.ListDatasetConfigs",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_GetDatasetConfig_sync",
+      "title": "GetDatasetConfigRequestObject",
+      "description": "Snippet for GetDatasetConfig",
+      "file": "StorageInsightsClient.GetDatasetConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDatasetConfig",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.GetDatasetConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.GetDatasetConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.StorageInsights.V1.DatasetConfig",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "GetDatasetConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.GetDatasetConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_GetDatasetConfig_async",
+      "title": "GetDatasetConfigRequestObjectAsync",
+      "description": "Snippet for GetDatasetConfigAsync",
+      "file": "StorageInsightsClient.GetDatasetConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDatasetConfigAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.GetDatasetConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.GetDatasetConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageInsights.V1.DatasetConfig>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "GetDatasetConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.GetDatasetConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_GetDatasetConfig_sync_flattened",
+      "title": "GetDatasetConfig",
+      "description": "Snippet for GetDatasetConfig",
+      "file": "StorageInsightsClient.GetDatasetConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDatasetConfig",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.GetDatasetConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.StorageInsights.V1.DatasetConfig",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "GetDatasetConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.GetDatasetConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_GetDatasetConfig_async_flattened",
+      "title": "GetDatasetConfigAsync",
+      "description": "Snippet for GetDatasetConfigAsync",
+      "file": "StorageInsightsClient.GetDatasetConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDatasetConfigAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.GetDatasetConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageInsights.V1.DatasetConfig>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "GetDatasetConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.GetDatasetConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_GetDatasetConfig_sync_flattened_resourceNames",
+      "title": "GetDatasetConfigResourceNames",
+      "description": "Snippet for GetDatasetConfig",
+      "file": "StorageInsightsClient.GetDatasetConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDatasetConfig",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.GetDatasetConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.DatasetConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.StorageInsights.V1.DatasetConfig",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "GetDatasetConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.GetDatasetConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_GetDatasetConfig_async_flattened_resourceNames",
+      "title": "GetDatasetConfigResourceNamesAsync",
+      "description": "Snippet for GetDatasetConfigAsync",
+      "file": "StorageInsightsClient.GetDatasetConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDatasetConfigAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.GetDatasetConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.DatasetConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageInsights.V1.DatasetConfig>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "GetDatasetConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.GetDatasetConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_CreateDatasetConfig_sync",
+      "title": "CreateDatasetConfigRequestObject",
+      "description": "Snippet for CreateDatasetConfig",
+      "file": "StorageInsightsClient.CreateDatasetConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatasetConfig",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.CreateDatasetConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.CreateDatasetConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.StorageInsights.V1.DatasetConfig, Google.Cloud.StorageInsights.V1.OperationMetadata>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "CreateDatasetConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.CreateDatasetConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_CreateDatasetConfig_async",
+      "title": "CreateDatasetConfigRequestObjectAsync",
+      "description": "Snippet for CreateDatasetConfigAsync",
+      "file": "StorageInsightsClient.CreateDatasetConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatasetConfigAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.CreateDatasetConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.CreateDatasetConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.StorageInsights.V1.DatasetConfig, Google.Cloud.StorageInsights.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "CreateDatasetConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.CreateDatasetConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_CreateDatasetConfig_sync_flattened",
+      "title": "CreateDatasetConfig",
+      "description": "Snippet for CreateDatasetConfig",
+      "file": "StorageInsightsClient.CreateDatasetConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatasetConfig",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.CreateDatasetConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.StorageInsights.V1.DatasetConfig",
+            "name": "datasetConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "datasetConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.StorageInsights.V1.DatasetConfig, Google.Cloud.StorageInsights.V1.OperationMetadata>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "CreateDatasetConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.CreateDatasetConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_CreateDatasetConfig_async_flattened",
+      "title": "CreateDatasetConfigAsync",
+      "description": "Snippet for CreateDatasetConfigAsync",
+      "file": "StorageInsightsClient.CreateDatasetConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatasetConfigAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.CreateDatasetConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.StorageInsights.V1.DatasetConfig",
+            "name": "datasetConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "datasetConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.StorageInsights.V1.DatasetConfig, Google.Cloud.StorageInsights.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "CreateDatasetConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.CreateDatasetConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_CreateDatasetConfig_sync_flattened_resourceNames",
+      "title": "CreateDatasetConfigResourceNames",
+      "description": "Snippet for CreateDatasetConfig",
+      "file": "StorageInsightsClient.CreateDatasetConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatasetConfig",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.CreateDatasetConfig",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.StorageInsights.V1.DatasetConfig",
+            "name": "datasetConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "datasetConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.StorageInsights.V1.DatasetConfig, Google.Cloud.StorageInsights.V1.OperationMetadata>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "CreateDatasetConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.CreateDatasetConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_CreateDatasetConfig_async_flattened_resourceNames",
+      "title": "CreateDatasetConfigResourceNamesAsync",
+      "description": "Snippet for CreateDatasetConfigAsync",
+      "file": "StorageInsightsClient.CreateDatasetConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDatasetConfigAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.CreateDatasetConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.StorageInsights.V1.DatasetConfig",
+            "name": "datasetConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "datasetConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.StorageInsights.V1.DatasetConfig, Google.Cloud.StorageInsights.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "CreateDatasetConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.CreateDatasetConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_UpdateDatasetConfig_sync",
+      "title": "UpdateDatasetConfigRequestObject",
+      "description": "Snippet for UpdateDatasetConfig",
+      "file": "StorageInsightsClient.UpdateDatasetConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDatasetConfig",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.UpdateDatasetConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.UpdateDatasetConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.StorageInsights.V1.DatasetConfig, Google.Cloud.StorageInsights.V1.OperationMetadata>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "UpdateDatasetConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.UpdateDatasetConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_UpdateDatasetConfig_async",
+      "title": "UpdateDatasetConfigRequestObjectAsync",
+      "description": "Snippet for UpdateDatasetConfigAsync",
+      "file": "StorageInsightsClient.UpdateDatasetConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDatasetConfigAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.UpdateDatasetConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.UpdateDatasetConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.StorageInsights.V1.DatasetConfig, Google.Cloud.StorageInsights.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "UpdateDatasetConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.UpdateDatasetConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_UpdateDatasetConfig_sync_flattened",
+      "title": "UpdateDatasetConfig",
+      "description": "Snippet for UpdateDatasetConfig",
+      "file": "StorageInsightsClient.UpdateDatasetConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDatasetConfig",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.UpdateDatasetConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.DatasetConfig",
+            "name": "datasetConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.StorageInsights.V1.DatasetConfig, Google.Cloud.StorageInsights.V1.OperationMetadata>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "UpdateDatasetConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.UpdateDatasetConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_UpdateDatasetConfig_async_flattened",
+      "title": "UpdateDatasetConfigAsync",
+      "description": "Snippet for UpdateDatasetConfigAsync",
+      "file": "StorageInsightsClient.UpdateDatasetConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDatasetConfigAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.UpdateDatasetConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.DatasetConfig",
+            "name": "datasetConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.StorageInsights.V1.DatasetConfig, Google.Cloud.StorageInsights.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "UpdateDatasetConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.UpdateDatasetConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_DeleteDatasetConfig_sync",
+      "title": "DeleteDatasetConfigRequestObject",
+      "description": "Snippet for DeleteDatasetConfig",
+      "file": "StorageInsightsClient.DeleteDatasetConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetConfig",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.DeleteDatasetConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.DeleteDatasetConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.StorageInsights.V1.OperationMetadata>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "DeleteDatasetConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.DeleteDatasetConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_DeleteDatasetConfig_async",
+      "title": "DeleteDatasetConfigRequestObjectAsync",
+      "description": "Snippet for DeleteDatasetConfigAsync",
+      "file": "StorageInsightsClient.DeleteDatasetConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetConfigAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.DeleteDatasetConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.DeleteDatasetConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.StorageInsights.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "DeleteDatasetConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.DeleteDatasetConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_DeleteDatasetConfig_sync_flattened",
+      "title": "DeleteDatasetConfig",
+      "description": "Snippet for DeleteDatasetConfig",
+      "file": "StorageInsightsClient.DeleteDatasetConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetConfig",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.DeleteDatasetConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.StorageInsights.V1.OperationMetadata>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "DeleteDatasetConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.DeleteDatasetConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_DeleteDatasetConfig_async_flattened",
+      "title": "DeleteDatasetConfigAsync",
+      "description": "Snippet for DeleteDatasetConfigAsync",
+      "file": "StorageInsightsClient.DeleteDatasetConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetConfigAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.DeleteDatasetConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.StorageInsights.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "DeleteDatasetConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.DeleteDatasetConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_DeleteDatasetConfig_sync_flattened_resourceNames",
+      "title": "DeleteDatasetConfigResourceNames",
+      "description": "Snippet for DeleteDatasetConfig",
+      "file": "StorageInsightsClient.DeleteDatasetConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetConfig",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.DeleteDatasetConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.DatasetConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.StorageInsights.V1.OperationMetadata>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "DeleteDatasetConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.DeleteDatasetConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_DeleteDatasetConfig_async_flattened_resourceNames",
+      "title": "DeleteDatasetConfigResourceNamesAsync",
+      "description": "Snippet for DeleteDatasetConfigAsync",
+      "file": "StorageInsightsClient.DeleteDatasetConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDatasetConfigAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.DeleteDatasetConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.DatasetConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.StorageInsights.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "DeleteDatasetConfig",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.DeleteDatasetConfig",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_LinkDataset_sync",
+      "title": "LinkDatasetRequestObject",
+      "description": "Snippet for LinkDataset",
+      "file": "StorageInsightsClient.LinkDatasetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LinkDataset",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.LinkDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.LinkDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.StorageInsights.V1.LinkDatasetResponse, Google.Cloud.StorageInsights.V1.OperationMetadata>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "LinkDataset",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.LinkDataset",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_LinkDataset_async",
+      "title": "LinkDatasetRequestObjectAsync",
+      "description": "Snippet for LinkDatasetAsync",
+      "file": "StorageInsightsClient.LinkDatasetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LinkDatasetAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.LinkDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.LinkDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.StorageInsights.V1.LinkDatasetResponse, Google.Cloud.StorageInsights.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "LinkDataset",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.LinkDataset",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_LinkDataset_sync_flattened",
+      "title": "LinkDataset",
+      "description": "Snippet for LinkDataset",
+      "file": "StorageInsightsClient.LinkDatasetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LinkDataset",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.LinkDataset",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.StorageInsights.V1.LinkDatasetResponse, Google.Cloud.StorageInsights.V1.OperationMetadata>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "LinkDataset",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.LinkDataset",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_LinkDataset_async_flattened",
+      "title": "LinkDatasetAsync",
+      "description": "Snippet for LinkDatasetAsync",
+      "file": "StorageInsightsClient.LinkDatasetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LinkDatasetAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.LinkDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.StorageInsights.V1.LinkDatasetResponse, Google.Cloud.StorageInsights.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "LinkDataset",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.LinkDataset",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_LinkDataset_sync_flattened_resourceNames",
+      "title": "LinkDatasetResourceNames",
+      "description": "Snippet for LinkDataset",
+      "file": "StorageInsightsClient.LinkDatasetResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LinkDataset",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.LinkDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.DatasetConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.StorageInsights.V1.LinkDatasetResponse, Google.Cloud.StorageInsights.V1.OperationMetadata>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "LinkDataset",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.LinkDataset",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_LinkDataset_async_flattened_resourceNames",
+      "title": "LinkDatasetResourceNamesAsync",
+      "description": "Snippet for LinkDatasetAsync",
+      "file": "StorageInsightsClient.LinkDatasetResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LinkDatasetAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.LinkDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.DatasetConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.StorageInsights.V1.LinkDatasetResponse, Google.Cloud.StorageInsights.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "LinkDataset",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.LinkDataset",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_UnlinkDataset_sync",
+      "title": "UnlinkDatasetRequestObject",
+      "description": "Snippet for UnlinkDataset",
+      "file": "StorageInsightsClient.UnlinkDatasetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UnlinkDataset",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.UnlinkDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.UnlinkDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.StorageInsights.V1.OperationMetadata>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "UnlinkDataset",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.UnlinkDataset",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_UnlinkDataset_async",
+      "title": "UnlinkDatasetRequestObjectAsync",
+      "description": "Snippet for UnlinkDatasetAsync",
+      "file": "StorageInsightsClient.UnlinkDatasetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UnlinkDatasetAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.UnlinkDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.UnlinkDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.StorageInsights.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "UnlinkDataset",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.UnlinkDataset",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_UnlinkDataset_sync_flattened",
+      "title": "UnlinkDataset",
+      "description": "Snippet for UnlinkDataset",
+      "file": "StorageInsightsClient.UnlinkDatasetSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UnlinkDataset",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.UnlinkDataset",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.StorageInsights.V1.OperationMetadata>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "UnlinkDataset",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.UnlinkDataset",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_UnlinkDataset_async_flattened",
+      "title": "UnlinkDatasetAsync",
+      "description": "Snippet for UnlinkDatasetAsync",
+      "file": "StorageInsightsClient.UnlinkDatasetAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UnlinkDatasetAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.UnlinkDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.StorageInsights.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "UnlinkDataset",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.UnlinkDataset",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_UnlinkDataset_sync_flattened_resourceNames",
+      "title": "UnlinkDatasetResourceNames",
+      "description": "Snippet for UnlinkDataset",
+      "file": "StorageInsightsClient.UnlinkDatasetResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UnlinkDataset",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.UnlinkDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.DatasetConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.StorageInsights.V1.OperationMetadata>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "UnlinkDataset",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.UnlinkDataset",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storageinsights_v1_generated_StorageInsights_UnlinkDataset_async_flattened_resourceNames",
+      "title": "UnlinkDatasetResourceNamesAsync",
+      "description": "Snippet for UnlinkDatasetAsync",
+      "file": "StorageInsightsClient.UnlinkDatasetResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UnlinkDatasetAsync",
+        "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient.UnlinkDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageInsights.V1.DatasetConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.StorageInsights.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "StorageInsightsClient",
+          "fullName": "Google.Cloud.StorageInsights.V1.StorageInsightsClient"
+        },
+        "method": {
+          "shortName": "UnlinkDataset",
+          "fullName": "google.cloud.storageinsights.v1.StorageInsights.UnlinkDataset",
+          "service": {
+            "shortName": "StorageInsights",
+            "fullName": "google.cloud.storageinsights.v1.StorageInsights"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

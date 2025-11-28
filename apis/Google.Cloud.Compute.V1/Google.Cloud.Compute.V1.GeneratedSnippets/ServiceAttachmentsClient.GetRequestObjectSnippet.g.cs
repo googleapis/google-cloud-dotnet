@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 Project = "",
                 ServiceAttachment = "",
+                ShowNatIps = false,
             };
             // Make the request
             ServiceAttachment response = serviceAttachmentsClient.Get(request);

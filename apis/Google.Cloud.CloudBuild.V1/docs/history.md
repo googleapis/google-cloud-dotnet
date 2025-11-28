@@ -1,5 +1,22 @@
 # Version history
 
+## Version 2.17.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+## Version 2.16.0, released 2025-08-19
+
+### New features
+
+- Add option to enable nested virtualization if available
+
+### Documentation improvements
+
+- Update comments for `machine_type` and `disk_size_gb`
+- Updated Private Service Connect IP ranges when route_all_traffic is false
+
 ## Version 2.15.0, released 2025-02-18
 
 ### New features

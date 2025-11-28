@@ -27,44 +27,122 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "CjZnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MWJldGExL3JlYXNvbmluZ19l",
             "bmdpbmUucHJvdG8SH2dvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEa",
             "H2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkv",
-            "cmVzb3VyY2UucHJvdG8aLWdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxYmV0",
-            "YTEvZW52X3Zhci5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90",
-            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLZBAoTUmVhc29u",
-            "aW5nRW5naW5lU3BlYxJbCgxwYWNrYWdlX3NwZWMYAiABKAsyQC5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJlYXNvbmluZ0VuZ2luZVNwZWMu",
-            "UGFja2FnZVNwZWNCA+BBARJhCg9kZXBsb3ltZW50X3NwZWMYBCABKAsyQy5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJlYXNvbmluZ0VuZ2lu",
-            "ZVNwZWMuRGVwbG95bWVudFNwZWNCA+BBARIzCg1jbGFzc19tZXRob2RzGAMg",
-            "AygLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdEID4EEBEhwKD2FnZW50X2Zy",
-            "YW1ld29yaxgFIAEoCUID4EEBGpgBCgtQYWNrYWdlU3BlYxIiChVwaWNrbGVf",
-            "b2JqZWN0X2djc191cmkYASABKAlCA+BBARIlChhkZXBlbmRlbmN5X2ZpbGVz",
-            "X2djc191cmkYAiABKAlCA+BBARIhChRyZXF1aXJlbWVudHNfZ2NzX3VyaRgD",
-            "IAEoCUID4EEBEhsKDnB5dGhvbl92ZXJzaW9uGAQgASgJQgPgQQEakwEKDkRl",
-            "cGxveW1lbnRTcGVjEjkKA2VudhgBIAMoCzInLmdvb2dsZS5jbG91ZC5haXBs",
-            "YXRmb3JtLnYxYmV0YTEuRW52VmFyQgPgQQESRgoKc2VjcmV0X2VudhgCIAMo",
-            "CzItLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuU2VjcmV0RW52",
-            "VmFyQgPgQQEiwwMKD1JlYXNvbmluZ0VuZ2luZRIRCgRuYW1lGAEgASgJQgPg",
-            "QQgSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQISGAoLZGVzY3JpcHRpb24Y",
-            "ByABKAlCA+BBARJHCgRzcGVjGAMgASgLMjQuZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjFiZXRhMS5SZWFzb25pbmdFbmdpbmVTcGVjQgPgQQESNAoLY3Jl",
-            "YXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
-            "QQMSNAoLdXBkYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQMSEQoEZXRhZxgGIAEoCUID4EEBOp8B6kGbAQopYWlwbGF0",
-            "Zm9ybS5nb29nbGVhcGlzLmNvbS9SZWFzb25pbmdFbmdpbmUSS3Byb2plY3Rz",
-            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9yZWFzb25pbmdFbmdp",
-            "bmVzL3tyZWFzb25pbmdfZW5naW5lfSoQcmVhc29uaW5nRW5naW5lczIPcmVh",
-            "c29uaW5nRW5naW5lQusBCiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djFiZXRhMUIUUmVhc29uaW5nRW5naW5lUHJvdG9QAVpDY2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9haXBsYXRmb3JtL2FwaXYxYmV0YTEvYWlwbGF0Zm9ybXBiO2Fp",
-            "cGxhdGZvcm1wYqoCH0dvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxQmV0YTHK",
-            "Ah9Hb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMWJldGEx6gIiR29vZ2xlOjpD",
-            "bG91ZDo6QUlQbGF0Zm9ybTo6VjFiZXRhMWIGcHJvdG8z"));
+            "cmVzb3VyY2UucHJvdG8aNWdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxYmV0",
+            "YTEvZW5jcnlwdGlvbl9zcGVjLnByb3RvGi1nb29nbGUvY2xvdWQvYWlwbGF0",
+            "Zm9ybS92MWJldGExL2Vudl92YXIucHJvdG8aOGdvb2dsZS9jbG91ZC9haXBs",
+            "YXRmb3JtL3YxYmV0YTEvc2VydmljZV9uZXR3b3JraW5nLnByb3RvGh5nb29n",
+            "bGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9z",
+            "dHJ1Y3QucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i",
+            "khAKE1JlYXNvbmluZ0VuZ2luZVNwZWMSXwoQc291cmNlX2NvZGVfc3BlYxgL",
+            "IAEoCzJDLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmVhc29u",
+            "aW5nRW5naW5lU3BlYy5Tb3VyY2VDb2RlU3BlY0gAEiEKD3NlcnZpY2VfYWNj",
+            "b3VudBgBIAEoCUID4EEBSAGIAQESWwoMcGFja2FnZV9zcGVjGAIgASgLMkAu",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SZWFzb25pbmdFbmdp",
+            "bmVTcGVjLlBhY2thZ2VTcGVjQgPgQQESYQoPZGVwbG95bWVudF9zcGVjGAQg",
+            "ASgLMkMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SZWFzb25p",
+            "bmdFbmdpbmVTcGVjLkRlcGxveW1lbnRTcGVjQgPgQQESMwoNY2xhc3NfbWV0",
+            "aG9kcxgDIAMoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBARIcCg9h",
+            "Z2VudF9mcmFtZXdvcmsYBSABKAlCA+BBARqYAQoLUGFja2FnZVNwZWMSIgoV",
+            "cGlja2xlX29iamVjdF9nY3NfdXJpGAEgASgJQgPgQQESJQoYZGVwZW5kZW5j",
+            "eV9maWxlc19nY3NfdXJpGAIgASgJQgPgQQESIQoUcmVxdWlyZW1lbnRzX2dj",
+            "c191cmkYAyABKAlCA+BBARIbCg5weXRob25fdmVyc2lvbhgEIAEoCUID4EEB",
+            "GsIECg5EZXBsb3ltZW50U3BlYxI5CgNlbnYYASADKAsyJy5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MWJldGExLkVudlZhckID4EEBEkYKCnNlY3JldF9l",
+            "bnYYAiADKAsyLS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlNl",
+            "Y3JldEVudlZhckID4EEBElYKFHBzY19pbnRlcmZhY2VfY29uZmlnGAQgASgL",
+            "MjMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5Qc2NJbnRlcmZh",
+            "Y2VDb25maWdCA+BBARIfCg1taW5faW5zdGFuY2VzGAUgASgFQgPgQQFIAIgB",
+            "ARIfCg1tYXhfaW5zdGFuY2VzGAYgASgFQgPgQQFIAYgBARJ1Cg9yZXNvdXJj",
+            "ZV9saW1pdHMYByADKAsyVy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJl",
+            "dGExLlJlYXNvbmluZ0VuZ2luZVNwZWMuRGVwbG95bWVudFNwZWMuUmVzb3Vy",
+            "Y2VMaW1pdHNFbnRyeUID4EEBEicKFWNvbnRhaW5lcl9jb25jdXJyZW5jeRgI",
+            "IAEoBUID4EEBSAKIAQEaNQoTUmVzb3VyY2VMaW1pdHNFbnRyeRILCgNrZXkY",
+            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBQhAKDl9taW5faW5zdGFuY2VzQhAK",
+            "Dl9tYXhfaW5zdGFuY2VzQhgKFl9jb250YWluZXJfY29uY3VycmVuY3ka2gYK",
+            "DlNvdXJjZUNvZGVTcGVjEmkKDWlubGluZV9zb3VyY2UYASABKAsyUC5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJlYXNvbmluZ0VuZ2luZVNw",
+            "ZWMuU291cmNlQ29kZVNwZWMuSW5saW5lU291cmNlSAASfgoYZGV2ZWxvcGVy",
+            "X2Nvbm5lY3Rfc291cmNlGAMgASgLMlouZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjFiZXRhMS5SZWFzb25pbmdFbmdpbmVTcGVjLlNvdXJjZUNvZGVTcGVj",
+            "LkRldmVsb3BlckNvbm5lY3RTb3VyY2VIABJlCgtweXRob25fc3BlYxgCIAEo",
+            "CzJOLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmVhc29uaW5n",
+            "RW5naW5lU3BlYy5Tb3VyY2VDb2RlU3BlYy5QeXRob25TcGVjSAEaLgoMSW5s",
+            "aW5lU291cmNlEh4KDnNvdXJjZV9hcmNoaXZlGAEgASgMQgbgQQLgQQQamQEK",
+            "FkRldmVsb3BlckNvbm5lY3RDb25maWcSVgoTZ2l0X3JlcG9zaXRvcnlfbGlu",
+            "axgBIAEoCUI54EEC+kEzCjFkZXZlbG9wZXJjb25uZWN0Lmdvb2dsZWFwaXMu",
+            "Y29tL0dpdFJlcG9zaXRvcnlMaW5rEhAKA2RpchgCIAEoCUID4EECEhUKCHJl",
+            "dmlzaW9uGAMgASgJQgPgQQIaiQEKFkRldmVsb3BlckNvbm5lY3RTb3VyY2US",
+            "bwoGY29uZmlnGAEgASgLMlouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFi",
+            "ZXRhMS5SZWFzb25pbmdFbmdpbmVTcGVjLlNvdXJjZUNvZGVTcGVjLkRldmVs",
+            "b3BlckNvbm5lY3RDb25maWdCA+BBAhqCAQoKUHl0aG9uU3BlYxIUCgd2ZXJz",
+            "aW9uGAEgASgJQgPgQQESHgoRZW50cnlwb2ludF9tb2R1bGUYAiABKAlCA+BB",
+            "ARIeChFlbnRyeXBvaW50X29iamVjdBgDIAEoCUID4EEBEh4KEXJlcXVpcmVt",
+            "ZW50c19maWxlGAQgASgJQgPgQQFCCAoGc291cmNlQg8KDWxhbmd1YWdlX3Nw",
+            "ZWNCEwoRZGVwbG95bWVudF9zb3VyY2VCEgoQX3NlcnZpY2VfYWNjb3VudCLi",
+            "BQoPUmVhc29uaW5nRW5naW5lEhEKBG5hbWUYASABKAlCA+BBCBIZCgxkaXNw",
+            "bGF5X25hbWUYAiABKAlCA+BBAhIYCgtkZXNjcmlwdGlvbhgHIAEoCUID4EEB",
+            "EkcKBHNwZWMYAyABKAsyNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJl",
+            "dGExLlJlYXNvbmluZ0VuZ2luZVNwZWNCA+BBARI0CgtjcmVhdGVfdGltZRgE",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRh",
+            "dGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
+            "AxIRCgRldGFnGAYgASgJQgPgQQESVgoMY29udGV4dF9zcGVjGAkgASgLMjsu",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SZWFzb25pbmdFbmdp",
+            "bmVDb250ZXh0U3BlY0ID4EEBEkgKD2VuY3J5cHRpb25fc3BlYxgLIAEoCzIv",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRW5jcnlwdGlvblNw",
+            "ZWMSTAoGbGFiZWxzGBEgAygLMjwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djFiZXRhMS5SZWFzb25pbmdFbmdpbmUuTGFiZWxzRW50cnkaLQoLTGFiZWxz",
+            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqfAepBmwEK",
+            "KWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vUmVhc29uaW5nRW5naW5lEktw",
+            "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmVhc29u",
+            "aW5nRW5naW5lcy97cmVhc29uaW5nX2VuZ2luZX0qEHJlYXNvbmluZ0VuZ2lu",
+            "ZXMyD3JlYXNvbmluZ0VuZ2luZSLsCAoaUmVhc29uaW5nRW5naW5lQ29udGV4",
+            "dFNwZWMSbQoSbWVtb3J5X2JhbmtfY29uZmlnGAEgASgLMkwuZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SZWFzb25pbmdFbmdpbmVDb250ZXh0",
+            "U3BlYy5NZW1vcnlCYW5rQ29uZmlnQgPgQQEa3gcKEE1lbW9yeUJhbmtDb25m",
+            "aWcSfQoRZ2VuZXJhdGlvbl9jb25maWcYASABKAsyXS5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MWJldGExLlJlYXNvbmluZ0VuZ2luZUNvbnRleHRTcGVj",
+            "Lk1lbW9yeUJhbmtDb25maWcuR2VuZXJhdGlvbkNvbmZpZ0ID4EEBEooBChhz",
+            "aW1pbGFyaXR5X3NlYXJjaF9jb25maWcYAiABKAsyYy5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MWJldGExLlJlYXNvbmluZ0VuZ2luZUNvbnRleHRTcGVj",
+            "Lk1lbW9yeUJhbmtDb25maWcuU2ltaWxhcml0eVNlYXJjaENvbmZpZ0ID4EEB",
+            "Em8KCnR0bF9jb25maWcYBSABKAsyVi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MWJldGExLlJlYXNvbmluZ0VuZ2luZUNvbnRleHRTcGVjLk1lbW9yeUJh",
+            "bmtDb25maWcuVHRsQ29uZmlnQgPgQQEangMKCVR0bENvbmZpZxI1CgtkZWZh",
+            "dWx0X3R0bBgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEB",
+            "SAASjAEKE2dyYW51bGFyX3R0bF9jb25maWcYAiABKAsyaC5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MWJldGExLlJlYXNvbmluZ0VuZ2luZUNvbnRleHRT",
+            "cGVjLk1lbW9yeUJhbmtDb25maWcuVHRsQ29uZmlnLkdyYW51bGFyVHRsQ29u",
+            "ZmlnQgPgQQFIABrDAQoRR3JhbnVsYXJUdGxDb25maWcSMgoKY3JlYXRlX3R0",
+            "bBgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBEjwKFGdl",
+            "bmVyYXRlX2NyZWF0ZWRfdHRsGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
+            "cmF0aW9uQgPgQQESPAoUZ2VuZXJhdGVfdXBkYXRlZF90dGwYAyABKAsyGS5n",
+            "b29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAUIFCgN0dGwaTQoQR2VuZXJh",
+            "dGlvbkNvbmZpZxI5CgVtb2RlbBgBIAEoCUIq4EEC+kEkCiJhaXBsYXRmb3Jt",
+            "Lmdvb2dsZWFwaXMuY29tL0VuZHBvaW50Gl0KFlNpbWlsYXJpdHlTZWFyY2hD",
+            "b25maWcSQwoPZW1iZWRkaW5nX21vZGVsGAEgASgJQirgQQL6QSQKImFpcGxh",
+            "dGZvcm0uZ29vZ2xlYXBpcy5jb20vRW5kcG9pbnRCjQMKI2NvbS5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExQhRSZWFzb25pbmdFbmdpbmVQcm90",
+            "b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjFiZXRh",
+            "MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIfR29vZ2xlLkNsb3VkLkFJ",
+            "UGxhdGZvcm0uVjFCZXRhMcoCH0dvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx",
+            "YmV0YTHqAiJHb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWJldGEx6kGe",
+            "AQoxZGV2ZWxvcGVyY29ubmVjdC5nb29nbGVhcGlzLmNvbS9HaXRSZXBvc2l0",
+            "b3J5TGluaxJpcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
+            "b259L2Nvbm5lY3Rpb25zL3tjb25uZWN0aW9ufS9naXRSZXBvc2l0b3J5TGlu",
+            "a3Mve2dpdF9yZXBvc2l0b3J5X2xpbmt9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EnvVarReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ServiceNetworkingReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Parser, new[]{ "PackageSpec", "DeploymentSpec", "ClassMethods", "AgentFramework" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.PackageSpec), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.PackageSpec.Parser, new[]{ "PickleObjectGcsUri", "DependencyFilesGcsUri", "RequirementsGcsUri", "PythonVersion" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.DeploymentSpec), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.DeploymentSpec.Parser, new[]{ "Env", "SecretEnv" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Parser, new[]{ "Name", "DisplayName", "Description", "Spec", "CreateTime", "UpdateTime", "Etag" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Parser, new[]{ "SourceCodeSpec", "ServiceAccount", "PackageSpec", "DeploymentSpec", "ClassMethods", "AgentFramework" }, new[]{ "DeploymentSource", "ServiceAccount" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.PackageSpec), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.PackageSpec.Parser, new[]{ "PickleObjectGcsUri", "DependencyFilesGcsUri", "RequirementsGcsUri", "PythonVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.DeploymentSpec), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.DeploymentSpec.Parser, new[]{ "Env", "SecretEnv", "PscInterfaceConfig", "MinInstances", "MaxInstances", "ResourceLimits", "ContainerConcurrency" }, new[]{ "MinInstances", "MaxInstances", "ContainerConcurrency" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Parser, new[]{ "InlineSource", "DeveloperConnectSource", "PythonSpec" }, new[]{ "Source", "LanguageSpec" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.InlineSource), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.InlineSource.Parser, new[]{ "SourceArchive" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.DeveloperConnectConfig), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.DeveloperConnectConfig.Parser, new[]{ "GitRepositoryLink", "Dir", "Revision" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.DeveloperConnectSource), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.DeveloperConnectSource.Parser, new[]{ "Config" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.PythonSpec), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.PythonSpec.Parser, new[]{ "Version", "EntrypointModule", "EntrypointObject", "RequirementsFile" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Parser, new[]{ "Name", "DisplayName", "Description", "Spec", "CreateTime", "UpdateTime", "Etag", "ContextSpec", "EncryptionSpec", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Parser, new[]{ "MemoryBankConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Parser, new[]{ "GenerationConfig", "SimilaritySearchConfig", "TtlConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Parser, new[]{ "DefaultTtl", "GranularTtlConfig" }, new[]{ "Ttl" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Types.GranularTtlConfig), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Types.GranularTtlConfig.Parser, new[]{ "CreateTtl", "GenerateCreatedTtl", "GenerateUpdatedTtl" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.GenerationConfig), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.GenerationConfig.Parser, new[]{ "Model" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.SimilaritySearchConfig), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.SimilaritySearchConfig.Parser, new[]{ "EmbeddingModel" }, null, null, null, null)})})
           }));
     }
     #endregion
@@ -109,10 +187,17 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReasoningEngineSpec(ReasoningEngineSpec other) : this() {
+      serviceAccount_ = other.serviceAccount_;
       packageSpec_ = other.packageSpec_ != null ? other.packageSpec_.Clone() : null;
       deploymentSpec_ = other.deploymentSpec_ != null ? other.deploymentSpec_.Clone() : null;
       classMethods_ = other.classMethods_.Clone();
       agentFramework_ = other.agentFramework_;
+      switch (other.DeploymentSourceCase) {
+        case DeploymentSourceOneofCase.SourceCodeSpec:
+          SourceCodeSpec = other.SourceCodeSpec.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -120,6 +205,54 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReasoningEngineSpec Clone() {
       return new ReasoningEngineSpec(this);
+    }
+
+    /// <summary>Field number for the "source_code_spec" field.</summary>
+    public const int SourceCodeSpecFieldNumber = 11;
+    /// <summary>
+    /// Deploy from source code files with a defined entrypoint.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec SourceCodeSpec {
+      get { return deploymentSourceCase_ == DeploymentSourceOneofCase.SourceCodeSpec ? (global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec) deploymentSource_ : null; }
+      set {
+        deploymentSource_ = value;
+        deploymentSourceCase_ = value == null ? DeploymentSourceOneofCase.None : DeploymentSourceOneofCase.SourceCodeSpec;
+      }
+    }
+
+    /// <summary>Field number for the "service_account" field.</summary>
+    public const int ServiceAccountFieldNumber = 1;
+    private readonly static string ServiceAccountDefaultValue = "";
+
+    private string serviceAccount_;
+    /// <summary>
+    /// Optional. The service account that the Reasoning Engine artifact runs as.
+    /// It should have "roles/storage.objectViewer" for reading the user project's
+    /// Cloud Storage and "roles/aiplatform.user" for using Vertex extensions. If
+    /// not specified, the Vertex AI Reasoning Engine Service Agent in the project
+    /// will be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ServiceAccount {
+      get { return serviceAccount_ ?? ServiceAccountDefaultValue; }
+      set {
+        serviceAccount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "service_account" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasServiceAccount {
+      get { return serviceAccount_ != null; }
+    }
+    /// <summary>Clears the value of the "service_account" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearServiceAccount() {
+      serviceAccount_ = null;
     }
 
     /// <summary>Field number for the "package_spec" field.</summary>
@@ -130,6 +263,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     /// Ignored when users directly specify a deployment image through
     /// `deployment_spec.first_party_image_override`, but keeping the
     /// field_behavior to avoid introducing breaking changes.
+    /// The `deployment_source` field should not be set if `package_spec` is
+    /// specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -175,7 +310,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     private string agentFramework_ = "";
     /// <summary>
     /// Optional. The OSS agent framework used to develop the agent.
-    /// Currently supported values: "langchain", "langgraph", "ag2", "custom".
+    /// Currently supported values: "google-adk", "langchain", "langgraph", "ag2",
+    /// "llama-index", "custom".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -184,6 +320,26 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       set {
         agentFramework_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    private object deploymentSource_;
+    /// <summary>Enum of possible cases for the "deployment_source" oneof.</summary>
+    public enum DeploymentSourceOneofCase {
+      None = 0,
+      SourceCodeSpec = 11,
+    }
+    private DeploymentSourceOneofCase deploymentSourceCase_ = DeploymentSourceOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeploymentSourceOneofCase DeploymentSourceCase {
+      get { return deploymentSourceCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDeploymentSource() {
+      deploymentSourceCase_ = DeploymentSourceOneofCase.None;
+      deploymentSource_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -201,10 +357,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(SourceCodeSpec, other.SourceCodeSpec)) return false;
+      if (ServiceAccount != other.ServiceAccount) return false;
       if (!object.Equals(PackageSpec, other.PackageSpec)) return false;
       if (!object.Equals(DeploymentSpec, other.DeploymentSpec)) return false;
       if(!classMethods_.Equals(other.classMethods_)) return false;
       if (AgentFramework != other.AgentFramework) return false;
+      if (DeploymentSourceCase != other.DeploymentSourceCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -212,10 +371,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (deploymentSourceCase_ == DeploymentSourceOneofCase.SourceCodeSpec) hash ^= SourceCodeSpec.GetHashCode();
+      if (HasServiceAccount) hash ^= ServiceAccount.GetHashCode();
       if (packageSpec_ != null) hash ^= PackageSpec.GetHashCode();
       if (deploymentSpec_ != null) hash ^= DeploymentSpec.GetHashCode();
       hash ^= classMethods_.GetHashCode();
       if (AgentFramework.Length != 0) hash ^= AgentFramework.GetHashCode();
+      hash ^= (int) deploymentSourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -234,6 +396,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (HasServiceAccount) {
+        output.WriteRawTag(10);
+        output.WriteString(ServiceAccount);
+      }
       if (packageSpec_ != null) {
         output.WriteRawTag(18);
         output.WriteMessage(PackageSpec);
@@ -247,6 +413,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(42);
         output.WriteString(AgentFramework);
       }
+      if (deploymentSourceCase_ == DeploymentSourceOneofCase.SourceCodeSpec) {
+        output.WriteRawTag(90);
+        output.WriteMessage(SourceCodeSpec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -257,6 +427,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasServiceAccount) {
+        output.WriteRawTag(10);
+        output.WriteString(ServiceAccount);
+      }
       if (packageSpec_ != null) {
         output.WriteRawTag(18);
         output.WriteMessage(PackageSpec);
@@ -270,6 +444,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(42);
         output.WriteString(AgentFramework);
       }
+      if (deploymentSourceCase_ == DeploymentSourceOneofCase.SourceCodeSpec) {
+        output.WriteRawTag(90);
+        output.WriteMessage(SourceCodeSpec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -280,6 +458,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (deploymentSourceCase_ == DeploymentSourceOneofCase.SourceCodeSpec) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SourceCodeSpec);
+      }
+      if (HasServiceAccount) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAccount);
+      }
       if (packageSpec_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PackageSpec);
       }
@@ -302,6 +486,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (other == null) {
         return;
       }
+      if (other.HasServiceAccount) {
+        ServiceAccount = other.ServiceAccount;
+      }
       if (other.packageSpec_ != null) {
         if (packageSpec_ == null) {
           PackageSpec = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.PackageSpec();
@@ -318,6 +505,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (other.AgentFramework.Length != 0) {
         AgentFramework = other.AgentFramework;
       }
+      switch (other.DeploymentSourceCase) {
+        case DeploymentSourceOneofCase.SourceCodeSpec:
+          if (SourceCodeSpec == null) {
+            SourceCodeSpec = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec();
+          }
+          SourceCodeSpec.MergeFrom(other.SourceCodeSpec);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -333,6 +529,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            ServiceAccount = input.ReadString();
+            break;
+          }
           case 18: {
             if (packageSpec_ == null) {
               PackageSpec = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.PackageSpec();
@@ -355,6 +555,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             AgentFramework = input.ReadString();
             break;
           }
+          case 90: {
+            global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec();
+            if (deploymentSourceCase_ == DeploymentSourceOneofCase.SourceCodeSpec) {
+              subBuilder.MergeFrom(SourceCodeSpec);
+            }
+            input.ReadMessage(subBuilder);
+            SourceCodeSpec = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -370,6 +579,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10: {
+            ServiceAccount = input.ReadString();
+            break;
+          }
           case 18: {
             if (packageSpec_ == null) {
               PackageSpec = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.PackageSpec();
@@ -392,6 +605,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             AgentFramework = input.ReadString();
             break;
           }
+          case 90: {
+            global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec();
+            if (deploymentSourceCase_ == DeploymentSourceOneofCase.SourceCodeSpec) {
+              subBuilder.MergeFrom(SourceCodeSpec);
+            }
+            input.ReadMessage(subBuilder);
+            SourceCodeSpec = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -403,7 +625,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// User provided package spec like pickled object and package requirements.
+      /// User-provided package specification, containing pickled object and package
+      /// requirements.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PackageSpec : pb::IMessage<PackageSpec>
@@ -502,8 +725,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         public const int PythonVersionFieldNumber = 4;
         private string pythonVersion_ = "";
         /// <summary>
-        /// Optional. The Python version. Currently support 3.8, 3.9, 3.10, 3.11.
-        /// If not specified, default value is 3.10.
+        /// Optional. The Python version. Supported values
+        /// are 3.9, 3.10, 3.11, 3.12, 3.13. If not specified, the default value
+        /// is 3.10.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -730,6 +954,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       {
         private static readonly pb::MessageParser<DeploymentSpec> _parser = new pb::MessageParser<DeploymentSpec>(() => new DeploymentSpec());
         private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<DeploymentSpec> Parser { get { return _parser; } }
@@ -757,8 +982,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DeploymentSpec(DeploymentSpec other) : this() {
+          _hasBits0 = other._hasBits0;
           env_ = other.env_.Clone();
           secretEnv_ = other.secretEnv_.Clone();
+          pscInterfaceConfig_ = other.pscInterfaceConfig_ != null ? other.pscInterfaceConfig_.Clone() : null;
+          minInstances_ = other.minInstances_;
+          maxInstances_ = other.maxInstances_;
+          resourceLimits_ = other.resourceLimits_.Clone();
+          containerConcurrency_ = other.containerConcurrency_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -802,6 +1033,138 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           get { return secretEnv_; }
         }
 
+        /// <summary>Field number for the "psc_interface_config" field.</summary>
+        public const int PscInterfaceConfigFieldNumber = 4;
+        private global::Google.Cloud.AIPlatform.V1Beta1.PscInterfaceConfig pscInterfaceConfig_;
+        /// <summary>
+        /// Optional. Configuration for PSC-I.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1Beta1.PscInterfaceConfig PscInterfaceConfig {
+          get { return pscInterfaceConfig_; }
+          set {
+            pscInterfaceConfig_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "min_instances" field.</summary>
+        public const int MinInstancesFieldNumber = 5;
+        private readonly static int MinInstancesDefaultValue = 0;
+
+        private int minInstances_;
+        /// <summary>
+        /// Optional. The minimum number of application instances that will be kept
+        /// running at all times. Defaults to 1. Range: [0, 10].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int MinInstances {
+          get { if ((_hasBits0 & 1) != 0) { return minInstances_; } else { return MinInstancesDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            minInstances_ = value;
+          }
+        }
+        /// <summary>Gets whether the "min_instances" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMinInstances {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "min_instances" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMinInstances() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "max_instances" field.</summary>
+        public const int MaxInstancesFieldNumber = 6;
+        private readonly static int MaxInstancesDefaultValue = 0;
+
+        private int maxInstances_;
+        /// <summary>
+        /// Optional. The maximum number of application instances that can be
+        /// launched to handle increased traffic. Defaults to 100. Range: [1, 1000].
+        ///
+        /// If VPC-SC or PSC-I is enabled, the acceptable range is [1, 100].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int MaxInstances {
+          get { if ((_hasBits0 & 2) != 0) { return maxInstances_; } else { return MaxInstancesDefaultValue; } }
+          set {
+            _hasBits0 |= 2;
+            maxInstances_ = value;
+          }
+        }
+        /// <summary>Gets whether the "max_instances" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMaxInstances {
+          get { return (_hasBits0 & 2) != 0; }
+        }
+        /// <summary>Clears the value of the "max_instances" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMaxInstances() {
+          _hasBits0 &= ~2;
+        }
+
+        /// <summary>Field number for the "resource_limits" field.</summary>
+        public const int ResourceLimitsFieldNumber = 7;
+        private static readonly pbc::MapField<string, string>.Codec _map_resourceLimits_codec
+            = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 58);
+        private readonly pbc::MapField<string, string> resourceLimits_ = new pbc::MapField<string, string>();
+        /// <summary>
+        /// Optional. Resource limits for each container. Only 'cpu' and 'memory'
+        /// keys are supported. Defaults to {"cpu": "4", "memory": "4Gi"}.
+        ///
+        ///   * The only supported values for CPU are '1', '2', '4', '6' and '8'. For
+        ///   more information, go to
+        ///   https://cloud.google.com/run/docs/configuring/cpu.
+        ///   * The only supported values for memory are '1Gi', '2Gi', ... '32 Gi'.
+        ///   * For required cpu on different memory values, go to
+        ///   https://cloud.google.com/run/docs/configuring/memory-limits
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::MapField<string, string> ResourceLimits {
+          get { return resourceLimits_; }
+        }
+
+        /// <summary>Field number for the "container_concurrency" field.</summary>
+        public const int ContainerConcurrencyFieldNumber = 8;
+        private readonly static int ContainerConcurrencyDefaultValue = 0;
+
+        private int containerConcurrency_;
+        /// <summary>
+        /// Optional. Concurrency for each container and agent server. Recommended
+        /// value: 2 * cpu + 1. Defaults to 9.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int ContainerConcurrency {
+          get { if ((_hasBits0 & 4) != 0) { return containerConcurrency_; } else { return ContainerConcurrencyDefaultValue; } }
+          set {
+            _hasBits0 |= 4;
+            containerConcurrency_ = value;
+          }
+        }
+        /// <summary>Gets whether the "container_concurrency" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasContainerConcurrency {
+          get { return (_hasBits0 & 4) != 0; }
+        }
+        /// <summary>Clears the value of the "container_concurrency" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearContainerConcurrency() {
+          _hasBits0 &= ~4;
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -819,6 +1182,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           if(!env_.Equals(other.env_)) return false;
           if(!secretEnv_.Equals(other.secretEnv_)) return false;
+          if (!object.Equals(PscInterfaceConfig, other.PscInterfaceConfig)) return false;
+          if (MinInstances != other.MinInstances) return false;
+          if (MaxInstances != other.MaxInstances) return false;
+          if (!ResourceLimits.Equals(other.ResourceLimits)) return false;
+          if (ContainerConcurrency != other.ContainerConcurrency) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -828,6 +1196,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           int hash = 1;
           hash ^= env_.GetHashCode();
           hash ^= secretEnv_.GetHashCode();
+          if (pscInterfaceConfig_ != null) hash ^= PscInterfaceConfig.GetHashCode();
+          if (HasMinInstances) hash ^= MinInstances.GetHashCode();
+          if (HasMaxInstances) hash ^= MaxInstances.GetHashCode();
+          hash ^= ResourceLimits.GetHashCode();
+          if (HasContainerConcurrency) hash ^= ContainerConcurrency.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -848,6 +1221,23 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         #else
           env_.WriteTo(output, _repeated_env_codec);
           secretEnv_.WriteTo(output, _repeated_secretEnv_codec);
+          if (pscInterfaceConfig_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(PscInterfaceConfig);
+          }
+          if (HasMinInstances) {
+            output.WriteRawTag(40);
+            output.WriteInt32(MinInstances);
+          }
+          if (HasMaxInstances) {
+            output.WriteRawTag(48);
+            output.WriteInt32(MaxInstances);
+          }
+          resourceLimits_.WriteTo(output, _map_resourceLimits_codec);
+          if (HasContainerConcurrency) {
+            output.WriteRawTag(64);
+            output.WriteInt32(ContainerConcurrency);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -860,6 +1250,23 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           env_.WriteTo(ref output, _repeated_env_codec);
           secretEnv_.WriteTo(ref output, _repeated_secretEnv_codec);
+          if (pscInterfaceConfig_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(PscInterfaceConfig);
+          }
+          if (HasMinInstances) {
+            output.WriteRawTag(40);
+            output.WriteInt32(MinInstances);
+          }
+          if (HasMaxInstances) {
+            output.WriteRawTag(48);
+            output.WriteInt32(MaxInstances);
+          }
+          resourceLimits_.WriteTo(ref output, _map_resourceLimits_codec);
+          if (HasContainerConcurrency) {
+            output.WriteRawTag(64);
+            output.WriteInt32(ContainerConcurrency);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -872,6 +1279,19 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           int size = 0;
           size += env_.CalculateSize(_repeated_env_codec);
           size += secretEnv_.CalculateSize(_repeated_secretEnv_codec);
+          if (pscInterfaceConfig_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(PscInterfaceConfig);
+          }
+          if (HasMinInstances) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(MinInstances);
+          }
+          if (HasMaxInstances) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxInstances);
+          }
+          size += resourceLimits_.CalculateSize(_map_resourceLimits_codec);
+          if (HasContainerConcurrency) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(ContainerConcurrency);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -886,6 +1306,22 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           env_.Add(other.env_);
           secretEnv_.Add(other.secretEnv_);
+          if (other.pscInterfaceConfig_ != null) {
+            if (pscInterfaceConfig_ == null) {
+              PscInterfaceConfig = new global::Google.Cloud.AIPlatform.V1Beta1.PscInterfaceConfig();
+            }
+            PscInterfaceConfig.MergeFrom(other.PscInterfaceConfig);
+          }
+          if (other.HasMinInstances) {
+            MinInstances = other.MinInstances;
+          }
+          if (other.HasMaxInstances) {
+            MaxInstances = other.MaxInstances;
+          }
+          resourceLimits_.MergeFrom(other.resourceLimits_);
+          if (other.HasContainerConcurrency) {
+            ContainerConcurrency = other.ContainerConcurrency;
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -907,6 +1343,29 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               }
               case 18: {
                 secretEnv_.AddEntriesFrom(input, _repeated_secretEnv_codec);
+                break;
+              }
+              case 34: {
+                if (pscInterfaceConfig_ == null) {
+                  PscInterfaceConfig = new global::Google.Cloud.AIPlatform.V1Beta1.PscInterfaceConfig();
+                }
+                input.ReadMessage(PscInterfaceConfig);
+                break;
+              }
+              case 40: {
+                MinInstances = input.ReadInt32();
+                break;
+              }
+              case 48: {
+                MaxInstances = input.ReadInt32();
+                break;
+              }
+              case 58: {
+                resourceLimits_.AddEntriesFrom(input, _map_resourceLimits_codec);
+                break;
+              }
+              case 64: {
+                ContainerConcurrency = input.ReadInt32();
                 break;
               }
             }
@@ -932,10 +1391,1432 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                 secretEnv_.AddEntriesFrom(ref input, _repeated_secretEnv_codec);
                 break;
               }
+              case 34: {
+                if (pscInterfaceConfig_ == null) {
+                  PscInterfaceConfig = new global::Google.Cloud.AIPlatform.V1Beta1.PscInterfaceConfig();
+                }
+                input.ReadMessage(PscInterfaceConfig);
+                break;
+              }
+              case 40: {
+                MinInstances = input.ReadInt32();
+                break;
+              }
+              case 48: {
+                MaxInstances = input.ReadInt32();
+                break;
+              }
+              case 58: {
+                resourceLimits_.AddEntriesFrom(ref input, _map_resourceLimits_codec);
+                break;
+              }
+              case 64: {
+                ContainerConcurrency = input.ReadInt32();
+                break;
+              }
             }
           }
         }
         #endif
+
+      }
+
+      /// <summary>
+      /// Specification for deploying from source code.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class SourceCodeSpec : pb::IMessage<SourceCodeSpec>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SourceCodeSpec> _parser = new pb::MessageParser<SourceCodeSpec>(() => new SourceCodeSpec());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SourceCodeSpec> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SourceCodeSpec() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SourceCodeSpec(SourceCodeSpec other) : this() {
+          switch (other.SourceCase) {
+            case SourceOneofCase.InlineSource:
+              InlineSource = other.InlineSource.Clone();
+              break;
+            case SourceOneofCase.DeveloperConnectSource:
+              DeveloperConnectSource = other.DeveloperConnectSource.Clone();
+              break;
+          }
+
+          switch (other.LanguageSpecCase) {
+            case LanguageSpecOneofCase.PythonSpec:
+              PythonSpec = other.PythonSpec.Clone();
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SourceCodeSpec Clone() {
+          return new SourceCodeSpec(this);
+        }
+
+        /// <summary>Field number for the "inline_source" field.</summary>
+        public const int InlineSourceFieldNumber = 1;
+        /// <summary>
+        /// Source code is provided directly in the request.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.InlineSource InlineSource {
+          get { return sourceCase_ == SourceOneofCase.InlineSource ? (global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.InlineSource) source_ : null; }
+          set {
+            source_ = value;
+            sourceCase_ = value == null ? SourceOneofCase.None : SourceOneofCase.InlineSource;
+          }
+        }
+
+        /// <summary>Field number for the "developer_connect_source" field.</summary>
+        public const int DeveloperConnectSourceFieldNumber = 3;
+        /// <summary>
+        /// Source code is in a Git repository managed by Developer Connect.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.DeveloperConnectSource DeveloperConnectSource {
+          get { return sourceCase_ == SourceOneofCase.DeveloperConnectSource ? (global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.DeveloperConnectSource) source_ : null; }
+          set {
+            source_ = value;
+            sourceCase_ = value == null ? SourceOneofCase.None : SourceOneofCase.DeveloperConnectSource;
+          }
+        }
+
+        /// <summary>Field number for the "python_spec" field.</summary>
+        public const int PythonSpecFieldNumber = 2;
+        /// <summary>
+        /// Configuration for a Python application.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.PythonSpec PythonSpec {
+          get { return languageSpecCase_ == LanguageSpecOneofCase.PythonSpec ? (global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.PythonSpec) languageSpec_ : null; }
+          set {
+            languageSpec_ = value;
+            languageSpecCase_ = value == null ? LanguageSpecOneofCase.None : LanguageSpecOneofCase.PythonSpec;
+          }
+        }
+
+        private object source_;
+        /// <summary>Enum of possible cases for the "source" oneof.</summary>
+        public enum SourceOneofCase {
+          None = 0,
+          InlineSource = 1,
+          DeveloperConnectSource = 3,
+        }
+        private SourceOneofCase sourceCase_ = SourceOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SourceOneofCase SourceCase {
+          get { return sourceCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearSource() {
+          sourceCase_ = SourceOneofCase.None;
+          source_ = null;
+        }
+
+        private object languageSpec_;
+        /// <summary>Enum of possible cases for the "language_spec" oneof.</summary>
+        public enum LanguageSpecOneofCase {
+          None = 0,
+          PythonSpec = 2,
+        }
+        private LanguageSpecOneofCase languageSpecCase_ = LanguageSpecOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LanguageSpecOneofCase LanguageSpecCase {
+          get { return languageSpecCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearLanguageSpec() {
+          languageSpecCase_ = LanguageSpecOneofCase.None;
+          languageSpec_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SourceCodeSpec);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SourceCodeSpec other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(InlineSource, other.InlineSource)) return false;
+          if (!object.Equals(DeveloperConnectSource, other.DeveloperConnectSource)) return false;
+          if (!object.Equals(PythonSpec, other.PythonSpec)) return false;
+          if (SourceCase != other.SourceCase) return false;
+          if (LanguageSpecCase != other.LanguageSpecCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (sourceCase_ == SourceOneofCase.InlineSource) hash ^= InlineSource.GetHashCode();
+          if (sourceCase_ == SourceOneofCase.DeveloperConnectSource) hash ^= DeveloperConnectSource.GetHashCode();
+          if (languageSpecCase_ == LanguageSpecOneofCase.PythonSpec) hash ^= PythonSpec.GetHashCode();
+          hash ^= (int) sourceCase_;
+          hash ^= (int) languageSpecCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (sourceCase_ == SourceOneofCase.InlineSource) {
+            output.WriteRawTag(10);
+            output.WriteMessage(InlineSource);
+          }
+          if (languageSpecCase_ == LanguageSpecOneofCase.PythonSpec) {
+            output.WriteRawTag(18);
+            output.WriteMessage(PythonSpec);
+          }
+          if (sourceCase_ == SourceOneofCase.DeveloperConnectSource) {
+            output.WriteRawTag(26);
+            output.WriteMessage(DeveloperConnectSource);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (sourceCase_ == SourceOneofCase.InlineSource) {
+            output.WriteRawTag(10);
+            output.WriteMessage(InlineSource);
+          }
+          if (languageSpecCase_ == LanguageSpecOneofCase.PythonSpec) {
+            output.WriteRawTag(18);
+            output.WriteMessage(PythonSpec);
+          }
+          if (sourceCase_ == SourceOneofCase.DeveloperConnectSource) {
+            output.WriteRawTag(26);
+            output.WriteMessage(DeveloperConnectSource);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (sourceCase_ == SourceOneofCase.InlineSource) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(InlineSource);
+          }
+          if (sourceCase_ == SourceOneofCase.DeveloperConnectSource) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeveloperConnectSource);
+          }
+          if (languageSpecCase_ == LanguageSpecOneofCase.PythonSpec) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(PythonSpec);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SourceCodeSpec other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.SourceCase) {
+            case SourceOneofCase.InlineSource:
+              if (InlineSource == null) {
+                InlineSource = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.InlineSource();
+              }
+              InlineSource.MergeFrom(other.InlineSource);
+              break;
+            case SourceOneofCase.DeveloperConnectSource:
+              if (DeveloperConnectSource == null) {
+                DeveloperConnectSource = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.DeveloperConnectSource();
+              }
+              DeveloperConnectSource.MergeFrom(other.DeveloperConnectSource);
+              break;
+          }
+
+          switch (other.LanguageSpecCase) {
+            case LanguageSpecOneofCase.PythonSpec:
+              if (PythonSpec == null) {
+                PythonSpec = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.PythonSpec();
+              }
+              PythonSpec.MergeFrom(other.PythonSpec);
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.InlineSource subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.InlineSource();
+                if (sourceCase_ == SourceOneofCase.InlineSource) {
+                  subBuilder.MergeFrom(InlineSource);
+                }
+                input.ReadMessage(subBuilder);
+                InlineSource = subBuilder;
+                break;
+              }
+              case 18: {
+                global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.PythonSpec subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.PythonSpec();
+                if (languageSpecCase_ == LanguageSpecOneofCase.PythonSpec) {
+                  subBuilder.MergeFrom(PythonSpec);
+                }
+                input.ReadMessage(subBuilder);
+                PythonSpec = subBuilder;
+                break;
+              }
+              case 26: {
+                global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.DeveloperConnectSource subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.DeveloperConnectSource();
+                if (sourceCase_ == SourceOneofCase.DeveloperConnectSource) {
+                  subBuilder.MergeFrom(DeveloperConnectSource);
+                }
+                input.ReadMessage(subBuilder);
+                DeveloperConnectSource = subBuilder;
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.InlineSource subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.InlineSource();
+                if (sourceCase_ == SourceOneofCase.InlineSource) {
+                  subBuilder.MergeFrom(InlineSource);
+                }
+                input.ReadMessage(subBuilder);
+                InlineSource = subBuilder;
+                break;
+              }
+              case 18: {
+                global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.PythonSpec subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.PythonSpec();
+                if (languageSpecCase_ == LanguageSpecOneofCase.PythonSpec) {
+                  subBuilder.MergeFrom(PythonSpec);
+                }
+                input.ReadMessage(subBuilder);
+                PythonSpec = subBuilder;
+                break;
+              }
+              case 26: {
+                global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.DeveloperConnectSource subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.DeveloperConnectSource();
+                if (sourceCase_ == SourceOneofCase.DeveloperConnectSource) {
+                  subBuilder.MergeFrom(DeveloperConnectSource);
+                }
+                input.ReadMessage(subBuilder);
+                DeveloperConnectSource = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the SourceCodeSpec message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Specifies source code provided as a byte stream.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class InlineSource : pb::IMessage<InlineSource>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<InlineSource> _parser = new pb::MessageParser<InlineSource>(() => new InlineSource());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<InlineSource> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public InlineSource() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public InlineSource(InlineSource other) : this() {
+              sourceArchive_ = other.sourceArchive_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public InlineSource Clone() {
+              return new InlineSource(this);
+            }
+
+            /// <summary>Field number for the "source_archive" field.</summary>
+            public const int SourceArchiveFieldNumber = 1;
+            private pb::ByteString sourceArchive_ = pb::ByteString.Empty;
+            /// <summary>
+            /// Required. Input only. The application source code archive, provided as
+            /// a compressed tarball
+            /// (.tar.gz) file.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pb::ByteString SourceArchive {
+              get { return sourceArchive_; }
+              set {
+                sourceArchive_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as InlineSource);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(InlineSource other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (SourceArchive != other.SourceArchive) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (SourceArchive.Length != 0) hash ^= SourceArchive.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (SourceArchive.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteBytes(SourceArchive);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (SourceArchive.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteBytes(SourceArchive);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (SourceArchive.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeBytesSize(SourceArchive);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(InlineSource other) {
+              if (other == null) {
+                return;
+              }
+              if (other.SourceArchive.Length != 0) {
+                SourceArchive = other.SourceArchive;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    SourceArchive = input.ReadBytes();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    SourceArchive = input.ReadBytes();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Specifies the configuration for fetching source code from a Git
+          /// repository that is managed by Developer Connect. This includes the
+          /// repository, revision, and directory to use.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class DeveloperConnectConfig : pb::IMessage<DeveloperConnectConfig>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<DeveloperConnectConfig> _parser = new pb::MessageParser<DeveloperConnectConfig>(() => new DeveloperConnectConfig());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<DeveloperConnectConfig> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public DeveloperConnectConfig() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public DeveloperConnectConfig(DeveloperConnectConfig other) : this() {
+              gitRepositoryLink_ = other.gitRepositoryLink_;
+              dir_ = other.dir_;
+              revision_ = other.revision_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public DeveloperConnectConfig Clone() {
+              return new DeveloperConnectConfig(this);
+            }
+
+            /// <summary>Field number for the "git_repository_link" field.</summary>
+            public const int GitRepositoryLinkFieldNumber = 1;
+            private string gitRepositoryLink_ = "";
+            /// <summary>
+            /// Required. The Developer Connect Git repository link, formatted as
+            /// `projects/*/locations/*/connections/*/gitRepositoryLink/*`.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string GitRepositoryLink {
+              get { return gitRepositoryLink_; }
+              set {
+                gitRepositoryLink_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "dir" field.</summary>
+            public const int DirFieldNumber = 2;
+            private string dir_ = "";
+            /// <summary>
+            /// Required. Directory, relative to the source root, in which to run the
+            /// build.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Dir {
+              get { return dir_; }
+              set {
+                dir_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "revision" field.</summary>
+            public const int RevisionFieldNumber = 3;
+            private string revision_ = "";
+            /// <summary>
+            /// Required. The revision to fetch from the Git repository such as a
+            /// branch, a tag, a commit SHA, or any Git ref.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Revision {
+              get { return revision_; }
+              set {
+                revision_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as DeveloperConnectConfig);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(DeveloperConnectConfig other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (GitRepositoryLink != other.GitRepositoryLink) return false;
+              if (Dir != other.Dir) return false;
+              if (Revision != other.Revision) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (GitRepositoryLink.Length != 0) hash ^= GitRepositoryLink.GetHashCode();
+              if (Dir.Length != 0) hash ^= Dir.GetHashCode();
+              if (Revision.Length != 0) hash ^= Revision.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (GitRepositoryLink.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(GitRepositoryLink);
+              }
+              if (Dir.Length != 0) {
+                output.WriteRawTag(18);
+                output.WriteString(Dir);
+              }
+              if (Revision.Length != 0) {
+                output.WriteRawTag(26);
+                output.WriteString(Revision);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (GitRepositoryLink.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(GitRepositoryLink);
+              }
+              if (Dir.Length != 0) {
+                output.WriteRawTag(18);
+                output.WriteString(Dir);
+              }
+              if (Revision.Length != 0) {
+                output.WriteRawTag(26);
+                output.WriteString(Revision);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (GitRepositoryLink.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(GitRepositoryLink);
+              }
+              if (Dir.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Dir);
+              }
+              if (Revision.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Revision);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(DeveloperConnectConfig other) {
+              if (other == null) {
+                return;
+              }
+              if (other.GitRepositoryLink.Length != 0) {
+                GitRepositoryLink = other.GitRepositoryLink;
+              }
+              if (other.Dir.Length != 0) {
+                Dir = other.Dir;
+              }
+              if (other.Revision.Length != 0) {
+                Revision = other.Revision;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    GitRepositoryLink = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    Dir = input.ReadString();
+                    break;
+                  }
+                  case 26: {
+                    Revision = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    GitRepositoryLink = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    Dir = input.ReadString();
+                    break;
+                  }
+                  case 26: {
+                    Revision = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Specifies source code to be fetched from a Git repository managed through
+          /// the Developer Connect service.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class DeveloperConnectSource : pb::IMessage<DeveloperConnectSource>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<DeveloperConnectSource> _parser = new pb::MessageParser<DeveloperConnectSource>(() => new DeveloperConnectSource());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<DeveloperConnectSource> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Descriptor.NestedTypes[2]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public DeveloperConnectSource() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public DeveloperConnectSource(DeveloperConnectSource other) : this() {
+              config_ = other.config_ != null ? other.config_.Clone() : null;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public DeveloperConnectSource Clone() {
+              return new DeveloperConnectSource(this);
+            }
+
+            /// <summary>Field number for the "config" field.</summary>
+            public const int ConfigFieldNumber = 1;
+            private global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.DeveloperConnectConfig config_;
+            /// <summary>
+            /// Required. The Developer Connect configuration that defines the
+            /// specific repository, revision, and directory to use as the source code
+            /// root.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.DeveloperConnectConfig Config {
+              get { return config_; }
+              set {
+                config_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as DeveloperConnectSource);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(DeveloperConnectSource other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (!object.Equals(Config, other.Config)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (config_ != null) hash ^= Config.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (config_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(Config);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (config_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(Config);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (config_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(Config);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(DeveloperConnectSource other) {
+              if (other == null) {
+                return;
+              }
+              if (other.config_ != null) {
+                if (config_ == null) {
+                  Config = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.DeveloperConnectConfig();
+                }
+                Config.MergeFrom(other.Config);
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    if (config_ == null) {
+                      Config = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.DeveloperConnectConfig();
+                    }
+                    input.ReadMessage(Config);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    if (config_ == null) {
+                      Config = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.DeveloperConnectConfig();
+                    }
+                    input.ReadMessage(Config);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Specification for running a Python application from source.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class PythonSpec : pb::IMessage<PythonSpec>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<PythonSpec> _parser = new pb::MessageParser<PythonSpec>(() => new PythonSpec());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<PythonSpec> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Descriptor.NestedTypes[3]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public PythonSpec() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public PythonSpec(PythonSpec other) : this() {
+              version_ = other.version_;
+              entrypointModule_ = other.entrypointModule_;
+              entrypointObject_ = other.entrypointObject_;
+              requirementsFile_ = other.requirementsFile_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public PythonSpec Clone() {
+              return new PythonSpec(this);
+            }
+
+            /// <summary>Field number for the "version" field.</summary>
+            public const int VersionFieldNumber = 1;
+            private string version_ = "";
+            /// <summary>
+            /// Optional. The version of Python to use. Support version
+            /// includes 3.9, 3.10, 3.11, 3.12, 3.13.
+            /// If not specified, default value is 3.10.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Version {
+              get { return version_; }
+              set {
+                version_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "entrypoint_module" field.</summary>
+            public const int EntrypointModuleFieldNumber = 2;
+            private string entrypointModule_ = "";
+            /// <summary>
+            /// Optional. The Python module to load as the entrypoint, specified as a
+            /// fully qualified module name. For example: path.to.agent.
+            /// If not specified, defaults to "agent".
+            ///
+            /// The project root will be added to Python sys.path, allowing imports
+            /// to be specified relative to the root.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string EntrypointModule {
+              get { return entrypointModule_; }
+              set {
+                entrypointModule_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "entrypoint_object" field.</summary>
+            public const int EntrypointObjectFieldNumber = 3;
+            private string entrypointObject_ = "";
+            /// <summary>
+            /// Optional. The name of the callable object within the
+            /// `entrypoint_module` to use as the application If not specified,
+            /// defaults to "root_agent".
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string EntrypointObject {
+              get { return entrypointObject_; }
+              set {
+                entrypointObject_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "requirements_file" field.</summary>
+            public const int RequirementsFileFieldNumber = 4;
+            private string requirementsFile_ = "";
+            /// <summary>
+            /// Optional. The path to the requirements file, relative to the source
+            /// root. If not specified, defaults to "requirements.txt".
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string RequirementsFile {
+              get { return requirementsFile_; }
+              set {
+                requirementsFile_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as PythonSpec);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(PythonSpec other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Version != other.Version) return false;
+              if (EntrypointModule != other.EntrypointModule) return false;
+              if (EntrypointObject != other.EntrypointObject) return false;
+              if (RequirementsFile != other.RequirementsFile) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Version.Length != 0) hash ^= Version.GetHashCode();
+              if (EntrypointModule.Length != 0) hash ^= EntrypointModule.GetHashCode();
+              if (EntrypointObject.Length != 0) hash ^= EntrypointObject.GetHashCode();
+              if (RequirementsFile.Length != 0) hash ^= RequirementsFile.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Version.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Version);
+              }
+              if (EntrypointModule.Length != 0) {
+                output.WriteRawTag(18);
+                output.WriteString(EntrypointModule);
+              }
+              if (EntrypointObject.Length != 0) {
+                output.WriteRawTag(26);
+                output.WriteString(EntrypointObject);
+              }
+              if (RequirementsFile.Length != 0) {
+                output.WriteRawTag(34);
+                output.WriteString(RequirementsFile);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Version.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Version);
+              }
+              if (EntrypointModule.Length != 0) {
+                output.WriteRawTag(18);
+                output.WriteString(EntrypointModule);
+              }
+              if (EntrypointObject.Length != 0) {
+                output.WriteRawTag(26);
+                output.WriteString(EntrypointObject);
+              }
+              if (RequirementsFile.Length != 0) {
+                output.WriteRawTag(34);
+                output.WriteString(RequirementsFile);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Version.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Version);
+              }
+              if (EntrypointModule.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(EntrypointModule);
+              }
+              if (EntrypointObject.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(EntrypointObject);
+              }
+              if (RequirementsFile.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(RequirementsFile);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(PythonSpec other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Version.Length != 0) {
+                Version = other.Version;
+              }
+              if (other.EntrypointModule.Length != 0) {
+                EntrypointModule = other.EntrypointModule;
+              }
+              if (other.EntrypointObject.Length != 0) {
+                EntrypointObject = other.EntrypointObject;
+              }
+              if (other.RequirementsFile.Length != 0) {
+                RequirementsFile = other.RequirementsFile;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    Version = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    EntrypointModule = input.ReadString();
+                    break;
+                  }
+                  case 26: {
+                    EntrypointObject = input.ReadString();
+                    break;
+                  }
+                  case 34: {
+                    RequirementsFile = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    Version = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    EntrypointModule = input.ReadString();
+                    break;
+                  }
+                  case 26: {
+                    EntrypointObject = input.ReadString();
+                    break;
+                  }
+                  case 34: {
+                    RequirementsFile = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
 
       }
 
@@ -990,6 +2871,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       etag_ = other.etag_;
+      contextSpec_ = other.contextSpec_ != null ? other.contextSpec_.Clone() : null;
+      encryptionSpec_ = other.encryptionSpec_ != null ? other.encryptionSpec_.Clone() : null;
+      labels_ = other.labels_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1004,6 +2888,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     private string name_ = "";
     /// <summary>
     /// Identifier. The resource name of the ReasoningEngine.
+    /// Format:
+    /// `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1105,6 +2991,53 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "context_spec" field.</summary>
+    public const int ContextSpecFieldNumber = 9;
+    private global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec contextSpec_;
+    /// <summary>
+    /// Optional. Configuration for how Agent Engine sub-resources should manage
+    /// context.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec ContextSpec {
+      get { return contextSpec_; }
+      set {
+        contextSpec_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "encryption_spec" field.</summary>
+    public const int EncryptionSpecFieldNumber = 11;
+    private global::Google.Cloud.AIPlatform.V1Beta1.EncryptionSpec encryptionSpec_;
+    /// <summary>
+    /// Customer-managed encryption key spec for a ReasoningEngine. If set, this
+    /// ReasoningEngine and all sub-resources of this ReasoningEngine will be
+    /// secured by this key.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.EncryptionSpec EncryptionSpec {
+      get { return encryptionSpec_; }
+      set {
+        encryptionSpec_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 17;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 138);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Labels for the ReasoningEngine.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1127,6 +3060,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (Etag != other.Etag) return false;
+      if (!object.Equals(ContextSpec, other.ContextSpec)) return false;
+      if (!object.Equals(EncryptionSpec, other.EncryptionSpec)) return false;
+      if (!Labels.Equals(other.Labels)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1141,6 +3077,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (contextSpec_ != null) hash ^= ContextSpec.GetHashCode();
+      if (encryptionSpec_ != null) hash ^= EncryptionSpec.GetHashCode();
+      hash ^= Labels.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1187,6 +3126,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(58);
         output.WriteString(Description);
       }
+      if (contextSpec_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ContextSpec);
+      }
+      if (encryptionSpec_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(EncryptionSpec);
+      }
+      labels_.WriteTo(output, _map_labels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1225,6 +3173,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(58);
         output.WriteString(Description);
       }
+      if (contextSpec_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ContextSpec);
+      }
+      if (encryptionSpec_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(EncryptionSpec);
+      }
+      labels_.WriteTo(ref output, _map_labels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1256,6 +3213,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (Etag.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
       }
+      if (contextSpec_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ContextSpec);
+      }
+      if (encryptionSpec_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionSpec);
+      }
+      size += labels_.CalculateSize(_map_labels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1298,6 +3262,19 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
+      if (other.contextSpec_ != null) {
+        if (contextSpec_ == null) {
+          ContextSpec = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec();
+        }
+        ContextSpec.MergeFrom(other.ContextSpec);
+      }
+      if (other.encryptionSpec_ != null) {
+        if (encryptionSpec_ == null) {
+          EncryptionSpec = new global::Google.Cloud.AIPlatform.V1Beta1.EncryptionSpec();
+        }
+        EncryptionSpec.MergeFrom(other.EncryptionSpec);
+      }
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1348,6 +3325,24 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 58: {
             Description = input.ReadString();
+            break;
+          }
+          case 74: {
+            if (contextSpec_ == null) {
+              ContextSpec = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec();
+            }
+            input.ReadMessage(ContextSpec);
+            break;
+          }
+          case 90: {
+            if (encryptionSpec_ == null) {
+              EncryptionSpec = new global::Google.Cloud.AIPlatform.V1Beta1.EncryptionSpec();
+            }
+            input.ReadMessage(EncryptionSpec);
+            break;
+          }
+          case 138: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
             break;
           }
         }
@@ -1402,10 +3397,1569 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             Description = input.ReadString();
             break;
           }
+          case 74: {
+            if (contextSpec_ == null) {
+              ContextSpec = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec();
+            }
+            input.ReadMessage(ContextSpec);
+            break;
+          }
+          case 90: {
+            if (encryptionSpec_ == null) {
+              EncryptionSpec = new global::Google.Cloud.AIPlatform.V1Beta1.EncryptionSpec();
+            }
+            input.ReadMessage(EncryptionSpec);
+            break;
+          }
+          case 138: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
         }
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// Configuration for how Agent Engine sub-resources should manage context.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ReasoningEngineContextSpec : pb::IMessage<ReasoningEngineContextSpec>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ReasoningEngineContextSpec> _parser = new pb::MessageParser<ReasoningEngineContextSpec>(() => new ReasoningEngineContextSpec());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ReasoningEngineContextSpec> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReasoningEngineContextSpec() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReasoningEngineContextSpec(ReasoningEngineContextSpec other) : this() {
+      memoryBankConfig_ = other.memoryBankConfig_ != null ? other.memoryBankConfig_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReasoningEngineContextSpec Clone() {
+      return new ReasoningEngineContextSpec(this);
+    }
+
+    /// <summary>Field number for the "memory_bank_config" field.</summary>
+    public const int MemoryBankConfigFieldNumber = 1;
+    private global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig memoryBankConfig_;
+    /// <summary>
+    /// Optional. Specification for a Memory Bank, which manages memories for the
+    /// Agent Engine.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig MemoryBankConfig {
+      get { return memoryBankConfig_; }
+      set {
+        memoryBankConfig_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ReasoningEngineContextSpec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ReasoningEngineContextSpec other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(MemoryBankConfig, other.MemoryBankConfig)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (memoryBankConfig_ != null) hash ^= MemoryBankConfig.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (memoryBankConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(MemoryBankConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (memoryBankConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(MemoryBankConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (memoryBankConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MemoryBankConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ReasoningEngineContextSpec other) {
+      if (other == null) {
+        return;
+      }
+      if (other.memoryBankConfig_ != null) {
+        if (memoryBankConfig_ == null) {
+          MemoryBankConfig = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig();
+        }
+        MemoryBankConfig.MergeFrom(other.MemoryBankConfig);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (memoryBankConfig_ == null) {
+              MemoryBankConfig = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig();
+            }
+            input.ReadMessage(MemoryBankConfig);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (memoryBankConfig_ == null) {
+              MemoryBankConfig = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig();
+            }
+            input.ReadMessage(MemoryBankConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ReasoningEngineContextSpec message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Specification for a Memory Bank.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class MemoryBankConfig : pb::IMessage<MemoryBankConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<MemoryBankConfig> _parser = new pb::MessageParser<MemoryBankConfig>(() => new MemoryBankConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<MemoryBankConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MemoryBankConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MemoryBankConfig(MemoryBankConfig other) : this() {
+          generationConfig_ = other.generationConfig_ != null ? other.generationConfig_.Clone() : null;
+          similaritySearchConfig_ = other.similaritySearchConfig_ != null ? other.similaritySearchConfig_.Clone() : null;
+          ttlConfig_ = other.ttlConfig_ != null ? other.ttlConfig_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MemoryBankConfig Clone() {
+          return new MemoryBankConfig(this);
+        }
+
+        /// <summary>Field number for the "generation_config" field.</summary>
+        public const int GenerationConfigFieldNumber = 1;
+        private global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.GenerationConfig generationConfig_;
+        /// <summary>
+        /// Optional. Configuration for how to generate memories for the Memory Bank.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.GenerationConfig GenerationConfig {
+          get { return generationConfig_; }
+          set {
+            generationConfig_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "similarity_search_config" field.</summary>
+        public const int SimilaritySearchConfigFieldNumber = 2;
+        private global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.SimilaritySearchConfig similaritySearchConfig_;
+        /// <summary>
+        /// Optional. Configuration for how to perform similarity search on memories.
+        /// If not set, the Memory Bank will use the default embedding model
+        /// `text-embedding-005`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.SimilaritySearchConfig SimilaritySearchConfig {
+          get { return similaritySearchConfig_; }
+          set {
+            similaritySearchConfig_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "ttl_config" field.</summary>
+        public const int TtlConfigFieldNumber = 5;
+        private global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig ttlConfig_;
+        /// <summary>
+        /// Optional. Configuration for automatic TTL ("time-to-live") of the
+        /// memories in the Memory Bank. If not set, TTL will not be applied
+        /// automatically. The TTL can be explicitly set by modifying the
+        /// `expire_time` of each Memory resource.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig TtlConfig {
+          get { return ttlConfig_; }
+          set {
+            ttlConfig_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as MemoryBankConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(MemoryBankConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(GenerationConfig, other.GenerationConfig)) return false;
+          if (!object.Equals(SimilaritySearchConfig, other.SimilaritySearchConfig)) return false;
+          if (!object.Equals(TtlConfig, other.TtlConfig)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (generationConfig_ != null) hash ^= GenerationConfig.GetHashCode();
+          if (similaritySearchConfig_ != null) hash ^= SimilaritySearchConfig.GetHashCode();
+          if (ttlConfig_ != null) hash ^= TtlConfig.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (generationConfig_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(GenerationConfig);
+          }
+          if (similaritySearchConfig_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(SimilaritySearchConfig);
+          }
+          if (ttlConfig_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(TtlConfig);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (generationConfig_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(GenerationConfig);
+          }
+          if (similaritySearchConfig_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(SimilaritySearchConfig);
+          }
+          if (ttlConfig_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(TtlConfig);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (generationConfig_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(GenerationConfig);
+          }
+          if (similaritySearchConfig_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(SimilaritySearchConfig);
+          }
+          if (ttlConfig_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(TtlConfig);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(MemoryBankConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.generationConfig_ != null) {
+            if (generationConfig_ == null) {
+              GenerationConfig = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.GenerationConfig();
+            }
+            GenerationConfig.MergeFrom(other.GenerationConfig);
+          }
+          if (other.similaritySearchConfig_ != null) {
+            if (similaritySearchConfig_ == null) {
+              SimilaritySearchConfig = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.SimilaritySearchConfig();
+            }
+            SimilaritySearchConfig.MergeFrom(other.SimilaritySearchConfig);
+          }
+          if (other.ttlConfig_ != null) {
+            if (ttlConfig_ == null) {
+              TtlConfig = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig();
+            }
+            TtlConfig.MergeFrom(other.TtlConfig);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (generationConfig_ == null) {
+                  GenerationConfig = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.GenerationConfig();
+                }
+                input.ReadMessage(GenerationConfig);
+                break;
+              }
+              case 18: {
+                if (similaritySearchConfig_ == null) {
+                  SimilaritySearchConfig = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.SimilaritySearchConfig();
+                }
+                input.ReadMessage(SimilaritySearchConfig);
+                break;
+              }
+              case 42: {
+                if (ttlConfig_ == null) {
+                  TtlConfig = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig();
+                }
+                input.ReadMessage(TtlConfig);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (generationConfig_ == null) {
+                  GenerationConfig = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.GenerationConfig();
+                }
+                input.ReadMessage(GenerationConfig);
+                break;
+              }
+              case 18: {
+                if (similaritySearchConfig_ == null) {
+                  SimilaritySearchConfig = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.SimilaritySearchConfig();
+                }
+                input.ReadMessage(SimilaritySearchConfig);
+                break;
+              }
+              case 42: {
+                if (ttlConfig_ == null) {
+                  TtlConfig = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig();
+                }
+                input.ReadMessage(TtlConfig);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the MemoryBankConfig message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Configuration for automatically setting the TTL ("time-to-live") of the
+          /// memories in the Memory Bank.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class TtlConfig : pb::IMessage<TtlConfig>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<TtlConfig> _parser = new pb::MessageParser<TtlConfig>(() => new TtlConfig());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<TtlConfig> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TtlConfig() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TtlConfig(TtlConfig other) : this() {
+              switch (other.TtlCase) {
+                case TtlOneofCase.DefaultTtl:
+                  DefaultTtl = other.DefaultTtl.Clone();
+                  break;
+                case TtlOneofCase.GranularTtlConfig:
+                  GranularTtlConfig = other.GranularTtlConfig.Clone();
+                  break;
+              }
+
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TtlConfig Clone() {
+              return new TtlConfig(this);
+            }
+
+            /// <summary>Field number for the "default_ttl" field.</summary>
+            public const int DefaultTtlFieldNumber = 1;
+            /// <summary>
+            /// Optional. The default TTL duration of the memories in the Memory
+            /// Bank. This applies to all operations that create or update a memory.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Protobuf.WellKnownTypes.Duration DefaultTtl {
+              get { return ttlCase_ == TtlOneofCase.DefaultTtl ? (global::Google.Protobuf.WellKnownTypes.Duration) ttl_ : null; }
+              set {
+                ttl_ = value;
+                ttlCase_ = value == null ? TtlOneofCase.None : TtlOneofCase.DefaultTtl;
+              }
+            }
+
+            /// <summary>Field number for the "granular_ttl_config" field.</summary>
+            public const int GranularTtlConfigFieldNumber = 2;
+            /// <summary>
+            /// Optional. The granular TTL configuration of the memories in the
+            /// Memory Bank.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Types.GranularTtlConfig GranularTtlConfig {
+              get { return ttlCase_ == TtlOneofCase.GranularTtlConfig ? (global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Types.GranularTtlConfig) ttl_ : null; }
+              set {
+                ttl_ = value;
+                ttlCase_ = value == null ? TtlOneofCase.None : TtlOneofCase.GranularTtlConfig;
+              }
+            }
+
+            private object ttl_;
+            /// <summary>Enum of possible cases for the "ttl" oneof.</summary>
+            public enum TtlOneofCase {
+              None = 0,
+              DefaultTtl = 1,
+              GranularTtlConfig = 2,
+            }
+            private TtlOneofCase ttlCase_ = TtlOneofCase.None;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TtlOneofCase TtlCase {
+              get { return ttlCase_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearTtl() {
+              ttlCase_ = TtlOneofCase.None;
+              ttl_ = null;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as TtlConfig);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(TtlConfig other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (!object.Equals(DefaultTtl, other.DefaultTtl)) return false;
+              if (!object.Equals(GranularTtlConfig, other.GranularTtlConfig)) return false;
+              if (TtlCase != other.TtlCase) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (ttlCase_ == TtlOneofCase.DefaultTtl) hash ^= DefaultTtl.GetHashCode();
+              if (ttlCase_ == TtlOneofCase.GranularTtlConfig) hash ^= GranularTtlConfig.GetHashCode();
+              hash ^= (int) ttlCase_;
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (ttlCase_ == TtlOneofCase.DefaultTtl) {
+                output.WriteRawTag(10);
+                output.WriteMessage(DefaultTtl);
+              }
+              if (ttlCase_ == TtlOneofCase.GranularTtlConfig) {
+                output.WriteRawTag(18);
+                output.WriteMessage(GranularTtlConfig);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (ttlCase_ == TtlOneofCase.DefaultTtl) {
+                output.WriteRawTag(10);
+                output.WriteMessage(DefaultTtl);
+              }
+              if (ttlCase_ == TtlOneofCase.GranularTtlConfig) {
+                output.WriteRawTag(18);
+                output.WriteMessage(GranularTtlConfig);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (ttlCase_ == TtlOneofCase.DefaultTtl) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(DefaultTtl);
+              }
+              if (ttlCase_ == TtlOneofCase.GranularTtlConfig) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(GranularTtlConfig);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(TtlConfig other) {
+              if (other == null) {
+                return;
+              }
+              switch (other.TtlCase) {
+                case TtlOneofCase.DefaultTtl:
+                  if (DefaultTtl == null) {
+                    DefaultTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+                  }
+                  DefaultTtl.MergeFrom(other.DefaultTtl);
+                  break;
+                case TtlOneofCase.GranularTtlConfig:
+                  if (GranularTtlConfig == null) {
+                    GranularTtlConfig = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Types.GranularTtlConfig();
+                  }
+                  GranularTtlConfig.MergeFrom(other.GranularTtlConfig);
+                  break;
+              }
+
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    global::Google.Protobuf.WellKnownTypes.Duration subBuilder = new global::Google.Protobuf.WellKnownTypes.Duration();
+                    if (ttlCase_ == TtlOneofCase.DefaultTtl) {
+                      subBuilder.MergeFrom(DefaultTtl);
+                    }
+                    input.ReadMessage(subBuilder);
+                    DefaultTtl = subBuilder;
+                    break;
+                  }
+                  case 18: {
+                    global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Types.GranularTtlConfig subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Types.GranularTtlConfig();
+                    if (ttlCase_ == TtlOneofCase.GranularTtlConfig) {
+                      subBuilder.MergeFrom(GranularTtlConfig);
+                    }
+                    input.ReadMessage(subBuilder);
+                    GranularTtlConfig = subBuilder;
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    global::Google.Protobuf.WellKnownTypes.Duration subBuilder = new global::Google.Protobuf.WellKnownTypes.Duration();
+                    if (ttlCase_ == TtlOneofCase.DefaultTtl) {
+                      subBuilder.MergeFrom(DefaultTtl);
+                    }
+                    input.ReadMessage(subBuilder);
+                    DefaultTtl = subBuilder;
+                    break;
+                  }
+                  case 18: {
+                    global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Types.GranularTtlConfig subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Types.GranularTtlConfig();
+                    if (ttlCase_ == TtlOneofCase.GranularTtlConfig) {
+                      subBuilder.MergeFrom(GranularTtlConfig);
+                    }
+                    input.ReadMessage(subBuilder);
+                    GranularTtlConfig = subBuilder;
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+            #region Nested types
+            /// <summary>Container for nested types declared in the TtlConfig message type.</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static partial class Types {
+              /// <summary>
+              /// Configuration for TTL of the memories in the Memory Bank based on the
+              /// action that created or updated the memory.
+              /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class GranularTtlConfig : pb::IMessage<GranularTtlConfig>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<GranularTtlConfig> _parser = new pb::MessageParser<GranularTtlConfig>(() => new GranularTtlConfig());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<GranularTtlConfig> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Descriptor.NestedTypes[0]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public GranularTtlConfig() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public GranularTtlConfig(GranularTtlConfig other) : this() {
+                  createTtl_ = other.createTtl_ != null ? other.createTtl_.Clone() : null;
+                  generateCreatedTtl_ = other.generateCreatedTtl_ != null ? other.generateCreatedTtl_.Clone() : null;
+                  generateUpdatedTtl_ = other.generateUpdatedTtl_ != null ? other.generateUpdatedTtl_.Clone() : null;
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public GranularTtlConfig Clone() {
+                  return new GranularTtlConfig(this);
+                }
+
+                /// <summary>Field number for the "create_ttl" field.</summary>
+                public const int CreateTtlFieldNumber = 1;
+                private global::Google.Protobuf.WellKnownTypes.Duration createTtl_;
+                /// <summary>
+                /// Optional. The TTL duration for memories uploaded via CreateMemory.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public global::Google.Protobuf.WellKnownTypes.Duration CreateTtl {
+                  get { return createTtl_; }
+                  set {
+                    createTtl_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "generate_created_ttl" field.</summary>
+                public const int GenerateCreatedTtlFieldNumber = 2;
+                private global::Google.Protobuf.WellKnownTypes.Duration generateCreatedTtl_;
+                /// <summary>
+                /// Optional. The TTL duration for memories newly generated via
+                /// GenerateMemories
+                /// ([GenerateMemoriesResponse.GeneratedMemory.Action.CREATED][google.cloud.aiplatform.v1beta1.GenerateMemoriesResponse.GeneratedMemory.Action.CREATED]).
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public global::Google.Protobuf.WellKnownTypes.Duration GenerateCreatedTtl {
+                  get { return generateCreatedTtl_; }
+                  set {
+                    generateCreatedTtl_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "generate_updated_ttl" field.</summary>
+                public const int GenerateUpdatedTtlFieldNumber = 3;
+                private global::Google.Protobuf.WellKnownTypes.Duration generateUpdatedTtl_;
+                /// <summary>
+                /// Optional. The TTL duration for memories updated via GenerateMemories
+                /// ([GenerateMemoriesResponse.GeneratedMemory.Action.CREATED][google.cloud.aiplatform.v1beta1.GenerateMemoriesResponse.GeneratedMemory.Action.CREATED]).
+                /// In the case of an UPDATE action, the `expire_time` of the existing
+                /// memory will be updated to the new value (now + TTL).
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public global::Google.Protobuf.WellKnownTypes.Duration GenerateUpdatedTtl {
+                  get { return generateUpdatedTtl_; }
+                  set {
+                    generateUpdatedTtl_ = value;
+                  }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as GranularTtlConfig);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(GranularTtlConfig other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (!object.Equals(CreateTtl, other.CreateTtl)) return false;
+                  if (!object.Equals(GenerateCreatedTtl, other.GenerateCreatedTtl)) return false;
+                  if (!object.Equals(GenerateUpdatedTtl, other.GenerateUpdatedTtl)) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (createTtl_ != null) hash ^= CreateTtl.GetHashCode();
+                  if (generateCreatedTtl_ != null) hash ^= GenerateCreatedTtl.GetHashCode();
+                  if (generateUpdatedTtl_ != null) hash ^= GenerateUpdatedTtl.GetHashCode();
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (createTtl_ != null) {
+                    output.WriteRawTag(10);
+                    output.WriteMessage(CreateTtl);
+                  }
+                  if (generateCreatedTtl_ != null) {
+                    output.WriteRawTag(18);
+                    output.WriteMessage(GenerateCreatedTtl);
+                  }
+                  if (generateUpdatedTtl_ != null) {
+                    output.WriteRawTag(26);
+                    output.WriteMessage(GenerateUpdatedTtl);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (createTtl_ != null) {
+                    output.WriteRawTag(10);
+                    output.WriteMessage(CreateTtl);
+                  }
+                  if (generateCreatedTtl_ != null) {
+                    output.WriteRawTag(18);
+                    output.WriteMessage(GenerateCreatedTtl);
+                  }
+                  if (generateUpdatedTtl_ != null) {
+                    output.WriteRawTag(26);
+                    output.WriteMessage(GenerateUpdatedTtl);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (createTtl_ != null) {
+                    size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTtl);
+                  }
+                  if (generateCreatedTtl_ != null) {
+                    size += 1 + pb::CodedOutputStream.ComputeMessageSize(GenerateCreatedTtl);
+                  }
+                  if (generateUpdatedTtl_ != null) {
+                    size += 1 + pb::CodedOutputStream.ComputeMessageSize(GenerateUpdatedTtl);
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(GranularTtlConfig other) {
+                  if (other == null) {
+                    return;
+                  }
+                  if (other.createTtl_ != null) {
+                    if (createTtl_ == null) {
+                      CreateTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+                    }
+                    CreateTtl.MergeFrom(other.CreateTtl);
+                  }
+                  if (other.generateCreatedTtl_ != null) {
+                    if (generateCreatedTtl_ == null) {
+                      GenerateCreatedTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+                    }
+                    GenerateCreatedTtl.MergeFrom(other.GenerateCreatedTtl);
+                  }
+                  if (other.generateUpdatedTtl_ != null) {
+                    if (generateUpdatedTtl_ == null) {
+                      GenerateUpdatedTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+                    }
+                    GenerateUpdatedTtl.MergeFrom(other.GenerateUpdatedTtl);
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 10: {
+                        if (createTtl_ == null) {
+                          CreateTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+                        }
+                        input.ReadMessage(CreateTtl);
+                        break;
+                      }
+                      case 18: {
+                        if (generateCreatedTtl_ == null) {
+                          GenerateCreatedTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+                        }
+                        input.ReadMessage(GenerateCreatedTtl);
+                        break;
+                      }
+                      case 26: {
+                        if (generateUpdatedTtl_ == null) {
+                          GenerateUpdatedTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+                        }
+                        input.ReadMessage(GenerateUpdatedTtl);
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 10: {
+                        if (createTtl_ == null) {
+                          CreateTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+                        }
+                        input.ReadMessage(CreateTtl);
+                        break;
+                      }
+                      case 18: {
+                        if (generateCreatedTtl_ == null) {
+                          GenerateCreatedTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+                        }
+                        input.ReadMessage(GenerateCreatedTtl);
+                        break;
+                      }
+                      case 26: {
+                        if (generateUpdatedTtl_ == null) {
+                          GenerateUpdatedTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+                        }
+                        input.ReadMessage(GenerateUpdatedTtl);
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+            }
+            #endregion
+
+          }
+
+          /// <summary>
+          /// Configuration for how to generate memories.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class GenerationConfig : pb::IMessage<GenerationConfig>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<GenerationConfig> _parser = new pb::MessageParser<GenerationConfig>(() => new GenerationConfig());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<GenerationConfig> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public GenerationConfig() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public GenerationConfig(GenerationConfig other) : this() {
+              model_ = other.model_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public GenerationConfig Clone() {
+              return new GenerationConfig(this);
+            }
+
+            /// <summary>Field number for the "model" field.</summary>
+            public const int ModelFieldNumber = 1;
+            private string model_ = "";
+            /// <summary>
+            /// Required. The model used to generate memories.
+            /// Format:
+            /// `projects/{project}/locations/{location}/publishers/google/models/{model}`.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Model {
+              get { return model_; }
+              set {
+                model_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as GenerationConfig);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(GenerationConfig other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Model != other.Model) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Model.Length != 0) hash ^= Model.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Model.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Model);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Model.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Model);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Model.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Model);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(GenerationConfig other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Model.Length != 0) {
+                Model = other.Model;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    Model = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    Model = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Configuration for how to perform similarity search on memories.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class SimilaritySearchConfig : pb::IMessage<SimilaritySearchConfig>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<SimilaritySearchConfig> _parser = new pb::MessageParser<SimilaritySearchConfig>(() => new SimilaritySearchConfig());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<SimilaritySearchConfig> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Descriptor.NestedTypes[2]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SimilaritySearchConfig() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SimilaritySearchConfig(SimilaritySearchConfig other) : this() {
+              embeddingModel_ = other.embeddingModel_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SimilaritySearchConfig Clone() {
+              return new SimilaritySearchConfig(this);
+            }
+
+            /// <summary>Field number for the "embedding_model" field.</summary>
+            public const int EmbeddingModelFieldNumber = 1;
+            private string embeddingModel_ = "";
+            /// <summary>
+            /// Required. The model used to generate embeddings to lookup similar
+            /// memories. Format:
+            /// `projects/{project}/locations/{location}/publishers/google/models/{model}`.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string EmbeddingModel {
+              get { return embeddingModel_; }
+              set {
+                embeddingModel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as SimilaritySearchConfig);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(SimilaritySearchConfig other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (EmbeddingModel != other.EmbeddingModel) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (EmbeddingModel.Length != 0) hash ^= EmbeddingModel.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (EmbeddingModel.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(EmbeddingModel);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (EmbeddingModel.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(EmbeddingModel);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (EmbeddingModel.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(EmbeddingModel);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(SimilaritySearchConfig other) {
+              if (other == null) {
+                return;
+              }
+              if (other.EmbeddingModel.Length != 0) {
+                EmbeddingModel = other.EmbeddingModel;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    EmbeddingModel = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    EmbeddingModel = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
 
   }
 

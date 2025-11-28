@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -37,7 +37,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance
         {
             TestData = ConformanceTestData.Load<TestFile>("storage", "v1");
             var serviceAccountFile = Path.Combine(TestData.DataPath, "test_service_account.not-a-test.json");
-            TestCredential = (ServiceAccountCredential) GoogleCredential.FromFile(serviceAccountFile).UnderlyingCredential;
+            TestCredential = CredentialFactory.FromFile<ServiceAccountCredential>(serviceAccountFile);
         }
     }
 }

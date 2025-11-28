@@ -13,139 +13,82 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
-using LibGit2Sharp;
 using Newtonsoft.Json.Linq;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Google.Cloud.Tools.ReleaseManager
+namespace Google.Cloud.Tools.ReleaseManager;
+
+public sealed class UpdateDependenciesCommand : CommandBase
 {
-    public sealed class UpdateDependenciesCommand : CommandBase
+    public UpdateDependenciesCommand()
+        : base("update-dependencies", "Updates dependencies for all APIs")
     {
-        public UpdateDependenciesCommand()
-            : base("update-dependencies", "Updates dependencies for all APIs (or those changed in the previous commit, with --owlbot)", 0, 1, "[--owlbot]")
+    }
+
+    protected override int ExecuteImpl(string[] args)
+    {
+        var nonSourceGenerator = new NonSourceGenerator(RootLayout);
+        var catalog = nonSourceGenerator.ApiCatalog;
+        var apiNames = catalog.CreateIdHashSet();
+
+        foreach (var api in catalog.Apis)
         {
+            UpdateDependencies(catalog, api);
+            nonSourceGenerator.GenerateApiFiles(api);
         }
+        nonSourceGenerator.GenerateNonApiFiles();
+        catalog.Save(nonSourceGenerator.RootLayout);
+        return 0;
+    }
 
-        protected override int ExecuteImpl(string[] args)
+    /// <summary>
+    /// Updates the dependencies in an API for other packages within this repository.
+    /// </summary>
+    private static void UpdateDependencies(ApiCatalog catalog, ApiMetadata api)
+    {
+        bool stableOnly = api.StructuredVersion.IsStable;
+        UpdateDependencyDictionary(api.Dependencies, "dependencies");
+        UpdateDependencyDictionary(api.TestDependencies, "testDependencies");
+
+        void UpdateDependencyDictionary(SortedDictionary<string, string> dependencies, string jsonName)
         {
-            var nonSourceGenerator = new NonSourceGenerator(RootLayout);
-            var catalog = nonSourceGenerator.ApiCatalog;
-            var apiNames = catalog.CreateIdHashSet();
-
-            var apisToUpdate = catalog.Apis;
-
-            if (args.Length == 1)
+            if (dependencies.Count == 0)
             {
-                if (args[0] != "--owlbot")
-                {
-                    throw new UserErrorException("Only valid argument for update-dependencies is --owlbot.");
-                }
-                apisToUpdate = FindApisToUpdateFromPreviousCommit(catalog);
-                // Don't even bother checking if we don't have any updates.
-                if (apisToUpdate.Count == 0)
-                {
-                    return 0;
-                }
+                return;
             }
 
-            foreach (var api in apisToUpdate)
+            // We want to update any dependencies to "internal" packages such as Google.LongRunning.
+            Dictionary<string, string> allInternalPackageVersions =
+                catalog.Apis
+                    .Select(api => new KeyValuePair<string, string>(api.Id, api.Version))
+                    .ToDictionary(pair => pair.Key, pair => pair.Value);
+
+            foreach (var package in dependencies.Keys.ToList())
             {
-                UpdateDependencies(catalog, api);
-                nonSourceGenerator.GenerateApiFiles(api);
-            }
-            nonSourceGenerator.GenerateNonApiFiles();
-            catalog.Save(nonSourceGenerator.RootLayout);
-            return 0;
-        }
-
-        private List<ApiMetadata> FindApisToUpdateFromPreviousCommit(ApiCatalog catalog)
-        {
-            using var repo = new Repository(RootLayout.RepositoryRoot);
-            // OwlBot will be post-processing a new commit from either OwlBot itself or
-            // release-please; we want to find out what the API catalog looked like in
-            // the parent commit.
-            var headCommit = repo.Head.Tip;
-            var parentCommit = headCommit.Parents.First();
-            var headApisJson = headCommit.Tree[ApiCatalog.PathInRepository].Target;
-            var parentApisJson = parentCommit.Tree[ApiCatalog.PathInRepository].Target;
-
-            // Let's not even bother parsing if apis.json hasn't changed.
-            if (headApisJson.Sha == parentApisJson.Sha)
-            {
-                return new();
-            }
-
-            var text = ((Blob) parentApisJson).GetContentText();
-            var oldCatalog = ApiCatalog.FromJson(text);
-
-            // We only want to check for dependency updates in APIs that have changed *and* aren't patch releases.
-            var apisToUpdate = catalog.Apis
-                .Where(api => oldCatalog.TryGetApi(api.Id, out var oldApi) && api.Version != oldApi.Version && api.StructuredVersion.Patch == 0)
-                .ToList();
-            if (apisToUpdate.Any())
-            {
-                Console.WriteLine("Checking for dependency updates in:");
-                foreach (var api in apisToUpdate)
+                if (allInternalPackageVersions.TryGetValue(package, out var latestVersion))
                 {
-                    Console.WriteLine($"  {api.Id}");
-                }
-            }
-            return apisToUpdate;
-        }
-
-        /// <summary>
-        /// Updates the dependencies in an API for known packages, but only if the default
-        /// version is later than the current one, with the same major version number.
-        /// </summary>
-        public static void UpdateDependencies(ApiCatalog catalog, ApiMetadata api)
-        {
-            bool stableOnly = api.StructuredVersion.IsStable;
-            UpdateDependencyDictionary(api.Dependencies, "dependencies");
-            UpdateDependencyDictionary(api.TestDependencies, "testDependencies");
-
-            void UpdateDependencyDictionary(SortedDictionary<string, string> dependencies, string jsonName)
-            {
-                if (dependencies.Count == 0)
-                {
-                    return;
-                }
-
-                // We want to update any dependencies to "internal" packages such as Google.LongRunning.
-                Dictionary<string, string> allInternalPackageVersions =
-                    catalog.Apis
-                        .Select(api => new KeyValuePair<string, string>(api.Id, api.Version))
-                        .ToDictionary(pair => pair.Key, pair => pair.Value);
-
-                foreach (var package in dependencies.Keys.ToList())
-                {
-                    if (allInternalPackageVersions.TryGetValue(package, out var defaultVersion))
+                    var currentDependencyVersion = dependencies[package];
+                    if (currentDependencyVersion == NonSourceGenerator.DefaultVersionValue ||
+                        currentDependencyVersion == NonSourceGenerator.ProjectVersionValue ||
+                        latestVersion == currentDependencyVersion)
                     {
-                        var currentVersion = dependencies[package];
-                        if (currentVersion == NonSourceGenerator.DefaultVersionValue ||
-                            currentVersion == NonSourceGenerator.ProjectVersionValue ||
-                            defaultVersion == currentVersion ||
-                            currentVersion.StartsWith('$') ||
-                            defaultVersion.StartsWith('$'))
-                        {
-                            continue;
-                        }
-                        var structuredDefaultVersion = StructuredVersion.FromString(defaultVersion);
-                        var structuredCurrentVersion = StructuredVersion.FromString(currentVersion);
-                        if (structuredDefaultVersion.CompareTo(structuredCurrentVersion) > 0 &&
-                            structuredDefaultVersion.Major == structuredCurrentVersion.Major &&
-                            (structuredDefaultVersion.IsStable || !stableOnly))
-                        {
-                            dependencies[package] = defaultVersion;
-                        }
+                        continue;
+                    }
+                    var structuredDefaultVersion = StructuredVersion.FromString(latestVersion);
+                    var structuredCurrentVersion = StructuredVersion.FromString(currentDependencyVersion);
+                    if (structuredDefaultVersion.CompareTo(structuredCurrentVersion) > 0 &&
+                        structuredDefaultVersion.Major == structuredCurrentVersion.Major &&
+                        (structuredDefaultVersion.IsStable || !stableOnly))
+                    {
+                        dependencies[package] = latestVersion;
                     }
                 }
+            }
 
-                if (api.Json is object)
-                {
-                    api.Json[jsonName] = new JObject(dependencies.Select(pair => new JProperty(pair.Key, pair.Value)));
-                }
+            if (api.Json is object)
+            {
+                api.Json[jsonName] = new JObject(dependencies.Select(pair => new JProperty(pair.Key, pair.Value)));
             }
         }
     }

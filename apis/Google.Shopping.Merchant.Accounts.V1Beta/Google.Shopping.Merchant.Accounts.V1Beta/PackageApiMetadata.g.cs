@@ -39,9 +39,13 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             yield return AutomaticimprovementsReflection.Descriptor;
             yield return BusinessidentityReflection.Descriptor;
             yield return BusinessinfoReflection.Descriptor;
+            yield return CheckoutsettingsReflection.Descriptor;
             yield return CustomerserviceReflection.Descriptor;
             yield return EmailpreferencesReflection.Descriptor;
+            yield return GbpaccountsReflection.Descriptor;
             yield return HomepageReflection.Descriptor;
+            yield return LfpprovidersReflection.Descriptor;
+            yield return OmnichannelsettingsReflection.Descriptor;
             yield return OnlineReturnPolicyReflection.Descriptor;
             yield return PhoneverificationstateReflection.Descriptor;
             yield return ProgramsReflection.Descriptor;
@@ -52,6 +56,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             yield return TermsofserviceagreementstateReflection.Descriptor;
             yield return TermsofservicekindReflection.Descriptor;
             yield return UserReflection.Descriptor;
+            yield return VerificationmailsettingsReflection.Descriptor;
         }
     }
 }

@@ -45,7 +45,7 @@ namespace Google.Ads.AdManager.V1 {
             "IAEoBUID4EEBIoIBChdMaXN0QWRVbml0U2l6ZXNSZXNwb25zZRI6Cg1hZF91",
             "bml0X3NpemVzGAEgAygLMiMuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQWRV",
             "bml0U2l6ZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEgoKdG90YWxfc2l6",
-            "ZRgDIAEoBTKABAoNQWRVbml0U2VydmljZRKHAQoJR2V0QWRVbml0EikuZ29v",
+            "ZRgDIAEoBTKsBAoNQWRVbml0U2VydmljZRKHAQoJR2V0QWRVbml0EikuZ29v",
             "Z2xlLmFkcy5hZG1hbmFnZXIudjEuR2V0QWRVbml0UmVxdWVzdBofLmdvb2ds",
             "ZS5hZHMuYWRtYW5hZ2VyLnYxLkFkVW5pdCIu2kEEbmFtZYLT5JMCIRIfL3Yx",
             "L3tuYW1lPW5ldHdvcmtzLyovYWRVbml0cy8qfRKaAQoLTGlzdEFkVW5pdHMS",
@@ -55,13 +55,14 @@ namespace Google.Ads.AdManager.V1 {
             "VW5pdHMSqgEKD0xpc3RBZFVuaXRTaXplcxIvLmdvb2dsZS5hZHMuYWRtYW5h",
             "Z2VyLnYxLkxpc3RBZFVuaXRTaXplc1JlcXVlc3QaMC5nb29nbGUuYWRzLmFk",
             "bWFuYWdlci52MS5MaXN0QWRVbml0U2l6ZXNSZXNwb25zZSI02kEGcGFyZW50",
-            "gtPkkwIlEiMvdjEve3BhcmVudD1uZXR3b3Jrcy8qfS9hZFVuaXRTaXplcxob",
-            "ykEYYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tQsYBChtjb20uZ29vZ2xlLmFk",
-            "cy5hZG1hbmFnZXIudjFCEkFkVW5pdFNlcnZpY2VQcm90b1ABWkBnb29nbGUu",
-            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIv",
-            "djE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29n",
-            "bGVcQWRzXEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6",
-            "OlYxYgZwcm90bzM="));
+            "gtPkkwIlEiMvdjEve3BhcmVudD1uZXR3b3Jrcy8qfS9hZFVuaXRTaXplcxpH",
+            "ykEYYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t0kEpaHR0cHM6Ly93d3cuZ29v",
+            "Z2xlYXBpcy5jb20vYXV0aC9hZG1hbmFnZXJCxgEKG2NvbS5nb29nbGUuYWRz",
+            "LmFkbWFuYWdlci52MUISQWRVbml0U2VydmljZVByb3RvUAFaQGdvb2dsZS5n",
+            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92",
+            "MTthZG1hbmFnZXKqAhdHb29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2ds",
+            "ZVxBZHNcQWRNYW5hZ2VyXFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6",
+            "VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.AdUnitMessagesReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -348,8 +349,8 @@ namespace Google.Ads.AdManager.V1 {
     /// <summary>
     /// Optional. The maximum number of AdUnits to return. The service may return
     /// fewer than this value. If unspecified, at most 50 ad units will be
-    /// returned. The maximum value is 1000; values above 1000 will be coerced to
-    /// 1000.
+    /// returned. The maximum value is 1000; values greater than 1000 will be
+    /// coerced to 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -769,7 +770,7 @@ namespace Google.Ads.AdManager.V1 {
     /// If a filter was included in the request, this reflects the total number
     /// after the filtering is applied.
     ///
-    /// `total_size` will not be calculated in the response unless it has been
+    /// `total_size` won't be calculated in the response unless it has been
     /// included in a response field mask. The response field mask can be provided
     /// to the method by using the URL parameter `$fields` or `fields`, or by using
     /// the HTTP/gRPC header `X-Goog-FieldMask`.
@@ -1032,8 +1033,8 @@ namespace Google.Ads.AdManager.V1 {
     /// <summary>
     /// Optional. The maximum number of AdUnitSizes to return. The service may
     /// return fewer than this value. If unspecified, at most 50 ad unit sizes will
-    /// be returned. The maximum value is 1000; values above 1000 will be coerced
-    /// to 1000.
+    /// be returned. The maximum value is 1000; values greater than 1000 will be
+    /// coerced to 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1453,7 +1454,7 @@ namespace Google.Ads.AdManager.V1 {
     /// If a filter was included in the request, this reflects the total number
     /// after the filtering is applied.
     ///
-    /// `total_size` will not be calculated in the response unless it has been
+    /// `total_size` won't be calculated in the response unless it has been
     /// included in a response field mask. The response field mask can be provided
     /// to the method by using the URL parameter `$fields` or `fields`, or by using
     /// the HTTP/gRPC header `X-Goog-FieldMask`.

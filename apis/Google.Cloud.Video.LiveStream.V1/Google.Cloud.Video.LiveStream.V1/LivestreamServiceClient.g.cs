@@ -21,6 +21,7 @@ using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using linq = System.Linq;
 using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
 using proto = Google.Protobuf;
@@ -61,6 +62,10 @@ namespace Google.Cloud.Video.LiveStream.V1
             StartChannelOperationsSettings = existing.StartChannelOperationsSettings.Clone();
             StopChannelSettings = existing.StopChannelSettings;
             StopChannelOperationsSettings = existing.StopChannelOperationsSettings.Clone();
+            StartDistributionSettings = existing.StartDistributionSettings;
+            StartDistributionOperationsSettings = existing.StartDistributionOperationsSettings.Clone();
+            StopDistributionSettings = existing.StopDistributionSettings;
+            StopDistributionOperationsSettings = existing.StopDistributionOperationsSettings.Clone();
             CreateInputSettings = existing.CreateInputSettings;
             CreateInputOperationsSettings = existing.CreateInputOperationsSettings.Clone();
             ListInputsSettings = existing.ListInputsSettings;
@@ -69,6 +74,7 @@ namespace Google.Cloud.Video.LiveStream.V1
             DeleteInputOperationsSettings = existing.DeleteInputOperationsSettings.Clone();
             UpdateInputSettings = existing.UpdateInputSettings;
             UpdateInputOperationsSettings = existing.UpdateInputOperationsSettings.Clone();
+            PreviewInputSettings = existing.PreviewInputSettings;
             CreateEventSettings = existing.CreateEventSettings;
             ListEventsSettings = existing.ListEventsSettings;
             GetEventSettings = existing.GetEventSettings;
@@ -79,6 +85,14 @@ namespace Google.Cloud.Video.LiveStream.V1
             CreateClipOperationsSettings = existing.CreateClipOperationsSettings.Clone();
             DeleteClipSettings = existing.DeleteClipSettings;
             DeleteClipOperationsSettings = existing.DeleteClipOperationsSettings.Clone();
+            CreateDvrSessionSettings = existing.CreateDvrSessionSettings;
+            CreateDvrSessionOperationsSettings = existing.CreateDvrSessionOperationsSettings.Clone();
+            ListDvrSessionsSettings = existing.ListDvrSessionsSettings;
+            GetDvrSessionSettings = existing.GetDvrSessionSettings;
+            DeleteDvrSessionSettings = existing.DeleteDvrSessionSettings;
+            DeleteDvrSessionOperationsSettings = existing.DeleteDvrSessionOperationsSettings.Clone();
+            UpdateDvrSessionSettings = existing.UpdateDvrSessionSettings;
+            UpdateDvrSessionOperationsSettings = existing.UpdateDvrSessionOperationsSettings.Clone();
             CreateAssetSettings = existing.CreateAssetSettings;
             CreateAssetOperationsSettings = existing.CreateAssetOperationsSettings.Clone();
             DeleteAssetSettings = existing.DeleteAssetSettings;
@@ -282,6 +296,66 @@ namespace Google.Cloud.Video.LiveStream.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LivestreamServiceClient.StartDistribution</c> and <c>LivestreamServiceClient.StartDistributionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StartDistributionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>LivestreamServiceClient.StartDistribution</c> and
+        /// <c>LivestreamServiceClient.StartDistributionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings StartDistributionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LivestreamServiceClient.StopDistribution</c> and <c>LivestreamServiceClient.StopDistributionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StopDistributionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>LivestreamServiceClient.StopDistribution</c> and
+        /// <c>LivestreamServiceClient.StopDistributionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings StopDistributionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>LivestreamServiceClient.CreateInput</c> and <c>LivestreamServiceClient.CreateInputAsync</c>.
         /// </summary>
         /// <remarks>
@@ -408,6 +482,18 @@ namespace Google.Cloud.Video.LiveStream.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LivestreamServiceClient.PreviewInput</c> and <c>LivestreamServiceClient.PreviewInputAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PreviewInputSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>LivestreamServiceClient.CreateEvent</c> and <c>LivestreamServiceClient.CreateEventAsync</c>.
         /// </summary>
         /// <remarks>
@@ -472,11 +558,17 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListClipsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ListClipsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -484,11 +576,17 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetClipSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetClipSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -497,10 +595,10 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateClipSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings CreateClipSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>LivestreamServiceClient.CreateClip</c> and
@@ -527,10 +625,10 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteClipSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings DeleteClipSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>LivestreamServiceClient.DeleteClip</c> and
@@ -552,15 +650,141 @@ namespace Google.Cloud.Video.LiveStream.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LivestreamServiceClient.CreateDvrSession</c> and <c>LivestreamServiceClient.CreateDvrSessionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateDvrSessionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>LivestreamServiceClient.CreateDvrSession</c> and
+        /// <c>LivestreamServiceClient.CreateDvrSessionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateDvrSessionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LivestreamServiceClient.ListDvrSessions</c> and <c>LivestreamServiceClient.ListDvrSessionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListDvrSessionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LivestreamServiceClient.GetDvrSession</c> and <c>LivestreamServiceClient.GetDvrSessionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetDvrSessionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LivestreamServiceClient.DeleteDvrSession</c> and <c>LivestreamServiceClient.DeleteDvrSessionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteDvrSessionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>LivestreamServiceClient.DeleteDvrSession</c> and
+        /// <c>LivestreamServiceClient.DeleteDvrSessionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteDvrSessionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LivestreamServiceClient.UpdateDvrSession</c> and <c>LivestreamServiceClient.UpdateDvrSessionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateDvrSessionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>LivestreamServiceClient.UpdateDvrSession</c> and
+        /// <c>LivestreamServiceClient.UpdateDvrSessionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateDvrSessionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>LivestreamServiceClient.CreateAsset</c> and <c>LivestreamServiceClient.CreateAssetAsync</c>.
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateAssetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings CreateAssetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>LivestreamServiceClient.CreateAsset</c> and
@@ -587,10 +811,10 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteAssetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings DeleteAssetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>LivestreamServiceClient.DeleteAsset</c> and
@@ -616,11 +840,17 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetAssetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetAssetSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -628,11 +858,17 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListAssetsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ListAssetsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -640,11 +876,17 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetPoolSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetPoolSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -653,10 +895,10 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdatePoolSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings UpdatePoolSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>LivestreamServiceClient.UpdatePool</c> and
@@ -898,8 +1140,11 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="channelId">
         /// Required. The ID of the channel resource to be created.
-        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
-        /// could contain dashes (-) in between.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -924,8 +1169,11 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="channelId">
         /// Required. The ID of the channel resource to be created.
-        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
-        /// could contain dashes (-) in between.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -950,8 +1198,11 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="channelId">
         /// Required. The ID of the channel resource to be created.
-        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
-        /// could contain dashes (-) in between.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -971,8 +1222,11 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="channelId">
         /// Required. The ID of the channel resource to be created.
-        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
-        /// could contain dashes (-) in between.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -997,8 +1251,11 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="channelId">
         /// Required. The ID of the channel resource to be created.
-        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
-        /// could contain dashes (-) in between.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1023,8 +1280,11 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="channelId">
         /// Required. The ID of the channel resource to be created.
-        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
-        /// could contain dashes (-) in between.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1886,6 +2146,382 @@ namespace Google.Cloud.Video.LiveStream.V1
             StopChannelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Starts distribution which delivers outputs to the destination indicated by
+        /// the Distribution configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ChannelOperationResponse, OperationMetadata> StartDistribution(StartDistributionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Starts distribution which delivers outputs to the destination indicated by
+        /// the Distribution configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ChannelOperationResponse, OperationMetadata>> StartDistributionAsync(StartDistributionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Starts distribution which delivers outputs to the destination indicated by
+        /// the Distribution configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ChannelOperationResponse, OperationMetadata>> StartDistributionAsync(StartDistributionRequest request, st::CancellationToken cancellationToken) =>
+            StartDistributionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>StartDistribution</c>.</summary>
+        public virtual lro::OperationsClient StartDistributionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>StartDistribution</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ChannelOperationResponse, OperationMetadata> PollOnceStartDistribution(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ChannelOperationResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StartDistributionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>StartDistribution</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ChannelOperationResponse, OperationMetadata>> PollOnceStartDistributionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ChannelOperationResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StartDistributionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Starts distribution which delivers outputs to the destination indicated by
+        /// the Distribution configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel resource, in the form of:
+        /// `projects/{project}/locations/{location}/channels/{channelId}`.
+        /// </param>
+        /// <param name="distributionKeys">
+        /// Optional. A list of keys to identify the distribution configuration in the
+        /// channel resource. If left empty, all the distributions in the channel
+        /// specification will be started.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ChannelOperationResponse, OperationMetadata> StartDistribution(string name, scg::IEnumerable<string> distributionKeys, gaxgrpc::CallSettings callSettings = null) =>
+            StartDistribution(new StartDistributionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                DistributionKeys =
+                {
+                    distributionKeys ?? linq::Enumerable.Empty<string>(),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Starts distribution which delivers outputs to the destination indicated by
+        /// the Distribution configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel resource, in the form of:
+        /// `projects/{project}/locations/{location}/channels/{channelId}`.
+        /// </param>
+        /// <param name="distributionKeys">
+        /// Optional. A list of keys to identify the distribution configuration in the
+        /// channel resource. If left empty, all the distributions in the channel
+        /// specification will be started.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ChannelOperationResponse, OperationMetadata>> StartDistributionAsync(string name, scg::IEnumerable<string> distributionKeys, gaxgrpc::CallSettings callSettings = null) =>
+            StartDistributionAsync(new StartDistributionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                DistributionKeys =
+                {
+                    distributionKeys ?? linq::Enumerable.Empty<string>(),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Starts distribution which delivers outputs to the destination indicated by
+        /// the Distribution configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel resource, in the form of:
+        /// `projects/{project}/locations/{location}/channels/{channelId}`.
+        /// </param>
+        /// <param name="distributionKeys">
+        /// Optional. A list of keys to identify the distribution configuration in the
+        /// channel resource. If left empty, all the distributions in the channel
+        /// specification will be started.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ChannelOperationResponse, OperationMetadata>> StartDistributionAsync(string name, scg::IEnumerable<string> distributionKeys, st::CancellationToken cancellationToken) =>
+            StartDistributionAsync(name, distributionKeys, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Starts distribution which delivers outputs to the destination indicated by
+        /// the Distribution configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel resource, in the form of:
+        /// `projects/{project}/locations/{location}/channels/{channelId}`.
+        /// </param>
+        /// <param name="distributionKeys">
+        /// Optional. A list of keys to identify the distribution configuration in the
+        /// channel resource. If left empty, all the distributions in the channel
+        /// specification will be started.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ChannelOperationResponse, OperationMetadata> StartDistribution(ChannelName name, scg::IEnumerable<string> distributionKeys, gaxgrpc::CallSettings callSettings = null) =>
+            StartDistribution(new StartDistributionRequest
+            {
+                ChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                DistributionKeys =
+                {
+                    distributionKeys ?? linq::Enumerable.Empty<string>(),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Starts distribution which delivers outputs to the destination indicated by
+        /// the Distribution configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel resource, in the form of:
+        /// `projects/{project}/locations/{location}/channels/{channelId}`.
+        /// </param>
+        /// <param name="distributionKeys">
+        /// Optional. A list of keys to identify the distribution configuration in the
+        /// channel resource. If left empty, all the distributions in the channel
+        /// specification will be started.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ChannelOperationResponse, OperationMetadata>> StartDistributionAsync(ChannelName name, scg::IEnumerable<string> distributionKeys, gaxgrpc::CallSettings callSettings = null) =>
+            StartDistributionAsync(new StartDistributionRequest
+            {
+                ChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                DistributionKeys =
+                {
+                    distributionKeys ?? linq::Enumerable.Empty<string>(),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Starts distribution which delivers outputs to the destination indicated by
+        /// the Distribution configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel resource, in the form of:
+        /// `projects/{project}/locations/{location}/channels/{channelId}`.
+        /// </param>
+        /// <param name="distributionKeys">
+        /// Optional. A list of keys to identify the distribution configuration in the
+        /// channel resource. If left empty, all the distributions in the channel
+        /// specification will be started.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ChannelOperationResponse, OperationMetadata>> StartDistributionAsync(ChannelName name, scg::IEnumerable<string> distributionKeys, st::CancellationToken cancellationToken) =>
+            StartDistributionAsync(name, distributionKeys, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Stops the specified distribution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ChannelOperationResponse, OperationMetadata> StopDistribution(StopDistributionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Stops the specified distribution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ChannelOperationResponse, OperationMetadata>> StopDistributionAsync(StopDistributionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Stops the specified distribution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ChannelOperationResponse, OperationMetadata>> StopDistributionAsync(StopDistributionRequest request, st::CancellationToken cancellationToken) =>
+            StopDistributionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>StopDistribution</c>.</summary>
+        public virtual lro::OperationsClient StopDistributionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>StopDistribution</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ChannelOperationResponse, OperationMetadata> PollOnceStopDistribution(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ChannelOperationResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StopDistributionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>StopDistribution</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ChannelOperationResponse, OperationMetadata>> PollOnceStopDistributionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ChannelOperationResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StopDistributionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Stops the specified distribution.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel resource, in the form of:
+        /// `projects/{project}/locations/{location}/channels/{channelId}`.
+        /// </param>
+        /// <param name="distributionKeys">
+        /// Optional. A list of key to identify the distribution configuration in the
+        /// channel resource. If left empty, all the distributions in the channel
+        /// specification will be stopped.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ChannelOperationResponse, OperationMetadata> StopDistribution(string name, scg::IEnumerable<string> distributionKeys, gaxgrpc::CallSettings callSettings = null) =>
+            StopDistribution(new StopDistributionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                DistributionKeys =
+                {
+                    distributionKeys ?? linq::Enumerable.Empty<string>(),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Stops the specified distribution.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel resource, in the form of:
+        /// `projects/{project}/locations/{location}/channels/{channelId}`.
+        /// </param>
+        /// <param name="distributionKeys">
+        /// Optional. A list of key to identify the distribution configuration in the
+        /// channel resource. If left empty, all the distributions in the channel
+        /// specification will be stopped.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ChannelOperationResponse, OperationMetadata>> StopDistributionAsync(string name, scg::IEnumerable<string> distributionKeys, gaxgrpc::CallSettings callSettings = null) =>
+            StopDistributionAsync(new StopDistributionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                DistributionKeys =
+                {
+                    distributionKeys ?? linq::Enumerable.Empty<string>(),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Stops the specified distribution.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel resource, in the form of:
+        /// `projects/{project}/locations/{location}/channels/{channelId}`.
+        /// </param>
+        /// <param name="distributionKeys">
+        /// Optional. A list of key to identify the distribution configuration in the
+        /// channel resource. If left empty, all the distributions in the channel
+        /// specification will be stopped.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ChannelOperationResponse, OperationMetadata>> StopDistributionAsync(string name, scg::IEnumerable<string> distributionKeys, st::CancellationToken cancellationToken) =>
+            StopDistributionAsync(name, distributionKeys, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Stops the specified distribution.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel resource, in the form of:
+        /// `projects/{project}/locations/{location}/channels/{channelId}`.
+        /// </param>
+        /// <param name="distributionKeys">
+        /// Optional. A list of key to identify the distribution configuration in the
+        /// channel resource. If left empty, all the distributions in the channel
+        /// specification will be stopped.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ChannelOperationResponse, OperationMetadata> StopDistribution(ChannelName name, scg::IEnumerable<string> distributionKeys, gaxgrpc::CallSettings callSettings = null) =>
+            StopDistribution(new StopDistributionRequest
+            {
+                ChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                DistributionKeys =
+                {
+                    distributionKeys ?? linq::Enumerable.Empty<string>(),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Stops the specified distribution.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel resource, in the form of:
+        /// `projects/{project}/locations/{location}/channels/{channelId}`.
+        /// </param>
+        /// <param name="distributionKeys">
+        /// Optional. A list of key to identify the distribution configuration in the
+        /// channel resource. If left empty, all the distributions in the channel
+        /// specification will be stopped.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ChannelOperationResponse, OperationMetadata>> StopDistributionAsync(ChannelName name, scg::IEnumerable<string> distributionKeys, gaxgrpc::CallSettings callSettings = null) =>
+            StopDistributionAsync(new StopDistributionRequest
+            {
+                ChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                DistributionKeys =
+                {
+                    distributionKeys ?? linq::Enumerable.Empty<string>(),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Stops the specified distribution.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel resource, in the form of:
+        /// `projects/{project}/locations/{location}/channels/{channelId}`.
+        /// </param>
+        /// <param name="distributionKeys">
+        /// Optional. A list of key to identify the distribution configuration in the
+        /// channel resource. If left empty, all the distributions in the channel
+        /// specification will be stopped.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ChannelOperationResponse, OperationMetadata>> StopDistributionAsync(ChannelName name, scg::IEnumerable<string> distributionKeys, st::CancellationToken cancellationToken) =>
+            StopDistributionAsync(name, distributionKeys, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates an input with the provided unique ID in the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1950,8 +2586,11 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="inputId">
         /// Required. The ID of the input resource to be created.
-        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
-        /// could contain dashes (-) in between.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1975,8 +2614,11 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="inputId">
         /// Required. The ID of the input resource to be created.
-        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
-        /// could contain dashes (-) in between.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2000,8 +2642,11 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="inputId">
         /// Required. The ID of the input resource to be created.
-        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
-        /// could contain dashes (-) in between.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2020,8 +2665,11 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="inputId">
         /// Required. The ID of the input resource to be created.
-        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
-        /// could contain dashes (-) in between.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2045,8 +2693,11 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="inputId">
         /// Required. The ID of the input resource to be created.
-        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
-        /// could contain dashes (-) in between.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2070,8 +2721,11 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="inputId">
         /// Required. The ID of the input resource to be created.
-        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
-        /// could contain dashes (-) in between.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2543,6 +3197,7 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// Field mask is used to specify the fields to be overwritten in the Input
         /// resource by the update. You can only update the following fields:
         /// 
+        /// * [`tier`](https://cloud.google.com/livestream/docs/reference/rest/v1/projects.locations.inputs#Tier)
         /// * [`preprocessingConfig`](https://cloud.google.com/livestream/docs/reference/rest/v1/projects.locations.inputs#PreprocessingConfig)
         /// * [`securityRules`](https://cloud.google.com/livestream/docs/reference/rest/v1/projects.locations.inputs#SecurityRule)
         /// 
@@ -2572,6 +3227,7 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// Field mask is used to specify the fields to be overwritten in the Input
         /// resource by the update. You can only update the following fields:
         /// 
+        /// * [`tier`](https://cloud.google.com/livestream/docs/reference/rest/v1/projects.locations.inputs#Tier)
         /// * [`preprocessingConfig`](https://cloud.google.com/livestream/docs/reference/rest/v1/projects.locations.inputs#PreprocessingConfig)
         /// * [`securityRules`](https://cloud.google.com/livestream/docs/reference/rest/v1/projects.locations.inputs#SecurityRule)
         /// 
@@ -2601,6 +3257,7 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// Field mask is used to specify the fields to be overwritten in the Input
         /// resource by the update. You can only update the following fields:
         /// 
+        /// * [`tier`](https://cloud.google.com/livestream/docs/reference/rest/v1/projects.locations.inputs#Tier)
         /// * [`preprocessingConfig`](https://cloud.google.com/livestream/docs/reference/rest/v1/projects.locations.inputs#PreprocessingConfig)
         /// * [`securityRules`](https://cloud.google.com/livestream/docs/reference/rest/v1/projects.locations.inputs#SecurityRule)
         /// 
@@ -2615,6 +3272,117 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Input, OperationMetadata>> UpdateInputAsync(Input input, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateInputAsync(input, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Preview the streaming content of the specified input.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PreviewInputResponse PreviewInput(PreviewInputRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Preview the streaming content of the specified input.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PreviewInputResponse> PreviewInputAsync(PreviewInputRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Preview the streaming content of the specified input.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PreviewInputResponse> PreviewInputAsync(PreviewInputRequest request, st::CancellationToken cancellationToken) =>
+            PreviewInputAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Preview the streaming content of the specified input.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the input resource, in the form of:
+        /// `projects/{project}/locations/{location}/inputs/{inputId}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PreviewInputResponse PreviewInput(string name, gaxgrpc::CallSettings callSettings = null) =>
+            PreviewInput(new PreviewInputRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Preview the streaming content of the specified input.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the input resource, in the form of:
+        /// `projects/{project}/locations/{location}/inputs/{inputId}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PreviewInputResponse> PreviewInputAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            PreviewInputAsync(new PreviewInputRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Preview the streaming content of the specified input.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the input resource, in the form of:
+        /// `projects/{project}/locations/{location}/inputs/{inputId}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PreviewInputResponse> PreviewInputAsync(string name, st::CancellationToken cancellationToken) =>
+            PreviewInputAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Preview the streaming content of the specified input.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the input resource, in the form of:
+        /// `projects/{project}/locations/{location}/inputs/{inputId}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PreviewInputResponse PreviewInput(InputName name, gaxgrpc::CallSettings callSettings = null) =>
+            PreviewInput(new PreviewInputRequest
+            {
+                InputName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Preview the streaming content of the specified input.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the input resource, in the form of:
+        /// `projects/{project}/locations/{location}/inputs/{inputId}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PreviewInputResponse> PreviewInputAsync(InputName name, gaxgrpc::CallSettings callSettings = null) =>
+            PreviewInputAsync(new PreviewInputRequest
+            {
+                InputName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Preview the streaming content of the specified input.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the input resource, in the form of:
+        /// `projects/{project}/locations/{location}/inputs/{inputId}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PreviewInputResponse> PreviewInputAsync(InputName name, st::CancellationToken cancellationToken) =>
+            PreviewInputAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates an event with the provided unique ID in the specified channel.
@@ -2655,8 +3423,11 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="eventId">
         /// Required. The ID of the event resource to be created.
-        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
-        /// could contain dashes (-) in between.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2680,8 +3451,11 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="eventId">
         /// Required. The ID of the event resource to be created.
-        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
-        /// could contain dashes (-) in between.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2705,8 +3479,11 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="eventId">
         /// Required. The ID of the event resource to be created.
-        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
-        /// could contain dashes (-) in between.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2725,8 +3502,11 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="eventId">
         /// Required. The ID of the event resource to be created.
-        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
-        /// could contain dashes (-) in between.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2750,8 +3530,11 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="eventId">
         /// Required. The ID of the event resource to be created.
-        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
-        /// could contain dashes (-) in between.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2775,8 +3558,11 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="eventId">
         /// Required. The ID of the event resource to be created.
-        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
-        /// could contain dashes (-) in between.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3484,10 +4270,12 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// Required. The resource being created
         /// </param>
         /// <param name="clipId">
-        /// Required. Id of the requesting object in the following form:
+        /// Required. The ID of the clip resource to be created.
         /// 
-        /// 1. 1 character minimum, 63 characters maximum
-        /// 2. Only contains letters, digits, underscores, and hyphens
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3510,10 +4298,12 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// Required. The resource being created
         /// </param>
         /// <param name="clipId">
-        /// Required. Id of the requesting object in the following form:
+        /// Required. The ID of the clip resource to be created.
         /// 
-        /// 1. 1 character minimum, 63 characters maximum
-        /// 2. Only contains letters, digits, underscores, and hyphens
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3536,10 +4326,12 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// Required. The resource being created
         /// </param>
         /// <param name="clipId">
-        /// Required. Id of the requesting object in the following form:
+        /// Required. The ID of the clip resource to be created.
         /// 
-        /// 1. 1 character minimum, 63 characters maximum
-        /// 2. Only contains letters, digits, underscores, and hyphens
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3557,10 +4349,12 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// Required. The resource being created
         /// </param>
         /// <param name="clipId">
-        /// Required. Id of the requesting object in the following form:
+        /// Required. The ID of the clip resource to be created.
         /// 
-        /// 1. 1 character minimum, 63 characters maximum
-        /// 2. Only contains letters, digits, underscores, and hyphens
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3583,10 +4377,12 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// Required. The resource being created
         /// </param>
         /// <param name="clipId">
-        /// Required. Id of the requesting object in the following form:
+        /// Required. The ID of the clip resource to be created.
         /// 
-        /// 1. 1 character minimum, 63 characters maximum
-        /// 2. Only contains letters, digits, underscores, and hyphens
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3609,10 +4405,12 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// Required. The resource being created
         /// </param>
         /// <param name="clipId">
-        /// Required. Id of the requesting object in the following form:
+        /// Required. The ID of the clip resource to be created.
         /// 
-        /// 1. 1 character minimum, 63 characters maximum
-        /// 2. Only contains letters, digits, underscores, and hyphens
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3621,7 +4419,7 @@ namespace Google.Cloud.Video.LiveStream.V1
 
         /// <summary>
         /// Deletes the specified clip job resource. This method only deletes the clip
-        /// job and does not delete the VOD clip stored in the GCS.
+        /// job and does not delete the VOD clip stored in Cloud Storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3631,7 +4429,7 @@ namespace Google.Cloud.Video.LiveStream.V1
 
         /// <summary>
         /// Deletes the specified clip job resource. This method only deletes the clip
-        /// job and does not delete the VOD clip stored in the GCS.
+        /// job and does not delete the VOD clip stored in Cloud Storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3641,7 +4439,7 @@ namespace Google.Cloud.Video.LiveStream.V1
 
         /// <summary>
         /// Deletes the specified clip job resource. This method only deletes the clip
-        /// job and does not delete the VOD clip stored in the GCS.
+        /// job and does not delete the VOD clip stored in Cloud Storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3677,7 +4475,7 @@ namespace Google.Cloud.Video.LiveStream.V1
 
         /// <summary>
         /// Deletes the specified clip job resource. This method only deletes the clip
-        /// job and does not delete the VOD clip stored in the GCS.
+        /// job and does not delete the VOD clip stored in Cloud Storage.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the clip resource, in the form of:
@@ -3693,7 +4491,7 @@ namespace Google.Cloud.Video.LiveStream.V1
 
         /// <summary>
         /// Deletes the specified clip job resource. This method only deletes the clip
-        /// job and does not delete the VOD clip stored in the GCS.
+        /// job and does not delete the VOD clip stored in Cloud Storage.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the clip resource, in the form of:
@@ -3709,7 +4507,7 @@ namespace Google.Cloud.Video.LiveStream.V1
 
         /// <summary>
         /// Deletes the specified clip job resource. This method only deletes the clip
-        /// job and does not delete the VOD clip stored in the GCS.
+        /// job and does not delete the VOD clip stored in Cloud Storage.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the clip resource, in the form of:
@@ -3722,7 +4520,7 @@ namespace Google.Cloud.Video.LiveStream.V1
 
         /// <summary>
         /// Deletes the specified clip job resource. This method only deletes the clip
-        /// job and does not delete the VOD clip stored in the GCS.
+        /// job and does not delete the VOD clip stored in Cloud Storage.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the clip resource, in the form of:
@@ -3738,7 +4536,7 @@ namespace Google.Cloud.Video.LiveStream.V1
 
         /// <summary>
         /// Deletes the specified clip job resource. This method only deletes the clip
-        /// job and does not delete the VOD clip stored in the GCS.
+        /// job and does not delete the VOD clip stored in Cloud Storage.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the clip resource, in the form of:
@@ -3754,7 +4552,7 @@ namespace Google.Cloud.Video.LiveStream.V1
 
         /// <summary>
         /// Deletes the specified clip job resource. This method only deletes the clip
-        /// job and does not delete the VOD clip stored in the GCS.
+        /// job and does not delete the VOD clip stored in Cloud Storage.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the clip resource, in the form of:
@@ -3764,6 +4562,739 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteClipAsync(ClipName name, st::CancellationToken cancellationToken) =>
             DeleteClipAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a DVR session with the provided unique ID in the specified channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DvrSession, OperationMetadata> CreateDvrSession(CreateDvrSessionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a DVR session with the provided unique ID in the specified channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DvrSession, OperationMetadata>> CreateDvrSessionAsync(CreateDvrSessionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a DVR session with the provided unique ID in the specified channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DvrSession, OperationMetadata>> CreateDvrSessionAsync(CreateDvrSessionRequest request, st::CancellationToken cancellationToken) =>
+            CreateDvrSessionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateDvrSession</c>.</summary>
+        public virtual lro::OperationsClient CreateDvrSessionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateDvrSession</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DvrSession, OperationMetadata> PollOnceCreateDvrSession(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DvrSession, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDvrSessionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateDvrSession</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DvrSession, OperationMetadata>> PollOnceCreateDvrSessionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DvrSession, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDvrSessionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a DVR session with the provided unique ID in the specified channel.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name, in the following form:
+        /// `projects/{project}/locations/{location}/channels/{channelId}`.
+        /// </param>
+        /// <param name="dvrSession">
+        /// Required. The resource being created
+        /// </param>
+        /// <param name="dvrSessionId">
+        /// Required. The ID of the DVR session resource to be created.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DvrSession, OperationMetadata> CreateDvrSession(string parent, DvrSession dvrSession, string dvrSessionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDvrSession(new CreateDvrSessionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                DvrSessionId = gax::GaxPreconditions.CheckNotNullOrEmpty(dvrSessionId, nameof(dvrSessionId)),
+                DvrSession = gax::GaxPreconditions.CheckNotNull(dvrSession, nameof(dvrSession)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a DVR session with the provided unique ID in the specified channel.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name, in the following form:
+        /// `projects/{project}/locations/{location}/channels/{channelId}`.
+        /// </param>
+        /// <param name="dvrSession">
+        /// Required. The resource being created
+        /// </param>
+        /// <param name="dvrSessionId">
+        /// Required. The ID of the DVR session resource to be created.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DvrSession, OperationMetadata>> CreateDvrSessionAsync(string parent, DvrSession dvrSession, string dvrSessionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDvrSessionAsync(new CreateDvrSessionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                DvrSessionId = gax::GaxPreconditions.CheckNotNullOrEmpty(dvrSessionId, nameof(dvrSessionId)),
+                DvrSession = gax::GaxPreconditions.CheckNotNull(dvrSession, nameof(dvrSession)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a DVR session with the provided unique ID in the specified channel.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name, in the following form:
+        /// `projects/{project}/locations/{location}/channels/{channelId}`.
+        /// </param>
+        /// <param name="dvrSession">
+        /// Required. The resource being created
+        /// </param>
+        /// <param name="dvrSessionId">
+        /// Required. The ID of the DVR session resource to be created.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DvrSession, OperationMetadata>> CreateDvrSessionAsync(string parent, DvrSession dvrSession, string dvrSessionId, st::CancellationToken cancellationToken) =>
+            CreateDvrSessionAsync(parent, dvrSession, dvrSessionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a DVR session with the provided unique ID in the specified channel.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name, in the following form:
+        /// `projects/{project}/locations/{location}/channels/{channelId}`.
+        /// </param>
+        /// <param name="dvrSession">
+        /// Required. The resource being created
+        /// </param>
+        /// <param name="dvrSessionId">
+        /// Required. The ID of the DVR session resource to be created.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DvrSession, OperationMetadata> CreateDvrSession(ChannelName parent, DvrSession dvrSession, string dvrSessionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDvrSession(new CreateDvrSessionRequest
+            {
+                ParentAsChannelName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DvrSessionId = gax::GaxPreconditions.CheckNotNullOrEmpty(dvrSessionId, nameof(dvrSessionId)),
+                DvrSession = gax::GaxPreconditions.CheckNotNull(dvrSession, nameof(dvrSession)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a DVR session with the provided unique ID in the specified channel.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name, in the following form:
+        /// `projects/{project}/locations/{location}/channels/{channelId}`.
+        /// </param>
+        /// <param name="dvrSession">
+        /// Required. The resource being created
+        /// </param>
+        /// <param name="dvrSessionId">
+        /// Required. The ID of the DVR session resource to be created.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DvrSession, OperationMetadata>> CreateDvrSessionAsync(ChannelName parent, DvrSession dvrSession, string dvrSessionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDvrSessionAsync(new CreateDvrSessionRequest
+            {
+                ParentAsChannelName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DvrSessionId = gax::GaxPreconditions.CheckNotNullOrEmpty(dvrSessionId, nameof(dvrSessionId)),
+                DvrSession = gax::GaxPreconditions.CheckNotNull(dvrSession, nameof(dvrSession)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a DVR session with the provided unique ID in the specified channel.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name, in the following form:
+        /// `projects/{project}/locations/{location}/channels/{channelId}`.
+        /// </param>
+        /// <param name="dvrSession">
+        /// Required. The resource being created
+        /// </param>
+        /// <param name="dvrSessionId">
+        /// Required. The ID of the DVR session resource to be created.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DvrSession, OperationMetadata>> CreateDvrSessionAsync(ChannelName parent, DvrSession dvrSession, string dvrSessionId, st::CancellationToken cancellationToken) =>
+            CreateDvrSessionAsync(parent, dvrSession, dvrSessionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns a list of all DVR sessions in the specified channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DvrSession"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDvrSessionsResponse, DvrSession> ListDvrSessions(ListDvrSessionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of all DVR sessions in the specified channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DvrSession"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDvrSessionsResponse, DvrSession> ListDvrSessionsAsync(ListDvrSessionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of all DVR sessions in the specified channel.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListDvrSessionsRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DvrSession"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDvrSessionsResponse, DvrSession> ListDvrSessions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDvrSessionsRequest request = new ListDvrSessionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDvrSessions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of all DVR sessions in the specified channel.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListDvrSessionsRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DvrSession"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDvrSessionsResponse, DvrSession> ListDvrSessionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDvrSessionsRequest request = new ListDvrSessionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDvrSessionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of all DVR sessions in the specified channel.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListDvrSessionsRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DvrSession"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDvrSessionsResponse, DvrSession> ListDvrSessions(ChannelName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDvrSessionsRequest request = new ListDvrSessionsRequest
+            {
+                ParentAsChannelName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDvrSessions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of all DVR sessions in the specified channel.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListDvrSessionsRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DvrSession"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDvrSessionsResponse, DvrSession> ListDvrSessionsAsync(ChannelName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDvrSessionsRequest request = new ListDvrSessionsRequest
+            {
+                ParentAsChannelName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDvrSessionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the specified DVR session.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DvrSession GetDvrSession(GetDvrSessionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the specified DVR session.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DvrSession> GetDvrSessionAsync(GetDvrSessionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the specified DVR session.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DvrSession> GetDvrSessionAsync(GetDvrSessionRequest request, st::CancellationToken cancellationToken) =>
+            GetDvrSessionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the specified DVR session.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource, in the following form:
+        /// `projects/{project}/locations/{location}/channels/{channelId}/dvrSessions/{dvrSessionId}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DvrSession GetDvrSession(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDvrSession(new GetDvrSessionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified DVR session.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource, in the following form:
+        /// `projects/{project}/locations/{location}/channels/{channelId}/dvrSessions/{dvrSessionId}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DvrSession> GetDvrSessionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDvrSessionAsync(new GetDvrSessionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified DVR session.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource, in the following form:
+        /// `projects/{project}/locations/{location}/channels/{channelId}/dvrSessions/{dvrSessionId}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DvrSession> GetDvrSessionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetDvrSessionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the specified DVR session.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource, in the following form:
+        /// `projects/{project}/locations/{location}/channels/{channelId}/dvrSessions/{dvrSessionId}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DvrSession GetDvrSession(DvrSessionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDvrSession(new GetDvrSessionRequest
+            {
+                DvrSessionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified DVR session.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource, in the following form:
+        /// `projects/{project}/locations/{location}/channels/{channelId}/dvrSessions/{dvrSessionId}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DvrSession> GetDvrSessionAsync(DvrSessionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDvrSessionAsync(new GetDvrSessionRequest
+            {
+                DvrSessionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the specified DVR session.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource, in the following form:
+        /// `projects/{project}/locations/{location}/channels/{channelId}/dvrSessions/{dvrSessionId}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DvrSession> GetDvrSessionAsync(DvrSessionName name, st::CancellationToken cancellationToken) =>
+            GetDvrSessionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified DVR session.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDvrSession(DeleteDvrSessionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the specified DVR session.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDvrSessionAsync(DeleteDvrSessionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes the specified DVR session.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDvrSessionAsync(DeleteDvrSessionRequest request, st::CancellationToken cancellationToken) =>
+            DeleteDvrSessionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteDvrSession</c>.</summary>
+        public virtual lro::OperationsClient DeleteDvrSessionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteDvrSession</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteDvrSession(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDvrSessionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteDvrSession</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteDvrSessionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDvrSessionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes the specified DVR session.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the event resource, in the form of:
+        /// `projects/{project}/locations/{location}/channels/{channelId}/dvrSessions/{dvrSessionId}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDvrSession(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDvrSession(new DeleteDvrSessionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified DVR session.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the event resource, in the form of:
+        /// `projects/{project}/locations/{location}/channels/{channelId}/dvrSessions/{dvrSessionId}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDvrSessionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDvrSessionAsync(new DeleteDvrSessionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified DVR session.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the event resource, in the form of:
+        /// `projects/{project}/locations/{location}/channels/{channelId}/dvrSessions/{dvrSessionId}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDvrSessionAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteDvrSessionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified DVR session.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the event resource, in the form of:
+        /// `projects/{project}/locations/{location}/channels/{channelId}/dvrSessions/{dvrSessionId}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDvrSession(DvrSessionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDvrSession(new DeleteDvrSessionRequest
+            {
+                DvrSessionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified DVR session.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the event resource, in the form of:
+        /// `projects/{project}/locations/{location}/channels/{channelId}/dvrSessions/{dvrSessionId}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDvrSessionAsync(DvrSessionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDvrSessionAsync(new DeleteDvrSessionRequest
+            {
+                DvrSessionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes the specified DVR session.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the event resource, in the form of:
+        /// `projects/{project}/locations/{location}/channels/{channelId}/dvrSessions/{dvrSessionId}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDvrSessionAsync(DvrSessionName name, st::CancellationToken cancellationToken) =>
+            DeleteDvrSessionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the specified DVR session.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DvrSession, OperationMetadata> UpdateDvrSession(UpdateDvrSessionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the specified DVR session.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DvrSession, OperationMetadata>> UpdateDvrSessionAsync(UpdateDvrSessionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the specified DVR session.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DvrSession, OperationMetadata>> UpdateDvrSessionAsync(UpdateDvrSessionRequest request, st::CancellationToken cancellationToken) =>
+            UpdateDvrSessionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateDvrSession</c>.</summary>
+        public virtual lro::OperationsClient UpdateDvrSessionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateDvrSession</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DvrSession, OperationMetadata> PollOnceUpdateDvrSession(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DvrSession, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDvrSessionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateDvrSession</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DvrSession, OperationMetadata>> PollOnceUpdateDvrSessionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DvrSession, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDvrSessionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the specified DVR session.
+        /// </summary>
+        /// <param name="dvrSession">
+        /// Required. The DVR session resource to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// DvrSession resource by the update. You can only update the following
+        /// fields:
+        /// 
+        /// * `dvrWindows`
+        /// 
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DvrSession, OperationMetadata> UpdateDvrSession(DvrSession dvrSession, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDvrSession(new UpdateDvrSessionRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                DvrSession = gax::GaxPreconditions.CheckNotNull(dvrSession, nameof(dvrSession)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the specified DVR session.
+        /// </summary>
+        /// <param name="dvrSession">
+        /// Required. The DVR session resource to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// DvrSession resource by the update. You can only update the following
+        /// fields:
+        /// 
+        /// * `dvrWindows`
+        /// 
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DvrSession, OperationMetadata>> UpdateDvrSessionAsync(DvrSession dvrSession, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDvrSessionAsync(new UpdateDvrSessionRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                DvrSession = gax::GaxPreconditions.CheckNotNull(dvrSession, nameof(dvrSession)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the specified DVR session.
+        /// </summary>
+        /// <param name="dvrSession">
+        /// Required. The DVR session resource to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// DvrSession resource by the update. You can only update the following
+        /// fields:
+        /// 
+        /// * `dvrWindows`
+        /// 
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DvrSession, OperationMetadata>> UpdateDvrSessionAsync(DvrSession dvrSession, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateDvrSessionAsync(dvrSession, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a Asset with the provided unique ID in the specified
@@ -3834,8 +5365,11 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="assetId">
         /// Required. The ID of the asset resource to be created.
-        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
-        /// could contain dashes (-) in between.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3860,8 +5394,11 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="assetId">
         /// Required. The ID of the asset resource to be created.
-        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
-        /// could contain dashes (-) in between.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3886,8 +5423,11 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="assetId">
         /// Required. The ID of the asset resource to be created.
-        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
-        /// could contain dashes (-) in between.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3907,8 +5447,11 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="assetId">
         /// Required. The ID of the asset resource to be created.
-        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
-        /// could contain dashes (-) in between.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3933,8 +5476,11 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="assetId">
         /// Required. The ID of the asset resource to be created.
-        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
-        /// could contain dashes (-) in between.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3959,8 +5505,11 @@ namespace Google.Cloud.Video.LiveStream.V1
         /// </param>
         /// <param name="assetId">
         /// Required. The ID of the asset resource to be created.
-        /// This value must be 1-63 characters, begin and end with `[a-z0-9]`,
-        /// could contain dashes (-) in between.
+        /// 
+        /// This value must be 1-63 characters, begin and end with a lower-case letter
+        /// or a number, and consist of only lower-case letters, numbers, and hyphens.
+        /// In other words, it must match the following regex:
+        /// `^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4626,6 +6175,10 @@ namespace Google.Cloud.Video.LiveStream.V1
 
         private readonly gaxgrpc::ApiCall<StopChannelRequest, lro::Operation> _callStopChannel;
 
+        private readonly gaxgrpc::ApiCall<StartDistributionRequest, lro::Operation> _callStartDistribution;
+
+        private readonly gaxgrpc::ApiCall<StopDistributionRequest, lro::Operation> _callStopDistribution;
+
         private readonly gaxgrpc::ApiCall<CreateInputRequest, lro::Operation> _callCreateInput;
 
         private readonly gaxgrpc::ApiCall<ListInputsRequest, ListInputsResponse> _callListInputs;
@@ -4635,6 +6188,8 @@ namespace Google.Cloud.Video.LiveStream.V1
         private readonly gaxgrpc::ApiCall<DeleteInputRequest, lro::Operation> _callDeleteInput;
 
         private readonly gaxgrpc::ApiCall<UpdateInputRequest, lro::Operation> _callUpdateInput;
+
+        private readonly gaxgrpc::ApiCall<PreviewInputRequest, PreviewInputResponse> _callPreviewInput;
 
         private readonly gaxgrpc::ApiCall<CreateEventRequest, Event> _callCreateEvent;
 
@@ -4651,6 +6206,16 @@ namespace Google.Cloud.Video.LiveStream.V1
         private readonly gaxgrpc::ApiCall<CreateClipRequest, lro::Operation> _callCreateClip;
 
         private readonly gaxgrpc::ApiCall<DeleteClipRequest, lro::Operation> _callDeleteClip;
+
+        private readonly gaxgrpc::ApiCall<CreateDvrSessionRequest, lro::Operation> _callCreateDvrSession;
+
+        private readonly gaxgrpc::ApiCall<ListDvrSessionsRequest, ListDvrSessionsResponse> _callListDvrSessions;
+
+        private readonly gaxgrpc::ApiCall<GetDvrSessionRequest, DvrSession> _callGetDvrSession;
+
+        private readonly gaxgrpc::ApiCall<DeleteDvrSessionRequest, lro::Operation> _callDeleteDvrSession;
+
+        private readonly gaxgrpc::ApiCall<UpdateDvrSessionRequest, lro::Operation> _callUpdateDvrSession;
 
         private readonly gaxgrpc::ApiCall<CreateAssetRequest, lro::Operation> _callCreateAsset;
 
@@ -4684,11 +6249,16 @@ namespace Google.Cloud.Video.LiveStream.V1
             UpdateChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateChannelOperationsSettings, logger);
             StartChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartChannelOperationsSettings, logger);
             StopChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StopChannelOperationsSettings, logger);
+            StartDistributionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartDistributionOperationsSettings, logger);
+            StopDistributionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StopDistributionOperationsSettings, logger);
             CreateInputOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInputOperationsSettings, logger);
             DeleteInputOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteInputOperationsSettings, logger);
             UpdateInputOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateInputOperationsSettings, logger);
             CreateClipOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateClipOperationsSettings, logger);
             DeleteClipOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteClipOperationsSettings, logger);
+            CreateDvrSessionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDvrSessionOperationsSettings, logger);
+            DeleteDvrSessionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDvrSessionOperationsSettings, logger);
+            UpdateDvrSessionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDvrSessionOperationsSettings, logger);
             CreateAssetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAssetOperationsSettings, logger);
             DeleteAssetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAssetOperationsSettings, logger);
             UpdatePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdatePoolOperationsSettings, logger);
@@ -4714,6 +6284,12 @@ namespace Google.Cloud.Video.LiveStream.V1
             _callStopChannel = clientHelper.BuildApiCall<StopChannelRequest, lro::Operation>("StopChannel", grpcClient.StopChannelAsync, grpcClient.StopChannel, effectiveSettings.StopChannelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callStopChannel);
             Modify_StopChannelApiCall(ref _callStopChannel);
+            _callStartDistribution = clientHelper.BuildApiCall<StartDistributionRequest, lro::Operation>("StartDistribution", grpcClient.StartDistributionAsync, grpcClient.StartDistribution, effectiveSettings.StartDistributionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callStartDistribution);
+            Modify_StartDistributionApiCall(ref _callStartDistribution);
+            _callStopDistribution = clientHelper.BuildApiCall<StopDistributionRequest, lro::Operation>("StopDistribution", grpcClient.StopDistributionAsync, grpcClient.StopDistribution, effectiveSettings.StopDistributionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callStopDistribution);
+            Modify_StopDistributionApiCall(ref _callStopDistribution);
             _callCreateInput = clientHelper.BuildApiCall<CreateInputRequest, lro::Operation>("CreateInput", grpcClient.CreateInputAsync, grpcClient.CreateInput, effectiveSettings.CreateInputSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateInput);
             Modify_CreateInputApiCall(ref _callCreateInput);
@@ -4729,6 +6305,9 @@ namespace Google.Cloud.Video.LiveStream.V1
             _callUpdateInput = clientHelper.BuildApiCall<UpdateInputRequest, lro::Operation>("UpdateInput", grpcClient.UpdateInputAsync, grpcClient.UpdateInput, effectiveSettings.UpdateInputSettings).WithGoogleRequestParam("input.name", request => request.Input?.Name);
             Modify_ApiCall(ref _callUpdateInput);
             Modify_UpdateInputApiCall(ref _callUpdateInput);
+            _callPreviewInput = clientHelper.BuildApiCall<PreviewInputRequest, PreviewInputResponse>("PreviewInput", grpcClient.PreviewInputAsync, grpcClient.PreviewInput, effectiveSettings.PreviewInputSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callPreviewInput);
+            Modify_PreviewInputApiCall(ref _callPreviewInput);
             _callCreateEvent = clientHelper.BuildApiCall<CreateEventRequest, Event>("CreateEvent", grpcClient.CreateEventAsync, grpcClient.CreateEvent, effectiveSettings.CreateEventSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateEvent);
             Modify_CreateEventApiCall(ref _callCreateEvent);
@@ -4753,6 +6332,21 @@ namespace Google.Cloud.Video.LiveStream.V1
             _callDeleteClip = clientHelper.BuildApiCall<DeleteClipRequest, lro::Operation>("DeleteClip", grpcClient.DeleteClipAsync, grpcClient.DeleteClip, effectiveSettings.DeleteClipSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteClip);
             Modify_DeleteClipApiCall(ref _callDeleteClip);
+            _callCreateDvrSession = clientHelper.BuildApiCall<CreateDvrSessionRequest, lro::Operation>("CreateDvrSession", grpcClient.CreateDvrSessionAsync, grpcClient.CreateDvrSession, effectiveSettings.CreateDvrSessionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateDvrSession);
+            Modify_CreateDvrSessionApiCall(ref _callCreateDvrSession);
+            _callListDvrSessions = clientHelper.BuildApiCall<ListDvrSessionsRequest, ListDvrSessionsResponse>("ListDvrSessions", grpcClient.ListDvrSessionsAsync, grpcClient.ListDvrSessions, effectiveSettings.ListDvrSessionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListDvrSessions);
+            Modify_ListDvrSessionsApiCall(ref _callListDvrSessions);
+            _callGetDvrSession = clientHelper.BuildApiCall<GetDvrSessionRequest, DvrSession>("GetDvrSession", grpcClient.GetDvrSessionAsync, grpcClient.GetDvrSession, effectiveSettings.GetDvrSessionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetDvrSession);
+            Modify_GetDvrSessionApiCall(ref _callGetDvrSession);
+            _callDeleteDvrSession = clientHelper.BuildApiCall<DeleteDvrSessionRequest, lro::Operation>("DeleteDvrSession", grpcClient.DeleteDvrSessionAsync, grpcClient.DeleteDvrSession, effectiveSettings.DeleteDvrSessionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteDvrSession);
+            Modify_DeleteDvrSessionApiCall(ref _callDeleteDvrSession);
+            _callUpdateDvrSession = clientHelper.BuildApiCall<UpdateDvrSessionRequest, lro::Operation>("UpdateDvrSession", grpcClient.UpdateDvrSessionAsync, grpcClient.UpdateDvrSession, effectiveSettings.UpdateDvrSessionSettings).WithGoogleRequestParam("dvr_session.name", request => request.DvrSession?.Name);
+            Modify_ApiCall(ref _callUpdateDvrSession);
+            Modify_UpdateDvrSessionApiCall(ref _callUpdateDvrSession);
             _callCreateAsset = clientHelper.BuildApiCall<CreateAssetRequest, lro::Operation>("CreateAsset", grpcClient.CreateAssetAsync, grpcClient.CreateAsset, effectiveSettings.CreateAssetSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateAsset);
             Modify_CreateAssetApiCall(ref _callCreateAsset);
@@ -4790,6 +6384,10 @@ namespace Google.Cloud.Video.LiveStream.V1
 
         partial void Modify_StopChannelApiCall(ref gaxgrpc::ApiCall<StopChannelRequest, lro::Operation> call);
 
+        partial void Modify_StartDistributionApiCall(ref gaxgrpc::ApiCall<StartDistributionRequest, lro::Operation> call);
+
+        partial void Modify_StopDistributionApiCall(ref gaxgrpc::ApiCall<StopDistributionRequest, lro::Operation> call);
+
         partial void Modify_CreateInputApiCall(ref gaxgrpc::ApiCall<CreateInputRequest, lro::Operation> call);
 
         partial void Modify_ListInputsApiCall(ref gaxgrpc::ApiCall<ListInputsRequest, ListInputsResponse> call);
@@ -4799,6 +6397,8 @@ namespace Google.Cloud.Video.LiveStream.V1
         partial void Modify_DeleteInputApiCall(ref gaxgrpc::ApiCall<DeleteInputRequest, lro::Operation> call);
 
         partial void Modify_UpdateInputApiCall(ref gaxgrpc::ApiCall<UpdateInputRequest, lro::Operation> call);
+
+        partial void Modify_PreviewInputApiCall(ref gaxgrpc::ApiCall<PreviewInputRequest, PreviewInputResponse> call);
 
         partial void Modify_CreateEventApiCall(ref gaxgrpc::ApiCall<CreateEventRequest, Event> call);
 
@@ -4815,6 +6415,16 @@ namespace Google.Cloud.Video.LiveStream.V1
         partial void Modify_CreateClipApiCall(ref gaxgrpc::ApiCall<CreateClipRequest, lro::Operation> call);
 
         partial void Modify_DeleteClipApiCall(ref gaxgrpc::ApiCall<DeleteClipRequest, lro::Operation> call);
+
+        partial void Modify_CreateDvrSessionApiCall(ref gaxgrpc::ApiCall<CreateDvrSessionRequest, lro::Operation> call);
+
+        partial void Modify_ListDvrSessionsApiCall(ref gaxgrpc::ApiCall<ListDvrSessionsRequest, ListDvrSessionsResponse> call);
+
+        partial void Modify_GetDvrSessionApiCall(ref gaxgrpc::ApiCall<GetDvrSessionRequest, DvrSession> call);
+
+        partial void Modify_DeleteDvrSessionApiCall(ref gaxgrpc::ApiCall<DeleteDvrSessionRequest, lro::Operation> call);
+
+        partial void Modify_UpdateDvrSessionApiCall(ref gaxgrpc::ApiCall<UpdateDvrSessionRequest, lro::Operation> call);
 
         partial void Modify_CreateAssetApiCall(ref gaxgrpc::ApiCall<CreateAssetRequest, lro::Operation> call);
 
@@ -4850,6 +6460,10 @@ namespace Google.Cloud.Video.LiveStream.V1
 
         partial void Modify_StopChannelRequest(ref StopChannelRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_StartDistributionRequest(ref StartDistributionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StopDistributionRequest(ref StopDistributionRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_CreateInputRequest(ref CreateInputRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListInputsRequest(ref ListInputsRequest request, ref gaxgrpc::CallSettings settings);
@@ -4859,6 +6473,8 @@ namespace Google.Cloud.Video.LiveStream.V1
         partial void Modify_DeleteInputRequest(ref DeleteInputRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateInputRequest(ref UpdateInputRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PreviewInputRequest(ref PreviewInputRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateEventRequest(ref CreateEventRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4875,6 +6491,16 @@ namespace Google.Cloud.Video.LiveStream.V1
         partial void Modify_CreateClipRequest(ref CreateClipRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteClipRequest(ref DeleteClipRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateDvrSessionRequest(ref CreateDvrSessionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListDvrSessionsRequest(ref ListDvrSessionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetDvrSessionRequest(ref GetDvrSessionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteDvrSessionRequest(ref DeleteDvrSessionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateDvrSessionRequest(ref UpdateDvrSessionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateAssetRequest(ref CreateAssetRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5077,6 +6703,62 @@ namespace Google.Cloud.Video.LiveStream.V1
             return new lro::Operation<ChannelOperationResponse, OperationMetadata>(await _callStopChannel.Async(request, callSettings).ConfigureAwait(false), StopChannelOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>StartDistribution</c>.</summary>
+        public override lro::OperationsClient StartDistributionOperationsClient { get; }
+
+        /// <summary>
+        /// Starts distribution which delivers outputs to the destination indicated by
+        /// the Distribution configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ChannelOperationResponse, OperationMetadata> StartDistribution(StartDistributionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StartDistributionRequest(ref request, ref callSettings);
+            return new lro::Operation<ChannelOperationResponse, OperationMetadata>(_callStartDistribution.Sync(request, callSettings), StartDistributionOperationsClient);
+        }
+
+        /// <summary>
+        /// Starts distribution which delivers outputs to the destination indicated by
+        /// the Distribution configuration.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ChannelOperationResponse, OperationMetadata>> StartDistributionAsync(StartDistributionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StartDistributionRequest(ref request, ref callSettings);
+            return new lro::Operation<ChannelOperationResponse, OperationMetadata>(await _callStartDistribution.Async(request, callSettings).ConfigureAwait(false), StartDistributionOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>StopDistribution</c>.</summary>
+        public override lro::OperationsClient StopDistributionOperationsClient { get; }
+
+        /// <summary>
+        /// Stops the specified distribution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ChannelOperationResponse, OperationMetadata> StopDistribution(StopDistributionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StopDistributionRequest(ref request, ref callSettings);
+            return new lro::Operation<ChannelOperationResponse, OperationMetadata>(_callStopDistribution.Sync(request, callSettings), StopDistributionOperationsClient);
+        }
+
+        /// <summary>
+        /// Stops the specified distribution.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ChannelOperationResponse, OperationMetadata>> StopDistributionAsync(StopDistributionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StopDistributionRequest(ref request, ref callSettings);
+            return new lro::Operation<ChannelOperationResponse, OperationMetadata>(await _callStopDistribution.Async(request, callSettings).ConfigureAwait(false), StopDistributionOperationsClient);
+        }
+
         /// <summary>The long-running operations client for <c>CreateInput</c>.</summary>
         public override lro::OperationsClient CreateInputOperationsClient { get; }
 
@@ -5204,6 +6886,30 @@ namespace Google.Cloud.Video.LiveStream.V1
         {
             Modify_UpdateInputRequest(ref request, ref callSettings);
             return new lro::Operation<Input, OperationMetadata>(await _callUpdateInput.Async(request, callSettings).ConfigureAwait(false), UpdateInputOperationsClient);
+        }
+
+        /// <summary>
+        /// Preview the streaming content of the specified input.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PreviewInputResponse PreviewInput(PreviewInputRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PreviewInputRequest(ref request, ref callSettings);
+            return _callPreviewInput.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Preview the streaming content of the specified input.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PreviewInputResponse> PreviewInputAsync(PreviewInputRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PreviewInputRequest(ref request, ref callSettings);
+            return _callPreviewInput.Async(request, callSettings);
         }
 
         /// <summary>
@@ -5382,7 +7088,7 @@ namespace Google.Cloud.Video.LiveStream.V1
 
         /// <summary>
         /// Deletes the specified clip job resource. This method only deletes the clip
-        /// job and does not delete the VOD clip stored in the GCS.
+        /// job and does not delete the VOD clip stored in Cloud Storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5395,7 +7101,7 @@ namespace Google.Cloud.Video.LiveStream.V1
 
         /// <summary>
         /// Deletes the specified clip job resource. This method only deletes the clip
-        /// job and does not delete the VOD clip stored in the GCS.
+        /// job and does not delete the VOD clip stored in Cloud Storage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5404,6 +7110,135 @@ namespace Google.Cloud.Video.LiveStream.V1
         {
             Modify_DeleteClipRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteClip.Async(request, callSettings).ConfigureAwait(false), DeleteClipOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateDvrSession</c>.</summary>
+        public override lro::OperationsClient CreateDvrSessionOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a DVR session with the provided unique ID in the specified channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DvrSession, OperationMetadata> CreateDvrSession(CreateDvrSessionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDvrSessionRequest(ref request, ref callSettings);
+            return new lro::Operation<DvrSession, OperationMetadata>(_callCreateDvrSession.Sync(request, callSettings), CreateDvrSessionOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a DVR session with the provided unique ID in the specified channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DvrSession, OperationMetadata>> CreateDvrSessionAsync(CreateDvrSessionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDvrSessionRequest(ref request, ref callSettings);
+            return new lro::Operation<DvrSession, OperationMetadata>(await _callCreateDvrSession.Async(request, callSettings).ConfigureAwait(false), CreateDvrSessionOperationsClient);
+        }
+
+        /// <summary>
+        /// Returns a list of all DVR sessions in the specified channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DvrSession"/> resources.</returns>
+        public override gax::PagedEnumerable<ListDvrSessionsResponse, DvrSession> ListDvrSessions(ListDvrSessionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDvrSessionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListDvrSessionsRequest, ListDvrSessionsResponse, DvrSession>(_callListDvrSessions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of all DVR sessions in the specified channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DvrSession"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListDvrSessionsResponse, DvrSession> ListDvrSessionsAsync(ListDvrSessionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDvrSessionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDvrSessionsRequest, ListDvrSessionsResponse, DvrSession>(_callListDvrSessions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the specified DVR session.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DvrSession GetDvrSession(GetDvrSessionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDvrSessionRequest(ref request, ref callSettings);
+            return _callGetDvrSession.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the specified DVR session.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DvrSession> GetDvrSessionAsync(GetDvrSessionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDvrSessionRequest(ref request, ref callSettings);
+            return _callGetDvrSession.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteDvrSession</c>.</summary>
+        public override lro::OperationsClient DeleteDvrSessionOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes the specified DVR session.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteDvrSession(DeleteDvrSessionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDvrSessionRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteDvrSession.Sync(request, callSettings), DeleteDvrSessionOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes the specified DVR session.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDvrSessionAsync(DeleteDvrSessionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDvrSessionRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteDvrSession.Async(request, callSettings).ConfigureAwait(false), DeleteDvrSessionOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateDvrSession</c>.</summary>
+        public override lro::OperationsClient UpdateDvrSessionOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the specified DVR session.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DvrSession, OperationMetadata> UpdateDvrSession(UpdateDvrSessionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDvrSessionRequest(ref request, ref callSettings);
+            return new lro::Operation<DvrSession, OperationMetadata>(_callUpdateDvrSession.Sync(request, callSettings), UpdateDvrSessionOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the specified DVR session.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DvrSession, OperationMetadata>> UpdateDvrSessionAsync(UpdateDvrSessionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDvrSessionRequest(ref request, ref callSettings);
+            return new lro::Operation<DvrSession, OperationMetadata>(await _callUpdateDvrSession.Async(request, callSettings).ConfigureAwait(false), UpdateDvrSessionOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>CreateAsset</c>.</summary>
@@ -5578,6 +7413,10 @@ namespace Google.Cloud.Video.LiveStream.V1
     {
     }
 
+    public partial class ListDvrSessionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListAssetsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -5610,6 +7449,14 @@ namespace Google.Cloud.Video.LiveStream.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Clip> GetEnumerator() => Clips.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListDvrSessionsResponse : gaxgrpc::IPageResponse<DvrSession>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<DvrSession> GetEnumerator() => DvrSessions.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

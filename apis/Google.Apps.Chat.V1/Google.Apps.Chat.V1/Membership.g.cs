@@ -29,7 +29,7 @@ namespace Google.Apps.Chat.V1 {
             "L2FwaS9yZXNvdXJjZS5wcm90bxoaZ29vZ2xlL2NoYXQvdjEvZ3JvdXAucHJv",
             "dG8aGWdvb2dsZS9jaGF0L3YxL3VzZXIucHJvdG8aIGdvb2dsZS9wcm90b2J1",
             "Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
-            "LnByb3RvIvoECgpNZW1iZXJzaGlwEhEKBG5hbWUYASABKAlCA+BBCBI+CgVz",
+            "LnByb3RvIpYFCgpNZW1iZXJzaGlwEhEKBG5hbWUYASABKAlCA+BBCBI+CgVz",
             "dGF0ZRgCIAEoDjIqLmdvb2dsZS5jaGF0LnYxLk1lbWJlcnNoaXAuTWVtYmVy",
             "c2hpcFN0YXRlQgPgQQMSPAoEcm9sZRgHIAEoDjIpLmdvb2dsZS5jaGF0LnYx",
             "Lk1lbWJlcnNoaXAuTWVtYmVyc2hpcFJvbGVCA+BBARIrCgZtZW1iZXIYAyAB",
@@ -39,35 +39,35 @@ namespace Google.Apps.Chat.V1 {
             "QQXgQQESNwoLZGVsZXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYu",
             "VGltZXN0YW1wQgbgQQXgQQEiXgoPTWVtYmVyc2hpcFN0YXRlEiAKHE1FTUJF",
             "UlNISVBfU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZKT0lORUQQARILCgdJTlZJ",
-            "VEVEEAISEAoMTk9UX0FfTUVNQkVSEAMiVAoOTWVtYmVyc2hpcFJvbGUSHwob",
+            "VEVEEAISEAoMTk9UX0FfTUVNQkVSEAMicAoOTWVtYmVyc2hpcFJvbGUSHwob",
             "TUVNQkVSU0hJUF9ST0xFX1VOU1BFQ0lGSUVEEAASDwoLUk9MRV9NRU1CRVIQ",
-            "ARIQCgxST0xFX01BTkFHRVIQAjpE6kFBCh5jaGF0Lmdvb2dsZWFwaXMuY29t",
-            "L01lbWJlcnNoaXASH3NwYWNlcy97c3BhY2V9L21lbWJlcnMve21lbWJlcn1C",
-            "DAoKbWVtYmVyVHlwZSKlAQoXQ3JlYXRlTWVtYmVyc2hpcFJlcXVlc3QSNgoG",
-            "cGFyZW50GAEgASgJQibgQQL6QSASHmNoYXQuZ29vZ2xlYXBpcy5jb20vTWVt",
-            "YmVyc2hpcBIzCgptZW1iZXJzaGlwGAIgASgLMhouZ29vZ2xlLmNoYXQudjEu",
-            "TWVtYmVyc2hpcEID4EECEh0KEHVzZV9hZG1pbl9hY2Nlc3MYBSABKAhCA+BB",
-            "ASKjAQoXVXBkYXRlTWVtYmVyc2hpcFJlcXVlc3QSMwoKbWVtYmVyc2hpcBgB",
-            "IAEoCzIaLmdvb2dsZS5jaGF0LnYxLk1lbWJlcnNoaXBCA+BBAhI0Cgt1cGRh",
-            "dGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BB",
-            "AhIdChB1c2VfYWRtaW5fYWNjZXNzGAMgASgIQgPgQQEi6gEKFkxpc3RNZW1i",
-            "ZXJzaGlwc1JlcXVlc3QSNgoGcGFyZW50GAEgASgJQibgQQL6QSASHmNoYXQu",
-            "Z29vZ2xlYXBpcy5jb20vTWVtYmVyc2hpcBIWCglwYWdlX3NpemUYAiABKAVC",
-            "A+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAUgASgJ",
-            "QgPgQQESGAoLc2hvd19ncm91cHMYBiABKAhCA+BBARIZCgxzaG93X2ludml0",
-            "ZWQYByABKAhCA+BBARIdChB1c2VfYWRtaW5fYWNjZXNzGAggASgIQgPgQQEi",
-            "aAoXTGlzdE1lbWJlcnNoaXBzUmVzcG9uc2USNAoLbWVtYmVyc2hpcHMYASAD",
-            "KAsyGi5nb29nbGUuY2hhdC52MS5NZW1iZXJzaGlwQgPgQQYSFwoPbmV4dF9w",
-            "YWdlX3Rva2VuGAIgASgJImsKFEdldE1lbWJlcnNoaXBSZXF1ZXN0EjQKBG5h",
-            "bWUYASABKAlCJuBBAvpBIAoeY2hhdC5nb29nbGVhcGlzLmNvbS9NZW1iZXJz",
-            "aGlwEh0KEHVzZV9hZG1pbl9hY2Nlc3MYAyABKAhCA+BBASJuChdEZWxldGVN",
-            "ZW1iZXJzaGlwUmVxdWVzdBI0CgRuYW1lGAEgASgJQibgQQL6QSAKHmNoYXQu",
-            "Z29vZ2xlYXBpcy5jb20vTWVtYmVyc2hpcBIdChB1c2VfYWRtaW5fYWNjZXNz",
-            "GAIgASgIQgPgQQFCqAEKEmNvbS5nb29nbGUuY2hhdC52MUIPTWVtYmVyc2hp",
-            "cFByb3RvUAFaLGNsb3VkLmdvb2dsZS5jb20vZ28vY2hhdC9hcGl2MS9jaGF0",
-            "cGI7Y2hhdHBiogILRFlOQVBJUHJvdG+qAhNHb29nbGUuQXBwcy5DaGF0LlYx",
-            "ygITR29vZ2xlXEFwcHNcQ2hhdFxWMeoCFkdvb2dsZTo6QXBwczo6Q2hhdDo6",
-            "VjFiBnByb3RvMw=="));
+            "ARIQCgxST0xFX01BTkFHRVIQAhIaChZST0xFX0FTU0lTVEFOVF9NQU5BR0VS",
+            "EAQ6ROpBQQoeY2hhdC5nb29nbGVhcGlzLmNvbS9NZW1iZXJzaGlwEh9zcGFj",
+            "ZXMve3NwYWNlfS9tZW1iZXJzL3ttZW1iZXJ9QgwKCm1lbWJlclR5cGUipQEK",
+            "F0NyZWF0ZU1lbWJlcnNoaXBSZXF1ZXN0EjYKBnBhcmVudBgBIAEoCUIm4EEC",
+            "+kEgEh5jaGF0Lmdvb2dsZWFwaXMuY29tL01lbWJlcnNoaXASMwoKbWVtYmVy",
+            "c2hpcBgCIAEoCzIaLmdvb2dsZS5jaGF0LnYxLk1lbWJlcnNoaXBCA+BBAhId",
+            "ChB1c2VfYWRtaW5fYWNjZXNzGAUgASgIQgPgQQEiowEKF1VwZGF0ZU1lbWJl",
+            "cnNoaXBSZXF1ZXN0EjMKCm1lbWJlcnNoaXAYASABKAsyGi5nb29nbGUuY2hh",
+            "dC52MS5NZW1iZXJzaGlwQgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQISHQoQdXNlX2FkbWluX2Fj",
+            "Y2VzcxgDIAEoCEID4EEBIuoBChZMaXN0TWVtYmVyc2hpcHNSZXF1ZXN0EjYK",
+            "BnBhcmVudBgBIAEoCUIm4EEC+kEgEh5jaGF0Lmdvb2dsZWFwaXMuY29tL01l",
+            "bWJlcnNoaXASFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tl",
+            "bhgDIAEoCUID4EEBEhMKBmZpbHRlchgFIAEoCUID4EEBEhgKC3Nob3dfZ3Jv",
+            "dXBzGAYgASgIQgPgQQESGQoMc2hvd19pbnZpdGVkGAcgASgIQgPgQQESHQoQ",
+            "dXNlX2FkbWluX2FjY2VzcxgIIAEoCEID4EEBImgKF0xpc3RNZW1iZXJzaGlw",
+            "c1Jlc3BvbnNlEjQKC21lbWJlcnNoaXBzGAEgAygLMhouZ29vZ2xlLmNoYXQu",
+            "djEuTWVtYmVyc2hpcEID4EEGEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJr",
+            "ChRHZXRNZW1iZXJzaGlwUmVxdWVzdBI0CgRuYW1lGAEgASgJQibgQQL6QSAK",
+            "HmNoYXQuZ29vZ2xlYXBpcy5jb20vTWVtYmVyc2hpcBIdChB1c2VfYWRtaW5f",
+            "YWNjZXNzGAMgASgIQgPgQQEibgoXRGVsZXRlTWVtYmVyc2hpcFJlcXVlc3QS",
+            "NAoEbmFtZRgBIAEoCUIm4EEC+kEgCh5jaGF0Lmdvb2dsZWFwaXMuY29tL01l",
+            "bWJlcnNoaXASHQoQdXNlX2FkbWluX2FjY2VzcxgCIAEoCEID4EEBQqgBChJj",
+            "b20uZ29vZ2xlLmNoYXQudjFCD01lbWJlcnNoaXBQcm90b1ABWixjbG91ZC5n",
+            "b29nbGUuY29tL2dvL2NoYXQvYXBpdjEvY2hhdHBiO2NoYXRwYqICC0RZTkFQ",
+            "SVByb3RvqgITR29vZ2xlLkFwcHMuQ2hhdC5WMcoCE0dvb2dsZVxBcHBzXENo",
+            "YXRcVjHqAhZHb29nbGU6OkFwcHM6OkNoYXQ6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.GroupReflection.Descriptor, global::Google.Apps.Chat.V1.UserReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -655,18 +655,69 @@ namespace Google.Apps.Chat.V1 {
         /// </summary>
         [pbr::OriginalName("MEMBERSHIP_ROLE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// A member of the space. The user has basic permissions, like sending
-        /// messages to the space. In 1:1 and unnamed group conversations, everyone
+        /// A member of the space. In the Chat UI, this role is called Member.
+        ///
+        /// The user has basic permissions, like sending
+        /// messages to the space.
+        /// Managers and owners can grant members additional permissions in a space,
+        /// including:
+        ///
+        /// - Add or remove members.
+        /// - Modify space details.
+        /// - Turn history on or off.
+        /// - Mention everyone in the space with `@all`.
+        /// - Manage Chat apps and webhooks installed in the space.
+        ///
+        /// In direct messages and unnamed group conversations, everyone
         /// has this role.
         /// </summary>
         [pbr::OriginalName("ROLE_MEMBER")] RoleMember = 1,
         /// <summary>
-        /// A space manager. The user has all basic permissions plus administrative
-        /// permissions that let them manage the space, like adding or removing
-        /// members. Only supported in
-        /// [SpaceType.SPACE][google.chat.v1.Space.SpaceType].
+        /// A space owner. In the Chat UI, this role is called Owner.
+        ///
+        /// The user has the complete set of space permissions to manage the space,
+        /// including:
+        ///
+        /// - Change the role of other members in the space to member, manager, or
+        /// owner.
+        /// - Delete the space.
+        ///
+        /// Only supported in
+        /// [SpaceType.SPACE][google.chat.v1.Space.SpaceType] (named spaces).
+        ///
+        /// To learn more, see
+        /// [Learn more about your role as a space
+        /// owner or manager](https://support.google.com/chat/answer/11833441).
         /// </summary>
         [pbr::OriginalName("ROLE_MANAGER")] RoleManager = 2,
+        /// <summary>
+        /// A space manager. In the Chat UI, this role is called Manager.
+        ///
+        /// The user has all basic permissions of `ROLE_MEMBER`,
+        /// and can be granted a subset of administrative permissions by an owner.
+        /// By default, managers have all the permissions of an owner except for the
+        /// ability to:
+        ///
+        /// - Delete the space.
+        /// - Make another space member an owner.
+        /// - Change an owner's role.
+        ///
+        /// By default, managers permissions include but aren't limited to:
+        ///
+        /// - Make another member a manager.
+        /// - Delete messages in the space.
+        /// - Manage space permissions.
+        /// - Receive notifications for requests to join the space if the manager
+        ///   has the "manage members" permission in the space settings.
+        /// - Make a space discoverable.
+        ///
+        /// Only supported in
+        /// [SpaceType.SPACE][google.chat.v1.Space.SpaceType] (named spaces).
+        ///
+        /// To learn more, see
+        /// [Manage space settings](https://support.google.com/chat/answer/13340792).
+        /// </summary>
+        [pbr::OriginalName("ROLE_ASSISTANT_MANAGER")] RoleAssistantManager = 4,
       }
 
     }
@@ -762,8 +813,6 @@ namespace Google.Apps.Chat.V1 {
     /// - When [authenticating as an
     /// app](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app),
     /// the `chat.app.memberships` authorization scope is required.
-    /// Authenticating as an app is available in [Developer
-    /// Preview](https://developers.google.com/workspace/preview).
     ///
     /// - Set `user.type` to `HUMAN`, and set `user.name` with format
     /// `users/{user}`, where `{user}` can be the email address for the user. For
@@ -2370,9 +2419,13 @@ namespace Google.Apps.Chat.V1 {
     /// human users' or their own memberships. Chat apps can't delete other apps'
     /// memberships.
     ///
-    /// When deleting a human membership, requires the `chat.memberships` scope and
-    /// `spaces/{space}/members/{member}` format. You can use the email as an
-    /// alias for `{member}`. For example,
+    /// When deleting a human membership, requires the `chat.memberships` scope
+    /// with [user
+    /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+    /// or the `chat.memberships.app` scope with [app
+    /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+    /// and the `spaces/{space}/members/{member}` format.
+    /// You can use the email as an alias for `{member}`. For example,
     /// `spaces/{space}/members/example@gmail.com` where `example@gmail.com` is the
     /// email of the Google Chat user.
     ///

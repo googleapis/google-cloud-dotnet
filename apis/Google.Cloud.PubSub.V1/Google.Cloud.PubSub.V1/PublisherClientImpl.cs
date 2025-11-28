@@ -187,6 +187,22 @@ public sealed class PublisherClientImpl : PublisherClient
     private readonly CancellationTokenSource _hardStopCts;
     private readonly TaskCompletionSource<int> _shutdownTcs;
 
+    /// <summary>
+    /// The number of ordering keys that are being currently tracked by the publisher,
+    /// which may include the empty string ordering key used for unordered messages.
+    /// For testing purposes only.
+    /// </summary>
+    internal int PendingKeysCount
+    {
+        get
+        {
+            lock(_lock)
+            {
+                return _keyedState.Count;
+            }
+        }
+    }
+
     /// <inheritdoc/>
     public override TopicName TopicName { get; }
 
@@ -534,6 +550,17 @@ public sealed class PublisherClientImpl : PublisherClient
                 }
                 // Trigger a new send, if there is any more data ready to send.
                 TriggerSend();
+
+                // For ordered messages we store the state on a dictionary by the ordering key.
+                // Ordering keys are usually short lived, so we remove states from the dictionary that have no pending messages,
+                // to avoid unbounded memory consumption.
+                // If messages for a removed key are published again, the key and its state will be added back to the dictionary,
+                // as if it were a new key.
+                // Note that if unordered messages have been sent the state dictionary will forever contain the entry with empty string as a key.
+                if (state.HasOrderingKey && state.State == OrderingKeyState.Normal && batches.Count == 0)
+                {
+                    _keyedState.Remove(state.OrderingKey);
+                }
             }
             postLockAction();
         }

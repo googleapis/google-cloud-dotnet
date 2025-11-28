@@ -485,7 +485,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         // See [RunQueryLazily](ref) for a synchronous example.
         // End see-also
 
-        [Fact]
+        [Fact(Skip = "b/457968834")]
         public void Lookup()
         {
             string projectId = _fixture.ProjectId;

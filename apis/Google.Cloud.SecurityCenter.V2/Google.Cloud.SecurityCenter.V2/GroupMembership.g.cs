@@ -25,17 +25,18 @@ namespace Google.Cloud.SecurityCenter.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjVnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjIvZ3JvdXBfbWVtYmVy",
-            "c2hpcC5wcm90bxIeZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYyIr0B",
+            "c2hpcC5wcm90bxIeZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYyItgB",
             "Cg9Hcm91cE1lbWJlcnNoaXASTQoKZ3JvdXBfdHlwZRgBIAEoDjI5Lmdvb2ds",
             "ZS5jbG91ZC5zZWN1cml0eWNlbnRlci52Mi5Hcm91cE1lbWJlcnNoaXAuR3Jv",
-            "dXBUeXBlEhAKCGdyb3VwX2lkGAIgASgJIkkKCUdyb3VwVHlwZRIaChZHUk9V",
+            "dXBUeXBlEhAKCGdyb3VwX2lkGAIgASgJImQKCUdyb3VwVHlwZRIaChZHUk9V",
             "UF9UWVBFX1VOU1BFQ0lGSUVEEAASIAocR1JPVVBfVFlQRV9UT1hJQ19DT01C",
-            "SU5BVElPThABQu4BCiJjb20uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVy",
-            "LnYyQhRHcm91cE1lbWJlcnNoaXBQcm90b1ABWkpjbG91ZC5nb29nbGUuY29t",
-            "L2dvL3NlY3VyaXR5Y2VudGVyL2FwaXYyL3NlY3VyaXR5Y2VudGVycGI7c2Vj",
-            "dXJpdHljZW50ZXJwYqoCHkdvb2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5W",
-            "MsoCHkdvb2dsZVxDbG91ZFxTZWN1cml0eUNlbnRlclxWMuoCIUdvb2dsZTo6",
-            "Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMmIGcHJvdG8z"));
+            "SU5BVElPThABEhkKFUdST1VQX1RZUEVfQ0hPS0VQT0lOVBADQu4BCiJjb20u",
+            "Z29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYyQhRHcm91cE1lbWJlcnNo",
+            "aXBQcm90b1ABWkpjbG91ZC5nb29nbGUuY29tL2dvL3NlY3VyaXR5Y2VudGVy",
+            "L2FwaXYyL3NlY3VyaXR5Y2VudGVycGI7c2VjdXJpdHljZW50ZXJwYqoCHkdv",
+            "b2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5WMsoCHkdvb2dsZVxDbG91ZFxT",
+            "ZWN1cml0eUNlbnRlclxWMuoCIUdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2Vu",
+            "dGVyOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -298,6 +299,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
         /// Group represents a toxic combination.
         /// </summary>
         [pbr::OriginalName("GROUP_TYPE_TOXIC_COMBINATION")] ToxicCombination = 1,
+        /// <summary>
+        /// Group represents a chokepoint.
+        /// </summary>
+        [pbr::OriginalName("GROUP_TYPE_CHOKEPOINT")] Chokepoint = 3,
       }
 
     }

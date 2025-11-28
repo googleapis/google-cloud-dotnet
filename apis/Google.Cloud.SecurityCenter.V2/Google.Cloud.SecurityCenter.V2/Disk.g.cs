@@ -95,7 +95,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
     private string name_ = "";
     /// <summary>
     /// The name of the disk, for example,
-    /// `https://www.googleapis.com/compute/v1/projects/{project-id}/zones/{zone-id}/disks/{disk-id}`.
+    /// "https://www.googleapis.com/compute/v1/projects/{project-id}/zones/{zone-id}/disks/{disk-id}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

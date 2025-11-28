@@ -11,6 +11,1250 @@
   },
   "snippets": [
     {
+      "regionTag": "policysimulator_v1_generated_OrgPolicyViolationsPreviewService_ListOrgPolicyViolationsPreviews_sync",
+      "title": "ListOrgPolicyViolationsPreviewsRequestObject",
+      "description": "Snippet for ListOrgPolicyViolationsPreviews",
+      "file": "OrgPolicyViolationsPreviewServiceClient.ListOrgPolicyViolationsPreviewsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOrgPolicyViolationsPreviews",
+        "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient.ListOrgPolicyViolationsPreviews",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PolicySimulator.V1.ListOrgPolicyViolationsPreviewsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PolicySimulator.V1.ListOrgPolicyViolationsPreviewsResponse, Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreview>",
+        "client": {
+          "shortName": "OrgPolicyViolationsPreviewServiceClient",
+          "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient"
+        },
+        "method": {
+          "shortName": "ListOrgPolicyViolationsPreviews",
+          "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService.ListOrgPolicyViolationsPreviews",
+          "service": {
+            "shortName": "OrgPolicyViolationsPreviewService",
+            "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "policysimulator_v1_generated_OrgPolicyViolationsPreviewService_ListOrgPolicyViolationsPreviews_async",
+      "title": "ListOrgPolicyViolationsPreviewsRequestObjectAsync",
+      "description": "Snippet for ListOrgPolicyViolationsPreviewsAsync",
+      "file": "OrgPolicyViolationsPreviewServiceClient.ListOrgPolicyViolationsPreviewsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOrgPolicyViolationsPreviewsAsync",
+        "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient.ListOrgPolicyViolationsPreviewsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PolicySimulator.V1.ListOrgPolicyViolationsPreviewsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PolicySimulator.V1.ListOrgPolicyViolationsPreviewsResponse, Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreview>",
+        "client": {
+          "shortName": "OrgPolicyViolationsPreviewServiceClient",
+          "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient"
+        },
+        "method": {
+          "shortName": "ListOrgPolicyViolationsPreviews",
+          "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService.ListOrgPolicyViolationsPreviews",
+          "service": {
+            "shortName": "OrgPolicyViolationsPreviewService",
+            "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "policysimulator_v1_generated_OrgPolicyViolationsPreviewService_ListOrgPolicyViolationsPreviews_sync_flattened",
+      "title": "ListOrgPolicyViolationsPreviews",
+      "description": "Snippet for ListOrgPolicyViolationsPreviews",
+      "file": "OrgPolicyViolationsPreviewServiceClient.ListOrgPolicyViolationsPreviewsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOrgPolicyViolationsPreviews",
+        "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient.ListOrgPolicyViolationsPreviews",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PolicySimulator.V1.ListOrgPolicyViolationsPreviewsResponse, Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreview>",
+        "client": {
+          "shortName": "OrgPolicyViolationsPreviewServiceClient",
+          "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient"
+        },
+        "method": {
+          "shortName": "ListOrgPolicyViolationsPreviews",
+          "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService.ListOrgPolicyViolationsPreviews",
+          "service": {
+            "shortName": "OrgPolicyViolationsPreviewService",
+            "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "policysimulator_v1_generated_OrgPolicyViolationsPreviewService_ListOrgPolicyViolationsPreviews_async_flattened",
+      "title": "ListOrgPolicyViolationsPreviewsAsync",
+      "description": "Snippet for ListOrgPolicyViolationsPreviewsAsync",
+      "file": "OrgPolicyViolationsPreviewServiceClient.ListOrgPolicyViolationsPreviewsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOrgPolicyViolationsPreviewsAsync",
+        "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient.ListOrgPolicyViolationsPreviewsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PolicySimulator.V1.ListOrgPolicyViolationsPreviewsResponse, Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreview>",
+        "client": {
+          "shortName": "OrgPolicyViolationsPreviewServiceClient",
+          "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient"
+        },
+        "method": {
+          "shortName": "ListOrgPolicyViolationsPreviews",
+          "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService.ListOrgPolicyViolationsPreviews",
+          "service": {
+            "shortName": "OrgPolicyViolationsPreviewService",
+            "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "policysimulator_v1_generated_OrgPolicyViolationsPreviewService_ListOrgPolicyViolationsPreviews_sync_flattened_resourceNames",
+      "title": "ListOrgPolicyViolationsPreviewsResourceNames",
+      "description": "Snippet for ListOrgPolicyViolationsPreviews",
+      "file": "OrgPolicyViolationsPreviewServiceClient.ListOrgPolicyViolationsPreviewsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOrgPolicyViolationsPreviews",
+        "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient.ListOrgPolicyViolationsPreviews",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PolicySimulator.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PolicySimulator.V1.ListOrgPolicyViolationsPreviewsResponse, Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreview>",
+        "client": {
+          "shortName": "OrgPolicyViolationsPreviewServiceClient",
+          "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient"
+        },
+        "method": {
+          "shortName": "ListOrgPolicyViolationsPreviews",
+          "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService.ListOrgPolicyViolationsPreviews",
+          "service": {
+            "shortName": "OrgPolicyViolationsPreviewService",
+            "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "policysimulator_v1_generated_OrgPolicyViolationsPreviewService_ListOrgPolicyViolationsPreviews_async_flattened_resourceNames",
+      "title": "ListOrgPolicyViolationsPreviewsResourceNamesAsync",
+      "description": "Snippet for ListOrgPolicyViolationsPreviewsAsync",
+      "file": "OrgPolicyViolationsPreviewServiceClient.ListOrgPolicyViolationsPreviewsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOrgPolicyViolationsPreviewsAsync",
+        "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient.ListOrgPolicyViolationsPreviewsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PolicySimulator.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PolicySimulator.V1.ListOrgPolicyViolationsPreviewsResponse, Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreview>",
+        "client": {
+          "shortName": "OrgPolicyViolationsPreviewServiceClient",
+          "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient"
+        },
+        "method": {
+          "shortName": "ListOrgPolicyViolationsPreviews",
+          "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService.ListOrgPolicyViolationsPreviews",
+          "service": {
+            "shortName": "OrgPolicyViolationsPreviewService",
+            "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "policysimulator_v1_generated_OrgPolicyViolationsPreviewService_GetOrgPolicyViolationsPreview_sync",
+      "title": "GetOrgPolicyViolationsPreviewRequestObject",
+      "description": "Snippet for GetOrgPolicyViolationsPreview",
+      "file": "OrgPolicyViolationsPreviewServiceClient.GetOrgPolicyViolationsPreviewRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetOrgPolicyViolationsPreview",
+        "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient.GetOrgPolicyViolationsPreview",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PolicySimulator.V1.GetOrgPolicyViolationsPreviewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreview",
+        "client": {
+          "shortName": "OrgPolicyViolationsPreviewServiceClient",
+          "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient"
+        },
+        "method": {
+          "shortName": "GetOrgPolicyViolationsPreview",
+          "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService.GetOrgPolicyViolationsPreview",
+          "service": {
+            "shortName": "OrgPolicyViolationsPreviewService",
+            "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "policysimulator_v1_generated_OrgPolicyViolationsPreviewService_GetOrgPolicyViolationsPreview_async",
+      "title": "GetOrgPolicyViolationsPreviewRequestObjectAsync",
+      "description": "Snippet for GetOrgPolicyViolationsPreviewAsync",
+      "file": "OrgPolicyViolationsPreviewServiceClient.GetOrgPolicyViolationsPreviewRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetOrgPolicyViolationsPreviewAsync",
+        "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient.GetOrgPolicyViolationsPreviewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PolicySimulator.V1.GetOrgPolicyViolationsPreviewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreview>",
+        "client": {
+          "shortName": "OrgPolicyViolationsPreviewServiceClient",
+          "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient"
+        },
+        "method": {
+          "shortName": "GetOrgPolicyViolationsPreview",
+          "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService.GetOrgPolicyViolationsPreview",
+          "service": {
+            "shortName": "OrgPolicyViolationsPreviewService",
+            "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "policysimulator_v1_generated_OrgPolicyViolationsPreviewService_GetOrgPolicyViolationsPreview_sync_flattened",
+      "title": "GetOrgPolicyViolationsPreview",
+      "description": "Snippet for GetOrgPolicyViolationsPreview",
+      "file": "OrgPolicyViolationsPreviewServiceClient.GetOrgPolicyViolationsPreviewSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetOrgPolicyViolationsPreview",
+        "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient.GetOrgPolicyViolationsPreview",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreview",
+        "client": {
+          "shortName": "OrgPolicyViolationsPreviewServiceClient",
+          "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient"
+        },
+        "method": {
+          "shortName": "GetOrgPolicyViolationsPreview",
+          "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService.GetOrgPolicyViolationsPreview",
+          "service": {
+            "shortName": "OrgPolicyViolationsPreviewService",
+            "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "policysimulator_v1_generated_OrgPolicyViolationsPreviewService_GetOrgPolicyViolationsPreview_async_flattened",
+      "title": "GetOrgPolicyViolationsPreviewAsync",
+      "description": "Snippet for GetOrgPolicyViolationsPreviewAsync",
+      "file": "OrgPolicyViolationsPreviewServiceClient.GetOrgPolicyViolationsPreviewAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetOrgPolicyViolationsPreviewAsync",
+        "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient.GetOrgPolicyViolationsPreviewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreview>",
+        "client": {
+          "shortName": "OrgPolicyViolationsPreviewServiceClient",
+          "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient"
+        },
+        "method": {
+          "shortName": "GetOrgPolicyViolationsPreview",
+          "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService.GetOrgPolicyViolationsPreview",
+          "service": {
+            "shortName": "OrgPolicyViolationsPreviewService",
+            "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "policysimulator_v1_generated_OrgPolicyViolationsPreviewService_GetOrgPolicyViolationsPreview_sync_flattened_resourceNames",
+      "title": "GetOrgPolicyViolationsPreviewResourceNames",
+      "description": "Snippet for GetOrgPolicyViolationsPreview",
+      "file": "OrgPolicyViolationsPreviewServiceClient.GetOrgPolicyViolationsPreviewResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetOrgPolicyViolationsPreview",
+        "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient.GetOrgPolicyViolationsPreview",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreview",
+        "client": {
+          "shortName": "OrgPolicyViolationsPreviewServiceClient",
+          "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient"
+        },
+        "method": {
+          "shortName": "GetOrgPolicyViolationsPreview",
+          "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService.GetOrgPolicyViolationsPreview",
+          "service": {
+            "shortName": "OrgPolicyViolationsPreviewService",
+            "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "policysimulator_v1_generated_OrgPolicyViolationsPreviewService_GetOrgPolicyViolationsPreview_async_flattened_resourceNames",
+      "title": "GetOrgPolicyViolationsPreviewResourceNamesAsync",
+      "description": "Snippet for GetOrgPolicyViolationsPreviewAsync",
+      "file": "OrgPolicyViolationsPreviewServiceClient.GetOrgPolicyViolationsPreviewResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetOrgPolicyViolationsPreviewAsync",
+        "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient.GetOrgPolicyViolationsPreviewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreview>",
+        "client": {
+          "shortName": "OrgPolicyViolationsPreviewServiceClient",
+          "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient"
+        },
+        "method": {
+          "shortName": "GetOrgPolicyViolationsPreview",
+          "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService.GetOrgPolicyViolationsPreview",
+          "service": {
+            "shortName": "OrgPolicyViolationsPreviewService",
+            "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "policysimulator_v1_generated_OrgPolicyViolationsPreviewService_CreateOrgPolicyViolationsPreview_sync",
+      "title": "CreateOrgPolicyViolationsPreviewRequestObject",
+      "description": "Snippet for CreateOrgPolicyViolationsPreview",
+      "file": "OrgPolicyViolationsPreviewServiceClient.CreateOrgPolicyViolationsPreviewRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOrgPolicyViolationsPreview",
+        "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient.CreateOrgPolicyViolationsPreview",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PolicySimulator.V1.CreateOrgPolicyViolationsPreviewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreview, Google.Cloud.PolicySimulator.V1.CreateOrgPolicyViolationsPreviewOperationMetadata>",
+        "client": {
+          "shortName": "OrgPolicyViolationsPreviewServiceClient",
+          "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOrgPolicyViolationsPreview",
+          "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService.CreateOrgPolicyViolationsPreview",
+          "service": {
+            "shortName": "OrgPolicyViolationsPreviewService",
+            "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "policysimulator_v1_generated_OrgPolicyViolationsPreviewService_CreateOrgPolicyViolationsPreview_async",
+      "title": "CreateOrgPolicyViolationsPreviewRequestObjectAsync",
+      "description": "Snippet for CreateOrgPolicyViolationsPreviewAsync",
+      "file": "OrgPolicyViolationsPreviewServiceClient.CreateOrgPolicyViolationsPreviewRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOrgPolicyViolationsPreviewAsync",
+        "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient.CreateOrgPolicyViolationsPreviewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PolicySimulator.V1.CreateOrgPolicyViolationsPreviewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreview, Google.Cloud.PolicySimulator.V1.CreateOrgPolicyViolationsPreviewOperationMetadata>>",
+        "client": {
+          "shortName": "OrgPolicyViolationsPreviewServiceClient",
+          "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOrgPolicyViolationsPreview",
+          "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService.CreateOrgPolicyViolationsPreview",
+          "service": {
+            "shortName": "OrgPolicyViolationsPreviewService",
+            "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "policysimulator_v1_generated_OrgPolicyViolationsPreviewService_CreateOrgPolicyViolationsPreview_sync_flattened",
+      "title": "CreateOrgPolicyViolationsPreview",
+      "description": "Snippet for CreateOrgPolicyViolationsPreview",
+      "file": "OrgPolicyViolationsPreviewServiceClient.CreateOrgPolicyViolationsPreviewSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOrgPolicyViolationsPreview",
+        "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient.CreateOrgPolicyViolationsPreview",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreview",
+            "name": "orgPolicyViolationsPreview"
+          },
+          {
+            "type": "System.String",
+            "name": "orgPolicyViolationsPreviewId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreview, Google.Cloud.PolicySimulator.V1.CreateOrgPolicyViolationsPreviewOperationMetadata>",
+        "client": {
+          "shortName": "OrgPolicyViolationsPreviewServiceClient",
+          "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOrgPolicyViolationsPreview",
+          "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService.CreateOrgPolicyViolationsPreview",
+          "service": {
+            "shortName": "OrgPolicyViolationsPreviewService",
+            "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "policysimulator_v1_generated_OrgPolicyViolationsPreviewService_CreateOrgPolicyViolationsPreview_async_flattened",
+      "title": "CreateOrgPolicyViolationsPreviewAsync",
+      "description": "Snippet for CreateOrgPolicyViolationsPreviewAsync",
+      "file": "OrgPolicyViolationsPreviewServiceClient.CreateOrgPolicyViolationsPreviewAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOrgPolicyViolationsPreviewAsync",
+        "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient.CreateOrgPolicyViolationsPreviewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreview",
+            "name": "orgPolicyViolationsPreview"
+          },
+          {
+            "type": "System.String",
+            "name": "orgPolicyViolationsPreviewId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreview, Google.Cloud.PolicySimulator.V1.CreateOrgPolicyViolationsPreviewOperationMetadata>>",
+        "client": {
+          "shortName": "OrgPolicyViolationsPreviewServiceClient",
+          "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOrgPolicyViolationsPreview",
+          "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService.CreateOrgPolicyViolationsPreview",
+          "service": {
+            "shortName": "OrgPolicyViolationsPreviewService",
+            "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "policysimulator_v1_generated_OrgPolicyViolationsPreviewService_CreateOrgPolicyViolationsPreview_sync_flattened_resourceNames",
+      "title": "CreateOrgPolicyViolationsPreviewResourceNames",
+      "description": "Snippet for CreateOrgPolicyViolationsPreview",
+      "file": "OrgPolicyViolationsPreviewServiceClient.CreateOrgPolicyViolationsPreviewResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOrgPolicyViolationsPreview",
+        "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient.CreateOrgPolicyViolationsPreview",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PolicySimulator.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreview",
+            "name": "orgPolicyViolationsPreview"
+          },
+          {
+            "type": "System.String",
+            "name": "orgPolicyViolationsPreviewId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreview, Google.Cloud.PolicySimulator.V1.CreateOrgPolicyViolationsPreviewOperationMetadata>",
+        "client": {
+          "shortName": "OrgPolicyViolationsPreviewServiceClient",
+          "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOrgPolicyViolationsPreview",
+          "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService.CreateOrgPolicyViolationsPreview",
+          "service": {
+            "shortName": "OrgPolicyViolationsPreviewService",
+            "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "policysimulator_v1_generated_OrgPolicyViolationsPreviewService_CreateOrgPolicyViolationsPreview_async_flattened_resourceNames",
+      "title": "CreateOrgPolicyViolationsPreviewResourceNamesAsync",
+      "description": "Snippet for CreateOrgPolicyViolationsPreviewAsync",
+      "file": "OrgPolicyViolationsPreviewServiceClient.CreateOrgPolicyViolationsPreviewResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOrgPolicyViolationsPreviewAsync",
+        "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient.CreateOrgPolicyViolationsPreviewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PolicySimulator.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreview",
+            "name": "orgPolicyViolationsPreview"
+          },
+          {
+            "type": "System.String",
+            "name": "orgPolicyViolationsPreviewId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreview, Google.Cloud.PolicySimulator.V1.CreateOrgPolicyViolationsPreviewOperationMetadata>>",
+        "client": {
+          "shortName": "OrgPolicyViolationsPreviewServiceClient",
+          "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOrgPolicyViolationsPreview",
+          "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService.CreateOrgPolicyViolationsPreview",
+          "service": {
+            "shortName": "OrgPolicyViolationsPreviewService",
+            "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "policysimulator_v1_generated_OrgPolicyViolationsPreviewService_ListOrgPolicyViolations_sync",
+      "title": "ListOrgPolicyViolationsRequestObject",
+      "description": "Snippet for ListOrgPolicyViolations",
+      "file": "OrgPolicyViolationsPreviewServiceClient.ListOrgPolicyViolationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOrgPolicyViolations",
+        "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient.ListOrgPolicyViolations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PolicySimulator.V1.ListOrgPolicyViolationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PolicySimulator.V1.ListOrgPolicyViolationsResponse, Google.Cloud.PolicySimulator.V1.OrgPolicyViolation>",
+        "client": {
+          "shortName": "OrgPolicyViolationsPreviewServiceClient",
+          "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient"
+        },
+        "method": {
+          "shortName": "ListOrgPolicyViolations",
+          "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService.ListOrgPolicyViolations",
+          "service": {
+            "shortName": "OrgPolicyViolationsPreviewService",
+            "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "policysimulator_v1_generated_OrgPolicyViolationsPreviewService_ListOrgPolicyViolations_async",
+      "title": "ListOrgPolicyViolationsRequestObjectAsync",
+      "description": "Snippet for ListOrgPolicyViolationsAsync",
+      "file": "OrgPolicyViolationsPreviewServiceClient.ListOrgPolicyViolationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOrgPolicyViolationsAsync",
+        "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient.ListOrgPolicyViolationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PolicySimulator.V1.ListOrgPolicyViolationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PolicySimulator.V1.ListOrgPolicyViolationsResponse, Google.Cloud.PolicySimulator.V1.OrgPolicyViolation>",
+        "client": {
+          "shortName": "OrgPolicyViolationsPreviewServiceClient",
+          "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient"
+        },
+        "method": {
+          "shortName": "ListOrgPolicyViolations",
+          "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService.ListOrgPolicyViolations",
+          "service": {
+            "shortName": "OrgPolicyViolationsPreviewService",
+            "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "policysimulator_v1_generated_OrgPolicyViolationsPreviewService_ListOrgPolicyViolations_sync_flattened",
+      "title": "ListOrgPolicyViolations",
+      "description": "Snippet for ListOrgPolicyViolations",
+      "file": "OrgPolicyViolationsPreviewServiceClient.ListOrgPolicyViolationsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOrgPolicyViolations",
+        "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient.ListOrgPolicyViolations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PolicySimulator.V1.ListOrgPolicyViolationsResponse, Google.Cloud.PolicySimulator.V1.OrgPolicyViolation>",
+        "client": {
+          "shortName": "OrgPolicyViolationsPreviewServiceClient",
+          "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient"
+        },
+        "method": {
+          "shortName": "ListOrgPolicyViolations",
+          "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService.ListOrgPolicyViolations",
+          "service": {
+            "shortName": "OrgPolicyViolationsPreviewService",
+            "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "policysimulator_v1_generated_OrgPolicyViolationsPreviewService_ListOrgPolicyViolations_async_flattened",
+      "title": "ListOrgPolicyViolationsAsync",
+      "description": "Snippet for ListOrgPolicyViolationsAsync",
+      "file": "OrgPolicyViolationsPreviewServiceClient.ListOrgPolicyViolationsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOrgPolicyViolationsAsync",
+        "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient.ListOrgPolicyViolationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PolicySimulator.V1.ListOrgPolicyViolationsResponse, Google.Cloud.PolicySimulator.V1.OrgPolicyViolation>",
+        "client": {
+          "shortName": "OrgPolicyViolationsPreviewServiceClient",
+          "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient"
+        },
+        "method": {
+          "shortName": "ListOrgPolicyViolations",
+          "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService.ListOrgPolicyViolations",
+          "service": {
+            "shortName": "OrgPolicyViolationsPreviewService",
+            "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "policysimulator_v1_generated_OrgPolicyViolationsPreviewService_ListOrgPolicyViolations_sync_flattened_resourceNames",
+      "title": "ListOrgPolicyViolationsResourceNames",
+      "description": "Snippet for ListOrgPolicyViolations",
+      "file": "OrgPolicyViolationsPreviewServiceClient.ListOrgPolicyViolationsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOrgPolicyViolations",
+        "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient.ListOrgPolicyViolations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PolicySimulator.V1.ListOrgPolicyViolationsResponse, Google.Cloud.PolicySimulator.V1.OrgPolicyViolation>",
+        "client": {
+          "shortName": "OrgPolicyViolationsPreviewServiceClient",
+          "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient"
+        },
+        "method": {
+          "shortName": "ListOrgPolicyViolations",
+          "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService.ListOrgPolicyViolations",
+          "service": {
+            "shortName": "OrgPolicyViolationsPreviewService",
+            "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "policysimulator_v1_generated_OrgPolicyViolationsPreviewService_ListOrgPolicyViolations_async_flattened_resourceNames",
+      "title": "ListOrgPolicyViolationsResourceNamesAsync",
+      "description": "Snippet for ListOrgPolicyViolationsAsync",
+      "file": "OrgPolicyViolationsPreviewServiceClient.ListOrgPolicyViolationsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOrgPolicyViolationsAsync",
+        "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient.ListOrgPolicyViolationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PolicySimulator.V1.ListOrgPolicyViolationsResponse, Google.Cloud.PolicySimulator.V1.OrgPolicyViolation>",
+        "client": {
+          "shortName": "OrgPolicyViolationsPreviewServiceClient",
+          "fullName": "Google.Cloud.PolicySimulator.V1.OrgPolicyViolationsPreviewServiceClient"
+        },
+        "method": {
+          "shortName": "ListOrgPolicyViolations",
+          "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService.ListOrgPolicyViolations",
+          "service": {
+            "shortName": "OrgPolicyViolationsPreviewService",
+            "fullName": "google.cloud.policysimulator.v1.OrgPolicyViolationsPreviewService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "policysimulator_v1_generated_Simulator_GetReplay_sync",
       "title": "GetReplayRequestObject",
       "description": "Snippet for GetReplay",

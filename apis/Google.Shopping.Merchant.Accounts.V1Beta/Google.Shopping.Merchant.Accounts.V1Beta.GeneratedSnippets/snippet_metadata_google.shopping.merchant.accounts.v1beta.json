@@ -4463,6 +4463,1080 @@
       ]
     },
     {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_GetCheckoutSettings_sync",
+      "title": "GetCheckoutSettingsRequestObject",
+      "description": "Snippet for GetCheckoutSettings",
+      "file": "CheckoutSettingsServiceClient.GetCheckoutSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCheckoutSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.GetCheckoutSettings",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.GetCheckoutSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "GetCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.GetCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_GetCheckoutSettings_async",
+      "title": "GetCheckoutSettingsRequestObjectAsync",
+      "description": "Snippet for GetCheckoutSettingsAsync",
+      "file": "CheckoutSettingsServiceClient.GetCheckoutSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCheckoutSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.GetCheckoutSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.GetCheckoutSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings>",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "GetCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.GetCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_GetCheckoutSettings_sync_flattened",
+      "title": "GetCheckoutSettings",
+      "description": "Snippet for GetCheckoutSettings",
+      "file": "CheckoutSettingsServiceClient.GetCheckoutSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCheckoutSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.GetCheckoutSettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "GetCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.GetCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_GetCheckoutSettings_async_flattened",
+      "title": "GetCheckoutSettingsAsync",
+      "description": "Snippet for GetCheckoutSettingsAsync",
+      "file": "CheckoutSettingsServiceClient.GetCheckoutSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCheckoutSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.GetCheckoutSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings>",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "GetCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.GetCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_GetCheckoutSettings_sync_flattened_resourceNames",
+      "title": "GetCheckoutSettingsResourceNames",
+      "description": "Snippet for GetCheckoutSettings",
+      "file": "CheckoutSettingsServiceClient.GetCheckoutSettingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCheckoutSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.GetCheckoutSettings",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "GetCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.GetCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_GetCheckoutSettings_async_flattened_resourceNames",
+      "title": "GetCheckoutSettingsResourceNamesAsync",
+      "description": "Snippet for GetCheckoutSettingsAsync",
+      "file": "CheckoutSettingsServiceClient.GetCheckoutSettingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCheckoutSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.GetCheckoutSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings>",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "GetCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.GetCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_CreateCheckoutSettings_sync",
+      "title": "CreateCheckoutSettingsRequestObject",
+      "description": "Snippet for CreateCheckoutSettings",
+      "file": "CheckoutSettingsServiceClient.CreateCheckoutSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCheckoutSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.CreateCheckoutSettings",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CreateCheckoutSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.CreateCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_CreateCheckoutSettings_async",
+      "title": "CreateCheckoutSettingsRequestObjectAsync",
+      "description": "Snippet for CreateCheckoutSettingsAsync",
+      "file": "CheckoutSettingsServiceClient.CreateCheckoutSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCheckoutSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.CreateCheckoutSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CreateCheckoutSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings>",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.CreateCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_CreateCheckoutSettings_sync_flattened",
+      "title": "CreateCheckoutSettings",
+      "description": "Snippet for CreateCheckoutSettings",
+      "file": "CheckoutSettingsServiceClient.CreateCheckoutSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCheckoutSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.CreateCheckoutSettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+            "name": "checkoutSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.CreateCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_CreateCheckoutSettings_async_flattened",
+      "title": "CreateCheckoutSettingsAsync",
+      "description": "Snippet for CreateCheckoutSettingsAsync",
+      "file": "CheckoutSettingsServiceClient.CreateCheckoutSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCheckoutSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.CreateCheckoutSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+            "name": "checkoutSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings>",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.CreateCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_CreateCheckoutSettings_sync_flattened_resourceNames",
+      "title": "CreateCheckoutSettingsResourceNames",
+      "description": "Snippet for CreateCheckoutSettings",
+      "file": "CheckoutSettingsServiceClient.CreateCheckoutSettingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCheckoutSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.CreateCheckoutSettings",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.ProgramName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+            "name": "checkoutSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.CreateCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_CreateCheckoutSettings_async_flattened_resourceNames",
+      "title": "CreateCheckoutSettingsResourceNamesAsync",
+      "description": "Snippet for CreateCheckoutSettingsAsync",
+      "file": "CheckoutSettingsServiceClient.CreateCheckoutSettingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCheckoutSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.CreateCheckoutSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.ProgramName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+            "name": "checkoutSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings>",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.CreateCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_UpdateCheckoutSettings_sync",
+      "title": "UpdateCheckoutSettingsRequestObject",
+      "description": "Snippet for UpdateCheckoutSettings",
+      "file": "CheckoutSettingsServiceClient.UpdateCheckoutSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCheckoutSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.UpdateCheckoutSettings",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.UpdateCheckoutSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.UpdateCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_UpdateCheckoutSettings_async",
+      "title": "UpdateCheckoutSettingsRequestObjectAsync",
+      "description": "Snippet for UpdateCheckoutSettingsAsync",
+      "file": "CheckoutSettingsServiceClient.UpdateCheckoutSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCheckoutSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.UpdateCheckoutSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.UpdateCheckoutSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings>",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.UpdateCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_UpdateCheckoutSettings_sync_flattened",
+      "title": "UpdateCheckoutSettings",
+      "description": "Snippet for UpdateCheckoutSettings",
+      "file": "CheckoutSettingsServiceClient.UpdateCheckoutSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCheckoutSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.UpdateCheckoutSettings",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+            "name": "checkoutSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.UpdateCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_UpdateCheckoutSettings_async_flattened",
+      "title": "UpdateCheckoutSettingsAsync",
+      "description": "Snippet for UpdateCheckoutSettingsAsync",
+      "file": "CheckoutSettingsServiceClient.UpdateCheckoutSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCheckoutSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.UpdateCheckoutSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings",
+            "name": "checkoutSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettings>",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.UpdateCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_DeleteCheckoutSettings_sync",
+      "title": "DeleteCheckoutSettingsRequestObject",
+      "description": "Snippet for DeleteCheckoutSettings",
+      "file": "CheckoutSettingsServiceClient.DeleteCheckoutSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCheckoutSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.DeleteCheckoutSettings",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.DeleteCheckoutSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.DeleteCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_DeleteCheckoutSettings_async",
+      "title": "DeleteCheckoutSettingsRequestObjectAsync",
+      "description": "Snippet for DeleteCheckoutSettingsAsync",
+      "file": "CheckoutSettingsServiceClient.DeleteCheckoutSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCheckoutSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.DeleteCheckoutSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.DeleteCheckoutSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.DeleteCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_DeleteCheckoutSettings_sync_flattened",
+      "title": "DeleteCheckoutSettings",
+      "description": "Snippet for DeleteCheckoutSettings",
+      "file": "CheckoutSettingsServiceClient.DeleteCheckoutSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCheckoutSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.DeleteCheckoutSettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.DeleteCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_DeleteCheckoutSettings_async_flattened",
+      "title": "DeleteCheckoutSettingsAsync",
+      "description": "Snippet for DeleteCheckoutSettingsAsync",
+      "file": "CheckoutSettingsServiceClient.DeleteCheckoutSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCheckoutSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.DeleteCheckoutSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.DeleteCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_DeleteCheckoutSettings_sync_flattened_resourceNames",
+      "title": "DeleteCheckoutSettingsResourceNames",
+      "description": "Snippet for DeleteCheckoutSettings",
+      "file": "CheckoutSettingsServiceClient.DeleteCheckoutSettingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCheckoutSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.DeleteCheckoutSettings",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.DeleteCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_CheckoutSettingsService_DeleteCheckoutSettings_async_flattened_resourceNames",
+      "title": "DeleteCheckoutSettingsResourceNamesAsync",
+      "description": "Snippet for DeleteCheckoutSettingsAsync",
+      "file": "CheckoutSettingsServiceClient.DeleteCheckoutSettingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCheckoutSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient.DeleteCheckoutSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CheckoutSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.CheckoutSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteCheckoutSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService.DeleteCheckoutSettings",
+          "service": {
+            "shortName": "CheckoutSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.CheckoutSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "merchantapi_v1beta_generated_EmailPreferencesService_GetEmailPreferences_sync",
       "title": "GetEmailPreferencesRequestObject",
       "description": "Snippet for GetEmailPreferences",
@@ -4945,6 +6019,612 @@
         {
           "start": 36,
           "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_GbpAccountsService_ListGbpAccounts_sync",
+      "title": "ListGbpAccountsRequestObject",
+      "description": "Snippet for ListGbpAccounts",
+      "file": "GbpAccountsServiceClient.ListGbpAccountsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGbpAccounts",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.GbpAccountsServiceClient.ListGbpAccounts",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.ListGbpAccountsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Accounts.V1Beta.ListGbpAccountsResponse, Google.Shopping.Merchant.Accounts.V1Beta.GbpAccount>",
+        "client": {
+          "shortName": "GbpAccountsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.GbpAccountsServiceClient"
+        },
+        "method": {
+          "shortName": "ListGbpAccounts",
+          "fullName": "google.shopping.merchant.accounts.v1beta.GbpAccountsService.ListGbpAccounts",
+          "service": {
+            "shortName": "GbpAccountsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.GbpAccountsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_GbpAccountsService_ListGbpAccounts_async",
+      "title": "ListGbpAccountsRequestObjectAsync",
+      "description": "Snippet for ListGbpAccountsAsync",
+      "file": "GbpAccountsServiceClient.ListGbpAccountsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGbpAccountsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.GbpAccountsServiceClient.ListGbpAccountsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.ListGbpAccountsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Accounts.V1Beta.ListGbpAccountsResponse, Google.Shopping.Merchant.Accounts.V1Beta.GbpAccount>",
+        "client": {
+          "shortName": "GbpAccountsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.GbpAccountsServiceClient"
+        },
+        "method": {
+          "shortName": "ListGbpAccounts",
+          "fullName": "google.shopping.merchant.accounts.v1beta.GbpAccountsService.ListGbpAccounts",
+          "service": {
+            "shortName": "GbpAccountsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.GbpAccountsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_GbpAccountsService_ListGbpAccounts_sync_flattened",
+      "title": "ListGbpAccounts",
+      "description": "Snippet for ListGbpAccounts",
+      "file": "GbpAccountsServiceClient.ListGbpAccountsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGbpAccounts",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.GbpAccountsServiceClient.ListGbpAccounts",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Accounts.V1Beta.ListGbpAccountsResponse, Google.Shopping.Merchant.Accounts.V1Beta.GbpAccount>",
+        "client": {
+          "shortName": "GbpAccountsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.GbpAccountsServiceClient"
+        },
+        "method": {
+          "shortName": "ListGbpAccounts",
+          "fullName": "google.shopping.merchant.accounts.v1beta.GbpAccountsService.ListGbpAccounts",
+          "service": {
+            "shortName": "GbpAccountsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.GbpAccountsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_GbpAccountsService_ListGbpAccounts_async_flattened",
+      "title": "ListGbpAccountsAsync",
+      "description": "Snippet for ListGbpAccountsAsync",
+      "file": "GbpAccountsServiceClient.ListGbpAccountsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGbpAccountsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.GbpAccountsServiceClient.ListGbpAccountsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Accounts.V1Beta.ListGbpAccountsResponse, Google.Shopping.Merchant.Accounts.V1Beta.GbpAccount>",
+        "client": {
+          "shortName": "GbpAccountsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.GbpAccountsServiceClient"
+        },
+        "method": {
+          "shortName": "ListGbpAccounts",
+          "fullName": "google.shopping.merchant.accounts.v1beta.GbpAccountsService.ListGbpAccounts",
+          "service": {
+            "shortName": "GbpAccountsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.GbpAccountsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_GbpAccountsService_ListGbpAccounts_sync_flattened_resourceNames",
+      "title": "ListGbpAccountsResourceNames",
+      "description": "Snippet for ListGbpAccounts",
+      "file": "GbpAccountsServiceClient.ListGbpAccountsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGbpAccounts",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.GbpAccountsServiceClient.ListGbpAccounts",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Accounts.V1Beta.ListGbpAccountsResponse, Google.Shopping.Merchant.Accounts.V1Beta.GbpAccount>",
+        "client": {
+          "shortName": "GbpAccountsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.GbpAccountsServiceClient"
+        },
+        "method": {
+          "shortName": "ListGbpAccounts",
+          "fullName": "google.shopping.merchant.accounts.v1beta.GbpAccountsService.ListGbpAccounts",
+          "service": {
+            "shortName": "GbpAccountsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.GbpAccountsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_GbpAccountsService_ListGbpAccounts_async_flattened_resourceNames",
+      "title": "ListGbpAccountsResourceNamesAsync",
+      "description": "Snippet for ListGbpAccountsAsync",
+      "file": "GbpAccountsServiceClient.ListGbpAccountsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGbpAccountsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.GbpAccountsServiceClient.ListGbpAccountsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Accounts.V1Beta.ListGbpAccountsResponse, Google.Shopping.Merchant.Accounts.V1Beta.GbpAccount>",
+        "client": {
+          "shortName": "GbpAccountsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.GbpAccountsServiceClient"
+        },
+        "method": {
+          "shortName": "ListGbpAccounts",
+          "fullName": "google.shopping.merchant.accounts.v1beta.GbpAccountsService.ListGbpAccounts",
+          "service": {
+            "shortName": "GbpAccountsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.GbpAccountsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_GbpAccountsService_LinkGbpAccount_sync",
+      "title": "LinkGbpAccountRequestObject",
+      "description": "Snippet for LinkGbpAccount",
+      "file": "GbpAccountsServiceClient.LinkGbpAccountRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LinkGbpAccount",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.GbpAccountsServiceClient.LinkGbpAccount",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.LinkGbpAccountRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.LinkGbpAccountResponse",
+        "client": {
+          "shortName": "GbpAccountsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.GbpAccountsServiceClient"
+        },
+        "method": {
+          "shortName": "LinkGbpAccount",
+          "fullName": "google.shopping.merchant.accounts.v1beta.GbpAccountsService.LinkGbpAccount",
+          "service": {
+            "shortName": "GbpAccountsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.GbpAccountsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_GbpAccountsService_LinkGbpAccount_async",
+      "title": "LinkGbpAccountRequestObjectAsync",
+      "description": "Snippet for LinkGbpAccountAsync",
+      "file": "GbpAccountsServiceClient.LinkGbpAccountRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LinkGbpAccountAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.GbpAccountsServiceClient.LinkGbpAccountAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.LinkGbpAccountRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.LinkGbpAccountResponse>",
+        "client": {
+          "shortName": "GbpAccountsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.GbpAccountsServiceClient"
+        },
+        "method": {
+          "shortName": "LinkGbpAccount",
+          "fullName": "google.shopping.merchant.accounts.v1beta.GbpAccountsService.LinkGbpAccount",
+          "service": {
+            "shortName": "GbpAccountsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.GbpAccountsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_GbpAccountsService_LinkGbpAccount_sync_flattened",
+      "title": "LinkGbpAccount",
+      "description": "Snippet for LinkGbpAccount",
+      "file": "GbpAccountsServiceClient.LinkGbpAccountSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LinkGbpAccount",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.GbpAccountsServiceClient.LinkGbpAccount",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.LinkGbpAccountResponse",
+        "client": {
+          "shortName": "GbpAccountsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.GbpAccountsServiceClient"
+        },
+        "method": {
+          "shortName": "LinkGbpAccount",
+          "fullName": "google.shopping.merchant.accounts.v1beta.GbpAccountsService.LinkGbpAccount",
+          "service": {
+            "shortName": "GbpAccountsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.GbpAccountsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_GbpAccountsService_LinkGbpAccount_async_flattened",
+      "title": "LinkGbpAccountAsync",
+      "description": "Snippet for LinkGbpAccountAsync",
+      "file": "GbpAccountsServiceClient.LinkGbpAccountAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LinkGbpAccountAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.GbpAccountsServiceClient.LinkGbpAccountAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.LinkGbpAccountResponse>",
+        "client": {
+          "shortName": "GbpAccountsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.GbpAccountsServiceClient"
+        },
+        "method": {
+          "shortName": "LinkGbpAccount",
+          "fullName": "google.shopping.merchant.accounts.v1beta.GbpAccountsService.LinkGbpAccount",
+          "service": {
+            "shortName": "GbpAccountsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.GbpAccountsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_GbpAccountsService_LinkGbpAccount_sync_flattened_resourceNames",
+      "title": "LinkGbpAccountResourceNames",
+      "description": "Snippet for LinkGbpAccount",
+      "file": "GbpAccountsServiceClient.LinkGbpAccountResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LinkGbpAccount",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.GbpAccountsServiceClient.LinkGbpAccount",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.LinkGbpAccountResponse",
+        "client": {
+          "shortName": "GbpAccountsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.GbpAccountsServiceClient"
+        },
+        "method": {
+          "shortName": "LinkGbpAccount",
+          "fullName": "google.shopping.merchant.accounts.v1beta.GbpAccountsService.LinkGbpAccount",
+          "service": {
+            "shortName": "GbpAccountsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.GbpAccountsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_GbpAccountsService_LinkGbpAccount_async_flattened_resourceNames",
+      "title": "LinkGbpAccountResourceNamesAsync",
+      "description": "Snippet for LinkGbpAccountAsync",
+      "file": "GbpAccountsServiceClient.LinkGbpAccountResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LinkGbpAccountAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.GbpAccountsServiceClient.LinkGbpAccountAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.LinkGbpAccountResponse>",
+        "client": {
+          "shortName": "GbpAccountsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.GbpAccountsServiceClient"
+        },
+        "method": {
+          "shortName": "LinkGbpAccount",
+          "fullName": "google.shopping.merchant.accounts.v1beta.GbpAccountsService.LinkGbpAccount",
+          "service": {
+            "shortName": "GbpAccountsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.GbpAccountsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
           "type": "SHORT"
         }
       ]
@@ -5631,6 +7311,2008 @@
       ]
     },
     {
+      "regionTag": "merchantapi_v1beta_generated_LfpProvidersService_FindLfpProviders_sync",
+      "title": "FindLfpProvidersRequestObject",
+      "description": "Snippet for FindLfpProviders",
+      "file": "LfpProvidersServiceClient.FindLfpProvidersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FindLfpProviders",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProvidersServiceClient.FindLfpProviders",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.FindLfpProvidersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Accounts.V1Beta.FindLfpProvidersResponse, Google.Shopping.Merchant.Accounts.V1Beta.LfpProvider>",
+        "client": {
+          "shortName": "LfpProvidersServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProvidersServiceClient"
+        },
+        "method": {
+          "shortName": "FindLfpProviders",
+          "fullName": "google.shopping.merchant.accounts.v1beta.LfpProvidersService.FindLfpProviders",
+          "service": {
+            "shortName": "LfpProvidersService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.LfpProvidersService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpProvidersService_FindLfpProviders_async",
+      "title": "FindLfpProvidersRequestObjectAsync",
+      "description": "Snippet for FindLfpProvidersAsync",
+      "file": "LfpProvidersServiceClient.FindLfpProvidersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FindLfpProvidersAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProvidersServiceClient.FindLfpProvidersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.FindLfpProvidersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Accounts.V1Beta.FindLfpProvidersResponse, Google.Shopping.Merchant.Accounts.V1Beta.LfpProvider>",
+        "client": {
+          "shortName": "LfpProvidersServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProvidersServiceClient"
+        },
+        "method": {
+          "shortName": "FindLfpProviders",
+          "fullName": "google.shopping.merchant.accounts.v1beta.LfpProvidersService.FindLfpProviders",
+          "service": {
+            "shortName": "LfpProvidersService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.LfpProvidersService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpProvidersService_FindLfpProviders_sync_flattened",
+      "title": "FindLfpProviders",
+      "description": "Snippet for FindLfpProviders",
+      "file": "LfpProvidersServiceClient.FindLfpProvidersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FindLfpProviders",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProvidersServiceClient.FindLfpProviders",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Accounts.V1Beta.FindLfpProvidersResponse, Google.Shopping.Merchant.Accounts.V1Beta.LfpProvider>",
+        "client": {
+          "shortName": "LfpProvidersServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProvidersServiceClient"
+        },
+        "method": {
+          "shortName": "FindLfpProviders",
+          "fullName": "google.shopping.merchant.accounts.v1beta.LfpProvidersService.FindLfpProviders",
+          "service": {
+            "shortName": "LfpProvidersService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.LfpProvidersService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpProvidersService_FindLfpProviders_async_flattened",
+      "title": "FindLfpProvidersAsync",
+      "description": "Snippet for FindLfpProvidersAsync",
+      "file": "LfpProvidersServiceClient.FindLfpProvidersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FindLfpProvidersAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProvidersServiceClient.FindLfpProvidersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Accounts.V1Beta.FindLfpProvidersResponse, Google.Shopping.Merchant.Accounts.V1Beta.LfpProvider>",
+        "client": {
+          "shortName": "LfpProvidersServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProvidersServiceClient"
+        },
+        "method": {
+          "shortName": "FindLfpProviders",
+          "fullName": "google.shopping.merchant.accounts.v1beta.LfpProvidersService.FindLfpProviders",
+          "service": {
+            "shortName": "LfpProvidersService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.LfpProvidersService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpProvidersService_FindLfpProviders_sync_flattened_resourceNames",
+      "title": "FindLfpProvidersResourceNames",
+      "description": "Snippet for FindLfpProviders",
+      "file": "LfpProvidersServiceClient.FindLfpProvidersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FindLfpProviders",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProvidersServiceClient.FindLfpProviders",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Accounts.V1Beta.FindLfpProvidersResponse, Google.Shopping.Merchant.Accounts.V1Beta.LfpProvider>",
+        "client": {
+          "shortName": "LfpProvidersServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProvidersServiceClient"
+        },
+        "method": {
+          "shortName": "FindLfpProviders",
+          "fullName": "google.shopping.merchant.accounts.v1beta.LfpProvidersService.FindLfpProviders",
+          "service": {
+            "shortName": "LfpProvidersService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.LfpProvidersService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpProvidersService_FindLfpProviders_async_flattened_resourceNames",
+      "title": "FindLfpProvidersResourceNamesAsync",
+      "description": "Snippet for FindLfpProvidersAsync",
+      "file": "LfpProvidersServiceClient.FindLfpProvidersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FindLfpProvidersAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProvidersServiceClient.FindLfpProvidersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Accounts.V1Beta.FindLfpProvidersResponse, Google.Shopping.Merchant.Accounts.V1Beta.LfpProvider>",
+        "client": {
+          "shortName": "LfpProvidersServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProvidersServiceClient"
+        },
+        "method": {
+          "shortName": "FindLfpProviders",
+          "fullName": "google.shopping.merchant.accounts.v1beta.LfpProvidersService.FindLfpProviders",
+          "service": {
+            "shortName": "LfpProvidersService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.LfpProvidersService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpProvidersService_LinkLfpProvider_sync",
+      "title": "LinkLfpProviderRequestObject",
+      "description": "Snippet for LinkLfpProvider",
+      "file": "LfpProvidersServiceClient.LinkLfpProviderRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LinkLfpProvider",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProvidersServiceClient.LinkLfpProvider",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.LinkLfpProviderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.LinkLfpProviderResponse",
+        "client": {
+          "shortName": "LfpProvidersServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProvidersServiceClient"
+        },
+        "method": {
+          "shortName": "LinkLfpProvider",
+          "fullName": "google.shopping.merchant.accounts.v1beta.LfpProvidersService.LinkLfpProvider",
+          "service": {
+            "shortName": "LfpProvidersService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.LfpProvidersService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpProvidersService_LinkLfpProvider_async",
+      "title": "LinkLfpProviderRequestObjectAsync",
+      "description": "Snippet for LinkLfpProviderAsync",
+      "file": "LfpProvidersServiceClient.LinkLfpProviderRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LinkLfpProviderAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProvidersServiceClient.LinkLfpProviderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.LinkLfpProviderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.LinkLfpProviderResponse>",
+        "client": {
+          "shortName": "LfpProvidersServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProvidersServiceClient"
+        },
+        "method": {
+          "shortName": "LinkLfpProvider",
+          "fullName": "google.shopping.merchant.accounts.v1beta.LfpProvidersService.LinkLfpProvider",
+          "service": {
+            "shortName": "LfpProvidersService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.LfpProvidersService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpProvidersService_LinkLfpProvider_sync_flattened",
+      "title": "LinkLfpProvider",
+      "description": "Snippet for LinkLfpProvider",
+      "file": "LfpProvidersServiceClient.LinkLfpProviderSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LinkLfpProvider",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProvidersServiceClient.LinkLfpProvider",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.LinkLfpProviderResponse",
+        "client": {
+          "shortName": "LfpProvidersServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProvidersServiceClient"
+        },
+        "method": {
+          "shortName": "LinkLfpProvider",
+          "fullName": "google.shopping.merchant.accounts.v1beta.LfpProvidersService.LinkLfpProvider",
+          "service": {
+            "shortName": "LfpProvidersService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.LfpProvidersService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpProvidersService_LinkLfpProvider_async_flattened",
+      "title": "LinkLfpProviderAsync",
+      "description": "Snippet for LinkLfpProviderAsync",
+      "file": "LfpProvidersServiceClient.LinkLfpProviderAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LinkLfpProviderAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProvidersServiceClient.LinkLfpProviderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.LinkLfpProviderResponse>",
+        "client": {
+          "shortName": "LfpProvidersServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProvidersServiceClient"
+        },
+        "method": {
+          "shortName": "LinkLfpProvider",
+          "fullName": "google.shopping.merchant.accounts.v1beta.LfpProvidersService.LinkLfpProvider",
+          "service": {
+            "shortName": "LfpProvidersService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.LfpProvidersService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpProvidersService_LinkLfpProvider_sync_flattened_resourceNames",
+      "title": "LinkLfpProviderResourceNames",
+      "description": "Snippet for LinkLfpProvider",
+      "file": "LfpProvidersServiceClient.LinkLfpProviderResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LinkLfpProvider",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProvidersServiceClient.LinkLfpProvider",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProviderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.LinkLfpProviderResponse",
+        "client": {
+          "shortName": "LfpProvidersServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProvidersServiceClient"
+        },
+        "method": {
+          "shortName": "LinkLfpProvider",
+          "fullName": "google.shopping.merchant.accounts.v1beta.LfpProvidersService.LinkLfpProvider",
+          "service": {
+            "shortName": "LfpProvidersService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.LfpProvidersService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_LfpProvidersService_LinkLfpProvider_async_flattened_resourceNames",
+      "title": "LinkLfpProviderResourceNamesAsync",
+      "description": "Snippet for LinkLfpProviderAsync",
+      "file": "LfpProvidersServiceClient.LinkLfpProviderResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LinkLfpProviderAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProvidersServiceClient.LinkLfpProviderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProviderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.LinkLfpProviderResponse>",
+        "client": {
+          "shortName": "LfpProvidersServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.LfpProvidersServiceClient"
+        },
+        "method": {
+          "shortName": "LinkLfpProvider",
+          "fullName": "google.shopping.merchant.accounts.v1beta.LfpProvidersService.LinkLfpProvider",
+          "service": {
+            "shortName": "LfpProvidersService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.LfpProvidersService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_GetOmnichannelSetting_sync",
+      "title": "GetOmnichannelSettingRequestObject",
+      "description": "Snippet for GetOmnichannelSetting",
+      "file": "OmnichannelSettingsServiceClient.GetOmnichannelSettingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetOmnichannelSetting",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.GetOmnichannelSetting",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.GetOmnichannelSettingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "GetOmnichannelSetting",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.GetOmnichannelSetting",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_GetOmnichannelSetting_async",
+      "title": "GetOmnichannelSettingRequestObjectAsync",
+      "description": "Snippet for GetOmnichannelSettingAsync",
+      "file": "OmnichannelSettingsServiceClient.GetOmnichannelSettingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetOmnichannelSettingAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.GetOmnichannelSettingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.GetOmnichannelSettingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting>",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "GetOmnichannelSetting",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.GetOmnichannelSetting",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_GetOmnichannelSetting_sync_flattened",
+      "title": "GetOmnichannelSetting",
+      "description": "Snippet for GetOmnichannelSetting",
+      "file": "OmnichannelSettingsServiceClient.GetOmnichannelSettingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetOmnichannelSetting",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.GetOmnichannelSetting",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "GetOmnichannelSetting",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.GetOmnichannelSetting",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_GetOmnichannelSetting_async_flattened",
+      "title": "GetOmnichannelSettingAsync",
+      "description": "Snippet for GetOmnichannelSettingAsync",
+      "file": "OmnichannelSettingsServiceClient.GetOmnichannelSettingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetOmnichannelSettingAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.GetOmnichannelSettingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting>",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "GetOmnichannelSetting",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.GetOmnichannelSetting",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_GetOmnichannelSetting_sync_flattened_resourceNames",
+      "title": "GetOmnichannelSettingResourceNames",
+      "description": "Snippet for GetOmnichannelSetting",
+      "file": "OmnichannelSettingsServiceClient.GetOmnichannelSettingResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetOmnichannelSetting",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.GetOmnichannelSetting",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "GetOmnichannelSetting",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.GetOmnichannelSetting",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_GetOmnichannelSetting_async_flattened_resourceNames",
+      "title": "GetOmnichannelSettingResourceNamesAsync",
+      "description": "Snippet for GetOmnichannelSettingAsync",
+      "file": "OmnichannelSettingsServiceClient.GetOmnichannelSettingResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetOmnichannelSettingAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.GetOmnichannelSettingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting>",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "GetOmnichannelSetting",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.GetOmnichannelSetting",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_ListOmnichannelSettings_sync",
+      "title": "ListOmnichannelSettingsRequestObject",
+      "description": "Snippet for ListOmnichannelSettings",
+      "file": "OmnichannelSettingsServiceClient.ListOmnichannelSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOmnichannelSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.ListOmnichannelSettings",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.ListOmnichannelSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Accounts.V1Beta.ListOmnichannelSettingsResponse, Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting>",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "ListOmnichannelSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.ListOmnichannelSettings",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_ListOmnichannelSettings_async",
+      "title": "ListOmnichannelSettingsRequestObjectAsync",
+      "description": "Snippet for ListOmnichannelSettingsAsync",
+      "file": "OmnichannelSettingsServiceClient.ListOmnichannelSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOmnichannelSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.ListOmnichannelSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.ListOmnichannelSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Accounts.V1Beta.ListOmnichannelSettingsResponse, Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting>",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "ListOmnichannelSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.ListOmnichannelSettings",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_ListOmnichannelSettings_sync_flattened",
+      "title": "ListOmnichannelSettings",
+      "description": "Snippet for ListOmnichannelSettings",
+      "file": "OmnichannelSettingsServiceClient.ListOmnichannelSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOmnichannelSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.ListOmnichannelSettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Accounts.V1Beta.ListOmnichannelSettingsResponse, Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting>",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "ListOmnichannelSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.ListOmnichannelSettings",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_ListOmnichannelSettings_async_flattened",
+      "title": "ListOmnichannelSettingsAsync",
+      "description": "Snippet for ListOmnichannelSettingsAsync",
+      "file": "OmnichannelSettingsServiceClient.ListOmnichannelSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOmnichannelSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.ListOmnichannelSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Accounts.V1Beta.ListOmnichannelSettingsResponse, Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting>",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "ListOmnichannelSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.ListOmnichannelSettings",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_ListOmnichannelSettings_sync_flattened_resourceNames",
+      "title": "ListOmnichannelSettingsResourceNames",
+      "description": "Snippet for ListOmnichannelSettings",
+      "file": "OmnichannelSettingsServiceClient.ListOmnichannelSettingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOmnichannelSettings",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.ListOmnichannelSettings",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Accounts.V1Beta.ListOmnichannelSettingsResponse, Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting>",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "ListOmnichannelSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.ListOmnichannelSettings",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_ListOmnichannelSettings_async_flattened_resourceNames",
+      "title": "ListOmnichannelSettingsResourceNamesAsync",
+      "description": "Snippet for ListOmnichannelSettingsAsync",
+      "file": "OmnichannelSettingsServiceClient.ListOmnichannelSettingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListOmnichannelSettingsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.ListOmnichannelSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Accounts.V1Beta.ListOmnichannelSettingsResponse, Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting>",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "ListOmnichannelSettings",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.ListOmnichannelSettings",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_CreateOmnichannelSetting_sync",
+      "title": "CreateOmnichannelSettingRequestObject",
+      "description": "Snippet for CreateOmnichannelSetting",
+      "file": "OmnichannelSettingsServiceClient.CreateOmnichannelSettingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOmnichannelSetting",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.CreateOmnichannelSetting",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CreateOmnichannelSettingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOmnichannelSetting",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.CreateOmnichannelSetting",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_CreateOmnichannelSetting_async",
+      "title": "CreateOmnichannelSettingRequestObjectAsync",
+      "description": "Snippet for CreateOmnichannelSettingAsync",
+      "file": "OmnichannelSettingsServiceClient.CreateOmnichannelSettingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOmnichannelSettingAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.CreateOmnichannelSettingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CreateOmnichannelSettingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting>",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOmnichannelSetting",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.CreateOmnichannelSetting",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_CreateOmnichannelSetting_sync_flattened",
+      "title": "CreateOmnichannelSetting",
+      "description": "Snippet for CreateOmnichannelSetting",
+      "file": "OmnichannelSettingsServiceClient.CreateOmnichannelSettingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOmnichannelSetting",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.CreateOmnichannelSetting",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting",
+            "name": "omnichannelSetting"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOmnichannelSetting",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.CreateOmnichannelSetting",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_CreateOmnichannelSetting_async_flattened",
+      "title": "CreateOmnichannelSettingAsync",
+      "description": "Snippet for CreateOmnichannelSettingAsync",
+      "file": "OmnichannelSettingsServiceClient.CreateOmnichannelSettingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOmnichannelSettingAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.CreateOmnichannelSettingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting",
+            "name": "omnichannelSetting"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting>",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOmnichannelSetting",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.CreateOmnichannelSetting",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_CreateOmnichannelSetting_sync_flattened_resourceNames",
+      "title": "CreateOmnichannelSettingResourceNames",
+      "description": "Snippet for CreateOmnichannelSetting",
+      "file": "OmnichannelSettingsServiceClient.CreateOmnichannelSettingResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOmnichannelSetting",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.CreateOmnichannelSetting",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting",
+            "name": "omnichannelSetting"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOmnichannelSetting",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.CreateOmnichannelSetting",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_CreateOmnichannelSetting_async_flattened_resourceNames",
+      "title": "CreateOmnichannelSettingResourceNamesAsync",
+      "description": "Snippet for CreateOmnichannelSettingAsync",
+      "file": "OmnichannelSettingsServiceClient.CreateOmnichannelSettingResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOmnichannelSettingAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.CreateOmnichannelSettingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting",
+            "name": "omnichannelSetting"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting>",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOmnichannelSetting",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.CreateOmnichannelSetting",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_UpdateOmnichannelSetting_sync",
+      "title": "UpdateOmnichannelSettingRequestObject",
+      "description": "Snippet for UpdateOmnichannelSetting",
+      "file": "OmnichannelSettingsServiceClient.UpdateOmnichannelSettingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateOmnichannelSetting",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.UpdateOmnichannelSetting",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.UpdateOmnichannelSettingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateOmnichannelSetting",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.UpdateOmnichannelSetting",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_UpdateOmnichannelSetting_async",
+      "title": "UpdateOmnichannelSettingRequestObjectAsync",
+      "description": "Snippet for UpdateOmnichannelSettingAsync",
+      "file": "OmnichannelSettingsServiceClient.UpdateOmnichannelSettingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateOmnichannelSettingAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.UpdateOmnichannelSettingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.UpdateOmnichannelSettingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting>",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateOmnichannelSetting",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.UpdateOmnichannelSetting",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_UpdateOmnichannelSetting_sync_flattened",
+      "title": "UpdateOmnichannelSetting",
+      "description": "Snippet for UpdateOmnichannelSetting",
+      "file": "OmnichannelSettingsServiceClient.UpdateOmnichannelSettingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateOmnichannelSetting",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.UpdateOmnichannelSetting",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting",
+            "name": "omnichannelSetting"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateOmnichannelSetting",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.UpdateOmnichannelSetting",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_UpdateOmnichannelSetting_async_flattened",
+      "title": "UpdateOmnichannelSettingAsync",
+      "description": "Snippet for UpdateOmnichannelSettingAsync",
+      "file": "OmnichannelSettingsServiceClient.UpdateOmnichannelSettingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateOmnichannelSettingAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.UpdateOmnichannelSettingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting",
+            "name": "omnichannelSetting"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSetting>",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateOmnichannelSetting",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.UpdateOmnichannelSetting",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_RequestInventoryVerification_sync",
+      "title": "RequestInventoryVerificationRequestObject",
+      "description": "Snippet for RequestInventoryVerification",
+      "file": "OmnichannelSettingsServiceClient.RequestInventoryVerificationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RequestInventoryVerification",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.RequestInventoryVerification",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.RequestInventoryVerificationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.RequestInventoryVerificationResponse",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "RequestInventoryVerification",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.RequestInventoryVerification",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_RequestInventoryVerification_async",
+      "title": "RequestInventoryVerificationRequestObjectAsync",
+      "description": "Snippet for RequestInventoryVerificationAsync",
+      "file": "OmnichannelSettingsServiceClient.RequestInventoryVerificationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RequestInventoryVerificationAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.RequestInventoryVerificationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.RequestInventoryVerificationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.RequestInventoryVerificationResponse>",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "RequestInventoryVerification",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.RequestInventoryVerification",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_RequestInventoryVerification_sync_flattened",
+      "title": "RequestInventoryVerification",
+      "description": "Snippet for RequestInventoryVerification",
+      "file": "OmnichannelSettingsServiceClient.RequestInventoryVerificationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RequestInventoryVerification",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.RequestInventoryVerification",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.RequestInventoryVerificationResponse",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "RequestInventoryVerification",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.RequestInventoryVerification",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_RequestInventoryVerification_async_flattened",
+      "title": "RequestInventoryVerificationAsync",
+      "description": "Snippet for RequestInventoryVerificationAsync",
+      "file": "OmnichannelSettingsServiceClient.RequestInventoryVerificationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RequestInventoryVerificationAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.RequestInventoryVerificationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.RequestInventoryVerificationResponse>",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "RequestInventoryVerification",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.RequestInventoryVerification",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_RequestInventoryVerification_sync_flattened_resourceNames",
+      "title": "RequestInventoryVerificationResourceNames",
+      "description": "Snippet for RequestInventoryVerification",
+      "file": "OmnichannelSettingsServiceClient.RequestInventoryVerificationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RequestInventoryVerification",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.RequestInventoryVerification",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.RequestInventoryVerificationResponse",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "RequestInventoryVerification",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.RequestInventoryVerification",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OmnichannelSettingsService_RequestInventoryVerification_async_flattened_resourceNames",
+      "title": "RequestInventoryVerificationResourceNamesAsync",
+      "description": "Snippet for RequestInventoryVerificationAsync",
+      "file": "OmnichannelSettingsServiceClient.RequestInventoryVerificationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RequestInventoryVerificationAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient.RequestInventoryVerificationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.RequestInventoryVerificationResponse>",
+        "client": {
+          "shortName": "OmnichannelSettingsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OmnichannelSettingsServiceClient"
+        },
+        "method": {
+          "shortName": "RequestInventoryVerification",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService.RequestInventoryVerification",
+          "service": {
+            "shortName": "OmnichannelSettingsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OmnichannelSettingsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_GetOnlineReturnPolicy_sync",
       "title": "GetOnlineReturnPolicyRequestObject",
       "description": "Snippet for GetOnlineReturnPolicy",
@@ -6232,6 +9914,983 @@
         {
           "start": 38,
           "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_sync",
+      "title": "CreateOnlineReturnPolicyRequestObject",
+      "description": "Snippet for CreateOnlineReturnPolicy",
+      "file": "OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOnlineReturnPolicy",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicy",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CreateOnlineReturnPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy",
+        "client": {
+          "shortName": "OnlineReturnPolicyServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOnlineReturnPolicy",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService.CreateOnlineReturnPolicy",
+          "service": {
+            "shortName": "OnlineReturnPolicyService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_async",
+      "title": "CreateOnlineReturnPolicyRequestObjectAsync",
+      "description": "Snippet for CreateOnlineReturnPolicyAsync",
+      "file": "OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOnlineReturnPolicyAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.CreateOnlineReturnPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy>",
+        "client": {
+          "shortName": "OnlineReturnPolicyServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOnlineReturnPolicy",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService.CreateOnlineReturnPolicy",
+          "service": {
+            "shortName": "OnlineReturnPolicyService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_sync_flattened1",
+      "title": "CreateOnlineReturnPolicy1",
+      "description": "Snippet for CreateOnlineReturnPolicy",
+      "file": "OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicy1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOnlineReturnPolicy",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy",
+        "client": {
+          "shortName": "OnlineReturnPolicyServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOnlineReturnPolicy",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService.CreateOnlineReturnPolicy",
+          "service": {
+            "shortName": "OnlineReturnPolicyService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_async_flattened1",
+      "title": "CreateOnlineReturnPolicy1Async",
+      "description": "Snippet for CreateOnlineReturnPolicyAsync",
+      "file": "OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicy1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOnlineReturnPolicyAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy>",
+        "client": {
+          "shortName": "OnlineReturnPolicyServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOnlineReturnPolicy",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService.CreateOnlineReturnPolicy",
+          "service": {
+            "shortName": "OnlineReturnPolicyService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_sync_flattened1_resourceNames",
+      "title": "CreateOnlineReturnPolicy1ResourceNames",
+      "description": "Snippet for CreateOnlineReturnPolicy",
+      "file": "OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicy1ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOnlineReturnPolicy",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicy",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy",
+        "client": {
+          "shortName": "OnlineReturnPolicyServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOnlineReturnPolicy",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService.CreateOnlineReturnPolicy",
+          "service": {
+            "shortName": "OnlineReturnPolicyService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_async_flattened1_resourceNames",
+      "title": "CreateOnlineReturnPolicy1ResourceNamesAsync",
+      "description": "Snippet for CreateOnlineReturnPolicyAsync",
+      "file": "OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicy1ResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOnlineReturnPolicyAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy>",
+        "client": {
+          "shortName": "OnlineReturnPolicyServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOnlineReturnPolicy",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService.CreateOnlineReturnPolicy",
+          "service": {
+            "shortName": "OnlineReturnPolicyService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_sync_flattened2",
+      "title": "CreateOnlineReturnPolicy2",
+      "description": "Snippet for CreateOnlineReturnPolicy",
+      "file": "OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicy2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOnlineReturnPolicy",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy",
+            "name": "onlineReturnPolicy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy",
+        "client": {
+          "shortName": "OnlineReturnPolicyServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOnlineReturnPolicy",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService.CreateOnlineReturnPolicy",
+          "service": {
+            "shortName": "OnlineReturnPolicyService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_async_flattened2",
+      "title": "CreateOnlineReturnPolicy2Async",
+      "description": "Snippet for CreateOnlineReturnPolicyAsync",
+      "file": "OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicy2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOnlineReturnPolicyAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy",
+            "name": "onlineReturnPolicy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy>",
+        "client": {
+          "shortName": "OnlineReturnPolicyServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOnlineReturnPolicy",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService.CreateOnlineReturnPolicy",
+          "service": {
+            "shortName": "OnlineReturnPolicyService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_sync_flattened2_resourceNames",
+      "title": "CreateOnlineReturnPolicy2ResourceNames",
+      "description": "Snippet for CreateOnlineReturnPolicy",
+      "file": "OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicy2ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOnlineReturnPolicy",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicy",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy",
+            "name": "onlineReturnPolicy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy",
+        "client": {
+          "shortName": "OnlineReturnPolicyServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOnlineReturnPolicy",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService.CreateOnlineReturnPolicy",
+          "service": {
+            "shortName": "OnlineReturnPolicyService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_CreateOnlineReturnPolicy_async_flattened2_resourceNames",
+      "title": "CreateOnlineReturnPolicy2ResourceNamesAsync",
+      "description": "Snippet for CreateOnlineReturnPolicyAsync",
+      "file": "OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicy2ResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOnlineReturnPolicyAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient.CreateOnlineReturnPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy",
+            "name": "onlineReturnPolicy"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy>",
+        "client": {
+          "shortName": "OnlineReturnPolicyServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOnlineReturnPolicy",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService.CreateOnlineReturnPolicy",
+          "service": {
+            "shortName": "OnlineReturnPolicyService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_UpdateOnlineReturnPolicy_sync",
+      "title": "UpdateOnlineReturnPolicyRequestObject",
+      "description": "Snippet for UpdateOnlineReturnPolicy",
+      "file": "OnlineReturnPolicyServiceClient.UpdateOnlineReturnPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateOnlineReturnPolicy",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient.UpdateOnlineReturnPolicy",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.UpdateOnlineReturnPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy",
+        "client": {
+          "shortName": "OnlineReturnPolicyServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateOnlineReturnPolicy",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService.UpdateOnlineReturnPolicy",
+          "service": {
+            "shortName": "OnlineReturnPolicyService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_UpdateOnlineReturnPolicy_async",
+      "title": "UpdateOnlineReturnPolicyRequestObjectAsync",
+      "description": "Snippet for UpdateOnlineReturnPolicyAsync",
+      "file": "OnlineReturnPolicyServiceClient.UpdateOnlineReturnPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateOnlineReturnPolicyAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient.UpdateOnlineReturnPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.UpdateOnlineReturnPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy>",
+        "client": {
+          "shortName": "OnlineReturnPolicyServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateOnlineReturnPolicy",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService.UpdateOnlineReturnPolicy",
+          "service": {
+            "shortName": "OnlineReturnPolicyService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_UpdateOnlineReturnPolicy_sync_flattened",
+      "title": "UpdateOnlineReturnPolicy",
+      "description": "Snippet for UpdateOnlineReturnPolicy",
+      "file": "OnlineReturnPolicyServiceClient.UpdateOnlineReturnPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateOnlineReturnPolicy",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient.UpdateOnlineReturnPolicy",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy",
+            "name": "onlineReturnPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy",
+        "client": {
+          "shortName": "OnlineReturnPolicyServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateOnlineReturnPolicy",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService.UpdateOnlineReturnPolicy",
+          "service": {
+            "shortName": "OnlineReturnPolicyService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_UpdateOnlineReturnPolicy_async_flattened",
+      "title": "UpdateOnlineReturnPolicyAsync",
+      "description": "Snippet for UpdateOnlineReturnPolicyAsync",
+      "file": "OnlineReturnPolicyServiceClient.UpdateOnlineReturnPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateOnlineReturnPolicyAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient.UpdateOnlineReturnPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy",
+            "name": "onlineReturnPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicy>",
+        "client": {
+          "shortName": "OnlineReturnPolicyServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateOnlineReturnPolicy",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService.UpdateOnlineReturnPolicy",
+          "service": {
+            "shortName": "OnlineReturnPolicyService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_DeleteOnlineReturnPolicy_sync",
+      "title": "DeleteOnlineReturnPolicyRequestObject",
+      "description": "Snippet for DeleteOnlineReturnPolicy",
+      "file": "OnlineReturnPolicyServiceClient.DeleteOnlineReturnPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteOnlineReturnPolicy",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient.DeleteOnlineReturnPolicy",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.DeleteOnlineReturnPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "OnlineReturnPolicyServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteOnlineReturnPolicy",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService.DeleteOnlineReturnPolicy",
+          "service": {
+            "shortName": "OnlineReturnPolicyService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_DeleteOnlineReturnPolicy_async",
+      "title": "DeleteOnlineReturnPolicyRequestObjectAsync",
+      "description": "Snippet for DeleteOnlineReturnPolicyAsync",
+      "file": "OnlineReturnPolicyServiceClient.DeleteOnlineReturnPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteOnlineReturnPolicyAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient.DeleteOnlineReturnPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.DeleteOnlineReturnPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "OnlineReturnPolicyServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteOnlineReturnPolicy",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService.DeleteOnlineReturnPolicy",
+          "service": {
+            "shortName": "OnlineReturnPolicyService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_DeleteOnlineReturnPolicy_sync_flattened",
+      "title": "DeleteOnlineReturnPolicy",
+      "description": "Snippet for DeleteOnlineReturnPolicy",
+      "file": "OnlineReturnPolicyServiceClient.DeleteOnlineReturnPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteOnlineReturnPolicy",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient.DeleteOnlineReturnPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "OnlineReturnPolicyServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteOnlineReturnPolicy",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService.DeleteOnlineReturnPolicy",
+          "service": {
+            "shortName": "OnlineReturnPolicyService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_DeleteOnlineReturnPolicy_async_flattened",
+      "title": "DeleteOnlineReturnPolicyAsync",
+      "description": "Snippet for DeleteOnlineReturnPolicyAsync",
+      "file": "OnlineReturnPolicyServiceClient.DeleteOnlineReturnPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteOnlineReturnPolicyAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient.DeleteOnlineReturnPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "OnlineReturnPolicyServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteOnlineReturnPolicy",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService.DeleteOnlineReturnPolicy",
+          "service": {
+            "shortName": "OnlineReturnPolicyService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_DeleteOnlineReturnPolicy_sync_flattened_resourceNames",
+      "title": "DeleteOnlineReturnPolicyResourceNames",
+      "description": "Snippet for DeleteOnlineReturnPolicy",
+      "file": "OnlineReturnPolicyServiceClient.DeleteOnlineReturnPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteOnlineReturnPolicy",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient.DeleteOnlineReturnPolicy",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "OnlineReturnPolicyServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteOnlineReturnPolicy",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService.DeleteOnlineReturnPolicy",
+          "service": {
+            "shortName": "OnlineReturnPolicyService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_OnlineReturnPolicyService_DeleteOnlineReturnPolicy_async_flattened_resourceNames",
+      "title": "DeleteOnlineReturnPolicyResourceNamesAsync",
+      "description": "Snippet for DeleteOnlineReturnPolicyAsync",
+      "file": "OnlineReturnPolicyServiceClient.DeleteOnlineReturnPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteOnlineReturnPolicyAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient.DeleteOnlineReturnPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "OnlineReturnPolicyServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.OnlineReturnPolicyServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteOnlineReturnPolicy",
+          "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService.DeleteOnlineReturnPolicy",
+          "service": {
+            "shortName": "OnlineReturnPolicyService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.OnlineReturnPolicyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
           "type": "SHORT"
         }
       ]

@@ -1,0 +1,8 @@
+{
+  "distribution_name": "Google.Shopping.Merchant.Quota.V1",
+  "release_level": "stable",
+  "client_documentation": "https://googleapis.dev/dotnet/Google.Shopping.Merchant.Quota.V1/latest",
+  "library_type": "GAPIC_AUTO",
+  "language": "dotnet",
+  "api_shortname": "merchantapi"
+}

@@ -1,5 +1,34 @@
 # Version history
 
+## Version 3.20.0, released 2025-11-03
+
+### New features
+
+- Update dependencies
+
+## Version 3.19.0, released 2025-09-16
+
+### New features
+
+- Support KEY_ENCAPSULATION purpose and quantum-safe algorithms ML_KEM_768, ML_KEM_1024 and KEM_XWING
+- Add PublicKeyFormat enums XWING_RAW_BYTES (used for KEM_XWING) and DER
+
+## Version 3.18.0, released 2025-05-16
+
+### Documentation improvements
+
+- A comment for enum value `DESTROYED` in enum `CryptoKeyVersionState` is changed
+
+## Version 3.17.0, released 2025-05-15
+
+### New features
+
+- Adding eTag field to AutokeyConfig
+
+### Documentation improvements
+
+- Updating docs for total_size field in KMS List APIs
+
 ## Version 3.16.0, released 2025-02-25
 
 ### New features

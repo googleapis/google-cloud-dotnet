@@ -353,4 +353,52 @@ namespace Google.Cloud.Bigtable.Admin.V2
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class CreateSchemaBundleRequest
+    {
+        /// <summary>
+        /// <see cref="gcbcv::TableName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gcbcv::TableName ParentAsTableName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gcbcv::TableName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetSchemaBundleRequest
+    {
+        /// <summary>
+        /// <see cref="gcbav::SchemaBundleName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbav::SchemaBundleName SchemaBundleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbav::SchemaBundleName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListSchemaBundlesRequest
+    {
+        /// <summary>
+        /// <see cref="gcbcv::TableName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gcbcv::TableName ParentAsTableName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gcbcv::TableName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteSchemaBundleRequest
+    {
+        /// <summary>
+        /// <see cref="gcbav::SchemaBundleName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbav::SchemaBundleName SchemaBundleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbav::SchemaBundleName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

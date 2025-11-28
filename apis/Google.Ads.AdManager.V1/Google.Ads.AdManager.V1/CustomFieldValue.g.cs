@@ -300,7 +300,6 @@ namespace Google.Ads.AdManager.V1 {
     public static partial class Types {
       /// <summary>
       /// Represent custom field value type.
-      /// Next Id: 5
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Value : pb::IMessage<Value>

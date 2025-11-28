@@ -1,5 +1,28 @@
 # Version history
 
+## Version 1.5.0, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+### Documentation improvements
+
+- Annotate all names with IDENTIFIER
+- Use backticks around `username` in documentation for `Actor.email`
+- Update Cloud Support RPC comments to no longer include cURL and Python examples
+
+## Version 1.4.0, released 2025-05-15
+
+### New features
+
+- Deprecate the `Actor.email` field and add `username` to replace it
+- Annotate `Comment.plain_text_body` as deprecated (it was already deprecated, but now we're adding the annotation for it)
+
+### Documentation improvements
+
+- Bring comments and metadata up to date
+
 ## Version 1.3.0, released 2024-05-14
 
 ### New features

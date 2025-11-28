@@ -27,7 +27,7 @@ namespace Google.Cloud.Eventarc.V1 {
             "Cilnb29nbGUvY2xvdWQvZXZlbnRhcmMvdjEvZW5yb2xsbWVudC5wcm90bxIY",
             "Z29vZ2xlLmNsb3VkLmV2ZW50YXJjLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2Jl",
             "aGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh9nb29n",
-            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIr4FCgpFbnJvbGxtZW50EhEK",
+            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIsEFCgpFbnJvbGxtZW50EhEK",
             "BG5hbWUYASABKAlCA+BBCBIQCgN1aWQYAiABKAlCA+BBAxIRCgRldGFnGAMg",
             "ASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9i",
             "dWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBSABKAsyGi5nb29n",
@@ -36,18 +36,18 @@ namespace Google.Cloud.Eventarc.V1 {
             "cnlCA+BBARJPCgthbm5vdGF0aW9ucxgHIAMoCzI1Lmdvb2dsZS5jbG91ZC5l",
             "dmVudGFyYy52MS5FbnJvbGxtZW50LkFubm90YXRpb25zRW50cnlCA+BBARIZ",
             "CgxkaXNwbGF5X25hbWUYCCABKAlCA+BBARIWCgljZWxfbWF0Y2gYCSABKAlC",
-            "A+BBAhI/CgttZXNzYWdlX2J1cxgKIAEoCUIq4EEC+kEkCiJldmVudGFyYy5n",
-            "b29nbGVhcGlzLmNvbS9NZXNzYWdlQnVzEhgKC2Rlc3RpbmF0aW9uGAsgASgJ",
-            "QgPgQQIaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
-            "ASgJOgI4ARoyChBBbm5vdGF0aW9uc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
-            "YWx1ZRgCIAEoCToCOAE6ggHqQX8KImV2ZW50YXJjLmdvb2dsZWFwaXMuY29t",
-            "L0Vucm9sbG1lbnQSQHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9lbnJvbGxtZW50cy97ZW5yb2xsbWVudH0qC2Vucm9sbG1lbnRz",
-            "MgplbnJvbGxtZW50Qr8BChxjb20uZ29vZ2xlLmNsb3VkLmV2ZW50YXJjLnYx",
-            "Qg9FbnJvbGxtZW50UHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNvbS9nby9ldmVu",
-            "dGFyYy9hcGl2MS9ldmVudGFyY3BiO2V2ZW50YXJjcGKqAhhHb29nbGUuQ2xv",
-            "dWQuRXZlbnRhcmMuVjHKAhhHb29nbGVcQ2xvdWRcRXZlbnRhcmNcVjHqAhtH",
-            "b29nbGU6OkNsb3VkOjpFdmVudGFyYzo6VjFiBnByb3RvMw=="));
+            "A+BBAhJCCgttZXNzYWdlX2J1cxgKIAEoCUIt4EEC4EEF+kEkCiJldmVudGFy",
+            "Yy5nb29nbGVhcGlzLmNvbS9NZXNzYWdlQnVzEhgKC2Rlc3RpbmF0aW9uGAsg",
+            "ASgJQgPgQQIaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
+            "GAIgASgJOgI4ARoyChBBbm5vdGF0aW9uc0VudHJ5EgsKA2tleRgBIAEoCRIN",
+            "CgV2YWx1ZRgCIAEoCToCOAE6ggHqQX8KImV2ZW50YXJjLmdvb2dsZWFwaXMu",
+            "Y29tL0Vucm9sbG1lbnQSQHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
+            "e2xvY2F0aW9ufS9lbnJvbGxtZW50cy97ZW5yb2xsbWVudH0qC2Vucm9sbG1l",
+            "bnRzMgplbnJvbGxtZW50Qr8BChxjb20uZ29vZ2xlLmNsb3VkLmV2ZW50YXJj",
+            "LnYxQg9FbnJvbGxtZW50UHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNvbS9nby9l",
+            "dmVudGFyYy9hcGl2MS9ldmVudGFyY3BiO2V2ZW50YXJjcGKqAhhHb29nbGUu",
+            "Q2xvdWQuRXZlbnRhcmMuVjHKAhhHb29nbGVcQ2xvdWRcRXZlbnRhcmNcVjHq",
+            "AhtHb29nbGU6OkNsb3VkOjpFdmVudGFyYzo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -261,8 +261,8 @@ namespace Google.Cloud.Eventarc.V1 {
     public const int MessageBusFieldNumber = 10;
     private string messageBus_ = "";
     /// <summary>
-    /// Required. Resource name of the message bus identifying the source of the
-    /// messages. It matches the form
+    /// Required. Immutable. Resource name of the message bus identifying the
+    /// source of the messages. It matches the form
     /// projects/{project}/locations/{location}/messageBuses/{messageBus}.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

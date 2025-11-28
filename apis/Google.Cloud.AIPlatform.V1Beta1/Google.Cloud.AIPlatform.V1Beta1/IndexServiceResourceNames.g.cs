@@ -56,6 +56,18 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         }
     }
 
+    public partial class ImportIndexRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::IndexName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::IndexName IndexName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::IndexName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class DeleteIndexRequest
     {
         /// <summary>

@@ -34,11 +34,11 @@ namespace Google.Ads.AdManager.V1
     public partial class ListCustomTargetingValuesRequest
     {
         /// <summary>
-        /// <see cref="CustomTargetingKeyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public CustomTargetingKeyName ParentAsCustomTargetingKeyName
+        public NetworkName ParentAsNetworkName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : CustomTargetingKeyName.Parse(Parent, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }

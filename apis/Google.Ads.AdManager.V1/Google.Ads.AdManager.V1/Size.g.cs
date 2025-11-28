@@ -99,9 +99,8 @@ namespace Google.Ads.AdManager.V1 {
     public const int WidthFieldNumber = 1;
     private int width_;
     /// <summary>
-    /// Required. The width of the [Creative](google.ads.admanager.v1.Creative),
-    /// [AdUnit](google.ads.admanager.v1.AdUnit), or
-    /// [LineItem](google.ads.admanager.v1.LineItem).
+    /// Required. The width of the Creative,
+    /// [AdUnit][google.ads.admanager.v1.AdUnit], or LineItem.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -116,9 +115,8 @@ namespace Google.Ads.AdManager.V1 {
     public const int HeightFieldNumber = 2;
     private int height_;
     /// <summary>
-    /// Required. The height of the [Creative](google.ads.admanager.v1.Creative),
-    /// [AdUnit](google.ads.admanager.v1.AdUnit), or
-    /// [LineItem](google.ads.admanager.v1.LineItem).
+    /// Required. The height of the Creative,
+    /// [AdUnit][google.ads.admanager.v1.AdUnit], or LineItem.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -133,10 +131,8 @@ namespace Google.Ads.AdManager.V1 {
     public const int SizeTypeFieldNumber = 3;
     private global::Google.Ads.AdManager.V1.SizeTypeEnum.Types.SizeType sizeType_ = global::Google.Ads.AdManager.V1.SizeTypeEnum.Types.SizeType.Unspecified;
     /// <summary>
-    /// Required. The SizeType of the
-    /// [Creative](google.ads.admanager.v1.Creative),
-    /// [AdUnit](google.ads.admanager.v1.AdUnit), or
-    /// [LineItem](google.ads.admanager.v1.LineItem).
+    /// Required. The SizeType of the Creative,
+    /// [AdUnit][google.ads.admanager.v1.AdUnit], or LineItem.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

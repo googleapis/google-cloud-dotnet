@@ -91,11 +91,17 @@ namespace Google.Cloud.Storage.V1.Snippets
         {
             var bucketName = _fixture.BucketName;
             var objectName = _fixture.HelloStorageObjectName;
-            var credential = (ServiceAccountCredential) (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential;
+            var actualCredential = (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential;
+            string serviceAccountEmail = actualCredential switch
+            {
+                ServiceAccountCredential sa => sa.Id,
+                ComputeCredential comp => await comp.GetDefaultServiceAccountEmailAsync(),
+                _ => throw new InvalidOperationException($"Credential type not supported for HMAC creation: {actualCredential.GetType().FullName}")
+            };
             using var httpClient = new HttpClient();
 
             using var storageClient = await StorageClient.CreateAsync();
-            var hmacKey = await storageClient.CreateHmacKeyAsync(_fixture.ProjectId, credential.Id);
+            var hmacKey = await storageClient.CreateHmacKeyAsync(_fixture.ProjectId, serviceAccountEmail);
             var hmacKeyId = hmacKey.Metadata.AccessId;
             var hmacKeySecret = hmacKey.Secret;
             // Let's wait for the HMAC key to be ready for use.

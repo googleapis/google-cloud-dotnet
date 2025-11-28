@@ -935,6 +935,209 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ImportCluster</summary>
+        public void ImportClusterRequestObject()
+        {
+            // Snippet: ImportCluster(ImportClusterRequest, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            ImportClusterRequest request = new ImportClusterRequest
+            {
+                ClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                GcsUri = "",
+                Database = "",
+                SqlImportOptions = new ImportClusterRequest.Types.SqlImportOptions(),
+                User = "",
+            };
+            // Make the request
+            Operation<ImportClusterResponse, OperationMetadata> response = alloyDBAdminClient.ImportCluster(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportClusterResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImportClusterResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportClusterResponse, OperationMetadata> retrievedResponse = alloyDBAdminClient.PollOnceImportCluster(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportClusterResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportClusterAsync</summary>
+        public async Task ImportClusterRequestObjectAsync()
+        {
+            // Snippet: ImportClusterAsync(ImportClusterRequest, CallSettings)
+            // Additional: ImportClusterAsync(ImportClusterRequest, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ImportClusterRequest request = new ImportClusterRequest
+            {
+                ClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                GcsUri = "",
+                Database = "",
+                SqlImportOptions = new ImportClusterRequest.Types.SqlImportOptions(),
+                User = "",
+            };
+            // Make the request
+            Operation<ImportClusterResponse, OperationMetadata> response = await alloyDBAdminClient.ImportClusterAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportClusterResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImportClusterResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportClusterResponse, OperationMetadata> retrievedResponse = await alloyDBAdminClient.PollOnceImportClusterAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportClusterResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportCluster</summary>
+        public void ImportCluster()
+        {
+            // Snippet: ImportCluster(string, string, string, string, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            string gcsUri = "";
+            string database = "";
+            string user = "";
+            // Make the request
+            Operation<ImportClusterResponse, OperationMetadata> response = alloyDBAdminClient.ImportCluster(name, gcsUri, database, user);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportClusterResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImportClusterResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportClusterResponse, OperationMetadata> retrievedResponse = alloyDBAdminClient.PollOnceImportCluster(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportClusterResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportClusterAsync</summary>
+        public async Task ImportClusterAsync()
+        {
+            // Snippet: ImportClusterAsync(string, string, string, string, CallSettings)
+            // Additional: ImportClusterAsync(string, string, string, string, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            string gcsUri = "";
+            string database = "";
+            string user = "";
+            // Make the request
+            Operation<ImportClusterResponse, OperationMetadata> response = await alloyDBAdminClient.ImportClusterAsync(name, gcsUri, database, user);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportClusterResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImportClusterResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportClusterResponse, OperationMetadata> retrievedResponse = await alloyDBAdminClient.PollOnceImportClusterAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportClusterResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportCluster</summary>
+        public void ImportClusterResourceNames()
+        {
+            // Snippet: ImportCluster(ClusterName, string, string, string, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            ClusterName name = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            string gcsUri = "";
+            string database = "";
+            string user = "";
+            // Make the request
+            Operation<ImportClusterResponse, OperationMetadata> response = alloyDBAdminClient.ImportCluster(name, gcsUri, database, user);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportClusterResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImportClusterResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportClusterResponse, OperationMetadata> retrievedResponse = alloyDBAdminClient.PollOnceImportCluster(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportClusterResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportClusterAsync</summary>
+        public async Task ImportClusterResourceNamesAsync()
+        {
+            // Snippet: ImportClusterAsync(ClusterName, string, string, string, CallSettings)
+            // Additional: ImportClusterAsync(ClusterName, string, string, string, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ClusterName name = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            string gcsUri = "";
+            string database = "";
+            string user = "";
+            // Make the request
+            Operation<ImportClusterResponse, OperationMetadata> response = await alloyDBAdminClient.ImportClusterAsync(name, gcsUri, database, user);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportClusterResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImportClusterResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportClusterResponse, OperationMetadata> retrievedResponse = await alloyDBAdminClient.PollOnceImportClusterAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportClusterResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for UpgradeCluster</summary>
         public void UpgradeClusterRequestObject()
         {
@@ -3713,6 +3916,7 @@ namespace GoogleCSharpSnippets
                 User = "",
                 SqlStatement = "",
                 Password = "",
+                ValidateOnly = false,
             };
             // Make the request
             ExecuteSqlResponse response = alloyDBAdminClient.ExecuteSql(request);
@@ -3734,6 +3938,7 @@ namespace GoogleCSharpSnippets
                 User = "",
                 SqlStatement = "",
                 Password = "",
+                ValidateOnly = false,
             };
             // Make the request
             ExecuteSqlResponse response = await alloyDBAdminClient.ExecuteSqlAsync(request);
@@ -4709,6 +4914,7 @@ namespace GoogleCSharpSnippets
             ListSupportedDatabaseFlagsRequest request = new ListSupportedDatabaseFlagsRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Scope = SupportedDatabaseFlag.Types.Scope.Unspecified,
             };
             // Make the request
             PagedEnumerable<ListSupportedDatabaseFlagsResponse, SupportedDatabaseFlag> response = alloyDBAdminClient.ListSupportedDatabaseFlags(request);
@@ -4757,6 +4963,7 @@ namespace GoogleCSharpSnippets
             ListSupportedDatabaseFlagsRequest request = new ListSupportedDatabaseFlagsRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Scope = SupportedDatabaseFlag.Types.Scope.Unspecified,
             };
             // Make the request
             PagedAsyncEnumerable<ListSupportedDatabaseFlagsResponse, SupportedDatabaseFlag> response = alloyDBAdminClient.ListSupportedDatabaseFlagsAsync(request);
@@ -6065,6 +6272,105 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatabase</summary>
+        public void CreateDatabaseRequestObject()
+        {
+            // Snippet: CreateDatabase(CreateDatabaseRequest, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            CreateDatabaseRequest request = new CreateDatabaseRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                DatabaseId = "",
+                Database = new Database(),
+            };
+            // Make the request
+            Database response = alloyDBAdminClient.CreateDatabase(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatabaseAsync</summary>
+        public async Task CreateDatabaseRequestObjectAsync()
+        {
+            // Snippet: CreateDatabaseAsync(CreateDatabaseRequest, CallSettings)
+            // Additional: CreateDatabaseAsync(CreateDatabaseRequest, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateDatabaseRequest request = new CreateDatabaseRequest
+            {
+                ParentAsClusterName = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]"),
+                DatabaseId = "",
+                Database = new Database(),
+            };
+            // Make the request
+            Database response = await alloyDBAdminClient.CreateDatabaseAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatabase</summary>
+        public void CreateDatabase()
+        {
+            // Snippet: CreateDatabase(string, Database, string, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            Database database = new Database();
+            string databaseId = "";
+            // Make the request
+            Database response = alloyDBAdminClient.CreateDatabase(parent, database, databaseId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatabaseAsync</summary>
+        public async Task CreateDatabaseAsync()
+        {
+            // Snippet: CreateDatabaseAsync(string, Database, string, CallSettings)
+            // Additional: CreateDatabaseAsync(string, Database, string, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/clusters/[CLUSTER]";
+            Database database = new Database();
+            string databaseId = "";
+            // Make the request
+            Database response = await alloyDBAdminClient.CreateDatabaseAsync(parent, database, databaseId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatabase</summary>
+        public void CreateDatabaseResourceNames()
+        {
+            // Snippet: CreateDatabase(ClusterName, Database, string, CallSettings)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = AlloyDBAdminClient.Create();
+            // Initialize request argument(s)
+            ClusterName parent = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            Database database = new Database();
+            string databaseId = "";
+            // Make the request
+            Database response = alloyDBAdminClient.CreateDatabase(parent, database, databaseId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatabaseAsync</summary>
+        public async Task CreateDatabaseResourceNamesAsync()
+        {
+            // Snippet: CreateDatabaseAsync(ClusterName, Database, string, CallSettings)
+            // Additional: CreateDatabaseAsync(ClusterName, Database, string, CancellationToken)
+            // Create client
+            AlloyDBAdminClient alloyDBAdminClient = await AlloyDBAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ClusterName parent = ClusterName.FromProjectLocationCluster("[PROJECT]", "[LOCATION]", "[CLUSTER]");
+            Database database = new Database();
+            string databaseId = "";
+            // Make the request
+            Database response = await alloyDBAdminClient.CreateDatabaseAsync(parent, database, databaseId);
             // End snippet
         }
     }

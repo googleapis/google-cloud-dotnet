@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 Query = "",
                 OrderBy = "",
                 Scope = "",
+                SemanticSearch = false,
             };
             // Make the request
             PagedEnumerable<SearchEntriesResponse, SearchEntriesResult> response = catalogServiceClient.SearchEntries(request);

@@ -1,0 +1,111 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.DatabaseCenter.V1Beta",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.databasecenter.v1beta",
+        "version": "v1beta"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "databasecenter_v1beta_generated_DatabaseCenter_QueryProducts_sync",
+      "title": "QueryProductsRequestObject",
+      "description": "Snippet for QueryProducts",
+      "file": "DatabaseCenterClient.QueryProductsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryProducts",
+        "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient.QueryProducts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DatabaseCenter.V1Beta.QueryProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DatabaseCenter.V1Beta.QueryProductsResponse, Google.Cloud.DatabaseCenter.V1Beta.Product>",
+        "client": {
+          "shortName": "DatabaseCenterClient",
+          "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient"
+        },
+        "method": {
+          "shortName": "QueryProducts",
+          "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter.QueryProducts",
+          "service": {
+            "shortName": "DatabaseCenter",
+            "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "databasecenter_v1beta_generated_DatabaseCenter_QueryProducts_async",
+      "title": "QueryProductsRequestObjectAsync",
+      "description": "Snippet for QueryProductsAsync",
+      "file": "DatabaseCenterClient.QueryProductsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryProductsAsync",
+        "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient.QueryProductsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DatabaseCenter.V1Beta.QueryProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DatabaseCenter.V1Beta.QueryProductsResponse, Google.Cloud.DatabaseCenter.V1Beta.Product>",
+        "client": {
+          "shortName": "DatabaseCenterClient",
+          "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient"
+        },
+        "method": {
+          "shortName": "QueryProducts",
+          "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter.QueryProducts",
+          "service": {
+            "shortName": "DatabaseCenter",
+            "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

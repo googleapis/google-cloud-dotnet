@@ -25,17 +25,18 @@ namespace Google.Ads.AdManager.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjBnb29nbGUvYWRzL2FkbWFuYWdlci92MS90YXhvbm9teV90eXBlX2VudW0u",
-            "cHJvdG8SF2dvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxIuUBChBUYXhvbm9teVR5",
-            "cGVFbnVtItABCgxUYXhvbm9teVR5cGUSHQoZVEFYT05PTVlfVFlQRV9VTlNQ",
+            "cHJvdG8SF2dvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxIoMCChBUYXhvbm9teVR5",
+            "cGVFbnVtIu4BCgxUYXhvbm9teVR5cGUSHQoZVEFYT05PTVlfVFlQRV9VTlNQ",
             "RUNJRklFRBAAEh0KGVRBWE9OT01ZX0lBQl9BVURJRU5DRV8xXzEQAxIcChhU",
-            "QVhPTk9NWV9JQUJfQ09OVEVOVF8yXzEQBBIcChhUQVhPTk9NWV9JQUJfQ09O",
-            "VEVOVF8yXzIQBhIcChhUQVhPTk9NWV9JQUJfQ09OVEVOVF8zXzAQBRIoCiRU",
-            "QVhPTk9NWV9HT09HTEVfU1RSVUNUVVJFRF9WSURFT18xXzAQB0LJAQobY29t",
-            "Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhVUYXhvbm9teVR5cGVFbnVtUHJv",
-            "dG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9h",
-            "ZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoCF0dvb2dsZS5BZHMuQWRNYW5h",
-            "Z2VyLlYxygIXR29vZ2xlXEFkc1xBZE1hbmFnZXJcVjHqAhpHb29nbGU6OkFk",
-            "czo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "QVhPTk9NWV9JQUJfQ09OVEVOVF8xXzAQCBIcChhUQVhPTk9NWV9JQUJfQ09O",
+            "VEVOVF8yXzEQBBIcChhUQVhPTk9NWV9JQUJfQ09OVEVOVF8yXzIQBhIcChhU",
+            "QVhPTk9NWV9JQUJfQ09OVEVOVF8zXzAQBRIoCiRUQVhPTk9NWV9HT09HTEVf",
+            "U1RSVUNUVVJFRF9WSURFT18xXzAQB0LJAQobY29tLmdvb2dsZS5hZHMuYWRt",
+            "YW5hZ2VyLnYxQhVUYXhvbm9teVR5cGVFbnVtUHJvdG9QAVpAZ29vZ2xlLmdv",
+            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3Yx",
+            "O2FkbWFuYWdlcqoCF0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xl",
+            "XEFkc1xBZE1hbmFnZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpW",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -219,6 +220,10 @@ namespace Google.Ads.AdManager.V1 {
         /// The IAB Audience Taxonomy v1.1.
         /// </summary>
         [pbr::OriginalName("TAXONOMY_IAB_AUDIENCE_1_1")] TaxonomyIabAudience11 = 3,
+        /// <summary>
+        /// The IAB Content Taxonomy v1.0.
+        /// </summary>
+        [pbr::OriginalName("TAXONOMY_IAB_CONTENT_1_0")] TaxonomyIabContent10 = 8,
         /// <summary>
         /// The IAB Content Taxonomy v2.1.
         /// </summary>

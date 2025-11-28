@@ -258,8 +258,8 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             {
                 ValidateQueryResults((await db.RunQueryAsync(gql)).Entities);
                 ValidateQueryResults((await db.RunQueryAsync(query)).Entities);
-                ValidateQueryResults(db.RunQueryLazilyAsync(query).ToEnumerable());
-                ValidateQueryResults(db.RunQueryLazilyAsync(gql).ToEnumerable());
+                ValidateQueryResults(await db.RunQueryLazilyAsync(query).ToListAsync());
+                ValidateQueryResults(await db.RunQueryLazilyAsync(gql).ToListAsync());
             });
         }
 

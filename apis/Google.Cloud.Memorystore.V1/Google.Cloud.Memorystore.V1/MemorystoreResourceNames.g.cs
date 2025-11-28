@@ -264,6 +264,538 @@ namespace Google.Cloud.Memorystore.V1
         public static bool operator !=(InstanceName a, InstanceName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>BackupCollection</c> resource.</summary>
+    public sealed partial class BackupCollectionName : gax::IResourceName, sys::IEquatable<BackupCollectionName>
+    {
+        /// <summary>The possible contents of <see cref="BackupCollectionName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/backupCollections/{backup_collection}</c>.
+            /// </summary>
+            ProjectLocationBackupCollection = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationBackupCollection = new gax::PathTemplate("projects/{project}/locations/{location}/backupCollections/{backup_collection}");
+
+        /// <summary>Creates a <see cref="BackupCollectionName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="BackupCollectionName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static BackupCollectionName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new BackupCollectionName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="BackupCollectionName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/backupCollections/{backup_collection}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="backupCollectionId">The <c>BackupCollection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="BackupCollectionName"/> constructed from the provided ids.</returns>
+        public static BackupCollectionName FromProjectLocationBackupCollection(string projectId, string locationId, string backupCollectionId) =>
+            new BackupCollectionName(ResourceNameType.ProjectLocationBackupCollection, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), backupCollectionId: gax::GaxPreconditions.CheckNotNullOrEmpty(backupCollectionId, nameof(backupCollectionId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="BackupCollectionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/backupCollections/{backup_collection}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="backupCollectionId">The <c>BackupCollection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="BackupCollectionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/backupCollections/{backup_collection}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string backupCollectionId) =>
+            FormatProjectLocationBackupCollection(projectId, locationId, backupCollectionId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="BackupCollectionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/backupCollections/{backup_collection}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="backupCollectionId">The <c>BackupCollection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="BackupCollectionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/backupCollections/{backup_collection}</c>.
+        /// </returns>
+        public static string FormatProjectLocationBackupCollection(string projectId, string locationId, string backupCollectionId) =>
+            s_projectLocationBackupCollection.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(backupCollectionId, nameof(backupCollectionId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="BackupCollectionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/backupCollections/{backup_collection}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="backupCollectionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="BackupCollectionName"/> if successful.</returns>
+        public static BackupCollectionName Parse(string backupCollectionName) => Parse(backupCollectionName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="BackupCollectionName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/backupCollections/{backup_collection}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="backupCollectionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="BackupCollectionName"/> if successful.</returns>
+        public static BackupCollectionName Parse(string backupCollectionName, bool allowUnparsed) =>
+            TryParse(backupCollectionName, allowUnparsed, out BackupCollectionName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="BackupCollectionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/backupCollections/{backup_collection}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="backupCollectionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="BackupCollectionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string backupCollectionName, out BackupCollectionName result) =>
+            TryParse(backupCollectionName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="BackupCollectionName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/backupCollections/{backup_collection}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="backupCollectionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="BackupCollectionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string backupCollectionName, bool allowUnparsed, out BackupCollectionName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(backupCollectionName, nameof(backupCollectionName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationBackupCollection.TryParseName(backupCollectionName, out resourceName))
+            {
+                result = FromProjectLocationBackupCollection(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(backupCollectionName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private BackupCollectionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string backupCollectionId = null, string locationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            BackupCollectionId = backupCollectionId;
+            LocationId = locationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="BackupCollectionName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/backupCollections/{backup_collection}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="backupCollectionId">The <c>BackupCollection</c> ID. Must not be <c>null</c> or empty.</param>
+        public BackupCollectionName(string projectId, string locationId, string backupCollectionId) : this(ResourceNameType.ProjectLocationBackupCollection, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), backupCollectionId: gax::GaxPreconditions.CheckNotNullOrEmpty(backupCollectionId, nameof(backupCollectionId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>BackupCollection</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string BackupCollectionId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationBackupCollection: return s_projectLocationBackupCollection.Expand(ProjectId, LocationId, BackupCollectionId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as BackupCollectionName);
+
+        /// <inheritdoc/>
+        public bool Equals(BackupCollectionName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(BackupCollectionName a, BackupCollectionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(BackupCollectionName a, BackupCollectionName b) => !(a == b);
+    }
+
+    /// <summary>Resource name for the <c>Backup</c> resource.</summary>
+    public sealed partial class BackupName : gax::IResourceName, sys::IEquatable<BackupName>
+    {
+        /// <summary>The possible contents of <see cref="BackupName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/backupCollections/{backup_collection}/backups/{backup}</c>.
+            /// </summary>
+            ProjectLocationBackupCollectionBackup = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationBackupCollectionBackup = new gax::PathTemplate("projects/{project}/locations/{location}/backupCollections/{backup_collection}/backups/{backup}");
+
+        /// <summary>Creates a <see cref="BackupName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="BackupName"/> containing the provided <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static BackupName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new BackupName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="BackupName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/backupCollections/{backup_collection}/backups/{backup}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="backupCollectionId">The <c>BackupCollection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="backupId">The <c>Backup</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="BackupName"/> constructed from the provided ids.</returns>
+        public static BackupName FromProjectLocationBackupCollectionBackup(string projectId, string locationId, string backupCollectionId, string backupId) =>
+            new BackupName(ResourceNameType.ProjectLocationBackupCollectionBackup, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), backupCollectionId: gax::GaxPreconditions.CheckNotNullOrEmpty(backupCollectionId, nameof(backupCollectionId)), backupId: gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="BackupName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/backupCollections/{backup_collection}/backups/{backup}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="backupCollectionId">The <c>BackupCollection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="backupId">The <c>Backup</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="BackupName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/backupCollections/{backup_collection}/backups/{backup}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string backupCollectionId, string backupId) =>
+            FormatProjectLocationBackupCollectionBackup(projectId, locationId, backupCollectionId, backupId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="BackupName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/backupCollections/{backup_collection}/backups/{backup}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="backupCollectionId">The <c>BackupCollection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="backupId">The <c>Backup</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="BackupName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/backupCollections/{backup_collection}/backups/{backup}</c>.
+        /// </returns>
+        public static string FormatProjectLocationBackupCollectionBackup(string projectId, string locationId, string backupCollectionId, string backupId) =>
+            s_projectLocationBackupCollectionBackup.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(backupCollectionId, nameof(backupCollectionId)), gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="BackupName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/backupCollections/{backup_collection}/backups/{backup}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="backupName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="BackupName"/> if successful.</returns>
+        public static BackupName Parse(string backupName) => Parse(backupName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="BackupName"/> instance; optionally allowing an
+        /// unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/backupCollections/{backup_collection}/backups/{backup}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="backupName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="BackupName"/> if successful.</returns>
+        public static BackupName Parse(string backupName, bool allowUnparsed) =>
+            TryParse(backupName, allowUnparsed, out BackupName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="BackupName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/backupCollections/{backup_collection}/backups/{backup}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="backupName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="BackupName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string backupName, out BackupName result) => TryParse(backupName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="BackupName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/backupCollections/{backup_collection}/backups/{backup}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="backupName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="BackupName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string backupName, bool allowUnparsed, out BackupName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(backupName, nameof(backupName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationBackupCollectionBackup.TryParseName(backupName, out resourceName))
+            {
+                result = FromProjectLocationBackupCollectionBackup(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(backupName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private BackupName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string backupId = null, string backupCollectionId = null, string locationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            BackupId = backupId;
+            BackupCollectionId = backupCollectionId;
+            LocationId = locationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="BackupName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/backupCollections/{backup_collection}/backups/{backup}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="backupCollectionId">The <c>BackupCollection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="backupId">The <c>Backup</c> ID. Must not be <c>null</c> or empty.</param>
+        public BackupName(string projectId, string locationId, string backupCollectionId, string backupId) : this(ResourceNameType.ProjectLocationBackupCollectionBackup, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), backupCollectionId: gax::GaxPreconditions.CheckNotNullOrEmpty(backupCollectionId, nameof(backupCollectionId)), backupId: gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Backup</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string BackupId { get; }
+
+        /// <summary>
+        /// The <c>BackupCollection</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string BackupCollectionId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationBackupCollectionBackup: return s_projectLocationBackupCollectionBackup.Expand(ProjectId, LocationId, BackupCollectionId, BackupId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as BackupName);
+
+        /// <inheritdoc/>
+        public bool Equals(BackupName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(BackupName a, BackupName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(BackupName a, BackupName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>CertificateAuthority</c> resource.</summary>
     public sealed partial class CertificateAuthorityName : gax::IResourceName, sys::IEquatable<CertificateAuthorityName>
     {
@@ -1276,6 +1808,275 @@ namespace Google.Cloud.Memorystore.V1
         public static bool operator !=(ServiceAttachmentName a, ServiceAttachmentName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>CryptoKey</c> resource.</summary>
+    public sealed partial class CryptoKeyName : gax::IResourceName, sys::IEquatable<CryptoKeyName>
+    {
+        /// <summary>The possible contents of <see cref="CryptoKeyName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}</c>.
+            /// </summary>
+            ProjectLocationKeyRingCryptoKey = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationKeyRingCryptoKey = new gax::PathTemplate("projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}");
+
+        /// <summary>Creates a <see cref="CryptoKeyName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="CryptoKeyName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static CryptoKeyName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new CryptoKeyName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="CryptoKeyName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="keyRingId">The <c>KeyRing</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="cryptoKeyId">The <c>CryptoKey</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="CryptoKeyName"/> constructed from the provided ids.</returns>
+        public static CryptoKeyName FromProjectLocationKeyRingCryptoKey(string projectId, string locationId, string keyRingId, string cryptoKeyId) =>
+            new CryptoKeyName(ResourceNameType.ProjectLocationKeyRingCryptoKey, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), keyRingId: gax::GaxPreconditions.CheckNotNullOrEmpty(keyRingId, nameof(keyRingId)), cryptoKeyId: gax::GaxPreconditions.CheckNotNullOrEmpty(cryptoKeyId, nameof(cryptoKeyId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="CryptoKeyName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="keyRingId">The <c>KeyRing</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="cryptoKeyId">The <c>CryptoKey</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="CryptoKeyName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string keyRingId, string cryptoKeyId) =>
+            FormatProjectLocationKeyRingCryptoKey(projectId, locationId, keyRingId, cryptoKeyId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="CryptoKeyName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="keyRingId">The <c>KeyRing</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="cryptoKeyId">The <c>CryptoKey</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="CryptoKeyName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}</c>.
+        /// </returns>
+        public static string FormatProjectLocationKeyRingCryptoKey(string projectId, string locationId, string keyRingId, string cryptoKeyId) =>
+            s_projectLocationKeyRingCryptoKey.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(keyRingId, nameof(keyRingId)), gax::GaxPreconditions.CheckNotNullOrEmpty(cryptoKeyId, nameof(cryptoKeyId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="CryptoKeyName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="cryptoKeyName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="CryptoKeyName"/> if successful.</returns>
+        public static CryptoKeyName Parse(string cryptoKeyName) => Parse(cryptoKeyName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="CryptoKeyName"/> instance; optionally allowing
+        /// an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="cryptoKeyName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="CryptoKeyName"/> if successful.</returns>
+        public static CryptoKeyName Parse(string cryptoKeyName, bool allowUnparsed) =>
+            TryParse(cryptoKeyName, allowUnparsed, out CryptoKeyName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="CryptoKeyName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="cryptoKeyName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="CryptoKeyName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string cryptoKeyName, out CryptoKeyName result) => TryParse(cryptoKeyName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="CryptoKeyName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="cryptoKeyName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="CryptoKeyName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string cryptoKeyName, bool allowUnparsed, out CryptoKeyName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(cryptoKeyName, nameof(cryptoKeyName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationKeyRingCryptoKey.TryParseName(cryptoKeyName, out resourceName))
+            {
+                result = FromProjectLocationKeyRingCryptoKey(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(cryptoKeyName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private CryptoKeyName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string cryptoKeyId = null, string keyRingId = null, string locationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            CryptoKeyId = cryptoKeyId;
+            KeyRingId = keyRingId;
+            LocationId = locationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="CryptoKeyName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="keyRingId">The <c>KeyRing</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="cryptoKeyId">The <c>CryptoKey</c> ID. Must not be <c>null</c> or empty.</param>
+        public CryptoKeyName(string projectId, string locationId, string keyRingId, string cryptoKeyId) : this(ResourceNameType.ProjectLocationKeyRingCryptoKey, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), keyRingId: gax::GaxPreconditions.CheckNotNullOrEmpty(keyRingId, nameof(keyRingId)), cryptoKeyId: gax::GaxPreconditions.CheckNotNullOrEmpty(cryptoKeyId, nameof(cryptoKeyId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>CryptoKey</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string CryptoKeyId { get; }
+
+        /// <summary>
+        /// The <c>KeyRing</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string KeyRingId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationKeyRingCryptoKey: return s_projectLocationKeyRingCryptoKey.Expand(ProjectId, LocationId, KeyRingId, CryptoKeyId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as CryptoKeyName);
+
+        /// <inheritdoc/>
+        public bool Equals(CryptoKeyName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(CryptoKeyName a, CryptoKeyName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(CryptoKeyName a, CryptoKeyName b) => !(a == b);
+    }
+
     public partial class Instance
     {
         /// <summary>
@@ -1285,6 +2086,98 @@ namespace Google.Cloud.Memorystore.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcmv::InstanceName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="BackupCollectionName"/>-typed view over the <see cref="BackupCollection"/> resource name
+        /// property.
+        /// </summary>
+        public BackupCollectionName BackupCollectionAsBackupCollectionName
+        {
+            get => string.IsNullOrEmpty(BackupCollection) ? null : BackupCollectionName.Parse(BackupCollection, allowUnparsed: true);
+            set => BackupCollection = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BackupCollection
+    {
+        /// <summary>
+        /// <see cref="gcmv::BackupCollectionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcmv::BackupCollectionName BackupCollectionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcmv::BackupCollectionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="Instance"/> resource name property.
+        /// </summary>
+        public InstanceName InstanceAsInstanceName
+        {
+            get => string.IsNullOrEmpty(Instance) ? null : InstanceName.Parse(Instance, allowUnparsed: true);
+            set => Instance = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="CryptoKeyName"/>-typed view over the <see cref="KmsKey"/> resource name property.
+        /// </summary>
+        public CryptoKeyName KmsKeyAsCryptoKeyName
+        {
+            get => string.IsNullOrEmpty(KmsKey) ? null : CryptoKeyName.Parse(KmsKey, allowUnparsed: true);
+            set => KmsKey = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class Backup
+    {
+        /// <summary>
+        /// <see cref="gcmv::BackupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcmv::BackupName BackupName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcmv::BackupName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="Instance"/> resource name property.
+        /// </summary>
+        public InstanceName InstanceAsInstanceName
+        {
+            get => string.IsNullOrEmpty(Instance) ? null : InstanceName.Parse(Instance, allowUnparsed: true);
+            set => Instance = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CrossInstanceReplicationConfig
+    {
+        public partial class Types
+        {
+            public partial class RemoteInstance
+            {
+                /// <summary>
+                /// <see cref="InstanceName"/>-typed view over the <see cref="Instance"/> resource name property.
+                /// </summary>
+                public InstanceName InstanceAsInstanceName
+                {
+                    get => string.IsNullOrEmpty(Instance) ? null : InstanceName.Parse(Instance, allowUnparsed: true);
+                    set => Instance = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
+
+    public partial class PscAttachmentDetail
+    {
+        /// <summary>
+        /// <see cref="ServiceAttachmentName"/>-typed view over the <see cref="ServiceAttachment"/> resource name
+        /// property.
+        /// </summary>
+        public ServiceAttachmentName ServiceAttachmentAsServiceAttachmentName
+        {
+            get => string.IsNullOrEmpty(ServiceAttachment) ? null : ServiceAttachmentName.Parse(ServiceAttachment, allowUnparsed: true);
+            set => ServiceAttachment = value?.ToString() ?? "";
         }
     }
 
@@ -1362,6 +2255,18 @@ namespace Google.Cloud.Memorystore.V1
         }
     }
 
+    public partial class RescheduleMaintenanceRequest
+    {
+        /// <summary>
+        /// <see cref="gcmv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcmv::InstanceName InstanceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcmv::InstanceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListInstancesRequest
     {
         /// <summary>
@@ -1399,6 +2304,90 @@ namespace Google.Cloud.Memorystore.V1
     }
 
     public partial class DeleteInstanceRequest
+    {
+        /// <summary>
+        /// <see cref="gcmv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcmv::InstanceName InstanceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcmv::InstanceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListBackupCollectionsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetBackupCollectionRequest
+    {
+        /// <summary>
+        /// <see cref="gcmv::BackupCollectionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcmv::BackupCollectionName BackupCollectionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcmv::BackupCollectionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListBackupsRequest
+    {
+        /// <summary>
+        /// <see cref="BackupCollectionName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public BackupCollectionName ParentAsBackupCollectionName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : BackupCollectionName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetBackupRequest
+    {
+        /// <summary>
+        /// <see cref="gcmv::BackupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcmv::BackupName BackupName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcmv::BackupName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteBackupRequest
+    {
+        /// <summary>
+        /// <see cref="gcmv::BackupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcmv::BackupName BackupName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcmv::BackupName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ExportBackupRequest
+    {
+        /// <summary>
+        /// <see cref="gcmv::BackupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcmv::BackupName BackupName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcmv::BackupName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BackupInstanceRequest
     {
         /// <summary>
         /// <see cref="gcmv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.

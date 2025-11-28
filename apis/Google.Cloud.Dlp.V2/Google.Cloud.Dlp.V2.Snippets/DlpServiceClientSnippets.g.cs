@@ -86,6 +86,8 @@ namespace GoogleCSharpSnippets
                 IncludeFindings = false,
                 ByteItem = new ByteContentItem(),
                 LocationId = "",
+                InspectTemplate = "",
+                DeidentifyTemplate = "",
             };
             // Make the request
             RedactImageResponse response = dlpServiceClient.RedactImage(request);
@@ -111,6 +113,8 @@ namespace GoogleCSharpSnippets
                 IncludeFindings = false,
                 ByteItem = new ByteContentItem(),
                 LocationId = "",
+                InspectTemplate = "",
+                DeidentifyTemplate = "",
             };
             // Make the request
             RedactImageResponse response = await dlpServiceClient.RedactImageAsync(request);

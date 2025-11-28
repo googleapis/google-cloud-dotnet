@@ -1,5 +1,63 @@
 # Version history
 
+## Version 2.0.0-alpha19, released 2025-11-03
+
+### New features
+
+- Update dependencies
+
+## Version 2.0.0-alpha18, released 2025-06-10
+
+More release process testing
+
+## Version 2.0.0-alpha17, released 2025-06-05
+
+More release process testing
+
+## Version 2.0.0-alpha16, released 2025-06-03
+
+More release process testing.
+
+## Version 2.0.0-alpha15, released 2025-05-30
+
+More release process testing.
+
+## Version 2.0.0-alpha14, released 2025-05-28
+
+more release process testing
+
+## Version 2.0.0-alpha13, released 2025-05-21
+
+More release process testing.
+
+## Version 2.0.0-alpha12, released 2025-05-21
+
+More release process testing.
+
+## Version 2.0.0-alpha11, released 2025-05-21
+
+More release process testing.
+
+## Version 2.0.0-alpha10, released 2025-05-21
+
+More release process testing.
+
+## Version 2.0.0-alpha09, released 2025-05-21
+
+More release process testing.
+
+## Version 2.0.0-alpha08, released 2025-05-21
+
+More release process testing.
+
+## Version 2.0.0-alpha07, released 2025-05-20
+
+More release process testing.
+
+## Version 2.0.0-alpha06, released 2025-05-19
+
+Only dependency changes since 2.0.0-alpha05; releasing as a test of new release processes.
+
 ## Version 2.0.0-alpha05, released 2024-05-08
 
 ### New features

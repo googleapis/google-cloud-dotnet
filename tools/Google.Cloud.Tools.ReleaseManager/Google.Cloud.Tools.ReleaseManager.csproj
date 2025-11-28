@@ -2,15 +2,13 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Api.CommonProtos" VersionOverride="2.16.0" />
     <PackageReference Include="LibGit2Sharp" />
     <PackageReference Include="NuGet.Protocol" />
     <PackageReference Include="Octokit" />
-    <ProjectReference Include="..\Google.Cloud.Tools.ApiIndex.V1\Google.Cloud.Tools.ApiIndex.V1.csproj" />
     <ProjectReference Include="..\Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj" />
     <ProjectReference Include="..\Google.Cloud.Tools.VersionCompat\Google.Cloud.Tools.VersionCompat.csproj" />
     <EmbeddedResource Include="History/*.json" />
@@ -20,8 +18,17 @@
      - this binary refers to. Without this, we end up loading the netstandard2.0 TFM
      - for libraries which target that, and that then fails to use the channel.
      -->
-    <PackageReference Include="Grpc.Net.Client" VersionOverride="2.66.0" />
+    <PackageReference Include="Grpc.Net.Client" VersionOverride="2.71.0" />
 
+    <!-- Ensure that we've got the default version of GAX available. -->
+    <PackageReference Include="Google.Api.Gax.Grpc" />
+
+    <!--
+      - Used to publish documentation. It doesn't matter if this ends up being fairly stale,
+      - so long as that doesn't cause other dependency conflicts.
+      -->
+    <PackageReference Include="Google.Cloud.Storage.V1" VersionOverride="4.13.0" />
+    
     <PackageReference Include="SharpCompress" />
   </ItemGroup>
 

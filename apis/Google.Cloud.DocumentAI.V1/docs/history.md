@@ -1,5 +1,38 @@
 # Version history
 
+## Version 3.23.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+## Version 3.22.0, released 2025-10-09
+
+### New features
+
+- Added new messages `EntityValidationOutput` and `EntitiesRevision`
+- Added new fields `entity_validation_output`, `entities_revisions`, and `entities_revision_id` to the `Document` message
+
+### Documentation improvements
+
+- The field `training_method` in `TrainProcessorVersionRequest` is now marked as optional
+
+## Version 3.21.0, released 2025-08-19
+
+### New features
+
+- Added config options for derived fields and signature detection. Some annotation changes changes to mark fields explicitly output only (no changes in semantics just readability)
+
+### Documentation improvements
+
+- A comment for field `document_schema` in message `.google.cloud.documentai.v1.ProcessorVersion` is changed to describe as output only.
+- A comment for field `create_time` in message `.google.cloud.documentai.v1.ProcessorVersion`  is changed to describe as output only.
+- A comment for field `latest_evaluation` in message `.google.cloud.documentai.v1.ProcessorVersion`  is changed to describe as output only.
+- A comment for field `kms_key_name` in message `.google.cloud.documentai.v1.ProcessorVersion`  is changed to describe as output only.
+- A comment for field `kms_key_version_name` in message `.google.cloud.documentai.v1.ProcessorVersion`  is changed to describe as output only.
+- A comment for field `deprecation_info` in message `.google.cloud.documentai.v1.ProcessorVersion`  is changed to describe as output only.
+- A comment for field `create_time` in message `.google.cloud.documentai.v1.Processor`  is changed to describe as output only.
+
 ## Version 3.20.0, released 2025-04-23
 
 ### New features

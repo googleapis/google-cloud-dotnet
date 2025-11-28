@@ -1,5 +1,60 @@
 # Version history
 
+## Version 3.30.0, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+## Version 3.29.0, released 2025-10-20
+
+### New features
+
+- Annotate some resource fields with their corresponding API types
+- Add AwsKinesisFailureReason.ApiViolationReason
+- Add tags to Subscription, Topic, and CreateSnapshotRequest messages for use in CreateSubscription, CreateTopic, and CreateSnapshot requests respectively
+
+### Documentation improvements
+
+- A comment for field `received_messages` in message `.google.pubsub.v1.StreamingPullResponse` is changed
+
+## Version 3.28.0, released 2025-10-09
+
+### New features
+
+- Support the protocol version in StreamingPullRequest
+
+## Version 3.27.0, released 2025-07-07
+
+### New features
+
+- Add MessageTransformationFailureReason to IngestionFailureEvent
+
+### Documentation improvements
+
+- Document that the `acknowledge_confirmation` and `modify_ack_deadline_confirmation` fields in message `.google.pubsub.v1.StreamingPullResponse` are not guaranteed to be populated
+
+## Version 3.26.0, released 2025-06-17
+
+### Bug fixes
+
+- Change HandleAck retry behavior to check metadata before the exception code
+
+## Version 3.25.0, released 2025-06-16
+
+### New features
+
+- Add SchemaViolationReason to IngestionFailureEvent
+- Generate renamed go pubsub admin clients
+
+### Bug fixes
+
+- Forget ordering keys that have no pending messages.
+
+### Documentation improvements
+
+- Standardize spelling of "acknowledgment" in Pub/Sub protos
+
 ## Version 3.24.0, released 2025-03-31
 
 ### Documentation improvements

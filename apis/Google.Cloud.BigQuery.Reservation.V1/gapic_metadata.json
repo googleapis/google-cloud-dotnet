@@ -28,6 +28,12 @@
                 "CreateReservationAsync"
               ]
             },
+            "CreateReservationGroup": {
+              "methods": [
+                "CreateReservationGroup",
+                "CreateReservationGroupAsync"
+              ]
+            },
             "DeleteAssignment": {
               "methods": [
                 "DeleteAssignment",
@@ -44,6 +50,12 @@
               "methods": [
                 "DeleteReservation",
                 "DeleteReservationAsync"
+              ]
+            },
+            "DeleteReservationGroup": {
+              "methods": [
+                "DeleteReservationGroup",
+                "DeleteReservationGroupAsync"
               ]
             },
             "FailoverReservation": {
@@ -64,10 +76,22 @@
                 "GetCapacityCommitmentAsync"
               ]
             },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
             "GetReservation": {
               "methods": [
                 "GetReservation",
                 "GetReservationAsync"
+              ]
+            },
+            "GetReservationGroup": {
+              "methods": [
+                "GetReservationGroup",
+                "GetReservationGroupAsync"
               ]
             },
             "ListAssignments": {
@@ -80,6 +104,12 @@
               "methods": [
                 "ListCapacityCommitments",
                 "ListCapacityCommitmentsAsync"
+              ]
+            },
+            "ListReservationGroups": {
+              "methods": [
+                "ListReservationGroups",
+                "ListReservationGroupsAsync"
               ]
             },
             "ListReservations": {
@@ -112,10 +142,22 @@
                 "SearchAssignmentsAsync"
               ]
             },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
             "SplitCapacityCommitment": {
               "methods": [
                 "SplitCapacityCommitment",
                 "SplitCapacityCommitmentAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
               ]
             },
             "UpdateAssignment": {

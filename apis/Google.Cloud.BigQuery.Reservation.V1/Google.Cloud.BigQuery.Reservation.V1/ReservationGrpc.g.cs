@@ -143,6 +143,28 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.BiReservation> __Marshaller_google_cloud_bigquery_reservation_v1_BiReservation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.BiReservation.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.UpdateBiReservationRequest> __Marshaller_google_cloud_bigquery_reservation_v1_UpdateBiReservationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.UpdateBiReservationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.Policy.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationGroupRequest> __Marshaller_google_cloud_bigquery_reservation_v1_CreateReservationGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup> __Marshaller_google_cloud_bigquery_reservation_v1_ReservationGroup = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.GetReservationGroupRequest> __Marshaller_google_cloud_bigquery_reservation_v1_GetReservationGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.GetReservationGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.DeleteReservationGroupRequest> __Marshaller_google_cloud_bigquery_reservation_v1_DeleteReservationGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.DeleteReservationGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsRequest> __Marshaller_google_cloud_bigquery_reservation_v1_ListReservationGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsResponse> __Marshaller_google_cloud_bigquery_reservation_v1_ListReservationGroupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationRequest, global::Google.Cloud.BigQuery.Reservation.V1.Reservation> __Method_CreateReservation = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationRequest, global::Google.Cloud.BigQuery.Reservation.V1.Reservation>(
@@ -319,6 +341,62 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         "UpdateBiReservation",
         __Marshaller_google_cloud_bigquery_reservation_v1_UpdateBiReservationRequest,
         __Marshaller_google_cloud_bigquery_reservation_v1_BiReservation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_GetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetIamPolicy",
+        __Marshaller_google_iam_v1_GetIamPolicyRequest,
+        __Marshaller_google_iam_v1_Policy);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_SetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SetIamPolicy",
+        __Marshaller_google_iam_v1_SetIamPolicyRequest,
+        __Marshaller_google_iam_v1_Policy);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Method_TestIamPermissions = new grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "TestIamPermissions",
+        __Marshaller_google_iam_v1_TestIamPermissionsRequest,
+        __Marshaller_google_iam_v1_TestIamPermissionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationGroupRequest, global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup> __Method_CreateReservationGroup = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationGroupRequest, global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateReservationGroup",
+        __Marshaller_google_cloud_bigquery_reservation_v1_CreateReservationGroupRequest,
+        __Marshaller_google_cloud_bigquery_reservation_v1_ReservationGroup);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.GetReservationGroupRequest, global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup> __Method_GetReservationGroup = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.GetReservationGroupRequest, global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetReservationGroup",
+        __Marshaller_google_cloud_bigquery_reservation_v1_GetReservationGroupRequest,
+        __Marshaller_google_cloud_bigquery_reservation_v1_ReservationGroup);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.DeleteReservationGroupRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteReservationGroup = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.DeleteReservationGroupRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteReservationGroup",
+        __Marshaller_google_cloud_bigquery_reservation_v1_DeleteReservationGroupRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsRequest, global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsResponse> __Method_ListReservationGroups = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsRequest, global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListReservationGroups",
+        __Marshaller_google_cloud_bigquery_reservation_v1_ListReservationGroupsRequest,
+        __Marshaller_google_cloud_bigquery_reservation_v1_ListReservationGroupsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -740,6 +818,121 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.BiReservation> UpdateBiReservation(global::Google.Cloud.BigQuery.Reservation.V1.UpdateBiReservationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the access control policy for a resource.
+      /// May return:
+      ///
+      /// * A`NOT_FOUND` error if the resource doesn't exist or you don't have the
+      ///   permission to view it.
+      /// * An empty policy if the resource exists but doesn't have a set policy.
+      ///
+      /// Supported resources are:
+      /// - Reservations
+      /// - ReservationAssignments
+      ///
+      /// To call this method, you must have the following Google IAM permissions:
+      ///
+      /// - `bigqueryreservation.reservations.getIamPolicy` to get policies on
+      /// reservations.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Sets an access control policy for a resource. Replaces any existing
+      /// policy.
+      ///
+      /// Supported resources are:
+      /// - Reservations
+      ///
+      /// To call this method, you must have the following Google IAM permissions:
+      ///
+      /// - `bigqueryreservation.reservations.setIamPolicy` to set policies on
+      /// reservations.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets your permissions on a resource. Returns an empty set of permissions if
+      /// the resource doesn't exist.
+      ///
+      /// Supported resources are:
+      /// - Reservations
+      ///
+      /// No Google IAM permissions are required to call this method.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new reservation group.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup> CreateReservationGroup(global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns information about the reservation group.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup> GetReservationGroup(global::Google.Cloud.BigQuery.Reservation.V1.GetReservationGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a reservation.
+      /// Returns `google.rpc.Code.FAILED_PRECONDITION` when reservation has
+      /// assignments.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteReservationGroup(global::Google.Cloud.BigQuery.Reservation.V1.DeleteReservationGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all the reservation groups for the project in the specified location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsResponse> ListReservationGroups(global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2429,6 +2622,466 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateBiReservation, null, options, request);
       }
+      /// <summary>
+      /// Gets the access control policy for a resource.
+      /// May return:
+      ///
+      /// * A`NOT_FOUND` error if the resource doesn't exist or you don't have the
+      ///   permission to view it.
+      /// * An empty policy if the resource exists but doesn't have a set policy.
+      ///
+      /// Supported resources are:
+      /// - Reservations
+      /// - ReservationAssignments
+      ///
+      /// To call this method, you must have the following Google IAM permissions:
+      ///
+      /// - `bigqueryreservation.reservations.getIamPolicy` to get policies on
+      /// reservations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the access control policy for a resource.
+      /// May return:
+      ///
+      /// * A`NOT_FOUND` error if the resource doesn't exist or you don't have the
+      ///   permission to view it.
+      /// * An empty policy if the resource exists but doesn't have a set policy.
+      ///
+      /// Supported resources are:
+      /// - Reservations
+      /// - ReservationAssignments
+      ///
+      /// To call this method, you must have the following Google IAM permissions:
+      ///
+      /// - `bigqueryreservation.reservations.getIamPolicy` to get policies on
+      /// reservations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Gets the access control policy for a resource.
+      /// May return:
+      ///
+      /// * A`NOT_FOUND` error if the resource doesn't exist or you don't have the
+      ///   permission to view it.
+      /// * An empty policy if the resource exists but doesn't have a set policy.
+      ///
+      /// Supported resources are:
+      /// - Reservations
+      /// - ReservationAssignments
+      ///
+      /// To call this method, you must have the following Google IAM permissions:
+      ///
+      /// - `bigqueryreservation.reservations.getIamPolicy` to get policies on
+      /// reservations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the access control policy for a resource.
+      /// May return:
+      ///
+      /// * A`NOT_FOUND` error if the resource doesn't exist or you don't have the
+      ///   permission to view it.
+      /// * An empty policy if the resource exists but doesn't have a set policy.
+      ///
+      /// Supported resources are:
+      /// - Reservations
+      /// - ReservationAssignments
+      ///
+      /// To call this method, you must have the following Google IAM permissions:
+      ///
+      /// - `bigqueryreservation.reservations.getIamPolicy` to get policies on
+      /// reservations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Sets an access control policy for a resource. Replaces any existing
+      /// policy.
+      ///
+      /// Supported resources are:
+      /// - Reservations
+      ///
+      /// To call this method, you must have the following Google IAM permissions:
+      ///
+      /// - `bigqueryreservation.reservations.setIamPolicy` to set policies on
+      /// reservations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Sets an access control policy for a resource. Replaces any existing
+      /// policy.
+      ///
+      /// Supported resources are:
+      /// - Reservations
+      ///
+      /// To call this method, you must have the following Google IAM permissions:
+      ///
+      /// - `bigqueryreservation.reservations.setIamPolicy` to set policies on
+      /// reservations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SetIamPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Sets an access control policy for a resource. Replaces any existing
+      /// policy.
+      ///
+      /// Supported resources are:
+      /// - Reservations
+      ///
+      /// To call this method, you must have the following Google IAM permissions:
+      ///
+      /// - `bigqueryreservation.reservations.setIamPolicy` to set policies on
+      /// reservations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Sets an access control policy for a resource. Replaces any existing
+      /// policy.
+      ///
+      /// Supported resources are:
+      /// - Reservations
+      ///
+      /// To call this method, you must have the following Google IAM permissions:
+      ///
+      /// - `bigqueryreservation.reservations.setIamPolicy` to set policies on
+      /// reservations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Gets your permissions on a resource. Returns an empty set of permissions if
+      /// the resource doesn't exist.
+      ///
+      /// Supported resources are:
+      /// - Reservations
+      ///
+      /// No Google IAM permissions are required to call this method.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TestIamPermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets your permissions on a resource. Returns an empty set of permissions if
+      /// the resource doesn't exist.
+      ///
+      /// Supported resources are:
+      /// - Reservations
+      ///
+      /// No Google IAM permissions are required to call this method.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
+      }
+      /// <summary>
+      /// Gets your permissions on a resource. Returns an empty set of permissions if
+      /// the resource doesn't exist.
+      ///
+      /// Supported resources are:
+      /// - Reservations
+      ///
+      /// No Google IAM permissions are required to call this method.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TestIamPermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets your permissions on a resource. Returns an empty set of permissions if
+      /// the resource doesn't exist.
+      ///
+      /// Supported resources are:
+      /// - Reservations
+      ///
+      /// No Google IAM permissions are required to call this method.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissions, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new reservation group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup CreateReservationGroup(global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateReservationGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new reservation group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup CreateReservationGroup(global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateReservationGroup, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new reservation group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup> CreateReservationGroupAsync(global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateReservationGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new reservation group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup> CreateReservationGroupAsync(global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateReservationGroup, null, options, request);
+      }
+      /// <summary>
+      /// Returns information about the reservation group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup GetReservationGroup(global::Google.Cloud.BigQuery.Reservation.V1.GetReservationGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetReservationGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns information about the reservation group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup GetReservationGroup(global::Google.Cloud.BigQuery.Reservation.V1.GetReservationGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetReservationGroup, null, options, request);
+      }
+      /// <summary>
+      /// Returns information about the reservation group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup> GetReservationGroupAsync(global::Google.Cloud.BigQuery.Reservation.V1.GetReservationGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetReservationGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns information about the reservation group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup> GetReservationGroupAsync(global::Google.Cloud.BigQuery.Reservation.V1.GetReservationGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetReservationGroup, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a reservation.
+      /// Returns `google.rpc.Code.FAILED_PRECONDITION` when reservation has
+      /// assignments.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteReservationGroup(global::Google.Cloud.BigQuery.Reservation.V1.DeleteReservationGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteReservationGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a reservation.
+      /// Returns `google.rpc.Code.FAILED_PRECONDITION` when reservation has
+      /// assignments.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteReservationGroup(global::Google.Cloud.BigQuery.Reservation.V1.DeleteReservationGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteReservationGroup, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a reservation.
+      /// Returns `google.rpc.Code.FAILED_PRECONDITION` when reservation has
+      /// assignments.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteReservationGroupAsync(global::Google.Cloud.BigQuery.Reservation.V1.DeleteReservationGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteReservationGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a reservation.
+      /// Returns `google.rpc.Code.FAILED_PRECONDITION` when reservation has
+      /// assignments.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteReservationGroupAsync(global::Google.Cloud.BigQuery.Reservation.V1.DeleteReservationGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteReservationGroup, null, options, request);
+      }
+      /// <summary>
+      /// Lists all the reservation groups for the project in the specified location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsResponse ListReservationGroups(global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListReservationGroups(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all the reservation groups for the project in the specified location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsResponse ListReservationGroups(global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListReservationGroups, null, options, request);
+      }
+      /// <summary>
+      /// Lists all the reservation groups for the project in the specified location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsResponse> ListReservationGroupsAsync(global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListReservationGroupsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all the reservation groups for the project in the specified location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsResponse> ListReservationGroupsAsync(global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListReservationGroups, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ReservationServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -2464,7 +3117,14 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
           .AddMethod(__Method_MoveAssignment, serviceImpl.MoveAssignment)
           .AddMethod(__Method_UpdateAssignment, serviceImpl.UpdateAssignment)
           .AddMethod(__Method_GetBiReservation, serviceImpl.GetBiReservation)
-          .AddMethod(__Method_UpdateBiReservation, serviceImpl.UpdateBiReservation).Build();
+          .AddMethod(__Method_UpdateBiReservation, serviceImpl.UpdateBiReservation)
+          .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
+          .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy)
+          .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions)
+          .AddMethod(__Method_CreateReservationGroup, serviceImpl.CreateReservationGroup)
+          .AddMethod(__Method_GetReservationGroup, serviceImpl.GetReservationGroup)
+          .AddMethod(__Method_DeleteReservationGroup, serviceImpl.DeleteReservationGroup)
+          .AddMethod(__Method_ListReservationGroups, serviceImpl.ListReservationGroups).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2496,6 +3156,13 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       serviceBinder.AddMethod(__Method_UpdateAssignment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.UpdateAssignmentRequest, global::Google.Cloud.BigQuery.Reservation.V1.Assignment>(serviceImpl.UpdateAssignment));
       serviceBinder.AddMethod(__Method_GetBiReservation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.GetBiReservationRequest, global::Google.Cloud.BigQuery.Reservation.V1.BiReservation>(serviceImpl.GetBiReservation));
       serviceBinder.AddMethod(__Method_UpdateBiReservation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.UpdateBiReservationRequest, global::Google.Cloud.BigQuery.Reservation.V1.BiReservation>(serviceImpl.UpdateBiReservation));
+      serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
+      serviceBinder.AddMethod(__Method_SetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicy));
+      serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));
+      serviceBinder.AddMethod(__Method_CreateReservationGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationGroupRequest, global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup>(serviceImpl.CreateReservationGroup));
+      serviceBinder.AddMethod(__Method_GetReservationGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.GetReservationGroupRequest, global::Google.Cloud.BigQuery.Reservation.V1.ReservationGroup>(serviceImpl.GetReservationGroup));
+      serviceBinder.AddMethod(__Method_DeleteReservationGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.DeleteReservationGroupRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteReservationGroup));
+      serviceBinder.AddMethod(__Method_ListReservationGroups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsRequest, global::Google.Cloud.BigQuery.Reservation.V1.ListReservationGroupsResponse>(serviceImpl.ListReservationGroups));
     }
 
   }

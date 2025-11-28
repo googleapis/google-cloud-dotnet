@@ -88,6 +88,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
             GetIamPolicySettings = existing.GetIamPolicySettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
+            CreateSchemaBundleSettings = existing.CreateSchemaBundleSettings;
+            CreateSchemaBundleOperationsSettings = existing.CreateSchemaBundleOperationsSettings.Clone();
+            UpdateSchemaBundleSettings = existing.UpdateSchemaBundleSettings;
+            UpdateSchemaBundleOperationsSettings = existing.UpdateSchemaBundleOperationsSettings.Clone();
+            GetSchemaBundleSettings = existing.GetSchemaBundleSettings;
+            ListSchemaBundlesSettings = existing.ListSchemaBundlesSettings;
+            DeleteSchemaBundleSettings = existing.DeleteSchemaBundleSettings;
             OnCopy(existing);
         }
 
@@ -713,6 +720,106 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.CreateSchemaBundle</c> and <c>BigtableTableAdminClient.CreateSchemaBundleAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateSchemaBundleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BigtableTableAdminClient.CreateSchemaBundle</c> and
+        /// <c>BigtableTableAdminClient.CreateSchemaBundleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateSchemaBundleOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.UpdateSchemaBundle</c> and <c>BigtableTableAdminClient.UpdateSchemaBundleAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateSchemaBundleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BigtableTableAdminClient.UpdateSchemaBundle</c> and
+        /// <c>BigtableTableAdminClient.UpdateSchemaBundleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateSchemaBundleOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.GetSchemaBundle</c> and <c>BigtableTableAdminClient.GetSchemaBundleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetSchemaBundleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.ListSchemaBundles</c> and <c>BigtableTableAdminClient.ListSchemaBundlesAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListSchemaBundlesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.DeleteSchemaBundle</c> and <c>BigtableTableAdminClient.DeleteSchemaBundleAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteSchemaBundleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="BigtableTableAdminSettings"/> object.</returns>
@@ -2540,8 +2647,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="authorizedView">
         /// Required. The AuthorizedView to update. The `name` in `authorized_view` is
         /// used to identify the AuthorizedView. AuthorizedView name must in this
-        /// format
-        /// projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;/authorizedViews/&lt;authorized_view&gt;
+        /// format:
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
         /// </param>
         /// <param name="updateMask">
         /// Optional. The list of fields to update.
@@ -2567,8 +2674,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="authorizedView">
         /// Required. The AuthorizedView to update. The `name` in `authorized_view` is
         /// used to identify the AuthorizedView. AuthorizedView name must in this
-        /// format
-        /// projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;/authorizedViews/&lt;authorized_view&gt;
+        /// format:
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
         /// </param>
         /// <param name="updateMask">
         /// Optional. The list of fields to update.
@@ -2594,8 +2701,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="authorizedView">
         /// Required. The AuthorizedView to update. The `name` in `authorized_view` is
         /// used to identify the AuthorizedView. AuthorizedView name must in this
-        /// format
-        /// projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;/authorizedViews/&lt;authorized_view&gt;
+        /// format:
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
         /// </param>
         /// <param name="updateMask">
         /// Optional. The list of fields to update.
@@ -5267,7 +5374,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             CopyBackupAsync(parent, backupId, sourceBackup, expireTime, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a Table or Backup resource.
+        /// Gets the access control policy for a Bigtable resource.
         /// Returns an empty policy if the resource exists but does not have a policy
         /// set.
         /// </summary>
@@ -5278,7 +5385,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a Table or Backup resource.
+        /// Gets the access control policy for a Bigtable resource.
         /// Returns an empty policy if the resource exists but does not have a policy
         /// set.
         /// </summary>
@@ -5289,7 +5396,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a Table or Backup resource.
+        /// Gets the access control policy for a Bigtable resource.
         /// Returns an empty policy if the resource exists but does not have a policy
         /// set.
         /// </summary>
@@ -5300,7 +5407,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a Table or Backup resource.
+        /// Gets the access control policy for a Bigtable resource.
         /// Returns an empty policy if the resource exists but does not have a policy
         /// set.
         /// </summary>
@@ -5317,7 +5424,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a Table or Backup resource.
+        /// Gets the access control policy for a Bigtable resource.
         /// Returns an empty policy if the resource exists but does not have a policy
         /// set.
         /// </summary>
@@ -5334,7 +5441,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a Table or Backup resource.
+        /// Gets the access control policy for a Bigtable resource.
         /// Returns an empty policy if the resource exists but does not have a policy
         /// set.
         /// </summary>
@@ -5348,7 +5455,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             GetIamPolicyAsync(resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a Table or Backup resource.
+        /// Gets the access control policy for a Bigtable resource.
         /// Returns an empty policy if the resource exists but does not have a policy
         /// set.
         /// </summary>
@@ -5365,7 +5472,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a Table or Backup resource.
+        /// Gets the access control policy for a Bigtable resource.
         /// Returns an empty policy if the resource exists but does not have a policy
         /// set.
         /// </summary>
@@ -5382,7 +5489,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a Table or Backup resource.
+        /// Gets the access control policy for a Bigtable resource.
         /// Returns an empty policy if the resource exists but does not have a policy
         /// set.
         /// </summary>
@@ -5396,7 +5503,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             GetIamPolicyAsync(resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on a Table or Backup resource.
+        /// Sets the access control policy on a Bigtable resource.
         /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5406,7 +5513,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on a Table or Backup resource.
+        /// Sets the access control policy on a Bigtable resource.
         /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5416,7 +5523,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on a Table or Backup resource.
+        /// Sets the access control policy on a Bigtable resource.
         /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5426,7 +5533,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on a Table or Backup resource.
+        /// Sets the access control policy on a Bigtable resource.
         /// Replaces any existing policy.
         /// </summary>
         /// <param name="resource">
@@ -5449,7 +5556,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on a Table or Backup resource.
+        /// Sets the access control policy on a Bigtable resource.
         /// Replaces any existing policy.
         /// </summary>
         /// <param name="resource">
@@ -5472,7 +5579,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on a Table or Backup resource.
+        /// Sets the access control policy on a Bigtable resource.
         /// Replaces any existing policy.
         /// </summary>
         /// <param name="resource">
@@ -5491,7 +5598,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             SetIamPolicyAsync(resource, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on a Table or Backup resource.
+        /// Sets the access control policy on a Bigtable resource.
         /// Replaces any existing policy.
         /// </summary>
         /// <param name="resource">
@@ -5514,7 +5621,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on a Table or Backup resource.
+        /// Sets the access control policy on a Bigtable resource.
         /// Replaces any existing policy.
         /// </summary>
         /// <param name="resource">
@@ -5537,7 +5644,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on a Table or Backup resource.
+        /// Sets the access control policy on a Bigtable resource.
         /// Replaces any existing policy.
         /// </summary>
         /// <param name="resource">
@@ -5556,7 +5663,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             SetIamPolicyAsync(resource, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup
+        /// Returns permissions that the caller has on the specified Bigtable
         /// resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5566,7 +5673,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup
+        /// Returns permissions that the caller has on the specified Bigtable
         /// resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5576,7 +5683,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup
+        /// Returns permissions that the caller has on the specified Bigtable
         /// resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5586,7 +5693,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup
+        /// Returns permissions that the caller has on the specified Bigtable
         /// resource.
         /// </summary>
         /// <param name="resource">
@@ -5612,7 +5719,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }, callSettings);
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup
+        /// Returns permissions that the caller has on the specified Bigtable
         /// resource.
         /// </summary>
         /// <param name="resource">
@@ -5638,7 +5745,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }, callSettings);
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup
+        /// Returns permissions that the caller has on the specified Bigtable
         /// resource.
         /// </summary>
         /// <param name="resource">
@@ -5657,7 +5764,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             TestIamPermissionsAsync(resource, permissions, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup
+        /// Returns permissions that the caller has on the specified Bigtable
         /// resource.
         /// </summary>
         /// <param name="resource">
@@ -5683,7 +5790,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }, callSettings);
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup
+        /// Returns permissions that the caller has on the specified Bigtable
         /// resource.
         /// </summary>
         /// <param name="resource">
@@ -5709,7 +5816,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }, callSettings);
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup
+        /// Returns permissions that the caller has on the specified Bigtable
         /// resource.
         /// </summary>
         /// <param name="resource">
@@ -5726,6 +5833,708 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gax::IResourceName resource, scg::IEnumerable<string> permissions, st::CancellationToken cancellationToken) =>
             TestIamPermissionsAsync(resource, permissions, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new schema bundle in the specified table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<SchemaBundle, CreateSchemaBundleMetadata> CreateSchemaBundle(CreateSchemaBundleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new schema bundle in the specified table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<SchemaBundle, CreateSchemaBundleMetadata>> CreateSchemaBundleAsync(CreateSchemaBundleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new schema bundle in the specified table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<SchemaBundle, CreateSchemaBundleMetadata>> CreateSchemaBundleAsync(CreateSchemaBundleRequest request, st::CancellationToken cancellationToken) =>
+            CreateSchemaBundleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateSchemaBundle</c>.</summary>
+        public virtual lro::OperationsClient CreateSchemaBundleOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateSchemaBundle</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<SchemaBundle, CreateSchemaBundleMetadata> PollOnceCreateSchemaBundle(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<SchemaBundle, CreateSchemaBundleMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateSchemaBundleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateSchemaBundle</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<SchemaBundle, CreateSchemaBundleMetadata>> PollOnceCreateSchemaBundleAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<SchemaBundle, CreateSchemaBundleMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateSchemaBundleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new schema bundle in the specified table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this schema bundle will be created.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="schemaBundleId">
+        /// Required. The unique ID to use for the schema bundle, which will become the
+        /// final component of the schema bundle's resource name.
+        /// </param>
+        /// <param name="schemaBundle">
+        /// Required. The schema bundle to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<SchemaBundle, CreateSchemaBundleMetadata> CreateSchemaBundle(string parent, string schemaBundleId, SchemaBundle schemaBundle, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSchemaBundle(new CreateSchemaBundleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                SchemaBundleId = gax::GaxPreconditions.CheckNotNullOrEmpty(schemaBundleId, nameof(schemaBundleId)),
+                SchemaBundle = gax::GaxPreconditions.CheckNotNull(schemaBundle, nameof(schemaBundle)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new schema bundle in the specified table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this schema bundle will be created.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="schemaBundleId">
+        /// Required. The unique ID to use for the schema bundle, which will become the
+        /// final component of the schema bundle's resource name.
+        /// </param>
+        /// <param name="schemaBundle">
+        /// Required. The schema bundle to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<SchemaBundle, CreateSchemaBundleMetadata>> CreateSchemaBundleAsync(string parent, string schemaBundleId, SchemaBundle schemaBundle, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSchemaBundleAsync(new CreateSchemaBundleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                SchemaBundleId = gax::GaxPreconditions.CheckNotNullOrEmpty(schemaBundleId, nameof(schemaBundleId)),
+                SchemaBundle = gax::GaxPreconditions.CheckNotNull(schemaBundle, nameof(schemaBundle)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new schema bundle in the specified table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this schema bundle will be created.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="schemaBundleId">
+        /// Required. The unique ID to use for the schema bundle, which will become the
+        /// final component of the schema bundle's resource name.
+        /// </param>
+        /// <param name="schemaBundle">
+        /// Required. The schema bundle to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<SchemaBundle, CreateSchemaBundleMetadata>> CreateSchemaBundleAsync(string parent, string schemaBundleId, SchemaBundle schemaBundle, st::CancellationToken cancellationToken) =>
+            CreateSchemaBundleAsync(parent, schemaBundleId, schemaBundle, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new schema bundle in the specified table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this schema bundle will be created.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="schemaBundleId">
+        /// Required. The unique ID to use for the schema bundle, which will become the
+        /// final component of the schema bundle's resource name.
+        /// </param>
+        /// <param name="schemaBundle">
+        /// Required. The schema bundle to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<SchemaBundle, CreateSchemaBundleMetadata> CreateSchemaBundle(gcbcv::TableName parent, string schemaBundleId, SchemaBundle schemaBundle, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSchemaBundle(new CreateSchemaBundleRequest
+            {
+                ParentAsTableName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SchemaBundleId = gax::GaxPreconditions.CheckNotNullOrEmpty(schemaBundleId, nameof(schemaBundleId)),
+                SchemaBundle = gax::GaxPreconditions.CheckNotNull(schemaBundle, nameof(schemaBundle)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new schema bundle in the specified table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this schema bundle will be created.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="schemaBundleId">
+        /// Required. The unique ID to use for the schema bundle, which will become the
+        /// final component of the schema bundle's resource name.
+        /// </param>
+        /// <param name="schemaBundle">
+        /// Required. The schema bundle to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<SchemaBundle, CreateSchemaBundleMetadata>> CreateSchemaBundleAsync(gcbcv::TableName parent, string schemaBundleId, SchemaBundle schemaBundle, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSchemaBundleAsync(new CreateSchemaBundleRequest
+            {
+                ParentAsTableName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SchemaBundleId = gax::GaxPreconditions.CheckNotNullOrEmpty(schemaBundleId, nameof(schemaBundleId)),
+                SchemaBundle = gax::GaxPreconditions.CheckNotNull(schemaBundle, nameof(schemaBundle)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new schema bundle in the specified table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this schema bundle will be created.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="schemaBundleId">
+        /// Required. The unique ID to use for the schema bundle, which will become the
+        /// final component of the schema bundle's resource name.
+        /// </param>
+        /// <param name="schemaBundle">
+        /// Required. The schema bundle to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<SchemaBundle, CreateSchemaBundleMetadata>> CreateSchemaBundleAsync(gcbcv::TableName parent, string schemaBundleId, SchemaBundle schemaBundle, st::CancellationToken cancellationToken) =>
+            CreateSchemaBundleAsync(parent, schemaBundleId, schemaBundle, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a schema bundle in the specified table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<SchemaBundle, UpdateSchemaBundleMetadata> UpdateSchemaBundle(UpdateSchemaBundleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a schema bundle in the specified table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<SchemaBundle, UpdateSchemaBundleMetadata>> UpdateSchemaBundleAsync(UpdateSchemaBundleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a schema bundle in the specified table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<SchemaBundle, UpdateSchemaBundleMetadata>> UpdateSchemaBundleAsync(UpdateSchemaBundleRequest request, st::CancellationToken cancellationToken) =>
+            UpdateSchemaBundleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateSchemaBundle</c>.</summary>
+        public virtual lro::OperationsClient UpdateSchemaBundleOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateSchemaBundle</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<SchemaBundle, UpdateSchemaBundleMetadata> PollOnceUpdateSchemaBundle(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<SchemaBundle, UpdateSchemaBundleMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateSchemaBundleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateSchemaBundle</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<SchemaBundle, UpdateSchemaBundleMetadata>> PollOnceUpdateSchemaBundleAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<SchemaBundle, UpdateSchemaBundleMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateSchemaBundleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates a schema bundle in the specified table.
+        /// </summary>
+        /// <param name="schemaBundle">
+        /// Required. The schema bundle to update.
+        /// 
+        /// The schema bundle's `name` field is used to identify the schema bundle to
+        /// update. Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/schemaBundles/{schema_bundle}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<SchemaBundle, UpdateSchemaBundleMetadata> UpdateSchemaBundle(SchemaBundle schemaBundle, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSchemaBundle(new UpdateSchemaBundleRequest
+            {
+                SchemaBundle = gax::GaxPreconditions.CheckNotNull(schemaBundle, nameof(schemaBundle)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a schema bundle in the specified table.
+        /// </summary>
+        /// <param name="schemaBundle">
+        /// Required. The schema bundle to update.
+        /// 
+        /// The schema bundle's `name` field is used to identify the schema bundle to
+        /// update. Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/schemaBundles/{schema_bundle}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<SchemaBundle, UpdateSchemaBundleMetadata>> UpdateSchemaBundleAsync(SchemaBundle schemaBundle, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSchemaBundleAsync(new UpdateSchemaBundleRequest
+            {
+                SchemaBundle = gax::GaxPreconditions.CheckNotNull(schemaBundle, nameof(schemaBundle)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a schema bundle in the specified table.
+        /// </summary>
+        /// <param name="schemaBundle">
+        /// Required. The schema bundle to update.
+        /// 
+        /// The schema bundle's `name` field is used to identify the schema bundle to
+        /// update. Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/schemaBundles/{schema_bundle}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<SchemaBundle, UpdateSchemaBundleMetadata>> UpdateSchemaBundleAsync(SchemaBundle schemaBundle, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateSchemaBundleAsync(schemaBundle, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets metadata information about the specified schema bundle.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SchemaBundle GetSchemaBundle(GetSchemaBundleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets metadata information about the specified schema bundle.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SchemaBundle> GetSchemaBundleAsync(GetSchemaBundleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets metadata information about the specified schema bundle.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SchemaBundle> GetSchemaBundleAsync(GetSchemaBundleRequest request, st::CancellationToken cancellationToken) =>
+            GetSchemaBundleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets metadata information about the specified schema bundle.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the schema bundle to retrieve.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/schemaBundles/{schema_bundle}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SchemaBundle GetSchemaBundle(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSchemaBundle(new GetSchemaBundleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets metadata information about the specified schema bundle.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the schema bundle to retrieve.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/schemaBundles/{schema_bundle}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SchemaBundle> GetSchemaBundleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSchemaBundleAsync(new GetSchemaBundleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets metadata information about the specified schema bundle.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the schema bundle to retrieve.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/schemaBundles/{schema_bundle}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SchemaBundle> GetSchemaBundleAsync(string name, st::CancellationToken cancellationToken) =>
+            GetSchemaBundleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets metadata information about the specified schema bundle.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the schema bundle to retrieve.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/schemaBundles/{schema_bundle}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SchemaBundle GetSchemaBundle(SchemaBundleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSchemaBundle(new GetSchemaBundleRequest
+            {
+                SchemaBundleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets metadata information about the specified schema bundle.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the schema bundle to retrieve.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/schemaBundles/{schema_bundle}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SchemaBundle> GetSchemaBundleAsync(SchemaBundleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSchemaBundleAsync(new GetSchemaBundleRequest
+            {
+                SchemaBundleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets metadata information about the specified schema bundle.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the schema bundle to retrieve.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/schemaBundles/{schema_bundle}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SchemaBundle> GetSchemaBundleAsync(SchemaBundleName name, st::CancellationToken cancellationToken) =>
+            GetSchemaBundleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all schema bundles associated with the specified table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SchemaBundle"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSchemaBundlesResponse, SchemaBundle> ListSchemaBundles(ListSchemaBundlesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all schema bundles associated with the specified table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SchemaBundle"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSchemaBundlesResponse, SchemaBundle> ListSchemaBundlesAsync(ListSchemaBundlesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all schema bundles associated with the specified table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of schema bundles.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SchemaBundle"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSchemaBundlesResponse, SchemaBundle> ListSchemaBundles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSchemaBundlesRequest request = new ListSchemaBundlesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSchemaBundles(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all schema bundles associated with the specified table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of schema bundles.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SchemaBundle"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSchemaBundlesResponse, SchemaBundle> ListSchemaBundlesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSchemaBundlesRequest request = new ListSchemaBundlesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSchemaBundlesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all schema bundles associated with the specified table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of schema bundles.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SchemaBundle"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSchemaBundlesResponse, SchemaBundle> ListSchemaBundles(gcbcv::TableName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSchemaBundlesRequest request = new ListSchemaBundlesRequest
+            {
+                ParentAsTableName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSchemaBundles(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all schema bundles associated with the specified table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of schema bundles.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SchemaBundle"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSchemaBundlesResponse, SchemaBundle> ListSchemaBundlesAsync(gcbcv::TableName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSchemaBundlesRequest request = new ListSchemaBundlesRequest
+            {
+                ParentAsTableName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSchemaBundlesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a schema bundle in the specified table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteSchemaBundle(DeleteSchemaBundleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a schema bundle in the specified table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSchemaBundleAsync(DeleteSchemaBundleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a schema bundle in the specified table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSchemaBundleAsync(DeleteSchemaBundleRequest request, st::CancellationToken cancellationToken) =>
+            DeleteSchemaBundleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a schema bundle in the specified table.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the schema bundle to delete.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/schemaBundles/{schema_bundle}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteSchemaBundle(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSchemaBundle(new DeleteSchemaBundleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a schema bundle in the specified table.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the schema bundle to delete.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/schemaBundles/{schema_bundle}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSchemaBundleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSchemaBundleAsync(new DeleteSchemaBundleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a schema bundle in the specified table.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the schema bundle to delete.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/schemaBundles/{schema_bundle}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSchemaBundleAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteSchemaBundleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a schema bundle in the specified table.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the schema bundle to delete.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/schemaBundles/{schema_bundle}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteSchemaBundle(SchemaBundleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSchemaBundle(new DeleteSchemaBundleRequest
+            {
+                SchemaBundleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a schema bundle in the specified table.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the schema bundle to delete.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/schemaBundles/{schema_bundle}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSchemaBundleAsync(SchemaBundleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSchemaBundleAsync(new DeleteSchemaBundleRequest
+            {
+                SchemaBundleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a schema bundle in the specified table.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the schema bundle to delete.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/schemaBundles/{schema_bundle}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSchemaBundleAsync(SchemaBundleName name, st::CancellationToken cancellationToken) =>
+            DeleteSchemaBundleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>BigtableTableAdmin client wrapper implementation, for convenient use.</summary>
@@ -5798,6 +6607,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         private readonly gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> _callTestIamPermissions;
 
+        private readonly gaxgrpc::ApiCall<CreateSchemaBundleRequest, lro::Operation> _callCreateSchemaBundle;
+
+        private readonly gaxgrpc::ApiCall<UpdateSchemaBundleRequest, lro::Operation> _callUpdateSchemaBundle;
+
+        private readonly gaxgrpc::ApiCall<GetSchemaBundleRequest, SchemaBundle> _callGetSchemaBundle;
+
+        private readonly gaxgrpc::ApiCall<ListSchemaBundlesRequest, ListSchemaBundlesResponse> _callListSchemaBundles;
+
+        private readonly gaxgrpc::ApiCall<DeleteSchemaBundleRequest, wkt::Empty> _callDeleteSchemaBundle;
+
         /// <summary>
         /// Constructs a client wrapper for the BigtableTableAdmin service, with the specified gRPC client and settings.
         /// </summary>
@@ -5822,6 +6641,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             CreateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupOperationsSettings, logger);
             RestoreTableOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreTableOperationsSettings, logger);
             CopyBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CopyBackupOperationsSettings, logger);
+            CreateSchemaBundleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateSchemaBundleOperationsSettings, logger);
+            UpdateSchemaBundleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateSchemaBundleOperationsSettings, logger);
             _callCreateTable = clientHelper.BuildApiCall<CreateTableRequest, Table>("CreateTable", grpcClient.CreateTableAsync, grpcClient.CreateTable, effectiveSettings.CreateTableSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTable);
             Modify_CreateTableApiCall(ref _callCreateTable);
@@ -5912,6 +6733,21 @@ namespace Google.Cloud.Bigtable.Admin.V2
             _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
+            _callCreateSchemaBundle = clientHelper.BuildApiCall<CreateSchemaBundleRequest, lro::Operation>("CreateSchemaBundle", grpcClient.CreateSchemaBundleAsync, grpcClient.CreateSchemaBundle, effectiveSettings.CreateSchemaBundleSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateSchemaBundle);
+            Modify_CreateSchemaBundleApiCall(ref _callCreateSchemaBundle);
+            _callUpdateSchemaBundle = clientHelper.BuildApiCall<UpdateSchemaBundleRequest, lro::Operation>("UpdateSchemaBundle", grpcClient.UpdateSchemaBundleAsync, grpcClient.UpdateSchemaBundle, effectiveSettings.UpdateSchemaBundleSettings).WithGoogleRequestParam("schema_bundle.name", request => request.SchemaBundle?.Name);
+            Modify_ApiCall(ref _callUpdateSchemaBundle);
+            Modify_UpdateSchemaBundleApiCall(ref _callUpdateSchemaBundle);
+            _callGetSchemaBundle = clientHelper.BuildApiCall<GetSchemaBundleRequest, SchemaBundle>("GetSchemaBundle", grpcClient.GetSchemaBundleAsync, grpcClient.GetSchemaBundle, effectiveSettings.GetSchemaBundleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetSchemaBundle);
+            Modify_GetSchemaBundleApiCall(ref _callGetSchemaBundle);
+            _callListSchemaBundles = clientHelper.BuildApiCall<ListSchemaBundlesRequest, ListSchemaBundlesResponse>("ListSchemaBundles", grpcClient.ListSchemaBundlesAsync, grpcClient.ListSchemaBundles, effectiveSettings.ListSchemaBundlesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListSchemaBundles);
+            Modify_ListSchemaBundlesApiCall(ref _callListSchemaBundles);
+            _callDeleteSchemaBundle = clientHelper.BuildApiCall<DeleteSchemaBundleRequest, wkt::Empty>("DeleteSchemaBundle", grpcClient.DeleteSchemaBundleAsync, grpcClient.DeleteSchemaBundle, effectiveSettings.DeleteSchemaBundleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteSchemaBundle);
+            Modify_DeleteSchemaBundleApiCall(ref _callDeleteSchemaBundle);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -5977,6 +6813,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> call);
 
+        partial void Modify_CreateSchemaBundleApiCall(ref gaxgrpc::ApiCall<CreateSchemaBundleRequest, lro::Operation> call);
+
+        partial void Modify_UpdateSchemaBundleApiCall(ref gaxgrpc::ApiCall<UpdateSchemaBundleRequest, lro::Operation> call);
+
+        partial void Modify_GetSchemaBundleApiCall(ref gaxgrpc::ApiCall<GetSchemaBundleRequest, SchemaBundle> call);
+
+        partial void Modify_ListSchemaBundlesApiCall(ref gaxgrpc::ApiCall<ListSchemaBundlesRequest, ListSchemaBundlesResponse> call);
+
+        partial void Modify_DeleteSchemaBundleApiCall(ref gaxgrpc::ApiCall<DeleteSchemaBundleRequest, wkt::Empty> call);
+
         partial void OnConstruction(BigtableTableAdmin.BigtableTableAdminClient grpcClient, BigtableTableAdminSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC BigtableTableAdmin client</summary>
@@ -6041,6 +6887,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         partial void Modify_SetIamPolicyRequest(ref gciv::SetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateSchemaBundleRequest(ref CreateSchemaBundleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateSchemaBundleRequest(ref UpdateSchemaBundleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetSchemaBundleRequest(ref GetSchemaBundleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListSchemaBundlesRequest(ref ListSchemaBundlesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteSchemaBundleRequest(ref DeleteSchemaBundleRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a new table in the specified instance.
@@ -6836,7 +7692,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// Gets the access control policy for a Table or Backup resource.
+        /// Gets the access control policy for a Bigtable resource.
         /// Returns an empty policy if the resource exists but does not have a policy
         /// set.
         /// </summary>
@@ -6850,7 +7706,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// Gets the access control policy for a Table or Backup resource.
+        /// Gets the access control policy for a Bigtable resource.
         /// Returns an empty policy if the resource exists but does not have a policy
         /// set.
         /// </summary>
@@ -6864,7 +7720,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// Sets the access control policy on a Table or Backup resource.
+        /// Sets the access control policy on a Bigtable resource.
         /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6877,7 +7733,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// Sets the access control policy on a Table or Backup resource.
+        /// Sets the access control policy on a Bigtable resource.
         /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6890,7 +7746,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup
+        /// Returns permissions that the caller has on the specified Bigtable
         /// resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6903,7 +7759,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup
+        /// Returns permissions that the caller has on the specified Bigtable
         /// resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6913,6 +7769,132 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateSchemaBundle</c>.</summary>
+        public override lro::OperationsClient CreateSchemaBundleOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new schema bundle in the specified table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<SchemaBundle, CreateSchemaBundleMetadata> CreateSchemaBundle(CreateSchemaBundleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateSchemaBundleRequest(ref request, ref callSettings);
+            return new lro::Operation<SchemaBundle, CreateSchemaBundleMetadata>(_callCreateSchemaBundle.Sync(request, callSettings), CreateSchemaBundleOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new schema bundle in the specified table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<SchemaBundle, CreateSchemaBundleMetadata>> CreateSchemaBundleAsync(CreateSchemaBundleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateSchemaBundleRequest(ref request, ref callSettings);
+            return new lro::Operation<SchemaBundle, CreateSchemaBundleMetadata>(await _callCreateSchemaBundle.Async(request, callSettings).ConfigureAwait(false), CreateSchemaBundleOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateSchemaBundle</c>.</summary>
+        public override lro::OperationsClient UpdateSchemaBundleOperationsClient { get; }
+
+        /// <summary>
+        /// Updates a schema bundle in the specified table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<SchemaBundle, UpdateSchemaBundleMetadata> UpdateSchemaBundle(UpdateSchemaBundleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSchemaBundleRequest(ref request, ref callSettings);
+            return new lro::Operation<SchemaBundle, UpdateSchemaBundleMetadata>(_callUpdateSchemaBundle.Sync(request, callSettings), UpdateSchemaBundleOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a schema bundle in the specified table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<SchemaBundle, UpdateSchemaBundleMetadata>> UpdateSchemaBundleAsync(UpdateSchemaBundleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSchemaBundleRequest(ref request, ref callSettings);
+            return new lro::Operation<SchemaBundle, UpdateSchemaBundleMetadata>(await _callUpdateSchemaBundle.Async(request, callSettings).ConfigureAwait(false), UpdateSchemaBundleOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets metadata information about the specified schema bundle.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SchemaBundle GetSchemaBundle(GetSchemaBundleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSchemaBundleRequest(ref request, ref callSettings);
+            return _callGetSchemaBundle.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets metadata information about the specified schema bundle.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SchemaBundle> GetSchemaBundleAsync(GetSchemaBundleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSchemaBundleRequest(ref request, ref callSettings);
+            return _callGetSchemaBundle.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all schema bundles associated with the specified table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SchemaBundle"/> resources.</returns>
+        public override gax::PagedEnumerable<ListSchemaBundlesResponse, SchemaBundle> ListSchemaBundles(ListSchemaBundlesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSchemaBundlesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSchemaBundlesRequest, ListSchemaBundlesResponse, SchemaBundle>(_callListSchemaBundles, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all schema bundles associated with the specified table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SchemaBundle"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListSchemaBundlesResponse, SchemaBundle> ListSchemaBundlesAsync(ListSchemaBundlesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSchemaBundlesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSchemaBundlesRequest, ListSchemaBundlesResponse, SchemaBundle>(_callListSchemaBundles, request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a schema bundle in the specified table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteSchemaBundle(DeleteSchemaBundleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSchemaBundleRequest(ref request, ref callSettings);
+            _callDeleteSchemaBundle.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a schema bundle in the specified table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteSchemaBundleAsync(DeleteSchemaBundleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSchemaBundleRequest(ref request, ref callSettings);
+            return _callDeleteSchemaBundle.Async(request, callSettings);
         }
     }
 
@@ -6929,6 +7911,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
     }
 
     public partial class ListBackupsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListSchemaBundlesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -6960,6 +7946,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Backup> GetEnumerator() => Backups.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListSchemaBundlesResponse : gaxgrpc::IPageResponse<SchemaBundle>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<SchemaBundle> GetEnumerator() => SchemaBundles.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

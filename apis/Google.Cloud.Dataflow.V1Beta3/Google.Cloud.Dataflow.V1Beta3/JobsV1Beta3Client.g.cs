@@ -216,16 +216,12 @@ namespace Google.Cloud.Dataflow.V1Beta3
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
         /// <item><description>https://www.googleapis.com/auth/compute</description></item>
-        /// <item><description>https://www.googleapis.com/auth/compute.readonly</description></item>
-        /// <item><description>https://www.googleapis.com/auth/userinfo.email</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
             "https://www.googleapis.com/auth/compute",
-            "https://www.googleapis.com/auth/compute.readonly",
-            "https://www.googleapis.com/auth/userinfo.email",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -296,6 +292,9 @@ namespace Google.Cloud.Dataflow.V1Beta3
         /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
         /// `projects.jobs.create` is not recommended, as your job will always start
         /// in `us-central1`.
+        /// 
+        /// Do not enter confidential information when you supply string values using
+        /// the API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -311,6 +310,9 @@ namespace Google.Cloud.Dataflow.V1Beta3
         /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
         /// `projects.jobs.create` is not recommended, as your job will always start
         /// in `us-central1`.
+        /// 
+        /// Do not enter confidential information when you supply string values using
+        /// the API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -326,6 +328,9 @@ namespace Google.Cloud.Dataflow.V1Beta3
         /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
         /// `projects.jobs.create` is not recommended, as your job will always start
         /// in `us-central1`.
+        /// 
+        /// Do not enter confidential information when you supply string values using
+        /// the API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -430,8 +435,12 @@ namespace Google.Cloud.Dataflow.V1Beta3
         /// `projects.locations.jobs.list` with a [regional endpoint]
         /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). To
         /// list the all jobs across all regions, use `projects.jobs.aggregated`. Using
-        /// `projects.jobs.list` is not recommended, as you can only get the list of
-        /// jobs that are running in `us-central1`.
+        /// `projects.jobs.list` is not recommended, because you can only get the list
+        /// of jobs that are running in `us-central1`.
+        /// 
+        /// `projects.locations.jobs.list` and `projects.jobs.list` support filtering
+        /// the list of jobs by name. Filtering by name isn't supported by
+        /// `projects.jobs.aggregated`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -446,8 +455,12 @@ namespace Google.Cloud.Dataflow.V1Beta3
         /// `projects.locations.jobs.list` with a [regional endpoint]
         /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). To
         /// list the all jobs across all regions, use `projects.jobs.aggregated`. Using
-        /// `projects.jobs.list` is not recommended, as you can only get the list of
-        /// jobs that are running in `us-central1`.
+        /// `projects.jobs.list` is not recommended, because you can only get the list
+        /// of jobs that are running in `us-central1`.
+        /// 
+        /// `projects.locations.jobs.list` and `projects.jobs.list` support filtering
+        /// the list of jobs by name. Filtering by name isn't supported by
+        /// `projects.jobs.aggregated`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -457,6 +470,9 @@ namespace Google.Cloud.Dataflow.V1Beta3
 
         /// <summary>
         /// List the jobs of a project across all regions.
+        /// 
+        /// **Note:** This method doesn't support filtering the list of
+        /// jobs by name.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -466,6 +482,9 @@ namespace Google.Cloud.Dataflow.V1Beta3
 
         /// <summary>
         /// List the jobs of a project across all regions.
+        /// 
+        /// **Note:** This method doesn't support filtering the list of
+        /// jobs by name.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -629,6 +648,9 @@ namespace Google.Cloud.Dataflow.V1Beta3
         /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
         /// `projects.jobs.create` is not recommended, as your job will always start
         /// in `us-central1`.
+        /// 
+        /// Do not enter confidential information when you supply string values using
+        /// the API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -647,6 +669,9 @@ namespace Google.Cloud.Dataflow.V1Beta3
         /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
         /// `projects.jobs.create` is not recommended, as your job will always start
         /// in `us-central1`.
+        /// 
+        /// Do not enter confidential information when you supply string values using
+        /// the API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -736,8 +761,12 @@ namespace Google.Cloud.Dataflow.V1Beta3
         /// `projects.locations.jobs.list` with a [regional endpoint]
         /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). To
         /// list the all jobs across all regions, use `projects.jobs.aggregated`. Using
-        /// `projects.jobs.list` is not recommended, as you can only get the list of
-        /// jobs that are running in `us-central1`.
+        /// `projects.jobs.list` is not recommended, because you can only get the list
+        /// of jobs that are running in `us-central1`.
+        /// 
+        /// `projects.locations.jobs.list` and `projects.jobs.list` support filtering
+        /// the list of jobs by name. Filtering by name isn't supported by
+        /// `projects.jobs.aggregated`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -755,8 +784,12 @@ namespace Google.Cloud.Dataflow.V1Beta3
         /// `projects.locations.jobs.list` with a [regional endpoint]
         /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). To
         /// list the all jobs across all regions, use `projects.jobs.aggregated`. Using
-        /// `projects.jobs.list` is not recommended, as you can only get the list of
-        /// jobs that are running in `us-central1`.
+        /// `projects.jobs.list` is not recommended, because you can only get the list
+        /// of jobs that are running in `us-central1`.
+        /// 
+        /// `projects.locations.jobs.list` and `projects.jobs.list` support filtering
+        /// the list of jobs by name. Filtering by name isn't supported by
+        /// `projects.jobs.aggregated`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -769,6 +802,9 @@ namespace Google.Cloud.Dataflow.V1Beta3
 
         /// <summary>
         /// List the jobs of a project across all regions.
+        /// 
+        /// **Note:** This method doesn't support filtering the list of
+        /// jobs by name.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -781,6 +817,9 @@ namespace Google.Cloud.Dataflow.V1Beta3
 
         /// <summary>
         /// List the jobs of a project across all regions.
+        /// 
+        /// **Note:** This method doesn't support filtering the list of
+        /// jobs by name.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

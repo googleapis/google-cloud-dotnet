@@ -13,7 +13,7 @@ declare -r PROTOC_VERSION=3.25.2
 declare -r GRPC_VERSION=2.60.0
 if [[ $GAPIC_GENERATOR_VERSION == "" ]]
 then
-  declare -r GAPIC_GENERATOR_VERSION=v1.4.33
+  declare -r GAPIC_GENERATOR_VERSION=v1.4.34
 else
   echo "Using GAPIC generator override: ${GAPIC_GENERATOR_VERSION}"
 fi
@@ -95,7 +95,7 @@ install_microgenerator() {
     declare -r GENERATOR_ROOT=$REPO_ROOT/gapic-generator-csharp
   fi
   
-  export GAPIC_PLUGIN=$GENERATOR_ROOT/Google.Api.Generator/bin/Release/net6.0/$RUNTIME/publish/Google.Api.Generator$EXTENSION
+  export GAPIC_PLUGIN=$GENERATOR_ROOT/Google.Api.Generator/bin/Release/net8.0/$RUNTIME/publish/Google.Api.Generator$EXTENSION
   
   if [[ "$CSHARP_GENERATOR_DIR" != "" ]]
   then

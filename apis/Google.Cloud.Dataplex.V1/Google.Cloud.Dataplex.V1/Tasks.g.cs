@@ -4851,7 +4851,7 @@ namespace Google.Cloud.Dataplex.V1 {
         /// </summary>
         [pbr::OriginalName("FAILED")] Failed = 5,
         /// <summary>
-        /// The job was cancelled outside of Dataplex.
+        /// The job was cancelled outside of Dataplex Universal Catalog.
         /// </summary>
         [pbr::OriginalName("ABORTED")] Aborted = 6,
       }
@@ -4865,8 +4865,8 @@ namespace Google.Cloud.Dataplex.V1 {
         /// </summary>
         [pbr::OriginalName("TRIGGER_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// The job was triggered by Dataplex based on trigger spec from task
-        /// definition.
+        /// The job was triggered by Dataplex Universal Catalog based on trigger spec
+        /// from task definition.
         /// </summary>
         [pbr::OriginalName("TASK_CONFIG")] TaskConfig = 1,
         /// <summary>

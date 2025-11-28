@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
-using Octokit;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -27,14 +26,12 @@ namespace Google.Cloud.Tools.ReleaseManager.History
     /// a version and release date - except potentially the first section, which might contain
     /// some preamble. All sections then have a list of lines.
     /// </summary>
+    /// <remarks>
+    /// This is now only used by PrepareLibraryReleaseCommand, and can probably be moved and simplified in
+    /// the longer term.
+    /// </remarks>
     internal sealed class HistoryFile
     {
-        /// <summary>
-        /// The default message to use when no commits in a release contain anything noteworthy.
-        /// </summary>
-        internal const string DefaultMessage = "No API surface changes; just dependency updates.";
-
-        public const string FixmeBlockingRelease = "FIXME: Edit this before releasing";
         private static readonly string[] PreambleLines = new[] { "# Version history", "" };
         private const string MarkdownFile = "history.md";
         private static readonly Regex SectionHeader = new Regex(@"## Version (.*), released \d{4}-\d{2}-\d{2}");
@@ -89,43 +86,8 @@ namespace Google.Cloud.Tools.ReleaseManager.History
             File.WriteAllLines(FilePath, Sections.SelectMany(section => section.Lines));
         }
 
-        /// <summary>
-        /// Merges the given list of releases into the file, ignoring releases that are already present.
-        /// </summary>
-        /// <param name="rootLayout">The root layout of the local file system, for local resolution of release notes.</param>
-        /// <param name="releases">The list of releases to merge, in reverse-chronological order (so latest first).</param>
-        /// <param name="defaultMessage">An optional release message to use when there are no commits with specific messages.
-        /// If this is null <see cref="DefaultMessage"/> is used instead.
-        /// </param>
-        /// <returns>The new sections inserted into the history.</returns>
-        internal List<Section> MergeReleases(RootLayout rootLayout, List<Release> releases, string defaultMessage)
-        {
-            List<Section> sectionsInserted = new List<Section>();
-
-            int latestExistingVersionIndex = Sections.FindIndex(s => s.Version != null);
-
-            var latestExistingVersion = latestExistingVersionIndex == -1 ? null : Sections[latestExistingVersionIndex].Version;
-            var insertIndex = latestExistingVersionIndex == -1 ? Sections.Count : latestExistingVersionIndex;
-
-            foreach (var release in releases)
-            {
-                // If we've reached an already-documented version, stop.
-                if (release.Version.Equals(latestExistingVersion))
-                {
-                    break;
-                }
-                Section section = new Section(rootLayout, release, defaultMessage ?? DefaultMessage);
-                Sections.Insert(insertIndex, section);
-                sectionsInserted.Add(section);
-                insertIndex++;
-            }
-            return sectionsInserted;
-        }
-
         public sealed class Section
         {
-            private static readonly StructuredVersion s_expectedInitialReleaseVersion = StructuredVersion.FromString("1.0.0-beta01");
-
             /// <summary>
             /// The version represented in this section. May be null, for the preamble.
             /// </summary>
@@ -147,73 +109,13 @@ namespace Google.Cloud.Tools.ReleaseManager.History
 
             public static Section FromReleaseNotes(StructuredVersion version, DateTime date, List<string> releaseNotes)
             {
-                var sectionHeader = FormatSectionHeader(version, date);
+                var sectionHeader = $"## Version {version}, released {date:yyyy-MM-dd}";
                 var lines = new List<string>()
                 {
                     sectionHeader, ""
                 };
                 lines.AddRange(releaseNotes);
                 return new Section(version, lines);
-            }
-
-            internal Section(RootLayout rootLayout, Release release, string defaultMessage)
-            {
-                Version = release.Version;
-
-                Lines = new List<string>
-                {
-                    FormatSectionHeader(release.Version, release.ReleaseDate),
-                    ""
-                };
-
-                if (Version.Equals(s_expectedInitialReleaseVersion))
-                {
-                    Lines.Add("Initial release.");
-                }
-                else
-                {
-                    Lines.AddRange(GetNotesFromCommits(rootLayout, release.Commits));
-                    // No "interesting" commits? That usually means it's just a dependency update.
-                    if (Lines.Count == 2)
-                    {
-                        var defaultMessageLines = defaultMessage.Replace("\r", "").Split('\n');
-                        Lines.AddRange(defaultMessageLines);
-                        Lines.Add("");
-                    }
-                }
-            }
-
-            internal static string FormatSectionHeader(StructuredVersion version, DateTime date) =>
-                $"## Version {version}, released {date:yyyy-MM-dd}";
-
-            internal static IEnumerable<string> GetNotesFromCommits(RootLayout rootLayout, IReadOnlyList<GitCommit> commits) =>
-                commits
-                    .SelectMany(c => c.GetReleaseNoteElements(rootLayout))
-                    .Where(c => c.PublishInReleaseNotes)
-                    .ToLookup(e => e.Type)
-                    .OrderBy(g => g.Key)
-                    .Select(GetNotesFromElement)
-                    .SelectMany(line => line);
-
-            internal static IEnumerable<string> GetNotesFromElement(IGrouping<ReleaseNoteElementType, ReleaseNoteElement> elements)
-            {
-                string description = elements.Key switch
-                {
-                    ReleaseNoteElementType.Fix => "Bug fixes",
-                    ReleaseNoteElementType.Feature => "New features",
-                    ReleaseNoteElementType.Chore => "Chores",
-                    ReleaseNoteElementType.Docs => "Documentation improvements",
-                    ReleaseNoteElementType.BreakingChange => "Breaking changes",
-                    ReleaseNoteElementType.Unknown => FixmeBlockingRelease,
-                    _ => throw new InvalidOperationException("Unknown element type")
-                };
-                yield return $"### {description}";
-                yield return "";
-                foreach (var element in elements)
-                {
-                    yield return $"- {element}";
-                }
-                yield return "";
             }
         }
     }

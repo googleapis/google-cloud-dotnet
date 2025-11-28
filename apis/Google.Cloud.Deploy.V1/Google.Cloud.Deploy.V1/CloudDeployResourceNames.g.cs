@@ -4702,12 +4702,13 @@ namespace Google.Cloud.Deploy.V1
             Unparsed = 0,
 
             /// <summary>
-            /// A resource name with pattern <c>projects/{project}/locations/{location}/revisions/{revision}</c>.
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/services/{service}/revisions/{revision}</c>.
             /// </summary>
-            ProjectLocationRevision = 1,
+            ProjectLocationServiceRevision = 1,
         }
 
-        private static gax::PathTemplate s_projectLocationRevision = new gax::PathTemplate("projects/{project}/locations/{location}/revisions/{revision}");
+        private static gax::PathTemplate s_projectLocationServiceRevision = new gax::PathTemplate("projects/{project}/locations/{location}/services/{service}/revisions/{revision}");
 
         /// <summary>Creates a <see cref="RevisionName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -4720,48 +4721,55 @@ namespace Google.Cloud.Deploy.V1
 
         /// <summary>
         /// Creates a <see cref="RevisionName"/> with the pattern
-        /// <c>projects/{project}/locations/{location}/revisions/{revision}</c>.
+        /// <c>projects/{project}/locations/{location}/services/{service}/revisions/{revision}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="serviceId">The <c>Service</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="revisionId">The <c>Revision</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>A new instance of <see cref="RevisionName"/> constructed from the provided ids.</returns>
-        public static RevisionName FromProjectLocationRevision(string projectId, string locationId, string revisionId) =>
-            new RevisionName(ResourceNameType.ProjectLocationRevision, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), revisionId: gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)));
+        public static RevisionName FromProjectLocationServiceRevision(string projectId, string locationId, string serviceId, string revisionId) =>
+            new RevisionName(ResourceNameType.ProjectLocationServiceRevision, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), serviceId: gax::GaxPreconditions.CheckNotNullOrEmpty(serviceId, nameof(serviceId)), revisionId: gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="RevisionName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/revisions/{revision}</c>.
+        /// <c>projects/{project}/locations/{location}/services/{service}/revisions/{revision}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="serviceId">The <c>Service</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="revisionId">The <c>Revision</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="RevisionName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/revisions/{revision}</c>.
+        /// <c>projects/{project}/locations/{location}/services/{service}/revisions/{revision}</c>.
         /// </returns>
-        public static string Format(string projectId, string locationId, string revisionId) =>
-            FormatProjectLocationRevision(projectId, locationId, revisionId);
+        public static string Format(string projectId, string locationId, string serviceId, string revisionId) =>
+            FormatProjectLocationServiceRevision(projectId, locationId, serviceId, revisionId);
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="RevisionName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/revisions/{revision}</c>.
+        /// <c>projects/{project}/locations/{location}/services/{service}/revisions/{revision}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="serviceId">The <c>Service</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="revisionId">The <c>Revision</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="RevisionName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/revisions/{revision}</c>.
+        /// <c>projects/{project}/locations/{location}/services/{service}/revisions/{revision}</c>.
         /// </returns>
-        public static string FormatProjectLocationRevision(string projectId, string locationId, string revisionId) =>
-            s_projectLocationRevision.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)));
+        public static string FormatProjectLocationServiceRevision(string projectId, string locationId, string serviceId, string revisionId) =>
+            s_projectLocationServiceRevision.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(serviceId, nameof(serviceId)), gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)));
 
         /// <summary>Parses the given resource name string into a new <see cref="RevisionName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>projects/{project}/locations/{location}/revisions/{revision}</c></description></item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/services/{service}/revisions/{revision}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="revisionName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -4775,7 +4783,11 @@ namespace Google.Cloud.Deploy.V1
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>projects/{project}/locations/{location}/revisions/{revision}</c></description></item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/services/{service}/revisions/{revision}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -4795,7 +4807,11 @@ namespace Google.Cloud.Deploy.V1
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>projects/{project}/locations/{location}/revisions/{revision}</c></description></item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/services/{service}/revisions/{revision}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="revisionName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -4812,7 +4828,11 @@ namespace Google.Cloud.Deploy.V1
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>projects/{project}/locations/{location}/revisions/{revision}</c></description></item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/services/{service}/revisions/{revision}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -4830,9 +4850,9 @@ namespace Google.Cloud.Deploy.V1
         {
             gax::GaxPreconditions.CheckNotNull(revisionName, nameof(revisionName));
             gax::TemplatedResourceName resourceName;
-            if (s_projectLocationRevision.TryParseName(revisionName, out resourceName))
+            if (s_projectLocationServiceRevision.TryParseName(revisionName, out resourceName))
             {
-                result = FromProjectLocationRevision(resourceName[0], resourceName[1], resourceName[2]);
+                result = FromProjectLocationServiceRevision(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
                 return true;
             }
             if (allowUnparsed)
@@ -4847,23 +4867,25 @@ namespace Google.Cloud.Deploy.V1
             return false;
         }
 
-        private RevisionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null, string revisionId = null)
+        private RevisionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null, string revisionId = null, string serviceId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             LocationId = locationId;
             ProjectId = projectId;
             RevisionId = revisionId;
+            ServiceId = serviceId;
         }
 
         /// <summary>
         /// Constructs a new instance of a <see cref="RevisionName"/> class from the component parts of pattern
-        /// <c>projects/{project}/locations/{location}/revisions/{revision}</c>
+        /// <c>projects/{project}/locations/{location}/services/{service}/revisions/{revision}</c>
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="serviceId">The <c>Service</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="revisionId">The <c>Revision</c> ID. Must not be <c>null</c> or empty.</param>
-        public RevisionName(string projectId, string locationId, string revisionId) : this(ResourceNameType.ProjectLocationRevision, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), revisionId: gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)))
+        public RevisionName(string projectId, string locationId, string serviceId, string revisionId) : this(ResourceNameType.ProjectLocationServiceRevision, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), serviceId: gax::GaxPreconditions.CheckNotNullOrEmpty(serviceId, nameof(serviceId)), revisionId: gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)))
         {
         }
 
@@ -4891,6 +4913,11 @@ namespace Google.Cloud.Deploy.V1
         /// </summary>
         public string RevisionId { get; }
 
+        /// <summary>
+        /// The <c>Service</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ServiceId { get; }
+
         /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
         public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
 
@@ -4901,7 +4928,7 @@ namespace Google.Cloud.Deploy.V1
             switch (Type)
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
-                case ResourceNameType.ProjectLocationRevision: return s_projectLocationRevision.Expand(ProjectId, LocationId, RevisionId);
+                case ResourceNameType.ProjectLocationServiceRevision: return s_projectLocationServiceRevision.Expand(ProjectId, LocationId, ServiceId, RevisionId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }

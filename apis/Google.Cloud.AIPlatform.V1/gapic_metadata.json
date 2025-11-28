@@ -5,6 +5,21 @@
   "protoPackage": "google.cloud.aiplatform.v1",
   "libraryPackage": "Google.Cloud.AIPlatform.V1",
   "services": {
+    "DataFoundryService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataFoundryServiceClient",
+          "rpcs": {
+            "GenerateSyntheticData": {
+              "methods": [
+                "GenerateSyntheticData",
+                "GenerateSyntheticDataAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "DatasetService": {
       "clients": {
         "grpc": {
@@ -343,10 +358,22 @@
         "grpc": {
           "libraryClient": "FeatureOnlineStoreServiceClient",
           "rpcs": {
+            "FeatureViewDirectWrite": {
+              "methods": [
+                "FeatureViewDirectWrite",
+                "FeatureViewDirectWriteAsync"
+              ]
+            },
             "FetchFeatureValues": {
               "methods": [
                 "FetchFeatureValues",
                 "FetchFeatureValuesAsync"
+              ]
+            },
+            "GenerateFetchAccessToken": {
+              "methods": [
+                "GenerateFetchAccessToken",
+                "GenerateFetchAccessTokenAsync"
               ]
             },
             "SearchNearestEntities": {
@@ -1270,6 +1297,12 @@
         "grpc": {
           "libraryClient": "ModelGardenServiceClient",
           "rpcs": {
+            "Deploy": {
+              "methods": [
+                "Deploy",
+                "DeployAsync"
+              ]
+            },
             "GetPublisherModel": {
               "methods": [
                 "GetPublisherModel",
@@ -1649,6 +1682,12 @@
               "methods": [
                 "DirectRawPredict",
                 "DirectRawPredictAsync"
+              ]
+            },
+            "EmbedContent": {
+              "methods": [
+                "EmbedContent",
+                "EmbedContentAsync"
               ]
             },
             "Explain": {
@@ -2089,6 +2128,12 @@
                 "GetRagCorpusAsync"
               ]
             },
+            "GetRagEngineConfig": {
+              "methods": [
+                "GetRagEngineConfig",
+                "GetRagEngineConfigAsync"
+              ]
+            },
             "GetRagFile": {
               "methods": [
                 "GetRagFile",
@@ -2117,6 +2162,12 @@
               "methods": [
                 "UpdateRagCorpus",
                 "UpdateRagCorpusAsync"
+              ]
+            },
+            "UpdateRagEngineConfig": {
+              "methods": [
+                "UpdateRagEngineConfig",
+                "UpdateRagEngineConfigAsync"
               ]
             },
             "UploadRagFile": {

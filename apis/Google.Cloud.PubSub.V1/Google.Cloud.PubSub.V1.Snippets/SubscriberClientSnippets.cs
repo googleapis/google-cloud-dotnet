@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Apis.Auth.OAuth2;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -60,13 +61,15 @@ namespace Google.Cloud.PubSub.V1.Snippets
             string projectId = "projectId";
             string subscriptionId = "subscriptionId";
             var services = new ServiceCollection();
+            var googleCredential = GoogleCredential.FromAccessToken("fake-access-token");
 
             // Sample: AddCustomizedSubscriberClient
             SubscriptionName subscriptionName = SubscriptionName.FromProjectSubscription(projectId, subscriptionId);
             services.AddSubscriberClient(builder =>
             {
                 builder.SubscriptionName = subscriptionName;
-                builder.CredentialsPath = "path/to/credentials.json";
+                // An instance of Google.Apis.Auth.OAuth2.GoogleCredential that you can create using Google.Apis.Auth.OAuth2.CredentialFactory and other GoogleCredential factory methods.
+                builder.GoogleCredential = googleCredential;
                 // Other settings to customize the client.
             });
             // End sample

@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.6.0, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+### Documentation improvements
+
+- Update comments
+- Annotate output-only fields as such
+
 ## Version 3.5.0, released 2024-05-14
 
 ### New features

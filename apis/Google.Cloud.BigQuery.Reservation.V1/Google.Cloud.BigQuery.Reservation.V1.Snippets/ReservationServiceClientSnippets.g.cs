@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.BigQuery.Reservation.V1;
+    using Google.Cloud.Iam.V1;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;
@@ -651,6 +652,7 @@ namespace GoogleCSharpSnippets
             FailoverReservationRequest request = new FailoverReservationRequest
             {
                 ReservationName = ReservationName.FromProjectLocationReservation("[PROJECT]", "[LOCATION]", "[RESERVATION]"),
+                FailoverMode = FailoverMode.Unspecified,
             };
             // Make the request
             Reservation response = reservationServiceClient.FailoverReservation(request);
@@ -668,6 +670,7 @@ namespace GoogleCSharpSnippets
             FailoverReservationRequest request = new FailoverReservationRequest
             {
                 ReservationName = ReservationName.FromProjectLocationReservation("[PROJECT]", "[LOCATION]", "[RESERVATION]"),
+                FailoverMode = FailoverMode.Unspecified,
             };
             // Make the request
             Reservation response = await reservationServiceClient.FailoverReservationAsync(request);
@@ -1391,6 +1394,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 CapacityCommitmentIds = { "", },
+                CapacityCommitmentId = "",
             };
             // Make the request
             CapacityCommitment response = reservationServiceClient.MergeCapacityCommitments(request);
@@ -1409,6 +1413,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 CapacityCommitmentIds = { "", },
+                CapacityCommitmentId = "",
             };
             // Make the request
             CapacityCommitment response = await reservationServiceClient.MergeCapacityCommitmentsAsync(request);
@@ -2814,6 +2819,712 @@ namespace GoogleCSharpSnippets
             FieldMask updateMask = new FieldMask();
             // Make the request
             BiReservation response = await reservationServiceClient.UpdateBiReservationAsync(biReservation, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicyRequestObject()
+        {
+            // Snippet: GetIamPolicy(GetIamPolicyRequest, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Options = new GetPolicyOptions(),
+            };
+            // Make the request
+            Policy response = reservationServiceClient.GetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyRequestObjectAsync()
+        {
+            // Snippet: GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)
+            // Additional: GetIamPolicyAsync(GetIamPolicyRequest, CancellationToken)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Options = new GetPolicyOptions(),
+            };
+            // Make the request
+            Policy response = await reservationServiceClient.GetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicy()
+        {
+            // Snippet: GetIamPolicy(string, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            string resource = "a/wildcard/resource";
+            // Make the request
+            Policy response = reservationServiceClient.GetIamPolicy(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyAsync()
+        {
+            // Snippet: GetIamPolicyAsync(string, CallSettings)
+            // Additional: GetIamPolicyAsync(string, CancellationToken)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string resource = "a/wildcard/resource";
+            // Make the request
+            Policy response = await reservationServiceClient.GetIamPolicyAsync(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicyResourceNames()
+        {
+            // Snippet: GetIamPolicy(IResourceName, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            Policy response = reservationServiceClient.GetIamPolicy(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyResourceNamesAsync()
+        {
+            // Snippet: GetIamPolicyAsync(IResourceName, CallSettings)
+            // Additional: GetIamPolicyAsync(IResourceName, CancellationToken)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            Policy response = await reservationServiceClient.GetIamPolicyAsync(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicyRequestObject()
+        {
+            // Snippet: SetIamPolicy(SetIamPolicyRequest, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Policy = new Policy(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Policy response = reservationServiceClient.SetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyRequestObjectAsync()
+        {
+            // Snippet: SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)
+            // Additional: SetIamPolicyAsync(SetIamPolicyRequest, CancellationToken)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Policy = new Policy(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Policy response = await reservationServiceClient.SetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicy()
+        {
+            // Snippet: SetIamPolicy(string, Policy, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            string resource = "a/wildcard/resource";
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = reservationServiceClient.SetIamPolicy(resource, policy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyAsync()
+        {
+            // Snippet: SetIamPolicyAsync(string, Policy, CallSettings)
+            // Additional: SetIamPolicyAsync(string, Policy, CancellationToken)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string resource = "a/wildcard/resource";
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = await reservationServiceClient.SetIamPolicyAsync(resource, policy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicyResourceNames()
+        {
+            // Snippet: SetIamPolicy(IResourceName, Policy, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = reservationServiceClient.SetIamPolicy(resource, policy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyResourceNamesAsync()
+        {
+            // Snippet: SetIamPolicyAsync(IResourceName, Policy, CallSettings)
+            // Additional: SetIamPolicyAsync(IResourceName, Policy, CancellationToken)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = await reservationServiceClient.SetIamPolicyAsync(resource, policy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissionsRequestObject()
+        {
+            // Snippet: TestIamPermissions(TestIamPermissionsRequest, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Permissions = { "", },
+            };
+            // Make the request
+            TestIamPermissionsResponse response = reservationServiceClient.TestIamPermissions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsRequestObjectAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest, CancellationToken)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Permissions = { "", },
+            };
+            // Make the request
+            TestIamPermissionsResponse response = await reservationServiceClient.TestIamPermissionsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateReservationGroup</summary>
+        public void CreateReservationGroupRequestObject()
+        {
+            // Snippet: CreateReservationGroup(CreateReservationGroupRequest, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            CreateReservationGroupRequest request = new CreateReservationGroupRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ReservationGroupId = "",
+                ReservationGroup = new ReservationGroup(),
+            };
+            // Make the request
+            ReservationGroup response = reservationServiceClient.CreateReservationGroup(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateReservationGroupAsync</summary>
+        public async Task CreateReservationGroupRequestObjectAsync()
+        {
+            // Snippet: CreateReservationGroupAsync(CreateReservationGroupRequest, CallSettings)
+            // Additional: CreateReservationGroupAsync(CreateReservationGroupRequest, CancellationToken)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateReservationGroupRequest request = new CreateReservationGroupRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ReservationGroupId = "",
+                ReservationGroup = new ReservationGroup(),
+            };
+            // Make the request
+            ReservationGroup response = await reservationServiceClient.CreateReservationGroupAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReservationGroup</summary>
+        public void GetReservationGroupRequestObject()
+        {
+            // Snippet: GetReservationGroup(GetReservationGroupRequest, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            GetReservationGroupRequest request = new GetReservationGroupRequest
+            {
+                ReservationGroupName = ReservationGroupName.FromProjectLocationReservationGroup("[PROJECT]", "[LOCATION]", "[RESERVATION_GROUP]"),
+            };
+            // Make the request
+            ReservationGroup response = reservationServiceClient.GetReservationGroup(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReservationGroupAsync</summary>
+        public async Task GetReservationGroupRequestObjectAsync()
+        {
+            // Snippet: GetReservationGroupAsync(GetReservationGroupRequest, CallSettings)
+            // Additional: GetReservationGroupAsync(GetReservationGroupRequest, CancellationToken)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetReservationGroupRequest request = new GetReservationGroupRequest
+            {
+                ReservationGroupName = ReservationGroupName.FromProjectLocationReservationGroup("[PROJECT]", "[LOCATION]", "[RESERVATION_GROUP]"),
+            };
+            // Make the request
+            ReservationGroup response = await reservationServiceClient.GetReservationGroupAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReservationGroup</summary>
+        public void GetReservationGroup()
+        {
+            // Snippet: GetReservationGroup(string, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/reservationGroups/[RESERVATION_GROUP]";
+            // Make the request
+            ReservationGroup response = reservationServiceClient.GetReservationGroup(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReservationGroupAsync</summary>
+        public async Task GetReservationGroupAsync()
+        {
+            // Snippet: GetReservationGroupAsync(string, CallSettings)
+            // Additional: GetReservationGroupAsync(string, CancellationToken)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/reservationGroups/[RESERVATION_GROUP]";
+            // Make the request
+            ReservationGroup response = await reservationServiceClient.GetReservationGroupAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReservationGroup</summary>
+        public void GetReservationGroupResourceNames()
+        {
+            // Snippet: GetReservationGroup(ReservationGroupName, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            ReservationGroupName name = ReservationGroupName.FromProjectLocationReservationGroup("[PROJECT]", "[LOCATION]", "[RESERVATION_GROUP]");
+            // Make the request
+            ReservationGroup response = reservationServiceClient.GetReservationGroup(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetReservationGroupAsync</summary>
+        public async Task GetReservationGroupResourceNamesAsync()
+        {
+            // Snippet: GetReservationGroupAsync(ReservationGroupName, CallSettings)
+            // Additional: GetReservationGroupAsync(ReservationGroupName, CancellationToken)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ReservationGroupName name = ReservationGroupName.FromProjectLocationReservationGroup("[PROJECT]", "[LOCATION]", "[RESERVATION_GROUP]");
+            // Make the request
+            ReservationGroup response = await reservationServiceClient.GetReservationGroupAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteReservationGroup</summary>
+        public void DeleteReservationGroupRequestObject()
+        {
+            // Snippet: DeleteReservationGroup(DeleteReservationGroupRequest, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteReservationGroupRequest request = new DeleteReservationGroupRequest
+            {
+                ReservationGroupName = ReservationGroupName.FromProjectLocationReservationGroup("[PROJECT]", "[LOCATION]", "[RESERVATION_GROUP]"),
+            };
+            // Make the request
+            reservationServiceClient.DeleteReservationGroup(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteReservationGroupAsync</summary>
+        public async Task DeleteReservationGroupRequestObjectAsync()
+        {
+            // Snippet: DeleteReservationGroupAsync(DeleteReservationGroupRequest, CallSettings)
+            // Additional: DeleteReservationGroupAsync(DeleteReservationGroupRequest, CancellationToken)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteReservationGroupRequest request = new DeleteReservationGroupRequest
+            {
+                ReservationGroupName = ReservationGroupName.FromProjectLocationReservationGroup("[PROJECT]", "[LOCATION]", "[RESERVATION_GROUP]"),
+            };
+            // Make the request
+            await reservationServiceClient.DeleteReservationGroupAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteReservationGroup</summary>
+        public void DeleteReservationGroup()
+        {
+            // Snippet: DeleteReservationGroup(string, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/reservationGroups/[RESERVATION_GROUP]";
+            // Make the request
+            reservationServiceClient.DeleteReservationGroup(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteReservationGroupAsync</summary>
+        public async Task DeleteReservationGroupAsync()
+        {
+            // Snippet: DeleteReservationGroupAsync(string, CallSettings)
+            // Additional: DeleteReservationGroupAsync(string, CancellationToken)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/reservationGroups/[RESERVATION_GROUP]";
+            // Make the request
+            await reservationServiceClient.DeleteReservationGroupAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteReservationGroup</summary>
+        public void DeleteReservationGroupResourceNames()
+        {
+            // Snippet: DeleteReservationGroup(ReservationGroupName, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            ReservationGroupName name = ReservationGroupName.FromProjectLocationReservationGroup("[PROJECT]", "[LOCATION]", "[RESERVATION_GROUP]");
+            // Make the request
+            reservationServiceClient.DeleteReservationGroup(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteReservationGroupAsync</summary>
+        public async Task DeleteReservationGroupResourceNamesAsync()
+        {
+            // Snippet: DeleteReservationGroupAsync(ReservationGroupName, CallSettings)
+            // Additional: DeleteReservationGroupAsync(ReservationGroupName, CancellationToken)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ReservationGroupName name = ReservationGroupName.FromProjectLocationReservationGroup("[PROJECT]", "[LOCATION]", "[RESERVATION_GROUP]");
+            // Make the request
+            await reservationServiceClient.DeleteReservationGroupAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListReservationGroups</summary>
+        public void ListReservationGroupsRequestObject()
+        {
+            // Snippet: ListReservationGroups(ListReservationGroupsRequest, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            ListReservationGroupsRequest request = new ListReservationGroupsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListReservationGroupsResponse, ReservationGroup> response = reservationServiceClient.ListReservationGroups(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ReservationGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListReservationGroupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ReservationGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ReservationGroup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ReservationGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListReservationGroupsAsync</summary>
+        public async Task ListReservationGroupsRequestObjectAsync()
+        {
+            // Snippet: ListReservationGroupsAsync(ListReservationGroupsRequest, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListReservationGroupsRequest request = new ListReservationGroupsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListReservationGroupsResponse, ReservationGroup> response = reservationServiceClient.ListReservationGroupsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ReservationGroup item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListReservationGroupsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ReservationGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ReservationGroup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ReservationGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListReservationGroups</summary>
+        public void ListReservationGroups()
+        {
+            // Snippet: ListReservationGroups(string, string, int?, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListReservationGroupsResponse, ReservationGroup> response = reservationServiceClient.ListReservationGroups(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ReservationGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListReservationGroupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ReservationGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ReservationGroup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ReservationGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListReservationGroupsAsync</summary>
+        public async Task ListReservationGroupsAsync()
+        {
+            // Snippet: ListReservationGroupsAsync(string, string, int?, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListReservationGroupsResponse, ReservationGroup> response = reservationServiceClient.ListReservationGroupsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ReservationGroup item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListReservationGroupsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ReservationGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ReservationGroup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ReservationGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListReservationGroups</summary>
+        public void ListReservationGroupsResourceNames()
+        {
+            // Snippet: ListReservationGroups(LocationName, string, int?, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListReservationGroupsResponse, ReservationGroup> response = reservationServiceClient.ListReservationGroups(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ReservationGroup item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListReservationGroupsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ReservationGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ReservationGroup> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ReservationGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListReservationGroupsAsync</summary>
+        public async Task ListReservationGroupsResourceNamesAsync()
+        {
+            // Snippet: ListReservationGroupsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListReservationGroupsResponse, ReservationGroup> response = reservationServiceClient.ListReservationGroupsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ReservationGroup item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListReservationGroupsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ReservationGroup item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ReservationGroup> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ReservationGroup item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
     }

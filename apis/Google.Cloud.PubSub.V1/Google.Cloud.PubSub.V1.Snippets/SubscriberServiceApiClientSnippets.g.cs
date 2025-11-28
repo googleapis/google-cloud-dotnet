@@ -61,6 +61,7 @@ namespace GoogleCSharpSnippets
                 {
                     new MessageTransform(),
                 },
+                Tags = { { "", "" }, },
             };
             // Make the request
             Subscription response = subscriberServiceApiClient.CreateSubscription(request);
@@ -100,6 +101,7 @@ namespace GoogleCSharpSnippets
                 {
                     new MessageTransform(),
                 },
+                Tags = { { "", "" }, },
             };
             // Make the request
             Subscription response = await subscriberServiceApiClient.CreateSubscriptionAsync(request);
@@ -1081,6 +1083,7 @@ namespace GoogleCSharpSnippets
                     ClientId = "",
                     MaxOutstandingMessages = 0L,
                     MaxOutstandingBytes = 0L,
+                    ProtocolVersion = 0L,
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);
@@ -1563,6 +1566,7 @@ namespace GoogleCSharpSnippets
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 Labels = { { "", "" }, },
+                Tags = { { "", "" }, },
             };
             // Make the request
             Snapshot response = subscriberServiceApiClient.CreateSnapshot(request);
@@ -1582,6 +1586,7 @@ namespace GoogleCSharpSnippets
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 Labels = { { "", "" }, },
+                Tags = { { "", "" }, },
             };
             // Make the request
             Snapshot response = await subscriberServiceApiClient.CreateSnapshotAsync(request);

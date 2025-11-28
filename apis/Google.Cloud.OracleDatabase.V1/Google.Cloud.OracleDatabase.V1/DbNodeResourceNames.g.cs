@@ -35,9 +35,17 @@ namespace Google.Cloud.OracleDatabase.V1
             /// <c>projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}/dbNodes/{db_node}</c>.
             /// </summary>
             ProjectLocationCloudVmClusterDbNode = 1,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}/dbNodes/{db_node}</c>.
+            /// </summary>
+            ProjectLocationExadbVmClusterDbNode = 2,
         }
 
         private static gax::PathTemplate s_projectLocationCloudVmClusterDbNode = new gax::PathTemplate("projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}/dbNodes/{db_node}");
+
+        private static gax::PathTemplate s_projectLocationExadbVmClusterDbNode = new gax::PathTemplate("projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}/dbNodes/{db_node}");
 
         /// <summary>Creates a <see cref="DbNodeName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -58,6 +66,18 @@ namespace Google.Cloud.OracleDatabase.V1
         /// <returns>A new instance of <see cref="DbNodeName"/> constructed from the provided ids.</returns>
         public static DbNodeName FromProjectLocationCloudVmClusterDbNode(string projectId, string locationId, string cloudVmClusterId, string dbNodeId) =>
             new DbNodeName(ResourceNameType.ProjectLocationCloudVmClusterDbNode, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), cloudVmClusterId: gax::GaxPreconditions.CheckNotNullOrEmpty(cloudVmClusterId, nameof(cloudVmClusterId)), dbNodeId: gax::GaxPreconditions.CheckNotNullOrEmpty(dbNodeId, nameof(dbNodeId)));
+
+        /// <summary>
+        /// Creates a <see cref="DbNodeName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}/dbNodes/{db_node}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="exadbVmClusterId">The <c>ExadbVmCluster</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dbNodeId">The <c>DbNode</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="DbNodeName"/> constructed from the provided ids.</returns>
+        public static DbNodeName FromProjectLocationExadbVmClusterDbNode(string projectId, string locationId, string exadbVmClusterId, string dbNodeId) =>
+            new DbNodeName(ResourceNameType.ProjectLocationExadbVmClusterDbNode, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), exadbVmClusterId: gax::GaxPreconditions.CheckNotNullOrEmpty(exadbVmClusterId, nameof(exadbVmClusterId)), dbNodeId: gax::GaxPreconditions.CheckNotNullOrEmpty(dbNodeId, nameof(dbNodeId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="DbNodeName"/> with pattern
@@ -89,6 +109,21 @@ namespace Google.Cloud.OracleDatabase.V1
         public static string FormatProjectLocationCloudVmClusterDbNode(string projectId, string locationId, string cloudVmClusterId, string dbNodeId) =>
             s_projectLocationCloudVmClusterDbNode.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(cloudVmClusterId, nameof(cloudVmClusterId)), gax::GaxPreconditions.CheckNotNullOrEmpty(dbNodeId, nameof(dbNodeId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="DbNodeName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}/dbNodes/{db_node}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="exadbVmClusterId">The <c>ExadbVmCluster</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="dbNodeId">The <c>DbNode</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="DbNodeName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}/dbNodes/{db_node}</c>.
+        /// </returns>
+        public static string FormatProjectLocationExadbVmClusterDbNode(string projectId, string locationId, string exadbVmClusterId, string dbNodeId) =>
+            s_projectLocationExadbVmClusterDbNode.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(exadbVmClusterId, nameof(exadbVmClusterId)), gax::GaxPreconditions.CheckNotNullOrEmpty(dbNodeId, nameof(dbNodeId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="DbNodeName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
@@ -96,6 +131,11 @@ namespace Google.Cloud.OracleDatabase.V1
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}/dbNodes/{db_node}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}/dbNodes/{db_node}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -114,6 +154,11 @@ namespace Google.Cloud.OracleDatabase.V1
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}/dbNodes/{db_node}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}/dbNodes/{db_node}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -140,6 +185,11 @@ namespace Google.Cloud.OracleDatabase.V1
         /// <c>projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}/dbNodes/{db_node}</c>
         /// </description>
         /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}/dbNodes/{db_node}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="dbNodeName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -159,6 +209,11 @@ namespace Google.Cloud.OracleDatabase.V1
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}/dbNodes/{db_node}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}/dbNodes/{db_node}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -183,6 +238,11 @@ namespace Google.Cloud.OracleDatabase.V1
                 result = FromProjectLocationCloudVmClusterDbNode(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
                 return true;
             }
+            if (s_projectLocationExadbVmClusterDbNode.TryParseName(dbNodeName, out resourceName))
+            {
+                result = FromProjectLocationExadbVmClusterDbNode(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(dbNodeName, out gax::UnparsedResourceName unparsedResourceName))
@@ -195,12 +255,13 @@ namespace Google.Cloud.OracleDatabase.V1
             return false;
         }
 
-        private DbNodeName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string cloudVmClusterId = null, string dbNodeId = null, string locationId = null, string projectId = null)
+        private DbNodeName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string cloudVmClusterId = null, string dbNodeId = null, string exadbVmClusterId = null, string locationId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             CloudVmClusterId = cloudVmClusterId;
             DbNodeId = dbNodeId;
+            ExadbVmClusterId = exadbVmClusterId;
             LocationId = locationId;
             ProjectId = projectId;
         }
@@ -227,23 +288,29 @@ namespace Google.Cloud.OracleDatabase.V1
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>CloudVmCluster</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
-        /// name.
+        /// The <c>CloudVmCluster</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string CloudVmClusterId { get; }
 
         /// <summary>
-        /// The <c>DbNode</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>DbNode</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string DbNodeId { get; }
 
         /// <summary>
-        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>ExadbVmCluster</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string ExadbVmClusterId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string LocationId { get; }
 
         /// <summary>
-        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string ProjectId { get; }
 
@@ -258,6 +325,7 @@ namespace Google.Cloud.OracleDatabase.V1
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.ProjectLocationCloudVmClusterDbNode: return s_projectLocationCloudVmClusterDbNode.Expand(ProjectId, LocationId, CloudVmClusterId, DbNodeId);
+                case ResourceNameType.ProjectLocationExadbVmClusterDbNode: return s_projectLocationExadbVmClusterDbNode.Expand(ProjectId, LocationId, ExadbVmClusterId, DbNodeId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }

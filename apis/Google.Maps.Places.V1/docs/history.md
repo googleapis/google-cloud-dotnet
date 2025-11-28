@@ -1,5 +1,52 @@
 # Version history
 
+## Version 1.0.0-beta18, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+## Version 1.0.0-beta17, released 2025-10-23
+
+### New features
+
+- Add Review.visitDate field to indicate when the review author visited
+- Add Place.consumerAlert field for suspicious review activity
+
+## Version 1.0.0-beta16, released 2025-10-21
+
+### New features
+
+- Add moved_place and moved_place_id to Place
+
+### Documentation improvements
+
+- Change comments in some fields in Places API
+- Clarify behavior of primary types and weekday text
+
+## Version 1.0.0-beta15, released 2025-05-15
+
+### New features
+
+- Add address descriptor proto
+- Add new photo fields
+- Update GenerativeSummary fields
+- Add new GoogleMapsLinks fields
+- Add new NeighborhoodSummary fields
+- Add new ReviewSummary fields
+- Add new review fields
+
+### Bug fixes
+
+- An existing field `description` is removed from message `.google.maps.places.v1.Place`
+- An existing field `references` is removed from message `.google.maps.places.v1.Place`
+- An existing message `AreaSummary` is removed
+- An existing field `area_summary` is removed from message `.google.maps.places.v1.Place`
+
+### Documentation improvements
+
+- Change comments for some fields in Places API
+
 ## Version 1.0.0-beta14, released 2025-03-17
 
 ### New features

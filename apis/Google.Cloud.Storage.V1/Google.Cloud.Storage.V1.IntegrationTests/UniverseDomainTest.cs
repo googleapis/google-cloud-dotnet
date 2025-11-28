@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Auth.OAuth2;
 using Google.Apis.Storage.v1.Data;
 using System;
 using System.IO;
@@ -48,7 +49,8 @@ public class UniverseDomainTest : IDisposable
     [Fact(Skip = "b/384633853")]
     public void UniverseDomain()
     {
-        _storage = new StorageClientBuilder { CredentialsPath = _credsPath, UniverseDomain = _universeDomain }.Build();
+        var googleCredential = CredentialFactory.FromFile<ServiceAccountCredential>(_credsPath).ToGoogleCredential();
+        _storage = new StorageClientBuilder { GoogleCredential = googleCredential, UniverseDomain = _universeDomain }.Build();
 
         _storage.CreateBucket(_projectId, new Bucket { Location = _location, Name = _bucketName });
 

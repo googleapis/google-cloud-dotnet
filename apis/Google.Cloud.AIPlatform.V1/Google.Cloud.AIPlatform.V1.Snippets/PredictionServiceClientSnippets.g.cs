@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
                 Instances = { new wkt::Value(), },
                 Parameters = new wkt::Value(),
+                Labels = { { "", "" }, },
             };
             // Make the request
             PredictResponse response = predictionServiceClient.Predict(request);
@@ -60,6 +61,7 @@ namespace GoogleCSharpSnippets
                 EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
                 Instances = { new wkt::Value(), },
                 Parameters = new wkt::Value(),
+                Labels = { { "", "" }, },
             };
             // Make the request
             PredictResponse response = await predictionServiceClient.PredictAsync(request);
@@ -722,6 +724,7 @@ namespace GoogleCSharpSnippets
                 SystemInstruction = new Content(),
                 CachedContentAsCachedContentName = CachedContentName.FromProjectLocationCachedContent("[PROJECT]", "[LOCATION]", "[CACHED_CONTENT]"),
                 Labels = { { "", "" }, },
+                ModelArmorConfig = new ModelArmorConfig(),
             };
             // Make the request
             GenerateContentResponse response = predictionServiceClient.GenerateContent(request);
@@ -750,6 +753,7 @@ namespace GoogleCSharpSnippets
                 SystemInstruction = new Content(),
                 CachedContentAsCachedContentName = CachedContentName.FromProjectLocationCachedContent("[PROJECT]", "[LOCATION]", "[CACHED_CONTENT]"),
                 Labels = { { "", "" }, },
+                ModelArmorConfig = new ModelArmorConfig(),
             };
             // Make the request
             GenerateContentResponse response = await predictionServiceClient.GenerateContentAsync(request);
@@ -806,6 +810,7 @@ namespace GoogleCSharpSnippets
                 SystemInstruction = new Content(),
                 CachedContentAsCachedContentName = CachedContentName.FromProjectLocationCachedContent("[PROJECT]", "[LOCATION]", "[CACHED_CONTENT]"),
                 Labels = { { "", "" }, },
+                ModelArmorConfig = new ModelArmorConfig(),
             };
             // Make the request, returning a streaming response
             using PredictionServiceClient.StreamGenerateContentStream response = predictionServiceClient.StreamGenerateContent(request);
@@ -843,6 +848,107 @@ namespace GoogleCSharpSnippets
                 // Do something with streamed response
             }
             // The response stream has completed
+            // End snippet
+        }
+
+        /// <summary>Snippet for EmbedContent</summary>
+        public void EmbedContentRequestObject()
+        {
+            // Snippet: EmbedContent(EmbedContentRequest, CallSettings)
+            // Create client
+            PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
+            // Initialize request argument(s)
+            EmbedContentRequest request = new EmbedContentRequest
+            {
+                ModelAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
+                Content = new Content(),
+                Title = "",
+                TaskType = EmbedContentRequest.Types.EmbeddingTaskType.Unspecified,
+                OutputDimensionality = 0,
+                AutoTruncate = false,
+            };
+            // Make the request
+            EmbedContentResponse response = predictionServiceClient.EmbedContent(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for EmbedContentAsync</summary>
+        public async Task EmbedContentRequestObjectAsync()
+        {
+            // Snippet: EmbedContentAsync(EmbedContentRequest, CallSettings)
+            // Additional: EmbedContentAsync(EmbedContentRequest, CancellationToken)
+            // Create client
+            PredictionServiceClient predictionServiceClient = await PredictionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EmbedContentRequest request = new EmbedContentRequest
+            {
+                ModelAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
+                Content = new Content(),
+                Title = "",
+                TaskType = EmbedContentRequest.Types.EmbeddingTaskType.Unspecified,
+                OutputDimensionality = 0,
+                AutoTruncate = false,
+            };
+            // Make the request
+            EmbedContentResponse response = await predictionServiceClient.EmbedContentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for EmbedContent</summary>
+        public void EmbedContent()
+        {
+            // Snippet: EmbedContent(string, Content, CallSettings)
+            // Create client
+            PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
+            // Initialize request argument(s)
+            string model = "projects/[PROJECT]/locations/[LOCATION]/endpoints/[ENDPOINT]";
+            Content content = new Content();
+            // Make the request
+            EmbedContentResponse response = predictionServiceClient.EmbedContent(model, content);
+            // End snippet
+        }
+
+        /// <summary>Snippet for EmbedContentAsync</summary>
+        public async Task EmbedContentAsync()
+        {
+            // Snippet: EmbedContentAsync(string, Content, CallSettings)
+            // Additional: EmbedContentAsync(string, Content, CancellationToken)
+            // Create client
+            PredictionServiceClient predictionServiceClient = await PredictionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string model = "projects/[PROJECT]/locations/[LOCATION]/endpoints/[ENDPOINT]";
+            Content content = new Content();
+            // Make the request
+            EmbedContentResponse response = await predictionServiceClient.EmbedContentAsync(model, content);
+            // End snippet
+        }
+
+        /// <summary>Snippet for EmbedContent</summary>
+        public void EmbedContentResourceNames()
+        {
+            // Snippet: EmbedContent(EndpointName, Content, CallSettings)
+            // Create client
+            PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
+            // Initialize request argument(s)
+            EndpointName model = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
+            Content content = new Content();
+            // Make the request
+            EmbedContentResponse response = predictionServiceClient.EmbedContent(model, content);
+            // End snippet
+        }
+
+        /// <summary>Snippet for EmbedContentAsync</summary>
+        public async Task EmbedContentResourceNamesAsync()
+        {
+            // Snippet: EmbedContentAsync(EndpointName, Content, CallSettings)
+            // Additional: EmbedContentAsync(EndpointName, Content, CancellationToken)
+            // Create client
+            PredictionServiceClient predictionServiceClient = await PredictionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EndpointName model = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
+            Content content = new Content();
+            // Make the request
+            EmbedContentResponse response = await predictionServiceClient.EmbedContentAsync(model, content);
             // End snippet
         }
     }

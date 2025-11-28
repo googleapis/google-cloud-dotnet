@@ -80,6 +80,10 @@ namespace Google.Cloud.Config.V1
             ExportPreviewResultSettings = existing.ExportPreviewResultSettings;
             ListTerraformVersionsSettings = existing.ListTerraformVersionsSettings;
             GetTerraformVersionSettings = existing.GetTerraformVersionSettings;
+            ListResourceChangesSettings = existing.ListResourceChangesSettings;
+            GetResourceChangeSettings = existing.GetResourceChangeSettings;
+            ListResourceDriftsSettings = existing.ListResourceDriftsSettings;
+            GetResourceDriftSettings = existing.GetResourceDriftSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -626,6 +630,78 @@ namespace Google.Cloud.Config.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetTerraformVersionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigClient.ListResourceChanges</c> and <c>ConfigClient.ListResourceChangesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListResourceChangesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigClient.GetResourceChange</c> and <c>ConfigClient.GetResourceChangeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetResourceChangeSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigClient.ListResourceDrifts</c> and <c>ConfigClient.ListResourceDriftsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListResourceDriftsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigClient.GetResourceDrift</c> and <c>ConfigClient.GetResourceDriftAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetResourceDriftSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -3662,6 +3738,556 @@ namespace Google.Cloud.Config.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<TerraformVersion> GetTerraformVersionAsync(TerraformVersionName name, st::CancellationToken cancellationToken) =>
             GetTerraformVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists ResourceChanges for a given preview.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ResourceChange"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListResourceChangesResponse, ResourceChange> ListResourceChanges(ListResourceChangesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists ResourceChanges for a given preview.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ResourceChange"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListResourceChangesResponse, ResourceChange> ListResourceChangesAsync(ListResourceChangesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists ResourceChanges for a given preview.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the ResourceChanges are listed. The
+        /// parent value is in the format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}'.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ResourceChange"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListResourceChangesResponse, ResourceChange> ListResourceChanges(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListResourceChangesRequest request = new ListResourceChangesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListResourceChanges(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ResourceChanges for a given preview.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the ResourceChanges are listed. The
+        /// parent value is in the format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}'.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ResourceChange"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListResourceChangesResponse, ResourceChange> ListResourceChangesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListResourceChangesRequest request = new ListResourceChangesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListResourceChangesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ResourceChanges for a given preview.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the ResourceChanges are listed. The
+        /// parent value is in the format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}'.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ResourceChange"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListResourceChangesResponse, ResourceChange> ListResourceChanges(PreviewName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListResourceChangesRequest request = new ListResourceChangesRequest
+            {
+                ParentAsPreviewName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListResourceChanges(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ResourceChanges for a given preview.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the ResourceChanges are listed. The
+        /// parent value is in the format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}'.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ResourceChange"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListResourceChangesResponse, ResourceChange> ListResourceChangesAsync(PreviewName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListResourceChangesRequest request = new ListResourceChangesRequest
+            {
+                ParentAsPreviewName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListResourceChangesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a ResourceChange for a given preview.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ResourceChange GetResourceChange(GetResourceChangeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a ResourceChange for a given preview.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ResourceChange> GetResourceChangeAsync(GetResourceChangeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a ResourceChange for a given preview.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ResourceChange> GetResourceChangeAsync(GetResourceChangeRequest request, st::CancellationToken cancellationToken) =>
+            GetResourceChangeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a ResourceChange for a given preview.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource change to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}/resourceChanges/{resource_change}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ResourceChange GetResourceChange(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetResourceChange(new GetResourceChangeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a ResourceChange for a given preview.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource change to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}/resourceChanges/{resource_change}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ResourceChange> GetResourceChangeAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetResourceChangeAsync(new GetResourceChangeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a ResourceChange for a given preview.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource change to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}/resourceChanges/{resource_change}'.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ResourceChange> GetResourceChangeAsync(string name, st::CancellationToken cancellationToken) =>
+            GetResourceChangeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a ResourceChange for a given preview.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource change to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}/resourceChanges/{resource_change}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ResourceChange GetResourceChange(ResourceChangeName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetResourceChange(new GetResourceChangeRequest
+            {
+                ResourceChangeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a ResourceChange for a given preview.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource change to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}/resourceChanges/{resource_change}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ResourceChange> GetResourceChangeAsync(ResourceChangeName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetResourceChangeAsync(new GetResourceChangeRequest
+            {
+                ResourceChangeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a ResourceChange for a given preview.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource change to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}/resourceChanges/{resource_change}'.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ResourceChange> GetResourceChangeAsync(ResourceChangeName name, st::CancellationToken cancellationToken) =>
+            GetResourceChangeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List ResourceDrifts for a given preview.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ResourceDrift"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListResourceDriftsResponse, ResourceDrift> ListResourceDrifts(ListResourceDriftsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List ResourceDrifts for a given preview.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ResourceDrift"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListResourceDriftsResponse, ResourceDrift> ListResourceDriftsAsync(ListResourceDriftsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List ResourceDrifts for a given preview.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the ResourceDrifts are listed. The
+        /// parent value is in the format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}'.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ResourceDrift"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListResourceDriftsResponse, ResourceDrift> ListResourceDrifts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListResourceDriftsRequest request = new ListResourceDriftsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListResourceDrifts(request, callSettings);
+        }
+
+        /// <summary>
+        /// List ResourceDrifts for a given preview.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the ResourceDrifts are listed. The
+        /// parent value is in the format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}'.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ResourceDrift"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListResourceDriftsResponse, ResourceDrift> ListResourceDriftsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListResourceDriftsRequest request = new ListResourceDriftsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListResourceDriftsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// List ResourceDrifts for a given preview.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the ResourceDrifts are listed. The
+        /// parent value is in the format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}'.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ResourceDrift"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListResourceDriftsResponse, ResourceDrift> ListResourceDrifts(PreviewName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListResourceDriftsRequest request = new ListResourceDriftsRequest
+            {
+                ParentAsPreviewName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListResourceDrifts(request, callSettings);
+        }
+
+        /// <summary>
+        /// List ResourceDrifts for a given preview.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent in whose context the ResourceDrifts are listed. The
+        /// parent value is in the format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}'.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ResourceDrift"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListResourceDriftsResponse, ResourceDrift> ListResourceDriftsAsync(PreviewName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListResourceDriftsRequest request = new ListResourceDriftsRequest
+            {
+                ParentAsPreviewName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListResourceDriftsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a ResourceDrift for a given preview.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ResourceDrift GetResourceDrift(GetResourceDriftRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a ResourceDrift for a given preview.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ResourceDrift> GetResourceDriftAsync(GetResourceDriftRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a ResourceDrift for a given preview.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ResourceDrift> GetResourceDriftAsync(GetResourceDriftRequest request, st::CancellationToken cancellationToken) =>
+            GetResourceDriftAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a ResourceDrift for a given preview.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource drift to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}/resourceDrifts/{resource_drift}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ResourceDrift GetResourceDrift(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetResourceDrift(new GetResourceDriftRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a ResourceDrift for a given preview.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource drift to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}/resourceDrifts/{resource_drift}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ResourceDrift> GetResourceDriftAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetResourceDriftAsync(new GetResourceDriftRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a ResourceDrift for a given preview.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource drift to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}/resourceDrifts/{resource_drift}'.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ResourceDrift> GetResourceDriftAsync(string name, st::CancellationToken cancellationToken) =>
+            GetResourceDriftAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a ResourceDrift for a given preview.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource drift to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}/resourceDrifts/{resource_drift}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ResourceDrift GetResourceDrift(ResourceDriftName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetResourceDrift(new GetResourceDriftRequest
+            {
+                ResourceDriftName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a ResourceDrift for a given preview.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource drift to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}/resourceDrifts/{resource_drift}'.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ResourceDrift> GetResourceDriftAsync(ResourceDriftName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetResourceDriftAsync(new GetResourceDriftRequest
+            {
+                ResourceDriftName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a ResourceDrift for a given preview.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource drift to retrieve.
+        /// Format:
+        /// 'projects/{project_id}/locations/{location}/previews/{preview}/resourceDrifts/{resource_drift}'.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ResourceDrift> GetResourceDriftAsync(ResourceDriftName name, st::CancellationToken cancellationToken) =>
+            GetResourceDriftAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Config client wrapper implementation, for convenient use.</summary>
@@ -3716,6 +4342,14 @@ namespace Google.Cloud.Config.V1
         private readonly gaxgrpc::ApiCall<ListTerraformVersionsRequest, ListTerraformVersionsResponse> _callListTerraformVersions;
 
         private readonly gaxgrpc::ApiCall<GetTerraformVersionRequest, TerraformVersion> _callGetTerraformVersion;
+
+        private readonly gaxgrpc::ApiCall<ListResourceChangesRequest, ListResourceChangesResponse> _callListResourceChanges;
+
+        private readonly gaxgrpc::ApiCall<GetResourceChangeRequest, ResourceChange> _callGetResourceChange;
+
+        private readonly gaxgrpc::ApiCall<ListResourceDriftsRequest, ListResourceDriftsResponse> _callListResourceDrifts;
+
+        private readonly gaxgrpc::ApiCall<GetResourceDriftRequest, ResourceDrift> _callGetResourceDrift;
 
         /// <summary>
         /// Constructs a client wrapper for the Config service, with the specified gRPC client and settings.
@@ -3810,6 +4444,18 @@ namespace Google.Cloud.Config.V1
             _callGetTerraformVersion = clientHelper.BuildApiCall<GetTerraformVersionRequest, TerraformVersion>("GetTerraformVersion", grpcClient.GetTerraformVersionAsync, grpcClient.GetTerraformVersion, effectiveSettings.GetTerraformVersionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTerraformVersion);
             Modify_GetTerraformVersionApiCall(ref _callGetTerraformVersion);
+            _callListResourceChanges = clientHelper.BuildApiCall<ListResourceChangesRequest, ListResourceChangesResponse>("ListResourceChanges", grpcClient.ListResourceChangesAsync, grpcClient.ListResourceChanges, effectiveSettings.ListResourceChangesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListResourceChanges);
+            Modify_ListResourceChangesApiCall(ref _callListResourceChanges);
+            _callGetResourceChange = clientHelper.BuildApiCall<GetResourceChangeRequest, ResourceChange>("GetResourceChange", grpcClient.GetResourceChangeAsync, grpcClient.GetResourceChange, effectiveSettings.GetResourceChangeSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetResourceChange);
+            Modify_GetResourceChangeApiCall(ref _callGetResourceChange);
+            _callListResourceDrifts = clientHelper.BuildApiCall<ListResourceDriftsRequest, ListResourceDriftsResponse>("ListResourceDrifts", grpcClient.ListResourceDriftsAsync, grpcClient.ListResourceDrifts, effectiveSettings.ListResourceDriftsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListResourceDrifts);
+            Modify_ListResourceDriftsApiCall(ref _callListResourceDrifts);
+            _callGetResourceDrift = clientHelper.BuildApiCall<GetResourceDriftRequest, ResourceDrift>("GetResourceDrift", grpcClient.GetResourceDriftAsync, grpcClient.GetResourceDrift, effectiveSettings.GetResourceDriftSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetResourceDrift);
+            Modify_GetResourceDriftApiCall(ref _callGetResourceDrift);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3860,6 +4506,14 @@ namespace Google.Cloud.Config.V1
         partial void Modify_ListTerraformVersionsApiCall(ref gaxgrpc::ApiCall<ListTerraformVersionsRequest, ListTerraformVersionsResponse> call);
 
         partial void Modify_GetTerraformVersionApiCall(ref gaxgrpc::ApiCall<GetTerraformVersionRequest, TerraformVersion> call);
+
+        partial void Modify_ListResourceChangesApiCall(ref gaxgrpc::ApiCall<ListResourceChangesRequest, ListResourceChangesResponse> call);
+
+        partial void Modify_GetResourceChangeApiCall(ref gaxgrpc::ApiCall<GetResourceChangeRequest, ResourceChange> call);
+
+        partial void Modify_ListResourceDriftsApiCall(ref gaxgrpc::ApiCall<ListResourceDriftsRequest, ListResourceDriftsResponse> call);
+
+        partial void Modify_GetResourceDriftApiCall(ref gaxgrpc::ApiCall<GetResourceDriftRequest, ResourceDrift> call);
 
         partial void OnConstruction(Config.ConfigClient grpcClient, ConfigSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -3917,6 +4571,14 @@ namespace Google.Cloud.Config.V1
         partial void Modify_ListTerraformVersionsRequest(ref ListTerraformVersionsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetTerraformVersionRequest(ref GetTerraformVersionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListResourceChangesRequest(ref ListResourceChangesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetResourceChangeRequest(ref GetResourceChangeRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListResourceDriftsRequest(ref ListResourceDriftsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetResourceDriftRequest(ref GetResourceDriftRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists [Deployment][google.cloud.config.v1.Deployment]s in a given project
@@ -4502,6 +5164,102 @@ namespace Google.Cloud.Config.V1
             Modify_GetTerraformVersionRequest(ref request, ref callSettings);
             return _callGetTerraformVersion.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Lists ResourceChanges for a given preview.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ResourceChange"/> resources.</returns>
+        public override gax::PagedEnumerable<ListResourceChangesResponse, ResourceChange> ListResourceChanges(ListResourceChangesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListResourceChangesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListResourceChangesRequest, ListResourceChangesResponse, ResourceChange>(_callListResourceChanges, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ResourceChanges for a given preview.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ResourceChange"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListResourceChangesResponse, ResourceChange> ListResourceChangesAsync(ListResourceChangesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListResourceChangesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListResourceChangesRequest, ListResourceChangesResponse, ResourceChange>(_callListResourceChanges, request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a ResourceChange for a given preview.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ResourceChange GetResourceChange(GetResourceChangeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetResourceChangeRequest(ref request, ref callSettings);
+            return _callGetResourceChange.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a ResourceChange for a given preview.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ResourceChange> GetResourceChangeAsync(GetResourceChangeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetResourceChangeRequest(ref request, ref callSettings);
+            return _callGetResourceChange.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// List ResourceDrifts for a given preview.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ResourceDrift"/> resources.</returns>
+        public override gax::PagedEnumerable<ListResourceDriftsResponse, ResourceDrift> ListResourceDrifts(ListResourceDriftsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListResourceDriftsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListResourceDriftsRequest, ListResourceDriftsResponse, ResourceDrift>(_callListResourceDrifts, request, callSettings);
+        }
+
+        /// <summary>
+        /// List ResourceDrifts for a given preview.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ResourceDrift"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListResourceDriftsResponse, ResourceDrift> ListResourceDriftsAsync(ListResourceDriftsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListResourceDriftsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListResourceDriftsRequest, ListResourceDriftsResponse, ResourceDrift>(_callListResourceDrifts, request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a ResourceDrift for a given preview.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ResourceDrift GetResourceDrift(GetResourceDriftRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetResourceDriftRequest(ref request, ref callSettings);
+            return _callGetResourceDrift.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a ResourceDrift for a given preview.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ResourceDrift> GetResourceDriftAsync(GetResourceDriftRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetResourceDriftRequest(ref request, ref callSettings);
+            return _callGetResourceDrift.Async(request, callSettings);
+        }
     }
 
     public partial class ListDeploymentsRequest : gaxgrpc::IPageRequest
@@ -4521,6 +5279,14 @@ namespace Google.Cloud.Config.V1
     }
 
     public partial class ListTerraformVersionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListResourceChangesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListResourceDriftsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -4560,6 +5326,22 @@ namespace Google.Cloud.Config.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<TerraformVersion> GetEnumerator() => TerraformVersions.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListResourceChangesResponse : gaxgrpc::IPageResponse<ResourceChange>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ResourceChange> GetEnumerator() => ResourceChanges.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListResourceDriftsResponse : gaxgrpc::IPageResponse<ResourceDrift>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ResourceDrift> GetEnumerator() => ResourceDrifts.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

@@ -33,14 +33,14 @@ namespace Google.Cloud.Dataplex.V1 {
             "GgoKCE9uRGVtYW5kGh0KCFNjaGVkdWxlEhEKBGNyb24YASABKAlCA+BBAkIG",
             "CgRtb2RlImkKCkRhdGFTb3VyY2USOAoGZW50aXR5GGQgASgJQibgQQX6QSAK",
             "HmRhdGFwbGV4Lmdvb2dsZWFwaXMuY29tL0VudGl0eUgAEhcKCHJlc291cmNl",
-            "GGUgASgJQgPgQQVIAEIICgZzb3VyY2UirwEKC1NjYW5uZWREYXRhElMKEWlu",
+            "GGUgASgJQgPgQQVIAEIICgZzb3VyY2UivgEKC1NjYW5uZWREYXRhElMKEWlu",
             "Y3JlbWVudGFsX2ZpZWxkGAEgASgLMjYuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4",
-            "LnYxLlNjYW5uZWREYXRhLkluY3JlbWVudGFsRmllbGRIABo9ChBJbmNyZW1l",
-            "bnRhbEZpZWxkEg0KBWZpZWxkGAEgASgJEg0KBXN0YXJ0GAIgASgJEgsKA2Vu",
-            "ZBgDIAEoCUIMCgpkYXRhX3JhbmdlQmsKHGNvbS5nb29nbGUuY2xvdWQuZGF0",
-            "YXBsZXgudjFCD1Byb2Nlc3NpbmdQcm90b1ABWjhjbG91ZC5nb29nbGUuY29t",
-            "L2dvL2RhdGFwbGV4L2FwaXYxL2RhdGFwbGV4cGI7ZGF0YXBsZXhwYmIGcHJv",
-            "dG8z"));
+            "LnYxLlNjYW5uZWREYXRhLkluY3JlbWVudGFsRmllbGRIABpMChBJbmNyZW1l",
+            "bnRhbEZpZWxkEhIKBWZpZWxkGAEgASgJQgPgQQMSEgoFc3RhcnQYAiABKAlC",
+            "A+BBAxIQCgNlbmQYAyABKAlCA+BBA0IMCgpkYXRhX3JhbmdlQmsKHGNvbS5n",
+            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjFCD1Byb2Nlc3NpbmdQcm90b1ABWjhj",
+            "bG91ZC5nb29nbGUuY29tL2dvL2RhdGFwbGV4L2FwaXYxL2RhdGFwbGV4cGI7",
+            "ZGF0YXBsZXhwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -779,8 +779,8 @@ namespace Google.Cloud.Dataplex.V1 {
     /// <summary>Field number for the "entity" field.</summary>
     public const int EntityFieldNumber = 100;
     /// <summary>
-    /// Immutable. The Dataplex entity that represents the data source (e.g.
-    /// BigQuery table) for DataScan, of the form:
+    /// Immutable. The Dataplex Universal Catalog entity that represents the data
+    /// source (e.g. BigQuery table) for DataScan, of the form:
     /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -811,8 +811,12 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int ResourceFieldNumber = 101;
     /// <summary>
     /// Immutable. The service-qualified full resource name of the cloud resource
-    /// for a DataScan job to scan against. The field could be: BigQuery table of
-    /// type "TABLE" for DataProfileScan/DataQualityScan Format:
+    /// for a DataScan job to scan against. The field could either be: Cloud
+    /// Storage bucket for DataDiscoveryScan Format:
+    /// //storage.googleapis.com/projects/PROJECT_ID/buckets/BUCKET_ID
+    /// or
+    /// BigQuery table of type "TABLE" for
+    /// DataProfileScan/DataQualityScan/DataDocumentationScan Format:
     /// //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1318,8 +1322,8 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int FieldFieldNumber = 1;
         private string field_ = "";
         /// <summary>
-        /// The field that contains values which monotonically increases over time
-        /// (e.g. a timestamp column).
+        /// Output only. The field that contains values which monotonically increases
+        /// over time (e.g. a timestamp column).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1334,7 +1338,7 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int StartFieldNumber = 2;
         private string start_ = "";
         /// <summary>
-        /// Value that marks the start of the range.
+        /// Output only. Value that marks the start of the range.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1349,7 +1353,7 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int EndFieldNumber = 3;
         private string end_ = "";
         /// <summary>
-        /// Value that marks the end of the range.
+        /// Output only. Value that marks the end of the range.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

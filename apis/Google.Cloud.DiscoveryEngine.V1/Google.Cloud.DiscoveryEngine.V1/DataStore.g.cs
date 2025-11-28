@@ -27,65 +27,73 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "CjBnb29nbGUvY2xvdWQvZGlzY292ZXJ5ZW5naW5lL3YxL2RhdGFfc3RvcmUu",
             "cHJvdG8SH2dvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEaH2dvb2ds",
             "ZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3Vy",
-            "Y2UucHJvdG8aLGdvb2dsZS9jbG91ZC9kaXNjb3ZlcnllbmdpbmUvdjEvY29t",
-            "bW9uLnByb3RvGkBnb29nbGUvY2xvdWQvZGlzY292ZXJ5ZW5naW5lL3YxL2Rv",
-            "Y3VtZW50X3Byb2Nlc3NpbmdfY29uZmlnLnByb3RvGixnb29nbGUvY2xvdWQv",
-            "ZGlzY292ZXJ5ZW5naW5lL3YxL3NjaGVtYS5wcm90bxofZ29vZ2xlL3Byb3Rv",
-            "YnVmL3RpbWVzdGFtcC5wcm90byKvCwoJRGF0YVN0b3JlEhEKBG5hbWUYASAB",
-            "KAlCA+BBBRIZCgxkaXNwbGF5X25hbWUYAiABKAlCA+BBAhJRChFpbmR1c3Ry",
-            "eV92ZXJ0aWNhbBgDIAEoDjIxLmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnllbmdp",
-            "bmUudjEuSW5kdXN0cnlWZXJ0aWNhbEID4EEFEkUKDnNvbHV0aW9uX3R5cGVz",
-            "GAUgAygOMi0uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5Tb2x1",
-            "dGlvblR5cGUSHgoRZGVmYXVsdF9zY2hlbWFfaWQYByABKAlCA+BBAxJVCg5j",
-            "b250ZW50X2NvbmZpZxgGIAEoDjI4Lmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnll",
-            "bmdpbmUudjEuRGF0YVN0b3JlLkNvbnRlbnRDb25maWdCA+BBBRI0CgtjcmVh",
-            "dGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "AxJjChthZHZhbmNlZF9zaXRlX3NlYXJjaF9jb25maWcYDCABKAsyOS5nb29n",
-            "bGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkFkdmFuY2VkU2l0ZVNlYXJj",
-            "aENvbmZpZ0ID4EEBEl0KEmJpbGxpbmdfZXN0aW1hdGlvbhgXIAEoCzI8Lmdv",
-            "b2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuRGF0YVN0b3JlLkJpbGxp",
-            "bmdFc3RpbWF0aW9uQgPgQQMSSgoQd29ya3NwYWNlX2NvbmZpZxgZIAEoCzIw",
-            "Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuV29ya3NwYWNlQ29u",
-            "ZmlnEl0KGmRvY3VtZW50X3Byb2Nlc3NpbmdfY29uZmlnGBsgASgLMjkuZ29v",
-            "Z2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5Eb2N1bWVudFByb2Nlc3Np",
-            "bmdDb25maWcSQAoPc3RhcnRpbmdfc2NoZW1hGBwgASgLMicuZ29vZ2xlLmNs",
-            "b3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TY2hlbWEargIKEUJpbGxpbmdFc3Rp",
-            "bWF0aW9uEhwKFHN0cnVjdHVyZWRfZGF0YV9zaXplGAEgASgDEh4KFnVuc3Ry",
-            "dWN0dXJlZF9kYXRhX3NpemUYAiABKAMSGQoRd2Vic2l0ZV9kYXRhX3NpemUY",
-            "AyABKAMSPwobc3RydWN0dXJlZF9kYXRhX3VwZGF0ZV90aW1lGAQgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJBCh11bnN0cnVjdHVyZWRfZGF0",
-            "YV91cGRhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXASPAoYd2Vic2l0ZV9kYXRhX3VwZGF0ZV90aW1lGAYgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcCJ/Cg1Db250ZW50Q29uZmlnEh4KGkNPTlRF",
-            "TlRfQ09ORklHX1VOU1BFQ0lGSUVEEAASDgoKTk9fQ09OVEVOVBABEhQKEENP",
-            "TlRFTlRfUkVRVUlSRUQQAhISCg5QVUJMSUNfV0VCU0lURRADEhQKEEdPT0dM",
-            "RV9XT1JLU1BBQ0UQBDrJAepBxQEKKGRpc2NvdmVyeWVuZ2luZS5nb29nbGVh",
-            "cGlzLmNvbS9EYXRhU3RvcmUSP3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
-            "bnMve2xvY2F0aW9ufS9kYXRhU3RvcmVzL3tkYXRhX3N0b3JlfRJYcHJvamVj",
-            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NvbGxlY3Rpb25z",
-            "L3tjb2xsZWN0aW9ufS9kYXRhU3RvcmVzL3tkYXRhX3N0b3JlfSKeAQoYQWR2",
-            "YW5jZWRTaXRlU2VhcmNoQ29uZmlnEiIKFWRpc2FibGVfaW5pdGlhbF9pbmRl",
-            "eBgDIAEoCEgAiAEBEiYKGWRpc2FibGVfYXV0b21hdGljX3JlZnJlc2gYBCAB",
-            "KAhIAYgBAUIYChZfZGlzYWJsZV9pbml0aWFsX2luZGV4QhwKGl9kaXNhYmxl",
-            "X2F1dG9tYXRpY19yZWZyZXNoIvUCCg9Xb3Jrc3BhY2VDb25maWcSQwoEdHlw",
-            "ZRgBIAEoDjI1Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuV29y",
-            "a3NwYWNlQ29uZmlnLlR5cGUSGgoSZGFzaGVyX2N1c3RvbWVyX2lkGAIgASgJ",
-            "EigKG3N1cGVyX2FkbWluX3NlcnZpY2VfYWNjb3VudBgEIAEoCUID4EEBEiYK",
-            "GXN1cGVyX2FkbWluX2VtYWlsX2FkZHJlc3MYBSABKAlCA+BBASKuAQoEVHlw",
-            "ZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASEAoMR09PR0xFX0RSSVZFEAESDwoL",
-            "R09PR0xFX01BSUwQAhIQCgxHT09HTEVfU0lURVMQAxITCg9HT09HTEVfQ0FM",
-            "RU5EQVIQBBIPCgtHT09HTEVfQ0hBVBAFEhEKDUdPT0dMRV9HUk9VUFMQBhIP",
-            "CgtHT09HTEVfS0VFUBAHEhEKDUdPT0dMRV9QRU9QTEUQCEKBAgojY29tLmdv",
-            "b2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFCDkRhdGFTdG9yZVByb3Rv",
-            "UAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYx",
-            "L2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIPRElTQ09W",
-            "RVJZRU5HSU5FqgIfR29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5WMcoC",
-            "H0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjHqAiJHb29nbGU6OkNs",
-            "b3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYgZwcm90bzM="));
+            "Y2UucHJvdG8aOWdvb2dsZS9jbG91ZC9kaXNjb3ZlcnllbmdpbmUvdjEvY21l",
+            "a19jb25maWdfc2VydmljZS5wcm90bxosZ29vZ2xlL2Nsb3VkL2Rpc2NvdmVy",
+            "eWVuZ2luZS92MS9jb21tb24ucHJvdG8aQGdvb2dsZS9jbG91ZC9kaXNjb3Zl",
+            "cnllbmdpbmUvdjEvZG9jdW1lbnRfcHJvY2Vzc2luZ19jb25maWcucHJvdG8a",
+            "LGdvb2dsZS9jbG91ZC9kaXNjb3ZlcnllbmdpbmUvdjEvc2NoZW1hLnByb3Rv",
+            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIucNCglEYXRhU3Rv",
+            "cmUSFAoEbmFtZRgBIAEoCUIG4EEF4EEIEhkKDGRpc3BsYXlfbmFtZRgCIAEo",
+            "CUID4EECElEKEWluZHVzdHJ5X3ZlcnRpY2FsGAMgASgOMjEuZ29vZ2xlLmNs",
+            "b3VkLmRpc2NvdmVyeWVuZ2luZS52MS5JbmR1c3RyeVZlcnRpY2FsQgPgQQUS",
+            "RQoOc29sdXRpb25fdHlwZXMYBSADKA4yLS5nb29nbGUuY2xvdWQuZGlzY292",
+            "ZXJ5ZW5naW5lLnYxLlNvbHV0aW9uVHlwZRIeChFkZWZhdWx0X3NjaGVtYV9p",
+            "ZBgHIAEoCUID4EEDElUKDmNvbnRlbnRfY29uZmlnGAYgASgOMjguZ29vZ2xl",
+            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5EYXRhU3RvcmUuQ29udGVudENv",
+            "bmZpZ0ID4EEFEjQKC2NyZWF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEmMKG2FkdmFuY2VkX3NpdGVfc2VhcmNoX2Nv",
+            "bmZpZxgMIAEoCzI5Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEu",
+            "QWR2YW5jZWRTaXRlU2VhcmNoQ29uZmlnQgPgQQESGQoMa21zX2tleV9uYW1l",
+            "GCAgASgJQgPgQQQSRQoLY21la19jb25maWcYEiABKAsyKy5nb29nbGUuY2xv",
+            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxLkNtZWtDb25maWdCA+BBAxJdChJiaWxs",
+            "aW5nX2VzdGltYXRpb24YFyABKAsyPC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5",
+            "ZW5naW5lLnYxLkRhdGFTdG9yZS5CaWxsaW5nRXN0aW1hdGlvbkID4EEDEhgK",
+            "C2FjbF9lbmFibGVkGBggASgIQgPgQQUSSgoQd29ya3NwYWNlX2NvbmZpZxgZ",
+            "IAEoCzIwLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuV29ya3Nw",
+            "YWNlQ29uZmlnEl0KGmRvY3VtZW50X3Byb2Nlc3NpbmdfY29uZmlnGBsgASgL",
+            "MjkuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5Eb2N1bWVudFBy",
+            "b2Nlc3NpbmdDb25maWcSQAoPc3RhcnRpbmdfc2NoZW1hGBwgASgLMicuZ29v",
+            "Z2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TY2hlbWESWgoWaGVhbHRo",
+            "Y2FyZV9maGlyX2NvbmZpZxgdIAEoCzI1Lmdvb2dsZS5jbG91ZC5kaXNjb3Zl",
+            "cnllbmdpbmUudjEuSGVhbHRoY2FyZUZoaXJDb25maWdCA+BBARJbChZpZGVu",
+            "dGl0eV9tYXBwaW5nX3N0b3JlGB8gASgJQjvgQQX6QTUKM2Rpc2NvdmVyeWVu",
+            "Z2luZS5nb29nbGVhcGlzLmNvbS9JZGVudGl0eU1hcHBpbmdTdG9yZRquAgoR",
+            "QmlsbGluZ0VzdGltYXRpb24SHAoUc3RydWN0dXJlZF9kYXRhX3NpemUYASAB",
+            "KAMSHgoWdW5zdHJ1Y3R1cmVkX2RhdGFfc2l6ZRgCIAEoAxIZChF3ZWJzaXRl",
+            "X2RhdGFfc2l6ZRgDIAEoAxI/ChtzdHJ1Y3R1cmVkX2RhdGFfdXBkYXRlX3Rp",
+            "bWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkEKHXVuc3Ry",
+            "dWN0dXJlZF9kYXRhX3VwZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcBI8Chh3ZWJzaXRlX2RhdGFfdXBkYXRlX3RpbWUYBiAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIn8KDUNvbnRlbnRDb25m",
+            "aWcSHgoaQ09OVEVOVF9DT05GSUdfVU5TUEVDSUZJRUQQABIOCgpOT19DT05U",
+            "RU5UEAESFAoQQ09OVEVOVF9SRVFVSVJFRBACEhIKDlBVQkxJQ19XRUJTSVRF",
+            "EAMSFAoQR09PR0xFX1dPUktTUEFDRRAEOskB6kHFAQooZGlzY292ZXJ5ZW5n",
+            "aW5lLmdvb2dsZWFwaXMuY29tL0RhdGFTdG9yZRI/cHJvamVjdHMve3Byb2pl",
+            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2RhdGFTdG9yZXMve2RhdGFfc3Rv",
+            "cmV9Elhwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "Y29sbGVjdGlvbnMve2NvbGxlY3Rpb259L2RhdGFTdG9yZXMve2RhdGFfc3Rv",
+            "cmV9Ip4BChhBZHZhbmNlZFNpdGVTZWFyY2hDb25maWcSIgoVZGlzYWJsZV9p",
+            "bml0aWFsX2luZGV4GAMgASgISACIAQESJgoZZGlzYWJsZV9hdXRvbWF0aWNf",
+            "cmVmcmVzaBgEIAEoCEgBiAEBQhgKFl9kaXNhYmxlX2luaXRpYWxfaW5kZXhC",
+            "HAoaX2Rpc2FibGVfYXV0b21hdGljX3JlZnJlc2gi9QIKD1dvcmtzcGFjZUNv",
+            "bmZpZxJDCgR0eXBlGAEgASgOMjUuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVu",
+            "Z2luZS52MS5Xb3Jrc3BhY2VDb25maWcuVHlwZRIaChJkYXNoZXJfY3VzdG9t",
+            "ZXJfaWQYAiABKAkSKAobc3VwZXJfYWRtaW5fc2VydmljZV9hY2NvdW50GAQg",
+            "ASgJQgPgQQESJgoZc3VwZXJfYWRtaW5fZW1haWxfYWRkcmVzcxgFIAEoCUID",
+            "4EEBIq4BCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIQCgxHT09HTEVf",
+            "RFJJVkUQARIPCgtHT09HTEVfTUFJTBACEhAKDEdPT0dMRV9TSVRFUxADEhMK",
+            "D0dPT0dMRV9DQUxFTkRBUhAEEg8KC0dPT0dMRV9DSEFUEAUSEQoNR09PR0xF",
+            "X0dST1VQUxAGEg8KC0dPT0dMRV9LRUVQEAcSEQoNR09PR0xFX1BFT1BMRRAI",
+            "QoECCiNjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MUIORGF0",
+            "YVN0b3JlUHJvdG9QAVpNY2xvdWQuZ29vZ2xlLmNvbS9nby9kaXNjb3Zlcnll",
+            "bmdpbmUvYXBpdjEvZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5ZW5naW5l",
+            "cGKiAg9ESVNDT1ZFUllFTkdJTkWqAh9Hb29nbGUuQ2xvdWQuRGlzY292ZXJ5",
+            "RW5naW5lLlYxygIfR29vZ2xlXENsb3VkXERpc2NvdmVyeUVuZ2luZVxWMeoC",
+            "Ikdvb2dsZTo6Q2xvdWQ6OkRpc2NvdmVyeUVuZ2luZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.CommonReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.DocumentProcessingConfigReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.SchemaReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.CmekConfigServiceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.CommonReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.DocumentProcessingConfigReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.SchemaReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.DataStore), global::Google.Cloud.DiscoveryEngine.V1.DataStore.Parser, new[]{ "Name", "DisplayName", "IndustryVertical", "SolutionTypes", "DefaultSchemaId", "ContentConfig", "CreateTime", "AdvancedSiteSearchConfig", "BillingEstimation", "WorkspaceConfig", "DocumentProcessingConfig", "StartingSchema" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.DataStore.Types.ContentConfig) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.DataStore.Types.BillingEstimation), global::Google.Cloud.DiscoveryEngine.V1.DataStore.Types.BillingEstimation.Parser, new[]{ "StructuredDataSize", "UnstructuredDataSize", "WebsiteDataSize", "StructuredDataUpdateTime", "UnstructuredDataUpdateTime", "WebsiteDataUpdateTime" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.DataStore), global::Google.Cloud.DiscoveryEngine.V1.DataStore.Parser, new[]{ "Name", "DisplayName", "IndustryVertical", "SolutionTypes", "DefaultSchemaId", "ContentConfig", "CreateTime", "AdvancedSiteSearchConfig", "KmsKeyName", "CmekConfig", "BillingEstimation", "AclEnabled", "WorkspaceConfig", "DocumentProcessingConfig", "StartingSchema", "HealthcareFhirConfig", "IdentityMappingStore" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.DataStore.Types.ContentConfig) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.DataStore.Types.BillingEstimation), global::Google.Cloud.DiscoveryEngine.V1.DataStore.Types.BillingEstimation.Parser, new[]{ "StructuredDataSize", "UnstructuredDataSize", "WebsiteDataSize", "StructuredDataUpdateTime", "UnstructuredDataUpdateTime", "WebsiteDataUpdateTime" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.AdvancedSiteSearchConfig), global::Google.Cloud.DiscoveryEngine.V1.AdvancedSiteSearchConfig.Parser, new[]{ "DisableInitialIndex", "DisableAutomaticRefresh" }, new[]{ "DisableInitialIndex", "DisableAutomaticRefresh" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.WorkspaceConfig), global::Google.Cloud.DiscoveryEngine.V1.WorkspaceConfig.Parser, new[]{ "Type", "DasherCustomerId", "SuperAdminServiceAccount", "SuperAdminEmailAddress" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.WorkspaceConfig.Types.Type) }, null, null)
           }));
@@ -140,10 +148,15 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       contentConfig_ = other.contentConfig_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       advancedSiteSearchConfig_ = other.advancedSiteSearchConfig_ != null ? other.advancedSiteSearchConfig_.Clone() : null;
+      kmsKeyName_ = other.kmsKeyName_;
+      cmekConfig_ = other.cmekConfig_ != null ? other.cmekConfig_.Clone() : null;
       billingEstimation_ = other.billingEstimation_ != null ? other.billingEstimation_.Clone() : null;
+      aclEnabled_ = other.aclEnabled_;
       workspaceConfig_ = other.workspaceConfig_ != null ? other.workspaceConfig_.Clone() : null;
       documentProcessingConfig_ = other.documentProcessingConfig_ != null ? other.documentProcessingConfig_.Clone() : null;
       startingSchema_ = other.startingSchema_ != null ? other.startingSchema_.Clone() : null;
+      healthcareFhirConfig_ = other.healthcareFhirConfig_ != null ? other.healthcareFhirConfig_.Clone() : null;
+      identityMappingStore_ = other.identityMappingStore_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -157,7 +170,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Immutable. The full resource name of the data store.
+    /// Immutable. Identifier. The full resource name of the data store.
     /// Format:
     /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`.
     ///
@@ -290,6 +303,43 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "kms_key_name" field.</summary>
+    public const int KmsKeyNameFieldNumber = 32;
+    private string kmsKeyName_ = "";
+    /// <summary>
+    /// Input only. The KMS key to be used to protect this DataStore at creation
+    /// time.
+    ///
+    /// Must be set for requests that need to comply with CMEK Org Policy
+    /// protections.
+    ///
+    /// If this field is set and processed successfully, the DataStore will be
+    /// protected by the KMS key, as indicated in the cmek_config field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string KmsKeyName {
+      get { return kmsKeyName_; }
+      set {
+        kmsKeyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "cmek_config" field.</summary>
+    public const int CmekConfigFieldNumber = 18;
+    private global::Google.Cloud.DiscoveryEngine.V1.CmekConfig cmekConfig_;
+    /// <summary>
+    /// Output only. CMEK-related information for the DataStore.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1.CmekConfig CmekConfig {
+      get { return cmekConfig_; }
+      set {
+        cmekConfig_ = value;
+      }
+    }
+
     /// <summary>Field number for the "billing_estimation" field.</summary>
     public const int BillingEstimationFieldNumber = 23;
     private global::Google.Cloud.DiscoveryEngine.V1.DataStore.Types.BillingEstimation billingEstimation_;
@@ -302,6 +352,37 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       get { return billingEstimation_; }
       set {
         billingEstimation_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "acl_enabled" field.</summary>
+    public const int AclEnabledFieldNumber = 24;
+    private bool aclEnabled_;
+    /// <summary>
+    /// Immutable. Whether data in the
+    /// [DataStore][google.cloud.discoveryengine.v1.DataStore] has ACL information.
+    /// If set to `true`, the source data must have ACL. ACL will be ingested when
+    /// data is ingested by
+    /// [DocumentService.ImportDocuments][google.cloud.discoveryengine.v1.DocumentService.ImportDocuments]
+    /// methods.
+    ///
+    /// When ACL is enabled for the
+    /// [DataStore][google.cloud.discoveryengine.v1.DataStore],
+    /// [Document][google.cloud.discoveryengine.v1.Document] can't be accessed by
+    /// calling
+    /// [DocumentService.GetDocument][google.cloud.discoveryengine.v1.DocumentService.GetDocument]
+    /// or
+    /// [DocumentService.ListDocuments][google.cloud.discoveryengine.v1.DocumentService.ListDocuments].
+    ///
+    /// Currently ACL is only supported in `GENERIC` industry vertical with
+    /// non-`PUBLIC_WEBSITE` content config.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AclEnabled {
+      get { return aclEnabled_; }
+      set {
+        aclEnabled_ = value;
       }
     }
 
@@ -370,6 +451,40 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "healthcare_fhir_config" field.</summary>
+    public const int HealthcareFhirConfigFieldNumber = 29;
+    private global::Google.Cloud.DiscoveryEngine.V1.HealthcareFhirConfig healthcareFhirConfig_;
+    /// <summary>
+    /// Optional. Configuration for `HEALTHCARE_FHIR` vertical.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1.HealthcareFhirConfig HealthcareFhirConfig {
+      get { return healthcareFhirConfig_; }
+      set {
+        healthcareFhirConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "identity_mapping_store" field.</summary>
+    public const int IdentityMappingStoreFieldNumber = 31;
+    private string identityMappingStore_ = "";
+    /// <summary>
+    /// Immutable. The fully qualified resource name of the associated
+    /// [IdentityMappingStore][google.cloud.discoveryengine.v1.IdentityMappingStore].
+    /// This field can only be set for acl_enabled DataStores with `THIRD_PARTY` or
+    /// `GSUITE` IdP. Format:
+    /// `projects/{project}/locations/{location}/identityMappingStores/{identity_mapping_store}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string IdentityMappingStore {
+      get { return identityMappingStore_; }
+      set {
+        identityMappingStore_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -393,10 +508,15 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (ContentConfig != other.ContentConfig) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(AdvancedSiteSearchConfig, other.AdvancedSiteSearchConfig)) return false;
+      if (KmsKeyName != other.KmsKeyName) return false;
+      if (!object.Equals(CmekConfig, other.CmekConfig)) return false;
       if (!object.Equals(BillingEstimation, other.BillingEstimation)) return false;
+      if (AclEnabled != other.AclEnabled) return false;
       if (!object.Equals(WorkspaceConfig, other.WorkspaceConfig)) return false;
       if (!object.Equals(DocumentProcessingConfig, other.DocumentProcessingConfig)) return false;
       if (!object.Equals(StartingSchema, other.StartingSchema)) return false;
+      if (!object.Equals(HealthcareFhirConfig, other.HealthcareFhirConfig)) return false;
+      if (IdentityMappingStore != other.IdentityMappingStore) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -412,10 +532,15 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (ContentConfig != global::Google.Cloud.DiscoveryEngine.V1.DataStore.Types.ContentConfig.Unspecified) hash ^= ContentConfig.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (advancedSiteSearchConfig_ != null) hash ^= AdvancedSiteSearchConfig.GetHashCode();
+      if (KmsKeyName.Length != 0) hash ^= KmsKeyName.GetHashCode();
+      if (cmekConfig_ != null) hash ^= CmekConfig.GetHashCode();
       if (billingEstimation_ != null) hash ^= BillingEstimation.GetHashCode();
+      if (AclEnabled != false) hash ^= AclEnabled.GetHashCode();
       if (workspaceConfig_ != null) hash ^= WorkspaceConfig.GetHashCode();
       if (documentProcessingConfig_ != null) hash ^= DocumentProcessingConfig.GetHashCode();
       if (startingSchema_ != null) hash ^= StartingSchema.GetHashCode();
+      if (healthcareFhirConfig_ != null) hash ^= HealthcareFhirConfig.GetHashCode();
+      if (IdentityMappingStore.Length != 0) hash ^= IdentityMappingStore.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -463,9 +588,17 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(98);
         output.WriteMessage(AdvancedSiteSearchConfig);
       }
+      if (cmekConfig_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(CmekConfig);
+      }
       if (billingEstimation_ != null) {
         output.WriteRawTag(186, 1);
         output.WriteMessage(BillingEstimation);
+      }
+      if (AclEnabled != false) {
+        output.WriteRawTag(192, 1);
+        output.WriteBool(AclEnabled);
       }
       if (workspaceConfig_ != null) {
         output.WriteRawTag(202, 1);
@@ -478,6 +611,18 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (startingSchema_ != null) {
         output.WriteRawTag(226, 1);
         output.WriteMessage(StartingSchema);
+      }
+      if (healthcareFhirConfig_ != null) {
+        output.WriteRawTag(234, 1);
+        output.WriteMessage(HealthcareFhirConfig);
+      }
+      if (IdentityMappingStore.Length != 0) {
+        output.WriteRawTag(250, 1);
+        output.WriteString(IdentityMappingStore);
+      }
+      if (KmsKeyName.Length != 0) {
+        output.WriteRawTag(130, 2);
+        output.WriteString(KmsKeyName);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -518,9 +663,17 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(98);
         output.WriteMessage(AdvancedSiteSearchConfig);
       }
+      if (cmekConfig_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(CmekConfig);
+      }
       if (billingEstimation_ != null) {
         output.WriteRawTag(186, 1);
         output.WriteMessage(BillingEstimation);
+      }
+      if (AclEnabled != false) {
+        output.WriteRawTag(192, 1);
+        output.WriteBool(AclEnabled);
       }
       if (workspaceConfig_ != null) {
         output.WriteRawTag(202, 1);
@@ -533,6 +686,18 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (startingSchema_ != null) {
         output.WriteRawTag(226, 1);
         output.WriteMessage(StartingSchema);
+      }
+      if (healthcareFhirConfig_ != null) {
+        output.WriteRawTag(234, 1);
+        output.WriteMessage(HealthcareFhirConfig);
+      }
+      if (IdentityMappingStore.Length != 0) {
+        output.WriteRawTag(250, 1);
+        output.WriteString(IdentityMappingStore);
+      }
+      if (KmsKeyName.Length != 0) {
+        output.WriteRawTag(130, 2);
+        output.WriteString(KmsKeyName);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -566,8 +731,17 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (advancedSiteSearchConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AdvancedSiteSearchConfig);
       }
+      if (KmsKeyName.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(KmsKeyName);
+      }
+      if (cmekConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(CmekConfig);
+      }
       if (billingEstimation_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(BillingEstimation);
+      }
+      if (AclEnabled != false) {
+        size += 2 + 1;
       }
       if (workspaceConfig_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(WorkspaceConfig);
@@ -577,6 +751,12 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (startingSchema_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(StartingSchema);
+      }
+      if (healthcareFhirConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(HealthcareFhirConfig);
+      }
+      if (IdentityMappingStore.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(IdentityMappingStore);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -618,11 +798,23 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         }
         AdvancedSiteSearchConfig.MergeFrom(other.AdvancedSiteSearchConfig);
       }
+      if (other.KmsKeyName.Length != 0) {
+        KmsKeyName = other.KmsKeyName;
+      }
+      if (other.cmekConfig_ != null) {
+        if (cmekConfig_ == null) {
+          CmekConfig = new global::Google.Cloud.DiscoveryEngine.V1.CmekConfig();
+        }
+        CmekConfig.MergeFrom(other.CmekConfig);
+      }
       if (other.billingEstimation_ != null) {
         if (billingEstimation_ == null) {
           BillingEstimation = new global::Google.Cloud.DiscoveryEngine.V1.DataStore.Types.BillingEstimation();
         }
         BillingEstimation.MergeFrom(other.BillingEstimation);
+      }
+      if (other.AclEnabled != false) {
+        AclEnabled = other.AclEnabled;
       }
       if (other.workspaceConfig_ != null) {
         if (workspaceConfig_ == null) {
@@ -641,6 +833,15 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           StartingSchema = new global::Google.Cloud.DiscoveryEngine.V1.Schema();
         }
         StartingSchema.MergeFrom(other.StartingSchema);
+      }
+      if (other.healthcareFhirConfig_ != null) {
+        if (healthcareFhirConfig_ == null) {
+          HealthcareFhirConfig = new global::Google.Cloud.DiscoveryEngine.V1.HealthcareFhirConfig();
+        }
+        HealthcareFhirConfig.MergeFrom(other.HealthcareFhirConfig);
+      }
+      if (other.IdentityMappingStore.Length != 0) {
+        IdentityMappingStore = other.IdentityMappingStore;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -696,11 +897,22 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             input.ReadMessage(AdvancedSiteSearchConfig);
             break;
           }
+          case 146: {
+            if (cmekConfig_ == null) {
+              CmekConfig = new global::Google.Cloud.DiscoveryEngine.V1.CmekConfig();
+            }
+            input.ReadMessage(CmekConfig);
+            break;
+          }
           case 186: {
             if (billingEstimation_ == null) {
               BillingEstimation = new global::Google.Cloud.DiscoveryEngine.V1.DataStore.Types.BillingEstimation();
             }
             input.ReadMessage(BillingEstimation);
+            break;
+          }
+          case 192: {
+            AclEnabled = input.ReadBool();
             break;
           }
           case 202: {
@@ -722,6 +934,21 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               StartingSchema = new global::Google.Cloud.DiscoveryEngine.V1.Schema();
             }
             input.ReadMessage(StartingSchema);
+            break;
+          }
+          case 234: {
+            if (healthcareFhirConfig_ == null) {
+              HealthcareFhirConfig = new global::Google.Cloud.DiscoveryEngine.V1.HealthcareFhirConfig();
+            }
+            input.ReadMessage(HealthcareFhirConfig);
+            break;
+          }
+          case 250: {
+            IdentityMappingStore = input.ReadString();
+            break;
+          }
+          case 258: {
+            KmsKeyName = input.ReadString();
             break;
           }
         }
@@ -778,11 +1005,22 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             input.ReadMessage(AdvancedSiteSearchConfig);
             break;
           }
+          case 146: {
+            if (cmekConfig_ == null) {
+              CmekConfig = new global::Google.Cloud.DiscoveryEngine.V1.CmekConfig();
+            }
+            input.ReadMessage(CmekConfig);
+            break;
+          }
           case 186: {
             if (billingEstimation_ == null) {
               BillingEstimation = new global::Google.Cloud.DiscoveryEngine.V1.DataStore.Types.BillingEstimation();
             }
             input.ReadMessage(BillingEstimation);
+            break;
+          }
+          case 192: {
+            AclEnabled = input.ReadBool();
             break;
           }
           case 202: {
@@ -804,6 +1042,21 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               StartingSchema = new global::Google.Cloud.DiscoveryEngine.V1.Schema();
             }
             input.ReadMessage(StartingSchema);
+            break;
+          }
+          case 234: {
+            if (healthcareFhirConfig_ == null) {
+              HealthcareFhirConfig = new global::Google.Cloud.DiscoveryEngine.V1.HealthcareFhirConfig();
+            }
+            input.ReadMessage(HealthcareFhirConfig);
+            break;
+          }
+          case 250: {
+            IdentityMappingStore = input.ReadString();
+            break;
+          }
+          case 258: {
+            KmsKeyName = input.ReadString();
             break;
           }
         }

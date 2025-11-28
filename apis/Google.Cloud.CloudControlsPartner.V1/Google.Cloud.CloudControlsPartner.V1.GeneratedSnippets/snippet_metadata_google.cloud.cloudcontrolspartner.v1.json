@@ -2403,6 +2403,809 @@
       ]
     },
     {
+      "regionTag": "cloudcontrolspartner_v1_generated_CloudControlsPartnerCore_CreateCustomer_sync",
+      "title": "CreateCustomerRequestObject",
+      "description": "Snippet for CreateCustomer",
+      "file": "CloudControlsPartnerCoreClient.CreateCustomerRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCustomer",
+        "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient.CreateCustomer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudControlsPartner.V1.CreateCustomerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudControlsPartner.V1.Customer",
+        "client": {
+          "shortName": "CloudControlsPartnerCoreClient",
+          "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient"
+        },
+        "method": {
+          "shortName": "CreateCustomer",
+          "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore.CreateCustomer",
+          "service": {
+            "shortName": "CloudControlsPartnerCore",
+            "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudcontrolspartner_v1_generated_CloudControlsPartnerCore_CreateCustomer_async",
+      "title": "CreateCustomerRequestObjectAsync",
+      "description": "Snippet for CreateCustomerAsync",
+      "file": "CloudControlsPartnerCoreClient.CreateCustomerRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCustomerAsync",
+        "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient.CreateCustomerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudControlsPartner.V1.CreateCustomerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudControlsPartner.V1.Customer>",
+        "client": {
+          "shortName": "CloudControlsPartnerCoreClient",
+          "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient"
+        },
+        "method": {
+          "shortName": "CreateCustomer",
+          "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore.CreateCustomer",
+          "service": {
+            "shortName": "CloudControlsPartnerCore",
+            "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudcontrolspartner_v1_generated_CloudControlsPartnerCore_CreateCustomer_sync_flattened",
+      "title": "CreateCustomer",
+      "description": "Snippet for CreateCustomer",
+      "file": "CloudControlsPartnerCoreClient.CreateCustomerSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCustomer",
+        "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient.CreateCustomer",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudControlsPartner.V1.Customer",
+            "name": "customer"
+          },
+          {
+            "type": "System.String",
+            "name": "customerId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudControlsPartner.V1.Customer",
+        "client": {
+          "shortName": "CloudControlsPartnerCoreClient",
+          "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient"
+        },
+        "method": {
+          "shortName": "CreateCustomer",
+          "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore.CreateCustomer",
+          "service": {
+            "shortName": "CloudControlsPartnerCore",
+            "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudcontrolspartner_v1_generated_CloudControlsPartnerCore_CreateCustomer_async_flattened",
+      "title": "CreateCustomerAsync",
+      "description": "Snippet for CreateCustomerAsync",
+      "file": "CloudControlsPartnerCoreClient.CreateCustomerAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCustomerAsync",
+        "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient.CreateCustomerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudControlsPartner.V1.Customer",
+            "name": "customer"
+          },
+          {
+            "type": "System.String",
+            "name": "customerId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudControlsPartner.V1.Customer>",
+        "client": {
+          "shortName": "CloudControlsPartnerCoreClient",
+          "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient"
+        },
+        "method": {
+          "shortName": "CreateCustomer",
+          "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore.CreateCustomer",
+          "service": {
+            "shortName": "CloudControlsPartnerCore",
+            "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudcontrolspartner_v1_generated_CloudControlsPartnerCore_CreateCustomer_sync_flattened_resourceNames",
+      "title": "CreateCustomerResourceNames",
+      "description": "Snippet for CreateCustomer",
+      "file": "CloudControlsPartnerCoreClient.CreateCustomerResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCustomer",
+        "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient.CreateCustomer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudControlsPartner.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudControlsPartner.V1.Customer",
+            "name": "customer"
+          },
+          {
+            "type": "System.String",
+            "name": "customerId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudControlsPartner.V1.Customer",
+        "client": {
+          "shortName": "CloudControlsPartnerCoreClient",
+          "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient"
+        },
+        "method": {
+          "shortName": "CreateCustomer",
+          "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore.CreateCustomer",
+          "service": {
+            "shortName": "CloudControlsPartnerCore",
+            "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudcontrolspartner_v1_generated_CloudControlsPartnerCore_CreateCustomer_async_flattened_resourceNames",
+      "title": "CreateCustomerResourceNamesAsync",
+      "description": "Snippet for CreateCustomerAsync",
+      "file": "CloudControlsPartnerCoreClient.CreateCustomerResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCustomerAsync",
+        "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient.CreateCustomerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudControlsPartner.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudControlsPartner.V1.Customer",
+            "name": "customer"
+          },
+          {
+            "type": "System.String",
+            "name": "customerId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudControlsPartner.V1.Customer>",
+        "client": {
+          "shortName": "CloudControlsPartnerCoreClient",
+          "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient"
+        },
+        "method": {
+          "shortName": "CreateCustomer",
+          "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore.CreateCustomer",
+          "service": {
+            "shortName": "CloudControlsPartnerCore",
+            "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudcontrolspartner_v1_generated_CloudControlsPartnerCore_UpdateCustomer_sync",
+      "title": "UpdateCustomerRequestObject",
+      "description": "Snippet for UpdateCustomer",
+      "file": "CloudControlsPartnerCoreClient.UpdateCustomerRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCustomer",
+        "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient.UpdateCustomer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudControlsPartner.V1.UpdateCustomerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudControlsPartner.V1.Customer",
+        "client": {
+          "shortName": "CloudControlsPartnerCoreClient",
+          "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient"
+        },
+        "method": {
+          "shortName": "UpdateCustomer",
+          "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore.UpdateCustomer",
+          "service": {
+            "shortName": "CloudControlsPartnerCore",
+            "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudcontrolspartner_v1_generated_CloudControlsPartnerCore_UpdateCustomer_async",
+      "title": "UpdateCustomerRequestObjectAsync",
+      "description": "Snippet for UpdateCustomerAsync",
+      "file": "CloudControlsPartnerCoreClient.UpdateCustomerRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCustomerAsync",
+        "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient.UpdateCustomerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudControlsPartner.V1.UpdateCustomerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudControlsPartner.V1.Customer>",
+        "client": {
+          "shortName": "CloudControlsPartnerCoreClient",
+          "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient"
+        },
+        "method": {
+          "shortName": "UpdateCustomer",
+          "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore.UpdateCustomer",
+          "service": {
+            "shortName": "CloudControlsPartnerCore",
+            "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudcontrolspartner_v1_generated_CloudControlsPartnerCore_UpdateCustomer_sync_flattened",
+      "title": "UpdateCustomer",
+      "description": "Snippet for UpdateCustomer",
+      "file": "CloudControlsPartnerCoreClient.UpdateCustomerSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCustomer",
+        "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient.UpdateCustomer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudControlsPartner.V1.Customer",
+            "name": "customer"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudControlsPartner.V1.Customer",
+        "client": {
+          "shortName": "CloudControlsPartnerCoreClient",
+          "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient"
+        },
+        "method": {
+          "shortName": "UpdateCustomer",
+          "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore.UpdateCustomer",
+          "service": {
+            "shortName": "CloudControlsPartnerCore",
+            "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudcontrolspartner_v1_generated_CloudControlsPartnerCore_UpdateCustomer_async_flattened",
+      "title": "UpdateCustomerAsync",
+      "description": "Snippet for UpdateCustomerAsync",
+      "file": "CloudControlsPartnerCoreClient.UpdateCustomerAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCustomerAsync",
+        "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient.UpdateCustomerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudControlsPartner.V1.Customer",
+            "name": "customer"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudControlsPartner.V1.Customer>",
+        "client": {
+          "shortName": "CloudControlsPartnerCoreClient",
+          "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient"
+        },
+        "method": {
+          "shortName": "UpdateCustomer",
+          "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore.UpdateCustomer",
+          "service": {
+            "shortName": "CloudControlsPartnerCore",
+            "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudcontrolspartner_v1_generated_CloudControlsPartnerCore_DeleteCustomer_sync",
+      "title": "DeleteCustomerRequestObject",
+      "description": "Snippet for DeleteCustomer",
+      "file": "CloudControlsPartnerCoreClient.DeleteCustomerRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCustomer",
+        "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient.DeleteCustomer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudControlsPartner.V1.DeleteCustomerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "CloudControlsPartnerCoreClient",
+          "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient"
+        },
+        "method": {
+          "shortName": "DeleteCustomer",
+          "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore.DeleteCustomer",
+          "service": {
+            "shortName": "CloudControlsPartnerCore",
+            "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudcontrolspartner_v1_generated_CloudControlsPartnerCore_DeleteCustomer_async",
+      "title": "DeleteCustomerRequestObjectAsync",
+      "description": "Snippet for DeleteCustomerAsync",
+      "file": "CloudControlsPartnerCoreClient.DeleteCustomerRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCustomerAsync",
+        "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient.DeleteCustomerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudControlsPartner.V1.DeleteCustomerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CloudControlsPartnerCoreClient",
+          "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient"
+        },
+        "method": {
+          "shortName": "DeleteCustomer",
+          "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore.DeleteCustomer",
+          "service": {
+            "shortName": "CloudControlsPartnerCore",
+            "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudcontrolspartner_v1_generated_CloudControlsPartnerCore_DeleteCustomer_sync_flattened",
+      "title": "DeleteCustomer",
+      "description": "Snippet for DeleteCustomer",
+      "file": "CloudControlsPartnerCoreClient.DeleteCustomerSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCustomer",
+        "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient.DeleteCustomer",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "CloudControlsPartnerCoreClient",
+          "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient"
+        },
+        "method": {
+          "shortName": "DeleteCustomer",
+          "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore.DeleteCustomer",
+          "service": {
+            "shortName": "CloudControlsPartnerCore",
+            "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudcontrolspartner_v1_generated_CloudControlsPartnerCore_DeleteCustomer_async_flattened",
+      "title": "DeleteCustomerAsync",
+      "description": "Snippet for DeleteCustomerAsync",
+      "file": "CloudControlsPartnerCoreClient.DeleteCustomerAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCustomerAsync",
+        "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient.DeleteCustomerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CloudControlsPartnerCoreClient",
+          "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient"
+        },
+        "method": {
+          "shortName": "DeleteCustomer",
+          "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore.DeleteCustomer",
+          "service": {
+            "shortName": "CloudControlsPartnerCore",
+            "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudcontrolspartner_v1_generated_CloudControlsPartnerCore_DeleteCustomer_sync_flattened_resourceNames",
+      "title": "DeleteCustomerResourceNames",
+      "description": "Snippet for DeleteCustomer",
+      "file": "CloudControlsPartnerCoreClient.DeleteCustomerResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCustomer",
+        "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient.DeleteCustomer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudControlsPartner.V1.CustomerName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "CloudControlsPartnerCoreClient",
+          "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient"
+        },
+        "method": {
+          "shortName": "DeleteCustomer",
+          "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore.DeleteCustomer",
+          "service": {
+            "shortName": "CloudControlsPartnerCore",
+            "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudcontrolspartner_v1_generated_CloudControlsPartnerCore_DeleteCustomer_async_flattened_resourceNames",
+      "title": "DeleteCustomerResourceNamesAsync",
+      "description": "Snippet for DeleteCustomerAsync",
+      "file": "CloudControlsPartnerCoreClient.DeleteCustomerResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCustomerAsync",
+        "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient.DeleteCustomerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudControlsPartner.V1.CustomerName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "CloudControlsPartnerCoreClient",
+          "fullName": "Google.Cloud.CloudControlsPartner.V1.CloudControlsPartnerCoreClient"
+        },
+        "method": {
+          "shortName": "DeleteCustomer",
+          "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore.DeleteCustomer",
+          "service": {
+            "shortName": "CloudControlsPartnerCore",
+            "fullName": "google.cloud.cloudcontrolspartner.v1.CloudControlsPartnerCore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "cloudcontrolspartner_v1_generated_CloudControlsPartnerMonitoring_ListViolations_sync",
       "title": "ListViolationsRequestObject",
       "description": "Snippet for ListViolations",

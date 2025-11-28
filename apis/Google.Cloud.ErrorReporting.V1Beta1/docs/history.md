@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.0.0-beta06, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+### Documentation improvements
+
+- Updates documentation with regional resource names for multiple requests
+- Removes references as a "global-only" service
+
 ## Version 3.0.0-beta05, released 2024-05-08
 
 ### New features

@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using static Google.Apis.Bigquery.v2.DatasetsResource;
+using System;
 
 namespace Google.Cloud.BigQuery.V2
 {
@@ -22,7 +23,14 @@ namespace Google.Cloud.BigQuery.V2
     /// </summary>
     public sealed class CreateDatasetOptions
     {
-        internal void ModifyRequest(InsertRequest request)
-        { }
+        /// <summary>
+        /// Optional action to perform after preparing the request. If this property is non-null,
+        /// the <see cref="InsertRequest"/> used for a request will be passed to the delegate
+        /// before the request is executed. This allows for fine-grained modifications which aren't
+        /// otherwise directly supported in this options type.
+        /// </summary>
+        public Action<InsertRequest> RequestModifier { get; set; }
+
+        internal void ModifyRequest(InsertRequest request) => RequestModifier?.Invoke(request);
     }
 }

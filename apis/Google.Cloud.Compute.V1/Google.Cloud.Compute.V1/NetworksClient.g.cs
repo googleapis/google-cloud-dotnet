@@ -60,6 +60,8 @@ namespace Google.Cloud.Compute.V1
             PatchOperationsSettings = existing.PatchOperationsSettings.Clone();
             RemovePeeringSettings = existing.RemovePeeringSettings;
             RemovePeeringOperationsSettings = existing.RemovePeeringOperationsSettings.Clone();
+            RequestRemovePeeringSettings = existing.RequestRemovePeeringSettings;
+            RequestRemovePeeringOperationsSettings = existing.RequestRemovePeeringOperationsSettings.Clone();
             SwitchToCustomModeSettings = existing.SwitchToCustomModeSettings;
             SwitchToCustomModeOperationsSettings = existing.SwitchToCustomModeOperationsSettings.Clone();
             UpdatePeeringSettings = existing.UpdatePeeringSettings;
@@ -299,6 +301,36 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings RemovePeeringOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetworksClient.RequestRemovePeering</c> and <c>NetworksClient.RequestRemovePeeringAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RequestRemovePeeringSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetworksClient.RequestRemovePeering</c> and
+        /// <c>NetworksClient.RequestRemovePeeringAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RequestRemovePeeringOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1384,6 +1416,121 @@ namespace Google.Cloud.Compute.V1
             RemovePeeringAsync(project, network, networksRemovePeeringRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Requests to remove a peering from the specified network. Applicable only for PeeringConnection with update_strategy=CONSENSUS.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> RequestRemovePeering(RequestRemovePeeringNetworkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Requests to remove a peering from the specified network. Applicable only for PeeringConnection with update_strategy=CONSENSUS.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> RequestRemovePeeringAsync(RequestRemovePeeringNetworkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Requests to remove a peering from the specified network. Applicable only for PeeringConnection with update_strategy=CONSENSUS.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> RequestRemovePeeringAsync(RequestRemovePeeringNetworkRequest request, st::CancellationToken cancellationToken) =>
+            RequestRemovePeeringAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RequestRemovePeering</c>.</summary>
+        public virtual lro::OperationsClient RequestRemovePeeringOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>RequestRemovePeering</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceRequestRemovePeering(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RequestRemovePeeringOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RequestRemovePeering</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceRequestRemovePeeringAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RequestRemovePeeringOperationsClient, callSettings);
+
+        /// <summary>
+        /// Requests to remove a peering from the specified network. Applicable only for PeeringConnection with update_strategy=CONSENSUS.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="network">
+        /// Name of the network resource to remove peering from.
+        /// </param>
+        /// <param name="networksRequestRemovePeeringRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> RequestRemovePeering(string project, string network, NetworksRequestRemovePeeringRequest networksRequestRemovePeeringRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            RequestRemovePeering(new RequestRemovePeeringNetworkRequest
+            {
+                Network = gax::GaxPreconditions.CheckNotNullOrEmpty(network, nameof(network)),
+                NetworksRequestRemovePeeringRequestResource = gax::GaxPreconditions.CheckNotNull(networksRequestRemovePeeringRequestResource, nameof(networksRequestRemovePeeringRequestResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            }, callSettings);
+
+        /// <summary>
+        /// Requests to remove a peering from the specified network. Applicable only for PeeringConnection with update_strategy=CONSENSUS.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="network">
+        /// Name of the network resource to remove peering from.
+        /// </param>
+        /// <param name="networksRequestRemovePeeringRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> RequestRemovePeeringAsync(string project, string network, NetworksRequestRemovePeeringRequest networksRequestRemovePeeringRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            RequestRemovePeeringAsync(new RequestRemovePeeringNetworkRequest
+            {
+                Network = gax::GaxPreconditions.CheckNotNullOrEmpty(network, nameof(network)),
+                NetworksRequestRemovePeeringRequestResource = gax::GaxPreconditions.CheckNotNull(networksRequestRemovePeeringRequestResource, nameof(networksRequestRemovePeeringRequestResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            }, callSettings);
+
+        /// <summary>
+        /// Requests to remove a peering from the specified network. Applicable only for PeeringConnection with update_strategy=CONSENSUS.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="network">
+        /// Name of the network resource to remove peering from.
+        /// </param>
+        /// <param name="networksRequestRemovePeeringRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> RequestRemovePeeringAsync(string project, string network, NetworksRequestRemovePeeringRequest networksRequestRemovePeeringRequestResource, st::CancellationToken cancellationToken) =>
+            RequestRemovePeeringAsync(project, network, networksRequestRemovePeeringRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Switches the network mode from auto subnet mode to custom subnet mode.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1626,6 +1773,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<RemovePeeringNetworkRequest, Operation> _callRemovePeering;
 
+        private readonly gaxgrpc::ApiCall<RequestRemovePeeringNetworkRequest, Operation> _callRequestRemovePeering;
+
         private readonly gaxgrpc::ApiCall<SwitchToCustomModeNetworkRequest, Operation> _callSwitchToCustomMode;
 
         private readonly gaxgrpc::ApiCall<UpdatePeeringNetworkRequest, Operation> _callUpdatePeering;
@@ -1650,6 +1799,7 @@ namespace Google.Cloud.Compute.V1
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings, logger);
             PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings, logger);
             RemovePeeringOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.RemovePeeringOperationsSettings, logger);
+            RequestRemovePeeringOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.RequestRemovePeeringOperationsSettings, logger);
             SwitchToCustomModeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SwitchToCustomModeOperationsSettings, logger);
             UpdatePeeringOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.UpdatePeeringOperationsSettings, logger);
             _callAddPeering = clientHelper.BuildApiCall<AddPeeringNetworkRequest, Operation>("AddPeering", grpcClient.AddPeeringAsync, grpcClient.AddPeering, effectiveSettings.AddPeeringSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
@@ -1679,6 +1829,9 @@ namespace Google.Cloud.Compute.V1
             _callRemovePeering = clientHelper.BuildApiCall<RemovePeeringNetworkRequest, Operation>("RemovePeering", grpcClient.RemovePeeringAsync, grpcClient.RemovePeering, effectiveSettings.RemovePeeringSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
             Modify_ApiCall(ref _callRemovePeering);
             Modify_RemovePeeringApiCall(ref _callRemovePeering);
+            _callRequestRemovePeering = clientHelper.BuildApiCall<RequestRemovePeeringNetworkRequest, Operation>("RequestRemovePeering", grpcClient.RequestRemovePeeringAsync, grpcClient.RequestRemovePeering, effectiveSettings.RequestRemovePeeringSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
+            Modify_ApiCall(ref _callRequestRemovePeering);
+            Modify_RequestRemovePeeringApiCall(ref _callRequestRemovePeering);
             _callSwitchToCustomMode = clientHelper.BuildApiCall<SwitchToCustomModeNetworkRequest, Operation>("SwitchToCustomMode", grpcClient.SwitchToCustomModeAsync, grpcClient.SwitchToCustomMode, effectiveSettings.SwitchToCustomModeSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
             Modify_ApiCall(ref _callSwitchToCustomMode);
             Modify_SwitchToCustomModeApiCall(ref _callSwitchToCustomMode);
@@ -1708,6 +1861,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_RemovePeeringApiCall(ref gaxgrpc::ApiCall<RemovePeeringNetworkRequest, Operation> call);
 
+        partial void Modify_RequestRemovePeeringApiCall(ref gaxgrpc::ApiCall<RequestRemovePeeringNetworkRequest, Operation> call);
+
         partial void Modify_SwitchToCustomModeApiCall(ref gaxgrpc::ApiCall<SwitchToCustomModeNetworkRequest, Operation> call);
 
         partial void Modify_UpdatePeeringApiCall(ref gaxgrpc::ApiCall<UpdatePeeringNetworkRequest, Operation> call);
@@ -1734,6 +1889,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_PatchNetworkRequest(ref PatchNetworkRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RemovePeeringNetworkRequest(ref RemovePeeringNetworkRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RequestRemovePeeringNetworkRequest(ref RequestRemovePeeringNetworkRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SwitchToCustomModeNetworkRequest(ref SwitchToCustomModeNetworkRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1998,6 +2155,39 @@ namespace Google.Cloud.Compute.V1
             GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), RemovePeeringOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>RequestRemovePeering</c>.</summary>
+        public override lro::OperationsClient RequestRemovePeeringOperationsClient { get; }
+
+        /// <summary>
+        /// Requests to remove a peering from the specified network. Applicable only for PeeringConnection with update_strategy=CONSENSUS.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> RequestRemovePeering(RequestRemovePeeringNetworkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RequestRemovePeeringNetworkRequest(ref request, ref callSettings);
+            Operation response = _callRequestRemovePeering.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), RequestRemovePeeringOperationsClient);
+        }
+
+        /// <summary>
+        /// Requests to remove a peering from the specified network. Applicable only for PeeringConnection with update_strategy=CONSENSUS.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> RequestRemovePeeringAsync(RequestRemovePeeringNetworkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RequestRemovePeeringNetworkRequest(ref request, ref callSettings);
+            Operation response = await _callRequestRemovePeering.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), RequestRemovePeeringOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>SwitchToCustomMode</c>.</summary>

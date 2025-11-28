@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListRepositories",
+    "client": "DataformClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  }
+]

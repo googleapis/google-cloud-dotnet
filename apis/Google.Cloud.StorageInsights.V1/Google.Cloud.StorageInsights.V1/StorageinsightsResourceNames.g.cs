@@ -548,6 +548,261 @@ namespace Google.Cloud.StorageInsights.V1
         public static bool operator !=(ReportConfigName a, ReportConfigName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>DatasetConfig</c> resource.</summary>
+    public sealed partial class DatasetConfigName : gax::IResourceName, sys::IEquatable<DatasetConfigName>
+    {
+        /// <summary>The possible contents of <see cref="DatasetConfigName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/datasetConfigs/{dataset_config}</c>
+            /// .
+            /// </summary>
+            ProjectLocationDatasetConfig = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationDatasetConfig = new gax::PathTemplate("projects/{project}/locations/{location}/datasetConfigs/{dataset_config}");
+
+        /// <summary>Creates a <see cref="DatasetConfigName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="DatasetConfigName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static DatasetConfigName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new DatasetConfigName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="DatasetConfigName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/datasetConfigs/{dataset_config}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="datasetConfigId">The <c>DatasetConfig</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="DatasetConfigName"/> constructed from the provided ids.</returns>
+        public static DatasetConfigName FromProjectLocationDatasetConfig(string projectId, string locationId, string datasetConfigId) =>
+            new DatasetConfigName(ResourceNameType.ProjectLocationDatasetConfig, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), datasetConfigId: gax::GaxPreconditions.CheckNotNullOrEmpty(datasetConfigId, nameof(datasetConfigId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="DatasetConfigName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/datasetConfigs/{dataset_config}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="datasetConfigId">The <c>DatasetConfig</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="DatasetConfigName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/datasetConfigs/{dataset_config}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string datasetConfigId) =>
+            FormatProjectLocationDatasetConfig(projectId, locationId, datasetConfigId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="DatasetConfigName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/datasetConfigs/{dataset_config}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="datasetConfigId">The <c>DatasetConfig</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="DatasetConfigName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/datasetConfigs/{dataset_config}</c>.
+        /// </returns>
+        public static string FormatProjectLocationDatasetConfig(string projectId, string locationId, string datasetConfigId) =>
+            s_projectLocationDatasetConfig.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(datasetConfigId, nameof(datasetConfigId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="DatasetConfigName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/datasetConfigs/{dataset_config}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="datasetConfigName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="DatasetConfigName"/> if successful.</returns>
+        public static DatasetConfigName Parse(string datasetConfigName) => Parse(datasetConfigName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="DatasetConfigName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/datasetConfigs/{dataset_config}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="datasetConfigName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="DatasetConfigName"/> if successful.</returns>
+        public static DatasetConfigName Parse(string datasetConfigName, bool allowUnparsed) =>
+            TryParse(datasetConfigName, allowUnparsed, out DatasetConfigName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="DatasetConfigName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/datasetConfigs/{dataset_config}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="datasetConfigName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="DatasetConfigName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string datasetConfigName, out DatasetConfigName result) =>
+            TryParse(datasetConfigName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="DatasetConfigName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/datasetConfigs/{dataset_config}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="datasetConfigName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="DatasetConfigName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string datasetConfigName, bool allowUnparsed, out DatasetConfigName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(datasetConfigName, nameof(datasetConfigName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationDatasetConfig.TryParseName(datasetConfigName, out resourceName))
+            {
+                result = FromProjectLocationDatasetConfig(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(datasetConfigName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private DatasetConfigName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string datasetConfigId = null, string locationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            DatasetConfigId = datasetConfigId;
+            LocationId = locationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="DatasetConfigName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/datasetConfigs/{dataset_config}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="datasetConfigId">The <c>DatasetConfig</c> ID. Must not be <c>null</c> or empty.</param>
+        public DatasetConfigName(string projectId, string locationId, string datasetConfigId) : this(ResourceNameType.ProjectLocationDatasetConfig, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), datasetConfigId: gax::GaxPreconditions.CheckNotNullOrEmpty(datasetConfigId, nameof(datasetConfigId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>DatasetConfig</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string DatasetConfigId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationDatasetConfig: return s_projectLocationDatasetConfig.Expand(ProjectId, LocationId, DatasetConfigId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as DatasetConfigName);
+
+        /// <inheritdoc/>
+        public bool Equals(DatasetConfigName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(DatasetConfigName a, DatasetConfigName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(DatasetConfigName a, DatasetConfigName b) => !(a == b);
+    }
+
     public partial class ListReportConfigsRequest
     {
         /// <summary>
@@ -640,6 +895,90 @@ namespace Google.Cloud.StorageInsights.V1
         public gcsv::ReportConfigName ReportConfigName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcsv::ReportConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DatasetConfig
+    {
+        /// <summary>
+        /// <see cref="gcsv::DatasetConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcsv::DatasetConfigName DatasetConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::DatasetConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListDatasetConfigsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetDatasetConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcsv::DatasetConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcsv::DatasetConfigName DatasetConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::DatasetConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateDatasetConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteDatasetConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcsv::DatasetConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcsv::DatasetConfigName DatasetConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::DatasetConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class LinkDatasetRequest
+    {
+        /// <summary>
+        /// <see cref="gcsv::DatasetConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcsv::DatasetConfigName DatasetConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::DatasetConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class UnlinkDatasetRequest
+    {
+        /// <summary>
+        /// <see cref="gcsv::DatasetConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcsv::DatasetConfigName DatasetConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcsv::DatasetConfigName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

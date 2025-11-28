@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
 using Xunit;
-using wkt = Google.Protobuf.WellKnownTypes;
+using WKT = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Firestore.Tests
 {
@@ -87,7 +87,7 @@ namespace Google.Cloud.Firestore.Tests
                 {
                     { "Name", new Value { StringValue = "test2" } },
                     { "Guid", new Value { StringValue = "a7dc91a0ef9b4fc79f031763d9688dfa" } },
-                    { "GuidOrNull", new Value { NullValue = wkt::NullValue.NullValue } }
+                    { "GuidOrNull", new Value { NullValue = WKT::NullValue.NullValue } }
                 }
             }
         };

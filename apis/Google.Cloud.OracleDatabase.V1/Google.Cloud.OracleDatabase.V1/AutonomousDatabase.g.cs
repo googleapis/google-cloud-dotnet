@@ -31,7 +31,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "djEvY29tbW9uLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJv",
             "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aG2dvb2dsZS90",
             "eXBlL2RheW9md2Vlay5wcm90bxobZ29vZ2xlL3R5cGUvdGltZW9mZGF5LnBy",
-            "b3RvIqUFChJBdXRvbm9tb3VzRGF0YWJhc2USEQoEbmFtZRgBIAEoCUID4EEI",
+            "b3RvIrIIChJBdXRvbm9tb3VzRGF0YWJhc2USEQoEbmFtZRgBIAEoCUID4EEI",
             "EhUKCGRhdGFiYXNlGAIgASgJQgPgQQESGQoMZGlzcGxheV9uYW1lGAMgASgJ",
             "QgPgQQESGwoOZW50aXRsZW1lbnRfaWQYBSABKAlCA+BBAxIbCg5hZG1pbl9w",
             "YXNzd29yZBgGIAEoCUID4EEBElUKCnByb3BlcnRpZXMYByABKAsyPC5nb29n",
@@ -39,200 +39,233 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "UHJvcGVydGllc0ID4EEBElMKBmxhYmVscxgIIAMoCzI+Lmdvb2dsZS5jbG91",
             "ZC5vcmFjbGVkYXRhYmFzZS52MS5BdXRvbm9tb3VzRGF0YWJhc2UuTGFiZWxz",
             "RW50cnlCA+BBARI3CgduZXR3b3JrGAkgASgJQibgQQH6QSAKHmNvbXB1dGUu",
-            "Z29vZ2xlYXBpcy5jb20vTmV0d29yaxIRCgRjaWRyGAogASgJQgPgQQESNAoL",
-            "Y3JlYXRlX3RpbWUYDSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "QgPgQQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
-            "ASgJOgI4ATqyAepBrgEKMG9yYWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29t",
-            "L0F1dG9ub21vdXNEYXRhYmFzZRJRcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
-            "aW9ucy97bG9jYXRpb259L2F1dG9ub21vdXNEYXRhYmFzZXMve2F1dG9ub21v",
-            "dXNfZGF0YWJhc2V9KhNhdXRvbm9tb3VzRGF0YWJhc2VzMhJhdXRvbm9tb3Vz",
-            "RGF0YWJhc2UityQKHEF1dG9ub21vdXNEYXRhYmFzZVByb3BlcnRpZXMSEQoE",
-            "b2NpZBgBIAEoCUID4EEDEhoKDWNvbXB1dGVfY291bnQYAiABKAJCA+BBARIb",
-            "Cg5jcHVfY29yZV9jb3VudBgDIAEoBUID4EEBEiEKFGRhdGFfc3RvcmFnZV9z",
-            "aXplX3RiGAQgASgFQgPgQQESIQoUZGF0YV9zdG9yYWdlX3NpemVfZ2IYPyAB",
-            "KAVCA+BBARJECgtkYl93b3JrbG9hZBgFIAEoDjIqLmdvb2dsZS5jbG91ZC5v",
-            "cmFjbGVkYXRhYmFzZS52MS5EQldvcmtsb2FkQgPgQQISZQoKZGJfZWRpdGlv",
-            "bhgGIAEoDjJMLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5BdXRv",
-            "bm9tb3VzRGF0YWJhc2VQcm9wZXJ0aWVzLkRhdGFiYXNlRWRpdGlvbkID4EEB",
-            "EhoKDWNoYXJhY3Rlcl9zZXQYCCABKAlCA+BBARIcCg9uX2NoYXJhY3Rlcl9z",
-            "ZXQYCSABKAlCA+BBARIgChNwcml2YXRlX2VuZHBvaW50X2lwGAogASgJQgPg",
-            "QQESIwoWcHJpdmF0ZV9lbmRwb2ludF9sYWJlbBgLIAEoCUID4EEBEhcKCmRi",
-            "X3ZlcnNpb24YDCABKAlCA+BBARIkChdpc19hdXRvX3NjYWxpbmdfZW5hYmxl",
-            "ZBgOIAEoCEID4EEBEiwKH2lzX3N0b3JhZ2VfYXV0b19zY2FsaW5nX2VuYWJs",
-            "ZWQYDyABKAhCA+BBARJjCgxsaWNlbnNlX3R5cGUYECABKA4ySC5nb29nbGUu",
-            "Y2xvdWQub3JhY2xlZGF0YWJhc2UudjEuQXV0b25vbW91c0RhdGFiYXNlUHJv",
-            "cGVydGllcy5MaWNlbnNlVHlwZUID4EECEk8KEWN1c3RvbWVyX2NvbnRhY3Rz",
-            "GBEgAygLMi8uZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkN1c3Rv",
-            "bWVyQ29udGFjdEID4EEBEhYKCXNlY3JldF9pZBgSIAEoCUID4EEBEhUKCHZh",
-            "dWx0X2lkGBMgASgJQgPgQQESfAoZbWFpbnRlbmFuY2Vfc2NoZWR1bGVfdHlw",
-            "ZRgUIAEoDjJULmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5BdXRv",
-            "bm9tb3VzRGF0YWJhc2VQcm9wZXJ0aWVzLk1haW50ZW5hbmNlU2NoZWR1bGVU",
-            "eXBlQgPgQQESJQoYbXRsc19jb25uZWN0aW9uX3JlcXVpcmVkGCIgASgIQgPg",
-            "QQESKQocYmFja3VwX3JldGVudGlvbl9wZXJpb2RfZGF5cxg5IAEoBUID4EEB",
-            "Ei0KIGFjdHVhbF91c2VkX2RhdGFfc3RvcmFnZV9zaXplX3RiGBUgASgBQgPg",
-            "QQMSJgoZYWxsb2NhdGVkX3N0b3JhZ2Vfc2l6ZV90YhgWIAEoAUID4EEDElEK",
-            "DGFwZXhfZGV0YWlscxgXIAEoCzI2Lmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRh",
-            "YmFzZS52MS5BdXRvbm9tb3VzRGF0YWJhc2VBcGV4QgPgQQMSMgogYXJlX3By",
-            "aW1hcnlfYWxsb3dsaXN0ZWRfaXBzX3VzZWQYGCABKAhCA+BBA0gAiAEBEh4K",
-            "EWxpZmVjeWNsZV9kZXRhaWxzGBkgASgJQgPgQQMSOQoFc3RhdGUYGiABKA4y",
-            "JS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuU3RhdGVCA+BBAxIt",
-            "CiBhdXRvbm9tb3VzX2NvbnRhaW5lcl9kYXRhYmFzZV9pZBgbIAEoCUID4EED",
-            "EicKGmF2YWlsYWJsZV91cGdyYWRlX3ZlcnNpb25zGBwgAygJQgPgQQMSZAoS",
-            "Y29ubmVjdGlvbl9zdHJpbmdzGB0gASgLMkMuZ29vZ2xlLmNsb3VkLm9yYWNs",
-            "ZWRhdGFiYXNlLnYxLkF1dG9ub21vdXNEYXRhYmFzZUNvbm5lY3Rpb25TdHJp",
-            "bmdzQgPgQQMSXgoPY29ubmVjdGlvbl91cmxzGB4gASgLMkAuZ29vZ2xlLmNs",
-            "b3VkLm9yYWNsZWRhdGFiYXNlLnYxLkF1dG9ub21vdXNEYXRhYmFzZUNvbm5l",
-            "Y3Rpb25VcmxzQgPgQQMSRQodZmFpbGVkX2RhdGFfcmVjb3ZlcnlfZHVyYXRp",
-            "b24YHyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAxIdChBt",
-            "ZW1vcnlfdGFibGVfZ2JzGCAgASgFQgPgQQMSKAobaXNfbG9jYWxfZGF0YV9n",
-            "dWFyZF9lbmFibGVkGCEgASgIQgPgQQMSOAorbG9jYWxfYWRnX2F1dG9fZmFp",
-            "bG92ZXJfbWF4X2RhdGFfbG9zc19saW1pdBgjIAEoBUID4EEDEl8KEGxvY2Fs",
-            "X3N0YW5kYnlfZGIYJCABKAsyQC5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJh",
-            "c2UudjEuQXV0b25vbW91c0RhdGFiYXNlU3RhbmRieVN1bW1hcnlCA+BBAxIv",
-            "CiJtZW1vcnlfcGVyX29yYWNsZV9jb21wdXRlX3VuaXRfZ2JzGCUgASgFQgPg",
-            "QQMSgQEKHGxvY2FsX2Rpc2FzdGVyX3JlY292ZXJ5X3R5cGUYJiABKA4yVi5n",
-            "b29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuQXV0b25vbW91c0RhdGFi",
-            "YXNlUHJvcGVydGllcy5Mb2NhbERpc2FzdGVyUmVjb3ZlcnlUeXBlQgPgQQMS",
-            "aAoPZGF0YV9zYWZlX3N0YXRlGCcgASgOMkouZ29vZ2xlLmNsb3VkLm9yYWNs",
-            "ZWRhdGFiYXNlLnYxLkF1dG9ub21vdXNEYXRhYmFzZVByb3BlcnRpZXMuRGF0",
-            "YVNhZmVTdGF0ZUID4EEDEnwKGWRhdGFiYXNlX21hbmFnZW1lbnRfc3RhdGUY",
-            "KCABKA4yVC5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuQXV0b25v",
-            "bW91c0RhdGFiYXNlUHJvcGVydGllcy5EYXRhYmFzZU1hbmFnZW1lbnRTdGF0",
-            "ZUID4EEDEl0KCW9wZW5fbW9kZRgpIAEoDjJFLmdvb2dsZS5jbG91ZC5vcmFj",
-            "bGVkYXRhYmFzZS52MS5BdXRvbm9tb3VzRGF0YWJhc2VQcm9wZXJ0aWVzLk9w",
-            "ZW5Nb2RlQgPgQQMSXwoZb3BlcmF0aW9uc19pbnNpZ2h0c19zdGF0ZRgqIAEo",
-            "DjI3Lmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5PcGVyYXRpb25z",
-            "SW5zaWdodHNTdGF0ZUID4EEDEhgKC3BlZXJfZGJfaWRzGCsgAygJQgPgQQMS",
-            "awoQcGVybWlzc2lvbl9sZXZlbBgsIAEoDjJMLmdvb2dsZS5jbG91ZC5vcmFj",
-            "bGVkYXRhYmFzZS52MS5BdXRvbm9tb3VzRGF0YWJhc2VQcm9wZXJ0aWVzLlBl",
-            "cm1pc3Npb25MZXZlbEID4EEDEh0KEHByaXZhdGVfZW5kcG9pbnQYLSABKAlC",
-            "A+BBAxJrChByZWZyZXNoYWJsZV9tb2RlGC4gASgOMkwuZ29vZ2xlLmNsb3Vk",
-            "Lm9yYWNsZWRhdGFiYXNlLnYxLkF1dG9ub21vdXNEYXRhYmFzZVByb3BlcnRp",
-            "ZXMuUmVmcmVzaGFibGVNb2RlQgPgQQMSbQoRcmVmcmVzaGFibGVfc3RhdGUY",
-            "LyABKA4yTS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuQXV0b25v",
-            "bW91c0RhdGFiYXNlUHJvcGVydGllcy5SZWZyZXNoYWJsZVN0YXRlQgPgQQMS",
-            "VAoEcm9sZRgwIAEoDjJBLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52",
-            "MS5BdXRvbm9tb3VzRGF0YWJhc2VQcm9wZXJ0aWVzLlJvbGVCA+BBAxJjChtz",
-            "Y2hlZHVsZWRfb3BlcmF0aW9uX2RldGFpbHMYQCADKAsyOS5nb29nbGUuY2xv",
-            "dWQub3JhY2xlZGF0YWJhc2UudjEuU2NoZWR1bGVkT3BlcmF0aW9uRGV0YWls",
-            "c0ID4EEDEiIKFXNxbF93ZWJfZGV2ZWxvcGVyX3VybBgyIAEoCUID4EEDEiQK",
-            "F3N1cHBvcnRlZF9jbG9uZV9yZWdpb25zGDMgAygJQgPgQQMSJwoadXNlZF9k",
-            "YXRhX3N0b3JhZ2Vfc2l6ZV90YnMYNSABKAVCA+BBAxIUCgdvY2lfdXJsGDYg",
-            "ASgJQgPgQQMSLwoidG90YWxfYXV0b19iYWNrdXBfc3RvcmFnZV9zaXplX2di",
-            "cxg7IAEoAkID4EEDEkMKGm5leHRfbG9uZ190ZXJtX2JhY2t1cF90aW1lGDwg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEj8KFm1haW50",
-            "ZW5hbmNlX2JlZ2luX3RpbWUYQSABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQMSPQoUbWFpbnRlbmFuY2VfZW5kX3RpbWUYQiABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMiYQoPRGF0YWJhc2VFZGl0",
-            "aW9uEiAKHERBVEFCQVNFX0VESVRJT05fVU5TUEVDSUZJRUQQABIUChBTVEFO",
-            "REFSRF9FRElUSU9OEAESFgoSRU5URVJQUklTRV9FRElUSU9OEAIiXQoLTGlj",
-            "ZW5zZVR5cGUSHAoYTElDRU5TRV9UWVBFX1VOU1BFQ0lGSUVEEAASFAoQTElD",
-            "RU5TRV9JTkNMVURFRBABEhoKFkJSSU5HX1lPVVJfT1dOX0xJQ0VOU0UQAiJc",
-            "ChdNYWludGVuYW5jZVNjaGVkdWxlVHlwZRIpCiVNQUlOVEVOQU5DRV9TQ0hF",
-            "RFVMRV9UWVBFX1VOU1BFQ0lGSUVEEAASCQoFRUFSTFkQARILCgdSRUdVTEFS",
-            "EAIiZAoZTG9jYWxEaXNhc3RlclJlY292ZXJ5VHlwZRIsCihMT0NBTF9ESVNB",
-            "U1RFUl9SRUNPVkVSWV9UWVBFX1VOU1BFQ0lGSUVEEAASBwoDQURHEAESEAoM",
-            "QkFDS1VQX0JBU0VEEAIihAEKDURhdGFTYWZlU3RhdGUSHwobREFUQV9TQUZF",
-            "X1NUQVRFX1VOU1BFQ0lGSUVEEAASDwoLUkVHSVNURVJJTkcQARIOCgpSRUdJ",
-            "U1RFUkVEEAISEQoNREVSRUdJU1RFUklORxADEhIKDk5PVF9SRUdJU1RFUkVE",
-            "EAQSCgoGRkFJTEVEEAUiqgEKF0RhdGFiYXNlTWFuYWdlbWVudFN0YXRlEikK",
-            "JURBVEFCQVNFX01BTkFHRU1FTlRfU1RBVEVfVU5TUEVDSUZJRUQQABIMCghF",
-            "TkFCTElORxABEgsKB0VOQUJMRUQQAhINCglESVNBQkxJTkcQAxIPCgtOT1Rf",
-            "RU5BQkxFRBAEEhMKD0ZBSUxFRF9FTkFCTElORxAFEhQKEEZBSUxFRF9ESVNB",
-            "QkxJTkcQBiJECghPcGVuTW9kZRIZChVPUEVOX01PREVfVU5TUEVDSUZJRUQQ",
-            "ABINCglSRUFEX09OTFkQARIOCgpSRUFEX1dSSVRFEAIiVQoPUGVybWlzc2lv",
-            "bkxldmVsEiAKHFBFUk1JU1NJT05fTEVWRUxfVU5TUEVDSUZJRUQQABIOCgpS",
-            "RVNUUklDVEVEEAESEAoMVU5SRVNUUklDVEVEEAIiTgoPUmVmcmVzaGFibGVN",
-            "b2RlEiAKHFJFRlJFU0hBQkxFX01PREVfVU5TUEVDSUZJRUQQABINCglBVVRP",
-            "TUFUSUMQARIKCgZNQU5VQUwQAiJZChBSZWZyZXNoYWJsZVN0YXRlEiEKHVJF",
-            "RlJFU0hBQkxFX1NUQVRFX1VOU1BFQ0lGSUVEEAASDgoKUkVGUkVTSElORxAB",
-            "EhIKDk5PVF9SRUZSRVNISU5HEAIicwoEUm9sZRIUChBST0xFX1VOU1BFQ0lG",
-            "SUVEEAASCwoHUFJJTUFSWRABEgsKB1NUQU5EQlkQAhIUChBESVNBQkxFRF9T",
-            "VEFOREJZEAMSDwoLQkFDS1VQX0NPUFkQBBIUChBTTkFQU0hPVF9TVEFOREJZ",
-            "EAVCIwohX2FyZV9wcmltYXJ5X2FsbG93bGlzdGVkX2lwc191c2VkIk4KFkF1",
-            "dG9ub21vdXNEYXRhYmFzZUFwZXgSGQoMYXBleF92ZXJzaW9uGAEgASgJQgPg",
-            "QQMSGQoMb3Jkc192ZXJzaW9uGAIgASgJQgPgQQMiqgIKI0F1dG9ub21vdXNE",
-            "YXRhYmFzZUNvbm5lY3Rpb25TdHJpbmdzElkKFmFsbF9jb25uZWN0aW9uX3N0",
-            "cmluZ3MYASABKAsyNC5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEu",
-            "QWxsQ29ubmVjdGlvblN0cmluZ3NCA+BBAxIWCglkZWRpY2F0ZWQYAiABKAlC",
-            "A+BBAxIRCgRoaWdoGAMgASgJQgPgQQMSEAoDbG93GAQgASgJQgPgQQMSEwoG",
-            "bWVkaXVtGAUgASgJQgPgQQMSVgoIcHJvZmlsZXMYBiADKAsyPy5nb29nbGUu",
-            "Y2xvdWQub3JhY2xlZGF0YWJhc2UudjEuRGF0YWJhc2VDb25uZWN0aW9uU3Ry",
-            "aW5nUHJvZmlsZUID4EEDIrIJCh9EYXRhYmFzZUNvbm5lY3Rpb25TdHJpbmdQ",
-            "cm9maWxlEmoKDmNvbnN1bWVyX2dyb3VwGAEgASgOMk0uZ29vZ2xlLmNsb3Vk",
+            "Z29vZ2xlYXBpcy5jb20vTmV0d29yaxIRCgRjaWRyGAogASgJQgPgQQESRQoL",
+            "b2RiX25ldHdvcmsYECABKAlCMOBBAfpBKgoob3JhY2xlZGF0YWJhc2UuZ29v",
+            "Z2xlYXBpcy5jb20vT2RiTmV0d29yaxJDCgpvZGJfc3VibmV0GBEgASgJQi/g",
+            "QQH6QSkKJ29yYWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29tL09kYlN1Ym5l",
+            "dBJICg1zb3VyY2VfY29uZmlnGAsgASgLMiwuZ29vZ2xlLmNsb3VkLm9yYWNs",
+            "ZWRhdGFiYXNlLnYxLlNvdXJjZUNvbmZpZ0ID4EEBElsKGXBlZXJfYXV0b25v",
+            "bW91c19kYXRhYmFzZXMYDCADKAlCOOBBA/pBMgowb3JhY2xlZGF0YWJhc2Uu",
+            "Z29vZ2xlYXBpcy5jb20vQXV0b25vbW91c0RhdGFiYXNlEjQKC2NyZWF0ZV90",
+            "aW1lGA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDElgK",
+            "JWRpc2FzdGVyX3JlY292ZXJ5X3N1cHBvcnRlZF9sb2NhdGlvbnMYDyADKAlC",
+            "KeBBA/pBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uGi0K",
+            "C0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6",
+            "sgHqQa4BCjBvcmFjbGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9BdXRvbm9t",
+            "b3VzRGF0YWJhc2USUXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
+            "Y2F0aW9ufS9hdXRvbm9tb3VzRGF0YWJhc2VzL3thdXRvbm9tb3VzX2RhdGFi",
+            "YXNlfSoTYXV0b25vbW91c0RhdGFiYXNlczISYXV0b25vbW91c0RhdGFiYXNl",
+            "IpkBCgxTb3VyY2VDb25maWcSVQoTYXV0b25vbW91c19kYXRhYmFzZRgBIAEo",
+            "CUI44EEB+kEyCjBvcmFjbGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9BdXRv",
+            "bm9tb3VzRGF0YWJhc2USMgolYXV0b21hdGljX2JhY2t1cHNfcmVwbGljYXRp",
+            "b25fZW5hYmxlZBgCIAEoCEID4EEBIsAnChxBdXRvbm9tb3VzRGF0YWJhc2VQ",
+            "cm9wZXJ0aWVzEhEKBG9jaWQYASABKAlCA+BBAxIaCg1jb21wdXRlX2NvdW50",
+            "GAIgASgCQgPgQQESGwoOY3B1X2NvcmVfY291bnQYAyABKAVCA+BBARIhChRk",
+            "YXRhX3N0b3JhZ2Vfc2l6ZV90YhgEIAEoBUID4EEBEiEKFGRhdGFfc3RvcmFn",
+            "ZV9zaXplX2diGD8gASgFQgPgQQESRAoLZGJfd29ya2xvYWQYBSABKA4yKi5n",
+            "b29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuREJXb3JrbG9hZEID4EEC",
+            "EmUKCmRiX2VkaXRpb24YBiABKA4yTC5nb29nbGUuY2xvdWQub3JhY2xlZGF0",
+            "YWJhc2UudjEuQXV0b25vbW91c0RhdGFiYXNlUHJvcGVydGllcy5EYXRhYmFz",
+            "ZUVkaXRpb25CA+BBARIaCg1jaGFyYWN0ZXJfc2V0GAggASgJQgPgQQESHAoP",
+            "bl9jaGFyYWN0ZXJfc2V0GAkgASgJQgPgQQESIAoTcHJpdmF0ZV9lbmRwb2lu",
+            "dF9pcBgKIAEoCUID4EEBEiMKFnByaXZhdGVfZW5kcG9pbnRfbGFiZWwYCyAB",
+            "KAlCA+BBARIXCgpkYl92ZXJzaW9uGAwgASgJQgPgQQESJAoXaXNfYXV0b19z",
+            "Y2FsaW5nX2VuYWJsZWQYDiABKAhCA+BBARIsCh9pc19zdG9yYWdlX2F1dG9f",
+            "c2NhbGluZ19lbmFibGVkGA8gASgIQgPgQQESYwoMbGljZW5zZV90eXBlGBAg",
+            "ASgOMkguZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkF1dG9ub21v",
+            "dXNEYXRhYmFzZVByb3BlcnRpZXMuTGljZW5zZVR5cGVCA+BBAhJPChFjdXN0",
+            "b21lcl9jb250YWN0cxgRIAMoCzIvLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRh",
+            "YmFzZS52MS5DdXN0b21lckNvbnRhY3RCA+BBARIWCglzZWNyZXRfaWQYEiAB",
+            "KAlCA+BBARIVCgh2YXVsdF9pZBgTIAEoCUID4EEBEnwKGW1haW50ZW5hbmNl",
+            "X3NjaGVkdWxlX3R5cGUYFCABKA4yVC5nb29nbGUuY2xvdWQub3JhY2xlZGF0",
+            "YWJhc2UudjEuQXV0b25vbW91c0RhdGFiYXNlUHJvcGVydGllcy5NYWludGVu",
+            "YW5jZVNjaGVkdWxlVHlwZUID4EEBEiUKGG10bHNfY29ubmVjdGlvbl9yZXF1",
+            "aXJlZBgiIAEoCEID4EEBEikKHGJhY2t1cF9yZXRlbnRpb25fcGVyaW9kX2Rh",
+            "eXMYOSABKAVCA+BBARItCiBhY3R1YWxfdXNlZF9kYXRhX3N0b3JhZ2Vfc2l6",
+            "ZV90YhgVIAEoAUID4EEDEiYKGWFsbG9jYXRlZF9zdG9yYWdlX3NpemVfdGIY",
+            "FiABKAFCA+BBAxJRCgxhcGV4X2RldGFpbHMYFyABKAsyNi5nb29nbGUuY2xv",
+            "dWQub3JhY2xlZGF0YWJhc2UudjEuQXV0b25vbW91c0RhdGFiYXNlQXBleEID",
+            "4EEDEjIKIGFyZV9wcmltYXJ5X2FsbG93bGlzdGVkX2lwc191c2VkGBggASgI",
+            "QgPgQQNIAIgBARIeChFsaWZlY3ljbGVfZGV0YWlscxgZIAEoCUID4EEDEjkK",
+            "BXN0YXRlGBogASgOMiUuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYx",
+            "LlN0YXRlQgPgQQMSLQogYXV0b25vbW91c19jb250YWluZXJfZGF0YWJhc2Vf",
+            "aWQYGyABKAlCA+BBAxInChphdmFpbGFibGVfdXBncmFkZV92ZXJzaW9ucxgc",
+            "IAMoCUID4EEDEmQKEmNvbm5lY3Rpb25fc3RyaW5ncxgdIAEoCzJDLmdvb2ds",
+            "ZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5BdXRvbm9tb3VzRGF0YWJhc2VD",
+            "b25uZWN0aW9uU3RyaW5nc0ID4EEDEl4KD2Nvbm5lY3Rpb25fdXJscxgeIAEo",
+            "CzJALmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5BdXRvbm9tb3Vz",
+            "RGF0YWJhc2VDb25uZWN0aW9uVXJsc0ID4EEDEkUKHWZhaWxlZF9kYXRhX3Jl",
+            "Y292ZXJ5X2R1cmF0aW9uGB8gASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0",
+            "aW9uQgPgQQMSHQoQbWVtb3J5X3RhYmxlX2dicxggIAEoBUID4EEDEigKG2lz",
+            "X2xvY2FsX2RhdGFfZ3VhcmRfZW5hYmxlZBghIAEoCEID4EEDEjgKK2xvY2Fs",
+            "X2FkZ19hdXRvX2ZhaWxvdmVyX21heF9kYXRhX2xvc3NfbGltaXQYIyABKAVC",
+            "A+BBAxJfChBsb2NhbF9zdGFuZGJ5X2RiGCQgASgLMkAuZ29vZ2xlLmNsb3Vk",
+            "Lm9yYWNsZWRhdGFiYXNlLnYxLkF1dG9ub21vdXNEYXRhYmFzZVN0YW5kYnlT",
+            "dW1tYXJ5QgPgQQMSLwoibWVtb3J5X3Blcl9vcmFjbGVfY29tcHV0ZV91bml0",
+            "X2dicxglIAEoBUID4EEDEoEBChxsb2NhbF9kaXNhc3Rlcl9yZWNvdmVyeV90",
+            "eXBlGCYgASgOMlYuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkF1",
+            "dG9ub21vdXNEYXRhYmFzZVByb3BlcnRpZXMuTG9jYWxEaXNhc3RlclJlY292",
+            "ZXJ5VHlwZUID4EEDEmgKD2RhdGFfc2FmZV9zdGF0ZRgnIAEoDjJKLmdvb2ds",
+            "ZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5BdXRvbm9tb3VzRGF0YWJhc2VQ",
+            "cm9wZXJ0aWVzLkRhdGFTYWZlU3RhdGVCA+BBAxJ8ChlkYXRhYmFzZV9tYW5h",
+            "Z2VtZW50X3N0YXRlGCggASgOMlQuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFi",
+            "YXNlLnYxLkF1dG9ub21vdXNEYXRhYmFzZVByb3BlcnRpZXMuRGF0YWJhc2VN",
+            "YW5hZ2VtZW50U3RhdGVCA+BBAxJdCglvcGVuX21vZGUYKSABKA4yRS5nb29n",
+            "bGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuQXV0b25vbW91c0RhdGFiYXNl",
+            "UHJvcGVydGllcy5PcGVuTW9kZUID4EEDEl8KGW9wZXJhdGlvbnNfaW5zaWdo",
+            "dHNfc3RhdGUYKiABKA4yNy5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2Uu",
+            "djEuT3BlcmF0aW9uc0luc2lnaHRzU3RhdGVCA+BBAxIYCgtwZWVyX2RiX2lk",
+            "cxgrIAMoCUID4EEDEmsKEHBlcm1pc3Npb25fbGV2ZWwYLCABKA4yTC5nb29n",
+            "bGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuQXV0b25vbW91c0RhdGFiYXNl",
+            "UHJvcGVydGllcy5QZXJtaXNzaW9uTGV2ZWxCA+BBAxIdChBwcml2YXRlX2Vu",
+            "ZHBvaW50GC0gASgJQgPgQQMSawoQcmVmcmVzaGFibGVfbW9kZRguIAEoDjJM",
+            "Lmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5BdXRvbm9tb3VzRGF0",
+            "YWJhc2VQcm9wZXJ0aWVzLlJlZnJlc2hhYmxlTW9kZUID4EEDEm0KEXJlZnJl",
+            "c2hhYmxlX3N0YXRlGC8gASgOMk0uZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFi",
+            "YXNlLnYxLkF1dG9ub21vdXNEYXRhYmFzZVByb3BlcnRpZXMuUmVmcmVzaGFi",
+            "bGVTdGF0ZUID4EEDElQKBHJvbGUYMCABKA4yQS5nb29nbGUuY2xvdWQub3Jh",
+            "Y2xlZGF0YWJhc2UudjEuQXV0b25vbW91c0RhdGFiYXNlUHJvcGVydGllcy5S",
+            "b2xlQgPgQQMSYwobc2NoZWR1bGVkX29wZXJhdGlvbl9kZXRhaWxzGEAgAygL",
+            "MjkuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLlNjaGVkdWxlZE9w",
+            "ZXJhdGlvbkRldGFpbHNCA+BBAxIiChVzcWxfd2ViX2RldmVsb3Blcl91cmwY",
+            "MiABKAlCA+BBAxIkChdzdXBwb3J0ZWRfY2xvbmVfcmVnaW9ucxgzIAMoCUID",
+            "4EEDEicKGnVzZWRfZGF0YV9zdG9yYWdlX3NpemVfdGJzGDUgASgFQgPgQQMS",
+            "FAoHb2NpX3VybBg2IAEoCUID4EEDEi8KInRvdGFsX2F1dG9fYmFja3VwX3N0",
+            "b3JhZ2Vfc2l6ZV9nYnMYOyABKAJCA+BBAxJDChpuZXh0X2xvbmdfdGVybV9i",
+            "YWNrdXBfdGltZRg8IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
+            "A+BBAxJFChxkYXRhX2d1YXJkX3JvbGVfY2hhbmdlZF90aW1lGD0gASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkwKI2Rpc2FzdGVyX3Jl",
+            "Y292ZXJ5X3JvbGVfY2hhbmdlZF90aW1lGD4gASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEj8KFm1haW50ZW5hbmNlX2JlZ2luX3RpbWUY",
+            "QSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSPQoUbWFp",
+            "bnRlbmFuY2VfZW5kX3RpbWUYQiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSHAoPYWxsb3dsaXN0ZWRfaXBzGEMgAygJQgPgQQESSgoO",
+            "ZW5jcnlwdGlvbl9rZXkYRCABKAsyLS5nb29nbGUuY2xvdWQub3JhY2xlZGF0",
+            "YWJhc2UudjEuRW5jcnlwdGlvbktleUID4EEBEmYKHmVuY3J5cHRpb25fa2V5",
+            "X2hpc3RvcnlfZW50cmllcxhFIAMoCzI5Lmdvb2dsZS5jbG91ZC5vcmFjbGVk",
+            "YXRhYmFzZS52MS5FbmNyeXB0aW9uS2V5SGlzdG9yeUVudHJ5QgPgQQMSIAoT",
+            "c2VydmljZV9hZ2VudF9lbWFpbBhGIAEoCUID4EEDImEKD0RhdGFiYXNlRWRp",
+            "dGlvbhIgChxEQVRBQkFTRV9FRElUSU9OX1VOU1BFQ0lGSUVEEAASFAoQU1RB",
+            "TkRBUkRfRURJVElPThABEhYKEkVOVEVSUFJJU0VfRURJVElPThACIl0KC0xp",
+            "Y2Vuc2VUeXBlEhwKGExJQ0VOU0VfVFlQRV9VTlNQRUNJRklFRBAAEhQKEExJ",
+            "Q0VOU0VfSU5DTFVERUQQARIaChZCUklOR19ZT1VSX09XTl9MSUNFTlNFEAIi",
+            "XAoXTWFpbnRlbmFuY2VTY2hlZHVsZVR5cGUSKQolTUFJTlRFTkFOQ0VfU0NI",
+            "RURVTEVfVFlQRV9VTlNQRUNJRklFRBAAEgkKBUVBUkxZEAESCwoHUkVHVUxB",
+            "UhACImQKGUxvY2FsRGlzYXN0ZXJSZWNvdmVyeVR5cGUSLAooTE9DQUxfRElT",
+            "QVNURVJfUkVDT1ZFUllfVFlQRV9VTlNQRUNJRklFRBAAEgcKA0FERxABEhAK",
+            "DEJBQ0tVUF9CQVNFRBACIoQBCg1EYXRhU2FmZVN0YXRlEh8KG0RBVEFfU0FG",
+            "RV9TVEFURV9VTlNQRUNJRklFRBAAEg8KC1JFR0lTVEVSSU5HEAESDgoKUkVH",
+            "SVNURVJFRBACEhEKDURFUkVHSVNURVJJTkcQAxISCg5OT1RfUkVHSVNURVJF",
+            "RBAEEgoKBkZBSUxFRBAFIqoBChdEYXRhYmFzZU1hbmFnZW1lbnRTdGF0ZRIp",
+            "CiVEQVRBQkFTRV9NQU5BR0VNRU5UX1NUQVRFX1VOU1BFQ0lGSUVEEAASDAoI",
+            "RU5BQkxJTkcQARILCgdFTkFCTEVEEAISDQoJRElTQUJMSU5HEAMSDwoLTk9U",
+            "X0VOQUJMRUQQBBITCg9GQUlMRURfRU5BQkxJTkcQBRIUChBGQUlMRURfRElT",
+            "QUJMSU5HEAYiRAoIT3Blbk1vZGUSGQoVT1BFTl9NT0RFX1VOU1BFQ0lGSUVE",
+            "EAASDQoJUkVBRF9PTkxZEAESDgoKUkVBRF9XUklURRACIlUKD1Blcm1pc3Np",
+            "b25MZXZlbBIgChxQRVJNSVNTSU9OX0xFVkVMX1VOU1BFQ0lGSUVEEAASDgoK",
+            "UkVTVFJJQ1RFRBABEhAKDFVOUkVTVFJJQ1RFRBACIk4KD1JlZnJlc2hhYmxl",
+            "TW9kZRIgChxSRUZSRVNIQUJMRV9NT0RFX1VOU1BFQ0lGSUVEEAASDQoJQVVU",
+            "T01BVElDEAESCgoGTUFOVUFMEAIiWQoQUmVmcmVzaGFibGVTdGF0ZRIhCh1S",
+            "RUZSRVNIQUJMRV9TVEFURV9VTlNQRUNJRklFRBAAEg4KClJFRlJFU0hJTkcQ",
+            "ARISCg5OT1RfUkVGUkVTSElORxACInMKBFJvbGUSFAoQUk9MRV9VTlNQRUNJ",
+            "RklFRBAAEgsKB1BSSU1BUlkQARILCgdTVEFOREJZEAISFAoQRElTQUJMRURf",
+            "U1RBTkRCWRADEg8KC0JBQ0tVUF9DT1BZEAQSFAoQU05BUFNIT1RfU1RBTkRC",
+            "WRAFQiMKIV9hcmVfcHJpbWFyeV9hbGxvd2xpc3RlZF9pcHNfdXNlZCKhAQoZ",
+            "RW5jcnlwdGlvbktleUhpc3RvcnlFbnRyeRJKCg5lbmNyeXB0aW9uX2tleRgB",
+            "IAEoCzItLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5FbmNyeXB0",
+            "aW9uS2V5QgPgQQMSOAoPYWN0aXZhdGlvbl90aW1lGAIgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDIugBCg1FbmNyeXB0aW9uS2V5Ek0K",
+            "CHByb3ZpZGVyGAEgASgOMjYuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNl",
+            "LnYxLkVuY3J5cHRpb25LZXkuUHJvdmlkZXJCA+BBARI6CgdrbXNfa2V5GAIg",
+            "ASgJQingQQH6QSMKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tl",
+            "eSJMCghQcm92aWRlchIYChRQUk9WSURFUl9VTlNQRUNJRklFRBAAEhIKDkdP",
+            "T0dMRV9NQU5BR0VEEAESEgoOT1JBQ0xFX01BTkFHRUQQAiJOChZBdXRvbm9t",
+            "b3VzRGF0YWJhc2VBcGV4EhkKDGFwZXhfdmVyc2lvbhgBIAEoCUID4EEDEhkK",
+            "DG9yZHNfdmVyc2lvbhgCIAEoCUID4EEDIqoCCiNBdXRvbm9tb3VzRGF0YWJh",
+            "c2VDb25uZWN0aW9uU3RyaW5ncxJZChZhbGxfY29ubmVjdGlvbl9zdHJpbmdz",
+            "GAEgASgLMjQuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkFsbENv",
+            "bm5lY3Rpb25TdHJpbmdzQgPgQQMSFgoJZGVkaWNhdGVkGAIgASgJQgPgQQMS",
+            "EQoEaGlnaBgDIAEoCUID4EEDEhAKA2xvdxgEIAEoCUID4EEDEhMKBm1lZGl1",
+            "bRgFIAEoCUID4EEDElYKCHByb2ZpbGVzGAYgAygLMj8uZ29vZ2xlLmNsb3Vk",
             "Lm9yYWNsZWRhdGFiYXNlLnYxLkRhdGFiYXNlQ29ubmVjdGlvblN0cmluZ1By",
-            "b2ZpbGUuQ29uc3VtZXJHcm91cEID4EEDEhkKDGRpc3BsYXlfbmFtZRgCIAEo",
-            "CUID4EEDEmQKC2hvc3RfZm9ybWF0GAMgASgOMkouZ29vZ2xlLmNsb3VkLm9y",
-            "YWNsZWRhdGFiYXNlLnYxLkRhdGFiYXNlQ29ubmVjdGlvblN0cmluZ1Byb2Zp",
-            "bGUuSG9zdEZvcm1hdEID4EEDEhgKC2lzX3JlZ2lvbmFsGAQgASgIQgPgQQMS",
-            "XwoIcHJvdG9jb2wYBSABKA4ySC5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJh",
-            "c2UudjEuRGF0YWJhc2VDb25uZWN0aW9uU3RyaW5nUHJvZmlsZS5Qcm90b2Nv",
-            "bEID4EEDEmYKDHNlc3Npb25fbW9kZRgGIAEoDjJLLmdvb2dsZS5jbG91ZC5v",
-            "cmFjbGVkYXRhYmFzZS52MS5EYXRhYmFzZUNvbm5lY3Rpb25TdHJpbmdQcm9m",
-            "aWxlLlNlc3Npb25Nb2RlQgPgQQMSaAoNc3ludGF4X2Zvcm1hdBgHIAEoDjJM",
-            "Lmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5EYXRhYmFzZUNvbm5l",
-            "Y3Rpb25TdHJpbmdQcm9maWxlLlN5bnRheEZvcm1hdEID4EEDEnIKEnRsc19h",
-            "dXRoZW50aWNhdGlvbhgIIAEoDjJRLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRh",
-            "YmFzZS52MS5EYXRhYmFzZUNvbm5lY3Rpb25TdHJpbmdQcm9maWxlLlRMU0F1",
-            "dGhlbnRpY2F0aW9uQgPgQQMSEgoFdmFsdWUYCSABKAlCA+BBAyJkCg1Db25z",
-            "dW1lckdyb3VwEh4KGkNPTlNVTUVSX0dST1VQX1VOU1BFQ0lGSUVEEAASCAoE",
-            "SElHSBABEgoKBk1FRElVTRACEgcKA0xPVxADEgYKAlRQEAQSDAoIVFBVUkdF",
-            "TlQQBSI7CgpIb3N0Rm9ybWF0EhsKF0hPU1RfRk9STUFUX1VOU1BFQ0lGSUVE",
-            "EAASCAoERlFEThABEgYKAklQEAIiNwoIUHJvdG9jb2wSGAoUUFJPVE9DT0xf",
-            "VU5TUEVDSUZJRUQQABIHCgNUQ1AQARIICgRUQ1BTEAIiRQoLU2Vzc2lvbk1v",
-            "ZGUSHAoYU0VTU0lPTl9NT0RFX1VOU1BFQ0lGSUVEEAASCgoGRElSRUNUEAES",
-            "DAoISU5ESVJFQ1QQAiJZCgxTeW50YXhGb3JtYXQSHQoZU1lOVEFYX0ZPUk1B",
-            "VF9VTlNQRUNJRklFRBAAEggKBExPTkcQARINCglFWkNPTk5FQ1QQAhIRCg1F",
-            "WkNPTk5FQ1RQTFVTEAMiTwoRVExTQXV0aGVudGljYXRpb24SIgoeVExTX0FV",
-            "VEhFTlRJQ0FUSU9OX1VOU1BFQ0lGSUVEEAASCgoGU0VSVkVSEAESCgoGTVVU",
-            "VUFMEAIiUAoUQWxsQ29ubmVjdGlvblN0cmluZ3MSEQoEaGlnaBgBIAEoCUID",
-            "4EEDEhAKA2xvdxgCIAEoCUID4EEDEhMKBm1lZGl1bRgDIAEoCUID4EEDIq0C",
-            "CiBBdXRvbm9tb3VzRGF0YWJhc2VDb25uZWN0aW9uVXJscxIVCghhcGV4X3Vy",
-            "aRgBIAEoCUID4EEDEiQKF2RhdGFiYXNlX3RyYW5zZm9ybXNfdXJpGAIgASgJ",
-            "QgPgQQMSHQoQZ3JhcGhfc3R1ZGlvX3VyaRgDIAEoCUID4EEDEioKHW1hY2hp",
-            "bmVfbGVhcm5pbmdfbm90ZWJvb2tfdXJpGAQgASgJQgPgQQMSMQokbWFjaGlu",
-            "ZV9sZWFybmluZ191c2VyX21hbmFnZW1lbnRfdXJpGAUgASgJQgPgQQMSGQoM",
-            "bW9uZ29fZGJfdXJpGAYgASgJQgPgQQMSFQoIb3Jkc191cmkYByABKAlCA+BB",
-            "AxIcCg9zcWxfZGV2X3dlYl91cmkYCCABKAlCA+BBAyLNAgogQXV0b25vbW91",
-            "c0RhdGFiYXNlU3RhbmRieVN1bW1hcnkSOQoRbGFnX3RpbWVfZHVyYXRpb24Y",
-            "ASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAxIeChFsaWZl",
-            "Y3ljbGVfZGV0YWlscxgCIAEoCUID4EEDEjkKBXN0YXRlGAMgASgOMiUuZ29v",
-            "Z2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLlN0YXRlQgPgQQMSRQocZGF0",
-            "YV9ndWFyZF9yb2xlX2NoYW5nZWRfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBAxJMCiNkaXNhc3Rlcl9yZWNvdmVyeV9yb2xl",
-            "X2NoYW5nZWRfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXBCA+BBAyKuAQoZU2NoZWR1bGVkT3BlcmF0aW9uRGV0YWlscxIwCgtkYXlf",
-            "b2Zfd2VlaxgBIAEoDjIWLmdvb2dsZS50eXBlLkRheU9mV2Vla0ID4EEDEi8K",
-            "CnN0YXJ0X3RpbWUYBCABKAsyFi5nb29nbGUudHlwZS5UaW1lT2ZEYXlCA+BB",
-            "AxIuCglzdG9wX3RpbWUYBSABKAsyFi5nb29nbGUudHlwZS5UaW1lT2ZEYXlC",
-            "A+BBAypCCgxHZW5lcmF0ZVR5cGUSHQoZR0VORVJBVEVfVFlQRV9VTlNQRUNJ",
-            "RklFRBAAEgcKA0FMTBABEgoKBlNJTkdMRRACKqsDCgVTdGF0ZRIVChFTVEFU",
-            "RV9VTlNQRUNJRklFRBAAEhAKDFBST1ZJU0lPTklORxABEg0KCUFWQUlMQUJM",
-            "RRACEgwKCFNUT1BQSU5HEAMSCwoHU1RPUFBFRBAEEgwKCFNUQVJUSU5HEAUS",
-            "DwoLVEVSTUlOQVRJTkcQBhIOCgpURVJNSU5BVEVEEAcSDwoLVU5BVkFJTEFC",
-            "TEUQCBIXChNSRVNUT1JFX0lOX1BST0dSRVNTEAkSEgoOUkVTVE9SRV9GQUlM",
-            "RUQQChIWChJCQUNLVVBfSU5fUFJPR1JFU1MQCxIVChFTQ0FMRV9JTl9QUk9H",
-            "UkVTUxAMEh0KGUFWQUlMQUJMRV9ORUVEU19BVFRFTlRJT04QDRIMCghVUERB",
-            "VElORxAOEhsKF01BSU5URU5BTkNFX0lOX1BST0dSRVNTEA8SDgoKUkVTVEFS",
-            "VElORxAQEg4KClJFQ1JFQVRJTkcQERIbChdST0xFX0NIQU5HRV9JTl9QUk9H",
-            "UkVTUxASEg0KCVVQR1JBRElORxATEhAKDElOQUNDRVNTSUJMRRAUEgsKB1NU",
-            "QU5EQlkQFSqqAQoXT3BlcmF0aW9uc0luc2lnaHRzU3RhdGUSKQolT1BFUkFU",
-            "SU9OU19JTlNJR0hUU19TVEFURV9VTlNQRUNJRklFRBAAEgwKCEVOQUJMSU5H",
-            "EAESCwoHRU5BQkxFRBACEg0KCURJU0FCTElORxADEg8KC05PVF9FTkFCTEVE",
-            "EAQSEwoPRkFJTEVEX0VOQUJMSU5HEAUSFAoQRkFJTEVEX0RJU0FCTElORxAG",
-            "Kk4KCkRCV29ya2xvYWQSGwoXREJfV09SS0xPQURfVU5TUEVDSUZJRUQQABII",
-            "CgRPTFRQEAESBgoCRFcQAhIHCgNBSkQQAxIICgRBUEVYEARC8QEKImNvbS5n",
-            "b29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjFCF0F1dG9ub21vdXNEYXRh",
-            "YmFzZVByb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20vZ28vb3JhY2xlZGF0YWJh",
-            "c2UvYXBpdjEvb3JhY2xlZGF0YWJhc2VwYjtvcmFjbGVkYXRhYmFzZXBiqgIe",
-            "R29vZ2xlLkNsb3VkLk9yYWNsZURhdGFiYXNlLlYxygIeR29vZ2xlXENsb3Vk",
-            "XE9yYWNsZURhdGFiYXNlXFYx6gIhR29vZ2xlOjpDbG91ZDo6T3JhY2xlRGF0",
-            "YWJhc2U6OlYxYgZwcm90bzM="));
+            "b2ZpbGVCA+BBAyKyCQofRGF0YWJhc2VDb25uZWN0aW9uU3RyaW5nUHJvZmls",
+            "ZRJqCg5jb25zdW1lcl9ncm91cBgBIAEoDjJNLmdvb2dsZS5jbG91ZC5vcmFj",
+            "bGVkYXRhYmFzZS52MS5EYXRhYmFzZUNvbm5lY3Rpb25TdHJpbmdQcm9maWxl",
+            "LkNvbnN1bWVyR3JvdXBCA+BBAxIZCgxkaXNwbGF5X25hbWUYAiABKAlCA+BB",
+            "AxJkCgtob3N0X2Zvcm1hdBgDIAEoDjJKLmdvb2dsZS5jbG91ZC5vcmFjbGVk",
+            "YXRhYmFzZS52MS5EYXRhYmFzZUNvbm5lY3Rpb25TdHJpbmdQcm9maWxlLkhv",
+            "c3RGb3JtYXRCA+BBAxIYCgtpc19yZWdpb25hbBgEIAEoCEID4EEDEl8KCHBy",
+            "b3RvY29sGAUgASgOMkguZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYx",
+            "LkRhdGFiYXNlQ29ubmVjdGlvblN0cmluZ1Byb2ZpbGUuUHJvdG9jb2xCA+BB",
+            "AxJmCgxzZXNzaW9uX21vZGUYBiABKA4ySy5nb29nbGUuY2xvdWQub3JhY2xl",
+            "ZGF0YWJhc2UudjEuRGF0YWJhc2VDb25uZWN0aW9uU3RyaW5nUHJvZmlsZS5T",
+            "ZXNzaW9uTW9kZUID4EEDEmgKDXN5bnRheF9mb3JtYXQYByABKA4yTC5nb29n",
+            "bGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuRGF0YWJhc2VDb25uZWN0aW9u",
+            "U3RyaW5nUHJvZmlsZS5TeW50YXhGb3JtYXRCA+BBAxJyChJ0bHNfYXV0aGVu",
+            "dGljYXRpb24YCCABKA4yUS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2Uu",
+            "djEuRGF0YWJhc2VDb25uZWN0aW9uU3RyaW5nUHJvZmlsZS5UTFNBdXRoZW50",
+            "aWNhdGlvbkID4EEDEhIKBXZhbHVlGAkgASgJQgPgQQMiZAoNQ29uc3VtZXJH",
+            "cm91cBIeChpDT05TVU1FUl9HUk9VUF9VTlNQRUNJRklFRBAAEggKBEhJR0gQ",
+            "ARIKCgZNRURJVU0QAhIHCgNMT1cQAxIGCgJUUBAEEgwKCFRQVVJHRU5UEAUi",
+            "OwoKSG9zdEZvcm1hdBIbChdIT1NUX0ZPUk1BVF9VTlNQRUNJRklFRBAAEggK",
+            "BEZRRE4QARIGCgJJUBACIjcKCFByb3RvY29sEhgKFFBST1RPQ09MX1VOU1BF",
+            "Q0lGSUVEEAASBwoDVENQEAESCAoEVENQUxACIkUKC1Nlc3Npb25Nb2RlEhwK",
+            "GFNFU1NJT05fTU9ERV9VTlNQRUNJRklFRBAAEgoKBkRJUkVDVBABEgwKCElO",
+            "RElSRUNUEAIiWQoMU3ludGF4Rm9ybWF0Eh0KGVNZTlRBWF9GT1JNQVRfVU5T",
+            "UEVDSUZJRUQQABIICgRMT05HEAESDQoJRVpDT05ORUNUEAISEQoNRVpDT05O",
+            "RUNUUExVUxADIk8KEVRMU0F1dGhlbnRpY2F0aW9uEiIKHlRMU19BVVRIRU5U",
+            "SUNBVElPTl9VTlNQRUNJRklFRBAAEgoKBlNFUlZFUhABEgoKBk1VVFVBTBAC",
+            "IlAKFEFsbENvbm5lY3Rpb25TdHJpbmdzEhEKBGhpZ2gYASABKAlCA+BBAxIQ",
+            "CgNsb3cYAiABKAlCA+BBAxITCgZtZWRpdW0YAyABKAlCA+BBAyKtAgogQXV0",
+            "b25vbW91c0RhdGFiYXNlQ29ubmVjdGlvblVybHMSFQoIYXBleF91cmkYASAB",
+            "KAlCA+BBAxIkChdkYXRhYmFzZV90cmFuc2Zvcm1zX3VyaRgCIAEoCUID4EED",
+            "Eh0KEGdyYXBoX3N0dWRpb191cmkYAyABKAlCA+BBAxIqCh1tYWNoaW5lX2xl",
+            "YXJuaW5nX25vdGVib29rX3VyaRgEIAEoCUID4EEDEjEKJG1hY2hpbmVfbGVh",
+            "cm5pbmdfdXNlcl9tYW5hZ2VtZW50X3VyaRgFIAEoCUID4EEDEhkKDG1vbmdv",
+            "X2RiX3VyaRgGIAEoCUID4EEDEhUKCG9yZHNfdXJpGAcgASgJQgPgQQMSHAoP",
+            "c3FsX2Rldl93ZWJfdXJpGAggASgJQgPgQQMizQIKIEF1dG9ub21vdXNEYXRh",
+            "YmFzZVN0YW5kYnlTdW1tYXJ5EjkKEWxhZ190aW1lX2R1cmF0aW9uGAEgASgL",
+            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQMSHgoRbGlmZWN5Y2xl",
+            "X2RldGFpbHMYAiABKAlCA+BBAxI5CgVzdGF0ZRgDIAEoDjIlLmdvb2dsZS5j",
+            "bG91ZC5vcmFjbGVkYXRhYmFzZS52MS5TdGF0ZUID4EEDEkUKHGRhdGFfZ3Vh",
+            "cmRfcm9sZV9jaGFuZ2VkX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgPgQQMSTAojZGlzYXN0ZXJfcmVjb3Zlcnlfcm9sZV9jaGFu",
+            "Z2VkX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMirgEKGVNjaGVkdWxlZE9wZXJhdGlvbkRldGFpbHMSMAoLZGF5X29mX3dl",
+            "ZWsYASABKA4yFi5nb29nbGUudHlwZS5EYXlPZldlZWtCA+BBAxIvCgpzdGFy",
+            "dF90aW1lGAQgASgLMhYuZ29vZ2xlLnR5cGUuVGltZU9mRGF5QgPgQQMSLgoJ",
+            "c3RvcF90aW1lGAUgASgLMhYuZ29vZ2xlLnR5cGUuVGltZU9mRGF5QgPgQQMq",
+            "QgoMR2VuZXJhdGVUeXBlEh0KGUdFTkVSQVRFX1RZUEVfVU5TUEVDSUZJRUQQ",
+            "ABIHCgNBTEwQARIKCgZTSU5HTEUQAiqrAwoFU3RhdGUSFQoRU1RBVEVfVU5T",
+            "UEVDSUZJRUQQABIQCgxQUk9WSVNJT05JTkcQARINCglBVkFJTEFCTEUQAhIM",
+            "CghTVE9QUElORxADEgsKB1NUT1BQRUQQBBIMCghTVEFSVElORxAFEg8KC1RF",
+            "Uk1JTkFUSU5HEAYSDgoKVEVSTUlOQVRFRBAHEg8KC1VOQVZBSUxBQkxFEAgS",
+            "FwoTUkVTVE9SRV9JTl9QUk9HUkVTUxAJEhIKDlJFU1RPUkVfRkFJTEVEEAoS",
+            "FgoSQkFDS1VQX0lOX1BST0dSRVNTEAsSFQoRU0NBTEVfSU5fUFJPR1JFU1MQ",
+            "DBIdChlBVkFJTEFCTEVfTkVFRFNfQVRURU5USU9OEA0SDAoIVVBEQVRJTkcQ",
+            "DhIbChdNQUlOVEVOQU5DRV9JTl9QUk9HUkVTUxAPEg4KClJFU1RBUlRJTkcQ",
+            "EBIOCgpSRUNSRUFUSU5HEBESGwoXUk9MRV9DSEFOR0VfSU5fUFJPR1JFU1MQ",
+            "EhINCglVUEdSQURJTkcQExIQCgxJTkFDQ0VTU0lCTEUQFBILCgdTVEFOREJZ",
+            "EBUqqgEKF09wZXJhdGlvbnNJbnNpZ2h0c1N0YXRlEikKJU9QRVJBVElPTlNf",
+            "SU5TSUdIVFNfU1RBVEVfVU5TUEVDSUZJRUQQABIMCghFTkFCTElORxABEgsK",
+            "B0VOQUJMRUQQAhINCglESVNBQkxJTkcQAxIPCgtOT1RfRU5BQkxFRBAEEhMK",
+            "D0ZBSUxFRF9FTkFCTElORxAFEhQKEEZBSUxFRF9ESVNBQkxJTkcQBipOCgpE",
+            "Qldvcmtsb2FkEhsKF0RCX1dPUktMT0FEX1VOU1BFQ0lGSUVEEAASCAoET0xU",
+            "UBABEgYKAkRXEAISBwoDQUpEEAMSCAoEQVBFWBAEQvEBCiJjb20uZ29vZ2xl",
+            "LmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxQhdBdXRvbm9tb3VzRGF0YWJhc2VQ",
+            "cm90b1ABWkpjbG91ZC5nb29nbGUuY29tL2dvL29yYWNsZWRhdGFiYXNlL2Fw",
+            "aXYxL29yYWNsZWRhdGFiYXNlcGI7b3JhY2xlZGF0YWJhc2VwYqoCHkdvb2ds",
+            "ZS5DbG91ZC5PcmFjbGVEYXRhYmFzZS5WMcoCHkdvb2dsZVxDbG91ZFxPcmFj",
+            "bGVEYXRhYmFzZVxWMeoCIUdvb2dsZTo6Q2xvdWQ6Ok9yYWNsZURhdGFiYXNl",
+            "OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OracleDatabase.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.OracleDatabase.V1.GenerateType), typeof(global::Google.Cloud.OracleDatabase.V1.State), typeof(global::Google.Cloud.OracleDatabase.V1.OperationsInsightsState), typeof(global::Google.Cloud.OracleDatabase.V1.DBWorkload), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabase), global::Google.Cloud.OracleDatabase.V1.AutonomousDatabase.Parser, new[]{ "Name", "Database", "DisplayName", "EntitlementId", "AdminPassword", "Properties", "Labels", "Network", "Cidr", "CreateTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties), global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Parser, new[]{ "Ocid", "ComputeCount", "CpuCoreCount", "DataStorageSizeTb", "DataStorageSizeGb", "DbWorkload", "DbEdition", "CharacterSet", "NCharacterSet", "PrivateEndpointIp", "PrivateEndpointLabel", "DbVersion", "IsAutoScalingEnabled", "IsStorageAutoScalingEnabled", "LicenseType", "CustomerContacts", "SecretId", "VaultId", "MaintenanceScheduleType", "MtlsConnectionRequired", "BackupRetentionPeriodDays", "ActualUsedDataStorageSizeTb", "AllocatedStorageSizeTb", "ApexDetails", "ArePrimaryAllowlistedIpsUsed", "LifecycleDetails", "State", "AutonomousContainerDatabaseId", "AvailableUpgradeVersions", "ConnectionStrings", "ConnectionUrls", "FailedDataRecoveryDuration", "MemoryTableGbs", "IsLocalDataGuardEnabled", "LocalAdgAutoFailoverMaxDataLossLimit", "LocalStandbyDb", "MemoryPerOracleComputeUnitGbs", "LocalDisasterRecoveryType", "DataSafeState", "DatabaseManagementState", "OpenMode", "OperationsInsightsState", "PeerDbIds", "PermissionLevel", "PrivateEndpoint", "RefreshableMode", "RefreshableState", "Role", "ScheduledOperationDetails", "SqlWebDeveloperUrl", "SupportedCloneRegions", "UsedDataStorageSizeTbs", "OciUrl", "TotalAutoBackupStorageSizeGbs", "NextLongTermBackupTime", "MaintenanceBeginTime", "MaintenanceEndTime" }, new[]{ "ArePrimaryAllowlistedIpsUsed" }, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.DatabaseEdition), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.LicenseType), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.MaintenanceScheduleType), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.LocalDisasterRecoveryType), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.DataSafeState), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.DatabaseManagementState), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.OpenMode), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.PermissionLevel), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.RefreshableMode), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.RefreshableState), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.Role) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabase), global::Google.Cloud.OracleDatabase.V1.AutonomousDatabase.Parser, new[]{ "Name", "Database", "DisplayName", "EntitlementId", "AdminPassword", "Properties", "Labels", "Network", "Cidr", "OdbNetwork", "OdbSubnet", "SourceConfig", "PeerAutonomousDatabases", "CreateTime", "DisasterRecoverySupportedLocations" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.SourceConfig), global::Google.Cloud.OracleDatabase.V1.SourceConfig.Parser, new[]{ "AutonomousDatabase", "AutomaticBackupsReplicationEnabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties), global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Parser, new[]{ "Ocid", "ComputeCount", "CpuCoreCount", "DataStorageSizeTb", "DataStorageSizeGb", "DbWorkload", "DbEdition", "CharacterSet", "NCharacterSet", "PrivateEndpointIp", "PrivateEndpointLabel", "DbVersion", "IsAutoScalingEnabled", "IsStorageAutoScalingEnabled", "LicenseType", "CustomerContacts", "SecretId", "VaultId", "MaintenanceScheduleType", "MtlsConnectionRequired", "BackupRetentionPeriodDays", "ActualUsedDataStorageSizeTb", "AllocatedStorageSizeTb", "ApexDetails", "ArePrimaryAllowlistedIpsUsed", "LifecycleDetails", "State", "AutonomousContainerDatabaseId", "AvailableUpgradeVersions", "ConnectionStrings", "ConnectionUrls", "FailedDataRecoveryDuration", "MemoryTableGbs", "IsLocalDataGuardEnabled", "LocalAdgAutoFailoverMaxDataLossLimit", "LocalStandbyDb", "MemoryPerOracleComputeUnitGbs", "LocalDisasterRecoveryType", "DataSafeState", "DatabaseManagementState", "OpenMode", "OperationsInsightsState", "PeerDbIds", "PermissionLevel", "PrivateEndpoint", "RefreshableMode", "RefreshableState", "Role", "ScheduledOperationDetails", "SqlWebDeveloperUrl", "SupportedCloneRegions", "UsedDataStorageSizeTbs", "OciUrl", "TotalAutoBackupStorageSizeGbs", "NextLongTermBackupTime", "DataGuardRoleChangedTime", "DisasterRecoveryRoleChangedTime", "MaintenanceBeginTime", "MaintenanceEndTime", "AllowlistedIps", "EncryptionKey", "EncryptionKeyHistoryEntries", "ServiceAgentEmail" }, new[]{ "ArePrimaryAllowlistedIpsUsed" }, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.DatabaseEdition), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.LicenseType), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.MaintenanceScheduleType), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.LocalDisasterRecoveryType), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.DataSafeState), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.DatabaseManagementState), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.OpenMode), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.PermissionLevel), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.RefreshableMode), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.RefreshableState), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.Role) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.EncryptionKeyHistoryEntry), global::Google.Cloud.OracleDatabase.V1.EncryptionKeyHistoryEntry.Parser, new[]{ "EncryptionKey", "ActivationTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.EncryptionKey), global::Google.Cloud.OracleDatabase.V1.EncryptionKey.Parser, new[]{ "Provider", "KmsKey" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.EncryptionKey.Types.Provider) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseApex), global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseApex.Parser, new[]{ "ApexVersion", "OrdsVersion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseConnectionStrings), global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseConnectionStrings.Parser, new[]{ "AllConnectionStrings", "Dedicated", "High", "Low", "Medium", "Profiles" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.DatabaseConnectionStringProfile), global::Google.Cloud.OracleDatabase.V1.DatabaseConnectionStringProfile.Parser, new[]{ "ConsumerGroup", "DisplayName", "HostFormat", "IsRegional", "Protocol", "SessionMode", "SyntaxFormat", "TlsAuthentication", "Value" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.DatabaseConnectionStringProfile.Types.ConsumerGroup), typeof(global::Google.Cloud.OracleDatabase.V1.DatabaseConnectionStringProfile.Types.HostFormat), typeof(global::Google.Cloud.OracleDatabase.V1.DatabaseConnectionStringProfile.Types.Protocol), typeof(global::Google.Cloud.OracleDatabase.V1.DatabaseConnectionStringProfile.Types.SessionMode), typeof(global::Google.Cloud.OracleDatabase.V1.DatabaseConnectionStringProfile.Types.SyntaxFormat), typeof(global::Google.Cloud.OracleDatabase.V1.DatabaseConnectionStringProfile.Types.TLSAuthentication) }, null, null),
@@ -471,7 +504,12 @@ namespace Google.Cloud.OracleDatabase.V1 {
       labels_ = other.labels_.Clone();
       network_ = other.network_;
       cidr_ = other.cidr_;
+      odbNetwork_ = other.odbNetwork_;
+      odbSubnet_ = other.odbSubnet_;
+      sourceConfig_ = other.sourceConfig_ != null ? other.sourceConfig_.Clone() : null;
+      peerAutonomousDatabases_ = other.peerAutonomousDatabases_.Clone();
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      disasterRecoverySupportedLocations_ = other.disasterRecoverySupportedLocations_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -611,7 +649,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int CidrFieldNumber = 10;
     private string cidr_ = "";
     /// <summary>
-    /// Optional. The subnet CIDR range for the Autonmous Database.
+    /// Optional. The subnet CIDR range for the Autonomous Database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -620,6 +658,74 @@ namespace Google.Cloud.OracleDatabase.V1 {
       set {
         cidr_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "odb_network" field.</summary>
+    public const int OdbNetworkFieldNumber = 16;
+    private string odbNetwork_ = "";
+    /// <summary>
+    /// Optional. The name of the OdbNetwork associated with the Autonomous
+    /// Database. Format:
+    /// projects/{project}/locations/{location}/odbNetworks/{odb_network} It is
+    /// optional but if specified, this should match the parent ODBNetwork of the
+    /// OdbSubnet.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OdbNetwork {
+      get { return odbNetwork_; }
+      set {
+        odbNetwork_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "odb_subnet" field.</summary>
+    public const int OdbSubnetFieldNumber = 17;
+    private string odbSubnet_ = "";
+    /// <summary>
+    /// Optional. The name of the OdbSubnet associated with the Autonomous
+    /// Database. Format:
+    /// projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OdbSubnet {
+      get { return odbSubnet_; }
+      set {
+        odbSubnet_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "source_config" field.</summary>
+    public const int SourceConfigFieldNumber = 11;
+    private global::Google.Cloud.OracleDatabase.V1.SourceConfig sourceConfig_;
+    /// <summary>
+    /// Optional. The source Autonomous Database configuration for the standby
+    /// Autonomous Database. The source Autonomous Database is configured while
+    /// creating the Peer Autonomous Database and can't be updated after creation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.OracleDatabase.V1.SourceConfig SourceConfig {
+      get { return sourceConfig_; }
+      set {
+        sourceConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "peer_autonomous_databases" field.</summary>
+    public const int PeerAutonomousDatabasesFieldNumber = 12;
+    private static readonly pb::FieldCodec<string> _repeated_peerAutonomousDatabases_codec
+        = pb::FieldCodec.ForString(98);
+    private readonly pbc::RepeatedField<string> peerAutonomousDatabases_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. The peer Autonomous Database names of the given Autonomous
+    /// Database.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> PeerAutonomousDatabases {
+      get { return peerAutonomousDatabases_; }
     }
 
     /// <summary>Field number for the "create_time" field.</summary>
@@ -635,6 +741,21 @@ namespace Google.Cloud.OracleDatabase.V1 {
       set {
         createTime_ = value;
       }
+    }
+
+    /// <summary>Field number for the "disaster_recovery_supported_locations" field.</summary>
+    public const int DisasterRecoverySupportedLocationsFieldNumber = 15;
+    private static readonly pb::FieldCodec<string> _repeated_disasterRecoverySupportedLocations_codec
+        = pb::FieldCodec.ForString(122);
+    private readonly pbc::RepeatedField<string> disasterRecoverySupportedLocations_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. List of supported GCP region to clone the Autonomous Database
+    /// for disaster recovery. Format: `project/{project}/locations/{location}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> DisasterRecoverySupportedLocations {
+      get { return disasterRecoverySupportedLocations_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -661,7 +782,12 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (!Labels.Equals(other.Labels)) return false;
       if (Network != other.Network) return false;
       if (Cidr != other.Cidr) return false;
+      if (OdbNetwork != other.OdbNetwork) return false;
+      if (OdbSubnet != other.OdbSubnet) return false;
+      if (!object.Equals(SourceConfig, other.SourceConfig)) return false;
+      if(!peerAutonomousDatabases_.Equals(other.peerAutonomousDatabases_)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if(!disasterRecoverySupportedLocations_.Equals(other.disasterRecoverySupportedLocations_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -678,7 +804,12 @@ namespace Google.Cloud.OracleDatabase.V1 {
       hash ^= Labels.GetHashCode();
       if (Network.Length != 0) hash ^= Network.GetHashCode();
       if (Cidr.Length != 0) hash ^= Cidr.GetHashCode();
+      if (OdbNetwork.Length != 0) hash ^= OdbNetwork.GetHashCode();
+      if (OdbSubnet.Length != 0) hash ^= OdbSubnet.GetHashCode();
+      if (sourceConfig_ != null) hash ^= SourceConfig.GetHashCode();
+      hash ^= peerAutonomousDatabases_.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      hash ^= disasterRecoverySupportedLocations_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -730,9 +861,23 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(82);
         output.WriteString(Cidr);
       }
+      if (sourceConfig_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(SourceConfig);
+      }
+      peerAutonomousDatabases_.WriteTo(output, _repeated_peerAutonomousDatabases_codec);
       if (createTime_ != null) {
         output.WriteRawTag(106);
         output.WriteMessage(CreateTime);
+      }
+      disasterRecoverySupportedLocations_.WriteTo(output, _repeated_disasterRecoverySupportedLocations_codec);
+      if (OdbNetwork.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(OdbNetwork);
+      }
+      if (OdbSubnet.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(OdbSubnet);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -777,9 +922,23 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(82);
         output.WriteString(Cidr);
       }
+      if (sourceConfig_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(SourceConfig);
+      }
+      peerAutonomousDatabases_.WriteTo(ref output, _repeated_peerAutonomousDatabases_codec);
       if (createTime_ != null) {
         output.WriteRawTag(106);
         output.WriteMessage(CreateTime);
+      }
+      disasterRecoverySupportedLocations_.WriteTo(ref output, _repeated_disasterRecoverySupportedLocations_codec);
+      if (OdbNetwork.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(OdbNetwork);
+      }
+      if (OdbSubnet.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(OdbSubnet);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -816,9 +975,20 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (Cidr.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Cidr);
       }
+      if (OdbNetwork.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(OdbNetwork);
+      }
+      if (OdbSubnet.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(OdbSubnet);
+      }
+      if (sourceConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SourceConfig);
+      }
+      size += peerAutonomousDatabases_.CalculateSize(_repeated_peerAutonomousDatabases_codec);
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
       }
+      size += disasterRecoverySupportedLocations_.CalculateSize(_repeated_disasterRecoverySupportedLocations_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -859,12 +1029,26 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (other.Cidr.Length != 0) {
         Cidr = other.Cidr;
       }
+      if (other.OdbNetwork.Length != 0) {
+        OdbNetwork = other.OdbNetwork;
+      }
+      if (other.OdbSubnet.Length != 0) {
+        OdbSubnet = other.OdbSubnet;
+      }
+      if (other.sourceConfig_ != null) {
+        if (sourceConfig_ == null) {
+          SourceConfig = new global::Google.Cloud.OracleDatabase.V1.SourceConfig();
+        }
+        SourceConfig.MergeFrom(other.SourceConfig);
+      }
+      peerAutonomousDatabases_.Add(other.peerAutonomousDatabases_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
+      disasterRecoverySupportedLocations_.Add(other.disasterRecoverySupportedLocations_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -919,11 +1103,34 @@ namespace Google.Cloud.OracleDatabase.V1 {
             Cidr = input.ReadString();
             break;
           }
+          case 90: {
+            if (sourceConfig_ == null) {
+              SourceConfig = new global::Google.Cloud.OracleDatabase.V1.SourceConfig();
+            }
+            input.ReadMessage(SourceConfig);
+            break;
+          }
+          case 98: {
+            peerAutonomousDatabases_.AddEntriesFrom(input, _repeated_peerAutonomousDatabases_codec);
+            break;
+          }
           case 106: {
             if (createTime_ == null) {
               CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(CreateTime);
+            break;
+          }
+          case 122: {
+            disasterRecoverySupportedLocations_.AddEntriesFrom(input, _repeated_disasterRecoverySupportedLocations_codec);
+            break;
+          }
+          case 130: {
+            OdbNetwork = input.ReadString();
+            break;
+          }
+          case 138: {
+            OdbSubnet = input.ReadString();
             break;
           }
         }
@@ -980,11 +1187,272 @@ namespace Google.Cloud.OracleDatabase.V1 {
             Cidr = input.ReadString();
             break;
           }
+          case 90: {
+            if (sourceConfig_ == null) {
+              SourceConfig = new global::Google.Cloud.OracleDatabase.V1.SourceConfig();
+            }
+            input.ReadMessage(SourceConfig);
+            break;
+          }
+          case 98: {
+            peerAutonomousDatabases_.AddEntriesFrom(ref input, _repeated_peerAutonomousDatabases_codec);
+            break;
+          }
           case 106: {
             if (createTime_ == null) {
               CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(CreateTime);
+            break;
+          }
+          case 122: {
+            disasterRecoverySupportedLocations_.AddEntriesFrom(ref input, _repeated_disasterRecoverySupportedLocations_codec);
+            break;
+          }
+          case 130: {
+            OdbNetwork = input.ReadString();
+            break;
+          }
+          case 138: {
+            OdbSubnet = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The source configuration for the standby Autonomous Database.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SourceConfig : pb::IMessage<SourceConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SourceConfig> _parser = new pb::MessageParser<SourceConfig>(() => new SourceConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SourceConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SourceConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SourceConfig(SourceConfig other) : this() {
+      autonomousDatabase_ = other.autonomousDatabase_;
+      automaticBackupsReplicationEnabled_ = other.automaticBackupsReplicationEnabled_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SourceConfig Clone() {
+      return new SourceConfig(this);
+    }
+
+    /// <summary>Field number for the "autonomous_database" field.</summary>
+    public const int AutonomousDatabaseFieldNumber = 1;
+    private string autonomousDatabase_ = "";
+    /// <summary>
+    /// Optional. The name of the primary Autonomous Database that is used to
+    /// create a Peer Autonomous Database from a source.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AutonomousDatabase {
+      get { return autonomousDatabase_; }
+      set {
+        autonomousDatabase_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "automatic_backups_replication_enabled" field.</summary>
+    public const int AutomaticBackupsReplicationEnabledFieldNumber = 2;
+    private bool automaticBackupsReplicationEnabled_;
+    /// <summary>
+    /// Optional. This field specifies if the replication of automatic backups is
+    /// enabled when creating a Data Guard.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AutomaticBackupsReplicationEnabled {
+      get { return automaticBackupsReplicationEnabled_; }
+      set {
+        automaticBackupsReplicationEnabled_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SourceConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SourceConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AutonomousDatabase != other.AutonomousDatabase) return false;
+      if (AutomaticBackupsReplicationEnabled != other.AutomaticBackupsReplicationEnabled) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (AutonomousDatabase.Length != 0) hash ^= AutonomousDatabase.GetHashCode();
+      if (AutomaticBackupsReplicationEnabled != false) hash ^= AutomaticBackupsReplicationEnabled.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (AutonomousDatabase.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AutonomousDatabase);
+      }
+      if (AutomaticBackupsReplicationEnabled != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(AutomaticBackupsReplicationEnabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AutonomousDatabase.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AutonomousDatabase);
+      }
+      if (AutomaticBackupsReplicationEnabled != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(AutomaticBackupsReplicationEnabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (AutonomousDatabase.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AutonomousDatabase);
+      }
+      if (AutomaticBackupsReplicationEnabled != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SourceConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.AutonomousDatabase.Length != 0) {
+        AutonomousDatabase = other.AutonomousDatabase;
+      }
+      if (other.AutomaticBackupsReplicationEnabled != false) {
+        AutomaticBackupsReplicationEnabled = other.AutomaticBackupsReplicationEnabled;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            AutonomousDatabase = input.ReadString();
+            break;
+          }
+          case 16: {
+            AutomaticBackupsReplicationEnabled = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            AutonomousDatabase = input.ReadString();
+            break;
+          }
+          case 16: {
+            AutomaticBackupsReplicationEnabled = input.ReadBool();
             break;
           }
         }
@@ -1013,7 +1481,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1089,8 +1557,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
       ociUrl_ = other.ociUrl_;
       totalAutoBackupStorageSizeGbs_ = other.totalAutoBackupStorageSizeGbs_;
       nextLongTermBackupTime_ = other.nextLongTermBackupTime_ != null ? other.nextLongTermBackupTime_.Clone() : null;
+      dataGuardRoleChangedTime_ = other.dataGuardRoleChangedTime_ != null ? other.dataGuardRoleChangedTime_.Clone() : null;
+      disasterRecoveryRoleChangedTime_ = other.disasterRecoveryRoleChangedTime_ != null ? other.disasterRecoveryRoleChangedTime_.Clone() : null;
       maintenanceBeginTime_ = other.maintenanceBeginTime_ != null ? other.maintenanceBeginTime_.Clone() : null;
       maintenanceEndTime_ = other.maintenanceEndTime_ != null ? other.maintenanceEndTime_.Clone() : null;
+      allowlistedIps_ = other.allowlistedIps_.Clone();
+      encryptionKey_ = other.encryptionKey_ != null ? other.encryptionKey_.Clone() : null;
+      encryptionKeyHistoryEntries_ = other.encryptionKeyHistoryEntries_.Clone();
+      serviceAgentEmail_ = other.serviceAgentEmail_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1969,6 +2443,38 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
     }
 
+    /// <summary>Field number for the "data_guard_role_changed_time" field.</summary>
+    public const int DataGuardRoleChangedTimeFieldNumber = 61;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp dataGuardRoleChangedTime_;
+    /// <summary>
+    /// Output only. The date and time the Autonomous Data Guard role was changed
+    /// for the standby Autonomous Database.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp DataGuardRoleChangedTime {
+      get { return dataGuardRoleChangedTime_; }
+      set {
+        dataGuardRoleChangedTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "disaster_recovery_role_changed_time" field.</summary>
+    public const int DisasterRecoveryRoleChangedTimeFieldNumber = 62;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp disasterRecoveryRoleChangedTime_;
+    /// <summary>
+    /// Output only. The date and time the Disaster Recovery role was changed for
+    /// the standby Autonomous Database.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp DisasterRecoveryRoleChangedTime {
+      get { return disasterRecoveryRoleChangedTime_; }
+      set {
+        disasterRecoveryRoleChangedTime_ = value;
+      }
+    }
+
     /// <summary>Field number for the "maintenance_begin_time" field.</summary>
     public const int MaintenanceBeginTimeFieldNumber = 65;
     private global::Google.Protobuf.WellKnownTypes.Timestamp maintenanceBeginTime_;
@@ -1996,6 +2502,68 @@ namespace Google.Cloud.OracleDatabase.V1 {
       get { return maintenanceEndTime_; }
       set {
         maintenanceEndTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "allowlisted_ips" field.</summary>
+    public const int AllowlistedIpsFieldNumber = 67;
+    private static readonly pb::FieldCodec<string> _repeated_allowlistedIps_codec
+        = pb::FieldCodec.ForString(538);
+    private readonly pbc::RepeatedField<string> allowlistedIps_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The list of allowlisted IP addresses for the Autonomous Database.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> AllowlistedIps {
+      get { return allowlistedIps_; }
+    }
+
+    /// <summary>Field number for the "encryption_key" field.</summary>
+    public const int EncryptionKeyFieldNumber = 68;
+    private global::Google.Cloud.OracleDatabase.V1.EncryptionKey encryptionKey_;
+    /// <summary>
+    /// Optional. The encryption key used to encrypt the Autonomous Database.
+    /// Updating this field will add a new entry in the
+    /// `encryption_key_history_entries` field with the former version.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.OracleDatabase.V1.EncryptionKey EncryptionKey {
+      get { return encryptionKey_; }
+      set {
+        encryptionKey_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "encryption_key_history_entries" field.</summary>
+    public const int EncryptionKeyHistoryEntriesFieldNumber = 69;
+    private static readonly pb::FieldCodec<global::Google.Cloud.OracleDatabase.V1.EncryptionKeyHistoryEntry> _repeated_encryptionKeyHistoryEntries_codec
+        = pb::FieldCodec.ForMessage(554, global::Google.Cloud.OracleDatabase.V1.EncryptionKeyHistoryEntry.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.OracleDatabase.V1.EncryptionKeyHistoryEntry> encryptionKeyHistoryEntries_ = new pbc::RepeatedField<global::Google.Cloud.OracleDatabase.V1.EncryptionKeyHistoryEntry>();
+    /// <summary>
+    /// Output only. The history of the encryption keys used to encrypt the
+    /// Autonomous Database.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.OracleDatabase.V1.EncryptionKeyHistoryEntry> EncryptionKeyHistoryEntries {
+      get { return encryptionKeyHistoryEntries_; }
+    }
+
+    /// <summary>Field number for the "service_agent_email" field.</summary>
+    public const int ServiceAgentEmailFieldNumber = 70;
+    private string serviceAgentEmail_ = "";
+    /// <summary>
+    /// Output only. An Oracle-managed Google Cloud service account on which
+    /// customers can grant roles to access resources in the customer project.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ServiceAgentEmail {
+      get { return serviceAgentEmail_; }
+      set {
+        serviceAgentEmail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2069,8 +2637,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (OciUrl != other.OciUrl) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(TotalAutoBackupStorageSizeGbs, other.TotalAutoBackupStorageSizeGbs)) return false;
       if (!object.Equals(NextLongTermBackupTime, other.NextLongTermBackupTime)) return false;
+      if (!object.Equals(DataGuardRoleChangedTime, other.DataGuardRoleChangedTime)) return false;
+      if (!object.Equals(DisasterRecoveryRoleChangedTime, other.DisasterRecoveryRoleChangedTime)) return false;
       if (!object.Equals(MaintenanceBeginTime, other.MaintenanceBeginTime)) return false;
       if (!object.Equals(MaintenanceEndTime, other.MaintenanceEndTime)) return false;
+      if(!allowlistedIps_.Equals(other.allowlistedIps_)) return false;
+      if (!object.Equals(EncryptionKey, other.EncryptionKey)) return false;
+      if(!encryptionKeyHistoryEntries_.Equals(other.encryptionKeyHistoryEntries_)) return false;
+      if (ServiceAgentEmail != other.ServiceAgentEmail) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2133,8 +2707,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (OciUrl.Length != 0) hash ^= OciUrl.GetHashCode();
       if (TotalAutoBackupStorageSizeGbs != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(TotalAutoBackupStorageSizeGbs);
       if (nextLongTermBackupTime_ != null) hash ^= NextLongTermBackupTime.GetHashCode();
+      if (dataGuardRoleChangedTime_ != null) hash ^= DataGuardRoleChangedTime.GetHashCode();
+      if (disasterRecoveryRoleChangedTime_ != null) hash ^= DisasterRecoveryRoleChangedTime.GetHashCode();
       if (maintenanceBeginTime_ != null) hash ^= MaintenanceBeginTime.GetHashCode();
       if (maintenanceEndTime_ != null) hash ^= MaintenanceEndTime.GetHashCode();
+      hash ^= allowlistedIps_.GetHashCode();
+      if (encryptionKey_ != null) hash ^= EncryptionKey.GetHashCode();
+      hash ^= encryptionKeyHistoryEntries_.GetHashCode();
+      if (ServiceAgentEmail.Length != 0) hash ^= ServiceAgentEmail.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2353,6 +2933,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(226, 3);
         output.WriteMessage(NextLongTermBackupTime);
       }
+      if (dataGuardRoleChangedTime_ != null) {
+        output.WriteRawTag(234, 3);
+        output.WriteMessage(DataGuardRoleChangedTime);
+      }
+      if (disasterRecoveryRoleChangedTime_ != null) {
+        output.WriteRawTag(242, 3);
+        output.WriteMessage(DisasterRecoveryRoleChangedTime);
+      }
       if (DataStorageSizeGb != 0) {
         output.WriteRawTag(248, 3);
         output.WriteInt32(DataStorageSizeGb);
@@ -2365,6 +2953,16 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (maintenanceEndTime_ != null) {
         output.WriteRawTag(146, 4);
         output.WriteMessage(MaintenanceEndTime);
+      }
+      allowlistedIps_.WriteTo(output, _repeated_allowlistedIps_codec);
+      if (encryptionKey_ != null) {
+        output.WriteRawTag(162, 4);
+        output.WriteMessage(EncryptionKey);
+      }
+      encryptionKeyHistoryEntries_.WriteTo(output, _repeated_encryptionKeyHistoryEntries_codec);
+      if (ServiceAgentEmail.Length != 0) {
+        output.WriteRawTag(178, 4);
+        output.WriteString(ServiceAgentEmail);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2576,6 +3174,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(226, 3);
         output.WriteMessage(NextLongTermBackupTime);
       }
+      if (dataGuardRoleChangedTime_ != null) {
+        output.WriteRawTag(234, 3);
+        output.WriteMessage(DataGuardRoleChangedTime);
+      }
+      if (disasterRecoveryRoleChangedTime_ != null) {
+        output.WriteRawTag(242, 3);
+        output.WriteMessage(DisasterRecoveryRoleChangedTime);
+      }
       if (DataStorageSizeGb != 0) {
         output.WriteRawTag(248, 3);
         output.WriteInt32(DataStorageSizeGb);
@@ -2588,6 +3194,16 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (maintenanceEndTime_ != null) {
         output.WriteRawTag(146, 4);
         output.WriteMessage(MaintenanceEndTime);
+      }
+      allowlistedIps_.WriteTo(ref output, _repeated_allowlistedIps_codec);
+      if (encryptionKey_ != null) {
+        output.WriteRawTag(162, 4);
+        output.WriteMessage(EncryptionKey);
+      }
+      encryptionKeyHistoryEntries_.WriteTo(ref output, _repeated_encryptionKeyHistoryEntries_codec);
+      if (ServiceAgentEmail.Length != 0) {
+        output.WriteRawTag(178, 4);
+        output.WriteString(ServiceAgentEmail);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -2754,11 +3370,25 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (nextLongTermBackupTime_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(NextLongTermBackupTime);
       }
+      if (dataGuardRoleChangedTime_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DataGuardRoleChangedTime);
+      }
+      if (disasterRecoveryRoleChangedTime_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DisasterRecoveryRoleChangedTime);
+      }
       if (maintenanceBeginTime_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(MaintenanceBeginTime);
       }
       if (maintenanceEndTime_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(MaintenanceEndTime);
+      }
+      size += allowlistedIps_.CalculateSize(_repeated_allowlistedIps_codec);
+      if (encryptionKey_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(EncryptionKey);
+      }
+      size += encryptionKeyHistoryEntries_.CalculateSize(_repeated_encryptionKeyHistoryEntries_codec);
+      if (ServiceAgentEmail.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ServiceAgentEmail);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2945,6 +3575,18 @@ namespace Google.Cloud.OracleDatabase.V1 {
         }
         NextLongTermBackupTime.MergeFrom(other.NextLongTermBackupTime);
       }
+      if (other.dataGuardRoleChangedTime_ != null) {
+        if (dataGuardRoleChangedTime_ == null) {
+          DataGuardRoleChangedTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        DataGuardRoleChangedTime.MergeFrom(other.DataGuardRoleChangedTime);
+      }
+      if (other.disasterRecoveryRoleChangedTime_ != null) {
+        if (disasterRecoveryRoleChangedTime_ == null) {
+          DisasterRecoveryRoleChangedTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        DisasterRecoveryRoleChangedTime.MergeFrom(other.DisasterRecoveryRoleChangedTime);
+      }
       if (other.maintenanceBeginTime_ != null) {
         if (maintenanceBeginTime_ == null) {
           MaintenanceBeginTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -2956,6 +3598,17 @@ namespace Google.Cloud.OracleDatabase.V1 {
           MaintenanceEndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         MaintenanceEndTime.MergeFrom(other.MaintenanceEndTime);
+      }
+      allowlistedIps_.Add(other.allowlistedIps_);
+      if (other.encryptionKey_ != null) {
+        if (encryptionKey_ == null) {
+          EncryptionKey = new global::Google.Cloud.OracleDatabase.V1.EncryptionKey();
+        }
+        EncryptionKey.MergeFrom(other.EncryptionKey);
+      }
+      encryptionKeyHistoryEntries_.Add(other.encryptionKeyHistoryEntries_);
+      if (other.ServiceAgentEmail.Length != 0) {
+        ServiceAgentEmail = other.ServiceAgentEmail;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3202,6 +3855,20 @@ namespace Google.Cloud.OracleDatabase.V1 {
             input.ReadMessage(NextLongTermBackupTime);
             break;
           }
+          case 490: {
+            if (dataGuardRoleChangedTime_ == null) {
+              DataGuardRoleChangedTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DataGuardRoleChangedTime);
+            break;
+          }
+          case 498: {
+            if (disasterRecoveryRoleChangedTime_ == null) {
+              DisasterRecoveryRoleChangedTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DisasterRecoveryRoleChangedTime);
+            break;
+          }
           case 504: {
             DataStorageSizeGb = input.ReadInt32();
             break;
@@ -3222,6 +3889,25 @@ namespace Google.Cloud.OracleDatabase.V1 {
               MaintenanceEndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(MaintenanceEndTime);
+            break;
+          }
+          case 538: {
+            allowlistedIps_.AddEntriesFrom(input, _repeated_allowlistedIps_codec);
+            break;
+          }
+          case 546: {
+            if (encryptionKey_ == null) {
+              EncryptionKey = new global::Google.Cloud.OracleDatabase.V1.EncryptionKey();
+            }
+            input.ReadMessage(EncryptionKey);
+            break;
+          }
+          case 554: {
+            encryptionKeyHistoryEntries_.AddEntriesFrom(input, _repeated_encryptionKeyHistoryEntries_codec);
+            break;
+          }
+          case 562: {
+            ServiceAgentEmail = input.ReadString();
             break;
           }
         }
@@ -3469,6 +4155,20 @@ namespace Google.Cloud.OracleDatabase.V1 {
             input.ReadMessage(NextLongTermBackupTime);
             break;
           }
+          case 490: {
+            if (dataGuardRoleChangedTime_ == null) {
+              DataGuardRoleChangedTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DataGuardRoleChangedTime);
+            break;
+          }
+          case 498: {
+            if (disasterRecoveryRoleChangedTime_ == null) {
+              DisasterRecoveryRoleChangedTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DisasterRecoveryRoleChangedTime);
+            break;
+          }
           case 504: {
             DataStorageSizeGb = input.ReadInt32();
             break;
@@ -3489,6 +4189,25 @@ namespace Google.Cloud.OracleDatabase.V1 {
               MaintenanceEndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(MaintenanceEndTime);
+            break;
+          }
+          case 538: {
+            allowlistedIps_.AddEntriesFrom(ref input, _repeated_allowlistedIps_codec);
+            break;
+          }
+          case 546: {
+            if (encryptionKey_ == null) {
+              EncryptionKey = new global::Google.Cloud.OracleDatabase.V1.EncryptionKey();
+            }
+            input.ReadMessage(EncryptionKey);
+            break;
+          }
+          case 554: {
+            encryptionKeyHistoryEntries_.AddEntriesFrom(ref input, _repeated_encryptionKeyHistoryEntries_codec);
+            break;
+          }
+          case 562: {
+            ServiceAgentEmail = input.ReadString();
             break;
           }
         }
@@ -3748,6 +4467,526 @@ namespace Google.Cloud.OracleDatabase.V1 {
   }
 
   /// <summary>
+  /// The history of the encryption keys used to encrypt the Autonomous Database.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class EncryptionKeyHistoryEntry : pb::IMessage<EncryptionKeyHistoryEntry>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EncryptionKeyHistoryEntry> _parser = new pb::MessageParser<EncryptionKeyHistoryEntry>(() => new EncryptionKeyHistoryEntry());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EncryptionKeyHistoryEntry> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EncryptionKeyHistoryEntry() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EncryptionKeyHistoryEntry(EncryptionKeyHistoryEntry other) : this() {
+      encryptionKey_ = other.encryptionKey_ != null ? other.encryptionKey_.Clone() : null;
+      activationTime_ = other.activationTime_ != null ? other.activationTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EncryptionKeyHistoryEntry Clone() {
+      return new EncryptionKeyHistoryEntry(this);
+    }
+
+    /// <summary>Field number for the "encryption_key" field.</summary>
+    public const int EncryptionKeyFieldNumber = 1;
+    private global::Google.Cloud.OracleDatabase.V1.EncryptionKey encryptionKey_;
+    /// <summary>
+    /// Output only. The encryption key used to encrypt the Autonomous Database.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.OracleDatabase.V1.EncryptionKey EncryptionKey {
+      get { return encryptionKey_; }
+      set {
+        encryptionKey_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "activation_time" field.</summary>
+    public const int ActivationTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp activationTime_;
+    /// <summary>
+    /// Output only. The date and time when the encryption key was activated on the
+    /// Autonomous Database..
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ActivationTime {
+      get { return activationTime_; }
+      set {
+        activationTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EncryptionKeyHistoryEntry);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EncryptionKeyHistoryEntry other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(EncryptionKey, other.EncryptionKey)) return false;
+      if (!object.Equals(ActivationTime, other.ActivationTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (encryptionKey_ != null) hash ^= EncryptionKey.GetHashCode();
+      if (activationTime_ != null) hash ^= ActivationTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (encryptionKey_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(EncryptionKey);
+      }
+      if (activationTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ActivationTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (encryptionKey_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(EncryptionKey);
+      }
+      if (activationTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ActivationTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (encryptionKey_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionKey);
+      }
+      if (activationTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ActivationTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EncryptionKeyHistoryEntry other) {
+      if (other == null) {
+        return;
+      }
+      if (other.encryptionKey_ != null) {
+        if (encryptionKey_ == null) {
+          EncryptionKey = new global::Google.Cloud.OracleDatabase.V1.EncryptionKey();
+        }
+        EncryptionKey.MergeFrom(other.EncryptionKey);
+      }
+      if (other.activationTime_ != null) {
+        if (activationTime_ == null) {
+          ActivationTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ActivationTime.MergeFrom(other.ActivationTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (encryptionKey_ == null) {
+              EncryptionKey = new global::Google.Cloud.OracleDatabase.V1.EncryptionKey();
+            }
+            input.ReadMessage(EncryptionKey);
+            break;
+          }
+          case 18: {
+            if (activationTime_ == null) {
+              ActivationTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ActivationTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (encryptionKey_ == null) {
+              EncryptionKey = new global::Google.Cloud.OracleDatabase.V1.EncryptionKey();
+            }
+            input.ReadMessage(EncryptionKey);
+            break;
+          }
+          case 18: {
+            if (activationTime_ == null) {
+              ActivationTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ActivationTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The encryption key used to encrypt the Autonomous Database.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class EncryptionKey : pb::IMessage<EncryptionKey>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EncryptionKey> _parser = new pb::MessageParser<EncryptionKey>(() => new EncryptionKey());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EncryptionKey> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EncryptionKey() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EncryptionKey(EncryptionKey other) : this() {
+      provider_ = other.provider_;
+      kmsKey_ = other.kmsKey_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EncryptionKey Clone() {
+      return new EncryptionKey(this);
+    }
+
+    /// <summary>Field number for the "provider" field.</summary>
+    public const int ProviderFieldNumber = 1;
+    private global::Google.Cloud.OracleDatabase.V1.EncryptionKey.Types.Provider provider_ = global::Google.Cloud.OracleDatabase.V1.EncryptionKey.Types.Provider.Unspecified;
+    /// <summary>
+    /// Optional. The provider of the encryption key.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.OracleDatabase.V1.EncryptionKey.Types.Provider Provider {
+      get { return provider_; }
+      set {
+        provider_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "kms_key" field.</summary>
+    public const int KmsKeyFieldNumber = 2;
+    private string kmsKey_ = "";
+    /// <summary>
+    /// Optional. The KMS key used to encrypt the Autonomous Database.
+    /// This field is required if the provider is GOOGLE_MANAGED.
+    /// The name of the KMS key resource in the following format:
+    /// `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string KmsKey {
+      get { return kmsKey_; }
+      set {
+        kmsKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EncryptionKey);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EncryptionKey other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Provider != other.Provider) return false;
+      if (KmsKey != other.KmsKey) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Provider != global::Google.Cloud.OracleDatabase.V1.EncryptionKey.Types.Provider.Unspecified) hash ^= Provider.GetHashCode();
+      if (KmsKey.Length != 0) hash ^= KmsKey.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Provider != global::Google.Cloud.OracleDatabase.V1.EncryptionKey.Types.Provider.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Provider);
+      }
+      if (KmsKey.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(KmsKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Provider != global::Google.Cloud.OracleDatabase.V1.EncryptionKey.Types.Provider.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Provider);
+      }
+      if (KmsKey.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(KmsKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Provider != global::Google.Cloud.OracleDatabase.V1.EncryptionKey.Types.Provider.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Provider);
+      }
+      if (KmsKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKey);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EncryptionKey other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Provider != global::Google.Cloud.OracleDatabase.V1.EncryptionKey.Types.Provider.Unspecified) {
+        Provider = other.Provider;
+      }
+      if (other.KmsKey.Length != 0) {
+        KmsKey = other.KmsKey;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Provider = (global::Google.Cloud.OracleDatabase.V1.EncryptionKey.Types.Provider) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            KmsKey = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Provider = (global::Google.Cloud.OracleDatabase.V1.EncryptionKey.Types.Provider) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            KmsKey = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the EncryptionKey message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The provider of the encryption key.
+      /// </summary>
+      public enum Provider {
+        /// <summary>
+        /// Default unspecified value.
+        /// </summary>
+        [pbr::OriginalName("PROVIDER_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Google Managed KMS key, if selected, please provide the KMS key name.
+        /// </summary>
+        [pbr::OriginalName("GOOGLE_MANAGED")] GoogleManaged = 1,
+        /// <summary>
+        /// Oracle Managed.
+        /// </summary>
+        [pbr::OriginalName("ORACLE_MANAGED")] OracleManaged = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// Oracle APEX Application Development.
   /// https://docs.oracle.com/en-us/iaas/api/#/en/database/20160918/datatypes/AutonomousDatabaseApex
   /// </summary>
@@ -3766,7 +5005,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4003,7 +5242,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4405,7 +5644,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5057,7 +6296,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5338,7 +6577,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5820,7 +7059,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6208,7 +7447,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

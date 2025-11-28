@@ -35,21 +35,26 @@ namespace Google.Cloud.AIPlatform.V1 {
             "YXJ0dXBTY3JpcHRCZWhhdmlvckID4EEBIo4BChlQb3N0U3RhcnR1cFNjcmlw",
             "dEJlaGF2aW9yEiwKKFBPU1RfU1RBUlRVUF9TQ1JJUFRfQkVIQVZJT1JfVU5T",
             "UEVDSUZJRUQQABIMCghSVU5fT05DRRABEhMKD1JVTl9FVkVSWV9TVEFSVBAC",
-            "EiAKHERPV05MT0FEX0FORF9SVU5fRVZFUllfU1RBUlQQAyKsAQoWTm90ZWJv",
-            "b2tTb2Z0d2FyZUNvbmZpZxI0CgNlbnYYASADKAsyIi5nb29nbGUuY2xvdWQu",
+            "EiAKHERPV05MT0FEX0FORF9SVU5fRVZFUllfU1RBUlQQAyJBCgpDb2xhYklt",
+            "YWdlEhkKDHJlbGVhc2VfbmFtZRgBIAEoCUID4EEBEhgKC2Rlc2NyaXB0aW9u",
+            "GAIgASgJQgPgQQMigQIKFk5vdGVib29rU29mdHdhcmVDb25maWcSQgoLY29s",
+            "YWJfaW1hZ2UYBSABKAsyJi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5D",
+            "b2xhYkltYWdlQgPgQQFIABI0CgNlbnYYASADKAsyIi5nb29nbGUuY2xvdWQu",
             "YWlwbGF0Zm9ybS52MS5FbnZWYXJCA+BBARJcChpwb3N0X3N0YXJ0dXBfc2Ny",
             "aXB0X2NvbmZpZxgCIAEoCzIzLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "LlBvc3RTdGFydHVwU2NyaXB0Q29uZmlnQgPgQQFC2QEKHmNvbS5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MUIbTm90ZWJvb2tTb2Z0d2FyZUNvbmZpZ1By",
-            "b3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9h",
-            "aXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxh",
-            "dGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2ds",
-            "ZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "LlBvc3RTdGFydHVwU2NyaXB0Q29uZmlnQgPgQQFCDwoNcnVudGltZV9pbWFn",
+            "ZULZAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhtOb3RlYm9v",
+            "a1NvZnR3YXJlQ29uZmlnUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9h",
+            "aXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpH",
+            "b29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBs",
+            "YXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PostStartupScriptConfig), global::Google.Cloud.AIPlatform.V1.PostStartupScriptConfig.Parser, new[]{ "PostStartupScript", "PostStartupScriptUrl", "PostStartupScriptBehavior" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.PostStartupScriptConfig.Types.PostStartupScriptBehavior) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NotebookSoftwareConfig), global::Google.Cloud.AIPlatform.V1.NotebookSoftwareConfig.Parser, new[]{ "Env", "PostStartupScriptConfig" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ColabImage), global::Google.Cloud.AIPlatform.V1.ColabImage.Parser, new[]{ "ReleaseName", "Description" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NotebookSoftwareConfig), global::Google.Cloud.AIPlatform.V1.NotebookSoftwareConfig.Parser, new[]{ "ColabImage", "Env", "PostStartupScriptConfig" }, new[]{ "RuntimeImage" }, null, null, null)
           }));
     }
     #endregion
@@ -126,7 +131,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string postStartupScriptUrl_ = "";
     /// <summary>
     /// Optional. Post startup script url to download. Example:
-    /// https://bucket/script.sh
+    /// `gs://bucket/script.sh`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -365,7 +370,247 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Notebook Software Config.
+  /// Colab image of the runtime.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ColabImage : pb::IMessage<ColabImage>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ColabImage> _parser = new pb::MessageParser<ColabImage>(() => new ColabImage());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ColabImage> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.NotebookSoftwareConfigReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ColabImage() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ColabImage(ColabImage other) : this() {
+      releaseName_ = other.releaseName_;
+      description_ = other.description_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ColabImage Clone() {
+      return new ColabImage(this);
+    }
+
+    /// <summary>Field number for the "release_name" field.</summary>
+    public const int ReleaseNameFieldNumber = 1;
+    private string releaseName_ = "";
+    /// <summary>
+    /// Optional. The release name of the NotebookRuntime Colab image, e.g.
+    /// "py310". If not specified, detault to the latest release.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ReleaseName {
+      get { return releaseName_; }
+      set {
+        releaseName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 2;
+    private string description_ = "";
+    /// <summary>
+    /// Output only. A human-readable description of the specified colab image
+    /// release, populated by the system. Example: "Python 3.10", "Latest - current
+    /// Python 3.11"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ColabImage);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ColabImage other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ReleaseName != other.ReleaseName) return false;
+      if (Description != other.Description) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ReleaseName.Length != 0) hash ^= ReleaseName.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ReleaseName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ReleaseName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Description);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ReleaseName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ReleaseName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Description);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ReleaseName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ReleaseName);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ColabImage other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ReleaseName.Length != 0) {
+        ReleaseName = other.ReleaseName;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ReleaseName = input.ReadString();
+            break;
+          }
+          case 18: {
+            Description = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ReleaseName = input.ReadString();
+            break;
+          }
+          case 18: {
+            Description = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Notebook Software Config. This is passed to the backend when user
+  /// makes software configurations in UI.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NotebookSoftwareConfig : pb::IMessage<NotebookSoftwareConfig>
@@ -382,7 +627,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.NotebookSoftwareConfigReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.AIPlatform.V1.NotebookSoftwareConfigReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -404,6 +649,12 @@ namespace Google.Cloud.AIPlatform.V1 {
     public NotebookSoftwareConfig(NotebookSoftwareConfig other) : this() {
       env_ = other.env_.Clone();
       postStartupScriptConfig_ = other.postStartupScriptConfig_ != null ? other.postStartupScriptConfig_.Clone() : null;
+      switch (other.RuntimeImageCase) {
+        case RuntimeImageOneofCase.ColabImage:
+          ColabImage = other.ColabImage.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -411,6 +662,21 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NotebookSoftwareConfig Clone() {
       return new NotebookSoftwareConfig(this);
+    }
+
+    /// <summary>Field number for the "colab_image" field.</summary>
+    public const int ColabImageFieldNumber = 5;
+    /// <summary>
+    /// Optional. Google-managed NotebookRuntime colab image.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.ColabImage ColabImage {
+      get { return runtimeImageCase_ == RuntimeImageOneofCase.ColabImage ? (global::Google.Cloud.AIPlatform.V1.ColabImage) runtimeImage_ : null; }
+      set {
+        runtimeImage_ = value;
+        runtimeImageCase_ = value == null ? RuntimeImageOneofCase.None : RuntimeImageOneofCase.ColabImage;
+      }
     }
 
     /// <summary>Field number for the "env" field.</summary>
@@ -443,6 +709,26 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    private object runtimeImage_;
+    /// <summary>Enum of possible cases for the "runtime_image" oneof.</summary>
+    public enum RuntimeImageOneofCase {
+      None = 0,
+      ColabImage = 5,
+    }
+    private RuntimeImageOneofCase runtimeImageCase_ = RuntimeImageOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RuntimeImageOneofCase RuntimeImageCase {
+      get { return runtimeImageCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRuntimeImage() {
+      runtimeImageCase_ = RuntimeImageOneofCase.None;
+      runtimeImage_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -458,8 +744,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(ColabImage, other.ColabImage)) return false;
       if(!env_.Equals(other.env_)) return false;
       if (!object.Equals(PostStartupScriptConfig, other.PostStartupScriptConfig)) return false;
+      if (RuntimeImageCase != other.RuntimeImageCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -467,8 +755,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (runtimeImageCase_ == RuntimeImageOneofCase.ColabImage) hash ^= ColabImage.GetHashCode();
       hash ^= env_.GetHashCode();
       if (postStartupScriptConfig_ != null) hash ^= PostStartupScriptConfig.GetHashCode();
+      hash ^= (int) runtimeImageCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -492,6 +782,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(PostStartupScriptConfig);
       }
+      if (runtimeImageCase_ == RuntimeImageOneofCase.ColabImage) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ColabImage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -507,6 +801,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(PostStartupScriptConfig);
       }
+      if (runtimeImageCase_ == RuntimeImageOneofCase.ColabImage) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ColabImage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -517,6 +815,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (runtimeImageCase_ == RuntimeImageOneofCase.ColabImage) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ColabImage);
+      }
       size += env_.CalculateSize(_repeated_env_codec);
       if (postStartupScriptConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PostStartupScriptConfig);
@@ -540,6 +841,15 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
         PostStartupScriptConfig.MergeFrom(other.PostStartupScriptConfig);
       }
+      switch (other.RuntimeImageCase) {
+        case RuntimeImageOneofCase.ColabImage:
+          if (ColabImage == null) {
+            ColabImage = new global::Google.Cloud.AIPlatform.V1.ColabImage();
+          }
+          ColabImage.MergeFrom(other.ColabImage);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -566,6 +876,15 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(PostStartupScriptConfig);
             break;
           }
+          case 42: {
+            global::Google.Cloud.AIPlatform.V1.ColabImage subBuilder = new global::Google.Cloud.AIPlatform.V1.ColabImage();
+            if (runtimeImageCase_ == RuntimeImageOneofCase.ColabImage) {
+              subBuilder.MergeFrom(ColabImage);
+            }
+            input.ReadMessage(subBuilder);
+            ColabImage = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -590,6 +909,15 @@ namespace Google.Cloud.AIPlatform.V1 {
               PostStartupScriptConfig = new global::Google.Cloud.AIPlatform.V1.PostStartupScriptConfig();
             }
             input.ReadMessage(PostStartupScriptConfig);
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.AIPlatform.V1.ColabImage subBuilder = new global::Google.Cloud.AIPlatform.V1.ColabImage();
+            if (runtimeImageCase_ == RuntimeImageOneofCase.ColabImage) {
+              subBuilder.MergeFrom(ColabImage);
+            }
+            input.ReadMessage(subBuilder);
+            ColabImage = subBuilder;
             break;
           }
         }

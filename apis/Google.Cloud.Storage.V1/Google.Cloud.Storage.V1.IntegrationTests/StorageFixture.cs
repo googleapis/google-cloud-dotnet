@@ -41,7 +41,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
     [FileLoggerBeforeAfterTest]
     public sealed class StorageFixture : CloudProjectFixtureBase, ICollectionFixture<StorageFixture>
     {
-        internal const string CrossLanguageTestBucket = "storage-library-test-bucket";
+        internal const string TestBucket = "dotnet-storage-library-test-bucket";
 
         private const string RequesterPaysProjectEnvironmentVariable = "REQUESTER_PAYS_TEST_PROJECT";
         private const string RequesterPaysCredentialsEnvironmentVariable = "REQUESTER_PAYS_CREDENTIALS";
@@ -51,7 +51,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
         /// <summary>
         /// Name of a bucket which already exists, but has no canned data. Mostly used
-        /// for creating objects.
+        /// for creating and moving objects.
         /// </summary>
         public string InitiallyEmptyBucket => BucketPrefix + "-empty";
 
@@ -60,11 +60,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         /// for 24 hours.
         /// </summary>
         public string SoftDeleteBucket => BucketPrefix + "-soft-delete";
-
-        /// <summary>
-        /// Name of a bucket with hierarchical namespace enabled
-        /// </summary>
-        public string HnsBucket => BucketPrefix + "-hns";
 
         /// <summary>
         /// A small amount of content. Do not mutate the array.
@@ -172,7 +167,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             CreateBucket(LabelsTestBucket, multiVersion: false);
             CreateBucket(InitiallyEmptyBucket, multiVersion: false);
             CreateBucket(SoftDeleteBucket, multiVersion: false, softDelete: true);
-            CreateBucket(HnsBucket, multiVersion: false, hnsEnabled: true);
 
             RequesterPaysClient = CreateRequesterPaysClient();
             if (RequesterPaysClient != null)
@@ -197,7 +191,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             {
                 return null;
             }
-            var credential = GoogleCredential.FromFile(file);
+            var credential = CredentialFactory.FromFile<ServiceAccountCredential>(file).ToGoogleCredential();
             return StorageClient.Create(credential);
         }
 

@@ -1,0 +1,96 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.licensemanager.v1",
+  "libraryPackage": "Google.Cloud.LicenseManager.V1",
+  "services": {
+    "LicenseManager": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "LicenseManagerClient",
+          "rpcs": {
+            "AggregateUsage": {
+              "methods": [
+                "AggregateUsage",
+                "AggregateUsageAsync"
+              ]
+            },
+            "CreateConfiguration": {
+              "methods": [
+                "CreateConfiguration",
+                "CreateConfigurationAsync"
+              ]
+            },
+            "DeactivateConfiguration": {
+              "methods": [
+                "DeactivateConfiguration",
+                "DeactivateConfigurationAsync"
+              ]
+            },
+            "DeleteConfiguration": {
+              "methods": [
+                "DeleteConfiguration",
+                "DeleteConfigurationAsync"
+              ]
+            },
+            "GetConfiguration": {
+              "methods": [
+                "GetConfiguration",
+                "GetConfigurationAsync"
+              ]
+            },
+            "GetInstance": {
+              "methods": [
+                "GetInstance",
+                "GetInstanceAsync"
+              ]
+            },
+            "GetProduct": {
+              "methods": [
+                "GetProduct",
+                "GetProductAsync"
+              ]
+            },
+            "ListConfigurations": {
+              "methods": [
+                "ListConfigurations",
+                "ListConfigurationsAsync"
+              ]
+            },
+            "ListInstances": {
+              "methods": [
+                "ListInstances",
+                "ListInstancesAsync"
+              ]
+            },
+            "ListProducts": {
+              "methods": [
+                "ListProducts",
+                "ListProductsAsync"
+              ]
+            },
+            "QueryConfigurationLicenseUsage": {
+              "methods": [
+                "QueryConfigurationLicenseUsage",
+                "QueryConfigurationLicenseUsageAsync"
+              ]
+            },
+            "ReactivateConfiguration": {
+              "methods": [
+                "ReactivateConfiguration",
+                "ReactivateConfigurationAsync"
+              ]
+            },
+            "UpdateConfiguration": {
+              "methods": [
+                "UpdateConfiguration",
+                "UpdateConfigurationAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

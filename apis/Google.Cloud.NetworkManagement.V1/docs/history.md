@@ -1,5 +1,43 @@
 # Version history
 
+## Version 2.17.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+## Version 2.16.0, released 2025-11-03
+
+### New features
+
+- Enable organization-level support for VPC Flow Logs
+- Add field `service_uri` to message `Endpoint.CloudRunRevisionEndpoint`
+- Add message `Endpoint.SingleEdgeResponse`
+- Add http additional_bindings
+- Add enum `Status` to message `InstanceInfo`
+- Add field `running` to message `InstanceInfo`
+- Add field `policy_priority` to message `NetworkInfo`
+- Add enum value `RouteInfo.NextHopType.SECURE_WEB_PROXY_GATEWAY`
+- Add enum `DeliverInfo.GoogleServiceType`
+- Add field `google_service_type` to message `DeliverInfo`
+- Add enum value `AbortInfo.Cause.GOOGLE_MANAGED_SERVICE_AMBIGUOUS_ENDPOINT`
+- Add enum values `NO_ROUTE_FROM_EXTERNAL_IPV6_SOURCE_TO_PRIVATE_IPV6_ADDRESS`, `TRAFFIC_FROM_HYBRID_ENDPOINT_TO_INTERNET_DISALLOWED`, `NO_MATCHING_NAT64_GATEWAY`, `LOAD_BALANCER_BACKEND_IP_VERSION_MISMATCH`, and `NO_KNOWN_ROUTE_FROM_NCC_NETWORK_TO_DESTINATION` to `DropInfo.Cause`
+- Add rpc `VpcFlowLogsService.QueryOrgVpcFlowLogsConfigs`
+- Add service `OrganizationVpcFlowLogsService`
+- Add enum `VpcFlowLogsConfig.CrossProjectMetadata`
+- Add enum `VpcFlowLogsConfig.TargetResourceState`
+- Add fields `cross_project_metadata`, `target_resource_state`, `network`, and `subnet` to message `VpcFlowLogsConfig`
+
+### Documentation improvements
+
+- Various documentation and comment improvements, Enable organization-level support for VPC Flow Logs
+
+## Version 2.15.0, released 2025-08-12
+
+### New features
+
+- Add `service_uri` field to CloudRunRevisionEndpoint
+
 ## Version 2.14.0, released 2025-04-14
 
 ### New features

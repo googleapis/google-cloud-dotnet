@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.5.0, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+## Version 1.4.0, released 2025-05-15
+
+### New features
+
+- Add Client Libraries for Datasets
+
 ## Version 1.3.0, released 2024-05-14
 
 ### New features

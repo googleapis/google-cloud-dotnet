@@ -13,12 +13,11 @@
 // limitations under the License.
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using static System.Net.Mime.MediaTypeNames;
+using System.Runtime.InteropServices;
 
 namespace Google.Cloud.Tools.Common
 {
@@ -27,17 +26,26 @@ namespace Google.Cloud.Tools.Common
         /// <summary>
         /// Runs the dotnet tool with the given working directory and arguments.
         /// </summary>
-        public static void RunDotnet(string workingDirectory, params string[] args)
+        public static void RunDotnet(string workingDirectory, params string[] args) => RunDotnetImpl(workingDirectory, sensitiveArgs: false, args);
+
+        /// <summary>
+        /// Runs the dotnet tool with the given working directory and arguments, but unlike
+        /// <see cref="RunDotnet(string, string[])"/>, the arguments are not logged in the event of failure.
+        /// (The output and error content are still logged, however.)
+        /// </summary>
+        public static void RunDotnetWithSensitiveArgs(string workingDirectory, params string[] args) => RunDotnetImpl(workingDirectory, sensitiveArgs: true, args);
+
+        private static void RunDotnetImpl(string workingDirectory, bool sensitiveArgs, string[] args)
         {
-            string joinedArguments = string.Join(" ", args);
             var psi = new ProcessStartInfo
             {
                 FileName = "dotnet",
-                Arguments = joinedArguments,
                 WorkingDirectory = workingDirectory,
                 RedirectStandardOutput = true,
                 RedirectStandardError = true
             };
+            args.ToList().ForEach(psi.ArgumentList.Add);
+
             var process = Process.Start(psi);
             TimeSpan timeout = TimeSpan.FromMinutes(5);
             // We assume there isn't so much output that this will block. Otherwise we'd have to read it in a different thread etc.
@@ -50,7 +58,8 @@ namespace Google.Cloud.Tools.Common
             {
                 var output = process.StandardOutput.ReadToEnd();
                 var error = process.StandardError.ReadToEnd();
-                throw new Exception($"dotnet exit code {process.ExitCode}. Directory: {workingDirectory}. Args: {joinedArguments}. Output: {output}. Error: {error}");
+                var loggedArgs = sensitiveArgs ? "(redacted)" : string.Join(" ", args);
+                throw new Exception($"dotnet exit code {process.ExitCode}. Directory: {workingDirectory}. Args: {loggedArgs}. Output: {output}. Error: {error}");
             }
         }
 
@@ -59,11 +68,14 @@ namespace Google.Cloud.Tools.Common
 
         public static void RunBashScript(string workingDirectory, string script, IEnumerable<string> args)
         {
+            var bash = RuntimeInformation.IsOSPlatform(OSPlatform.Windows)
+                ? @"C:\Program Files\Git\bin\bash.exe" // Hardcoding this is a bit odd, but it's not like this is general purpose...
+                : "/bin/bash";
             var processArguments = args.Prepend($"./{script}").ToList();
 
             var psi = new ProcessStartInfo
             {
-                FileName = "/bin/bash",
+                FileName = bash,
                 WorkingDirectory = workingDirectory
             };
             processArguments.ForEach(psi.ArgumentList.Add);

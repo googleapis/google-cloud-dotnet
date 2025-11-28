@@ -53,6 +53,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             CreateIndexSettings = existing.CreateIndexSettings;
             CreateIndexOperationsSettings = existing.CreateIndexOperationsSettings.Clone();
             GetIndexSettings = existing.GetIndexSettings;
+            ImportIndexSettings = existing.ImportIndexSettings;
+            ImportIndexOperationsSettings = existing.ImportIndexOperationsSettings.Clone();
             ListIndexesSettings = existing.ListIndexesSettings;
             UpdateIndexSettings = existing.UpdateIndexSettings;
             UpdateIndexOperationsSettings = existing.UpdateIndexOperationsSettings.Clone();
@@ -108,6 +110,36 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetIndexSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>IndexServiceClient.ImportIndex</c> and <c>IndexServiceClient.ImportIndexAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ImportIndexSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>IndexServiceClient.ImportIndex</c> and
+        /// <c>IndexServiceClient.ImportIndexAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ImportIndexOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -638,6 +670,59 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             GetIndexAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Imports an Index from an external source (e.g., BigQuery).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Index, ImportIndexOperationMetadata> ImportIndex(ImportIndexRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports an Index from an external source (e.g., BigQuery).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Index, ImportIndexOperationMetadata>> ImportIndexAsync(ImportIndexRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports an Index from an external source (e.g., BigQuery).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Index, ImportIndexOperationMetadata>> ImportIndexAsync(ImportIndexRequest request, st::CancellationToken cancellationToken) =>
+            ImportIndexAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ImportIndex</c>.</summary>
+        public virtual lro::OperationsClient ImportIndexOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ImportIndex</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Index, ImportIndexOperationMetadata> PollOnceImportIndex(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Index, ImportIndexOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportIndexOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ImportIndex</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Index, ImportIndexOperationMetadata>> PollOnceImportIndexAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Index, ImportIndexOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportIndexOperationsClient, callSettings);
+
+        /// <summary>
         /// Lists Indexes in a Location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1135,6 +1220,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         private readonly gaxgrpc::ApiCall<GetIndexRequest, Index> _callGetIndex;
 
+        private readonly gaxgrpc::ApiCall<ImportIndexRequest, lro::Operation> _callImportIndex;
+
         private readonly gaxgrpc::ApiCall<ListIndexesRequest, ListIndexesResponse> _callListIndexes;
 
         private readonly gaxgrpc::ApiCall<UpdateIndexRequest, lro::Operation> _callUpdateIndex;
@@ -1161,6 +1248,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
                 Logger = logger,
             });
             CreateIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateIndexOperationsSettings, logger);
+            ImportIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportIndexOperationsSettings, logger);
             UpdateIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateIndexOperationsSettings, logger);
             DeleteIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteIndexOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
@@ -1171,6 +1259,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             _callGetIndex = clientHelper.BuildApiCall<GetIndexRequest, Index>("GetIndex", grpcClient.GetIndexAsync, grpcClient.GetIndex, effectiveSettings.GetIndexSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetIndex);
             Modify_GetIndexApiCall(ref _callGetIndex);
+            _callImportIndex = clientHelper.BuildApiCall<ImportIndexRequest, lro::Operation>("ImportIndex", grpcClient.ImportIndexAsync, grpcClient.ImportIndex, effectiveSettings.ImportIndexSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callImportIndex);
+            Modify_ImportIndexApiCall(ref _callImportIndex);
             _callListIndexes = clientHelper.BuildApiCall<ListIndexesRequest, ListIndexesResponse>("ListIndexes", grpcClient.ListIndexesAsync, grpcClient.ListIndexes, effectiveSettings.ListIndexesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListIndexes);
             Modify_ListIndexesApiCall(ref _callListIndexes);
@@ -1194,6 +1285,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_CreateIndexApiCall(ref gaxgrpc::ApiCall<CreateIndexRequest, lro::Operation> call);
 
         partial void Modify_GetIndexApiCall(ref gaxgrpc::ApiCall<GetIndexRequest, Index> call);
+
+        partial void Modify_ImportIndexApiCall(ref gaxgrpc::ApiCall<ImportIndexRequest, lro::Operation> call);
 
         partial void Modify_ListIndexesApiCall(ref gaxgrpc::ApiCall<ListIndexesRequest, ListIndexesResponse> call);
 
@@ -1219,6 +1312,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_CreateIndexRequest(ref CreateIndexRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetIndexRequest(ref GetIndexRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ImportIndexRequest(ref ImportIndexRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListIndexesRequest(ref ListIndexesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1279,6 +1374,33 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             Modify_GetIndexRequest(ref request, ref callSettings);
             return _callGetIndex.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>ImportIndex</c>.</summary>
+        public override lro::OperationsClient ImportIndexOperationsClient { get; }
+
+        /// <summary>
+        /// Imports an Index from an external source (e.g., BigQuery).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Index, ImportIndexOperationMetadata> ImportIndex(ImportIndexRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportIndexRequest(ref request, ref callSettings);
+            return new lro::Operation<Index, ImportIndexOperationMetadata>(_callImportIndex.Sync(request, callSettings), ImportIndexOperationsClient);
+        }
+
+        /// <summary>
+        /// Imports an Index from an external source (e.g., BigQuery).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Index, ImportIndexOperationMetadata>> ImportIndexAsync(ImportIndexRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportIndexRequest(ref request, ref callSettings);
+            return new lro::Operation<Index, ImportIndexOperationMetadata>(await _callImportIndex.Async(request, callSettings).ConfigureAwait(false), ImportIndexOperationsClient);
         }
 
         /// <summary>

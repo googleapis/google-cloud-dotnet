@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ using System.Threading.Tasks;
 using Xunit;
 using Xunit.Abstractions;
 using static Google.Cloud.Firestore.Tests.Proto.Test;
-using wkt = Google.Protobuf.WellKnownTypes;
+using WKT = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Firestore.Tests.Proto
 {
@@ -183,8 +183,8 @@ namespace Google.Cloud.Firestore.Tests.Proto
                     {
                         Name = docRef.Path,
                         Fields = { ValueSerializer.SerializeMap(SerializationContext.Default, DeserializeJson(cursor.DocSnapshot.JsonData)) },
-                        CreateTime = wkt::Timestamp.FromDateTimeOffset(DateTimeOffset.MinValue),
-                        UpdateTime = wkt::Timestamp.FromDateTimeOffset(DateTimeOffset.MinValue),
+                        CreateTime = WKT::Timestamp.FromDateTimeOffset(DateTimeOffset.MinValue),
+                        UpdateTime = WKT::Timestamp.FromDateTimeOffset(DateTimeOffset.MinValue),
                     },
                     Timestamp.FromDateTimeOffset(DateTimeOffset.MinValue));
             }
@@ -370,20 +370,20 @@ namespace Google.Cloud.Firestore.Tests.Proto
 
         private static object DeserializeJson(string json)
         {
-            wkt::Value proto = wkt::Value.Parser.ParseJson(json);
+            WKT::Value proto = WKT::Value.Parser.ParseJson(json);
             return ConvertValue(proto);
         }
 
         /// <summary>
         /// Converts a value from well-known type format to .NET CLR format (using dictionaries and lists).
         /// </summary>
-        private static object ConvertValue(wkt::Value value)
+        private static object ConvertValue(WKT::Value value)
         {
             switch (value.KindCase)
             {
-                case wkt::Value.KindOneofCase.BoolValue:
+                case WKT::Value.KindOneofCase.BoolValue:
                     return value.BoolValue;
-                case wkt::Value.KindOneofCase.ListValue:
+                case WKT::Value.KindOneofCase.ListValue:
                     var values = value.ListValue.Values;
                     var first = values.FirstOrDefault();
                     if (first?.StringValue == "ArrayRemove")
@@ -398,19 +398,19 @@ namespace Google.Cloud.Firestore.Tests.Proto
                     {
                         return values.Select(ConvertValue).ToArray();
                     }
-                case wkt::Value.KindOneofCase.NullValue:
+                case WKT::Value.KindOneofCase.NullValue:
                     return null;
-                case wkt::Value.KindOneofCase.NumberValue:
+                case WKT::Value.KindOneofCase.NumberValue:
                     // Unfortunately we lose the "integer vs floating point" detail from the JSON.
                     // Let's assume that anything which rounds to itself is an integer.
                     var number = value.NumberValue;
                     return Math.Round(number) == number ? (object) (long) number : (object) number;
-                case wkt::Value.KindOneofCase.StringValue:
+                case WKT::Value.KindOneofCase.StringValue:
                     return value.StringValue == "ServerTimestamp" ? FieldValue.ServerTimestamp
                         : value.StringValue == "Delete" ? FieldValue.Delete
                         : value.StringValue == "NaN" ? (object) double.NaN
                         : value.StringValue;
-                case wkt::Value.KindOneofCase.StructValue:
+                case WKT::Value.KindOneofCase.StructValue:
                     return value.StructValue.Fields.ToDictionary(pair => pair.Key, pair => ConvertValue(pair.Value));
                 default:
                     throw new ArgumentException($"Unknown value kind: {value.KindCase}");
@@ -431,7 +431,7 @@ namespace Google.Cloud.Firestore.Tests.Proto
                 _actualRequest = CanonicalizeRequest(request);
                 var response = new CommitResponse
                 {
-                    CommitTime = new wkt::Timestamp(),
+                    CommitTime = new WKT::Timestamp(),
                     WriteResults = { request.Writes.Select(_ => new V1.WriteResult()) }
                 };
                 return Task.FromResult(response);

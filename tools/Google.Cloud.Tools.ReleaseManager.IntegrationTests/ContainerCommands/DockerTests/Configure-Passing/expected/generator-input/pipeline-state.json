@@ -1,0 +1,45 @@
+{
+    "imageTag": "latest",
+    "libraries": [
+        {
+            "id": "Google.Test.V1",
+            "currentVersion": "1.0.0",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2024-10-03T15:36:23Z",
+            "lastGeneratedCommit": "d03cc133141975f28a66554ddbd5c0e871946044",
+            "apiPaths": [
+                "google/test/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Test.V1/Google.Test.V1"
+            ]
+        },
+        {
+            "id": "Google.Test.V2",
+            "currentVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2024-10-03T15:36:23Z",
+            "lastGeneratedCommit": "d03cc133141975f28a66554ddbd5c0e871946044",
+            "apiPaths": [
+                "google/test/v2"
+            ],
+            "sourcePaths": [
+                "apis/Google.Test.V2/Google.Test.V2"
+            ]
+        },
+        {
+            "id": "Google.Test.V3",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/test/v3"
+            ],
+            "sourcePaths": [
+                "apis/Google.Test.V3/Google.Test.V3"
+            ],
+            "nextVersion": "1.0.0-beta01"
+        }
+    ]
+}

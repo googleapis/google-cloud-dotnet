@@ -1,5 +1,22 @@
 # Version history
 
+## Version 2.6.0, released 2025-11-03
+
+### New features
+
+- Update dependencies
+
+## Version 2.5.0, released 2025-08-12
+
+### New features
+
+- Add highest_upgradable_cve_severity field to Vulnerability report
+
+### Documentation improvements
+
+- A comment for field `update_time` in message `.google.cloud.osconfig.v1.VulnerabilityReport` is changed
+- A comment for field `filter` in message `.google.cloud.osconfig.v1.ListVulnerabilityReportsRequest` is changed
+
 ## Version 2.4.0, released 2024-05-14
 
 ### New features

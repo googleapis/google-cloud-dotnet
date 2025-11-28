@@ -12,9 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Tools.Common;
 using Octokit;
-using System;
 
 namespace Google.Cloud.Tools.ReleaseManager;
 
@@ -25,28 +23,12 @@ internal static class GitHubHelpers
 
     private const string ApplicationName = "google-cloud-dotnet-release-manager";
 
-    private const string AccessTokenEnvironmentVariable = "GITHUB_ACCESS_TOKEN";
-
-    /// <summary>
-    /// Fetches a GitHub access token from the GITHUB_ACCESS_TOKEN environment variable,
-    /// failing if the environment variable is missing/empty.
-    /// </summary>
-    internal static string GetGitHubAccessToken()
-    {
-        string gitHubToken = Environment.GetEnvironmentVariable(AccessTokenEnvironmentVariable);
-        if (string.IsNullOrEmpty(gitHubToken))
-        {
-            throw new UserErrorException($"This command requires a non-empty value for the {AccessTokenEnvironmentVariable} environment variable.");
-        }
-        return gitHubToken;
-    }
-
     /// <summary>
     /// Creates a GitHub client with the specified token.
     /// </summary>
     internal static GitHubClient CreateGitHubClient(string gitHubToken) =>
         new GitHubClient(new ProductHeaderValue(ApplicationName))
         {
-            Credentials = new Octokit.Credentials(gitHubToken)
+            Credentials = new Credentials(gitHubToken)
         };
 }

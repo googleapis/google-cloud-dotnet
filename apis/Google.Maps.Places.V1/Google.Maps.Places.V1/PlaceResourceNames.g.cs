@@ -237,6 +237,15 @@ namespace Google.Maps.Places.V1
             set => Name = value?.ToString() ?? "";
         }
 
+        /// <summary>
+        /// <see cref="gmpv::PlaceName"/>-typed view over the <see cref="MovedPlace"/> resource name property.
+        /// </summary>
+        public gmpv::PlaceName MovedPlaceAsPlaceName
+        {
+            get => string.IsNullOrEmpty(MovedPlace) ? null : gmpv::PlaceName.Parse(MovedPlace, allowUnparsed: true);
+            set => MovedPlace = value?.ToString() ?? "";
+        }
+
         public partial class Types
         {
             public partial class SubDestination

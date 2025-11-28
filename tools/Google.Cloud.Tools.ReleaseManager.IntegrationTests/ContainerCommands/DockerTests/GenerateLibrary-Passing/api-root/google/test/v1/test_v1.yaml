@@ -1,0 +1,7 @@
+type: google.api.Service
+config_version: 1
+name: test.googleapis.com
+title: Test API
+
+apis:
+- name: google.test.v1.TestService

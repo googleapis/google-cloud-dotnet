@@ -1,5 +1,22 @@
 # Version history
 
+## Version 2.8.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+## Version 2.7.0, released 2025-09-16
+
+### New features
+
+- Add new fields to Eventarc resources
+
+### Documentation improvements
+
+- Correct some comments
+- Fixed typo in comments in Eventarc protos
+
 ## Version 2.6.0, released 2024-10-29
 
 ### New features

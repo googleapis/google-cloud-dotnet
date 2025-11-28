@@ -68,6 +68,14 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.Organization> __Marshaller_google_marketingplatform_admin_v1alpha_Organization = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.Organization.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListOrganizationsRequest> __Marshaller_google_marketingplatform_admin_v1alpha_ListOrganizationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListOrganizationsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListOrganizationsResponse> __Marshaller_google_marketingplatform_admin_v1alpha_ListOrganizationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListOrganizationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.FindSalesPartnerManagedClientsRequest> __Marshaller_google_marketingplatform_admin_v1alpha_FindSalesPartnerManagedClientsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.FindSalesPartnerManagedClientsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.FindSalesPartnerManagedClientsResponse> __Marshaller_google_marketingplatform_admin_v1alpha_FindSalesPartnerManagedClientsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.FindSalesPartnerManagedClientsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAnalyticsAccountLinksRequest> __Marshaller_google_marketingplatform_admin_v1alpha_ListAnalyticsAccountLinksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAnalyticsAccountLinksRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAnalyticsAccountLinksResponse> __Marshaller_google_marketingplatform_admin_v1alpha_ListAnalyticsAccountLinksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAnalyticsAccountLinksResponse.Parser));
@@ -83,6 +91,10 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.SetPropertyServiceLevelRequest> __Marshaller_google_marketingplatform_admin_v1alpha_SetPropertyServiceLevelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.SetPropertyServiceLevelRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.SetPropertyServiceLevelResponse> __Marshaller_google_marketingplatform_admin_v1alpha_SetPropertyServiceLevelResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.SetPropertyServiceLevelResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageRequest> __Marshaller_google_marketingplatform_admin_v1alpha_ReportPropertyUsageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageResponse> __Marshaller_google_marketingplatform_admin_v1alpha_ReportPropertyUsageResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetOrganizationRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.Organization> __Method_GetOrganization = new grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetOrganizationRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.Organization>(
@@ -91,6 +103,22 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
         "GetOrganization",
         __Marshaller_google_marketingplatform_admin_v1alpha_GetOrganizationRequest,
         __Marshaller_google_marketingplatform_admin_v1alpha_Organization);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListOrganizationsRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListOrganizationsResponse> __Method_ListOrganizations = new grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListOrganizationsRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListOrganizationsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListOrganizations",
+        __Marshaller_google_marketingplatform_admin_v1alpha_ListOrganizationsRequest,
+        __Marshaller_google_marketingplatform_admin_v1alpha_ListOrganizationsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.FindSalesPartnerManagedClientsRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.FindSalesPartnerManagedClientsResponse> __Method_FindSalesPartnerManagedClients = new grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.FindSalesPartnerManagedClientsRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.FindSalesPartnerManagedClientsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FindSalesPartnerManagedClients",
+        __Marshaller_google_marketingplatform_admin_v1alpha_FindSalesPartnerManagedClientsRequest,
+        __Marshaller_google_marketingplatform_admin_v1alpha_FindSalesPartnerManagedClientsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAnalyticsAccountLinksRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAnalyticsAccountLinksResponse> __Method_ListAnalyticsAccountLinks = new grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAnalyticsAccountLinksRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAnalyticsAccountLinksResponse>(
@@ -124,6 +152,14 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
         __Marshaller_google_marketingplatform_admin_v1alpha_SetPropertyServiceLevelRequest,
         __Marshaller_google_marketingplatform_admin_v1alpha_SetPropertyServiceLevelResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageResponse> __Method_ReportPropertyUsage = new grpc::Method<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ReportPropertyUsage",
+        __Marshaller_google_marketingplatform_admin_v1alpha_ReportPropertyUsageRequest,
+        __Marshaller_google_marketingplatform_admin_v1alpha_ReportPropertyUsageResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -142,6 +178,33 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.Organization> GetOrganization(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetOrganizationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns a list of organizations that the user has access to.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListOrganizationsResponse> ListOrganizations(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListOrganizationsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns a list of clients managed by the sales partner organization.
+      ///
+      /// User needs to be an OrgAdmin/BillingAdmin on the sales partner organization
+      /// in order to view the end clients.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.FindSalesPartnerManagedClientsResponse> FindSalesPartnerManagedClients(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.FindSalesPartnerManagedClientsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -200,6 +263,27 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.SetPropertyServiceLevelResponse> SetPropertyServiceLevel(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.SetPropertyServiceLevelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get the usage and billing data for properties within the organization for
+      /// the specified month.
+      ///
+      /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
+      /// organization in order to view the billing and usage data.
+      ///
+      /// Per sales partner client org, user needs to be OrgAdmin/BillingAdmin on
+      /// the sales partner org in order to view the billing and usage data, or
+      /// OrgAdmin/BillingAdmin on the sales partner client org in order to view the
+      /// usage data only.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageResponse> ReportPropertyUsage(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -280,6 +364,114 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
       public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.Organization> GetOrganizationAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetOrganizationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetOrganization, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of organizations that the user has access to.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListOrganizationsResponse ListOrganizations(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListOrganizationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListOrganizations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of organizations that the user has access to.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListOrganizationsResponse ListOrganizations(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListOrganizationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListOrganizations, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of organizations that the user has access to.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListOrganizationsResponse> ListOrganizationsAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListOrganizationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListOrganizationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of organizations that the user has access to.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListOrganizationsResponse> ListOrganizationsAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListOrganizationsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListOrganizations, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of clients managed by the sales partner organization.
+      ///
+      /// User needs to be an OrgAdmin/BillingAdmin on the sales partner organization
+      /// in order to view the end clients.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.FindSalesPartnerManagedClientsResponse FindSalesPartnerManagedClients(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.FindSalesPartnerManagedClientsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FindSalesPartnerManagedClients(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of clients managed by the sales partner organization.
+      ///
+      /// User needs to be an OrgAdmin/BillingAdmin on the sales partner organization
+      /// in order to view the end clients.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.FindSalesPartnerManagedClientsResponse FindSalesPartnerManagedClients(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.FindSalesPartnerManagedClientsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FindSalesPartnerManagedClients, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of clients managed by the sales partner organization.
+      ///
+      /// User needs to be an OrgAdmin/BillingAdmin on the sales partner organization
+      /// in order to view the end clients.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.FindSalesPartnerManagedClientsResponse> FindSalesPartnerManagedClientsAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.FindSalesPartnerManagedClientsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FindSalesPartnerManagedClientsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of clients managed by the sales partner organization.
+      ///
+      /// User needs to be an OrgAdmin/BillingAdmin on the sales partner organization
+      /// in order to view the end clients.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.FindSalesPartnerManagedClientsResponse> FindSalesPartnerManagedClientsAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.FindSalesPartnerManagedClientsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FindSalesPartnerManagedClients, null, options, request);
       }
       /// <summary>
       /// Lists the Google Analytics accounts link to the specified Google Marketing
@@ -513,6 +705,90 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetPropertyServiceLevel, null, options, request);
       }
+      /// <summary>
+      /// Get the usage and billing data for properties within the organization for
+      /// the specified month.
+      ///
+      /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
+      /// organization in order to view the billing and usage data.
+      ///
+      /// Per sales partner client org, user needs to be OrgAdmin/BillingAdmin on
+      /// the sales partner org in order to view the billing and usage data, or
+      /// OrgAdmin/BillingAdmin on the sales partner client org in order to view the
+      /// usage data only.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageResponse ReportPropertyUsage(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ReportPropertyUsage(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get the usage and billing data for properties within the organization for
+      /// the specified month.
+      ///
+      /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
+      /// organization in order to view the billing and usage data.
+      ///
+      /// Per sales partner client org, user needs to be OrgAdmin/BillingAdmin on
+      /// the sales partner org in order to view the billing and usage data, or
+      /// OrgAdmin/BillingAdmin on the sales partner client org in order to view the
+      /// usage data only.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageResponse ReportPropertyUsage(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ReportPropertyUsage, null, options, request);
+      }
+      /// <summary>
+      /// Get the usage and billing data for properties within the organization for
+      /// the specified month.
+      ///
+      /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
+      /// organization in order to view the billing and usage data.
+      ///
+      /// Per sales partner client org, user needs to be OrgAdmin/BillingAdmin on
+      /// the sales partner org in order to view the billing and usage data, or
+      /// OrgAdmin/BillingAdmin on the sales partner client org in order to view the
+      /// usage data only.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageResponse> ReportPropertyUsageAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ReportPropertyUsageAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get the usage and billing data for properties within the organization for
+      /// the specified month.
+      ///
+      /// Per direct client org, user needs to be OrgAdmin/BillingAdmin on the
+      /// organization in order to view the billing and usage data.
+      ///
+      /// Per sales partner client org, user needs to be OrgAdmin/BillingAdmin on
+      /// the sales partner org in order to view the billing and usage data, or
+      /// OrgAdmin/BillingAdmin on the sales partner client org in order to view the
+      /// usage data only.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageResponse> ReportPropertyUsageAsync(global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ReportPropertyUsage, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override MarketingplatformAdminServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -528,10 +804,13 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetOrganization, serviceImpl.GetOrganization)
+          .AddMethod(__Method_ListOrganizations, serviceImpl.ListOrganizations)
+          .AddMethod(__Method_FindSalesPartnerManagedClients, serviceImpl.FindSalesPartnerManagedClients)
           .AddMethod(__Method_ListAnalyticsAccountLinks, serviceImpl.ListAnalyticsAccountLinks)
           .AddMethod(__Method_CreateAnalyticsAccountLink, serviceImpl.CreateAnalyticsAccountLink)
           .AddMethod(__Method_DeleteAnalyticsAccountLink, serviceImpl.DeleteAnalyticsAccountLink)
-          .AddMethod(__Method_SetPropertyServiceLevel, serviceImpl.SetPropertyServiceLevel).Build();
+          .AddMethod(__Method_SetPropertyServiceLevel, serviceImpl.SetPropertyServiceLevel)
+          .AddMethod(__Method_ReportPropertyUsage, serviceImpl.ReportPropertyUsage).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -542,10 +821,13 @@ namespace Google.Ads.MarketingPlatform.Admin.V1Alpha {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, MarketingplatformAdminServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_GetOrganization, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.GetOrganizationRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.Organization>(serviceImpl.GetOrganization));
+      serviceBinder.AddMethod(__Method_ListOrganizations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListOrganizationsRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListOrganizationsResponse>(serviceImpl.ListOrganizations));
+      serviceBinder.AddMethod(__Method_FindSalesPartnerManagedClients, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.FindSalesPartnerManagedClientsRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.FindSalesPartnerManagedClientsResponse>(serviceImpl.FindSalesPartnerManagedClients));
       serviceBinder.AddMethod(__Method_ListAnalyticsAccountLinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAnalyticsAccountLinksRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ListAnalyticsAccountLinksResponse>(serviceImpl.ListAnalyticsAccountLinks));
       serviceBinder.AddMethod(__Method_CreateAnalyticsAccountLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.CreateAnalyticsAccountLinkRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.AnalyticsAccountLink>(serviceImpl.CreateAnalyticsAccountLink));
       serviceBinder.AddMethod(__Method_DeleteAnalyticsAccountLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.DeleteAnalyticsAccountLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAnalyticsAccountLink));
       serviceBinder.AddMethod(__Method_SetPropertyServiceLevel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.SetPropertyServiceLevelRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.SetPropertyServiceLevelResponse>(serviceImpl.SetPropertyServiceLevel));
+      serviceBinder.AddMethod(__Method_ReportPropertyUsage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageRequest, global::Google.Ads.MarketingPlatform.Admin.V1Alpha.ReportPropertyUsageResponse>(serviceImpl.ReportPropertyUsage));
     }
 
   }

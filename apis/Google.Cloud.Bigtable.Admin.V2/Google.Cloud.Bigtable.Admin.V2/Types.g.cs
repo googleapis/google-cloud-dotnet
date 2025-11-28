@@ -26,7 +26,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           string.Concat(
             "CiRnb29nbGUvYmlndGFibGUvYWRtaW4vdjIvdHlwZXMucHJvdG8SGGdvb2ds",
             "ZS5iaWd0YWJsZS5hZG1pbi52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlv",
-            "ci5wcm90byLjFwoEVHlwZRI6CgpieXRlc190eXBlGAEgASgLMiQuZ29vZ2xl",
+            "ci5wcm90byLHGQoEVHlwZRI6CgpieXRlc190eXBlGAEgASgLMiQuZ29vZ2xl",
             "LmJpZ3RhYmxlLmFkbWluLnYyLlR5cGUuQnl0ZXNIABI8CgtzdHJpbmdfdHlw",
             "ZRgCIAEoCzIlLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UeXBlLlN0cmlu",
             "Z0gAEjoKCmludDY0X3R5cGUYBSABKAsyJC5nb29nbGUuYmlndGFibGUuYWRt",
@@ -42,67 +42,72 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "dWN0X3R5cGUYByABKAsyJS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuVHlw",
             "ZS5TdHJ1Y3RIABI6CgphcnJheV90eXBlGAMgASgLMiQuZ29vZ2xlLmJpZ3Rh",
             "YmxlLmFkbWluLnYyLlR5cGUuQXJyYXlIABI2CghtYXBfdHlwZRgEIAEoCzIi",
-            "Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UeXBlLk1hcEgAGqkBCgVCeXRl",
-            "cxI/CghlbmNvZGluZxgBIAEoCzItLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52",
-            "Mi5UeXBlLkJ5dGVzLkVuY29kaW5nGl8KCEVuY29kaW5nEkAKA3JhdxgBIAEo",
-            "CzIxLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UeXBlLkJ5dGVzLkVuY29k",
-            "aW5nLlJhd0gAGgUKA1Jhd0IKCghlbmNvZGluZxqfAgoGU3RyaW5nEkAKCGVu",
-            "Y29kaW5nGAEgASgLMi4uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlR5cGUu",
-            "U3RyaW5nLkVuY29kaW5nGtIBCghFbmNvZGluZxJOCgh1dGY4X3JhdxgBIAEo",
-            "CzI2Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UeXBlLlN0cmluZy5FbmNv",
-            "ZGluZy5VdGY4UmF3QgIYAUgAEk4KCnV0ZjhfYnl0ZXMYAiABKAsyOC5nb29n",
-            "bGUuYmlndGFibGUuYWRtaW4udjIuVHlwZS5TdHJpbmcuRW5jb2RpbmcuVXRm",
-            "OEJ5dGVzSAAaDQoHVXRmOFJhdzoCGAEaCwoJVXRmOEJ5dGVzQgoKCGVuY29k",
-            "aW5nGv0CCgVJbnQ2NBI/CghlbmNvZGluZxgBIAEoCzItLmdvb2dsZS5iaWd0",
-            "YWJsZS5hZG1pbi52Mi5UeXBlLkludDY0LkVuY29kaW5nGrICCghFbmNvZGlu",
-            "ZxJYChBiaWdfZW5kaWFuX2J5dGVzGAEgASgLMjwuZ29vZ2xlLmJpZ3RhYmxl",
-            "LmFkbWluLnYyLlR5cGUuSW50NjQuRW5jb2RpbmcuQmlnRW5kaWFuQnl0ZXNI",
-            "ABJcChJvcmRlcmVkX2NvZGVfYnl0ZXMYAiABKAsyPi5nb29nbGUuYmlndGFi",
-            "bGUuYWRtaW4udjIuVHlwZS5JbnQ2NC5FbmNvZGluZy5PcmRlcmVkQ29kZUJ5",
-            "dGVzSAAaTgoOQmlnRW5kaWFuQnl0ZXMSPAoKYnl0ZXNfdHlwZRgBIAEoCzIk",
-            "Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UeXBlLkJ5dGVzQgIYARoSChBP",
-            "cmRlcmVkQ29kZUJ5dGVzQgoKCGVuY29kaW5nGgYKBEJvb2waCQoHRmxvYXQz",
-            "MhoJCgdGbG9hdDY0GrQBCglUaW1lc3RhbXASQwoIZW5jb2RpbmcYASABKAsy",
-            "MS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuVHlwZS5UaW1lc3RhbXAuRW5j",
-            "b2RpbmcaYgoIRW5jb2RpbmcSSgoRdW5peF9taWNyb3NfaW50NjQYASABKAsy",
-            "LS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuVHlwZS5JbnQ2NC5FbmNvZGlu",
-            "Z0gAQgoKCGVuY29kaW5nGgYKBERhdGUauQQKBlN0cnVjdBI7CgZmaWVsZHMY",
-            "ASADKAsyKy5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuVHlwZS5TdHJ1Y3Qu",
-            "RmllbGQSQAoIZW5jb2RpbmcYAiABKAsyLi5nb29nbGUuYmlndGFibGUuYWRt",
-            "aW4udjIuVHlwZS5TdHJ1Y3QuRW5jb2RpbmcaSQoFRmllbGQSEgoKZmllbGRf",
-            "bmFtZRgBIAEoCRIsCgR0eXBlGAIgASgLMh4uZ29vZ2xlLmJpZ3RhYmxlLmFk",
-            "bWluLnYyLlR5cGUa5AIKCEVuY29kaW5nEk0KCXNpbmdsZXRvbhgBIAEoCzI4",
-            "Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UeXBlLlN0cnVjdC5FbmNvZGlu",
-            "Zy5TaW5nbGV0b25IABJYCg9kZWxpbWl0ZWRfYnl0ZXMYAiABKAsyPS5nb29n",
-            "bGUuYmlndGFibGUuYWRtaW4udjIuVHlwZS5TdHJ1Y3QuRW5jb2RpbmcuRGVs",
-            "aW1pdGVkQnl0ZXNIABJdChJvcmRlcmVkX2NvZGVfYnl0ZXMYAyABKAsyPy5n",
-            "b29nbGUuYmlndGFibGUuYWRtaW4udjIuVHlwZS5TdHJ1Y3QuRW5jb2Rpbmcu",
-            "T3JkZXJlZENvZGVCeXRlc0gAGgsKCVNpbmdsZXRvbhojCg5EZWxpbWl0ZWRC",
-            "eXRlcxIRCglkZWxpbWl0ZXIYASABKAwaEgoQT3JkZXJlZENvZGVCeXRlc0IK",
-            "CghlbmNvZGluZxo9CgVBcnJheRI0CgxlbGVtZW50X3R5cGUYASABKAsyHi5n",
-            "b29nbGUuYmlndGFibGUuYWRtaW4udjIuVHlwZRprCgNNYXASMAoIa2V5X3R5",
-            "cGUYASABKAsyHi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuVHlwZRIyCgp2",
-            "YWx1ZV90eXBlGAIgASgLMh4uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlR5",
-            "cGUa2wMKCUFnZ3JlZ2F0ZRIyCgppbnB1dF90eXBlGAEgASgLMh4uZ29vZ2xl",
-            "LmJpZ3RhYmxlLmFkbWluLnYyLlR5cGUSNwoKc3RhdGVfdHlwZRgCIAEoCzIe",
-            "Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UeXBlQgPgQQMSOwoDc3VtGAQg",
-            "ASgLMiwuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlR5cGUuQWdncmVnYXRl",
-            "LlN1bUgAEmUKEmhsbHBwX3VuaXF1ZV9jb3VudBgFIAEoCzJHLmdvb2dsZS5i",
-            "aWd0YWJsZS5hZG1pbi52Mi5UeXBlLkFnZ3JlZ2F0ZS5IeXBlckxvZ0xvZ1Bs",
-            "dXNQbHVzVW5pcXVlQ291bnRIABI7CgNtYXgYBiABKAsyLC5nb29nbGUuYmln",
-            "dGFibGUuYWRtaW4udjIuVHlwZS5BZ2dyZWdhdGUuTWF4SAASOwoDbWluGAcg",
-            "ASgLMiwuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlR5cGUuQWdncmVnYXRl",
-            "Lk1pbkgAGgUKA1N1bRoFCgNNYXgaBQoDTWluGiAKHkh5cGVyTG9nTG9nUGx1",
-            "c1BsdXNVbmlxdWVDb3VudEIMCgphZ2dyZWdhdG9yQgYKBGtpbmRCzQEKHGNv",
-            "bS5nb29nbGUuYmlndGFibGUuYWRtaW4udjJCClR5cGVzUHJvdG9QAVo4Y2xv",
-            "dWQuZ29vZ2xlLmNvbS9nby9iaWd0YWJsZS9hZG1pbi9hcGl2Mi9hZG1pbnBi",
-            "O2FkbWlucGKqAh5Hb29nbGUuQ2xvdWQuQmlndGFibGUuQWRtaW4uVjLKAh5H",
-            "b29nbGVcQ2xvdWRcQmlndGFibGVcQWRtaW5cVjLqAiJHb29nbGU6OkNsb3Vk",
-            "OjpCaWd0YWJsZTo6QWRtaW46OlYyYgZwcm90bzM="));
+            "Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UeXBlLk1hcEgAEjoKCnByb3Rv",
+            "X3R5cGUYDSABKAsyJC5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuVHlwZS5Q",
+            "cm90b0gAEjgKCWVudW1fdHlwZRgOIAEoCzIjLmdvb2dsZS5iaWd0YWJsZS5h",
+            "ZG1pbi52Mi5UeXBlLkVudW1IABqpAQoFQnl0ZXMSPwoIZW5jb2RpbmcYASAB",
+            "KAsyLS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuVHlwZS5CeXRlcy5FbmNv",
+            "ZGluZxpfCghFbmNvZGluZxJACgNyYXcYASABKAsyMS5nb29nbGUuYmlndGFi",
+            "bGUuYWRtaW4udjIuVHlwZS5CeXRlcy5FbmNvZGluZy5SYXdIABoFCgNSYXdC",
+            "CgoIZW5jb2RpbmcanwIKBlN0cmluZxJACghlbmNvZGluZxgBIAEoCzIuLmdv",
+            "b2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UeXBlLlN0cmluZy5FbmNvZGluZxrS",
+            "AQoIRW5jb2RpbmcSTgoIdXRmOF9yYXcYASABKAsyNi5nb29nbGUuYmlndGFi",
+            "bGUuYWRtaW4udjIuVHlwZS5TdHJpbmcuRW5jb2RpbmcuVXRmOFJhd0ICGAFI",
+            "ABJOCgp1dGY4X2J5dGVzGAIgASgLMjguZ29vZ2xlLmJpZ3RhYmxlLmFkbWlu",
+            "LnYyLlR5cGUuU3RyaW5nLkVuY29kaW5nLlV0ZjhCeXRlc0gAGg0KB1V0ZjhS",
+            "YXc6AhgBGgsKCVV0ZjhCeXRlc0IKCghlbmNvZGluZxr9AgoFSW50NjQSPwoI",
+            "ZW5jb2RpbmcYASABKAsyLS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuVHlw",
+            "ZS5JbnQ2NC5FbmNvZGluZxqyAgoIRW5jb2RpbmcSWAoQYmlnX2VuZGlhbl9i",
+            "eXRlcxgBIAEoCzI8Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UeXBlLklu",
+            "dDY0LkVuY29kaW5nLkJpZ0VuZGlhbkJ5dGVzSAASXAoSb3JkZXJlZF9jb2Rl",
+            "X2J5dGVzGAIgASgLMj4uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlR5cGUu",
+            "SW50NjQuRW5jb2RpbmcuT3JkZXJlZENvZGVCeXRlc0gAGk4KDkJpZ0VuZGlh",
+            "bkJ5dGVzEjwKCmJ5dGVzX3R5cGUYASABKAsyJC5nb29nbGUuYmlndGFibGUu",
+            "YWRtaW4udjIuVHlwZS5CeXRlc0ICGAEaEgoQT3JkZXJlZENvZGVCeXRlc0IK",
+            "CghlbmNvZGluZxoGCgRCb29sGgkKB0Zsb2F0MzIaCQoHRmxvYXQ2NBq0AQoJ",
+            "VGltZXN0YW1wEkMKCGVuY29kaW5nGAEgASgLMjEuZ29vZ2xlLmJpZ3RhYmxl",
+            "LmFkbWluLnYyLlR5cGUuVGltZXN0YW1wLkVuY29kaW5nGmIKCEVuY29kaW5n",
+            "EkoKEXVuaXhfbWljcm9zX2ludDY0GAEgASgLMi0uZ29vZ2xlLmJpZ3RhYmxl",
+            "LmFkbWluLnYyLlR5cGUuSW50NjQuRW5jb2RpbmdIAEIKCghlbmNvZGluZxoG",
+            "CgREYXRlGrkECgZTdHJ1Y3QSOwoGZmllbGRzGAEgAygLMisuZ29vZ2xlLmJp",
+            "Z3RhYmxlLmFkbWluLnYyLlR5cGUuU3RydWN0LkZpZWxkEkAKCGVuY29kaW5n",
+            "GAIgASgLMi4uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlR5cGUuU3RydWN0",
+            "LkVuY29kaW5nGkkKBUZpZWxkEhIKCmZpZWxkX25hbWUYASABKAkSLAoEdHlw",
+            "ZRgCIAEoCzIeLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UeXBlGuQCCghF",
+            "bmNvZGluZxJNCglzaW5nbGV0b24YASABKAsyOC5nb29nbGUuYmlndGFibGUu",
+            "YWRtaW4udjIuVHlwZS5TdHJ1Y3QuRW5jb2RpbmcuU2luZ2xldG9uSAASWAoP",
+            "ZGVsaW1pdGVkX2J5dGVzGAIgASgLMj0uZ29vZ2xlLmJpZ3RhYmxlLmFkbWlu",
+            "LnYyLlR5cGUuU3RydWN0LkVuY29kaW5nLkRlbGltaXRlZEJ5dGVzSAASXQoS",
+            "b3JkZXJlZF9jb2RlX2J5dGVzGAMgASgLMj8uZ29vZ2xlLmJpZ3RhYmxlLmFk",
+            "bWluLnYyLlR5cGUuU3RydWN0LkVuY29kaW5nLk9yZGVyZWRDb2RlQnl0ZXNI",
+            "ABoLCglTaW5nbGV0b24aIwoORGVsaW1pdGVkQnl0ZXMSEQoJZGVsaW1pdGVy",
+            "GAEgASgMGhIKEE9yZGVyZWRDb2RlQnl0ZXNCCgoIZW5jb2RpbmcaNwoFUHJv",
+            "dG8SGAoQc2NoZW1hX2J1bmRsZV9pZBgBIAEoCRIUCgxtZXNzYWdlX25hbWUY",
+            "AiABKAkaMwoERW51bRIYChBzY2hlbWFfYnVuZGxlX2lkGAEgASgJEhEKCWVu",
+            "dW1fbmFtZRgCIAEoCRo9CgVBcnJheRI0CgxlbGVtZW50X3R5cGUYASABKAsy",
+            "Hi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuVHlwZRprCgNNYXASMAoIa2V5",
+            "X3R5cGUYASABKAsyHi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuVHlwZRIy",
+            "Cgp2YWx1ZV90eXBlGAIgASgLMh4uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYy",
+            "LlR5cGUa2wMKCUFnZ3JlZ2F0ZRIyCgppbnB1dF90eXBlGAEgASgLMh4uZ29v",
+            "Z2xlLmJpZ3RhYmxlLmFkbWluLnYyLlR5cGUSNwoKc3RhdGVfdHlwZRgCIAEo",
+            "CzIeLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UeXBlQgPgQQMSOwoDc3Vt",
+            "GAQgASgLMiwuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlR5cGUuQWdncmVn",
+            "YXRlLlN1bUgAEmUKEmhsbHBwX3VuaXF1ZV9jb3VudBgFIAEoCzJHLmdvb2ds",
+            "ZS5iaWd0YWJsZS5hZG1pbi52Mi5UeXBlLkFnZ3JlZ2F0ZS5IeXBlckxvZ0xv",
+            "Z1BsdXNQbHVzVW5pcXVlQ291bnRIABI7CgNtYXgYBiABKAsyLC5nb29nbGUu",
+            "YmlndGFibGUuYWRtaW4udjIuVHlwZS5BZ2dyZWdhdGUuTWF4SAASOwoDbWlu",
+            "GAcgASgLMiwuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlR5cGUuQWdncmVn",
+            "YXRlLk1pbkgAGgUKA1N1bRoFCgNNYXgaBQoDTWluGiAKHkh5cGVyTG9nTG9n",
+            "UGx1c1BsdXNVbmlxdWVDb3VudEIMCgphZ2dyZWdhdG9yQgYKBGtpbmRCzQEK",
+            "HGNvbS5nb29nbGUuYmlndGFibGUuYWRtaW4udjJCClR5cGVzUHJvdG9QAVo4",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9iaWd0YWJsZS9hZG1pbi9hcGl2Mi9hZG1p",
+            "bnBiO2FkbWlucGKqAh5Hb29nbGUuQ2xvdWQuQmlndGFibGUuQWRtaW4uVjLK",
+            "Ah5Hb29nbGVcQ2xvdWRcQmlndGFibGVcQWRtaW5cVjLqAiJHb29nbGU6OkNs",
+            "b3VkOjpCaWd0YWJsZTo6QWRtaW46OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type), global::Google.Cloud.Bigtable.Admin.V2.Type.Parser, new[]{ "BytesType", "StringType", "Int64Type", "Float32Type", "Float64Type", "BoolType", "TimestampType", "DateType", "AggregateType", "StructType", "ArrayType", "MapType" }, new[]{ "Kind" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Bytes), global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Bytes.Parser, new[]{ "Encoding" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Bytes.Types.Encoding), global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Bytes.Types.Encoding.Parser, new[]{ "Raw" }, new[]{ "Encoding" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Bytes.Types.Encoding.Types.Raw), global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Bytes.Types.Encoding.Types.Raw.Parser, null, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type), global::Google.Cloud.Bigtable.Admin.V2.Type.Parser, new[]{ "BytesType", "StringType", "Int64Type", "Float32Type", "Float64Type", "BoolType", "TimestampType", "DateType", "AggregateType", "StructType", "ArrayType", "MapType", "ProtoType", "EnumType" }, new[]{ "Kind" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Bytes), global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Bytes.Parser, new[]{ "Encoding" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Bytes.Types.Encoding), global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Bytes.Types.Encoding.Parser, new[]{ "Raw" }, new[]{ "Encoding" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Bytes.Types.Encoding.Types.Raw), global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Bytes.Types.Encoding.Types.Raw.Parser, null, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type.Types.String), global::Google.Cloud.Bigtable.Admin.V2.Type.Types.String.Parser, new[]{ "Encoding" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type.Types.String.Types.Encoding), global::Google.Cloud.Bigtable.Admin.V2.Type.Types.String.Types.Encoding.Parser, new[]{ "Utf8Raw", "Utf8Bytes" }, new[]{ "Encoding" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type.Types.String.Types.Encoding.Types.Utf8Raw), global::Google.Cloud.Bigtable.Admin.V2.Type.Types.String.Types.Encoding.Types.Utf8Raw.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type.Types.String.Types.Encoding.Types.Utf8Bytes), global::Google.Cloud.Bigtable.Admin.V2.Type.Types.String.Types.Encoding.Types.Utf8Bytes.Parser, null, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Int64), global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Int64.Parser, new[]{ "Encoding" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Int64.Types.Encoding), global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Int64.Types.Encoding.Parser, new[]{ "BigEndianBytes", "OrderedCodeBytes" }, new[]{ "Encoding" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Int64.Types.Encoding.Types.BigEndianBytes), global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Int64.Types.Encoding.Types.BigEndianBytes.Parser, new[]{ "BytesType" }, null, null, null, null),
@@ -116,6 +121,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Struct.Types.Encoding), global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Struct.Types.Encoding.Parser, new[]{ "Singleton", "DelimitedBytes", "OrderedCodeBytes" }, new[]{ "Encoding" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Struct.Types.Encoding.Types.Singleton), global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Struct.Types.Encoding.Types.Singleton.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Struct.Types.Encoding.Types.DelimitedBytes), global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Struct.Types.Encoding.Types.DelimitedBytes.Parser, new[]{ "Delimiter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Struct.Types.Encoding.Types.OrderedCodeBytes), global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Struct.Types.Encoding.Types.OrderedCodeBytes.Parser, null, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Proto), global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Proto.Parser, new[]{ "SchemaBundleId", "MessageName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Enum), global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Enum.Parser, new[]{ "SchemaBundleId", "EnumName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Array), global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Array.Parser, new[]{ "ElementType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Map), global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Map.Parser, new[]{ "KeyType", "ValueType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Aggregate), global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Aggregate.Parser, new[]{ "InputType", "StateType", "Sum", "HllppUniqueCount", "Max", "Min" }, new[]{ "Aggregator" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Aggregate.Types.Sum), global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Aggregate.Types.Sum.Parser, null, null, null, null, null),
@@ -223,6 +230,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           break;
         case KindOneofCase.MapType:
           MapType = other.MapType.Clone();
+          break;
+        case KindOneofCase.ProtoType:
+          ProtoType = other.ProtoType.Clone();
+          break;
+        case KindOneofCase.EnumType:
+          EnumType = other.EnumType.Clone();
           break;
       }
 
@@ -415,6 +428,36 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
     }
 
+    /// <summary>Field number for the "proto_type" field.</summary>
+    public const int ProtoTypeFieldNumber = 13;
+    /// <summary>
+    /// Proto
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Proto ProtoType {
+      get { return kindCase_ == KindOneofCase.ProtoType ? (global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Proto) kind_ : null; }
+      set {
+        kind_ = value;
+        kindCase_ = value == null ? KindOneofCase.None : KindOneofCase.ProtoType;
+      }
+    }
+
+    /// <summary>Field number for the "enum_type" field.</summary>
+    public const int EnumTypeFieldNumber = 14;
+    /// <summary>
+    /// Enum
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Enum EnumType {
+      get { return kindCase_ == KindOneofCase.EnumType ? (global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Enum) kind_ : null; }
+      set {
+        kind_ = value;
+        kindCase_ = value == null ? KindOneofCase.None : KindOneofCase.EnumType;
+      }
+    }
+
     private object kind_;
     /// <summary>Enum of possible cases for the "kind" oneof.</summary>
     public enum KindOneofCase {
@@ -431,6 +474,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       StructType = 7,
       ArrayType = 3,
       MapType = 4,
+      ProtoType = 13,
+      EnumType = 14,
     }
     private KindOneofCase kindCase_ = KindOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -473,6 +518,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (!object.Equals(StructType, other.StructType)) return false;
       if (!object.Equals(ArrayType, other.ArrayType)) return false;
       if (!object.Equals(MapType, other.MapType)) return false;
+      if (!object.Equals(ProtoType, other.ProtoType)) return false;
+      if (!object.Equals(EnumType, other.EnumType)) return false;
       if (KindCase != other.KindCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -493,6 +540,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (kindCase_ == KindOneofCase.StructType) hash ^= StructType.GetHashCode();
       if (kindCase_ == KindOneofCase.ArrayType) hash ^= ArrayType.GetHashCode();
       if (kindCase_ == KindOneofCase.MapType) hash ^= MapType.GetHashCode();
+      if (kindCase_ == KindOneofCase.ProtoType) hash ^= ProtoType.GetHashCode();
+      if (kindCase_ == KindOneofCase.EnumType) hash ^= EnumType.GetHashCode();
       hash ^= (int) kindCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -560,6 +609,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(98);
         output.WriteMessage(Float32Type);
       }
+      if (kindCase_ == KindOneofCase.ProtoType) {
+        output.WriteRawTag(106);
+        output.WriteMessage(ProtoType);
+      }
+      if (kindCase_ == KindOneofCase.EnumType) {
+        output.WriteRawTag(114);
+        output.WriteMessage(EnumType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -618,6 +675,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(98);
         output.WriteMessage(Float32Type);
       }
+      if (kindCase_ == KindOneofCase.ProtoType) {
+        output.WriteRawTag(106);
+        output.WriteMessage(ProtoType);
+      }
+      if (kindCase_ == KindOneofCase.EnumType) {
+        output.WriteRawTag(114);
+        output.WriteMessage(EnumType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -663,6 +728,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       if (kindCase_ == KindOneofCase.MapType) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MapType);
+      }
+      if (kindCase_ == KindOneofCase.ProtoType) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProtoType);
+      }
+      if (kindCase_ == KindOneofCase.EnumType) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EnumType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -748,6 +819,18 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             MapType = new global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Map();
           }
           MapType.MergeFrom(other.MapType);
+          break;
+        case KindOneofCase.ProtoType:
+          if (ProtoType == null) {
+            ProtoType = new global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Proto();
+          }
+          ProtoType.MergeFrom(other.ProtoType);
+          break;
+        case KindOneofCase.EnumType:
+          if (EnumType == null) {
+            EnumType = new global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Enum();
+          }
+          EnumType.MergeFrom(other.EnumType);
           break;
       }
 
@@ -874,6 +957,24 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             Float32Type = subBuilder;
             break;
           }
+          case 106: {
+            global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Proto subBuilder = new global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Proto();
+            if (kindCase_ == KindOneofCase.ProtoType) {
+              subBuilder.MergeFrom(ProtoType);
+            }
+            input.ReadMessage(subBuilder);
+            ProtoType = subBuilder;
+            break;
+          }
+          case 114: {
+            global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Enum subBuilder = new global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Enum();
+            if (kindCase_ == KindOneofCase.EnumType) {
+              subBuilder.MergeFrom(EnumType);
+            }
+            input.ReadMessage(subBuilder);
+            EnumType = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -995,6 +1096,24 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             }
             input.ReadMessage(subBuilder);
             Float32Type = subBuilder;
+            break;
+          }
+          case 106: {
+            global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Proto subBuilder = new global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Proto();
+            if (kindCase_ == KindOneofCase.ProtoType) {
+              subBuilder.MergeFrom(ProtoType);
+            }
+            input.ReadMessage(subBuilder);
+            ProtoType = subBuilder;
+            break;
+          }
+          case 114: {
+            global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Enum subBuilder = new global::Google.Cloud.Bigtable.Admin.V2.Type.Types.Enum();
+            if (kindCase_ == KindOneofCase.EnumType) {
+              subBuilder.MergeFrom(EnumType);
+            }
+            input.ReadMessage(subBuilder);
+            EnumType = subBuilder;
             break;
           }
         }
@@ -5866,6 +5985,482 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
+      /// A protobuf message type.
+      /// Values of type `Proto` are stored in `Value.bytes_value`.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Proto : pb::IMessage<Proto>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Proto> _parser = new pb::MessageParser<Proto>(() => new Proto());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Proto> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Bigtable.Admin.V2.Type.Descriptor.NestedTypes[9]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Proto() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Proto(Proto other) : this() {
+          schemaBundleId_ = other.schemaBundleId_;
+          messageName_ = other.messageName_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Proto Clone() {
+          return new Proto(this);
+        }
+
+        /// <summary>Field number for the "schema_bundle_id" field.</summary>
+        public const int SchemaBundleIdFieldNumber = 1;
+        private string schemaBundleId_ = "";
+        /// <summary>
+        /// The ID of the schema bundle that this proto is defined in.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string SchemaBundleId {
+          get { return schemaBundleId_; }
+          set {
+            schemaBundleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "message_name" field.</summary>
+        public const int MessageNameFieldNumber = 2;
+        private string messageName_ = "";
+        /// <summary>
+        /// The fully qualified name of the protobuf message, including package. In
+        /// the format of "foo.bar.Message".
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string MessageName {
+          get { return messageName_; }
+          set {
+            messageName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Proto);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Proto other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (SchemaBundleId != other.SchemaBundleId) return false;
+          if (MessageName != other.MessageName) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (SchemaBundleId.Length != 0) hash ^= SchemaBundleId.GetHashCode();
+          if (MessageName.Length != 0) hash ^= MessageName.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (SchemaBundleId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(SchemaBundleId);
+          }
+          if (MessageName.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(MessageName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (SchemaBundleId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(SchemaBundleId);
+          }
+          if (MessageName.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(MessageName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (SchemaBundleId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(SchemaBundleId);
+          }
+          if (MessageName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(MessageName);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Proto other) {
+          if (other == null) {
+            return;
+          }
+          if (other.SchemaBundleId.Length != 0) {
+            SchemaBundleId = other.SchemaBundleId;
+          }
+          if (other.MessageName.Length != 0) {
+            MessageName = other.MessageName;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                SchemaBundleId = input.ReadString();
+                break;
+              }
+              case 18: {
+                MessageName = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                SchemaBundleId = input.ReadString();
+                break;
+              }
+              case 18: {
+                MessageName = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// A protobuf enum type.
+      /// Values of type `Enum` are stored in `Value.int_value`.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Enum : pb::IMessage<Enum>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Enum> _parser = new pb::MessageParser<Enum>(() => new Enum());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Enum> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Bigtable.Admin.V2.Type.Descriptor.NestedTypes[10]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Enum() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Enum(Enum other) : this() {
+          schemaBundleId_ = other.schemaBundleId_;
+          enumName_ = other.enumName_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Enum Clone() {
+          return new Enum(this);
+        }
+
+        /// <summary>Field number for the "schema_bundle_id" field.</summary>
+        public const int SchemaBundleIdFieldNumber = 1;
+        private string schemaBundleId_ = "";
+        /// <summary>
+        /// The ID of the schema bundle that this enum is defined in.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string SchemaBundleId {
+          get { return schemaBundleId_; }
+          set {
+            schemaBundleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "enum_name" field.</summary>
+        public const int EnumNameFieldNumber = 2;
+        private string enumName_ = "";
+        /// <summary>
+        /// The fully qualified name of the protobuf enum message, including package.
+        /// In the format of "foo.bar.EnumMessage".
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string EnumName {
+          get { return enumName_; }
+          set {
+            enumName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Enum);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Enum other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (SchemaBundleId != other.SchemaBundleId) return false;
+          if (EnumName != other.EnumName) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (SchemaBundleId.Length != 0) hash ^= SchemaBundleId.GetHashCode();
+          if (EnumName.Length != 0) hash ^= EnumName.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (SchemaBundleId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(SchemaBundleId);
+          }
+          if (EnumName.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(EnumName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (SchemaBundleId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(SchemaBundleId);
+          }
+          if (EnumName.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(EnumName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (SchemaBundleId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(SchemaBundleId);
+          }
+          if (EnumName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(EnumName);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Enum other) {
+          if (other == null) {
+            return;
+          }
+          if (other.SchemaBundleId.Length != 0) {
+            SchemaBundleId = other.SchemaBundleId;
+          }
+          if (other.EnumName.Length != 0) {
+            EnumName = other.EnumName;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                SchemaBundleId = input.ReadString();
+                break;
+              }
+              case 18: {
+                EnumName = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                SchemaBundleId = input.ReadString();
+                break;
+              }
+              case 18: {
+                EnumName = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// An ordered list of elements of a given type.
       /// Values of type `Array` are stored in `Value.array_value`.
       /// </summary>
@@ -5884,7 +6479,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Bigtable.Admin.V2.Type.Descriptor.NestedTypes[9]; }
+          get { return global::Google.Cloud.Bigtable.Admin.V2.Type.Descriptor.NestedTypes[11]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6095,7 +6690,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Bigtable.Admin.V2.Type.Descriptor.NestedTypes[10]; }
+          get { return global::Google.Cloud.Bigtable.Admin.V2.Type.Descriptor.NestedTypes[12]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6354,7 +6949,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Bigtable.Admin.V2.Type.Descriptor.NestedTypes[11]; }
+          get { return global::Google.Cloud.Bigtable.Admin.V2.Type.Descriptor.NestedTypes[13]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

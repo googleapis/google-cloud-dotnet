@@ -87,7 +87,8 @@ namespace Google.Cloud.ApiHub.V1 {
   }
   #region Messages
   /// <summary>
-  /// The [GetStyleGuide][ApiHub.GetStyleGuide] method's request.
+  /// The [GetStyleGuide][google.cloud.apihub.v1.LintingService.GetStyleGuide]
+  /// method's request.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetStyleGuideRequest : pb::IMessage<GetStyleGuideRequest>
@@ -285,7 +286,9 @@ namespace Google.Cloud.ApiHub.V1 {
   }
 
   /// <summary>
-  /// The [UpdateStyleGuide][ApiHub.UpdateStyleGuide] method's request.
+  /// The
+  /// [UpdateStyleGuide][google.cloud.apihub.v1.LintingService.UpdateStyleGuide]
+  /// method's request.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateStyleGuideRequest : pb::IMessage<UpdateStyleGuideRequest>
@@ -539,7 +542,9 @@ namespace Google.Cloud.ApiHub.V1 {
   }
 
   /// <summary>
-  /// The [GetStyleGuideContents][ApiHub.GetStyleGuideContents] method's request.
+  /// The
+  /// [GetStyleGuideContents][google.cloud.apihub.v1.LintingService.GetStyleGuideContents]
+  /// method's request.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetStyleGuideContentsRequest : pb::IMessage<GetStyleGuideContentsRequest>
@@ -738,7 +743,8 @@ namespace Google.Cloud.ApiHub.V1 {
   }
 
   /// <summary>
-  /// The [LintSpec][ApiHub.LintSpec] method's request.
+  /// The [LintSpec][google.cloud.apihub.v1.LintingService.LintSpec] method's
+  /// request.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LintSpecRequest : pb::IMessage<LintSpecRequest>

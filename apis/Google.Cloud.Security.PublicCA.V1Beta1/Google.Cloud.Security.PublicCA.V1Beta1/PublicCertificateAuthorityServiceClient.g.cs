@@ -223,7 +223,9 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1
         public virtual PublicCertificateAuthorityService.PublicCertificateAuthorityServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey] bound to the project.
+        /// Creates a new
+        /// [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey]
+        /// bound to the project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -232,7 +234,9 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey] bound to the project.
+        /// Creates a new
+        /// [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey]
+        /// bound to the project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -241,7 +245,9 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey] bound to the project.
+        /// Creates a new
+        /// [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey]
+        /// bound to the project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -250,17 +256,19 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1
             CreateExternalAccountKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey] bound to the project.
+        /// Creates a new
+        /// [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey]
+        /// bound to the project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this external_account_key will be created.
-        /// Format: projects/[project_id]/locations/[location].
-        /// At present only the "global" location is supported.
+        /// Required. The parent resource where this external_account_key will be
+        /// created. Format: projects/[project_id]/locations/[location]. At present
+        /// only the "global" location is supported.
         /// </param>
         /// <param name="externalAccountKey">
-        /// Required. The external account key to create. This field only exists to future-proof
-        /// the API. At present, all fields in ExternalAccountKey are output only and
-        /// all values are ignored. For the purpose of the
+        /// Required. The external account key to create. This field only exists to
+        /// future-proof the API. At present, all fields in ExternalAccountKey are
+        /// output only and all values are ignored. For the purpose of the
         /// CreateExternalAccountKeyRequest, set it to a default/empty value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -273,17 +281,19 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey] bound to the project.
+        /// Creates a new
+        /// [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey]
+        /// bound to the project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this external_account_key will be created.
-        /// Format: projects/[project_id]/locations/[location].
-        /// At present only the "global" location is supported.
+        /// Required. The parent resource where this external_account_key will be
+        /// created. Format: projects/[project_id]/locations/[location]. At present
+        /// only the "global" location is supported.
         /// </param>
         /// <param name="externalAccountKey">
-        /// Required. The external account key to create. This field only exists to future-proof
-        /// the API. At present, all fields in ExternalAccountKey are output only and
-        /// all values are ignored. For the purpose of the
+        /// Required. The external account key to create. This field only exists to
+        /// future-proof the API. At present, all fields in ExternalAccountKey are
+        /// output only and all values are ignored. For the purpose of the
         /// CreateExternalAccountKeyRequest, set it to a default/empty value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -296,17 +306,19 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey] bound to the project.
+        /// Creates a new
+        /// [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey]
+        /// bound to the project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this external_account_key will be created.
-        /// Format: projects/[project_id]/locations/[location].
-        /// At present only the "global" location is supported.
+        /// Required. The parent resource where this external_account_key will be
+        /// created. Format: projects/[project_id]/locations/[location]. At present
+        /// only the "global" location is supported.
         /// </param>
         /// <param name="externalAccountKey">
-        /// Required. The external account key to create. This field only exists to future-proof
-        /// the API. At present, all fields in ExternalAccountKey are output only and
-        /// all values are ignored. For the purpose of the
+        /// Required. The external account key to create. This field only exists to
+        /// future-proof the API. At present, all fields in ExternalAccountKey are
+        /// output only and all values are ignored. For the purpose of the
         /// CreateExternalAccountKeyRequest, set it to a default/empty value.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -315,17 +327,19 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1
             CreateExternalAccountKeyAsync(parent, externalAccountKey, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey] bound to the project.
+        /// Creates a new
+        /// [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey]
+        /// bound to the project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this external_account_key will be created.
-        /// Format: projects/[project_id]/locations/[location].
-        /// At present only the "global" location is supported.
+        /// Required. The parent resource where this external_account_key will be
+        /// created. Format: projects/[project_id]/locations/[location]. At present
+        /// only the "global" location is supported.
         /// </param>
         /// <param name="externalAccountKey">
-        /// Required. The external account key to create. This field only exists to future-proof
-        /// the API. At present, all fields in ExternalAccountKey are output only and
-        /// all values are ignored. For the purpose of the
+        /// Required. The external account key to create. This field only exists to
+        /// future-proof the API. At present, all fields in ExternalAccountKey are
+        /// output only and all values are ignored. For the purpose of the
         /// CreateExternalAccountKeyRequest, set it to a default/empty value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -338,17 +352,19 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey] bound to the project.
+        /// Creates a new
+        /// [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey]
+        /// bound to the project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this external_account_key will be created.
-        /// Format: projects/[project_id]/locations/[location].
-        /// At present only the "global" location is supported.
+        /// Required. The parent resource where this external_account_key will be
+        /// created. Format: projects/[project_id]/locations/[location]. At present
+        /// only the "global" location is supported.
         /// </param>
         /// <param name="externalAccountKey">
-        /// Required. The external account key to create. This field only exists to future-proof
-        /// the API. At present, all fields in ExternalAccountKey are output only and
-        /// all values are ignored. For the purpose of the
+        /// Required. The external account key to create. This field only exists to
+        /// future-proof the API. At present, all fields in ExternalAccountKey are
+        /// output only and all values are ignored. For the purpose of the
         /// CreateExternalAccountKeyRequest, set it to a default/empty value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -361,17 +377,19 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey] bound to the project.
+        /// Creates a new
+        /// [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey]
+        /// bound to the project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this external_account_key will be created.
-        /// Format: projects/[project_id]/locations/[location].
-        /// At present only the "global" location is supported.
+        /// Required. The parent resource where this external_account_key will be
+        /// created. Format: projects/[project_id]/locations/[location]. At present
+        /// only the "global" location is supported.
         /// </param>
         /// <param name="externalAccountKey">
-        /// Required. The external account key to create. This field only exists to future-proof
-        /// the API. At present, all fields in ExternalAccountKey are output only and
-        /// all values are ignored. For the purpose of the
+        /// Required. The external account key to create. This field only exists to
+        /// future-proof the API. At present, all fields in ExternalAccountKey are
+        /// output only and all values are ignored. For the purpose of the
         /// CreateExternalAccountKeyRequest, set it to a default/empty value.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -426,7 +444,9 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1
         partial void Modify_CreateExternalAccountKeyRequest(ref CreateExternalAccountKeyRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Creates a new [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey] bound to the project.
+        /// Creates a new
+        /// [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey]
+        /// bound to the project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -438,7 +458,9 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1
         }
 
         /// <summary>
-        /// Creates a new [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey] bound to the project.
+        /// Creates a new
+        /// [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey]
+        /// bound to the project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

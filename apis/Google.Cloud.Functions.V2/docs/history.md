@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.8.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+### Documentation improvements
+
+- Updated `docker_registry` proto to reflect its deprecated status
+- Small fixes
+
 ## Version 1.7.0, released 2024-08-13
 
 ### New features

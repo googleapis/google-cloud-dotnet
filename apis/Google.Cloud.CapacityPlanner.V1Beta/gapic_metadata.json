@@ -1,0 +1,54 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.capacityplanner.v1beta",
+  "libraryPackage": "Google.Cloud.CapacityPlanner.V1Beta",
+  "services": {
+    "UsageService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "UsageServiceClient",
+          "rpcs": {
+            "ExportForecasts": {
+              "methods": [
+                "ExportForecasts",
+                "ExportForecastsAsync"
+              ]
+            },
+            "ExportReservationsUsage": {
+              "methods": [
+                "ExportReservationsUsage",
+                "ExportReservationsUsageAsync"
+              ]
+            },
+            "ExportUsageHistories": {
+              "methods": [
+                "ExportUsageHistories",
+                "ExportUsageHistoriesAsync"
+              ]
+            },
+            "QueryForecasts": {
+              "methods": [
+                "QueryForecasts",
+                "QueryForecastsAsync"
+              ]
+            },
+            "QueryReservations": {
+              "methods": [
+                "QueryReservations",
+                "QueryReservationsAsync"
+              ]
+            },
+            "QueryUsageHistories": {
+              "methods": [
+                "QueryUsageHistories",
+                "QueryUsageHistoriesAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

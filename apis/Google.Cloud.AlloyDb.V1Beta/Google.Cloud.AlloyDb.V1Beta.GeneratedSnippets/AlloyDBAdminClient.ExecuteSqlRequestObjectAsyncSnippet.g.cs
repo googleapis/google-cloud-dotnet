@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
                 User = "",
                 SqlStatement = "",
                 Password = "",
+                ValidateOnly = false,
             };
             // Make the request
             ExecuteSqlResponse response = await alloyDBAdminClient.ExecuteSqlAsync(request);

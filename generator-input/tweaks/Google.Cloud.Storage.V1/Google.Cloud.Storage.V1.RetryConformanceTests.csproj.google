@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+  - Note: the use of ReplaceAll is basically because we can't easily generate this.
+  - ReplaceAll should only be used when absolutely necessary.
+  -->
+<Project Sdk="Microsoft.NET.Sdk" ReplaceAll="true">
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net462</TargetFrameworks>
+    <TargetFrameworks Condition="'$(OS)' != 'Windows_NT'">net8.0</TargetFrameworks>
+    <IsPackable>false</IsPackable>
+    <NoWarn>1701;1702;1705;xUnit2004;xUnit2013;AD0001</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- This is required as a direct dependency to enable testing -->
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- We don't use anything from the Test project, but this gets us the same dependencies trivially. -->
+    <ProjectReference Include="..\Google.Cloud.Storage.V1.Tests\Google.Cloud.Storage.V1.Tests.csproj" />
+  </ItemGroup>
+</Project>

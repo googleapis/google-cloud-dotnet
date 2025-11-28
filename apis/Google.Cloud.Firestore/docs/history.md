@@ -1,5 +1,23 @@
 # Version history
 
+## Version 3.13.0, released 2025-11-18
+
+### New features
+
+- Update documentation with .NET 10 compatibility workaround
+
+## Version 3.12.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+## Version 3.11.0, released 2025-10-15
+
+### New features
+
+- Implement support for Firestore type discriminators
+
 ## Version 3.10.0, released 2025-03-12
 
 ### New features

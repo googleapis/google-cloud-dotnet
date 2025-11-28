@@ -63,68 +63,116 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             "bnNlEh4KEW9pZGNfY2xhaW1zX3Rva2VuGAIgASgJQgPgQQMSLwoOcGFydGlh",
             "bF9lcnJvcnMYAyADKAsyEi5nb29nbGUucnBjLlN0YXR1c0ID4EEDIjMKDkdj",
             "cENyZWRlbnRpYWxzEiEKGXNlcnZpY2VfYWNjb3VudF9pZF90b2tlbnMYAiAD",
-            "KAkipgUKDFRva2VuT3B0aW9ucxJ2Chphd3NfcHJpbmNpcGFsX3RhZ3Nfb3B0",
-            "aW9ucxgEIAEoCzJLLmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRp",
-            "bmcudjEuVG9rZW5PcHRpb25zLkF3c1ByaW5jaXBhbFRhZ3NPcHRpb25zQgPg",
-            "QQFIABIVCghhdWRpZW5jZRgBIAEoCUID4EEBEhIKBW5vbmNlGAIgAygJQgPg",
-            "QQESSQoKdG9rZW5fdHlwZRgDIAEoDjIwLmdvb2dsZS5jbG91ZC5jb25maWRl",
-            "bnRpYWxjb21wdXRpbmcudjEuVG9rZW5UeXBlQgPgQQEakQMKF0F3c1ByaW5j",
-            "aXBhbFRhZ3NPcHRpb25zEoUBChZhbGxvd2VkX3ByaW5jaXBhbF90YWdzGAEg",
-            "ASgLMmAuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5U",
-            "b2tlbk9wdGlvbnMuQXdzUHJpbmNpcGFsVGFnc09wdGlvbnMuQWxsb3dlZFBy",
-            "aW5jaXBhbFRhZ3NCA+BBARrtAQoUQWxsb3dlZFByaW5jaXBhbFRhZ3MSogEK",
-            "GmNvbnRhaW5lcl9pbWFnZV9zaWduYXR1cmVzGAEgASgLMnkuZ29vZ2xlLmNs",
-            "b3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5Ub2tlbk9wdGlvbnMuQXdz",
-            "UHJpbmNpcGFsVGFnc09wdGlvbnMuQWxsb3dlZFByaW5jaXBhbFRhZ3MuQ29u",
-            "dGFpbmVySW1hZ2VTaWduYXR1cmVzQgPgQQEaMAoYQ29udGFpbmVySW1hZ2VT",
-            "aWduYXR1cmVzEhQKB2tleV9pZHMYASADKAlCA+BBAUIUChJ0b2tlbl90eXBl",
-            "X29wdGlvbnMijwMKDlRwbUF0dGVzdGF0aW9uEksKBnF1b3RlcxgBIAMoCzI7",
-            "Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuVHBtQXR0",
-            "ZXN0YXRpb24uUXVvdGUSFQoNdGNnX2V2ZW50X2xvZxgCIAEoDBIbChNjYW5v",
-            "bmljYWxfZXZlbnRfbG9nGAMgASgMEg8KB2FrX2NlcnQYBCABKAwSEgoKY2Vy",
-            "dF9jaGFpbhgFIAMoDBrWAQoFUXVvdGUSEQoJaGFzaF9hbGdvGAEgASgFEl4K",
-            "CnBjcl92YWx1ZXMYAiADKAsySi5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFs",
-            "Y29tcHV0aW5nLnYxLlRwbUF0dGVzdGF0aW9uLlF1b3RlLlBjclZhbHVlc0Vu",
-            "dHJ5EhEKCXJhd19xdW90ZRgDIAEoDBIVCg1yYXdfc2lnbmF0dXJlGAQgASgM",
-            "GjAKDlBjclZhbHVlc0VudHJ5EgsKA2tleRgBIAEoBRINCgV2YWx1ZRgCIAEo",
-            "DDoCOAEiagoVQ29uZmlkZW50aWFsU3BhY2VJbmZvElEKD3NpZ25lZF9lbnRp",
-            "dGllcxgBIAMoCzIzLmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRp",
-            "bmcudjEuU2lnbmVkRW50aXR5QgPgQQEidwoMU2lnbmVkRW50aXR5EmcKGmNv",
-            "bnRhaW5lcl9pbWFnZV9zaWduYXR1cmVzGAEgAygLMj4uZ29vZ2xlLmNsb3Vk",
-            "LmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5Db250YWluZXJJbWFnZVNpZ25h",
-            "dHVyZUID4EEBIq8BChdDb250YWluZXJJbWFnZVNpZ25hdHVyZRIUCgdwYXls",
-            "b2FkGAEgASgMQgPgQQESFgoJc2lnbmF0dXJlGAIgASgMQgPgQQESFwoKcHVi",
-            "bGljX2tleRgDIAEoDEID4EEBEk0KB3NpZ19hbGcYBCABKA4yNy5nb29nbGUu",
-            "Y2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlNpZ25pbmdBbGdvcml0",
-            "aG1CA+BBASp/ChBTaWduaW5nQWxnb3JpdGhtEiEKHVNJR05JTkdfQUxHT1JJ",
-            "VEhNX1VOU1BFQ0lGSUVEEAASFQoRUlNBU1NBX1BTU19TSEEyNTYQARIaChZS",
-            "U0FTU0FfUEtDUzFWMTVfU0hBMjU2EAISFQoRRUNEU0FfUDI1Nl9TSEEyNTYQ",
-            "AyqOAQoJVG9rZW5UeXBlEhoKFlRPS0VOX1RZUEVfVU5TUEVDSUZJRUQQABIT",
-            "Cg9UT0tFTl9UWVBFX09JREMQARISCg5UT0tFTl9UWVBFX1BLSRACEhoKFlRP",
-            "S0VOX1RZUEVfTElNSVRFRF9BV1MQAxIgChxUT0tFTl9UWVBFX0FXU19QUklO",
-            "Q0lQQUxUQUdTEAQytwQKFUNvbmZpZGVudGlhbENvbXB1dGluZxLYAQoPQ3Jl",
-            "YXRlQ2hhbGxlbmdlEj0uZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1",
-            "dGluZy52MS5DcmVhdGVDaGFsbGVuZ2VSZXF1ZXN0GjAuZ29vZ2xlLmNsb3Vk",
-            "LmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5DaGFsbGVuZ2UiVNpBEHBhcmVu",
-            "dCxjaGFsbGVuZ2WC0+STAjsiLi92MS97cGFyZW50PXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyp9L2NoYWxsZW5nZXM6CWNoYWxsZW5nZRLoAQoRVmVyaWZ5QXR0",
-            "ZXN0YXRpb24SPy5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5n",
-            "LnYxLlZlcmlmeUF0dGVzdGF0aW9uUmVxdWVzdBpALmdvb2dsZS5jbG91ZC5j",
-            "b25maWRlbnRpYWxjb21wdXRpbmcudjEuVmVyaWZ5QXR0ZXN0YXRpb25SZXNw",
-            "b25zZSJQgtPkkwJKIkUvdjEve2NoYWxsZW5nZT1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL2NoYWxsZW5nZXMvKn06dmVyaWZ5QXR0ZXN0YXRpb246ASoaWMpB",
-            "JGNvbmZpZGVudGlhbGNvbXB1dGluZy5nb29nbGVhcGlzLmNvbdJBLmh0dHBz",
-            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1ClwIK",
-            "KWNvbS5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxQgxT",
-            "ZXJ2aWNlUHJvdG9QAVpfY2xvdWQuZ29vZ2xlLmNvbS9nby9jb25maWRlbnRp",
-            "YWxjb21wdXRpbmcvYXBpdjEvY29uZmlkZW50aWFsY29tcHV0aW5ncGI7Y29u",
-            "ZmlkZW50aWFsY29tcHV0aW5ncGKqAiVHb29nbGUuQ2xvdWQuQ29uZmlkZW50",
-            "aWFsQ29tcHV0aW5nLlYxygIlR29vZ2xlXENsb3VkXENvbmZpZGVudGlhbENv",
-            "bXB1dGluZ1xWMeoCKEdvb2dsZTo6Q2xvdWQ6OkNvbmZpZGVudGlhbENvbXB1",
-            "dGluZzo6VjFiBnByb3RvMw=="));
+            "KAkihQIKDFRva2VuT3B0aW9ucxJpChphd3NfcHJpbmNpcGFsX3RhZ3Nfb3B0",
+            "aW9ucxgEIAEoCzI+Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRp",
+            "bmcudjEuQXdzUHJpbmNpcGFsVGFnc09wdGlvbnNCA+BBAUgAEhUKCGF1ZGll",
+            "bmNlGAEgASgJQgPgQQESEgoFbm9uY2UYAiADKAlCA+BBARJJCgp0b2tlbl90",
+            "eXBlGAMgASgOMjAuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGlu",
+            "Zy52MS5Ub2tlblR5cGVCA+BBAUIUChJ0b2tlbl90eXBlX29wdGlvbnMi9gIK",
+            "F0F3c1ByaW5jaXBhbFRhZ3NPcHRpb25zEngKFmFsbG93ZWRfcHJpbmNpcGFs",
+            "X3RhZ3MYASABKAsyUy5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0",
+            "aW5nLnYxLkF3c1ByaW5jaXBhbFRhZ3NPcHRpb25zLkFsbG93ZWRQcmluY2lw",
+            "YWxUYWdzQgPgQQEa4AEKFEFsbG93ZWRQcmluY2lwYWxUYWdzEpUBChpjb250",
+            "YWluZXJfaW1hZ2Vfc2lnbmF0dXJlcxgBIAEoCzJsLmdvb2dsZS5jbG91ZC5j",
+            "b25maWRlbnRpYWxjb21wdXRpbmcudjEuQXdzUHJpbmNpcGFsVGFnc09wdGlv",
+            "bnMuQWxsb3dlZFByaW5jaXBhbFRhZ3MuQ29udGFpbmVySW1hZ2VTaWduYXR1",
+            "cmVzQgPgQQEaMAoYQ29udGFpbmVySW1hZ2VTaWduYXR1cmVzEhQKB2tleV9p",
+            "ZHMYASADKAlCA+BBASKPAwoOVHBtQXR0ZXN0YXRpb24SSwoGcXVvdGVzGAEg",
+            "AygLMjsuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5U",
+            "cG1BdHRlc3RhdGlvbi5RdW90ZRIVCg10Y2dfZXZlbnRfbG9nGAIgASgMEhsK",
+            "E2Nhbm9uaWNhbF9ldmVudF9sb2cYAyABKAwSDwoHYWtfY2VydBgEIAEoDBIS",
+            "CgpjZXJ0X2NoYWluGAUgAygMGtYBCgVRdW90ZRIRCgloYXNoX2FsZ28YASAB",
+            "KAUSXgoKcGNyX3ZhbHVlcxgCIAMoCzJKLmdvb2dsZS5jbG91ZC5jb25maWRl",
+            "bnRpYWxjb21wdXRpbmcudjEuVHBtQXR0ZXN0YXRpb24uUXVvdGUuUGNyVmFs",
+            "dWVzRW50cnkSEQoJcmF3X3F1b3RlGAMgASgMEhUKDXJhd19zaWduYXR1cmUY",
+            "BCABKAwaMAoOUGNyVmFsdWVzRW50cnkSCwoDa2V5GAEgASgFEg0KBXZhbHVl",
+            "GAIgASgMOgI4ASJqChVDb25maWRlbnRpYWxTcGFjZUluZm8SUQoPc2lnbmVk",
+            "X2VudGl0aWVzGAEgAygLMjMuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNv",
+            "bXB1dGluZy52MS5TaWduZWRFbnRpdHlCA+BBASJ3CgxTaWduZWRFbnRpdHkS",
+            "ZwoaY29udGFpbmVyX2ltYWdlX3NpZ25hdHVyZXMYASADKAsyPi5nb29nbGUu",
+            "Y2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLkNvbnRhaW5lckltYWdl",
+            "U2lnbmF0dXJlQgPgQQEirwEKF0NvbnRhaW5lckltYWdlU2lnbmF0dXJlEhQK",
+            "B3BheWxvYWQYASABKAxCA+BBARIWCglzaWduYXR1cmUYAiABKAxCA+BBARIX",
+            "CgpwdWJsaWNfa2V5GAMgASgMQgPgQQESTQoHc2lnX2FsZxgEIAEoDjI3Lmdv",
+            "b2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuU2lnbmluZ0Fs",
+            "Z29yaXRobUID4EEBIpYICh5WZXJpZnlDb25maWRlbnRpYWxTcGFjZVJlcXVl",
+            "c3QSUQoHdGRfY2NlbBgDIAEoCzI5Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRp",
+            "YWxjb21wdXRpbmcudjEuVGR4Q2NlbEF0dGVzdGF0aW9uQgPgQQRIABJVCg90",
+            "cG1fYXR0ZXN0YXRpb24YBCABKAsyNS5nb29nbGUuY2xvdWQuY29uZmlkZW50",
+            "aWFsY29tcHV0aW5nLnYxLlRwbUF0dGVzdGF0aW9uQgPgQQRIABJJCgljaGFs",
+            "bGVuZ2UYASABKAlCNuBBAvpBMAouY29uZmlkZW50aWFsY29tcHV0aW5nLmdv",
+            "b2dsZWFwaXMuY29tL0NoYWxsZW5nZRJTCg9nY3BfY3JlZGVudGlhbHMYAiAB",
+            "KAsyNS5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLkdj",
+            "cENyZWRlbnRpYWxzQgPgQQESUQoPc2lnbmVkX2VudGl0aWVzGAUgAygLMjMu",
+            "Z29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5TaWduZWRF",
+            "bnRpdHlCA+BBARJeChVnY2Vfc2hpZWxkZWRfaWRlbnRpdHkYBiABKAsyOi5n",
+            "b29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLkdjZVNoaWVs",
+            "ZGVkSWRlbnRpdHlCA+BBARJ0CgdvcHRpb25zGAcgASgLMl4uZ29vZ2xlLmNs",
+            "b3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5WZXJpZnlDb25maWRlbnRp",
+            "YWxTcGFjZVJlcXVlc3QuQ29uZmlkZW50aWFsU3BhY2VPcHRpb25zQgPgQQEa",
+            "7QIKGENvbmZpZGVudGlhbFNwYWNlT3B0aW9ucxJpChphd3NfcHJpbmNpcGFs",
+            "X3RhZ3Nfb3B0aW9ucxgFIAEoCzI+Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRp",
+            "YWxjb21wdXRpbmcudjEuQXdzUHJpbmNpcGFsVGFnc09wdGlvbnNCA+BBAUgA",
+            "EhUKCGF1ZGllbmNlGAEgASgJQgPgQQESTwoNdG9rZW5fcHJvZmlsZRgCIAEo",
+            "DjIzLmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuVG9r",
+            "ZW5Qcm9maWxlQgPgQQESEgoFbm9uY2UYAyADKAlCA+BBARJRCg5zaWduYXR1",
+            "cmVfdHlwZRgEIAEoDjI0Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21w",
+            "dXRpbmcudjEuU2lnbmF0dXJlVHlwZUID4EEBQhcKFXRva2VuX3Byb2ZpbGVf",
+            "b3B0aW9uc0IRCg90ZWVfYXR0ZXN0YXRpb24iRwoTR2NlU2hpZWxkZWRJZGVu",
+            "dGl0eRIUCgdha19jZXJ0GAEgASgMQgPgQQESGgoNYWtfY2VydF9jaGFpbhgC",
+            "IAMoDEID4EEBInIKH1ZlcmlmeUNvbmZpZGVudGlhbFNwYWNlUmVzcG9uc2US",
+            "HgoRYXR0ZXN0YXRpb25fdG9rZW4YASABKAlCA+BBAxIvCg5wYXJ0aWFsX2Vy",
+            "cm9ycxgCIAMoCzISLmdvb2dsZS5ycGMuU3RhdHVzQgPgQQMizgEKHFZlcmlm",
+            "eUNvbmZpZGVudGlhbEdrZVJlcXVlc3QSUAoPdHBtX2F0dGVzdGF0aW9uGAIg",
+            "ASgLMjUuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5U",
+            "cG1BdHRlc3RhdGlvbkgAEkkKCWNoYWxsZW5nZRgBIAEoCUI24EEC+kEwCi5j",
+            "b25maWRlbnRpYWxjb21wdXRpbmcuZ29vZ2xlYXBpcy5jb20vQ2hhbGxlbmdl",
+            "QhEKD3RlZV9hdHRlc3RhdGlvbiI/Ch1WZXJpZnlDb25maWRlbnRpYWxHa2VS",
+            "ZXNwb25zZRIeChFhdHRlc3RhdGlvbl90b2tlbhgBIAEoCUID4EEDKn8KEFNp",
+            "Z25pbmdBbGdvcml0aG0SIQodU0lHTklOR19BTEdPUklUSE1fVU5TUEVDSUZJ",
+            "RUQQABIVChFSU0FTU0FfUFNTX1NIQTI1NhABEhoKFlJTQVNTQV9QS0NTMVYx",
+            "NV9TSEEyNTYQAhIVChFFQ0RTQV9QMjU2X1NIQTI1NhADKo4BCglUb2tlblR5",
+            "cGUSGgoWVE9LRU5fVFlQRV9VTlNQRUNJRklFRBAAEhMKD1RPS0VOX1RZUEVf",
+            "T0lEQxABEhIKDlRPS0VOX1RZUEVfUEtJEAISGgoWVE9LRU5fVFlQRV9MSU1J",
+            "VEVEX0FXUxADEiAKHFRPS0VOX1RZUEVfQVdTX1BSSU5DSVBBTFRBR1MQBCpg",
+            "Cg1TaWduYXR1cmVUeXBlEh4KGlNJR05BVFVSRV9UWVBFX1VOU1BFQ0lGSUVE",
+            "EAASFwoTU0lHTkFUVVJFX1RZUEVfT0lEQxABEhYKElNJR05BVFVSRV9UWVBF",
+            "X1BLSRACKmMKDFRva2VuUHJvZmlsZRIdChlUT0tFTl9QUk9GSUxFX1VOU1BF",
+            "Q0lGSUVEEAASHQoZVE9LRU5fUFJPRklMRV9ERUZBVUxUX0VBVBABEhUKEVRP",
+            "S0VOX1BST0ZJTEVfQVdTEAIytQgKFUNvbmZpZGVudGlhbENvbXB1dGluZxLY",
+            "AQoPQ3JlYXRlQ2hhbGxlbmdlEj0uZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlh",
+            "bGNvbXB1dGluZy52MS5DcmVhdGVDaGFsbGVuZ2VSZXF1ZXN0GjAuZ29vZ2xl",
+            "LmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5DaGFsbGVuZ2UiVNpB",
+            "EHBhcmVudCxjaGFsbGVuZ2WC0+STAjsiLi92MS97cGFyZW50PXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyp9L2NoYWxsZW5nZXM6CWNoYWxsZW5nZRLoAQoRVmVy",
+            "aWZ5QXR0ZXN0YXRpb24SPy5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29t",
+            "cHV0aW5nLnYxLlZlcmlmeUF0dGVzdGF0aW9uUmVxdWVzdBpALmdvb2dsZS5j",
+            "bG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuVmVyaWZ5QXR0ZXN0YXRp",
+            "b25SZXNwb25zZSJQgtPkkwJKIkUvdjEve2NoYWxsZW5nZT1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL2NoYWxsZW5nZXMvKn06dmVyaWZ5QXR0ZXN0YXRpb246",
+            "ASoSgAIKF1ZlcmlmeUNvbmZpZGVudGlhbFNwYWNlEkUuZ29vZ2xlLmNsb3Vk",
+            "LmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5WZXJpZnlDb25maWRlbnRpYWxT",
+            "cGFjZVJlcXVlc3QaRi5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0",
+            "aW5nLnYxLlZlcmlmeUNvbmZpZGVudGlhbFNwYWNlUmVzcG9uc2UiVoLT5JMC",
+            "UCJLL3YxL3tjaGFsbGVuZ2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jaGFs",
+            "bGVuZ2VzLyp9OnZlcmlmeUNvbmZpZGVudGlhbFNwYWNlOgEqEvgBChVWZXJp",
+            "ZnlDb25maWRlbnRpYWxHa2USQy5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFs",
+            "Y29tcHV0aW5nLnYxLlZlcmlmeUNvbmZpZGVudGlhbEdrZVJlcXVlc3QaRC5n",
+            "b29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlZlcmlmeUNv",
+            "bmZpZGVudGlhbEdrZVJlc3BvbnNlIlSC0+STAk4iSS92MS97Y2hhbGxlbmdl",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovY2hhbGxlbmdlcy8qfTp2ZXJpZnlD",
+            "b25maWRlbnRpYWxHa2U6ASoaWMpBJGNvbmZpZGVudGlhbGNvbXB1dGluZy5n",
+            "b29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
+            "dGgvY2xvdWQtcGxhdGZvcm1ClwIKKWNvbS5nb29nbGUuY2xvdWQuY29uZmlk",
+            "ZW50aWFsY29tcHV0aW5nLnYxQgxTZXJ2aWNlUHJvdG9QAVpfY2xvdWQuZ29v",
+            "Z2xlLmNvbS9nby9jb25maWRlbnRpYWxjb21wdXRpbmcvYXBpdjEvY29uZmlk",
+            "ZW50aWFsY29tcHV0aW5ncGI7Y29uZmlkZW50aWFsY29tcHV0aW5ncGKqAiVH",
+            "b29nbGUuQ2xvdWQuQ29uZmlkZW50aWFsQ29tcHV0aW5nLlYxygIlR29vZ2xl",
+            "XENsb3VkXENvbmZpZGVudGlhbENvbXB1dGluZ1xWMeoCKEdvb2dsZTo6Q2xv",
+            "dWQ6OkNvbmZpZGVudGlhbENvbXB1dGluZzo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.ConfidentialComputing.V1.SigningAlgorithm), typeof(global::Google.Cloud.ConfidentialComputing.V1.TokenType), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.ConfidentialComputing.V1.SigningAlgorithm), typeof(global::Google.Cloud.ConfidentialComputing.V1.TokenType), typeof(global::Google.Cloud.ConfidentialComputing.V1.SignatureType), typeof(global::Google.Cloud.ConfidentialComputing.V1.TokenProfile), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.Challenge), global::Google.Cloud.ConfidentialComputing.V1.Challenge.Parser, new[]{ "Name", "CreateTime", "ExpireTime", "Used", "TpmNonce" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.CreateChallengeRequest), global::Google.Cloud.ConfidentialComputing.V1.CreateChallengeRequest.Parser, new[]{ "Parent", "Challenge" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationRequest), global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationRequest.Parser, new[]{ "TdCcel", "SevSnpAttestation", "Challenge", "GcpCredentials", "TpmAttestation", "ConfidentialSpaceInfo", "TokenOptions", "Attester" }, new[]{ "TeeAttestation" }, null, null, null),
@@ -132,11 +180,17 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.SevSnpAttestation), global::Google.Cloud.ConfidentialComputing.V1.SevSnpAttestation.Parser, new[]{ "Report", "AuxBlob" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationResponse), global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationResponse.Parser, new[]{ "OidcClaimsToken", "PartialErrors" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.GcpCredentials), global::Google.Cloud.ConfidentialComputing.V1.GcpCredentials.Parser, new[]{ "ServiceAccountIdTokens" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.TokenOptions), global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Parser, new[]{ "AwsPrincipalTagsOptions", "Audience", "Nonce", "TokenType" }, new[]{ "TokenTypeOptions" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions), global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Parser, new[]{ "AllowedPrincipalTags" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags), global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Parser, new[]{ "ContainerImageSignatures" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Types.ContainerImageSignatures), global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Types.ContainerImageSignatures.Parser, new[]{ "KeyIds" }, null, null, null, null)})})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.TokenOptions), global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Parser, new[]{ "AwsPrincipalTagsOptions", "Audience", "Nonce", "TokenType" }, new[]{ "TokenTypeOptions" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions), global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions.Parser, new[]{ "AllowedPrincipalTags" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags), global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Parser, new[]{ "ContainerImageSignatures" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Types.ContainerImageSignatures), global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Types.ContainerImageSignatures.Parser, new[]{ "KeyIds" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation), global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation.Parser, new[]{ "Quotes", "TcgEventLog", "CanonicalEventLog", "AkCert", "CertChain" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation.Types.Quote), global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation.Types.Quote.Parser, new[]{ "HashAlgo", "PcrValues", "RawQuote", "RawSignature" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.ConfidentialSpaceInfo), global::Google.Cloud.ConfidentialComputing.V1.ConfidentialSpaceInfo.Parser, new[]{ "SignedEntities" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.SignedEntity), global::Google.Cloud.ConfidentialComputing.V1.SignedEntity.Parser, new[]{ "ContainerImageSignatures" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.ContainerImageSignature), global::Google.Cloud.ConfidentialComputing.V1.ContainerImageSignature.Parser, new[]{ "Payload", "Signature", "PublicKey", "SigAlg" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.ContainerImageSignature), global::Google.Cloud.ConfidentialComputing.V1.ContainerImageSignature.Parser, new[]{ "Payload", "Signature", "PublicKey", "SigAlg" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest), global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest.Parser, new[]{ "TdCcel", "TpmAttestation", "Challenge", "GcpCredentials", "SignedEntities", "GceShieldedIdentity", "Options" }, new[]{ "TeeAttestation" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest.Types.ConfidentialSpaceOptions), global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest.Types.ConfidentialSpaceOptions.Parser, new[]{ "AwsPrincipalTagsOptions", "Audience", "TokenProfile", "Nonce", "SignatureType" }, new[]{ "TokenProfileOptions" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.GceShieldedIdentity), global::Google.Cloud.ConfidentialComputing.V1.GceShieldedIdentity.Parser, new[]{ "AkCert", "AkCertChain" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceResponse), global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceResponse.Parser, new[]{ "AttestationToken", "PartialErrors" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest), global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeRequest.Parser, new[]{ "TpmAttestation", "Challenge" }, new[]{ "TeeAttestation" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeResponse), global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialGkeResponse.Parser, new[]{ "AttestationToken" }, null, null, null, null)
           }));
     }
     #endregion
@@ -190,6 +244,42 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     /// Principal-tag-based token for AWS integration
     /// </summary>
     [pbr::OriginalName("TOKEN_TYPE_AWS_PRINCIPALTAGS")] AwsPrincipaltags = 4,
+  }
+
+  /// <summary>
+  /// SignatureType enumerates supported signature types for attestation tokens.
+  /// </summary>
+  public enum SignatureType {
+    /// <summary>
+    /// Unspecified signature type.
+    /// </summary>
+    [pbr::OriginalName("SIGNATURE_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Google OIDC signature.
+    /// </summary>
+    [pbr::OriginalName("SIGNATURE_TYPE_OIDC")] Oidc = 1,
+    /// <summary>
+    /// Public Key Infrastructure (PKI) signature.
+    /// </summary>
+    [pbr::OriginalName("SIGNATURE_TYPE_PKI")] Pki = 2,
+  }
+
+  /// <summary>
+  /// TokenProfile enumerates the supported token claims profiles.
+  /// </summary>
+  public enum TokenProfile {
+    /// <summary>
+    /// Unspecified token profile.
+    /// </summary>
+    [pbr::OriginalName("TOKEN_PROFILE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// EAT claims.
+    /// </summary>
+    [pbr::OriginalName("TOKEN_PROFILE_DEFAULT_EAT")] DefaultEat = 1,
+    /// <summary>
+    /// AWS Principal Tags claims.
+    /// </summary>
+    [pbr::OriginalName("TOKEN_PROFILE_AWS")] Aws = 2,
   }
 
   #endregion
@@ -819,8 +909,8 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
   }
 
   /// <summary>
-  /// A request for an OIDC token, providing all the necessary information needed
-  /// for this service to verify the platform state of the requestor.
+  /// A request for an attestation token, providing all the necessary information
+  /// needed for this service to verify the platform state of the requestor.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VerifyAttestationRequest : pb::IMessage<VerifyAttestationRequest>
@@ -1961,7 +2051,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
 
   /// <summary>
   /// A response once an attestation has been successfully verified, containing a
-  /// signed OIDC token.
+  /// signed attestation token.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VerifyAttestationResponse : pb::IMessage<VerifyAttestationResponse>
@@ -2431,12 +2521,12 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     /// <summary>Field number for the "aws_principal_tags_options" field.</summary>
     public const int AwsPrincipalTagsOptionsFieldNumber = 4;
     /// <summary>
-    /// Optional. Options for the Limited AWS token type.
+    /// Optional. Options for AWS token type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions AwsPrincipalTagsOptions {
-      get { return tokenTypeOptionsCase_ == TokenTypeOptionsOneofCase.AwsPrincipalTagsOptions ? (global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions) tokenTypeOptions_ : null; }
+    public global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions AwsPrincipalTagsOptions {
+      get { return tokenTypeOptionsCase_ == TokenTypeOptionsOneofCase.AwsPrincipalTagsOptions ? (global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions) tokenTypeOptions_ : null; }
       set {
         tokenTypeOptions_ = value;
         tokenTypeOptionsCase_ = value == null ? TokenTypeOptionsOneofCase.None : TokenTypeOptionsOneofCase.AwsPrincipalTagsOptions;
@@ -2638,7 +2728,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       switch (other.TokenTypeOptionsCase) {
         case TokenTypeOptionsOneofCase.AwsPrincipalTagsOptions:
           if (AwsPrincipalTagsOptions == null) {
-            AwsPrincipalTagsOptions = new global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions();
+            AwsPrincipalTagsOptions = new global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions();
           }
           AwsPrincipalTagsOptions.MergeFrom(other.AwsPrincipalTagsOptions);
           break;
@@ -2672,7 +2762,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             break;
           }
           case 34: {
-            global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions subBuilder = new global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions();
+            global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions subBuilder = new global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions();
             if (tokenTypeOptionsCase_ == TokenTypeOptionsOneofCase.AwsPrincipalTagsOptions) {
               subBuilder.MergeFrom(AwsPrincipalTagsOptions);
             }
@@ -2708,7 +2798,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             break;
           }
           case 34: {
-            global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions subBuilder = new global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions();
+            global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions subBuilder = new global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions();
             if (tokenTypeOptionsCase_ == TokenTypeOptionsOneofCase.AwsPrincipalTagsOptions) {
               subBuilder.MergeFrom(AwsPrincipalTagsOptions);
             }
@@ -2721,30 +2811,236 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     }
     #endif
 
+  }
+
+  /// <summary>
+  /// Token options that only apply to the AWS Principal Tags token type.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AwsPrincipalTagsOptions : pb::IMessage<AwsPrincipalTagsOptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AwsPrincipalTagsOptions> _parser = new pb::MessageParser<AwsPrincipalTagsOptions>(() => new AwsPrincipalTagsOptions());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AwsPrincipalTagsOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsPrincipalTagsOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsPrincipalTagsOptions(AwsPrincipalTagsOptions other) : this() {
+      allowedPrincipalTags_ = other.allowedPrincipalTags_ != null ? other.allowedPrincipalTags_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AwsPrincipalTagsOptions Clone() {
+      return new AwsPrincipalTagsOptions(this);
+    }
+
+    /// <summary>Field number for the "allowed_principal_tags" field.</summary>
+    public const int AllowedPrincipalTagsFieldNumber = 1;
+    private global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags allowedPrincipalTags_;
+    /// <summary>
+    /// Optional. Principal tags to allow in the token.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags AllowedPrincipalTags {
+      get { return allowedPrincipalTags_; }
+      set {
+        allowedPrincipalTags_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AwsPrincipalTagsOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AwsPrincipalTagsOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(AllowedPrincipalTags, other.AllowedPrincipalTags)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (allowedPrincipalTags_ != null) hash ^= AllowedPrincipalTags.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (allowedPrincipalTags_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(AllowedPrincipalTags);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (allowedPrincipalTags_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(AllowedPrincipalTags);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (allowedPrincipalTags_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AllowedPrincipalTags);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AwsPrincipalTagsOptions other) {
+      if (other == null) {
+        return;
+      }
+      if (other.allowedPrincipalTags_ != null) {
+        if (allowedPrincipalTags_ == null) {
+          AllowedPrincipalTags = new global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags();
+        }
+        AllowedPrincipalTags.MergeFrom(other.AllowedPrincipalTags);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (allowedPrincipalTags_ == null) {
+              AllowedPrincipalTags = new global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags();
+            }
+            input.ReadMessage(AllowedPrincipalTags);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (allowedPrincipalTags_ == null) {
+              AllowedPrincipalTags = new global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags();
+            }
+            input.ReadMessage(AllowedPrincipalTags);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
     #region Nested types
-    /// <summary>Container for nested types declared in the TokenOptions message type.</summary>
+    /// <summary>Container for nested types declared in the AwsPrincipalTagsOptions message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Token options that only apply to the AWS Principal Tags token type.
+      /// Allowed principal tags is used to define what principal tags will be
+      /// placed in the token.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-      public sealed partial class AwsPrincipalTagsOptions : pb::IMessage<AwsPrincipalTagsOptions>
+      public sealed partial class AllowedPrincipalTags : pb::IMessage<AllowedPrincipalTags>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
       #endif
       {
-        private static readonly pb::MessageParser<AwsPrincipalTagsOptions> _parser = new pb::MessageParser<AwsPrincipalTagsOptions>(() => new AwsPrincipalTagsOptions());
+        private static readonly pb::MessageParser<AllowedPrincipalTags> _parser = new pb::MessageParser<AllowedPrincipalTags>(() => new AllowedPrincipalTags());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public static pb::MessageParser<AwsPrincipalTagsOptions> Parser { get { return _parser; } }
+        public static pb::MessageParser<AllowedPrincipalTags> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Descriptor.NestedTypes[0]; }
+          get { return global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2755,7 +3051,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public AwsPrincipalTagsOptions() {
+        public AllowedPrincipalTags() {
           OnConstruction();
         }
 
@@ -2763,48 +3059,48 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public AwsPrincipalTagsOptions(AwsPrincipalTagsOptions other) : this() {
-          allowedPrincipalTags_ = other.allowedPrincipalTags_ != null ? other.allowedPrincipalTags_.Clone() : null;
+        public AllowedPrincipalTags(AllowedPrincipalTags other) : this() {
+          containerImageSignatures_ = other.containerImageSignatures_ != null ? other.containerImageSignatures_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public AwsPrincipalTagsOptions Clone() {
-          return new AwsPrincipalTagsOptions(this);
+        public AllowedPrincipalTags Clone() {
+          return new AllowedPrincipalTags(this);
         }
 
-        /// <summary>Field number for the "allowed_principal_tags" field.</summary>
-        public const int AllowedPrincipalTagsFieldNumber = 1;
-        private global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags allowedPrincipalTags_;
+        /// <summary>Field number for the "container_image_signatures" field.</summary>
+        public const int ContainerImageSignaturesFieldNumber = 1;
+        private global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Types.ContainerImageSignatures containerImageSignatures_;
         /// <summary>
-        /// Optional. Principal tags to allow in the token.
+        /// Optional. Container image signatures allowed in the token.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags AllowedPrincipalTags {
-          get { return allowedPrincipalTags_; }
+        public global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Types.ContainerImageSignatures ContainerImageSignatures {
+          get { return containerImageSignatures_; }
           set {
-            allowedPrincipalTags_ = value;
+            containerImageSignatures_ = value;
           }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
-          return Equals(other as AwsPrincipalTagsOptions);
+          return Equals(other as AllowedPrincipalTags);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool Equals(AwsPrincipalTagsOptions other) {
+        public bool Equals(AllowedPrincipalTags other) {
           if (ReferenceEquals(other, null)) {
             return false;
           }
           if (ReferenceEquals(other, this)) {
             return true;
           }
-          if (!object.Equals(AllowedPrincipalTags, other.AllowedPrincipalTags)) return false;
+          if (!object.Equals(ContainerImageSignatures, other.ContainerImageSignatures)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -2812,7 +3108,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (allowedPrincipalTags_ != null) hash ^= AllowedPrincipalTags.GetHashCode();
+          if (containerImageSignatures_ != null) hash ^= ContainerImageSignatures.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -2831,9 +3127,9 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (allowedPrincipalTags_ != null) {
+          if (containerImageSignatures_ != null) {
             output.WriteRawTag(10);
-            output.WriteMessage(AllowedPrincipalTags);
+            output.WriteMessage(ContainerImageSignatures);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
@@ -2845,9 +3141,9 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (allowedPrincipalTags_ != null) {
+          if (containerImageSignatures_ != null) {
             output.WriteRawTag(10);
-            output.WriteMessage(AllowedPrincipalTags);
+            output.WriteMessage(ContainerImageSignatures);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
@@ -2859,8 +3155,8 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (allowedPrincipalTags_ != null) {
-            size += 1 + pb::CodedOutputStream.ComputeMessageSize(AllowedPrincipalTags);
+          if (containerImageSignatures_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ContainerImageSignatures);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -2870,15 +3166,15 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void MergeFrom(AwsPrincipalTagsOptions other) {
+        public void MergeFrom(AllowedPrincipalTags other) {
           if (other == null) {
             return;
           }
-          if (other.allowedPrincipalTags_ != null) {
-            if (allowedPrincipalTags_ == null) {
-              AllowedPrincipalTags = new global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags();
+          if (other.containerImageSignatures_ != null) {
+            if (containerImageSignatures_ == null) {
+              ContainerImageSignatures = new global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Types.ContainerImageSignatures();
             }
-            AllowedPrincipalTags.MergeFrom(other.AllowedPrincipalTags);
+            ContainerImageSignatures.MergeFrom(other.ContainerImageSignatures);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -2896,10 +3192,10 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
               case 10: {
-                if (allowedPrincipalTags_ == null) {
-                  AllowedPrincipalTags = new global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags();
+                if (containerImageSignatures_ == null) {
+                  ContainerImageSignatures = new global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Types.ContainerImageSignatures();
                 }
-                input.ReadMessage(AllowedPrincipalTags);
+                input.ReadMessage(ContainerImageSignatures);
                 break;
               }
             }
@@ -2918,10 +3214,10 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                 break;
               case 10: {
-                if (allowedPrincipalTags_ == null) {
-                  AllowedPrincipalTags = new global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags();
+                if (containerImageSignatures_ == null) {
+                  ContainerImageSignatures = new global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Types.ContainerImageSignatures();
                 }
-                input.ReadMessage(AllowedPrincipalTags);
+                input.ReadMessage(ContainerImageSignatures);
                 break;
               }
             }
@@ -2930,30 +3226,30 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
         #endif
 
         #region Nested types
-        /// <summary>Container for nested types declared in the AwsPrincipalTagsOptions message type.</summary>
+        /// <summary>Container for nested types declared in the AllowedPrincipalTags message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// Allowed principal tags is used to define what principal tags will be
-          /// placed in the token.
+          /// Allowed Container Image Signatures. Key IDs are required to allow
+          /// this claim to fit within the narrow AWS IAM restrictions.
           /// </summary>
           [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-          public sealed partial class AllowedPrincipalTags : pb::IMessage<AllowedPrincipalTags>
+          public sealed partial class ContainerImageSignatures : pb::IMessage<ContainerImageSignatures>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
           #endif
           {
-            private static readonly pb::MessageParser<AllowedPrincipalTags> _parser = new pb::MessageParser<AllowedPrincipalTags>(() => new AllowedPrincipalTags());
+            private static readonly pb::MessageParser<ContainerImageSignatures> _parser = new pb::MessageParser<ContainerImageSignatures>(() => new ContainerImageSignatures());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public static pb::MessageParser<AllowedPrincipalTags> Parser { get { return _parser; } }
+            public static pb::MessageParser<ContainerImageSignatures> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
-              get { return global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Descriptor.NestedTypes[0]; }
+              get { return global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Descriptor.NestedTypes[0]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2964,7 +3260,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public AllowedPrincipalTags() {
+            public ContainerImageSignatures() {
               OnConstruction();
             }
 
@@ -2972,48 +3268,49 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public AllowedPrincipalTags(AllowedPrincipalTags other) : this() {
-              containerImageSignatures_ = other.containerImageSignatures_ != null ? other.containerImageSignatures_.Clone() : null;
+            public ContainerImageSignatures(ContainerImageSignatures other) : this() {
+              keyIds_ = other.keyIds_.Clone();
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public AllowedPrincipalTags Clone() {
-              return new AllowedPrincipalTags(this);
+            public ContainerImageSignatures Clone() {
+              return new ContainerImageSignatures(this);
             }
 
-            /// <summary>Field number for the "container_image_signatures" field.</summary>
-            public const int ContainerImageSignaturesFieldNumber = 1;
-            private global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Types.ContainerImageSignatures containerImageSignatures_;
+            /// <summary>Field number for the "key_ids" field.</summary>
+            public const int KeyIdsFieldNumber = 1;
+            private static readonly pb::FieldCodec<string> _repeated_keyIds_codec
+                = pb::FieldCodec.ForString(10);
+            private readonly pbc::RepeatedField<string> keyIds_ = new pbc::RepeatedField<string>();
             /// <summary>
-            /// Optional. Container image signatures allowed in the token.
+            /// Optional. List of key ids to filter into the Principal tags. Only keys
+            /// that have been validated and added to the token will be filtered into
+            /// principal tags. Unrecognized key ids will be ignored.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Types.ContainerImageSignatures ContainerImageSignatures {
-              get { return containerImageSignatures_; }
-              set {
-                containerImageSignatures_ = value;
-              }
+            public pbc::RepeatedField<string> KeyIds {
+              get { return keyIds_; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
-              return Equals(other as AllowedPrincipalTags);
+              return Equals(other as ContainerImageSignatures);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public bool Equals(AllowedPrincipalTags other) {
+            public bool Equals(ContainerImageSignatures other) {
               if (ReferenceEquals(other, null)) {
                 return false;
               }
               if (ReferenceEquals(other, this)) {
                 return true;
               }
-              if (!object.Equals(ContainerImageSignatures, other.ContainerImageSignatures)) return false;
+              if(!keyIds_.Equals(other.keyIds_)) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
 
@@ -3021,7 +3318,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
-              if (containerImageSignatures_ != null) hash ^= ContainerImageSignatures.GetHashCode();
+              hash ^= keyIds_.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -3040,10 +3337,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
             #else
-              if (containerImageSignatures_ != null) {
-                output.WriteRawTag(10);
-                output.WriteMessage(ContainerImageSignatures);
-              }
+              keyIds_.WriteTo(output, _repeated_keyIds_codec);
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -3054,10 +3348,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-              if (containerImageSignatures_ != null) {
-                output.WriteRawTag(10);
-                output.WriteMessage(ContainerImageSignatures);
-              }
+              keyIds_.WriteTo(ref output, _repeated_keyIds_codec);
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -3068,9 +3359,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
-              if (containerImageSignatures_ != null) {
-                size += 1 + pb::CodedOutputStream.ComputeMessageSize(ContainerImageSignatures);
-              }
+              size += keyIds_.CalculateSize(_repeated_keyIds_codec);
               if (_unknownFields != null) {
                 size += _unknownFields.CalculateSize();
               }
@@ -3079,16 +3368,11 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public void MergeFrom(AllowedPrincipalTags other) {
+            public void MergeFrom(ContainerImageSignatures other) {
               if (other == null) {
                 return;
               }
-              if (other.containerImageSignatures_ != null) {
-                if (containerImageSignatures_ == null) {
-                  ContainerImageSignatures = new global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Types.ContainerImageSignatures();
-                }
-                ContainerImageSignatures.MergeFrom(other.ContainerImageSignatures);
-              }
+              keyIds_.Add(other.keyIds_);
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
 
@@ -3105,10 +3389,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
                     _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                     break;
                   case 10: {
-                    if (containerImageSignatures_ == null) {
-                      ContainerImageSignatures = new global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Types.ContainerImageSignatures();
-                    }
-                    input.ReadMessage(ContainerImageSignatures);
+                    keyIds_.AddEntriesFrom(input, _repeated_keyIds_codec);
                     break;
                   }
                 }
@@ -3127,212 +3408,13 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
                     _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                     break;
                   case 10: {
-                    if (containerImageSignatures_ == null) {
-                      ContainerImageSignatures = new global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Types.ContainerImageSignatures();
-                    }
-                    input.ReadMessage(ContainerImageSignatures);
+                    keyIds_.AddEntriesFrom(ref input, _repeated_keyIds_codec);
                     break;
                   }
                 }
               }
             }
             #endif
-
-            #region Nested types
-            /// <summary>Container for nested types declared in the AllowedPrincipalTags message type.</summary>
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-            public static partial class Types {
-              /// <summary>
-              /// Allowed Container Image Signatures. Key IDs are required to allow this
-              /// claim to fit within the narrow AWS IAM restrictions.
-              /// </summary>
-              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-              public sealed partial class ContainerImageSignatures : pb::IMessage<ContainerImageSignatures>
-              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-                  , pb::IBufferMessage
-              #endif
-              {
-                private static readonly pb::MessageParser<ContainerImageSignatures> _parser = new pb::MessageParser<ContainerImageSignatures>(() => new ContainerImageSignatures());
-                private pb::UnknownFieldSet _unknownFields;
-                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public static pb::MessageParser<ContainerImageSignatures> Parser { get { return _parser; } }
-
-                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public static pbr::MessageDescriptor Descriptor {
-                  get { return global::Google.Cloud.ConfidentialComputing.V1.TokenOptions.Types.AwsPrincipalTagsOptions.Types.AllowedPrincipalTags.Descriptor.NestedTypes[0]; }
-                }
-
-                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                pbr::MessageDescriptor pb::IMessage.Descriptor {
-                  get { return Descriptor; }
-                }
-
-                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public ContainerImageSignatures() {
-                  OnConstruction();
-                }
-
-                partial void OnConstruction();
-
-                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public ContainerImageSignatures(ContainerImageSignatures other) : this() {
-                  keyIds_ = other.keyIds_.Clone();
-                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-                }
-
-                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public ContainerImageSignatures Clone() {
-                  return new ContainerImageSignatures(this);
-                }
-
-                /// <summary>Field number for the "key_ids" field.</summary>
-                public const int KeyIdsFieldNumber = 1;
-                private static readonly pb::FieldCodec<string> _repeated_keyIds_codec
-                    = pb::FieldCodec.ForString(10);
-                private readonly pbc::RepeatedField<string> keyIds_ = new pbc::RepeatedField<string>();
-                /// <summary>
-                /// Optional. List of key ids to filter into the Principal tags. Only
-                /// keys that have been validated and added to the token will be filtered
-                /// into principal tags. Unrecognized key ids will be ignored.
-                /// </summary>
-                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public pbc::RepeatedField<string> KeyIds {
-                  get { return keyIds_; }
-                }
-
-                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public override bool Equals(object other) {
-                  return Equals(other as ContainerImageSignatures);
-                }
-
-                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public bool Equals(ContainerImageSignatures other) {
-                  if (ReferenceEquals(other, null)) {
-                    return false;
-                  }
-                  if (ReferenceEquals(other, this)) {
-                    return true;
-                  }
-                  if(!keyIds_.Equals(other.keyIds_)) return false;
-                  return Equals(_unknownFields, other._unknownFields);
-                }
-
-                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public override int GetHashCode() {
-                  int hash = 1;
-                  hash ^= keyIds_.GetHashCode();
-                  if (_unknownFields != null) {
-                    hash ^= _unknownFields.GetHashCode();
-                  }
-                  return hash;
-                }
-
-                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public override string ToString() {
-                  return pb::JsonFormatter.ToDiagnosticString(this);
-                }
-
-                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public void WriteTo(pb::CodedOutputStream output) {
-                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-                  output.WriteRawMessage(this);
-                #else
-                  keyIds_.WriteTo(output, _repeated_keyIds_codec);
-                  if (_unknownFields != null) {
-                    _unknownFields.WriteTo(output);
-                  }
-                #endif
-                }
-
-                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-                  keyIds_.WriteTo(ref output, _repeated_keyIds_codec);
-                  if (_unknownFields != null) {
-                    _unknownFields.WriteTo(ref output);
-                  }
-                }
-                #endif
-
-                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public int CalculateSize() {
-                  int size = 0;
-                  size += keyIds_.CalculateSize(_repeated_keyIds_codec);
-                  if (_unknownFields != null) {
-                    size += _unknownFields.CalculateSize();
-                  }
-                  return size;
-                }
-
-                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public void MergeFrom(ContainerImageSignatures other) {
-                  if (other == null) {
-                    return;
-                  }
-                  keyIds_.Add(other.keyIds_);
-                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-                }
-
-                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                public void MergeFrom(pb::CodedInputStream input) {
-                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-                  input.ReadRawMessage(this);
-                #else
-                  uint tag;
-                  while ((tag = input.ReadTag()) != 0) {
-                    switch(tag) {
-                      default:
-                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-                        break;
-                      case 10: {
-                        keyIds_.AddEntriesFrom(input, _repeated_keyIds_codec);
-                        break;
-                      }
-                    }
-                  }
-                #endif
-                }
-
-                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-                  uint tag;
-                  while ((tag = input.ReadTag()) != 0) {
-                    switch(tag) {
-                      default:
-                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-                        break;
-                      case 10: {
-                        keyIds_.AddEntriesFrom(ref input, _repeated_keyIds_codec);
-                        break;
-                      }
-                    }
-                  }
-                }
-                #endif
-
-              }
-
-            }
-            #endregion
 
           }
 
@@ -3365,7 +3447,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4020,7 +4102,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4207,7 +4289,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4394,7 +4476,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4691,6 +4773,1868 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
           }
           case 32: {
             SigAlg = (global::Google.Cloud.ConfidentialComputing.V1.SigningAlgorithm) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A request for an attestation token, providing all the necessary information
+  /// needed for this service to verify the platform state of the requestor.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class VerifyConfidentialSpaceRequest : pb::IMessage<VerifyConfidentialSpaceRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<VerifyConfidentialSpaceRequest> _parser = new pb::MessageParser<VerifyConfidentialSpaceRequest>(() => new VerifyConfidentialSpaceRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<VerifyConfidentialSpaceRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerifyConfidentialSpaceRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerifyConfidentialSpaceRequest(VerifyConfidentialSpaceRequest other) : this() {
+      challenge_ = other.challenge_;
+      gcpCredentials_ = other.gcpCredentials_ != null ? other.gcpCredentials_.Clone() : null;
+      signedEntities_ = other.signedEntities_.Clone();
+      gceShieldedIdentity_ = other.gceShieldedIdentity_ != null ? other.gceShieldedIdentity_.Clone() : null;
+      options_ = other.options_ != null ? other.options_.Clone() : null;
+      switch (other.TeeAttestationCase) {
+        case TeeAttestationOneofCase.TdCcel:
+          TdCcel = other.TdCcel.Clone();
+          break;
+        case TeeAttestationOneofCase.TpmAttestation:
+          TpmAttestation = other.TpmAttestation.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerifyConfidentialSpaceRequest Clone() {
+      return new VerifyConfidentialSpaceRequest(this);
+    }
+
+    /// <summary>Field number for the "td_ccel" field.</summary>
+    public const int TdCcelFieldNumber = 3;
+    /// <summary>
+    /// Input only. A TDX with CCEL and RTMR Attestation Quote.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ConfidentialComputing.V1.TdxCcelAttestation TdCcel {
+      get { return teeAttestationCase_ == TeeAttestationOneofCase.TdCcel ? (global::Google.Cloud.ConfidentialComputing.V1.TdxCcelAttestation) teeAttestation_ : null; }
+      set {
+        teeAttestation_ = value;
+        teeAttestationCase_ = value == null ? TeeAttestationOneofCase.None : TeeAttestationOneofCase.TdCcel;
+      }
+    }
+
+    /// <summary>Field number for the "tpm_attestation" field.</summary>
+    public const int TpmAttestationFieldNumber = 4;
+    /// <summary>
+    /// Input only. The TPM-specific data provided by the attesting platform,
+    /// used to populate any of the claims regarding platform state.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation TpmAttestation {
+      get { return teeAttestationCase_ == TeeAttestationOneofCase.TpmAttestation ? (global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation) teeAttestation_ : null; }
+      set {
+        teeAttestation_ = value;
+        teeAttestationCase_ = value == null ? TeeAttestationOneofCase.None : TeeAttestationOneofCase.TpmAttestation;
+      }
+    }
+
+    /// <summary>Field number for the "challenge" field.</summary>
+    public const int ChallengeFieldNumber = 1;
+    private string challenge_ = "";
+    /// <summary>
+    /// Required. The name of the Challenge whose nonce was used to generate the
+    /// attestation, in the format `projects/*/locations/*/challenges/*`. The
+    /// provided Challenge will be consumed, and cannot be used again.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Challenge {
+      get { return challenge_; }
+      set {
+        challenge_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "gcp_credentials" field.</summary>
+    public const int GcpCredentialsFieldNumber = 2;
+    private global::Google.Cloud.ConfidentialComputing.V1.GcpCredentials gcpCredentials_;
+    /// <summary>
+    /// Optional. Credentials used to populate the "emails" claim in the
+    /// claims_token. If not present, token will not contain the "emails" claim.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ConfidentialComputing.V1.GcpCredentials GcpCredentials {
+      get { return gcpCredentials_; }
+      set {
+        gcpCredentials_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "signed_entities" field.</summary>
+    public const int SignedEntitiesFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Google.Cloud.ConfidentialComputing.V1.SignedEntity> _repeated_signedEntities_codec
+        = pb::FieldCodec.ForMessage(42, global::Google.Cloud.ConfidentialComputing.V1.SignedEntity.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.ConfidentialComputing.V1.SignedEntity> signedEntities_ = new pbc::RepeatedField<global::Google.Cloud.ConfidentialComputing.V1.SignedEntity>();
+    /// <summary>
+    /// Optional. A list of signed entities containing container image signatures
+    /// that can be used for server-side signature verification.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.ConfidentialComputing.V1.SignedEntity> SignedEntities {
+      get { return signedEntities_; }
+    }
+
+    /// <summary>Field number for the "gce_shielded_identity" field.</summary>
+    public const int GceShieldedIdentityFieldNumber = 6;
+    private global::Google.Cloud.ConfidentialComputing.V1.GceShieldedIdentity gceShieldedIdentity_;
+    /// <summary>
+    /// Optional. Information about the associated Compute Engine instance.
+    /// Required for td_ccel requests only - tpm_attestation requests will provide
+    /// this information in the attestation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ConfidentialComputing.V1.GceShieldedIdentity GceShieldedIdentity {
+      get { return gceShieldedIdentity_; }
+      set {
+        gceShieldedIdentity_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "options" field.</summary>
+    public const int OptionsFieldNumber = 7;
+    private global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest.Types.ConfidentialSpaceOptions options_;
+    /// <summary>
+    /// Optional. A collection of fields that modify the token output.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest.Types.ConfidentialSpaceOptions Options {
+      get { return options_; }
+      set {
+        options_ = value;
+      }
+    }
+
+    private object teeAttestation_;
+    /// <summary>Enum of possible cases for the "tee_attestation" oneof.</summary>
+    public enum TeeAttestationOneofCase {
+      None = 0,
+      TdCcel = 3,
+      TpmAttestation = 4,
+    }
+    private TeeAttestationOneofCase teeAttestationCase_ = TeeAttestationOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TeeAttestationOneofCase TeeAttestationCase {
+      get { return teeAttestationCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTeeAttestation() {
+      teeAttestationCase_ = TeeAttestationOneofCase.None;
+      teeAttestation_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as VerifyConfidentialSpaceRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(VerifyConfidentialSpaceRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(TdCcel, other.TdCcel)) return false;
+      if (!object.Equals(TpmAttestation, other.TpmAttestation)) return false;
+      if (Challenge != other.Challenge) return false;
+      if (!object.Equals(GcpCredentials, other.GcpCredentials)) return false;
+      if(!signedEntities_.Equals(other.signedEntities_)) return false;
+      if (!object.Equals(GceShieldedIdentity, other.GceShieldedIdentity)) return false;
+      if (!object.Equals(Options, other.Options)) return false;
+      if (TeeAttestationCase != other.TeeAttestationCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (teeAttestationCase_ == TeeAttestationOneofCase.TdCcel) hash ^= TdCcel.GetHashCode();
+      if (teeAttestationCase_ == TeeAttestationOneofCase.TpmAttestation) hash ^= TpmAttestation.GetHashCode();
+      if (Challenge.Length != 0) hash ^= Challenge.GetHashCode();
+      if (gcpCredentials_ != null) hash ^= GcpCredentials.GetHashCode();
+      hash ^= signedEntities_.GetHashCode();
+      if (gceShieldedIdentity_ != null) hash ^= GceShieldedIdentity.GetHashCode();
+      if (options_ != null) hash ^= Options.GetHashCode();
+      hash ^= (int) teeAttestationCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Challenge.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Challenge);
+      }
+      if (gcpCredentials_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(GcpCredentials);
+      }
+      if (teeAttestationCase_ == TeeAttestationOneofCase.TdCcel) {
+        output.WriteRawTag(26);
+        output.WriteMessage(TdCcel);
+      }
+      if (teeAttestationCase_ == TeeAttestationOneofCase.TpmAttestation) {
+        output.WriteRawTag(34);
+        output.WriteMessage(TpmAttestation);
+      }
+      signedEntities_.WriteTo(output, _repeated_signedEntities_codec);
+      if (gceShieldedIdentity_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(GceShieldedIdentity);
+      }
+      if (options_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Options);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Challenge.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Challenge);
+      }
+      if (gcpCredentials_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(GcpCredentials);
+      }
+      if (teeAttestationCase_ == TeeAttestationOneofCase.TdCcel) {
+        output.WriteRawTag(26);
+        output.WriteMessage(TdCcel);
+      }
+      if (teeAttestationCase_ == TeeAttestationOneofCase.TpmAttestation) {
+        output.WriteRawTag(34);
+        output.WriteMessage(TpmAttestation);
+      }
+      signedEntities_.WriteTo(ref output, _repeated_signedEntities_codec);
+      if (gceShieldedIdentity_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(GceShieldedIdentity);
+      }
+      if (options_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Options);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (teeAttestationCase_ == TeeAttestationOneofCase.TdCcel) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TdCcel);
+      }
+      if (teeAttestationCase_ == TeeAttestationOneofCase.TpmAttestation) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TpmAttestation);
+      }
+      if (Challenge.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Challenge);
+      }
+      if (gcpCredentials_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GcpCredentials);
+      }
+      size += signedEntities_.CalculateSize(_repeated_signedEntities_codec);
+      if (gceShieldedIdentity_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GceShieldedIdentity);
+      }
+      if (options_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(VerifyConfidentialSpaceRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Challenge.Length != 0) {
+        Challenge = other.Challenge;
+      }
+      if (other.gcpCredentials_ != null) {
+        if (gcpCredentials_ == null) {
+          GcpCredentials = new global::Google.Cloud.ConfidentialComputing.V1.GcpCredentials();
+        }
+        GcpCredentials.MergeFrom(other.GcpCredentials);
+      }
+      signedEntities_.Add(other.signedEntities_);
+      if (other.gceShieldedIdentity_ != null) {
+        if (gceShieldedIdentity_ == null) {
+          GceShieldedIdentity = new global::Google.Cloud.ConfidentialComputing.V1.GceShieldedIdentity();
+        }
+        GceShieldedIdentity.MergeFrom(other.GceShieldedIdentity);
+      }
+      if (other.options_ != null) {
+        if (options_ == null) {
+          Options = new global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest.Types.ConfidentialSpaceOptions();
+        }
+        Options.MergeFrom(other.Options);
+      }
+      switch (other.TeeAttestationCase) {
+        case TeeAttestationOneofCase.TdCcel:
+          if (TdCcel == null) {
+            TdCcel = new global::Google.Cloud.ConfidentialComputing.V1.TdxCcelAttestation();
+          }
+          TdCcel.MergeFrom(other.TdCcel);
+          break;
+        case TeeAttestationOneofCase.TpmAttestation:
+          if (TpmAttestation == null) {
+            TpmAttestation = new global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation();
+          }
+          TpmAttestation.MergeFrom(other.TpmAttestation);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Challenge = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (gcpCredentials_ == null) {
+              GcpCredentials = new global::Google.Cloud.ConfidentialComputing.V1.GcpCredentials();
+            }
+            input.ReadMessage(GcpCredentials);
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.ConfidentialComputing.V1.TdxCcelAttestation subBuilder = new global::Google.Cloud.ConfidentialComputing.V1.TdxCcelAttestation();
+            if (teeAttestationCase_ == TeeAttestationOneofCase.TdCcel) {
+              subBuilder.MergeFrom(TdCcel);
+            }
+            input.ReadMessage(subBuilder);
+            TdCcel = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation subBuilder = new global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation();
+            if (teeAttestationCase_ == TeeAttestationOneofCase.TpmAttestation) {
+              subBuilder.MergeFrom(TpmAttestation);
+            }
+            input.ReadMessage(subBuilder);
+            TpmAttestation = subBuilder;
+            break;
+          }
+          case 42: {
+            signedEntities_.AddEntriesFrom(input, _repeated_signedEntities_codec);
+            break;
+          }
+          case 50: {
+            if (gceShieldedIdentity_ == null) {
+              GceShieldedIdentity = new global::Google.Cloud.ConfidentialComputing.V1.GceShieldedIdentity();
+            }
+            input.ReadMessage(GceShieldedIdentity);
+            break;
+          }
+          case 58: {
+            if (options_ == null) {
+              Options = new global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest.Types.ConfidentialSpaceOptions();
+            }
+            input.ReadMessage(Options);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Challenge = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (gcpCredentials_ == null) {
+              GcpCredentials = new global::Google.Cloud.ConfidentialComputing.V1.GcpCredentials();
+            }
+            input.ReadMessage(GcpCredentials);
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.ConfidentialComputing.V1.TdxCcelAttestation subBuilder = new global::Google.Cloud.ConfidentialComputing.V1.TdxCcelAttestation();
+            if (teeAttestationCase_ == TeeAttestationOneofCase.TdCcel) {
+              subBuilder.MergeFrom(TdCcel);
+            }
+            input.ReadMessage(subBuilder);
+            TdCcel = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation subBuilder = new global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation();
+            if (teeAttestationCase_ == TeeAttestationOneofCase.TpmAttestation) {
+              subBuilder.MergeFrom(TpmAttestation);
+            }
+            input.ReadMessage(subBuilder);
+            TpmAttestation = subBuilder;
+            break;
+          }
+          case 42: {
+            signedEntities_.AddEntriesFrom(ref input, _repeated_signedEntities_codec);
+            break;
+          }
+          case 50: {
+            if (gceShieldedIdentity_ == null) {
+              GceShieldedIdentity = new global::Google.Cloud.ConfidentialComputing.V1.GceShieldedIdentity();
+            }
+            input.ReadMessage(GceShieldedIdentity);
+            break;
+          }
+          case 58: {
+            if (options_ == null) {
+              Options = new global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest.Types.ConfidentialSpaceOptions();
+            }
+            input.ReadMessage(Options);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the VerifyConfidentialSpaceRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Token options for Confidential Space attestation.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ConfidentialSpaceOptions : pb::IMessage<ConfidentialSpaceOptions>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ConfidentialSpaceOptions> _parser = new pb::MessageParser<ConfidentialSpaceOptions>(() => new ConfidentialSpaceOptions());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ConfidentialSpaceOptions> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.ConfidentialComputing.V1.VerifyConfidentialSpaceRequest.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConfidentialSpaceOptions() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConfidentialSpaceOptions(ConfidentialSpaceOptions other) : this() {
+          audience_ = other.audience_;
+          tokenProfile_ = other.tokenProfile_;
+          nonce_ = other.nonce_.Clone();
+          signatureType_ = other.signatureType_;
+          switch (other.TokenProfileOptionsCase) {
+            case TokenProfileOptionsOneofCase.AwsPrincipalTagsOptions:
+              AwsPrincipalTagsOptions = other.AwsPrincipalTagsOptions.Clone();
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConfidentialSpaceOptions Clone() {
+          return new ConfidentialSpaceOptions(this);
+        }
+
+        /// <summary>Field number for the "aws_principal_tags_options" field.</summary>
+        public const int AwsPrincipalTagsOptionsFieldNumber = 5;
+        /// <summary>
+        /// Optional. Options for the AWS token type.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions AwsPrincipalTagsOptions {
+          get { return tokenProfileOptionsCase_ == TokenProfileOptionsOneofCase.AwsPrincipalTagsOptions ? (global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions) tokenProfileOptions_ : null; }
+          set {
+            tokenProfileOptions_ = value;
+            tokenProfileOptionsCase_ = value == null ? TokenProfileOptionsOneofCase.None : TokenProfileOptionsOneofCase.AwsPrincipalTagsOptions;
+          }
+        }
+
+        /// <summary>Field number for the "audience" field.</summary>
+        public const int AudienceFieldNumber = 1;
+        private string audience_ = "";
+        /// <summary>
+        /// Optional. Optional string to issue the token with a custom audience
+        /// claim. Required if custom nonces are specified.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Audience {
+          get { return audience_; }
+          set {
+            audience_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "token_profile" field.</summary>
+        public const int TokenProfileFieldNumber = 2;
+        private global::Google.Cloud.ConfidentialComputing.V1.TokenProfile tokenProfile_ = global::Google.Cloud.ConfidentialComputing.V1.TokenProfile.Unspecified;
+        /// <summary>
+        /// Optional. Optional specification for token claims profile.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.ConfidentialComputing.V1.TokenProfile TokenProfile {
+          get { return tokenProfile_; }
+          set {
+            tokenProfile_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "nonce" field.</summary>
+        public const int NonceFieldNumber = 3;
+        private static readonly pb::FieldCodec<string> _repeated_nonce_codec
+            = pb::FieldCodec.ForString(26);
+        private readonly pbc::RepeatedField<string> nonce_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Optional. Optional parameter to place one or more nonces in the eat_nonce
+        /// claim in the output token. The minimum size for JSON-encoded EATs is 10
+        /// bytes and the maximum size is 74 bytes.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> Nonce {
+          get { return nonce_; }
+        }
+
+        /// <summary>Field number for the "signature_type" field.</summary>
+        public const int SignatureTypeFieldNumber = 4;
+        private global::Google.Cloud.ConfidentialComputing.V1.SignatureType signatureType_ = global::Google.Cloud.ConfidentialComputing.V1.SignatureType.Unspecified;
+        /// <summary>
+        /// Optional. Optional specification for how to sign the attestation token.
+        /// Defaults to SIGNATURE_TYPE_OIDC if unspecified.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.ConfidentialComputing.V1.SignatureType SignatureType {
+          get { return signatureType_; }
+          set {
+            signatureType_ = value;
+          }
+        }
+
+        private object tokenProfileOptions_;
+        /// <summary>Enum of possible cases for the "token_profile_options" oneof.</summary>
+        public enum TokenProfileOptionsOneofCase {
+          None = 0,
+          AwsPrincipalTagsOptions = 5,
+        }
+        private TokenProfileOptionsOneofCase tokenProfileOptionsCase_ = TokenProfileOptionsOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TokenProfileOptionsOneofCase TokenProfileOptionsCase {
+          get { return tokenProfileOptionsCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearTokenProfileOptions() {
+          tokenProfileOptionsCase_ = TokenProfileOptionsOneofCase.None;
+          tokenProfileOptions_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ConfidentialSpaceOptions);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ConfidentialSpaceOptions other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(AwsPrincipalTagsOptions, other.AwsPrincipalTagsOptions)) return false;
+          if (Audience != other.Audience) return false;
+          if (TokenProfile != other.TokenProfile) return false;
+          if(!nonce_.Equals(other.nonce_)) return false;
+          if (SignatureType != other.SignatureType) return false;
+          if (TokenProfileOptionsCase != other.TokenProfileOptionsCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (tokenProfileOptionsCase_ == TokenProfileOptionsOneofCase.AwsPrincipalTagsOptions) hash ^= AwsPrincipalTagsOptions.GetHashCode();
+          if (Audience.Length != 0) hash ^= Audience.GetHashCode();
+          if (TokenProfile != global::Google.Cloud.ConfidentialComputing.V1.TokenProfile.Unspecified) hash ^= TokenProfile.GetHashCode();
+          hash ^= nonce_.GetHashCode();
+          if (SignatureType != global::Google.Cloud.ConfidentialComputing.V1.SignatureType.Unspecified) hash ^= SignatureType.GetHashCode();
+          hash ^= (int) tokenProfileOptionsCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Audience.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Audience);
+          }
+          if (TokenProfile != global::Google.Cloud.ConfidentialComputing.V1.TokenProfile.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) TokenProfile);
+          }
+          nonce_.WriteTo(output, _repeated_nonce_codec);
+          if (SignatureType != global::Google.Cloud.ConfidentialComputing.V1.SignatureType.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) SignatureType);
+          }
+          if (tokenProfileOptionsCase_ == TokenProfileOptionsOneofCase.AwsPrincipalTagsOptions) {
+            output.WriteRawTag(42);
+            output.WriteMessage(AwsPrincipalTagsOptions);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Audience.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Audience);
+          }
+          if (TokenProfile != global::Google.Cloud.ConfidentialComputing.V1.TokenProfile.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) TokenProfile);
+          }
+          nonce_.WriteTo(ref output, _repeated_nonce_codec);
+          if (SignatureType != global::Google.Cloud.ConfidentialComputing.V1.SignatureType.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) SignatureType);
+          }
+          if (tokenProfileOptionsCase_ == TokenProfileOptionsOneofCase.AwsPrincipalTagsOptions) {
+            output.WriteRawTag(42);
+            output.WriteMessage(AwsPrincipalTagsOptions);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (tokenProfileOptionsCase_ == TokenProfileOptionsOneofCase.AwsPrincipalTagsOptions) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(AwsPrincipalTagsOptions);
+          }
+          if (Audience.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Audience);
+          }
+          if (TokenProfile != global::Google.Cloud.ConfidentialComputing.V1.TokenProfile.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TokenProfile);
+          }
+          size += nonce_.CalculateSize(_repeated_nonce_codec);
+          if (SignatureType != global::Google.Cloud.ConfidentialComputing.V1.SignatureType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SignatureType);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ConfidentialSpaceOptions other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Audience.Length != 0) {
+            Audience = other.Audience;
+          }
+          if (other.TokenProfile != global::Google.Cloud.ConfidentialComputing.V1.TokenProfile.Unspecified) {
+            TokenProfile = other.TokenProfile;
+          }
+          nonce_.Add(other.nonce_);
+          if (other.SignatureType != global::Google.Cloud.ConfidentialComputing.V1.SignatureType.Unspecified) {
+            SignatureType = other.SignatureType;
+          }
+          switch (other.TokenProfileOptionsCase) {
+            case TokenProfileOptionsOneofCase.AwsPrincipalTagsOptions:
+              if (AwsPrincipalTagsOptions == null) {
+                AwsPrincipalTagsOptions = new global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions();
+              }
+              AwsPrincipalTagsOptions.MergeFrom(other.AwsPrincipalTagsOptions);
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Audience = input.ReadString();
+                break;
+              }
+              case 16: {
+                TokenProfile = (global::Google.Cloud.ConfidentialComputing.V1.TokenProfile) input.ReadEnum();
+                break;
+              }
+              case 26: {
+                nonce_.AddEntriesFrom(input, _repeated_nonce_codec);
+                break;
+              }
+              case 32: {
+                SignatureType = (global::Google.Cloud.ConfidentialComputing.V1.SignatureType) input.ReadEnum();
+                break;
+              }
+              case 42: {
+                global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions subBuilder = new global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions();
+                if (tokenProfileOptionsCase_ == TokenProfileOptionsOneofCase.AwsPrincipalTagsOptions) {
+                  subBuilder.MergeFrom(AwsPrincipalTagsOptions);
+                }
+                input.ReadMessage(subBuilder);
+                AwsPrincipalTagsOptions = subBuilder;
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Audience = input.ReadString();
+                break;
+              }
+              case 16: {
+                TokenProfile = (global::Google.Cloud.ConfidentialComputing.V1.TokenProfile) input.ReadEnum();
+                break;
+              }
+              case 26: {
+                nonce_.AddEntriesFrom(ref input, _repeated_nonce_codec);
+                break;
+              }
+              case 32: {
+                SignatureType = (global::Google.Cloud.ConfidentialComputing.V1.SignatureType) input.ReadEnum();
+                break;
+              }
+              case 42: {
+                global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions subBuilder = new global::Google.Cloud.ConfidentialComputing.V1.AwsPrincipalTagsOptions();
+                if (tokenProfileOptionsCase_ == TokenProfileOptionsOneofCase.AwsPrincipalTagsOptions) {
+                  subBuilder.MergeFrom(AwsPrincipalTagsOptions);
+                }
+                input.ReadMessage(subBuilder);
+                AwsPrincipalTagsOptions = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// GceShieldedIdentity contains information about a Compute Engine instance.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GceShieldedIdentity : pb::IMessage<GceShieldedIdentity>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GceShieldedIdentity> _parser = new pb::MessageParser<GceShieldedIdentity>(() => new GceShieldedIdentity());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GceShieldedIdentity> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GceShieldedIdentity() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GceShieldedIdentity(GceShieldedIdentity other) : this() {
+      akCert_ = other.akCert_;
+      akCertChain_ = other.akCertChain_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GceShieldedIdentity Clone() {
+      return new GceShieldedIdentity(this);
+    }
+
+    /// <summary>Field number for the "ak_cert" field.</summary>
+    public const int AkCertFieldNumber = 1;
+    private pb::ByteString akCert_ = pb::ByteString.Empty;
+    /// <summary>
+    /// Optional. DER-encoded X.509 certificate of the Attestation Key (otherwise
+    /// known as an AK or a TPM restricted signing key) used to generate the
+    /// quotes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString AkCert {
+      get { return akCert_; }
+      set {
+        akCert_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ak_cert_chain" field.</summary>
+    public const int AkCertChainFieldNumber = 2;
+    private static readonly pb::FieldCodec<pb::ByteString> _repeated_akCertChain_codec
+        = pb::FieldCodec.ForBytes(18);
+    private readonly pbc::RepeatedField<pb::ByteString> akCertChain_ = new pbc::RepeatedField<pb::ByteString>();
+    /// <summary>
+    /// Optional. List of DER-encoded X.509 certificates which, together with the
+    /// ak_cert, chain back to a trusted Root Certificate.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<pb::ByteString> AkCertChain {
+      get { return akCertChain_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GceShieldedIdentity);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GceShieldedIdentity other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AkCert != other.AkCert) return false;
+      if(!akCertChain_.Equals(other.akCertChain_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (AkCert.Length != 0) hash ^= AkCert.GetHashCode();
+      hash ^= akCertChain_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (AkCert.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(AkCert);
+      }
+      akCertChain_.WriteTo(output, _repeated_akCertChain_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AkCert.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(AkCert);
+      }
+      akCertChain_.WriteTo(ref output, _repeated_akCertChain_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (AkCert.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(AkCert);
+      }
+      size += akCertChain_.CalculateSize(_repeated_akCertChain_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GceShieldedIdentity other) {
+      if (other == null) {
+        return;
+      }
+      if (other.AkCert.Length != 0) {
+        AkCert = other.AkCert;
+      }
+      akCertChain_.Add(other.akCertChain_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            AkCert = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            akCertChain_.AddEntriesFrom(input, _repeated_akCertChain_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            AkCert = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            akCertChain_.AddEntriesFrom(ref input, _repeated_akCertChain_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// VerifyConfidentialSpaceResponse is returned once a Confidential Space
+  /// attestation has been successfully verified, containing a signed token.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class VerifyConfidentialSpaceResponse : pb::IMessage<VerifyConfidentialSpaceResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<VerifyConfidentialSpaceResponse> _parser = new pb::MessageParser<VerifyConfidentialSpaceResponse>(() => new VerifyConfidentialSpaceResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<VerifyConfidentialSpaceResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerifyConfidentialSpaceResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerifyConfidentialSpaceResponse(VerifyConfidentialSpaceResponse other) : this() {
+      attestationToken_ = other.attestationToken_;
+      partialErrors_ = other.partialErrors_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerifyConfidentialSpaceResponse Clone() {
+      return new VerifyConfidentialSpaceResponse(this);
+    }
+
+    /// <summary>Field number for the "attestation_token" field.</summary>
+    public const int AttestationTokenFieldNumber = 1;
+    private string attestationToken_ = "";
+    /// <summary>
+    /// Output only. The attestation token issued by this service. It contains
+    /// specific platform claims based on the contents of the provided attestation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AttestationToken {
+      get { return attestationToken_; }
+      set {
+        attestationToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "partial_errors" field.</summary>
+    public const int PartialErrorsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Rpc.Status> _repeated_partialErrors_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Rpc.Status.Parser);
+    private readonly pbc::RepeatedField<global::Google.Rpc.Status> partialErrors_ = new pbc::RepeatedField<global::Google.Rpc.Status>();
+    /// <summary>
+    /// Output only. A list of messages that carry the partial error details
+    /// related to VerifyConfidentialSpace. This field is populated by errors
+    /// during container image signature verification, which may reflect problems
+    /// in the provided image signatures. This does not block the issuing of an
+    /// attestation token, but the token will not contain claims for the failed
+    /// image signatures.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Rpc.Status> PartialErrors {
+      get { return partialErrors_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as VerifyConfidentialSpaceResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(VerifyConfidentialSpaceResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AttestationToken != other.AttestationToken) return false;
+      if(!partialErrors_.Equals(other.partialErrors_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (AttestationToken.Length != 0) hash ^= AttestationToken.GetHashCode();
+      hash ^= partialErrors_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (AttestationToken.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AttestationToken);
+      }
+      partialErrors_.WriteTo(output, _repeated_partialErrors_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AttestationToken.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AttestationToken);
+      }
+      partialErrors_.WriteTo(ref output, _repeated_partialErrors_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (AttestationToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AttestationToken);
+      }
+      size += partialErrors_.CalculateSize(_repeated_partialErrors_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(VerifyConfidentialSpaceResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.AttestationToken.Length != 0) {
+        AttestationToken = other.AttestationToken;
+      }
+      partialErrors_.Add(other.partialErrors_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            AttestationToken = input.ReadString();
+            break;
+          }
+          case 18: {
+            partialErrors_.AddEntriesFrom(input, _repeated_partialErrors_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            AttestationToken = input.ReadString();
+            break;
+          }
+          case 18: {
+            partialErrors_.AddEntriesFrom(ref input, _repeated_partialErrors_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A request for an attestation token, providing all the necessary information
+  /// needed for this service to verify Confidential GKE platform state of the
+  /// requestor.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class VerifyConfidentialGkeRequest : pb::IMessage<VerifyConfidentialGkeRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<VerifyConfidentialGkeRequest> _parser = new pb::MessageParser<VerifyConfidentialGkeRequest>(() => new VerifyConfidentialGkeRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<VerifyConfidentialGkeRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerifyConfidentialGkeRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerifyConfidentialGkeRequest(VerifyConfidentialGkeRequest other) : this() {
+      challenge_ = other.challenge_;
+      switch (other.TeeAttestationCase) {
+        case TeeAttestationOneofCase.TpmAttestation:
+          TpmAttestation = other.TpmAttestation.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerifyConfidentialGkeRequest Clone() {
+      return new VerifyConfidentialGkeRequest(this);
+    }
+
+    /// <summary>Field number for the "tpm_attestation" field.</summary>
+    public const int TpmAttestationFieldNumber = 2;
+    /// <summary>
+    /// The TPM-specific data provided by the attesting platform, used to
+    /// populate any of the claims regarding platform state.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation TpmAttestation {
+      get { return teeAttestationCase_ == TeeAttestationOneofCase.TpmAttestation ? (global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation) teeAttestation_ : null; }
+      set {
+        teeAttestation_ = value;
+        teeAttestationCase_ = value == null ? TeeAttestationOneofCase.None : TeeAttestationOneofCase.TpmAttestation;
+      }
+    }
+
+    /// <summary>Field number for the "challenge" field.</summary>
+    public const int ChallengeFieldNumber = 1;
+    private string challenge_ = "";
+    /// <summary>
+    /// Required. The name of the Challenge whose nonce was used to generate the
+    /// attestation, in the format projects/*/locations/*/challenges/*. The
+    /// provided Challenge will be consumed, and cannot be used again.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Challenge {
+      get { return challenge_; }
+      set {
+        challenge_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private object teeAttestation_;
+    /// <summary>Enum of possible cases for the "tee_attestation" oneof.</summary>
+    public enum TeeAttestationOneofCase {
+      None = 0,
+      TpmAttestation = 2,
+    }
+    private TeeAttestationOneofCase teeAttestationCase_ = TeeAttestationOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TeeAttestationOneofCase TeeAttestationCase {
+      get { return teeAttestationCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTeeAttestation() {
+      teeAttestationCase_ = TeeAttestationOneofCase.None;
+      teeAttestation_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as VerifyConfidentialGkeRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(VerifyConfidentialGkeRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(TpmAttestation, other.TpmAttestation)) return false;
+      if (Challenge != other.Challenge) return false;
+      if (TeeAttestationCase != other.TeeAttestationCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (teeAttestationCase_ == TeeAttestationOneofCase.TpmAttestation) hash ^= TpmAttestation.GetHashCode();
+      if (Challenge.Length != 0) hash ^= Challenge.GetHashCode();
+      hash ^= (int) teeAttestationCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Challenge.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Challenge);
+      }
+      if (teeAttestationCase_ == TeeAttestationOneofCase.TpmAttestation) {
+        output.WriteRawTag(18);
+        output.WriteMessage(TpmAttestation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Challenge.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Challenge);
+      }
+      if (teeAttestationCase_ == TeeAttestationOneofCase.TpmAttestation) {
+        output.WriteRawTag(18);
+        output.WriteMessage(TpmAttestation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (teeAttestationCase_ == TeeAttestationOneofCase.TpmAttestation) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TpmAttestation);
+      }
+      if (Challenge.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Challenge);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(VerifyConfidentialGkeRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Challenge.Length != 0) {
+        Challenge = other.Challenge;
+      }
+      switch (other.TeeAttestationCase) {
+        case TeeAttestationOneofCase.TpmAttestation:
+          if (TpmAttestation == null) {
+            TpmAttestation = new global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation();
+          }
+          TpmAttestation.MergeFrom(other.TpmAttestation);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Challenge = input.ReadString();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation subBuilder = new global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation();
+            if (teeAttestationCase_ == TeeAttestationOneofCase.TpmAttestation) {
+              subBuilder.MergeFrom(TpmAttestation);
+            }
+            input.ReadMessage(subBuilder);
+            TpmAttestation = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Challenge = input.ReadString();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation subBuilder = new global::Google.Cloud.ConfidentialComputing.V1.TpmAttestation();
+            if (teeAttestationCase_ == TeeAttestationOneofCase.TpmAttestation) {
+              subBuilder.MergeFrom(TpmAttestation);
+            }
+            input.ReadMessage(subBuilder);
+            TpmAttestation = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// VerifyConfidentialGkeResponse response is returened once a Confidential GKE
+  /// attestation has been successfully verified, containing a signed OIDC token.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class VerifyConfidentialGkeResponse : pb::IMessage<VerifyConfidentialGkeResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<VerifyConfidentialGkeResponse> _parser = new pb::MessageParser<VerifyConfidentialGkeResponse>(() => new VerifyConfidentialGkeResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<VerifyConfidentialGkeResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.ConfidentialComputing.V1.ServiceReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerifyConfidentialGkeResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerifyConfidentialGkeResponse(VerifyConfidentialGkeResponse other) : this() {
+      attestationToken_ = other.attestationToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VerifyConfidentialGkeResponse Clone() {
+      return new VerifyConfidentialGkeResponse(this);
+    }
+
+    /// <summary>Field number for the "attestation_token" field.</summary>
+    public const int AttestationTokenFieldNumber = 1;
+    private string attestationToken_ = "";
+    /// <summary>
+    /// Output only. The attestation token issued by this service for Confidential
+    /// GKE. It contains specific platform claims based on the contents of the
+    /// provided attestation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AttestationToken {
+      get { return attestationToken_; }
+      set {
+        attestationToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as VerifyConfidentialGkeResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(VerifyConfidentialGkeResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AttestationToken != other.AttestationToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (AttestationToken.Length != 0) hash ^= AttestationToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (AttestationToken.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AttestationToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AttestationToken.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AttestationToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (AttestationToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AttestationToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(VerifyConfidentialGkeResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.AttestationToken.Length != 0) {
+        AttestationToken = other.AttestationToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            AttestationToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            AttestationToken = input.ReadString();
             break;
           }
         }

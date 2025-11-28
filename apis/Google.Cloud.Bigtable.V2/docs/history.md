@@ -1,5 +1,65 @@
 # Version history
 
+## Version 3.26.0, released 2025-11-10
+
+### New features
+
+- Add PeerInfo proto in Bigtable API
+
+## Version 3.25.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+## Version 3.24.0, released 2025-09-16
+
+### New features
+
+- Add Type API updates needed to support structured keys in materialized views
+- Add encodings for STRUCT and the Timestamp type
+
+## Version 3.23.0, released 2025-08-12
+
+### Bug fixes
+
+- Add ReadRows/SampleRowKeys bindings for materialized views
+
+## Version 3.22.0, released 2025-08-04
+
+### Bug fixes
+
+- Update routing_parameters.path_template
+
+## Version 3.21.0, released 2025-07-28
+
+### New features
+
+- Publish Proto and Enum types to CBT data API
+
+## Version 3.20.0, released 2025-07-22
+
+### New features
+
+- Add Idempotency to Cloud Bigtable MutateRowsRequest API
+
+### Documentation improvements
+
+- Sync generated comments from the API Protos
+- Minor comment update for field `idempotency` in message `.google.bigtable.v2.MutateRowRequest`
+
+## Version 3.19.0, released 2025-07-07
+
+### New features
+
+- Add Idempotency to Cloud Bigtable MutateRowRequest API
+
+## Version 3.18.0, released 2025-05-28
+
+### Bug fixes
+
+- ReadRow/s respects rowsLimit and retries on Aborted exception. Fixes TestReadRows_Retry_PausedScan, TestReadRows_NoRetry_ErrorAfterLastRow, and TestReadRow_Generic_DeadlineExceeded. (#14794)
+
 ## Version 3.17.0, released 2025-03-17
 
 ### New features

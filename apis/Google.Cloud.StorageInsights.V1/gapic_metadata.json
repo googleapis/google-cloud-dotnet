@@ -10,16 +10,34 @@
         "grpc": {
           "libraryClient": "StorageInsightsClient",
           "rpcs": {
+            "CreateDatasetConfig": {
+              "methods": [
+                "CreateDatasetConfig",
+                "CreateDatasetConfigAsync"
+              ]
+            },
             "CreateReportConfig": {
               "methods": [
                 "CreateReportConfig",
                 "CreateReportConfigAsync"
               ]
             },
+            "DeleteDatasetConfig": {
+              "methods": [
+                "DeleteDatasetConfig",
+                "DeleteDatasetConfigAsync"
+              ]
+            },
             "DeleteReportConfig": {
               "methods": [
                 "DeleteReportConfig",
                 "DeleteReportConfigAsync"
+              ]
+            },
+            "GetDatasetConfig": {
+              "methods": [
+                "GetDatasetConfig",
+                "GetDatasetConfigAsync"
               ]
             },
             "GetReportConfig": {
@@ -34,6 +52,18 @@
                 "GetReportDetailAsync"
               ]
             },
+            "LinkDataset": {
+              "methods": [
+                "LinkDataset",
+                "LinkDatasetAsync"
+              ]
+            },
+            "ListDatasetConfigs": {
+              "methods": [
+                "ListDatasetConfigs",
+                "ListDatasetConfigsAsync"
+              ]
+            },
             "ListReportConfigs": {
               "methods": [
                 "ListReportConfigs",
@@ -44,6 +74,18 @@
               "methods": [
                 "ListReportDetails",
                 "ListReportDetailsAsync"
+              ]
+            },
+            "UnlinkDataset": {
+              "methods": [
+                "UnlinkDataset",
+                "UnlinkDatasetAsync"
+              ]
+            },
+            "UpdateDatasetConfig": {
+              "methods": [
+                "UpdateDatasetConfig",
+                "UpdateDatasetConfigAsync"
               ]
             },
             "UpdateReportConfig": {

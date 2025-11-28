@@ -349,5 +349,15 @@ namespace Google.Cloud.DiscoveryEngine.V1
             get => string.IsNullOrEmpty(Name) ? null : gcdv::DataStoreName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="IdentityMappingStoreName"/>-typed view over the <see cref="IdentityMappingStore"/> resource name
+        /// property.
+        /// </summary>
+        public IdentityMappingStoreName IdentityMappingStoreAsIdentityMappingStoreName
+        {
+            get => string.IsNullOrEmpty(IdentityMappingStore) ? null : IdentityMappingStoreName.Parse(IdentityMappingStore, allowUnparsed: true);
+            set => IdentityMappingStore = value?.ToString() ?? "";
+        }
     }
 }

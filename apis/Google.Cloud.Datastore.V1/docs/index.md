@@ -23,6 +23,22 @@ Several custom conversions, additional constructors,
 factory methods (particularly on [Filter](obj/api/Google.Cloud.Datastore.V1.Filter.yml)
 are provided to simplify working with the protobuf messages.
 
+## Conflicts with .NET 10
+
+.NET 10 introduces the `AsyncEnumerable` class which causes
+conflicts with the `System.Linq.Async` package that
+Google.Cloud.Datastore.V1 depends on.
+
+We will release a new major version with a dependency on
+`System.Linq.AsyncEnumerable` instead, but within the current major
+version (3.x) you can follow the workaround described on the [.NET compatibility
+page](https://learn.microsoft.com/en-us/dotnet/core/compatibility/core-libraries/10.0/asyncenumerable),
+by adding a direct dependency on `System.Linq.Async` in your project
+file, with `ExcludeAssets=compile`:
+
+```xml
+<PackageReference Include="System.Linq.Async" Version="6.0.3" ExcludeAssets="compile"/>
+```
 ## Support for emulator detection
 
 As of 2.2.0-beta02 and 2.2.0, the library has support for detecting the

@@ -1,5 +1,23 @@
 # Version history
 
+## Version 3.16.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+## Version 3.15.0, released 2025-08-04
+
+### New features
+
+- Add Firestore CloneDatabase support
+
+## Version 3.14.0, released 2025-07-22
+
+### New features
+
+- Expose tags field in Database and RestoreDatabaseRequest public protos
+
 ## Version 3.13.0, released 2025-04-14
 
 ### New features

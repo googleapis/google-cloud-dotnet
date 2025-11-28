@@ -34,117 +34,133 @@ namespace Google.Cloud.TextToSpeech.V1 {
             "IpQBCgVWb2ljZRIWCg5sYW5ndWFnZV9jb2RlcxgBIAMoCRIMCgRuYW1lGAIg",
             "ASgJEkIKC3NzbWxfZ2VuZGVyGAMgASgOMi0uZ29vZ2xlLmNsb3VkLnRleHR0",
             "b3NwZWVjaC52MS5Tc21sVm9pY2VHZW5kZXISIQoZbmF0dXJhbF9zYW1wbGVf",
-            "cmF0ZV9oZXJ0ehgEIAEoBSJkChRBZHZhbmNlZFZvaWNlT3B0aW9ucxIqCh1s",
-            "b3dfbGF0ZW5jeV9qb3VybmV5X3N5bnRoZXNpcxgBIAEoCEgAiAEBQiAKHl9s",
-            "b3dfbGF0ZW5jeV9qb3VybmV5X3N5bnRoZXNpcyLdAgoXU3ludGhlc2l6ZVNw",
-            "ZWVjaFJlcXVlc3QSQAoFaW5wdXQYASABKAsyLC5nb29nbGUuY2xvdWQudGV4",
-            "dHRvc3BlZWNoLnYxLlN5bnRoZXNpc0lucHV0QgPgQQISRgoFdm9pY2UYAiAB",
-            "KAsyMi5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLlZvaWNlU2VsZWN0",
-            "aW9uUGFyYW1zQgPgQQISRAoMYXVkaW9fY29uZmlnGAMgASgLMikuZ29vZ2xl",
-            "LmNsb3VkLnRleHR0b3NwZWVjaC52MS5BdWRpb0NvbmZpZ0ID4EECElcKFmFk",
-            "dmFuY2VkX3ZvaWNlX29wdGlvbnMYCCABKAsyMi5nb29nbGUuY2xvdWQudGV4",
-            "dHRvc3BlZWNoLnYxLkFkdmFuY2VkVm9pY2VPcHRpb25zSACIAQFCGQoXX2Fk",
-            "dmFuY2VkX3ZvaWNlX29wdGlvbnMi2gIKGUN1c3RvbVByb251bmNpYXRpb25Q",
-            "YXJhbXMSEwoGcGhyYXNlGAEgASgJSACIAQESaAoRcGhvbmV0aWNfZW5jb2Rp",
-            "bmcYAiABKA4ySC5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLkN1c3Rv",
-            "bVByb251bmNpYXRpb25QYXJhbXMuUGhvbmV0aWNFbmNvZGluZ0gBiAEBEhoK",
-            "DXByb251bmNpYXRpb24YAyABKAlIAogBASJvChBQaG9uZXRpY0VuY29kaW5n",
-            "EiEKHVBIT05FVElDX0VOQ09ESU5HX1VOU1BFQ0lGSUVEEAASGQoVUEhPTkVU",
-            "SUNfRU5DT0RJTkdfSVBBEAESHQoZUEhPTkVUSUNfRU5DT0RJTkdfWF9TQU1Q",
-            "QRACQgkKB19waHJhc2VCFAoSX3Bob25ldGljX2VuY29kaW5nQhAKDl9wcm9u",
-            "dW5jaWF0aW9uImcKFEN1c3RvbVByb251bmNpYXRpb25zEk8KDnByb251bmNp",
-            "YXRpb25zGAEgAygLMjcuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MS5D",
-            "dXN0b21Qcm9udW5jaWF0aW9uUGFyYW1zIpABChJNdWx0aVNwZWFrZXJNYXJr",
-            "dXASSQoFdHVybnMYASADKAsyNS5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNo",
-            "LnYxLk11bHRpU3BlYWtlck1hcmt1cC5UdXJuQgPgQQIaLwoEVHVybhIUCgdz",
-            "cGVha2VyGAEgASgJQgPgQQISEQoEdGV4dBgCIAEoCUID4EECIuoBCg5TeW50",
-            "aGVzaXNJbnB1dBIOCgR0ZXh0GAEgASgJSAASDgoEc3NtbBgCIAEoCUgAElAK",
-            "FG11bHRpX3NwZWFrZXJfbWFya3VwGAQgASgLMjAuZ29vZ2xlLmNsb3VkLnRl",
-            "eHR0b3NwZWVjaC52MS5NdWx0aVNwZWFrZXJNYXJrdXBIABJWChVjdXN0b21f",
-            "cHJvbnVuY2lhdGlvbnMYAyABKAsyMi5nb29nbGUuY2xvdWQudGV4dHRvc3Bl",
-            "ZWNoLnYxLkN1c3RvbVByb251bmNpYXRpb25zQgPgQQFCDgoMaW5wdXRfc291",
-            "cmNlIpUCChRWb2ljZVNlbGVjdGlvblBhcmFtcxIaCg1sYW5ndWFnZV9jb2Rl",
-            "GAEgASgJQgPgQQISDAoEbmFtZRgCIAEoCRJCCgtzc21sX2dlbmRlchgDIAEo",
-            "DjItLmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuU3NtbFZvaWNlR2Vu",
-            "ZGVyEkUKDGN1c3RvbV92b2ljZRgEIAEoCzIvLmdvb2dsZS5jbG91ZC50ZXh0",
-            "dG9zcGVlY2gudjEuQ3VzdG9tVm9pY2VQYXJhbXMSSAoLdm9pY2VfY2xvbmUY",
-            "BSABKAsyLi5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLlZvaWNlQ2xv",
-            "bmVQYXJhbXNCA+BBASLxAQoLQXVkaW9Db25maWcSSAoOYXVkaW9fZW5jb2Rp",
-            "bmcYASABKA4yKy5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLkF1ZGlv",
-            "RW5jb2RpbmdCA+BBAhIdCg1zcGVha2luZ19yYXRlGAIgASgBQgbgQQTgQQES",
-            "FQoFcGl0Y2gYAyABKAFCBuBBBOBBARIeCg52b2x1bWVfZ2Fpbl9kYhgEIAEo",
-            "AUIG4EEE4EEBEh4KEXNhbXBsZV9yYXRlX2hlcnR6GAUgASgFQgPgQQESIgoS",
-            "ZWZmZWN0c19wcm9maWxlX2lkGAYgAygJQgbgQQTgQQEi8QEKEUN1c3RvbVZv",
-            "aWNlUGFyYW1zEjIKBW1vZGVsGAEgASgJQiPgQQL6QR0KG2F1dG9tbC5nb29n",
-            "bGVhcGlzLmNvbS9Nb2RlbBJcCg5yZXBvcnRlZF91c2FnZRgDIAEoDjI9Lmdv",
-            "b2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuQ3VzdG9tVm9pY2VQYXJhbXMu",
-            "UmVwb3J0ZWRVc2FnZUIFGAHgQQEiSgoNUmVwb3J0ZWRVc2FnZRIeChpSRVBP",
-            "UlRFRF9VU0FHRV9VTlNQRUNJRklFRBAAEgwKCFJFQUxUSU1FEAESCwoHT0ZG",
-            "TElORRACIjIKEFZvaWNlQ2xvbmVQYXJhbXMSHgoRdm9pY2VfY2xvbmluZ19r",
-            "ZXkYASABKAlCA+BBAiIxChhTeW50aGVzaXplU3BlZWNoUmVzcG9uc2USFQoN",
-            "YXVkaW9fY29udGVudBgBIAEoDCKfAQoUU3RyZWFtaW5nQXVkaW9Db25maWcS",
-            "SAoOYXVkaW9fZW5jb2RpbmcYASABKA4yKy5nb29nbGUuY2xvdWQudGV4dHRv",
-            "c3BlZWNoLnYxLkF1ZGlvRW5jb2RpbmdCA+BBAhIeChFzYW1wbGVfcmF0ZV9o",
-            "ZXJ0ehgCIAEoBUID4EEBEh0KDXNwZWFraW5nX3JhdGUYAyABKAFCBuBBBOBB",
-            "ASKUAgoZU3RyZWFtaW5nU3ludGhlc2l6ZUNvbmZpZxJGCgV2b2ljZRgBIAEo",
-            "CzIyLmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuVm9pY2VTZWxlY3Rp",
-            "b25QYXJhbXNCA+BBAhJXChZzdHJlYW1pbmdfYXVkaW9fY29uZmlnGAQgASgL",
-            "MjIuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MS5TdHJlYW1pbmdBdWRp",
-            "b0NvbmZpZ0ID4EEBElYKFWN1c3RvbV9wcm9udW5jaWF0aW9ucxgFIAEoCzIy",
-            "Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuQ3VzdG9tUHJvbnVuY2lh",
-            "dGlvbnNCA+BBASI5ChdTdHJlYW1pbmdTeW50aGVzaXNJbnB1dBIOCgR0ZXh0",
-            "GAEgASgJSABCDgoMaW5wdXRfc291cmNlIs4BChpTdHJlYW1pbmdTeW50aGVz",
-            "aXplUmVxdWVzdBJTChBzdHJlYW1pbmdfY29uZmlnGAEgASgLMjcuZ29vZ2xl",
-            "LmNsb3VkLnRleHR0b3NwZWVjaC52MS5TdHJlYW1pbmdTeW50aGVzaXplQ29u",
-            "ZmlnSAASRgoFaW5wdXQYAiABKAsyNS5nb29nbGUuY2xvdWQudGV4dHRvc3Bl",
-            "ZWNoLnYxLlN0cmVhbWluZ1N5bnRoZXNpc0lucHV0SABCEwoRc3RyZWFtaW5n",
-            "X3JlcXVlc3QiNAobU3RyZWFtaW5nU3ludGhlc2l6ZVJlc3BvbnNlEhUKDWF1",
-            "ZGlvX2NvbnRlbnQYASABKAwqVwoPU3NtbFZvaWNlR2VuZGVyEiEKHVNTTUxf",
-            "Vk9JQ0VfR0VOREVSX1VOU1BFQ0lGSUVEEAASCAoETUFMRRABEgoKBkZFTUFM",
-            "RRACEgsKB05FVVRSQUwQAypyCg1BdWRpb0VuY29kaW5nEh4KGkFVRElPX0VO",
-            "Q09ESU5HX1VOU1BFQ0lGSUVEEAASDAoITElORUFSMTYQARIHCgNNUDMQAhIM",
-            "CghPR0dfT1BVUxADEgkKBU1VTEFXEAUSCAoEQUxBVxAGEgcKA1BDTRAHMscE",
-            "CgxUZXh0VG9TcGVlY2gSkwEKCkxpc3RWb2ljZXMSLy5nb29nbGUuY2xvdWQu",
-            "dGV4dHRvc3BlZWNoLnYxLkxpc3RWb2ljZXNSZXF1ZXN0GjAuZ29vZ2xlLmNs",
-            "b3VkLnRleHR0b3NwZWVjaC52MS5MaXN0Vm9pY2VzUmVzcG9uc2UiItpBDWxh",
-            "bmd1YWdlX2NvZGWC0+STAgwSCi92MS92b2ljZXMSvAEKEFN5bnRoZXNpemVT",
-            "cGVlY2gSNS5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLlN5bnRoZXNp",
-            "emVTcGVlY2hSZXF1ZXN0GjYuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52",
-            "MS5TeW50aGVzaXplU3BlZWNoUmVzcG9uc2UiOdpBGGlucHV0LHZvaWNlLGF1",
-            "ZGlvX2NvbmZpZ4LT5JMCGCITL3YxL3RleHQ6c3ludGhlc2l6ZToBKhKQAQoT",
-            "U3RyZWFtaW5nU3ludGhlc2l6ZRI4Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVl",
-            "Y2gudjEuU3RyZWFtaW5nU3ludGhlc2l6ZVJlcXVlc3QaOS5nb29nbGUuY2xv",
-            "dWQudGV4dHRvc3BlZWNoLnYxLlN0cmVhbWluZ1N5bnRoZXNpemVSZXNwb25z",
-            "ZSIAKAEwARpPykEbdGV4dHRvc3BlZWNoLmdvb2dsZWFwaXMuY29t0kEuaHR0",
-            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUK8",
-            "AgogY29tLmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjFCEVRleHRUb1Nw",
-            "ZWVjaFByb3RvUAFaRGNsb3VkLmdvb2dsZS5jb20vZ28vdGV4dHRvc3BlZWNo",
-            "L2FwaXYxL3RleHR0b3NwZWVjaHBiO3RleHR0b3NwZWVjaHBiogIEQ1RUU6oC",
-            "HEdvb2dsZS5DbG91ZC5UZXh0VG9TcGVlY2guVjHKAhxHb29nbGVcQ2xvdWRc",
-            "VGV4dFRvU3BlZWNoXFYx6gIfR29vZ2xlOjpDbG91ZDo6VGV4dFRvU3BlZWNo",
-            "OjpWMepBVQobYXV0b21sLmdvb2dsZWFwaXMuY29tL01vZGVsEjZwcm9qZWN0",
-            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbW9kZWxzL3ttb2Rl",
-            "bH1iBnByb3RvMw=="));
+            "cmF0ZV9oZXJ0ehgEIAEoBSKKAQoUQWR2YW5jZWRWb2ljZU9wdGlvbnMSKgod",
+            "bG93X2xhdGVuY3lfam91cm5leV9zeW50aGVzaXMYASABKAhIAIgBARIkChRy",
+            "ZWxheF9zYWZldHlfZmlsdGVycxgIIAEoCEIG4EEE4EEBQiAKHl9sb3dfbGF0",
+            "ZW5jeV9qb3VybmV5X3N5bnRoZXNpcyLdAgoXU3ludGhlc2l6ZVNwZWVjaFJl",
+            "cXVlc3QSQAoFaW5wdXQYASABKAsyLC5nb29nbGUuY2xvdWQudGV4dHRvc3Bl",
+            "ZWNoLnYxLlN5bnRoZXNpc0lucHV0QgPgQQISRgoFdm9pY2UYAiABKAsyMi5n",
+            "b29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLlZvaWNlU2VsZWN0aW9uUGFy",
+            "YW1zQgPgQQISRAoMYXVkaW9fY29uZmlnGAMgASgLMikuZ29vZ2xlLmNsb3Vk",
+            "LnRleHR0b3NwZWVjaC52MS5BdWRpb0NvbmZpZ0ID4EECElcKFmFkdmFuY2Vk",
+            "X3ZvaWNlX29wdGlvbnMYCCABKAsyMi5nb29nbGUuY2xvdWQudGV4dHRvc3Bl",
+            "ZWNoLnYxLkFkdmFuY2VkVm9pY2VPcHRpb25zSACIAQFCGQoXX2FkdmFuY2Vk",
+            "X3ZvaWNlX29wdGlvbnMiogMKGUN1c3RvbVByb251bmNpYXRpb25QYXJhbXMS",
+            "EwoGcGhyYXNlGAEgASgJSACIAQESaAoRcGhvbmV0aWNfZW5jb2RpbmcYAiAB",
+            "KA4ySC5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLkN1c3RvbVByb251",
+            "bmNpYXRpb25QYXJhbXMuUGhvbmV0aWNFbmNvZGluZ0gBiAEBEhoKDXByb251",
+            "bmNpYXRpb24YAyABKAlIAogBASK2AQoQUGhvbmV0aWNFbmNvZGluZxIhCh1Q",
+            "SE9ORVRJQ19FTkNPRElOR19VTlNQRUNJRklFRBAAEhkKFVBIT05FVElDX0VO",
+            "Q09ESU5HX0lQQRABEh0KGVBIT05FVElDX0VOQ09ESU5HX1hfU0FNUEEQAhIn",
+            "CiNQSE9ORVRJQ19FTkNPRElOR19KQVBBTkVTRV9ZT01JR0FOQRADEhwKGFBI",
+            "T05FVElDX0VOQ09ESU5HX1BJTllJThAEQgkKB19waHJhc2VCFAoSX3Bob25l",
+            "dGljX2VuY29kaW5nQhAKDl9wcm9udW5jaWF0aW9uImcKFEN1c3RvbVByb251",
+            "bmNpYXRpb25zEk8KDnByb251bmNpYXRpb25zGAEgAygLMjcuZ29vZ2xlLmNs",
+            "b3VkLnRleHR0b3NwZWVjaC52MS5DdXN0b21Qcm9udW5jaWF0aW9uUGFyYW1z",
+            "IpABChJNdWx0aVNwZWFrZXJNYXJrdXASSQoFdHVybnMYASADKAsyNS5nb29n",
+            "bGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLk11bHRpU3BlYWtlck1hcmt1cC5U",
+            "dXJuQgPgQQIaLwoEVHVybhIUCgdzcGVha2VyGAEgASgJQgPgQQISEQoEdGV4",
+            "dBgCIAEoCUID4EECIlAKGU11bHRpc3BlYWtlclByZWJ1aWx0Vm9pY2USGgoN",
+            "c3BlYWtlcl9hbGlhcxgBIAEoCUID4EECEhcKCnNwZWFrZXJfaWQYAiABKAlC",
+            "A+BBAiJ2ChdNdWx0aVNwZWFrZXJWb2ljZUNvbmZpZxJbChVzcGVha2VyX3Zv",
+            "aWNlX2NvbmZpZ3MYAiADKAsyNy5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNo",
+            "LnYxLk11bHRpc3BlYWtlclByZWJ1aWx0Vm9pY2VCA+BBAiKcAgoOU3ludGhl",
+            "c2lzSW5wdXQSDgoEdGV4dBgBIAEoCUgAEhAKBm1hcmt1cBgFIAEoCUgAEg4K",
+            "BHNzbWwYAiABKAlIABJQChRtdWx0aV9zcGVha2VyX21hcmt1cBgEIAEoCzIw",
+            "Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuTXVsdGlTcGVha2VyTWFy",
+            "a3VwSAASEwoGcHJvbXB0GAYgASgJSAGIAQESVgoVY3VzdG9tX3Byb251bmNp",
+            "YXRpb25zGAMgASgLMjIuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MS5D",
+            "dXN0b21Qcm9udW5jaWF0aW9uc0ID4EEBQg4KDGlucHV0X3NvdXJjZUIJCgdf",
+            "cHJvbXB0Io4DChRWb2ljZVNlbGVjdGlvblBhcmFtcxIaCg1sYW5ndWFnZV9j",
+            "b2RlGAEgASgJQgPgQQISDAoEbmFtZRgCIAEoCRJCCgtzc21sX2dlbmRlchgD",
+            "IAEoDjItLmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuU3NtbFZvaWNl",
+            "R2VuZGVyEkUKDGN1c3RvbV92b2ljZRgEIAEoCzIvLmdvb2dsZS5jbG91ZC50",
+            "ZXh0dG9zcGVlY2gudjEuQ3VzdG9tVm9pY2VQYXJhbXMSSAoLdm9pY2VfY2xv",
+            "bmUYBSABKAsyLi5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLlZvaWNl",
+            "Q2xvbmVQYXJhbXNCA+BBARIXCgptb2RlbF9uYW1lGAYgASgJQgPgQQESXgoa",
+            "bXVsdGlfc3BlYWtlcl92b2ljZV9jb25maWcYByABKAsyNS5nb29nbGUuY2xv",
+            "dWQudGV4dHRvc3BlZWNoLnYxLk11bHRpU3BlYWtlclZvaWNlQ29uZmlnQgPg",
+            "QQEi8QEKC0F1ZGlvQ29uZmlnEkgKDmF1ZGlvX2VuY29kaW5nGAEgASgOMisu",
+            "Z29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MS5BdWRpb0VuY29kaW5nQgPg",
+            "QQISHQoNc3BlYWtpbmdfcmF0ZRgCIAEoAUIG4EEE4EEBEhUKBXBpdGNoGAMg",
+            "ASgBQgbgQQTgQQESHgoOdm9sdW1lX2dhaW5fZGIYBCABKAFCBuBBBOBBARIe",
+            "ChFzYW1wbGVfcmF0ZV9oZXJ0ehgFIAEoBUID4EEBEiIKEmVmZmVjdHNfcHJv",
+            "ZmlsZV9pZBgGIAMoCUIG4EEE4EEBIvEBChFDdXN0b21Wb2ljZVBhcmFtcxIy",
+            "CgVtb2RlbBgBIAEoCUIj4EEC+kEdChthdXRvbWwuZ29vZ2xlYXBpcy5jb20v",
+            "TW9kZWwSXAoOcmVwb3J0ZWRfdXNhZ2UYAyABKA4yPS5nb29nbGUuY2xvdWQu",
+            "dGV4dHRvc3BlZWNoLnYxLkN1c3RvbVZvaWNlUGFyYW1zLlJlcG9ydGVkVXNh",
+            "Z2VCBRgB4EEBIkoKDVJlcG9ydGVkVXNhZ2USHgoaUkVQT1JURURfVVNBR0Vf",
+            "VU5TUEVDSUZJRUQQABIMCghSRUFMVElNRRABEgsKB09GRkxJTkUQAiIyChBW",
+            "b2ljZUNsb25lUGFyYW1zEh4KEXZvaWNlX2Nsb25pbmdfa2V5GAEgASgJQgPg",
+            "QQIiMQoYU3ludGhlc2l6ZVNwZWVjaFJlc3BvbnNlEhUKDWF1ZGlvX2NvbnRl",
+            "bnQYASABKAwinwEKFFN0cmVhbWluZ0F1ZGlvQ29uZmlnEkgKDmF1ZGlvX2Vu",
+            "Y29kaW5nGAEgASgOMisuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MS5B",
+            "dWRpb0VuY29kaW5nQgPgQQISHgoRc2FtcGxlX3JhdGVfaGVydHoYAiABKAVC",
+            "A+BBARIdCg1zcGVha2luZ19yYXRlGAMgASgBQgbgQQTgQQEilAIKGVN0cmVh",
+            "bWluZ1N5bnRoZXNpemVDb25maWcSRgoFdm9pY2UYASABKAsyMi5nb29nbGUu",
+            "Y2xvdWQudGV4dHRvc3BlZWNoLnYxLlZvaWNlU2VsZWN0aW9uUGFyYW1zQgPg",
+            "QQISVwoWc3RyZWFtaW5nX2F1ZGlvX2NvbmZpZxgEIAEoCzIyLmdvb2dsZS5j",
+            "bG91ZC50ZXh0dG9zcGVlY2gudjEuU3RyZWFtaW5nQXVkaW9Db25maWdCA+BB",
+            "ARJWChVjdXN0b21fcHJvbnVuY2lhdGlvbnMYBSABKAsyMi5nb29nbGUuY2xv",
+            "dWQudGV4dHRvc3BlZWNoLnYxLkN1c3RvbVByb251bmNpYXRpb25zQgPgQQEi",
+            "vQEKF1N0cmVhbWluZ1N5bnRoZXNpc0lucHV0Eg4KBHRleHQYASABKAlIABIQ",
+            "CgZtYXJrdXAYBSABKAlIABJQChRtdWx0aV9zcGVha2VyX21hcmt1cBgHIAEo",
+            "CzIwLmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuTXVsdGlTcGVha2Vy",
+            "TWFya3VwSAASEwoGcHJvbXB0GAYgASgJSAGIAQFCDgoMaW5wdXRfc291cmNl",
+            "QgkKB19wcm9tcHQizgEKGlN0cmVhbWluZ1N5bnRoZXNpemVSZXF1ZXN0ElMK",
+            "EHN0cmVhbWluZ19jb25maWcYASABKAsyNy5nb29nbGUuY2xvdWQudGV4dHRv",
+            "c3BlZWNoLnYxLlN0cmVhbWluZ1N5bnRoZXNpemVDb25maWdIABJGCgVpbnB1",
+            "dBgCIAEoCzI1Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuU3RyZWFt",
+            "aW5nU3ludGhlc2lzSW5wdXRIAEITChFzdHJlYW1pbmdfcmVxdWVzdCI0ChtT",
+            "dHJlYW1pbmdTeW50aGVzaXplUmVzcG9uc2USFQoNYXVkaW9fY29udGVudBgB",
+            "IAEoDCpXCg9Tc21sVm9pY2VHZW5kZXISIQodU1NNTF9WT0lDRV9HRU5ERVJf",
+            "VU5TUEVDSUZJRUQQABIICgRNQUxFEAESCgoGRkVNQUxFEAISCwoHTkVVVFJB",
+            "TBADKnsKDUF1ZGlvRW5jb2RpbmcSHgoaQVVESU9fRU5DT0RJTkdfVU5TUEVD",
+            "SUZJRUQQABIMCghMSU5FQVIxNhABEgcKA01QMxACEgwKCE9HR19PUFVTEAMS",
+            "CQoFTVVMQVcQBRIICgRBTEFXEAYSBwoDUENNEAcSBwoDTTRBEAgyxwQKDFRl",
+            "eHRUb1NwZWVjaBKTAQoKTGlzdFZvaWNlcxIvLmdvb2dsZS5jbG91ZC50ZXh0",
+            "dG9zcGVlY2gudjEuTGlzdFZvaWNlc1JlcXVlc3QaMC5nb29nbGUuY2xvdWQu",
+            "dGV4dHRvc3BlZWNoLnYxLkxpc3RWb2ljZXNSZXNwb25zZSIi2kENbGFuZ3Vh",
+            "Z2VfY29kZYLT5JMCDBIKL3YxL3ZvaWNlcxK8AQoQU3ludGhlc2l6ZVNwZWVj",
+            "aBI1Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuU3ludGhlc2l6ZVNw",
+            "ZWVjaFJlcXVlc3QaNi5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLlN5",
+            "bnRoZXNpemVTcGVlY2hSZXNwb25zZSI52kEYaW5wdXQsdm9pY2UsYXVkaW9f",
+            "Y29uZmlngtPkkwIYIhMvdjEvdGV4dDpzeW50aGVzaXplOgEqEpABChNTdHJl",
+            "YW1pbmdTeW50aGVzaXplEjguZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52",
+            "MS5TdHJlYW1pbmdTeW50aGVzaXplUmVxdWVzdBo5Lmdvb2dsZS5jbG91ZC50",
+            "ZXh0dG9zcGVlY2gudjEuU3RyZWFtaW5nU3ludGhlc2l6ZVJlc3BvbnNlIgAo",
+            "ATABGk/KQRt0ZXh0dG9zcGVlY2guZ29vZ2xlYXBpcy5jb23SQS5odHRwczov",
+            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQrwCCiBj",
+            "b20uZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MUIRVGV4dFRvU3BlZWNo",
+            "UHJvdG9QAVpEY2xvdWQuZ29vZ2xlLmNvbS9nby90ZXh0dG9zcGVlY2gvYXBp",
+            "djEvdGV4dHRvc3BlZWNocGI7dGV4dHRvc3BlZWNocGKiAgRDVFRTqgIcR29v",
+            "Z2xlLkNsb3VkLlRleHRUb1NwZWVjaC5WMcoCHEdvb2dsZVxDbG91ZFxUZXh0",
+            "VG9TcGVlY2hcVjHqAh9Hb29nbGU6OkNsb3VkOjpUZXh0VG9TcGVlY2g6OlYx",
+            "6kFVChthdXRvbWwuZ29vZ2xlYXBpcy5jb20vTW9kZWwSNnByb2plY3RzL3tw",
+            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9tb2RlbHMve21vZGVsfWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.TextToSpeech.V1.SsmlVoiceGender), typeof(global::Google.Cloud.TextToSpeech.V1.AudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.ListVoicesRequest), global::Google.Cloud.TextToSpeech.V1.ListVoicesRequest.Parser, new[]{ "LanguageCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.ListVoicesResponse), global::Google.Cloud.TextToSpeech.V1.ListVoicesResponse.Parser, new[]{ "Voices" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.Voice), global::Google.Cloud.TextToSpeech.V1.Voice.Parser, new[]{ "LanguageCodes", "Name", "SsmlGender", "NaturalSampleRateHertz" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.AdvancedVoiceOptions), global::Google.Cloud.TextToSpeech.V1.AdvancedVoiceOptions.Parser, new[]{ "LowLatencyJourneySynthesis" }, new[]{ "LowLatencyJourneySynthesis" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.AdvancedVoiceOptions), global::Google.Cloud.TextToSpeech.V1.AdvancedVoiceOptions.Parser, new[]{ "LowLatencyJourneySynthesis", "RelaxSafetyFilters" }, new[]{ "LowLatencyJourneySynthesis" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.SynthesizeSpeechRequest), global::Google.Cloud.TextToSpeech.V1.SynthesizeSpeechRequest.Parser, new[]{ "Input", "Voice", "AudioConfig", "AdvancedVoiceOptions" }, new[]{ "AdvancedVoiceOptions" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.CustomPronunciationParams), global::Google.Cloud.TextToSpeech.V1.CustomPronunciationParams.Parser, new[]{ "Phrase", "PhoneticEncoding", "Pronunciation" }, new[]{ "Phrase", "PhoneticEncoding", "Pronunciation" }, new[]{ typeof(global::Google.Cloud.TextToSpeech.V1.CustomPronunciationParams.Types.PhoneticEncoding) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.CustomPronunciations), global::Google.Cloud.TextToSpeech.V1.CustomPronunciations.Parser, new[]{ "Pronunciations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.MultiSpeakerMarkup), global::Google.Cloud.TextToSpeech.V1.MultiSpeakerMarkup.Parser, new[]{ "Turns" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.MultiSpeakerMarkup.Types.Turn), global::Google.Cloud.TextToSpeech.V1.MultiSpeakerMarkup.Types.Turn.Parser, new[]{ "Speaker", "Text" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.SynthesisInput), global::Google.Cloud.TextToSpeech.V1.SynthesisInput.Parser, new[]{ "Text", "Ssml", "MultiSpeakerMarkup", "CustomPronunciations" }, new[]{ "InputSource" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.VoiceSelectionParams), global::Google.Cloud.TextToSpeech.V1.VoiceSelectionParams.Parser, new[]{ "LanguageCode", "Name", "SsmlGender", "CustomVoice", "VoiceClone" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.MultispeakerPrebuiltVoice), global::Google.Cloud.TextToSpeech.V1.MultispeakerPrebuiltVoice.Parser, new[]{ "SpeakerAlias", "SpeakerId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.MultiSpeakerVoiceConfig), global::Google.Cloud.TextToSpeech.V1.MultiSpeakerVoiceConfig.Parser, new[]{ "SpeakerVoiceConfigs" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.SynthesisInput), global::Google.Cloud.TextToSpeech.V1.SynthesisInput.Parser, new[]{ "Text", "Markup", "Ssml", "MultiSpeakerMarkup", "Prompt", "CustomPronunciations" }, new[]{ "InputSource", "Prompt" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.VoiceSelectionParams), global::Google.Cloud.TextToSpeech.V1.VoiceSelectionParams.Parser, new[]{ "LanguageCode", "Name", "SsmlGender", "CustomVoice", "VoiceClone", "ModelName", "MultiSpeakerVoiceConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.AudioConfig), global::Google.Cloud.TextToSpeech.V1.AudioConfig.Parser, new[]{ "AudioEncoding", "SpeakingRate", "Pitch", "VolumeGainDb", "SampleRateHertz", "EffectsProfileId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.CustomVoiceParams), global::Google.Cloud.TextToSpeech.V1.CustomVoiceParams.Parser, new[]{ "Model", "ReportedUsage" }, null, new[]{ typeof(global::Google.Cloud.TextToSpeech.V1.CustomVoiceParams.Types.ReportedUsage) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.VoiceCloneParams), global::Google.Cloud.TextToSpeech.V1.VoiceCloneParams.Parser, new[]{ "VoiceCloningKey" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.SynthesizeSpeechResponse), global::Google.Cloud.TextToSpeech.V1.SynthesizeSpeechResponse.Parser, new[]{ "AudioContent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.StreamingAudioConfig), global::Google.Cloud.TextToSpeech.V1.StreamingAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "SpeakingRate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.StreamingSynthesizeConfig), global::Google.Cloud.TextToSpeech.V1.StreamingSynthesizeConfig.Parser, new[]{ "Voice", "StreamingAudioConfig", "CustomPronunciations" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.StreamingSynthesisInput), global::Google.Cloud.TextToSpeech.V1.StreamingSynthesisInput.Parser, new[]{ "Text" }, new[]{ "InputSource" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.StreamingSynthesisInput), global::Google.Cloud.TextToSpeech.V1.StreamingSynthesisInput.Parser, new[]{ "Text", "Markup", "MultiSpeakerMarkup", "Prompt" }, new[]{ "InputSource", "Prompt" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.StreamingSynthesizeRequest), global::Google.Cloud.TextToSpeech.V1.StreamingSynthesizeRequest.Parser, new[]{ "StreamingConfig", "Input" }, new[]{ "StreamingRequest" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.StreamingSynthesizeResponse), global::Google.Cloud.TextToSpeech.V1.StreamingSynthesizeResponse.Parser, new[]{ "AudioContent" }, null, null, null, null)
           }));
@@ -186,7 +202,8 @@ namespace Google.Cloud.TextToSpeech.V1 {
   /// </summary>
   public enum AudioEncoding {
     /// <summary>
-    /// Not specified. Will return result
+    /// Not specified. Only used by GenerateVoiceCloningKey. Otherwise, will return
+    /// result
     /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT].
     /// </summary>
     [pbr::OriginalName("AUDIO_ENCODING_UNSPECIFIED")] Unspecified = 0,
@@ -222,6 +239,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// any other) header.
     /// </summary>
     [pbr::OriginalName("PCM")] Pcm = 7,
+    /// <summary>
+    /// M4A audio.
+    /// </summary>
+    [pbr::OriginalName("M4A")] M4A = 8,
   }
 
   #endregion
@@ -963,6 +984,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public AdvancedVoiceOptions(AdvancedVoiceOptions other) : this() {
       _hasBits0 = other._hasBits0;
       lowLatencyJourneySynthesis_ = other.lowLatencyJourneySynthesis_;
+      relaxSafetyFilters_ = other.relaxSafetyFilters_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1003,6 +1025,24 @@ namespace Google.Cloud.TextToSpeech.V1 {
       _hasBits0 &= ~1;
     }
 
+    /// <summary>Field number for the "relax_safety_filters" field.</summary>
+    public const int RelaxSafetyFiltersFieldNumber = 8;
+    private bool relaxSafetyFilters_;
+    /// <summary>
+    /// Optional. Input only. If true, relaxes safety filters for Gemini TTS. Only
+    /// supported for accounts linked to Invoiced (Offline) Cloud billing accounts.
+    /// Otherwise, will return result
+    /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool RelaxSafetyFilters {
+      get { return relaxSafetyFilters_; }
+      set {
+        relaxSafetyFilters_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1019,6 +1059,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
         return true;
       }
       if (LowLatencyJourneySynthesis != other.LowLatencyJourneySynthesis) return false;
+      if (RelaxSafetyFilters != other.RelaxSafetyFilters) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1027,6 +1068,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (HasLowLatencyJourneySynthesis) hash ^= LowLatencyJourneySynthesis.GetHashCode();
+      if (RelaxSafetyFilters != false) hash ^= RelaxSafetyFilters.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1049,6 +1091,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
         output.WriteRawTag(8);
         output.WriteBool(LowLatencyJourneySynthesis);
       }
+      if (RelaxSafetyFilters != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(RelaxSafetyFilters);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1063,6 +1109,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
         output.WriteRawTag(8);
         output.WriteBool(LowLatencyJourneySynthesis);
       }
+      if (RelaxSafetyFilters != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(RelaxSafetyFilters);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1074,6 +1124,9 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public int CalculateSize() {
       int size = 0;
       if (HasLowLatencyJourneySynthesis) {
+        size += 1 + 1;
+      }
+      if (RelaxSafetyFilters != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -1090,6 +1143,9 @@ namespace Google.Cloud.TextToSpeech.V1 {
       }
       if (other.HasLowLatencyJourneySynthesis) {
         LowLatencyJourneySynthesis = other.LowLatencyJourneySynthesis;
+      }
+      if (other.RelaxSafetyFilters != false) {
+        RelaxSafetyFilters = other.RelaxSafetyFilters;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1110,6 +1166,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
             LowLatencyJourneySynthesis = input.ReadBool();
             break;
           }
+          case 64: {
+            RelaxSafetyFilters = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1127,6 +1187,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
             break;
           case 8: {
             LowLatencyJourneySynthesis = input.ReadBool();
+            break;
+          }
+          case 64: {
+            RelaxSafetyFilters = input.ReadBool();
             break;
           }
         }
@@ -1833,6 +1897,31 @@ namespace Google.Cloud.TextToSpeech.V1 {
         /// https://en.wikipedia.org/wiki/X-SAMPA
         /// </summary>
         [pbr::OriginalName("PHONETIC_ENCODING_X_SAMPA")] XSampa = 2,
+        /// <summary>
+        /// For reading-to-pron conversion to work well, the `pronunciation` field
+        ///  should only contain Kanji, Hiragana, and Katakana.
+        ///
+        /// The pronunciation can also contain pitch accents.
+        /// The start of a pitch phrase is specified with `^` and the down-pitch
+        /// position is specified with `!`, for example:
+        ///
+        ///     phrase:端  pronunciation:^はし
+        ///     phrase:箸  pronunciation:^は!し
+        ///     phrase:橋  pronunciation:^はし!
+        ///
+        /// We currently only support the Tokyo dialect, which allows at most one
+        /// down-pitch per phrase (i.e. at most one `!` between `^`).
+        /// </summary>
+        [pbr::OriginalName("PHONETIC_ENCODING_JAPANESE_YOMIGANA")] JapaneseYomigana = 3,
+        /// <summary>
+        /// Used to specify pronunciations for Mandarin words. See
+        /// https://en.wikipedia.org/wiki/Pinyin.
+        ///
+        /// For example: 朝阳, the pronunciation is "chao2 yang2". The number
+        /// represents the tone, and there is a space between syllables. Neutral
+        /// tones are represented by 5, for example 孩子 "hai2 zi5".
+        /// </summary>
+        [pbr::OriginalName("PHONETIC_ENCODING_PINYIN")] Pinyin = 4,
       }
 
     }
@@ -2456,6 +2545,433 @@ namespace Google.Cloud.TextToSpeech.V1 {
   }
 
   /// <summary>
+  /// Configuration for a single speaker in a Gemini TTS multi-speaker setup.
+  /// Enables dialogue between two speakers.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class MultispeakerPrebuiltVoice : pb::IMessage<MultispeakerPrebuiltVoice>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MultispeakerPrebuiltVoice> _parser = new pb::MessageParser<MultispeakerPrebuiltVoice>(() => new MultispeakerPrebuiltVoice());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MultispeakerPrebuiltVoice> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MultispeakerPrebuiltVoice() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MultispeakerPrebuiltVoice(MultispeakerPrebuiltVoice other) : this() {
+      speakerAlias_ = other.speakerAlias_;
+      speakerId_ = other.speakerId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MultispeakerPrebuiltVoice Clone() {
+      return new MultispeakerPrebuiltVoice(this);
+    }
+
+    /// <summary>Field number for the "speaker_alias" field.</summary>
+    public const int SpeakerAliasFieldNumber = 1;
+    private string speakerAlias_ = "";
+    /// <summary>
+    /// Required. The speaker alias of the voice. This is the user-chosen speaker
+    /// name that is used in the multispeaker text input, such as "Speaker1".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SpeakerAlias {
+      get { return speakerAlias_; }
+      set {
+        speakerAlias_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "speaker_id" field.</summary>
+    public const int SpeakerIdFieldNumber = 2;
+    private string speakerId_ = "";
+    /// <summary>
+    /// Required. The speaker ID of the voice. See
+    /// https://cloud.google.com/text-to-speech/docs/gemini-tts#voice_options
+    /// for available values.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SpeakerId {
+      get { return speakerId_; }
+      set {
+        speakerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MultispeakerPrebuiltVoice);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MultispeakerPrebuiltVoice other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (SpeakerAlias != other.SpeakerAlias) return false;
+      if (SpeakerId != other.SpeakerId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (SpeakerAlias.Length != 0) hash ^= SpeakerAlias.GetHashCode();
+      if (SpeakerId.Length != 0) hash ^= SpeakerId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (SpeakerAlias.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(SpeakerAlias);
+      }
+      if (SpeakerId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SpeakerId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (SpeakerAlias.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(SpeakerAlias);
+      }
+      if (SpeakerId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SpeakerId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (SpeakerAlias.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SpeakerAlias);
+      }
+      if (SpeakerId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SpeakerId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MultispeakerPrebuiltVoice other) {
+      if (other == null) {
+        return;
+      }
+      if (other.SpeakerAlias.Length != 0) {
+        SpeakerAlias = other.SpeakerAlias;
+      }
+      if (other.SpeakerId.Length != 0) {
+        SpeakerId = other.SpeakerId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            SpeakerAlias = input.ReadString();
+            break;
+          }
+          case 18: {
+            SpeakerId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            SpeakerAlias = input.ReadString();
+            break;
+          }
+          case 18: {
+            SpeakerId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Configuration for a multi-speaker text-to-speech setup. Enables the use of up
+  /// to two distinct voices in a single synthesis request.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class MultiSpeakerVoiceConfig : pb::IMessage<MultiSpeakerVoiceConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MultiSpeakerVoiceConfig> _parser = new pb::MessageParser<MultiSpeakerVoiceConfig>(() => new MultiSpeakerVoiceConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MultiSpeakerVoiceConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MultiSpeakerVoiceConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MultiSpeakerVoiceConfig(MultiSpeakerVoiceConfig other) : this() {
+      speakerVoiceConfigs_ = other.speakerVoiceConfigs_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MultiSpeakerVoiceConfig Clone() {
+      return new MultiSpeakerVoiceConfig(this);
+    }
+
+    /// <summary>Field number for the "speaker_voice_configs" field.</summary>
+    public const int SpeakerVoiceConfigsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.TextToSpeech.V1.MultispeakerPrebuiltVoice> _repeated_speakerVoiceConfigs_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.TextToSpeech.V1.MultispeakerPrebuiltVoice.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.TextToSpeech.V1.MultispeakerPrebuiltVoice> speakerVoiceConfigs_ = new pbc::RepeatedField<global::Google.Cloud.TextToSpeech.V1.MultispeakerPrebuiltVoice>();
+    /// <summary>
+    /// Required. A list of configurations for the voices of the speakers. Exactly
+    /// two speaker voice configurations must be provided.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.TextToSpeech.V1.MultispeakerPrebuiltVoice> SpeakerVoiceConfigs {
+      get { return speakerVoiceConfigs_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MultiSpeakerVoiceConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MultiSpeakerVoiceConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!speakerVoiceConfigs_.Equals(other.speakerVoiceConfigs_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= speakerVoiceConfigs_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      speakerVoiceConfigs_.WriteTo(output, _repeated_speakerVoiceConfigs_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      speakerVoiceConfigs_.WriteTo(ref output, _repeated_speakerVoiceConfigs_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += speakerVoiceConfigs_.CalculateSize(_repeated_speakerVoiceConfigs_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MultiSpeakerVoiceConfig other) {
+      if (other == null) {
+        return;
+      }
+      speakerVoiceConfigs_.Add(other.speakerVoiceConfigs_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 18: {
+            speakerVoiceConfigs_.AddEntriesFrom(input, _repeated_speakerVoiceConfigs_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            speakerVoiceConfigs_.AddEntriesFrom(ref input, _repeated_speakerVoiceConfigs_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Contains text input to be synthesized. Either `text` or `ssml` must be
   /// supplied. Supplying both or neither returns
   /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]. The
@@ -2476,7 +2992,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2496,10 +3012,14 @@ namespace Google.Cloud.TextToSpeech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SynthesisInput(SynthesisInput other) : this() {
+      prompt_ = other.prompt_;
       customPronunciations_ = other.customPronunciations_ != null ? other.customPronunciations_.Clone() : null;
       switch (other.InputSourceCase) {
         case InputSourceOneofCase.Text:
           Text = other.Text;
+          break;
+        case InputSourceOneofCase.Markup:
+          Markup = other.Markup;
           break;
         case InputSourceOneofCase.Ssml:
           Ssml = other.Ssml;
@@ -2543,6 +3063,36 @@ namespace Google.Cloud.TextToSpeech.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearText() {
       if (HasText) {
+        ClearInputSource();
+      }
+    }
+
+    /// <summary>Field number for the "markup" field.</summary>
+    public const int MarkupFieldNumber = 5;
+    /// <summary>
+    /// Markup for HD voices specifically. This field may not be used with any
+    /// other voices.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Markup {
+      get { return HasMarkup ? (string) inputSource_ : ""; }
+      set {
+        inputSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        inputSourceCase_ = InputSourceOneofCase.Markup;
+      }
+    }
+    /// <summary>Gets whether the "markup" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMarkup {
+      get { return inputSourceCase_ == InputSourceOneofCase.Markup; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "markup" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMarkup() {
+      if (HasMarkup) {
         ClearInputSource();
       }
     }
@@ -2596,6 +3146,38 @@ namespace Google.Cloud.TextToSpeech.V1 {
       }
     }
 
+    /// <summary>Field number for the "prompt" field.</summary>
+    public const int PromptFieldNumber = 6;
+    private readonly static string PromptDefaultValue = "";
+
+    private string prompt_;
+    /// <summary>
+    /// This system instruction is supported only for controllable/promptable voice
+    /// models. If this system instruction is used, we pass the unedited text to
+    /// Gemini-TTS. Otherwise, a default system instruction is used. AI Studio
+    /// calls this system instruction, Style Instructions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Prompt {
+      get { return prompt_ ?? PromptDefaultValue; }
+      set {
+        prompt_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "prompt" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPrompt {
+      get { return prompt_ != null; }
+    }
+    /// <summary>Clears the value of the "prompt" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPrompt() {
+      prompt_ = null;
+    }
+
     /// <summary>Field number for the "custom_pronunciations" field.</summary>
     public const int CustomPronunciationsFieldNumber = 3;
     private global::Google.Cloud.TextToSpeech.V1.CustomPronunciations customPronunciations_;
@@ -2625,6 +3207,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public enum InputSourceOneofCase {
       None = 0,
       Text = 1,
+      Markup = 5,
       Ssml = 2,
       MultiSpeakerMarkup = 4,
     }
@@ -2658,8 +3241,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
         return true;
       }
       if (Text != other.Text) return false;
+      if (Markup != other.Markup) return false;
       if (Ssml != other.Ssml) return false;
       if (!object.Equals(MultiSpeakerMarkup, other.MultiSpeakerMarkup)) return false;
+      if (Prompt != other.Prompt) return false;
       if (!object.Equals(CustomPronunciations, other.CustomPronunciations)) return false;
       if (InputSourceCase != other.InputSourceCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -2670,8 +3255,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (HasText) hash ^= Text.GetHashCode();
+      if (HasMarkup) hash ^= Markup.GetHashCode();
       if (HasSsml) hash ^= Ssml.GetHashCode();
       if (inputSourceCase_ == InputSourceOneofCase.MultiSpeakerMarkup) hash ^= MultiSpeakerMarkup.GetHashCode();
+      if (HasPrompt) hash ^= Prompt.GetHashCode();
       if (customPronunciations_ != null) hash ^= CustomPronunciations.GetHashCode();
       hash ^= (int) inputSourceCase_;
       if (_unknownFields != null) {
@@ -2708,6 +3295,14 @@ namespace Google.Cloud.TextToSpeech.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(MultiSpeakerMarkup);
       }
+      if (HasMarkup) {
+        output.WriteRawTag(42);
+        output.WriteString(Markup);
+      }
+      if (HasPrompt) {
+        output.WriteRawTag(50);
+        output.WriteString(Prompt);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2734,6 +3329,14 @@ namespace Google.Cloud.TextToSpeech.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(MultiSpeakerMarkup);
       }
+      if (HasMarkup) {
+        output.WriteRawTag(42);
+        output.WriteString(Markup);
+      }
+      if (HasPrompt) {
+        output.WriteRawTag(50);
+        output.WriteString(Prompt);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2747,11 +3350,17 @@ namespace Google.Cloud.TextToSpeech.V1 {
       if (HasText) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
       }
+      if (HasMarkup) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Markup);
+      }
       if (HasSsml) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Ssml);
       }
       if (inputSourceCase_ == InputSourceOneofCase.MultiSpeakerMarkup) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MultiSpeakerMarkup);
+      }
+      if (HasPrompt) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Prompt);
       }
       if (customPronunciations_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomPronunciations);
@@ -2768,6 +3377,9 @@ namespace Google.Cloud.TextToSpeech.V1 {
       if (other == null) {
         return;
       }
+      if (other.HasPrompt) {
+        Prompt = other.Prompt;
+      }
       if (other.customPronunciations_ != null) {
         if (customPronunciations_ == null) {
           CustomPronunciations = new global::Google.Cloud.TextToSpeech.V1.CustomPronunciations();
@@ -2777,6 +3389,9 @@ namespace Google.Cloud.TextToSpeech.V1 {
       switch (other.InputSourceCase) {
         case InputSourceOneofCase.Text:
           Text = other.Text;
+          break;
+        case InputSourceOneofCase.Markup:
+          Markup = other.Markup;
           break;
         case InputSourceOneofCase.Ssml:
           Ssml = other.Ssml;
@@ -2828,6 +3443,14 @@ namespace Google.Cloud.TextToSpeech.V1 {
             MultiSpeakerMarkup = subBuilder;
             break;
           }
+          case 42: {
+            Markup = input.ReadString();
+            break;
+          }
+          case 50: {
+            Prompt = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2867,6 +3490,14 @@ namespace Google.Cloud.TextToSpeech.V1 {
             MultiSpeakerMarkup = subBuilder;
             break;
           }
+          case 42: {
+            Markup = input.ReadString();
+            break;
+          }
+          case 50: {
+            Prompt = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -2892,7 +3523,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2917,6 +3548,8 @@ namespace Google.Cloud.TextToSpeech.V1 {
       ssmlGender_ = other.ssmlGender_;
       customVoice_ = other.customVoice_ != null ? other.customVoice_.Clone() : null;
       voiceClone_ = other.voiceClone_ != null ? other.voiceClone_.Clone() : null;
+      modelName_ = other.modelName_;
+      multiSpeakerVoiceConfig_ = other.multiSpeakerVoiceConfig_ != null ? other.multiSpeakerVoiceConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3021,6 +3654,39 @@ namespace Google.Cloud.TextToSpeech.V1 {
       }
     }
 
+    /// <summary>Field number for the "model_name" field.</summary>
+    public const int ModelNameFieldNumber = 6;
+    private string modelName_ = "";
+    /// <summary>
+    /// Optional. The name of the model. If set, the service will choose the model
+    /// matching the specified configuration.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ModelName {
+      get { return modelName_; }
+      set {
+        modelName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "multi_speaker_voice_config" field.</summary>
+    public const int MultiSpeakerVoiceConfigFieldNumber = 7;
+    private global::Google.Cloud.TextToSpeech.V1.MultiSpeakerVoiceConfig multiSpeakerVoiceConfig_;
+    /// <summary>
+    /// Optional. The configuration for a Gemini multi-speaker text-to-speech
+    /// setup. Enables the use of two distinct voices in a single synthesis
+    /// request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.TextToSpeech.V1.MultiSpeakerVoiceConfig MultiSpeakerVoiceConfig {
+      get { return multiSpeakerVoiceConfig_; }
+      set {
+        multiSpeakerVoiceConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3041,6 +3707,8 @@ namespace Google.Cloud.TextToSpeech.V1 {
       if (SsmlGender != other.SsmlGender) return false;
       if (!object.Equals(CustomVoice, other.CustomVoice)) return false;
       if (!object.Equals(VoiceClone, other.VoiceClone)) return false;
+      if (ModelName != other.ModelName) return false;
+      if (!object.Equals(MultiSpeakerVoiceConfig, other.MultiSpeakerVoiceConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3053,6 +3721,8 @@ namespace Google.Cloud.TextToSpeech.V1 {
       if (SsmlGender != global::Google.Cloud.TextToSpeech.V1.SsmlVoiceGender.Unspecified) hash ^= SsmlGender.GetHashCode();
       if (customVoice_ != null) hash ^= CustomVoice.GetHashCode();
       if (voiceClone_ != null) hash ^= VoiceClone.GetHashCode();
+      if (ModelName.Length != 0) hash ^= ModelName.GetHashCode();
+      if (multiSpeakerVoiceConfig_ != null) hash ^= MultiSpeakerVoiceConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3091,6 +3761,14 @@ namespace Google.Cloud.TextToSpeech.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(VoiceClone);
       }
+      if (ModelName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ModelName);
+      }
+      if (multiSpeakerVoiceConfig_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(MultiSpeakerVoiceConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3121,6 +3799,14 @@ namespace Google.Cloud.TextToSpeech.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(VoiceClone);
       }
+      if (ModelName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ModelName);
+      }
+      if (multiSpeakerVoiceConfig_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(MultiSpeakerVoiceConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3145,6 +3831,12 @@ namespace Google.Cloud.TextToSpeech.V1 {
       }
       if (voiceClone_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(VoiceClone);
+      }
+      if (ModelName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelName);
+      }
+      if (multiSpeakerVoiceConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MultiSpeakerVoiceConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3178,6 +3870,15 @@ namespace Google.Cloud.TextToSpeech.V1 {
           VoiceClone = new global::Google.Cloud.TextToSpeech.V1.VoiceCloneParams();
         }
         VoiceClone.MergeFrom(other.VoiceClone);
+      }
+      if (other.ModelName.Length != 0) {
+        ModelName = other.ModelName;
+      }
+      if (other.multiSpeakerVoiceConfig_ != null) {
+        if (multiSpeakerVoiceConfig_ == null) {
+          MultiSpeakerVoiceConfig = new global::Google.Cloud.TextToSpeech.V1.MultiSpeakerVoiceConfig();
+        }
+        MultiSpeakerVoiceConfig.MergeFrom(other.MultiSpeakerVoiceConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3218,6 +3919,17 @@ namespace Google.Cloud.TextToSpeech.V1 {
               VoiceClone = new global::Google.Cloud.TextToSpeech.V1.VoiceCloneParams();
             }
             input.ReadMessage(VoiceClone);
+            break;
+          }
+          case 50: {
+            ModelName = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (multiSpeakerVoiceConfig_ == null) {
+              MultiSpeakerVoiceConfig = new global::Google.Cloud.TextToSpeech.V1.MultiSpeakerVoiceConfig();
+            }
+            input.ReadMessage(MultiSpeakerVoiceConfig);
             break;
           }
         }
@@ -3261,6 +3973,17 @@ namespace Google.Cloud.TextToSpeech.V1 {
             input.ReadMessage(VoiceClone);
             break;
           }
+          case 50: {
+            ModelName = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (multiSpeakerVoiceConfig_ == null) {
+              MultiSpeakerVoiceConfig = new global::Google.Cloud.TextToSpeech.V1.MultiSpeakerVoiceConfig();
+            }
+            input.ReadMessage(MultiSpeakerVoiceConfig);
+            break;
+          }
         }
       }
     }
@@ -3286,7 +4009,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3694,7 +4417,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3961,7 +4684,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4157,7 +4880,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4357,7 +5080,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4638,7 +5361,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4950,7 +5673,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4970,9 +5693,16 @@ namespace Google.Cloud.TextToSpeech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StreamingSynthesisInput(StreamingSynthesisInput other) : this() {
+      prompt_ = other.prompt_;
       switch (other.InputSourceCase) {
         case InputSourceOneofCase.Text:
           Text = other.Text;
+          break;
+        case InputSourceOneofCase.Markup:
+          Markup = other.Markup;
+          break;
+        case InputSourceOneofCase.MultiSpeakerMarkup:
+          MultiSpeakerMarkup = other.MultiSpeakerMarkup.Clone();
           break;
       }
 
@@ -5016,11 +5746,88 @@ namespace Google.Cloud.TextToSpeech.V1 {
       }
     }
 
+    /// <summary>Field number for the "markup" field.</summary>
+    public const int MarkupFieldNumber = 5;
+    /// <summary>
+    /// Markup for HD voices specifically. This field may not be used with any
+    /// other voices.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Markup {
+      get { return HasMarkup ? (string) inputSource_ : ""; }
+      set {
+        inputSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        inputSourceCase_ = InputSourceOneofCase.Markup;
+      }
+    }
+    /// <summary>Gets whether the "markup" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMarkup {
+      get { return inputSourceCase_ == InputSourceOneofCase.Markup; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "markup" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMarkup() {
+      if (HasMarkup) {
+        ClearInputSource();
+      }
+    }
+
+    /// <summary>Field number for the "multi_speaker_markup" field.</summary>
+    public const int MultiSpeakerMarkupFieldNumber = 7;
+    /// <summary>
+    /// Multi-speaker markup for Gemini TTS. This field may not
+    /// be used with any other voices.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.TextToSpeech.V1.MultiSpeakerMarkup MultiSpeakerMarkup {
+      get { return inputSourceCase_ == InputSourceOneofCase.MultiSpeakerMarkup ? (global::Google.Cloud.TextToSpeech.V1.MultiSpeakerMarkup) inputSource_ : null; }
+      set {
+        inputSource_ = value;
+        inputSourceCase_ = value == null ? InputSourceOneofCase.None : InputSourceOneofCase.MultiSpeakerMarkup;
+      }
+    }
+
+    /// <summary>Field number for the "prompt" field.</summary>
+    public const int PromptFieldNumber = 6;
+    private readonly static string PromptDefaultValue = "";
+
+    private string prompt_;
+    /// <summary>
+    /// This is system instruction supported only for controllable voice models.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Prompt {
+      get { return prompt_ ?? PromptDefaultValue; }
+      set {
+        prompt_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "prompt" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPrompt {
+      get { return prompt_ != null; }
+    }
+    /// <summary>Clears the value of the "prompt" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPrompt() {
+      prompt_ = null;
+    }
+
     private object inputSource_;
     /// <summary>Enum of possible cases for the "input_source" oneof.</summary>
     public enum InputSourceOneofCase {
       None = 0,
       Text = 1,
+      Markup = 5,
+      MultiSpeakerMarkup = 7,
     }
     private InputSourceOneofCase inputSourceCase_ = InputSourceOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5052,6 +5859,9 @@ namespace Google.Cloud.TextToSpeech.V1 {
         return true;
       }
       if (Text != other.Text) return false;
+      if (Markup != other.Markup) return false;
+      if (!object.Equals(MultiSpeakerMarkup, other.MultiSpeakerMarkup)) return false;
+      if (Prompt != other.Prompt) return false;
       if (InputSourceCase != other.InputSourceCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -5061,6 +5871,9 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (HasText) hash ^= Text.GetHashCode();
+      if (HasMarkup) hash ^= Markup.GetHashCode();
+      if (inputSourceCase_ == InputSourceOneofCase.MultiSpeakerMarkup) hash ^= MultiSpeakerMarkup.GetHashCode();
+      if (HasPrompt) hash ^= Prompt.GetHashCode();
       hash ^= (int) inputSourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -5084,6 +5897,18 @@ namespace Google.Cloud.TextToSpeech.V1 {
         output.WriteRawTag(10);
         output.WriteString(Text);
       }
+      if (HasMarkup) {
+        output.WriteRawTag(42);
+        output.WriteString(Markup);
+      }
+      if (HasPrompt) {
+        output.WriteRawTag(50);
+        output.WriteString(Prompt);
+      }
+      if (inputSourceCase_ == InputSourceOneofCase.MultiSpeakerMarkup) {
+        output.WriteRawTag(58);
+        output.WriteMessage(MultiSpeakerMarkup);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5098,6 +5923,18 @@ namespace Google.Cloud.TextToSpeech.V1 {
         output.WriteRawTag(10);
         output.WriteString(Text);
       }
+      if (HasMarkup) {
+        output.WriteRawTag(42);
+        output.WriteString(Markup);
+      }
+      if (HasPrompt) {
+        output.WriteRawTag(50);
+        output.WriteString(Prompt);
+      }
+      if (inputSourceCase_ == InputSourceOneofCase.MultiSpeakerMarkup) {
+        output.WriteRawTag(58);
+        output.WriteMessage(MultiSpeakerMarkup);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5111,6 +5948,15 @@ namespace Google.Cloud.TextToSpeech.V1 {
       if (HasText) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
       }
+      if (HasMarkup) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Markup);
+      }
+      if (inputSourceCase_ == InputSourceOneofCase.MultiSpeakerMarkup) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MultiSpeakerMarkup);
+      }
+      if (HasPrompt) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Prompt);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -5123,9 +5969,21 @@ namespace Google.Cloud.TextToSpeech.V1 {
       if (other == null) {
         return;
       }
+      if (other.HasPrompt) {
+        Prompt = other.Prompt;
+      }
       switch (other.InputSourceCase) {
         case InputSourceOneofCase.Text:
           Text = other.Text;
+          break;
+        case InputSourceOneofCase.Markup:
+          Markup = other.Markup;
+          break;
+        case InputSourceOneofCase.MultiSpeakerMarkup:
+          if (MultiSpeakerMarkup == null) {
+            MultiSpeakerMarkup = new global::Google.Cloud.TextToSpeech.V1.MultiSpeakerMarkup();
+          }
+          MultiSpeakerMarkup.MergeFrom(other.MultiSpeakerMarkup);
           break;
       }
 
@@ -5148,6 +6006,23 @@ namespace Google.Cloud.TextToSpeech.V1 {
             Text = input.ReadString();
             break;
           }
+          case 42: {
+            Markup = input.ReadString();
+            break;
+          }
+          case 50: {
+            Prompt = input.ReadString();
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.TextToSpeech.V1.MultiSpeakerMarkup subBuilder = new global::Google.Cloud.TextToSpeech.V1.MultiSpeakerMarkup();
+            if (inputSourceCase_ == InputSourceOneofCase.MultiSpeakerMarkup) {
+              subBuilder.MergeFrom(MultiSpeakerMarkup);
+            }
+            input.ReadMessage(subBuilder);
+            MultiSpeakerMarkup = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -5165,6 +6040,23 @@ namespace Google.Cloud.TextToSpeech.V1 {
             break;
           case 10: {
             Text = input.ReadString();
+            break;
+          }
+          case 42: {
+            Markup = input.ReadString();
+            break;
+          }
+          case 50: {
+            Prompt = input.ReadString();
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.TextToSpeech.V1.MultiSpeakerMarkup subBuilder = new global::Google.Cloud.TextToSpeech.V1.MultiSpeakerMarkup();
+            if (inputSourceCase_ == InputSourceOneofCase.MultiSpeakerMarkup) {
+              subBuilder.MergeFrom(MultiSpeakerMarkup);
+            }
+            input.ReadMessage(subBuilder);
+            MultiSpeakerMarkup = subBuilder;
             break;
           }
         }
@@ -5196,7 +6088,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5495,7 +6387,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

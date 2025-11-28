@@ -894,5 +894,77 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissionsRequestObject()
+        {
+            // Snippet: TestIamPermissions(TestIamPermissionsTargetInstanceRequest, CallSettings)
+            // Create client
+            TargetInstancesClient targetInstancesClient = TargetInstancesClient.Create();
+            // Initialize request argument(s)
+            TestIamPermissionsTargetInstanceRequest request = new TestIamPermissionsTargetInstanceRequest
+            {
+                Zone = "",
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = targetInstancesClient.TestIamPermissions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsRequestObjectAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(TestIamPermissionsTargetInstanceRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsTargetInstanceRequest, CancellationToken)
+            // Create client
+            TargetInstancesClient targetInstancesClient = await TargetInstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            TestIamPermissionsTargetInstanceRequest request = new TestIamPermissionsTargetInstanceRequest
+            {
+                Zone = "",
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = await targetInstancesClient.TestIamPermissionsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissions()
+        {
+            // Snippet: TestIamPermissions(string, string, string, TestPermissionsRequest, CallSettings)
+            // Create client
+            TargetInstancesClient targetInstancesClient = TargetInstancesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = targetInstancesClient.TestIamPermissions(project, zone, resource, testPermissionsRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(string, string, string, TestPermissionsRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(string, string, string, TestPermissionsRequest, CancellationToken)
+            // Create client
+            TargetInstancesClient targetInstancesClient = await TargetInstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = await targetInstancesClient.TestIamPermissionsAsync(project, zone, resource, testPermissionsRequestResource);
+            // End snippet
+        }
     }
 }

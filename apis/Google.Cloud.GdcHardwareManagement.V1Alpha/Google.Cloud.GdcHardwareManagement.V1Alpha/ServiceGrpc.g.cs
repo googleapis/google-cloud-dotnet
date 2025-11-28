@@ -82,6 +82,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GdcHardwareManagement.V1Alpha.SubmitOrderRequest> __Marshaller_google_cloud_gdchardwaremanagement_v1alpha_SubmitOrderRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GdcHardwareManagement.V1Alpha.SubmitOrderRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GdcHardwareManagement.V1Alpha.CancelOrderRequest> __Marshaller_google_cloud_gdchardwaremanagement_v1alpha_CancelOrderRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GdcHardwareManagement.V1Alpha.CancelOrderRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListSitesRequest> __Marshaller_google_cloud_gdchardwaremanagement_v1alpha_ListSitesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListSitesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListSitesResponse> __Marshaller_google_cloud_gdchardwaremanagement_v1alpha_ListSitesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListSitesResponse.Parser));
@@ -167,6 +169,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Cloud.GdcHardwareManagement.V1Alpha.DeleteZoneRequest> __Marshaller_google_cloud_gdchardwaremanagement_v1alpha_DeleteZoneRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GdcHardwareManagement.V1Alpha.DeleteZoneRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GdcHardwareManagement.V1Alpha.SignalZoneStateRequest> __Marshaller_google_cloud_gdchardwaremanagement_v1alpha_SignalZoneStateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GdcHardwareManagement.V1Alpha.SignalZoneStateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GdcHardwareManagement.V1Alpha.RequestOrderDateChangeRequest> __Marshaller_google_cloud_gdchardwaremanagement_v1alpha_RequestOrderDateChangeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GdcHardwareManagement.V1Alpha.RequestOrderDateChangeRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListOrdersRequest, global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListOrdersResponse> __Method_ListOrders = new grpc::Method<global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListOrdersRequest, global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListOrdersResponse>(
@@ -214,6 +218,14 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
         __ServiceName,
         "SubmitOrder",
         __Marshaller_google_cloud_gdchardwaremanagement_v1alpha_SubmitOrderRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GdcHardwareManagement.V1Alpha.CancelOrderRequest, global::Google.LongRunning.Operation> __Method_CancelOrder = new grpc::Method<global::Google.Cloud.GdcHardwareManagement.V1Alpha.CancelOrderRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CancelOrder",
+        __Marshaller_google_cloud_gdchardwaremanagement_v1alpha_CancelOrderRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -448,6 +460,14 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
         __Marshaller_google_cloud_gdchardwaremanagement_v1alpha_SignalZoneStateRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GdcHardwareManagement.V1Alpha.RequestOrderDateChangeRequest, global::Google.LongRunning.Operation> __Method_RequestOrderDateChange = new grpc::Method<global::Google.Cloud.GdcHardwareManagement.V1Alpha.RequestOrderDateChangeRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RequestOrderDateChange",
+        __Marshaller_google_cloud_gdchardwaremanagement_v1alpha_RequestOrderDateChangeRequest,
+        __Marshaller_google_longrunning_Operation);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -526,6 +546,18 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> SubmitOrder(global::Google.Cloud.GdcHardwareManagement.V1Alpha.SubmitOrderRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Cancels an order.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CancelOrder(global::Google.Cloud.GdcHardwareManagement.V1Alpha.CancelOrderRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -881,6 +913,18 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      /// <summary>
+      /// Updates the requested date change of a single Order.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RequestOrderDateChange(global::Google.Cloud.GdcHardwareManagement.V1Alpha.RequestOrderDateChangeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Client for GDCHardwareManagement</summary>
@@ -1197,6 +1241,54 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SubmitOrderAsync(global::Google.Cloud.GdcHardwareManagement.V1Alpha.SubmitOrderRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SubmitOrder, null, options, request);
+      }
+      /// <summary>
+      /// Cancels an order.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CancelOrder(global::Google.Cloud.GdcHardwareManagement.V1Alpha.CancelOrderRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelOrder(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Cancels an order.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CancelOrder(global::Google.Cloud.GdcHardwareManagement.V1Alpha.CancelOrderRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CancelOrder, null, options, request);
+      }
+      /// <summary>
+      /// Cancels an order.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CancelOrderAsync(global::Google.Cloud.GdcHardwareManagement.V1Alpha.CancelOrderRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelOrderAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Cancels an order.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CancelOrderAsync(global::Google.Cloud.GdcHardwareManagement.V1Alpha.CancelOrderRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CancelOrder, null, options, request);
       }
       /// <summary>
       /// Lists sites in a given project and location.
@@ -2602,6 +2694,54 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
       {
         return CallInvoker.AsyncUnaryCall(__Method_SignalZoneState, null, options, request);
       }
+      /// <summary>
+      /// Updates the requested date change of a single Order.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RequestOrderDateChange(global::Google.Cloud.GdcHardwareManagement.V1Alpha.RequestOrderDateChangeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RequestOrderDateChange(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the requested date change of a single Order.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RequestOrderDateChange(global::Google.Cloud.GdcHardwareManagement.V1Alpha.RequestOrderDateChangeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RequestOrderDateChange, null, options, request);
+      }
+      /// <summary>
+      /// Updates the requested date change of a single Order.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RequestOrderDateChangeAsync(global::Google.Cloud.GdcHardwareManagement.V1Alpha.RequestOrderDateChangeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RequestOrderDateChangeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the requested date change of a single Order.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RequestOrderDateChangeAsync(global::Google.Cloud.GdcHardwareManagement.V1Alpha.RequestOrderDateChangeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RequestOrderDateChange, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override GDCHardwareManagementClient NewInstance(ClientBaseConfiguration configuration)
@@ -2622,6 +2762,7 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
           .AddMethod(__Method_UpdateOrder, serviceImpl.UpdateOrder)
           .AddMethod(__Method_DeleteOrder, serviceImpl.DeleteOrder)
           .AddMethod(__Method_SubmitOrder, serviceImpl.SubmitOrder)
+          .AddMethod(__Method_CancelOrder, serviceImpl.CancelOrder)
           .AddMethod(__Method_ListSites, serviceImpl.ListSites)
           .AddMethod(__Method_GetSite, serviceImpl.GetSite)
           .AddMethod(__Method_CreateSite, serviceImpl.CreateSite)
@@ -2650,7 +2791,8 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
           .AddMethod(__Method_CreateZone, serviceImpl.CreateZone)
           .AddMethod(__Method_UpdateZone, serviceImpl.UpdateZone)
           .AddMethod(__Method_DeleteZone, serviceImpl.DeleteZone)
-          .AddMethod(__Method_SignalZoneState, serviceImpl.SignalZoneState).Build();
+          .AddMethod(__Method_SignalZoneState, serviceImpl.SignalZoneState)
+          .AddMethod(__Method_RequestOrderDateChange, serviceImpl.RequestOrderDateChange).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2666,6 +2808,7 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
       serviceBinder.AddMethod(__Method_UpdateOrder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.UpdateOrderRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateOrder));
       serviceBinder.AddMethod(__Method_DeleteOrder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.DeleteOrderRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteOrder));
       serviceBinder.AddMethod(__Method_SubmitOrder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.SubmitOrderRequest, global::Google.LongRunning.Operation>(serviceImpl.SubmitOrder));
+      serviceBinder.AddMethod(__Method_CancelOrder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.CancelOrderRequest, global::Google.LongRunning.Operation>(serviceImpl.CancelOrder));
       serviceBinder.AddMethod(__Method_ListSites, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListSitesRequest, global::Google.Cloud.GdcHardwareManagement.V1Alpha.ListSitesResponse>(serviceImpl.ListSites));
       serviceBinder.AddMethod(__Method_GetSite, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.GetSiteRequest, global::Google.Cloud.GdcHardwareManagement.V1Alpha.Site>(serviceImpl.GetSite));
       serviceBinder.AddMethod(__Method_CreateSite, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.CreateSiteRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateSite));
@@ -2695,6 +2838,7 @@ namespace Google.Cloud.GdcHardwareManagement.V1Alpha {
       serviceBinder.AddMethod(__Method_UpdateZone, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.UpdateZoneRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateZone));
       serviceBinder.AddMethod(__Method_DeleteZone, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.DeleteZoneRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteZone));
       serviceBinder.AddMethod(__Method_SignalZoneState, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.SignalZoneStateRequest, global::Google.LongRunning.Operation>(serviceImpl.SignalZoneState));
+      serviceBinder.AddMethod(__Method_RequestOrderDateChange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GdcHardwareManagement.V1Alpha.RequestOrderDateChangeRequest, global::Google.LongRunning.Operation>(serviceImpl.RequestOrderDateChange));
     }
 
   }

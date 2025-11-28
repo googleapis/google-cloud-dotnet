@@ -18704,6 +18704,103 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1beta1_generated_FeatureOnlineStoreService_GenerateFetchAccessToken_sync",
+      "title": "GenerateFetchAccessTokenRequestObject",
+      "description": "Snippet for GenerateFetchAccessToken",
+      "file": "FeatureOnlineStoreServiceClient.GenerateFetchAccessTokenRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateFetchAccessToken",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.FeatureOnlineStoreServiceClient.GenerateFetchAccessToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.GenerateFetchAccessTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.GenerateFetchAccessTokenResponse",
+        "client": {
+          "shortName": "FeatureOnlineStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.FeatureOnlineStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateFetchAccessToken",
+          "fullName": "google.cloud.aiplatform.v1beta1.FeatureOnlineStoreService.GenerateFetchAccessToken",
+          "service": {
+            "shortName": "FeatureOnlineStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.FeatureOnlineStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_FeatureOnlineStoreService_GenerateFetchAccessToken_async",
+      "title": "GenerateFetchAccessTokenRequestObjectAsync",
+      "description": "Snippet for GenerateFetchAccessTokenAsync",
+      "file": "FeatureOnlineStoreServiceClient.GenerateFetchAccessTokenRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateFetchAccessTokenAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.FeatureOnlineStoreServiceClient.GenerateFetchAccessTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.GenerateFetchAccessTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.GenerateFetchAccessTokenResponse>",
+        "client": {
+          "shortName": "FeatureOnlineStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.FeatureOnlineStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateFetchAccessToken",
+          "fullName": "google.cloud.aiplatform.v1beta1.FeatureOnlineStoreService.GenerateFetchAccessToken",
+          "service": {
+            "shortName": "FeatureOnlineStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.FeatureOnlineStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1beta1_generated_FeatureRegistryService_CreateFeatureGroup_sync",
       "title": "CreateFeatureGroupRequestObject",
       "description": "Snippet for CreateFeatureGroup",
@@ -38727,6 +38824,103 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1beta1_generated_IndexService_ImportIndex_sync",
+      "title": "ImportIndexRequestObject",
+      "description": "Snippet for ImportIndex",
+      "file": "IndexServiceClient.ImportIndexRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportIndex",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.IndexServiceClient.ImportIndex",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ImportIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.Index, Google.Cloud.AIPlatform.V1Beta1.ImportIndexOperationMetadata>",
+        "client": {
+          "shortName": "IndexServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.IndexServiceClient"
+        },
+        "method": {
+          "shortName": "ImportIndex",
+          "fullName": "google.cloud.aiplatform.v1beta1.IndexService.ImportIndex",
+          "service": {
+            "shortName": "IndexService",
+            "fullName": "google.cloud.aiplatform.v1beta1.IndexService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_IndexService_ImportIndex_async",
+      "title": "ImportIndexRequestObjectAsync",
+      "description": "Snippet for ImportIndexAsync",
+      "file": "IndexServiceClient.ImportIndexRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportIndexAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.IndexServiceClient.ImportIndexAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ImportIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.Index, Google.Cloud.AIPlatform.V1Beta1.ImportIndexOperationMetadata>>",
+        "client": {
+          "shortName": "IndexServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.IndexServiceClient"
+        },
+        "method": {
+          "shortName": "ImportIndex",
+          "fullName": "google.cloud.aiplatform.v1beta1.IndexService.ImportIndex",
+          "service": {
+            "shortName": "IndexService",
+            "fullName": "google.cloud.aiplatform.v1beta1.IndexService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1beta1_generated_IndexService_ListIndexes_sync",
       "title": "ListIndexesRequestObject",
       "description": "Snippet for ListIndexes",
@@ -50524,6 +50718,1770 @@
         {
           "start": 35,
           "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_CreateMemory_sync",
+      "title": "CreateMemoryRequestObject",
+      "description": "Snippet for CreateMemory",
+      "file": "MemoryBankServiceClient.CreateMemoryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMemory",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.CreateMemory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.CreateMemoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.Memory, Google.Cloud.AIPlatform.V1Beta1.CreateMemoryOperationMetadata>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMemory",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.CreateMemory",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_CreateMemory_async",
+      "title": "CreateMemoryRequestObjectAsync",
+      "description": "Snippet for CreateMemoryAsync",
+      "file": "MemoryBankServiceClient.CreateMemoryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMemoryAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.CreateMemoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.CreateMemoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.Memory, Google.Cloud.AIPlatform.V1Beta1.CreateMemoryOperationMetadata>>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMemory",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.CreateMemory",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_GetMemory_sync",
+      "title": "GetMemoryRequestObject",
+      "description": "Snippet for GetMemory",
+      "file": "MemoryBankServiceClient.GetMemoryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMemory",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.GetMemory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.GetMemoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.Memory",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "GetMemory",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.GetMemory",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_GetMemory_async",
+      "title": "GetMemoryRequestObjectAsync",
+      "description": "Snippet for GetMemoryAsync",
+      "file": "MemoryBankServiceClient.GetMemoryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMemoryAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.GetMemoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.GetMemoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.Memory>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "GetMemory",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.GetMemory",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_GetMemory_sync_flattened",
+      "title": "GetMemory",
+      "description": "Snippet for GetMemory",
+      "file": "MemoryBankServiceClient.GetMemorySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMemory",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.GetMemory",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.Memory",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "GetMemory",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.GetMemory",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_GetMemory_async_flattened",
+      "title": "GetMemoryAsync",
+      "description": "Snippet for GetMemoryAsync",
+      "file": "MemoryBankServiceClient.GetMemoryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMemoryAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.GetMemoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.Memory>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "GetMemory",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.GetMemory",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_GetMemory_sync_flattened_resourceNames",
+      "title": "GetMemoryResourceNames",
+      "description": "Snippet for GetMemory",
+      "file": "MemoryBankServiceClient.GetMemoryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMemory",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.GetMemory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.MemoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.Memory",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "GetMemory",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.GetMemory",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_GetMemory_async_flattened_resourceNames",
+      "title": "GetMemoryResourceNamesAsync",
+      "description": "Snippet for GetMemoryAsync",
+      "file": "MemoryBankServiceClient.GetMemoryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMemoryAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.GetMemoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.MemoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.Memory>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "GetMemory",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.GetMemory",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_UpdateMemory_sync",
+      "title": "UpdateMemoryRequestObject",
+      "description": "Snippet for UpdateMemory",
+      "file": "MemoryBankServiceClient.UpdateMemoryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMemory",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.UpdateMemory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.UpdateMemoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.Memory, Google.Cloud.AIPlatform.V1Beta1.UpdateMemoryOperationMetadata>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateMemory",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.UpdateMemory",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_UpdateMemory_async",
+      "title": "UpdateMemoryRequestObjectAsync",
+      "description": "Snippet for UpdateMemoryAsync",
+      "file": "MemoryBankServiceClient.UpdateMemoryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMemoryAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.UpdateMemoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.UpdateMemoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.Memory, Google.Cloud.AIPlatform.V1Beta1.UpdateMemoryOperationMetadata>>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateMemory",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.UpdateMemory",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_UpdateMemory_sync_flattened",
+      "title": "UpdateMemory",
+      "description": "Snippet for UpdateMemory",
+      "file": "MemoryBankServiceClient.UpdateMemorySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMemory",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.UpdateMemory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.Memory",
+            "name": "memory"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.Memory, Google.Cloud.AIPlatform.V1Beta1.UpdateMemoryOperationMetadata>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateMemory",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.UpdateMemory",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_UpdateMemory_async_flattened",
+      "title": "UpdateMemoryAsync",
+      "description": "Snippet for UpdateMemoryAsync",
+      "file": "MemoryBankServiceClient.UpdateMemoryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMemoryAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.UpdateMemoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.Memory",
+            "name": "memory"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.Memory, Google.Cloud.AIPlatform.V1Beta1.UpdateMemoryOperationMetadata>>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateMemory",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.UpdateMemory",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_ListMemories_sync",
+      "title": "ListMemoriesRequestObject",
+      "description": "Snippet for ListMemories",
+      "file": "MemoryBankServiceClient.ListMemoriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMemories",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.ListMemories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ListMemoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListMemoriesResponse, Google.Cloud.AIPlatform.V1Beta1.Memory>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "ListMemories",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.ListMemories",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_ListMemories_async",
+      "title": "ListMemoriesRequestObjectAsync",
+      "description": "Snippet for ListMemoriesAsync",
+      "file": "MemoryBankServiceClient.ListMemoriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMemoriesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.ListMemoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ListMemoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListMemoriesResponse, Google.Cloud.AIPlatform.V1Beta1.Memory>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "ListMemories",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.ListMemories",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_ListMemories_sync_flattened",
+      "title": "ListMemories",
+      "description": "Snippet for ListMemories",
+      "file": "MemoryBankServiceClient.ListMemoriesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMemories",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.ListMemories",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListMemoriesResponse, Google.Cloud.AIPlatform.V1Beta1.Memory>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "ListMemories",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.ListMemories",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_ListMemories_async_flattened",
+      "title": "ListMemoriesAsync",
+      "description": "Snippet for ListMemoriesAsync",
+      "file": "MemoryBankServiceClient.ListMemoriesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMemoriesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.ListMemoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListMemoriesResponse, Google.Cloud.AIPlatform.V1Beta1.Memory>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "ListMemories",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.ListMemories",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_ListMemories_sync_flattened_resourceNames",
+      "title": "ListMemoriesResourceNames",
+      "description": "Snippet for ListMemories",
+      "file": "MemoryBankServiceClient.ListMemoriesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMemories",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.ListMemories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListMemoriesResponse, Google.Cloud.AIPlatform.V1Beta1.Memory>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "ListMemories",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.ListMemories",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_ListMemories_async_flattened_resourceNames",
+      "title": "ListMemoriesResourceNamesAsync",
+      "description": "Snippet for ListMemoriesAsync",
+      "file": "MemoryBankServiceClient.ListMemoriesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMemoriesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.ListMemoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListMemoriesResponse, Google.Cloud.AIPlatform.V1Beta1.Memory>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "ListMemories",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.ListMemories",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_DeleteMemory_sync",
+      "title": "DeleteMemoryRequestObject",
+      "description": "Snippet for DeleteMemory",
+      "file": "MemoryBankServiceClient.DeleteMemoryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMemory",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.DeleteMemory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.DeleteMemoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteMemoryOperationMetadata>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMemory",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.DeleteMemory",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_DeleteMemory_async",
+      "title": "DeleteMemoryRequestObjectAsync",
+      "description": "Snippet for DeleteMemoryAsync",
+      "file": "MemoryBankServiceClient.DeleteMemoryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMemoryAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.DeleteMemoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.DeleteMemoryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteMemoryOperationMetadata>>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMemory",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.DeleteMemory",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_DeleteMemory_sync_flattened",
+      "title": "DeleteMemory",
+      "description": "Snippet for DeleteMemory",
+      "file": "MemoryBankServiceClient.DeleteMemorySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMemory",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.DeleteMemory",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteMemoryOperationMetadata>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMemory",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.DeleteMemory",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_DeleteMemory_async_flattened",
+      "title": "DeleteMemoryAsync",
+      "description": "Snippet for DeleteMemoryAsync",
+      "file": "MemoryBankServiceClient.DeleteMemoryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMemoryAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.DeleteMemoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteMemoryOperationMetadata>>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMemory",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.DeleteMemory",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_DeleteMemory_sync_flattened_resourceNames",
+      "title": "DeleteMemoryResourceNames",
+      "description": "Snippet for DeleteMemory",
+      "file": "MemoryBankServiceClient.DeleteMemoryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMemory",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.DeleteMemory",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.MemoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteMemoryOperationMetadata>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMemory",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.DeleteMemory",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_DeleteMemory_async_flattened_resourceNames",
+      "title": "DeleteMemoryResourceNamesAsync",
+      "description": "Snippet for DeleteMemoryAsync",
+      "file": "MemoryBankServiceClient.DeleteMemoryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMemoryAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.DeleteMemoryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.MemoryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteMemoryOperationMetadata>>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMemory",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.DeleteMemory",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_GenerateMemories_sync",
+      "title": "GenerateMemoriesRequestObject",
+      "description": "Snippet for GenerateMemories",
+      "file": "MemoryBankServiceClient.GenerateMemoriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateMemories",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.GenerateMemories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesResponse, Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesOperationMetadata>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateMemories",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.GenerateMemories",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_GenerateMemories_async",
+      "title": "GenerateMemoriesRequestObjectAsync",
+      "description": "Snippet for GenerateMemoriesAsync",
+      "file": "MemoryBankServiceClient.GenerateMemoriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateMemoriesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.GenerateMemoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesResponse, Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesOperationMetadata>>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateMemories",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.GenerateMemories",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_GenerateMemories_sync_flattened",
+      "title": "GenerateMemories",
+      "description": "Snippet for GenerateMemories",
+      "file": "MemoryBankServiceClient.GenerateMemoriesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateMemories",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.GenerateMemories",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesResponse, Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesOperationMetadata>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateMemories",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.GenerateMemories",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_GenerateMemories_async_flattened",
+      "title": "GenerateMemoriesAsync",
+      "description": "Snippet for GenerateMemoriesAsync",
+      "file": "MemoryBankServiceClient.GenerateMemoriesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateMemoriesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.GenerateMemoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesResponse, Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesOperationMetadata>>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateMemories",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.GenerateMemories",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_GenerateMemories_sync_flattened_resourceNames",
+      "title": "GenerateMemoriesResourceNames",
+      "description": "Snippet for GenerateMemories",
+      "file": "MemoryBankServiceClient.GenerateMemoriesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateMemories",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.GenerateMemories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesResponse, Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesOperationMetadata>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateMemories",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.GenerateMemories",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_GenerateMemories_async_flattened_resourceNames",
+      "title": "GenerateMemoriesResourceNamesAsync",
+      "description": "Snippet for GenerateMemoriesAsync",
+      "file": "MemoryBankServiceClient.GenerateMemoriesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateMemoriesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.GenerateMemoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesResponse, Google.Cloud.AIPlatform.V1Beta1.GenerateMemoriesOperationMetadata>>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateMemories",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.GenerateMemories",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_RetrieveMemories_sync",
+      "title": "RetrieveMemoriesRequestObject",
+      "description": "Snippet for RetrieveMemories",
+      "file": "MemoryBankServiceClient.RetrieveMemoriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveMemories",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.RetrieveMemories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.RetrieveMemoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.RetrieveMemoriesResponse",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "RetrieveMemories",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.RetrieveMemories",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_RetrieveMemories_async",
+      "title": "RetrieveMemoriesRequestObjectAsync",
+      "description": "Snippet for RetrieveMemoriesAsync",
+      "file": "MemoryBankServiceClient.RetrieveMemoriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveMemoriesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.RetrieveMemoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.RetrieveMemoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.RetrieveMemoriesResponse>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "RetrieveMemories",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.RetrieveMemories",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_RetrieveMemories_sync_flattened",
+      "title": "RetrieveMemories",
+      "description": "Snippet for RetrieveMemories",
+      "file": "MemoryBankServiceClient.RetrieveMemoriesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveMemories",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.RetrieveMemories",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.RetrieveMemoriesResponse",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "RetrieveMemories",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.RetrieveMemories",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_RetrieveMemories_async_flattened",
+      "title": "RetrieveMemoriesAsync",
+      "description": "Snippet for RetrieveMemoriesAsync",
+      "file": "MemoryBankServiceClient.RetrieveMemoriesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveMemoriesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.RetrieveMemoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.RetrieveMemoriesResponse>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "RetrieveMemories",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.RetrieveMemories",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_RetrieveMemories_sync_flattened_resourceNames",
+      "title": "RetrieveMemoriesResourceNames",
+      "description": "Snippet for RetrieveMemories",
+      "file": "MemoryBankServiceClient.RetrieveMemoriesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveMemories",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.RetrieveMemories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.RetrieveMemoriesResponse",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "RetrieveMemories",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.RetrieveMemories",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_MemoryBankService_RetrieveMemories_async_flattened_resourceNames",
+      "title": "RetrieveMemoriesResourceNamesAsync",
+      "description": "Snippet for RetrieveMemoriesAsync",
+      "file": "MemoryBankServiceClient.RetrieveMemoriesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RetrieveMemoriesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient.RetrieveMemoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.RetrieveMemoriesResponse>",
+        "client": {
+          "shortName": "MemoryBankServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.MemoryBankServiceClient"
+        },
+        "method": {
+          "shortName": "RetrieveMemories",
+          "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService.RetrieveMemories",
+          "service": {
+            "shortName": "MemoryBankService",
+            "fullName": "google.cloud.aiplatform.v1beta1.MemoryBankService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
           "type": "SHORT"
         }
       ]
@@ -70734,6 +72692,103 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1beta1_generated_ModelService_RecommendSpec_sync",
+      "title": "RecommendSpecRequestObject",
+      "description": "Snippet for RecommendSpec",
+      "file": "ModelServiceClient.RecommendSpecRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RecommendSpec",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelServiceClient.RecommendSpec",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.RecommendSpecRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.RecommendSpecResponse",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "RecommendSpec",
+          "fullName": "google.cloud.aiplatform.v1beta1.ModelService.RecommendSpec",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ModelService_RecommendSpec_async",
+      "title": "RecommendSpecRequestObjectAsync",
+      "description": "Snippet for RecommendSpecAsync",
+      "file": "ModelServiceClient.RecommendSpecRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RecommendSpecAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelServiceClient.RecommendSpecAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.RecommendSpecRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.RecommendSpecResponse>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "RecommendSpec",
+          "fullName": "google.cloud.aiplatform.v1beta1.ModelService.RecommendSpec",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1beta1_generated_NotebookService_CreateNotebookRuntimeTemplate_sync",
       "title": "CreateNotebookRuntimeTemplateRequestObject",
       "description": "Snippet for CreateNotebookRuntimeTemplate",
@@ -80765,12 +82820,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 49,
+          "end": 50,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 47,
+          "end": 48,
           "type": "SHORT"
         }
       ]
@@ -80814,12 +82869,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 50,
+          "end": 51,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 48,
+          "end": 49,
           "type": "SHORT"
         }
       ]
@@ -82609,12 +84664,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 55,
+          "end": 56,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 53,
+          "end": 54,
           "type": "SHORT"
         }
       ]
@@ -82658,12 +84713,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 56,
+          "end": 57,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 54,
+          "end": 55,
           "type": "SHORT"
         }
       ]
@@ -82809,12 +84864,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 67,
+          "end": 68,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 65,
+          "end": 66,
           "type": "SHORT"
         }
       ]
@@ -83016,6 +85071,309 @@
         {
           "start": 37,
           "end": 53,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_PredictionService_EmbedContent_sync",
+      "title": "EmbedContentRequestObject",
+      "description": "Snippet for EmbedContent",
+      "file": "PredictionServiceClient.EmbedContentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EmbedContent",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.PredictionServiceClient.EmbedContent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.EmbedContentResponse",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "EmbedContent",
+          "fullName": "google.cloud.aiplatform.v1beta1.PredictionService.EmbedContent",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.PredictionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_PredictionService_EmbedContent_async",
+      "title": "EmbedContentRequestObjectAsync",
+      "description": "Snippet for EmbedContentAsync",
+      "file": "PredictionServiceClient.EmbedContentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EmbedContentAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.PredictionServiceClient.EmbedContentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.EmbedContentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.EmbedContentResponse>",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "EmbedContent",
+          "fullName": "google.cloud.aiplatform.v1beta1.PredictionService.EmbedContent",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.PredictionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_PredictionService_EmbedContent_sync_flattened",
+      "title": "EmbedContent",
+      "description": "Snippet for EmbedContent",
+      "file": "PredictionServiceClient.EmbedContentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EmbedContent",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.PredictionServiceClient.EmbedContent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "model"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.Content",
+            "name": "content"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.EmbedContentResponse",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "EmbedContent",
+          "fullName": "google.cloud.aiplatform.v1beta1.PredictionService.EmbedContent",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.PredictionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_PredictionService_EmbedContent_async_flattened",
+      "title": "EmbedContentAsync",
+      "description": "Snippet for EmbedContentAsync",
+      "file": "PredictionServiceClient.EmbedContentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EmbedContentAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.PredictionServiceClient.EmbedContentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "model"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.Content",
+            "name": "content"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.EmbedContentResponse>",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "EmbedContent",
+          "fullName": "google.cloud.aiplatform.v1beta1.PredictionService.EmbedContent",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.PredictionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_PredictionService_EmbedContent_sync_flattened_resourceNames",
+      "title": "EmbedContentResourceNames",
+      "description": "Snippet for EmbedContent",
+      "file": "PredictionServiceClient.EmbedContentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EmbedContent",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.PredictionServiceClient.EmbedContent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.EndpointName",
+            "name": "model"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.Content",
+            "name": "content"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.EmbedContentResponse",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "EmbedContent",
+          "fullName": "google.cloud.aiplatform.v1beta1.PredictionService.EmbedContent",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.PredictionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_PredictionService_EmbedContent_async_flattened_resourceNames",
+      "title": "EmbedContentResourceNamesAsync",
+      "description": "Snippet for EmbedContentAsync",
+      "file": "PredictionServiceClient.EmbedContentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EmbedContentAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.PredictionServiceClient.EmbedContentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.EndpointName",
+            "name": "model"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.Content",
+            "name": "content"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.EmbedContentResponse>",
+        "client": {
+          "shortName": "PredictionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.PredictionServiceClient"
+        },
+        "method": {
+          "shortName": "EmbedContent",
+          "fullName": "google.cloud.aiplatform.v1beta1.PredictionService.EmbedContent",
+          "service": {
+            "shortName": "PredictionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.PredictionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
           "type": "SHORT"
         }
       ]
@@ -88163,12 +90521,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 78,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 76,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -88212,12 +90570,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 80,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 78,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -101234,12 +103592,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 62,
+          "end": 63,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 60,
+          "end": 61,
           "type": "SHORT"
         }
       ]
@@ -101283,12 +103641,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 63,
+          "end": 64,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 61,
+          "end": 62,
           "type": "SHORT"
         }
       ]

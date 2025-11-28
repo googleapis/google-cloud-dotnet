@@ -1,5 +1,33 @@
 # Version history
 
+## Version 2.11.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+## Version 2.10.0, released 2025-10-09
+
+### New features
+
+- Add new `BACKGROUND_CHANGE_DATA_CAPTURE`, `BACKGROUND_COLUMN_METADATA_INDEX`, and `BACKGROUND_SEARCH_INDEX_REFRESH` reservation assignment types
+- Add support for creation and modification of new reservation groups
+- Add new reservation IAM policy get/set/test methods
+
+## Version 2.9.0, released 2025-09-03
+
+### New features
+
+- Add a new field `soft_failover_start_time` in the existing `replication_status` in `.google.cloud.bigquery.reservation.v1.Reservation` to provide visibility into the state of ongoing soft failover operations on the reservation
+- Add a new field `failover_mode` to `.google.cloud.bigquery.reservation.v1.FailoverReservationRequest` that allows users to choose between the HARD or SOFT failover modes when they initiate a failover operation on a reservation
+
+## Version 2.8.0, released 2025-08-19
+
+### New features
+
+- Add Reservation.max_slots field to Reservation proto, indicating the total max number of slots this reservation can use up to
+- Add Reservation.scaling_mode field and its corresponding enum message ScalingMode. This field should be used together with Reservation.max_slots
+
 ## Version 2.7.0, released 2025-03-03
 
 ### New features

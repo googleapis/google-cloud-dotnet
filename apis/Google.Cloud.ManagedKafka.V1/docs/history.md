@@ -1,5 +1,27 @@
 # Version history
 
+## Version 1.0.0-beta08, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+## Version 1.0.0-beta07, released 2025-07-09
+
+### New features
+
+- Update libraries and clients for Managed Kafka
+
+## Version 1.0.0-beta06, released 2025-05-27
+
+### New features
+
+- Add Managed Kafka ACL API
+
+### Documentation improvements
+
+- A comment for message `TaskRetryPolicy` is changed
+
 ## Version 1.0.0-beta05, released 2025-03-24
 
 ### New features

@@ -32,6 +32,18 @@ namespace Google.Cloud.ApiHub.V1
         }
     }
 
+    public partial class DeleteApiHubInstanceRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::ApiHubInstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::ApiHubInstanceName ApiHubInstanceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::ApiHubInstanceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetApiHubInstanceRequest
     {
         /// <summary>

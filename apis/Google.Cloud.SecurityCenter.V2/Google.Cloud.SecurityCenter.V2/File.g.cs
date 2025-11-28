@@ -25,22 +25,29 @@ namespace Google.Cloud.SecurityCenter.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cilnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjIvZmlsZS5wcm90bxIe",
-            "Z29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYyIvABCgRGaWxlEgwKBHBh",
+            "Z29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYyIoMECgRGaWxlEgwKBHBh",
             "dGgYASABKAkSDAoEc2l6ZRgCIAEoAxIOCgZzaGEyNTYYAyABKAkSEwoLaGFz",
             "aGVkX3NpemUYBCABKAMSGAoQcGFydGlhbGx5X2hhc2hlZBgFIAEoCBIQCghj",
             "b250ZW50cxgGIAEoCRJACglkaXNrX3BhdGgYByABKAsyLS5nb29nbGUuY2xv",
-            "dWQuc2VjdXJpdHljZW50ZXIudjIuRmlsZS5EaXNrUGF0aBo5CghEaXNrUGF0",
-            "aBIWCg5wYXJ0aXRpb25fdXVpZBgBIAEoCRIVCg1yZWxhdGl2ZV9wYXRoGAIg",
-            "ASgJQuMBCiJjb20uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYyQglG",
-            "aWxlUHJvdG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9nby9zZWN1cml0eWNlbnRl",
-            "ci9hcGl2Mi9zZWN1cml0eWNlbnRlcnBiO3NlY3VyaXR5Y2VudGVycGKqAh5H",
-            "b29nbGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjLKAh5Hb29nbGVcQ2xvdWRc",
-            "U2VjdXJpdHlDZW50ZXJcVjLqAiFHb29nbGU6OkNsb3VkOjpTZWN1cml0eUNl",
-            "bnRlcjo6VjJiBnByb3RvMw=="));
+            "dWQuc2VjdXJpdHljZW50ZXIudjIuRmlsZS5EaXNrUGF0aBJGCgpvcGVyYXRp",
+            "b25zGAggAygLMjIuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYyLkZp",
+            "bGUuRmlsZU9wZXJhdGlvbho5CghEaXNrUGF0aBIWCg5wYXJ0aXRpb25fdXVp",
+            "ZBgBIAEoCRIVCg1yZWxhdGl2ZV9wYXRoGAIgASgJGsgBCg1GaWxlT3BlcmF0",
+            "aW9uEk4KBHR5cGUYASABKA4yQC5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50",
+            "ZXIudjIuRmlsZS5GaWxlT3BlcmF0aW9uLk9wZXJhdGlvblR5cGUiZwoNT3Bl",
+            "cmF0aW9uVHlwZRIeChpPUEVSQVRJT05fVFlQRV9VTlNQRUNJRklFRBAAEggK",
+            "BE9QRU4QARIICgRSRUFEEAISCgoGUkVOQU1FEAMSCQoFV1JJVEUQBBILCgdF",
+            "WEVDVVRFEAVC4wEKImNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIu",
+            "djJCCUZpbGVQcm90b1ABWkpjbG91ZC5nb29nbGUuY29tL2dvL3NlY3VyaXR5",
+            "Y2VudGVyL2FwaXYyL3NlY3VyaXR5Y2VudGVycGI7c2VjdXJpdHljZW50ZXJw",
+            "YqoCHkdvb2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5WMsoCHkdvb2dsZVxD",
+            "bG91ZFxTZWN1cml0eUNlbnRlclxWMuoCIUdvb2dsZTo6Q2xvdWQ6OlNlY3Vy",
+            "aXR5Q2VudGVyOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.File), global::Google.Cloud.SecurityCenter.V2.File.Parser, new[]{ "Path", "Size", "Sha256", "HashedSize", "PartiallyHashed", "Contents", "DiskPath" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.File.Types.DiskPath), global::Google.Cloud.SecurityCenter.V2.File.Types.DiskPath.Parser, new[]{ "PartitionUuid", "RelativePath" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.File), global::Google.Cloud.SecurityCenter.V2.File.Parser, new[]{ "Path", "Size", "Sha256", "HashedSize", "PartiallyHashed", "Contents", "DiskPath", "Operations" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.File.Types.DiskPath), global::Google.Cloud.SecurityCenter.V2.File.Types.DiskPath.Parser, new[]{ "PartitionUuid", "RelativePath" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.File.Types.FileOperation), global::Google.Cloud.SecurityCenter.V2.File.Types.FileOperation.Parser, new[]{ "Type" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V2.File.Types.FileOperation.Types.OperationType) }, null, null)})
           }));
     }
     #endregion
@@ -93,6 +100,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
       partiallyHashed_ = other.partiallyHashed_;
       contents_ = other.contents_;
       diskPath_ = other.diskPath_ != null ? other.diskPath_.Clone() : null;
+      operations_ = other.operations_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -211,6 +219,20 @@ namespace Google.Cloud.SecurityCenter.V2 {
       }
     }
 
+    /// <summary>Field number for the "operations" field.</summary>
+    public const int OperationsFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::Google.Cloud.SecurityCenter.V2.File.Types.FileOperation> _repeated_operations_codec
+        = pb::FieldCodec.ForMessage(66, global::Google.Cloud.SecurityCenter.V2.File.Types.FileOperation.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V2.File.Types.FileOperation> operations_ = new pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V2.File.Types.FileOperation>();
+    /// <summary>
+    /// Operation(s) performed on a file.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.SecurityCenter.V2.File.Types.FileOperation> Operations {
+      get { return operations_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -233,6 +255,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
       if (PartiallyHashed != other.PartiallyHashed) return false;
       if (Contents != other.Contents) return false;
       if (!object.Equals(DiskPath, other.DiskPath)) return false;
+      if(!operations_.Equals(other.operations_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -247,6 +270,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
       if (PartiallyHashed != false) hash ^= PartiallyHashed.GetHashCode();
       if (Contents.Length != 0) hash ^= Contents.GetHashCode();
       if (diskPath_ != null) hash ^= DiskPath.GetHashCode();
+      hash ^= operations_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -293,6 +317,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
         output.WriteRawTag(58);
         output.WriteMessage(DiskPath);
       }
+      operations_.WriteTo(output, _repeated_operations_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -331,6 +356,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
         output.WriteRawTag(58);
         output.WriteMessage(DiskPath);
       }
+      operations_.WriteTo(ref output, _repeated_operations_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -362,6 +388,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
       if (diskPath_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DiskPath);
       }
+      size += operations_.CalculateSize(_repeated_operations_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -398,6 +425,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
         }
         DiskPath.MergeFrom(other.DiskPath);
       }
+      operations_.Add(other.operations_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -444,6 +472,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
             input.ReadMessage(DiskPath);
             break;
           }
+          case 66: {
+            operations_.AddEntriesFrom(input, _repeated_operations_codec);
+            break;
+          }
         }
       }
     #endif
@@ -488,6 +520,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
               DiskPath = new global::Google.Cloud.SecurityCenter.V2.File.Types.DiskPath();
             }
             input.ReadMessage(DiskPath);
+            break;
+          }
+          case 66: {
+            operations_.AddEntriesFrom(ref input, _repeated_operations_codec);
             break;
           }
         }
@@ -735,6 +771,240 @@ namespace Google.Cloud.SecurityCenter.V2 {
           }
         }
         #endif
+
+      }
+
+      /// <summary>
+      /// Operation(s) performed on a file.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class FileOperation : pb::IMessage<FileOperation>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<FileOperation> _parser = new pb::MessageParser<FileOperation>(() => new FileOperation());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<FileOperation> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.SecurityCenter.V2.File.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FileOperation() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FileOperation(FileOperation other) : this() {
+          type_ = other.type_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FileOperation Clone() {
+          return new FileOperation(this);
+        }
+
+        /// <summary>Field number for the "type" field.</summary>
+        public const int TypeFieldNumber = 1;
+        private global::Google.Cloud.SecurityCenter.V2.File.Types.FileOperation.Types.OperationType type_ = global::Google.Cloud.SecurityCenter.V2.File.Types.FileOperation.Types.OperationType.Unspecified;
+        /// <summary>
+        /// The type of the operation
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.SecurityCenter.V2.File.Types.FileOperation.Types.OperationType Type {
+          get { return type_; }
+          set {
+            type_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as FileOperation);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(FileOperation other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Type != other.Type) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Type != global::Google.Cloud.SecurityCenter.V2.File.Types.FileOperation.Types.OperationType.Unspecified) hash ^= Type.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Type != global::Google.Cloud.SecurityCenter.V2.File.Types.FileOperation.Types.OperationType.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Type);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Type != global::Google.Cloud.SecurityCenter.V2.File.Types.FileOperation.Types.OperationType.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Type);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Type != global::Google.Cloud.SecurityCenter.V2.File.Types.FileOperation.Types.OperationType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(FileOperation other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Type != global::Google.Cloud.SecurityCenter.V2.File.Types.FileOperation.Types.OperationType.Unspecified) {
+            Type = other.Type;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Type = (global::Google.Cloud.SecurityCenter.V2.File.Types.FileOperation.Types.OperationType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Type = (global::Google.Cloud.SecurityCenter.V2.File.Types.FileOperation.Types.OperationType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the FileOperation message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The type of the operation
+          /// </summary>
+          public enum OperationType {
+            /// <summary>
+            /// The operation is unspecified.
+            /// </summary>
+            [pbr::OriginalName("OPERATION_TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Represents an open operation.
+            /// </summary>
+            [pbr::OriginalName("OPEN")] Open = 1,
+            /// <summary>
+            /// Represents a read operation.
+            /// </summary>
+            [pbr::OriginalName("READ")] Read = 2,
+            /// <summary>
+            /// Represents a rename operation.
+            /// </summary>
+            [pbr::OriginalName("RENAME")] Rename = 3,
+            /// <summary>
+            /// Represents a write operation.
+            /// </summary>
+            [pbr::OriginalName("WRITE")] Write = 4,
+            /// <summary>
+            /// Represents an execute operation.
+            /// </summary>
+            [pbr::OriginalName("EXECUTE")] Execute = 5,
+          }
+
+        }
+        #endregion
 
       }
 

@@ -40,19 +40,19 @@ namespace Google.Cloud.CloudControlsPartner.V1 {
             "bml6YXRpb259L2xvY2F0aW9ucy97bG9jYXRpb259L3BhcnRuZXIyB3BhcnRu",
             "ZXIiVgoRR2V0UGFydG5lclJlcXVlc3QSQQoEbmFtZRgBIAEoCUIz4EEC+kEt",
             "CitjbG91ZGNvbnRyb2xzcGFydG5lci5nb29nbGVhcGlzLmNvbS9QYXJ0bmVy",
-            "IicKA1NrdRIKCgJpZBgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiABKAki3AEK",
+            "IicKA1NrdRIKCgJpZBgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiABKAki4AEK",
             "C0VrbU1ldGFkYXRhElMKDGVrbV9zb2x1dGlvbhgBIAEoDjI9Lmdvb2dsZS5j",
             "bG91ZC5jbG91ZGNvbnRyb2xzcGFydG5lci52MS5Fa21NZXRhZGF0YS5Fa21T",
-            "b2x1dGlvbhIYChBla21fZW5kcG9pbnRfdXJpGAIgASgJIl4KC0VrbVNvbHV0",
+            "b2x1dGlvbhIYChBla21fZW5kcG9pbnRfdXJpGAIgASgJImIKC0VrbVNvbHV0",
             "aW9uEhwKGEVLTV9TT0xVVElPTl9VTlNQRUNJRklFRBAAEgwKCEZPUlRBTklY",
-            "EAESCwoHRlVUVVJFWBACEgoKBlRIQUxFUxADEgoKBlZJUlRSVRAEQpECCihj",
-            "b20uZ29vZ2xlLmNsb3VkLmNsb3VkY29udHJvbHNwYXJ0bmVyLnYxQg1QYXJ0",
-            "bmVyc1Byb3RvUAFaXGNsb3VkLmdvb2dsZS5jb20vZ28vY2xvdWRjb250cm9s",
-            "c3BhcnRuZXIvYXBpdjEvY2xvdWRjb250cm9sc3BhcnRuZXJwYjtjbG91ZGNv",
-            "bnRyb2xzcGFydG5lcnBiqgIkR29vZ2xlLkNsb3VkLkNsb3VkQ29udHJvbHNQ",
-            "YXJ0bmVyLlYxygIkR29vZ2xlXENsb3VkXENsb3VkQ29udHJvbHNQYXJ0bmVy",
-            "XFYx6gInR29vZ2xlOjpDbG91ZDo6Q2xvdWRDb250cm9sc1BhcnRuZXI6OlYx",
-            "YgZwcm90bzM="));
+            "EAESCwoHRlVUVVJFWBACEgoKBlRIQUxFUxADEg4KBlZJUlRSVRAEGgIIAUKR",
+            "AgooY29tLmdvb2dsZS5jbG91ZC5jbG91ZGNvbnRyb2xzcGFydG5lci52MUIN",
+            "UGFydG5lcnNQcm90b1ABWlxjbG91ZC5nb29nbGUuY29tL2dvL2Nsb3VkY29u",
+            "dHJvbHNwYXJ0bmVyL2FwaXYxL2Nsb3VkY29udHJvbHNwYXJ0bmVycGI7Y2xv",
+            "dWRjb250cm9sc3BhcnRuZXJwYqoCJEdvb2dsZS5DbG91ZC5DbG91ZENvbnRy",
+            "b2xzUGFydG5lci5WMcoCJEdvb2dsZVxDbG91ZFxDbG91ZENvbnRyb2xzUGFy",
+            "dG5lclxWMeoCJ0dvb2dsZTo6Q2xvdWQ6OkNsb3VkQ29udHJvbHNQYXJ0bmVy",
+            "OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1192,8 +1192,9 @@ namespace Google.Cloud.CloudControlsPartner.V1 {
         /// </summary>
         [pbr::OriginalName("THALES")] Thales = 3,
         /// <summary>
-        /// EKM Partner Virtu
+        /// This enum value is never used.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("VIRTRU")] Virtru = 4,
       }
 

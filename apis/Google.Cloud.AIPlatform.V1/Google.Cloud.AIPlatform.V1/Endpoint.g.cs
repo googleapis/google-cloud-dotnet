@@ -33,7 +33,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "bGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9tYWNoaW5lX3Jlc291cmNlcy5wcm90",
             "bxozZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvc2VydmljZV9uZXR3b3Jr",
             "aW5nLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dv",
-            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i/woKCEVuZHBvaW50EhEK",
+            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ijAwKCEVuZHBvaW50EhEK",
             "BG5hbWUYASABKAlCA+BBAxIZCgxkaXNwbGF5X25hbWUYAiABKAlCA+BBAhIT",
             "CgtkZXNjcmlwdGlvbhgDIAEoCRJHCg9kZXBsb3llZF9tb2RlbHMYBCADKAsy",
             "KS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5EZXBsb3llZE1vZGVsQgPg",
@@ -58,75 +58,83 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZW5kcG9pbnRfZG5zGBkgASgJQgPgQQMSVAoYY2xpZW50X2Nvbm5lY3Rpb25f",
             "Y29uZmlnGBcgASgLMjIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQ2xp",
             "ZW50Q29ubmVjdGlvbkNvbmZpZxIaCg1zYXRpc2ZpZXNfcHpzGBsgASgIQgPg",
-            "QQMSGgoNc2F0aXNmaWVzX3B6aRgcIAEoCEID4EEDGjMKEVRyYWZmaWNTcGxp",
-            "dEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAEaLQoLTGFi",
-            "ZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATq1AepB",
-            "sQEKImFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRW5kcG9pbnQSPHByb2pl",
-            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9lbmRwb2ludHMv",
-            "e2VuZHBvaW50fRJNcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L3B1Ymxpc2hlcnMve3B1Ymxpc2hlcn0vbW9kZWxzL3ttb2RlbH0i",
-            "3gkKDURlcGxveWVkTW9kZWwSTQoTZGVkaWNhdGVkX3Jlc291cmNlcxgHIAEo",
-            "CzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRlZGljYXRlZFJlc291",
-            "cmNlc0gAEk0KE2F1dG9tYXRpY19yZXNvdXJjZXMYCCABKAsyLi5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5BdXRvbWF0aWNSZXNvdXJjZXNIABJRChBz",
-            "aGFyZWRfcmVzb3VyY2VzGBEgASgJQjX6QTIKMGFpcGxhdGZvcm0uZ29vZ2xl",
-            "YXBpcy5jb20vRGVwbG95bWVudFJlc291cmNlUG9vbEgAEg8KAmlkGAEgASgJ",
-            "QgPgQQUSNgoFbW9kZWwYAiABKAlCJ+BBAvpBIQofYWlwbGF0Zm9ybS5nb29n",
-            "bGVhcGlzLmNvbS9Nb2RlbBIdChBtb2RlbF92ZXJzaW9uX2lkGBIgASgJQgPg",
-            "QQMSFAoMZGlzcGxheV9uYW1lGAMgASgJEjQKC2NyZWF0ZV90aW1lGAYgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkUKEGV4cGxhbmF0",
-            "aW9uX3NwZWMYCSABKAsyKy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5F",
-            "eHBsYW5hdGlvblNwZWMSHAoUZGlzYWJsZV9leHBsYW5hdGlvbnMYEyABKAgS",
-            "FwoPc2VydmljZV9hY2NvdW50GAsgASgJEiEKGWRpc2FibGVfY29udGFpbmVy",
-            "X2xvZ2dpbmcYDyABKAgSHQoVZW5hYmxlX2FjY2Vzc19sb2dnaW5nGA0gASgI",
-            "EkwKEXByaXZhdGVfZW5kcG9pbnRzGA4gASgLMiwuZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjEuUHJpdmF0ZUVuZHBvaW50c0ID4EEDElQKGGZhc3Rlcl9k",
-            "ZXBsb3ltZW50X2NvbmZpZxgXIAEoCzIyLmdvb2dsZS5jbG91ZC5haXBsYXRm",
-            "b3JtLnYxLkZhc3RlckRlcGxveW1lbnRDb25maWcSRQoGc3RhdHVzGBogASgL",
-            "MjAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRGVwbG95ZWRNb2RlbC5T",
-            "dGF0dXNCA+BBAxJSCg1zeXN0ZW1fbGFiZWxzGBwgAygLMjsuZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjEuRGVwbG95ZWRNb2RlbC5TeXN0ZW1MYWJlbHNF",
-            "bnRyeRJbChlzcGVjdWxhdGl2ZV9kZWNvZGluZ19zcGVjGB4gASgLMjMuZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3BlY3VsYXRpdmVEZWNvZGluZ1Nw",
-            "ZWNCA+BBARp/CgZTdGF0dXMSFAoHbWVzc2FnZRgBIAEoCUID4EEDEjkKEGxh",
-            "c3RfdXBkYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMSJAoXYXZhaWxhYmxlX3JlcGxpY2FfY291bnQYAyABKAVCA+BB",
-            "AxozChFTeXN0ZW1MYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
-            "AiABKAk6AjgBQhYKFHByZWRpY3Rpb25fcmVzb3VyY2VzIo8BChBQcml2YXRl",
-            "RW5kcG9pbnRzEh0KEHByZWRpY3RfaHR0cF91cmkYASABKAlCA+BBAxIdChBl",
-            "eHBsYWluX2h0dHBfdXJpGAIgASgJQgPgQQMSHAoPaGVhbHRoX2h0dHBfdXJp",
-            "GAMgASgJQgPgQQMSHwoSc2VydmljZV9hdHRhY2htZW50GAQgASgJQgPgQQMi",
-            "nAEKI1ByZWRpY3RSZXF1ZXN0UmVzcG9uc2VMb2dnaW5nQ29uZmlnEg8KB2Vu",
-            "YWJsZWQYASABKAgSFQoNc2FtcGxpbmdfcmF0ZRgCIAEoARJNChRiaWdxdWVy",
-            "eV9kZXN0aW5hdGlvbhgDIAEoCzIvLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxLkJpZ1F1ZXJ5RGVzdGluYXRpb24iTgoWQ2xpZW50Q29ubmVjdGlvbkNv",
-            "bmZpZxI0ChFpbmZlcmVuY2VfdGltZW91dBgBIAEoCzIZLmdvb2dsZS5wcm90",
-            "b2J1Zi5EdXJhdGlvbiI1ChZGYXN0ZXJEZXBsb3ltZW50Q29uZmlnEhsKE2Zh",
-            "c3RfdHJ5b3V0X2VuYWJsZWQYAiABKAgimQMKF1NwZWN1bGF0aXZlRGVjb2Rp",
-            "bmdTcGVjEmwKF2RyYWZ0X21vZGVsX3NwZWN1bGF0aW9uGAIgASgLMkkuZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3BlY3VsYXRpdmVEZWNvZGluZ1Nw",
-            "ZWMuRHJhZnRNb2RlbFNwZWN1bGF0aW9uSAASYQoRbmdyYW1fc3BlY3VsYXRp",
-            "b24YAyABKAsyRC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TcGVjdWxh",
-            "dGl2ZURlY29kaW5nU3BlYy5OZ3JhbVNwZWN1bGF0aW9uSAASHwoXc3BlY3Vs",
-            "YXRpdmVfdG9rZW5fY291bnQYASABKAUaVQoVRHJhZnRNb2RlbFNwZWN1bGF0",
-            "aW9uEjwKC2RyYWZ0X21vZGVsGAEgASgJQifgQQL6QSEKH2FpcGxhdGZvcm0u",
-            "Z29vZ2xlYXBpcy5jb20vTW9kZWwaJgoQTmdyYW1TcGVjdWxhdGlvbhISCgpu",
-            "Z3JhbV9zaXplGAEgASgFQg0KC3NwZWN1bGF0aW9uQssBCh5jb20uZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjFCDUVuZHBvaW50UHJvdG9QAVo+Y2xvdWQu",
-            "Z29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjth",
-            "aXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdv",
-            "b2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQ",
-            "bGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "QQMSGgoNc2F0aXNmaWVzX3B6aRgcIAEoCEID4EEDEmUKH2dlbl9haV9hZHZh",
+            "bmNlZF9mZWF0dXJlc19jb25maWcYHSABKAsyNy5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MS5HZW5BaUFkdmFuY2VkRmVhdHVyZXNDb25maWdCA+BBARIk",
+            "Chxwcml2YXRlX21vZGVsX3NlcnZlcl9lbmFibGVkGB4gASgIGjMKEVRyYWZm",
+            "aWNTcGxpdEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAEa",
+            "LQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
+            "ATq1AepBsQEKImFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRW5kcG9pbnQS",
+            "PHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9lbmRw",
+            "b2ludHMve2VuZHBvaW50fRJNcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
+            "cy97bG9jYXRpb259L3B1Ymxpc2hlcnMve3B1Ymxpc2hlcn0vbW9kZWxzL3tt",
+            "b2RlbH0i8gkKDURlcGxveWVkTW9kZWwSTQoTZGVkaWNhdGVkX3Jlc291cmNl",
+            "cxgHIAEoCzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRlZGljYXRl",
+            "ZFJlc291cmNlc0gAEk0KE2F1dG9tYXRpY19yZXNvdXJjZXMYCCABKAsyLi5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5BdXRvbWF0aWNSZXNvdXJjZXNI",
+            "ABJRChBzaGFyZWRfcmVzb3VyY2VzGBEgASgJQjX6QTIKMGFpcGxhdGZvcm0u",
+            "Z29vZ2xlYXBpcy5jb20vRGVwbG95bWVudFJlc291cmNlUG9vbEgAEg8KAmlk",
+            "GAEgASgJQgPgQQUSMwoFbW9kZWwYAiABKAlCJPpBIQofYWlwbGF0Zm9ybS5n",
+            "b29nbGVhcGlzLmNvbS9Nb2RlbBIdChBtb2RlbF92ZXJzaW9uX2lkGBIgASgJ",
+            "QgPgQQMSFAoMZGlzcGxheV9uYW1lGAMgASgJEjQKC2NyZWF0ZV90aW1lGAYg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkUKEGV4cGxh",
+            "bmF0aW9uX3NwZWMYCSABKAsyKy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5FeHBsYW5hdGlvblNwZWMSHAoUZGlzYWJsZV9leHBsYW5hdGlvbnMYEyAB",
+            "KAgSFwoPc2VydmljZV9hY2NvdW50GAsgASgJEiEKGWRpc2FibGVfY29udGFp",
+            "bmVyX2xvZ2dpbmcYDyABKAgSHQoVZW5hYmxlX2FjY2Vzc19sb2dnaW5nGA0g",
+            "ASgIEkwKEXByaXZhdGVfZW5kcG9pbnRzGA4gASgLMiwuZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjEuUHJpdmF0ZUVuZHBvaW50c0ID4EEDElQKGGZhc3Rl",
+            "cl9kZXBsb3ltZW50X2NvbmZpZxgXIAEoCzIyLmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxLkZhc3RlckRlcGxveW1lbnRDb25maWcSRQoGc3RhdHVzGBog",
+            "ASgLMjAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRGVwbG95ZWRNb2Rl",
+            "bC5TdGF0dXNCA+BBAxJSCg1zeXN0ZW1fbGFiZWxzGBwgAygLMjsuZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjEuRGVwbG95ZWRNb2RlbC5TeXN0ZW1MYWJl",
+            "bHNFbnRyeRIVCg1jaGVja3BvaW50X2lkGB0gASgJElsKGXNwZWN1bGF0aXZl",
+            "X2RlY29kaW5nX3NwZWMYHiABKAsyMy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MS5TcGVjdWxhdGl2ZURlY29kaW5nU3BlY0ID4EEBGn8KBlN0YXR1cxIU",
+            "CgdtZXNzYWdlGAEgASgJQgPgQQMSOQoQbGFzdF91cGRhdGVfdGltZRgCIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIkChdhdmFpbGFi",
+            "bGVfcmVwbGljYV9jb3VudBgDIAEoBUID4EEDGjMKEVN5c3RlbUxhYmVsc0Vu",
+            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCFgoUcHJlZGlj",
+            "dGlvbl9yZXNvdXJjZXMijwEKEFByaXZhdGVFbmRwb2ludHMSHQoQcHJlZGlj",
+            "dF9odHRwX3VyaRgBIAEoCUID4EEDEh0KEGV4cGxhaW5faHR0cF91cmkYAiAB",
+            "KAlCA+BBAxIcCg9oZWFsdGhfaHR0cF91cmkYAyABKAlCA+BBAxIfChJzZXJ2",
+            "aWNlX2F0dGFjaG1lbnQYBCABKAlCA+BBAyKcAQojUHJlZGljdFJlcXVlc3RS",
+            "ZXNwb25zZUxvZ2dpbmdDb25maWcSDwoHZW5hYmxlZBgBIAEoCBIVCg1zYW1w",
+            "bGluZ19yYXRlGAIgASgBEk0KFGJpZ3F1ZXJ5X2Rlc3RpbmF0aW9uGAMgASgL",
+            "Mi8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQmlnUXVlcnlEZXN0aW5h",
+            "dGlvbiJOChZDbGllbnRDb25uZWN0aW9uQ29uZmlnEjQKEWluZmVyZW5jZV90",
+            "aW1lb3V0GAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIjUKFkZh",
+            "c3RlckRlcGxveW1lbnRDb25maWcSGwoTZmFzdF90cnlvdXRfZW5hYmxlZBgC",
+            "IAEoCCKVAQobR2VuQWlBZHZhbmNlZEZlYXR1cmVzQ29uZmlnElUKCnJhZ19j",
+            "b25maWcYASABKAsyQS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5HZW5B",
+            "aUFkdmFuY2VkRmVhdHVyZXNDb25maWcuUmFnQ29uZmlnGh8KCVJhZ0NvbmZp",
+            "ZxISCgplbmFibGVfcmFnGAEgASgIIpkDChdTcGVjdWxhdGl2ZURlY29kaW5n",
+            "U3BlYxJsChdkcmFmdF9tb2RlbF9zcGVjdWxhdGlvbhgCIAEoCzJJLmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLlNwZWN1bGF0aXZlRGVjb2RpbmdTcGVj",
+            "LkRyYWZ0TW9kZWxTcGVjdWxhdGlvbkgAEmEKEW5ncmFtX3NwZWN1bGF0aW9u",
+            "GAMgASgLMkQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU3BlY3VsYXRp",
+            "dmVEZWNvZGluZ1NwZWMuTmdyYW1TcGVjdWxhdGlvbkgAEh8KF3NwZWN1bGF0",
+            "aXZlX3Rva2VuX2NvdW50GAEgASgFGlUKFURyYWZ0TW9kZWxTcGVjdWxhdGlv",
+            "bhI8CgtkcmFmdF9tb2RlbBgBIAEoCUIn4EEC+kEhCh9haXBsYXRmb3JtLmdv",
+            "b2dsZWFwaXMuY29tL01vZGVsGiYKEE5ncmFtU3BlY3VsYXRpb24SEgoKbmdy",
+            "YW1fc2l6ZRgBIAEoBUINCgtzcGVjdWxhdGlvbkLLAQoeY29tLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxQg1FbmRwb2ludFByb3RvUAFaPmNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlw",
+            "bGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29n",
+            "bGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxh",
+            "dGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ServiceNetworkingReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Endpoint), global::Google.Cloud.AIPlatform.V1.Endpoint.Parser, new[]{ "Name", "DisplayName", "Description", "DeployedModels", "TrafficSplit", "Etag", "Labels", "CreateTime", "UpdateTime", "EncryptionSpec", "Network", "EnablePrivateServiceConnect", "PrivateServiceConnectConfig", "ModelDeploymentMonitoringJob", "PredictRequestResponseLoggingConfig", "DedicatedEndpointEnabled", "DedicatedEndpointDns", "ClientConnectionConfig", "SatisfiesPzs", "SatisfiesPzi" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployedModel), global::Google.Cloud.AIPlatform.V1.DeployedModel.Parser, new[]{ "DedicatedResources", "AutomaticResources", "SharedResources", "Id", "Model", "ModelVersionId", "DisplayName", "CreateTime", "ExplanationSpec", "DisableExplanations", "ServiceAccount", "DisableContainerLogging", "EnableAccessLogging", "PrivateEndpoints", "FasterDeploymentConfig", "Status", "SystemLabels", "SpeculativeDecodingSpec" }, new[]{ "PredictionResources" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployedModel.Types.Status), global::Google.Cloud.AIPlatform.V1.DeployedModel.Types.Status.Parser, new[]{ "Message", "LastUpdateTime", "AvailableReplicaCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Endpoint), global::Google.Cloud.AIPlatform.V1.Endpoint.Parser, new[]{ "Name", "DisplayName", "Description", "DeployedModels", "TrafficSplit", "Etag", "Labels", "CreateTime", "UpdateTime", "EncryptionSpec", "Network", "EnablePrivateServiceConnect", "PrivateServiceConnectConfig", "ModelDeploymentMonitoringJob", "PredictRequestResponseLoggingConfig", "DedicatedEndpointEnabled", "DedicatedEndpointDns", "ClientConnectionConfig", "SatisfiesPzs", "SatisfiesPzi", "GenAiAdvancedFeaturesConfig", "PrivateModelServerEnabled" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployedModel), global::Google.Cloud.AIPlatform.V1.DeployedModel.Parser, new[]{ "DedicatedResources", "AutomaticResources", "SharedResources", "Id", "Model", "ModelVersionId", "DisplayName", "CreateTime", "ExplanationSpec", "DisableExplanations", "ServiceAccount", "DisableContainerLogging", "EnableAccessLogging", "PrivateEndpoints", "FasterDeploymentConfig", "Status", "SystemLabels", "CheckpointId", "SpeculativeDecodingSpec" }, new[]{ "PredictionResources" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployedModel.Types.Status), global::Google.Cloud.AIPlatform.V1.DeployedModel.Types.Status.Parser, new[]{ "Message", "LastUpdateTime", "AvailableReplicaCount" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PrivateEndpoints), global::Google.Cloud.AIPlatform.V1.PrivateEndpoints.Parser, new[]{ "PredictHttpUri", "ExplainHttpUri", "HealthHttpUri", "ServiceAttachment" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PredictRequestResponseLoggingConfig), global::Google.Cloud.AIPlatform.V1.PredictRequestResponseLoggingConfig.Parser, new[]{ "Enabled", "SamplingRate", "BigqueryDestination" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ClientConnectionConfig), global::Google.Cloud.AIPlatform.V1.ClientConnectionConfig.Parser, new[]{ "InferenceTimeout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FasterDeploymentConfig), global::Google.Cloud.AIPlatform.V1.FasterDeploymentConfig.Parser, new[]{ "FastTryoutEnabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GenAiAdvancedFeaturesConfig), global::Google.Cloud.AIPlatform.V1.GenAiAdvancedFeaturesConfig.Parser, new[]{ "RagConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GenAiAdvancedFeaturesConfig.Types.RagConfig), global::Google.Cloud.AIPlatform.V1.GenAiAdvancedFeaturesConfig.Types.RagConfig.Parser, new[]{ "EnableRag" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SpeculativeDecodingSpec), global::Google.Cloud.AIPlatform.V1.SpeculativeDecodingSpec.Parser, new[]{ "DraftModelSpeculation", "NgramSpeculation", "SpeculativeTokenCount" }, new[]{ "Speculation" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SpeculativeDecodingSpec.Types.DraftModelSpeculation), global::Google.Cloud.AIPlatform.V1.SpeculativeDecodingSpec.Types.DraftModelSpeculation.Parser, new[]{ "DraftModel" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SpeculativeDecodingSpec.Types.NgramSpeculation), global::Google.Cloud.AIPlatform.V1.SpeculativeDecodingSpec.Types.NgramSpeculation.Parser, new[]{ "NgramSize" }, null, null, null, null)})
           }));
@@ -194,6 +202,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       clientConnectionConfig_ = other.clientConnectionConfig_ != null ? other.clientConnectionConfig_.Clone() : null;
       satisfiesPzs_ = other.satisfiesPzs_;
       satisfiesPzi_ = other.satisfiesPzi_;
+      genAiAdvancedFeaturesConfig_ = other.genAiAdvancedFeaturesConfig_ != null ? other.genAiAdvancedFeaturesConfig_.Clone() : null;
+      privateModelServerEnabled_ = other.privateModelServerEnabled_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -503,9 +513,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string dedicatedEndpointDns_ = "";
     /// <summary>
     /// Output only. DNS of the dedicated endpoint. Will only be populated if
-    /// dedicated_endpoint_enabled is true.
-    /// Format:
-    /// `https://{endpoint_id}.{region}-{project_number}.prediction.vertexai.goog`.
+    /// dedicated_endpoint_enabled is true. Depending on the features enabled, uid
+    /// might be a random number or a string. For example, if fast_tryout is
+    /// enabled, uid will be fasttryout. Format:
+    /// `https://{endpoint_id}.{region}-{uid}.prediction.vertexai.goog`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -561,6 +572,38 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "gen_ai_advanced_features_config" field.</summary>
+    public const int GenAiAdvancedFeaturesConfigFieldNumber = 29;
+    private global::Google.Cloud.AIPlatform.V1.GenAiAdvancedFeaturesConfig genAiAdvancedFeaturesConfig_;
+    /// <summary>
+    /// Optional. Configuration for GenAiAdvancedFeatures. If the endpoint is
+    /// serving GenAI models, advanced features like native RAG integration can be
+    /// configured. Currently, only Model Garden models are supported.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.GenAiAdvancedFeaturesConfig GenAiAdvancedFeaturesConfig {
+      get { return genAiAdvancedFeaturesConfig_; }
+      set {
+        genAiAdvancedFeaturesConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "private_model_server_enabled" field.</summary>
+    public const int PrivateModelServerEnabledFieldNumber = 30;
+    private bool privateModelServerEnabled_;
+    /// <summary>
+    /// If true, the model server will be isolated from the external internet.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool PrivateModelServerEnabled {
+      get { return privateModelServerEnabled_; }
+      set {
+        privateModelServerEnabled_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -596,6 +639,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(ClientConnectionConfig, other.ClientConnectionConfig)) return false;
       if (SatisfiesPzs != other.SatisfiesPzs) return false;
       if (SatisfiesPzi != other.SatisfiesPzi) return false;
+      if (!object.Equals(GenAiAdvancedFeaturesConfig, other.GenAiAdvancedFeaturesConfig)) return false;
+      if (PrivateModelServerEnabled != other.PrivateModelServerEnabled) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -623,6 +668,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (clientConnectionConfig_ != null) hash ^= ClientConnectionConfig.GetHashCode();
       if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
       if (SatisfiesPzi != false) hash ^= SatisfiesPzi.GetHashCode();
+      if (genAiAdvancedFeaturesConfig_ != null) hash ^= GenAiAdvancedFeaturesConfig.GetHashCode();
+      if (PrivateModelServerEnabled != false) hash ^= PrivateModelServerEnabled.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -712,6 +759,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(224, 1);
         output.WriteBool(SatisfiesPzi);
       }
+      if (genAiAdvancedFeaturesConfig_ != null) {
+        output.WriteRawTag(234, 1);
+        output.WriteMessage(GenAiAdvancedFeaturesConfig);
+      }
+      if (PrivateModelServerEnabled != false) {
+        output.WriteRawTag(240, 1);
+        output.WriteBool(PrivateModelServerEnabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -793,6 +848,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(224, 1);
         output.WriteBool(SatisfiesPzi);
       }
+      if (genAiAdvancedFeaturesConfig_ != null) {
+        output.WriteRawTag(234, 1);
+        output.WriteMessage(GenAiAdvancedFeaturesConfig);
+      }
+      if (PrivateModelServerEnabled != false) {
+        output.WriteRawTag(240, 1);
+        output.WriteBool(PrivateModelServerEnabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -855,6 +918,12 @@ namespace Google.Cloud.AIPlatform.V1 {
         size += 2 + 1;
       }
       if (SatisfiesPzi != false) {
+        size += 2 + 1;
+      }
+      if (genAiAdvancedFeaturesConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(GenAiAdvancedFeaturesConfig);
+      }
+      if (PrivateModelServerEnabled != false) {
         size += 2 + 1;
       }
       if (_unknownFields != null) {
@@ -940,6 +1009,15 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.SatisfiesPzi != false) {
         SatisfiesPzi = other.SatisfiesPzi;
+      }
+      if (other.genAiAdvancedFeaturesConfig_ != null) {
+        if (genAiAdvancedFeaturesConfig_ == null) {
+          GenAiAdvancedFeaturesConfig = new global::Google.Cloud.AIPlatform.V1.GenAiAdvancedFeaturesConfig();
+        }
+        GenAiAdvancedFeaturesConfig.MergeFrom(other.GenAiAdvancedFeaturesConfig);
+      }
+      if (other.PrivateModelServerEnabled != false) {
+        PrivateModelServerEnabled = other.PrivateModelServerEnabled;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1052,6 +1130,17 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 224: {
             SatisfiesPzi = input.ReadBool();
+            break;
+          }
+          case 234: {
+            if (genAiAdvancedFeaturesConfig_ == null) {
+              GenAiAdvancedFeaturesConfig = new global::Google.Cloud.AIPlatform.V1.GenAiAdvancedFeaturesConfig();
+            }
+            input.ReadMessage(GenAiAdvancedFeaturesConfig);
+            break;
+          }
+          case 240: {
+            PrivateModelServerEnabled = input.ReadBool();
             break;
           }
         }
@@ -1167,6 +1256,17 @@ namespace Google.Cloud.AIPlatform.V1 {
             SatisfiesPzi = input.ReadBool();
             break;
           }
+          case 234: {
+            if (genAiAdvancedFeaturesConfig_ == null) {
+              GenAiAdvancedFeaturesConfig = new global::Google.Cloud.AIPlatform.V1.GenAiAdvancedFeaturesConfig();
+            }
+            input.ReadMessage(GenAiAdvancedFeaturesConfig);
+            break;
+          }
+          case 240: {
+            PrivateModelServerEnabled = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -1226,6 +1326,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       fasterDeploymentConfig_ = other.fasterDeploymentConfig_ != null ? other.fasterDeploymentConfig_.Clone() : null;
       status_ = other.status_ != null ? other.status_.Clone() : null;
       systemLabels_ = other.systemLabels_.Clone();
+      checkpointId_ = other.checkpointId_;
       speculativeDecodingSpec_ = other.speculativeDecodingSpec_ != null ? other.speculativeDecodingSpec_.Clone() : null;
       switch (other.PredictionResourcesCase) {
         case PredictionResourcesOneofCase.DedicatedResources:
@@ -1333,9 +1434,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ModelFieldNumber = 2;
     private string model_ = "";
     /// <summary>
-    /// Required. The resource name of the Model that this is the deployment of.
-    /// Note that the Model may be in a different location than the DeployedModel's
-    /// Endpoint.
+    /// The resource name of the Model that this is the deployment of. Note that
+    /// the Model may be in a different location than the DeployedModel's Endpoint.
     ///
     /// The resource name may contain version id or version alias to specify the
     /// version.
@@ -1576,6 +1676,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return systemLabels_; }
     }
 
+    /// <summary>Field number for the "checkpoint_id" field.</summary>
+    public const int CheckpointIdFieldNumber = 29;
+    private string checkpointId_ = "";
+    /// <summary>
+    /// The checkpoint id of the model.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CheckpointId {
+      get { return checkpointId_; }
+      set {
+        checkpointId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "speculative_decoding_spec" field.</summary>
     public const int SpeculativeDecodingSpecFieldNumber = 30;
     private global::Google.Cloud.AIPlatform.V1.SpeculativeDecodingSpec speculativeDecodingSpec_;
@@ -1645,6 +1760,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(FasterDeploymentConfig, other.FasterDeploymentConfig)) return false;
       if (!object.Equals(Status, other.Status)) return false;
       if (!SystemLabels.Equals(other.SystemLabels)) return false;
+      if (CheckpointId != other.CheckpointId) return false;
       if (!object.Equals(SpeculativeDecodingSpec, other.SpeculativeDecodingSpec)) return false;
       if (PredictionResourcesCase != other.PredictionResourcesCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1671,6 +1787,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (fasterDeploymentConfig_ != null) hash ^= FasterDeploymentConfig.GetHashCode();
       if (status_ != null) hash ^= Status.GetHashCode();
       hash ^= SystemLabels.GetHashCode();
+      if (CheckpointId.Length != 0) hash ^= CheckpointId.GetHashCode();
       if (speculativeDecodingSpec_ != null) hash ^= SpeculativeDecodingSpec.GetHashCode();
       hash ^= (int) predictionResourcesCase_;
       if (_unknownFields != null) {
@@ -1756,6 +1873,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteMessage(Status);
       }
       systemLabels_.WriteTo(output, _map_systemLabels_codec);
+      if (CheckpointId.Length != 0) {
+        output.WriteRawTag(234, 1);
+        output.WriteString(CheckpointId);
+      }
       if (speculativeDecodingSpec_ != null) {
         output.WriteRawTag(242, 1);
         output.WriteMessage(SpeculativeDecodingSpec);
@@ -1835,6 +1956,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteMessage(Status);
       }
       systemLabels_.WriteTo(ref output, _map_systemLabels_codec);
+      if (CheckpointId.Length != 0) {
+        output.WriteRawTag(234, 1);
+        output.WriteString(CheckpointId);
+      }
       if (speculativeDecodingSpec_ != null) {
         output.WriteRawTag(242, 1);
         output.WriteMessage(SpeculativeDecodingSpec);
@@ -1898,6 +2023,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Status);
       }
       size += systemLabels_.CalculateSize(_map_systemLabels_codec);
+      if (CheckpointId.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(CheckpointId);
+      }
       if (speculativeDecodingSpec_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SpeculativeDecodingSpec);
       }
@@ -1968,6 +2096,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         Status.MergeFrom(other.Status);
       }
       systemLabels_.MergeFrom(other.systemLabels_);
+      if (other.CheckpointId.Length != 0) {
+        CheckpointId = other.CheckpointId;
+      }
       if (other.speculativeDecodingSpec_ != null) {
         if (speculativeDecodingSpec_ == null) {
           SpeculativeDecodingSpec = new global::Google.Cloud.AIPlatform.V1.SpeculativeDecodingSpec();
@@ -2100,6 +2231,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             systemLabels_.AddEntriesFrom(input, _map_systemLabels_codec);
             break;
           }
+          case 234: {
+            CheckpointId = input.ReadString();
+            break;
+          }
           case 242: {
             if (speculativeDecodingSpec_ == null) {
               SpeculativeDecodingSpec = new global::Google.Cloud.AIPlatform.V1.SpeculativeDecodingSpec();
@@ -2213,6 +2348,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 226: {
             systemLabels_.AddEntriesFrom(ref input, _map_systemLabels_codec);
+            break;
+          }
+          case 234: {
+            CheckpointId = input.ReadString();
             break;
           }
           case 242: {
@@ -3536,6 +3675,417 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
+  /// Configuration for GenAiAdvancedFeatures.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GenAiAdvancedFeaturesConfig : pb::IMessage<GenAiAdvancedFeaturesConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GenAiAdvancedFeaturesConfig> _parser = new pb::MessageParser<GenAiAdvancedFeaturesConfig>(() => new GenAiAdvancedFeaturesConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GenAiAdvancedFeaturesConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.EndpointReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GenAiAdvancedFeaturesConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GenAiAdvancedFeaturesConfig(GenAiAdvancedFeaturesConfig other) : this() {
+      ragConfig_ = other.ragConfig_ != null ? other.ragConfig_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GenAiAdvancedFeaturesConfig Clone() {
+      return new GenAiAdvancedFeaturesConfig(this);
+    }
+
+    /// <summary>Field number for the "rag_config" field.</summary>
+    public const int RagConfigFieldNumber = 1;
+    private global::Google.Cloud.AIPlatform.V1.GenAiAdvancedFeaturesConfig.Types.RagConfig ragConfig_;
+    /// <summary>
+    /// Configuration for Retrieval Augmented Generation feature.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.GenAiAdvancedFeaturesConfig.Types.RagConfig RagConfig {
+      get { return ragConfig_; }
+      set {
+        ragConfig_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GenAiAdvancedFeaturesConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GenAiAdvancedFeaturesConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(RagConfig, other.RagConfig)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ragConfig_ != null) hash ^= RagConfig.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ragConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(RagConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ragConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(RagConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ragConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RagConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GenAiAdvancedFeaturesConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ragConfig_ != null) {
+        if (ragConfig_ == null) {
+          RagConfig = new global::Google.Cloud.AIPlatform.V1.GenAiAdvancedFeaturesConfig.Types.RagConfig();
+        }
+        RagConfig.MergeFrom(other.RagConfig);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (ragConfig_ == null) {
+              RagConfig = new global::Google.Cloud.AIPlatform.V1.GenAiAdvancedFeaturesConfig.Types.RagConfig();
+            }
+            input.ReadMessage(RagConfig);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (ragConfig_ == null) {
+              RagConfig = new global::Google.Cloud.AIPlatform.V1.GenAiAdvancedFeaturesConfig.Types.RagConfig();
+            }
+            input.ReadMessage(RagConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the GenAiAdvancedFeaturesConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Configuration for Retrieval Augmented Generation feature.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class RagConfig : pb::IMessage<RagConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<RagConfig> _parser = new pb::MessageParser<RagConfig>(() => new RagConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<RagConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.GenAiAdvancedFeaturesConfig.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RagConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RagConfig(RagConfig other) : this() {
+          enableRag_ = other.enableRag_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RagConfig Clone() {
+          return new RagConfig(this);
+        }
+
+        /// <summary>Field number for the "enable_rag" field.</summary>
+        public const int EnableRagFieldNumber = 1;
+        private bool enableRag_;
+        /// <summary>
+        /// If true, enable Retrieval Augmented Generation in ChatCompletion request.
+        /// Once enabled, the endpoint will be identified as GenAI endpoint and
+        /// Arthedain router will be used.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool EnableRag {
+          get { return enableRag_; }
+          set {
+            enableRag_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as RagConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(RagConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (EnableRag != other.EnableRag) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (EnableRag != false) hash ^= EnableRag.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (EnableRag != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(EnableRag);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (EnableRag != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(EnableRag);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (EnableRag != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(RagConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.EnableRag != false) {
+            EnableRag = other.EnableRag;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                EnableRag = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                EnableRag = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// Configuration for Speculative Decoding.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -3553,7 +4103,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.EndpointReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.AIPlatform.V1.EndpointReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

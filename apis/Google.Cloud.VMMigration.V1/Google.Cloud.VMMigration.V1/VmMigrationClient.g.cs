@@ -18,7 +18,6 @@
 using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
@@ -59,6 +58,7 @@ namespace Google.Cloud.VMMigration.V1
             DeleteSourceSettings = existing.DeleteSourceSettings;
             DeleteSourceOperationsSettings = existing.DeleteSourceOperationsSettings.Clone();
             FetchInventorySettings = existing.FetchInventorySettings;
+            FetchStorageInventorySettings = existing.FetchStorageInventorySettings;
             ListUtilizationReportsSettings = existing.ListUtilizationReportsSettings;
             GetUtilizationReportSettings = existing.GetUtilizationReportSettings;
             CreateUtilizationReportSettings = existing.CreateUtilizationReportSettings;
@@ -89,6 +89,8 @@ namespace Google.Cloud.VMMigration.V1
             PauseMigrationOperationsSettings = existing.PauseMigrationOperationsSettings.Clone();
             FinalizeMigrationSettings = existing.FinalizeMigrationSettings;
             FinalizeMigrationOperationsSettings = existing.FinalizeMigrationOperationsSettings.Clone();
+            ExtendMigrationSettings = existing.ExtendMigrationSettings;
+            ExtendMigrationOperationsSettings = existing.ExtendMigrationOperationsSettings.Clone();
             CreateCloneJobSettings = existing.CreateCloneJobSettings;
             CreateCloneJobOperationsSettings = existing.CreateCloneJobOperationsSettings.Clone();
             CancelCloneJobSettings = existing.CancelCloneJobSettings;
@@ -123,8 +125,29 @@ namespace Google.Cloud.VMMigration.V1
             DeleteTargetProjectOperationsSettings = existing.DeleteTargetProjectOperationsSettings.Clone();
             ListReplicationCyclesSettings = existing.ListReplicationCyclesSettings;
             GetReplicationCycleSettings = existing.GetReplicationCycleSettings;
+            ListImageImportsSettings = existing.ListImageImportsSettings;
+            GetImageImportSettings = existing.GetImageImportSettings;
+            CreateImageImportSettings = existing.CreateImageImportSettings;
+            CreateImageImportOperationsSettings = existing.CreateImageImportOperationsSettings.Clone();
+            DeleteImageImportSettings = existing.DeleteImageImportSettings;
+            DeleteImageImportOperationsSettings = existing.DeleteImageImportOperationsSettings.Clone();
+            ListImageImportJobsSettings = existing.ListImageImportJobsSettings;
+            GetImageImportJobSettings = existing.GetImageImportJobSettings;
+            CancelImageImportJobSettings = existing.CancelImageImportJobSettings;
+            CancelImageImportJobOperationsSettings = existing.CancelImageImportJobOperationsSettings.Clone();
+            CreateDiskMigrationJobSettings = existing.CreateDiskMigrationJobSettings;
+            CreateDiskMigrationJobOperationsSettings = existing.CreateDiskMigrationJobOperationsSettings.Clone();
+            ListDiskMigrationJobsSettings = existing.ListDiskMigrationJobsSettings;
+            GetDiskMigrationJobSettings = existing.GetDiskMigrationJobSettings;
+            UpdateDiskMigrationJobSettings = existing.UpdateDiskMigrationJobSettings;
+            UpdateDiskMigrationJobOperationsSettings = existing.UpdateDiskMigrationJobOperationsSettings.Clone();
+            DeleteDiskMigrationJobSettings = existing.DeleteDiskMigrationJobSettings;
+            DeleteDiskMigrationJobOperationsSettings = existing.DeleteDiskMigrationJobOperationsSettings.Clone();
+            RunDiskMigrationJobSettings = existing.RunDiskMigrationJobSettings;
+            RunDiskMigrationJobOperationsSettings = existing.RunDiskMigrationJobOperationsSettings.Clone();
+            CancelDiskMigrationJobSettings = existing.CancelDiskMigrationJobSettings;
+            CancelDiskMigrationJobOperationsSettings = existing.CancelDiskMigrationJobOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
-            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -255,6 +278,18 @@ namespace Google.Cloud.VMMigration.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings FetchInventorySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmMigrationClient.FetchStorageInventory</c> and <c>VmMigrationClient.FetchStorageInventoryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchStorageInventorySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -687,6 +722,36 @@ namespace Google.Cloud.VMMigration.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings FinalizeMigrationOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmMigrationClient.ExtendMigration</c> and <c>VmMigrationClient.ExtendMigrationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExtendMigrationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmMigrationClient.ExtendMigration</c> and
+        /// <c>VmMigrationClient.ExtendMigrationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ExtendMigrationOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1172,14 +1237,321 @@ namespace Google.Cloud.VMMigration.V1
         public gaxgrpc::CallSettings GetReplicationCycleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmMigrationClient.ListImageImports</c> and <c>VmMigrationClient.ListImageImportsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListImageImportsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmMigrationClient.GetImageImport</c> and <c>VmMigrationClient.GetImageImportAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetImageImportSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmMigrationClient.CreateImageImport</c> and <c>VmMigrationClient.CreateImageImportAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateImageImportSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmMigrationClient.CreateImageImport</c> and
+        /// <c>VmMigrationClient.CreateImageImportAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateImageImportOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmMigrationClient.DeleteImageImport</c> and <c>VmMigrationClient.DeleteImageImportAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteImageImportSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmMigrationClient.DeleteImageImport</c> and
+        /// <c>VmMigrationClient.DeleteImageImportAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteImageImportOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmMigrationClient.ListImageImportJobs</c> and <c>VmMigrationClient.ListImageImportJobsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListImageImportJobsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmMigrationClient.GetImageImportJob</c> and <c>VmMigrationClient.GetImageImportJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetImageImportJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmMigrationClient.CancelImageImportJob</c> and <c>VmMigrationClient.CancelImageImportJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CancelImageImportJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmMigrationClient.CancelImageImportJob</c> and
+        /// <c>VmMigrationClient.CancelImageImportJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CancelImageImportJobOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmMigrationClient.CreateDiskMigrationJob</c> and <c>VmMigrationClient.CreateDiskMigrationJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateDiskMigrationJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmMigrationClient.CreateDiskMigrationJob</c> and
+        /// <c>VmMigrationClient.CreateDiskMigrationJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateDiskMigrationJobOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmMigrationClient.ListDiskMigrationJobs</c> and <c>VmMigrationClient.ListDiskMigrationJobsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListDiskMigrationJobsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmMigrationClient.GetDiskMigrationJob</c> and <c>VmMigrationClient.GetDiskMigrationJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetDiskMigrationJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmMigrationClient.UpdateDiskMigrationJob</c> and <c>VmMigrationClient.UpdateDiskMigrationJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateDiskMigrationJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmMigrationClient.UpdateDiskMigrationJob</c> and
+        /// <c>VmMigrationClient.UpdateDiskMigrationJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateDiskMigrationJobOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmMigrationClient.DeleteDiskMigrationJob</c> and <c>VmMigrationClient.DeleteDiskMigrationJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteDiskMigrationJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmMigrationClient.DeleteDiskMigrationJob</c> and
+        /// <c>VmMigrationClient.DeleteDiskMigrationJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteDiskMigrationJobOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmMigrationClient.RunDiskMigrationJob</c> and <c>VmMigrationClient.RunDiskMigrationJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RunDiskMigrationJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmMigrationClient.RunDiskMigrationJob</c> and
+        /// <c>VmMigrationClient.RunDiskMigrationJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RunDiskMigrationJobOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmMigrationClient.CancelDiskMigrationJob</c> and <c>VmMigrationClient.CancelDiskMigrationJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CancelDiskMigrationJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmMigrationClient.CancelDiskMigrationJob</c> and
+        /// <c>VmMigrationClient.CancelDiskMigrationJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CancelDiskMigrationJobOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
-
-        /// <summary>
-        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
-        /// </summary>
-        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="VmMigrationSettings"/> object.</returns>
@@ -1323,9 +1695,6 @@ namespace Google.Cloud.VMMigration.V1
 
         /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
         public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
-
-        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
-        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Lists Sources in a given project and location.
@@ -2143,6 +2512,202 @@ namespace Google.Cloud.VMMigration.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<FetchInventoryResponse> FetchInventoryAsync(SourceName source, st::CancellationToken cancellationToken) =>
             FetchInventoryAsync(source, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List remote source's inventory of storage resources.
+        /// The remote source is another cloud vendor (e.g. AWS, Azure).
+        /// The inventory describes the list of existing storage resources in that
+        /// source. Note that this operation lists the resources on the remote source,
+        /// as opposed to listing the MigratingVms resources in the vmmigration
+        /// service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SourceStorageResource"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchStorageInventoryResponse, SourceStorageResource> FetchStorageInventory(FetchStorageInventoryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List remote source's inventory of storage resources.
+        /// The remote source is another cloud vendor (e.g. AWS, Azure).
+        /// The inventory describes the list of existing storage resources in that
+        /// source. Note that this operation lists the resources on the remote source,
+        /// as opposed to listing the MigratingVms resources in the vmmigration
+        /// service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SourceStorageResource"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchStorageInventoryResponse, SourceStorageResource> FetchStorageInventoryAsync(FetchStorageInventoryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List remote source's inventory of storage resources.
+        /// The remote source is another cloud vendor (e.g. AWS, Azure).
+        /// The inventory describes the list of existing storage resources in that
+        /// source. Note that this operation lists the resources on the remote source,
+        /// as opposed to listing the MigratingVms resources in the vmmigration
+        /// service.
+        /// </summary>
+        /// <param name="source">
+        /// Required. The name of the Source.
+        /// </param>
+        /// <param name="type">
+        /// Required. The type of the storage inventory to fetch.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SourceStorageResource"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchStorageInventoryResponse, SourceStorageResource> FetchStorageInventory(string source, FetchStorageInventoryRequest.Types.StorageType type, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchStorageInventoryRequest request = new FetchStorageInventoryRequest
+            {
+                Source = gax::GaxPreconditions.CheckNotNullOrEmpty(source, nameof(source)),
+                Type = type,
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchStorageInventory(request, callSettings);
+        }
+
+        /// <summary>
+        /// List remote source's inventory of storage resources.
+        /// The remote source is another cloud vendor (e.g. AWS, Azure).
+        /// The inventory describes the list of existing storage resources in that
+        /// source. Note that this operation lists the resources on the remote source,
+        /// as opposed to listing the MigratingVms resources in the vmmigration
+        /// service.
+        /// </summary>
+        /// <param name="source">
+        /// Required. The name of the Source.
+        /// </param>
+        /// <param name="type">
+        /// Required. The type of the storage inventory to fetch.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SourceStorageResource"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchStorageInventoryResponse, SourceStorageResource> FetchStorageInventoryAsync(string source, FetchStorageInventoryRequest.Types.StorageType type, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchStorageInventoryRequest request = new FetchStorageInventoryRequest
+            {
+                Source = gax::GaxPreconditions.CheckNotNullOrEmpty(source, nameof(source)),
+                Type = type,
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchStorageInventoryAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// List remote source's inventory of storage resources.
+        /// The remote source is another cloud vendor (e.g. AWS, Azure).
+        /// The inventory describes the list of existing storage resources in that
+        /// source. Note that this operation lists the resources on the remote source,
+        /// as opposed to listing the MigratingVms resources in the vmmigration
+        /// service.
+        /// </summary>
+        /// <param name="source">
+        /// Required. The name of the Source.
+        /// </param>
+        /// <param name="type">
+        /// Required. The type of the storage inventory to fetch.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SourceStorageResource"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchStorageInventoryResponse, SourceStorageResource> FetchStorageInventory(SourceName source, FetchStorageInventoryRequest.Types.StorageType type, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchStorageInventoryRequest request = new FetchStorageInventoryRequest
+            {
+                SourceAsSourceName = gax::GaxPreconditions.CheckNotNull(source, nameof(source)),
+                Type = type,
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchStorageInventory(request, callSettings);
+        }
+
+        /// <summary>
+        /// List remote source's inventory of storage resources.
+        /// The remote source is another cloud vendor (e.g. AWS, Azure).
+        /// The inventory describes the list of existing storage resources in that
+        /// source. Note that this operation lists the resources on the remote source,
+        /// as opposed to listing the MigratingVms resources in the vmmigration
+        /// service.
+        /// </summary>
+        /// <param name="source">
+        /// Required. The name of the Source.
+        /// </param>
+        /// <param name="type">
+        /// Required. The type of the storage inventory to fetch.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SourceStorageResource"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchStorageInventoryResponse, SourceStorageResource> FetchStorageInventoryAsync(SourceName source, FetchStorageInventoryRequest.Types.StorageType type, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchStorageInventoryRequest request = new FetchStorageInventoryRequest
+            {
+                SourceAsSourceName = gax::GaxPreconditions.CheckNotNull(source, nameof(source)),
+                Type = type,
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchStorageInventoryAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Utilization Reports of the given Source.
@@ -4456,6 +5021,59 @@ namespace Google.Cloud.VMMigration.V1
             FinalizeMigrationAsync(migratingVm, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Extend the migrating VM time to live.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExtendMigrationResponse, OperationMetadata> ExtendMigration(ExtendMigrationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Extend the migrating VM time to live.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExtendMigrationResponse, OperationMetadata>> ExtendMigrationAsync(ExtendMigrationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Extend the migrating VM time to live.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExtendMigrationResponse, OperationMetadata>> ExtendMigrationAsync(ExtendMigrationRequest request, st::CancellationToken cancellationToken) =>
+            ExtendMigrationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ExtendMigration</c>.</summary>
+        public virtual lro::OperationsClient ExtendMigrationOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ExtendMigration</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ExtendMigrationResponse, OperationMetadata> PollOnceExtendMigration(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExtendMigrationResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExtendMigrationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ExtendMigration</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ExtendMigrationResponse, OperationMetadata>> PollOnceExtendMigrationAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExtendMigrationResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExtendMigrationOperationsClient, callSettings);
+
+        /// <summary>
         /// Initiates a Clone of a specific migrating VM.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4762,7 +5380,8 @@ namespace Google.Cloud.VMMigration.V1
             CancelCloneJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists CloneJobs of a given migrating VM.
+        /// Lists the CloneJobs of a migrating VM. Only 25 most recent CloneJobs are
+        /// listed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4771,7 +5390,8 @@ namespace Google.Cloud.VMMigration.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists CloneJobs of a given migrating VM.
+        /// Lists the CloneJobs of a migrating VM. Only 25 most recent CloneJobs are
+        /// listed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4780,7 +5400,8 @@ namespace Google.Cloud.VMMigration.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists CloneJobs of a given migrating VM.
+        /// Lists the CloneJobs of a migrating VM. Only 25 most recent CloneJobs are
+        /// listed.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of source VMs.
@@ -4813,7 +5434,8 @@ namespace Google.Cloud.VMMigration.V1
         }
 
         /// <summary>
-        /// Lists CloneJobs of a given migrating VM.
+        /// Lists the CloneJobs of a migrating VM. Only 25 most recent CloneJobs are
+        /// listed.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of source VMs.
@@ -4846,7 +5468,8 @@ namespace Google.Cloud.VMMigration.V1
         }
 
         /// <summary>
-        /// Lists CloneJobs of a given migrating VM.
+        /// Lists the CloneJobs of a migrating VM. Only 25 most recent CloneJobs are
+        /// listed.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of source VMs.
@@ -4879,7 +5502,8 @@ namespace Google.Cloud.VMMigration.V1
         }
 
         /// <summary>
-        /// Lists CloneJobs of a given migrating VM.
+        /// Lists the CloneJobs of a migrating VM. Only 25 most recent CloneJobs are
+        /// listed.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of source VMs.
@@ -5341,7 +5965,8 @@ namespace Google.Cloud.VMMigration.V1
             CancelCutoverJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists CutoverJobs of a given migrating VM.
+        /// Lists the CutoverJobs of a migrating VM. Only 25 most recent CutoverJobs
+        /// are listed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5350,7 +5975,8 @@ namespace Google.Cloud.VMMigration.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists CutoverJobs of a given migrating VM.
+        /// Lists the CutoverJobs of a migrating VM. Only 25 most recent CutoverJobs
+        /// are listed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5359,7 +5985,8 @@ namespace Google.Cloud.VMMigration.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists CutoverJobs of a given migrating VM.
+        /// Lists the CutoverJobs of a migrating VM. Only 25 most recent CutoverJobs
+        /// are listed.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of migrating VMs.
@@ -5392,7 +6019,8 @@ namespace Google.Cloud.VMMigration.V1
         }
 
         /// <summary>
-        /// Lists CutoverJobs of a given migrating VM.
+        /// Lists the CutoverJobs of a migrating VM. Only 25 most recent CutoverJobs
+        /// are listed.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of migrating VMs.
@@ -5425,7 +6053,8 @@ namespace Google.Cloud.VMMigration.V1
         }
 
         /// <summary>
-        /// Lists CutoverJobs of a given migrating VM.
+        /// Lists the CutoverJobs of a migrating VM. Only 25 most recent CutoverJobs
+        /// are listed.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of migrating VMs.
@@ -5458,7 +6087,8 @@ namespace Google.Cloud.VMMigration.V1
         }
 
         /// <summary>
-        /// Lists CutoverJobs of a given migrating VM.
+        /// Lists the CutoverJobs of a migrating VM. Only 25 most recent CutoverJobs
+        /// are listed.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of migrating VMs.
@@ -7585,6 +8215,1860 @@ namespace Google.Cloud.VMMigration.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ReplicationCycle> GetReplicationCycleAsync(ReplicationCycleName name, st::CancellationToken cancellationToken) =>
             GetReplicationCycleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists ImageImports in a given project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ImageImport"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListImageImportsResponse, ImageImport> ListImageImports(ListImageImportsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists ImageImports in a given project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ImageImport"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListImageImportsResponse, ImageImport> ListImageImportsAsync(ListImageImportsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists ImageImports in a given project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of targets.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ImageImport"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListImageImportsResponse, ImageImport> ListImageImports(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListImageImportsRequest request = new ListImageImportsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListImageImports(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ImageImports in a given project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of targets.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ImageImport"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListImageImportsResponse, ImageImport> ListImageImportsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListImageImportsRequest request = new ListImageImportsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListImageImportsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ImageImports in a given project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of targets.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ImageImport"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListImageImportsResponse, ImageImport> ListImageImports(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListImageImportsRequest request = new ListImageImportsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListImageImports(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ImageImports in a given project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of targets.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ImageImport"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListImageImportsResponse, ImageImport> ListImageImportsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListImageImportsRequest request = new ListImageImportsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListImageImportsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single ImageImport.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ImageImport GetImageImport(GetImageImportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single ImageImport.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ImageImport> GetImageImportAsync(GetImageImportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single ImageImport.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ImageImport> GetImageImportAsync(GetImageImportRequest request, st::CancellationToken cancellationToken) =>
+            GetImageImportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single ImageImport.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ImageImport name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ImageImport GetImageImport(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetImageImport(new GetImageImportRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single ImageImport.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ImageImport name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ImageImport> GetImageImportAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetImageImportAsync(new GetImageImportRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single ImageImport.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ImageImport name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ImageImport> GetImageImportAsync(string name, st::CancellationToken cancellationToken) =>
+            GetImageImportAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single ImageImport.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ImageImport name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ImageImport GetImageImport(ImageImportName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetImageImport(new GetImageImportRequest
+            {
+                ImageImportName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single ImageImport.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ImageImport name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ImageImport> GetImageImportAsync(ImageImportName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetImageImportAsync(new GetImageImportRequest
+            {
+                ImageImportName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single ImageImport.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ImageImport name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ImageImport> GetImageImportAsync(ImageImportName name, st::CancellationToken cancellationToken) =>
+            GetImageImportAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new ImageImport in a given project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ImageImport, OperationMetadata> CreateImageImport(CreateImageImportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new ImageImport in a given project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImageImport, OperationMetadata>> CreateImageImportAsync(CreateImageImportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new ImageImport in a given project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImageImport, OperationMetadata>> CreateImageImportAsync(CreateImageImportRequest request, st::CancellationToken cancellationToken) =>
+            CreateImageImportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateImageImport</c>.</summary>
+        public virtual lro::OperationsClient CreateImageImportOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateImageImport</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ImageImport, OperationMetadata> PollOnceCreateImageImport(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImageImport, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateImageImportOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateImageImport</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ImageImport, OperationMetadata>> PollOnceCreateImageImportAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImageImport, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateImageImportOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new ImageImport in a given project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The ImageImport's parent.
+        /// </param>
+        /// <param name="imageImport">
+        /// Required. The create request body.
+        /// </param>
+        /// <param name="imageImportId">
+        /// Required. The image import identifier.
+        /// This value maximum length is 63 characters, and valid characters are
+        /// /[a-z][0-9]-/. It must start with an english letter and must not end with a
+        /// hyphen.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ImageImport, OperationMetadata> CreateImageImport(string parent, ImageImport imageImport, string imageImportId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateImageImport(new CreateImageImportRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ImageImportId = gax::GaxPreconditions.CheckNotNullOrEmpty(imageImportId, nameof(imageImportId)),
+                ImageImport = gax::GaxPreconditions.CheckNotNull(imageImport, nameof(imageImport)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new ImageImport in a given project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The ImageImport's parent.
+        /// </param>
+        /// <param name="imageImport">
+        /// Required. The create request body.
+        /// </param>
+        /// <param name="imageImportId">
+        /// Required. The image import identifier.
+        /// This value maximum length is 63 characters, and valid characters are
+        /// /[a-z][0-9]-/. It must start with an english letter and must not end with a
+        /// hyphen.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImageImport, OperationMetadata>> CreateImageImportAsync(string parent, ImageImport imageImport, string imageImportId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateImageImportAsync(new CreateImageImportRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ImageImportId = gax::GaxPreconditions.CheckNotNullOrEmpty(imageImportId, nameof(imageImportId)),
+                ImageImport = gax::GaxPreconditions.CheckNotNull(imageImport, nameof(imageImport)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new ImageImport in a given project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The ImageImport's parent.
+        /// </param>
+        /// <param name="imageImport">
+        /// Required. The create request body.
+        /// </param>
+        /// <param name="imageImportId">
+        /// Required. The image import identifier.
+        /// This value maximum length is 63 characters, and valid characters are
+        /// /[a-z][0-9]-/. It must start with an english letter and must not end with a
+        /// hyphen.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImageImport, OperationMetadata>> CreateImageImportAsync(string parent, ImageImport imageImport, string imageImportId, st::CancellationToken cancellationToken) =>
+            CreateImageImportAsync(parent, imageImport, imageImportId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new ImageImport in a given project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The ImageImport's parent.
+        /// </param>
+        /// <param name="imageImport">
+        /// Required. The create request body.
+        /// </param>
+        /// <param name="imageImportId">
+        /// Required. The image import identifier.
+        /// This value maximum length is 63 characters, and valid characters are
+        /// /[a-z][0-9]-/. It must start with an english letter and must not end with a
+        /// hyphen.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ImageImport, OperationMetadata> CreateImageImport(gagr::LocationName parent, ImageImport imageImport, string imageImportId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateImageImport(new CreateImageImportRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ImageImportId = gax::GaxPreconditions.CheckNotNullOrEmpty(imageImportId, nameof(imageImportId)),
+                ImageImport = gax::GaxPreconditions.CheckNotNull(imageImport, nameof(imageImport)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new ImageImport in a given project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The ImageImport's parent.
+        /// </param>
+        /// <param name="imageImport">
+        /// Required. The create request body.
+        /// </param>
+        /// <param name="imageImportId">
+        /// Required. The image import identifier.
+        /// This value maximum length is 63 characters, and valid characters are
+        /// /[a-z][0-9]-/. It must start with an english letter and must not end with a
+        /// hyphen.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImageImport, OperationMetadata>> CreateImageImportAsync(gagr::LocationName parent, ImageImport imageImport, string imageImportId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateImageImportAsync(new CreateImageImportRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ImageImportId = gax::GaxPreconditions.CheckNotNullOrEmpty(imageImportId, nameof(imageImportId)),
+                ImageImport = gax::GaxPreconditions.CheckNotNull(imageImport, nameof(imageImport)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new ImageImport in a given project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The ImageImport's parent.
+        /// </param>
+        /// <param name="imageImport">
+        /// Required. The create request body.
+        /// </param>
+        /// <param name="imageImportId">
+        /// Required. The image import identifier.
+        /// This value maximum length is 63 characters, and valid characters are
+        /// /[a-z][0-9]-/. It must start with an english letter and must not end with a
+        /// hyphen.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImageImport, OperationMetadata>> CreateImageImportAsync(gagr::LocationName parent, ImageImport imageImport, string imageImportId, st::CancellationToken cancellationToken) =>
+            CreateImageImportAsync(parent, imageImport, imageImportId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single ImageImport.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteImageImport(DeleteImageImportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single ImageImport.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteImageImportAsync(DeleteImageImportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single ImageImport.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteImageImportAsync(DeleteImageImportRequest request, st::CancellationToken cancellationToken) =>
+            DeleteImageImportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteImageImport</c>.</summary>
+        public virtual lro::OperationsClient DeleteImageImportOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteImageImport</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteImageImport(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteImageImportOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteImageImport</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteImageImportAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteImageImportOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a single ImageImport.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ImageImport name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteImageImport(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteImageImport(new DeleteImageImportRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single ImageImport.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ImageImport name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteImageImportAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteImageImportAsync(new DeleteImageImportRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single ImageImport.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ImageImport name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteImageImportAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteImageImportAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single ImageImport.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ImageImport name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteImageImport(ImageImportName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteImageImport(new DeleteImageImportRequest
+            {
+                ImageImportName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single ImageImport.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ImageImport name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteImageImportAsync(ImageImportName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteImageImportAsync(new DeleteImageImportRequest
+            {
+                ImageImportName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single ImageImport.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ImageImport name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteImageImportAsync(ImageImportName name, st::CancellationToken cancellationToken) =>
+            DeleteImageImportAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists ImageImportJobs in a given project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ImageImportJob"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListImageImportJobsResponse, ImageImportJob> ListImageImportJobs(ListImageImportJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists ImageImportJobs in a given project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ImageImportJob"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListImageImportJobsResponse, ImageImportJob> ListImageImportJobsAsync(ListImageImportJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists ImageImportJobs in a given project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of targets.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ImageImportJob"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListImageImportJobsResponse, ImageImportJob> ListImageImportJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListImageImportJobsRequest request = new ListImageImportJobsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListImageImportJobs(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ImageImportJobs in a given project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of targets.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ImageImportJob"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListImageImportJobsResponse, ImageImportJob> ListImageImportJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListImageImportJobsRequest request = new ListImageImportJobsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListImageImportJobsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ImageImportJobs in a given project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of targets.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ImageImportJob"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListImageImportJobsResponse, ImageImportJob> ListImageImportJobs(ImageImportName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListImageImportJobsRequest request = new ListImageImportJobsRequest
+            {
+                ParentAsImageImportName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListImageImportJobs(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ImageImportJobs in a given project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of targets.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ImageImportJob"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListImageImportJobsResponse, ImageImportJob> ListImageImportJobsAsync(ImageImportName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListImageImportJobsRequest request = new ListImageImportJobsRequest
+            {
+                ParentAsImageImportName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListImageImportJobsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single ImageImportJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ImageImportJob GetImageImportJob(GetImageImportJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single ImageImportJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ImageImportJob> GetImageImportJobAsync(GetImageImportJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single ImageImportJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ImageImportJob> GetImageImportJobAsync(GetImageImportJobRequest request, st::CancellationToken cancellationToken) =>
+            GetImageImportJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single ImageImportJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ImageImportJob name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ImageImportJob GetImageImportJob(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetImageImportJob(new GetImageImportJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single ImageImportJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ImageImportJob name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ImageImportJob> GetImageImportJobAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetImageImportJobAsync(new GetImageImportJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single ImageImportJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ImageImportJob name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ImageImportJob> GetImageImportJobAsync(string name, st::CancellationToken cancellationToken) =>
+            GetImageImportJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single ImageImportJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ImageImportJob name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ImageImportJob GetImageImportJob(ImageImportJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetImageImportJob(new GetImageImportJobRequest
+            {
+                ImageImportJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single ImageImportJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ImageImportJob name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ImageImportJob> GetImageImportJobAsync(ImageImportJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetImageImportJobAsync(new GetImageImportJobRequest
+            {
+                ImageImportJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single ImageImportJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The ImageImportJob name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ImageImportJob> GetImageImportJobAsync(ImageImportJobName name, st::CancellationToken cancellationToken) =>
+            GetImageImportJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Initiates the cancellation of a running ImageImportJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CancelImageImportJobResponse, OperationMetadata> CancelImageImportJob(CancelImageImportJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Initiates the cancellation of a running ImageImportJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CancelImageImportJobResponse, OperationMetadata>> CancelImageImportJobAsync(CancelImageImportJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Initiates the cancellation of a running ImageImportJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CancelImageImportJobResponse, OperationMetadata>> CancelImageImportJobAsync(CancelImageImportJobRequest request, st::CancellationToken cancellationToken) =>
+            CancelImageImportJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CancelImageImportJob</c>.</summary>
+        public virtual lro::OperationsClient CancelImageImportJobOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CancelImageImportJob</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<CancelImageImportJobResponse, OperationMetadata> PollOnceCancelImageImportJob(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CancelImageImportJobResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CancelImageImportJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CancelImageImportJob</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<CancelImageImportJobResponse, OperationMetadata>> PollOnceCancelImageImportJobAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CancelImageImportJobResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CancelImageImportJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Initiates the cancellation of a running ImageImportJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The image import job id.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CancelImageImportJobResponse, OperationMetadata> CancelImageImportJob(string name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelImageImportJob(new CancelImageImportJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Initiates the cancellation of a running ImageImportJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The image import job id.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CancelImageImportJobResponse, OperationMetadata>> CancelImageImportJobAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelImageImportJobAsync(new CancelImageImportJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Initiates the cancellation of a running ImageImportJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The image import job id.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CancelImageImportJobResponse, OperationMetadata>> CancelImageImportJobAsync(string name, st::CancellationToken cancellationToken) =>
+            CancelImageImportJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Initiates the cancellation of a running ImageImportJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The image import job id.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CancelImageImportJobResponse, OperationMetadata> CancelImageImportJob(ImageImportJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelImageImportJob(new CancelImageImportJobRequest
+            {
+                ImageImportJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Initiates the cancellation of a running ImageImportJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The image import job id.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CancelImageImportJobResponse, OperationMetadata>> CancelImageImportJobAsync(ImageImportJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelImageImportJobAsync(new CancelImageImportJobRequest
+            {
+                ImageImportJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Initiates the cancellation of a running ImageImportJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The image import job id.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CancelImageImportJobResponse, OperationMetadata>> CancelImageImportJobAsync(ImageImportJobName name, st::CancellationToken cancellationToken) =>
+            CancelImageImportJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new disk migration job in a given Source.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DiskMigrationJob, OperationMetadata> CreateDiskMigrationJob(CreateDiskMigrationJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new disk migration job in a given Source.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DiskMigrationJob, OperationMetadata>> CreateDiskMigrationJobAsync(CreateDiskMigrationJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new disk migration job in a given Source.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DiskMigrationJob, OperationMetadata>> CreateDiskMigrationJobAsync(CreateDiskMigrationJobRequest request, st::CancellationToken cancellationToken) =>
+            CreateDiskMigrationJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateDiskMigrationJob</c>.</summary>
+        public virtual lro::OperationsClient CreateDiskMigrationJobOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateDiskMigrationJob</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DiskMigrationJob, OperationMetadata> PollOnceCreateDiskMigrationJob(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DiskMigrationJob, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDiskMigrationJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateDiskMigrationJob</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DiskMigrationJob, OperationMetadata>> PollOnceCreateDiskMigrationJobAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DiskMigrationJob, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDiskMigrationJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new disk migration job in a given Source.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The DiskMigrationJob's parent.
+        /// </param>
+        /// <param name="diskMigrationJob">
+        /// Required. The create request body.
+        /// </param>
+        /// <param name="diskMigrationJobId">
+        /// Required. The DiskMigrationJob identifier.
+        /// The maximum length of this value is 63 characters.
+        /// Valid characters are lower case Latin letters, digits and hyphen.
+        /// It must start with a Latin letter and must not end with a hyphen.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DiskMigrationJob, OperationMetadata> CreateDiskMigrationJob(string parent, DiskMigrationJob diskMigrationJob, string diskMigrationJobId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDiskMigrationJob(new CreateDiskMigrationJobRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                DiskMigrationJobId = gax::GaxPreconditions.CheckNotNullOrEmpty(diskMigrationJobId, nameof(diskMigrationJobId)),
+                DiskMigrationJob = gax::GaxPreconditions.CheckNotNull(diskMigrationJob, nameof(diskMigrationJob)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new disk migration job in a given Source.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The DiskMigrationJob's parent.
+        /// </param>
+        /// <param name="diskMigrationJob">
+        /// Required. The create request body.
+        /// </param>
+        /// <param name="diskMigrationJobId">
+        /// Required. The DiskMigrationJob identifier.
+        /// The maximum length of this value is 63 characters.
+        /// Valid characters are lower case Latin letters, digits and hyphen.
+        /// It must start with a Latin letter and must not end with a hyphen.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DiskMigrationJob, OperationMetadata>> CreateDiskMigrationJobAsync(string parent, DiskMigrationJob diskMigrationJob, string diskMigrationJobId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDiskMigrationJobAsync(new CreateDiskMigrationJobRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                DiskMigrationJobId = gax::GaxPreconditions.CheckNotNullOrEmpty(diskMigrationJobId, nameof(diskMigrationJobId)),
+                DiskMigrationJob = gax::GaxPreconditions.CheckNotNull(diskMigrationJob, nameof(diskMigrationJob)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new disk migration job in a given Source.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The DiskMigrationJob's parent.
+        /// </param>
+        /// <param name="diskMigrationJob">
+        /// Required. The create request body.
+        /// </param>
+        /// <param name="diskMigrationJobId">
+        /// Required. The DiskMigrationJob identifier.
+        /// The maximum length of this value is 63 characters.
+        /// Valid characters are lower case Latin letters, digits and hyphen.
+        /// It must start with a Latin letter and must not end with a hyphen.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DiskMigrationJob, OperationMetadata>> CreateDiskMigrationJobAsync(string parent, DiskMigrationJob diskMigrationJob, string diskMigrationJobId, st::CancellationToken cancellationToken) =>
+            CreateDiskMigrationJobAsync(parent, diskMigrationJob, diskMigrationJobId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new disk migration job in a given Source.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The DiskMigrationJob's parent.
+        /// </param>
+        /// <param name="diskMigrationJob">
+        /// Required. The create request body.
+        /// </param>
+        /// <param name="diskMigrationJobId">
+        /// Required. The DiskMigrationJob identifier.
+        /// The maximum length of this value is 63 characters.
+        /// Valid characters are lower case Latin letters, digits and hyphen.
+        /// It must start with a Latin letter and must not end with a hyphen.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DiskMigrationJob, OperationMetadata> CreateDiskMigrationJob(SourceName parent, DiskMigrationJob diskMigrationJob, string diskMigrationJobId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDiskMigrationJob(new CreateDiskMigrationJobRequest
+            {
+                ParentAsSourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DiskMigrationJobId = gax::GaxPreconditions.CheckNotNullOrEmpty(diskMigrationJobId, nameof(diskMigrationJobId)),
+                DiskMigrationJob = gax::GaxPreconditions.CheckNotNull(diskMigrationJob, nameof(diskMigrationJob)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new disk migration job in a given Source.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The DiskMigrationJob's parent.
+        /// </param>
+        /// <param name="diskMigrationJob">
+        /// Required. The create request body.
+        /// </param>
+        /// <param name="diskMigrationJobId">
+        /// Required. The DiskMigrationJob identifier.
+        /// The maximum length of this value is 63 characters.
+        /// Valid characters are lower case Latin letters, digits and hyphen.
+        /// It must start with a Latin letter and must not end with a hyphen.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DiskMigrationJob, OperationMetadata>> CreateDiskMigrationJobAsync(SourceName parent, DiskMigrationJob diskMigrationJob, string diskMigrationJobId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDiskMigrationJobAsync(new CreateDiskMigrationJobRequest
+            {
+                ParentAsSourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                DiskMigrationJobId = gax::GaxPreconditions.CheckNotNullOrEmpty(diskMigrationJobId, nameof(diskMigrationJobId)),
+                DiskMigrationJob = gax::GaxPreconditions.CheckNotNull(diskMigrationJob, nameof(diskMigrationJob)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new disk migration job in a given Source.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The DiskMigrationJob's parent.
+        /// </param>
+        /// <param name="diskMigrationJob">
+        /// Required. The create request body.
+        /// </param>
+        /// <param name="diskMigrationJobId">
+        /// Required. The DiskMigrationJob identifier.
+        /// The maximum length of this value is 63 characters.
+        /// Valid characters are lower case Latin letters, digits and hyphen.
+        /// It must start with a Latin letter and must not end with a hyphen.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DiskMigrationJob, OperationMetadata>> CreateDiskMigrationJobAsync(SourceName parent, DiskMigrationJob diskMigrationJob, string diskMigrationJobId, st::CancellationToken cancellationToken) =>
+            CreateDiskMigrationJobAsync(parent, diskMigrationJob, diskMigrationJobId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists DiskMigrationJobs in a given Source.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DiskMigrationJob"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDiskMigrationJobsResponse, DiskMigrationJob> ListDiskMigrationJobs(ListDiskMigrationJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists DiskMigrationJobs in a given Source.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DiskMigrationJob"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDiskMigrationJobsResponse, DiskMigrationJob> ListDiskMigrationJobsAsync(ListDiskMigrationJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists DiskMigrationJobs in a given Source.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of DiskMigrationJobs.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DiskMigrationJob"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDiskMigrationJobsResponse, DiskMigrationJob> ListDiskMigrationJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDiskMigrationJobsRequest request = new ListDiskMigrationJobsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDiskMigrationJobs(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists DiskMigrationJobs in a given Source.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of DiskMigrationJobs.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DiskMigrationJob"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDiskMigrationJobsResponse, DiskMigrationJob> ListDiskMigrationJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDiskMigrationJobsRequest request = new ListDiskMigrationJobsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDiskMigrationJobsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists DiskMigrationJobs in a given Source.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of DiskMigrationJobs.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DiskMigrationJob"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListDiskMigrationJobsResponse, DiskMigrationJob> ListDiskMigrationJobs(SourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDiskMigrationJobsRequest request = new ListDiskMigrationJobsRequest
+            {
+                ParentAsSourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDiskMigrationJobs(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists DiskMigrationJobs in a given Source.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of DiskMigrationJobs.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DiskMigrationJob"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListDiskMigrationJobsResponse, DiskMigrationJob> ListDiskMigrationJobsAsync(SourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDiskMigrationJobsRequest request = new ListDiskMigrationJobsRequest
+            {
+                ParentAsSourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDiskMigrationJobsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DiskMigrationJob GetDiskMigrationJob(GetDiskMigrationJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiskMigrationJob> GetDiskMigrationJobAsync(GetDiskMigrationJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiskMigrationJob> GetDiskMigrationJobAsync(GetDiskMigrationJobRequest request, st::CancellationToken cancellationToken) =>
+            GetDiskMigrationJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DiskMigrationJob.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DiskMigrationJob GetDiskMigrationJob(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDiskMigrationJob(new GetDiskMigrationJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DiskMigrationJob.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiskMigrationJob> GetDiskMigrationJobAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDiskMigrationJobAsync(new GetDiskMigrationJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DiskMigrationJob.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiskMigrationJob> GetDiskMigrationJobAsync(string name, st::CancellationToken cancellationToken) =>
+            GetDiskMigrationJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DiskMigrationJob.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DiskMigrationJob GetDiskMigrationJob(DiskMigrationJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDiskMigrationJob(new GetDiskMigrationJobRequest
+            {
+                DiskMigrationJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DiskMigrationJob.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiskMigrationJob> GetDiskMigrationJobAsync(DiskMigrationJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDiskMigrationJobAsync(new GetDiskMigrationJobRequest
+            {
+                DiskMigrationJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DiskMigrationJob.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DiskMigrationJob> GetDiskMigrationJobAsync(DiskMigrationJobName name, st::CancellationToken cancellationToken) =>
+            GetDiskMigrationJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the parameters of a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DiskMigrationJob, OperationMetadata> UpdateDiskMigrationJob(UpdateDiskMigrationJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DiskMigrationJob, OperationMetadata>> UpdateDiskMigrationJobAsync(UpdateDiskMigrationJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DiskMigrationJob, OperationMetadata>> UpdateDiskMigrationJobAsync(UpdateDiskMigrationJobRequest request, st::CancellationToken cancellationToken) =>
+            UpdateDiskMigrationJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateDiskMigrationJob</c>.</summary>
+        public virtual lro::OperationsClient UpdateDiskMigrationJobOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateDiskMigrationJob</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DiskMigrationJob, OperationMetadata> PollOnceUpdateDiskMigrationJob(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DiskMigrationJob, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDiskMigrationJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateDiskMigrationJob</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DiskMigrationJob, OperationMetadata>> PollOnceUpdateDiskMigrationJobAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DiskMigrationJob, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDiskMigrationJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="diskMigrationJob">
+        /// Required. The update request body.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// DiskMigrationJob resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask, then a mask equivalent to all fields that are
+        /// populated (have a non-empty value), will be implied.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DiskMigrationJob, OperationMetadata> UpdateDiskMigrationJob(DiskMigrationJob diskMigrationJob, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDiskMigrationJob(new UpdateDiskMigrationJobRequest
+            {
+                UpdateMask = updateMask,
+                DiskMigrationJob = gax::GaxPreconditions.CheckNotNull(diskMigrationJob, nameof(diskMigrationJob)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="diskMigrationJob">
+        /// Required. The update request body.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// DiskMigrationJob resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask, then a mask equivalent to all fields that are
+        /// populated (have a non-empty value), will be implied.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DiskMigrationJob, OperationMetadata>> UpdateDiskMigrationJobAsync(DiskMigrationJob diskMigrationJob, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDiskMigrationJobAsync(new UpdateDiskMigrationJobRequest
+            {
+                UpdateMask = updateMask,
+                DiskMigrationJob = gax::GaxPreconditions.CheckNotNull(diskMigrationJob, nameof(diskMigrationJob)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="diskMigrationJob">
+        /// Required. The update request body.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// DiskMigrationJob resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask, then a mask equivalent to all fields that are
+        /// populated (have a non-empty value), will be implied.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DiskMigrationJob, OperationMetadata>> UpdateDiskMigrationJobAsync(DiskMigrationJob diskMigrationJob, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateDiskMigrationJobAsync(diskMigrationJob, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDiskMigrationJob(DeleteDiskMigrationJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDiskMigrationJobAsync(DeleteDiskMigrationJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDiskMigrationJobAsync(DeleteDiskMigrationJobRequest request, st::CancellationToken cancellationToken) =>
+            DeleteDiskMigrationJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteDiskMigrationJob</c>.</summary>
+        public virtual lro::OperationsClient DeleteDiskMigrationJobOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteDiskMigrationJob</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteDiskMigrationJob(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDiskMigrationJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteDiskMigrationJob</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteDiskMigrationJobAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDiskMigrationJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DiskMigrationJob.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDiskMigrationJob(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDiskMigrationJob(new DeleteDiskMigrationJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DiskMigrationJob.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDiskMigrationJobAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDiskMigrationJobAsync(new DeleteDiskMigrationJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DiskMigrationJob.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDiskMigrationJobAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteDiskMigrationJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DiskMigrationJob.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDiskMigrationJob(DiskMigrationJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDiskMigrationJob(new DeleteDiskMigrationJobRequest
+            {
+                DiskMigrationJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DiskMigrationJob.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDiskMigrationJobAsync(DiskMigrationJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDiskMigrationJobAsync(new DeleteDiskMigrationJobRequest
+            {
+                DiskMigrationJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DiskMigrationJob.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDiskMigrationJobAsync(DiskMigrationJobName name, st::CancellationToken cancellationToken) =>
+            DeleteDiskMigrationJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Runs the disk migration job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RunDiskMigrationJobResponse, OperationMetadata> RunDiskMigrationJob(RunDiskMigrationJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Runs the disk migration job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RunDiskMigrationJobResponse, OperationMetadata>> RunDiskMigrationJobAsync(RunDiskMigrationJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Runs the disk migration job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RunDiskMigrationJobResponse, OperationMetadata>> RunDiskMigrationJobAsync(RunDiskMigrationJobRequest request, st::CancellationToken cancellationToken) =>
+            RunDiskMigrationJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RunDiskMigrationJob</c>.</summary>
+        public virtual lro::OperationsClient RunDiskMigrationJobOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>RunDiskMigrationJob</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<RunDiskMigrationJobResponse, OperationMetadata> PollOnceRunDiskMigrationJob(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RunDiskMigrationJobResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RunDiskMigrationJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RunDiskMigrationJob</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<RunDiskMigrationJobResponse, OperationMetadata>> PollOnceRunDiskMigrationJobAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RunDiskMigrationJobResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RunDiskMigrationJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Runs the disk migration job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DiskMigrationJob.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RunDiskMigrationJobResponse, OperationMetadata> RunDiskMigrationJob(string name, gaxgrpc::CallSettings callSettings = null) =>
+            RunDiskMigrationJob(new RunDiskMigrationJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Runs the disk migration job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DiskMigrationJob.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RunDiskMigrationJobResponse, OperationMetadata>> RunDiskMigrationJobAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            RunDiskMigrationJobAsync(new RunDiskMigrationJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Runs the disk migration job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DiskMigrationJob.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RunDiskMigrationJobResponse, OperationMetadata>> RunDiskMigrationJobAsync(string name, st::CancellationToken cancellationToken) =>
+            RunDiskMigrationJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Runs the disk migration job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DiskMigrationJob.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RunDiskMigrationJobResponse, OperationMetadata> RunDiskMigrationJob(DiskMigrationJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            RunDiskMigrationJob(new RunDiskMigrationJobRequest
+            {
+                DiskMigrationJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Runs the disk migration job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DiskMigrationJob.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RunDiskMigrationJobResponse, OperationMetadata>> RunDiskMigrationJobAsync(DiskMigrationJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            RunDiskMigrationJobAsync(new RunDiskMigrationJobRequest
+            {
+                DiskMigrationJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Runs the disk migration job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the DiskMigrationJob.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RunDiskMigrationJobResponse, OperationMetadata>> RunDiskMigrationJobAsync(DiskMigrationJobName name, st::CancellationToken cancellationToken) =>
+            RunDiskMigrationJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancels the disk migration job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<CancelDiskMigrationJobResponse, OperationMetadata> CancelDiskMigrationJob(CancelDiskMigrationJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels the disk migration job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CancelDiskMigrationJobResponse, OperationMetadata>> CancelDiskMigrationJobAsync(CancelDiskMigrationJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels the disk migration job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<CancelDiskMigrationJobResponse, OperationMetadata>> CancelDiskMigrationJobAsync(CancelDiskMigrationJobRequest request, st::CancellationToken cancellationToken) =>
+            CancelDiskMigrationJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CancelDiskMigrationJob</c>.</summary>
+        public virtual lro::OperationsClient CancelDiskMigrationJobOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CancelDiskMigrationJob</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<CancelDiskMigrationJobResponse, OperationMetadata> PollOnceCancelDiskMigrationJob(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CancelDiskMigrationJobResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CancelDiskMigrationJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CancelDiskMigrationJob</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<CancelDiskMigrationJobResponse, OperationMetadata>> PollOnceCancelDiskMigrationJobAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<CancelDiskMigrationJobResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CancelDiskMigrationJobOperationsClient, callSettings);
     }
 
     /// <summary>VmMigration client wrapper implementation, for convenient use.</summary>
@@ -7604,6 +10088,8 @@ namespace Google.Cloud.VMMigration.V1
         private readonly gaxgrpc::ApiCall<DeleteSourceRequest, lro::Operation> _callDeleteSource;
 
         private readonly gaxgrpc::ApiCall<FetchInventoryRequest, FetchInventoryResponse> _callFetchInventory;
+
+        private readonly gaxgrpc::ApiCall<FetchStorageInventoryRequest, FetchStorageInventoryResponse> _callFetchStorageInventory;
 
         private readonly gaxgrpc::ApiCall<ListUtilizationReportsRequest, ListUtilizationReportsResponse> _callListUtilizationReports;
 
@@ -7640,6 +10126,8 @@ namespace Google.Cloud.VMMigration.V1
         private readonly gaxgrpc::ApiCall<PauseMigrationRequest, lro::Operation> _callPauseMigration;
 
         private readonly gaxgrpc::ApiCall<FinalizeMigrationRequest, lro::Operation> _callFinalizeMigration;
+
+        private readonly gaxgrpc::ApiCall<ExtendMigrationRequest, lro::Operation> _callExtendMigration;
 
         private readonly gaxgrpc::ApiCall<CreateCloneJobRequest, lro::Operation> _callCreateCloneJob;
 
@@ -7685,6 +10173,34 @@ namespace Google.Cloud.VMMigration.V1
 
         private readonly gaxgrpc::ApiCall<GetReplicationCycleRequest, ReplicationCycle> _callGetReplicationCycle;
 
+        private readonly gaxgrpc::ApiCall<ListImageImportsRequest, ListImageImportsResponse> _callListImageImports;
+
+        private readonly gaxgrpc::ApiCall<GetImageImportRequest, ImageImport> _callGetImageImport;
+
+        private readonly gaxgrpc::ApiCall<CreateImageImportRequest, lro::Operation> _callCreateImageImport;
+
+        private readonly gaxgrpc::ApiCall<DeleteImageImportRequest, lro::Operation> _callDeleteImageImport;
+
+        private readonly gaxgrpc::ApiCall<ListImageImportJobsRequest, ListImageImportJobsResponse> _callListImageImportJobs;
+
+        private readonly gaxgrpc::ApiCall<GetImageImportJobRequest, ImageImportJob> _callGetImageImportJob;
+
+        private readonly gaxgrpc::ApiCall<CancelImageImportJobRequest, lro::Operation> _callCancelImageImportJob;
+
+        private readonly gaxgrpc::ApiCall<CreateDiskMigrationJobRequest, lro::Operation> _callCreateDiskMigrationJob;
+
+        private readonly gaxgrpc::ApiCall<ListDiskMigrationJobsRequest, ListDiskMigrationJobsResponse> _callListDiskMigrationJobs;
+
+        private readonly gaxgrpc::ApiCall<GetDiskMigrationJobRequest, DiskMigrationJob> _callGetDiskMigrationJob;
+
+        private readonly gaxgrpc::ApiCall<UpdateDiskMigrationJobRequest, lro::Operation> _callUpdateDiskMigrationJob;
+
+        private readonly gaxgrpc::ApiCall<DeleteDiskMigrationJobRequest, lro::Operation> _callDeleteDiskMigrationJob;
+
+        private readonly gaxgrpc::ApiCall<RunDiskMigrationJobRequest, lro::Operation> _callRunDiskMigrationJob;
+
+        private readonly gaxgrpc::ApiCall<CancelDiskMigrationJobRequest, lro::Operation> _callCancelDiskMigrationJob;
+
         /// <summary>
         /// Constructs a client wrapper for the VmMigration service, with the specified gRPC client and settings.
         /// </summary>
@@ -7715,6 +10231,7 @@ namespace Google.Cloud.VMMigration.V1
             ResumeMigrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ResumeMigrationOperationsSettings, logger);
             PauseMigrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PauseMigrationOperationsSettings, logger);
             FinalizeMigrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.FinalizeMigrationOperationsSettings, logger);
+            ExtendMigrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExtendMigrationOperationsSettings, logger);
             CreateCloneJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCloneJobOperationsSettings, logger);
             CancelCloneJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CancelCloneJobOperationsSettings, logger);
             CreateCutoverJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCutoverJobOperationsSettings, logger);
@@ -7727,8 +10244,15 @@ namespace Google.Cloud.VMMigration.V1
             CreateTargetProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTargetProjectOperationsSettings, logger);
             UpdateTargetProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTargetProjectOperationsSettings, logger);
             DeleteTargetProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTargetProjectOperationsSettings, logger);
+            CreateImageImportOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateImageImportOperationsSettings, logger);
+            DeleteImageImportOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteImageImportOperationsSettings, logger);
+            CancelImageImportJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CancelImageImportJobOperationsSettings, logger);
+            CreateDiskMigrationJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDiskMigrationJobOperationsSettings, logger);
+            UpdateDiskMigrationJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDiskMigrationJobOperationsSettings, logger);
+            DeleteDiskMigrationJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDiskMigrationJobOperationsSettings, logger);
+            RunDiskMigrationJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RunDiskMigrationJobOperationsSettings, logger);
+            CancelDiskMigrationJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CancelDiskMigrationJobOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
-            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListSources = clientHelper.BuildApiCall<ListSourcesRequest, ListSourcesResponse>("ListSources", grpcClient.ListSourcesAsync, grpcClient.ListSources, effectiveSettings.ListSourcesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSources);
             Modify_ListSourcesApiCall(ref _callListSources);
@@ -7747,6 +10271,9 @@ namespace Google.Cloud.VMMigration.V1
             _callFetchInventory = clientHelper.BuildApiCall<FetchInventoryRequest, FetchInventoryResponse>("FetchInventory", grpcClient.FetchInventoryAsync, grpcClient.FetchInventory, effectiveSettings.FetchInventorySettings).WithGoogleRequestParam("source", request => request.Source);
             Modify_ApiCall(ref _callFetchInventory);
             Modify_FetchInventoryApiCall(ref _callFetchInventory);
+            _callFetchStorageInventory = clientHelper.BuildApiCall<FetchStorageInventoryRequest, FetchStorageInventoryResponse>("FetchStorageInventory", grpcClient.FetchStorageInventoryAsync, grpcClient.FetchStorageInventory, effectiveSettings.FetchStorageInventorySettings).WithGoogleRequestParam("source", request => request.Source);
+            Modify_ApiCall(ref _callFetchStorageInventory);
+            Modify_FetchStorageInventoryApiCall(ref _callFetchStorageInventory);
             _callListUtilizationReports = clientHelper.BuildApiCall<ListUtilizationReportsRequest, ListUtilizationReportsResponse>("ListUtilizationReports", grpcClient.ListUtilizationReportsAsync, grpcClient.ListUtilizationReports, effectiveSettings.ListUtilizationReportsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListUtilizationReports);
             Modify_ListUtilizationReportsApiCall(ref _callListUtilizationReports);
@@ -7801,6 +10328,9 @@ namespace Google.Cloud.VMMigration.V1
             _callFinalizeMigration = clientHelper.BuildApiCall<FinalizeMigrationRequest, lro::Operation>("FinalizeMigration", grpcClient.FinalizeMigrationAsync, grpcClient.FinalizeMigration, effectiveSettings.FinalizeMigrationSettings).WithGoogleRequestParam("migrating_vm", request => request.MigratingVm);
             Modify_ApiCall(ref _callFinalizeMigration);
             Modify_FinalizeMigrationApiCall(ref _callFinalizeMigration);
+            _callExtendMigration = clientHelper.BuildApiCall<ExtendMigrationRequest, lro::Operation>("ExtendMigration", grpcClient.ExtendMigrationAsync, grpcClient.ExtendMigration, effectiveSettings.ExtendMigrationSettings).WithGoogleRequestParam("migrating_vm", request => request.MigratingVm);
+            Modify_ApiCall(ref _callExtendMigration);
+            Modify_ExtendMigrationApiCall(ref _callExtendMigration);
             _callCreateCloneJob = clientHelper.BuildApiCall<CreateCloneJobRequest, lro::Operation>("CreateCloneJob", grpcClient.CreateCloneJobAsync, grpcClient.CreateCloneJob, effectiveSettings.CreateCloneJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCloneJob);
             Modify_CreateCloneJobApiCall(ref _callCreateCloneJob);
@@ -7867,6 +10397,48 @@ namespace Google.Cloud.VMMigration.V1
             _callGetReplicationCycle = clientHelper.BuildApiCall<GetReplicationCycleRequest, ReplicationCycle>("GetReplicationCycle", grpcClient.GetReplicationCycleAsync, grpcClient.GetReplicationCycle, effectiveSettings.GetReplicationCycleSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetReplicationCycle);
             Modify_GetReplicationCycleApiCall(ref _callGetReplicationCycle);
+            _callListImageImports = clientHelper.BuildApiCall<ListImageImportsRequest, ListImageImportsResponse>("ListImageImports", grpcClient.ListImageImportsAsync, grpcClient.ListImageImports, effectiveSettings.ListImageImportsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListImageImports);
+            Modify_ListImageImportsApiCall(ref _callListImageImports);
+            _callGetImageImport = clientHelper.BuildApiCall<GetImageImportRequest, ImageImport>("GetImageImport", grpcClient.GetImageImportAsync, grpcClient.GetImageImport, effectiveSettings.GetImageImportSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetImageImport);
+            Modify_GetImageImportApiCall(ref _callGetImageImport);
+            _callCreateImageImport = clientHelper.BuildApiCall<CreateImageImportRequest, lro::Operation>("CreateImageImport", grpcClient.CreateImageImportAsync, grpcClient.CreateImageImport, effectiveSettings.CreateImageImportSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateImageImport);
+            Modify_CreateImageImportApiCall(ref _callCreateImageImport);
+            _callDeleteImageImport = clientHelper.BuildApiCall<DeleteImageImportRequest, lro::Operation>("DeleteImageImport", grpcClient.DeleteImageImportAsync, grpcClient.DeleteImageImport, effectiveSettings.DeleteImageImportSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteImageImport);
+            Modify_DeleteImageImportApiCall(ref _callDeleteImageImport);
+            _callListImageImportJobs = clientHelper.BuildApiCall<ListImageImportJobsRequest, ListImageImportJobsResponse>("ListImageImportJobs", grpcClient.ListImageImportJobsAsync, grpcClient.ListImageImportJobs, effectiveSettings.ListImageImportJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListImageImportJobs);
+            Modify_ListImageImportJobsApiCall(ref _callListImageImportJobs);
+            _callGetImageImportJob = clientHelper.BuildApiCall<GetImageImportJobRequest, ImageImportJob>("GetImageImportJob", grpcClient.GetImageImportJobAsync, grpcClient.GetImageImportJob, effectiveSettings.GetImageImportJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetImageImportJob);
+            Modify_GetImageImportJobApiCall(ref _callGetImageImportJob);
+            _callCancelImageImportJob = clientHelper.BuildApiCall<CancelImageImportJobRequest, lro::Operation>("CancelImageImportJob", grpcClient.CancelImageImportJobAsync, grpcClient.CancelImageImportJob, effectiveSettings.CancelImageImportJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callCancelImageImportJob);
+            Modify_CancelImageImportJobApiCall(ref _callCancelImageImportJob);
+            _callCreateDiskMigrationJob = clientHelper.BuildApiCall<CreateDiskMigrationJobRequest, lro::Operation>("CreateDiskMigrationJob", grpcClient.CreateDiskMigrationJobAsync, grpcClient.CreateDiskMigrationJob, effectiveSettings.CreateDiskMigrationJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateDiskMigrationJob);
+            Modify_CreateDiskMigrationJobApiCall(ref _callCreateDiskMigrationJob);
+            _callListDiskMigrationJobs = clientHelper.BuildApiCall<ListDiskMigrationJobsRequest, ListDiskMigrationJobsResponse>("ListDiskMigrationJobs", grpcClient.ListDiskMigrationJobsAsync, grpcClient.ListDiskMigrationJobs, effectiveSettings.ListDiskMigrationJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListDiskMigrationJobs);
+            Modify_ListDiskMigrationJobsApiCall(ref _callListDiskMigrationJobs);
+            _callGetDiskMigrationJob = clientHelper.BuildApiCall<GetDiskMigrationJobRequest, DiskMigrationJob>("GetDiskMigrationJob", grpcClient.GetDiskMigrationJobAsync, grpcClient.GetDiskMigrationJob, effectiveSettings.GetDiskMigrationJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetDiskMigrationJob);
+            Modify_GetDiskMigrationJobApiCall(ref _callGetDiskMigrationJob);
+            _callUpdateDiskMigrationJob = clientHelper.BuildApiCall<UpdateDiskMigrationJobRequest, lro::Operation>("UpdateDiskMigrationJob", grpcClient.UpdateDiskMigrationJobAsync, grpcClient.UpdateDiskMigrationJob, effectiveSettings.UpdateDiskMigrationJobSettings).WithGoogleRequestParam("disk_migration_job.name", request => request.DiskMigrationJob?.Name);
+            Modify_ApiCall(ref _callUpdateDiskMigrationJob);
+            Modify_UpdateDiskMigrationJobApiCall(ref _callUpdateDiskMigrationJob);
+            _callDeleteDiskMigrationJob = clientHelper.BuildApiCall<DeleteDiskMigrationJobRequest, lro::Operation>("DeleteDiskMigrationJob", grpcClient.DeleteDiskMigrationJobAsync, grpcClient.DeleteDiskMigrationJob, effectiveSettings.DeleteDiskMigrationJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteDiskMigrationJob);
+            Modify_DeleteDiskMigrationJobApiCall(ref _callDeleteDiskMigrationJob);
+            _callRunDiskMigrationJob = clientHelper.BuildApiCall<RunDiskMigrationJobRequest, lro::Operation>("RunDiskMigrationJob", grpcClient.RunDiskMigrationJobAsync, grpcClient.RunDiskMigrationJob, effectiveSettings.RunDiskMigrationJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRunDiskMigrationJob);
+            Modify_RunDiskMigrationJobApiCall(ref _callRunDiskMigrationJob);
+            _callCancelDiskMigrationJob = clientHelper.BuildApiCall<CancelDiskMigrationJobRequest, lro::Operation>("CancelDiskMigrationJob", grpcClient.CancelDiskMigrationJobAsync, grpcClient.CancelDiskMigrationJob, effectiveSettings.CancelDiskMigrationJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callCancelDiskMigrationJob);
+            Modify_CancelDiskMigrationJobApiCall(ref _callCancelDiskMigrationJob);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -7883,6 +10455,8 @@ namespace Google.Cloud.VMMigration.V1
         partial void Modify_DeleteSourceApiCall(ref gaxgrpc::ApiCall<DeleteSourceRequest, lro::Operation> call);
 
         partial void Modify_FetchInventoryApiCall(ref gaxgrpc::ApiCall<FetchInventoryRequest, FetchInventoryResponse> call);
+
+        partial void Modify_FetchStorageInventoryApiCall(ref gaxgrpc::ApiCall<FetchStorageInventoryRequest, FetchStorageInventoryResponse> call);
 
         partial void Modify_ListUtilizationReportsApiCall(ref gaxgrpc::ApiCall<ListUtilizationReportsRequest, ListUtilizationReportsResponse> call);
 
@@ -7919,6 +10493,8 @@ namespace Google.Cloud.VMMigration.V1
         partial void Modify_PauseMigrationApiCall(ref gaxgrpc::ApiCall<PauseMigrationRequest, lro::Operation> call);
 
         partial void Modify_FinalizeMigrationApiCall(ref gaxgrpc::ApiCall<FinalizeMigrationRequest, lro::Operation> call);
+
+        partial void Modify_ExtendMigrationApiCall(ref gaxgrpc::ApiCall<ExtendMigrationRequest, lro::Operation> call);
 
         partial void Modify_CreateCloneJobApiCall(ref gaxgrpc::ApiCall<CreateCloneJobRequest, lro::Operation> call);
 
@@ -7964,6 +10540,34 @@ namespace Google.Cloud.VMMigration.V1
 
         partial void Modify_GetReplicationCycleApiCall(ref gaxgrpc::ApiCall<GetReplicationCycleRequest, ReplicationCycle> call);
 
+        partial void Modify_ListImageImportsApiCall(ref gaxgrpc::ApiCall<ListImageImportsRequest, ListImageImportsResponse> call);
+
+        partial void Modify_GetImageImportApiCall(ref gaxgrpc::ApiCall<GetImageImportRequest, ImageImport> call);
+
+        partial void Modify_CreateImageImportApiCall(ref gaxgrpc::ApiCall<CreateImageImportRequest, lro::Operation> call);
+
+        partial void Modify_DeleteImageImportApiCall(ref gaxgrpc::ApiCall<DeleteImageImportRequest, lro::Operation> call);
+
+        partial void Modify_ListImageImportJobsApiCall(ref gaxgrpc::ApiCall<ListImageImportJobsRequest, ListImageImportJobsResponse> call);
+
+        partial void Modify_GetImageImportJobApiCall(ref gaxgrpc::ApiCall<GetImageImportJobRequest, ImageImportJob> call);
+
+        partial void Modify_CancelImageImportJobApiCall(ref gaxgrpc::ApiCall<CancelImageImportJobRequest, lro::Operation> call);
+
+        partial void Modify_CreateDiskMigrationJobApiCall(ref gaxgrpc::ApiCall<CreateDiskMigrationJobRequest, lro::Operation> call);
+
+        partial void Modify_ListDiskMigrationJobsApiCall(ref gaxgrpc::ApiCall<ListDiskMigrationJobsRequest, ListDiskMigrationJobsResponse> call);
+
+        partial void Modify_GetDiskMigrationJobApiCall(ref gaxgrpc::ApiCall<GetDiskMigrationJobRequest, DiskMigrationJob> call);
+
+        partial void Modify_UpdateDiskMigrationJobApiCall(ref gaxgrpc::ApiCall<UpdateDiskMigrationJobRequest, lro::Operation> call);
+
+        partial void Modify_DeleteDiskMigrationJobApiCall(ref gaxgrpc::ApiCall<DeleteDiskMigrationJobRequest, lro::Operation> call);
+
+        partial void Modify_RunDiskMigrationJobApiCall(ref gaxgrpc::ApiCall<RunDiskMigrationJobRequest, lro::Operation> call);
+
+        partial void Modify_CancelDiskMigrationJobApiCall(ref gaxgrpc::ApiCall<CancelDiskMigrationJobRequest, lro::Operation> call);
+
         partial void OnConstruction(VmMigration.VmMigrationClient grpcClient, VmMigrationSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC VmMigration client</summary>
@@ -7971,9 +10575,6 @@ namespace Google.Cloud.VMMigration.V1
 
         /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
         public override gcl::LocationsClient LocationsClient { get; }
-
-        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
-        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_ListSourcesRequest(ref ListSourcesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -7986,6 +10587,8 @@ namespace Google.Cloud.VMMigration.V1
         partial void Modify_DeleteSourceRequest(ref DeleteSourceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_FetchInventoryRequest(ref FetchInventoryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchStorageInventoryRequest(ref FetchStorageInventoryRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListUtilizationReportsRequest(ref ListUtilizationReportsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -8022,6 +10625,8 @@ namespace Google.Cloud.VMMigration.V1
         partial void Modify_PauseMigrationRequest(ref PauseMigrationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_FinalizeMigrationRequest(ref FinalizeMigrationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExtendMigrationRequest(ref ExtendMigrationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateCloneJobRequest(ref CreateCloneJobRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -8066,6 +10671,34 @@ namespace Google.Cloud.VMMigration.V1
         partial void Modify_ListReplicationCyclesRequest(ref ListReplicationCyclesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetReplicationCycleRequest(ref GetReplicationCycleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListImageImportsRequest(ref ListImageImportsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetImageImportRequest(ref GetImageImportRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateImageImportRequest(ref CreateImageImportRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteImageImportRequest(ref DeleteImageImportRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListImageImportJobsRequest(ref ListImageImportJobsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetImageImportJobRequest(ref GetImageImportJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CancelImageImportJobRequest(ref CancelImageImportJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateDiskMigrationJobRequest(ref CreateDiskMigrationJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListDiskMigrationJobsRequest(ref ListDiskMigrationJobsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetDiskMigrationJobRequest(ref GetDiskMigrationJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateDiskMigrationJobRequest(ref UpdateDiskMigrationJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteDiskMigrationJobRequest(ref DeleteDiskMigrationJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RunDiskMigrationJobRequest(ref RunDiskMigrationJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CancelDiskMigrationJobRequest(ref CancelDiskMigrationJobRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Sources in a given project and location.
@@ -8226,6 +10859,40 @@ namespace Google.Cloud.VMMigration.V1
         {
             Modify_FetchInventoryRequest(ref request, ref callSettings);
             return _callFetchInventory.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// List remote source's inventory of storage resources.
+        /// The remote source is another cloud vendor (e.g. AWS, Azure).
+        /// The inventory describes the list of existing storage resources in that
+        /// source. Note that this operation lists the resources on the remote source,
+        /// as opposed to listing the MigratingVms resources in the vmmigration
+        /// service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SourceStorageResource"/> resources.</returns>
+        public override gax::PagedEnumerable<FetchStorageInventoryResponse, SourceStorageResource> FetchStorageInventory(FetchStorageInventoryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchStorageInventoryRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<FetchStorageInventoryRequest, FetchStorageInventoryResponse, SourceStorageResource>(_callFetchStorageInventory, request, callSettings);
+        }
+
+        /// <summary>
+        /// List remote source's inventory of storage resources.
+        /// The remote source is another cloud vendor (e.g. AWS, Azure).
+        /// The inventory describes the list of existing storage resources in that
+        /// source. Note that this operation lists the resources on the remote source,
+        /// as opposed to listing the MigratingVms resources in the vmmigration
+        /// service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SourceStorageResource"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<FetchStorageInventoryResponse, SourceStorageResource> FetchStorageInventoryAsync(FetchStorageInventoryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchStorageInventoryRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<FetchStorageInventoryRequest, FetchStorageInventoryResponse, SourceStorageResource>(_callFetchStorageInventory, request, callSettings);
         }
 
         /// <summary>
@@ -8712,6 +11379,33 @@ namespace Google.Cloud.VMMigration.V1
             return new lro::Operation<FinalizeMigrationResponse, OperationMetadata>(await _callFinalizeMigration.Async(request, callSettings).ConfigureAwait(false), FinalizeMigrationOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>ExtendMigration</c>.</summary>
+        public override lro::OperationsClient ExtendMigrationOperationsClient { get; }
+
+        /// <summary>
+        /// Extend the migrating VM time to live.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ExtendMigrationResponse, OperationMetadata> ExtendMigration(ExtendMigrationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExtendMigrationRequest(ref request, ref callSettings);
+            return new lro::Operation<ExtendMigrationResponse, OperationMetadata>(_callExtendMigration.Sync(request, callSettings), ExtendMigrationOperationsClient);
+        }
+
+        /// <summary>
+        /// Extend the migrating VM time to live.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ExtendMigrationResponse, OperationMetadata>> ExtendMigrationAsync(ExtendMigrationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExtendMigrationRequest(ref request, ref callSettings);
+            return new lro::Operation<ExtendMigrationResponse, OperationMetadata>(await _callExtendMigration.Async(request, callSettings).ConfigureAwait(false), ExtendMigrationOperationsClient);
+        }
+
         /// <summary>The long-running operations client for <c>CreateCloneJob</c>.</summary>
         public override lro::OperationsClient CreateCloneJobOperationsClient { get; }
 
@@ -8767,7 +11461,8 @@ namespace Google.Cloud.VMMigration.V1
         }
 
         /// <summary>
-        /// Lists CloneJobs of a given migrating VM.
+        /// Lists the CloneJobs of a migrating VM. Only 25 most recent CloneJobs are
+        /// listed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8779,7 +11474,8 @@ namespace Google.Cloud.VMMigration.V1
         }
 
         /// <summary>
-        /// Lists CloneJobs of a given migrating VM.
+        /// Lists the CloneJobs of a migrating VM. Only 25 most recent CloneJobs are
+        /// listed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8873,7 +11569,8 @@ namespace Google.Cloud.VMMigration.V1
         }
 
         /// <summary>
-        /// Lists CutoverJobs of a given migrating VM.
+        /// Lists the CutoverJobs of a migrating VM. Only 25 most recent CutoverJobs
+        /// are listed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8885,7 +11582,8 @@ namespace Google.Cloud.VMMigration.V1
         }
 
         /// <summary>
-        /// Lists CutoverJobs of a given migrating VM.
+        /// Lists the CutoverJobs of a migrating VM. Only 25 most recent CutoverJobs
+        /// are listed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9309,9 +12007,373 @@ namespace Google.Cloud.VMMigration.V1
             Modify_GetReplicationCycleRequest(ref request, ref callSettings);
             return _callGetReplicationCycle.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Lists ImageImports in a given project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ImageImport"/> resources.</returns>
+        public override gax::PagedEnumerable<ListImageImportsResponse, ImageImport> ListImageImports(ListImageImportsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListImageImportsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListImageImportsRequest, ListImageImportsResponse, ImageImport>(_callListImageImports, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ImageImports in a given project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ImageImport"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListImageImportsResponse, ImageImport> ListImageImportsAsync(ListImageImportsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListImageImportsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListImageImportsRequest, ListImageImportsResponse, ImageImport>(_callListImageImports, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single ImageImport.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ImageImport GetImageImport(GetImageImportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetImageImportRequest(ref request, ref callSettings);
+            return _callGetImageImport.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single ImageImport.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ImageImport> GetImageImportAsync(GetImageImportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetImageImportRequest(ref request, ref callSettings);
+            return _callGetImageImport.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateImageImport</c>.</summary>
+        public override lro::OperationsClient CreateImageImportOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new ImageImport in a given project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ImageImport, OperationMetadata> CreateImageImport(CreateImageImportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateImageImportRequest(ref request, ref callSettings);
+            return new lro::Operation<ImageImport, OperationMetadata>(_callCreateImageImport.Sync(request, callSettings), CreateImageImportOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new ImageImport in a given project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ImageImport, OperationMetadata>> CreateImageImportAsync(CreateImageImportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateImageImportRequest(ref request, ref callSettings);
+            return new lro::Operation<ImageImport, OperationMetadata>(await _callCreateImageImport.Async(request, callSettings).ConfigureAwait(false), CreateImageImportOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteImageImport</c>.</summary>
+        public override lro::OperationsClient DeleteImageImportOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a single ImageImport.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteImageImport(DeleteImageImportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteImageImportRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteImageImport.Sync(request, callSettings), DeleteImageImportOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single ImageImport.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteImageImportAsync(DeleteImageImportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteImageImportRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteImageImport.Async(request, callSettings).ConfigureAwait(false), DeleteImageImportOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists ImageImportJobs in a given project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ImageImportJob"/> resources.</returns>
+        public override gax::PagedEnumerable<ListImageImportJobsResponse, ImageImportJob> ListImageImportJobs(ListImageImportJobsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListImageImportJobsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListImageImportJobsRequest, ListImageImportJobsResponse, ImageImportJob>(_callListImageImportJobs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ImageImportJobs in a given project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ImageImportJob"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListImageImportJobsResponse, ImageImportJob> ListImageImportJobsAsync(ListImageImportJobsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListImageImportJobsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListImageImportJobsRequest, ListImageImportJobsResponse, ImageImportJob>(_callListImageImportJobs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single ImageImportJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ImageImportJob GetImageImportJob(GetImageImportJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetImageImportJobRequest(ref request, ref callSettings);
+            return _callGetImageImportJob.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single ImageImportJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ImageImportJob> GetImageImportJobAsync(GetImageImportJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetImageImportJobRequest(ref request, ref callSettings);
+            return _callGetImageImportJob.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CancelImageImportJob</c>.</summary>
+        public override lro::OperationsClient CancelImageImportJobOperationsClient { get; }
+
+        /// <summary>
+        /// Initiates the cancellation of a running ImageImportJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<CancelImageImportJobResponse, OperationMetadata> CancelImageImportJob(CancelImageImportJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelImageImportJobRequest(ref request, ref callSettings);
+            return new lro::Operation<CancelImageImportJobResponse, OperationMetadata>(_callCancelImageImportJob.Sync(request, callSettings), CancelImageImportJobOperationsClient);
+        }
+
+        /// <summary>
+        /// Initiates the cancellation of a running ImageImportJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<CancelImageImportJobResponse, OperationMetadata>> CancelImageImportJobAsync(CancelImageImportJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelImageImportJobRequest(ref request, ref callSettings);
+            return new lro::Operation<CancelImageImportJobResponse, OperationMetadata>(await _callCancelImageImportJob.Async(request, callSettings).ConfigureAwait(false), CancelImageImportJobOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateDiskMigrationJob</c>.</summary>
+        public override lro::OperationsClient CreateDiskMigrationJobOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new disk migration job in a given Source.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DiskMigrationJob, OperationMetadata> CreateDiskMigrationJob(CreateDiskMigrationJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDiskMigrationJobRequest(ref request, ref callSettings);
+            return new lro::Operation<DiskMigrationJob, OperationMetadata>(_callCreateDiskMigrationJob.Sync(request, callSettings), CreateDiskMigrationJobOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new disk migration job in a given Source.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DiskMigrationJob, OperationMetadata>> CreateDiskMigrationJobAsync(CreateDiskMigrationJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDiskMigrationJobRequest(ref request, ref callSettings);
+            return new lro::Operation<DiskMigrationJob, OperationMetadata>(await _callCreateDiskMigrationJob.Async(request, callSettings).ConfigureAwait(false), CreateDiskMigrationJobOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists DiskMigrationJobs in a given Source.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="DiskMigrationJob"/> resources.</returns>
+        public override gax::PagedEnumerable<ListDiskMigrationJobsResponse, DiskMigrationJob> ListDiskMigrationJobs(ListDiskMigrationJobsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDiskMigrationJobsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListDiskMigrationJobsRequest, ListDiskMigrationJobsResponse, DiskMigrationJob>(_callListDiskMigrationJobs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists DiskMigrationJobs in a given Source.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="DiskMigrationJob"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListDiskMigrationJobsResponse, DiskMigrationJob> ListDiskMigrationJobsAsync(ListDiskMigrationJobsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListDiskMigrationJobsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDiskMigrationJobsRequest, ListDiskMigrationJobsResponse, DiskMigrationJob>(_callListDiskMigrationJobs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DiskMigrationJob GetDiskMigrationJob(GetDiskMigrationJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDiskMigrationJobRequest(ref request, ref callSettings);
+            return _callGetDiskMigrationJob.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DiskMigrationJob> GetDiskMigrationJobAsync(GetDiskMigrationJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDiskMigrationJobRequest(ref request, ref callSettings);
+            return _callGetDiskMigrationJob.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateDiskMigrationJob</c>.</summary>
+        public override lro::OperationsClient UpdateDiskMigrationJobOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the parameters of a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DiskMigrationJob, OperationMetadata> UpdateDiskMigrationJob(UpdateDiskMigrationJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDiskMigrationJobRequest(ref request, ref callSettings);
+            return new lro::Operation<DiskMigrationJob, OperationMetadata>(_callUpdateDiskMigrationJob.Sync(request, callSettings), UpdateDiskMigrationJobOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the parameters of a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DiskMigrationJob, OperationMetadata>> UpdateDiskMigrationJobAsync(UpdateDiskMigrationJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDiskMigrationJobRequest(ref request, ref callSettings);
+            return new lro::Operation<DiskMigrationJob, OperationMetadata>(await _callUpdateDiskMigrationJob.Async(request, callSettings).ConfigureAwait(false), UpdateDiskMigrationJobOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteDiskMigrationJob</c>.</summary>
+        public override lro::OperationsClient DeleteDiskMigrationJobOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteDiskMigrationJob(DeleteDiskMigrationJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDiskMigrationJobRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteDiskMigrationJob.Sync(request, callSettings), DeleteDiskMigrationJobOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single DiskMigrationJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDiskMigrationJobAsync(DeleteDiskMigrationJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDiskMigrationJobRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteDiskMigrationJob.Async(request, callSettings).ConfigureAwait(false), DeleteDiskMigrationJobOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>RunDiskMigrationJob</c>.</summary>
+        public override lro::OperationsClient RunDiskMigrationJobOperationsClient { get; }
+
+        /// <summary>
+        /// Runs the disk migration job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<RunDiskMigrationJobResponse, OperationMetadata> RunDiskMigrationJob(RunDiskMigrationJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RunDiskMigrationJobRequest(ref request, ref callSettings);
+            return new lro::Operation<RunDiskMigrationJobResponse, OperationMetadata>(_callRunDiskMigrationJob.Sync(request, callSettings), RunDiskMigrationJobOperationsClient);
+        }
+
+        /// <summary>
+        /// Runs the disk migration job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<RunDiskMigrationJobResponse, OperationMetadata>> RunDiskMigrationJobAsync(RunDiskMigrationJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RunDiskMigrationJobRequest(ref request, ref callSettings);
+            return new lro::Operation<RunDiskMigrationJobResponse, OperationMetadata>(await _callRunDiskMigrationJob.Async(request, callSettings).ConfigureAwait(false), RunDiskMigrationJobOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>CancelDiskMigrationJob</c>.</summary>
+        public override lro::OperationsClient CancelDiskMigrationJobOperationsClient { get; }
+
+        /// <summary>
+        /// Cancels the disk migration job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<CancelDiskMigrationJobResponse, OperationMetadata> CancelDiskMigrationJob(CancelDiskMigrationJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelDiskMigrationJobRequest(ref request, ref callSettings);
+            return new lro::Operation<CancelDiskMigrationJobResponse, OperationMetadata>(_callCancelDiskMigrationJob.Sync(request, callSettings), CancelDiskMigrationJobOperationsClient);
+        }
+
+        /// <summary>
+        /// Cancels the disk migration job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<CancelDiskMigrationJobResponse, OperationMetadata>> CancelDiskMigrationJobAsync(CancelDiskMigrationJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelDiskMigrationJobRequest(ref request, ref callSettings);
+            return new lro::Operation<CancelDiskMigrationJobResponse, OperationMetadata>(await _callCancelDiskMigrationJob.Async(request, callSettings).ConfigureAwait(false), CancelDiskMigrationJobOperationsClient);
+        }
     }
 
     public partial class ListSourcesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class FetchStorageInventoryRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -9347,10 +12409,30 @@ namespace Google.Cloud.VMMigration.V1
     {
     }
 
+    public partial class ListImageImportsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListImageImportJobsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListDiskMigrationJobsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListSourcesResponse : gaxgrpc::IPageResponse<Source>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Source> GetEnumerator() => Sources.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class FetchStorageInventoryResponse : gaxgrpc::IPageResponse<SourceStorageResource>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<SourceStorageResource> GetEnumerator() => Resources.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
@@ -9419,6 +12501,30 @@ namespace Google.Cloud.VMMigration.V1
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
+    public partial class ListImageImportsResponse : gaxgrpc::IPageResponse<ImageImport>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ImageImport> GetEnumerator() => ImageImports.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListImageImportJobsResponse : gaxgrpc::IPageResponse<ImageImportJob>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ImageImportJob> GetEnumerator() => ImageImportJobs.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListDiskMigrationJobsResponse : gaxgrpc::IPageResponse<DiskMigrationJob>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<DiskMigrationJob> GetEnumerator() => DiskMigrationJobs.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
     public static partial class VmMigration
     {
         public partial class VmMigrationClient
@@ -9446,16 +12552,6 @@ namespace Google.Cloud.VMMigration.V1
             /// </returns>
             public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
                 new gcl::Locations.LocationsClient(CallInvoker);
-
-            /// <summary>
-            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
-            /// this client.
-            /// </summary>
-            /// <returns>
-            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
-            /// </returns>
-            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
-                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }

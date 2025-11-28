@@ -1,5 +1,39 @@
 # Version history
 
+## Version 1.11.0, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+## Version 1.10.0, released 2025-09-24
+
+### New features
+
+- Added H.265 (HEVC) codec support
+- Added UHD (4k) resolution support
+- Added Auto Transcription support
+- Added StartDistribution/StopDistribution methods and Distribution/DistributionStream messages used for distributing live streams to external RTMP/SRT endpoints
+- Added PreviewInput method used for the low latency input monitoring
+- Added UpdateEncryptions event to perform key rotation without restarting a channel
+
+### Documentation improvements
+
+- Update requirements of resource ID fields to be more clear
+
+## Version 1.9.0, released 2025-05-15
+
+### New features
+
+- Added OutputType field to the Clip resource to support MP4 clipping
+- Added DVRSession methods to support DVR feature
+
+### Documentation improvements
+
+- Clarified GCS in the comment for method `DeleteClip` in service `LivestreamService`
+- Updated comment for field `update_mask` in message `.google.cloud.video.livestream.v1.UpdateInputRequest` to indicate updates in `tier` field are allowed
+- A comment for field `requested_cancellation` in message `.google.cloud.video.livestream.v1.OperationMetadata` is changed to clarify error type
+
 ## Version 1.8.0, released 2024-07-22
 
 ### New features

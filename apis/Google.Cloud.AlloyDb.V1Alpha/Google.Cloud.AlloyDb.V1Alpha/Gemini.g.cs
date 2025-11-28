@@ -26,28 +26,49 @@ namespace Google.Cloud.AlloyDb.V1Alpha {
           string.Concat(
             "Cilnb29nbGUvY2xvdWQvYWxsb3lkYi92MWFscGhhL2dlbWluaS5wcm90bxIc",
             "Z29vZ2xlLmNsb3VkLmFsbG95ZGIudjFhbHBoYRofZ29vZ2xlL2FwaS9maWVs",
-            "ZF9iZWhhdmlvci5wcm90byIsChNHZW1pbmlDbHVzdGVyQ29uZmlnEhUKCGVu",
-            "dGl0bGVkGAEgASgIQgPgQQMiLQoUR2VtaW5pSW5zdGFuY2VDb25maWcSFQoI",
-            "ZW50aXRsZWQYASABKAhCA+BBA0LNAQogY29tLmdvb2dsZS5jbG91ZC5hbGxv",
-            "eWRiLnYxYWxwaGFCC0dlbWluaVByb3RvUAFaOmNsb3VkLmdvb2dsZS5jb20v",
-            "Z28vYWxsb3lkYi9hcGl2MWFscGhhL2FsbG95ZGJwYjthbGxveWRicGKqAhxH",
-            "b29nbGUuQ2xvdWQuQWxsb3lEYi5WMUFscGhhygIcR29vZ2xlXENsb3VkXEFs",
-            "bG95RGJcVjFhbHBoYeoCH0dvb2dsZTo6Q2xvdWQ6OkFsbG95REI6OlYxYWxw",
-            "aGFiBnByb3RvMw=="));
+            "ZF9iZWhhdmlvci5wcm90byIuChNHZW1pbmlDbHVzdGVyQ29uZmlnEhcKCGVu",
+            "dGl0bGVkGAEgASgIQgUYAeBBAyIvChRHZW1pbmlJbnN0YW5jZUNvbmZpZxIX",
+            "CghlbnRpdGxlZBgBIAEoCEIFGAHgQQMiYwoRR0NBSW5zdGFuY2VDb25maWcS",
+            "TgoPZ2NhX2VudGl0bGVtZW50GAEgASgOMjAuZ29vZ2xlLmNsb3VkLmFsbG95",
+            "ZGIudjFhbHBoYS5HQ0FFbnRpdGxlbWVudFR5cGVCA+BBAypMChJHQ0FFbnRp",
+            "dGxlbWVudFR5cGUSJAogR0NBX0VOVElUTEVNRU5UX1RZUEVfVU5TUEVDSUZJ",
+            "RUQQABIQCgxHQ0FfU1RBTkRBUkQQAULNAQogY29tLmdvb2dsZS5jbG91ZC5h",
+            "bGxveWRiLnYxYWxwaGFCC0dlbWluaVByb3RvUAFaOmNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vYWxsb3lkYi9hcGl2MWFscGhhL2FsbG95ZGJwYjthbGxveWRicGKq",
+            "AhxHb29nbGUuQ2xvdWQuQWxsb3lEYi5WMUFscGhhygIcR29vZ2xlXENsb3Vk",
+            "XEFsbG95RGJcVjFhbHBoYeoCH0dvb2dsZTo6Q2xvdWQ6OkFsbG95REI6OlYx",
+            "YWxwaGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AlloyDb.V1Alpha.GCAEntitlementType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Alpha.GeminiClusterConfig), global::Google.Cloud.AlloyDb.V1Alpha.GeminiClusterConfig.Parser, new[]{ "Entitled" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Alpha.GeminiInstanceConfig), global::Google.Cloud.AlloyDb.V1Alpha.GeminiInstanceConfig.Parser, new[]{ "Entitled" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Alpha.GeminiInstanceConfig), global::Google.Cloud.AlloyDb.V1Alpha.GeminiInstanceConfig.Parser, new[]{ "Entitled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1Alpha.GCAInstanceConfig), global::Google.Cloud.AlloyDb.V1Alpha.GCAInstanceConfig.Parser, new[]{ "GcaEntitlement" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// Enum representing the type of GCA entitlement assigned to a resource.
+  /// </summary>
+  public enum GCAEntitlementType {
+    /// <summary>
+    /// No GCA entitlement is assigned.
+    /// </summary>
+    [pbr::OriginalName("GCA_ENTITLEMENT_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// The resource is entitled to the GCA Standard Tier.
+    /// </summary>
+    [pbr::OriginalName("GCA_STANDARD")] GcaStandard = 1,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
-  /// Cluster level configuration parameters related to the Gemini in Databases
-  /// add-on.
+  /// Deprecated and unused. This message will be removed in the near future.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GeminiClusterConfig : pb::IMessage<GeminiClusterConfig>
@@ -98,11 +119,10 @@ namespace Google.Cloud.AlloyDb.V1Alpha {
     public const int EntitledFieldNumber = 1;
     private bool entitled_;
     /// <summary>
-    /// Output only. Whether the Gemini in Databases add-on is enabled for the
-    /// cluster. It will be true only if the add-on has been enabled for the
-    /// billing account corresponding to the cluster. Its status is toggled from
-    /// the Admin Control Center (ACC) and cannot be toggled using AlloyDB's APIs.
+    /// Output only. Deprecated and unused. This field will be removed in the near
+    /// future.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Entitled {
@@ -246,8 +266,7 @@ namespace Google.Cloud.AlloyDb.V1Alpha {
   }
 
   /// <summary>
-  /// Instance level configuration parameters related to the Gemini in Databases
-  /// add-on.
+  /// Deprecated and unused. This message will be removed in the near future.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GeminiInstanceConfig : pb::IMessage<GeminiInstanceConfig>
@@ -298,11 +317,10 @@ namespace Google.Cloud.AlloyDb.V1Alpha {
     public const int EntitledFieldNumber = 1;
     private bool entitled_;
     /// <summary>
-    /// Output only. Whether the Gemini in Databases add-on is enabled for the
-    /// instance. It will be true only if the add-on has been enabled for the
-    /// billing account corresponding to the instance. Its status is toggled from
-    /// the Admin Control Center (ACC) and cannot be toggled using AlloyDB's APIs.
+    /// Output only. Deprecated and unused. This field will be removed in the near
+    /// future.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Entitled {
@@ -436,6 +454,203 @@ namespace Google.Cloud.AlloyDb.V1Alpha {
             break;
           case 8: {
             Entitled = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Instance level configuration parameters related to the Gemini Cloud Assist
+  /// product.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GCAInstanceConfig : pb::IMessage<GCAInstanceConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GCAInstanceConfig> _parser = new pb::MessageParser<GCAInstanceConfig>(() => new GCAInstanceConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GCAInstanceConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AlloyDb.V1Alpha.GeminiReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GCAInstanceConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GCAInstanceConfig(GCAInstanceConfig other) : this() {
+      gcaEntitlement_ = other.gcaEntitlement_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GCAInstanceConfig Clone() {
+      return new GCAInstanceConfig(this);
+    }
+
+    /// <summary>Field number for the "gca_entitlement" field.</summary>
+    public const int GcaEntitlementFieldNumber = 1;
+    private global::Google.Cloud.AlloyDb.V1Alpha.GCAEntitlementType gcaEntitlement_ = global::Google.Cloud.AlloyDb.V1Alpha.GCAEntitlementType.Unspecified;
+    /// <summary>
+    /// Output only. Represents the GCA entitlement state of the instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AlloyDb.V1Alpha.GCAEntitlementType GcaEntitlement {
+      get { return gcaEntitlement_; }
+      set {
+        gcaEntitlement_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GCAInstanceConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GCAInstanceConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (GcaEntitlement != other.GcaEntitlement) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (GcaEntitlement != global::Google.Cloud.AlloyDb.V1Alpha.GCAEntitlementType.Unspecified) hash ^= GcaEntitlement.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (GcaEntitlement != global::Google.Cloud.AlloyDb.V1Alpha.GCAEntitlementType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) GcaEntitlement);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (GcaEntitlement != global::Google.Cloud.AlloyDb.V1Alpha.GCAEntitlementType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) GcaEntitlement);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (GcaEntitlement != global::Google.Cloud.AlloyDb.V1Alpha.GCAEntitlementType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) GcaEntitlement);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GCAInstanceConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.GcaEntitlement != global::Google.Cloud.AlloyDb.V1Alpha.GCAEntitlementType.Unspecified) {
+        GcaEntitlement = other.GcaEntitlement;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            GcaEntitlement = (global::Google.Cloud.AlloyDb.V1Alpha.GCAEntitlementType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            GcaEntitlement = (global::Google.Cloud.AlloyDb.V1Alpha.GCAEntitlementType) input.ReadEnum();
             break;
           }
         }

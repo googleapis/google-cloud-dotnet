@@ -22,7 +22,7 @@ using System.Linq;
 using Xunit;
 using static Google.Cloud.Firestore.Tests.DocumentSnapshotHelpers;
 using static Google.Cloud.Firestore.Tests.ProtoHelpers;
-using wkt = Google.Protobuf.WellKnownTypes;
+using WKT = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Firestore.Tests
 {
@@ -36,7 +36,7 @@ namespace Google.Cloud.Firestore.Tests
 
         public static IEnumerable<object[]> BclAndValues { get; } = new List<object[]>
         {
-            { (object) null, new Value { NullValue = wkt::NullValue.NullValue } },
+            { (object) null, new Value { NullValue = WKT::NullValue.NullValue } },
             // Simple types
             { true, new Value { BooleanValue = true } },
             { false, new Value { BooleanValue = false } },
@@ -174,11 +174,11 @@ namespace Google.Cloud.Firestore.Tests
 
             // Nullable type handling
             { new NullableContainer { NullableValue = null },
-                new Value { MapValue = new MapValue { Fields = { { "NullableValue", new Value { NullValue = wkt::NullValue.NullValue } } } } } },
+                new Value { MapValue = new MapValue { Fields = { { "NullableValue", new Value { NullValue = WKT::NullValue.NullValue } } } } } },
             { new NullableContainer { NullableValue = 10 },
                 new Value { MapValue = new MapValue { Fields = { { "NullableValue", new Value { IntegerValue = 10L } } } } } },
             { new NullableEnumContainer { NullableValue = null },
-                new Value { MapValue = new MapValue { Fields = { { "NullableValue", new Value { NullValue = wkt::NullValue.NullValue } } } } } },
+                new Value { MapValue = new MapValue { Fields = { { "NullableValue", new Value { NullValue = WKT::NullValue.NullValue } } } } } },
             { new NullableEnumContainer { NullableValue = (Int32Enum) 10 },
                 new Value { MapValue = new MapValue { Fields = { { "NullableValue", new Value { IntegerValue = 10L } } } } } },
 

@@ -1,5 +1,27 @@
 # Version history
 
+## Version 1.0.0-alpha33, released 2025-11-03
+
+### New features
+
+- Update dependencies
+
+## Version 1.0.0-alpha32, released 2025-09-16
+
+### New features
+
+- Added new provisioning models
+
+### Documentation improvements
+
+- Fix a few broken references in documentation
+- Clarify options for logs
+- Clarify the custom instance template needs to be in the same project
+- Rephrase reservation field doc
+- Update reservation field to include NO_RESERVATION
+- Clarify that user provided labels will also be applied to Cloud Logging
+- Clarify Batch only supports global custom instance template now
+
 ## Version 1.0.0-alpha31, released 2024-09-16
 
 ### New features

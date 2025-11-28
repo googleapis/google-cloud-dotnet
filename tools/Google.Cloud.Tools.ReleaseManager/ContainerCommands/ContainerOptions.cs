@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -21,17 +22,23 @@ namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 
 public class ContainerOptions
 {
-    private const string ApiPathOption = "api-path";
-    private const string LibraryIdOption = "library-id";
-    private const string RepoRootOption = "repo-root";
-    private const string ApiRootOption = "api-root";
-    private const string GeneratorInputOption = "generator-input";
-    private const string GeneratorOutputOption = "generator-output";
-    private const string PackageOutputOption = "package-output";
-    private const string TestOption = "test";
-    private const string OutputOption = "output";
-    private const string VersionOption = "version";
-    private const string ReleaseNotesOption = "release-notes";
+    internal const string DefaultDotnetPath = "/usr/bin/dotnet";
+
+    internal const string UtilityDocsLibraryPrefix = "docs-";
+    internal const string ApiPathOption = "api-path";
+    internal const string LibraryIdOption = "library-id";
+    internal const string RepoRootOption = "repo-root";
+    internal const string ApiRootOption = "api-root";
+    internal const string GeneratorInputOption = "generator-input";
+    internal const string GeneratorOutputOption = "generator-output";
+    internal const string PackageOutputOption = "package-output";
+    internal const string TestOption = "test";
+    internal const string OutputOption = "output";
+    internal const string VersionOption = "version";
+    internal const string ReleaseNotesOption = "release-notes";
+    // Used in tests, to be able to pass either a dotnet mock or a differnt path
+    // to dotnet than what librarian is passing.
+    internal const string DotnetPathOption = "dotnet-path";
 
     internal string ApiPath { get; set; }
     internal string LibraryId { get; set; }
@@ -44,6 +51,7 @@ public class ContainerOptions
     internal string Version { get; set; }
     internal string Output { get; set; }
     internal string ReleaseNotes { get; set; }
+    internal string DotnetPath { get; set; }
 
     internal ContainerOptions(Dictionary<string, string> options)
     {
@@ -58,7 +66,10 @@ public class ContainerOptions
         Version = options.GetValueOrDefault(VersionOption);
         Output = options.GetValueOrDefault(OutputOption);
         ReleaseNotes = options.GetValueOrDefault(ReleaseNotesOption);
+        DotnetPath = options.GetValueOrDefault(DotnetPathOption) ?? DefaultDotnetPath;
     }
+
+    internal static ContainerOptions FromArgs(params string[] args) => FromArgs((IEnumerable<string>) args);
 
     internal static ContainerOptions FromArgs(IEnumerable<string> args)
     {
@@ -75,10 +86,14 @@ public class ContainerOptions
         }
     }
 
+    internal string UtilityDocsName  => LibraryId is null ? null
+        : LibraryId.StartsWith(UtilityDocsLibraryPrefix, StringComparison.Ordinal) ? LibraryId[UtilityDocsLibraryPrefix.Length..]
+        : null;
+
     internal string RequireOption(string option, [CallerArgumentExpression("option")] string expression = null) =>
         option ?? throw new UserErrorException($"Option for {expression} is required");
 
-    internal List<ApiMetadata> GetApisFromLibraryId(ApiCatalog catalog) => LibraryId is null ? catalog.Apis
+    internal List<ApiMetadata> GetApisFromLibraryId(ApiCatalog catalog) => string.IsNullOrEmpty(LibraryId) ? catalog.Apis
         : catalog.PackageGroups.FirstOrDefault(pg => pg.Id == LibraryId) is PackageGroup group ? group.PackageIds.Select(id => catalog[id]).ToList()
         : new() { catalog[LibraryId] };
 }

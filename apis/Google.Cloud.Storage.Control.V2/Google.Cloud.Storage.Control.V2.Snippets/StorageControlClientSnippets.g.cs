@@ -17,9 +17,12 @@
 namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Cloud.Iam.V1;
     using Google.Cloud.Storage.Control.V2;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -1435,6 +1438,1683 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAnywhereCache</summary>
+        public void CreateAnywhereCacheRequestObject()
+        {
+            // Snippet: CreateAnywhereCache(CreateAnywhereCacheRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            CreateAnywhereCacheRequest request = new CreateAnywhereCacheRequest
+            {
+                ParentAsBucketName = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                AnywhereCache = new AnywhereCache(),
+            };
+            // Make the request
+            Operation<AnywhereCache, CreateAnywhereCacheMetadata> response = storageControlClient.CreateAnywhereCache(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AnywhereCache, CreateAnywhereCacheMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AnywhereCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AnywhereCache, CreateAnywhereCacheMetadata> retrievedResponse = storageControlClient.PollOnceCreateAnywhereCache(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AnywhereCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAnywhereCacheAsync</summary>
+        public async Task CreateAnywhereCacheRequestObjectAsync()
+        {
+            // Snippet: CreateAnywhereCacheAsync(CreateAnywhereCacheRequest, CallSettings)
+            // Additional: CreateAnywhereCacheAsync(CreateAnywhereCacheRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateAnywhereCacheRequest request = new CreateAnywhereCacheRequest
+            {
+                ParentAsBucketName = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                AnywhereCache = new AnywhereCache(),
+            };
+            // Make the request
+            Operation<AnywhereCache, CreateAnywhereCacheMetadata> response = await storageControlClient.CreateAnywhereCacheAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AnywhereCache, CreateAnywhereCacheMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AnywhereCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AnywhereCache, CreateAnywhereCacheMetadata> retrievedResponse = await storageControlClient.PollOnceCreateAnywhereCacheAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AnywhereCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAnywhereCache</summary>
+        public void CreateAnywhereCache()
+        {
+            // Snippet: CreateAnywhereCache(string, AnywhereCache, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/buckets/[BUCKET]";
+            AnywhereCache anywhereCache = new AnywhereCache();
+            // Make the request
+            Operation<AnywhereCache, CreateAnywhereCacheMetadata> response = storageControlClient.CreateAnywhereCache(parent, anywhereCache);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AnywhereCache, CreateAnywhereCacheMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AnywhereCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AnywhereCache, CreateAnywhereCacheMetadata> retrievedResponse = storageControlClient.PollOnceCreateAnywhereCache(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AnywhereCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAnywhereCacheAsync</summary>
+        public async Task CreateAnywhereCacheAsync()
+        {
+            // Snippet: CreateAnywhereCacheAsync(string, AnywhereCache, CallSettings)
+            // Additional: CreateAnywhereCacheAsync(string, AnywhereCache, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/buckets/[BUCKET]";
+            AnywhereCache anywhereCache = new AnywhereCache();
+            // Make the request
+            Operation<AnywhereCache, CreateAnywhereCacheMetadata> response = await storageControlClient.CreateAnywhereCacheAsync(parent, anywhereCache);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AnywhereCache, CreateAnywhereCacheMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AnywhereCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AnywhereCache, CreateAnywhereCacheMetadata> retrievedResponse = await storageControlClient.PollOnceCreateAnywhereCacheAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AnywhereCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAnywhereCache</summary>
+        public void CreateAnywhereCacheResourceNames()
+        {
+            // Snippet: CreateAnywhereCache(BucketName, AnywhereCache, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            BucketName parent = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            AnywhereCache anywhereCache = new AnywhereCache();
+            // Make the request
+            Operation<AnywhereCache, CreateAnywhereCacheMetadata> response = storageControlClient.CreateAnywhereCache(parent, anywhereCache);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AnywhereCache, CreateAnywhereCacheMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AnywhereCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AnywhereCache, CreateAnywhereCacheMetadata> retrievedResponse = storageControlClient.PollOnceCreateAnywhereCache(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AnywhereCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAnywhereCacheAsync</summary>
+        public async Task CreateAnywhereCacheResourceNamesAsync()
+        {
+            // Snippet: CreateAnywhereCacheAsync(BucketName, AnywhereCache, CallSettings)
+            // Additional: CreateAnywhereCacheAsync(BucketName, AnywhereCache, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            BucketName parent = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            AnywhereCache anywhereCache = new AnywhereCache();
+            // Make the request
+            Operation<AnywhereCache, CreateAnywhereCacheMetadata> response = await storageControlClient.CreateAnywhereCacheAsync(parent, anywhereCache);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AnywhereCache, CreateAnywhereCacheMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AnywhereCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AnywhereCache, CreateAnywhereCacheMetadata> retrievedResponse = await storageControlClient.PollOnceCreateAnywhereCacheAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AnywhereCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAnywhereCache</summary>
+        public void UpdateAnywhereCacheRequestObject()
+        {
+            // Snippet: UpdateAnywhereCache(UpdateAnywhereCacheRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            UpdateAnywhereCacheRequest request = new UpdateAnywhereCacheRequest
+            {
+                AnywhereCache = new AnywhereCache(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<AnywhereCache, UpdateAnywhereCacheMetadata> response = storageControlClient.UpdateAnywhereCache(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AnywhereCache, UpdateAnywhereCacheMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AnywhereCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AnywhereCache, UpdateAnywhereCacheMetadata> retrievedResponse = storageControlClient.PollOnceUpdateAnywhereCache(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AnywhereCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAnywhereCacheAsync</summary>
+        public async Task UpdateAnywhereCacheRequestObjectAsync()
+        {
+            // Snippet: UpdateAnywhereCacheAsync(UpdateAnywhereCacheRequest, CallSettings)
+            // Additional: UpdateAnywhereCacheAsync(UpdateAnywhereCacheRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateAnywhereCacheRequest request = new UpdateAnywhereCacheRequest
+            {
+                AnywhereCache = new AnywhereCache(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<AnywhereCache, UpdateAnywhereCacheMetadata> response = await storageControlClient.UpdateAnywhereCacheAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AnywhereCache, UpdateAnywhereCacheMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AnywhereCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AnywhereCache, UpdateAnywhereCacheMetadata> retrievedResponse = await storageControlClient.PollOnceUpdateAnywhereCacheAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AnywhereCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAnywhereCache</summary>
+        public void UpdateAnywhereCache()
+        {
+            // Snippet: UpdateAnywhereCache(AnywhereCache, FieldMask, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            AnywhereCache anywhereCache = new AnywhereCache();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<AnywhereCache, UpdateAnywhereCacheMetadata> response = storageControlClient.UpdateAnywhereCache(anywhereCache, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AnywhereCache, UpdateAnywhereCacheMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AnywhereCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AnywhereCache, UpdateAnywhereCacheMetadata> retrievedResponse = storageControlClient.PollOnceUpdateAnywhereCache(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AnywhereCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAnywhereCacheAsync</summary>
+        public async Task UpdateAnywhereCacheAsync()
+        {
+            // Snippet: UpdateAnywhereCacheAsync(AnywhereCache, FieldMask, CallSettings)
+            // Additional: UpdateAnywhereCacheAsync(AnywhereCache, FieldMask, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            AnywhereCache anywhereCache = new AnywhereCache();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<AnywhereCache, UpdateAnywhereCacheMetadata> response = await storageControlClient.UpdateAnywhereCacheAsync(anywhereCache, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AnywhereCache, UpdateAnywhereCacheMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AnywhereCache result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AnywhereCache, UpdateAnywhereCacheMetadata> retrievedResponse = await storageControlClient.PollOnceUpdateAnywhereCacheAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AnywhereCache retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableAnywhereCache</summary>
+        public void DisableAnywhereCacheRequestObject()
+        {
+            // Snippet: DisableAnywhereCache(DisableAnywhereCacheRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            DisableAnywhereCacheRequest request = new DisableAnywhereCacheRequest
+            {
+                AnywhereCacheName = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]"),
+            };
+            // Make the request
+            AnywhereCache response = storageControlClient.DisableAnywhereCache(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableAnywhereCacheAsync</summary>
+        public async Task DisableAnywhereCacheRequestObjectAsync()
+        {
+            // Snippet: DisableAnywhereCacheAsync(DisableAnywhereCacheRequest, CallSettings)
+            // Additional: DisableAnywhereCacheAsync(DisableAnywhereCacheRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            DisableAnywhereCacheRequest request = new DisableAnywhereCacheRequest
+            {
+                AnywhereCacheName = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]"),
+            };
+            // Make the request
+            AnywhereCache response = await storageControlClient.DisableAnywhereCacheAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableAnywhereCache</summary>
+        public void DisableAnywhereCache()
+        {
+            // Snippet: DisableAnywhereCache(string, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/anywhereCaches/[ANYWHERE_CACHE]";
+            // Make the request
+            AnywhereCache response = storageControlClient.DisableAnywhereCache(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableAnywhereCacheAsync</summary>
+        public async Task DisableAnywhereCacheAsync()
+        {
+            // Snippet: DisableAnywhereCacheAsync(string, CallSettings)
+            // Additional: DisableAnywhereCacheAsync(string, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/anywhereCaches/[ANYWHERE_CACHE]";
+            // Make the request
+            AnywhereCache response = await storageControlClient.DisableAnywhereCacheAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableAnywhereCache</summary>
+        public void DisableAnywhereCacheResourceNames()
+        {
+            // Snippet: DisableAnywhereCache(AnywhereCacheName, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            AnywhereCacheName name = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]");
+            // Make the request
+            AnywhereCache response = storageControlClient.DisableAnywhereCache(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableAnywhereCacheAsync</summary>
+        public async Task DisableAnywhereCacheResourceNamesAsync()
+        {
+            // Snippet: DisableAnywhereCacheAsync(AnywhereCacheName, CallSettings)
+            // Additional: DisableAnywhereCacheAsync(AnywhereCacheName, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            AnywhereCacheName name = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]");
+            // Make the request
+            AnywhereCache response = await storageControlClient.DisableAnywhereCacheAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PauseAnywhereCache</summary>
+        public void PauseAnywhereCacheRequestObject()
+        {
+            // Snippet: PauseAnywhereCache(PauseAnywhereCacheRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            PauseAnywhereCacheRequest request = new PauseAnywhereCacheRequest
+            {
+                AnywhereCacheName = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]"),
+            };
+            // Make the request
+            AnywhereCache response = storageControlClient.PauseAnywhereCache(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PauseAnywhereCacheAsync</summary>
+        public async Task PauseAnywhereCacheRequestObjectAsync()
+        {
+            // Snippet: PauseAnywhereCacheAsync(PauseAnywhereCacheRequest, CallSettings)
+            // Additional: PauseAnywhereCacheAsync(PauseAnywhereCacheRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            PauseAnywhereCacheRequest request = new PauseAnywhereCacheRequest
+            {
+                AnywhereCacheName = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]"),
+            };
+            // Make the request
+            AnywhereCache response = await storageControlClient.PauseAnywhereCacheAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PauseAnywhereCache</summary>
+        public void PauseAnywhereCache()
+        {
+            // Snippet: PauseAnywhereCache(string, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/anywhereCaches/[ANYWHERE_CACHE]";
+            // Make the request
+            AnywhereCache response = storageControlClient.PauseAnywhereCache(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PauseAnywhereCacheAsync</summary>
+        public async Task PauseAnywhereCacheAsync()
+        {
+            // Snippet: PauseAnywhereCacheAsync(string, CallSettings)
+            // Additional: PauseAnywhereCacheAsync(string, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/anywhereCaches/[ANYWHERE_CACHE]";
+            // Make the request
+            AnywhereCache response = await storageControlClient.PauseAnywhereCacheAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PauseAnywhereCache</summary>
+        public void PauseAnywhereCacheResourceNames()
+        {
+            // Snippet: PauseAnywhereCache(AnywhereCacheName, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            AnywhereCacheName name = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]");
+            // Make the request
+            AnywhereCache response = storageControlClient.PauseAnywhereCache(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PauseAnywhereCacheAsync</summary>
+        public async Task PauseAnywhereCacheResourceNamesAsync()
+        {
+            // Snippet: PauseAnywhereCacheAsync(AnywhereCacheName, CallSettings)
+            // Additional: PauseAnywhereCacheAsync(AnywhereCacheName, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            AnywhereCacheName name = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]");
+            // Make the request
+            AnywhereCache response = await storageControlClient.PauseAnywhereCacheAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeAnywhereCache</summary>
+        public void ResumeAnywhereCacheRequestObject()
+        {
+            // Snippet: ResumeAnywhereCache(ResumeAnywhereCacheRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            ResumeAnywhereCacheRequest request = new ResumeAnywhereCacheRequest
+            {
+                AnywhereCacheName = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]"),
+            };
+            // Make the request
+            AnywhereCache response = storageControlClient.ResumeAnywhereCache(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeAnywhereCacheAsync</summary>
+        public async Task ResumeAnywhereCacheRequestObjectAsync()
+        {
+            // Snippet: ResumeAnywhereCacheAsync(ResumeAnywhereCacheRequest, CallSettings)
+            // Additional: ResumeAnywhereCacheAsync(ResumeAnywhereCacheRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            ResumeAnywhereCacheRequest request = new ResumeAnywhereCacheRequest
+            {
+                AnywhereCacheName = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]"),
+            };
+            // Make the request
+            AnywhereCache response = await storageControlClient.ResumeAnywhereCacheAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeAnywhereCache</summary>
+        public void ResumeAnywhereCache()
+        {
+            // Snippet: ResumeAnywhereCache(string, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/anywhereCaches/[ANYWHERE_CACHE]";
+            // Make the request
+            AnywhereCache response = storageControlClient.ResumeAnywhereCache(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeAnywhereCacheAsync</summary>
+        public async Task ResumeAnywhereCacheAsync()
+        {
+            // Snippet: ResumeAnywhereCacheAsync(string, CallSettings)
+            // Additional: ResumeAnywhereCacheAsync(string, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/anywhereCaches/[ANYWHERE_CACHE]";
+            // Make the request
+            AnywhereCache response = await storageControlClient.ResumeAnywhereCacheAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeAnywhereCache</summary>
+        public void ResumeAnywhereCacheResourceNames()
+        {
+            // Snippet: ResumeAnywhereCache(AnywhereCacheName, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            AnywhereCacheName name = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]");
+            // Make the request
+            AnywhereCache response = storageControlClient.ResumeAnywhereCache(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeAnywhereCacheAsync</summary>
+        public async Task ResumeAnywhereCacheResourceNamesAsync()
+        {
+            // Snippet: ResumeAnywhereCacheAsync(AnywhereCacheName, CallSettings)
+            // Additional: ResumeAnywhereCacheAsync(AnywhereCacheName, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            AnywhereCacheName name = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]");
+            // Make the request
+            AnywhereCache response = await storageControlClient.ResumeAnywhereCacheAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAnywhereCache</summary>
+        public void GetAnywhereCacheRequestObject()
+        {
+            // Snippet: GetAnywhereCache(GetAnywhereCacheRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            GetAnywhereCacheRequest request = new GetAnywhereCacheRequest
+            {
+                AnywhereCacheName = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]"),
+            };
+            // Make the request
+            AnywhereCache response = storageControlClient.GetAnywhereCache(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAnywhereCacheAsync</summary>
+        public async Task GetAnywhereCacheRequestObjectAsync()
+        {
+            // Snippet: GetAnywhereCacheAsync(GetAnywhereCacheRequest, CallSettings)
+            // Additional: GetAnywhereCacheAsync(GetAnywhereCacheRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAnywhereCacheRequest request = new GetAnywhereCacheRequest
+            {
+                AnywhereCacheName = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]"),
+            };
+            // Make the request
+            AnywhereCache response = await storageControlClient.GetAnywhereCacheAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAnywhereCache</summary>
+        public void GetAnywhereCache()
+        {
+            // Snippet: GetAnywhereCache(string, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/anywhereCaches/[ANYWHERE_CACHE]";
+            // Make the request
+            AnywhereCache response = storageControlClient.GetAnywhereCache(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAnywhereCacheAsync</summary>
+        public async Task GetAnywhereCacheAsync()
+        {
+            // Snippet: GetAnywhereCacheAsync(string, CallSettings)
+            // Additional: GetAnywhereCacheAsync(string, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/buckets/[BUCKET]/anywhereCaches/[ANYWHERE_CACHE]";
+            // Make the request
+            AnywhereCache response = await storageControlClient.GetAnywhereCacheAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAnywhereCache</summary>
+        public void GetAnywhereCacheResourceNames()
+        {
+            // Snippet: GetAnywhereCache(AnywhereCacheName, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            AnywhereCacheName name = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]");
+            // Make the request
+            AnywhereCache response = storageControlClient.GetAnywhereCache(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAnywhereCacheAsync</summary>
+        public async Task GetAnywhereCacheResourceNamesAsync()
+        {
+            // Snippet: GetAnywhereCacheAsync(AnywhereCacheName, CallSettings)
+            // Additional: GetAnywhereCacheAsync(AnywhereCacheName, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            AnywhereCacheName name = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]");
+            // Make the request
+            AnywhereCache response = await storageControlClient.GetAnywhereCacheAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAnywhereCaches</summary>
+        public void ListAnywhereCachesRequestObject()
+        {
+            // Snippet: ListAnywhereCaches(ListAnywhereCachesRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            ListAnywhereCachesRequest request = new ListAnywhereCachesRequest
+            {
+                ParentAsBucketName = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+            };
+            // Make the request
+            PagedEnumerable<ListAnywhereCachesResponse, AnywhereCache> response = storageControlClient.ListAnywhereCaches(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AnywhereCache item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAnywhereCachesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AnywhereCache item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AnywhereCache> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AnywhereCache item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAnywhereCachesAsync</summary>
+        public async Task ListAnywhereCachesRequestObjectAsync()
+        {
+            // Snippet: ListAnywhereCachesAsync(ListAnywhereCachesRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAnywhereCachesRequest request = new ListAnywhereCachesRequest
+            {
+                ParentAsBucketName = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAnywhereCachesResponse, AnywhereCache> response = storageControlClient.ListAnywhereCachesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AnywhereCache item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAnywhereCachesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AnywhereCache item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AnywhereCache> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AnywhereCache item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAnywhereCaches</summary>
+        public void ListAnywhereCaches()
+        {
+            // Snippet: ListAnywhereCaches(string, string, int?, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/buckets/[BUCKET]";
+            // Make the request
+            PagedEnumerable<ListAnywhereCachesResponse, AnywhereCache> response = storageControlClient.ListAnywhereCaches(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AnywhereCache item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAnywhereCachesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AnywhereCache item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AnywhereCache> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AnywhereCache item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAnywhereCachesAsync</summary>
+        public async Task ListAnywhereCachesAsync()
+        {
+            // Snippet: ListAnywhereCachesAsync(string, string, int?, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/buckets/[BUCKET]";
+            // Make the request
+            PagedAsyncEnumerable<ListAnywhereCachesResponse, AnywhereCache> response = storageControlClient.ListAnywhereCachesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AnywhereCache item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAnywhereCachesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AnywhereCache item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AnywhereCache> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AnywhereCache item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAnywhereCaches</summary>
+        public void ListAnywhereCachesResourceNames()
+        {
+            // Snippet: ListAnywhereCaches(BucketName, string, int?, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            BucketName parent = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            // Make the request
+            PagedEnumerable<ListAnywhereCachesResponse, AnywhereCache> response = storageControlClient.ListAnywhereCaches(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AnywhereCache item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAnywhereCachesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AnywhereCache item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AnywhereCache> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AnywhereCache item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAnywhereCachesAsync</summary>
+        public async Task ListAnywhereCachesResourceNamesAsync()
+        {
+            // Snippet: ListAnywhereCachesAsync(BucketName, string, int?, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            BucketName parent = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            // Make the request
+            PagedAsyncEnumerable<ListAnywhereCachesResponse, AnywhereCache> response = storageControlClient.ListAnywhereCachesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AnywhereCache item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAnywhereCachesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AnywhereCache item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AnywhereCache> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AnywhereCache item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProjectIntelligenceConfig</summary>
+        public void GetProjectIntelligenceConfigRequestObject()
+        {
+            // Snippet: GetProjectIntelligenceConfig(GetProjectIntelligenceConfigRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            GetProjectIntelligenceConfigRequest request = new GetProjectIntelligenceConfigRequest
+            {
+                IntelligenceConfigName = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]"),
+            };
+            // Make the request
+            IntelligenceConfig response = storageControlClient.GetProjectIntelligenceConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProjectIntelligenceConfigAsync</summary>
+        public async Task GetProjectIntelligenceConfigRequestObjectAsync()
+        {
+            // Snippet: GetProjectIntelligenceConfigAsync(GetProjectIntelligenceConfigRequest, CallSettings)
+            // Additional: GetProjectIntelligenceConfigAsync(GetProjectIntelligenceConfigRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            GetProjectIntelligenceConfigRequest request = new GetProjectIntelligenceConfigRequest
+            {
+                IntelligenceConfigName = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]"),
+            };
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.GetProjectIntelligenceConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProjectIntelligenceConfig</summary>
+        public void GetProjectIntelligenceConfig()
+        {
+            // Snippet: GetProjectIntelligenceConfig(string, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            string name = "folders/[FOLDER]/locations/[LOCATION]/intelligenceConfig";
+            // Make the request
+            IntelligenceConfig response = storageControlClient.GetProjectIntelligenceConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProjectIntelligenceConfigAsync</summary>
+        public async Task GetProjectIntelligenceConfigAsync()
+        {
+            // Snippet: GetProjectIntelligenceConfigAsync(string, CallSettings)
+            // Additional: GetProjectIntelligenceConfigAsync(string, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "folders/[FOLDER]/locations/[LOCATION]/intelligenceConfig";
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.GetProjectIntelligenceConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProjectIntelligenceConfig</summary>
+        public void GetProjectIntelligenceConfigResourceNames()
+        {
+            // Snippet: GetProjectIntelligenceConfig(IntelligenceConfigName, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            IntelligenceConfigName name = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            // Make the request
+            IntelligenceConfig response = storageControlClient.GetProjectIntelligenceConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProjectIntelligenceConfigAsync</summary>
+        public async Task GetProjectIntelligenceConfigResourceNamesAsync()
+        {
+            // Snippet: GetProjectIntelligenceConfigAsync(IntelligenceConfigName, CallSettings)
+            // Additional: GetProjectIntelligenceConfigAsync(IntelligenceConfigName, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            IntelligenceConfigName name = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.GetProjectIntelligenceConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProjectIntelligenceConfig</summary>
+        public void UpdateProjectIntelligenceConfigRequestObject()
+        {
+            // Snippet: UpdateProjectIntelligenceConfig(UpdateProjectIntelligenceConfigRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            UpdateProjectIntelligenceConfigRequest request = new UpdateProjectIntelligenceConfigRequest
+            {
+                IntelligenceConfig = new IntelligenceConfig(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            IntelligenceConfig response = storageControlClient.UpdateProjectIntelligenceConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProjectIntelligenceConfigAsync</summary>
+        public async Task UpdateProjectIntelligenceConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateProjectIntelligenceConfigAsync(UpdateProjectIntelligenceConfigRequest, CallSettings)
+            // Additional: UpdateProjectIntelligenceConfigAsync(UpdateProjectIntelligenceConfigRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateProjectIntelligenceConfigRequest request = new UpdateProjectIntelligenceConfigRequest
+            {
+                IntelligenceConfig = new IntelligenceConfig(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.UpdateProjectIntelligenceConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProjectIntelligenceConfig</summary>
+        public void UpdateProjectIntelligenceConfig()
+        {
+            // Snippet: UpdateProjectIntelligenceConfig(IntelligenceConfig, FieldMask, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            IntelligenceConfig intelligenceConfig = new IntelligenceConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            IntelligenceConfig response = storageControlClient.UpdateProjectIntelligenceConfig(intelligenceConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProjectIntelligenceConfigAsync</summary>
+        public async Task UpdateProjectIntelligenceConfigAsync()
+        {
+            // Snippet: UpdateProjectIntelligenceConfigAsync(IntelligenceConfig, FieldMask, CallSettings)
+            // Additional: UpdateProjectIntelligenceConfigAsync(IntelligenceConfig, FieldMask, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            IntelligenceConfig intelligenceConfig = new IntelligenceConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.UpdateProjectIntelligenceConfigAsync(intelligenceConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFolderIntelligenceConfig</summary>
+        public void GetFolderIntelligenceConfigRequestObject()
+        {
+            // Snippet: GetFolderIntelligenceConfig(GetFolderIntelligenceConfigRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            GetFolderIntelligenceConfigRequest request = new GetFolderIntelligenceConfigRequest
+            {
+                IntelligenceConfigName = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]"),
+            };
+            // Make the request
+            IntelligenceConfig response = storageControlClient.GetFolderIntelligenceConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFolderIntelligenceConfigAsync</summary>
+        public async Task GetFolderIntelligenceConfigRequestObjectAsync()
+        {
+            // Snippet: GetFolderIntelligenceConfigAsync(GetFolderIntelligenceConfigRequest, CallSettings)
+            // Additional: GetFolderIntelligenceConfigAsync(GetFolderIntelligenceConfigRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            GetFolderIntelligenceConfigRequest request = new GetFolderIntelligenceConfigRequest
+            {
+                IntelligenceConfigName = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]"),
+            };
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.GetFolderIntelligenceConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFolderIntelligenceConfig</summary>
+        public void GetFolderIntelligenceConfig()
+        {
+            // Snippet: GetFolderIntelligenceConfig(string, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            string name = "folders/[FOLDER]/locations/[LOCATION]/intelligenceConfig";
+            // Make the request
+            IntelligenceConfig response = storageControlClient.GetFolderIntelligenceConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFolderIntelligenceConfigAsync</summary>
+        public async Task GetFolderIntelligenceConfigAsync()
+        {
+            // Snippet: GetFolderIntelligenceConfigAsync(string, CallSettings)
+            // Additional: GetFolderIntelligenceConfigAsync(string, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "folders/[FOLDER]/locations/[LOCATION]/intelligenceConfig";
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.GetFolderIntelligenceConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFolderIntelligenceConfig</summary>
+        public void GetFolderIntelligenceConfigResourceNames()
+        {
+            // Snippet: GetFolderIntelligenceConfig(IntelligenceConfigName, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            IntelligenceConfigName name = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            // Make the request
+            IntelligenceConfig response = storageControlClient.GetFolderIntelligenceConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFolderIntelligenceConfigAsync</summary>
+        public async Task GetFolderIntelligenceConfigResourceNamesAsync()
+        {
+            // Snippet: GetFolderIntelligenceConfigAsync(IntelligenceConfigName, CallSettings)
+            // Additional: GetFolderIntelligenceConfigAsync(IntelligenceConfigName, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            IntelligenceConfigName name = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.GetFolderIntelligenceConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFolderIntelligenceConfig</summary>
+        public void UpdateFolderIntelligenceConfigRequestObject()
+        {
+            // Snippet: UpdateFolderIntelligenceConfig(UpdateFolderIntelligenceConfigRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            UpdateFolderIntelligenceConfigRequest request = new UpdateFolderIntelligenceConfigRequest
+            {
+                IntelligenceConfig = new IntelligenceConfig(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            IntelligenceConfig response = storageControlClient.UpdateFolderIntelligenceConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFolderIntelligenceConfigAsync</summary>
+        public async Task UpdateFolderIntelligenceConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateFolderIntelligenceConfigAsync(UpdateFolderIntelligenceConfigRequest, CallSettings)
+            // Additional: UpdateFolderIntelligenceConfigAsync(UpdateFolderIntelligenceConfigRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateFolderIntelligenceConfigRequest request = new UpdateFolderIntelligenceConfigRequest
+            {
+                IntelligenceConfig = new IntelligenceConfig(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.UpdateFolderIntelligenceConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFolderIntelligenceConfig</summary>
+        public void UpdateFolderIntelligenceConfig()
+        {
+            // Snippet: UpdateFolderIntelligenceConfig(IntelligenceConfig, FieldMask, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            IntelligenceConfig intelligenceConfig = new IntelligenceConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            IntelligenceConfig response = storageControlClient.UpdateFolderIntelligenceConfig(intelligenceConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFolderIntelligenceConfigAsync</summary>
+        public async Task UpdateFolderIntelligenceConfigAsync()
+        {
+            // Snippet: UpdateFolderIntelligenceConfigAsync(IntelligenceConfig, FieldMask, CallSettings)
+            // Additional: UpdateFolderIntelligenceConfigAsync(IntelligenceConfig, FieldMask, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            IntelligenceConfig intelligenceConfig = new IntelligenceConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.UpdateFolderIntelligenceConfigAsync(intelligenceConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOrganizationIntelligenceConfig</summary>
+        public void GetOrganizationIntelligenceConfigRequestObject()
+        {
+            // Snippet: GetOrganizationIntelligenceConfig(GetOrganizationIntelligenceConfigRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            GetOrganizationIntelligenceConfigRequest request = new GetOrganizationIntelligenceConfigRequest
+            {
+                IntelligenceConfigName = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]"),
+            };
+            // Make the request
+            IntelligenceConfig response = storageControlClient.GetOrganizationIntelligenceConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOrganizationIntelligenceConfigAsync</summary>
+        public async Task GetOrganizationIntelligenceConfigRequestObjectAsync()
+        {
+            // Snippet: GetOrganizationIntelligenceConfigAsync(GetOrganizationIntelligenceConfigRequest, CallSettings)
+            // Additional: GetOrganizationIntelligenceConfigAsync(GetOrganizationIntelligenceConfigRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            GetOrganizationIntelligenceConfigRequest request = new GetOrganizationIntelligenceConfigRequest
+            {
+                IntelligenceConfigName = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]"),
+            };
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.GetOrganizationIntelligenceConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOrganizationIntelligenceConfig</summary>
+        public void GetOrganizationIntelligenceConfig()
+        {
+            // Snippet: GetOrganizationIntelligenceConfig(string, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            string name = "folders/[FOLDER]/locations/[LOCATION]/intelligenceConfig";
+            // Make the request
+            IntelligenceConfig response = storageControlClient.GetOrganizationIntelligenceConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOrganizationIntelligenceConfigAsync</summary>
+        public async Task GetOrganizationIntelligenceConfigAsync()
+        {
+            // Snippet: GetOrganizationIntelligenceConfigAsync(string, CallSettings)
+            // Additional: GetOrganizationIntelligenceConfigAsync(string, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "folders/[FOLDER]/locations/[LOCATION]/intelligenceConfig";
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.GetOrganizationIntelligenceConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOrganizationIntelligenceConfig</summary>
+        public void GetOrganizationIntelligenceConfigResourceNames()
+        {
+            // Snippet: GetOrganizationIntelligenceConfig(IntelligenceConfigName, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            IntelligenceConfigName name = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            // Make the request
+            IntelligenceConfig response = storageControlClient.GetOrganizationIntelligenceConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOrganizationIntelligenceConfigAsync</summary>
+        public async Task GetOrganizationIntelligenceConfigResourceNamesAsync()
+        {
+            // Snippet: GetOrganizationIntelligenceConfigAsync(IntelligenceConfigName, CallSettings)
+            // Additional: GetOrganizationIntelligenceConfigAsync(IntelligenceConfigName, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            IntelligenceConfigName name = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.GetOrganizationIntelligenceConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateOrganizationIntelligenceConfig</summary>
+        public void UpdateOrganizationIntelligenceConfigRequestObject()
+        {
+            // Snippet: UpdateOrganizationIntelligenceConfig(UpdateOrganizationIntelligenceConfigRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            UpdateOrganizationIntelligenceConfigRequest request = new UpdateOrganizationIntelligenceConfigRequest
+            {
+                IntelligenceConfig = new IntelligenceConfig(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            IntelligenceConfig response = storageControlClient.UpdateOrganizationIntelligenceConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateOrganizationIntelligenceConfigAsync</summary>
+        public async Task UpdateOrganizationIntelligenceConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateOrganizationIntelligenceConfigAsync(UpdateOrganizationIntelligenceConfigRequest, CallSettings)
+            // Additional: UpdateOrganizationIntelligenceConfigAsync(UpdateOrganizationIntelligenceConfigRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateOrganizationIntelligenceConfigRequest request = new UpdateOrganizationIntelligenceConfigRequest
+            {
+                IntelligenceConfig = new IntelligenceConfig(),
+                UpdateMask = new FieldMask(),
+                RequestId = "",
+            };
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.UpdateOrganizationIntelligenceConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateOrganizationIntelligenceConfig</summary>
+        public void UpdateOrganizationIntelligenceConfig()
+        {
+            // Snippet: UpdateOrganizationIntelligenceConfig(IntelligenceConfig, FieldMask, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            IntelligenceConfig intelligenceConfig = new IntelligenceConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            IntelligenceConfig response = storageControlClient.UpdateOrganizationIntelligenceConfig(intelligenceConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateOrganizationIntelligenceConfigAsync</summary>
+        public async Task UpdateOrganizationIntelligenceConfigAsync()
+        {
+            // Snippet: UpdateOrganizationIntelligenceConfigAsync(IntelligenceConfig, FieldMask, CallSettings)
+            // Additional: UpdateOrganizationIntelligenceConfigAsync(IntelligenceConfig, FieldMask, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            IntelligenceConfig intelligenceConfig = new IntelligenceConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            IntelligenceConfig response = await storageControlClient.UpdateOrganizationIntelligenceConfigAsync(intelligenceConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicyRequestObject()
+        {
+            // Snippet: GetIamPolicy(GetIamPolicyRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Options = new GetPolicyOptions(),
+            };
+            // Make the request
+            Policy response = storageControlClient.GetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyRequestObjectAsync()
+        {
+            // Snippet: GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)
+            // Additional: GetIamPolicyAsync(GetIamPolicyRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Options = new GetPolicyOptions(),
+            };
+            // Make the request
+            Policy response = await storageControlClient.GetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicy()
+        {
+            // Snippet: GetIamPolicy(string, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            string resource = "a/wildcard/resource";
+            // Make the request
+            Policy response = storageControlClient.GetIamPolicy(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyAsync()
+        {
+            // Snippet: GetIamPolicyAsync(string, CallSettings)
+            // Additional: GetIamPolicyAsync(string, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string resource = "a/wildcard/resource";
+            // Make the request
+            Policy response = await storageControlClient.GetIamPolicyAsync(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicyResourceNames()
+        {
+            // Snippet: GetIamPolicy(IResourceName, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            Policy response = storageControlClient.GetIamPolicy(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyResourceNamesAsync()
+        {
+            // Snippet: GetIamPolicyAsync(IResourceName, CallSettings)
+            // Additional: GetIamPolicyAsync(IResourceName, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            Policy response = await storageControlClient.GetIamPolicyAsync(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicyRequestObject()
+        {
+            // Snippet: SetIamPolicy(SetIamPolicyRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Policy = new Policy(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Policy response = storageControlClient.SetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyRequestObjectAsync()
+        {
+            // Snippet: SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)
+            // Additional: SetIamPolicyAsync(SetIamPolicyRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Policy = new Policy(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Policy response = await storageControlClient.SetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicy()
+        {
+            // Snippet: SetIamPolicy(string, Policy, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            string resource = "a/wildcard/resource";
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = storageControlClient.SetIamPolicy(resource, policy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyAsync()
+        {
+            // Snippet: SetIamPolicyAsync(string, Policy, CallSettings)
+            // Additional: SetIamPolicyAsync(string, Policy, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string resource = "a/wildcard/resource";
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = await storageControlClient.SetIamPolicyAsync(resource, policy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicyResourceNames()
+        {
+            // Snippet: SetIamPolicy(IResourceName, Policy, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = storageControlClient.SetIamPolicy(resource, policy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyResourceNamesAsync()
+        {
+            // Snippet: SetIamPolicyAsync(IResourceName, Policy, CallSettings)
+            // Additional: SetIamPolicyAsync(IResourceName, Policy, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = await storageControlClient.SetIamPolicyAsync(resource, policy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissionsRequestObject()
+        {
+            // Snippet: TestIamPermissions(TestIamPermissionsRequest, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Permissions = { "", },
+            };
+            // Make the request
+            TestIamPermissionsResponse response = storageControlClient.TestIamPermissions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsRequestObjectAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Permissions = { "", },
+            };
+            // Make the request
+            TestIamPermissionsResponse response = await storageControlClient.TestIamPermissionsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissions()
+        {
+            // Snippet: TestIamPermissions(string, IEnumerable<string>, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            string resource = "a/wildcard/resource";
+            IEnumerable<string> permissions = new string[] { "", };
+            // Make the request
+            TestIamPermissionsResponse response = storageControlClient.TestIamPermissions(resource, permissions);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: TestIamPermissionsAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string resource = "a/wildcard/resource";
+            IEnumerable<string> permissions = new string[] { "", };
+            // Make the request
+            TestIamPermissionsResponse response = await storageControlClient.TestIamPermissionsAsync(resource, permissions);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissionsResourceNames()
+        {
+            // Snippet: TestIamPermissions(IResourceName, IEnumerable<string>, CallSettings)
+            // Create client
+            StorageControlClient storageControlClient = StorageControlClient.Create();
+            // Initialize request argument(s)
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
+            IEnumerable<string> permissions = new string[] { "", };
+            // Make the request
+            TestIamPermissionsResponse response = storageControlClient.TestIamPermissions(resource, permissions);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsResourceNamesAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(IResourceName, IEnumerable<string>, CallSettings)
+            // Additional: TestIamPermissionsAsync(IResourceName, IEnumerable<string>, CancellationToken)
+            // Create client
+            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
+            IEnumerable<string> permissions = new string[] { "", };
+            // Make the request
+            TestIamPermissionsResponse response = await storageControlClient.TestIamPermissionsAsync(resource, permissions);
             // End snippet
         }
     }

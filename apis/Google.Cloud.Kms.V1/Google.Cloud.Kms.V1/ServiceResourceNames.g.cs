@@ -306,4 +306,16 @@ namespace Google.Cloud.Kms.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class DecapsulateRequest
+    {
+        /// <summary>
+        /// <see cref="gckv::CryptoKeyVersionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gckv::CryptoKeyVersionName CryptoKeyVersionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyVersionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

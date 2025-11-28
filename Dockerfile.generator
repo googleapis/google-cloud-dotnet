@@ -12,13 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM mcr.microsoft.com/dotnet/sdk:6.0.414-jammy AS build
+FROM marketplace.gcr.io/google/debian12:latest AS dotnet-base
+
+RUN apt-get update
+RUN apt-get install -y curl git unzip
+
+RUN curl https://packages.microsoft.com/config/debian/12/packages-microsoft-prod.deb -o packages-microsoft-prod.deb
+RUN dpkg -i packages-microsoft-prod.deb
+RUN rm packages-microsoft-prod.deb
+RUN apt-get update && apt-get install -y dotnet-sdk-8.0
+
+FROM dotnet-base AS build
 
 WORKDIR /src
-
-# Additional tooling required to regenerate libraries and project files.
-RUN apt-get update
-RUN apt-get install -y unzip
 
 # Copy files which are needed for building
 COPY apis/GoogleApis.snk apis/GoogleApis.snk
@@ -38,7 +44,7 @@ RUN dotnet build tweaks/Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2.Genera
 # Install protobuf, the gRPC plugin and GAPIC generator, ready to run
 RUN bash -c 'source toolversions.sh && install_protoc && install_microgenerator && install_grpc'
 
-FROM mcr.microsoft.com/dotnet/sdk:6.0.414-jammy
+FROM dotnet-base
 
 WORKDIR /app
 COPY --from=build /src/packages/Google.Protobuf.Tools.* protobuf

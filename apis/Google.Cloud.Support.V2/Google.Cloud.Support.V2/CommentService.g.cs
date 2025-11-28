@@ -120,8 +120,7 @@ namespace Google.Cloud.Support.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of Case object for which comments should be
-    /// listed.
+    /// Required. The name of the case for which to list comments.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,7 +135,7 @@ namespace Google.Cloud.Support.V2 {
     public const int PageSizeFieldNumber = 4;
     private int pageSize_;
     /// <summary>
-    /// The maximum number of comments fetched with each request. Defaults to 10.
+    /// The maximum number of comments to fetch. Defaults to 10.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,7 +151,7 @@ namespace Google.Cloud.Support.V2 {
     private string pageToken_ = "";
     /// <summary>
     /// A token identifying the page of results to return. If unspecified, the
-    /// first page is retrieved.
+    /// first page is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -399,7 +398,7 @@ namespace Google.Cloud.Support.V2 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Support.V2.Comment.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Support.V2.Comment> comments_ = new pbc::RepeatedField<global::Google.Cloud.Support.V2.Comment>();
     /// <summary>
-    /// The list of Comments associated with the given Case.
+    /// List of the comments associated with the case.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -411,9 +410,9 @@ namespace Google.Cloud.Support.V2 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// A token to retrieve the next page of results. This should be set in the
-    /// `page_token` field of subsequent `ListCommentsRequest` message that is
-    /// issued. If unspecified, there are no more results to retrieve.
+    /// A token to retrieve the next page of results. Set this in the `page_token`
+    /// field of subsequent `cases.comments.list` requests. If unspecified, there
+    /// are no more results to retrieve.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -572,7 +571,7 @@ namespace Google.Cloud.Support.V2 {
   }
 
   /// <summary>
-  /// The request message for CreateComment endpoint.
+  /// The request message for the CreateComment endpoint.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateCommentRequest : pb::IMessage<CreateCommentRequest>
@@ -624,7 +623,7 @@ namespace Google.Cloud.Support.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of Case to which this comment should be added.
+    /// Required. The name of the case to which the comment should be added.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -639,7 +638,7 @@ namespace Google.Cloud.Support.V2 {
     public const int CommentFieldNumber = 2;
     private global::Google.Cloud.Support.V2.Comment comment_;
     /// <summary>
-    /// Required. The Comment object to be added to this Case.
+    /// Required. The comment to be added.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

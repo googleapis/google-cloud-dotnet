@@ -103,50 +103,51 @@ namespace Google.Cloud.AIPlatform.V1 {
             "bmllU291cmNlEhsKDmJhc2VfbW9kZWxfdXJpGAEgASgJQgPgQQIiewoPUHJl",
             "ZGljdFNjaGVtYXRhEiAKE2luc3RhbmNlX3NjaGVtYV91cmkYASABKAlCA+BB",
             "BRIiChVwYXJhbWV0ZXJzX3NjaGVtYV91cmkYAiABKAlCA+BBBRIiChVwcmVk",
-            "aWN0aW9uX3NjaGVtYV91cmkYAyABKAlCA+BBBSLTBAoSTW9kZWxDb250YWlu",
+            "aWN0aW9uX3NjaGVtYV91cmkYAyABKAlCA+BBBSL1BAoSTW9kZWxDb250YWlu",
             "ZXJTcGVjEhkKCWltYWdlX3VyaRgBIAEoCUIG4EEC4EEFEhQKB2NvbW1hbmQY",
             "AiADKAlCA+BBBRIRCgRhcmdzGAMgAygJQgPgQQUSNAoDZW52GAQgAygLMiIu",
             "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRW52VmFyQgPgQQUSNAoFcG9y",
             "dHMYBSADKAsyIC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Qb3J0QgPg",
             "QQUSGgoNcHJlZGljdF9yb3V0ZRgGIAEoCUID4EEFEhkKDGhlYWx0aF9yb3V0",
-            "ZRgHIAEoCUID4EEFEjkKCmdycGNfcG9ydHMYCSADKAsyIC5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MS5Qb3J0QgPgQQUSOgoSZGVwbG95bWVudF90aW1l",
-            "b3V0GAogASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQUSIgoV",
-            "c2hhcmVkX21lbW9yeV9zaXplX21iGAsgASgDQgPgQQUSPQoNc3RhcnR1cF9w",
-            "cm9iZRgMIAEoCzIhLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlByb2Jl",
-            "QgPgQQUSPAoMaGVhbHRoX3Byb2JlGA0gASgLMiEuZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjEuUHJvYmVCA+BBBRI+Cg5saXZlbmVzc19wcm9iZRgOIAEo",
-            "CzIhLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlByb2JlQgPgQQUiHgoE",
-            "UG9ydBIWCg5jb250YWluZXJfcG9ydBgDIAEoBSKTAgoPTW9kZWxTb3VyY2VJ",
-            "bmZvElAKC3NvdXJjZV90eXBlGAEgASgOMjsuZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjEuTW9kZWxTb3VyY2VJbmZvLk1vZGVsU291cmNlVHlwZRIMCgRj",
-            "b3B5GAIgASgIIp8BCg9Nb2RlbFNvdXJjZVR5cGUSIQodTU9ERUxfU09VUkNF",
-            "X1RZUEVfVU5TUEVDSUZJRUQQABIKCgZBVVRPTUwQARIKCgZDVVNUT00QAhII",
-            "CgRCUU1MEAMSEAoMTU9ERUxfR0FSREVOEAQSCQoFR0VOSUUQBRIZChVDVVNU",
-            "T01fVEVYVF9FTUJFRERJTkcQBhIPCgtNQVJLRVRQTEFDRRAHItsFCgVQcm9i",
-            "ZRI8CgRleGVjGAEgASgLMiwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
-            "UHJvYmUuRXhlY0FjdGlvbkgAEkMKCGh0dHBfZ2V0GAQgASgLMi8uZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjEuUHJvYmUuSHR0cEdldEFjdGlvbkgAEjwK",
-            "BGdycGMYBSABKAsyLC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Qcm9i",
-            "ZS5HcnBjQWN0aW9uSAASRwoKdGNwX3NvY2tldBgGIAEoCzIxLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxLlByb2JlLlRjcFNvY2tldEFjdGlvbkgAEhYK",
-            "DnBlcmlvZF9zZWNvbmRzGAIgASgFEhcKD3RpbWVvdXRfc2Vjb25kcxgDIAEo",
-            "BRIZChFmYWlsdXJlX3RocmVzaG9sZBgHIAEoBRIZChFzdWNjZXNzX3RocmVz",
-            "aG9sZBgIIAEoBRIdChVpbml0aWFsX2RlbGF5X3NlY29uZHMYCSABKAUaHQoK",
-            "RXhlY0FjdGlvbhIPCgdjb21tYW5kGAEgAygJGo0BCg1IdHRwR2V0QWN0aW9u",
-            "EgwKBHBhdGgYASABKAkSDAoEcG9ydBgCIAEoBRIMCgRob3N0GAMgASgJEg4K",
-            "BnNjaGVtZRgEIAEoCRJCCgxodHRwX2hlYWRlcnMYBSADKAsyLC5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5Qcm9iZS5IdHRwSGVhZGVyGisKCkdycGNB",
-            "Y3Rpb24SDAoEcG9ydBgBIAEoBRIPCgdzZXJ2aWNlGAIgASgJGi0KD1RjcFNv",
-            "Y2tldEFjdGlvbhIMCgRwb3J0GAEgASgFEgwKBGhvc3QYAiABKAkaKQoKSHR0",
-            "cEhlYWRlchIMCgRuYW1lGAEgASgJEg0KBXZhbHVlGAIgASgJQgwKCnByb2Jl",
-            "X3R5cGUiQAoKQ2hlY2twb2ludBIVCg1jaGVja3BvaW50X2lkGAEgASgJEg0K",
-            "BWVwb2NoGAIgASgDEgwKBHN0ZXAYAyABKANCyAEKHmNvbS5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MUIKTW9kZWxQcm90b1ABWj5jbG91ZC5nb29nbGUu",
-            "Y29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZv",
-            "cm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENs",
-            "b3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3Jt",
-            "OjpWMWIGcHJvdG8z"));
+            "ZRgHIAEoCUID4EEFEiAKE2ludm9rZV9yb3V0ZV9wcmVmaXgYDyABKAlCA+BB",
+            "BRI5CgpncnBjX3BvcnRzGAkgAygLMiAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjEuUG9ydEID4EEFEjoKEmRlcGxveW1lbnRfdGltZW91dBgKIAEoCzIZ",
+            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEFEiIKFXNoYXJlZF9tZW1v",
+            "cnlfc2l6ZV9tYhgLIAEoA0ID4EEFEj0KDXN0YXJ0dXBfcHJvYmUYDCABKAsy",
+            "IS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Qcm9iZUID4EEFEjwKDGhl",
+            "YWx0aF9wcm9iZRgNIAEoCzIhLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "LlByb2JlQgPgQQUSPgoObGl2ZW5lc3NfcHJvYmUYDiABKAsyIS5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5Qcm9iZUID4EEFIh4KBFBvcnQSFgoOY29u",
+            "dGFpbmVyX3BvcnQYAyABKAUikwIKD01vZGVsU291cmNlSW5mbxJQCgtzb3Vy",
+            "Y2VfdHlwZRgBIAEoDjI7Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1v",
+            "ZGVsU291cmNlSW5mby5Nb2RlbFNvdXJjZVR5cGUSDAoEY29weRgCIAEoCCKf",
+            "AQoPTW9kZWxTb3VyY2VUeXBlEiEKHU1PREVMX1NPVVJDRV9UWVBFX1VOU1BF",
+            "Q0lGSUVEEAASCgoGQVVUT01MEAESCgoGQ1VTVE9NEAISCAoEQlFNTBADEhAK",
+            "DE1PREVMX0dBUkRFThAEEgkKBUdFTklFEAUSGQoVQ1VTVE9NX1RFWFRfRU1C",
+            "RURESU5HEAYSDwoLTUFSS0VUUExBQ0UQByLbBQoFUHJvYmUSPAoEZXhlYxgB",
+            "IAEoCzIsLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlByb2JlLkV4ZWNB",
+            "Y3Rpb25IABJDCghodHRwX2dldBgEIAEoCzIvLmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxLlByb2JlLkh0dHBHZXRBY3Rpb25IABI8CgRncnBjGAUgASgL",
+            "MiwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUHJvYmUuR3JwY0FjdGlv",
+            "bkgAEkcKCnRjcF9zb2NrZXQYBiABKAsyMS5nb29nbGUuY2xvdWQuYWlwbGF0",
+            "Zm9ybS52MS5Qcm9iZS5UY3BTb2NrZXRBY3Rpb25IABIWCg5wZXJpb2Rfc2Vj",
+            "b25kcxgCIAEoBRIXCg90aW1lb3V0X3NlY29uZHMYAyABKAUSGQoRZmFpbHVy",
+            "ZV90aHJlc2hvbGQYByABKAUSGQoRc3VjY2Vzc190aHJlc2hvbGQYCCABKAUS",
+            "HQoVaW5pdGlhbF9kZWxheV9zZWNvbmRzGAkgASgFGh0KCkV4ZWNBY3Rpb24S",
+            "DwoHY29tbWFuZBgBIAMoCRqNAQoNSHR0cEdldEFjdGlvbhIMCgRwYXRoGAEg",
+            "ASgJEgwKBHBvcnQYAiABKAUSDAoEaG9zdBgDIAEoCRIOCgZzY2hlbWUYBCAB",
+            "KAkSQgoMaHR0cF9oZWFkZXJzGAUgAygLMiwuZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuUHJvYmUuSHR0cEhlYWRlchorCgpHcnBjQWN0aW9uEgwKBHBv",
+            "cnQYASABKAUSDwoHc2VydmljZRgCIAEoCRotCg9UY3BTb2NrZXRBY3Rpb24S",
+            "DAoEcG9ydBgBIAEoBRIMCgRob3N0GAIgASgJGikKCkh0dHBIZWFkZXISDAoE",
+            "bmFtZRgBIAEoCRINCgV2YWx1ZRgCIAEoCUIMCgpwcm9iZV90eXBlIkAKCkNo",
+            "ZWNrcG9pbnQSFQoNY2hlY2twb2ludF9pZBgBIAEoCRINCgVlcG9jaBgCIAEo",
+            "AxIMCgRzdGVwGAMgASgDQsgBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjFCCk1vZGVsUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBs",
+            "YXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29n",
+            "bGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRm",
+            "b3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.DeployedModelRefReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -159,7 +160,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelGardenSource), global::Google.Cloud.AIPlatform.V1.ModelGardenSource.Parser, new[]{ "PublicModelName", "VersionId", "SkipHfModelCache" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GenieSource), global::Google.Cloud.AIPlatform.V1.GenieSource.Parser, new[]{ "BaseModelUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PredictSchemata), global::Google.Cloud.AIPlatform.V1.PredictSchemata.Parser, new[]{ "InstanceSchemaUri", "ParametersSchemaUri", "PredictionSchemaUri" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelContainerSpec), global::Google.Cloud.AIPlatform.V1.ModelContainerSpec.Parser, new[]{ "ImageUri", "Command", "Args", "Env", "Ports", "PredictRoute", "HealthRoute", "GrpcPorts", "DeploymentTimeout", "SharedMemorySizeMb", "StartupProbe", "HealthProbe", "LivenessProbe" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelContainerSpec), global::Google.Cloud.AIPlatform.V1.ModelContainerSpec.Parser, new[]{ "ImageUri", "Command", "Args", "Env", "Ports", "PredictRoute", "HealthRoute", "InvokeRoutePrefix", "GrpcPorts", "DeploymentTimeout", "SharedMemorySizeMb", "StartupProbe", "HealthProbe", "LivenessProbe" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Port), global::Google.Cloud.AIPlatform.V1.Port.Parser, new[]{ "ContainerPort" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelSourceInfo), global::Google.Cloud.AIPlatform.V1.ModelSourceInfo.Parser, new[]{ "SourceType", "Copy" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.ModelSourceInfo.Types.ModelSourceType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Probe), global::Google.Cloud.AIPlatform.V1.Probe.Parser, new[]{ "Exec", "HttpGet", "Grpc", "TcpSocket", "PeriodSeconds", "TimeoutSeconds", "FailureThreshold", "SuccessThreshold", "InitialDelaySeconds" }, new[]{ "ProbeType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Probe.Types.ExecAction), global::Google.Cloud.AIPlatform.V1.Probe.Types.ExecAction.Parser, new[]{ "Command" }, null, null, null, null),
@@ -4192,6 +4193,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       ports_ = other.ports_.Clone();
       predictRoute_ = other.predictRoute_;
       healthRoute_ = other.healthRoute_;
+      invokeRoutePrefix_ = other.invokeRoutePrefix_;
       grpcPorts_ = other.grpcPorts_.Clone();
       deploymentTimeout_ = other.deploymentTimeout_ != null ? other.deploymentTimeout_.Clone() : null;
       sharedMemorySizeMb_ = other.sharedMemorySizeMb_;
@@ -4498,6 +4500,28 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "invoke_route_prefix" field.</summary>
+    public const int InvokeRoutePrefixFieldNumber = 15;
+    private string invokeRoutePrefix_ = "";
+    /// <summary>
+    /// Immutable. Invoke route prefix for the custom container. "/*" is the only
+    /// supported value right now. By setting this field, any non-root route on
+    /// this model will be accessible with invoke http call eg: "/invoke/foo/bar",
+    /// however the [PredictionService.Invoke] RPC is not supported yet.
+    ///
+    /// Only one of `predict_route` or `invoke_route_prefix` can be set, and we
+    /// default to using `predict_route` if this field is not set. If this field
+    /// is set, the Model can only be deployed to dedicated endpoint.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string InvokeRoutePrefix {
+      get { return invokeRoutePrefix_; }
+      set {
+        invokeRoutePrefix_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "grpc_ports" field.</summary>
     public const int GrpcPortsFieldNumber = 9;
     private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.Port> _repeated_grpcPorts_codec
@@ -4619,6 +4643,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if(!ports_.Equals(other.ports_)) return false;
       if (PredictRoute != other.PredictRoute) return false;
       if (HealthRoute != other.HealthRoute) return false;
+      if (InvokeRoutePrefix != other.InvokeRoutePrefix) return false;
       if(!grpcPorts_.Equals(other.grpcPorts_)) return false;
       if (!object.Equals(DeploymentTimeout, other.DeploymentTimeout)) return false;
       if (SharedMemorySizeMb != other.SharedMemorySizeMb) return false;
@@ -4639,6 +4664,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       hash ^= ports_.GetHashCode();
       if (PredictRoute.Length != 0) hash ^= PredictRoute.GetHashCode();
       if (HealthRoute.Length != 0) hash ^= HealthRoute.GetHashCode();
+      if (InvokeRoutePrefix.Length != 0) hash ^= InvokeRoutePrefix.GetHashCode();
       hash ^= grpcPorts_.GetHashCode();
       if (deploymentTimeout_ != null) hash ^= DeploymentTimeout.GetHashCode();
       if (SharedMemorySizeMb != 0L) hash ^= SharedMemorySizeMb.GetHashCode();
@@ -4700,6 +4726,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(114);
         output.WriteMessage(LivenessProbe);
       }
+      if (InvokeRoutePrefix.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(InvokeRoutePrefix);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4747,6 +4777,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(114);
         output.WriteMessage(LivenessProbe);
       }
+      if (InvokeRoutePrefix.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(InvokeRoutePrefix);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4769,6 +4803,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (HealthRoute.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(HealthRoute);
+      }
+      if (InvokeRoutePrefix.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(InvokeRoutePrefix);
       }
       size += grpcPorts_.CalculateSize(_repeated_grpcPorts_codec);
       if (deploymentTimeout_ != null) {
@@ -4810,6 +4847,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.HealthRoute.Length != 0) {
         HealthRoute = other.HealthRoute;
+      }
+      if (other.InvokeRoutePrefix.Length != 0) {
+        InvokeRoutePrefix = other.InvokeRoutePrefix;
       }
       grpcPorts_.Add(other.grpcPorts_);
       if (other.deploymentTimeout_ != null) {
@@ -4918,6 +4958,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(LivenessProbe);
             break;
           }
+          case 122: {
+            InvokeRoutePrefix = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -4995,6 +5039,10 @@ namespace Google.Cloud.AIPlatform.V1 {
               LivenessProbe = new global::Google.Cloud.AIPlatform.V1.Probe();
             }
             input.ReadMessage(LivenessProbe);
+            break;
+          }
+          case 122: {
+            InvokeRoutePrefix = input.ReadString();
             break;
           }
         }

@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaav = Google.Ads.AdManager.V1;
+using gax = Google.Api.Gax;
 
 namespace Google.Ads.AdManager.V1
 {
@@ -40,6 +41,82 @@ namespace Google.Ads.AdManager.V1
         {
             get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateCustomFieldRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchCreateCustomFieldsRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchUpdateCustomFieldsRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchActivateCustomFieldsRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="CustomFieldName"/>-typed view over the <see cref="Names"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<CustomFieldName> CustomFieldNames
+        {
+            get => new gax::ResourceNameList<CustomFieldName>(Names, s => string.IsNullOrEmpty(s) ? null : CustomFieldName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class BatchDeactivateCustomFieldsRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="CustomFieldName"/>-typed view over the <see cref="Names"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<CustomFieldName> CustomFieldNames
+        {
+            get => new gax::ResourceNameList<CustomFieldName>(Names, s => string.IsNullOrEmpty(s) ? null : CustomFieldName.Parse(s, allowUnparsed: true));
         }
     }
 }

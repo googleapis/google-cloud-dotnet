@@ -160,5 +160,83 @@ namespace GoogleCSharpSnippets
             VerifyAttestationResponse response = await confidentialComputingClient.VerifyAttestationAsync(request);
             // End snippet
         }
+
+        /// <summary>Snippet for VerifyConfidentialSpace</summary>
+        public void VerifyConfidentialSpaceRequestObject()
+        {
+            // Snippet: VerifyConfidentialSpace(VerifyConfidentialSpaceRequest, CallSettings)
+            // Create client
+            ConfidentialComputingClient confidentialComputingClient = ConfidentialComputingClient.Create();
+            // Initialize request argument(s)
+            VerifyConfidentialSpaceRequest request = new VerifyConfidentialSpaceRequest
+            {
+                ChallengeAsChallengeName = ChallengeName.FromProjectLocationUuid("[PROJECT]", "[LOCATION]", "[UUID]"),
+                GcpCredentials = new GcpCredentials(),
+                TdCcel = new TdxCcelAttestation(),
+                SignedEntities = { new SignedEntity(), },
+                GceShieldedIdentity = new GceShieldedIdentity(),
+                Options = new VerifyConfidentialSpaceRequest.Types.ConfidentialSpaceOptions(),
+            };
+            // Make the request
+            VerifyConfidentialSpaceResponse response = confidentialComputingClient.VerifyConfidentialSpace(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for VerifyConfidentialSpaceAsync</summary>
+        public async Task VerifyConfidentialSpaceRequestObjectAsync()
+        {
+            // Snippet: VerifyConfidentialSpaceAsync(VerifyConfidentialSpaceRequest, CallSettings)
+            // Additional: VerifyConfidentialSpaceAsync(VerifyConfidentialSpaceRequest, CancellationToken)
+            // Create client
+            ConfidentialComputingClient confidentialComputingClient = await ConfidentialComputingClient.CreateAsync();
+            // Initialize request argument(s)
+            VerifyConfidentialSpaceRequest request = new VerifyConfidentialSpaceRequest
+            {
+                ChallengeAsChallengeName = ChallengeName.FromProjectLocationUuid("[PROJECT]", "[LOCATION]", "[UUID]"),
+                GcpCredentials = new GcpCredentials(),
+                TdCcel = new TdxCcelAttestation(),
+                SignedEntities = { new SignedEntity(), },
+                GceShieldedIdentity = new GceShieldedIdentity(),
+                Options = new VerifyConfidentialSpaceRequest.Types.ConfidentialSpaceOptions(),
+            };
+            // Make the request
+            VerifyConfidentialSpaceResponse response = await confidentialComputingClient.VerifyConfidentialSpaceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for VerifyConfidentialGke</summary>
+        public void VerifyConfidentialGkeRequestObject()
+        {
+            // Snippet: VerifyConfidentialGke(VerifyConfidentialGkeRequest, CallSettings)
+            // Create client
+            ConfidentialComputingClient confidentialComputingClient = ConfidentialComputingClient.Create();
+            // Initialize request argument(s)
+            VerifyConfidentialGkeRequest request = new VerifyConfidentialGkeRequest
+            {
+                ChallengeAsChallengeName = ChallengeName.FromProjectLocationUuid("[PROJECT]", "[LOCATION]", "[UUID]"),
+                TpmAttestation = new TpmAttestation(),
+            };
+            // Make the request
+            VerifyConfidentialGkeResponse response = confidentialComputingClient.VerifyConfidentialGke(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for VerifyConfidentialGkeAsync</summary>
+        public async Task VerifyConfidentialGkeRequestObjectAsync()
+        {
+            // Snippet: VerifyConfidentialGkeAsync(VerifyConfidentialGkeRequest, CallSettings)
+            // Additional: VerifyConfidentialGkeAsync(VerifyConfidentialGkeRequest, CancellationToken)
+            // Create client
+            ConfidentialComputingClient confidentialComputingClient = await ConfidentialComputingClient.CreateAsync();
+            // Initialize request argument(s)
+            VerifyConfidentialGkeRequest request = new VerifyConfidentialGkeRequest
+            {
+                ChallengeAsChallengeName = ChallengeName.FromProjectLocationUuid("[PROJECT]", "[LOCATION]", "[UUID]"),
+                TpmAttestation = new TpmAttestation(),
+            };
+            // Make the request
+            VerifyConfidentialGkeResponse response = await confidentialComputingClient.VerifyConfidentialGkeAsync(request);
+            // End snippet
+        }
     }
 }

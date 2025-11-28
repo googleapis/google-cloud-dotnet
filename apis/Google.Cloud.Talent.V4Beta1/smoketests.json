@@ -2,6 +2,7 @@
   {
     "client": "CompanyServiceClient",
     "method": "ListCompanies",
+    "restrictedSkip": "Requires additional set-up",
     "arguments": {
       "parent": "projects/${PROJECT_ID}"
     }

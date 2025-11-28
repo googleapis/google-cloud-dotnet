@@ -68,6 +68,21 @@ namespace Google.Cloud.DeveloperConnect.V1
             FetchLinkableGitRepositoriesSettings = existing.FetchLinkableGitRepositoriesSettings;
             FetchGitHubInstallationsSettings = existing.FetchGitHubInstallationsSettings;
             FetchGitRefsSettings = existing.FetchGitRefsSettings;
+            ListAccountConnectorsSettings = existing.ListAccountConnectorsSettings;
+            GetAccountConnectorSettings = existing.GetAccountConnectorSettings;
+            CreateAccountConnectorSettings = existing.CreateAccountConnectorSettings;
+            CreateAccountConnectorOperationsSettings = existing.CreateAccountConnectorOperationsSettings.Clone();
+            UpdateAccountConnectorSettings = existing.UpdateAccountConnectorSettings;
+            UpdateAccountConnectorOperationsSettings = existing.UpdateAccountConnectorOperationsSettings.Clone();
+            DeleteAccountConnectorSettings = existing.DeleteAccountConnectorSettings;
+            DeleteAccountConnectorOperationsSettings = existing.DeleteAccountConnectorOperationsSettings.Clone();
+            FetchAccessTokenSettings = existing.FetchAccessTokenSettings;
+            ListUsersSettings = existing.ListUsersSettings;
+            DeleteUserSettings = existing.DeleteUserSettings;
+            DeleteUserOperationsSettings = existing.DeleteUserOperationsSettings.Clone();
+            FetchSelfSettings = existing.FetchSelfSettings;
+            DeleteSelfSettings = existing.DeleteSelfSettings;
+            DeleteSelfOperationsSettings = existing.DeleteSelfOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -410,6 +425,221 @@ namespace Google.Cloud.DeveloperConnect.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings FetchGitRefsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeveloperConnectClient.ListAccountConnectors</c> and <c>DeveloperConnectClient.ListAccountConnectorsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAccountConnectorsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeveloperConnectClient.GetAccountConnector</c> and <c>DeveloperConnectClient.GetAccountConnectorAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAccountConnectorSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeveloperConnectClient.CreateAccountConnector</c> and
+        /// <c>DeveloperConnectClient.CreateAccountConnectorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateAccountConnectorSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DeveloperConnectClient.CreateAccountConnector</c> and
+        /// <c>DeveloperConnectClient.CreateAccountConnectorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateAccountConnectorOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeveloperConnectClient.UpdateAccountConnector</c> and
+        /// <c>DeveloperConnectClient.UpdateAccountConnectorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateAccountConnectorSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DeveloperConnectClient.UpdateAccountConnector</c> and
+        /// <c>DeveloperConnectClient.UpdateAccountConnectorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateAccountConnectorOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeveloperConnectClient.DeleteAccountConnector</c> and
+        /// <c>DeveloperConnectClient.DeleteAccountConnectorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteAccountConnectorSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DeveloperConnectClient.DeleteAccountConnector</c> and
+        /// <c>DeveloperConnectClient.DeleteAccountConnectorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteAccountConnectorOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeveloperConnectClient.FetchAccessToken</c> and <c>DeveloperConnectClient.FetchAccessTokenAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchAccessTokenSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeveloperConnectClient.ListUsers</c> and <c>DeveloperConnectClient.ListUsersAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListUsersSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeveloperConnectClient.DeleteUser</c> and <c>DeveloperConnectClient.DeleteUserAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteUserSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DeveloperConnectClient.DeleteUser</c> and
+        /// <c>DeveloperConnectClient.DeleteUserAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteUserOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeveloperConnectClient.FetchSelf</c> and <c>DeveloperConnectClient.FetchSelfAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchSelfSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeveloperConnectClient.DeleteSelf</c> and <c>DeveloperConnectClient.DeleteSelfAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteSelfSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DeveloperConnectClient.DeleteSelf</c> and
+        /// <c>DeveloperConnectClient.DeleteSelfAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteSelfOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -2554,6 +2784,1319 @@ namespace Google.Cloud.DeveloperConnect.V1
             }
             return FetchGitRefsAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Lists AccountConnectors in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AccountConnector"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAccountConnectorsResponse, AccountConnector> ListAccountConnectors(ListAccountConnectorsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists AccountConnectors in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AccountConnector"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAccountConnectorsResponse, AccountConnector> ListAccountConnectorsAsync(ListAccountConnectorsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists AccountConnectors in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListAccountConnectorsRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AccountConnector"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAccountConnectorsResponse, AccountConnector> ListAccountConnectors(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccountConnectorsRequest request = new ListAccountConnectorsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccountConnectors(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists AccountConnectors in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListAccountConnectorsRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AccountConnector"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAccountConnectorsResponse, AccountConnector> ListAccountConnectorsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccountConnectorsRequest request = new ListAccountConnectorsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccountConnectorsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists AccountConnectors in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListAccountConnectorsRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AccountConnector"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAccountConnectorsResponse, AccountConnector> ListAccountConnectors(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccountConnectorsRequest request = new ListAccountConnectorsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccountConnectors(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists AccountConnectors in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListAccountConnectorsRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AccountConnector"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAccountConnectorsResponse, AccountConnector> ListAccountConnectorsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAccountConnectorsRequest request = new ListAccountConnectorsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAccountConnectorsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single AccountConnector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AccountConnector GetAccountConnector(GetAccountConnectorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single AccountConnector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccountConnector> GetAccountConnectorAsync(GetAccountConnectorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single AccountConnector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccountConnector> GetAccountConnectorAsync(GetAccountConnectorRequest request, st::CancellationToken cancellationToken) =>
+            GetAccountConnectorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single AccountConnector.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AccountConnector GetAccountConnector(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAccountConnector(new GetAccountConnectorRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single AccountConnector.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccountConnector> GetAccountConnectorAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAccountConnectorAsync(new GetAccountConnectorRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single AccountConnector.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccountConnector> GetAccountConnectorAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAccountConnectorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single AccountConnector.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AccountConnector GetAccountConnector(AccountConnectorName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAccountConnector(new GetAccountConnectorRequest
+            {
+                AccountConnectorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single AccountConnector.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccountConnector> GetAccountConnectorAsync(AccountConnectorName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAccountConnectorAsync(new GetAccountConnectorRequest
+            {
+                AccountConnectorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single AccountConnector.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AccountConnector> GetAccountConnectorAsync(AccountConnectorName name, st::CancellationToken cancellationToken) =>
+            GetAccountConnectorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new AccountConnector in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AccountConnector, OperationMetadata> CreateAccountConnector(CreateAccountConnectorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new AccountConnector in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AccountConnector, OperationMetadata>> CreateAccountConnectorAsync(CreateAccountConnectorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new AccountConnector in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AccountConnector, OperationMetadata>> CreateAccountConnectorAsync(CreateAccountConnectorRequest request, st::CancellationToken cancellationToken) =>
+            CreateAccountConnectorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateAccountConnector</c>.</summary>
+        public virtual lro::OperationsClient CreateAccountConnectorOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateAccountConnector</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AccountConnector, OperationMetadata> PollOnceCreateAccountConnector(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AccountConnector, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAccountConnectorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateAccountConnector</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AccountConnector, OperationMetadata>> PollOnceCreateAccountConnectorAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AccountConnector, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAccountConnectorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new AccountConnector in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Location resource name as the account_connector’s parent.
+        /// </param>
+        /// <param name="accountConnector">
+        /// Required. The AccountConnector to create.
+        /// </param>
+        /// <param name="accountConnectorId">
+        /// Required. The ID to use for the AccountConnector, which will become the
+        /// final component of the AccountConnector's resource name. Its format should
+        /// adhere to https://google.aip.dev/122#resource-id-segments Names must be
+        /// unique per-project per-location.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AccountConnector, OperationMetadata> CreateAccountConnector(string parent, AccountConnector accountConnector, string accountConnectorId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAccountConnector(new CreateAccountConnectorRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AccountConnectorId = gax::GaxPreconditions.CheckNotNullOrEmpty(accountConnectorId, nameof(accountConnectorId)),
+                AccountConnector = gax::GaxPreconditions.CheckNotNull(accountConnector, nameof(accountConnector)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new AccountConnector in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Location resource name as the account_connector’s parent.
+        /// </param>
+        /// <param name="accountConnector">
+        /// Required. The AccountConnector to create.
+        /// </param>
+        /// <param name="accountConnectorId">
+        /// Required. The ID to use for the AccountConnector, which will become the
+        /// final component of the AccountConnector's resource name. Its format should
+        /// adhere to https://google.aip.dev/122#resource-id-segments Names must be
+        /// unique per-project per-location.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AccountConnector, OperationMetadata>> CreateAccountConnectorAsync(string parent, AccountConnector accountConnector, string accountConnectorId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAccountConnectorAsync(new CreateAccountConnectorRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AccountConnectorId = gax::GaxPreconditions.CheckNotNullOrEmpty(accountConnectorId, nameof(accountConnectorId)),
+                AccountConnector = gax::GaxPreconditions.CheckNotNull(accountConnector, nameof(accountConnector)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new AccountConnector in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Location resource name as the account_connector’s parent.
+        /// </param>
+        /// <param name="accountConnector">
+        /// Required. The AccountConnector to create.
+        /// </param>
+        /// <param name="accountConnectorId">
+        /// Required. The ID to use for the AccountConnector, which will become the
+        /// final component of the AccountConnector's resource name. Its format should
+        /// adhere to https://google.aip.dev/122#resource-id-segments Names must be
+        /// unique per-project per-location.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AccountConnector, OperationMetadata>> CreateAccountConnectorAsync(string parent, AccountConnector accountConnector, string accountConnectorId, st::CancellationToken cancellationToken) =>
+            CreateAccountConnectorAsync(parent, accountConnector, accountConnectorId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new AccountConnector in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Location resource name as the account_connector’s parent.
+        /// </param>
+        /// <param name="accountConnector">
+        /// Required. The AccountConnector to create.
+        /// </param>
+        /// <param name="accountConnectorId">
+        /// Required. The ID to use for the AccountConnector, which will become the
+        /// final component of the AccountConnector's resource name. Its format should
+        /// adhere to https://google.aip.dev/122#resource-id-segments Names must be
+        /// unique per-project per-location.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AccountConnector, OperationMetadata> CreateAccountConnector(gagr::LocationName parent, AccountConnector accountConnector, string accountConnectorId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAccountConnector(new CreateAccountConnectorRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AccountConnectorId = gax::GaxPreconditions.CheckNotNullOrEmpty(accountConnectorId, nameof(accountConnectorId)),
+                AccountConnector = gax::GaxPreconditions.CheckNotNull(accountConnector, nameof(accountConnector)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new AccountConnector in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Location resource name as the account_connector’s parent.
+        /// </param>
+        /// <param name="accountConnector">
+        /// Required. The AccountConnector to create.
+        /// </param>
+        /// <param name="accountConnectorId">
+        /// Required. The ID to use for the AccountConnector, which will become the
+        /// final component of the AccountConnector's resource name. Its format should
+        /// adhere to https://google.aip.dev/122#resource-id-segments Names must be
+        /// unique per-project per-location.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AccountConnector, OperationMetadata>> CreateAccountConnectorAsync(gagr::LocationName parent, AccountConnector accountConnector, string accountConnectorId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAccountConnectorAsync(new CreateAccountConnectorRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AccountConnectorId = gax::GaxPreconditions.CheckNotNullOrEmpty(accountConnectorId, nameof(accountConnectorId)),
+                AccountConnector = gax::GaxPreconditions.CheckNotNull(accountConnector, nameof(accountConnector)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new AccountConnector in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Location resource name as the account_connector’s parent.
+        /// </param>
+        /// <param name="accountConnector">
+        /// Required. The AccountConnector to create.
+        /// </param>
+        /// <param name="accountConnectorId">
+        /// Required. The ID to use for the AccountConnector, which will become the
+        /// final component of the AccountConnector's resource name. Its format should
+        /// adhere to https://google.aip.dev/122#resource-id-segments Names must be
+        /// unique per-project per-location.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AccountConnector, OperationMetadata>> CreateAccountConnectorAsync(gagr::LocationName parent, AccountConnector accountConnector, string accountConnectorId, st::CancellationToken cancellationToken) =>
+            CreateAccountConnectorAsync(parent, accountConnector, accountConnectorId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the parameters of a single AccountConnector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AccountConnector, OperationMetadata> UpdateAccountConnector(UpdateAccountConnectorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single AccountConnector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AccountConnector, OperationMetadata>> UpdateAccountConnectorAsync(UpdateAccountConnectorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single AccountConnector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AccountConnector, OperationMetadata>> UpdateAccountConnectorAsync(UpdateAccountConnectorRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAccountConnectorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateAccountConnector</c>.</summary>
+        public virtual lro::OperationsClient UpdateAccountConnectorOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateAccountConnector</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AccountConnector, OperationMetadata> PollOnceUpdateAccountConnector(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AccountConnector, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAccountConnectorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateAccountConnector</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AccountConnector, OperationMetadata>> PollOnceUpdateAccountConnectorAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AccountConnector, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAccountConnectorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single AccountConnector.
+        /// </summary>
+        /// <param name="accountConnector">
+        /// Required. The AccountConnector to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AccountConnector, OperationMetadata> UpdateAccountConnector(AccountConnector accountConnector, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAccountConnector(new UpdateAccountConnectorRequest
+            {
+                UpdateMask = updateMask,
+                AccountConnector = gax::GaxPreconditions.CheckNotNull(accountConnector, nameof(accountConnector)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single AccountConnector.
+        /// </summary>
+        /// <param name="accountConnector">
+        /// Required. The AccountConnector to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AccountConnector, OperationMetadata>> UpdateAccountConnectorAsync(AccountConnector accountConnector, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAccountConnectorAsync(new UpdateAccountConnectorRequest
+            {
+                UpdateMask = updateMask,
+                AccountConnector = gax::GaxPreconditions.CheckNotNull(accountConnector, nameof(accountConnector)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single AccountConnector.
+        /// </summary>
+        /// <param name="accountConnector">
+        /// Required. The AccountConnector to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AccountConnector, OperationMetadata>> UpdateAccountConnectorAsync(AccountConnector accountConnector, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateAccountConnectorAsync(accountConnector, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single AccountConnector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAccountConnector(DeleteAccountConnectorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single AccountConnector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAccountConnectorAsync(DeleteAccountConnectorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single AccountConnector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAccountConnectorAsync(DeleteAccountConnectorRequest request, st::CancellationToken cancellationToken) =>
+            DeleteAccountConnectorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteAccountConnector</c>.</summary>
+        public virtual lro::OperationsClient DeleteAccountConnectorOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteAccountConnector</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteAccountConnector(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAccountConnectorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteAccountConnector</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteAccountConnectorAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAccountConnectorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a single AccountConnector.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAccountConnector(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAccountConnector(new DeleteAccountConnectorRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single AccountConnector.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAccountConnectorAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAccountConnectorAsync(new DeleteAccountConnectorRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single AccountConnector.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAccountConnectorAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteAccountConnectorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single AccountConnector.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAccountConnector(AccountConnectorName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAccountConnector(new DeleteAccountConnectorRequest
+            {
+                AccountConnectorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single AccountConnector.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAccountConnectorAsync(AccountConnectorName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAccountConnectorAsync(new DeleteAccountConnectorRequest
+            {
+                AccountConnectorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single AccountConnector.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAccountConnectorAsync(AccountConnectorName name, st::CancellationToken cancellationToken) =>
+            DeleteAccountConnectorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetches OAuth access token based on end user credentials.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchAccessTokenResponse FetchAccessToken(FetchAccessTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches OAuth access token based on end user credentials.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchAccessTokenResponse> FetchAccessTokenAsync(FetchAccessTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches OAuth access token based on end user credentials.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchAccessTokenResponse> FetchAccessTokenAsync(FetchAccessTokenRequest request, st::CancellationToken cancellationToken) =>
+            FetchAccessTokenAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetches OAuth access token based on end user credentials.
+        /// </summary>
+        /// <param name="accountConnector">
+        /// Required. The resource name of the AccountConnector in the format
+        /// `projects/*/locations/*/accountConnectors/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchAccessTokenResponse FetchAccessToken(string accountConnector, gaxgrpc::CallSettings callSettings = null) =>
+            FetchAccessToken(new FetchAccessTokenRequest
+            {
+                AccountConnector = gax::GaxPreconditions.CheckNotNullOrEmpty(accountConnector, nameof(accountConnector)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches OAuth access token based on end user credentials.
+        /// </summary>
+        /// <param name="accountConnector">
+        /// Required. The resource name of the AccountConnector in the format
+        /// `projects/*/locations/*/accountConnectors/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchAccessTokenResponse> FetchAccessTokenAsync(string accountConnector, gaxgrpc::CallSettings callSettings = null) =>
+            FetchAccessTokenAsync(new FetchAccessTokenRequest
+            {
+                AccountConnector = gax::GaxPreconditions.CheckNotNullOrEmpty(accountConnector, nameof(accountConnector)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches OAuth access token based on end user credentials.
+        /// </summary>
+        /// <param name="accountConnector">
+        /// Required. The resource name of the AccountConnector in the format
+        /// `projects/*/locations/*/accountConnectors/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchAccessTokenResponse> FetchAccessTokenAsync(string accountConnector, st::CancellationToken cancellationToken) =>
+            FetchAccessTokenAsync(accountConnector, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetches OAuth access token based on end user credentials.
+        /// </summary>
+        /// <param name="accountConnector">
+        /// Required. The resource name of the AccountConnector in the format
+        /// `projects/*/locations/*/accountConnectors/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchAccessTokenResponse FetchAccessToken(AccountConnectorName accountConnector, gaxgrpc::CallSettings callSettings = null) =>
+            FetchAccessToken(new FetchAccessTokenRequest
+            {
+                AccountConnectorAsAccountConnectorName = gax::GaxPreconditions.CheckNotNull(accountConnector, nameof(accountConnector)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches OAuth access token based on end user credentials.
+        /// </summary>
+        /// <param name="accountConnector">
+        /// Required. The resource name of the AccountConnector in the format
+        /// `projects/*/locations/*/accountConnectors/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchAccessTokenResponse> FetchAccessTokenAsync(AccountConnectorName accountConnector, gaxgrpc::CallSettings callSettings = null) =>
+            FetchAccessTokenAsync(new FetchAccessTokenRequest
+            {
+                AccountConnectorAsAccountConnectorName = gax::GaxPreconditions.CheckNotNull(accountConnector, nameof(accountConnector)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches OAuth access token based on end user credentials.
+        /// </summary>
+        /// <param name="accountConnector">
+        /// Required. The resource name of the AccountConnector in the format
+        /// `projects/*/locations/*/accountConnectors/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchAccessTokenResponse> FetchAccessTokenAsync(AccountConnectorName accountConnector, st::CancellationToken cancellationToken) =>
+            FetchAccessTokenAsync(accountConnector, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists Users in a given project, location, and account_connector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="User"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListUsersResponse, User> ListUsers(ListUsersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Users in a given project, location, and account_connector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="User"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListUsersResponse, User> ListUsersAsync(ListUsersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Users in a given project, location, and account_connector.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListUsersRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="User"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListUsersResponse, User> ListUsers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUsersRequest request = new ListUsersRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUsers(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Users in a given project, location, and account_connector.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListUsersRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="User"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListUsersResponse, User> ListUsersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUsersRequest request = new ListUsersRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUsersAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Users in a given project, location, and account_connector.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListUsersRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="User"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListUsersResponse, User> ListUsers(AccountConnectorName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUsersRequest request = new ListUsersRequest
+            {
+                ParentAsAccountConnectorName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUsers(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Users in a given project, location, and account_connector.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListUsersRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="User"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListUsersResponse, User> ListUsersAsync(AccountConnectorName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUsersRequest request = new ListUsersRequest
+            {
+                ParentAsAccountConnectorName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUsersAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a single User.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteUser(DeleteUserRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single User.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteUserAsync(DeleteUserRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single User.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteUserAsync(DeleteUserRequest request, st::CancellationToken cancellationToken) =>
+            DeleteUserAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteUser</c>.</summary>
+        public virtual lro::OperationsClient DeleteUserOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteUser</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteUser(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteUserOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteUser</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteUserAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteUserOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a single User.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteUser(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteUser(new DeleteUserRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single User.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteUserAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteUserAsync(new DeleteUserRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single User.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteUserAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteUserAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single User.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteUser(UserName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteUser(new DeleteUserRequest
+            {
+                UserName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single User.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteUserAsync(UserName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteUserAsync(new DeleteUserRequest
+            {
+                UserName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single User.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteUserAsync(UserName name, st::CancellationToken cancellationToken) =>
+            DeleteUserAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch the User based on the user credentials.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual User FetchSelf(FetchSelfRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch the User based on the user credentials.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<User> FetchSelfAsync(FetchSelfRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch the User based on the user credentials.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<User> FetchSelfAsync(FetchSelfRequest request, st::CancellationToken cancellationToken) =>
+            FetchSelfAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch the User based on the user credentials.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the AccountConnector resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual User FetchSelf(string name, gaxgrpc::CallSettings callSettings = null) =>
+            FetchSelf(new FetchSelfRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch the User based on the user credentials.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the AccountConnector resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<User> FetchSelfAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            FetchSelfAsync(new FetchSelfRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch the User based on the user credentials.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the AccountConnector resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<User> FetchSelfAsync(string name, st::CancellationToken cancellationToken) =>
+            FetchSelfAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch the User based on the user credentials.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the AccountConnector resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual User FetchSelf(AccountConnectorName name, gaxgrpc::CallSettings callSettings = null) =>
+            FetchSelf(new FetchSelfRequest
+            {
+                AccountConnectorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch the User based on the user credentials.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the AccountConnector resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<User> FetchSelfAsync(AccountConnectorName name, gaxgrpc::CallSettings callSettings = null) =>
+            FetchSelfAsync(new FetchSelfRequest
+            {
+                AccountConnectorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch the User based on the user credentials.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the AccountConnector resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<User> FetchSelfAsync(AccountConnectorName name, st::CancellationToken cancellationToken) =>
+            FetchSelfAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete the User based on the user credentials.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteSelf(DeleteSelfRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete the User based on the user credentials.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSelfAsync(DeleteSelfRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete the User based on the user credentials.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSelfAsync(DeleteSelfRequest request, st::CancellationToken cancellationToken) =>
+            DeleteSelfAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteSelf</c>.</summary>
+        public virtual lro::OperationsClient DeleteSelfOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteSelf</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteSelf(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteSelfOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteSelf</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteSelfAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteSelfOperationsClient, callSettings);
+
+        /// <summary>
+        /// Delete the User based on the user credentials.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the AccountConnector resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteSelf(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSelf(new DeleteSelfRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete the User based on the user credentials.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the AccountConnector resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSelfAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSelfAsync(new DeleteSelfRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete the User based on the user credentials.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the AccountConnector resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSelfAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteSelfAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete the User based on the user credentials.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the AccountConnector resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteSelf(AccountConnectorName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSelf(new DeleteSelfRequest
+            {
+                AccountConnectorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete the User based on the user credentials.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the AccountConnector resource
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSelfAsync(AccountConnectorName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSelfAsync(new DeleteSelfRequest
+            {
+                AccountConnectorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete the User based on the user credentials.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the AccountConnector resource
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSelfAsync(AccountConnectorName name, st::CancellationToken cancellationToken) =>
+            DeleteSelfAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>DeveloperConnect client wrapper implementation, for convenient use.</summary>
@@ -2590,6 +4133,26 @@ namespace Google.Cloud.DeveloperConnect.V1
 
         private readonly gaxgrpc::ApiCall<FetchGitRefsRequest, FetchGitRefsResponse> _callFetchGitRefs;
 
+        private readonly gaxgrpc::ApiCall<ListAccountConnectorsRequest, ListAccountConnectorsResponse> _callListAccountConnectors;
+
+        private readonly gaxgrpc::ApiCall<GetAccountConnectorRequest, AccountConnector> _callGetAccountConnector;
+
+        private readonly gaxgrpc::ApiCall<CreateAccountConnectorRequest, lro::Operation> _callCreateAccountConnector;
+
+        private readonly gaxgrpc::ApiCall<UpdateAccountConnectorRequest, lro::Operation> _callUpdateAccountConnector;
+
+        private readonly gaxgrpc::ApiCall<DeleteAccountConnectorRequest, lro::Operation> _callDeleteAccountConnector;
+
+        private readonly gaxgrpc::ApiCall<FetchAccessTokenRequest, FetchAccessTokenResponse> _callFetchAccessToken;
+
+        private readonly gaxgrpc::ApiCall<ListUsersRequest, ListUsersResponse> _callListUsers;
+
+        private readonly gaxgrpc::ApiCall<DeleteUserRequest, lro::Operation> _callDeleteUser;
+
+        private readonly gaxgrpc::ApiCall<FetchSelfRequest, User> _callFetchSelf;
+
+        private readonly gaxgrpc::ApiCall<DeleteSelfRequest, lro::Operation> _callDeleteSelf;
+
         /// <summary>
         /// Constructs a client wrapper for the DeveloperConnect service, with the specified gRPC client and settings.
         /// </summary>
@@ -2610,6 +4173,11 @@ namespace Google.Cloud.DeveloperConnect.V1
             DeleteConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteConnectionOperationsSettings, logger);
             CreateGitRepositoryLinkOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateGitRepositoryLinkOperationsSettings, logger);
             DeleteGitRepositoryLinkOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteGitRepositoryLinkOperationsSettings, logger);
+            CreateAccountConnectorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAccountConnectorOperationsSettings, logger);
+            UpdateAccountConnectorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAccountConnectorOperationsSettings, logger);
+            DeleteAccountConnectorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAccountConnectorOperationsSettings, logger);
+            DeleteUserOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteUserOperationsSettings, logger);
+            DeleteSelfOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSelfOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListConnections = clientHelper.BuildApiCall<ListConnectionsRequest, ListConnectionsResponse>("ListConnections", grpcClient.ListConnectionsAsync, grpcClient.ListConnections, effectiveSettings.ListConnectionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListConnections);
@@ -2653,6 +4221,36 @@ namespace Google.Cloud.DeveloperConnect.V1
             _callFetchGitRefs = clientHelper.BuildApiCall<FetchGitRefsRequest, FetchGitRefsResponse>("FetchGitRefs", grpcClient.FetchGitRefsAsync, grpcClient.FetchGitRefs, effectiveSettings.FetchGitRefsSettings).WithGoogleRequestParam("git_repository_link", request => request.GitRepositoryLink);
             Modify_ApiCall(ref _callFetchGitRefs);
             Modify_FetchGitRefsApiCall(ref _callFetchGitRefs);
+            _callListAccountConnectors = clientHelper.BuildApiCall<ListAccountConnectorsRequest, ListAccountConnectorsResponse>("ListAccountConnectors", grpcClient.ListAccountConnectorsAsync, grpcClient.ListAccountConnectors, effectiveSettings.ListAccountConnectorsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAccountConnectors);
+            Modify_ListAccountConnectorsApiCall(ref _callListAccountConnectors);
+            _callGetAccountConnector = clientHelper.BuildApiCall<GetAccountConnectorRequest, AccountConnector>("GetAccountConnector", grpcClient.GetAccountConnectorAsync, grpcClient.GetAccountConnector, effectiveSettings.GetAccountConnectorSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAccountConnector);
+            Modify_GetAccountConnectorApiCall(ref _callGetAccountConnector);
+            _callCreateAccountConnector = clientHelper.BuildApiCall<CreateAccountConnectorRequest, lro::Operation>("CreateAccountConnector", grpcClient.CreateAccountConnectorAsync, grpcClient.CreateAccountConnector, effectiveSettings.CreateAccountConnectorSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateAccountConnector);
+            Modify_CreateAccountConnectorApiCall(ref _callCreateAccountConnector);
+            _callUpdateAccountConnector = clientHelper.BuildApiCall<UpdateAccountConnectorRequest, lro::Operation>("UpdateAccountConnector", grpcClient.UpdateAccountConnectorAsync, grpcClient.UpdateAccountConnector, effectiveSettings.UpdateAccountConnectorSettings).WithGoogleRequestParam("account_connector.name", request => request.AccountConnector?.Name);
+            Modify_ApiCall(ref _callUpdateAccountConnector);
+            Modify_UpdateAccountConnectorApiCall(ref _callUpdateAccountConnector);
+            _callDeleteAccountConnector = clientHelper.BuildApiCall<DeleteAccountConnectorRequest, lro::Operation>("DeleteAccountConnector", grpcClient.DeleteAccountConnectorAsync, grpcClient.DeleteAccountConnector, effectiveSettings.DeleteAccountConnectorSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteAccountConnector);
+            Modify_DeleteAccountConnectorApiCall(ref _callDeleteAccountConnector);
+            _callFetchAccessToken = clientHelper.BuildApiCall<FetchAccessTokenRequest, FetchAccessTokenResponse>("FetchAccessToken", grpcClient.FetchAccessTokenAsync, grpcClient.FetchAccessToken, effectiveSettings.FetchAccessTokenSettings).WithGoogleRequestParam("account_connector", request => request.AccountConnector);
+            Modify_ApiCall(ref _callFetchAccessToken);
+            Modify_FetchAccessTokenApiCall(ref _callFetchAccessToken);
+            _callListUsers = clientHelper.BuildApiCall<ListUsersRequest, ListUsersResponse>("ListUsers", grpcClient.ListUsersAsync, grpcClient.ListUsers, effectiveSettings.ListUsersSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListUsers);
+            Modify_ListUsersApiCall(ref _callListUsers);
+            _callDeleteUser = clientHelper.BuildApiCall<DeleteUserRequest, lro::Operation>("DeleteUser", grpcClient.DeleteUserAsync, grpcClient.DeleteUser, effectiveSettings.DeleteUserSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteUser);
+            Modify_DeleteUserApiCall(ref _callDeleteUser);
+            _callFetchSelf = clientHelper.BuildApiCall<FetchSelfRequest, User>("FetchSelf", grpcClient.FetchSelfAsync, grpcClient.FetchSelf, effectiveSettings.FetchSelfSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callFetchSelf);
+            Modify_FetchSelfApiCall(ref _callFetchSelf);
+            _callDeleteSelf = clientHelper.BuildApiCall<DeleteSelfRequest, lro::Operation>("DeleteSelf", grpcClient.DeleteSelfAsync, grpcClient.DeleteSelf, effectiveSettings.DeleteSelfSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteSelf);
+            Modify_DeleteSelfApiCall(ref _callDeleteSelf);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2685,6 +4283,26 @@ namespace Google.Cloud.DeveloperConnect.V1
         partial void Modify_FetchGitHubInstallationsApiCall(ref gaxgrpc::ApiCall<FetchGitHubInstallationsRequest, FetchGitHubInstallationsResponse> call);
 
         partial void Modify_FetchGitRefsApiCall(ref gaxgrpc::ApiCall<FetchGitRefsRequest, FetchGitRefsResponse> call);
+
+        partial void Modify_ListAccountConnectorsApiCall(ref gaxgrpc::ApiCall<ListAccountConnectorsRequest, ListAccountConnectorsResponse> call);
+
+        partial void Modify_GetAccountConnectorApiCall(ref gaxgrpc::ApiCall<GetAccountConnectorRequest, AccountConnector> call);
+
+        partial void Modify_CreateAccountConnectorApiCall(ref gaxgrpc::ApiCall<CreateAccountConnectorRequest, lro::Operation> call);
+
+        partial void Modify_UpdateAccountConnectorApiCall(ref gaxgrpc::ApiCall<UpdateAccountConnectorRequest, lro::Operation> call);
+
+        partial void Modify_DeleteAccountConnectorApiCall(ref gaxgrpc::ApiCall<DeleteAccountConnectorRequest, lro::Operation> call);
+
+        partial void Modify_FetchAccessTokenApiCall(ref gaxgrpc::ApiCall<FetchAccessTokenRequest, FetchAccessTokenResponse> call);
+
+        partial void Modify_ListUsersApiCall(ref gaxgrpc::ApiCall<ListUsersRequest, ListUsersResponse> call);
+
+        partial void Modify_DeleteUserApiCall(ref gaxgrpc::ApiCall<DeleteUserRequest, lro::Operation> call);
+
+        partial void Modify_FetchSelfApiCall(ref gaxgrpc::ApiCall<FetchSelfRequest, User> call);
+
+        partial void Modify_DeleteSelfApiCall(ref gaxgrpc::ApiCall<DeleteSelfRequest, lro::Operation> call);
 
         partial void OnConstruction(DeveloperConnect.DeveloperConnectClient grpcClient, DeveloperConnectSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2721,6 +4339,26 @@ namespace Google.Cloud.DeveloperConnect.V1
         partial void Modify_FetchGitHubInstallationsRequest(ref FetchGitHubInstallationsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_FetchGitRefsRequest(ref FetchGitRefsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAccountConnectorsRequest(ref ListAccountConnectorsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAccountConnectorRequest(ref GetAccountConnectorRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateAccountConnectorRequest(ref CreateAccountConnectorRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateAccountConnectorRequest(ref UpdateAccountConnectorRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteAccountConnectorRequest(ref DeleteAccountConnectorRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchAccessTokenRequest(ref FetchAccessTokenRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListUsersRequest(ref ListUsersRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteUserRequest(ref DeleteUserRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchSelfRequest(ref FetchSelfRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteSelfRequest(ref DeleteSelfRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Connections in a given project and location.
@@ -3088,6 +4726,261 @@ namespace Google.Cloud.DeveloperConnect.V1
             Modify_FetchGitRefsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<FetchGitRefsRequest, FetchGitRefsResponse, string>(_callFetchGitRefs, request, callSettings);
         }
+
+        /// <summary>
+        /// Lists AccountConnectors in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AccountConnector"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAccountConnectorsResponse, AccountConnector> ListAccountConnectors(ListAccountConnectorsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAccountConnectorsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAccountConnectorsRequest, ListAccountConnectorsResponse, AccountConnector>(_callListAccountConnectors, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists AccountConnectors in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AccountConnector"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAccountConnectorsResponse, AccountConnector> ListAccountConnectorsAsync(ListAccountConnectorsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAccountConnectorsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAccountConnectorsRequest, ListAccountConnectorsResponse, AccountConnector>(_callListAccountConnectors, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single AccountConnector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AccountConnector GetAccountConnector(GetAccountConnectorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAccountConnectorRequest(ref request, ref callSettings);
+            return _callGetAccountConnector.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single AccountConnector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AccountConnector> GetAccountConnectorAsync(GetAccountConnectorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAccountConnectorRequest(ref request, ref callSettings);
+            return _callGetAccountConnector.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateAccountConnector</c>.</summary>
+        public override lro::OperationsClient CreateAccountConnectorOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new AccountConnector in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AccountConnector, OperationMetadata> CreateAccountConnector(CreateAccountConnectorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAccountConnectorRequest(ref request, ref callSettings);
+            return new lro::Operation<AccountConnector, OperationMetadata>(_callCreateAccountConnector.Sync(request, callSettings), CreateAccountConnectorOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new AccountConnector in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AccountConnector, OperationMetadata>> CreateAccountConnectorAsync(CreateAccountConnectorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAccountConnectorRequest(ref request, ref callSettings);
+            return new lro::Operation<AccountConnector, OperationMetadata>(await _callCreateAccountConnector.Async(request, callSettings).ConfigureAwait(false), CreateAccountConnectorOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateAccountConnector</c>.</summary>
+        public override lro::OperationsClient UpdateAccountConnectorOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the parameters of a single AccountConnector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AccountConnector, OperationMetadata> UpdateAccountConnector(UpdateAccountConnectorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAccountConnectorRequest(ref request, ref callSettings);
+            return new lro::Operation<AccountConnector, OperationMetadata>(_callUpdateAccountConnector.Sync(request, callSettings), UpdateAccountConnectorOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the parameters of a single AccountConnector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AccountConnector, OperationMetadata>> UpdateAccountConnectorAsync(UpdateAccountConnectorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAccountConnectorRequest(ref request, ref callSettings);
+            return new lro::Operation<AccountConnector, OperationMetadata>(await _callUpdateAccountConnector.Async(request, callSettings).ConfigureAwait(false), UpdateAccountConnectorOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteAccountConnector</c>.</summary>
+        public override lro::OperationsClient DeleteAccountConnectorOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a single AccountConnector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteAccountConnector(DeleteAccountConnectorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAccountConnectorRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteAccountConnector.Sync(request, callSettings), DeleteAccountConnectorOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single AccountConnector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAccountConnectorAsync(DeleteAccountConnectorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAccountConnectorRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteAccountConnector.Async(request, callSettings).ConfigureAwait(false), DeleteAccountConnectorOperationsClient);
+        }
+
+        /// <summary>
+        /// Fetches OAuth access token based on end user credentials.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FetchAccessTokenResponse FetchAccessToken(FetchAccessTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchAccessTokenRequest(ref request, ref callSettings);
+            return _callFetchAccessToken.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches OAuth access token based on end user credentials.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FetchAccessTokenResponse> FetchAccessTokenAsync(FetchAccessTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchAccessTokenRequest(ref request, ref callSettings);
+            return _callFetchAccessToken.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Users in a given project, location, and account_connector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="User"/> resources.</returns>
+        public override gax::PagedEnumerable<ListUsersResponse, User> ListUsers(ListUsersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListUsersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListUsersRequest, ListUsersResponse, User>(_callListUsers, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Users in a given project, location, and account_connector.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="User"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListUsersResponse, User> ListUsersAsync(ListUsersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListUsersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListUsersRequest, ListUsersResponse, User>(_callListUsers, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteUser</c>.</summary>
+        public override lro::OperationsClient DeleteUserOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a single User.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteUser(DeleteUserRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteUserRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteUser.Sync(request, callSettings), DeleteUserOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single User.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteUserAsync(DeleteUserRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteUserRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteUser.Async(request, callSettings).ConfigureAwait(false), DeleteUserOperationsClient);
+        }
+
+        /// <summary>
+        /// Fetch the User based on the user credentials.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override User FetchSelf(FetchSelfRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchSelfRequest(ref request, ref callSettings);
+            return _callFetchSelf.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch the User based on the user credentials.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<User> FetchSelfAsync(FetchSelfRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchSelfRequest(ref request, ref callSettings);
+            return _callFetchSelf.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteSelf</c>.</summary>
+        public override lro::OperationsClient DeleteSelfOperationsClient { get; }
+
+        /// <summary>
+        /// Delete the User based on the user credentials.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteSelf(DeleteSelfRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSelfRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteSelf.Sync(request, callSettings), DeleteSelfOperationsClient);
+        }
+
+        /// <summary>
+        /// Delete the User based on the user credentials.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteSelfAsync(DeleteSelfRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSelfRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteSelf.Async(request, callSettings).ConfigureAwait(false), DeleteSelfOperationsClient);
+        }
     }
 
     public partial class ListConnectionsRequest : gaxgrpc::IPageRequest
@@ -3103,6 +4996,14 @@ namespace Google.Cloud.DeveloperConnect.V1
     }
 
     public partial class FetchGitRefsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAccountConnectorsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListUsersRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -3134,6 +5035,22 @@ namespace Google.Cloud.DeveloperConnect.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<string> GetEnumerator() => RefNames.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAccountConnectorsResponse : gaxgrpc::IPageResponse<AccountConnector>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AccountConnector> GetEnumerator() => AccountConnectors.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListUsersResponse : gaxgrpc::IPageResponse<User>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<User> GetEnumerator() => Users.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

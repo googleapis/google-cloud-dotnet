@@ -34,9 +34,24 @@ namespace Google.Cloud.CloudQuotas.V1Beta
             /// A resource name with pattern <c>projects/{project}/locations/{location}/quotaAdjusterSettings</c>.
             /// </summary>
             ProjectLocation = 1,
+
+            /// <summary>
+            /// A resource name with pattern <c>organizations/{organization}/locations/{location}/quotaAdjusterSettings</c>
+            /// .
+            /// </summary>
+            OrganizationLocation = 2,
+
+            /// <summary>
+            /// A resource name with pattern <c>folders/{folder}/locations/{location}/quotaAdjusterSettings</c>.
+            /// </summary>
+            FolderLocation = 3,
         }
 
         private static gax::PathTemplate s_projectLocation = new gax::PathTemplate("projects/{project}/locations/{location}/quotaAdjusterSettings");
+
+        private static gax::PathTemplate s_organizationLocation = new gax::PathTemplate("organizations/{organization}/locations/{location}/quotaAdjusterSettings");
+
+        private static gax::PathTemplate s_folderLocation = new gax::PathTemplate("folders/{folder}/locations/{location}/quotaAdjusterSettings");
 
         /// <summary>Creates a <see cref="QuotaAdjusterSettingsName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -58,6 +73,30 @@ namespace Google.Cloud.CloudQuotas.V1Beta
         /// </returns>
         public static QuotaAdjusterSettingsName FromProjectLocation(string projectId, string locationId) =>
             new QuotaAdjusterSettingsName(ResourceNameType.ProjectLocation, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)));
+
+        /// <summary>
+        /// Creates a <see cref="QuotaAdjusterSettingsName"/> with the pattern
+        /// <c>organizations/{organization}/locations/{location}/quotaAdjusterSettings</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// A new instance of <see cref="QuotaAdjusterSettingsName"/> constructed from the provided ids.
+        /// </returns>
+        public static QuotaAdjusterSettingsName FromOrganizationLocation(string organizationId, string locationId) =>
+            new QuotaAdjusterSettingsName(ResourceNameType.OrganizationLocation, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)));
+
+        /// <summary>
+        /// Creates a <see cref="QuotaAdjusterSettingsName"/> with the pattern
+        /// <c>folders/{folder}/locations/{location}/quotaAdjusterSettings</c>.
+        /// </summary>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// A new instance of <see cref="QuotaAdjusterSettingsName"/> constructed from the provided ids.
+        /// </returns>
+        public static QuotaAdjusterSettingsName FromFolderLocation(string folderId, string locationId) =>
+            new QuotaAdjusterSettingsName(ResourceNameType.FolderLocation, folderId: gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="QuotaAdjusterSettingsName"/> with pattern
@@ -85,6 +124,32 @@ namespace Google.Cloud.CloudQuotas.V1Beta
             s_projectLocation.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)));
 
         /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="QuotaAdjusterSettingsName"/> with pattern
+        /// <c>organizations/{organization}/locations/{location}/quotaAdjusterSettings</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="QuotaAdjusterSettingsName"/> with pattern
+        /// <c>organizations/{organization}/locations/{location}/quotaAdjusterSettings</c>.
+        /// </returns>
+        public static string FormatOrganizationLocation(string organizationId, string locationId) =>
+            s_organizationLocation.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="QuotaAdjusterSettingsName"/> with pattern
+        /// <c>folders/{folder}/locations/{location}/quotaAdjusterSettings</c>.
+        /// </summary>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="QuotaAdjusterSettingsName"/> with pattern
+        /// <c>folders/{folder}/locations/{location}/quotaAdjusterSettings</c>.
+        /// </returns>
+        public static string FormatFolderLocation(string folderId, string locationId) =>
+            s_folderLocation.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)));
+
+        /// <summary>
         /// Parses the given resource name string into a new <see cref="QuotaAdjusterSettingsName"/> instance.
         /// </summary>
         /// <remarks>
@@ -93,6 +158,10 @@ namespace Google.Cloud.CloudQuotas.V1Beta
         /// <item>
         /// <description><c>projects/{project}/locations/{location}/quotaAdjusterSettings</c></description>
         /// </item>
+        /// <item>
+        /// <description><c>organizations/{organization}/locations/{location}/quotaAdjusterSettings</c></description>
+        /// </item>
+        /// <item><description><c>folders/{folder}/locations/{location}/quotaAdjusterSettings</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="quotaAdjusterSettingsName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -110,6 +179,10 @@ namespace Google.Cloud.CloudQuotas.V1Beta
         /// <item>
         /// <description><c>projects/{project}/locations/{location}/quotaAdjusterSettings</c></description>
         /// </item>
+        /// <item>
+        /// <description><c>organizations/{organization}/locations/{location}/quotaAdjusterSettings</c></description>
+        /// </item>
+        /// <item><description><c>folders/{folder}/locations/{location}/quotaAdjusterSettings</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -132,6 +205,10 @@ namespace Google.Cloud.CloudQuotas.V1Beta
         /// <item>
         /// <description><c>projects/{project}/locations/{location}/quotaAdjusterSettings</c></description>
         /// </item>
+        /// <item>
+        /// <description><c>organizations/{organization}/locations/{location}/quotaAdjusterSettings</c></description>
+        /// </item>
+        /// <item><description><c>folders/{folder}/locations/{location}/quotaAdjusterSettings</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="quotaAdjusterSettingsName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -153,6 +230,10 @@ namespace Google.Cloud.CloudQuotas.V1Beta
         /// <item>
         /// <description><c>projects/{project}/locations/{location}/quotaAdjusterSettings</c></description>
         /// </item>
+        /// <item>
+        /// <description><c>organizations/{organization}/locations/{location}/quotaAdjusterSettings</c></description>
+        /// </item>
+        /// <item><description><c>folders/{folder}/locations/{location}/quotaAdjusterSettings</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -176,6 +257,16 @@ namespace Google.Cloud.CloudQuotas.V1Beta
                 result = FromProjectLocation(resourceName[0], resourceName[1]);
                 return true;
             }
+            if (s_organizationLocation.TryParseName(quotaAdjusterSettingsName, out resourceName))
+            {
+                result = FromOrganizationLocation(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (s_folderLocation.TryParseName(quotaAdjusterSettingsName, out resourceName))
+            {
+                result = FromFolderLocation(resourceName[0], resourceName[1]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(quotaAdjusterSettingsName, out gax::UnparsedResourceName unparsedResourceName))
@@ -188,11 +279,13 @@ namespace Google.Cloud.CloudQuotas.V1Beta
             return false;
         }
 
-        private QuotaAdjusterSettingsName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null)
+        private QuotaAdjusterSettingsName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string folderId = null, string locationId = null, string organizationId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
+            FolderId = folderId;
             LocationId = locationId;
+            OrganizationId = organizationId;
             ProjectId = projectId;
         }
 
@@ -216,12 +309,23 @@ namespace Google.Cloud.CloudQuotas.V1Beta
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Folder</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string FolderId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string LocationId { get; }
 
         /// <summary>
-        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Organization</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string ProjectId { get; }
 
@@ -236,6 +340,8 @@ namespace Google.Cloud.CloudQuotas.V1Beta
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.ProjectLocation: return s_projectLocation.Expand(ProjectId, LocationId);
+                case ResourceNameType.OrganizationLocation: return s_organizationLocation.Expand(OrganizationId, LocationId);
+                case ResourceNameType.FolderLocation: return s_folderLocation.Expand(FolderId, LocationId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }

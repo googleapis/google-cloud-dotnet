@@ -89,12 +89,15 @@ namespace Google.Cloud.NetworkServices.V1
             yield return CommonReflection.Descriptor;
             yield return DepReflection.Descriptor;
             yield return EndpointPolicyReflection.Descriptor;
+            yield return ExtensibilityReflection.Descriptor;
             yield return GatewayReflection.Descriptor;
             yield return GrpcRouteReflection.Descriptor;
             yield return HttpRouteReflection.Descriptor;
             yield return MeshReflection.Descriptor;
             yield return NetworkServicesReflection.Descriptor;
+            yield return RouteViewReflection.Descriptor;
             yield return ServiceBindingReflection.Descriptor;
+            yield return ServiceLbPolicyReflection.Descriptor;
             yield return TcpRouteReflection.Descriptor;
             yield return TlsRouteReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;

@@ -306,6 +306,75 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ImportIndex</summary>
+        public void ImportIndexRequestObject()
+        {
+            // Snippet: ImportIndex(ImportIndexRequest, CallSettings)
+            // Create client
+            gcav::IndexServiceClient indexServiceClient = gcav::IndexServiceClient.Create();
+            // Initialize request argument(s)
+            gcav::ImportIndexRequest request = new gcav::ImportIndexRequest
+            {
+                IndexName = gcav::IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
+                IsCompleteOverwrite = false,
+                Config = new gcav::ImportIndexRequest.Types.ConnectorConfig(),
+            };
+            // Make the request
+            Operation<gcav::Index, gcav::ImportIndexOperationMetadata> response = indexServiceClient.ImportIndex(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcav::Index, gcav::ImportIndexOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcav::Index result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcav::Index, gcav::ImportIndexOperationMetadata> retrievedResponse = indexServiceClient.PollOnceImportIndex(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcav::Index retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportIndexAsync</summary>
+        public async Task ImportIndexRequestObjectAsync()
+        {
+            // Snippet: ImportIndexAsync(ImportIndexRequest, CallSettings)
+            // Additional: ImportIndexAsync(ImportIndexRequest, CancellationToken)
+            // Create client
+            gcav::IndexServiceClient indexServiceClient = await gcav::IndexServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::ImportIndexRequest request = new gcav::ImportIndexRequest
+            {
+                IndexName = gcav::IndexName.FromProjectLocationIndex("[PROJECT]", "[LOCATION]", "[INDEX]"),
+                IsCompleteOverwrite = false,
+                Config = new gcav::ImportIndexRequest.Types.ConnectorConfig(),
+            };
+            // Make the request
+            Operation<gcav::Index, gcav::ImportIndexOperationMetadata> response = await indexServiceClient.ImportIndexAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcav::Index, gcav::ImportIndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcav::Index result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcav::Index, gcav::ImportIndexOperationMetadata> retrievedResponse = await indexServiceClient.PollOnceImportIndexAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcav::Index retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for ListIndexes</summary>
         public void ListIndexesRequestObject()
         {

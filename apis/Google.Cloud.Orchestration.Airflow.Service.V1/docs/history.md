@@ -1,5 +1,19 @@
 # Version history
 
+## Version 2.10.0, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+### Documentation improvements
+
+- `enabled` field of `MasterAuthorizedNetworksConfig` is now marked as optional
+- A comment for field `connection_type` in message `.google.cloud.orchestration.airflow.service.v1.NetworkingConfig` is changed
+- Fix Composer 3 image version format in API docs
+- A comment for method `ListWorkloads` in service `Environments` is changed
+- Add examples for kubernetes secret
+
 ## Version 2.9.0, released 2024-09-16
 
 ### New features

@@ -1,0 +1,939 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.Maintenance.Api.V1Beta",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.maintenance.api.v1beta",
+        "version": "v1beta"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "maintenance_v1beta_generated_Maintenance_SummarizeMaintenances_sync",
+      "title": "SummarizeMaintenancesRequestObject",
+      "description": "Snippet for SummarizeMaintenances",
+      "file": "MaintenanceClient.SummarizeMaintenancesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SummarizeMaintenances",
+        "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient.SummarizeMaintenances",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Maintenance.Api.V1Beta.SummarizeMaintenancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Maintenance.Api.V1Beta.SummarizeMaintenancesResponse, Google.Cloud.Maintenance.Api.V1Beta.MaintenanceSummary>",
+        "client": {
+          "shortName": "MaintenanceClient",
+          "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient"
+        },
+        "method": {
+          "shortName": "SummarizeMaintenances",
+          "fullName": "google.cloud.maintenance.api.v1beta.Maintenance.SummarizeMaintenances",
+          "service": {
+            "shortName": "Maintenance",
+            "fullName": "google.cloud.maintenance.api.v1beta.Maintenance"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "maintenance_v1beta_generated_Maintenance_SummarizeMaintenances_async",
+      "title": "SummarizeMaintenancesRequestObjectAsync",
+      "description": "Snippet for SummarizeMaintenancesAsync",
+      "file": "MaintenanceClient.SummarizeMaintenancesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SummarizeMaintenancesAsync",
+        "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient.SummarizeMaintenancesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Maintenance.Api.V1Beta.SummarizeMaintenancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Maintenance.Api.V1Beta.SummarizeMaintenancesResponse, Google.Cloud.Maintenance.Api.V1Beta.MaintenanceSummary>",
+        "client": {
+          "shortName": "MaintenanceClient",
+          "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient"
+        },
+        "method": {
+          "shortName": "SummarizeMaintenances",
+          "fullName": "google.cloud.maintenance.api.v1beta.Maintenance.SummarizeMaintenances",
+          "service": {
+            "shortName": "Maintenance",
+            "fullName": "google.cloud.maintenance.api.v1beta.Maintenance"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "maintenance_v1beta_generated_Maintenance_SummarizeMaintenances_sync_flattened",
+      "title": "SummarizeMaintenances",
+      "description": "Snippet for SummarizeMaintenances",
+      "file": "MaintenanceClient.SummarizeMaintenancesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SummarizeMaintenances",
+        "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient.SummarizeMaintenances",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Maintenance.Api.V1Beta.SummarizeMaintenancesResponse, Google.Cloud.Maintenance.Api.V1Beta.MaintenanceSummary>",
+        "client": {
+          "shortName": "MaintenanceClient",
+          "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient"
+        },
+        "method": {
+          "shortName": "SummarizeMaintenances",
+          "fullName": "google.cloud.maintenance.api.v1beta.Maintenance.SummarizeMaintenances",
+          "service": {
+            "shortName": "Maintenance",
+            "fullName": "google.cloud.maintenance.api.v1beta.Maintenance"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "maintenance_v1beta_generated_Maintenance_SummarizeMaintenances_async_flattened",
+      "title": "SummarizeMaintenancesAsync",
+      "description": "Snippet for SummarizeMaintenancesAsync",
+      "file": "MaintenanceClient.SummarizeMaintenancesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SummarizeMaintenancesAsync",
+        "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient.SummarizeMaintenancesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Maintenance.Api.V1Beta.SummarizeMaintenancesResponse, Google.Cloud.Maintenance.Api.V1Beta.MaintenanceSummary>",
+        "client": {
+          "shortName": "MaintenanceClient",
+          "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient"
+        },
+        "method": {
+          "shortName": "SummarizeMaintenances",
+          "fullName": "google.cloud.maintenance.api.v1beta.Maintenance.SummarizeMaintenances",
+          "service": {
+            "shortName": "Maintenance",
+            "fullName": "google.cloud.maintenance.api.v1beta.Maintenance"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "maintenance_v1beta_generated_Maintenance_SummarizeMaintenances_sync_flattened_resourceNames",
+      "title": "SummarizeMaintenancesResourceNames",
+      "description": "Snippet for SummarizeMaintenances",
+      "file": "MaintenanceClient.SummarizeMaintenancesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SummarizeMaintenances",
+        "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient.SummarizeMaintenances",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Maintenance.Api.V1Beta.SummarizeMaintenancesResponse, Google.Cloud.Maintenance.Api.V1Beta.MaintenanceSummary>",
+        "client": {
+          "shortName": "MaintenanceClient",
+          "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient"
+        },
+        "method": {
+          "shortName": "SummarizeMaintenances",
+          "fullName": "google.cloud.maintenance.api.v1beta.Maintenance.SummarizeMaintenances",
+          "service": {
+            "shortName": "Maintenance",
+            "fullName": "google.cloud.maintenance.api.v1beta.Maintenance"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "maintenance_v1beta_generated_Maintenance_SummarizeMaintenances_async_flattened_resourceNames",
+      "title": "SummarizeMaintenancesResourceNamesAsync",
+      "description": "Snippet for SummarizeMaintenancesAsync",
+      "file": "MaintenanceClient.SummarizeMaintenancesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SummarizeMaintenancesAsync",
+        "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient.SummarizeMaintenancesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Maintenance.Api.V1Beta.SummarizeMaintenancesResponse, Google.Cloud.Maintenance.Api.V1Beta.MaintenanceSummary>",
+        "client": {
+          "shortName": "MaintenanceClient",
+          "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient"
+        },
+        "method": {
+          "shortName": "SummarizeMaintenances",
+          "fullName": "google.cloud.maintenance.api.v1beta.Maintenance.SummarizeMaintenances",
+          "service": {
+            "shortName": "Maintenance",
+            "fullName": "google.cloud.maintenance.api.v1beta.Maintenance"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "maintenance_v1beta_generated_Maintenance_ListResourceMaintenances_sync",
+      "title": "ListResourceMaintenancesRequestObject",
+      "description": "Snippet for ListResourceMaintenances",
+      "file": "MaintenanceClient.ListResourceMaintenancesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceMaintenances",
+        "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient.ListResourceMaintenances",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Maintenance.Api.V1Beta.ListResourceMaintenancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Maintenance.Api.V1Beta.ListResourceMaintenancesResponse, Google.Cloud.Maintenance.Api.V1Beta.ResourceMaintenance>",
+        "client": {
+          "shortName": "MaintenanceClient",
+          "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient"
+        },
+        "method": {
+          "shortName": "ListResourceMaintenances",
+          "fullName": "google.cloud.maintenance.api.v1beta.Maintenance.ListResourceMaintenances",
+          "service": {
+            "shortName": "Maintenance",
+            "fullName": "google.cloud.maintenance.api.v1beta.Maintenance"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "maintenance_v1beta_generated_Maintenance_ListResourceMaintenances_async",
+      "title": "ListResourceMaintenancesRequestObjectAsync",
+      "description": "Snippet for ListResourceMaintenancesAsync",
+      "file": "MaintenanceClient.ListResourceMaintenancesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceMaintenancesAsync",
+        "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient.ListResourceMaintenancesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Maintenance.Api.V1Beta.ListResourceMaintenancesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Maintenance.Api.V1Beta.ListResourceMaintenancesResponse, Google.Cloud.Maintenance.Api.V1Beta.ResourceMaintenance>",
+        "client": {
+          "shortName": "MaintenanceClient",
+          "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient"
+        },
+        "method": {
+          "shortName": "ListResourceMaintenances",
+          "fullName": "google.cloud.maintenance.api.v1beta.Maintenance.ListResourceMaintenances",
+          "service": {
+            "shortName": "Maintenance",
+            "fullName": "google.cloud.maintenance.api.v1beta.Maintenance"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "maintenance_v1beta_generated_Maintenance_ListResourceMaintenances_sync_flattened",
+      "title": "ListResourceMaintenances",
+      "description": "Snippet for ListResourceMaintenances",
+      "file": "MaintenanceClient.ListResourceMaintenancesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceMaintenances",
+        "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient.ListResourceMaintenances",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Maintenance.Api.V1Beta.ListResourceMaintenancesResponse, Google.Cloud.Maintenance.Api.V1Beta.ResourceMaintenance>",
+        "client": {
+          "shortName": "MaintenanceClient",
+          "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient"
+        },
+        "method": {
+          "shortName": "ListResourceMaintenances",
+          "fullName": "google.cloud.maintenance.api.v1beta.Maintenance.ListResourceMaintenances",
+          "service": {
+            "shortName": "Maintenance",
+            "fullName": "google.cloud.maintenance.api.v1beta.Maintenance"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "maintenance_v1beta_generated_Maintenance_ListResourceMaintenances_async_flattened",
+      "title": "ListResourceMaintenancesAsync",
+      "description": "Snippet for ListResourceMaintenancesAsync",
+      "file": "MaintenanceClient.ListResourceMaintenancesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceMaintenancesAsync",
+        "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient.ListResourceMaintenancesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Maintenance.Api.V1Beta.ListResourceMaintenancesResponse, Google.Cloud.Maintenance.Api.V1Beta.ResourceMaintenance>",
+        "client": {
+          "shortName": "MaintenanceClient",
+          "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient"
+        },
+        "method": {
+          "shortName": "ListResourceMaintenances",
+          "fullName": "google.cloud.maintenance.api.v1beta.Maintenance.ListResourceMaintenances",
+          "service": {
+            "shortName": "Maintenance",
+            "fullName": "google.cloud.maintenance.api.v1beta.Maintenance"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "maintenance_v1beta_generated_Maintenance_ListResourceMaintenances_sync_flattened_resourceNames",
+      "title": "ListResourceMaintenancesResourceNames",
+      "description": "Snippet for ListResourceMaintenances",
+      "file": "MaintenanceClient.ListResourceMaintenancesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceMaintenances",
+        "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient.ListResourceMaintenances",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Maintenance.Api.V1Beta.ListResourceMaintenancesResponse, Google.Cloud.Maintenance.Api.V1Beta.ResourceMaintenance>",
+        "client": {
+          "shortName": "MaintenanceClient",
+          "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient"
+        },
+        "method": {
+          "shortName": "ListResourceMaintenances",
+          "fullName": "google.cloud.maintenance.api.v1beta.Maintenance.ListResourceMaintenances",
+          "service": {
+            "shortName": "Maintenance",
+            "fullName": "google.cloud.maintenance.api.v1beta.Maintenance"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "maintenance_v1beta_generated_Maintenance_ListResourceMaintenances_async_flattened_resourceNames",
+      "title": "ListResourceMaintenancesResourceNamesAsync",
+      "description": "Snippet for ListResourceMaintenancesAsync",
+      "file": "MaintenanceClient.ListResourceMaintenancesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListResourceMaintenancesAsync",
+        "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient.ListResourceMaintenancesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Maintenance.Api.V1Beta.ListResourceMaintenancesResponse, Google.Cloud.Maintenance.Api.V1Beta.ResourceMaintenance>",
+        "client": {
+          "shortName": "MaintenanceClient",
+          "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient"
+        },
+        "method": {
+          "shortName": "ListResourceMaintenances",
+          "fullName": "google.cloud.maintenance.api.v1beta.Maintenance.ListResourceMaintenances",
+          "service": {
+            "shortName": "Maintenance",
+            "fullName": "google.cloud.maintenance.api.v1beta.Maintenance"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "maintenance_v1beta_generated_Maintenance_GetResourceMaintenance_sync",
+      "title": "GetResourceMaintenanceRequestObject",
+      "description": "Snippet for GetResourceMaintenance",
+      "file": "MaintenanceClient.GetResourceMaintenanceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetResourceMaintenance",
+        "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient.GetResourceMaintenance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Maintenance.Api.V1Beta.GetResourceMaintenanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Maintenance.Api.V1Beta.ResourceMaintenance",
+        "client": {
+          "shortName": "MaintenanceClient",
+          "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient"
+        },
+        "method": {
+          "shortName": "GetResourceMaintenance",
+          "fullName": "google.cloud.maintenance.api.v1beta.Maintenance.GetResourceMaintenance",
+          "service": {
+            "shortName": "Maintenance",
+            "fullName": "google.cloud.maintenance.api.v1beta.Maintenance"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "maintenance_v1beta_generated_Maintenance_GetResourceMaintenance_async",
+      "title": "GetResourceMaintenanceRequestObjectAsync",
+      "description": "Snippet for GetResourceMaintenanceAsync",
+      "file": "MaintenanceClient.GetResourceMaintenanceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetResourceMaintenanceAsync",
+        "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient.GetResourceMaintenanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Maintenance.Api.V1Beta.GetResourceMaintenanceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Maintenance.Api.V1Beta.ResourceMaintenance>",
+        "client": {
+          "shortName": "MaintenanceClient",
+          "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient"
+        },
+        "method": {
+          "shortName": "GetResourceMaintenance",
+          "fullName": "google.cloud.maintenance.api.v1beta.Maintenance.GetResourceMaintenance",
+          "service": {
+            "shortName": "Maintenance",
+            "fullName": "google.cloud.maintenance.api.v1beta.Maintenance"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "maintenance_v1beta_generated_Maintenance_GetResourceMaintenance_sync_flattened",
+      "title": "GetResourceMaintenance",
+      "description": "Snippet for GetResourceMaintenance",
+      "file": "MaintenanceClient.GetResourceMaintenanceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetResourceMaintenance",
+        "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient.GetResourceMaintenance",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Maintenance.Api.V1Beta.ResourceMaintenance",
+        "client": {
+          "shortName": "MaintenanceClient",
+          "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient"
+        },
+        "method": {
+          "shortName": "GetResourceMaintenance",
+          "fullName": "google.cloud.maintenance.api.v1beta.Maintenance.GetResourceMaintenance",
+          "service": {
+            "shortName": "Maintenance",
+            "fullName": "google.cloud.maintenance.api.v1beta.Maintenance"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "maintenance_v1beta_generated_Maintenance_GetResourceMaintenance_async_flattened",
+      "title": "GetResourceMaintenanceAsync",
+      "description": "Snippet for GetResourceMaintenanceAsync",
+      "file": "MaintenanceClient.GetResourceMaintenanceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetResourceMaintenanceAsync",
+        "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient.GetResourceMaintenanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Maintenance.Api.V1Beta.ResourceMaintenance>",
+        "client": {
+          "shortName": "MaintenanceClient",
+          "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient"
+        },
+        "method": {
+          "shortName": "GetResourceMaintenance",
+          "fullName": "google.cloud.maintenance.api.v1beta.Maintenance.GetResourceMaintenance",
+          "service": {
+            "shortName": "Maintenance",
+            "fullName": "google.cloud.maintenance.api.v1beta.Maintenance"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "maintenance_v1beta_generated_Maintenance_GetResourceMaintenance_sync_flattened_resourceNames",
+      "title": "GetResourceMaintenanceResourceNames",
+      "description": "Snippet for GetResourceMaintenance",
+      "file": "MaintenanceClient.GetResourceMaintenanceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetResourceMaintenance",
+        "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient.GetResourceMaintenance",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Maintenance.Api.V1Beta.ResourceMaintenanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Maintenance.Api.V1Beta.ResourceMaintenance",
+        "client": {
+          "shortName": "MaintenanceClient",
+          "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient"
+        },
+        "method": {
+          "shortName": "GetResourceMaintenance",
+          "fullName": "google.cloud.maintenance.api.v1beta.Maintenance.GetResourceMaintenance",
+          "service": {
+            "shortName": "Maintenance",
+            "fullName": "google.cloud.maintenance.api.v1beta.Maintenance"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "maintenance_v1beta_generated_Maintenance_GetResourceMaintenance_async_flattened_resourceNames",
+      "title": "GetResourceMaintenanceResourceNamesAsync",
+      "description": "Snippet for GetResourceMaintenanceAsync",
+      "file": "MaintenanceClient.GetResourceMaintenanceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetResourceMaintenanceAsync",
+        "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient.GetResourceMaintenanceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Maintenance.Api.V1Beta.ResourceMaintenanceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Maintenance.Api.V1Beta.ResourceMaintenance>",
+        "client": {
+          "shortName": "MaintenanceClient",
+          "fullName": "Google.Cloud.Maintenance.Api.V1Beta.MaintenanceClient"
+        },
+        "method": {
+          "shortName": "GetResourceMaintenance",
+          "fullName": "google.cloud.maintenance.api.v1beta.Maintenance.GetResourceMaintenance",
+          "service": {
+            "shortName": "Maintenance",
+            "fullName": "google.cloud.maintenance.api.v1beta.Maintenance"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

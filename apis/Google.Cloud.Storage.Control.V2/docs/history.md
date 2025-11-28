@@ -1,5 +1,33 @@
 # Version history
 
+## Version 1.6.0, released 2025-11-06
+
+### New features
+
+- Update dependencies
+
+## Version 1.5.0, released 2025-10-14
+
+### Bug fixes
+
+- Upgrade gRPC service registration func
+
+## Version 1.4.0, released 2025-05-15
+
+### New features
+
+- Add Client Libraries Storage IntelligenceConfig
+
+## Version 1.3.0, released 2025-05-06
+
+### New features
+
+- Add Anywhere cache control APIs
+
+### Documentation improvements
+
+- Added comments for Anywhere cache messages
+
 ## Version 1.2.0, released 2025-03-17
 
 No API surface changes; no dependency updates. This is a no-op release.

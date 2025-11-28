@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListTemplates",
+    "client": "ModelArmorClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  }
+]

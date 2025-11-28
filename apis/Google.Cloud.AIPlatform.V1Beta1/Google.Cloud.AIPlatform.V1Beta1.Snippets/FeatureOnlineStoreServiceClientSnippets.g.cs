@@ -257,5 +257,38 @@ namespace GoogleCSharpSnippets
             await responseHandlerTask;
             // End snippet
         }
+
+        /// <summary>Snippet for GenerateFetchAccessToken</summary>
+        public void GenerateFetchAccessTokenRequestObject()
+        {
+            // Snippet: GenerateFetchAccessToken(GenerateFetchAccessTokenRequest, CallSettings)
+            // Create client
+            FeatureOnlineStoreServiceClient featureOnlineStoreServiceClient = FeatureOnlineStoreServiceClient.Create();
+            // Initialize request argument(s)
+            GenerateFetchAccessTokenRequest request = new GenerateFetchAccessTokenRequest
+            {
+                FeatureViewAsFeatureViewName = FeatureViewName.FromProjectLocationFeatureOnlineStoreFeatureView("[PROJECT]", "[LOCATION]", "[FEATURE_ONLINE_STORE]", "[FEATURE_VIEW]"),
+            };
+            // Make the request
+            GenerateFetchAccessTokenResponse response = featureOnlineStoreServiceClient.GenerateFetchAccessToken(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateFetchAccessTokenAsync</summary>
+        public async Task GenerateFetchAccessTokenRequestObjectAsync()
+        {
+            // Snippet: GenerateFetchAccessTokenAsync(GenerateFetchAccessTokenRequest, CallSettings)
+            // Additional: GenerateFetchAccessTokenAsync(GenerateFetchAccessTokenRequest, CancellationToken)
+            // Create client
+            FeatureOnlineStoreServiceClient featureOnlineStoreServiceClient = await FeatureOnlineStoreServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GenerateFetchAccessTokenRequest request = new GenerateFetchAccessTokenRequest
+            {
+                FeatureViewAsFeatureViewName = FeatureViewName.FromProjectLocationFeatureOnlineStoreFeatureView("[PROJECT]", "[LOCATION]", "[FEATURE_ONLINE_STORE]", "[FEATURE_VIEW]"),
+            };
+            // Make the request
+            GenerateFetchAccessTokenResponse response = await featureOnlineStoreServiceClient.GenerateFetchAccessTokenAsync(request);
+            // End snippet
+        }
     }
 }

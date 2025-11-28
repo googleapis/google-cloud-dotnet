@@ -4,6 +4,7 @@
     <IsPackable>false</IsPackable>
     <TargetFrameworks>netstandard2.1;net462</TargetFrameworks>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <LangVersion>latest</LangVersion>
     <RepoRoot>$([System.IO.Path]::GetDirectoryName($([MSBuild]::GetPathOfFileAbove('toolversions.sh', '$(MSBuildThisFileDirectory)'))))</RepoRoot>
     <AssemblyOriginatorKeyFile>$(RepoRoot)/apis/GoogleApis.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>True</SignAssembly>
@@ -13,11 +14,13 @@
     <PackageReference Include="xunit.assert" />
     <PackageReference Include="xunit.core" />
     <PackageReference Include="Xunit.SkippableFact" />
-    <PackageReference Include="Google.Apis" VersionOverride="1.68.0" />
+    <PackageReference Include="Google.Apis" VersionOverride="1.72.0" />
     <PackageReference Include="Grpc.Core.Api" VersionOverride="2.66.0" />
-    <PackageReference Include="Google.Api.Gax" VersionOverride="[4.9.0, 5.0.0)" />
+    <PackageReference Include="Google.Api.Gax" />
     <PackageReference Include="Google.Protobuf" />
-    <!-- For net462, but it's harmless for netstandard2.1 -->
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)'=='net462'">
     <PackageReference Include="System.Runtime.InteropServices.RuntimeInformation" />
   </ItemGroup>
 </Project>

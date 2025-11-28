@@ -418,7 +418,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // End sample
         }
 
-        [Fact]
+        [Fact(Skip = "Requires test product set; skipped for now")]
         public void DetectSimilarProducts()
         {
             Image image = LoadResourceImage("shoes_1.jpg");
@@ -448,7 +448,7 @@ namespace Google.Cloud.Vision.V1.Snippets
         // See [DetectSimilarProducts](ref) for a synchronous example.
         // End see-also
 
-        [Fact]
+        [Fact(Skip = "Requires test product set; skipped for now")]
         public void DetectSimilarProducts_WithFilter()
         {
             Image image = LoadResourceImage("shoes_1.jpg");

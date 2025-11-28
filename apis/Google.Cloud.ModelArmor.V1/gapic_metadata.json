@@ -1,0 +1,72 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.modelarmor.v1",
+  "libraryPackage": "Google.Cloud.ModelArmor.V1",
+  "services": {
+    "ModelArmor": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ModelArmorClient",
+          "rpcs": {
+            "CreateTemplate": {
+              "methods": [
+                "CreateTemplate",
+                "CreateTemplateAsync"
+              ]
+            },
+            "DeleteTemplate": {
+              "methods": [
+                "DeleteTemplate",
+                "DeleteTemplateAsync"
+              ]
+            },
+            "GetFloorSetting": {
+              "methods": [
+                "GetFloorSetting",
+                "GetFloorSettingAsync"
+              ]
+            },
+            "GetTemplate": {
+              "methods": [
+                "GetTemplate",
+                "GetTemplateAsync"
+              ]
+            },
+            "ListTemplates": {
+              "methods": [
+                "ListTemplates",
+                "ListTemplatesAsync"
+              ]
+            },
+            "SanitizeModelResponse": {
+              "methods": [
+                "SanitizeModelResponse",
+                "SanitizeModelResponseAsync"
+              ]
+            },
+            "SanitizeUserPrompt": {
+              "methods": [
+                "SanitizeUserPrompt",
+                "SanitizeUserPromptAsync"
+              ]
+            },
+            "UpdateFloorSetting": {
+              "methods": [
+                "UpdateFloorSetting",
+                "UpdateFloorSettingAsync"
+              ]
+            },
+            "UpdateTemplate": {
+              "methods": [
+                "UpdateTemplate",
+                "UpdateTemplateAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

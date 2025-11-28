@@ -322,7 +322,7 @@ namespace Google.Cloud.Support.V2
         public virtual CaseService.CaseServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieve the specified case.
+        /// Retrieve a case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -331,7 +331,7 @@ namespace Google.Cloud.Support.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieve the specified case.
+        /// Retrieve a case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -340,7 +340,7 @@ namespace Google.Cloud.Support.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieve the specified case.
+        /// Retrieve a case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -349,10 +349,10 @@ namespace Google.Cloud.Support.V2
             GetCaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieve the specified case.
+        /// Retrieve a case.
         /// </summary>
         /// <param name="name">
-        /// Required. The fully qualified name of a case to be retrieved.
+        /// Required. The full name of a case to be retrieved.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -363,10 +363,10 @@ namespace Google.Cloud.Support.V2
             }, callSettings);
 
         /// <summary>
-        /// Retrieve the specified case.
+        /// Retrieve a case.
         /// </summary>
         /// <param name="name">
-        /// Required. The fully qualified name of a case to be retrieved.
+        /// Required. The full name of a case to be retrieved.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -377,10 +377,10 @@ namespace Google.Cloud.Support.V2
             }, callSettings);
 
         /// <summary>
-        /// Retrieve the specified case.
+        /// Retrieve a case.
         /// </summary>
         /// <param name="name">
-        /// Required. The fully qualified name of a case to be retrieved.
+        /// Required. The full name of a case to be retrieved.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -388,10 +388,10 @@ namespace Google.Cloud.Support.V2
             GetCaseAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieve the specified case.
+        /// Retrieve a case.
         /// </summary>
         /// <param name="name">
-        /// Required. The fully qualified name of a case to be retrieved.
+        /// Required. The full name of a case to be retrieved.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -402,10 +402,10 @@ namespace Google.Cloud.Support.V2
             }, callSettings);
 
         /// <summary>
-        /// Retrieve the specified case.
+        /// Retrieve a case.
         /// </summary>
         /// <param name="name">
-        /// Required. The fully qualified name of a case to be retrieved.
+        /// Required. The full name of a case to be retrieved.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -416,10 +416,10 @@ namespace Google.Cloud.Support.V2
             }, callSettings);
 
         /// <summary>
-        /// Retrieve the specified case.
+        /// Retrieve a case.
         /// </summary>
         /// <param name="name">
-        /// Required. The fully qualified name of a case to be retrieved.
+        /// Required. The full name of a case to be retrieved.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -427,12 +427,11 @@ namespace Google.Cloud.Support.V2
             GetCaseAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieve all cases under the specified parent.
+        /// Retrieve all cases under a parent, but not its children.
         /// 
-        /// Note: Listing cases under an Organization returns only the cases directly
-        /// parented by that organization. To retrieve all cases under an organization,
-        /// including cases parented by projects under that organization, use
-        /// `cases.search`.
+        /// For example, listing cases under an organization only returns the cases
+        /// that are directly parented by that organization. To retrieve cases
+        /// under an organization and its projects, use `cases.search`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -441,12 +440,11 @@ namespace Google.Cloud.Support.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieve all cases under the specified parent.
+        /// Retrieve all cases under a parent, but not its children.
         /// 
-        /// Note: Listing cases under an Organization returns only the cases directly
-        /// parented by that organization. To retrieve all cases under an organization,
-        /// including cases parented by projects under that organization, use
-        /// `cases.search`.
+        /// For example, listing cases under an organization only returns the cases
+        /// that are directly parented by that organization. To retrieve cases
+        /// under an organization and its projects, use `cases.search`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -455,15 +453,14 @@ namespace Google.Cloud.Support.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieve all cases under the specified parent.
+        /// Retrieve all cases under a parent, but not its children.
         /// 
-        /// Note: Listing cases under an Organization returns only the cases directly
-        /// parented by that organization. To retrieve all cases under an organization,
-        /// including cases parented by projects under that organization, use
-        /// `cases.search`.
+        /// For example, listing cases under an organization only returns the cases
+        /// that are directly parented by that organization. To retrieve cases
+        /// under an organization and its projects, use `cases.search`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The fully qualified name of parent resource to list cases under.
+        /// Required. The name of a parent to list cases under.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -493,15 +490,14 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Retrieve all cases under the specified parent.
+        /// Retrieve all cases under a parent, but not its children.
         /// 
-        /// Note: Listing cases under an Organization returns only the cases directly
-        /// parented by that organization. To retrieve all cases under an organization,
-        /// including cases parented by projects under that organization, use
-        /// `cases.search`.
+        /// For example, listing cases under an organization only returns the cases
+        /// that are directly parented by that organization. To retrieve cases
+        /// under an organization and its projects, use `cases.search`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The fully qualified name of parent resource to list cases under.
+        /// Required. The name of a parent to list cases under.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -531,15 +527,14 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Retrieve all cases under the specified parent.
+        /// Retrieve all cases under a parent, but not its children.
         /// 
-        /// Note: Listing cases under an Organization returns only the cases directly
-        /// parented by that organization. To retrieve all cases under an organization,
-        /// including cases parented by projects under that organization, use
-        /// `cases.search`.
+        /// For example, listing cases under an organization only returns the cases
+        /// that are directly parented by that organization. To retrieve cases
+        /// under an organization and its projects, use `cases.search`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The fully qualified name of parent resource to list cases under.
+        /// Required. The name of a parent to list cases under.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -569,15 +564,14 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Retrieve all cases under the specified parent.
+        /// Retrieve all cases under a parent, but not its children.
         /// 
-        /// Note: Listing cases under an Organization returns only the cases directly
-        /// parented by that organization. To retrieve all cases under an organization,
-        /// including cases parented by projects under that organization, use
-        /// `cases.search`.
+        /// For example, listing cases under an organization only returns the cases
+        /// that are directly parented by that organization. To retrieve cases
+        /// under an organization and its projects, use `cases.search`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The fully qualified name of parent resource to list cases under.
+        /// Required. The name of a parent to list cases under.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -607,15 +601,14 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Retrieve all cases under the specified parent.
+        /// Retrieve all cases under a parent, but not its children.
         /// 
-        /// Note: Listing cases under an Organization returns only the cases directly
-        /// parented by that organization. To retrieve all cases under an organization,
-        /// including cases parented by projects under that organization, use
-        /// `cases.search`.
+        /// For example, listing cases under an organization only returns the cases
+        /// that are directly parented by that organization. To retrieve cases
+        /// under an organization and its projects, use `cases.search`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The fully qualified name of parent resource to list cases under.
+        /// Required. The name of a parent to list cases under.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -645,15 +638,14 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Retrieve all cases under the specified parent.
+        /// Retrieve all cases under a parent, but not its children.
         /// 
-        /// Note: Listing cases under an Organization returns only the cases directly
-        /// parented by that organization. To retrieve all cases under an organization,
-        /// including cases parented by projects under that organization, use
-        /// `cases.search`.
+        /// For example, listing cases under an organization only returns the cases
+        /// that are directly parented by that organization. To retrieve cases
+        /// under an organization and its projects, use `cases.search`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The fully qualified name of parent resource to list cases under.
+        /// Required. The name of a parent to list cases under.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -683,7 +675,7 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Search cases using the specified query.
+        /// Search for cases using a query.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -692,7 +684,7 @@ namespace Google.Cloud.Support.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Search cases using the specified query.
+        /// Search for cases using a query.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -701,9 +693,11 @@ namespace Google.Cloud.Support.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create a new case and associate it with the given Google Cloud Resource.
-        /// The case object must have the following fields set: `display_name`,
-        /// `description`, `classification`, and `priority`.
+        /// Create a new case and associate it with a parent.
+        /// 
+        /// It must have the following fields set: `display_name`, `description`,
+        /// `classification`, and `priority`. If you're just testing the API and don't
+        /// want to route your case to an agent, set `testCase=true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -712,9 +706,11 @@ namespace Google.Cloud.Support.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create a new case and associate it with the given Google Cloud Resource.
-        /// The case object must have the following fields set: `display_name`,
-        /// `description`, `classification`, and `priority`.
+        /// Create a new case and associate it with a parent.
+        /// 
+        /// It must have the following fields set: `display_name`, `description`,
+        /// `classification`, and `priority`. If you're just testing the API and don't
+        /// want to route your case to an agent, set `testCase=true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -723,9 +719,11 @@ namespace Google.Cloud.Support.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create a new case and associate it with the given Google Cloud Resource.
-        /// The case object must have the following fields set: `display_name`,
-        /// `description`, `classification`, and `priority`.
+        /// Create a new case and associate it with a parent.
+        /// 
+        /// It must have the following fields set: `display_name`, `description`,
+        /// `classification`, and `priority`. If you're just testing the API and don't
+        /// want to route your case to an agent, set `testCase=true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -734,13 +732,14 @@ namespace Google.Cloud.Support.V2
             CreateCaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Create a new case and associate it with the given Google Cloud Resource.
-        /// The case object must have the following fields set: `display_name`,
-        /// `description`, `classification`, and `priority`.
+        /// Create a new case and associate it with a parent.
+        /// 
+        /// It must have the following fields set: `display_name`, `description`,
+        /// `classification`, and `priority`. If you're just testing the API and don't
+        /// want to route your case to an agent, set `testCase=true`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the Google Cloud Resource under which the case should
-        /// be created.
+        /// Required. The name of the parent under which the case should be created.
         /// </param>
         /// <param name="case">
         /// Required. The case to be created.
@@ -755,13 +754,14 @@ namespace Google.Cloud.Support.V2
             }, callSettings);
 
         /// <summary>
-        /// Create a new case and associate it with the given Google Cloud Resource.
-        /// The case object must have the following fields set: `display_name`,
-        /// `description`, `classification`, and `priority`.
+        /// Create a new case and associate it with a parent.
+        /// 
+        /// It must have the following fields set: `display_name`, `description`,
+        /// `classification`, and `priority`. If you're just testing the API and don't
+        /// want to route your case to an agent, set `testCase=true`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the Google Cloud Resource under which the case should
-        /// be created.
+        /// Required. The name of the parent under which the case should be created.
         /// </param>
         /// <param name="case">
         /// Required. The case to be created.
@@ -776,13 +776,14 @@ namespace Google.Cloud.Support.V2
             }, callSettings);
 
         /// <summary>
-        /// Create a new case and associate it with the given Google Cloud Resource.
-        /// The case object must have the following fields set: `display_name`,
-        /// `description`, `classification`, and `priority`.
+        /// Create a new case and associate it with a parent.
+        /// 
+        /// It must have the following fields set: `display_name`, `description`,
+        /// `classification`, and `priority`. If you're just testing the API and don't
+        /// want to route your case to an agent, set `testCase=true`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the Google Cloud Resource under which the case should
-        /// be created.
+        /// Required. The name of the parent under which the case should be created.
         /// </param>
         /// <param name="case">
         /// Required. The case to be created.
@@ -793,13 +794,14 @@ namespace Google.Cloud.Support.V2
             CreateCaseAsync(parent, @case, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Create a new case and associate it with the given Google Cloud Resource.
-        /// The case object must have the following fields set: `display_name`,
-        /// `description`, `classification`, and `priority`.
+        /// Create a new case and associate it with a parent.
+        /// 
+        /// It must have the following fields set: `display_name`, `description`,
+        /// `classification`, and `priority`. If you're just testing the API and don't
+        /// want to route your case to an agent, set `testCase=true`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the Google Cloud Resource under which the case should
-        /// be created.
+        /// Required. The name of the parent under which the case should be created.
         /// </param>
         /// <param name="case">
         /// Required. The case to be created.
@@ -814,13 +816,14 @@ namespace Google.Cloud.Support.V2
             }, callSettings);
 
         /// <summary>
-        /// Create a new case and associate it with the given Google Cloud Resource.
-        /// The case object must have the following fields set: `display_name`,
-        /// `description`, `classification`, and `priority`.
+        /// Create a new case and associate it with a parent.
+        /// 
+        /// It must have the following fields set: `display_name`, `description`,
+        /// `classification`, and `priority`. If you're just testing the API and don't
+        /// want to route your case to an agent, set `testCase=true`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the Google Cloud Resource under which the case should
-        /// be created.
+        /// Required. The name of the parent under which the case should be created.
         /// </param>
         /// <param name="case">
         /// Required. The case to be created.
@@ -835,13 +838,14 @@ namespace Google.Cloud.Support.V2
             }, callSettings);
 
         /// <summary>
-        /// Create a new case and associate it with the given Google Cloud Resource.
-        /// The case object must have the following fields set: `display_name`,
-        /// `description`, `classification`, and `priority`.
+        /// Create a new case and associate it with a parent.
+        /// 
+        /// It must have the following fields set: `display_name`, `description`,
+        /// `classification`, and `priority`. If you're just testing the API and don't
+        /// want to route your case to an agent, set `testCase=true`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the Google Cloud Resource under which the case should
-        /// be created.
+        /// Required. The name of the parent under which the case should be created.
         /// </param>
         /// <param name="case">
         /// Required. The case to be created.
@@ -852,13 +856,14 @@ namespace Google.Cloud.Support.V2
             CreateCaseAsync(parent, @case, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Create a new case and associate it with the given Google Cloud Resource.
-        /// The case object must have the following fields set: `display_name`,
-        /// `description`, `classification`, and `priority`.
+        /// Create a new case and associate it with a parent.
+        /// 
+        /// It must have the following fields set: `display_name`, `description`,
+        /// `classification`, and `priority`. If you're just testing the API and don't
+        /// want to route your case to an agent, set `testCase=true`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the Google Cloud Resource under which the case should
-        /// be created.
+        /// Required. The name of the parent under which the case should be created.
         /// </param>
         /// <param name="case">
         /// Required. The case to be created.
@@ -873,13 +878,14 @@ namespace Google.Cloud.Support.V2
             }, callSettings);
 
         /// <summary>
-        /// Create a new case and associate it with the given Google Cloud Resource.
-        /// The case object must have the following fields set: `display_name`,
-        /// `description`, `classification`, and `priority`.
+        /// Create a new case and associate it with a parent.
+        /// 
+        /// It must have the following fields set: `display_name`, `description`,
+        /// `classification`, and `priority`. If you're just testing the API and don't
+        /// want to route your case to an agent, set `testCase=true`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the Google Cloud Resource under which the case should
-        /// be created.
+        /// Required. The name of the parent under which the case should be created.
         /// </param>
         /// <param name="case">
         /// Required. The case to be created.
@@ -894,13 +900,14 @@ namespace Google.Cloud.Support.V2
             }, callSettings);
 
         /// <summary>
-        /// Create a new case and associate it with the given Google Cloud Resource.
-        /// The case object must have the following fields set: `display_name`,
-        /// `description`, `classification`, and `priority`.
+        /// Create a new case and associate it with a parent.
+        /// 
+        /// It must have the following fields set: `display_name`, `description`,
+        /// `classification`, and `priority`. If you're just testing the API and don't
+        /// want to route your case to an agent, set `testCase=true`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the Google Cloud Resource under which the case should
-        /// be created.
+        /// Required. The name of the parent under which the case should be created.
         /// </param>
         /// <param name="case">
         /// Required. The case to be created.
@@ -911,7 +918,7 @@ namespace Google.Cloud.Support.V2
             CreateCaseAsync(parent, @case, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Update the specified case. Only a subset of fields can be updated.
+        /// Update a case. Only some fields can be updated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -920,7 +927,7 @@ namespace Google.Cloud.Support.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update the specified case. Only a subset of fields can be updated.
+        /// Update a case. Only some fields can be updated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -929,7 +936,7 @@ namespace Google.Cloud.Support.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update the specified case. Only a subset of fields can be updated.
+        /// Update a case. Only some fields can be updated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -938,20 +945,19 @@ namespace Google.Cloud.Support.V2
             UpdateCaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Update the specified case. Only a subset of fields can be updated.
+        /// Update a case. Only some fields can be updated.
         /// </summary>
         /// <param name="case">
-        /// Required. The case object to update.
+        /// Required. The case to update.
         /// </param>
         /// <param name="updateMask">
-        /// A list of attributes of the case object that should be updated
-        /// as part of this request. Supported values are `priority`, `display_name`,
-        /// and `subscriber_email_addresses`. If no fields are specified, all supported
-        /// fields are updated.
+        /// A list of attributes of the case that should be updated. Supported values
+        /// are `priority`, `display_name`, and `subscriber_email_addresses`. If no
+        /// fields are specified, all supported fields are updated.
         /// 
-        /// WARNING: If you do not provide a field mask, then you might accidentally
-        /// clear some fields. For example, if you leave the field mask empty and do
-        /// not provide a value for `subscriber_email_addresses`, then
+        /// Be careful - if you do not provide a field mask, then you might
+        /// accidentally clear some fields. For example, if you leave the field mask
+        /// empty and do not provide a value for `subscriber_email_addresses`, then
         /// `subscriber_email_addresses` is updated to empty.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -964,20 +970,19 @@ namespace Google.Cloud.Support.V2
             }, callSettings);
 
         /// <summary>
-        /// Update the specified case. Only a subset of fields can be updated.
+        /// Update a case. Only some fields can be updated.
         /// </summary>
         /// <param name="case">
-        /// Required. The case object to update.
+        /// Required. The case to update.
         /// </param>
         /// <param name="updateMask">
-        /// A list of attributes of the case object that should be updated
-        /// as part of this request. Supported values are `priority`, `display_name`,
-        /// and `subscriber_email_addresses`. If no fields are specified, all supported
-        /// fields are updated.
+        /// A list of attributes of the case that should be updated. Supported values
+        /// are `priority`, `display_name`, and `subscriber_email_addresses`. If no
+        /// fields are specified, all supported fields are updated.
         /// 
-        /// WARNING: If you do not provide a field mask, then you might accidentally
-        /// clear some fields. For example, if you leave the field mask empty and do
-        /// not provide a value for `subscriber_email_addresses`, then
+        /// Be careful - if you do not provide a field mask, then you might
+        /// accidentally clear some fields. For example, if you leave the field mask
+        /// empty and do not provide a value for `subscriber_email_addresses`, then
         /// `subscriber_email_addresses` is updated to empty.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -990,20 +995,19 @@ namespace Google.Cloud.Support.V2
             }, callSettings);
 
         /// <summary>
-        /// Update the specified case. Only a subset of fields can be updated.
+        /// Update a case. Only some fields can be updated.
         /// </summary>
         /// <param name="case">
-        /// Required. The case object to update.
+        /// Required. The case to update.
         /// </param>
         /// <param name="updateMask">
-        /// A list of attributes of the case object that should be updated
-        /// as part of this request. Supported values are `priority`, `display_name`,
-        /// and `subscriber_email_addresses`. If no fields are specified, all supported
-        /// fields are updated.
+        /// A list of attributes of the case that should be updated. Supported values
+        /// are `priority`, `display_name`, and `subscriber_email_addresses`. If no
+        /// fields are specified, all supported fields are updated.
         /// 
-        /// WARNING: If you do not provide a field mask, then you might accidentally
-        /// clear some fields. For example, if you leave the field mask empty and do
-        /// not provide a value for `subscriber_email_addresses`, then
+        /// Be careful - if you do not provide a field mask, then you might
+        /// accidentally clear some fields. For example, if you leave the field mask
+        /// empty and do not provide a value for `subscriber_email_addresses`, then
         /// `subscriber_email_addresses` is updated to empty.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1012,13 +1016,13 @@ namespace Google.Cloud.Support.V2
             UpdateCaseAsync(@case, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Escalate a case. Escalating a case will initiate the Google Cloud Support
-        /// escalation management process.
+        /// Escalate a case, starting the Google Cloud Support escalation management
+        /// process.
         /// 
-        /// This operation is only available to certain Customer Care tiers. Go to
+        /// This operation is only available for some support services. Go to
         /// https://cloud.google.com/support and look for 'Technical support
-        /// escalations' in the feature list to find out which tiers are able to
-        /// perform escalations.
+        /// escalations' in the feature list to find out which ones let you
+        /// do that.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1027,13 +1031,13 @@ namespace Google.Cloud.Support.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Escalate a case. Escalating a case will initiate the Google Cloud Support
-        /// escalation management process.
+        /// Escalate a case, starting the Google Cloud Support escalation management
+        /// process.
         /// 
-        /// This operation is only available to certain Customer Care tiers. Go to
+        /// This operation is only available for some support services. Go to
         /// https://cloud.google.com/support and look for 'Technical support
-        /// escalations' in the feature list to find out which tiers are able to
-        /// perform escalations.
+        /// escalations' in the feature list to find out which ones let you
+        /// do that.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1042,13 +1046,13 @@ namespace Google.Cloud.Support.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Escalate a case. Escalating a case will initiate the Google Cloud Support
-        /// escalation management process.
+        /// Escalate a case, starting the Google Cloud Support escalation management
+        /// process.
         /// 
-        /// This operation is only available to certain Customer Care tiers. Go to
+        /// This operation is only available for some support services. Go to
         /// https://cloud.google.com/support and look for 'Technical support
-        /// escalations' in the feature list to find out which tiers are able to
-        /// perform escalations.
+        /// escalations' in the feature list to find out which ones let you
+        /// do that.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1057,7 +1061,7 @@ namespace Google.Cloud.Support.V2
             EscalateCaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Close the specified case.
+        /// Close a case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1066,7 +1070,7 @@ namespace Google.Cloud.Support.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Close the specified case.
+        /// Close a case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1075,7 +1079,7 @@ namespace Google.Cloud.Support.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Close the specified case.
+        /// Close a case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1084,10 +1088,16 @@ namespace Google.Cloud.Support.V2
             CloseCaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieve valid classifications to be used when creating a support case.
-        /// The classications are hierarchical, with each classification containing
-        /// all levels of the hierarchy, separated by " &gt; ". For example "Technical
-        /// Issue &gt; Compute &gt; Compute Engine".
+        /// Retrieve valid classifications to use when creating a support case.
+        /// 
+        /// Classifications are hierarchical. Each classification is a string
+        /// containing all levels of the hierarchy separated by `" &gt; "`. For example,
+        /// `"Technical Issue &gt; Compute &gt; Compute Engine"`.
+        /// 
+        /// Classification IDs returned by this endpoint are valid for at least six
+        /// months. When a classification is deactivated, this endpoint immediately
+        /// stops returning it. After six months, `case.create` requests using the
+        /// classification will fail.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1096,10 +1106,16 @@ namespace Google.Cloud.Support.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieve valid classifications to be used when creating a support case.
-        /// The classications are hierarchical, with each classification containing
-        /// all levels of the hierarchy, separated by " &gt; ". For example "Technical
-        /// Issue &gt; Compute &gt; Compute Engine".
+        /// Retrieve valid classifications to use when creating a support case.
+        /// 
+        /// Classifications are hierarchical. Each classification is a string
+        /// containing all levels of the hierarchy separated by `" &gt; "`. For example,
+        /// `"Technical Issue &gt; Compute &gt; Compute Engine"`.
+        /// 
+        /// Classification IDs returned by this endpoint are valid for at least six
+        /// months. When a classification is deactivated, this endpoint immediately
+        /// stops returning it. After six months, `case.create` requests using the
+        /// classification will fail.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1212,7 +1228,7 @@ namespace Google.Cloud.Support.V2
         partial void Modify_SearchCaseClassificationsRequest(ref SearchCaseClassificationsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Retrieve the specified case.
+        /// Retrieve a case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1224,7 +1240,7 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Retrieve the specified case.
+        /// Retrieve a case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1236,12 +1252,11 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Retrieve all cases under the specified parent.
+        /// Retrieve all cases under a parent, but not its children.
         /// 
-        /// Note: Listing cases under an Organization returns only the cases directly
-        /// parented by that organization. To retrieve all cases under an organization,
-        /// including cases parented by projects under that organization, use
-        /// `cases.search`.
+        /// For example, listing cases under an organization only returns the cases
+        /// that are directly parented by that organization. To retrieve cases
+        /// under an organization and its projects, use `cases.search`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1253,12 +1268,11 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Retrieve all cases under the specified parent.
+        /// Retrieve all cases under a parent, but not its children.
         /// 
-        /// Note: Listing cases under an Organization returns only the cases directly
-        /// parented by that organization. To retrieve all cases under an organization,
-        /// including cases parented by projects under that organization, use
-        /// `cases.search`.
+        /// For example, listing cases under an organization only returns the cases
+        /// that are directly parented by that organization. To retrieve cases
+        /// under an organization and its projects, use `cases.search`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1270,7 +1284,7 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Search cases using the specified query.
+        /// Search for cases using a query.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1282,7 +1296,7 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Search cases using the specified query.
+        /// Search for cases using a query.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1294,9 +1308,11 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Create a new case and associate it with the given Google Cloud Resource.
-        /// The case object must have the following fields set: `display_name`,
-        /// `description`, `classification`, and `priority`.
+        /// Create a new case and associate it with a parent.
+        /// 
+        /// It must have the following fields set: `display_name`, `description`,
+        /// `classification`, and `priority`. If you're just testing the API and don't
+        /// want to route your case to an agent, set `testCase=true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1308,9 +1324,11 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Create a new case and associate it with the given Google Cloud Resource.
-        /// The case object must have the following fields set: `display_name`,
-        /// `description`, `classification`, and `priority`.
+        /// Create a new case and associate it with a parent.
+        /// 
+        /// It must have the following fields set: `display_name`, `description`,
+        /// `classification`, and `priority`. If you're just testing the API and don't
+        /// want to route your case to an agent, set `testCase=true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1322,7 +1340,7 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Update the specified case. Only a subset of fields can be updated.
+        /// Update a case. Only some fields can be updated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1334,7 +1352,7 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Update the specified case. Only a subset of fields can be updated.
+        /// Update a case. Only some fields can be updated.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1346,13 +1364,13 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Escalate a case. Escalating a case will initiate the Google Cloud Support
-        /// escalation management process.
+        /// Escalate a case, starting the Google Cloud Support escalation management
+        /// process.
         /// 
-        /// This operation is only available to certain Customer Care tiers. Go to
+        /// This operation is only available for some support services. Go to
         /// https://cloud.google.com/support and look for 'Technical support
-        /// escalations' in the feature list to find out which tiers are able to
-        /// perform escalations.
+        /// escalations' in the feature list to find out which ones let you
+        /// do that.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1364,13 +1382,13 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Escalate a case. Escalating a case will initiate the Google Cloud Support
-        /// escalation management process.
+        /// Escalate a case, starting the Google Cloud Support escalation management
+        /// process.
         /// 
-        /// This operation is only available to certain Customer Care tiers. Go to
+        /// This operation is only available for some support services. Go to
         /// https://cloud.google.com/support and look for 'Technical support
-        /// escalations' in the feature list to find out which tiers are able to
-        /// perform escalations.
+        /// escalations' in the feature list to find out which ones let you
+        /// do that.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1382,7 +1400,7 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Close the specified case.
+        /// Close a case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1394,7 +1412,7 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Close the specified case.
+        /// Close a case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1406,10 +1424,16 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Retrieve valid classifications to be used when creating a support case.
-        /// The classications are hierarchical, with each classification containing
-        /// all levels of the hierarchy, separated by " &gt; ". For example "Technical
-        /// Issue &gt; Compute &gt; Compute Engine".
+        /// Retrieve valid classifications to use when creating a support case.
+        /// 
+        /// Classifications are hierarchical. Each classification is a string
+        /// containing all levels of the hierarchy separated by `" &gt; "`. For example,
+        /// `"Technical Issue &gt; Compute &gt; Compute Engine"`.
+        /// 
+        /// Classification IDs returned by this endpoint are valid for at least six
+        /// months. When a classification is deactivated, this endpoint immediately
+        /// stops returning it. After six months, `case.create` requests using the
+        /// classification will fail.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1421,10 +1445,16 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Retrieve valid classifications to be used when creating a support case.
-        /// The classications are hierarchical, with each classification containing
-        /// all levels of the hierarchy, separated by " &gt; ". For example "Technical
-        /// Issue &gt; Compute &gt; Compute Engine".
+        /// Retrieve valid classifications to use when creating a support case.
+        /// 
+        /// Classifications are hierarchical. Each classification is a string
+        /// containing all levels of the hierarchy separated by `" &gt; "`. For example,
+        /// `"Technical Issue &gt; Compute &gt; Compute Engine"`.
+        /// 
+        /// Classification IDs returned by this endpoint are valid for at least six
+        /// months. When a classification is deactivated, this endpoint immediately
+        /// stops returning it. After six months, `case.create` requests using the
+        /// classification will fail.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

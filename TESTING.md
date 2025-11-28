@@ -183,10 +183,11 @@ resource names):
 Google.Cloud.Vision.V1
 ----------------------
 
-The test project must have a populated product set, and have AutoML
-configured appropriately. To create the product set expected by the
-snippets, change to the `apis/Google.Cloud.Vision.V1` directory and
-run:
+There are two snippets which require a populated product set, and to
+have AutoML configured appropriately. These tests are currently
+skipped, but are preserved so it's easy to test manually when
+required. To create the product set expected by the snippets, change
+to the `apis/Google.Cloud.Vision.V1` directory and run:
 
 ```text
 dotnet run -p Google.Cloud.Vision.V1.PopulateProductSearchTestSet -- Google.Cloud.Vision.V1.Snippets {YOUR_PROJECT_ID}

@@ -155,8 +155,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "dGlvbhIVCg1sYW5ndWFnZV9jb2RlGAogASgJEkkKC2R0bWZfZGlnaXRzGAUg",
             "ASgLMjQuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5UZWxlcGhv",
             "bnlEdG1mRXZlbnRzIoIBCgtNZXNzYWdlVHlwZRIcChhNRVNTQUdFX1RZUEVf",
-            "VU5TUEVDSUZJRUQQABIOCgpUUkFOU0NSSVBUEAESDwoLRFRNRl9ESUdJVFMQ",
-            "AxIbChdFTkRfT0ZfU0lOR0xFX1VUVEVSQU5DRRACEhcKE1BBUlRJQUxfRFRN",
+            "VU5TUEVDSUZJRUQQABIOCgpUUkFOU0NSSVBUEAESGwoXRU5EX09GX1NJTkdM",
+            "RV9VVFRFUkFOQ0UQAhIPCgtEVE1GX0RJR0lUUxADEhcKE1BBUlRJQUxfRFRN",
             "Rl9ESUdJVFMQBCIwCglUZXh0SW5wdXQSDAoEdGV4dBgBIAEoCRIVCg1sYW5n",
             "dWFnZV9jb2RlGAIgASgJIl4KCkV2ZW50SW5wdXQSDAoEbmFtZRgBIAEoCRIr",
             "CgpwYXJhbWV0ZXJzGAIgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBIV",
@@ -6302,10 +6302,6 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         /// </summary>
         [pbr::OriginalName("TRANSCRIPT")] Transcript = 1,
         /// <summary>
-        /// Message contains DTMF digits.
-        /// </summary>
-        [pbr::OriginalName("DTMF_DIGITS")] DtmfDigits = 3,
-        /// <summary>
         /// This event indicates that the server has detected the end of the user's
         /// speech utterance and expects no additional speech. Therefore, the server
         /// will not process additional audio (although it may subsequently return
@@ -6315,6 +6311,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         /// `single_utterance` was set to `true`, and is not used otherwise.
         /// </summary>
         [pbr::OriginalName("END_OF_SINGLE_UTTERANCE")] EndOfSingleUtterance = 2,
+        /// <summary>
+        /// Message contains DTMF digits.
+        /// </summary>
+        [pbr::OriginalName("DTMF_DIGITS")] DtmfDigits = 3,
         /// <summary>
         /// Message contains DTMF digits. Before a message with DTMF_DIGITS is sent,
         /// a message with PARTIAL_DTMF_DIGITS may be sent with DTMF digits collected

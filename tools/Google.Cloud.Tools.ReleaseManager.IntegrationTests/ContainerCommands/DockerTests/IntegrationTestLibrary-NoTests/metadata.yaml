@@ -1,0 +1,33 @@
+command: integration-test-library
+args:
+- '--repo-root=/test/repo'
+- '--library-id=Google.Test.V1'
+commonFiles:
+  - source: test-apis.json
+    target: repo/generator-input/apis.json
+  - source: test-state.json
+    target: repo/generator-input/pipeline-state.json
+  - source: Google.Test.V1
+    target: repo/apis/Google.Test.V1
+  - source: Google.Test.V2
+    target: repo/apis/Google.Test.V2
+repoFiles:
+  - source: global.json
+    target: repo/global.json
+  - source: runintegrationtests.sh
+    target: repo/runintegrationtests.sh
+  - source: toolversions.sh
+    target: repo/toolversions.sh
+  - source: Directory.Packages.props
+    target: repo/Directory.Packages.props
+  - source: apis/Directory.Build.props
+    target: repo/apis/Directory.Build.props
+  - source: apis/Directory.Build.targets
+    target: repo/apis/Directory.Build.targets
+  - source: apis/GoogleApis.snk
+    target: repo/apis/GoogleApis.snk    
+fileExpectations:
+  absent:
+  - repo/apis/Google.Test.V1/Google.Test.V1/bin
+  - repo/apis/Google.Test.V2/Google.Test.V2/bin
+  - repo/apis/Google.Test.V2/Google.Test.V2.IntegrationTests/bin

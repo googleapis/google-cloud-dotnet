@@ -14,37 +14,45 @@
 
 using Google.Apis.Bigquery.v2.Data;
 using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace Google.Cloud.BigQuery.V2.Tests
 {
     public class QueryOptionsTest
     {
-        [Fact]
-        public void PropertiesSetOnRequest()
+        private readonly QueryOptions _options = new QueryOptions
         {
-            var options = new QueryOptions
+            AllowLargeResults = true,
+            CreateDisposition = CreateDisposition.CreateNever,
+            DefaultDataset = new DatasetReference { ProjectId = "a", DatasetId = "b" },
+            DestinationTable = new TableReference { ProjectId = "a", DatasetId = "b", TableId = "c" },
+            FlattenResults = false,
+            MaximumBillingTier = 10,
+            MaximumBytesBilled = 1000,
+            Priority = QueryPriority.Batch,
+            UseQueryCache = false,
+            WriteDisposition = WriteDisposition.WriteIfEmpty,
+            UseLegacySql = true,
+            ParameterMode = BigQueryParameterMode.Positional,
+            DestinationEncryptionConfiguration = new EncryptionConfiguration { KmsKeyName = "projects/1/locations/us/keyRings/1/cryptoKeys/1" },
+            DestinationSchemaUpdateOptions = SchemaUpdateOption.AllowFieldAddition | SchemaUpdateOption.AllowFieldRelaxation,
+            TimePartitioning = TimePartition.CreateDailyPartitioning(TimeSpan.FromHours(1), "field"),
+            ConfigurationModifier = options => options.ETag = "test",
+            JobConfigurationModifier = config => config.Reservation = "Reservation",
+            DryRun = true,
+            Labels = new Dictionary<string, string>()
             {
-                AllowLargeResults = true,
-                CreateDisposition = CreateDisposition.CreateNever,
-                DefaultDataset = new DatasetReference { ProjectId = "a", DatasetId = "b" },
-                DestinationTable = new TableReference { ProjectId = "a", DatasetId = "b", TableId = "c" },
-                FlattenResults = false,
-                MaximumBillingTier = 10,
-                MaximumBytesBilled = 1000,
-                Priority = QueryPriority.Batch,
-                UseQueryCache = false,
-                WriteDisposition = WriteDisposition.WriteIfEmpty,
-                UseLegacySql = true,
-                ParameterMode = BigQueryParameterMode.Positional,
-                DestinationEncryptionConfiguration = new EncryptionConfiguration { KmsKeyName = "projects/1/locations/us/keyRings/1/cryptoKeys/1" },
-                DestinationSchemaUpdateOptions = SchemaUpdateOption.AllowFieldAddition | SchemaUpdateOption.AllowFieldRelaxation,
-                TimePartitioning = TimePartition.CreateDailyPartitioning(TimeSpan.FromHours(1), "field"),
-                ConfigurationModifier = options => options.ETag = "test"
-            };
+                { "Key", "Value" }
+            }
+        };
+
+        [Fact]
+        public void TestModifyRequest()
+        {
 
             JobConfigurationQuery query = new JobConfigurationQuery();
-            options.ModifyRequest(query);
+            _options.ModifyRequest(query);
             Assert.Equal(true, query.AllowLargeResults);
             Assert.Equal("CREATE_NEVER", query.CreateDisposition);
             Assert.Equal("b", query.DefaultDataset.DatasetId);
@@ -65,6 +73,16 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal("DAY", query.TimePartitioning.Type);
             Assert.Equal("field", query.TimePartitioning.Field);
             Assert.Equal("test", query.ETag);
+        }
+
+        [Fact]
+        public void TestModifyJobConfiguration()
+        {
+            var jobConfiguration = new JobConfiguration();
+            _options.ModifyJobConfiguration(jobConfiguration);
+            Assert.Equal("Reservation", jobConfiguration.Reservation);
+            Assert.Equal(true, jobConfiguration.DryRun);
+            Assert.Equal(_options.Labels, jobConfiguration.Labels);
         }
     }
 }

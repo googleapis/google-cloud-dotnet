@@ -1,0 +1,24 @@
+command: generate-library
+args:
+- '--api-root=/test/api-root'
+- '--output=/test/output'
+- '--generator-input=/test/generator-input'
+- '--library-id=Google.Test.V2'
+commonFiles:
+  # This is the simplest way of creating an empty directory
+  - source: irrelevant-content
+    target: output/.ignored
+  - source: test-apis.json
+    target: generator-input/apis.json
+  - source: test-state.json
+    target: generator-input/pipeline-state.json
+  - source: CommonResourcesConfig.json
+    target: generator-input/CommonResourcesConfig.json
+  - source: googleapis
+    target: api-root
+  - source: README-template.md
+    target: generator-input/README-template.md
+  - source: renovate-template.json
+    target: generator-input/renovate-template.json
+# Gapic generator fails because REST transport is requested, but no method in any service has an HTTP annotation
+expectedExitCode: 1

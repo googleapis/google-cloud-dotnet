@@ -47,7 +47,7 @@ namespace Google.Cloud.NetApp.V1 {
             "ZXN0EjIKBG5hbWUYASABKAlCJOBBAvpBHgocbmV0YXBwLmdvb2dsZWFwaXMu",
             "Y29tL1ZvbHVtZRINCgVmb3JjZRgCIAEoCCJjChNSZXZlcnRWb2x1bWVSZXF1",
             "ZXN0EjIKBG5hbWUYASABKAlCJOBBAvpBHgocbmV0YXBwLmdvb2dsZWFwaXMu",
-            "Y29tL1ZvbHVtZRIYCgtzbmFwc2hvdF9pZBgCIAEoCUID4EECIpERCgZWb2x1",
+            "Y29tL1ZvbHVtZRIYCgtzbmFwc2hvdF9pZBgCIAEoCUID4EECItURCgZWb2x1",
             "bWUSEQoEbmFtZRgBIAEoCUID4EEIEjgKBXN0YXRlGAIgASgOMiQuZ29vZ2xl",
             "LmNsb3VkLm5ldGFwcC52MS5Wb2x1bWUuU3RhdGVCA+BBAxIaCg1zdGF0ZV9k",
             "ZXRhaWxzGAMgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29n",
@@ -88,95 +88,114 @@ namespace Google.Cloud.NetApp.V1 {
             "cmVwbGljYV96b25lGCQgASgJQgPgQQMSEQoEem9uZRglIAEoCUID4EEDEh8K",
             "EmNvbGRfdGllcl9zaXplX2dpYhgnIAEoA0ID4EEDEl8KHWh5YnJpZF9yZXBs",
             "aWNhdGlvbl9wYXJhbWV0ZXJzGCggASgLMjMuZ29vZ2xlLmNsb3VkLm5ldGFw",
-            "cC52MS5IeWJyaWRSZXBsaWNhdGlvblBhcmFtZXRlcnNCA+BBARotCgtMYWJl",
-            "bHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIpkBCgVT",
-            "dGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgkKBVJFQURZEAESDAoIQ1JF",
-            "QVRJTkcQAhIMCghERUxFVElORxADEgwKCFVQREFUSU5HEAQSDQoJUkVTVE9S",
-            "SU5HEAUSDAoIRElTQUJMRUQQBhIJCgVFUlJPUhAHEg0KCVBSRVBBUklORxAI",
-            "Eg0KCVJFQURfT05MWRAJOmzqQWkKHG5ldGFwcC5nb29nbGVhcGlzLmNvbS9W",
-            "b2x1bWUSOHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
-            "fS92b2x1bWVzL3t2b2x1bWV9Kgd2b2x1bWVzMgZ2b2x1bWVCEAoOX2JhY2t1",
-            "cF9jb25maWdCEQoPX3RpZXJpbmdfcG9saWN5IlIKDEV4cG9ydFBvbGljeRJC",
-            "CgVydWxlcxgBIAMoCzIuLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuU2ltcGxl",
-            "RXhwb3J0UG9saWN5UnVsZUID4EECIvwEChZTaW1wbGVFeHBvcnRQb2xpY3lS",
-            "dWxlEhwKD2FsbG93ZWRfY2xpZW50cxgBIAEoCUgAiAEBEhwKD2hhc19yb290",
-            "X2FjY2VzcxgCIAEoCUgBiAEBEjwKC2FjY2Vzc190eXBlGAMgASgOMiIuZ29v",
-            "Z2xlLmNsb3VkLm5ldGFwcC52MS5BY2Nlc3NUeXBlSAKIAQESEgoFbmZzdjMY",
-            "BCABKAhIA4gBARISCgVuZnN2NBgFIAEoCEgEiAEBEiEKFGtlcmJlcm9zXzVf",
-            "cmVhZF9vbmx5GAYgASgISAWIAQESIgoVa2VyYmVyb3NfNV9yZWFkX3dyaXRl",
-            "GAcgASgISAaIAQESIgoVa2VyYmVyb3NfNWlfcmVhZF9vbmx5GAggASgISAeI",
-            "AQESIwoWa2VyYmVyb3NfNWlfcmVhZF93cml0ZRgJIAEoCEgIiAEBEiIKFWtl",
-            "cmJlcm9zXzVwX3JlYWRfb25seRgKIAEoCEgJiAEBEiMKFmtlcmJlcm9zXzVw",
-            "X3JlYWRfd3JpdGUYCyABKAhICogBAUISChBfYWxsb3dlZF9jbGllbnRzQhIK",
-            "EF9oYXNfcm9vdF9hY2Nlc3NCDgoMX2FjY2Vzc190eXBlQggKBl9uZnN2M0II",
-            "CgZfbmZzdjRCFwoVX2tlcmJlcm9zXzVfcmVhZF9vbmx5QhgKFl9rZXJiZXJv",
-            "c181X3JlYWRfd3JpdGVCGAoWX2tlcmJlcm9zXzVpX3JlYWRfb25seUIZChdf",
-            "a2VyYmVyb3NfNWlfcmVhZF93cml0ZUIYChZfa2VyYmVyb3NfNXBfcmVhZF9v",
-            "bmx5QhkKF19rZXJiZXJvc181cF9yZWFkX3dyaXRlIpoDCg5TbmFwc2hvdFBv",
-            "bGljeRIUCgdlbmFibGVkGAEgASgISACIAQESRAoPaG91cmx5X3NjaGVkdWxl",
-            "GAIgASgLMiYuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5Ib3VybHlTY2hlZHVs",
-            "ZUgBiAEBEkIKDmRhaWx5X3NjaGVkdWxlGAMgASgLMiUuZ29vZ2xlLmNsb3Vk",
-            "Lm5ldGFwcC52MS5EYWlseVNjaGVkdWxlSAKIAQESRAoPd2Vla2x5X3NjaGVk",
-            "dWxlGAQgASgLMiYuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5XZWVrbHlTY2hl",
-            "ZHVsZUgDiAEBEkYKEG1vbnRobHlfc2NoZWR1bGUYBSABKAsyJy5nb29nbGUu",
-            "Y2xvdWQubmV0YXBwLnYxLk1vbnRobHlTY2hlZHVsZUgEiAEBQgoKCF9lbmFi",
-            "bGVkQhIKEF9ob3VybHlfc2NoZWR1bGVCEQoPX2RhaWx5X3NjaGVkdWxlQhIK",
-            "EF93ZWVrbHlfc2NoZWR1bGVCEwoRX21vbnRobHlfc2NoZWR1bGUiZgoOSG91",
-            "cmx5U2NoZWR1bGUSHgoRc25hcHNob3RzX3RvX2tlZXAYASABKAFIAIgBARIT",
-            "CgZtaW51dGUYAiABKAFIAYgBAUIUChJfc25hcHNob3RzX3RvX2tlZXBCCQoH",
-            "X21pbnV0ZSKBAQoNRGFpbHlTY2hlZHVsZRIeChFzbmFwc2hvdHNfdG9fa2Vl",
-            "cBgBIAEoAUgAiAEBEhMKBm1pbnV0ZRgCIAEoAUgBiAEBEhEKBGhvdXIYAyAB",
-            "KAFIAogBAUIUChJfc25hcHNob3RzX3RvX2tlZXBCCQoHX21pbnV0ZUIHCgVf",
-            "aG91ciKcAQoOV2Vla2x5U2NoZWR1bGUSHgoRc25hcHNob3RzX3RvX2tlZXAY",
-            "ASABKAFIAIgBARITCgZtaW51dGUYAiABKAFIAYgBARIRCgRob3VyGAMgASgB",
-            "SAKIAQESEAoDZGF5GAQgASgJSAOIAQFCFAoSX3NuYXBzaG90c190b19rZWVw",
-            "QgkKB19taW51dGVCBwoFX2hvdXJCBgoEX2RheSKxAQoPTW9udGhseVNjaGVk",
-            "dWxlEh4KEXNuYXBzaG90c190b19rZWVwGAEgASgBSACIAQESEwoGbWludXRl",
-            "GAIgASgBSAGIAQESEQoEaG91chgDIAEoAUgCiAEBEhoKDWRheXNfb2ZfbW9u",
-            "dGgYBCABKAlIA4gBAUIUChJfc25hcHNob3RzX3RvX2tlZXBCCQoHX21pbnV0",
-            "ZUIHCgVfaG91ckIQCg5fZGF5c19vZl9tb250aCKeAQoLTW91bnRPcHRpb24S",
-            "DgoGZXhwb3J0GAEgASgJEhMKC2V4cG9ydF9mdWxsGAIgASgJEjMKCHByb3Rv",
-            "Y29sGAMgASgOMiEuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5Qcm90b2NvbHMS",
-            "FAoMaW5zdHJ1Y3Rpb25zGAQgASgJEh8KCmlwX2FkZHJlc3MYBSABKAlCC+BB",
-            "A+KMz9cIAggCIlEKEVJlc3RvcmVQYXJhbWV0ZXJzEhkKD3NvdXJjZV9zbmFw",
-            "c2hvdBgBIAEoCUgAEhcKDXNvdXJjZV9iYWNrdXAYAiABKAlIAEIICgZzb3Vy",
-            "Y2UimgIKDEJhY2t1cENvbmZpZxJDCg9iYWNrdXBfcG9saWNpZXMYASADKAlC",
-            "KuBBAfpBJAoibmV0YXBwLmdvb2dsZWFwaXMuY29tL0JhY2t1cFBvbGljeRI/",
-            "CgxiYWNrdXBfdmF1bHQYAiABKAlCKeBBAfpBIwohbmV0YXBwLmdvb2dsZWFw",
-            "aXMuY29tL0JhY2t1cFZhdWx0EioKGHNjaGVkdWxlZF9iYWNrdXBfZW5hYmxl",
-            "ZBgDIAEoCEID4EEBSACIAQESJAoSYmFja3VwX2NoYWluX2J5dGVzGAQgASgD",
-            "QgPgQQNIAYgBAUIbChlfc2NoZWR1bGVkX2JhY2t1cF9lbmFibGVkQhUKE19i",
-            "YWNrdXBfY2hhaW5fYnl0ZXMi+QEKDVRpZXJpbmdQb2xpY3kSTwoLdGllcl9h",
-            "Y3Rpb24YASABKA4yMC5nb29nbGUuY2xvdWQubmV0YXBwLnYxLlRpZXJpbmdQ",
-            "b2xpY3kuVGllckFjdGlvbkID4EEBSACIAQESKAoWY29vbGluZ190aHJlc2hv",
-            "bGRfZGF5cxgCIAEoBUID4EEBSAGIAQEiQgoKVGllckFjdGlvbhIbChdUSUVS",
-            "X0FDVElPTl9VTlNQRUNJRklFRBAAEgsKB0VOQUJMRUQQARIKCgZQQVVTRUQQ",
-            "AkIOCgxfdGllcl9hY3Rpb25CGQoXX2Nvb2xpbmdfdGhyZXNob2xkX2RheXMi",
-            "lgMKG0h5YnJpZFJlcGxpY2F0aW9uUGFyYW1ldGVycxI+CgtyZXBsaWNhdGlv",
-            "bhgBIAEoCUIp4EEC+kEjCiFuZXRhcHAuZ29vZ2xlYXBpcy5jb20vUmVwbGlj",
-            "YXRpb24SHQoQcGVlcl92b2x1bWVfbmFtZRgCIAEoCUID4EECEh4KEXBlZXJf",
-            "Y2x1c3Rlcl9uYW1lGAMgASgJQgPgQQISGgoNcGVlcl9zdm1fbmFtZRgEIAEo",
-            "CUID4EECEh4KEXBlZXJfaXBfYWRkcmVzc2VzGAUgAygJQgPgQQISHQoQY2x1",
-            "c3Rlcl9sb2NhdGlvbhgGIAEoCUID4EEBEhgKC2Rlc2NyaXB0aW9uGAcgASgJ",
-            "QgPgQQESVAoGbGFiZWxzGAggAygLMj8uZ29vZ2xlLmNsb3VkLm5ldGFwcC52",
-            "MS5IeWJyaWRSZXBsaWNhdGlvblBhcmFtZXRlcnMuTGFiZWxzRW50cnlCA+BB",
-            "ARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
-            "AjgBKkUKCVByb3RvY29scxIZChVQUk9UT0NPTFNfVU5TUEVDSUZJRUQQABIJ",
-            "CgVORlNWMxABEgkKBU5GU1Y0EAISBwoDU01CEAMqVwoKQWNjZXNzVHlwZRIb",
-            "ChdBQ0NFU1NfVFlQRV9VTlNQRUNJRklFRBAAEg0KCVJFQURfT05MWRABEg4K",
-            "ClJFQURfV1JJVEUQAhINCglSRUFEX05PTkUQAyroAQoLU01CU2V0dGluZ3MS",
-            "HAoYU01CX1NFVFRJTkdTX1VOU1BFQ0lGSUVEEAASEAoMRU5DUllQVF9EQVRB",
-            "EAESDQoJQlJPV1NBQkxFEAISEQoNQ0hBTkdFX05PVElGWRADEhEKDU5PTl9C",
-            "Uk9XU0FCTEUQBBILCgdPUExPQ0tTEAUSEQoNU0hPV19TTkFQU0hPVBAGEhoK",
-            "FlNIT1dfUFJFVklPVVNfVkVSU0lPTlMQBxIcChhBQ0NFU1NfQkFTRURfRU5V",
-            "TUVSQVRJT04QCBIaChZDT05USU5VT1VTTFlfQVZBSUxBQkxFEAkqQwoNU2Vj",
-            "dXJpdHlTdHlsZRIeChpTRUNVUklUWV9TVFlMRV9VTlNQRUNJRklFRBAAEggK",
-            "BE5URlMQARIICgRVTklYEAIqQQoQUmVzdHJpY3RlZEFjdGlvbhIhCh1SRVNU",
-            "UklDVEVEX0FDVElPTl9VTlNQRUNJRklFRBAAEgoKBkRFTEVURRABQq0BChpj",
-            "b20uZ29vZ2xlLmNsb3VkLm5ldGFwcC52MUILVm9sdW1lUHJvdG9QAVoyY2xv",
-            "dWQuZ29vZ2xlLmNvbS9nby9uZXRhcHAvYXBpdjEvbmV0YXBwcGI7bmV0YXBw",
-            "cGKqAhZHb29nbGUuQ2xvdWQuTmV0QXBwLlYxygIWR29vZ2xlXENsb3VkXE5l",
-            "dEFwcFxWMeoCGUdvb2dsZTo6Q2xvdWQ6Ok5ldEFwcDo6VjFiBnByb3RvMw=="));
+            "cC52MS5IeWJyaWRSZXBsaWNhdGlvblBhcmFtZXRlcnNCA+BBARIdChB0aHJv",
+            "dWdocHV0X21pYnBzGCkgASgBQgPgQQESIwoWaG90X3RpZXJfc2l6ZV91c2Vk",
+            "X2dpYhgsIAEoA0ID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRIN",
+            "CgV2YWx1ZRgCIAEoCToCOAEimQEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lG",
+            "SUVEEAASCQoFUkVBRFkQARIMCghDUkVBVElORxACEgwKCERFTEVUSU5HEAMS",
+            "DAoIVVBEQVRJTkcQBBINCglSRVNUT1JJTkcQBRIMCghESVNBQkxFRBAGEgkK",
+            "BUVSUk9SEAcSDQoJUFJFUEFSSU5HEAgSDQoJUkVBRF9PTkxZEAk6bOpBaQoc",
+            "bmV0YXBwLmdvb2dsZWFwaXMuY29tL1ZvbHVtZRI4cHJvamVjdHMve3Byb2pl",
+            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3ZvbHVtZXMve3ZvbHVtZX0qB3Zv",
+            "bHVtZXMyBnZvbHVtZUIQCg5fYmFja3VwX2NvbmZpZ0IRCg9fdGllcmluZ19w",
+            "b2xpY3kiUgoMRXhwb3J0UG9saWN5EkIKBXJ1bGVzGAEgAygLMi4uZ29vZ2xl",
+            "LmNsb3VkLm5ldGFwcC52MS5TaW1wbGVFeHBvcnRQb2xpY3lSdWxlQgPgQQIi",
+            "7wYKFlNpbXBsZUV4cG9ydFBvbGljeVJ1bGUSHAoPYWxsb3dlZF9jbGllbnRz",
+            "GAEgASgJSACIAQESHAoPaGFzX3Jvb3RfYWNjZXNzGAIgASgJSAGIAQESPAoL",
+            "YWNjZXNzX3R5cGUYAyABKA4yIi5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkFj",
+            "Y2Vzc1R5cGVIAogBARISCgVuZnN2MxgEIAEoCEgDiAEBEhIKBW5mc3Y0GAUg",
+            "ASgISASIAQESIQoUa2VyYmVyb3NfNV9yZWFkX29ubHkYBiABKAhIBYgBARIi",
+            "ChVrZXJiZXJvc181X3JlYWRfd3JpdGUYByABKAhIBogBARIiChVrZXJiZXJv",
+            "c181aV9yZWFkX29ubHkYCCABKAhIB4gBARIjChZrZXJiZXJvc181aV9yZWFk",
+            "X3dyaXRlGAkgASgISAiIAQESIgoVa2VyYmVyb3NfNXBfcmVhZF9vbmx5GAog",
+            "ASgISAmIAQESIwoWa2VyYmVyb3NfNXBfcmVhZF93cml0ZRgLIAEoCEgKiAEB",
+            "ElgKC3NxdWFzaF9tb2RlGAwgASgOMjkuZ29vZ2xlLmNsb3VkLm5ldGFwcC52",
+            "MS5TaW1wbGVFeHBvcnRQb2xpY3lSdWxlLlNxdWFzaE1vZGVCA+BBAUgLiAEB",
+            "EhoKCGFub25fdWlkGA0gASgDQgPgQQFIDIgBASJeCgpTcXVhc2hNb2RlEhsK",
+            "F1NRVUFTSF9NT0RFX1VOU1BFQ0lGSUVEEAASEgoOTk9fUk9PVF9TUVVBU0gQ",
+            "ARIPCgtST09UX1NRVUFTSBACEg4KCkFMTF9TUVVBU0gQA0ISChBfYWxsb3dl",
+            "ZF9jbGllbnRzQhIKEF9oYXNfcm9vdF9hY2Nlc3NCDgoMX2FjY2Vzc190eXBl",
+            "QggKBl9uZnN2M0IICgZfbmZzdjRCFwoVX2tlcmJlcm9zXzVfcmVhZF9vbmx5",
+            "QhgKFl9rZXJiZXJvc181X3JlYWRfd3JpdGVCGAoWX2tlcmJlcm9zXzVpX3Jl",
+            "YWRfb25seUIZChdfa2VyYmVyb3NfNWlfcmVhZF93cml0ZUIYChZfa2VyYmVy",
+            "b3NfNXBfcmVhZF9vbmx5QhkKF19rZXJiZXJvc181cF9yZWFkX3dyaXRlQg4K",
+            "DF9zcXVhc2hfbW9kZUILCglfYW5vbl91aWQimgMKDlNuYXBzaG90UG9saWN5",
+            "EhQKB2VuYWJsZWQYASABKAhIAIgBARJECg9ob3VybHlfc2NoZWR1bGUYAiAB",
+            "KAsyJi5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkhvdXJseVNjaGVkdWxlSAGI",
+            "AQESQgoOZGFpbHlfc2NoZWR1bGUYAyABKAsyJS5nb29nbGUuY2xvdWQubmV0",
+            "YXBwLnYxLkRhaWx5U2NoZWR1bGVIAogBARJECg93ZWVrbHlfc2NoZWR1bGUY",
+            "BCABKAsyJi5nb29nbGUuY2xvdWQubmV0YXBwLnYxLldlZWtseVNjaGVkdWxl",
+            "SAOIAQESRgoQbW9udGhseV9zY2hlZHVsZRgFIAEoCzInLmdvb2dsZS5jbG91",
+            "ZC5uZXRhcHAudjEuTW9udGhseVNjaGVkdWxlSASIAQFCCgoIX2VuYWJsZWRC",
+            "EgoQX2hvdXJseV9zY2hlZHVsZUIRCg9fZGFpbHlfc2NoZWR1bGVCEgoQX3dl",
+            "ZWtseV9zY2hlZHVsZUITChFfbW9udGhseV9zY2hlZHVsZSJmCg5Ib3VybHlT",
+            "Y2hlZHVsZRIeChFzbmFwc2hvdHNfdG9fa2VlcBgBIAEoAUgAiAEBEhMKBm1p",
+            "bnV0ZRgCIAEoAUgBiAEBQhQKEl9zbmFwc2hvdHNfdG9fa2VlcEIJCgdfbWlu",
+            "dXRlIoEBCg1EYWlseVNjaGVkdWxlEh4KEXNuYXBzaG90c190b19rZWVwGAEg",
+            "ASgBSACIAQESEwoGbWludXRlGAIgASgBSAGIAQESEQoEaG91chgDIAEoAUgC",
+            "iAEBQhQKEl9zbmFwc2hvdHNfdG9fa2VlcEIJCgdfbWludXRlQgcKBV9ob3Vy",
+            "IpwBCg5XZWVrbHlTY2hlZHVsZRIeChFzbmFwc2hvdHNfdG9fa2VlcBgBIAEo",
+            "AUgAiAEBEhMKBm1pbnV0ZRgCIAEoAUgBiAEBEhEKBGhvdXIYAyABKAFIAogB",
+            "ARIQCgNkYXkYBCABKAlIA4gBAUIUChJfc25hcHNob3RzX3RvX2tlZXBCCQoH",
+            "X21pbnV0ZUIHCgVfaG91ckIGCgRfZGF5IrEBCg9Nb250aGx5U2NoZWR1bGUS",
+            "HgoRc25hcHNob3RzX3RvX2tlZXAYASABKAFIAIgBARITCgZtaW51dGUYAiAB",
+            "KAFIAYgBARIRCgRob3VyGAMgASgBSAKIAQESGgoNZGF5c19vZl9tb250aBgE",
+            "IAEoCUgDiAEBQhQKEl9zbmFwc2hvdHNfdG9fa2VlcEIJCgdfbWludXRlQgcK",
+            "BV9ob3VyQhAKDl9kYXlzX29mX21vbnRoIp4BCgtNb3VudE9wdGlvbhIOCgZl",
+            "eHBvcnQYASABKAkSEwoLZXhwb3J0X2Z1bGwYAiABKAkSMwoIcHJvdG9jb2wY",
+            "AyABKA4yIS5nb29nbGUuY2xvdWQubmV0YXBwLnYxLlByb3RvY29scxIUCgxp",
+            "bnN0cnVjdGlvbnMYBCABKAkSHwoKaXBfYWRkcmVzcxgFIAEoCUIL4EED4ozP",
+            "1wgCCAIiUQoRUmVzdG9yZVBhcmFtZXRlcnMSGQoPc291cmNlX3NuYXBzaG90",
+            "GAEgASgJSAASFwoNc291cmNlX2JhY2t1cBgCIAEoCUgAQggKBnNvdXJjZSKa",
+            "AgoMQmFja3VwQ29uZmlnEkMKD2JhY2t1cF9wb2xpY2llcxgBIAMoCUIq4EEB",
+            "+kEkCiJuZXRhcHAuZ29vZ2xlYXBpcy5jb20vQmFja3VwUG9saWN5Ej8KDGJh",
+            "Y2t1cF92YXVsdBgCIAEoCUIp4EEB+kEjCiFuZXRhcHAuZ29vZ2xlYXBpcy5j",
+            "b20vQmFja3VwVmF1bHQSKgoYc2NoZWR1bGVkX2JhY2t1cF9lbmFibGVkGAMg",
+            "ASgIQgPgQQFIAIgBARIkChJiYWNrdXBfY2hhaW5fYnl0ZXMYBCABKANCA+BB",
+            "A0gBiAEBQhsKGV9zY2hlZHVsZWRfYmFja3VwX2VuYWJsZWRCFQoTX2JhY2t1",
+            "cF9jaGFpbl9ieXRlcyLKAgoNVGllcmluZ1BvbGljeRJPCgt0aWVyX2FjdGlv",
+            "bhgBIAEoDjIwLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuVGllcmluZ1BvbGlj",
+            "eS5UaWVyQWN0aW9uQgPgQQFIAIgBARIoChZjb29saW5nX3RocmVzaG9sZF9k",
+            "YXlzGAIgASgFQgPgQQFIAYgBARIuChxob3RfdGllcl9ieXBhc3NfbW9kZV9l",
+            "bmFibGVkGAMgASgIQgPgQQFIAogBASJCCgpUaWVyQWN0aW9uEhsKF1RJRVJf",
+            "QUNUSU9OX1VOU1BFQ0lGSUVEEAASCwoHRU5BQkxFRBABEgoKBlBBVVNFRBAC",
+            "Qg4KDF90aWVyX2FjdGlvbkIZChdfY29vbGluZ190aHJlc2hvbGRfZGF5c0If",
+            "Ch1faG90X3RpZXJfYnlwYXNzX21vZGVfZW5hYmxlZCLDBgobSHlicmlkUmVw",
+            "bGljYXRpb25QYXJhbWV0ZXJzEj4KC3JlcGxpY2F0aW9uGAEgASgJQingQQL6",
+            "QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9SZXBsaWNhdGlvbhIdChBwZWVy",
+            "X3ZvbHVtZV9uYW1lGAIgASgJQgPgQQISHgoRcGVlcl9jbHVzdGVyX25hbWUY",
+            "AyABKAlCA+BBAhIaCg1wZWVyX3N2bV9uYW1lGAQgASgJQgPgQQISHgoRcGVl",
+            "cl9pcF9hZGRyZXNzZXMYBSADKAlCA+BBAhIdChBjbHVzdGVyX2xvY2F0aW9u",
+            "GAYgASgJQgPgQQESGAoLZGVzY3JpcHRpb24YByABKAlCA+BBARJUCgZsYWJl",
+            "bHMYCCADKAsyPy5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkh5YnJpZFJlcGxp",
+            "Y2F0aW9uUGFyYW1ldGVycy5MYWJlbHNFbnRyeUID4EEBElQKFHJlcGxpY2F0",
+            "aW9uX3NjaGVkdWxlGAkgASgOMjEuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5I",
+            "eWJyaWRSZXBsaWNhdGlvblNjaGVkdWxlQgPgQQESdQoXaHlicmlkX3JlcGxp",
+            "Y2F0aW9uX3R5cGUYCiABKA4yTy5nb29nbGUuY2xvdWQubmV0YXBwLnYxLkh5",
+            "YnJpZFJlcGxpY2F0aW9uUGFyYW1ldGVycy5Wb2x1bWVIeWJyaWRSZXBsaWNh",
+            "dGlvblR5cGVCA+BBARIrCh5sYXJnZV92b2x1bWVfY29uc3RpdHVlbnRfY291",
+            "bnQYCyABKAVCA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoF",
+            "dmFsdWUYAiABKAk6AjgBIrABChtWb2x1bWVIeWJyaWRSZXBsaWNhdGlvblR5",
+            "cGUSLgoqVk9MVU1FX0hZQlJJRF9SRVBMSUNBVElPTl9UWVBFX1VOU1BFQ0lG",
+            "SUVEEAASDQoJTUlHUkFUSU9OEAESGgoWQ09OVElOVU9VU19SRVBMSUNBVElP",
+            "ThACEhYKEk9OUFJFTV9SRVBMSUNBVElPThADEh4KGlJFVkVSU0VfT05QUkVN",
+            "X1JFUExJQ0FUSU9OEAQqRQoJUHJvdG9jb2xzEhkKFVBST1RPQ09MU19VTlNQ",
+            "RUNJRklFRBAAEgkKBU5GU1YzEAESCQoFTkZTVjQQAhIHCgNTTUIQAypXCgpB",
+            "Y2Nlc3NUeXBlEhsKF0FDQ0VTU19UWVBFX1VOU1BFQ0lGSUVEEAASDQoJUkVB",
+            "RF9PTkxZEAESDgoKUkVBRF9XUklURRACEg0KCVJFQURfTk9ORRADKugBCgtT",
+            "TUJTZXR0aW5ncxIcChhTTUJfU0VUVElOR1NfVU5TUEVDSUZJRUQQABIQCgxF",
+            "TkNSWVBUX0RBVEEQARINCglCUk9XU0FCTEUQAhIRCg1DSEFOR0VfTk9USUZZ",
+            "EAMSEQoNTk9OX0JST1dTQUJMRRAEEgsKB09QTE9DS1MQBRIRCg1TSE9XX1NO",
+            "QVBTSE9UEAYSGgoWU0hPV19QUkVWSU9VU19WRVJTSU9OUxAHEhwKGEFDQ0VT",
+            "U19CQVNFRF9FTlVNRVJBVElPThAIEhoKFkNPTlRJTlVPVVNMWV9BVkFJTEFC",
+            "TEUQCSpDCg1TZWN1cml0eVN0eWxlEh4KGlNFQ1VSSVRZX1NUWUxFX1VOU1BF",
+            "Q0lGSUVEEAASCAoETlRGUxABEggKBFVOSVgQAipBChBSZXN0cmljdGVkQWN0",
+            "aW9uEiEKHVJFU1RSSUNURURfQUNUSU9OX1VOU1BFQ0lGSUVEEAASCgoGREVM",
+            "RVRFEAFCrQEKGmNvbS5nb29nbGUuY2xvdWQubmV0YXBwLnYxQgtWb2x1bWVQ",
+            "cm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dvL25ldGFwcC9hcGl2MS9uZXRh",
+            "cHBwYjtuZXRhcHBwYqoCFkdvb2dsZS5DbG91ZC5OZXRBcHAuVjHKAhZHb29n",
+            "bGVcQ2xvdWRcTmV0QXBwXFYx6gIZR29vZ2xlOjpDbG91ZDo6TmV0QXBwOjpW",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetApp.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetApp.V1.Protocols), typeof(global::Google.Cloud.NetApp.V1.AccessType), typeof(global::Google.Cloud.NetApp.V1.SMBSettings), typeof(global::Google.Cloud.NetApp.V1.SecurityStyle), typeof(global::Google.Cloud.NetApp.V1.RestrictedAction), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -187,9 +206,9 @@ namespace Google.Cloud.NetApp.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.UpdateVolumeRequest), global::Google.Cloud.NetApp.V1.UpdateVolumeRequest.Parser, new[]{ "UpdateMask", "Volume" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.DeleteVolumeRequest), global::Google.Cloud.NetApp.V1.DeleteVolumeRequest.Parser, new[]{ "Name", "Force" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.RevertVolumeRequest), global::Google.Cloud.NetApp.V1.RevertVolumeRequest.Parser, new[]{ "Name", "SnapshotId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.Volume), global::Google.Cloud.NetApp.V1.Volume.Parser, new[]{ "Name", "State", "StateDetails", "CreateTime", "ShareName", "PsaRange", "StoragePool", "Network", "ServiceLevel", "CapacityGib", "ExportPolicy", "Protocols", "SmbSettings", "MountOptions", "UnixPermissions", "Labels", "Description", "SnapshotPolicy", "SnapReserve", "SnapshotDirectory", "UsedGib", "SecurityStyle", "KerberosEnabled", "LdapEnabled", "ActiveDirectory", "RestoreParameters", "KmsConfig", "EncryptionType", "HasReplication", "BackupConfig", "RestrictedActions", "LargeCapacity", "MultipleEndpoints", "TieringPolicy", "ReplicaZone", "Zone", "ColdTierSizeGib", "HybridReplicationParameters" }, new[]{ "BackupConfig", "TieringPolicy" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.Volume.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.Volume), global::Google.Cloud.NetApp.V1.Volume.Parser, new[]{ "Name", "State", "StateDetails", "CreateTime", "ShareName", "PsaRange", "StoragePool", "Network", "ServiceLevel", "CapacityGib", "ExportPolicy", "Protocols", "SmbSettings", "MountOptions", "UnixPermissions", "Labels", "Description", "SnapshotPolicy", "SnapReserve", "SnapshotDirectory", "UsedGib", "SecurityStyle", "KerberosEnabled", "LdapEnabled", "ActiveDirectory", "RestoreParameters", "KmsConfig", "EncryptionType", "HasReplication", "BackupConfig", "RestrictedActions", "LargeCapacity", "MultipleEndpoints", "TieringPolicy", "ReplicaZone", "Zone", "ColdTierSizeGib", "HybridReplicationParameters", "ThroughputMibps", "HotTierSizeUsedGib" }, new[]{ "BackupConfig", "TieringPolicy" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.Volume.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ExportPolicy), global::Google.Cloud.NetApp.V1.ExportPolicy.Parser, new[]{ "Rules" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule), global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule.Parser, new[]{ "AllowedClients", "HasRootAccess", "AccessType", "Nfsv3", "Nfsv4", "Kerberos5ReadOnly", "Kerberos5ReadWrite", "Kerberos5IReadOnly", "Kerberos5IReadWrite", "Kerberos5PReadOnly", "Kerberos5PReadWrite" }, new[]{ "AllowedClients", "HasRootAccess", "AccessType", "Nfsv3", "Nfsv4", "Kerberos5ReadOnly", "Kerberos5ReadWrite", "Kerberos5IReadOnly", "Kerberos5IReadWrite", "Kerberos5PReadOnly", "Kerberos5PReadWrite" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule), global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule.Parser, new[]{ "AllowedClients", "HasRootAccess", "AccessType", "Nfsv3", "Nfsv4", "Kerberos5ReadOnly", "Kerberos5ReadWrite", "Kerberos5IReadOnly", "Kerberos5IReadWrite", "Kerberos5PReadOnly", "Kerberos5PReadWrite", "SquashMode", "AnonUid" }, new[]{ "AllowedClients", "HasRootAccess", "AccessType", "Nfsv3", "Nfsv4", "Kerberos5ReadOnly", "Kerberos5ReadWrite", "Kerberos5IReadOnly", "Kerberos5IReadWrite", "Kerberos5PReadOnly", "Kerberos5PReadWrite", "SquashMode", "AnonUid" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule.Types.SquashMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.SnapshotPolicy), global::Google.Cloud.NetApp.V1.SnapshotPolicy.Parser, new[]{ "Enabled", "HourlySchedule", "DailySchedule", "WeeklySchedule", "MonthlySchedule" }, new[]{ "Enabled", "HourlySchedule", "DailySchedule", "WeeklySchedule", "MonthlySchedule" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.HourlySchedule), global::Google.Cloud.NetApp.V1.HourlySchedule.Parser, new[]{ "SnapshotsToKeep", "Minute" }, new[]{ "SnapshotsToKeep", "Minute" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.DailySchedule), global::Google.Cloud.NetApp.V1.DailySchedule.Parser, new[]{ "SnapshotsToKeep", "Minute", "Hour" }, new[]{ "SnapshotsToKeep", "Minute", "Hour" }, null, null, null),
@@ -198,8 +217,8 @@ namespace Google.Cloud.NetApp.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.MountOption), global::Google.Cloud.NetApp.V1.MountOption.Parser, new[]{ "Export", "ExportFull", "Protocol", "Instructions", "IpAddress" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.RestoreParameters), global::Google.Cloud.NetApp.V1.RestoreParameters.Parser, new[]{ "SourceSnapshot", "SourceBackup" }, new[]{ "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.BackupConfig), global::Google.Cloud.NetApp.V1.BackupConfig.Parser, new[]{ "BackupPolicies", "BackupVault", "ScheduledBackupEnabled", "BackupChainBytes" }, new[]{ "ScheduledBackupEnabled", "BackupChainBytes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.TieringPolicy), global::Google.Cloud.NetApp.V1.TieringPolicy.Parser, new[]{ "TierAction", "CoolingThresholdDays" }, new[]{ "TierAction", "CoolingThresholdDays" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.TieringPolicy.Types.TierAction) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.HybridReplicationParameters), global::Google.Cloud.NetApp.V1.HybridReplicationParameters.Parser, new[]{ "Replication", "PeerVolumeName", "PeerClusterName", "PeerSvmName", "PeerIpAddresses", "ClusterLocation", "Description", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.TieringPolicy), global::Google.Cloud.NetApp.V1.TieringPolicy.Parser, new[]{ "TierAction", "CoolingThresholdDays", "HotTierBypassModeEnabled" }, new[]{ "TierAction", "CoolingThresholdDays", "HotTierBypassModeEnabled" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.TieringPolicy.Types.TierAction) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.HybridReplicationParameters), global::Google.Cloud.NetApp.V1.HybridReplicationParameters.Parser, new[]{ "Replication", "PeerVolumeName", "PeerClusterName", "PeerSvmName", "PeerIpAddresses", "ClusterLocation", "Description", "Labels", "ReplicationSchedule", "HybridReplicationType", "LargeVolumeConstituentCount" }, null, new[]{ typeof(global::Google.Cloud.NetApp.V1.HybridReplicationParameters.Types.VolumeHybridReplicationType) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -2238,6 +2257,8 @@ namespace Google.Cloud.NetApp.V1 {
       zone_ = other.zone_;
       coldTierSizeGib_ = other.coldTierSizeGib_;
       hybridReplicationParameters_ = other.hybridReplicationParameters_ != null ? other.hybridReplicationParameters_.Clone() : null;
+      throughputMibps_ = other.throughputMibps_;
+      hotTierSizeUsedGib_ = other.hotTierSizeUsedGib_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2798,7 +2819,8 @@ namespace Google.Cloud.NetApp.V1 {
     public const int ColdTierSizeGibFieldNumber = 39;
     private long coldTierSizeGib_;
     /// <summary>
-    /// Output only. Size of the volume cold tier data in GiB.
+    /// Output only. Size of the volume cold tier data rounded down to the nearest
+    /// GiB.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2821,6 +2843,37 @@ namespace Google.Cloud.NetApp.V1 {
       get { return hybridReplicationParameters_; }
       set {
         hybridReplicationParameters_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "throughput_mibps" field.</summary>
+    public const int ThroughputMibpsFieldNumber = 41;
+    private double throughputMibps_;
+    /// <summary>
+    /// Optional. Throughput of the volume (in MiB/s)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double ThroughputMibps {
+      get { return throughputMibps_; }
+      set {
+        throughputMibps_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "hot_tier_size_used_gib" field.</summary>
+    public const int HotTierSizeUsedGibFieldNumber = 44;
+    private long hotTierSizeUsedGib_;
+    /// <summary>
+    /// Output only. Total hot tier data rounded down to the nearest GiB used by
+    /// the Volume. This field is only used for flex Service Level
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long HotTierSizeUsedGib {
+      get { return hotTierSizeUsedGib_; }
+      set {
+        hotTierSizeUsedGib_ = value;
       }
     }
 
@@ -2877,6 +2930,8 @@ namespace Google.Cloud.NetApp.V1 {
       if (Zone != other.Zone) return false;
       if (ColdTierSizeGib != other.ColdTierSizeGib) return false;
       if (!object.Equals(HybridReplicationParameters, other.HybridReplicationParameters)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(ThroughputMibps, other.ThroughputMibps)) return false;
+      if (HotTierSizeUsedGib != other.HotTierSizeUsedGib) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2922,6 +2977,8 @@ namespace Google.Cloud.NetApp.V1 {
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (ColdTierSizeGib != 0L) hash ^= ColdTierSizeGib.GetHashCode();
       if (hybridReplicationParameters_ != null) hash ^= HybridReplicationParameters.GetHashCode();
+      if (ThroughputMibps != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ThroughputMibps);
+      if (HotTierSizeUsedGib != 0L) hash ^= HotTierSizeUsedGib.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3077,6 +3134,14 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(194, 2);
         output.WriteMessage(HybridReplicationParameters);
       }
+      if (ThroughputMibps != 0D) {
+        output.WriteRawTag(201, 2);
+        output.WriteDouble(ThroughputMibps);
+      }
+      if (HotTierSizeUsedGib != 0L) {
+        output.WriteRawTag(224, 2);
+        output.WriteInt64(HotTierSizeUsedGib);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3224,6 +3289,14 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(194, 2);
         output.WriteMessage(HybridReplicationParameters);
       }
+      if (ThroughputMibps != 0D) {
+        output.WriteRawTag(201, 2);
+        output.WriteDouble(ThroughputMibps);
+      }
+      if (HotTierSizeUsedGib != 0L) {
+        output.WriteRawTag(224, 2);
+        output.WriteInt64(HotTierSizeUsedGib);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3337,6 +3410,12 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (hybridReplicationParameters_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(HybridReplicationParameters);
+      }
+      if (ThroughputMibps != 0D) {
+        size += 2 + 8;
+      }
+      if (HotTierSizeUsedGib != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(HotTierSizeUsedGib);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3474,6 +3553,12 @@ namespace Google.Cloud.NetApp.V1 {
           HybridReplicationParameters = new global::Google.Cloud.NetApp.V1.HybridReplicationParameters();
         }
         HybridReplicationParameters.MergeFrom(other.HybridReplicationParameters);
+      }
+      if (other.ThroughputMibps != 0D) {
+        ThroughputMibps = other.ThroughputMibps;
+      }
+      if (other.HotTierSizeUsedGib != 0L) {
+        HotTierSizeUsedGib = other.HotTierSizeUsedGib;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3666,6 +3751,14 @@ namespace Google.Cloud.NetApp.V1 {
             input.ReadMessage(HybridReplicationParameters);
             break;
           }
+          case 329: {
+            ThroughputMibps = input.ReadDouble();
+            break;
+          }
+          case 352: {
+            HotTierSizeUsedGib = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -3855,6 +3948,14 @@ namespace Google.Cloud.NetApp.V1 {
               HybridReplicationParameters = new global::Google.Cloud.NetApp.V1.HybridReplicationParameters();
             }
             input.ReadMessage(HybridReplicationParameters);
+            break;
+          }
+          case 329: {
+            ThroughputMibps = input.ReadDouble();
+            break;
+          }
+          case 352: {
+            HotTierSizeUsedGib = input.ReadInt64();
             break;
           }
         }
@@ -4156,6 +4257,8 @@ namespace Google.Cloud.NetApp.V1 {
       kerberos5IReadWrite_ = other.kerberos5IReadWrite_;
       kerberos5PReadOnly_ = other.kerberos5PReadOnly_;
       kerberos5PReadWrite_ = other.kerberos5PReadWrite_;
+      squashMode_ = other.squashMode_;
+      anonUid_ = other.anonUid_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4508,6 +4611,69 @@ namespace Google.Cloud.NetApp.V1 {
       _hasBits0 &= ~256;
     }
 
+    /// <summary>Field number for the "squash_mode" field.</summary>
+    public const int SquashModeFieldNumber = 12;
+    private readonly static global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule.Types.SquashMode SquashModeDefaultValue = global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule.Types.SquashMode.Unspecified;
+
+    private global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule.Types.SquashMode squashMode_;
+    /// <summary>
+    /// Optional. Defines how user identity squashing is applied for this export
+    /// rule. This field is the preferred way to configure squashing behavior and
+    /// takes precedence over `has_root_access` if both are provided.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule.Types.SquashMode SquashMode {
+      get { if ((_hasBits0 & 512) != 0) { return squashMode_; } else { return SquashModeDefaultValue; } }
+      set {
+        _hasBits0 |= 512;
+        squashMode_ = value;
+      }
+    }
+    /// <summary>Gets whether the "squash_mode" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSquashMode {
+      get { return (_hasBits0 & 512) != 0; }
+    }
+    /// <summary>Clears the value of the "squash_mode" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSquashMode() {
+      _hasBits0 &= ~512;
+    }
+
+    /// <summary>Field number for the "anon_uid" field.</summary>
+    public const int AnonUidFieldNumber = 13;
+    private readonly static long AnonUidDefaultValue = 0L;
+
+    private long anonUid_;
+    /// <summary>
+    /// Optional. An integer representing the anonymous user ID. Range is 0 to
+    /// 4294967295. Required when squash_mode is ROOT_SQUASH or ALL_SQUASH.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long AnonUid {
+      get { if ((_hasBits0 & 1024) != 0) { return anonUid_; } else { return AnonUidDefaultValue; } }
+      set {
+        _hasBits0 |= 1024;
+        anonUid_ = value;
+      }
+    }
+    /// <summary>Gets whether the "anon_uid" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAnonUid {
+      get { return (_hasBits0 & 1024) != 0; }
+    }
+    /// <summary>Clears the value of the "anon_uid" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAnonUid() {
+      _hasBits0 &= ~1024;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4534,6 +4700,8 @@ namespace Google.Cloud.NetApp.V1 {
       if (Kerberos5IReadWrite != other.Kerberos5IReadWrite) return false;
       if (Kerberos5PReadOnly != other.Kerberos5PReadOnly) return false;
       if (Kerberos5PReadWrite != other.Kerberos5PReadWrite) return false;
+      if (SquashMode != other.SquashMode) return false;
+      if (AnonUid != other.AnonUid) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4552,6 +4720,8 @@ namespace Google.Cloud.NetApp.V1 {
       if (HasKerberos5IReadWrite) hash ^= Kerberos5IReadWrite.GetHashCode();
       if (HasKerberos5PReadOnly) hash ^= Kerberos5PReadOnly.GetHashCode();
       if (HasKerberos5PReadWrite) hash ^= Kerberos5PReadWrite.GetHashCode();
+      if (HasSquashMode) hash ^= SquashMode.GetHashCode();
+      if (HasAnonUid) hash ^= AnonUid.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4614,6 +4784,14 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(88);
         output.WriteBool(Kerberos5PReadWrite);
       }
+      if (HasSquashMode) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) SquashMode);
+      }
+      if (HasAnonUid) {
+        output.WriteRawTag(104);
+        output.WriteInt64(AnonUid);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4668,6 +4846,14 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(88);
         output.WriteBool(Kerberos5PReadWrite);
       }
+      if (HasSquashMode) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) SquashMode);
+      }
+      if (HasAnonUid) {
+        output.WriteRawTag(104);
+        output.WriteInt64(AnonUid);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4710,6 +4896,12 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (HasKerberos5PReadWrite) {
         size += 1 + 1;
+      }
+      if (HasSquashMode) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SquashMode);
+      }
+      if (HasAnonUid) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(AnonUid);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4755,6 +4947,12 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (other.HasKerberos5PReadWrite) {
         Kerberos5PReadWrite = other.Kerberos5PReadWrite;
+      }
+      if (other.HasSquashMode) {
+        SquashMode = other.SquashMode;
+      }
+      if (other.HasAnonUid) {
+        AnonUid = other.AnonUid;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4813,6 +5011,14 @@ namespace Google.Cloud.NetApp.V1 {
           }
           case 88: {
             Kerberos5PReadWrite = input.ReadBool();
+            break;
+          }
+          case 96: {
+            SquashMode = (global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule.Types.SquashMode) input.ReadEnum();
+            break;
+          }
+          case 104: {
+            AnonUid = input.ReadInt64();
             break;
           }
         }
@@ -4874,10 +5080,52 @@ namespace Google.Cloud.NetApp.V1 {
             Kerberos5PReadWrite = input.ReadBool();
             break;
           }
+          case 96: {
+            SquashMode = (global::Google.Cloud.NetApp.V1.SimpleExportPolicyRule.Types.SquashMode) input.ReadEnum();
+            break;
+          }
+          case 104: {
+            AnonUid = input.ReadInt64();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the SimpleExportPolicyRule message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// SquashMode defines how remote user privileges are restricted when accessing
+      /// an NFS export. It controls how user identities (like root) are mapped to
+      /// anonymous users to limit access and enforce security.
+      /// </summary>
+      public enum SquashMode {
+        /// <summary>
+        /// Defaults to NO_ROOT_SQUASH.
+        /// </summary>
+        [pbr::OriginalName("SQUASH_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The root user (UID 0) retains full access. Other users are
+        /// unaffected.
+        /// </summary>
+        [pbr::OriginalName("NO_ROOT_SQUASH")] NoRootSquash = 1,
+        /// <summary>
+        /// The root user (UID 0) is squashed to anonymous user ID. Other users are
+        /// unaffected.
+        /// </summary>
+        [pbr::OriginalName("ROOT_SQUASH")] RootSquash = 2,
+        /// <summary>
+        /// All users are squashed to anonymous user ID.
+        /// </summary>
+        [pbr::OriginalName("ALL_SQUASH")] AllSquash = 3,
+      }
+
+    }
+    #endregion
 
   }
 
@@ -7684,6 +7932,7 @@ namespace Google.Cloud.NetApp.V1 {
       _hasBits0 = other._hasBits0;
       tierAction_ = other.tierAction_;
       coolingThresholdDays_ = other.coolingThresholdDays_;
+      hotTierBypassModeEnabled_ = other.hotTierBypassModeEnabled_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -7755,6 +8004,37 @@ namespace Google.Cloud.NetApp.V1 {
       _hasBits0 &= ~2;
     }
 
+    /// <summary>Field number for the "hot_tier_bypass_mode_enabled" field.</summary>
+    public const int HotTierBypassModeEnabledFieldNumber = 3;
+    private readonly static bool HotTierBypassModeEnabledDefaultValue = false;
+
+    private bool hotTierBypassModeEnabled_;
+    /// <summary>
+    /// Optional. Flag indicating that the hot tier bypass mode is enabled. Default
+    /// is false. This is only applicable to Flex service level.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HotTierBypassModeEnabled {
+      get { if ((_hasBits0 & 4) != 0) { return hotTierBypassModeEnabled_; } else { return HotTierBypassModeEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        hotTierBypassModeEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "hot_tier_bypass_mode_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasHotTierBypassModeEnabled {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "hot_tier_bypass_mode_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearHotTierBypassModeEnabled() {
+      _hasBits0 &= ~4;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -7772,6 +8052,7 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (TierAction != other.TierAction) return false;
       if (CoolingThresholdDays != other.CoolingThresholdDays) return false;
+      if (HotTierBypassModeEnabled != other.HotTierBypassModeEnabled) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -7781,6 +8062,7 @@ namespace Google.Cloud.NetApp.V1 {
       int hash = 1;
       if (HasTierAction) hash ^= TierAction.GetHashCode();
       if (HasCoolingThresholdDays) hash ^= CoolingThresholdDays.GetHashCode();
+      if (HasHotTierBypassModeEnabled) hash ^= HotTierBypassModeEnabled.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -7807,6 +8089,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(16);
         output.WriteInt32(CoolingThresholdDays);
       }
+      if (HasHotTierBypassModeEnabled) {
+        output.WriteRawTag(24);
+        output.WriteBool(HotTierBypassModeEnabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7825,6 +8111,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(16);
         output.WriteInt32(CoolingThresholdDays);
       }
+      if (HasHotTierBypassModeEnabled) {
+        output.WriteRawTag(24);
+        output.WriteBool(HotTierBypassModeEnabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7840,6 +8130,9 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (HasCoolingThresholdDays) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(CoolingThresholdDays);
+      }
+      if (HasHotTierBypassModeEnabled) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -7858,6 +8151,9 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (other.HasCoolingThresholdDays) {
         CoolingThresholdDays = other.CoolingThresholdDays;
+      }
+      if (other.HasHotTierBypassModeEnabled) {
+        HotTierBypassModeEnabled = other.HotTierBypassModeEnabled;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -7882,6 +8178,10 @@ namespace Google.Cloud.NetApp.V1 {
             CoolingThresholdDays = input.ReadInt32();
             break;
           }
+          case 24: {
+            HotTierBypassModeEnabled = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -7903,6 +8203,10 @@ namespace Google.Cloud.NetApp.V1 {
           }
           case 16: {
             CoolingThresholdDays = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            HotTierBypassModeEnabled = input.ReadBool();
             break;
           }
         }
@@ -7985,6 +8289,9 @@ namespace Google.Cloud.NetApp.V1 {
       clusterLocation_ = other.clusterLocation_;
       description_ = other.description_;
       labels_ = other.labels_.Clone();
+      replicationSchedule_ = other.replicationSchedule_;
+      hybridReplicationType_ = other.hybridReplicationType_;
+      largeVolumeConstituentCount_ = other.largeVolumeConstituentCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8116,6 +8423,51 @@ namespace Google.Cloud.NetApp.V1 {
       get { return labels_; }
     }
 
+    /// <summary>Field number for the "replication_schedule" field.</summary>
+    public const int ReplicationScheduleFieldNumber = 9;
+    private global::Google.Cloud.NetApp.V1.HybridReplicationSchedule replicationSchedule_ = global::Google.Cloud.NetApp.V1.HybridReplicationSchedule.Unspecified;
+    /// <summary>
+    /// Optional. Replication Schedule for the replication created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetApp.V1.HybridReplicationSchedule ReplicationSchedule {
+      get { return replicationSchedule_; }
+      set {
+        replicationSchedule_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "hybrid_replication_type" field.</summary>
+    public const int HybridReplicationTypeFieldNumber = 10;
+    private global::Google.Cloud.NetApp.V1.HybridReplicationParameters.Types.VolumeHybridReplicationType hybridReplicationType_ = global::Google.Cloud.NetApp.V1.HybridReplicationParameters.Types.VolumeHybridReplicationType.Unspecified;
+    /// <summary>
+    /// Optional. Type of the hybrid replication.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetApp.V1.HybridReplicationParameters.Types.VolumeHybridReplicationType HybridReplicationType {
+      get { return hybridReplicationType_; }
+      set {
+        hybridReplicationType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "large_volume_constituent_count" field.</summary>
+    public const int LargeVolumeConstituentCountFieldNumber = 11;
+    private int largeVolumeConstituentCount_;
+    /// <summary>
+    /// Optional. Constituent volume count for large volume.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int LargeVolumeConstituentCount {
+      get { return largeVolumeConstituentCount_; }
+      set {
+        largeVolumeConstituentCount_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -8139,6 +8491,9 @@ namespace Google.Cloud.NetApp.V1 {
       if (ClusterLocation != other.ClusterLocation) return false;
       if (Description != other.Description) return false;
       if (!Labels.Equals(other.Labels)) return false;
+      if (ReplicationSchedule != other.ReplicationSchedule) return false;
+      if (HybridReplicationType != other.HybridReplicationType) return false;
+      if (LargeVolumeConstituentCount != other.LargeVolumeConstituentCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8154,6 +8509,9 @@ namespace Google.Cloud.NetApp.V1 {
       if (ClusterLocation.Length != 0) hash ^= ClusterLocation.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       hash ^= Labels.GetHashCode();
+      if (ReplicationSchedule != global::Google.Cloud.NetApp.V1.HybridReplicationSchedule.Unspecified) hash ^= ReplicationSchedule.GetHashCode();
+      if (HybridReplicationType != global::Google.Cloud.NetApp.V1.HybridReplicationParameters.Types.VolumeHybridReplicationType.Unspecified) hash ^= HybridReplicationType.GetHashCode();
+      if (LargeVolumeConstituentCount != 0) hash ^= LargeVolumeConstituentCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8198,6 +8556,18 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteString(Description);
       }
       labels_.WriteTo(output, _map_labels_codec);
+      if (ReplicationSchedule != global::Google.Cloud.NetApp.V1.HybridReplicationSchedule.Unspecified) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) ReplicationSchedule);
+      }
+      if (HybridReplicationType != global::Google.Cloud.NetApp.V1.HybridReplicationParameters.Types.VolumeHybridReplicationType.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) HybridReplicationType);
+      }
+      if (LargeVolumeConstituentCount != 0) {
+        output.WriteRawTag(88);
+        output.WriteInt32(LargeVolumeConstituentCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8234,6 +8604,18 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteString(Description);
       }
       labels_.WriteTo(ref output, _map_labels_codec);
+      if (ReplicationSchedule != global::Google.Cloud.NetApp.V1.HybridReplicationSchedule.Unspecified) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) ReplicationSchedule);
+      }
+      if (HybridReplicationType != global::Google.Cloud.NetApp.V1.HybridReplicationParameters.Types.VolumeHybridReplicationType.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) HybridReplicationType);
+      }
+      if (LargeVolumeConstituentCount != 0) {
+        output.WriteRawTag(88);
+        output.WriteInt32(LargeVolumeConstituentCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8264,6 +8646,15 @@ namespace Google.Cloud.NetApp.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
       }
       size += labels_.CalculateSize(_map_labels_codec);
+      if (ReplicationSchedule != global::Google.Cloud.NetApp.V1.HybridReplicationSchedule.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReplicationSchedule);
+      }
+      if (HybridReplicationType != global::Google.Cloud.NetApp.V1.HybridReplicationParameters.Types.VolumeHybridReplicationType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) HybridReplicationType);
+      }
+      if (LargeVolumeConstituentCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(LargeVolumeConstituentCount);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -8296,6 +8687,15 @@ namespace Google.Cloud.NetApp.V1 {
         Description = other.Description;
       }
       labels_.MergeFrom(other.labels_);
+      if (other.ReplicationSchedule != global::Google.Cloud.NetApp.V1.HybridReplicationSchedule.Unspecified) {
+        ReplicationSchedule = other.ReplicationSchedule;
+      }
+      if (other.HybridReplicationType != global::Google.Cloud.NetApp.V1.HybridReplicationParameters.Types.VolumeHybridReplicationType.Unspecified) {
+        HybridReplicationType = other.HybridReplicationType;
+      }
+      if (other.LargeVolumeConstituentCount != 0) {
+        LargeVolumeConstituentCount = other.LargeVolumeConstituentCount;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -8341,6 +8741,18 @@ namespace Google.Cloud.NetApp.V1 {
           }
           case 66: {
             labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
+          case 72: {
+            ReplicationSchedule = (global::Google.Cloud.NetApp.V1.HybridReplicationSchedule) input.ReadEnum();
+            break;
+          }
+          case 80: {
+            HybridReplicationType = (global::Google.Cloud.NetApp.V1.HybridReplicationParameters.Types.VolumeHybridReplicationType) input.ReadEnum();
+            break;
+          }
+          case 88: {
+            LargeVolumeConstituentCount = input.ReadInt32();
             break;
           }
         }
@@ -8390,10 +8802,58 @@ namespace Google.Cloud.NetApp.V1 {
             labels_.AddEntriesFrom(ref input, _map_labels_codec);
             break;
           }
+          case 72: {
+            ReplicationSchedule = (global::Google.Cloud.NetApp.V1.HybridReplicationSchedule) input.ReadEnum();
+            break;
+          }
+          case 80: {
+            HybridReplicationType = (global::Google.Cloud.NetApp.V1.HybridReplicationParameters.Types.VolumeHybridReplicationType) input.ReadEnum();
+            break;
+          }
+          case 88: {
+            LargeVolumeConstituentCount = input.ReadInt32();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the HybridReplicationParameters message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Type of the volume's hybrid replication.
+      /// </summary>
+      public enum VolumeHybridReplicationType {
+        /// <summary>
+        /// Unspecified hybrid replication type.
+        /// </summary>
+        [pbr::OriginalName("VOLUME_HYBRID_REPLICATION_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Hybrid replication type for migration.
+        /// </summary>
+        [pbr::OriginalName("MIGRATION")] Migration = 1,
+        /// <summary>
+        /// Hybrid replication type for continuous replication.
+        /// </summary>
+        [pbr::OriginalName("CONTINUOUS_REPLICATION")] ContinuousReplication = 2,
+        /// <summary>
+        /// New field for reversible OnPrem replication, to be used for data
+        /// protection.
+        /// </summary>
+        [pbr::OriginalName("ONPREM_REPLICATION")] OnpremReplication = 3,
+        /// <summary>
+        /// New field for reversible OnPrem replication, to be used for data
+        /// protection.
+        /// </summary>
+        [pbr::OriginalName("REVERSE_ONPREM_REPLICATION")] ReverseOnpremReplication = 4,
+      }
+
+    }
+    #endregion
 
   }
 

@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <IsPackable>false</IsPackable>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <LangVersion>10</LangVersion>
     <AssemblyName>Google.Cloud.Docs.Snippets</AssemblyName>
     <PackageId>Google.Cloud.Docs.Snippets</PackageId>
@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Apache.Avro" VersionOverride="1.12.0" />      
+    <PackageReference Include="Apache.Avro" VersionOverride="1.12.1" />      
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
     <PackageReference Include="xunit.runner.visualstudio" />
     <PackageReference Include="xunit" />

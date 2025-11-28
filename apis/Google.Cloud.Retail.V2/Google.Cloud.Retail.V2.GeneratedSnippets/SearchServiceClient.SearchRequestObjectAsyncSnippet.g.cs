@@ -64,6 +64,16 @@ namespace GoogleCSharpSnippets
                 Entity = "",
                 ConversationalSearchSpec = new SearchRequest.Types.ConversationalSearchSpec(),
                 TileNavigationSpec = new SearchRequest.Types.TileNavigationSpec(),
+                LanguageCode = "",
+                RegionCode = "",
+                PlaceId = "",
+                UserAttributes =
+                {
+                    {
+                        "",
+                        new StringList()
+                    },
+                },
             };
             // Make the request
             PagedAsyncEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.SearchAsync(request);

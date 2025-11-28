@@ -12,7 +12,7 @@
     <PackageReference Include="Google.Api.Gax.Grpc" />
     <PackageReference Include="Google.Cloud.Logging.V2" VersionOverride="[4.4.0, 5.0.0)" />
     <PackageReference Include="Google.Cloud.Trace.V1" VersionOverride="[3.4.0, 4.0.0)" />
-    <PackageReference Include="Microsoft.Extensions.Http" VersionOverride="6.0.0" />
-    <PackageReference Include="System.Diagnostics.StackTrace" VersionOverride="4.3.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" />
+    <PackageReference Include="System.Diagnostics.StackTrace" />
   </ItemGroup>
 </Project>

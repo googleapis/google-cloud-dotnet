@@ -1,0 +1,267 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.saasplatform.saasservicemgmt.v1beta1",
+  "libraryPackage": "Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1",
+  "services": {
+    "SaasDeployments": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SaasDeploymentsClient",
+          "rpcs": {
+            "CreateRelease": {
+              "methods": [
+                "CreateRelease",
+                "CreateReleaseAsync"
+              ]
+            },
+            "CreateSaas": {
+              "methods": [
+                "CreateSaas",
+                "CreateSaasAsync"
+              ]
+            },
+            "CreateTenant": {
+              "methods": [
+                "CreateTenant",
+                "CreateTenantAsync"
+              ]
+            },
+            "CreateUnit": {
+              "methods": [
+                "CreateUnit",
+                "CreateUnitAsync"
+              ]
+            },
+            "CreateUnitKind": {
+              "methods": [
+                "CreateUnitKind",
+                "CreateUnitKindAsync"
+              ]
+            },
+            "CreateUnitOperation": {
+              "methods": [
+                "CreateUnitOperation",
+                "CreateUnitOperationAsync"
+              ]
+            },
+            "DeleteRelease": {
+              "methods": [
+                "DeleteRelease",
+                "DeleteReleaseAsync"
+              ]
+            },
+            "DeleteSaas": {
+              "methods": [
+                "DeleteSaas",
+                "DeleteSaasAsync"
+              ]
+            },
+            "DeleteTenant": {
+              "methods": [
+                "DeleteTenant",
+                "DeleteTenantAsync"
+              ]
+            },
+            "DeleteUnit": {
+              "methods": [
+                "DeleteUnit",
+                "DeleteUnitAsync"
+              ]
+            },
+            "DeleteUnitKind": {
+              "methods": [
+                "DeleteUnitKind",
+                "DeleteUnitKindAsync"
+              ]
+            },
+            "DeleteUnitOperation": {
+              "methods": [
+                "DeleteUnitOperation",
+                "DeleteUnitOperationAsync"
+              ]
+            },
+            "GetRelease": {
+              "methods": [
+                "GetRelease",
+                "GetReleaseAsync"
+              ]
+            },
+            "GetSaas": {
+              "methods": [
+                "GetSaas",
+                "GetSaasAsync"
+              ]
+            },
+            "GetTenant": {
+              "methods": [
+                "GetTenant",
+                "GetTenantAsync"
+              ]
+            },
+            "GetUnit": {
+              "methods": [
+                "GetUnit",
+                "GetUnitAsync"
+              ]
+            },
+            "GetUnitKind": {
+              "methods": [
+                "GetUnitKind",
+                "GetUnitKindAsync"
+              ]
+            },
+            "GetUnitOperation": {
+              "methods": [
+                "GetUnitOperation",
+                "GetUnitOperationAsync"
+              ]
+            },
+            "ListReleases": {
+              "methods": [
+                "ListReleases",
+                "ListReleasesAsync"
+              ]
+            },
+            "ListSaas": {
+              "methods": [
+                "ListSaas",
+                "ListSaasAsync"
+              ]
+            },
+            "ListTenants": {
+              "methods": [
+                "ListTenants",
+                "ListTenantsAsync"
+              ]
+            },
+            "ListUnitKinds": {
+              "methods": [
+                "ListUnitKinds",
+                "ListUnitKindsAsync"
+              ]
+            },
+            "ListUnitOperations": {
+              "methods": [
+                "ListUnitOperations",
+                "ListUnitOperationsAsync"
+              ]
+            },
+            "ListUnits": {
+              "methods": [
+                "ListUnits",
+                "ListUnitsAsync"
+              ]
+            },
+            "UpdateRelease": {
+              "methods": [
+                "UpdateRelease",
+                "UpdateReleaseAsync"
+              ]
+            },
+            "UpdateSaas": {
+              "methods": [
+                "UpdateSaas",
+                "UpdateSaasAsync"
+              ]
+            },
+            "UpdateTenant": {
+              "methods": [
+                "UpdateTenant",
+                "UpdateTenantAsync"
+              ]
+            },
+            "UpdateUnit": {
+              "methods": [
+                "UpdateUnit",
+                "UpdateUnitAsync"
+              ]
+            },
+            "UpdateUnitKind": {
+              "methods": [
+                "UpdateUnitKind",
+                "UpdateUnitKindAsync"
+              ]
+            },
+            "UpdateUnitOperation": {
+              "methods": [
+                "UpdateUnitOperation",
+                "UpdateUnitOperationAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "SaasRollouts": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SaasRolloutsClient",
+          "rpcs": {
+            "CreateRollout": {
+              "methods": [
+                "CreateRollout",
+                "CreateRolloutAsync"
+              ]
+            },
+            "CreateRolloutKind": {
+              "methods": [
+                "CreateRolloutKind",
+                "CreateRolloutKindAsync"
+              ]
+            },
+            "DeleteRollout": {
+              "methods": [
+                "DeleteRollout",
+                "DeleteRolloutAsync"
+              ]
+            },
+            "DeleteRolloutKind": {
+              "methods": [
+                "DeleteRolloutKind",
+                "DeleteRolloutKindAsync"
+              ]
+            },
+            "GetRollout": {
+              "methods": [
+                "GetRollout",
+                "GetRolloutAsync"
+              ]
+            },
+            "GetRolloutKind": {
+              "methods": [
+                "GetRolloutKind",
+                "GetRolloutKindAsync"
+              ]
+            },
+            "ListRolloutKinds": {
+              "methods": [
+                "ListRolloutKinds",
+                "ListRolloutKindsAsync"
+              ]
+            },
+            "ListRollouts": {
+              "methods": [
+                "ListRollouts",
+                "ListRolloutsAsync"
+              ]
+            },
+            "UpdateRollout": {
+              "methods": [
+                "UpdateRollout",
+                "UpdateRolloutAsync"
+              ]
+            },
+            "UpdateRolloutKind": {
+              "methods": [
+                "UpdateRolloutKind",
+                "UpdateRolloutKindAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

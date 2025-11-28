@@ -28,9 +28,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "dG8SH2dvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEaH2dvb2dsZS9h",
             "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2Uu",
             "cHJvdG8aLWdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxYmV0YTEvY29udGVu",
-            "dC5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xl",
-            "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKRAwoHU2Vzc2lvbhIUCgRuYW1l",
-            "GAEgASgJQgbgQQLgQQgSNAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUu",
+            "dC5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGhxnb29n",
+            "bGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGlt",
+            "ZXN0YW1wLnByb3RvIoYECgdTZXNzaW9uEjYKC2V4cGlyZV90aW1lGA0gASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEBSAASMAoDdHRsGA4g",
+            "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgbgQQHgQQRIABIRCgRu",
+            "YW1lGAEgASgJQgPgQQgSNAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUu",
             "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBCABKAsy",
             "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSGQoMZGlzcGxheV9u",
             "YW1lGAUgASgJQgPgQQESMwoNc2Vzc2lvbl9zdGF0ZRgKIAEoCzIXLmdvb2ds",
@@ -38,46 +41,47 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "QQI6mgHqQZYBCiFhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL1Nlc3Npb24S",
             "XnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9yZWFz",
             "b25pbmdFbmdpbmVzL3tyZWFzb25pbmdfZW5naW5lfS9zZXNzaW9ucy97c2Vz",
-            "c2lvbn0qCHNlc3Npb25zMgdzZXNzaW9uIssECgxTZXNzaW9uRXZlbnQSFAoE",
-            "bmFtZRgBIAEoCUIG4EEC4EEIEhMKBmF1dGhvchgDIAEoCUID4EECEj4KB2Nv",
-            "bnRlbnQYBCABKAsyKC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
-            "LkNvbnRlbnRCA+BBARIaCg1pbnZvY2F0aW9uX2lkGAUgASgJQgPgQQISQwoH",
-            "YWN0aW9ucxgGIAEoCzItLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0",
-            "YTEuRXZlbnRBY3Rpb25zQgPgQQESMgoJdGltZXN0YW1wGAggASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EECEhcKCmVycm9yX2NvZGUYCSAB",
-            "KAlCA+BBARIaCg1lcnJvcl9tZXNzYWdlGAogASgJQgPgQQESSwoOZXZlbnRf",
-            "bWV0YWRhdGEYCyABKAsyLi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJl",
-            "dGExLkV2ZW50TWV0YWRhdGFCA+BBATq4AepBtAEKJmFpcGxhdGZvcm0uZ29v",
-            "Z2xlYXBpcy5jb20vU2Vzc2lvbkV2ZW50Em1wcm9qZWN0cy97cHJvamVjdH0v",
-            "bG9jYXRpb25zL3tsb2NhdGlvbn0vcmVhc29uaW5nRW5naW5lcy97cmVhc29u",
-            "aW5nX2VuZ2luZX0vc2Vzc2lvbnMve3Nlc3Npb259L2V2ZW50cy97ZXZlbnR9",
-            "Kg1zZXNzaW9uRXZlbnRzMgxzZXNzaW9uRXZlbnQi6QEKDUV2ZW50TWV0YWRh",
-            "dGESUwoSZ3JvdW5kaW5nX21ldGFkYXRhGAEgASgLMjIuZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjFiZXRhMS5Hcm91bmRpbmdNZXRhZGF0YUID4EEBEhQK",
-            "B3BhcnRpYWwYAiABKAhCA+BBARIaCg10dXJuX2NvbXBsZXRlGAMgASgIQgPg",
-            "QQESGAoLaW50ZXJydXB0ZWQYBCABKAhCA+BBARIiChVsb25nX3J1bm5pbmdf",
-            "dG9vbF9pZHMYBSADKAlCA+BBARITCgZicmFuY2gYBiABKAlCA+BBASKIAwoM",
-            "RXZlbnRBY3Rpb25zEh8KEnNraXBfc3VtbWFyaXphdGlvbhgBIAEoCEID4EEB",
-            "EjEKC3N0YXRlX2RlbHRhGAIgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVj",
-            "dEID4EEBEl0KDmFydGlmYWN0X2RlbHRhGAMgAygLMkAuZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjFiZXRhMS5FdmVudEFjdGlvbnMuQXJ0aWZhY3REZWx0",
-            "YUVudHJ5QgPgQQESHQoRdHJhbnNmZXJfdG9fYWdlbnQYBSABKAhCAhgBEhUK",
-            "CGVzY2FsYXRlGAYgASgIQgPgQQESPAoWcmVxdWVzdGVkX2F1dGhfY29uZmln",
-            "cxgHIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBARIbCg50cmFu",
-            "c2Zlcl9hZ2VudBgIIAEoCUID4EEBGjQKEkFydGlmYWN0RGVsdGFFbnRyeRIL",
-            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAU6AjgBQuMBCiNjb20uZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMUIMU2Vzc2lvblByb3RvUAFaQ2Ns",
-            "b3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxh",
-            "dGZvcm1wYjthaXBsYXRmb3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9y",
-            "bS5WMUJldGExygIfR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoC",
-            "Ikdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
+            "c2lvbn0qCHNlc3Npb25zMgdzZXNzaW9uQgwKCmV4cGlyYXRpb24iyAQKDFNl",
+            "c3Npb25FdmVudBIRCgRuYW1lGAEgASgJQgPgQQgSEwoGYXV0aG9yGAMgASgJ",
+            "QgPgQQISPgoHY29udGVudBgEIAEoCzIoLmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxYmV0YTEuQ29udGVudEID4EEBEhoKDWludm9jYXRpb25faWQYBSAB",
+            "KAlCA+BBAhJDCgdhY3Rpb25zGAYgASgLMi0uZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjFiZXRhMS5FdmVudEFjdGlvbnNCA+BBARIyCgl0aW1lc3RhbXAY",
+            "CCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQISFwoKZXJy",
+            "b3JfY29kZRgJIAEoCUID4EEBEhoKDWVycm9yX21lc3NhZ2UYCiABKAlCA+BB",
+            "ARJLCg5ldmVudF9tZXRhZGF0YRgLIAEoCzIuLmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxYmV0YTEuRXZlbnRNZXRhZGF0YUID4EEBOrgB6kG0AQomYWlw",
+            "bGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9TZXNzaW9uRXZlbnQSbXByb2plY3Rz",
+            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9yZWFzb25pbmdFbmdp",
+            "bmVzL3tyZWFzb25pbmdfZW5naW5lfS9zZXNzaW9ucy97c2Vzc2lvbn0vZXZl",
+            "bnRzL3tldmVudH0qDXNlc3Npb25FdmVudHMyDHNlc3Npb25FdmVudCKbAgoN",
+            "RXZlbnRNZXRhZGF0YRJTChJncm91bmRpbmdfbWV0YWRhdGEYASABKAsyMi5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkdyb3VuZGluZ01ldGFk",
+            "YXRhQgPgQQESFAoHcGFydGlhbBgCIAEoCEID4EEBEhoKDXR1cm5fY29tcGxl",
+            "dGUYAyABKAhCA+BBARIYCgtpbnRlcnJ1cHRlZBgEIAEoCEID4EEBEiIKFWxv",
+            "bmdfcnVubmluZ190b29sX2lkcxgFIAMoCUID4EEBEhMKBmJyYW5jaBgGIAEo",
+            "CUID4EEBEjAKD2N1c3RvbV9tZXRhZGF0YRgHIAEoCzIXLmdvb2dsZS5wcm90",
+            "b2J1Zi5TdHJ1Y3Qi6QIKDEV2ZW50QWN0aW9ucxIfChJza2lwX3N1bW1hcml6",
+            "YXRpb24YASABKAhCA+BBARIxCgtzdGF0ZV9kZWx0YRgCIAEoCzIXLmdvb2ds",
+            "ZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBARJdCg5hcnRpZmFjdF9kZWx0YRgDIAMo",
+            "CzJALmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRXZlbnRBY3Rp",
+            "b25zLkFydGlmYWN0RGVsdGFFbnRyeUID4EEBEhUKCGVzY2FsYXRlGAYgASgI",
+            "QgPgQQESPAoWcmVxdWVzdGVkX2F1dGhfY29uZmlncxgHIAEoCzIXLmdvb2ds",
+            "ZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBARIbCg50cmFuc2Zlcl9hZ2VudBgIIAEo",
+            "CUID4EEBGjQKEkFydGlmYWN0RGVsdGFFbnRyeRILCgNrZXkYASABKAkSDQoF",
+            "dmFsdWUYAiABKAU6AjgBQuMBCiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjFiZXRhMUIMU2Vzc2lvblByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20v",
+            "Z28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxhdGZvcm1wYjthaXBsYXRm",
+            "b3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMUJldGExygIfR29v",
+            "Z2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoCIkdvb2dsZTo6Q2xvdWQ6",
+            "OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ContentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ContentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Session), global::Google.Cloud.AIPlatform.V1Beta1.Session.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "DisplayName", "SessionState", "UserId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Session), global::Google.Cloud.AIPlatform.V1Beta1.Session.Parser, new[]{ "ExpireTime", "Ttl", "Name", "CreateTime", "UpdateTime", "DisplayName", "SessionState", "UserId" }, new[]{ "Expiration" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.SessionEvent), global::Google.Cloud.AIPlatform.V1Beta1.SessionEvent.Parser, new[]{ "Name", "Author", "Content", "InvocationId", "Actions", "Timestamp", "ErrorCode", "ErrorMessage", "EventMetadata" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.EventMetadata), global::Google.Cloud.AIPlatform.V1Beta1.EventMetadata.Parser, new[]{ "GroundingMetadata", "Partial", "TurnComplete", "Interrupted", "LongRunningToolIds", "Branch" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.EventActions), global::Google.Cloud.AIPlatform.V1Beta1.EventActions.Parser, new[]{ "SkipSummarization", "StateDelta", "ArtifactDelta", "TransferToAgent", "Escalate", "RequestedAuthConfigs", "TransferAgent" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.EventMetadata), global::Google.Cloud.AIPlatform.V1Beta1.EventMetadata.Parser, new[]{ "GroundingMetadata", "Partial", "TurnComplete", "Interrupted", "LongRunningToolIds", "Branch", "CustomMetadata" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.EventActions), global::Google.Cloud.AIPlatform.V1Beta1.EventActions.Parser, new[]{ "SkipSummarization", "StateDelta", "ArtifactDelta", "Escalate", "RequestedAuthConfigs", "TransferAgent" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -128,6 +132,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       displayName_ = other.displayName_;
       sessionState_ = other.sessionState_ != null ? other.sessionState_.Clone() : null;
       userId_ = other.userId_;
+      switch (other.ExpirationCase) {
+        case ExpirationOneofCase.ExpireTime:
+          ExpireTime = other.ExpireTime.Clone();
+          break;
+        case ExpirationOneofCase.Ttl:
+          Ttl = other.Ttl.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -137,11 +150,43 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       return new Session(this);
     }
 
+    /// <summary>Field number for the "expire_time" field.</summary>
+    public const int ExpireTimeFieldNumber = 13;
+    /// <summary>
+    /// Optional. Timestamp of when this session is considered expired.
+    /// This is *always* provided on output, regardless of what was sent
+    /// on input.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ExpireTime {
+      get { return expirationCase_ == ExpirationOneofCase.ExpireTime ? (global::Google.Protobuf.WellKnownTypes.Timestamp) expiration_ : null; }
+      set {
+        expiration_ = value;
+        expirationCase_ = value == null ? ExpirationOneofCase.None : ExpirationOneofCase.ExpireTime;
+      }
+    }
+
+    /// <summary>Field number for the "ttl" field.</summary>
+    public const int TtlFieldNumber = 14;
+    /// <summary>
+    /// Optional. Input only. The TTL for this session.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration Ttl {
+      get { return expirationCase_ == ExpirationOneofCase.Ttl ? (global::Google.Protobuf.WellKnownTypes.Duration) expiration_ : null; }
+      set {
+        expiration_ = value;
+        expirationCase_ = value == null ? ExpirationOneofCase.None : ExpirationOneofCase.Ttl;
+      }
+    }
+
     /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Identifier. The resource name of the session.
+    /// Identifier. The resource name of the session.
     /// Format:
     /// 'projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}'.
     /// </summary>
@@ -229,6 +274,27 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    private object expiration_;
+    /// <summary>Enum of possible cases for the "expiration" oneof.</summary>
+    public enum ExpirationOneofCase {
+      None = 0,
+      ExpireTime = 13,
+      Ttl = 14,
+    }
+    private ExpirationOneofCase expirationCase_ = ExpirationOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExpirationOneofCase ExpirationCase {
+      get { return expirationCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearExpiration() {
+      expirationCase_ = ExpirationOneofCase.None;
+      expiration_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -244,12 +310,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(ExpireTime, other.ExpireTime)) return false;
+      if (!object.Equals(Ttl, other.Ttl)) return false;
       if (Name != other.Name) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (DisplayName != other.DisplayName) return false;
       if (!object.Equals(SessionState, other.SessionState)) return false;
       if (UserId != other.UserId) return false;
+      if (ExpirationCase != other.ExpirationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -257,12 +326,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (expirationCase_ == ExpirationOneofCase.ExpireTime) hash ^= ExpireTime.GetHashCode();
+      if (expirationCase_ == ExpirationOneofCase.Ttl) hash ^= Ttl.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (sessionState_ != null) hash ^= SessionState.GetHashCode();
       if (UserId.Length != 0) hash ^= UserId.GetHashCode();
+      hash ^= (int) expirationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -305,6 +377,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(98);
         output.WriteString(UserId);
       }
+      if (expirationCase_ == ExpirationOneofCase.ExpireTime) {
+        output.WriteRawTag(106);
+        output.WriteMessage(ExpireTime);
+      }
+      if (expirationCase_ == ExpirationOneofCase.Ttl) {
+        output.WriteRawTag(114);
+        output.WriteMessage(Ttl);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -339,6 +419,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(98);
         output.WriteString(UserId);
       }
+      if (expirationCase_ == ExpirationOneofCase.ExpireTime) {
+        output.WriteRawTag(106);
+        output.WriteMessage(ExpireTime);
+      }
+      if (expirationCase_ == ExpirationOneofCase.Ttl) {
+        output.WriteRawTag(114);
+        output.WriteMessage(Ttl);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -349,6 +437,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (expirationCase_ == ExpirationOneofCase.ExpireTime) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExpireTime);
+      }
+      if (expirationCase_ == ExpirationOneofCase.Ttl) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Ttl);
+      }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
@@ -406,6 +500,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (other.UserId.Length != 0) {
         UserId = other.UserId;
       }
+      switch (other.ExpirationCase) {
+        case ExpirationOneofCase.ExpireTime:
+          if (ExpireTime == null) {
+            ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          }
+          ExpireTime.MergeFrom(other.ExpireTime);
+          break;
+        case ExpirationOneofCase.Ttl:
+          if (Ttl == null) {
+            Ttl = new global::Google.Protobuf.WellKnownTypes.Duration();
+          }
+          Ttl.MergeFrom(other.Ttl);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -454,6 +563,24 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             UserId = input.ReadString();
             break;
           }
+          case 106: {
+            global::Google.Protobuf.WellKnownTypes.Timestamp subBuilder = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            if (expirationCase_ == ExpirationOneofCase.ExpireTime) {
+              subBuilder.MergeFrom(ExpireTime);
+            }
+            input.ReadMessage(subBuilder);
+            ExpireTime = subBuilder;
+            break;
+          }
+          case 114: {
+            global::Google.Protobuf.WellKnownTypes.Duration subBuilder = new global::Google.Protobuf.WellKnownTypes.Duration();
+            if (expirationCase_ == ExpirationOneofCase.Ttl) {
+              subBuilder.MergeFrom(Ttl);
+            }
+            input.ReadMessage(subBuilder);
+            Ttl = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -500,6 +627,24 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 98: {
             UserId = input.ReadString();
+            break;
+          }
+          case 106: {
+            global::Google.Protobuf.WellKnownTypes.Timestamp subBuilder = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            if (expirationCase_ == ExpirationOneofCase.ExpireTime) {
+              subBuilder.MergeFrom(ExpireTime);
+            }
+            input.ReadMessage(subBuilder);
+            ExpireTime = subBuilder;
+            break;
+          }
+          case 114: {
+            global::Google.Protobuf.WellKnownTypes.Duration subBuilder = new global::Google.Protobuf.WellKnownTypes.Duration();
+            if (expirationCase_ == ExpirationOneofCase.Ttl) {
+              subBuilder.MergeFrom(Ttl);
+            }
+            input.ReadMessage(subBuilder);
+            Ttl = subBuilder;
             break;
           }
         }
@@ -569,7 +714,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Identifier. The resource name of the event.
+    /// Identifier. The resource name of the event.
     /// Format:`projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}/events/{event}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1107,6 +1252,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       interrupted_ = other.interrupted_;
       longRunningToolIds_ = other.longRunningToolIds_.Clone();
       branch_ = other.branch_;
+      customMetadata_ = other.customMetadata_ != null ? other.customMetadata_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1214,6 +1360,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "custom_metadata" field.</summary>
+    public const int CustomMetadataFieldNumber = 7;
+    private global::Google.Protobuf.WellKnownTypes.Struct customMetadata_;
+    /// <summary>
+    /// The custom metadata of the LlmResponse.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Struct CustomMetadata {
+      get { return customMetadata_; }
+      set {
+        customMetadata_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1235,6 +1396,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (Interrupted != other.Interrupted) return false;
       if(!longRunningToolIds_.Equals(other.longRunningToolIds_)) return false;
       if (Branch != other.Branch) return false;
+      if (!object.Equals(CustomMetadata, other.CustomMetadata)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1248,6 +1410,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (Interrupted != false) hash ^= Interrupted.GetHashCode();
       hash ^= longRunningToolIds_.GetHashCode();
       if (Branch.Length != 0) hash ^= Branch.GetHashCode();
+      if (customMetadata_ != null) hash ^= CustomMetadata.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1287,6 +1450,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(50);
         output.WriteString(Branch);
       }
+      if (customMetadata_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(CustomMetadata);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1318,6 +1485,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(50);
         output.WriteString(Branch);
       }
+      if (customMetadata_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(CustomMetadata);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1343,6 +1514,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       size += longRunningToolIds_.CalculateSize(_repeated_longRunningToolIds_codec);
       if (Branch.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Branch);
+      }
+      if (customMetadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomMetadata);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1374,6 +1548,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       longRunningToolIds_.Add(other.longRunningToolIds_);
       if (other.Branch.Length != 0) {
         Branch = other.Branch;
+      }
+      if (other.customMetadata_ != null) {
+        if (customMetadata_ == null) {
+          CustomMetadata = new global::Google.Protobuf.WellKnownTypes.Struct();
+        }
+        CustomMetadata.MergeFrom(other.CustomMetadata);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1417,6 +1597,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             Branch = input.ReadString();
             break;
           }
+          case 58: {
+            if (customMetadata_ == null) {
+              CustomMetadata = new global::Google.Protobuf.WellKnownTypes.Struct();
+            }
+            input.ReadMessage(CustomMetadata);
+            break;
+          }
         }
       }
     #endif
@@ -1457,6 +1644,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 50: {
             Branch = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (customMetadata_ == null) {
+              CustomMetadata = new global::Google.Protobuf.WellKnownTypes.Struct();
+            }
+            input.ReadMessage(CustomMetadata);
             break;
           }
         }
@@ -1507,7 +1701,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       skipSummarization_ = other.skipSummarization_;
       stateDelta_ = other.stateDelta_ != null ? other.stateDelta_.Clone() : null;
       artifactDelta_ = other.artifactDelta_.Clone();
-      transferToAgent_ = other.transferToAgent_;
       escalate_ = other.escalate_;
       requestedAuthConfigs_ = other.requestedAuthConfigs_ != null ? other.requestedAuthConfigs_.Clone() : null;
       transferAgent_ = other.transferAgent_;
@@ -1565,22 +1758,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, int> ArtifactDelta {
       get { return artifactDelta_; }
-    }
-
-    /// <summary>Field number for the "transfer_to_agent" field.</summary>
-    public const int TransferToAgentFieldNumber = 5;
-    private bool transferToAgent_;
-    /// <summary>
-    /// Deprecated. If set, the event transfers to the specified agent.
-    /// </summary>
-    [global::System.ObsoleteAttribute]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool TransferToAgent {
-      get { return transferToAgent_; }
-      set {
-        transferToAgent_ = value;
-      }
     }
 
     /// <summary>Field number for the "escalate" field.</summary>
@@ -1649,7 +1826,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (SkipSummarization != other.SkipSummarization) return false;
       if (!object.Equals(StateDelta, other.StateDelta)) return false;
       if (!ArtifactDelta.Equals(other.ArtifactDelta)) return false;
-      if (TransferToAgent != other.TransferToAgent) return false;
       if (Escalate != other.Escalate) return false;
       if (!object.Equals(RequestedAuthConfigs, other.RequestedAuthConfigs)) return false;
       if (TransferAgent != other.TransferAgent) return false;
@@ -1663,7 +1839,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (SkipSummarization != false) hash ^= SkipSummarization.GetHashCode();
       if (stateDelta_ != null) hash ^= StateDelta.GetHashCode();
       hash ^= ArtifactDelta.GetHashCode();
-      if (TransferToAgent != false) hash ^= TransferToAgent.GetHashCode();
       if (Escalate != false) hash ^= Escalate.GetHashCode();
       if (requestedAuthConfigs_ != null) hash ^= RequestedAuthConfigs.GetHashCode();
       if (TransferAgent.Length != 0) hash ^= TransferAgent.GetHashCode();
@@ -1694,10 +1869,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteMessage(StateDelta);
       }
       artifactDelta_.WriteTo(output, _map_artifactDelta_codec);
-      if (TransferToAgent != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(TransferToAgent);
-      }
       if (Escalate != false) {
         output.WriteRawTag(48);
         output.WriteBool(Escalate);
@@ -1729,10 +1900,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteMessage(StateDelta);
       }
       artifactDelta_.WriteTo(ref output, _map_artifactDelta_codec);
-      if (TransferToAgent != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(TransferToAgent);
-      }
       if (Escalate != false) {
         output.WriteRawTag(48);
         output.WriteBool(Escalate);
@@ -1762,9 +1929,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StateDelta);
       }
       size += artifactDelta_.CalculateSize(_map_artifactDelta_codec);
-      if (TransferToAgent != false) {
-        size += 1 + 1;
-      }
       if (Escalate != false) {
         size += 1 + 1;
       }
@@ -1796,9 +1960,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         StateDelta.MergeFrom(other.StateDelta);
       }
       artifactDelta_.MergeFrom(other.artifactDelta_);
-      if (other.TransferToAgent != false) {
-        TransferToAgent = other.TransferToAgent;
-      }
       if (other.Escalate != false) {
         Escalate = other.Escalate;
       }
@@ -1839,10 +2000,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 26: {
             artifactDelta_.AddEntriesFrom(input, _map_artifactDelta_codec);
-            break;
-          }
-          case 40: {
-            TransferToAgent = input.ReadBool();
             break;
           }
           case 48: {
@@ -1888,10 +2045,6 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 26: {
             artifactDelta_.AddEntriesFrom(ref input, _map_artifactDelta_codec);
-            break;
-          }
-          case 40: {
-            TransferToAgent = input.ReadBool();
             break;
           }
           case 48: {

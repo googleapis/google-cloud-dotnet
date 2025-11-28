@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Auth.OAuth2;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 
@@ -38,13 +39,15 @@ public class PublisherClientSnippets
         string projectId = "projectId";
         string topicId = "topicId";
         var services = new ServiceCollection();
+        var googleCredential = GoogleCredential.FromAccessToken("fake-access-token");
 
         // Sample: AddCustomizedPublisherClient
         TopicName topicName = TopicName.FromProjectTopic(projectId, topicId);
         services.AddPublisherClient(builder =>
         {
             builder.TopicName = topicName;
-            builder.CredentialsPath = "path/to/credentials.json";
+            // An instance of Google.Apis.Auth.OAuth2.GoogleCredential that you can create using Google.Apis.Auth.OAuth2.CredentialFactory and other GoogleCredential factory methods.
+            builder.GoogleCredential = googleCredential;
             // Other settings to customize.
         });
         // End sample

@@ -22,11 +22,10 @@ namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 /// <summary>
 /// Builds code generated for an API, without any other context (no handwritten code etc). Expected options:
 /// - generator-output: the directory containing the results of a previous generate command; required
-/// - api-path: (relative to api-root) e.g. google/cloud/functions/v2; required
+/// - api-path: (as provided to generate-raw) e.g. google/cloud/functions/v2; required
+/// - dotnet-path: the path to the dotnet command; optional; for testing purposes
 ///
-/// Exactly one of repo-root or generator-output must be specified. When repo-root is specified,
-/// the library is built including handwritten code etc. When generator-output is specified, this
-/// builds the result of "raw" generation, without any additional configuration etc.
+/// This builds the result of "raw" generation, without any additional configuration etc.
 /// </summary>
 public class BuildRawCommand : IContainerCommand
 {
@@ -34,6 +33,9 @@ public class BuildRawCommand : IContainerCommand
     {
         var generatorOutput = options.RequireOption(options.GeneratorOutput);
         var apiPath = options.RequireOption(options.ApiPath);
+        // This option is optional for command callers, but we can request it as required from
+        // Options because Options should set a default value for it.
+        var dotnetPath = options.RequireOption(options.DotnetPath);
 
         var apiRoot = Path.Combine(generatorOutput, apiPath);
         if (!Directory.Exists(apiRoot))
@@ -53,8 +55,8 @@ public class BuildRawCommand : IContainerCommand
 
         var psi = new ProcessStartInfo
         {
-            FileName = "/usr/bin/dotnet",
-            WorkingDirectory = apiRoot
+            FileName = dotnetPath,
+            WorkingDirectory = apiRoot,
         };
         var processArguments = new List<string> { "build", "-nologo", "-clp:NoSummary", "-v", "quiet", solution };
         processArguments.ForEach(psi.ArgumentList.Add);

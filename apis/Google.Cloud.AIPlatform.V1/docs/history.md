@@ -1,5 +1,275 @@
 # Version history
 
+## Version 3.56.0, released 2025-11-05
+
+### New features
+
+- Add new fields `SUCCESSFULLY_DEPLOYED` and `FAILED_TO_DEPLOY` to `DeploymentStage`
+
+## Version 3.55.0, released 2025-11-03
+
+### New features
+
+- Update dependencies
+
+## Version 3.54.0, released 2025-10-28
+
+### Bug fixes
+
+- Updating `bigtable_metadata` field name in `FeatureOnlineStore`
+- Updating `enableDirectBigtableAccess` field name in FeatureOnlineStore`
+- Updating `bigtable_metadata` field name in `FeatureView`
+
+## Version 3.53.0, released 2025-10-24
+
+### New features
+
+- Add EmbedContent method v1
+
+## Version 3.52.0, released 2025-10-21
+
+### New features
+
+- Add FunctionResponsePart and excluded_predefined_functions in ComputerUse
+
+## Version 3.51.0, released 2025-10-20
+
+### New features
+
+- Continuous Tuning
+
+### Documentation improvements
+
+- Updated docs for related fields
+
+## Version 3.50.0, released 2025-10-15
+
+### New features
+
+- Add support for Inline source based deployment
+- Add aspect_ratio and image_config for v1 version
+
+### Documentation improvements
+
+- A comment for message `ReasoningEngineSpec` is changed
+- A comment for field `package_spec` in message `.google.cloud.aiplatform.v1.ReasoningEngineSpec` is changed
+
+## Version 3.49.0, released 2025-10-14
+
+### New features
+
+- Add JAILBREAK category to SafetySettings for prediction service
+- Add JAILBREAK as a new Prompt block reason in PredictionService
+- Add additional proto fields and GenerateFetchAccessToken API
+
+## Version 3.48.0, released 2025-10-09
+
+### New features
+
+- Add labels field for Predict API for Imagen use case (v1beta and v1)
+- Add DeploymentTier enum to DeployedIndex
+- Auto-generated CL for //google/cloud/aiplatform:aiplatform_v1_public_proto_gen
+
+## Version 3.47.0, released 2025-09-29
+
+### New features
+
+- A new value `NVIDIA_RTX_PRO_6000` is added to enum `AcceleratorType`
+- Add enable_widget option in Google Maps and additional grounding information
+
+### Documentation improvements
+
+- Remove legacy internal lint directives
+
+## Version 3.46.0, released 2025-09-16
+
+### New features
+
+- Add private_model_server_enabled to in Endpoint.proto
+
+## Version 3.45.0, released 2025-08-20
+
+### New features
+
+- Add data foundry service synthetic data generation API for v1
+
+## Version 3.44.0, released 2025-08-14
+
+### Bug fixes
+
+- Fields are not part of `oneof`
+
+## Version 3.43.0, released 2025-08-12
+
+### New features
+
+- Added document_name for vertex ai search as part of retrieved context from grounding chunk
+- Add option EndpointUserId and ModelUserId fields
+- Migrate dedicated endpoint to be enabled by default
+- Add support for CMEK, runtime controls, and PSC-I to Reasoning Engine protos
+
+### Documentation improvements
+
+- A comment for field `dedicated_endpoint_enabled` in message `.google.cloud.aiplatform.v1.DeployRequest` is changed
+- Add psc_interface_config, min/max_instances, resource_limits, container_concurrency to ReasoningEngineSpec
+- Add encryption_spec to ReasoningEngine
+
+## Version 3.42.0, released 2025-08-08
+
+### New features
+
+- Add Grounding with Google Maps tool
+
+## Version 3.41.0, released 2025-08-05
+
+### New features
+
+- A new value `NVIDIA_GB200` is added to enum `AcceleratorType`
+- Add FeatureViewDirectWrite API in v1
+
+## Version 3.40.0, released 2025-08-04
+
+### New features
+
+- Add exclude_domains for grounding with GoogleSearch and EnterpriseWebSearch
+- Add embedding_metadata to google.cloud.aiplatform.v1.Index
+- Remove private preview label from Model Armor protos
+- Added the ability to use the Model Armor service for content sanitization
+- Add enable_datapoint_upsert_logging to google.cloud.aiplatform.v1.DeployedIndex
+- Add `DeploymentStage` for CreateEndpointOperationMetadata and DeployModelOperationMetadata
+
+### Documentation improvements
+
+- Update MutateDeployedModel documentation
+
+## Version 3.39.0, released 2025-07-28
+
+### New features
+
+- Add service_account to Reasoning Engine public protos
+
+## Version 3.38.0, released 2025-07-09
+
+### New features
+
+- Expose task_unique_name in pipeline task details for pipeline rerun
+
+## Version 3.37.0, released 2025-07-07
+
+### New features
+
+- Add message ColabImage, add field colab_image to NotebookSoftwareConfig
+- Allow user input for schedule_resource_name in NotebookExecutionJob
+- Add computer use support to tools
+- Add invoke_route_prefix to ModelContainerSpec in aiplatform v1 models.proto
+
+### Documentation improvements
+
+- A comment for message NotebookRuntime is changed
+- A comment for enum value BEING_STARTED in enum NotebookRuntime.RuntimeState is changed
+- A comment for message NotebookSoftwareConfig is changed
+
+## Version 3.36.0, released 2025-06-25
+
+### New features
+
+- Add PSCAutomationConfig to PrivateServiceConnectConfig in service_networking.proto
+- Add GenAiAdvancedFeaturesConfig to endpoint.proto
+- Add Model Garden deploy OSS model API
+
+### Documentation improvements
+
+- Update dedicateEndpointDns documentation
+
+## Version 3.35.0, released 2025-06-17
+
+### New features
+
+- Add DnsPeeringConfig in service_networking.proto
+- Add dns_peering_configs to PscInterfaceConfig
+- Add RagEngineConfig update/get APIs to v1
+- Add Unprovisioned tier to RagEngineConfig to disable RagEngine service and delete all data within the service.
+
+## Version 3.34.0, released 2025-06-13
+
+### New features
+
+- Add EncryptionSpec field for RagCorpus CMEK feature to v1
+
+## Version 3.33.0, released 2025-06-09
+
+### New features
+
+- Expose UrlContextMetadata API to v1
+- Add network_attachment to PscInterfaceConfig
+- Add psc_interface_config to CustomJobSpec
+- Add psc_interface_config to PersistentResource
+- Add psc_interface_config to PipelineJob
+- Add json schema support to structured output and function declaration
+- Expose URL Context API to v1
+
+### Bug fixes
+
+- Upgrade gRPC service registration func
+
+## Version 3.32.0, released 2025-05-29
+
+### New features
+
+- A new field `include_thoughts` is added to message `.google.cloud.aiplatform.v1.Part`
+- A new field `thought` is added to message `.google.cloud.aiplatform.v1.Part`
+- A new field `thought_signature` is added to message `.google.cloud.aiplatform.v1.GenerationConfig.ThinkingConfig`
+
+## Version 3.31.0, released 2025-05-20
+
+### New features
+
+- Add VertexAISearch.max_results, filter, data_store_specs options
+
+## Version 3.30.0, released 2025-05-19
+
+### New features
+
+- Adding thoughts_token_count to prediction service
+
+## Version 3.29.0, released 2025-05-15
+
+### New features
+
+- Add checkpoint ID to endpoint proto
+- New field `additional_properties` is added to message `.google.cloud.aiplatform.v1.Schema`
+- Add ANN feature for RagManagedDb
+- Tuning Checkpoints API
+- A new value `NVIDIA_B200 & NVIDIA_H200_141GB` is added to enum `AcceleratorType`
+
+## Version 3.28.0, released 2025-05-06
+
+### New features
+
+- Expose llm parser to public v1 proto to prepare for GA
+
+### Documentation improvements
+
+- update an outdated URL
+
+## Version 3.27.0, released 2025-04-30
+
+### New features
+
+- allow customers to set encryption_spec for context caching
+- new fields `ref` and `defs` are added to message `.google.cloud.aiplatform.v1.Schema`
+
+### Documentation improvements
+
+- Deprecate election category HARM_CATEGORY_CIVIC_INTEGRITY
+
+## Version 3.26.0, released 2025-04-29
+
+### New features
+
+- Adding ThinkingConfig to v1 client library ([commit cb44e6e](https://github.com/googleapis/google-cloud-dotnet/commit/cb44e6e4235d928bdddf3a46172367ccc726da5b))
+- Model Registry Model Checkpoint API ([commit b698c85](https://github.com/googleapis/google-cloud-dotnet/commit/b698c85f1cc0379dd5703887cfaa52fcee11139a))
+
 ## Version 3.25.0, released 2025-03-31
 
 ### New features

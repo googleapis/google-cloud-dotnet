@@ -497,6 +497,142 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for BulkSetLabels</summary>
+        public void BulkSetLabelsRequestObject()
+        {
+            // Snippet: BulkSetLabels(BulkSetLabelsDiskRequest, CallSettings)
+            // Create client
+            DisksClient disksClient = DisksClient.Create();
+            // Initialize request argument(s)
+            BulkSetLabelsDiskRequest request = new BulkSetLabelsDiskRequest
+            {
+                Zone = "",
+                RequestId = "",
+                Resource = "",
+                Project = "",
+                BulkZoneSetLabelsRequestResource = new BulkZoneSetLabelsRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = disksClient.BulkSetLabels(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = disksClient.PollOnceBulkSetLabels(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkSetLabelsAsync</summary>
+        public async Task BulkSetLabelsRequestObjectAsync()
+        {
+            // Snippet: BulkSetLabelsAsync(BulkSetLabelsDiskRequest, CallSettings)
+            // Additional: BulkSetLabelsAsync(BulkSetLabelsDiskRequest, CancellationToken)
+            // Create client
+            DisksClient disksClient = await DisksClient.CreateAsync();
+            // Initialize request argument(s)
+            BulkSetLabelsDiskRequest request = new BulkSetLabelsDiskRequest
+            {
+                Zone = "",
+                RequestId = "",
+                Resource = "",
+                Project = "",
+                BulkZoneSetLabelsRequestResource = new BulkZoneSetLabelsRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await disksClient.BulkSetLabelsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await disksClient.PollOnceBulkSetLabelsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkSetLabels</summary>
+        public void BulkSetLabels()
+        {
+            // Snippet: BulkSetLabels(string, string, BulkZoneSetLabelsRequest, CallSettings)
+            // Create client
+            DisksClient disksClient = DisksClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            BulkZoneSetLabelsRequest bulkZoneSetLabelsRequestResource = new BulkZoneSetLabelsRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = disksClient.BulkSetLabels(project, zone, bulkZoneSetLabelsRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = disksClient.PollOnceBulkSetLabels(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkSetLabelsAsync</summary>
+        public async Task BulkSetLabelsAsync()
+        {
+            // Snippet: BulkSetLabelsAsync(string, string, BulkZoneSetLabelsRequest, CallSettings)
+            // Additional: BulkSetLabelsAsync(string, string, BulkZoneSetLabelsRequest, CancellationToken)
+            // Create client
+            DisksClient disksClient = await DisksClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            BulkZoneSetLabelsRequest bulkZoneSetLabelsRequestResource = new BulkZoneSetLabelsRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await disksClient.BulkSetLabelsAsync(project, zone, bulkZoneSetLabelsRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await disksClient.PollOnceBulkSetLabelsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateSnapshot</summary>
         public void CreateSnapshotRequestObject()
         {

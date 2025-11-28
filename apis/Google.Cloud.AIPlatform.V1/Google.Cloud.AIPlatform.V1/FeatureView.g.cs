@@ -28,7 +28,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "dG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGh9nb29nbGUvYXBpL2Zp",
             "ZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3Rv",
             "GjJnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9tYWNoaW5lX3Jlc291cmNl",
-            "cy5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKKFAoL",
+            "cy5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKXFQoL",
             "RmVhdHVyZVZpZXcSVwoQYmlnX3F1ZXJ5X3NvdXJjZRgGIAEoCzI2Lmdvb2ds",
             "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1cmVWaWV3LkJpZ1F1ZXJ5U291",
             "cmNlQgPgQQFIABJlChdmZWF0dXJlX3JlZ2lzdHJ5X3NvdXJjZRgJIAEoCzI9",
@@ -49,7 +49,9 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZV9hZ2VudF90eXBlGA4gASgOMjguZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
             "djEuRmVhdHVyZVZpZXcuU2VydmljZUFnZW50VHlwZUID4EEBEiIKFXNlcnZp",
             "Y2VfYWNjb3VudF9lbWFpbBgNIAEoCUID4EEDEhoKDXNhdGlzZmllc19wenMY",
-            "EyABKAhCA+BBAxIaCg1zYXRpc2ZpZXNfcHppGBQgASgIQgPgQQMaQgoOQmln",
+            "EyABKAhCA+BBAxIaCg1zYXRpc2ZpZXNfcHppGBQgASgIQgPgQQMSWAoRYmln",
+            "dGFibGVfbWV0YWRhdGEYFiABKAsyOC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MS5GZWF0dXJlVmlldy5CaWd0YWJsZU1ldGFkYXRhQgPgQQMaQgoOQmln",
             "UXVlcnlTb3VyY2USEAoDdXJpGAEgASgJQgPgQQISHgoRZW50aXR5X2lkX2Nv",
             "bHVtbnMYAiADKAlCA+BBAhozCgpTeW5jQ29uZmlnEgwKBGNyb24YASABKAkS",
             "FwoKY29udGludW91cxgCIAEoCEID4EEBGucFCgtJbmRleENvbmZpZxJfCg50",
@@ -79,29 +81,31 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZBgCIAEoA0ID4EEBGmMKD09wdGltaXplZENvbmZpZxJQChNhdXRvbWF0aWNf",
             "cmVzb3VyY2VzGAcgASgLMi4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
             "QXV0b21hdGljUmVzb3VyY2VzQgPgQQEaLQoLTGFiZWxzRW50cnkSCwoDa2V5",
-            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJ7ChBTZXJ2aWNlQWdlbnRUeXBl",
-            "EiIKHlNFUlZJQ0VfQUdFTlRfVFlQRV9VTlNQRUNJRklFRBAAEh4KGlNFUlZJ",
-            "Q0VfQUdFTlRfVFlQRV9QUk9KRUNUEAESIwofU0VSVklDRV9BR0VOVF9UWVBF",
-            "X0ZFQVRVUkVfVklFVxACOpsB6kGXAQolYWlwbGF0Zm9ybS5nb29nbGVhcGlz",
-            "LmNvbS9GZWF0dXJlVmlldxJucHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
-            "cy97bG9jYXRpb259L2ZlYXR1cmVPbmxpbmVTdG9yZXMve2ZlYXR1cmVfb25s",
-            "aW5lX3N0b3JlfS9mZWF0dXJlVmlld3Mve2ZlYXR1cmVfdmlld31CCAoGc291",
-            "cmNlQs4BCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCEEZlYXR1",
-            "cmVWaWV3UHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3Jt",
-            "L2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xv",
-            "dWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx",
-            "6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARoxChBCaWd0YWJsZU1ldGFkYXRh",
+            "Eh0KEHJlYWRfYXBwX3Byb2ZpbGUYASABKAlCA+BBAyJ7ChBTZXJ2aWNlQWdl",
+            "bnRUeXBlEiIKHlNFUlZJQ0VfQUdFTlRfVFlQRV9VTlNQRUNJRklFRBAAEh4K",
+            "GlNFUlZJQ0VfQUdFTlRfVFlQRV9QUk9KRUNUEAESIwofU0VSVklDRV9BR0VO",
+            "VF9UWVBFX0ZFQVRVUkVfVklFVxACOpsB6kGXAQolYWlwbGF0Zm9ybS5nb29n",
+            "bGVhcGlzLmNvbS9GZWF0dXJlVmlldxJucHJvamVjdHMve3Byb2plY3R9L2xv",
+            "Y2F0aW9ucy97bG9jYXRpb259L2ZlYXR1cmVPbmxpbmVTdG9yZXMve2ZlYXR1",
+            "cmVfb25saW5lX3N0b3JlfS9mZWF0dXJlVmlld3Mve2ZlYXR1cmVfdmlld31C",
+            "CAoGc291cmNlQs4BCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFC",
+            "EEZlYXR1cmVWaWV3UHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBs",
+            "YXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29n",
+            "bGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRm",
+            "b3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView), global::Google.Cloud.AIPlatform.V1.FeatureView.Parser, new[]{ "BigQuerySource", "FeatureRegistrySource", "VertexRagSource", "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "SyncConfig", "IndexConfig", "OptimizedConfig", "ServiceAgentType", "ServiceAccountEmail", "SatisfiesPzs", "SatisfiesPzi" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.ServiceAgentType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigQuerySource), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigQuerySource.Parser, new[]{ "Uri", "EntityIdColumns" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView), global::Google.Cloud.AIPlatform.V1.FeatureView.Parser, new[]{ "BigQuerySource", "FeatureRegistrySource", "VertexRagSource", "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "SyncConfig", "IndexConfig", "OptimizedConfig", "ServiceAgentType", "ServiceAccountEmail", "SatisfiesPzs", "SatisfiesPzi", "BigtableMetadata" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.ServiceAgentType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigQuerySource), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigQuerySource.Parser, new[]{ "Uri", "EntityIdColumns" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.SyncConfig), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.SyncConfig.Parser, new[]{ "Cron", "Continuous" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Parser, new[]{ "TreeAhConfig", "BruteForceConfig", "EmbeddingColumn", "FilterColumns", "CrowdingColumn", "EmbeddingDimension", "DistanceMeasureType" }, new[]{ "AlgorithmConfig", "EmbeddingDimension" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.DistanceMeasureType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.BruteForceConfig), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.BruteForceConfig.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.TreeAHConfig), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.TreeAHConfig.Parser, new[]{ "LeafNodeEmbeddingCount" }, new[]{ "LeafNodeEmbeddingCount" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.FeatureRegistrySource), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.FeatureRegistrySource.Parser, new[]{ "FeatureGroups", "ProjectNumber" }, new[]{ "ProjectNumber" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.FeatureRegistrySource.Types.FeatureGroup), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.FeatureRegistrySource.Types.FeatureGroup.Parser, new[]{ "FeatureGroupId", "FeatureIds" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.VertexRagSource), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.VertexRagSource.Parser, new[]{ "Uri", "RagCorpusId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.OptimizedConfig), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.OptimizedConfig.Parser, new[]{ "AutomaticResources" }, null, null, null, null),
-            null, })
+            null, new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigtableMetadata), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigtableMetadata.Parser, new[]{ "ReadAppProfile" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -159,6 +163,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       serviceAccountEmail_ = other.serviceAccountEmail_;
       satisfiesPzs_ = other.satisfiesPzs_;
       satisfiesPzi_ = other.satisfiesPzi_;
+      bigtableMetadata_ = other.bigtableMetadata_ != null ? other.bigtableMetadata_.Clone() : null;
       switch (other.SourceCase) {
         case SourceOneofCase.BigQuerySource:
           BigQuerySource = other.BigQuerySource.Clone();
@@ -431,6 +436,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "bigtable_metadata" field.</summary>
+    public const int BigtableMetadataFieldNumber = 22;
+    private global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigtableMetadata bigtableMetadata_;
+    /// <summary>
+    /// Metadata containing information about the Cloud Bigtable.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigtableMetadata BigtableMetadata {
+      get { return bigtableMetadata_; }
+      set {
+        bigtableMetadata_ = value;
+      }
+    }
+
     private object source_;
     /// <summary>Enum of possible cases for the "source" oneof.</summary>
     public enum SourceOneofCase {
@@ -483,6 +503,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ServiceAccountEmail != other.ServiceAccountEmail) return false;
       if (SatisfiesPzs != other.SatisfiesPzs) return false;
       if (SatisfiesPzi != other.SatisfiesPzi) return false;
+      if (!object.Equals(BigtableMetadata, other.BigtableMetadata)) return false;
       if (SourceCase != other.SourceCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -506,6 +527,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ServiceAccountEmail.Length != 0) hash ^= ServiceAccountEmail.GetHashCode();
       if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
       if (SatisfiesPzi != false) hash ^= SatisfiesPzi.GetHashCode();
+      if (bigtableMetadata_ != null) hash ^= BigtableMetadata.GetHashCode();
       hash ^= (int) sourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -582,6 +604,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(160, 1);
         output.WriteBool(SatisfiesPzi);
       }
+      if (bigtableMetadata_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(BigtableMetadata);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -649,6 +675,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(160, 1);
         output.WriteBool(SatisfiesPzi);
       }
+      if (bigtableMetadata_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(BigtableMetadata);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -701,6 +731,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (SatisfiesPzi != false) {
         size += 2 + 1;
+      }
+      if (bigtableMetadata_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(BigtableMetadata);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -762,6 +795,12 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.SatisfiesPzi != false) {
         SatisfiesPzi = other.SatisfiesPzi;
+      }
+      if (other.bigtableMetadata_ != null) {
+        if (bigtableMetadata_ == null) {
+          BigtableMetadata = new global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigtableMetadata();
+        }
+        BigtableMetadata.MergeFrom(other.BigtableMetadata);
       }
       switch (other.SourceCase) {
         case SourceOneofCase.BigQuerySource:
@@ -889,6 +928,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             SatisfiesPzi = input.ReadBool();
             break;
           }
+          case 178: {
+            if (bigtableMetadata_ == null) {
+              BigtableMetadata = new global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigtableMetadata();
+            }
+            input.ReadMessage(BigtableMetadata);
+            break;
+          }
         }
       }
     #endif
@@ -992,6 +1038,13 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 160: {
             SatisfiesPzi = input.ReadBool();
+            break;
+          }
+          case 178: {
+            if (bigtableMetadata_ == null) {
+              BigtableMetadata = new global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigtableMetadata();
+            }
+            input.ReadMessage(BigtableMetadata);
             break;
           }
         }
@@ -3337,6 +3390,203 @@ namespace Google.Cloud.AIPlatform.V1 {
                   AutomaticResources = new global::Google.Cloud.AIPlatform.V1.AutomaticResources();
                 }
                 input.ReadMessage(AutomaticResources);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Metadata for the Cloud Bigtable that supports directly interacting Bigtable
+      /// instances.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class BigtableMetadata : pb::IMessage<BigtableMetadata>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<BigtableMetadata> _parser = new pb::MessageParser<BigtableMetadata>(() => new BigtableMetadata());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<BigtableMetadata> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.FeatureView.Descriptor.NestedTypes[7]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public BigtableMetadata() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public BigtableMetadata(BigtableMetadata other) : this() {
+          readAppProfile_ = other.readAppProfile_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public BigtableMetadata Clone() {
+          return new BigtableMetadata(this);
+        }
+
+        /// <summary>Field number for the "read_app_profile" field.</summary>
+        public const int ReadAppProfileFieldNumber = 1;
+        private string readAppProfile_ = "";
+        /// <summary>
+        /// The Bigtable App Profile to use for reading from Bigtable.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ReadAppProfile {
+          get { return readAppProfile_; }
+          set {
+            readAppProfile_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as BigtableMetadata);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(BigtableMetadata other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ReadAppProfile != other.ReadAppProfile) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ReadAppProfile.Length != 0) hash ^= ReadAppProfile.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ReadAppProfile.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ReadAppProfile);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ReadAppProfile.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ReadAppProfile);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ReadAppProfile.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ReadAppProfile);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(BigtableMetadata other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ReadAppProfile.Length != 0) {
+            ReadAppProfile = other.ReadAppProfile;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                ReadAppProfile = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                ReadAppProfile = input.ReadString();
                 break;
               }
             }

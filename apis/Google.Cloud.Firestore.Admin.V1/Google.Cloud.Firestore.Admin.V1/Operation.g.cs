@@ -27,84 +27,93 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             "Cilnb29nbGUvZmlyZXN0b3JlL2FkbWluL3YxL29wZXJhdGlvbi5wcm90bxIZ",
             "Z29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MRoZZ29vZ2xlL2FwaS9yZXNvdXJj",
             "ZS5wcm90bxolZ29vZ2xlL2ZpcmVzdG9yZS9hZG1pbi92MS9pbmRleC5wcm90",
-            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byK9AgoWSW5kZXhP",
-            "cGVyYXRpb25NZXRhZGF0YRIuCgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgCIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASDQoFaW5kZXgYAyABKAkSOAoFc3RhdGUY",
-            "BCABKA4yKS5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLk9wZXJhdGlvblN0",
-            "YXRlEj8KEnByb2dyZXNzX2RvY3VtZW50cxgFIAEoCzIjLmdvb2dsZS5maXJl",
-            "c3RvcmUuYWRtaW4udjEuUHJvZ3Jlc3MSOwoOcHJvZ3Jlc3NfYnl0ZXMYBiAB",
-            "KAsyIy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLlByb2dyZXNzIpkHChZG",
-            "aWVsZE9wZXJhdGlvbk1ldGFkYXRhEi4KCnN0YXJ0X3RpbWUYASABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAIgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBINCgVmaWVsZBgDIAEoCRJfChNp",
-            "bmRleF9jb25maWdfZGVsdGFzGAQgAygLMkIuZ29vZ2xlLmZpcmVzdG9yZS5h",
-            "ZG1pbi52MS5GaWVsZE9wZXJhdGlvbk1ldGFkYXRhLkluZGV4Q29uZmlnRGVs",
-            "dGESOAoFc3RhdGUYBSABKA4yKS5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYx",
-            "Lk9wZXJhdGlvblN0YXRlEj8KEnByb2dyZXNzX2RvY3VtZW50cxgGIAEoCzIj",
-            "Lmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuUHJvZ3Jlc3MSOwoOcHJvZ3Jl",
-            "c3NfYnl0ZXMYByABKAsyIy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLlBy",
-            "b2dyZXNzEloKEHR0bF9jb25maWdfZGVsdGEYCCABKAsyQC5nb29nbGUuZmly",
-            "ZXN0b3JlLmFkbWluLnYxLkZpZWxkT3BlcmF0aW9uTWV0YWRhdGEuVHRsQ29u",
-            "ZmlnRGVsdGEa5wEKEEluZGV4Q29uZmlnRGVsdGESYgoLY2hhbmdlX3R5cGUY",
-            "ASABKA4yTS5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLkZpZWxkT3BlcmF0",
-            "aW9uTWV0YWRhdGEuSW5kZXhDb25maWdEZWx0YS5DaGFuZ2VUeXBlEi8KBWlu",
-            "ZGV4GAIgASgLMiAuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleCI+",
-            "CgpDaGFuZ2VUeXBlEhsKF0NIQU5HRV9UWVBFX1VOU1BFQ0lGSUVEEAASBwoD",
-            "QUREEAESCgoGUkVNT1ZFEAIasgEKDlR0bENvbmZpZ0RlbHRhEmAKC2NoYW5n",
-            "ZV90eXBlGAEgASgOMksuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5GaWVs",
-            "ZE9wZXJhdGlvbk1ldGFkYXRhLlR0bENvbmZpZ0RlbHRhLkNoYW5nZVR5cGUi",
-            "PgoKQ2hhbmdlVHlwZRIbChdDSEFOR0VfVFlQRV9VTlNQRUNJRklFRBAAEgcK",
-            "A0FERBABEgoKBlJFTU9WRRACIrYDChdFeHBvcnREb2N1bWVudHNNZXRhZGF0",
-            "YRIuCgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcBIsCghlbmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXASQgoPb3BlcmF0aW9uX3N0YXRlGAMgASgOMikuZ29vZ2xlLmZpcmVz",
-            "dG9yZS5hZG1pbi52MS5PcGVyYXRpb25TdGF0ZRI/ChJwcm9ncmVzc19kb2N1",
-            "bWVudHMYBCABKAsyIy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLlByb2dy",
-            "ZXNzEjsKDnByb2dyZXNzX2J5dGVzGAUgASgLMiMuZ29vZ2xlLmZpcmVzdG9y",
-            "ZS5hZG1pbi52MS5Qcm9ncmVzcxIWCg5jb2xsZWN0aW9uX2lkcxgGIAMoCRIZ",
-            "ChFvdXRwdXRfdXJpX3ByZWZpeBgHIAEoCRIVCg1uYW1lc3BhY2VfaWRzGAgg",
-            "AygJEjEKDXNuYXBzaG90X3RpbWUYCSABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wIoIDChdJbXBvcnREb2N1bWVudHNNZXRhZGF0YRIuCgpzdGFy",
-            "dF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghl",
-            "bmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASQgoP",
-            "b3BlcmF0aW9uX3N0YXRlGAMgASgOMikuZ29vZ2xlLmZpcmVzdG9yZS5hZG1p",
-            "bi52MS5PcGVyYXRpb25TdGF0ZRI/ChJwcm9ncmVzc19kb2N1bWVudHMYBCAB",
-            "KAsyIy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLlByb2dyZXNzEjsKDnBy",
-            "b2dyZXNzX2J5dGVzGAUgASgLMiMuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52",
-            "MS5Qcm9ncmVzcxIWCg5jb2xsZWN0aW9uX2lkcxgGIAMoCRIYChBpbnB1dF91",
-            "cmlfcHJlZml4GAcgASgJEhUKDW5hbWVzcGFjZV9pZHMYCCADKAkinwMKG0J1",
-            "bGtEZWxldGVEb2N1bWVudHNNZXRhZGF0YRIuCgpzdGFydF90aW1lGAEgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgCIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASQgoPb3BlcmF0aW9uX3N0",
-            "YXRlGAMgASgOMikuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5PcGVyYXRp",
-            "b25TdGF0ZRI/ChJwcm9ncmVzc19kb2N1bWVudHMYBCABKAsyIy5nb29nbGUu",
-            "ZmlyZXN0b3JlLmFkbWluLnYxLlByb2dyZXNzEjsKDnByb2dyZXNzX2J5dGVz",
-            "GAUgASgLMiMuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5Qcm9ncmVzcxIW",
-            "Cg5jb2xsZWN0aW9uX2lkcxgGIAMoCRIVCg1uYW1lc3BhY2VfaWRzGAcgAygJ",
-            "EjEKDXNuYXBzaG90X3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wIjQKF0V4cG9ydERvY3VtZW50c1Jlc3BvbnNlEhkKEW91dHB1dF91",
-            "cmlfcHJlZml4GAEgASgJIu0CChdSZXN0b3JlRGF0YWJhc2VNZXRhZGF0YRIu",
+            "bxooZ29vZ2xlL2ZpcmVzdG9yZS9hZG1pbi92MS9zbmFwc2hvdC5wcm90bxof",
+            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byK9AgoWSW5kZXhPcGVy",
+            "YXRpb25NZXRhZGF0YRIuCgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgCIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXASDQoFaW5kZXgYAyABKAkSOAoFc3RhdGUYBCAB",
+            "KA4yKS5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLk9wZXJhdGlvblN0YXRl",
+            "Ej8KEnByb2dyZXNzX2RvY3VtZW50cxgFIAEoCzIjLmdvb2dsZS5maXJlc3Rv",
+            "cmUuYWRtaW4udjEuUHJvZ3Jlc3MSOwoOcHJvZ3Jlc3NfYnl0ZXMYBiABKAsy",
+            "Iy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLlByb2dyZXNzIpkHChZGaWVs",
+            "ZE9wZXJhdGlvbk1ldGFkYXRhEi4KCnN0YXJ0X3RpbWUYASABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAIgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBINCgVmaWVsZBgDIAEoCRJfChNpbmRl",
+            "eF9jb25maWdfZGVsdGFzGAQgAygLMkIuZ29vZ2xlLmZpcmVzdG9yZS5hZG1p",
+            "bi52MS5GaWVsZE9wZXJhdGlvbk1ldGFkYXRhLkluZGV4Q29uZmlnRGVsdGES",
+            "OAoFc3RhdGUYBSABKA4yKS5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLk9w",
+            "ZXJhdGlvblN0YXRlEj8KEnByb2dyZXNzX2RvY3VtZW50cxgGIAEoCzIjLmdv",
+            "b2dsZS5maXJlc3RvcmUuYWRtaW4udjEuUHJvZ3Jlc3MSOwoOcHJvZ3Jlc3Nf",
+            "Ynl0ZXMYByABKAsyIy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLlByb2dy",
+            "ZXNzEloKEHR0bF9jb25maWdfZGVsdGEYCCABKAsyQC5nb29nbGUuZmlyZXN0",
+            "b3JlLmFkbWluLnYxLkZpZWxkT3BlcmF0aW9uTWV0YWRhdGEuVHRsQ29uZmln",
+            "RGVsdGEa5wEKEEluZGV4Q29uZmlnRGVsdGESYgoLY2hhbmdlX3R5cGUYASAB",
+            "KA4yTS5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLkZpZWxkT3BlcmF0aW9u",
+            "TWV0YWRhdGEuSW5kZXhDb25maWdEZWx0YS5DaGFuZ2VUeXBlEi8KBWluZGV4",
+            "GAIgASgLMiAuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleCI+CgpD",
+            "aGFuZ2VUeXBlEhsKF0NIQU5HRV9UWVBFX1VOU1BFQ0lGSUVEEAASBwoDQURE",
+            "EAESCgoGUkVNT1ZFEAIasgEKDlR0bENvbmZpZ0RlbHRhEmAKC2NoYW5nZV90",
+            "eXBlGAEgASgOMksuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5GaWVsZE9w",
+            "ZXJhdGlvbk1ldGFkYXRhLlR0bENvbmZpZ0RlbHRhLkNoYW5nZVR5cGUiPgoK",
+            "Q2hhbmdlVHlwZRIbChdDSEFOR0VfVFlQRV9VTlNQRUNJRklFRBAAEgcKA0FE",
+            "RBABEgoKBlJFTU9WRRACIrYDChdFeHBvcnREb2N1bWVudHNNZXRhZGF0YRIu",
             "CgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
             "cBIsCghlbmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
             "bXASQgoPb3BlcmF0aW9uX3N0YXRlGAMgASgOMikuZ29vZ2xlLmZpcmVzdG9y",
-            "ZS5hZG1pbi52MS5PcGVyYXRpb25TdGF0ZRI4CghkYXRhYmFzZRgEIAEoCUIm",
-            "+kEjCiFmaXJlc3RvcmUuZ29vZ2xlYXBpcy5jb20vRGF0YWJhc2USNAoGYmFj",
-            "a3VwGAUgASgJQiT6QSEKH2ZpcmVzdG9yZS5nb29nbGVhcGlzLmNvbS9CYWNr",
-            "dXASQAoTcHJvZ3Jlc3NfcGVyY2VudGFnZRgIIAEoCzIjLmdvb2dsZS5maXJl",
-            "c3RvcmUuYWRtaW4udjEuUHJvZ3Jlc3MiOgoIUHJvZ3Jlc3MSFgoOZXN0aW1h",
-            "dGVkX3dvcmsYASABKAMSFgoOY29tcGxldGVkX3dvcmsYAiABKAMqngEKDk9w",
-            "ZXJhdGlvblN0YXRlEh8KG09QRVJBVElPTl9TVEFURV9VTlNQRUNJRklFRBAA",
-            "EhAKDElOSVRJQUxJWklORxABEg4KClBST0NFU1NJTkcQAhIOCgpDQU5DRUxM",
-            "SU5HEAMSDgoKRklOQUxJWklORxAEEg4KClNVQ0NFU1NGVUwQBRIKCgZGQUlM",
-            "RUQQBhINCglDQU5DRUxMRUQQB0LdAQodY29tLmdvb2dsZS5maXJlc3RvcmUu",
-            "YWRtaW4udjFCDk9wZXJhdGlvblByb3RvUAFaOWNsb3VkLmdvb2dsZS5jb20v",
-            "Z28vZmlyZXN0b3JlL2FwaXYxL2FkbWluL2FkbWlucGI7YWRtaW5wYqICBEdD",
-            "RlOqAh9Hb29nbGUuQ2xvdWQuRmlyZXN0b3JlLkFkbWluLlYxygIfR29vZ2xl",
-            "XENsb3VkXEZpcmVzdG9yZVxBZG1pblxWMeoCI0dvb2dsZTo6Q2xvdWQ6OkZp",
-            "cmVzdG9yZTo6QWRtaW46OlYxYgZwcm90bzM="));
+            "ZS5hZG1pbi52MS5PcGVyYXRpb25TdGF0ZRI/ChJwcm9ncmVzc19kb2N1bWVu",
+            "dHMYBCABKAsyIy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLlByb2dyZXNz",
+            "EjsKDnByb2dyZXNzX2J5dGVzGAUgASgLMiMuZ29vZ2xlLmZpcmVzdG9yZS5h",
+            "ZG1pbi52MS5Qcm9ncmVzcxIWCg5jb2xsZWN0aW9uX2lkcxgGIAMoCRIZChFv",
+            "dXRwdXRfdXJpX3ByZWZpeBgHIAEoCRIVCg1uYW1lc3BhY2VfaWRzGAggAygJ",
+            "EjEKDXNuYXBzaG90X3RpbWUYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wIoIDChdJbXBvcnREb2N1bWVudHNNZXRhZGF0YRIuCgpzdGFydF90",
+            "aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRf",
+            "dGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASQgoPb3Bl",
+            "cmF0aW9uX3N0YXRlGAMgASgOMikuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52",
+            "MS5PcGVyYXRpb25TdGF0ZRI/ChJwcm9ncmVzc19kb2N1bWVudHMYBCABKAsy",
+            "Iy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLlByb2dyZXNzEjsKDnByb2dy",
+            "ZXNzX2J5dGVzGAUgASgLMiMuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5Q",
+            "cm9ncmVzcxIWCg5jb2xsZWN0aW9uX2lkcxgGIAMoCRIYChBpbnB1dF91cmlf",
+            "cHJlZml4GAcgASgJEhUKDW5hbWVzcGFjZV9pZHMYCCADKAkinwMKG0J1bGtE",
+            "ZWxldGVEb2N1bWVudHNNZXRhZGF0YRIuCgpzdGFydF90aW1lGAEgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgCIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASQgoPb3BlcmF0aW9uX3N0YXRl",
+            "GAMgASgOMikuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5PcGVyYXRpb25T",
+            "dGF0ZRI/ChJwcm9ncmVzc19kb2N1bWVudHMYBCABKAsyIy5nb29nbGUuZmly",
+            "ZXN0b3JlLmFkbWluLnYxLlByb2dyZXNzEjsKDnByb2dyZXNzX2J5dGVzGAUg",
+            "ASgLMiMuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5Qcm9ncmVzcxIWCg5j",
+            "b2xsZWN0aW9uX2lkcxgGIAMoCRIVCg1uYW1lc3BhY2VfaWRzGAcgAygJEjEK",
+            "DXNuYXBzaG90X3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wIjQKF0V4cG9ydERvY3VtZW50c1Jlc3BvbnNlEhkKEW91dHB1dF91cmlf",
+            "cHJlZml4GAEgASgJIu0CChdSZXN0b3JlRGF0YWJhc2VNZXRhZGF0YRIuCgpz",
+            "dGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIs",
+            "CghlbmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
+            "QgoPb3BlcmF0aW9uX3N0YXRlGAMgASgOMikuZ29vZ2xlLmZpcmVzdG9yZS5h",
+            "ZG1pbi52MS5PcGVyYXRpb25TdGF0ZRI4CghkYXRhYmFzZRgEIAEoCUIm+kEj",
+            "CiFmaXJlc3RvcmUuZ29vZ2xlYXBpcy5jb20vRGF0YWJhc2USNAoGYmFja3Vw",
+            "GAUgASgJQiT6QSEKH2ZpcmVzdG9yZS5nb29nbGVhcGlzLmNvbS9CYWNrdXAS",
+            "QAoTcHJvZ3Jlc3NfcGVyY2VudGFnZRgIIAEoCzIjLmdvb2dsZS5maXJlc3Rv",
+            "cmUuYWRtaW4udjEuUHJvZ3Jlc3Mi9QIKFUNsb25lRGF0YWJhc2VNZXRhZGF0",
+            "YRIuCgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcBIsCghlbmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXASQgoPb3BlcmF0aW9uX3N0YXRlGAMgASgOMikuZ29vZ2xlLmZpcmVz",
+            "dG9yZS5hZG1pbi52MS5PcGVyYXRpb25TdGF0ZRI4CghkYXRhYmFzZRgEIAEo",
+            "CUIm+kEjCiFmaXJlc3RvcmUuZ29vZ2xlYXBpcy5jb20vRGF0YWJhc2USPgoN",
+            "cGl0cl9zbmFwc2hvdBgHIAEoCzInLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4u",
+            "djEuUGl0clNuYXBzaG90EkAKE3Byb2dyZXNzX3BlcmNlbnRhZ2UYBiABKAsy",
+            "Iy5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLlByb2dyZXNzIjoKCFByb2dy",
+            "ZXNzEhYKDmVzdGltYXRlZF93b3JrGAEgASgDEhYKDmNvbXBsZXRlZF93b3Jr",
+            "GAIgASgDKp4BCg5PcGVyYXRpb25TdGF0ZRIfChtPUEVSQVRJT05fU1RBVEVf",
+            "VU5TUEVDSUZJRUQQABIQCgxJTklUSUFMSVpJTkcQARIOCgpQUk9DRVNTSU5H",
+            "EAISDgoKQ0FOQ0VMTElORxADEg4KCkZJTkFMSVpJTkcQBBIOCgpTVUNDRVNT",
+            "RlVMEAUSCgoGRkFJTEVEEAYSDQoJQ0FOQ0VMTEVEEAdC3QEKHWNvbS5nb29n",
+            "bGUuZmlyZXN0b3JlLmFkbWluLnYxQg5PcGVyYXRpb25Qcm90b1ABWjljbG91",
+            "ZC5nb29nbGUuY29tL2dvL2ZpcmVzdG9yZS9hcGl2MS9hZG1pbi9hZG1pbnBi",
+            "O2FkbWlucGKiAgRHQ0ZTqgIfR29vZ2xlLkNsb3VkLkZpcmVzdG9yZS5BZG1p",
+            "bi5WMcoCH0dvb2dsZVxDbG91ZFxGaXJlc3RvcmVcQWRtaW5cVjHqAiNHb29n",
+            "bGU6OkNsb3VkOjpGaXJlc3RvcmU6OkFkbWluOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Firestore.Admin.V1.IndexReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Firestore.Admin.V1.IndexReflection.Descriptor, global::Google.Cloud.Firestore.Admin.V1.SnapshotReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Firestore.Admin.V1.OperationState), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.IndexOperationMetadata), global::Google.Cloud.Firestore.Admin.V1.IndexOperationMetadata.Parser, new[]{ "StartTime", "EndTime", "Index", "State", "ProgressDocuments", "ProgressBytes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata), global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Parser, new[]{ "StartTime", "EndTime", "Field", "IndexConfigDeltas", "State", "ProgressDocuments", "ProgressBytes", "TtlConfigDelta" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta), global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta.Parser, new[]{ "ChangeType", "Index" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.FieldOperationMetadata.Types.IndexConfigDelta.Types.ChangeType) }, null, null),
@@ -114,6 +123,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsMetadata), global::Google.Cloud.Firestore.Admin.V1.BulkDeleteDocumentsMetadata.Parser, new[]{ "StartTime", "EndTime", "OperationState", "ProgressDocuments", "ProgressBytes", "CollectionIds", "NamespaceIds", "SnapshotTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsResponse), global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsResponse.Parser, new[]{ "OutputUriPrefix" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.RestoreDatabaseMetadata), global::Google.Cloud.Firestore.Admin.V1.RestoreDatabaseMetadata.Parser, new[]{ "StartTime", "EndTime", "OperationState", "Database", "Backup", "ProgressPercentage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.CloneDatabaseMetadata), global::Google.Cloud.Firestore.Admin.V1.CloneDatabaseMetadata.Parser, new[]{ "StartTime", "EndTime", "OperationState", "Database", "PitrSnapshot", "ProgressPercentage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Progress), global::Google.Cloud.Firestore.Admin.V1.Progress.Parser, new[]{ "EstimatedWork", "CompletedWork" }, null, null, null, null)
           }));
     }
@@ -3783,6 +3793,439 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   }
 
   /// <summary>
+  /// Metadata for the [long-running operation][google.longrunning.Operation] from
+  /// the [CloneDatabase][google.firestore.admin.v1.CloneDatabase] request.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CloneDatabaseMetadata : pb::IMessage<CloneDatabaseMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CloneDatabaseMetadata> _parser = new pb::MessageParser<CloneDatabaseMetadata>(() => new CloneDatabaseMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CloneDatabaseMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Firestore.Admin.V1.OperationReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CloneDatabaseMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CloneDatabaseMetadata(CloneDatabaseMetadata other) : this() {
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      operationState_ = other.operationState_;
+      database_ = other.database_;
+      pitrSnapshot_ = other.pitrSnapshot_ != null ? other.pitrSnapshot_.Clone() : null;
+      progressPercentage_ = other.progressPercentage_ != null ? other.progressPercentage_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CloneDatabaseMetadata Clone() {
+      return new CloneDatabaseMetadata(this);
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// The time the clone was started.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// The time the clone finished, unset for ongoing clones.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "operation_state" field.</summary>
+    public const int OperationStateFieldNumber = 3;
+    private global::Google.Cloud.Firestore.Admin.V1.OperationState operationState_ = global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified;
+    /// <summary>
+    /// The operation state of the clone.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.Admin.V1.OperationState OperationState {
+      get { return operationState_; }
+      set {
+        operationState_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "database" field.</summary>
+    public const int DatabaseFieldNumber = 4;
+    private string database_ = "";
+    /// <summary>
+    /// The name of the database being cloned to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Database {
+      get { return database_; }
+      set {
+        database_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "pitr_snapshot" field.</summary>
+    public const int PitrSnapshotFieldNumber = 7;
+    private global::Google.Cloud.Firestore.Admin.V1.PitrSnapshot pitrSnapshot_;
+    /// <summary>
+    /// The snapshot from which this database was cloned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.Admin.V1.PitrSnapshot PitrSnapshot {
+      get { return pitrSnapshot_; }
+      set {
+        pitrSnapshot_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "progress_percentage" field.</summary>
+    public const int ProgressPercentageFieldNumber = 6;
+    private global::Google.Cloud.Firestore.Admin.V1.Progress progressPercentage_;
+    /// <summary>
+    /// How far along the clone is as an estimated percentage of remaining time.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.Admin.V1.Progress ProgressPercentage {
+      get { return progressPercentage_; }
+      set {
+        progressPercentage_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CloneDatabaseMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CloneDatabaseMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (OperationState != other.OperationState) return false;
+      if (Database != other.Database) return false;
+      if (!object.Equals(PitrSnapshot, other.PitrSnapshot)) return false;
+      if (!object.Equals(ProgressPercentage, other.ProgressPercentage)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (OperationState != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) hash ^= OperationState.GetHashCode();
+      if (Database.Length != 0) hash ^= Database.GetHashCode();
+      if (pitrSnapshot_ != null) hash ^= PitrSnapshot.GetHashCode();
+      if (progressPercentage_ != null) hash ^= ProgressPercentage.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (OperationState != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) OperationState);
+      }
+      if (Database.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Database);
+      }
+      if (progressPercentage_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ProgressPercentage);
+      }
+      if (pitrSnapshot_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(PitrSnapshot);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (OperationState != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) OperationState);
+      }
+      if (Database.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Database);
+      }
+      if (progressPercentage_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ProgressPercentage);
+      }
+      if (pitrSnapshot_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(PitrSnapshot);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (OperationState != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OperationState);
+      }
+      if (Database.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Database);
+      }
+      if (pitrSnapshot_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PitrSnapshot);
+      }
+      if (progressPercentage_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProgressPercentage);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CloneDatabaseMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      if (other.OperationState != global::Google.Cloud.Firestore.Admin.V1.OperationState.Unspecified) {
+        OperationState = other.OperationState;
+      }
+      if (other.Database.Length != 0) {
+        Database = other.Database;
+      }
+      if (other.pitrSnapshot_ != null) {
+        if (pitrSnapshot_ == null) {
+          PitrSnapshot = new global::Google.Cloud.Firestore.Admin.V1.PitrSnapshot();
+        }
+        PitrSnapshot.MergeFrom(other.PitrSnapshot);
+      }
+      if (other.progressPercentage_ != null) {
+        if (progressPercentage_ == null) {
+          ProgressPercentage = new global::Google.Cloud.Firestore.Admin.V1.Progress();
+        }
+        ProgressPercentage.MergeFrom(other.ProgressPercentage);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 24: {
+            OperationState = (global::Google.Cloud.Firestore.Admin.V1.OperationState) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            Database = input.ReadString();
+            break;
+          }
+          case 50: {
+            if (progressPercentage_ == null) {
+              ProgressPercentage = new global::Google.Cloud.Firestore.Admin.V1.Progress();
+            }
+            input.ReadMessage(ProgressPercentage);
+            break;
+          }
+          case 58: {
+            if (pitrSnapshot_ == null) {
+              PitrSnapshot = new global::Google.Cloud.Firestore.Admin.V1.PitrSnapshot();
+            }
+            input.ReadMessage(PitrSnapshot);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 24: {
+            OperationState = (global::Google.Cloud.Firestore.Admin.V1.OperationState) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            Database = input.ReadString();
+            break;
+          }
+          case 50: {
+            if (progressPercentage_ == null) {
+              ProgressPercentage = new global::Google.Cloud.Firestore.Admin.V1.Progress();
+            }
+            input.ReadMessage(ProgressPercentage);
+            break;
+          }
+          case 58: {
+            if (pitrSnapshot_ == null) {
+              PitrSnapshot = new global::Google.Cloud.Firestore.Admin.V1.PitrSnapshot();
+            }
+            input.ReadMessage(PitrSnapshot);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Describes the progress of the operation.
   /// Unit of work is generic and must be interpreted based on where
   /// [Progress][google.firestore.admin.v1.Progress] is used.
@@ -3802,7 +4245,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Firestore.Admin.V1.OperationReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Firestore.Admin.V1.OperationReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -54,6 +54,7 @@ namespace Google.Cloud.Compute.V1
             DeleteSignedUrlKeySettings = existing.DeleteSignedUrlKeySettings;
             DeleteSignedUrlKeyOperationsSettings = existing.DeleteSignedUrlKeyOperationsSettings.Clone();
             GetSettings = existing.GetSettings;
+            GetEffectiveSecurityPoliciesSettings = existing.GetEffectiveSecurityPoliciesSettings;
             GetHealthSettings = existing.GetHealthSettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             InsertSettings = existing.InsertSettings;
@@ -206,6 +207,28 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackendServicesClient.GetEffectiveSecurityPolicies</c> and
+        /// <c>BackendServicesClient.GetEffectiveSecurityPoliciesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetEffectiveSecurityPoliciesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1096,6 +1119,83 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<BackendService> GetAsync(string project, string backendService, st::CancellationToken cancellationToken) =>
             GetAsync(project, backendService, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns effective security policies applied to this backend service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GetEffectiveSecurityPoliciesBackendServiceResponse GetEffectiveSecurityPolicies(GetEffectiveSecurityPoliciesBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns effective security policies applied to this backend service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetEffectiveSecurityPoliciesBackendServiceResponse> GetEffectiveSecurityPoliciesAsync(GetEffectiveSecurityPoliciesBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns effective security policies applied to this backend service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetEffectiveSecurityPoliciesBackendServiceResponse> GetEffectiveSecurityPoliciesAsync(GetEffectiveSecurityPoliciesBackendServiceRequest request, st::CancellationToken cancellationToken) =>
+            GetEffectiveSecurityPoliciesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns effective security policies applied to this backend service.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="backendService">
+        /// Name of the Backend Service for this request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GetEffectiveSecurityPoliciesBackendServiceResponse GetEffectiveSecurityPolicies(string project, string backendService, gaxgrpc::CallSettings callSettings = null) =>
+            GetEffectiveSecurityPolicies(new GetEffectiveSecurityPoliciesBackendServiceRequest
+            {
+                BackendService = gax::GaxPreconditions.CheckNotNullOrEmpty(backendService, nameof(backendService)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns effective security policies applied to this backend service.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="backendService">
+        /// Name of the Backend Service for this request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetEffectiveSecurityPoliciesBackendServiceResponse> GetEffectiveSecurityPoliciesAsync(string project, string backendService, gaxgrpc::CallSettings callSettings = null) =>
+            GetEffectiveSecurityPoliciesAsync(new GetEffectiveSecurityPoliciesBackendServiceRequest
+            {
+                BackendService = gax::GaxPreconditions.CheckNotNullOrEmpty(backendService, nameof(backendService)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns effective security policies applied to this backend service.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="backendService">
+        /// Name of the Backend Service for this request.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GetEffectiveSecurityPoliciesBackendServiceResponse> GetEffectiveSecurityPoliciesAsync(string project, string backendService, st::CancellationToken cancellationToken) =>
+            GetEffectiveSecurityPoliciesAsync(project, backendService, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the most recent health check results for this BackendService. Example request body: { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
@@ -2181,6 +2281,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<GetBackendServiceRequest, BackendService> _callGet;
 
+        private readonly gaxgrpc::ApiCall<GetEffectiveSecurityPoliciesBackendServiceRequest, GetEffectiveSecurityPoliciesBackendServiceResponse> _callGetEffectiveSecurityPolicies;
+
         private readonly gaxgrpc::ApiCall<GetHealthBackendServiceRequest, BackendServiceGroupHealth> _callGetHealth;
 
         private readonly gaxgrpc::ApiCall<GetIamPolicyBackendServiceRequest, Policy> _callGetIamPolicy;
@@ -2241,6 +2343,9 @@ namespace Google.Cloud.Compute.V1
             _callGet = clientHelper.BuildApiCall<GetBackendServiceRequest, BackendService>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("backend_service", request => request.BackendService);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
+            _callGetEffectiveSecurityPolicies = clientHelper.BuildApiCall<GetEffectiveSecurityPoliciesBackendServiceRequest, GetEffectiveSecurityPoliciesBackendServiceResponse>("GetEffectiveSecurityPolicies", grpcClient.GetEffectiveSecurityPoliciesAsync, grpcClient.GetEffectiveSecurityPolicies, effectiveSettings.GetEffectiveSecurityPoliciesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("backend_service", request => request.BackendService);
+            Modify_ApiCall(ref _callGetEffectiveSecurityPolicies);
+            Modify_GetEffectiveSecurityPoliciesApiCall(ref _callGetEffectiveSecurityPolicies);
             _callGetHealth = clientHelper.BuildApiCall<GetHealthBackendServiceRequest, BackendServiceGroupHealth>("GetHealth", grpcClient.GetHealthAsync, grpcClient.GetHealth, effectiveSettings.GetHealthSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("backend_service", request => request.BackendService);
             Modify_ApiCall(ref _callGetHealth);
             Modify_GetHealthApiCall(ref _callGetHealth);
@@ -2289,6 +2394,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_GetApiCall(ref gaxgrpc::ApiCall<GetBackendServiceRequest, BackendService> call);
 
+        partial void Modify_GetEffectiveSecurityPoliciesApiCall(ref gaxgrpc::ApiCall<GetEffectiveSecurityPoliciesBackendServiceRequest, GetEffectiveSecurityPoliciesBackendServiceResponse> call);
+
         partial void Modify_GetHealthApiCall(ref gaxgrpc::ApiCall<GetHealthBackendServiceRequest, BackendServiceGroupHealth> call);
 
         partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<GetIamPolicyBackendServiceRequest, Policy> call);
@@ -2325,6 +2432,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_DeleteSignedUrlKeyBackendServiceRequest(ref DeleteSignedUrlKeyBackendServiceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetBackendServiceRequest(ref GetBackendServiceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetEffectiveSecurityPoliciesBackendServiceRequest(ref GetEffectiveSecurityPoliciesBackendServiceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetHealthBackendServiceRequest(ref GetHealthBackendServiceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2495,6 +2604,30 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_GetBackendServiceRequest(ref request, ref callSettings);
             return _callGet.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns effective security policies applied to this backend service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GetEffectiveSecurityPoliciesBackendServiceResponse GetEffectiveSecurityPolicies(GetEffectiveSecurityPoliciesBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEffectiveSecurityPoliciesBackendServiceRequest(ref request, ref callSettings);
+            return _callGetEffectiveSecurityPolicies.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns effective security policies applied to this backend service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GetEffectiveSecurityPoliciesBackendServiceResponse> GetEffectiveSecurityPoliciesAsync(GetEffectiveSecurityPoliciesBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEffectiveSecurityPoliciesBackendServiceRequest(ref request, ref callSettings);
+            return _callGetEffectiveSecurityPolicies.Async(request, callSettings);
         }
 
         /// <summary>

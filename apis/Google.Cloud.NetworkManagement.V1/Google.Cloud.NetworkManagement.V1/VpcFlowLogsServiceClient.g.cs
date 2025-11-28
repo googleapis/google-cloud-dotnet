@@ -58,6 +58,8 @@ namespace Google.Cloud.NetworkManagement.V1
             UpdateVpcFlowLogsConfigOperationsSettings = existing.UpdateVpcFlowLogsConfigOperationsSettings.Clone();
             DeleteVpcFlowLogsConfigSettings = existing.DeleteVpcFlowLogsConfigSettings;
             DeleteVpcFlowLogsConfigOperationsSettings = existing.DeleteVpcFlowLogsConfigOperationsSettings.Clone();
+            QueryOrgVpcFlowLogsConfigsSettings = existing.QueryOrgVpcFlowLogsConfigsSettings;
+            ShowEffectiveFlowLogsConfigsSettings = existing.ShowEffectiveFlowLogsConfigsSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -183,6 +185,32 @@ namespace Google.Cloud.NetworkManagement.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VpcFlowLogsServiceClient.QueryOrgVpcFlowLogsConfigs</c> and
+        /// <c>VpcFlowLogsServiceClient.QueryOrgVpcFlowLogsConfigsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings QueryOrgVpcFlowLogsConfigsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VpcFlowLogsServiceClient.ShowEffectiveFlowLogsConfigs</c> and
+        /// <c>VpcFlowLogsServiceClient.ShowEffectiveFlowLogsConfigsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ShowEffectiveFlowLogsConfigsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -368,8 +396,13 @@ namespace Google.Cloud.NetworkManagement.V1
         /// Lists all `VpcFlowLogsConfigs` in a given project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the VpcFlowLogsConfig:
-        /// `projects/{project_id}/locations/global`
+        /// Required. The parent resource of the VpcFlowLogsConfig,
+        /// in one of the following formats:
+        /// 
+        /// - For project-level resourcs: `projects/{project_id}/locations/global`
+        /// 
+        /// - For organization-level resources:
+        /// `organizations/{organization_id}/locations/global`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -402,8 +435,13 @@ namespace Google.Cloud.NetworkManagement.V1
         /// Lists all `VpcFlowLogsConfigs` in a given project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the VpcFlowLogsConfig:
-        /// `projects/{project_id}/locations/global`
+        /// Required. The parent resource of the VpcFlowLogsConfig,
+        /// in one of the following formats:
+        /// 
+        /// - For project-level resourcs: `projects/{project_id}/locations/global`
+        /// 
+        /// - For organization-level resources:
+        /// `organizations/{organization_id}/locations/global`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -436,8 +474,13 @@ namespace Google.Cloud.NetworkManagement.V1
         /// Lists all `VpcFlowLogsConfigs` in a given project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the VpcFlowLogsConfig:
-        /// `projects/{project_id}/locations/global`
+        /// Required. The parent resource of the VpcFlowLogsConfig,
+        /// in one of the following formats:
+        /// 
+        /// - For project-level resourcs: `projects/{project_id}/locations/global`
+        /// 
+        /// - For organization-level resources:
+        /// `organizations/{organization_id}/locations/global`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -470,8 +513,13 @@ namespace Google.Cloud.NetworkManagement.V1
         /// Lists all `VpcFlowLogsConfigs` in a given project.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the VpcFlowLogsConfig:
-        /// `projects/{project_id}/locations/global`
+        /// Required. The parent resource of the VpcFlowLogsConfig,
+        /// in one of the following formats:
+        /// 
+        /// - For project-level resourcs: `projects/{project_id}/locations/global`
+        /// 
+        /// - For organization-level resources:
+        /// `organizations/{organization_id}/locations/global`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -488,6 +536,84 @@ namespace Google.Cloud.NetworkManagement.V1
             ListVpcFlowLogsConfigsRequest request = new ListVpcFlowLogsConfigsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVpcFlowLogsConfigsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all `VpcFlowLogsConfigs` in a given project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the VpcFlowLogsConfig,
+        /// in one of the following formats:
+        /// 
+        /// - For project-level resourcs: `projects/{project_id}/locations/global`
+        /// 
+        /// - For organization-level resources:
+        /// `organizations/{organization_id}/locations/global`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="VpcFlowLogsConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> ListVpcFlowLogsConfigs(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVpcFlowLogsConfigsRequest request = new ListVpcFlowLogsConfigsRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVpcFlowLogsConfigs(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all `VpcFlowLogsConfigs` in a given project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the VpcFlowLogsConfig,
+        /// in one of the following formats:
+        /// 
+        /// - For project-level resourcs: `projects/{project_id}/locations/global`
+        /// 
+        /// - For organization-level resources:
+        /// `organizations/{organization_id}/locations/global`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="VpcFlowLogsConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> ListVpcFlowLogsConfigsAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVpcFlowLogsConfigsRequest request = new ListVpcFlowLogsConfigsRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
             };
             if (pageToken != null)
             {
@@ -531,8 +657,14 @@ namespace Google.Cloud.NetworkManagement.V1
         /// Gets the details of a specific `VpcFlowLogsConfig`.
         /// </summary>
         /// <param name="name">
-        /// Required. `VpcFlowLogsConfig` resource name using the form:
-        /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+        /// Required. The resource name of the VpcFlowLogsConfig,
+        /// in one of the following formats:
+        /// 
+        /// - For project-level resources:
+        /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+        /// 
+        /// - For organization-level resources:
+        /// `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -546,8 +678,14 @@ namespace Google.Cloud.NetworkManagement.V1
         /// Gets the details of a specific `VpcFlowLogsConfig`.
         /// </summary>
         /// <param name="name">
-        /// Required. `VpcFlowLogsConfig` resource name using the form:
-        /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+        /// Required. The resource name of the VpcFlowLogsConfig,
+        /// in one of the following formats:
+        /// 
+        /// - For project-level resources:
+        /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+        /// 
+        /// - For organization-level resources:
+        /// `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -561,8 +699,14 @@ namespace Google.Cloud.NetworkManagement.V1
         /// Gets the details of a specific `VpcFlowLogsConfig`.
         /// </summary>
         /// <param name="name">
-        /// Required. `VpcFlowLogsConfig` resource name using the form:
-        /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+        /// Required. The resource name of the VpcFlowLogsConfig,
+        /// in one of the following formats:
+        /// 
+        /// - For project-level resources:
+        /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+        /// 
+        /// - For organization-level resources:
+        /// `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -573,8 +717,14 @@ namespace Google.Cloud.NetworkManagement.V1
         /// Gets the details of a specific `VpcFlowLogsConfig`.
         /// </summary>
         /// <param name="name">
-        /// Required. `VpcFlowLogsConfig` resource name using the form:
-        /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+        /// Required. The resource name of the VpcFlowLogsConfig,
+        /// in one of the following formats:
+        /// 
+        /// - For project-level resources:
+        /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+        /// 
+        /// - For organization-level resources:
+        /// `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -588,8 +738,14 @@ namespace Google.Cloud.NetworkManagement.V1
         /// Gets the details of a specific `VpcFlowLogsConfig`.
         /// </summary>
         /// <param name="name">
-        /// Required. `VpcFlowLogsConfig` resource name using the form:
-        /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+        /// Required. The resource name of the VpcFlowLogsConfig,
+        /// in one of the following formats:
+        /// 
+        /// - For project-level resources:
+        /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+        /// 
+        /// - For organization-level resources:
+        /// `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -603,8 +759,14 @@ namespace Google.Cloud.NetworkManagement.V1
         /// Gets the details of a specific `VpcFlowLogsConfig`.
         /// </summary>
         /// <param name="name">
-        /// Required. `VpcFlowLogsConfig` resource name using the form:
-        /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+        /// Required. The resource name of the VpcFlowLogsConfig,
+        /// in one of the following formats:
+        /// 
+        /// - For project-level resources:
+        /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+        /// 
+        /// - For organization-level resources:
+        /// `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -617,8 +779,8 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Creating a configuration with state=DISABLED will fail
-        /// 2. The following fields are not considered as `settings` for the purpose
+        /// 1. Creating a configuration with `state=DISABLED` will fail
+        /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - creating another configuration
         /// with the same fields but different values for the following fields will
         /// fail as well:
@@ -640,8 +802,8 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Creating a configuration with state=DISABLED will fail
-        /// 2. The following fields are not considered as `settings` for the purpose
+        /// 1. Creating a configuration with `state=DISABLED` will fail
+        /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - creating another configuration
         /// with the same fields but different values for the following fields will
         /// fail as well:
@@ -663,8 +825,8 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Creating a configuration with state=DISABLED will fail
-        /// 2. The following fields are not considered as `settings` for the purpose
+        /// 1. Creating a configuration with `state=DISABLED` will fail
+        /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - creating another configuration
         /// with the same fields but different values for the following fields will
         /// fail as well:
@@ -713,8 +875,8 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Creating a configuration with state=DISABLED will fail
-        /// 2. The following fields are not considered as `settings` for the purpose
+        /// 1. Creating a configuration with `state=DISABLED` will fail
+        /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - creating another configuration
         /// with the same fields but different values for the following fields will
         /// fail as well:
@@ -725,8 +887,13 @@ namespace Google.Cloud.NetworkManagement.V1
         /// * description
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the VPC Flow Logs configuration to create:
-        /// `projects/{project_id}/locations/global`
+        /// Required. The parent resource of the VpcFlowLogsConfig to create,
+        /// in one of the following formats:
+        /// 
+        /// - For project-level resources: `projects/{project_id}/locations/global`
+        /// 
+        /// - For organization-level resources:
+        /// `organizations/{organization_id}/locations/global`
         /// </param>
         /// <param name="vpcFlowLogsConfig">
         /// Required. A `VpcFlowLogsConfig` resource
@@ -750,8 +917,8 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Creating a configuration with state=DISABLED will fail
-        /// 2. The following fields are not considered as `settings` for the purpose
+        /// 1. Creating a configuration with `state=DISABLED` will fail
+        /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - creating another configuration
         /// with the same fields but different values for the following fields will
         /// fail as well:
@@ -762,8 +929,13 @@ namespace Google.Cloud.NetworkManagement.V1
         /// * description
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the VPC Flow Logs configuration to create:
-        /// `projects/{project_id}/locations/global`
+        /// Required. The parent resource of the VpcFlowLogsConfig to create,
+        /// in one of the following formats:
+        /// 
+        /// - For project-level resources: `projects/{project_id}/locations/global`
+        /// 
+        /// - For organization-level resources:
+        /// `organizations/{organization_id}/locations/global`
         /// </param>
         /// <param name="vpcFlowLogsConfig">
         /// Required. A `VpcFlowLogsConfig` resource
@@ -787,8 +959,8 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Creating a configuration with state=DISABLED will fail
-        /// 2. The following fields are not considered as `settings` for the purpose
+        /// 1. Creating a configuration with `state=DISABLED` will fail
+        /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - creating another configuration
         /// with the same fields but different values for the following fields will
         /// fail as well:
@@ -799,8 +971,13 @@ namespace Google.Cloud.NetworkManagement.V1
         /// * description
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the VPC Flow Logs configuration to create:
-        /// `projects/{project_id}/locations/global`
+        /// Required. The parent resource of the VpcFlowLogsConfig to create,
+        /// in one of the following formats:
+        /// 
+        /// - For project-level resources: `projects/{project_id}/locations/global`
+        /// 
+        /// - For organization-level resources:
+        /// `organizations/{organization_id}/locations/global`
         /// </param>
         /// <param name="vpcFlowLogsConfig">
         /// Required. A `VpcFlowLogsConfig` resource
@@ -819,8 +996,8 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Creating a configuration with state=DISABLED will fail
-        /// 2. The following fields are not considered as `settings` for the purpose
+        /// 1. Creating a configuration with `state=DISABLED` will fail
+        /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - creating another configuration
         /// with the same fields but different values for the following fields will
         /// fail as well:
@@ -831,8 +1008,13 @@ namespace Google.Cloud.NetworkManagement.V1
         /// * description
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the VPC Flow Logs configuration to create:
-        /// `projects/{project_id}/locations/global`
+        /// Required. The parent resource of the VpcFlowLogsConfig to create,
+        /// in one of the following formats:
+        /// 
+        /// - For project-level resources: `projects/{project_id}/locations/global`
+        /// 
+        /// - For organization-level resources:
+        /// `organizations/{organization_id}/locations/global`
         /// </param>
         /// <param name="vpcFlowLogsConfig">
         /// Required. A `VpcFlowLogsConfig` resource
@@ -856,8 +1038,8 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Creating a configuration with state=DISABLED will fail
-        /// 2. The following fields are not considered as `settings` for the purpose
+        /// 1. Creating a configuration with `state=DISABLED` will fail
+        /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - creating another configuration
         /// with the same fields but different values for the following fields will
         /// fail as well:
@@ -868,8 +1050,13 @@ namespace Google.Cloud.NetworkManagement.V1
         /// * description
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the VPC Flow Logs configuration to create:
-        /// `projects/{project_id}/locations/global`
+        /// Required. The parent resource of the VpcFlowLogsConfig to create,
+        /// in one of the following formats:
+        /// 
+        /// - For project-level resources: `projects/{project_id}/locations/global`
+        /// 
+        /// - For organization-level resources:
+        /// `organizations/{organization_id}/locations/global`
         /// </param>
         /// <param name="vpcFlowLogsConfig">
         /// Required. A `VpcFlowLogsConfig` resource
@@ -893,8 +1080,8 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Creating a configuration with state=DISABLED will fail
-        /// 2. The following fields are not considered as `settings` for the purpose
+        /// 1. Creating a configuration with `state=DISABLED` will fail
+        /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - creating another configuration
         /// with the same fields but different values for the following fields will
         /// fail as well:
@@ -905,8 +1092,13 @@ namespace Google.Cloud.NetworkManagement.V1
         /// * description
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the VPC Flow Logs configuration to create:
-        /// `projects/{project_id}/locations/global`
+        /// Required. The parent resource of the VpcFlowLogsConfig to create,
+        /// in one of the following formats:
+        /// 
+        /// - For project-level resources: `projects/{project_id}/locations/global`
+        /// 
+        /// - For organization-level resources:
+        /// `organizations/{organization_id}/locations/global`
         /// </param>
         /// <param name="vpcFlowLogsConfig">
         /// Required. A `VpcFlowLogsConfig` resource
@@ -920,13 +1112,134 @@ namespace Google.Cloud.NetworkManagement.V1
             CreateVpcFlowLogsConfigAsync(parent, vpcFlowLogsConfig, vpcFlowLogsConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates a new `VpcFlowLogsConfig`.
+        /// If a configuration with the exact same settings already exists (even if the
+        /// ID is different), the creation fails.
+        /// Notes:
+        /// 
+        /// 1. Creating a configuration with `state=DISABLED` will fail
+        /// 2. The following fields are not considered as settings for the purpose
+        /// of the check mentioned above, therefore - creating another configuration
+        /// with the same fields but different values for the following fields will
+        /// fail as well:
+        /// * name
+        /// * create_time
+        /// * update_time
+        /// * labels
+        /// * description
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the VpcFlowLogsConfig to create,
+        /// in one of the following formats:
+        /// 
+        /// - For project-level resources: `projects/{project_id}/locations/global`
+        /// 
+        /// - For organization-level resources:
+        /// `organizations/{organization_id}/locations/global`
+        /// </param>
+        /// <param name="vpcFlowLogsConfig">
+        /// Required. A `VpcFlowLogsConfig` resource
+        /// </param>
+        /// <param name="vpcFlowLogsConfigId">
+        /// Required. ID of the `VpcFlowLogsConfig`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<VpcFlowLogsConfig, OperationMetadata> CreateVpcFlowLogsConfig(OrganizationLocationName parent, VpcFlowLogsConfig vpcFlowLogsConfig, VpcFlowLogsConfigName vpcFlowLogsConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateVpcFlowLogsConfig(new CreateVpcFlowLogsConfigRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                VpcFlowLogsConfigIdAsVpcFlowLogsConfigName = gax::GaxPreconditions.CheckNotNull(vpcFlowLogsConfigId, nameof(vpcFlowLogsConfigId)),
+                VpcFlowLogsConfig = gax::GaxPreconditions.CheckNotNull(vpcFlowLogsConfig, nameof(vpcFlowLogsConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `VpcFlowLogsConfig`.
+        /// If a configuration with the exact same settings already exists (even if the
+        /// ID is different), the creation fails.
+        /// Notes:
+        /// 
+        /// 1. Creating a configuration with `state=DISABLED` will fail
+        /// 2. The following fields are not considered as settings for the purpose
+        /// of the check mentioned above, therefore - creating another configuration
+        /// with the same fields but different values for the following fields will
+        /// fail as well:
+        /// * name
+        /// * create_time
+        /// * update_time
+        /// * labels
+        /// * description
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the VpcFlowLogsConfig to create,
+        /// in one of the following formats:
+        /// 
+        /// - For project-level resources: `projects/{project_id}/locations/global`
+        /// 
+        /// - For organization-level resources:
+        /// `organizations/{organization_id}/locations/global`
+        /// </param>
+        /// <param name="vpcFlowLogsConfig">
+        /// Required. A `VpcFlowLogsConfig` resource
+        /// </param>
+        /// <param name="vpcFlowLogsConfigId">
+        /// Required. ID of the `VpcFlowLogsConfig`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<VpcFlowLogsConfig, OperationMetadata>> CreateVpcFlowLogsConfigAsync(OrganizationLocationName parent, VpcFlowLogsConfig vpcFlowLogsConfig, VpcFlowLogsConfigName vpcFlowLogsConfigId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateVpcFlowLogsConfigAsync(new CreateVpcFlowLogsConfigRequest
+            {
+                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                VpcFlowLogsConfigIdAsVpcFlowLogsConfigName = gax::GaxPreconditions.CheckNotNull(vpcFlowLogsConfigId, nameof(vpcFlowLogsConfigId)),
+                VpcFlowLogsConfig = gax::GaxPreconditions.CheckNotNull(vpcFlowLogsConfig, nameof(vpcFlowLogsConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `VpcFlowLogsConfig`.
+        /// If a configuration with the exact same settings already exists (even if the
+        /// ID is different), the creation fails.
+        /// Notes:
+        /// 
+        /// 1. Creating a configuration with `state=DISABLED` will fail
+        /// 2. The following fields are not considered as settings for the purpose
+        /// of the check mentioned above, therefore - creating another configuration
+        /// with the same fields but different values for the following fields will
+        /// fail as well:
+        /// * name
+        /// * create_time
+        /// * update_time
+        /// * labels
+        /// * description
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the VpcFlowLogsConfig to create,
+        /// in one of the following formats:
+        /// 
+        /// - For project-level resources: `projects/{project_id}/locations/global`
+        /// 
+        /// - For organization-level resources:
+        /// `organizations/{organization_id}/locations/global`
+        /// </param>
+        /// <param name="vpcFlowLogsConfig">
+        /// Required. A `VpcFlowLogsConfig` resource
+        /// </param>
+        /// <param name="vpcFlowLogsConfigId">
+        /// Required. ID of the `VpcFlowLogsConfig`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<VpcFlowLogsConfig, OperationMetadata>> CreateVpcFlowLogsConfigAsync(OrganizationLocationName parent, VpcFlowLogsConfig vpcFlowLogsConfig, VpcFlowLogsConfigName vpcFlowLogsConfigId, st::CancellationToken cancellationToken) =>
+            CreateVpcFlowLogsConfigAsync(parent, vpcFlowLogsConfig, vpcFlowLogsConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Updates an existing `VpcFlowLogsConfig`.
         /// If a configuration with the exact same settings already exists (even if the
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Updating a configuration with state=DISABLED will fail.
-        /// 2. The following fields are not considered as `settings` for the purpose
+        /// 1. Updating a configuration with `state=DISABLED` will fail.
+        /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - updating another configuration
         /// with the same fields but different values for the following fields will
         /// fail as well:
@@ -948,8 +1261,8 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Updating a configuration with state=DISABLED will fail.
-        /// 2. The following fields are not considered as `settings` for the purpose
+        /// 1. Updating a configuration with `state=DISABLED` will fail.
+        /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - updating another configuration
         /// with the same fields but different values for the following fields will
         /// fail as well:
@@ -971,8 +1284,8 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Updating a configuration with state=DISABLED will fail.
-        /// 2. The following fields are not considered as `settings` for the purpose
+        /// 1. Updating a configuration with `state=DISABLED` will fail.
+        /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - updating another configuration
         /// with the same fields but different values for the following fields will
         /// fail as well:
@@ -1021,8 +1334,8 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Updating a configuration with state=DISABLED will fail.
-        /// 2. The following fields are not considered as `settings` for the purpose
+        /// 1. Updating a configuration with `state=DISABLED` will fail.
+        /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - updating another configuration
         /// with the same fields but different values for the following fields will
         /// fail as well:
@@ -1038,6 +1351,12 @@ namespace Google.Cloud.NetworkManagement.V1
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
         /// this field.
+        /// For example, to change the state of the configuration to ENABLED, specify
+        /// `update_mask` = `"state"`, and the `vpc_flow_logs_config` would be:
+        /// `vpc_flow_logs_config = {
+        /// name =
+        /// "projects/my-project/locations/global/vpcFlowLogsConfigs/my-config"
+        /// state = "ENABLED" }`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1054,8 +1373,8 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Updating a configuration with state=DISABLED will fail.
-        /// 2. The following fields are not considered as `settings` for the purpose
+        /// 1. Updating a configuration with `state=DISABLED` will fail.
+        /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - updating another configuration
         /// with the same fields but different values for the following fields will
         /// fail as well:
@@ -1071,6 +1390,12 @@ namespace Google.Cloud.NetworkManagement.V1
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
         /// this field.
+        /// For example, to change the state of the configuration to ENABLED, specify
+        /// `update_mask` = `"state"`, and the `vpc_flow_logs_config` would be:
+        /// `vpc_flow_logs_config = {
+        /// name =
+        /// "projects/my-project/locations/global/vpcFlowLogsConfigs/my-config"
+        /// state = "ENABLED" }`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1087,8 +1412,8 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Updating a configuration with state=DISABLED will fail.
-        /// 2. The following fields are not considered as `settings` for the purpose
+        /// 1. Updating a configuration with `state=DISABLED` will fail.
+        /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - updating another configuration
         /// with the same fields but different values for the following fields will
         /// fail as well:
@@ -1104,6 +1429,12 @@ namespace Google.Cloud.NetworkManagement.V1
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
         /// this field.
+        /// For example, to change the state of the configuration to ENABLED, specify
+        /// `update_mask` = `"state"`, and the `vpc_flow_logs_config` would be:
+        /// `vpc_flow_logs_config = {
+        /// name =
+        /// "projects/my-project/locations/global/vpcFlowLogsConfigs/my-config"
+        /// state = "ENABLED" }`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1168,8 +1499,14 @@ namespace Google.Cloud.NetworkManagement.V1
         /// Deletes a specific `VpcFlowLogsConfig`.
         /// </summary>
         /// <param name="name">
-        /// Required. `VpcFlowLogsConfig` resource name using the form:
-        /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+        /// Required. The resource name of the VpcFlowLogsConfig,
+        /// in one of the following formats:
+        /// 
+        /// - For a project-level resource:
+        /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+        /// 
+        /// - For an organization-level resource:
+        /// `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1183,8 +1520,14 @@ namespace Google.Cloud.NetworkManagement.V1
         /// Deletes a specific `VpcFlowLogsConfig`.
         /// </summary>
         /// <param name="name">
-        /// Required. `VpcFlowLogsConfig` resource name using the form:
-        /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+        /// Required. The resource name of the VpcFlowLogsConfig,
+        /// in one of the following formats:
+        /// 
+        /// - For a project-level resource:
+        /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+        /// 
+        /// - For an organization-level resource:
+        /// `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1198,8 +1541,14 @@ namespace Google.Cloud.NetworkManagement.V1
         /// Deletes a specific `VpcFlowLogsConfig`.
         /// </summary>
         /// <param name="name">
-        /// Required. `VpcFlowLogsConfig` resource name using the form:
-        /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+        /// Required. The resource name of the VpcFlowLogsConfig,
+        /// in one of the following formats:
+        /// 
+        /// - For a project-level resource:
+        /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+        /// 
+        /// - For an organization-level resource:
+        /// `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1210,8 +1559,14 @@ namespace Google.Cloud.NetworkManagement.V1
         /// Deletes a specific `VpcFlowLogsConfig`.
         /// </summary>
         /// <param name="name">
-        /// Required. `VpcFlowLogsConfig` resource name using the form:
-        /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+        /// Required. The resource name of the VpcFlowLogsConfig,
+        /// in one of the following formats:
+        /// 
+        /// - For a project-level resource:
+        /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+        /// 
+        /// - For an organization-level resource:
+        /// `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1225,8 +1580,14 @@ namespace Google.Cloud.NetworkManagement.V1
         /// Deletes a specific `VpcFlowLogsConfig`.
         /// </summary>
         /// <param name="name">
-        /// Required. `VpcFlowLogsConfig` resource name using the form:
-        /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+        /// Required. The resource name of the VpcFlowLogsConfig,
+        /// in one of the following formats:
+        /// 
+        /// - For a project-level resource:
+        /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+        /// 
+        /// - For an organization-level resource:
+        /// `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1240,13 +1601,59 @@ namespace Google.Cloud.NetworkManagement.V1
         /// Deletes a specific `VpcFlowLogsConfig`.
         /// </summary>
         /// <param name="name">
-        /// Required. `VpcFlowLogsConfig` resource name using the form:
-        /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+        /// Required. The resource name of the VpcFlowLogsConfig,
+        /// in one of the following formats:
+        /// 
+        /// - For a project-level resource:
+        /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+        /// 
+        /// - For an organization-level resource:
+        /// `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteVpcFlowLogsConfigAsync(VpcFlowLogsConfigName name, st::CancellationToken cancellationToken) =>
             DeleteVpcFlowLogsConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// QueryOrgVpcFlowLogsConfigs returns a list of all organization-level VPC
+        /// Flow Logs configurations applicable to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="VpcFlowLogsConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<QueryOrgVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> QueryOrgVpcFlowLogsConfigs(QueryOrgVpcFlowLogsConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// QueryOrgVpcFlowLogsConfigs returns a list of all organization-level VPC
+        /// Flow Logs configurations applicable to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="VpcFlowLogsConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<QueryOrgVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> QueryOrgVpcFlowLogsConfigsAsync(QueryOrgVpcFlowLogsConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// ShowEffectiveFlowLogsConfigs returns a list of all VPC Flow Logs
+        /// configurations applicable to a specified resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EffectiveVpcFlowLogsConfig"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ShowEffectiveFlowLogsConfigsResponse, EffectiveVpcFlowLogsConfig> ShowEffectiveFlowLogsConfigs(ShowEffectiveFlowLogsConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// ShowEffectiveFlowLogsConfigs returns a list of all VPC Flow Logs
+        /// configurations applicable to a specified resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="EffectiveVpcFlowLogsConfig"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ShowEffectiveFlowLogsConfigsResponse, EffectiveVpcFlowLogsConfig> ShowEffectiveFlowLogsConfigsAsync(ShowEffectiveFlowLogsConfigsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
     }
 
     /// <summary>VpcFlowLogsService client wrapper implementation, for convenient use.</summary>
@@ -1266,6 +1673,10 @@ namespace Google.Cloud.NetworkManagement.V1
         private readonly gaxgrpc::ApiCall<UpdateVpcFlowLogsConfigRequest, lro::Operation> _callUpdateVpcFlowLogsConfig;
 
         private readonly gaxgrpc::ApiCall<DeleteVpcFlowLogsConfigRequest, lro::Operation> _callDeleteVpcFlowLogsConfig;
+
+        private readonly gaxgrpc::ApiCall<QueryOrgVpcFlowLogsConfigsRequest, QueryOrgVpcFlowLogsConfigsResponse> _callQueryOrgVpcFlowLogsConfigs;
+
+        private readonly gaxgrpc::ApiCall<ShowEffectiveFlowLogsConfigsRequest, ShowEffectiveFlowLogsConfigsResponse> _callShowEffectiveFlowLogsConfigs;
 
         /// <summary>
         /// Constructs a client wrapper for the VpcFlowLogsService service, with the specified gRPC client and settings.
@@ -1302,6 +1713,12 @@ namespace Google.Cloud.NetworkManagement.V1
             _callDeleteVpcFlowLogsConfig = clientHelper.BuildApiCall<DeleteVpcFlowLogsConfigRequest, lro::Operation>("DeleteVpcFlowLogsConfig", grpcClient.DeleteVpcFlowLogsConfigAsync, grpcClient.DeleteVpcFlowLogsConfig, effectiveSettings.DeleteVpcFlowLogsConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteVpcFlowLogsConfig);
             Modify_DeleteVpcFlowLogsConfigApiCall(ref _callDeleteVpcFlowLogsConfig);
+            _callQueryOrgVpcFlowLogsConfigs = clientHelper.BuildApiCall<QueryOrgVpcFlowLogsConfigsRequest, QueryOrgVpcFlowLogsConfigsResponse>("QueryOrgVpcFlowLogsConfigs", grpcClient.QueryOrgVpcFlowLogsConfigsAsync, grpcClient.QueryOrgVpcFlowLogsConfigs, effectiveSettings.QueryOrgVpcFlowLogsConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callQueryOrgVpcFlowLogsConfigs);
+            Modify_QueryOrgVpcFlowLogsConfigsApiCall(ref _callQueryOrgVpcFlowLogsConfigs);
+            _callShowEffectiveFlowLogsConfigs = clientHelper.BuildApiCall<ShowEffectiveFlowLogsConfigsRequest, ShowEffectiveFlowLogsConfigsResponse>("ShowEffectiveFlowLogsConfigs", grpcClient.ShowEffectiveFlowLogsConfigsAsync, grpcClient.ShowEffectiveFlowLogsConfigs, effectiveSettings.ShowEffectiveFlowLogsConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callShowEffectiveFlowLogsConfigs);
+            Modify_ShowEffectiveFlowLogsConfigsApiCall(ref _callShowEffectiveFlowLogsConfigs);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1316,6 +1733,10 @@ namespace Google.Cloud.NetworkManagement.V1
         partial void Modify_UpdateVpcFlowLogsConfigApiCall(ref gaxgrpc::ApiCall<UpdateVpcFlowLogsConfigRequest, lro::Operation> call);
 
         partial void Modify_DeleteVpcFlowLogsConfigApiCall(ref gaxgrpc::ApiCall<DeleteVpcFlowLogsConfigRequest, lro::Operation> call);
+
+        partial void Modify_QueryOrgVpcFlowLogsConfigsApiCall(ref gaxgrpc::ApiCall<QueryOrgVpcFlowLogsConfigsRequest, QueryOrgVpcFlowLogsConfigsResponse> call);
+
+        partial void Modify_ShowEffectiveFlowLogsConfigsApiCall(ref gaxgrpc::ApiCall<ShowEffectiveFlowLogsConfigsRequest, ShowEffectiveFlowLogsConfigsResponse> call);
 
         partial void OnConstruction(VpcFlowLogsService.VpcFlowLogsServiceClient grpcClient, VpcFlowLogsServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1337,6 +1758,10 @@ namespace Google.Cloud.NetworkManagement.V1
         partial void Modify_UpdateVpcFlowLogsConfigRequest(ref UpdateVpcFlowLogsConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteVpcFlowLogsConfigRequest(ref DeleteVpcFlowLogsConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_QueryOrgVpcFlowLogsConfigsRequest(ref QueryOrgVpcFlowLogsConfigsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ShowEffectiveFlowLogsConfigsRequest(ref ShowEffectiveFlowLogsConfigsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists all `VpcFlowLogsConfigs` in a given project.
@@ -1395,8 +1820,8 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Creating a configuration with state=DISABLED will fail
-        /// 2. The following fields are not considered as `settings` for the purpose
+        /// 1. Creating a configuration with `state=DISABLED` will fail
+        /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - creating another configuration
         /// with the same fields but different values for the following fields will
         /// fail as well:
@@ -1421,8 +1846,8 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Creating a configuration with state=DISABLED will fail
-        /// 2. The following fields are not considered as `settings` for the purpose
+        /// 1. Creating a configuration with `state=DISABLED` will fail
+        /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - creating another configuration
         /// with the same fields but different values for the following fields will
         /// fail as well:
@@ -1450,8 +1875,8 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Updating a configuration with state=DISABLED will fail.
-        /// 2. The following fields are not considered as `settings` for the purpose
+        /// 1. Updating a configuration with `state=DISABLED` will fail.
+        /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - updating another configuration
         /// with the same fields but different values for the following fields will
         /// fail as well:
@@ -1476,8 +1901,8 @@ namespace Google.Cloud.NetworkManagement.V1
         /// ID is different), the creation fails.
         /// Notes:
         /// 
-        /// 1. Updating a configuration with state=DISABLED will fail.
-        /// 2. The following fields are not considered as `settings` for the purpose
+        /// 1. Updating a configuration with `state=DISABLED` will fail.
+        /// 2. The following fields are not considered as settings for the purpose
         /// of the check mentioned above, therefore - updating another configuration
         /// with the same fields but different values for the following fields will
         /// fail as well:
@@ -1522,9 +1947,69 @@ namespace Google.Cloud.NetworkManagement.V1
             Modify_DeleteVpcFlowLogsConfigRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteVpcFlowLogsConfig.Async(request, callSettings).ConfigureAwait(false), DeleteVpcFlowLogsConfigOperationsClient);
         }
+
+        /// <summary>
+        /// QueryOrgVpcFlowLogsConfigs returns a list of all organization-level VPC
+        /// Flow Logs configurations applicable to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="VpcFlowLogsConfig"/> resources.</returns>
+        public override gax::PagedEnumerable<QueryOrgVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> QueryOrgVpcFlowLogsConfigs(QueryOrgVpcFlowLogsConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryOrgVpcFlowLogsConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<QueryOrgVpcFlowLogsConfigsRequest, QueryOrgVpcFlowLogsConfigsResponse, VpcFlowLogsConfig>(_callQueryOrgVpcFlowLogsConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// QueryOrgVpcFlowLogsConfigs returns a list of all organization-level VPC
+        /// Flow Logs configurations applicable to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="VpcFlowLogsConfig"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<QueryOrgVpcFlowLogsConfigsResponse, VpcFlowLogsConfig> QueryOrgVpcFlowLogsConfigsAsync(QueryOrgVpcFlowLogsConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryOrgVpcFlowLogsConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<QueryOrgVpcFlowLogsConfigsRequest, QueryOrgVpcFlowLogsConfigsResponse, VpcFlowLogsConfig>(_callQueryOrgVpcFlowLogsConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// ShowEffectiveFlowLogsConfigs returns a list of all VPC Flow Logs
+        /// configurations applicable to a specified resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="EffectiveVpcFlowLogsConfig"/> resources.</returns>
+        public override gax::PagedEnumerable<ShowEffectiveFlowLogsConfigsResponse, EffectiveVpcFlowLogsConfig> ShowEffectiveFlowLogsConfigs(ShowEffectiveFlowLogsConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ShowEffectiveFlowLogsConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ShowEffectiveFlowLogsConfigsRequest, ShowEffectiveFlowLogsConfigsResponse, EffectiveVpcFlowLogsConfig>(_callShowEffectiveFlowLogsConfigs, request, callSettings);
+        }
+
+        /// <summary>
+        /// ShowEffectiveFlowLogsConfigs returns a list of all VPC Flow Logs
+        /// configurations applicable to a specified resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="EffectiveVpcFlowLogsConfig"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ShowEffectiveFlowLogsConfigsResponse, EffectiveVpcFlowLogsConfig> ShowEffectiveFlowLogsConfigsAsync(ShowEffectiveFlowLogsConfigsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ShowEffectiveFlowLogsConfigsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ShowEffectiveFlowLogsConfigsRequest, ShowEffectiveFlowLogsConfigsResponse, EffectiveVpcFlowLogsConfig>(_callShowEffectiveFlowLogsConfigs, request, callSettings);
+        }
     }
 
     public partial class ListVpcFlowLogsConfigsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class QueryOrgVpcFlowLogsConfigsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ShowEffectiveFlowLogsConfigsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -1532,6 +2017,22 @@ namespace Google.Cloud.NetworkManagement.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<VpcFlowLogsConfig> GetEnumerator() => VpcFlowLogsConfigs.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class QueryOrgVpcFlowLogsConfigsResponse : gaxgrpc::IPageResponse<VpcFlowLogsConfig>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<VpcFlowLogsConfig> GetEnumerator() => VpcFlowLogsConfigs.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ShowEffectiveFlowLogsConfigsResponse : gaxgrpc::IPageResponse<EffectiveVpcFlowLogsConfig>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<EffectiveVpcFlowLogsConfig> GetEnumerator() => EffectiveFlowLogsConfigs.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

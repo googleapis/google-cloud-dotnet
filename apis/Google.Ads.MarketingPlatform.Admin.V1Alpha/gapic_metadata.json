@@ -22,6 +22,12 @@
                 "DeleteAnalyticsAccountLinkAsync"
               ]
             },
+            "FindSalesPartnerManagedClients": {
+              "methods": [
+                "FindSalesPartnerManagedClients",
+                "FindSalesPartnerManagedClientsAsync"
+              ]
+            },
             "GetOrganization": {
               "methods": [
                 "GetOrganization",
@@ -32,6 +38,18 @@
               "methods": [
                 "ListAnalyticsAccountLinks",
                 "ListAnalyticsAccountLinksAsync"
+              ]
+            },
+            "ListOrganizations": {
+              "methods": [
+                "ListOrganizations",
+                "ListOrganizationsAsync"
+              ]
+            },
+            "ReportPropertyUsage": {
+              "methods": [
+                "ReportPropertyUsage",
+                "ReportPropertyUsageAsync"
               ]
             },
             "SetPropertyServiceLevel": {

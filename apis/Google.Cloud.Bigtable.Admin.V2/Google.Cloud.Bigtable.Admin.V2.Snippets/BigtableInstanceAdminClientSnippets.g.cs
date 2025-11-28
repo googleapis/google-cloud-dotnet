@@ -425,6 +425,7 @@ namespace GoogleCSharpSnippets
                 CreateTime = new Timestamp(),
                 SatisfiesPzs = false,
                 SatisfiesPzi = false,
+                Tags = { { "", "" }, },
             };
             // Make the request
             Instance response = bigtableInstanceAdminClient.UpdateInstance(request);
@@ -449,6 +450,7 @@ namespace GoogleCSharpSnippets
                 CreateTime = new Timestamp(),
                 SatisfiesPzs = false,
                 SatisfiesPzi = false,
+                Tags = { { "", "" }, },
             };
             // Make the request
             Instance response = await bigtableInstanceAdminClient.UpdateInstanceAsync(request);

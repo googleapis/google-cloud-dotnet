@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
                 Mutations = { new Mutation(), },
                 AppProfileId = "",
                 AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
+                Idempotency = new Idempotency(),
             };
             // Make the request
             MutateRowResponse response = await bigtableServiceApiClient.MutateRowAsync(request);

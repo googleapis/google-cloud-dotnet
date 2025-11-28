@@ -80,6 +80,32 @@ namespace Google.Cloud.NetworkServices.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.DeleteEndpointPolicyRequest> __Marshaller_google_cloud_networkservices_v1_DeleteEndpointPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.DeleteEndpointPolicyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsRequest> __Marshaller_google_cloud_networkservices_v1_ListWasmPluginVersionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsResponse> __Marshaller_google_cloud_networkservices_v1_ListWasmPluginVersionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.GetWasmPluginVersionRequest> __Marshaller_google_cloud_networkservices_v1_GetWasmPluginVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.GetWasmPluginVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.WasmPluginVersion> __Marshaller_google_cloud_networkservices_v1_WasmPluginVersion = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.WasmPluginVersion.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.CreateWasmPluginVersionRequest> __Marshaller_google_cloud_networkservices_v1_CreateWasmPluginVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.CreateWasmPluginVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.DeleteWasmPluginVersionRequest> __Marshaller_google_cloud_networkservices_v1_DeleteWasmPluginVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.DeleteWasmPluginVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.ListWasmPluginsRequest> __Marshaller_google_cloud_networkservices_v1_ListWasmPluginsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.ListWasmPluginsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.ListWasmPluginsResponse> __Marshaller_google_cloud_networkservices_v1_ListWasmPluginsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.ListWasmPluginsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.GetWasmPluginRequest> __Marshaller_google_cloud_networkservices_v1_GetWasmPluginRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.GetWasmPluginRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.WasmPlugin> __Marshaller_google_cloud_networkservices_v1_WasmPlugin = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.WasmPlugin.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.CreateWasmPluginRequest> __Marshaller_google_cloud_networkservices_v1_CreateWasmPluginRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.CreateWasmPluginRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.UpdateWasmPluginRequest> __Marshaller_google_cloud_networkservices_v1_UpdateWasmPluginRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.UpdateWasmPluginRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.DeleteWasmPluginRequest> __Marshaller_google_cloud_networkservices_v1_DeleteWasmPluginRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.DeleteWasmPluginRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.ListGatewaysRequest> __Marshaller_google_cloud_networkservices_v1_ListGatewaysRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.ListGatewaysRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.ListGatewaysResponse> __Marshaller_google_cloud_networkservices_v1_ListGatewaysResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.ListGatewaysResponse.Parser));
@@ -160,6 +186,8 @@ namespace Google.Cloud.NetworkServices.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.CreateServiceBindingRequest> __Marshaller_google_cloud_networkservices_v1_CreateServiceBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.CreateServiceBindingRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.UpdateServiceBindingRequest> __Marshaller_google_cloud_networkservices_v1_UpdateServiceBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.UpdateServiceBindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.DeleteServiceBindingRequest> __Marshaller_google_cloud_networkservices_v1_DeleteServiceBindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.DeleteServiceBindingRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.ListMeshesRequest> __Marshaller_google_cloud_networkservices_v1_ListMeshesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.ListMeshesRequest.Parser));
@@ -175,6 +203,36 @@ namespace Google.Cloud.NetworkServices.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.UpdateMeshRequest> __Marshaller_google_cloud_networkservices_v1_UpdateMeshRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.UpdateMeshRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.DeleteMeshRequest> __Marshaller_google_cloud_networkservices_v1_DeleteMeshRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.DeleteMeshRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesRequest> __Marshaller_google_cloud_networkservices_v1_ListServiceLbPoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesResponse> __Marshaller_google_cloud_networkservices_v1_ListServiceLbPoliciesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.GetServiceLbPolicyRequest> __Marshaller_google_cloud_networkservices_v1_GetServiceLbPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.GetServiceLbPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy> __Marshaller_google_cloud_networkservices_v1_ServiceLbPolicy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.CreateServiceLbPolicyRequest> __Marshaller_google_cloud_networkservices_v1_CreateServiceLbPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.CreateServiceLbPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.UpdateServiceLbPolicyRequest> __Marshaller_google_cloud_networkservices_v1_UpdateServiceLbPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.UpdateServiceLbPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.DeleteServiceLbPolicyRequest> __Marshaller_google_cloud_networkservices_v1_DeleteServiceLbPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.DeleteServiceLbPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.GetGatewayRouteViewRequest> __Marshaller_google_cloud_networkservices_v1_GetGatewayRouteViewRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.GetGatewayRouteViewRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.GatewayRouteView> __Marshaller_google_cloud_networkservices_v1_GatewayRouteView = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.GatewayRouteView.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.GetMeshRouteViewRequest> __Marshaller_google_cloud_networkservices_v1_GetMeshRouteViewRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.GetMeshRouteViewRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.MeshRouteView> __Marshaller_google_cloud_networkservices_v1_MeshRouteView = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.MeshRouteView.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsRequest> __Marshaller_google_cloud_networkservices_v1_ListGatewayRouteViewsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsResponse> __Marshaller_google_cloud_networkservices_v1_ListGatewayRouteViewsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsRequest> __Marshaller_google_cloud_networkservices_v1_ListMeshRouteViewsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsResponse> __Marshaller_google_cloud_networkservices_v1_ListMeshRouteViewsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.ListEndpointPoliciesRequest, global::Google.Cloud.NetworkServices.V1.ListEndpointPoliciesResponse> __Method_ListEndpointPolicies = new grpc::Method<global::Google.Cloud.NetworkServices.V1.ListEndpointPoliciesRequest, global::Google.Cloud.NetworkServices.V1.ListEndpointPoliciesResponse>(
@@ -214,6 +272,78 @@ namespace Google.Cloud.NetworkServices.V1 {
         __ServiceName,
         "DeleteEndpointPolicy",
         __Marshaller_google_cloud_networkservices_v1_DeleteEndpointPolicyRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsRequest, global::Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsResponse> __Method_ListWasmPluginVersions = new grpc::Method<global::Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsRequest, global::Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListWasmPluginVersions",
+        __Marshaller_google_cloud_networkservices_v1_ListWasmPluginVersionsRequest,
+        __Marshaller_google_cloud_networkservices_v1_ListWasmPluginVersionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.GetWasmPluginVersionRequest, global::Google.Cloud.NetworkServices.V1.WasmPluginVersion> __Method_GetWasmPluginVersion = new grpc::Method<global::Google.Cloud.NetworkServices.V1.GetWasmPluginVersionRequest, global::Google.Cloud.NetworkServices.V1.WasmPluginVersion>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetWasmPluginVersion",
+        __Marshaller_google_cloud_networkservices_v1_GetWasmPluginVersionRequest,
+        __Marshaller_google_cloud_networkservices_v1_WasmPluginVersion);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.CreateWasmPluginVersionRequest, global::Google.LongRunning.Operation> __Method_CreateWasmPluginVersion = new grpc::Method<global::Google.Cloud.NetworkServices.V1.CreateWasmPluginVersionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateWasmPluginVersion",
+        __Marshaller_google_cloud_networkservices_v1_CreateWasmPluginVersionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.DeleteWasmPluginVersionRequest, global::Google.LongRunning.Operation> __Method_DeleteWasmPluginVersion = new grpc::Method<global::Google.Cloud.NetworkServices.V1.DeleteWasmPluginVersionRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteWasmPluginVersion",
+        __Marshaller_google_cloud_networkservices_v1_DeleteWasmPluginVersionRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.ListWasmPluginsRequest, global::Google.Cloud.NetworkServices.V1.ListWasmPluginsResponse> __Method_ListWasmPlugins = new grpc::Method<global::Google.Cloud.NetworkServices.V1.ListWasmPluginsRequest, global::Google.Cloud.NetworkServices.V1.ListWasmPluginsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListWasmPlugins",
+        __Marshaller_google_cloud_networkservices_v1_ListWasmPluginsRequest,
+        __Marshaller_google_cloud_networkservices_v1_ListWasmPluginsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.GetWasmPluginRequest, global::Google.Cloud.NetworkServices.V1.WasmPlugin> __Method_GetWasmPlugin = new grpc::Method<global::Google.Cloud.NetworkServices.V1.GetWasmPluginRequest, global::Google.Cloud.NetworkServices.V1.WasmPlugin>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetWasmPlugin",
+        __Marshaller_google_cloud_networkservices_v1_GetWasmPluginRequest,
+        __Marshaller_google_cloud_networkservices_v1_WasmPlugin);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.CreateWasmPluginRequest, global::Google.LongRunning.Operation> __Method_CreateWasmPlugin = new grpc::Method<global::Google.Cloud.NetworkServices.V1.CreateWasmPluginRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateWasmPlugin",
+        __Marshaller_google_cloud_networkservices_v1_CreateWasmPluginRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.UpdateWasmPluginRequest, global::Google.LongRunning.Operation> __Method_UpdateWasmPlugin = new grpc::Method<global::Google.Cloud.NetworkServices.V1.UpdateWasmPluginRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateWasmPlugin",
+        __Marshaller_google_cloud_networkservices_v1_UpdateWasmPluginRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.DeleteWasmPluginRequest, global::Google.LongRunning.Operation> __Method_DeleteWasmPlugin = new grpc::Method<global::Google.Cloud.NetworkServices.V1.DeleteWasmPluginRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteWasmPlugin",
+        __Marshaller_google_cloud_networkservices_v1_DeleteWasmPluginRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -441,6 +571,14 @@ namespace Google.Cloud.NetworkServices.V1 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.UpdateServiceBindingRequest, global::Google.LongRunning.Operation> __Method_UpdateServiceBinding = new grpc::Method<global::Google.Cloud.NetworkServices.V1.UpdateServiceBindingRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateServiceBinding",
+        __Marshaller_google_cloud_networkservices_v1_UpdateServiceBindingRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.DeleteServiceBindingRequest, global::Google.LongRunning.Operation> __Method_DeleteServiceBinding = new grpc::Method<global::Google.Cloud.NetworkServices.V1.DeleteServiceBindingRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -487,6 +625,78 @@ namespace Google.Cloud.NetworkServices.V1 {
         "DeleteMesh",
         __Marshaller_google_cloud_networkservices_v1_DeleteMeshRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesRequest, global::Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesResponse> __Method_ListServiceLbPolicies = new grpc::Method<global::Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesRequest, global::Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListServiceLbPolicies",
+        __Marshaller_google_cloud_networkservices_v1_ListServiceLbPoliciesRequest,
+        __Marshaller_google_cloud_networkservices_v1_ListServiceLbPoliciesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.GetServiceLbPolicyRequest, global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy> __Method_GetServiceLbPolicy = new grpc::Method<global::Google.Cloud.NetworkServices.V1.GetServiceLbPolicyRequest, global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetServiceLbPolicy",
+        __Marshaller_google_cloud_networkservices_v1_GetServiceLbPolicyRequest,
+        __Marshaller_google_cloud_networkservices_v1_ServiceLbPolicy);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.CreateServiceLbPolicyRequest, global::Google.LongRunning.Operation> __Method_CreateServiceLbPolicy = new grpc::Method<global::Google.Cloud.NetworkServices.V1.CreateServiceLbPolicyRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateServiceLbPolicy",
+        __Marshaller_google_cloud_networkservices_v1_CreateServiceLbPolicyRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.UpdateServiceLbPolicyRequest, global::Google.LongRunning.Operation> __Method_UpdateServiceLbPolicy = new grpc::Method<global::Google.Cloud.NetworkServices.V1.UpdateServiceLbPolicyRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateServiceLbPolicy",
+        __Marshaller_google_cloud_networkservices_v1_UpdateServiceLbPolicyRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.DeleteServiceLbPolicyRequest, global::Google.LongRunning.Operation> __Method_DeleteServiceLbPolicy = new grpc::Method<global::Google.Cloud.NetworkServices.V1.DeleteServiceLbPolicyRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteServiceLbPolicy",
+        __Marshaller_google_cloud_networkservices_v1_DeleteServiceLbPolicyRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.GetGatewayRouteViewRequest, global::Google.Cloud.NetworkServices.V1.GatewayRouteView> __Method_GetGatewayRouteView = new grpc::Method<global::Google.Cloud.NetworkServices.V1.GetGatewayRouteViewRequest, global::Google.Cloud.NetworkServices.V1.GatewayRouteView>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetGatewayRouteView",
+        __Marshaller_google_cloud_networkservices_v1_GetGatewayRouteViewRequest,
+        __Marshaller_google_cloud_networkservices_v1_GatewayRouteView);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.GetMeshRouteViewRequest, global::Google.Cloud.NetworkServices.V1.MeshRouteView> __Method_GetMeshRouteView = new grpc::Method<global::Google.Cloud.NetworkServices.V1.GetMeshRouteViewRequest, global::Google.Cloud.NetworkServices.V1.MeshRouteView>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetMeshRouteView",
+        __Marshaller_google_cloud_networkservices_v1_GetMeshRouteViewRequest,
+        __Marshaller_google_cloud_networkservices_v1_MeshRouteView);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsRequest, global::Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsResponse> __Method_ListGatewayRouteViews = new grpc::Method<global::Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsRequest, global::Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListGatewayRouteViews",
+        __Marshaller_google_cloud_networkservices_v1_ListGatewayRouteViewsRequest,
+        __Marshaller_google_cloud_networkservices_v1_ListGatewayRouteViewsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsRequest, global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsResponse> __Method_ListMeshRouteViews = new grpc::Method<global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsRequest, global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListMeshRouteViews",
+        __Marshaller_google_cloud_networkservices_v1_ListMeshRouteViewsRequest,
+        __Marshaller_google_cloud_networkservices_v1_ListMeshRouteViewsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -554,6 +764,118 @@ namespace Google.Cloud.NetworkServices.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteEndpointPolicy(global::Google.Cloud.NetworkServices.V1.DeleteEndpointPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists `WasmPluginVersion` resources in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsResponse> ListWasmPluginVersions(global::Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of the specified `WasmPluginVersion` resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkServices.V1.WasmPluginVersion> GetWasmPluginVersion(global::Google.Cloud.NetworkServices.V1.GetWasmPluginVersionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new `WasmPluginVersion` resource in a given project
+      /// and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateWasmPluginVersion(global::Google.Cloud.NetworkServices.V1.CreateWasmPluginVersionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes the specified `WasmPluginVersion` resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteWasmPluginVersion(global::Google.Cloud.NetworkServices.V1.DeleteWasmPluginVersionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists `WasmPlugin` resources in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkServices.V1.ListWasmPluginsResponse> ListWasmPlugins(global::Google.Cloud.NetworkServices.V1.ListWasmPluginsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of the specified `WasmPlugin` resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkServices.V1.WasmPlugin> GetWasmPlugin(global::Google.Cloud.NetworkServices.V1.GetWasmPluginRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new `WasmPlugin` resource in a given project
+      /// and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateWasmPlugin(global::Google.Cloud.NetworkServices.V1.CreateWasmPluginRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the parameters of the specified `WasmPlugin` resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateWasmPlugin(global::Google.Cloud.NetworkServices.V1.UpdateWasmPluginRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes the specified `WasmPlugin` resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteWasmPlugin(global::Google.Cloud.NetworkServices.V1.DeleteWasmPluginRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -895,6 +1217,18 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
 
       /// <summary>
+      /// Updates the parameters of a single ServiceBinding.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateServiceBinding(global::Google.Cloud.NetworkServices.V1.UpdateServiceBindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Deletes a single ServiceBinding.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -962,6 +1296,114 @@ namespace Google.Cloud.NetworkServices.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteMesh(global::Google.Cloud.NetworkServices.V1.DeleteMeshRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists ServiceLbPolicies in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesResponse> ListServiceLbPolicies(global::Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single ServiceLbPolicy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy> GetServiceLbPolicy(global::Google.Cloud.NetworkServices.V1.GetServiceLbPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new ServiceLbPolicy in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateServiceLbPolicy(global::Google.Cloud.NetworkServices.V1.CreateServiceLbPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the parameters of a single ServiceLbPolicy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateServiceLbPolicy(global::Google.Cloud.NetworkServices.V1.UpdateServiceLbPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single ServiceLbPolicy.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteServiceLbPolicy(global::Google.Cloud.NetworkServices.V1.DeleteServiceLbPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get a single RouteView of a Gateway.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkServices.V1.GatewayRouteView> GetGatewayRouteView(global::Google.Cloud.NetworkServices.V1.GetGatewayRouteViewRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get a single RouteView of a Mesh.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkServices.V1.MeshRouteView> GetMeshRouteView(global::Google.Cloud.NetworkServices.V1.GetMeshRouteViewRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists RouteViews
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsResponse> ListGatewayRouteViews(global::Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists RouteViews
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsResponse> ListMeshRouteViews(global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1234,6 +1676,454 @@ namespace Google.Cloud.NetworkServices.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteEndpointPolicyAsync(global::Google.Cloud.NetworkServices.V1.DeleteEndpointPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteEndpointPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Lists `WasmPluginVersion` resources in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsResponse ListWasmPluginVersions(global::Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListWasmPluginVersions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists `WasmPluginVersion` resources in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsResponse ListWasmPluginVersions(global::Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListWasmPluginVersions, null, options, request);
+      }
+      /// <summary>
+      /// Lists `WasmPluginVersion` resources in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsResponse> ListWasmPluginVersionsAsync(global::Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListWasmPluginVersionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists `WasmPluginVersion` resources in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsResponse> ListWasmPluginVersionsAsync(global::Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListWasmPluginVersions, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of the specified `WasmPluginVersion` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.WasmPluginVersion GetWasmPluginVersion(global::Google.Cloud.NetworkServices.V1.GetWasmPluginVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetWasmPluginVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of the specified `WasmPluginVersion` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.WasmPluginVersion GetWasmPluginVersion(global::Google.Cloud.NetworkServices.V1.GetWasmPluginVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetWasmPluginVersion, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of the specified `WasmPluginVersion` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.WasmPluginVersion> GetWasmPluginVersionAsync(global::Google.Cloud.NetworkServices.V1.GetWasmPluginVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetWasmPluginVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of the specified `WasmPluginVersion` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.WasmPluginVersion> GetWasmPluginVersionAsync(global::Google.Cloud.NetworkServices.V1.GetWasmPluginVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetWasmPluginVersion, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new `WasmPluginVersion` resource in a given project
+      /// and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateWasmPluginVersion(global::Google.Cloud.NetworkServices.V1.CreateWasmPluginVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateWasmPluginVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new `WasmPluginVersion` resource in a given project
+      /// and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateWasmPluginVersion(global::Google.Cloud.NetworkServices.V1.CreateWasmPluginVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateWasmPluginVersion, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new `WasmPluginVersion` resource in a given project
+      /// and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateWasmPluginVersionAsync(global::Google.Cloud.NetworkServices.V1.CreateWasmPluginVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateWasmPluginVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new `WasmPluginVersion` resource in a given project
+      /// and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateWasmPluginVersionAsync(global::Google.Cloud.NetworkServices.V1.CreateWasmPluginVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateWasmPluginVersion, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the specified `WasmPluginVersion` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteWasmPluginVersion(global::Google.Cloud.NetworkServices.V1.DeleteWasmPluginVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteWasmPluginVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the specified `WasmPluginVersion` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteWasmPluginVersion(global::Google.Cloud.NetworkServices.V1.DeleteWasmPluginVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteWasmPluginVersion, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the specified `WasmPluginVersion` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteWasmPluginVersionAsync(global::Google.Cloud.NetworkServices.V1.DeleteWasmPluginVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteWasmPluginVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the specified `WasmPluginVersion` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteWasmPluginVersionAsync(global::Google.Cloud.NetworkServices.V1.DeleteWasmPluginVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteWasmPluginVersion, null, options, request);
+      }
+      /// <summary>
+      /// Lists `WasmPlugin` resources in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.ListWasmPluginsResponse ListWasmPlugins(global::Google.Cloud.NetworkServices.V1.ListWasmPluginsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListWasmPlugins(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists `WasmPlugin` resources in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.ListWasmPluginsResponse ListWasmPlugins(global::Google.Cloud.NetworkServices.V1.ListWasmPluginsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListWasmPlugins, null, options, request);
+      }
+      /// <summary>
+      /// Lists `WasmPlugin` resources in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.ListWasmPluginsResponse> ListWasmPluginsAsync(global::Google.Cloud.NetworkServices.V1.ListWasmPluginsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListWasmPluginsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists `WasmPlugin` resources in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.ListWasmPluginsResponse> ListWasmPluginsAsync(global::Google.Cloud.NetworkServices.V1.ListWasmPluginsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListWasmPlugins, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of the specified `WasmPlugin` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.WasmPlugin GetWasmPlugin(global::Google.Cloud.NetworkServices.V1.GetWasmPluginRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetWasmPlugin(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of the specified `WasmPlugin` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.WasmPlugin GetWasmPlugin(global::Google.Cloud.NetworkServices.V1.GetWasmPluginRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetWasmPlugin, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of the specified `WasmPlugin` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.WasmPlugin> GetWasmPluginAsync(global::Google.Cloud.NetworkServices.V1.GetWasmPluginRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetWasmPluginAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of the specified `WasmPlugin` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.WasmPlugin> GetWasmPluginAsync(global::Google.Cloud.NetworkServices.V1.GetWasmPluginRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetWasmPlugin, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new `WasmPlugin` resource in a given project
+      /// and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateWasmPlugin(global::Google.Cloud.NetworkServices.V1.CreateWasmPluginRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateWasmPlugin(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new `WasmPlugin` resource in a given project
+      /// and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateWasmPlugin(global::Google.Cloud.NetworkServices.V1.CreateWasmPluginRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateWasmPlugin, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new `WasmPlugin` resource in a given project
+      /// and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateWasmPluginAsync(global::Google.Cloud.NetworkServices.V1.CreateWasmPluginRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateWasmPluginAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new `WasmPlugin` resource in a given project
+      /// and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateWasmPluginAsync(global::Google.Cloud.NetworkServices.V1.CreateWasmPluginRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateWasmPlugin, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of the specified `WasmPlugin` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateWasmPlugin(global::Google.Cloud.NetworkServices.V1.UpdateWasmPluginRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateWasmPlugin(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of the specified `WasmPlugin` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateWasmPlugin(global::Google.Cloud.NetworkServices.V1.UpdateWasmPluginRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateWasmPlugin, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of the specified `WasmPlugin` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateWasmPluginAsync(global::Google.Cloud.NetworkServices.V1.UpdateWasmPluginRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateWasmPluginAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of the specified `WasmPlugin` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateWasmPluginAsync(global::Google.Cloud.NetworkServices.V1.UpdateWasmPluginRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateWasmPlugin, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the specified `WasmPlugin` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteWasmPlugin(global::Google.Cloud.NetworkServices.V1.DeleteWasmPluginRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteWasmPlugin(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the specified `WasmPlugin` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteWasmPlugin(global::Google.Cloud.NetworkServices.V1.DeleteWasmPluginRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteWasmPlugin, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the specified `WasmPlugin` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteWasmPluginAsync(global::Google.Cloud.NetworkServices.V1.DeleteWasmPluginRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteWasmPluginAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the specified `WasmPlugin` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteWasmPluginAsync(global::Google.Cloud.NetworkServices.V1.DeleteWasmPluginRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteWasmPlugin, null, options, request);
       }
       /// <summary>
       /// Lists Gateways in a given project and location.
@@ -2580,6 +3470,54 @@ namespace Google.Cloud.NetworkServices.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateServiceBinding, null, options, request);
       }
       /// <summary>
+      /// Updates the parameters of a single ServiceBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateServiceBinding(global::Google.Cloud.NetworkServices.V1.UpdateServiceBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateServiceBinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single ServiceBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateServiceBinding(global::Google.Cloud.NetworkServices.V1.UpdateServiceBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateServiceBinding, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single ServiceBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateServiceBindingAsync(global::Google.Cloud.NetworkServices.V1.UpdateServiceBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateServiceBindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single ServiceBinding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateServiceBindingAsync(global::Google.Cloud.NetworkServices.V1.UpdateServiceBindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateServiceBinding, null, options, request);
+      }
+      /// <summary>
       /// Deletes a single ServiceBinding.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2867,6 +3805,438 @@ namespace Google.Cloud.NetworkServices.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteMesh, null, options, request);
       }
+      /// <summary>
+      /// Lists ServiceLbPolicies in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesResponse ListServiceLbPolicies(global::Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListServiceLbPolicies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists ServiceLbPolicies in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesResponse ListServiceLbPolicies(global::Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListServiceLbPolicies, null, options, request);
+      }
+      /// <summary>
+      /// Lists ServiceLbPolicies in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesResponse> ListServiceLbPoliciesAsync(global::Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListServiceLbPoliciesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists ServiceLbPolicies in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesResponse> ListServiceLbPoliciesAsync(global::Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListServiceLbPolicies, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single ServiceLbPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy GetServiceLbPolicy(global::Google.Cloud.NetworkServices.V1.GetServiceLbPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetServiceLbPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single ServiceLbPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy GetServiceLbPolicy(global::Google.Cloud.NetworkServices.V1.GetServiceLbPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetServiceLbPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single ServiceLbPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy> GetServiceLbPolicyAsync(global::Google.Cloud.NetworkServices.V1.GetServiceLbPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetServiceLbPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single ServiceLbPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy> GetServiceLbPolicyAsync(global::Google.Cloud.NetworkServices.V1.GetServiceLbPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetServiceLbPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new ServiceLbPolicy in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateServiceLbPolicy(global::Google.Cloud.NetworkServices.V1.CreateServiceLbPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateServiceLbPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new ServiceLbPolicy in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateServiceLbPolicy(global::Google.Cloud.NetworkServices.V1.CreateServiceLbPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateServiceLbPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new ServiceLbPolicy in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateServiceLbPolicyAsync(global::Google.Cloud.NetworkServices.V1.CreateServiceLbPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateServiceLbPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new ServiceLbPolicy in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateServiceLbPolicyAsync(global::Google.Cloud.NetworkServices.V1.CreateServiceLbPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateServiceLbPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single ServiceLbPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateServiceLbPolicy(global::Google.Cloud.NetworkServices.V1.UpdateServiceLbPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateServiceLbPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single ServiceLbPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateServiceLbPolicy(global::Google.Cloud.NetworkServices.V1.UpdateServiceLbPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateServiceLbPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single ServiceLbPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateServiceLbPolicyAsync(global::Google.Cloud.NetworkServices.V1.UpdateServiceLbPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateServiceLbPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single ServiceLbPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateServiceLbPolicyAsync(global::Google.Cloud.NetworkServices.V1.UpdateServiceLbPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateServiceLbPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single ServiceLbPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteServiceLbPolicy(global::Google.Cloud.NetworkServices.V1.DeleteServiceLbPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteServiceLbPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single ServiceLbPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteServiceLbPolicy(global::Google.Cloud.NetworkServices.V1.DeleteServiceLbPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteServiceLbPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single ServiceLbPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteServiceLbPolicyAsync(global::Google.Cloud.NetworkServices.V1.DeleteServiceLbPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteServiceLbPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single ServiceLbPolicy.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteServiceLbPolicyAsync(global::Google.Cloud.NetworkServices.V1.DeleteServiceLbPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteServiceLbPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Get a single RouteView of a Gateway.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.GatewayRouteView GetGatewayRouteView(global::Google.Cloud.NetworkServices.V1.GetGatewayRouteViewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetGatewayRouteView(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a single RouteView of a Gateway.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.GatewayRouteView GetGatewayRouteView(global::Google.Cloud.NetworkServices.V1.GetGatewayRouteViewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetGatewayRouteView, null, options, request);
+      }
+      /// <summary>
+      /// Get a single RouteView of a Gateway.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.GatewayRouteView> GetGatewayRouteViewAsync(global::Google.Cloud.NetworkServices.V1.GetGatewayRouteViewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetGatewayRouteViewAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a single RouteView of a Gateway.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.GatewayRouteView> GetGatewayRouteViewAsync(global::Google.Cloud.NetworkServices.V1.GetGatewayRouteViewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetGatewayRouteView, null, options, request);
+      }
+      /// <summary>
+      /// Get a single RouteView of a Mesh.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.MeshRouteView GetMeshRouteView(global::Google.Cloud.NetworkServices.V1.GetMeshRouteViewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMeshRouteView(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a single RouteView of a Mesh.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.MeshRouteView GetMeshRouteView(global::Google.Cloud.NetworkServices.V1.GetMeshRouteViewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetMeshRouteView, null, options, request);
+      }
+      /// <summary>
+      /// Get a single RouteView of a Mesh.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.MeshRouteView> GetMeshRouteViewAsync(global::Google.Cloud.NetworkServices.V1.GetMeshRouteViewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMeshRouteViewAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get a single RouteView of a Mesh.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.MeshRouteView> GetMeshRouteViewAsync(global::Google.Cloud.NetworkServices.V1.GetMeshRouteViewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetMeshRouteView, null, options, request);
+      }
+      /// <summary>
+      /// Lists RouteViews
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsResponse ListGatewayRouteViews(global::Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListGatewayRouteViews(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists RouteViews
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsResponse ListGatewayRouteViews(global::Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListGatewayRouteViews, null, options, request);
+      }
+      /// <summary>
+      /// Lists RouteViews
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsResponse> ListGatewayRouteViewsAsync(global::Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListGatewayRouteViewsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists RouteViews
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsResponse> ListGatewayRouteViewsAsync(global::Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListGatewayRouteViews, null, options, request);
+      }
+      /// <summary>
+      /// Lists RouteViews
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsResponse ListMeshRouteViews(global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListMeshRouteViews(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists RouteViews
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsResponse ListMeshRouteViews(global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListMeshRouteViews, null, options, request);
+      }
+      /// <summary>
+      /// Lists RouteViews
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsResponse> ListMeshRouteViewsAsync(global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListMeshRouteViewsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists RouteViews
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsResponse> ListMeshRouteViewsAsync(global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListMeshRouteViews, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override NetworkServicesClient NewInstance(ClientBaseConfiguration configuration)
@@ -2886,6 +4256,15 @@ namespace Google.Cloud.NetworkServices.V1 {
           .AddMethod(__Method_CreateEndpointPolicy, serviceImpl.CreateEndpointPolicy)
           .AddMethod(__Method_UpdateEndpointPolicy, serviceImpl.UpdateEndpointPolicy)
           .AddMethod(__Method_DeleteEndpointPolicy, serviceImpl.DeleteEndpointPolicy)
+          .AddMethod(__Method_ListWasmPluginVersions, serviceImpl.ListWasmPluginVersions)
+          .AddMethod(__Method_GetWasmPluginVersion, serviceImpl.GetWasmPluginVersion)
+          .AddMethod(__Method_CreateWasmPluginVersion, serviceImpl.CreateWasmPluginVersion)
+          .AddMethod(__Method_DeleteWasmPluginVersion, serviceImpl.DeleteWasmPluginVersion)
+          .AddMethod(__Method_ListWasmPlugins, serviceImpl.ListWasmPlugins)
+          .AddMethod(__Method_GetWasmPlugin, serviceImpl.GetWasmPlugin)
+          .AddMethod(__Method_CreateWasmPlugin, serviceImpl.CreateWasmPlugin)
+          .AddMethod(__Method_UpdateWasmPlugin, serviceImpl.UpdateWasmPlugin)
+          .AddMethod(__Method_DeleteWasmPlugin, serviceImpl.DeleteWasmPlugin)
           .AddMethod(__Method_ListGateways, serviceImpl.ListGateways)
           .AddMethod(__Method_GetGateway, serviceImpl.GetGateway)
           .AddMethod(__Method_CreateGateway, serviceImpl.CreateGateway)
@@ -2914,12 +4293,22 @@ namespace Google.Cloud.NetworkServices.V1 {
           .AddMethod(__Method_ListServiceBindings, serviceImpl.ListServiceBindings)
           .AddMethod(__Method_GetServiceBinding, serviceImpl.GetServiceBinding)
           .AddMethod(__Method_CreateServiceBinding, serviceImpl.CreateServiceBinding)
+          .AddMethod(__Method_UpdateServiceBinding, serviceImpl.UpdateServiceBinding)
           .AddMethod(__Method_DeleteServiceBinding, serviceImpl.DeleteServiceBinding)
           .AddMethod(__Method_ListMeshes, serviceImpl.ListMeshes)
           .AddMethod(__Method_GetMesh, serviceImpl.GetMesh)
           .AddMethod(__Method_CreateMesh, serviceImpl.CreateMesh)
           .AddMethod(__Method_UpdateMesh, serviceImpl.UpdateMesh)
-          .AddMethod(__Method_DeleteMesh, serviceImpl.DeleteMesh).Build();
+          .AddMethod(__Method_DeleteMesh, serviceImpl.DeleteMesh)
+          .AddMethod(__Method_ListServiceLbPolicies, serviceImpl.ListServiceLbPolicies)
+          .AddMethod(__Method_GetServiceLbPolicy, serviceImpl.GetServiceLbPolicy)
+          .AddMethod(__Method_CreateServiceLbPolicy, serviceImpl.CreateServiceLbPolicy)
+          .AddMethod(__Method_UpdateServiceLbPolicy, serviceImpl.UpdateServiceLbPolicy)
+          .AddMethod(__Method_DeleteServiceLbPolicy, serviceImpl.DeleteServiceLbPolicy)
+          .AddMethod(__Method_GetGatewayRouteView, serviceImpl.GetGatewayRouteView)
+          .AddMethod(__Method_GetMeshRouteView, serviceImpl.GetMeshRouteView)
+          .AddMethod(__Method_ListGatewayRouteViews, serviceImpl.ListGatewayRouteViews)
+          .AddMethod(__Method_ListMeshRouteViews, serviceImpl.ListMeshRouteViews).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2934,6 +4323,15 @@ namespace Google.Cloud.NetworkServices.V1 {
       serviceBinder.AddMethod(__Method_CreateEndpointPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.CreateEndpointPolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateEndpointPolicy));
       serviceBinder.AddMethod(__Method_UpdateEndpointPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.UpdateEndpointPolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateEndpointPolicy));
       serviceBinder.AddMethod(__Method_DeleteEndpointPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.DeleteEndpointPolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteEndpointPolicy));
+      serviceBinder.AddMethod(__Method_ListWasmPluginVersions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsRequest, global::Google.Cloud.NetworkServices.V1.ListWasmPluginVersionsResponse>(serviceImpl.ListWasmPluginVersions));
+      serviceBinder.AddMethod(__Method_GetWasmPluginVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.GetWasmPluginVersionRequest, global::Google.Cloud.NetworkServices.V1.WasmPluginVersion>(serviceImpl.GetWasmPluginVersion));
+      serviceBinder.AddMethod(__Method_CreateWasmPluginVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.CreateWasmPluginVersionRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateWasmPluginVersion));
+      serviceBinder.AddMethod(__Method_DeleteWasmPluginVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.DeleteWasmPluginVersionRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteWasmPluginVersion));
+      serviceBinder.AddMethod(__Method_ListWasmPlugins, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.ListWasmPluginsRequest, global::Google.Cloud.NetworkServices.V1.ListWasmPluginsResponse>(serviceImpl.ListWasmPlugins));
+      serviceBinder.AddMethod(__Method_GetWasmPlugin, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.GetWasmPluginRequest, global::Google.Cloud.NetworkServices.V1.WasmPlugin>(serviceImpl.GetWasmPlugin));
+      serviceBinder.AddMethod(__Method_CreateWasmPlugin, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.CreateWasmPluginRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateWasmPlugin));
+      serviceBinder.AddMethod(__Method_UpdateWasmPlugin, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.UpdateWasmPluginRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateWasmPlugin));
+      serviceBinder.AddMethod(__Method_DeleteWasmPlugin, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.DeleteWasmPluginRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteWasmPlugin));
       serviceBinder.AddMethod(__Method_ListGateways, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.ListGatewaysRequest, global::Google.Cloud.NetworkServices.V1.ListGatewaysResponse>(serviceImpl.ListGateways));
       serviceBinder.AddMethod(__Method_GetGateway, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.GetGatewayRequest, global::Google.Cloud.NetworkServices.V1.Gateway>(serviceImpl.GetGateway));
       serviceBinder.AddMethod(__Method_CreateGateway, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.CreateGatewayRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateGateway));
@@ -2962,12 +4360,22 @@ namespace Google.Cloud.NetworkServices.V1 {
       serviceBinder.AddMethod(__Method_ListServiceBindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.ListServiceBindingsRequest, global::Google.Cloud.NetworkServices.V1.ListServiceBindingsResponse>(serviceImpl.ListServiceBindings));
       serviceBinder.AddMethod(__Method_GetServiceBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.GetServiceBindingRequest, global::Google.Cloud.NetworkServices.V1.ServiceBinding>(serviceImpl.GetServiceBinding));
       serviceBinder.AddMethod(__Method_CreateServiceBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.CreateServiceBindingRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateServiceBinding));
+      serviceBinder.AddMethod(__Method_UpdateServiceBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.UpdateServiceBindingRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateServiceBinding));
       serviceBinder.AddMethod(__Method_DeleteServiceBinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.DeleteServiceBindingRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteServiceBinding));
       serviceBinder.AddMethod(__Method_ListMeshes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.ListMeshesRequest, global::Google.Cloud.NetworkServices.V1.ListMeshesResponse>(serviceImpl.ListMeshes));
       serviceBinder.AddMethod(__Method_GetMesh, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.GetMeshRequest, global::Google.Cloud.NetworkServices.V1.Mesh>(serviceImpl.GetMesh));
       serviceBinder.AddMethod(__Method_CreateMesh, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.CreateMeshRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateMesh));
       serviceBinder.AddMethod(__Method_UpdateMesh, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.UpdateMeshRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateMesh));
       serviceBinder.AddMethod(__Method_DeleteMesh, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.DeleteMeshRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteMesh));
+      serviceBinder.AddMethod(__Method_ListServiceLbPolicies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesRequest, global::Google.Cloud.NetworkServices.V1.ListServiceLbPoliciesResponse>(serviceImpl.ListServiceLbPolicies));
+      serviceBinder.AddMethod(__Method_GetServiceLbPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.GetServiceLbPolicyRequest, global::Google.Cloud.NetworkServices.V1.ServiceLbPolicy>(serviceImpl.GetServiceLbPolicy));
+      serviceBinder.AddMethod(__Method_CreateServiceLbPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.CreateServiceLbPolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateServiceLbPolicy));
+      serviceBinder.AddMethod(__Method_UpdateServiceLbPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.UpdateServiceLbPolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateServiceLbPolicy));
+      serviceBinder.AddMethod(__Method_DeleteServiceLbPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.DeleteServiceLbPolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteServiceLbPolicy));
+      serviceBinder.AddMethod(__Method_GetGatewayRouteView, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.GetGatewayRouteViewRequest, global::Google.Cloud.NetworkServices.V1.GatewayRouteView>(serviceImpl.GetGatewayRouteView));
+      serviceBinder.AddMethod(__Method_GetMeshRouteView, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.GetMeshRouteViewRequest, global::Google.Cloud.NetworkServices.V1.MeshRouteView>(serviceImpl.GetMeshRouteView));
+      serviceBinder.AddMethod(__Method_ListGatewayRouteViews, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsRequest, global::Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsResponse>(serviceImpl.ListGatewayRouteViews));
+      serviceBinder.AddMethod(__Method_ListMeshRouteViews, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsRequest, global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsResponse>(serviceImpl.ListMeshRouteViews));
     }
 
   }

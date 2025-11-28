@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gcnv = Google.Cloud.NetApp.V1;
 using sys = System;
@@ -316,6 +317,24 @@ namespace Google.Cloud.NetApp.V1
         {
             get => string.IsNullOrEmpty(SourceSnapshot) ? null : SnapshotName.Parse(SourceSnapshot, allowUnparsed: true);
             set => SourceSnapshot = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="VolumeRegion"/> resource name property.
+        /// </summary>
+        public gagr::LocationName VolumeRegionAsLocationName
+        {
+            get => string.IsNullOrEmpty(VolumeRegion) ? null : gagr::LocationName.Parse(VolumeRegion, allowUnparsed: true);
+            set => VolumeRegion = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="BackupRegion"/> resource name property.
+        /// </summary>
+        public gagr::LocationName BackupRegionAsLocationName
+        {
+            get => string.IsNullOrEmpty(BackupRegion) ? null : gagr::LocationName.Parse(BackupRegion, allowUnparsed: true);
+            set => BackupRegion = value?.ToString() ?? "";
         }
     }
 

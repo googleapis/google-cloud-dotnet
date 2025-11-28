@@ -224,7 +224,7 @@ namespace Google.Cloud.Support.V2
         public virtual CommentService.CommentServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieve all Comments associated with the Case object.
+        /// List all the comments associated with a case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -233,7 +233,7 @@ namespace Google.Cloud.Support.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieve all Comments associated with the Case object.
+        /// List all the comments associated with a case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -242,11 +242,10 @@ namespace Google.Cloud.Support.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieve all Comments associated with the Case object.
+        /// List all the comments associated with a case.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of Case object for which comments should be
-        /// listed.
+        /// Required. The name of the case for which to list comments.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -276,11 +275,10 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Retrieve all Comments associated with the Case object.
+        /// List all the comments associated with a case.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of Case object for which comments should be
-        /// listed.
+        /// Required. The name of the case for which to list comments.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -310,11 +308,10 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Retrieve all Comments associated with the Case object.
+        /// List all the comments associated with a case.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of Case object for which comments should be
-        /// listed.
+        /// Required. The name of the case for which to list comments.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -344,11 +341,10 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Retrieve all Comments associated with the Case object.
+        /// List all the comments associated with a case.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of Case object for which comments should be
-        /// listed.
+        /// Required. The name of the case for which to list comments.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -378,8 +374,9 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Add a new comment to the specified Case.
-        /// The comment object must have the following fields set: body.
+        /// Add a new comment to a case.
+        /// 
+        /// The comment must have the following fields set: `body`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -388,8 +385,9 @@ namespace Google.Cloud.Support.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Add a new comment to the specified Case.
-        /// The comment object must have the following fields set: body.
+        /// Add a new comment to a case.
+        /// 
+        /// The comment must have the following fields set: `body`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -398,8 +396,9 @@ namespace Google.Cloud.Support.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Add a new comment to the specified Case.
-        /// The comment object must have the following fields set: body.
+        /// Add a new comment to a case.
+        /// 
+        /// The comment must have the following fields set: `body`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -408,14 +407,15 @@ namespace Google.Cloud.Support.V2
             CreateCommentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Add a new comment to the specified Case.
-        /// The comment object must have the following fields set: body.
+        /// Add a new comment to a case.
+        /// 
+        /// The comment must have the following fields set: `body`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of Case to which this comment should be added.
+        /// Required. The name of the case to which the comment should be added.
         /// </param>
         /// <param name="comment">
-        /// Required. The Comment object to be added to this Case.
+        /// Required. The comment to be added.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -427,14 +427,15 @@ namespace Google.Cloud.Support.V2
             }, callSettings);
 
         /// <summary>
-        /// Add a new comment to the specified Case.
-        /// The comment object must have the following fields set: body.
+        /// Add a new comment to a case.
+        /// 
+        /// The comment must have the following fields set: `body`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of Case to which this comment should be added.
+        /// Required. The name of the case to which the comment should be added.
         /// </param>
         /// <param name="comment">
-        /// Required. The Comment object to be added to this Case.
+        /// Required. The comment to be added.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -446,14 +447,15 @@ namespace Google.Cloud.Support.V2
             }, callSettings);
 
         /// <summary>
-        /// Add a new comment to the specified Case.
-        /// The comment object must have the following fields set: body.
+        /// Add a new comment to a case.
+        /// 
+        /// The comment must have the following fields set: `body`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of Case to which this comment should be added.
+        /// Required. The name of the case to which the comment should be added.
         /// </param>
         /// <param name="comment">
-        /// Required. The Comment object to be added to this Case.
+        /// Required. The comment to be added.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -461,14 +463,15 @@ namespace Google.Cloud.Support.V2
             CreateCommentAsync(parent, comment, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Add a new comment to the specified Case.
-        /// The comment object must have the following fields set: body.
+        /// Add a new comment to a case.
+        /// 
+        /// The comment must have the following fields set: `body`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of Case to which this comment should be added.
+        /// Required. The name of the case to which the comment should be added.
         /// </param>
         /// <param name="comment">
-        /// Required. The Comment object to be added to this Case.
+        /// Required. The comment to be added.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -480,14 +483,15 @@ namespace Google.Cloud.Support.V2
             }, callSettings);
 
         /// <summary>
-        /// Add a new comment to the specified Case.
-        /// The comment object must have the following fields set: body.
+        /// Add a new comment to a case.
+        /// 
+        /// The comment must have the following fields set: `body`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of Case to which this comment should be added.
+        /// Required. The name of the case to which the comment should be added.
         /// </param>
         /// <param name="comment">
-        /// Required. The Comment object to be added to this Case.
+        /// Required. The comment to be added.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -499,14 +503,15 @@ namespace Google.Cloud.Support.V2
             }, callSettings);
 
         /// <summary>
-        /// Add a new comment to the specified Case.
-        /// The comment object must have the following fields set: body.
+        /// Add a new comment to a case.
+        /// 
+        /// The comment must have the following fields set: `body`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of Case to which this comment should be added.
+        /// Required. The name of the case to which the comment should be added.
         /// </param>
         /// <param name="comment">
-        /// Required. The Comment object to be added to this Case.
+        /// Required. The comment to be added.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -564,7 +569,7 @@ namespace Google.Cloud.Support.V2
         partial void Modify_CreateCommentRequest(ref CreateCommentRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Retrieve all Comments associated with the Case object.
+        /// List all the comments associated with a case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -576,7 +581,7 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Retrieve all Comments associated with the Case object.
+        /// List all the comments associated with a case.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -588,8 +593,9 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Add a new comment to the specified Case.
-        /// The comment object must have the following fields set: body.
+        /// Add a new comment to a case.
+        /// 
+        /// The comment must have the following fields set: `body`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -601,8 +607,9 @@ namespace Google.Cloud.Support.V2
         }
 
         /// <summary>
-        /// Add a new comment to the specified Case.
-        /// The comment object must have the following fields set: body.
+        /// Add a new comment to a case.
+        /// 
+        /// The comment must have the following fields set: `body`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

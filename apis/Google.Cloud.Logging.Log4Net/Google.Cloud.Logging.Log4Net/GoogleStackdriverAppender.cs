@@ -25,7 +25,6 @@ using log4net.Core;
 using log4net.Layout;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Security;
 using System.Threading;
@@ -234,8 +233,10 @@ namespace Google.Cloud.Logging.Log4Net
         private GoogleCredential GetCredentialFromConfiguration()
         {
             var credential =
+#pragma warning disable CS0618 // Temporarily disable warnings for obsolete methods. See b/453009677 for more details.
                 !string.IsNullOrWhiteSpace(CredentialFile) ? GoogleCredential.FromFile(CredentialFile) :
                 !string.IsNullOrWhiteSpace(CredentialJson) ? GoogleCredential.FromJson(CredentialJson) :
+#pragma warning restore CS0618
                 null;
             if (credential == null)
             {

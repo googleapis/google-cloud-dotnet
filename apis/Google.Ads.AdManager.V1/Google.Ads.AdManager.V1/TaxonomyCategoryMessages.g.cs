@@ -28,17 +28,20 @@ namespace Google.Ads.AdManager.V1 {
             "ZXNzYWdlcy5wcm90bxIXZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEaMGdvb2ds",
             "ZS9hZHMvYWRtYW5hZ2VyL3YxL3RheG9ub215X3R5cGVfZW51bS5wcm90bxof",
             "Z29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9y",
-            "ZXNvdXJjZS5wcm90byLfAwoQVGF4b25vbXlDYXRlZ29yeRIRCgRuYW1lGAEg",
-            "ASgJQgPgQQgSIQoUdGF4b25vbXlfY2F0ZWdvcnlfaWQYAiABKANCA+BBAxIZ",
-            "CgxkaXNwbGF5X25hbWUYAyABKAlCA+BBAxIaCg1ncm91cGluZ19vbmx5GAUg",
-            "ASgIQgPgQQMSKAobcGFyZW50X3RheG9ub215X2NhdGVnb3J5X2lkGAYgASgD",
-            "QgPgQQMSUgoNdGF4b25vbXlfdHlwZRgJIAEoDjI2Lmdvb2dsZS5hZHMuYWRt",
-            "YW5hZ2VyLnYxLlRheG9ub215VHlwZUVudW0uVGF4b25vbXlUeXBlQgPgQQMS",
-            "GwoOYW5jZXN0b3JfbmFtZXMYByADKAlCA+BBAxIrCh5hbmNlc3Rvcl90YXhv",
-            "bm9teV9jYXRlZ29yeV9pZHMYCCADKANCA+BBAzqVAepBkQEKKWFkbWFuYWdl",
-            "ci5nb29nbGVhcGlzLmNvbS9UYXhvbm9teUNhdGVnb3J5Ej5uZXR3b3Jrcy97",
-            "bmV0d29ya19jb2RlfS90YXhvbm9teUNhdGVnb3JpZXMve3RheG9ub215X2Nh",
-            "dGVnb3J5fSoSdGF4b25vbXlDYXRlZ29yaWVzMhB0YXhvbm9teUNhdGVnb3J5",
+            "ZXNvdXJjZS5wcm90byLmBAoQVGF4b25vbXlDYXRlZ29yeRIRCgRuYW1lGAEg",
+            "ASgJQgPgQQgSJgoUdGF4b25vbXlfY2F0ZWdvcnlfaWQYAiABKANCA+BBA0gA",
+            "iAEBEh4KDGRpc3BsYXlfbmFtZRgDIAEoCUID4EEDSAGIAQESHwoNZ3JvdXBp",
+            "bmdfb25seRgFIAEoCEID4EEDSAKIAQESLQobcGFyZW50X3RheG9ub215X2Nh",
+            "dGVnb3J5X2lkGAYgASgDQgPgQQNIA4gBARJXCg10YXhvbm9teV90eXBlGAkg",
+            "ASgOMjYuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuVGF4b25vbXlUeXBlRW51",
+            "bS5UYXhvbm9teVR5cGVCA+BBA0gEiAEBEhsKDmFuY2VzdG9yX25hbWVzGAcg",
+            "AygJQgPgQQMSKwoeYW5jZXN0b3JfdGF4b25vbXlfY2F0ZWdvcnlfaWRzGAgg",
+            "AygDQgPgQQM6lQHqQZEBCilhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vVGF4",
+            "b25vbXlDYXRlZ29yeRI+bmV0d29ya3Mve25ldHdvcmtfY29kZX0vdGF4b25v",
+            "bXlDYXRlZ29yaWVzL3t0YXhvbm9teV9jYXRlZ29yeX0qEnRheG9ub215Q2F0",
+            "ZWdvcmllczIQdGF4b25vbXlDYXRlZ29yeUIXChVfdGF4b25vbXlfY2F0ZWdv",
+            "cnlfaWRCDwoNX2Rpc3BsYXlfbmFtZUIQCg5fZ3JvdXBpbmdfb25seUIeChxf",
+            "cGFyZW50X3RheG9ub215X2NhdGVnb3J5X2lkQhAKDl90YXhvbm9teV90eXBl",
             "QtEBChtjb20uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjFCHVRheG9ub215Q2F0",
             "ZWdvcnlNZXNzYWdlc1Byb3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
             "b3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92MTthZG1hbmFnZXKqAhdH",
@@ -47,7 +50,7 @@ namespace Google.Ads.AdManager.V1 {
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.TaxonomyTypeEnumReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.TaxonomyCategory), global::Google.Ads.AdManager.V1.TaxonomyCategory.Parser, new[]{ "Name", "TaxonomyCategoryId", "DisplayName", "GroupingOnly", "ParentTaxonomyCategoryId", "TaxonomyType", "AncestorNames", "AncestorTaxonomyCategoryIds" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.TaxonomyCategory), global::Google.Ads.AdManager.V1.TaxonomyCategory.Parser, new[]{ "Name", "TaxonomyCategoryId", "DisplayName", "GroupingOnly", "ParentTaxonomyCategoryId", "TaxonomyType", "AncestorNames", "AncestorTaxonomyCategoryIds" }, new[]{ "TaxonomyCategoryId", "DisplayName", "GroupingOnly", "ParentTaxonomyCategoryId", "TaxonomyType" }, null, null, null)
           }));
     }
     #endregion
@@ -65,6 +68,7 @@ namespace Google.Ads.AdManager.V1 {
   {
     private static readonly pb::MessageParser<TaxonomyCategory> _parser = new pb::MessageParser<TaxonomyCategory>(() => new TaxonomyCategory());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TaxonomyCategory> Parser { get { return _parser; } }
@@ -92,6 +96,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TaxonomyCategory(TaxonomyCategory other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
       taxonomyCategoryId_ = other.taxonomyCategoryId_;
       displayName_ = other.displayName_;
@@ -127,6 +132,8 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "taxonomy_category_id" field.</summary>
     public const int TaxonomyCategoryIdFieldNumber = 2;
+    private readonly static long TaxonomyCategoryIdDefaultValue = 0L;
+
     private long taxonomyCategoryId_;
     /// <summary>
     /// Output only. `TaxonomyCategory` ID.
@@ -134,29 +141,58 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long TaxonomyCategoryId {
-      get { return taxonomyCategoryId_; }
+      get { if ((_hasBits0 & 1) != 0) { return taxonomyCategoryId_; } else { return TaxonomyCategoryIdDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         taxonomyCategoryId_ = value;
       }
+    }
+    /// <summary>Gets whether the "taxonomy_category_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTaxonomyCategoryId {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "taxonomy_category_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTaxonomyCategoryId() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "display_name" field.</summary>
     public const int DisplayNameFieldNumber = 3;
-    private string displayName_ = "";
+    private readonly static string DisplayNameDefaultValue = "";
+
+    private string displayName_;
     /// <summary>
     /// Output only. Display name of the `TaxonomyCategory`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
-      get { return displayName_; }
+      get { return displayName_ ?? DisplayNameDefaultValue; }
       set {
         displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return displayName_ != null; }
+    }
+    /// <summary>Clears the value of the "display_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      displayName_ = null;
+    }
 
     /// <summary>Field number for the "grouping_only" field.</summary>
     public const int GroupingOnlyFieldNumber = 5;
+    private readonly static bool GroupingOnlyDefaultValue = false;
+
     private bool groupingOnly_;
     /// <summary>
     /// Output only. Whether this `TaxonomyCategory` only serves to group its
@@ -165,14 +201,29 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool GroupingOnly {
-      get { return groupingOnly_; }
+      get { if ((_hasBits0 & 2) != 0) { return groupingOnly_; } else { return GroupingOnlyDefaultValue; } }
       set {
+        _hasBits0 |= 2;
         groupingOnly_ = value;
       }
+    }
+    /// <summary>Gets whether the "grouping_only" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGroupingOnly {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "grouping_only" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGroupingOnly() {
+      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "parent_taxonomy_category_id" field.</summary>
     public const int ParentTaxonomyCategoryIdFieldNumber = 6;
+    private readonly static long ParentTaxonomyCategoryIdDefaultValue = 0L;
+
     private long parentTaxonomyCategoryId_;
     /// <summary>
     /// Output only. The ID of the parent category this `TaxonomyCategory` descends
@@ -181,25 +232,53 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long ParentTaxonomyCategoryId {
-      get { return parentTaxonomyCategoryId_; }
+      get { if ((_hasBits0 & 4) != 0) { return parentTaxonomyCategoryId_; } else { return ParentTaxonomyCategoryIdDefaultValue; } }
       set {
+        _hasBits0 |= 4;
         parentTaxonomyCategoryId_ = value;
       }
+    }
+    /// <summary>Gets whether the "parent_taxonomy_category_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasParentTaxonomyCategoryId {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "parent_taxonomy_category_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearParentTaxonomyCategoryId() {
+      _hasBits0 &= ~4;
     }
 
     /// <summary>Field number for the "taxonomy_type" field.</summary>
     public const int TaxonomyTypeFieldNumber = 9;
-    private global::Google.Ads.AdManager.V1.TaxonomyTypeEnum.Types.TaxonomyType taxonomyType_ = global::Google.Ads.AdManager.V1.TaxonomyTypeEnum.Types.TaxonomyType.Unspecified;
+    private readonly static global::Google.Ads.AdManager.V1.TaxonomyTypeEnum.Types.TaxonomyType TaxonomyTypeDefaultValue = global::Google.Ads.AdManager.V1.TaxonomyTypeEnum.Types.TaxonomyType.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.TaxonomyTypeEnum.Types.TaxonomyType taxonomyType_;
     /// <summary>
     /// Output only. The taxonomy that this `TaxonomyCategory` belongs to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Ads.AdManager.V1.TaxonomyTypeEnum.Types.TaxonomyType TaxonomyType {
-      get { return taxonomyType_; }
+      get { if ((_hasBits0 & 8) != 0) { return taxonomyType_; } else { return TaxonomyTypeDefaultValue; } }
       set {
+        _hasBits0 |= 8;
         taxonomyType_ = value;
       }
+    }
+    /// <summary>Gets whether the "taxonomy_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTaxonomyType {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "taxonomy_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTaxonomyType() {
+      _hasBits0 &= ~8;
     }
 
     /// <summary>Field number for the "ancestor_names" field.</summary>
@@ -261,11 +340,11 @@ namespace Google.Ads.AdManager.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (TaxonomyCategoryId != 0L) hash ^= TaxonomyCategoryId.GetHashCode();
-      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (GroupingOnly != false) hash ^= GroupingOnly.GetHashCode();
-      if (ParentTaxonomyCategoryId != 0L) hash ^= ParentTaxonomyCategoryId.GetHashCode();
-      if (TaxonomyType != global::Google.Ads.AdManager.V1.TaxonomyTypeEnum.Types.TaxonomyType.Unspecified) hash ^= TaxonomyType.GetHashCode();
+      if (HasTaxonomyCategoryId) hash ^= TaxonomyCategoryId.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasGroupingOnly) hash ^= GroupingOnly.GetHashCode();
+      if (HasParentTaxonomyCategoryId) hash ^= ParentTaxonomyCategoryId.GetHashCode();
+      if (HasTaxonomyType) hash ^= TaxonomyType.GetHashCode();
       hash ^= ancestorNames_.GetHashCode();
       hash ^= ancestorTaxonomyCategoryIds_.GetHashCode();
       if (_unknownFields != null) {
@@ -290,25 +369,25 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (TaxonomyCategoryId != 0L) {
+      if (HasTaxonomyCategoryId) {
         output.WriteRawTag(16);
         output.WriteInt64(TaxonomyCategoryId);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         output.WriteRawTag(26);
         output.WriteString(DisplayName);
       }
-      if (GroupingOnly != false) {
+      if (HasGroupingOnly) {
         output.WriteRawTag(40);
         output.WriteBool(GroupingOnly);
       }
-      if (ParentTaxonomyCategoryId != 0L) {
+      if (HasParentTaxonomyCategoryId) {
         output.WriteRawTag(48);
         output.WriteInt64(ParentTaxonomyCategoryId);
       }
       ancestorNames_.WriteTo(output, _repeated_ancestorNames_codec);
       ancestorTaxonomyCategoryIds_.WriteTo(output, _repeated_ancestorTaxonomyCategoryIds_codec);
-      if (TaxonomyType != global::Google.Ads.AdManager.V1.TaxonomyTypeEnum.Types.TaxonomyType.Unspecified) {
+      if (HasTaxonomyType) {
         output.WriteRawTag(72);
         output.WriteEnum((int) TaxonomyType);
       }
@@ -326,25 +405,25 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (TaxonomyCategoryId != 0L) {
+      if (HasTaxonomyCategoryId) {
         output.WriteRawTag(16);
         output.WriteInt64(TaxonomyCategoryId);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         output.WriteRawTag(26);
         output.WriteString(DisplayName);
       }
-      if (GroupingOnly != false) {
+      if (HasGroupingOnly) {
         output.WriteRawTag(40);
         output.WriteBool(GroupingOnly);
       }
-      if (ParentTaxonomyCategoryId != 0L) {
+      if (HasParentTaxonomyCategoryId) {
         output.WriteRawTag(48);
         output.WriteInt64(ParentTaxonomyCategoryId);
       }
       ancestorNames_.WriteTo(ref output, _repeated_ancestorNames_codec);
       ancestorTaxonomyCategoryIds_.WriteTo(ref output, _repeated_ancestorTaxonomyCategoryIds_codec);
-      if (TaxonomyType != global::Google.Ads.AdManager.V1.TaxonomyTypeEnum.Types.TaxonomyType.Unspecified) {
+      if (HasTaxonomyType) {
         output.WriteRawTag(72);
         output.WriteEnum((int) TaxonomyType);
       }
@@ -361,19 +440,19 @@ namespace Google.Ads.AdManager.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (TaxonomyCategoryId != 0L) {
+      if (HasTaxonomyCategoryId) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(TaxonomyCategoryId);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
-      if (GroupingOnly != false) {
+      if (HasGroupingOnly) {
         size += 1 + 1;
       }
-      if (ParentTaxonomyCategoryId != 0L) {
+      if (HasParentTaxonomyCategoryId) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(ParentTaxonomyCategoryId);
       }
-      if (TaxonomyType != global::Google.Ads.AdManager.V1.TaxonomyTypeEnum.Types.TaxonomyType.Unspecified) {
+      if (HasTaxonomyType) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TaxonomyType);
       }
       size += ancestorNames_.CalculateSize(_repeated_ancestorNames_codec);
@@ -393,19 +472,19 @@ namespace Google.Ads.AdManager.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.TaxonomyCategoryId != 0L) {
+      if (other.HasTaxonomyCategoryId) {
         TaxonomyCategoryId = other.TaxonomyCategoryId;
       }
-      if (other.DisplayName.Length != 0) {
+      if (other.HasDisplayName) {
         DisplayName = other.DisplayName;
       }
-      if (other.GroupingOnly != false) {
+      if (other.HasGroupingOnly) {
         GroupingOnly = other.GroupingOnly;
       }
-      if (other.ParentTaxonomyCategoryId != 0L) {
+      if (other.HasParentTaxonomyCategoryId) {
         ParentTaxonomyCategoryId = other.ParentTaxonomyCategoryId;
       }
-      if (other.TaxonomyType != global::Google.Ads.AdManager.V1.TaxonomyTypeEnum.Types.TaxonomyType.Unspecified) {
+      if (other.HasTaxonomyType) {
         TaxonomyType = other.TaxonomyType;
       }
       ancestorNames_.Add(other.ancestorNames_);

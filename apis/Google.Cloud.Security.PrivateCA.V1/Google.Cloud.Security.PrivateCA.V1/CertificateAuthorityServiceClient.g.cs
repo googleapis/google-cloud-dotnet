@@ -1210,8 +1210,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Optional. It must be unique within a location and match the regular
         /// expression `[a-zA-Z0-9_-]{1,63}`. This field is required when using a
         /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// in the Enterprise [CertificateAuthority.Tier][], but is optional and its
-        /// value is ignored otherwise.
+        /// in the Enterprise
+        /// [CertificateAuthority.tier][google.cloud.security.privateca.v1.CertificateAuthority.tier],
+        /// but is optional and its value is ignored otherwise.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1242,8 +1243,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Optional. It must be unique within a location and match the regular
         /// expression `[a-zA-Z0-9_-]{1,63}`. This field is required when using a
         /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// in the Enterprise [CertificateAuthority.Tier][], but is optional and its
-        /// value is ignored otherwise.
+        /// in the Enterprise
+        /// [CertificateAuthority.tier][google.cloud.security.privateca.v1.CertificateAuthority.tier],
+        /// but is optional and its value is ignored otherwise.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1274,8 +1276,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Optional. It must be unique within a location and match the regular
         /// expression `[a-zA-Z0-9_-]{1,63}`. This field is required when using a
         /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// in the Enterprise [CertificateAuthority.Tier][], but is optional and its
-        /// value is ignored otherwise.
+        /// in the Enterprise
+        /// [CertificateAuthority.tier][google.cloud.security.privateca.v1.CertificateAuthority.tier],
+        /// but is optional and its value is ignored otherwise.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1301,8 +1304,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Optional. It must be unique within a location and match the regular
         /// expression `[a-zA-Z0-9_-]{1,63}`. This field is required when using a
         /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// in the Enterprise [CertificateAuthority.Tier][], but is optional and its
-        /// value is ignored otherwise.
+        /// in the Enterprise
+        /// [CertificateAuthority.tier][google.cloud.security.privateca.v1.CertificateAuthority.tier],
+        /// but is optional and its value is ignored otherwise.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1333,8 +1337,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Optional. It must be unique within a location and match the regular
         /// expression `[a-zA-Z0-9_-]{1,63}`. This field is required when using a
         /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// in the Enterprise [CertificateAuthority.Tier][], but is optional and its
-        /// value is ignored otherwise.
+        /// in the Enterprise
+        /// [CertificateAuthority.tier][google.cloud.security.privateca.v1.CertificateAuthority.tier],
+        /// but is optional and its value is ignored otherwise.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1365,8 +1370,9 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// Optional. It must be unique within a location and match the regular
         /// expression `[a-zA-Z0-9_-]{1,63}`. This field is required when using a
         /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// in the Enterprise [CertificateAuthority.Tier][], but is optional and its
-        /// value is ignored otherwise.
+        /// in the Enterprise
+        /// [CertificateAuthority.tier][google.cloud.security.privateca.v1.CertificateAuthority.tier],
+        /// but is optional and its value is ignored otherwise.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

@@ -38,7 +38,7 @@ namespace GoogleCSharpSnippets
             AssembleDataRequest request = new AssembleDataRequest
             {
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
-                GeminiTemplateConfig = new GeminiTemplateConfig(),
+                GeminiRequestReadConfig = new GeminiRequestReadConfig(),
             };
             // Make the request
             Operation<AssembleDataResponse, AssembleDataOperationMetadata> response = datasetServiceClient.AssembleData(request);

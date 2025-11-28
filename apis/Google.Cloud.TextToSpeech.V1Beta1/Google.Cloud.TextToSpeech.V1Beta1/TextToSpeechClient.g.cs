@@ -439,7 +439,7 @@ namespace Google.Cloud.TextToSpeech.V1Beta1
         }
 
         /// <summary>
-        /// Performs bidirectional streaming speech synthesis: receive audio while
+        /// Performs bidirectional streaming speech synthesis: receives audio while
         /// sending text.
         /// </summary>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -607,7 +607,7 @@ namespace Google.Cloud.TextToSpeech.V1Beta1
         }
 
         /// <summary>
-        /// Performs bidirectional streaming speech synthesis: receive audio while
+        /// Performs bidirectional streaming speech synthesis: receives audio while
         /// sending text.
         /// </summary>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

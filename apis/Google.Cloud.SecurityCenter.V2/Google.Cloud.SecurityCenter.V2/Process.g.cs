@@ -26,7 +26,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
           string.Concat(
             "Cixnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjIvcHJvY2Vzcy5wcm90",
             "bxIeZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYyGilnb29nbGUvY2xv",
-            "dWQvc2VjdXJpdHljZW50ZXIvdjIvZmlsZS5wcm90byL1AgoHUHJvY2VzcxIM",
+            "dWQvc2VjdXJpdHljZW50ZXIvdjIvZmlsZS5wcm90byKGAwoHUHJvY2VzcxIM",
             "CgRuYW1lGAEgASgJEjQKBmJpbmFyeRgCIAEoCzIkLmdvb2dsZS5jbG91ZC5z",
             "ZWN1cml0eWNlbnRlci52Mi5GaWxlEjcKCWxpYnJhcmllcxgDIAMoCzIkLmdv",
             "b2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52Mi5GaWxlEjQKBnNjcmlwdBgE",
@@ -35,17 +35,17 @@ namespace Google.Cloud.SecurityCenter.V2 {
             "bnZfdmFyaWFibGVzGAcgAygLMjMuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2Vu",
             "dGVyLnYyLkVudmlyb25tZW50VmFyaWFibGUSHwoXZW52X3ZhcmlhYmxlc190",
             "cnVuY2F0ZWQYCCABKAgSCwoDcGlkGAkgASgDEhIKCnBhcmVudF9waWQYCiAB",
-            "KAMiMAoTRW52aXJvbm1lbnRWYXJpYWJsZRIMCgRuYW1lGAEgASgJEgsKA3Zh",
-            "bBgCIAEoCULmAQoiY29tLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52",
-            "MkIMUHJvY2Vzc1Byb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20vZ28vc2VjdXJp",
-            "dHljZW50ZXIvYXBpdjIvc2VjdXJpdHljZW50ZXJwYjtzZWN1cml0eWNlbnRl",
-            "cnBiqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVyLlYyygIeR29vZ2xl",
-            "XENsb3VkXFNlY3VyaXR5Q2VudGVyXFYy6gIhR29vZ2xlOjpDbG91ZDo6U2Vj",
-            "dXJpdHlDZW50ZXI6OlYyYgZwcm90bzM="));
+            "KAMSDwoHdXNlcl9pZBgLIAEoAyIwChNFbnZpcm9ubWVudFZhcmlhYmxlEgwK",
+            "BG5hbWUYASABKAkSCwoDdmFsGAIgASgJQuYBCiJjb20uZ29vZ2xlLmNsb3Vk",
+            "LnNlY3VyaXR5Y2VudGVyLnYyQgxQcm9jZXNzUHJvdG9QAVpKY2xvdWQuZ29v",
+            "Z2xlLmNvbS9nby9zZWN1cml0eWNlbnRlci9hcGl2Mi9zZWN1cml0eWNlbnRl",
+            "cnBiO3NlY3VyaXR5Y2VudGVycGKqAh5Hb29nbGUuQ2xvdWQuU2VjdXJpdHlD",
+            "ZW50ZXIuVjLKAh5Hb29nbGVcQ2xvdWRcU2VjdXJpdHlDZW50ZXJcVjLqAiFH",
+            "b29nbGU6OkNsb3VkOjpTZWN1cml0eUNlbnRlcjo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.SecurityCenter.V2.FileReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.Process), global::Google.Cloud.SecurityCenter.V2.Process.Parser, new[]{ "Name", "Binary", "Libraries", "Script", "Args", "ArgumentsTruncated", "EnvVariables", "EnvVariablesTruncated", "Pid", "ParentPid" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.Process), global::Google.Cloud.SecurityCenter.V2.Process.Parser, new[]{ "Name", "Binary", "Libraries", "Script", "Args", "ArgumentsTruncated", "EnvVariables", "EnvVariablesTruncated", "Pid", "ParentPid", "UserId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.EnvironmentVariable), global::Google.Cloud.SecurityCenter.V2.EnvironmentVariable.Parser, new[]{ "Name", "Val" }, null, null, null, null)
           }));
     }
@@ -101,6 +101,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
       envVariablesTruncated_ = other.envVariablesTruncated_;
       pid_ = other.pid_;
       parentPid_ = other.parentPid_;
+      userId_ = other.userId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -261,6 +262,22 @@ namespace Google.Cloud.SecurityCenter.V2 {
       }
     }
 
+    /// <summary>Field number for the "user_id" field.</summary>
+    public const int UserIdFieldNumber = 11;
+    private long userId_;
+    /// <summary>
+    /// The ID of the user that executed the process. E.g. If this is the root user
+    /// this will always be 0.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long UserId {
+      get { return userId_; }
+      set {
+        userId_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -286,6 +303,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
       if (EnvVariablesTruncated != other.EnvVariablesTruncated) return false;
       if (Pid != other.Pid) return false;
       if (ParentPid != other.ParentPid) return false;
+      if (UserId != other.UserId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -303,6 +321,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
       if (EnvVariablesTruncated != false) hash ^= EnvVariablesTruncated.GetHashCode();
       if (Pid != 0L) hash ^= Pid.GetHashCode();
       if (ParentPid != 0L) hash ^= ParentPid.GetHashCode();
+      if (UserId != 0L) hash ^= UserId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -352,6 +371,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
         output.WriteRawTag(80);
         output.WriteInt64(ParentPid);
       }
+      if (UserId != 0L) {
+        output.WriteRawTag(88);
+        output.WriteInt64(UserId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -393,6 +416,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
         output.WriteRawTag(80);
         output.WriteInt64(ParentPid);
       }
+      if (UserId != 0L) {
+        output.WriteRawTag(88);
+        output.WriteInt64(UserId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -426,6 +453,9 @@ namespace Google.Cloud.SecurityCenter.V2 {
       }
       if (ParentPid != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(ParentPid);
+      }
+      if (UserId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(UserId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -468,6 +498,9 @@ namespace Google.Cloud.SecurityCenter.V2 {
       }
       if (other.ParentPid != 0L) {
         ParentPid = other.ParentPid;
+      }
+      if (other.UserId != 0L) {
+        UserId = other.UserId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -530,6 +563,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
             ParentPid = input.ReadInt64();
             break;
           }
+          case 88: {
+            UserId = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -589,6 +626,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
           }
           case 80: {
             ParentPid = input.ReadInt64();
+            break;
+          }
+          case 88: {
+            UserId = input.ReadInt64();
             break;
           }
         }

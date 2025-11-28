@@ -28,7 +28,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
             "bG9nc19jb25maWcucHJvdG8SIWdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdl",
             "bWVudC52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29v",
             "Z2xlL2FwaS9yZXNvdXJjZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVz",
-            "dGFtcC5wcm90byKIDQoRVnBjRmxvd0xvZ3NDb25maWcSEQoEbmFtZRgBIAEo",
+            "dGFtcC5wcm90byKkEAoRVnBjRmxvd0xvZ3NDb25maWcSEQoEbmFtZRgBIAEo",
             "CUID4EEIEh0KC2Rlc2NyaXB0aW9uGAIgASgJQgPgQQFIAYgBARJTCgVzdGF0",
             "ZRgDIAEoDjI6Lmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5W",
             "cGNGbG93TG9nc0NvbmZpZy5TdGF0ZUID4EEBSAKIAQEScAoUYWdncmVnYXRp",
@@ -38,44 +38,78 @@ namespace Google.Cloud.NetworkManagement.V1 {
             "WQoIbWV0YWRhdGEYBiABKA4yPS5nb29nbGUuY2xvdWQubmV0d29ya21hbmFn",
             "ZW1lbnQudjEuVnBjRmxvd0xvZ3NDb25maWcuTWV0YWRhdGFCA+BBAUgFiAEB",
             "EhwKD21ldGFkYXRhX2ZpZWxkcxgHIAMoCUID4EEBEh0KC2ZpbHRlcl9leHBy",
-            "GAggASgJQgPgQQFIBogBARJxChV0YXJnZXRfcmVzb3VyY2Vfc3RhdGUYDCAB",
+            "GAggASgJQgPgQQFIBogBARJzChZjcm9zc19wcm9qZWN0X21ldGFkYXRhGA0g",
+            "ASgOMkkuZ29vZ2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLlZwY0Zs",
+            "b3dMb2dzQ29uZmlnLkNyb3NzUHJvamVjdE1ldGFkYXRhQgPgQQFIB4gBARJx",
+            "ChV0YXJnZXRfcmVzb3VyY2Vfc3RhdGUYDCABKA4ySC5nb29nbGUuY2xvdWQu",
+            "bmV0d29ya21hbmFnZW1lbnQudjEuVnBjRmxvd0xvZ3NDb25maWcuVGFyZ2V0",
+            "UmVzb3VyY2VTdGF0ZUID4EEDSAiIAQESEQoHbmV0d29yaxhkIAEoCUgAEhAK",
+            "BnN1Ym5ldBhlIAEoCUgAEiEKF2ludGVyY29ubmVjdF9hdHRhY2htZW50GGYg",
+            "ASgJSAASFAoKdnBuX3R1bm5lbBhnIAEoCUgAElUKBmxhYmVscxgLIAMoCzJA",
+            "Lmdvb2dsZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5WcGNGbG93TG9n",
+            "c0NvbmZpZy5MYWJlbHNFbnRyeUID4EEBEjQKC2NyZWF0ZV90aW1lGAkgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90",
+            "aW1lGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDGi0K",
+            "C0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi",
+            "OQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABILCgdFTkFCTEVEEAES",
+            "DAoIRElTQUJMRUQQAiK2AQoTQWdncmVnYXRpb25JbnRlcnZhbBIkCiBBR0dS",
+            "RUdBVElPTl9JTlRFUlZBTF9VTlNQRUNJRklFRBAAEhIKDklOVEVSVkFMXzVf",
+            "U0VDEAESEwoPSU5URVJWQUxfMzBfU0VDEAISEgoOSU5URVJWQUxfMV9NSU4Q",
+            "AxISCg5JTlRFUlZBTF81X01JThAEEhMKD0lOVEVSVkFMXzEwX01JThAFEhMK",
+            "D0lOVEVSVkFMXzE1X01JThAGIm0KCE1ldGFkYXRhEhgKFE1FVEFEQVRBX1VO",
+            "U1BFQ0lGSUVEEAASGAoUSU5DTFVERV9BTExfTUVUQURBVEEQARIYChRFWENM",
+            "VURFX0FMTF9NRVRBREFUQRACEhMKD0NVU1RPTV9NRVRBREFUQRADIocBChRD",
+            "cm9zc1Byb2plY3RNZXRhZGF0YRImCiJDUk9TU19QUk9KRUNUX01FVEFEQVRB",
+            "X1VOU1BFQ0lGSUVEEAASIgoeQ1JPU1NfUFJPSkVDVF9NRVRBREFUQV9FTkFC",
+            "TEVEEAESIwofQ1JPU1NfUFJPSkVDVF9NRVRBREFUQV9ESVNBQkxFRBACInwK",
+            "E1RhcmdldFJlc291cmNlU3RhdGUSJQohVEFSR0VUX1JFU09VUkNFX1NUQVRF",
+            "X1VOU1BFQ0lGSUVEEAASGgoWVEFSR0VUX1JFU09VUkNFX0VYSVNUUxABEiIK",
+            "HlRBUkdFVF9SRVNPVVJDRV9ET0VTX05PVF9FWElTVBACOo8C6kGLAgoybmV0",
+            "d29ya21hbmFnZW1lbnQuZ29vZ2xlYXBpcy5jb20vVnBjRmxvd0xvZ3NDb25m",
+            "aWcSUXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS92",
+            "cGNGbG93TG9nc0NvbmZpZ3Mve3ZwY19mbG93X2xvZ3NfY29uZmlnfRJbb3Jn",
+            "YW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9sb2NhdGlvbnMve2xvY2F0aW9u",
+            "fS92cGNGbG93TG9nc0NvbmZpZ3Mve3ZwY19mbG93X2xvZ3NfY29uZmlnfSoS",
+            "dnBjRmxvd0xvZ3NDb25maWdzMhF2cGNGbG93TG9nc0NvbmZpZ0IRCg90YXJn",
+            "ZXRfcmVzb3VyY2VCDgoMX2Rlc2NyaXB0aW9uQggKBl9zdGF0ZUIXChVfYWdn",
+            "cmVnYXRpb25faW50ZXJ2YWxCEAoOX2Zsb3dfc2FtcGxpbmdCCwoJX21ldGFk",
+            "YXRhQg4KDF9maWx0ZXJfZXhwckIZChdfY3Jvc3NfcHJvamVjdF9tZXRhZGF0",
+            "YUIYChZfdGFyZ2V0X3Jlc291cmNlX3N0YXRlIs4HChpFZmZlY3RpdmVWcGNG",
+            "bG93TG9nc0NvbmZpZxIMCgRuYW1lGAEgASgJEk4KBXN0YXRlGAMgASgOMjou",
+            "Z29vZ2xlLmNsb3VkLm5ldHdvcmttYW5hZ2VtZW50LnYxLlZwY0Zsb3dMb2dz",
+            "Q29uZmlnLlN0YXRlSAGIAQESawoUYWdncmVnYXRpb25faW50ZXJ2YWwYBCAB",
             "KA4ySC5nb29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQudjEuVnBjRmxv",
-            "d0xvZ3NDb25maWcuVGFyZ2V0UmVzb3VyY2VTdGF0ZUID4EEDSAeIAQESIQoX",
-            "aW50ZXJjb25uZWN0X2F0dGFjaG1lbnQYZiABKAlIABIUCgp2cG5fdHVubmVs",
-            "GGcgASgJSAASVQoGbGFiZWxzGAsgAygLMkAuZ29vZ2xlLmNsb3VkLm5ldHdv",
-            "cmttYW5hZ2VtZW50LnYxLlZwY0Zsb3dMb2dzQ29uZmlnLkxhYmVsc0VudHJ5",
-            "QgPgQQESNAoLY3JlYXRlX3RpbWUYCSABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYCiABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5",
-            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASI5CgVTdGF0ZRIVChFTVEFURV9V",
-            "TlNQRUNJRklFRBAAEgsKB0VOQUJMRUQQARIMCghESVNBQkxFRBACIrYBChNB",
-            "Z2dyZWdhdGlvbkludGVydmFsEiQKIEFHR1JFR0FUSU9OX0lOVEVSVkFMX1VO",
-            "U1BFQ0lGSUVEEAASEgoOSU5URVJWQUxfNV9TRUMQARITCg9JTlRFUlZBTF8z",
-            "MF9TRUMQAhISCg5JTlRFUlZBTF8xX01JThADEhIKDklOVEVSVkFMXzVfTUlO",
-            "EAQSEwoPSU5URVJWQUxfMTBfTUlOEAUSEwoPSU5URVJWQUxfMTVfTUlOEAYi",
-            "bQoITWV0YWRhdGESGAoUTUVUQURBVEFfVU5TUEVDSUZJRUQQABIYChRJTkNM",
-            "VURFX0FMTF9NRVRBREFUQRABEhgKFEVYQ0xVREVfQUxMX01FVEFEQVRBEAIS",
-            "EwoPQ1VTVE9NX01FVEFEQVRBEAMifAoTVGFyZ2V0UmVzb3VyY2VTdGF0ZRIl",
-            "CiFUQVJHRVRfUkVTT1VSQ0VfU1RBVEVfVU5TUEVDSUZJRUQQABIaChZUQVJH",
-            "RVRfUkVTT1VSQ0VfRVhJU1RTEAESIgoeVEFSR0VUX1JFU09VUkNFX0RPRVNf",
-            "Tk9UX0VYSVNUEAI6sgHqQa4BCjJuZXR3b3JrbWFuYWdlbWVudC5nb29nbGVh",
-            "cGlzLmNvbS9WcGNGbG93TG9nc0NvbmZpZxJRcHJvamVjdHMve3Byb2plY3R9",
-            "L2xvY2F0aW9ucy97bG9jYXRpb259L3ZwY0Zsb3dMb2dzQ29uZmlncy97dnBj",
-            "X2Zsb3dfbG9nc19jb25maWd9KhJ2cGNGbG93TG9nc0NvbmZpZ3MyEXZwY0Zs",
-            "b3dMb2dzQ29uZmlnQhEKD3RhcmdldF9yZXNvdXJjZUIOCgxfZGVzY3JpcHRp",
-            "b25CCAoGX3N0YXRlQhcKFV9hZ2dyZWdhdGlvbl9pbnRlcnZhbEIQCg5fZmxv",
-            "d19zYW1wbGluZ0ILCglfbWV0YWRhdGFCDgoMX2ZpbHRlcl9leHByQhgKFl90",
-            "YXJnZXRfcmVzb3VyY2Vfc3RhdGVChQIKJWNvbS5nb29nbGUuY2xvdWQubmV0",
-            "d29ya21hbmFnZW1lbnQudjFCFlZwY0Zsb3dMb2dzQ29uZmlnUHJvdG9QAVpT",
-            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9uZXR3b3JrbWFuYWdlbWVudC9hcGl2MS9u",
-            "ZXR3b3JrbWFuYWdlbWVudHBiO25ldHdvcmttYW5hZ2VtZW50cGKqAiFHb29n",
-            "bGUuQ2xvdWQuTmV0d29ya01hbmFnZW1lbnQuVjHKAiFHb29nbGVcQ2xvdWRc",
-            "TmV0d29ya01hbmFnZW1lbnRcVjHqAiRHb29nbGU6OkNsb3VkOjpOZXR3b3Jr",
-            "TWFuYWdlbWVudDo6VjFiBnByb3RvMw=="));
+            "d0xvZ3NDb25maWcuQWdncmVnYXRpb25JbnRlcnZhbEgCiAEBEhoKDWZsb3df",
+            "c2FtcGxpbmcYBSABKAJIA4gBARJUCghtZXRhZGF0YRgGIAEoDjI9Lmdvb2ds",
+            "ZS5jbG91ZC5uZXR3b3JrbWFuYWdlbWVudC52MS5WcGNGbG93TG9nc0NvbmZp",
+            "Zy5NZXRhZGF0YUgEiAEBEhcKD21ldGFkYXRhX2ZpZWxkcxgHIAMoCRIYCgtm",
+            "aWx0ZXJfZXhwchgIIAEoCUgFiAEBEm4KFmNyb3NzX3Byb2plY3RfbWV0YWRh",
+            "dGEYDSABKA4ySS5nb29nbGUuY2xvdWQubmV0d29ya21hbmFnZW1lbnQudjEu",
+            "VnBjRmxvd0xvZ3NDb25maWcuQ3Jvc3NQcm9qZWN0TWV0YWRhdGFIBogBARIR",
+            "CgduZXR3b3JrGGQgASgJSAASEAoGc3VibmV0GGUgASgJSAASIQoXaW50ZXJj",
+            "b25uZWN0X2F0dGFjaG1lbnQYZiABKAlIABIUCgp2cG5fdHVubmVsGGcgASgJ",
+            "SAASVwoFc2NvcGUYDCABKA4yQy5nb29nbGUuY2xvdWQubmV0d29ya21hbmFn",
+            "ZW1lbnQudjEuRWZmZWN0aXZlVnBjRmxvd0xvZ3NDb25maWcuU2NvcGVIB4gB",
+            "ASKOAQoFU2NvcGUSFQoRU0NPUEVfVU5TUEVDSUZJRUQQABIKCgZTVUJORVQQ",
+            "ARIWChJDT01QVVRFX0FQSV9TVUJORVQQAhILCgdORVRXT1JLEAMSDgoKVlBO",
+            "X1RVTk5FTBAEEhsKF0lOVEVSQ09OTkVDVF9BVFRBQ0hNRU5UEAUSEAoMT1JH",
+            "QU5JWkFUSU9OEAZCEQoPdGFyZ2V0X3Jlc291cmNlQggKBl9zdGF0ZUIXChVf",
+            "YWdncmVnYXRpb25faW50ZXJ2YWxCEAoOX2Zsb3dfc2FtcGxpbmdCCwoJX21l",
+            "dGFkYXRhQg4KDF9maWx0ZXJfZXhwckIZChdfY3Jvc3NfcHJvamVjdF9tZXRh",
+            "ZGF0YUIICgZfc2NvcGVC8gIKJWNvbS5nb29nbGUuY2xvdWQubmV0d29ya21h",
+            "bmFnZW1lbnQudjFCFlZwY0Zsb3dMb2dzQ29uZmlnUHJvdG9QAVpTY2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby9uZXR3b3JrbWFuYWdlbWVudC9hcGl2MS9uZXR3b3Jr",
+            "bWFuYWdlbWVudHBiO25ldHdvcmttYW5hZ2VtZW50cGKqAiFHb29nbGUuQ2xv",
+            "dWQuTmV0d29ya01hbmFnZW1lbnQuVjHKAiFHb29nbGVcQ2xvdWRcTmV0d29y",
+            "a01hbmFnZW1lbnRcVjHqAiRHb29nbGU6OkNsb3VkOjpOZXR3b3JrTWFuYWdl",
+            "bWVudDo6VjHqQWoKNW5ldHdvcmttYW5hZ2VtZW50Lmdvb2dsZWFwaXMuY29t",
+            "L09yZ2FuaXphdGlvbkxvY2F0aW9uEjFvcmdhbml6YXRpb25zL3tvcmdhbml6",
+            "YXRpb259L2xvY2F0aW9ucy97bG9jYXRpb259YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig), global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Parser, new[]{ "Name", "Description", "State", "AggregationInterval", "FlowSampling", "Metadata", "MetadataFields", "FilterExpr", "TargetResourceState", "InterconnectAttachment", "VpnTunnel", "Labels", "CreateTime", "UpdateTime" }, new[]{ "TargetResource", "Description", "State", "AggregationInterval", "FlowSampling", "Metadata", "FilterExpr", "TargetResourceState" }, new[]{ typeof(global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.State), typeof(global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.AggregationInterval), typeof(global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.Metadata), typeof(global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.TargetResourceState) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig), global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Parser, new[]{ "Name", "Description", "State", "AggregationInterval", "FlowSampling", "Metadata", "MetadataFields", "FilterExpr", "CrossProjectMetadata", "TargetResourceState", "Network", "Subnet", "InterconnectAttachment", "VpnTunnel", "Labels", "CreateTime", "UpdateTime" }, new[]{ "TargetResource", "Description", "State", "AggregationInterval", "FlowSampling", "Metadata", "FilterExpr", "CrossProjectMetadata", "TargetResourceState" }, new[]{ typeof(global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.State), typeof(global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.AggregationInterval), typeof(global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.Metadata), typeof(global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.CrossProjectMetadata), typeof(global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.TargetResourceState) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkManagement.V1.EffectiveVpcFlowLogsConfig), global::Google.Cloud.NetworkManagement.V1.EffectiveVpcFlowLogsConfig.Parser, new[]{ "Name", "State", "AggregationInterval", "FlowSampling", "Metadata", "MetadataFields", "FilterExpr", "CrossProjectMetadata", "Network", "Subnet", "InterconnectAttachment", "VpnTunnel", "Scope" }, new[]{ "TargetResource", "State", "AggregationInterval", "FlowSampling", "Metadata", "FilterExpr", "CrossProjectMetadata", "Scope" }, new[]{ typeof(global::Google.Cloud.NetworkManagement.V1.EffectiveVpcFlowLogsConfig.Types.Scope) }, null, null)
           }));
     }
     #endregion
@@ -130,11 +164,18 @@ namespace Google.Cloud.NetworkManagement.V1 {
       metadata_ = other.metadata_;
       metadataFields_ = other.metadataFields_.Clone();
       filterExpr_ = other.filterExpr_;
+      crossProjectMetadata_ = other.crossProjectMetadata_;
       targetResourceState_ = other.targetResourceState_;
       labels_ = other.labels_.Clone();
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       switch (other.TargetResourceCase) {
+        case TargetResourceOneofCase.Network:
+          Network = other.Network;
+          break;
+        case TargetResourceOneofCase.Subnet:
+          Subnet = other.Subnet;
+          break;
         case TargetResourceOneofCase.InterconnectAttachment:
           InterconnectAttachment = other.InterconnectAttachment;
           break;
@@ -156,8 +197,14 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Identifier. Unique name of the configuration using the form:
-    ///     `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+    /// Identifier. Unique name of the configuration. The name can have one of the
+    /// following forms:
+    ///
+    /// - For project-level configurations:
+    /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+    ///
+    /// - For organization-level configurations:
+    /// `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -205,7 +252,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     private global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.State state_;
     /// <summary>
     /// Optional. The state of the VPC Flow Log configuration. Default value is
-    /// ENABLED. When creating a new configuration, it must be enabled.
+    /// ENABLED. When creating a new configuration, it must be enabled. Setting
+    /// state=DISABLED will pause the log generation for this config.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -370,14 +418,46 @@ namespace Google.Cloud.NetworkManagement.V1 {
       filterExpr_ = null;
     }
 
+    /// <summary>Field number for the "cross_project_metadata" field.</summary>
+    public const int CrossProjectMetadataFieldNumber = 13;
+    private readonly static global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.CrossProjectMetadata CrossProjectMetadataDefaultValue = global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.CrossProjectMetadata.Unspecified;
+
+    private global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.CrossProjectMetadata crossProjectMetadata_;
+    /// <summary>
+    /// Optional. Determines whether to include cross project annotations in the
+    /// logs. This field is available only for organization configurations. If not
+    /// specified in org configs will be set to CROSS_PROJECT_METADATA_ENABLED.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.CrossProjectMetadata CrossProjectMetadata {
+      get { if ((_hasBits0 & 32) != 0) { return crossProjectMetadata_; } else { return CrossProjectMetadataDefaultValue; } }
+      set {
+        _hasBits0 |= 32;
+        crossProjectMetadata_ = value;
+      }
+    }
+    /// <summary>Gets whether the "cross_project_metadata" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCrossProjectMetadata {
+      get { return (_hasBits0 & 32) != 0; }
+    }
+    /// <summary>Clears the value of the "cross_project_metadata" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCrossProjectMetadata() {
+      _hasBits0 &= ~32;
+    }
+
     /// <summary>Field number for the "target_resource_state" field.</summary>
     public const int TargetResourceStateFieldNumber = 12;
     private readonly static global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.TargetResourceState TargetResourceStateDefaultValue = global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.TargetResourceState.Unspecified;
 
     private global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.TargetResourceState targetResourceState_;
     /// <summary>
-    /// Output only. A diagnostic bit - describes the state of the configured
-    /// target resource for diagnostic purposes.
+    /// Output only. Describes the state of the configured target resource for
+    /// diagnostic purposes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -399,6 +479,67 @@ namespace Google.Cloud.NetworkManagement.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearTargetResourceState() {
       _hasBits0 &= ~16;
+    }
+
+    /// <summary>Field number for the "network" field.</summary>
+    public const int NetworkFieldNumber = 100;
+    /// <summary>
+    /// Traffic will be logged from VMs, VPN tunnels and Interconnect Attachments
+    /// within the network.
+    /// Format: projects/{project_id}/global/networks/{name}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Network {
+      get { return HasNetwork ? (string) targetResource_ : ""; }
+      set {
+        targetResource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        targetResourceCase_ = TargetResourceOneofCase.Network;
+      }
+    }
+    /// <summary>Gets whether the "network" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNetwork {
+      get { return targetResourceCase_ == TargetResourceOneofCase.Network; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "network" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNetwork() {
+      if (HasNetwork) {
+        ClearTargetResource();
+      }
+    }
+
+    /// <summary>Field number for the "subnet" field.</summary>
+    public const int SubnetFieldNumber = 101;
+    /// <summary>
+    /// Traffic will be logged from VMs within the subnetwork.
+    /// Format: projects/{project_id}/regions/{region}/subnetworks/{name}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Subnet {
+      get { return HasSubnet ? (string) targetResource_ : ""; }
+      set {
+        targetResource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        targetResourceCase_ = TargetResourceOneofCase.Subnet;
+      }
+    }
+    /// <summary>Gets whether the "subnet" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSubnet {
+      get { return targetResourceCase_ == TargetResourceOneofCase.Subnet; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "subnet" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSubnet() {
+      if (HasSubnet) {
+        ClearTargetResource();
+      }
     }
 
     /// <summary>Field number for the "interconnect_attachment" field.</summary>
@@ -510,6 +651,8 @@ namespace Google.Cloud.NetworkManagement.V1 {
     /// <summary>Enum of possible cases for the "target_resource" oneof.</summary>
     public enum TargetResourceOneofCase {
       None = 0,
+      Network = 100,
+      Subnet = 101,
       InterconnectAttachment = 102,
       VpnTunnel = 103,
     }
@@ -550,7 +693,10 @@ namespace Google.Cloud.NetworkManagement.V1 {
       if (Metadata != other.Metadata) return false;
       if(!metadataFields_.Equals(other.metadataFields_)) return false;
       if (FilterExpr != other.FilterExpr) return false;
+      if (CrossProjectMetadata != other.CrossProjectMetadata) return false;
       if (TargetResourceState != other.TargetResourceState) return false;
+      if (Network != other.Network) return false;
+      if (Subnet != other.Subnet) return false;
       if (InterconnectAttachment != other.InterconnectAttachment) return false;
       if (VpnTunnel != other.VpnTunnel) return false;
       if (!Labels.Equals(other.Labels)) return false;
@@ -572,7 +718,10 @@ namespace Google.Cloud.NetworkManagement.V1 {
       if (HasMetadata) hash ^= Metadata.GetHashCode();
       hash ^= metadataFields_.GetHashCode();
       if (HasFilterExpr) hash ^= FilterExpr.GetHashCode();
+      if (HasCrossProjectMetadata) hash ^= CrossProjectMetadata.GetHashCode();
       if (HasTargetResourceState) hash ^= TargetResourceState.GetHashCode();
+      if (HasNetwork) hash ^= Network.GetHashCode();
+      if (HasSubnet) hash ^= Subnet.GetHashCode();
       if (HasInterconnectAttachment) hash ^= InterconnectAttachment.GetHashCode();
       if (HasVpnTunnel) hash ^= VpnTunnel.GetHashCode();
       hash ^= Labels.GetHashCode();
@@ -639,6 +788,18 @@ namespace Google.Cloud.NetworkManagement.V1 {
         output.WriteRawTag(96);
         output.WriteEnum((int) TargetResourceState);
       }
+      if (HasCrossProjectMetadata) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) CrossProjectMetadata);
+      }
+      if (HasNetwork) {
+        output.WriteRawTag(162, 6);
+        output.WriteString(Network);
+      }
+      if (HasSubnet) {
+        output.WriteRawTag(170, 6);
+        output.WriteString(Subnet);
+      }
       if (HasInterconnectAttachment) {
         output.WriteRawTag(178, 6);
         output.WriteString(InterconnectAttachment);
@@ -699,6 +860,18 @@ namespace Google.Cloud.NetworkManagement.V1 {
         output.WriteRawTag(96);
         output.WriteEnum((int) TargetResourceState);
       }
+      if (HasCrossProjectMetadata) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) CrossProjectMetadata);
+      }
+      if (HasNetwork) {
+        output.WriteRawTag(162, 6);
+        output.WriteString(Network);
+      }
+      if (HasSubnet) {
+        output.WriteRawTag(170, 6);
+        output.WriteString(Subnet);
+      }
       if (HasInterconnectAttachment) {
         output.WriteRawTag(178, 6);
         output.WriteString(InterconnectAttachment);
@@ -739,8 +912,17 @@ namespace Google.Cloud.NetworkManagement.V1 {
       if (HasFilterExpr) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(FilterExpr);
       }
+      if (HasCrossProjectMetadata) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CrossProjectMetadata);
+      }
       if (HasTargetResourceState) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TargetResourceState);
+      }
+      if (HasNetwork) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Network);
+      }
+      if (HasSubnet) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Subnet);
       }
       if (HasInterconnectAttachment) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(InterconnectAttachment);
@@ -789,6 +971,9 @@ namespace Google.Cloud.NetworkManagement.V1 {
       if (other.HasFilterExpr) {
         FilterExpr = other.FilterExpr;
       }
+      if (other.HasCrossProjectMetadata) {
+        CrossProjectMetadata = other.CrossProjectMetadata;
+      }
       if (other.HasTargetResourceState) {
         TargetResourceState = other.TargetResourceState;
       }
@@ -806,6 +991,12 @@ namespace Google.Cloud.NetworkManagement.V1 {
         UpdateTime.MergeFrom(other.UpdateTime);
       }
       switch (other.TargetResourceCase) {
+        case TargetResourceOneofCase.Network:
+          Network = other.Network;
+          break;
+        case TargetResourceOneofCase.Subnet:
+          Subnet = other.Subnet;
+          break;
         case TargetResourceOneofCase.InterconnectAttachment:
           InterconnectAttachment = other.InterconnectAttachment;
           break;
@@ -881,6 +1072,18 @@ namespace Google.Cloud.NetworkManagement.V1 {
           }
           case 96: {
             TargetResourceState = (global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.TargetResourceState) input.ReadEnum();
+            break;
+          }
+          case 104: {
+            CrossProjectMetadata = (global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.CrossProjectMetadata) input.ReadEnum();
+            break;
+          }
+          case 802: {
+            Network = input.ReadString();
+            break;
+          }
+          case 810: {
+            Subnet = input.ReadString();
             break;
           }
           case 818: {
@@ -960,6 +1163,18 @@ namespace Google.Cloud.NetworkManagement.V1 {
             TargetResourceState = (global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.TargetResourceState) input.ReadEnum();
             break;
           }
+          case 104: {
+            CrossProjectMetadata = (global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.CrossProjectMetadata) input.ReadEnum();
+            break;
+          }
+          case 802: {
+            Network = input.ReadString();
+            break;
+          }
+          case 810: {
+            Subnet = input.ReadString();
+            break;
+          }
           case 818: {
             InterconnectAttachment = input.ReadString();
             break;
@@ -980,7 +1195,6 @@ namespace Google.Cloud.NetworkManagement.V1 {
     public static partial class Types {
       /// <summary>
       /// Determines whether this configuration will be generating logs.
-      /// Setting state=DISABLED will pause the log generation for this config.
       /// </summary>
       public enum State {
         /// <summary>
@@ -1054,8 +1268,29 @@ namespace Google.Cloud.NetworkManagement.V1 {
       }
 
       /// <summary>
-      /// Optional states of the target resource that are used as part of the
-      /// diagnostic bit.
+      /// Determines whether to include cross project annotations in the logs.
+      /// Project configurations will always have CROSS_PROJECT_METADATA_DISABLED.
+      /// </summary>
+      public enum CrossProjectMetadata {
+        /// <summary>
+        /// If not specified, the default is CROSS_PROJECT_METADATA_ENABLED.
+        /// </summary>
+        [pbr::OriginalName("CROSS_PROJECT_METADATA_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// When CROSS_PROJECT_METADATA_ENABLED, metadata from other projects will be
+        /// included in the logs.
+        /// </summary>
+        [pbr::OriginalName("CROSS_PROJECT_METADATA_ENABLED")] Enabled = 1,
+        /// <summary>
+        /// When CROSS_PROJECT_METADATA_DISABLED, metadata from other projects will
+        /// not be included in the logs.
+        /// </summary>
+        [pbr::OriginalName("CROSS_PROJECT_METADATA_DISABLED")] Disabled = 2,
+      }
+
+      /// <summary>
+      /// Output only. Indicates whether the target resource exists, for diagnostic
+      /// purposes.
       /// </summary>
       public enum TargetResourceState {
         /// <summary>
@@ -1070,6 +1305,943 @@ namespace Google.Cloud.NetworkManagement.V1 {
         /// Indicates that the target resource does not exist.
         /// </summary>
         [pbr::OriginalName("TARGET_RESOURCE_DOES_NOT_EXIST")] TargetResourceDoesNotExist = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// A configuration to generate a response for GetEffectiveVpcFlowLogsConfig
+  /// request.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class EffectiveVpcFlowLogsConfig : pb::IMessage<EffectiveVpcFlowLogsConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EffectiveVpcFlowLogsConfig> _parser = new pb::MessageParser<EffectiveVpcFlowLogsConfig>(() => new EffectiveVpcFlowLogsConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EffectiveVpcFlowLogsConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfigReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EffectiveVpcFlowLogsConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EffectiveVpcFlowLogsConfig(EffectiveVpcFlowLogsConfig other) : this() {
+      _hasBits0 = other._hasBits0;
+      name_ = other.name_;
+      state_ = other.state_;
+      aggregationInterval_ = other.aggregationInterval_;
+      flowSampling_ = other.flowSampling_;
+      metadata_ = other.metadata_;
+      metadataFields_ = other.metadataFields_.Clone();
+      filterExpr_ = other.filterExpr_;
+      crossProjectMetadata_ = other.crossProjectMetadata_;
+      scope_ = other.scope_;
+      switch (other.TargetResourceCase) {
+        case TargetResourceOneofCase.Network:
+          Network = other.Network;
+          break;
+        case TargetResourceOneofCase.Subnet:
+          Subnet = other.Subnet;
+          break;
+        case TargetResourceOneofCase.InterconnectAttachment:
+          InterconnectAttachment = other.InterconnectAttachment;
+          break;
+        case TargetResourceOneofCase.VpnTunnel:
+          VpnTunnel = other.VpnTunnel;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EffectiveVpcFlowLogsConfig Clone() {
+      return new EffectiveVpcFlowLogsConfig(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Unique name of the configuration. The name can have one of the following
+    /// forms:
+    ///
+    /// - For project-level configurations:
+    /// `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+    ///
+    /// - For organization-level configurations:
+    /// `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+    ///
+    /// - For a Compute config, the name will be the path of the subnet:
+    /// `projects/{project_id}/regions/{region}/subnetworks/{subnet_id}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 3;
+    private readonly static global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.State StateDefaultValue = global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.State.Unspecified;
+
+    private global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.State state_;
+    /// <summary>
+    /// The state of the VPC Flow Log configuration. Default value is ENABLED.
+    /// When creating a new configuration, it must be enabled.
+    /// Setting state=DISABLED will pause the log generation for this config.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.State State {
+      get { if ((_hasBits0 & 1) != 0) { return state_; } else { return StateDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        state_ = value;
+      }
+    }
+    /// <summary>Gets whether the "state" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasState {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "state" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearState() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "aggregation_interval" field.</summary>
+    public const int AggregationIntervalFieldNumber = 4;
+    private readonly static global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.AggregationInterval AggregationIntervalDefaultValue = global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.AggregationInterval.Unspecified;
+
+    private global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.AggregationInterval aggregationInterval_;
+    /// <summary>
+    /// The aggregation interval for the logs. Default value is INTERVAL_5_SEC.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.AggregationInterval AggregationInterval {
+      get { if ((_hasBits0 & 2) != 0) { return aggregationInterval_; } else { return AggregationIntervalDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        aggregationInterval_ = value;
+      }
+    }
+    /// <summary>Gets whether the "aggregation_interval" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAggregationInterval {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "aggregation_interval" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAggregationInterval() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "flow_sampling" field.</summary>
+    public const int FlowSamplingFieldNumber = 5;
+    private readonly static float FlowSamplingDefaultValue = 0F;
+
+    private float flowSampling_;
+    /// <summary>
+    /// The value of the field must be in (0, 1]. The sampling rate of VPC Flow
+    /// Logs where 1.0 means all collected logs are reported.
+    /// Setting the sampling rate to 0.0 is not allowed. If you want to disable VPC
+    /// Flow Logs, use the state field instead.
+    /// Default value is 1.0.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float FlowSampling {
+      get { if ((_hasBits0 & 4) != 0) { return flowSampling_; } else { return FlowSamplingDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        flowSampling_ = value;
+      }
+    }
+    /// <summary>Gets whether the "flow_sampling" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFlowSampling {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "flow_sampling" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFlowSampling() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "metadata" field.</summary>
+    public const int MetadataFieldNumber = 6;
+    private readonly static global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.Metadata MetadataDefaultValue = global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.Metadata.Unspecified;
+
+    private global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.Metadata metadata_;
+    /// <summary>
+    /// Configures whether all, none or a subset of metadata fields should be
+    /// added to the reported VPC flow logs.
+    /// Default value is INCLUDE_ALL_METADATA.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.Metadata Metadata {
+      get { if ((_hasBits0 & 8) != 0) { return metadata_; } else { return MetadataDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        metadata_ = value;
+      }
+    }
+    /// <summary>Gets whether the "metadata" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMetadata {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "metadata" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMetadata() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "metadata_fields" field.</summary>
+    public const int MetadataFieldsFieldNumber = 7;
+    private static readonly pb::FieldCodec<string> _repeated_metadataFields_codec
+        = pb::FieldCodec.ForString(58);
+    private readonly pbc::RepeatedField<string> metadataFields_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Custom metadata fields to include in the reported VPC flow logs.
+    /// Can only be specified if "metadata" was set to CUSTOM_METADATA.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> MetadataFields {
+      get { return metadataFields_; }
+    }
+
+    /// <summary>Field number for the "filter_expr" field.</summary>
+    public const int FilterExprFieldNumber = 8;
+    private readonly static string FilterExprDefaultValue = "";
+
+    private string filterExpr_;
+    /// <summary>
+    /// Export filter used to define which VPC Flow Logs should be logged.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FilterExpr {
+      get { return filterExpr_ ?? FilterExprDefaultValue; }
+      set {
+        filterExpr_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "filter_expr" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFilterExpr {
+      get { return filterExpr_ != null; }
+    }
+    /// <summary>Clears the value of the "filter_expr" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFilterExpr() {
+      filterExpr_ = null;
+    }
+
+    /// <summary>Field number for the "cross_project_metadata" field.</summary>
+    public const int CrossProjectMetadataFieldNumber = 13;
+    private readonly static global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.CrossProjectMetadata CrossProjectMetadataDefaultValue = global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.CrossProjectMetadata.Unspecified;
+
+    private global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.CrossProjectMetadata crossProjectMetadata_;
+    /// <summary>
+    /// Determines whether to include cross project annotations in the logs.
+    /// This field is available only for organization configurations. If not
+    /// specified in org configs will be set to CROSS_PROJECT_METADATA_ENABLED.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.CrossProjectMetadata CrossProjectMetadata {
+      get { if ((_hasBits0 & 32) != 0) { return crossProjectMetadata_; } else { return CrossProjectMetadataDefaultValue; } }
+      set {
+        _hasBits0 |= 32;
+        crossProjectMetadata_ = value;
+      }
+    }
+    /// <summary>Gets whether the "cross_project_metadata" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCrossProjectMetadata {
+      get { return (_hasBits0 & 32) != 0; }
+    }
+    /// <summary>Clears the value of the "cross_project_metadata" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCrossProjectMetadata() {
+      _hasBits0 &= ~32;
+    }
+
+    /// <summary>Field number for the "network" field.</summary>
+    public const int NetworkFieldNumber = 100;
+    /// <summary>
+    /// Traffic will be logged from VMs, VPN tunnels and Interconnect Attachments
+    /// within the network.
+    /// Format: projects/{project_id}/global/networks/{name}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Network {
+      get { return HasNetwork ? (string) targetResource_ : ""; }
+      set {
+        targetResource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        targetResourceCase_ = TargetResourceOneofCase.Network;
+      }
+    }
+    /// <summary>Gets whether the "network" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNetwork {
+      get { return targetResourceCase_ == TargetResourceOneofCase.Network; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "network" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNetwork() {
+      if (HasNetwork) {
+        ClearTargetResource();
+      }
+    }
+
+    /// <summary>Field number for the "subnet" field.</summary>
+    public const int SubnetFieldNumber = 101;
+    /// <summary>
+    /// Traffic will be logged from VMs within the subnetwork.
+    /// Format: projects/{project_id}/regions/{region}/subnetworks/{name}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Subnet {
+      get { return HasSubnet ? (string) targetResource_ : ""; }
+      set {
+        targetResource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        targetResourceCase_ = TargetResourceOneofCase.Subnet;
+      }
+    }
+    /// <summary>Gets whether the "subnet" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSubnet {
+      get { return targetResourceCase_ == TargetResourceOneofCase.Subnet; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "subnet" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSubnet() {
+      if (HasSubnet) {
+        ClearTargetResource();
+      }
+    }
+
+    /// <summary>Field number for the "interconnect_attachment" field.</summary>
+    public const int InterconnectAttachmentFieldNumber = 102;
+    /// <summary>
+    /// Traffic will be logged from the Interconnect Attachment.
+    /// Format:
+    /// projects/{project_id}/regions/{region}/interconnectAttachments/{name}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string InterconnectAttachment {
+      get { return HasInterconnectAttachment ? (string) targetResource_ : ""; }
+      set {
+        targetResource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        targetResourceCase_ = TargetResourceOneofCase.InterconnectAttachment;
+      }
+    }
+    /// <summary>Gets whether the "interconnect_attachment" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInterconnectAttachment {
+      get { return targetResourceCase_ == TargetResourceOneofCase.InterconnectAttachment; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "interconnect_attachment" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInterconnectAttachment() {
+      if (HasInterconnectAttachment) {
+        ClearTargetResource();
+      }
+    }
+
+    /// <summary>Field number for the "vpn_tunnel" field.</summary>
+    public const int VpnTunnelFieldNumber = 103;
+    /// <summary>
+    /// Traffic will be logged from the VPN Tunnel.
+    /// Format: projects/{project_id}/regions/{region}/vpnTunnels/{name}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VpnTunnel {
+      get { return HasVpnTunnel ? (string) targetResource_ : ""; }
+      set {
+        targetResource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        targetResourceCase_ = TargetResourceOneofCase.VpnTunnel;
+      }
+    }
+    /// <summary>Gets whether the "vpn_tunnel" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVpnTunnel {
+      get { return targetResourceCase_ == TargetResourceOneofCase.VpnTunnel; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "vpn_tunnel" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVpnTunnel() {
+      if (HasVpnTunnel) {
+        ClearTargetResource();
+      }
+    }
+
+    /// <summary>Field number for the "scope" field.</summary>
+    public const int ScopeFieldNumber = 12;
+    private readonly static global::Google.Cloud.NetworkManagement.V1.EffectiveVpcFlowLogsConfig.Types.Scope ScopeDefaultValue = global::Google.Cloud.NetworkManagement.V1.EffectiveVpcFlowLogsConfig.Types.Scope.Unspecified;
+
+    private global::Google.Cloud.NetworkManagement.V1.EffectiveVpcFlowLogsConfig.Types.Scope scope_;
+    /// <summary>
+    /// Specifies the scope of the config (e.g., SUBNET, NETWORK, ORGANIZATION..).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetworkManagement.V1.EffectiveVpcFlowLogsConfig.Types.Scope Scope {
+      get { if ((_hasBits0 & 16) != 0) { return scope_; } else { return ScopeDefaultValue; } }
+      set {
+        _hasBits0 |= 16;
+        scope_ = value;
+      }
+    }
+    /// <summary>Gets whether the "scope" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasScope {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "scope" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearScope() {
+      _hasBits0 &= ~16;
+    }
+
+    private object targetResource_;
+    /// <summary>Enum of possible cases for the "target_resource" oneof.</summary>
+    public enum TargetResourceOneofCase {
+      None = 0,
+      Network = 100,
+      Subnet = 101,
+      InterconnectAttachment = 102,
+      VpnTunnel = 103,
+    }
+    private TargetResourceOneofCase targetResourceCase_ = TargetResourceOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TargetResourceOneofCase TargetResourceCase {
+      get { return targetResourceCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTargetResource() {
+      targetResourceCase_ = TargetResourceOneofCase.None;
+      targetResource_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EffectiveVpcFlowLogsConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EffectiveVpcFlowLogsConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (State != other.State) return false;
+      if (AggregationInterval != other.AggregationInterval) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(FlowSampling, other.FlowSampling)) return false;
+      if (Metadata != other.Metadata) return false;
+      if(!metadataFields_.Equals(other.metadataFields_)) return false;
+      if (FilterExpr != other.FilterExpr) return false;
+      if (CrossProjectMetadata != other.CrossProjectMetadata) return false;
+      if (Network != other.Network) return false;
+      if (Subnet != other.Subnet) return false;
+      if (InterconnectAttachment != other.InterconnectAttachment) return false;
+      if (VpnTunnel != other.VpnTunnel) return false;
+      if (Scope != other.Scope) return false;
+      if (TargetResourceCase != other.TargetResourceCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (HasState) hash ^= State.GetHashCode();
+      if (HasAggregationInterval) hash ^= AggregationInterval.GetHashCode();
+      if (HasFlowSampling) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(FlowSampling);
+      if (HasMetadata) hash ^= Metadata.GetHashCode();
+      hash ^= metadataFields_.GetHashCode();
+      if (HasFilterExpr) hash ^= FilterExpr.GetHashCode();
+      if (HasCrossProjectMetadata) hash ^= CrossProjectMetadata.GetHashCode();
+      if (HasNetwork) hash ^= Network.GetHashCode();
+      if (HasSubnet) hash ^= Subnet.GetHashCode();
+      if (HasInterconnectAttachment) hash ^= InterconnectAttachment.GetHashCode();
+      if (HasVpnTunnel) hash ^= VpnTunnel.GetHashCode();
+      if (HasScope) hash ^= Scope.GetHashCode();
+      hash ^= (int) targetResourceCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (HasState) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) State);
+      }
+      if (HasAggregationInterval) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) AggregationInterval);
+      }
+      if (HasFlowSampling) {
+        output.WriteRawTag(45);
+        output.WriteFloat(FlowSampling);
+      }
+      if (HasMetadata) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Metadata);
+      }
+      metadataFields_.WriteTo(output, _repeated_metadataFields_codec);
+      if (HasFilterExpr) {
+        output.WriteRawTag(66);
+        output.WriteString(FilterExpr);
+      }
+      if (HasScope) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) Scope);
+      }
+      if (HasCrossProjectMetadata) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) CrossProjectMetadata);
+      }
+      if (HasNetwork) {
+        output.WriteRawTag(162, 6);
+        output.WriteString(Network);
+      }
+      if (HasSubnet) {
+        output.WriteRawTag(170, 6);
+        output.WriteString(Subnet);
+      }
+      if (HasInterconnectAttachment) {
+        output.WriteRawTag(178, 6);
+        output.WriteString(InterconnectAttachment);
+      }
+      if (HasVpnTunnel) {
+        output.WriteRawTag(186, 6);
+        output.WriteString(VpnTunnel);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (HasState) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) State);
+      }
+      if (HasAggregationInterval) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) AggregationInterval);
+      }
+      if (HasFlowSampling) {
+        output.WriteRawTag(45);
+        output.WriteFloat(FlowSampling);
+      }
+      if (HasMetadata) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Metadata);
+      }
+      metadataFields_.WriteTo(ref output, _repeated_metadataFields_codec);
+      if (HasFilterExpr) {
+        output.WriteRawTag(66);
+        output.WriteString(FilterExpr);
+      }
+      if (HasScope) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) Scope);
+      }
+      if (HasCrossProjectMetadata) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) CrossProjectMetadata);
+      }
+      if (HasNetwork) {
+        output.WriteRawTag(162, 6);
+        output.WriteString(Network);
+      }
+      if (HasSubnet) {
+        output.WriteRawTag(170, 6);
+        output.WriteString(Subnet);
+      }
+      if (HasInterconnectAttachment) {
+        output.WriteRawTag(178, 6);
+        output.WriteString(InterconnectAttachment);
+      }
+      if (HasVpnTunnel) {
+        output.WriteRawTag(186, 6);
+        output.WriteString(VpnTunnel);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (HasState) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (HasAggregationInterval) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AggregationInterval);
+      }
+      if (HasFlowSampling) {
+        size += 1 + 4;
+      }
+      if (HasMetadata) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Metadata);
+      }
+      size += metadataFields_.CalculateSize(_repeated_metadataFields_codec);
+      if (HasFilterExpr) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FilterExpr);
+      }
+      if (HasCrossProjectMetadata) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CrossProjectMetadata);
+      }
+      if (HasNetwork) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Network);
+      }
+      if (HasSubnet) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Subnet);
+      }
+      if (HasInterconnectAttachment) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(InterconnectAttachment);
+      }
+      if (HasVpnTunnel) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(VpnTunnel);
+      }
+      if (HasScope) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Scope);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EffectiveVpcFlowLogsConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.HasState) {
+        State = other.State;
+      }
+      if (other.HasAggregationInterval) {
+        AggregationInterval = other.AggregationInterval;
+      }
+      if (other.HasFlowSampling) {
+        FlowSampling = other.FlowSampling;
+      }
+      if (other.HasMetadata) {
+        Metadata = other.Metadata;
+      }
+      metadataFields_.Add(other.metadataFields_);
+      if (other.HasFilterExpr) {
+        FilterExpr = other.FilterExpr;
+      }
+      if (other.HasCrossProjectMetadata) {
+        CrossProjectMetadata = other.CrossProjectMetadata;
+      }
+      if (other.HasScope) {
+        Scope = other.Scope;
+      }
+      switch (other.TargetResourceCase) {
+        case TargetResourceOneofCase.Network:
+          Network = other.Network;
+          break;
+        case TargetResourceOneofCase.Subnet:
+          Subnet = other.Subnet;
+          break;
+        case TargetResourceOneofCase.InterconnectAttachment:
+          InterconnectAttachment = other.InterconnectAttachment;
+          break;
+        case TargetResourceOneofCase.VpnTunnel:
+          VpnTunnel = other.VpnTunnel;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 24: {
+            State = (global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.State) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            AggregationInterval = (global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.AggregationInterval) input.ReadEnum();
+            break;
+          }
+          case 45: {
+            FlowSampling = input.ReadFloat();
+            break;
+          }
+          case 48: {
+            Metadata = (global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.Metadata) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            metadataFields_.AddEntriesFrom(input, _repeated_metadataFields_codec);
+            break;
+          }
+          case 66: {
+            FilterExpr = input.ReadString();
+            break;
+          }
+          case 96: {
+            Scope = (global::Google.Cloud.NetworkManagement.V1.EffectiveVpcFlowLogsConfig.Types.Scope) input.ReadEnum();
+            break;
+          }
+          case 104: {
+            CrossProjectMetadata = (global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.CrossProjectMetadata) input.ReadEnum();
+            break;
+          }
+          case 802: {
+            Network = input.ReadString();
+            break;
+          }
+          case 810: {
+            Subnet = input.ReadString();
+            break;
+          }
+          case 818: {
+            InterconnectAttachment = input.ReadString();
+            break;
+          }
+          case 826: {
+            VpnTunnel = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 24: {
+            State = (global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.State) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            AggregationInterval = (global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.AggregationInterval) input.ReadEnum();
+            break;
+          }
+          case 45: {
+            FlowSampling = input.ReadFloat();
+            break;
+          }
+          case 48: {
+            Metadata = (global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.Metadata) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            metadataFields_.AddEntriesFrom(ref input, _repeated_metadataFields_codec);
+            break;
+          }
+          case 66: {
+            FilterExpr = input.ReadString();
+            break;
+          }
+          case 96: {
+            Scope = (global::Google.Cloud.NetworkManagement.V1.EffectiveVpcFlowLogsConfig.Types.Scope) input.ReadEnum();
+            break;
+          }
+          case 104: {
+            CrossProjectMetadata = (global::Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig.Types.CrossProjectMetadata) input.ReadEnum();
+            break;
+          }
+          case 802: {
+            Network = input.ReadString();
+            break;
+          }
+          case 810: {
+            Subnet = input.ReadString();
+            break;
+          }
+          case 818: {
+            InterconnectAttachment = input.ReadString();
+            break;
+          }
+          case 826: {
+            VpnTunnel = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the EffectiveVpcFlowLogsConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The scope for this flow log configuration.
+      /// </summary>
+      public enum Scope {
+        /// <summary>
+        /// Scope is unspecified.
+        /// </summary>
+        [pbr::OriginalName("SCOPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Target resource is a subnet (Network Management API).
+        /// </summary>
+        [pbr::OriginalName("SUBNET")] Subnet = 1,
+        /// <summary>
+        /// Target resource is a subnet, and the config originates from the Compute
+        /// API.
+        /// </summary>
+        [pbr::OriginalName("COMPUTE_API_SUBNET")] ComputeApiSubnet = 2,
+        /// <summary>
+        /// Target resource is a network.
+        /// </summary>
+        [pbr::OriginalName("NETWORK")] Network = 3,
+        /// <summary>
+        /// Target resource is a VPN tunnel.
+        /// </summary>
+        [pbr::OriginalName("VPN_TUNNEL")] VpnTunnel = 4,
+        /// <summary>
+        /// Target resource is an interconnect attachment.
+        /// </summary>
+        [pbr::OriginalName("INTERCONNECT_ATTACHMENT")] InterconnectAttachment = 5,
+        /// <summary>
+        /// Configuration applies to an entire organization.
+        /// </summary>
+        [pbr::OriginalName("ORGANIZATION")] Organization = 6,
       }
 
     }

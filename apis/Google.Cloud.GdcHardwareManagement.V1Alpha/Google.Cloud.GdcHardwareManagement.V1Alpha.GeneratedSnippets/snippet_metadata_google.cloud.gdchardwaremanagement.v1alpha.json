@@ -1710,6 +1710,293 @@
       ]
     },
     {
+      "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_CancelOrder_sync",
+      "title": "CancelOrderRequestObject",
+      "description": "Snippet for CancelOrder",
+      "file": "GDCHardwareManagementClient.CancelOrderRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelOrder",
+        "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient.CancelOrder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GdcHardwareManagement.V1Alpha.CancelOrderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GdcHardwareManagement.V1Alpha.Order, Google.Cloud.GdcHardwareManagement.V1Alpha.OperationMetadata>",
+        "client": {
+          "shortName": "GDCHardwareManagementClient",
+          "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient"
+        },
+        "method": {
+          "shortName": "CancelOrder",
+          "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement.CancelOrder",
+          "service": {
+            "shortName": "GDCHardwareManagement",
+            "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_CancelOrder_async",
+      "title": "CancelOrderRequestObjectAsync",
+      "description": "Snippet for CancelOrderAsync",
+      "file": "GDCHardwareManagementClient.CancelOrderRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelOrderAsync",
+        "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient.CancelOrderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GdcHardwareManagement.V1Alpha.CancelOrderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GdcHardwareManagement.V1Alpha.Order, Google.Cloud.GdcHardwareManagement.V1Alpha.OperationMetadata>>",
+        "client": {
+          "shortName": "GDCHardwareManagementClient",
+          "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient"
+        },
+        "method": {
+          "shortName": "CancelOrder",
+          "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement.CancelOrder",
+          "service": {
+            "shortName": "GDCHardwareManagement",
+            "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_CancelOrder_sync_flattened",
+      "title": "CancelOrder",
+      "description": "Snippet for CancelOrder",
+      "file": "GDCHardwareManagementClient.CancelOrderSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelOrder",
+        "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient.CancelOrder",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GdcHardwareManagement.V1Alpha.Order, Google.Cloud.GdcHardwareManagement.V1Alpha.OperationMetadata>",
+        "client": {
+          "shortName": "GDCHardwareManagementClient",
+          "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient"
+        },
+        "method": {
+          "shortName": "CancelOrder",
+          "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement.CancelOrder",
+          "service": {
+            "shortName": "GDCHardwareManagement",
+            "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_CancelOrder_async_flattened",
+      "title": "CancelOrderAsync",
+      "description": "Snippet for CancelOrderAsync",
+      "file": "GDCHardwareManagementClient.CancelOrderAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelOrderAsync",
+        "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient.CancelOrderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GdcHardwareManagement.V1Alpha.Order, Google.Cloud.GdcHardwareManagement.V1Alpha.OperationMetadata>>",
+        "client": {
+          "shortName": "GDCHardwareManagementClient",
+          "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient"
+        },
+        "method": {
+          "shortName": "CancelOrder",
+          "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement.CancelOrder",
+          "service": {
+            "shortName": "GDCHardwareManagement",
+            "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_CancelOrder_sync_flattened_resourceNames",
+      "title": "CancelOrderResourceNames",
+      "description": "Snippet for CancelOrder",
+      "file": "GDCHardwareManagementClient.CancelOrderResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelOrder",
+        "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient.CancelOrder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GdcHardwareManagement.V1Alpha.OrderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GdcHardwareManagement.V1Alpha.Order, Google.Cloud.GdcHardwareManagement.V1Alpha.OperationMetadata>",
+        "client": {
+          "shortName": "GDCHardwareManagementClient",
+          "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient"
+        },
+        "method": {
+          "shortName": "CancelOrder",
+          "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement.CancelOrder",
+          "service": {
+            "shortName": "GDCHardwareManagement",
+            "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_CancelOrder_async_flattened_resourceNames",
+      "title": "CancelOrderResourceNamesAsync",
+      "description": "Snippet for CancelOrderAsync",
+      "file": "GDCHardwareManagementClient.CancelOrderResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelOrderAsync",
+        "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient.CancelOrderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GdcHardwareManagement.V1Alpha.OrderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GdcHardwareManagement.V1Alpha.Order, Google.Cloud.GdcHardwareManagement.V1Alpha.OperationMetadata>>",
+        "client": {
+          "shortName": "GDCHardwareManagementClient",
+          "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient"
+        },
+        "method": {
+          "shortName": "CancelOrder",
+          "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement.CancelOrder",
+          "service": {
+            "shortName": "GDCHardwareManagement",
+            "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_ListSites_sync",
       "title": "ListSitesRequestObject",
       "description": "Snippet for ListSites",
@@ -10096,6 +10383,309 @@
         {
           "start": 36,
           "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_RequestOrderDateChange_sync",
+      "title": "RequestOrderDateChangeRequestObject",
+      "description": "Snippet for RequestOrderDateChange",
+      "file": "GDCHardwareManagementClient.RequestOrderDateChangeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RequestOrderDateChange",
+        "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient.RequestOrderDateChange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GdcHardwareManagement.V1Alpha.RequestOrderDateChangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GdcHardwareManagement.V1Alpha.Order, Google.Cloud.GdcHardwareManagement.V1Alpha.OperationMetadata>",
+        "client": {
+          "shortName": "GDCHardwareManagementClient",
+          "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient"
+        },
+        "method": {
+          "shortName": "RequestOrderDateChange",
+          "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement.RequestOrderDateChange",
+          "service": {
+            "shortName": "GDCHardwareManagement",
+            "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_RequestOrderDateChange_async",
+      "title": "RequestOrderDateChangeRequestObjectAsync",
+      "description": "Snippet for RequestOrderDateChangeAsync",
+      "file": "GDCHardwareManagementClient.RequestOrderDateChangeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RequestOrderDateChangeAsync",
+        "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient.RequestOrderDateChangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GdcHardwareManagement.V1Alpha.RequestOrderDateChangeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GdcHardwareManagement.V1Alpha.Order, Google.Cloud.GdcHardwareManagement.V1Alpha.OperationMetadata>>",
+        "client": {
+          "shortName": "GDCHardwareManagementClient",
+          "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient"
+        },
+        "method": {
+          "shortName": "RequestOrderDateChange",
+          "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement.RequestOrderDateChange",
+          "service": {
+            "shortName": "GDCHardwareManagement",
+            "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_RequestOrderDateChange_sync_flattened",
+      "title": "RequestOrderDateChange",
+      "description": "Snippet for RequestOrderDateChange",
+      "file": "GDCHardwareManagementClient.RequestOrderDateChangeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RequestOrderDateChange",
+        "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient.RequestOrderDateChange",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Type.Date",
+            "name": "requestedDate"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GdcHardwareManagement.V1Alpha.Order, Google.Cloud.GdcHardwareManagement.V1Alpha.OperationMetadata>",
+        "client": {
+          "shortName": "GDCHardwareManagementClient",
+          "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient"
+        },
+        "method": {
+          "shortName": "RequestOrderDateChange",
+          "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement.RequestOrderDateChange",
+          "service": {
+            "shortName": "GDCHardwareManagement",
+            "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_RequestOrderDateChange_async_flattened",
+      "title": "RequestOrderDateChangeAsync",
+      "description": "Snippet for RequestOrderDateChangeAsync",
+      "file": "GDCHardwareManagementClient.RequestOrderDateChangeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RequestOrderDateChangeAsync",
+        "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient.RequestOrderDateChangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Type.Date",
+            "name": "requestedDate"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GdcHardwareManagement.V1Alpha.Order, Google.Cloud.GdcHardwareManagement.V1Alpha.OperationMetadata>>",
+        "client": {
+          "shortName": "GDCHardwareManagementClient",
+          "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient"
+        },
+        "method": {
+          "shortName": "RequestOrderDateChange",
+          "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement.RequestOrderDateChange",
+          "service": {
+            "shortName": "GDCHardwareManagement",
+            "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_RequestOrderDateChange_sync_flattened_resourceNames",
+      "title": "RequestOrderDateChangeResourceNames",
+      "description": "Snippet for RequestOrderDateChange",
+      "file": "GDCHardwareManagementClient.RequestOrderDateChangeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RequestOrderDateChange",
+        "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient.RequestOrderDateChange",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GdcHardwareManagement.V1Alpha.OrderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Type.Date",
+            "name": "requestedDate"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.GdcHardwareManagement.V1Alpha.Order, Google.Cloud.GdcHardwareManagement.V1Alpha.OperationMetadata>",
+        "client": {
+          "shortName": "GDCHardwareManagementClient",
+          "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient"
+        },
+        "method": {
+          "shortName": "RequestOrderDateChange",
+          "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement.RequestOrderDateChange",
+          "service": {
+            "shortName": "GDCHardwareManagement",
+            "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "gdchardwaremanagement_v1alpha_generated_GDCHardwareManagement_RequestOrderDateChange_async_flattened_resourceNames",
+      "title": "RequestOrderDateChangeResourceNamesAsync",
+      "description": "Snippet for RequestOrderDateChangeAsync",
+      "file": "GDCHardwareManagementClient.RequestOrderDateChangeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RequestOrderDateChangeAsync",
+        "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient.RequestOrderDateChangeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GdcHardwareManagement.V1Alpha.OrderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Type.Date",
+            "name": "requestedDate"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.GdcHardwareManagement.V1Alpha.Order, Google.Cloud.GdcHardwareManagement.V1Alpha.OperationMetadata>>",
+        "client": {
+          "shortName": "GDCHardwareManagementClient",
+          "fullName": "Google.Cloud.GdcHardwareManagement.V1Alpha.GDCHardwareManagementClient"
+        },
+        "method": {
+          "shortName": "RequestOrderDateChange",
+          "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement.RequestOrderDateChange",
+          "service": {
+            "shortName": "GDCHardwareManagement",
+            "fullName": "google.cloud.gdchardwaremanagement.v1alpha.GDCHardwareManagement"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
           "type": "SHORT"
         }
       ]

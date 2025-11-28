@@ -32,51 +32,51 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
             "bGUvcHJvdG9idWYvZW1wdHkucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVs",
             "ZF9tYXNrLnByb3RvGj5nb29nbGUvc2hvcHBpbmcvbWVyY2hhbnQvcHJvZHVj",
             "dHMvdjFiZXRhL3Byb2R1Y3RzX2NvbW1vbi5wcm90bxogZ29vZ2xlL3Nob3Bw",
-            "aW5nL3R5cGUvdHlwZXMucHJvdG8ilwQKDFByb2R1Y3RJbnB1dBIRCgRuYW1l",
+            "aW5nL3R5cGUvdHlwZXMucHJvdG8imgQKDFByb2R1Y3RJbnB1dBIRCgRuYW1l",
             "GAEgASgJQgPgQQgSFAoHcHJvZHVjdBgCIAEoCUID4EEDEj8KB2NoYW5uZWwY",
             "AyABKA4yKS5nb29nbGUuc2hvcHBpbmcudHlwZS5DaGFubmVsLkNoYW5uZWxF",
             "bnVtQgPgQQUSGAoIb2ZmZXJfaWQYBCABKAlCBuBBAuBBBRIgChBjb250ZW50",
             "X2xhbmd1YWdlGAUgASgJQgbgQQLgQQUSGgoKZmVlZF9sYWJlbBgGIAEoCUIG",
-            "4EEC4EEFEiAKDnZlcnNpb25fbnVtYmVyGAcgASgDQgPgQQFIAIgBARJNCgph",
-            "dHRyaWJ1dGVzGAggASgLMjQuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnBy",
-            "b2R1Y3RzLnYxYmV0YS5BdHRyaWJ1dGVzQgPgQQESRQoRY3VzdG9tX2F0dHJp",
-            "YnV0ZXMYCSADKAsyJS5nb29nbGUuc2hvcHBpbmcudHlwZS5DdXN0b21BdHRy",
-            "aWJ1dGVCA+BBATp66kF3CidtZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbS9Q",
-            "cm9kdWN0SW5wdXQSL2FjY291bnRzL3thY2NvdW50fS9wcm9kdWN0SW5wdXRz",
-            "L3twcm9kdWN0aW5wdXR9Kg1wcm9kdWN0SW5wdXRzMgxwcm9kdWN0SW5wdXRC",
-            "EQoPX3ZlcnNpb25fbnVtYmVyIsUBChlJbnNlcnRQcm9kdWN0SW5wdXRSZXF1",
-            "ZXN0EjoKBnBhcmVudBgBIAEoCUIq4EEC+kEkEiJtZXJjaGFudGFwaS5nb29n",
-            "bGVhcGlzLmNvbS9Qcm9kdWN0ElIKDXByb2R1Y3RfaW5wdXQYAiABKAsyNi5n",
-            "b29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjFiZXRhLlByb2R1",
-            "Y3RJbnB1dEID4EECEhgKC2RhdGFfc291cmNlGAMgASgJQgPgQQIivwEKGVVw",
-            "ZGF0ZVByb2R1Y3RJbnB1dFJlcXVlc3QSUgoNcHJvZHVjdF9pbnB1dBgBIAEo",
-            "CzI2Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MWJldGEu",
-            "UHJvZHVjdElucHV0QgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQESGAoLZGF0YV9zb3VyY2UYAyAB",
-            "KAlCA+BBAiJ0ChlEZWxldGVQcm9kdWN0SW5wdXRSZXF1ZXN0Ej0KBG5hbWUY",
-            "ASABKAlCL+BBAvpBKQonbWVyY2hhbnRhcGkuZ29vZ2xlYXBpcy5jb20vUHJv",
-            "ZHVjdElucHV0EhgKC2RhdGFfc291cmNlGAIgASgJQgPgQQIyhQYKFFByb2R1",
-            "Y3RJbnB1dHNTZXJ2aWNlEuMBChJJbnNlcnRQcm9kdWN0SW5wdXQSQy5nb29n",
-            "bGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjFiZXRhLkluc2VydFBy",
-            "b2R1Y3RJbnB1dFJlcXVlc3QaNi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQu",
-            "cHJvZHVjdHMudjFiZXRhLlByb2R1Y3RJbnB1dCJQgtPkkwJKIjkvcHJvZHVj",
-            "dHMvdjFiZXRhL3twYXJlbnQ9YWNjb3VudHMvKn0vcHJvZHVjdElucHV0czpp",
-            "bnNlcnQ6DXByb2R1Y3RfaW5wdXQShgIKElVwZGF0ZVByb2R1Y3RJbnB1dBJD",
-            "Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MWJldGEuVXBk",
-            "YXRlUHJvZHVjdElucHV0UmVxdWVzdBo2Lmdvb2dsZS5zaG9wcGluZy5tZXJj",
-            "aGFudC5wcm9kdWN0cy52MWJldGEuUHJvZHVjdElucHV0InPaQRlwcm9kdWN0",
-            "X2lucHV0LHVwZGF0ZV9tYXNrgtPkkwJRMkAvcHJvZHVjdHMvdjFiZXRhL3tw",
-            "cm9kdWN0X2lucHV0Lm5hbWU9YWNjb3VudHMvKi9wcm9kdWN0SW5wdXRzLyp9",
-            "Og1wcm9kdWN0X2lucHV0ErQBChJEZWxldGVQcm9kdWN0SW5wdXQSQy5nb29n",
-            "bGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjFiZXRhLkRlbGV0ZVBy",
-            "b2R1Y3RJbnB1dFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiQdpB",
-            "BG5hbWWC0+STAjQqMi9wcm9kdWN0cy92MWJldGEve25hbWU9YWNjb3VudHMv",
-            "Ki9wcm9kdWN0SW5wdXRzLyp9GkfKQRptZXJjaGFudGFwaS5nb29nbGVhcGlz",
-            "LmNvbdJBJ2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY29udGVu",
-            "dEKUAQosY29tLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52",
-            "MWJldGFCElByb2R1Y3RJbnB1dHNQcm90b1ABWk5jbG91ZC5nb29nbGUuY29t",
-            "L2dvL3Nob3BwaW5nL21lcmNoYW50L3Byb2R1Y3RzL2FwaXYxYmV0YS9wcm9k",
-            "dWN0c3BiO3Byb2R1Y3RzcGJiBnByb3RvMw=="));
+            "4EEC4EEFEiMKDnZlcnNpb25fbnVtYmVyGAcgASgDQgbgQQHgQQVIAIgBARJN",
+            "CgphdHRyaWJ1dGVzGAggASgLMjQuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50",
+            "LnByb2R1Y3RzLnYxYmV0YS5BdHRyaWJ1dGVzQgPgQQESRQoRY3VzdG9tX2F0",
+            "dHJpYnV0ZXMYCSADKAsyJS5nb29nbGUuc2hvcHBpbmcudHlwZS5DdXN0b21B",
+            "dHRyaWJ1dGVCA+BBATp66kF3CidtZXJjaGFudGFwaS5nb29nbGVhcGlzLmNv",
+            "bS9Qcm9kdWN0SW5wdXQSL2FjY291bnRzL3thY2NvdW50fS9wcm9kdWN0SW5w",
+            "dXRzL3twcm9kdWN0aW5wdXR9Kg1wcm9kdWN0SW5wdXRzMgxwcm9kdWN0SW5w",
+            "dXRCEQoPX3ZlcnNpb25fbnVtYmVyIsUBChlJbnNlcnRQcm9kdWN0SW5wdXRS",
+            "ZXF1ZXN0EjoKBnBhcmVudBgBIAEoCUIq4EEC+kEkEiJtZXJjaGFudGFwaS5n",
+            "b29nbGVhcGlzLmNvbS9Qcm9kdWN0ElIKDXByb2R1Y3RfaW5wdXQYAiABKAsy",
+            "Ni5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjFiZXRhLlBy",
+            "b2R1Y3RJbnB1dEID4EECEhgKC2RhdGFfc291cmNlGAMgASgJQgPgQQIivwEK",
+            "GVVwZGF0ZVByb2R1Y3RJbnB1dFJlcXVlc3QSUgoNcHJvZHVjdF9pbnB1dBgB",
+            "IAEoCzI2Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MWJl",
+            "dGEuUHJvZHVjdElucHV0QgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQESGAoLZGF0YV9zb3VyY2UY",
+            "AyABKAlCA+BBAiJ0ChlEZWxldGVQcm9kdWN0SW5wdXRSZXF1ZXN0Ej0KBG5h",
+            "bWUYASABKAlCL+BBAvpBKQonbWVyY2hhbnRhcGkuZ29vZ2xlYXBpcy5jb20v",
+            "UHJvZHVjdElucHV0EhgKC2RhdGFfc291cmNlGAIgASgJQgPgQQIyhQYKFFBy",
+            "b2R1Y3RJbnB1dHNTZXJ2aWNlEuMBChJJbnNlcnRQcm9kdWN0SW5wdXQSQy5n",
+            "b29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjFiZXRhLkluc2Vy",
+            "dFByb2R1Y3RJbnB1dFJlcXVlc3QaNi5nb29nbGUuc2hvcHBpbmcubWVyY2hh",
+            "bnQucHJvZHVjdHMudjFiZXRhLlByb2R1Y3RJbnB1dCJQgtPkkwJKIjkvcHJv",
+            "ZHVjdHMvdjFiZXRhL3twYXJlbnQ9YWNjb3VudHMvKn0vcHJvZHVjdElucHV0",
+            "czppbnNlcnQ6DXByb2R1Y3RfaW5wdXQShgIKElVwZGF0ZVByb2R1Y3RJbnB1",
+            "dBJDLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MWJldGEu",
+            "VXBkYXRlUHJvZHVjdElucHV0UmVxdWVzdBo2Lmdvb2dsZS5zaG9wcGluZy5t",
+            "ZXJjaGFudC5wcm9kdWN0cy52MWJldGEuUHJvZHVjdElucHV0InPaQRlwcm9k",
+            "dWN0X2lucHV0LHVwZGF0ZV9tYXNrgtPkkwJRMkAvcHJvZHVjdHMvdjFiZXRh",
+            "L3twcm9kdWN0X2lucHV0Lm5hbWU9YWNjb3VudHMvKi9wcm9kdWN0SW5wdXRz",
+            "Lyp9Og1wcm9kdWN0X2lucHV0ErQBChJEZWxldGVQcm9kdWN0SW5wdXQSQy5n",
+            "b29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjFiZXRhLkRlbGV0",
+            "ZVByb2R1Y3RJbnB1dFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHki",
+            "QdpBBG5hbWWC0+STAjQqMi9wcm9kdWN0cy92MWJldGEve25hbWU9YWNjb3Vu",
+            "dHMvKi9wcm9kdWN0SW5wdXRzLyp9GkfKQRptZXJjaGFudGFwaS5nb29nbGVh",
+            "cGlzLmNvbdJBJ2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY29u",
+            "dGVudEKUAQosY29tLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0",
+            "cy52MWJldGFCElByb2R1Y3RJbnB1dHNQcm90b1ABWk5jbG91ZC5nb29nbGUu",
+            "Y29tL2dvL3Nob3BwaW5nL21lcmNoYW50L3Byb2R1Y3RzL2FwaXYxYmV0YS9w",
+            "cm9kdWN0c3BiO3Byb2R1Y3RzcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Shopping.Merchant.Products.V1Beta.ProductsCommonReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -95,7 +95,8 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
   ///  processed product that you see in Merchant Center, in Shopping ads, or
   ///  across Google surfaces. Product inputs, rules and supplemental data source
   ///  data are combined to create the processed
-  ///  [Product][google.shopping.merchant.products.v1beta.Product].
+  ///  [Product][google.shopping.merchant.products.v1beta.Product]. For more
+  ///  information, see [Manage products](/merchant/api/guides/products/overview).
   ///
   ///  Required product input attributes to pass data validation checks are
   ///  primarily defined in the [Products Data
@@ -110,8 +111,12 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
   ///  minutes before the processed product can be retrieved.
   ///
   ///  All fields in the product input and its sub-messages match the English name
-  ///  of their corresponding attribute in the vertical spec with [some
-  ///  exceptions](https://support.google.com/merchants/answer/7052112).
+  ///  of their corresponding attribute in the [Products Data
+  ///  Specification](https://support.google.com/merchants/answer/188494) with
+  ///  [some exceptions](https://support.google.com/merchants/answer/7052112).
+  ///  The following reference documentation lists the field names in the
+  ///  **camelCase** casing style while the Products Data Specification lists the
+  ///  names in the **snake_case** casing style.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductInput : pb::IMessage<ProductInput>
@@ -173,11 +178,11 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
     private string name_ = "";
     /// <summary>
     /// Identifier. The name of the product input.
-    /// Format: accounts/{account}/productInputs/{productinput}
+    /// Format: `accounts/{account}/productInputs/{productinput}`
     /// where the last section `productinput` consists of 4 parts:
-    /// channel~content_language~feed_label~offer_id
+    /// `channel~content_language~feed_label~offer_id`
     /// example for product input name is
-    /// "accounts/123/productInputs/online~en~US~sku123"
+    /// `accounts/123/productInputs/online~en~US~sku123`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -193,8 +198,7 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
     private string product_ = "";
     /// <summary>
     /// Output only. The name of the processed product.
-    /// Format:
-    /// `"{product.name=accounts/{account}/products/{product}}"`
+    /// Format: `accounts/{account}/products/{product}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -263,9 +267,11 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
     public const int FeedLabelFieldNumber = 6;
     private string feedLabel_ = "";
     /// <summary>
-    /// Required. Immutable. The [feed
-    /// label](https://developers.google.com/shopping-content/guides/products/feed-labels)
-    /// for the product.
+    /// Required. Immutable. The label that lets you categorize and identify your
+    /// products. The maximum allowed characters are 20, and the supported
+    /// characters are `A-Z`, `0-9`, hyphen, and underscore. The feed label must
+    /// not include any spaces. For more information, see [Using feed
+    /// labels](//support.google.com/merchants/answer/14994087).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -282,9 +288,9 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
 
     private long versionNumber_;
     /// <summary>
-    /// Optional. Represents the existing version (freshness) of the product, which
-    /// can be used to preserve the right order when multiple updates are done at
-    /// the same time.
+    /// Optional. Immutable. Represents the existing version (freshness) of the
+    /// product, which can be used to preserve the right order when multiple
+    /// updates are done at the same time.
     ///
     /// If set, the insertion is prevented when version number is lower than
     /// the current version number of the existing product. Re-insertion (for
@@ -292,6 +298,8 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
     /// `version_number`.
     ///
     /// Only supported for insertions into primary data sources.
+    /// Do not set this field for updates.
+    /// Do not set this field for insertions into supplemental data sources.
     ///
     /// If the operation is prevented, the aborted exception will be
     /// thrown.
@@ -344,7 +352,7 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
     /// form (for example,
     /// `{ "name": "size type", "value": "regular" }`).
     /// This is useful for submitting attributes not explicitly exposed by the
-    /// API, such as additional attributes used for Buy on Google.
+    /// API.
     /// Maximum allowed number of characters for each
     /// custom attribute is 10240 (represents sum of characters for name and
     /// value). Maximum 2500 custom attributes can be set per product, with total
@@ -736,7 +744,7 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
     private string parent_ = "";
     /// <summary>
     /// Required. The account where this product will be inserted.
-    /// Format: accounts/{account}
+    /// Format: `accounts/{account}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -768,11 +776,14 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
     /// <summary>
     /// Required. The primary or supplemental product data source name. If the
     /// product already exists and data source provided is different, then the
-    /// product will be moved to a new data source.
+    /// product will be moved to a new data source. For more information, see
+    /// [Overview of Data sources
+    /// sub-API](/merchant/api/guides/data-sources/overview).
     ///
     /// Only API data sources are supported.
     ///
-    /// Format: `accounts/{account}/dataSources/{datasource}`.
+    /// Format: `accounts/{account}/dataSources/{datasource}`. For example,
+    /// `accounts/123456/dataSources/104628`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1080,7 +1091,8 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
     ///
     /// Only API data sources are supported.
     ///
-    /// Format: `accounts/{account}/dataSources/{datasource}`.
+    /// Format: `accounts/{account}/dataSources/{datasource}`. For example,
+    /// `accounts/123456/dataSources/104628`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1344,11 +1356,11 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the product input resource to delete.
-    /// Format: accounts/{account}/productInputs/{product}
+    /// Format: `accounts/{account}/productInputs/{product}`
     /// where the last section `product` consists of 4 parts:
-    /// channel~content_language~feed_label~offer_id
+    /// `channel~content_language~feed_label~offer_id`
     /// example for product name is
-    /// "accounts/123/productInputs/online~en~US~sku123"
+    /// `accounts/123/productInputs/online~en~US~sku123`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1365,7 +1377,8 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
     /// <summary>
     /// Required. The primary or supplemental data source from which the product
     /// input should be deleted. Format:
-    /// `accounts/{account}/dataSources/{datasource}`.
+    /// `accounts/{account}/dataSources/{datasource}`. For example,
+    /// `accounts/123456/dataSources/104628`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

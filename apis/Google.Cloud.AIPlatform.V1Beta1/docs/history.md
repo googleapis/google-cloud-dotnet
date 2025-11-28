@@ -1,5 +1,382 @@
 # Version history
 
+## Version 1.0.0-beta61, released 2025-11-05
+
+### New features
+
+- Add new fields `SUCCESSFULLY_DEPLOYED` and `FAILED_TO_DEPLOY` to `DeploymentStage`
+- Add order_by to list_events
+
+### Documentation improvements
+
+- A comment for field `filter` in message `.google.cloud.aiplatform.v1beta1.ListSessionsRequest` is changed
+
+## Version 1.0.0-beta60, released 2025-11-03
+
+### New features
+
+- Update dependencies
+
+## Version 1.0.0-beta59, released 2025-11-03
+
+### Bug fixes
+
+- An existing field `transfer_to_agent` is removed from message `.google.cloud.aiplatform.v1beta1.EventActions`
+
+### Documentation improvements
+
+- Remove comments for a non public feature
+- Fix idle_scaledown_period minimum from 3600 to 300 (5 minutes)
+
+## Version 1.0.0-beta58, released 2025-10-28
+
+### Bug fixes
+
+- Updating `bigtable_metadata` field name in `FeatureOnlineStore`
+- Updating `enableDirectBigtableAccess` field name in FeatureOnlineStore`
+- Updating `bigtable_metadata` field name in `FeatureView`
+
+## Version 1.0.0-beta57, released 2025-10-23
+
+### New features
+
+- Add EmbedContent method v1beta1
+
+## Version 1.0.0-beta56, released 2025-10-20
+
+### New features
+
+- Add FunctionResponsePart and excluded_predefined_functions in ComputerUse
+
+## Version 1.0.0-beta55, released 2025-10-15
+
+### New features
+
+- Add support for Inline source based deployment
+
+### Documentation improvements
+
+- A comment for message `ReasoningEngineSpec` is changed
+- A comment for field `package_spec` in message `.google.cloud.aiplatform.v1beta1.ReasoningEngineSpec` is changed
+
+## Version 1.0.0-beta54, released 2025-10-14
+
+### New features
+
+- Add aspect_ratio and image_config for v1beta1 version
+- Add additional proto fields and GenerateFetchAccessToken API
+- Add JAILBREAK category to SafetySettings for prediction service
+- A new message `ScaleToZeroSpec` is added
+- A new field `initial_replica_count` is added to message `.google.cloud.aiplatform.v1beta1.DedicatedResources`
+- A new field `scale_to_zero_spec` is added to message `.google.cloud.aiplatform.v1beta1.DedicatedResources`
+
+## Version 1.0.0-beta53, released 2025-10-09
+
+### New features
+
+- Add labels field for Predict API for Imagen use case (v1beta)
+- Auto-generated CL for //google/cloud/aiplatform:aiplatform_v1beta1_public_proto_gen
+
+## Version 1.0.0-beta52, released 2025-09-29
+
+### New features
+
+- A new value `NVIDIA_RTX_PRO_6000` is added to enum `AcceleratorType`
+- Add enable_widget option in Google Maps and additional grounding information
+
+### Documentation improvements
+
+- Remove legacy internal lint directives
+
+## Version 1.0.0-beta51, released 2025-09-16
+
+### New features
+
+- Add private_model_server_enabled to in Endpoint.proto
+
+## Version 1.0.0-beta50, released 2025-09-08
+
+### New features
+
+- PSC support for custom weights deploy
+- Tuning PreTunedModel API field
+
+### Documentation improvements
+
+- A comment for field `dedicated_endpoint_disabled` in message `.google.cloud.aiplatform.v1beta1.DeployRequest` is changed
+
+## Version 1.0.0-beta49, released 2025-09-03
+
+### New features
+
+- Add Validation mode in FunctionCallingConfig
+
+### Documentation improvements
+
+- Update the comment for ANY mode in FunctionCallingConfig.
+
+## Version 1.0.0-beta48, released 2025-08-28
+
+### New features
+
+- Add API response for Gen AI Evaluation in Tuning
+- Add `disable_container_logging` in v1beta1 api
+
+## Version 1.0.0-beta47, released 2025-08-14
+
+### New features
+
+- Add option EndpointUserId and ModelUserId fields
+- Migrate dedicated endpoint to be enabled by default
+
+### Documentation improvements
+
+- A comment for field `dedicated_endpoint_enabled` in message `.google.cloud.aiplatform.v1beta1.DeployRequest` is changed
+
+## Version 1.0.0-beta46, released 2025-08-13
+
+### New features
+
+- Add API for Gen AI Evaluation in Tuning
+- Add `gpu_partition_size` to `MachineSpec`
+
+## Version 1.0.0-beta45, released 2025-08-12
+
+### New features
+
+- Added document_name for vertex ai search as part of retrieved context from grounding chunk
+- Expose RecommendSpecs api to vertex python SDK for Custom Weights Model deployment
+
+## Version 1.0.0-beta44, released 2025-08-08
+
+### New features
+
+- Add Grounding with Google Maps tool
+- Add expiration for TTL for Memory and Sessions
+- Add direct_memories_source
+- Add force_delete field to DeleteRagFile 'preview' API request for Vertex RAG
+
+### Documentation improvements
+
+- Update comment for allowed values for config models
+- A comment for field `monitored_resource_labels` in message `.google.cloud.aiplatform.v1beta1.AutoscalingMetricSpec` is changed
+
+## Version 1.0.0-beta43, released 2025-08-05
+
+### New features
+
+- Add embedding_metadata to google.cloud.aiplatform.v1.Index
+- A new value `NVIDIA_GB200` is added to enum `AcceleratorType`
+- Add exclude_domains for grounding with GoogleSearch and EnterpriseWebSearch
+- Online Prediction DeployModel API to support custom metrics based autoscaling
+- Add FeatureViewDirectWrite API in v1
+
+## Version 1.0.0-beta42, released 2025-08-04
+
+### New features
+
+- Add field ReasoningEngineSpec.service_account
+- Add field ReasoningEngine.encryption_spec
+- Add `DeploymentStage` for CreateEndpointOperationMetadata and DeployModelOperationMetadata
+- Add the VeoTuningSpec
+- Add enable_datapoint_upsert_logging to google.cloud.aiplatform.v1.DeployedIndex
+- Add a FooBar API
+
+### Documentation improvements
+
+- Update MutateDeployedModel documentation
+
+## Version 1.0.0-beta41, released 2025-07-28
+
+### New features
+
+- Adds DWS and spot VM feature support to custom batch predictions 2.0
+- Add service_account to Reasoning Engine public protos
+
+## Version 1.0.0-beta40, released 2025-07-22
+
+### Bug fixes
+
+- Remove gemini_template_config and request_column_name fields from DatasetService.AssessData and DatasetService.AssembleData
+
+## Version 1.0.0-beta39, released 2025-07-15
+
+### New features
+
+- Vertex AI Model Garden custom model deploy Public Preview
+- Add API for Managed OSS Fine Tuning
+
+### Documentation improvements
+
+- A comment for field `model` in message `.google.cloud.aiplatform.v1beta1.TunedModel` is changed
+- A comment for field `learning_rate_multiplier` in message `.google.cloud.aiplatform.v1beta1.SupervisedHyperParameters` is changed
+- A comment for field `training_dataset_uri` in message `.google.cloud.aiplatform.v1beta1.SupervisedTuningSpec` is changed
+- A comment for field `validation_dataset_uri` in message `.google.cloud.aiplatform.v1beta1.SupervisedTuningSpec` is changed
+
+## Version 1.0.0-beta38, released 2025-07-11
+
+### New features
+
+- Add flexstart option to v1beta1
+- Some comments changes in machine_resources.proto to v1beta1
+- Add Aggregation Output in EvaluateDataset Get Operation Response
+
+### Documentation improvements
+
+- A comment for message `DedicatedResources` is changed
+- A comment for field `machine_spec` in message `.google.cloud.aiplatform.v1beta1.DedicatedResources` is changed
+- A comment for field `min_replica_count` in message `.google.cloud.aiplatform.v1beta1.DedicatedResources` is changed
+- A comment for field `max_replica_count` in message `.google.cloud.aiplatform.v1beta1.DedicatedResources` is changed
+- A comment for field `required_replica_count` in message `.google.cloud.aiplatform.v1beta1.DedicatedResources` is changed
+- A comment for field `min_replica_count` in message `.google.cloud.aiplatform.v1beta1.AutomaticResources` is changed
+- A comment for field `max_replica_count` in message `.google.cloud.aiplatform.v1beta1.AutomaticResources` is changed
+- A comment for field `boot_disk_type` in message `.google.cloud.aiplatform.v1beta1.DiskSpec` is changed
+- Add constraints for AggregationMetric enum and default value for flip_enabled field in AutoraterConfig
+
+## Version 1.0.0-beta37, released 2025-07-07
+
+### New features
+
+- Add message ColabImage, add field colab_image to NotebookSoftwareConfig
+- Allow user input for schedule_resource_name in NotebookExecutionJob
+- Expose task_unique_name in pipeline task details for pipeline rerun
+- Add computer use support to tools
+
+### Documentation improvements
+
+- A comment for message NotebookRuntime is changed
+- A comment for enum value BEING_STARTED in enum NotebookRuntime.RuntimeState is changed
+- A comment for message NotebookSoftwareConfig is changed
+
+## Version 1.0.0-beta36, released 2025-06-25
+
+### New features
+
+- Add PSCAutomationConfig to PrivateServiceConnectConfig in service_networking.proto
+- Add GenAiAdvancedFeaturesConfig to endpoint.proto
+- Reasoning Engine v1beta1 subresource updates
+- Add invoke_route_prefix to ModelContainerSpec in aiplatform v1beta1 models.proto
+
+### Documentation improvements
+
+- Update dedicateEndpointDns documentation
+- Clarify that the names for sessions and session_events are no longer required.
+
+## Version 1.0.0-beta35, released 2025-06-17
+
+### New features
+
+- Add DnsPeeringConfig in service_networking.proto
+- Add dns_peering_configs to PscInterfaceConfig
+- Add Scaled tier for RagEngineConfig to v1beta, equivalent to Enterprise
+- Add Unprovisioned tier to RagEngineConfig in v1beta1 that can disable RagEngine service and delete all data within the service
+
+### Documentation improvements
+
+- Enterprise tier in RagEngineConfig, use Scaled tier instead.
+
+## Version 1.0.0-beta34, released 2025-06-13
+
+### New features
+
+- Introduce RagFileMetadataConfig for importing metadata to Rag
+
+## Version 1.0.0-beta33, released 2025-06-09
+
+### New features
+
+- Expose UrlContextMetadata API to v1beta1
+- Add json schema support to structured output and function declaration
+- A new field `include_thoughts` is added to message `.google.cloud.aiplatform.v1.GenerationConfig.ThinkingConfig`
+- A new field `thought_signature` is added to message `.google.cloud.aiplatform.v1.Part`
+- A new field `thought` is added to message `.google.cloud.aiplatform.v1.Part`
+- Expose URL Context API to v1beta1
+
+### Bug fixes
+
+- Upgrade gRPC service registration func
+
+### Documentation improvements
+
+- Allow field `thought` to be set as input
+
+## Version 1.0.0-beta32, released 2025-05-28
+
+### New features
+
+- Introduce RAG as context/memory store for Gemini Live API
+- Add ImportIndex to IndexService
+
+### Documentation improvements
+
+- A comment for message `RagFileParsingConfig` is updated.
+- A comment for field `global_max_embedding_requests_per_min` in message `.google.cloud.aiplatform.v1beta1.ImportRagFilesConfig` is updated.
+
+## Version 1.0.0-beta31, released 2025-05-20
+
+### New features
+
+- Add VertexAISearch.max_results, filter, data_store_specs options
+
+## Version 1.0.0-beta30, released 2025-05-19
+
+### New features
+
+- Add encryption_spec to Model Monitoring public preview API
+- Adding thoughts_token_count to v1beta1 client library
+
+## Version 1.0.0-beta29, released 2025-05-15
+
+### New features
+
+- Add checkpoint ID to endpoint proto
+- Add ANN feature for RagManagedDb
+- Tuning Checkpoints API
+- New field `additional_properties` is added to message `.google.cloud.aiplatform.v1beta1.Schema`
+- Add EncryptionSpec for RagCorpus CMEK feature
+- A new value `NVIDIA_B200 & NVIDIA_H200_141GB` is added to enum `AcceleratorType`
+
+### Documentation improvements
+
+- Fix links and typos
+- Remove comments for a non public feature
+
+## Version 1.0.0-beta28, released 2025-05-06
+
+### New features
+
+- A new field `system_labels` is added to message `google.cloud.aiplatform.v1beta1.DeployRequest`
+
+### Documentation improvements
+
+- update an outdated URL
+
+## Version 1.0.0-beta27, released 2025-04-30
+
+### New features
+
+- add gemini_request_read_config field to AssembleDataRequest and AssessDataRequest in aiplatform v1beta
+- allow customers to set encryption_spec for context caching
+- new fields `ref` and `defs` are added to message `.google.cloud.aiplatform.v1beta1.Schema`
+
+### Documentation improvements
+
+- fix comment for field_mapping field in GeminiTemplateConfig
+- Deprecate election category HARM_CATEGORY_CIVIC_INTEGRITY
+
+## Version 1.0.0-beta26, released 2025-04-29
+
+### Bug fixes
+
+- **BREAKING CHANGE** Removed support for session resource paths that do not include reasoning engine ([commit 3f9a249](https://github.com/googleapis/google-cloud-dotnet/commit/3f9a24942c5d487a9d5145bfb15c2fd1f9bf7572))
+
+### New features
+
+- Adding ThinkingConfig to v1beta1 client library ([commit fa3ad70](https://github.com/googleapis/google-cloud-dotnet/commit/fa3ad706c7956fa7f1c2fe1ebb512876d1210c15))
+- Add Model Garden EULA(End User License Agreement) related APIs ([commit 3f9a249](https://github.com/googleapis/google-cloud-dotnet/commit/3f9a24942c5d487a9d5145bfb15c2fd1f9bf7572))
+- Model Registry Model Checkpoint API ([commit 3f9a249](https://github.com/googleapis/google-cloud-dotnet/commit/3f9a24942c5d487a9d5145bfb15c2fd1f9bf7572))
+- Deprecated EventActions.transfer_to_agent and replaced with EventActions.transfer_agent ([commit 3f9a249](https://github.com/googleapis/google-cloud-dotnet/commit/3f9a24942c5d487a9d5145bfb15c2fd1f9bf7572))
+
 ## Version 1.0.0-beta25, released 2025-04-14
 
 ### New features

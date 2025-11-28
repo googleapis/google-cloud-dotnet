@@ -27,73 +27,82 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "Ci9nb29nbGUvY2xvdWQvb3JhY2xlZGF0YWJhc2UvdjEvdm1fY2x1c3Rlci5w",
             "cm90bxIeZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxGh9nb29nbGUv",
             "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNl",
+            "LnByb3RvGitnb29nbGUvY2xvdWQvb3JhY2xlZGF0YWJhc2UvdjEvY29tbW9u",
             "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhpnb29n",
-            "bGUvdHlwZS9kYXRldGltZS5wcm90byLWBQoOQ2xvdWRWbUNsdXN0ZXISEQoE",
+            "bGUvdHlwZS9kYXRldGltZS5wcm90byKCCAoOQ2xvdWRWbUNsdXN0ZXISEQoE",
             "bmFtZRgBIAEoCUID4EEIEmAKFmV4YWRhdGFfaW5mcmFzdHJ1Y3R1cmUYAiAB",
             "KAlCQOBBAvpBOgo4b3JhY2xlZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20vQ2xv",
             "dWRFeGFkYXRhSW5mcmFzdHJ1Y3R1cmUSGQoMZGlzcGxheV9uYW1lGAMgASgJ",
-            "QgPgQQESHAoPZ2NwX29yYWNsZV96b25lGAwgASgJQgPgQQMSUQoKcHJvcGVy",
-            "dGllcxgGIAEoCzI4Lmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5D",
-            "bG91ZFZtQ2x1c3RlclByb3BlcnRpZXNCA+BBARJPCgZsYWJlbHMYByADKAsy",
-            "Oi5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuQ2xvdWRWbUNsdXN0",
-            "ZXIuTGFiZWxzRW50cnlCA+BBARI0CgtjcmVhdGVfdGltZRgIIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIRCgRjaWRyGAkgASgJQgPg",
-            "QQISHwoSYmFja3VwX3N1Ym5ldF9jaWRyGAogASgJQgPgQQISNwoHbmV0d29y",
-            "axgLIAEoCUIm4EEC+kEgCh5jb21wdXRlLmdvb2dsZWFwaXMuY29tL05ldHdv",
-            "cmsaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
-            "OgI4ATqfAepBmwEKLG9yYWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29tL0Ns",
-            "b3VkVm1DbHVzdGVyEkpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
-            "b2NhdGlvbn0vY2xvdWRWbUNsdXN0ZXJzL3tjbG91ZF92bV9jbHVzdGVyfSoP",
-            "Y2xvdWRWbUNsdXN0ZXJzMg5jbG91ZFZtQ2x1c3RlciKcDAoYQ2xvdWRWbUNs",
-            "dXN0ZXJQcm9wZXJ0aWVzEhEKBG9jaWQYASABKAlCA+BBAxJfCgxsaWNlbnNl",
-            "X3R5cGUYAiABKA4yRC5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEu",
-            "Q2xvdWRWbUNsdXN0ZXJQcm9wZXJ0aWVzLkxpY2Vuc2VUeXBlQgPgQQISFwoK",
-            "Z2lfdmVyc2lvbhgDIAEoCUID4EEBEi0KCXRpbWVfem9uZRgEIAEoCzIVLmdv",
-            "b2dsZS50eXBlLlRpbWVab25lQgPgQQESHAoPc3NoX3B1YmxpY19rZXlzGAUg",
-            "AygJQgPgQQESFwoKbm9kZV9jb3VudBgGIAEoBUID4EEBEhIKBXNoYXBlGAcg",
-            "ASgJQgPgQQMSFwoKb2NwdV9jb3VudBgIIAEoAkID4EEBEhsKDm1lbW9yeV9z",
-            "aXplX2diGAkgASgFQgPgQQESJAoXZGJfbm9kZV9zdG9yYWdlX3NpemVfZ2IY",
-            "CiABKAVCA+BBARIcCg9zdG9yYWdlX3NpemVfZ2IYCyABKAVCA+BBAxIhChRk",
-            "YXRhX3N0b3JhZ2Vfc2l6ZV90YhgMIAEoAUID4EEBEmUKD2Rpc2tfcmVkdW5k",
-            "YW5jeRgNIAEoDjJHLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5D",
-            "bG91ZFZtQ2x1c3RlclByb3BlcnRpZXMuRGlza1JlZHVuZGFuY3lCA+BBARIl",
-            "ChhzcGFyc2VfZGlza2dyb3VwX2VuYWJsZWQYDiABKAhCA+BBARIhChRsb2Nh",
-            "bF9iYWNrdXBfZW5hYmxlZBgPIAEoCEID4EEBEhwKD2hvc3RuYW1lX3ByZWZp",
-            "eBgQIAEoCUID4EEBEmcKI2RpYWdub3N0aWNzX2RhdGFfY29sbGVjdGlvbl9v",
-            "cHRpb25zGBMgASgLMjUuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYx",
-            "LkRhdGFDb2xsZWN0aW9uT3B0aW9uc0ID4EEBElIKBXN0YXRlGBQgASgOMj4u",
-            "Z29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkNsb3VkVm1DbHVzdGVy",
-            "UHJvcGVydGllcy5TdGF0ZUID4EEDEiMKFnNjYW5fbGlzdGVuZXJfcG9ydF90",
-            "Y3AYFSABKAVCA+BBAxInChpzY2FuX2xpc3RlbmVyX3BvcnRfdGNwX3NzbBgW",
-            "IAEoBUID4EEDEhMKBmRvbWFpbhgXIAEoCUID4EEDEhUKCHNjYW5fZG5zGBgg",
-            "ASgJQgPgQQMSFQoIaG9zdG5hbWUYGSABKAlCA+BBAxIbCg5jcHVfY29yZV9j",
-            "b3VudBgaIAEoBUID4EECEhsKDnN5c3RlbV92ZXJzaW9uGBsgASgJQgPgQQES",
-            "GAoLc2Nhbl9pcF9pZHMYHCADKAlCA+BBAxIfChJzY2FuX2Ruc19yZWNvcmRf",
-            "aWQYHSABKAlCA+BBAxIUCgdvY2lfdXJsGB4gASgJQgPgQQMSHAoPZGJfc2Vy",
-            "dmVyX29jaWRzGB8gAygJQgPgQQESGwoOY29tcGFydG1lbnRfaWQYICABKAlC",
-            "A+BBAxIcCg9kbnNfbGlzdGVuZXJfaXAYIyABKAlCA+BBAxIZCgxjbHVzdGVy",
-            "X25hbWUYJCABKAlCA+BBASJdCgtMaWNlbnNlVHlwZRIcChhMSUNFTlNFX1RZ",
-            "UEVfVU5TUEVDSUZJRUQQABIUChBMSUNFTlNFX0lOQ0xVREVEEAESGgoWQlJJ",
-            "TkdfWU9VUl9PV05fTElDRU5TRRACIkcKDkRpc2tSZWR1bmRhbmN5Eh8KG0RJ",
-            "U0tfUkVEVU5EQU5DWV9VTlNQRUNJRklFRBAAEggKBEhJR0gQARIKCgZOT1JN",
-            "QUwQAiKXAQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIQCgxQUk9W",
-            "SVNJT05JTkcQARINCglBVkFJTEFCTEUQAhIMCghVUERBVElORxADEg8KC1RF",
-            "Uk1JTkFUSU5HEAQSDgoKVEVSTUlOQVRFRBAFEgoKBkZBSUxFRBAGEhsKF01B",
-            "SU5URU5BTkNFX0lOX1BST0dSRVNTEAcijAEKFURhdGFDb2xsZWN0aW9uT3B0",
-            "aW9ucxInChpkaWFnbm9zdGljc19ldmVudHNfZW5hYmxlZBgBIAEoCEID4EEB",
-            "EiYKGWhlYWx0aF9tb25pdG9yaW5nX2VuYWJsZWQYAiABKAhCA+BBARIiChVp",
-            "bmNpZGVudF9sb2dzX2VuYWJsZWQYAyABKAhCA+BBAULtAQoiY29tLmdvb2ds",
-            "ZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MUITQ2xvdWRWbUNsdXN0ZXJQcm90",
-            "b1ABWkpjbG91ZC5nb29nbGUuY29tL2dvL29yYWNsZWRhdGFiYXNlL2FwaXYx",
-            "L29yYWNsZWRhdGFiYXNlcGI7b3JhY2xlZGF0YWJhc2VwYqoCHkdvb2dsZS5D",
-            "bG91ZC5PcmFjbGVEYXRhYmFzZS5WMcoCHkdvb2dsZVxDbG91ZFxPcmFjbGVE",
-            "YXRhYmFzZVxWMeoCIUdvb2dsZTo6Q2xvdWQ6Ok9yYWNsZURhdGFiYXNlOjpW",
-            "MWIGcHJvdG8z"));
+            "QgPgQQESUQoKcHJvcGVydGllcxgGIAEoCzI4Lmdvb2dsZS5jbG91ZC5vcmFj",
+            "bGVkYXRhYmFzZS52MS5DbG91ZFZtQ2x1c3RlclByb3BlcnRpZXNCA+BBARJP",
+            "CgZsYWJlbHMYByADKAsyOi5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2Uu",
+            "djEuQ2xvdWRWbUNsdXN0ZXIuTGFiZWxzRW50cnlCA+BBARI0CgtjcmVhdGVf",
+            "dGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIR",
+            "CgRjaWRyGAkgASgJQgPgQQESHwoSYmFja3VwX3N1Ym5ldF9jaWRyGAogASgJ",
+            "QgPgQQESNwoHbmV0d29yaxgLIAEoCUIm4EEB+kEgCh5jb21wdXRlLmdvb2ds",
+            "ZWFwaXMuY29tL05ldHdvcmsSHAoPZ2NwX29yYWNsZV96b25lGAwgASgJQgPg",
+            "QQMSRQoLb2RiX25ldHdvcmsYDSABKAlCMOBBAfpBKgoob3JhY2xlZGF0YWJh",
+            "c2UuZ29vZ2xlYXBpcy5jb20vT2RiTmV0d29yaxJDCgpvZGJfc3VibmV0GA4g",
+            "ASgJQi/gQQH6QSkKJ29yYWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29tL09k",
+            "YlN1Ym5ldBJKChFiYWNrdXBfb2RiX3N1Ym5ldBgPIAEoCUIv4EEB+kEpCidv",
+            "cmFjbGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9PZGJTdWJuZXQSUgoSaWRl",
+            "bnRpdHlfY29ubmVjdG9yGBAgASgLMjEuZ29vZ2xlLmNsb3VkLm9yYWNsZWRh",
+            "dGFiYXNlLnYxLklkZW50aXR5Q29ubmVjdG9yQgPgQQMaLQoLTGFiZWxzRW50",
+            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqfAepBmwEKLG9y",
+            "YWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29tL0Nsb3VkVm1DbHVzdGVyEkpw",
+            "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2xvdWRW",
+            "bUNsdXN0ZXJzL3tjbG91ZF92bV9jbHVzdGVyfSoPY2xvdWRWbUNsdXN0ZXJz",
+            "Mg5jbG91ZFZtQ2x1c3RlciLmDAoYQ2xvdWRWbUNsdXN0ZXJQcm9wZXJ0aWVz",
+            "EhEKBG9jaWQYASABKAlCA+BBAxJfCgxsaWNlbnNlX3R5cGUYAiABKA4yRC5n",
+            "b29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuQ2xvdWRWbUNsdXN0ZXJQ",
+            "cm9wZXJ0aWVzLkxpY2Vuc2VUeXBlQgPgQQISFwoKZ2lfdmVyc2lvbhgDIAEo",
+            "CUID4EEBEi0KCXRpbWVfem9uZRgEIAEoCzIVLmdvb2dsZS50eXBlLlRpbWVa",
+            "b25lQgPgQQESHAoPc3NoX3B1YmxpY19rZXlzGAUgAygJQgPgQQESFwoKbm9k",
+            "ZV9jb3VudBgGIAEoBUID4EEBEhIKBXNoYXBlGAcgASgJQgPgQQMSFwoKb2Nw",
+            "dV9jb3VudBgIIAEoAkID4EEBEhsKDm1lbW9yeV9zaXplX2diGAkgASgFQgPg",
+            "QQESJAoXZGJfbm9kZV9zdG9yYWdlX3NpemVfZ2IYCiABKAVCA+BBARIcCg9z",
+            "dG9yYWdlX3NpemVfZ2IYCyABKAVCA+BBAxIhChRkYXRhX3N0b3JhZ2Vfc2l6",
+            "ZV90YhgMIAEoAUID4EEBEmUKD2Rpc2tfcmVkdW5kYW5jeRgNIAEoDjJHLmdv",
+            "b2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5DbG91ZFZtQ2x1c3RlclBy",
+            "b3BlcnRpZXMuRGlza1JlZHVuZGFuY3lCA+BBARIlChhzcGFyc2VfZGlza2dy",
+            "b3VwX2VuYWJsZWQYDiABKAhCA+BBARIhChRsb2NhbF9iYWNrdXBfZW5hYmxl",
+            "ZBgPIAEoCEID4EEBEhwKD2hvc3RuYW1lX3ByZWZpeBgQIAEoCUID4EEBEmcK",
+            "I2RpYWdub3N0aWNzX2RhdGFfY29sbGVjdGlvbl9vcHRpb25zGBMgASgLMjUu",
+            "Z29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkRhdGFDb2xsZWN0aW9u",
+            "T3B0aW9uc0ID4EEBElIKBXN0YXRlGBQgASgOMj4uZ29vZ2xlLmNsb3VkLm9y",
+            "YWNsZWRhdGFiYXNlLnYxLkNsb3VkVm1DbHVzdGVyUHJvcGVydGllcy5TdGF0",
+            "ZUID4EEDEiMKFnNjYW5fbGlzdGVuZXJfcG9ydF90Y3AYFSABKAVCA+BBAxIn",
+            "ChpzY2FuX2xpc3RlbmVyX3BvcnRfdGNwX3NzbBgWIAEoBUID4EEDEhMKBmRv",
+            "bWFpbhgXIAEoCUID4EEDEhUKCHNjYW5fZG5zGBggASgJQgPgQQMSFQoIaG9z",
+            "dG5hbWUYGSABKAlCA+BBAxIbCg5jcHVfY29yZV9jb3VudBgaIAEoBUID4EEC",
+            "EhsKDnN5c3RlbV92ZXJzaW9uGBsgASgJQgPgQQESGAoLc2Nhbl9pcF9pZHMY",
+            "HCADKAlCA+BBAxIfChJzY2FuX2Ruc19yZWNvcmRfaWQYHSABKAlCA+BBAxIU",
+            "CgdvY2lfdXJsGB4gASgJQgPgQQMSHAoPZGJfc2VydmVyX29jaWRzGB8gAygJ",
+            "QgPgQQESGwoOY29tcGFydG1lbnRfaWQYICABKAlCA+BBAxIcCg9kbnNfbGlz",
+            "dGVuZXJfaXAYIyABKAlCA+BBAxIZCgxjbHVzdGVyX25hbWUYJCABKAlCA+BB",
+            "ARJICg1jb21wdXRlX21vZGVsGCUgASgOMiwuZ29vZ2xlLmNsb3VkLm9yYWNs",
+            "ZWRhdGFiYXNlLnYxLkNvbXB1dGVNb2RlbEID4EEDIl0KC0xpY2Vuc2VUeXBl",
+            "EhwKGExJQ0VOU0VfVFlQRV9VTlNQRUNJRklFRBAAEhQKEExJQ0VOU0VfSU5D",
+            "TFVERUQQARIaChZCUklOR19ZT1VSX09XTl9MSUNFTlNFEAIiRwoORGlza1Jl",
+            "ZHVuZGFuY3kSHwobRElTS19SRURVTkRBTkNZX1VOU1BFQ0lGSUVEEAASCAoE",
+            "SElHSBABEgoKBk5PUk1BTBACIpcBCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJ",
+            "RklFRBAAEhAKDFBST1ZJU0lPTklORxABEg0KCUFWQUlMQUJMRRACEgwKCFVQ",
+            "REFUSU5HEAMSDwoLVEVSTUlOQVRJTkcQBBIOCgpURVJNSU5BVEVEEAUSCgoG",
+            "RkFJTEVEEAYSGwoXTUFJTlRFTkFOQ0VfSU5fUFJPR1JFU1MQByKMAQoVRGF0",
+            "YUNvbGxlY3Rpb25PcHRpb25zEicKGmRpYWdub3N0aWNzX2V2ZW50c19lbmFi",
+            "bGVkGAEgASgIQgPgQQESJgoZaGVhbHRoX21vbml0b3JpbmdfZW5hYmxlZBgC",
+            "IAEoCEID4EEBEiIKFWluY2lkZW50X2xvZ3NfZW5hYmxlZBgDIAEoCEID4EEB",
+            "Qu0BCiJjb20uZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxQhNDbG91",
+            "ZFZtQ2x1c3RlclByb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20vZ28vb3JhY2xl",
+            "ZGF0YWJhc2UvYXBpdjEvb3JhY2xlZGF0YWJhc2VwYjtvcmFjbGVkYXRhYmFz",
+            "ZXBiqgIeR29vZ2xlLkNsb3VkLk9yYWNsZURhdGFiYXNlLlYxygIeR29vZ2xl",
+            "XENsb3VkXE9yYWNsZURhdGFiYXNlXFYx6gIhR29vZ2xlOjpDbG91ZDo6T3Jh",
+            "Y2xlRGF0YWJhc2U6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OracleDatabase.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmCluster), global::Google.Cloud.OracleDatabase.V1.CloudVmCluster.Parser, new[]{ "Name", "ExadataInfrastructure", "DisplayName", "GcpOracleZone", "Properties", "Labels", "CreateTime", "Cidr", "BackupSubnetCidr", "Network" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties), global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Parser, new[]{ "Ocid", "LicenseType", "GiVersion", "TimeZone", "SshPublicKeys", "NodeCount", "Shape", "OcpuCount", "MemorySizeGb", "DbNodeStorageSizeGb", "StorageSizeGb", "DataStorageSizeTb", "DiskRedundancy", "SparseDiskgroupEnabled", "LocalBackupEnabled", "HostnamePrefix", "DiagnosticsDataCollectionOptions", "State", "ScanListenerPortTcp", "ScanListenerPortTcpSsl", "Domain", "ScanDns", "Hostname", "CpuCoreCount", "SystemVersion", "ScanIpIds", "ScanDnsRecordId", "OciUrl", "DbServerOcids", "CompartmentId", "DnsListenerIp", "ClusterName" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.LicenseType), typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.DiskRedundancy), typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmCluster), global::Google.Cloud.OracleDatabase.V1.CloudVmCluster.Parser, new[]{ "Name", "ExadataInfrastructure", "DisplayName", "Properties", "Labels", "CreateTime", "Cidr", "BackupSubnetCidr", "Network", "GcpOracleZone", "OdbNetwork", "OdbSubnet", "BackupOdbSubnet", "IdentityConnector" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties), global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Parser, new[]{ "Ocid", "LicenseType", "GiVersion", "TimeZone", "SshPublicKeys", "NodeCount", "Shape", "OcpuCount", "MemorySizeGb", "DbNodeStorageSizeGb", "StorageSizeGb", "DataStorageSizeTb", "DiskRedundancy", "SparseDiskgroupEnabled", "LocalBackupEnabled", "HostnamePrefix", "DiagnosticsDataCollectionOptions", "State", "ScanListenerPortTcp", "ScanListenerPortTcpSsl", "Domain", "ScanDns", "Hostname", "CpuCoreCount", "SystemVersion", "ScanIpIds", "ScanDnsRecordId", "OciUrl", "DbServerOcids", "CompartmentId", "DnsListenerIp", "ClusterName", "ComputeModel" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.LicenseType), typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.DiskRedundancy), typeof(global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.DataCollectionOptions), global::Google.Cloud.OracleDatabase.V1.DataCollectionOptions.Parser, new[]{ "DiagnosticsEventsEnabled", "HealthMonitoringEnabled", "IncidentLogsEnabled" }, null, null, null, null)
           }));
     }
@@ -143,13 +152,17 @@ namespace Google.Cloud.OracleDatabase.V1 {
       name_ = other.name_;
       exadataInfrastructure_ = other.exadataInfrastructure_;
       displayName_ = other.displayName_;
-      gcpOracleZone_ = other.gcpOracleZone_;
       properties_ = other.properties_ != null ? other.properties_.Clone() : null;
       labels_ = other.labels_.Clone();
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       cidr_ = other.cidr_;
       backupSubnetCidr_ = other.backupSubnetCidr_;
       network_ = other.network_;
+      gcpOracleZone_ = other.gcpOracleZone_;
+      odbNetwork_ = other.odbNetwork_;
+      odbSubnet_ = other.odbSubnet_;
+      backupOdbSubnet_ = other.backupOdbSubnet_;
+      identityConnector_ = other.identityConnector_ != null ? other.identityConnector_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -207,22 +220,6 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
     }
 
-    /// <summary>Field number for the "gcp_oracle_zone" field.</summary>
-    public const int GcpOracleZoneFieldNumber = 12;
-    private string gcpOracleZone_ = "";
-    /// <summary>
-    /// Output only. Google Cloud Platform location where Oracle Exadata is hosted.
-    /// It is same as Google Cloud Platform Oracle zone of Exadata infrastructure.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string GcpOracleZone {
-      get { return gcpOracleZone_; }
-      set {
-        gcpOracleZone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "properties" field.</summary>
     public const int PropertiesFieldNumber = 6;
     private global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties properties_;
@@ -271,7 +268,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int CidrFieldNumber = 9;
     private string cidr_ = "";
     /// <summary>
-    /// Required. Network settings. CIDR to use for cluster IP allocation.
+    /// Optional. Network settings. CIDR to use for cluster IP allocation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -286,7 +283,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int BackupSubnetCidrFieldNumber = 10;
     private string backupSubnetCidr_ = "";
     /// <summary>
-    /// Required. CIDR range of the backup subnet.
+    /// Optional. CIDR range of the backup subnet.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -301,7 +298,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int NetworkFieldNumber = 11;
     private string network_ = "";
     /// <summary>
-    /// Required. The name of the VPC network.
+    /// Optional. The name of the VPC network.
     /// Format: projects/{project}/global/networks/{network}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -310,6 +307,92 @@ namespace Google.Cloud.OracleDatabase.V1 {
       get { return network_; }
       set {
         network_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "gcp_oracle_zone" field.</summary>
+    public const int GcpOracleZoneFieldNumber = 12;
+    private string gcpOracleZone_ = "";
+    /// <summary>
+    /// Output only. The GCP Oracle zone where Oracle CloudVmCluster is hosted.
+    /// This will be the same as the gcp_oracle_zone of the
+    /// CloudExadataInfrastructure. Example: us-east4-b-r2.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string GcpOracleZone {
+      get { return gcpOracleZone_; }
+      set {
+        gcpOracleZone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "odb_network" field.</summary>
+    public const int OdbNetworkFieldNumber = 13;
+    private string odbNetwork_ = "";
+    /// <summary>
+    /// Optional. The name of the OdbNetwork associated with the VM Cluster.
+    /// Format:
+    /// projects/{project}/locations/{location}/odbNetworks/{odb_network}
+    /// It is optional but if specified, this should match the parent ODBNetwork of
+    /// the odb_subnet and backup_odb_subnet.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OdbNetwork {
+      get { return odbNetwork_; }
+      set {
+        odbNetwork_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "odb_subnet" field.</summary>
+    public const int OdbSubnetFieldNumber = 14;
+    private string odbSubnet_ = "";
+    /// <summary>
+    /// Optional. The name of the OdbSubnet associated with the VM Cluster for
+    /// IP allocation. Format:
+    /// projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OdbSubnet {
+      get { return odbSubnet_; }
+      set {
+        odbSubnet_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "backup_odb_subnet" field.</summary>
+    public const int BackupOdbSubnetFieldNumber = 15;
+    private string backupOdbSubnet_ = "";
+    /// <summary>
+    /// Optional. The name of the backup OdbSubnet associated with the VM Cluster.
+    /// Format:
+    /// projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string BackupOdbSubnet {
+      get { return backupOdbSubnet_; }
+      set {
+        backupOdbSubnet_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "identity_connector" field.</summary>
+    public const int IdentityConnectorFieldNumber = 16;
+    private global::Google.Cloud.OracleDatabase.V1.IdentityConnector identityConnector_;
+    /// <summary>
+    /// Output only. The identity connector details which will allow OCI to
+    /// securely access the resources in the customer project.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.OracleDatabase.V1.IdentityConnector IdentityConnector {
+      get { return identityConnector_; }
+      set {
+        identityConnector_ = value;
       }
     }
 
@@ -331,13 +414,17 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (Name != other.Name) return false;
       if (ExadataInfrastructure != other.ExadataInfrastructure) return false;
       if (DisplayName != other.DisplayName) return false;
-      if (GcpOracleZone != other.GcpOracleZone) return false;
       if (!object.Equals(Properties, other.Properties)) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (Cidr != other.Cidr) return false;
       if (BackupSubnetCidr != other.BackupSubnetCidr) return false;
       if (Network != other.Network) return false;
+      if (GcpOracleZone != other.GcpOracleZone) return false;
+      if (OdbNetwork != other.OdbNetwork) return false;
+      if (OdbSubnet != other.OdbSubnet) return false;
+      if (BackupOdbSubnet != other.BackupOdbSubnet) return false;
+      if (!object.Equals(IdentityConnector, other.IdentityConnector)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -348,13 +435,17 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (ExadataInfrastructure.Length != 0) hash ^= ExadataInfrastructure.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (GcpOracleZone.Length != 0) hash ^= GcpOracleZone.GetHashCode();
       if (properties_ != null) hash ^= Properties.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (Cidr.Length != 0) hash ^= Cidr.GetHashCode();
       if (BackupSubnetCidr.Length != 0) hash ^= BackupSubnetCidr.GetHashCode();
       if (Network.Length != 0) hash ^= Network.GetHashCode();
+      if (GcpOracleZone.Length != 0) hash ^= GcpOracleZone.GetHashCode();
+      if (OdbNetwork.Length != 0) hash ^= OdbNetwork.GetHashCode();
+      if (OdbSubnet.Length != 0) hash ^= OdbSubnet.GetHashCode();
+      if (BackupOdbSubnet.Length != 0) hash ^= BackupOdbSubnet.GetHashCode();
+      if (identityConnector_ != null) hash ^= IdentityConnector.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -410,6 +501,22 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(98);
         output.WriteString(GcpOracleZone);
       }
+      if (OdbNetwork.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(OdbNetwork);
+      }
+      if (OdbSubnet.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(OdbSubnet);
+      }
+      if (BackupOdbSubnet.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(BackupOdbSubnet);
+      }
+      if (identityConnector_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(IdentityConnector);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -457,6 +564,22 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(98);
         output.WriteString(GcpOracleZone);
       }
+      if (OdbNetwork.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(OdbNetwork);
+      }
+      if (OdbSubnet.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(OdbSubnet);
+      }
+      if (BackupOdbSubnet.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(BackupOdbSubnet);
+      }
+      if (identityConnector_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(IdentityConnector);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -476,9 +599,6 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (DisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
-      if (GcpOracleZone.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(GcpOracleZone);
-      }
       if (properties_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Properties);
       }
@@ -494,6 +614,21 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (Network.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Network);
+      }
+      if (GcpOracleZone.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GcpOracleZone);
+      }
+      if (OdbNetwork.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OdbNetwork);
+      }
+      if (OdbSubnet.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OdbSubnet);
+      }
+      if (BackupOdbSubnet.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BackupOdbSubnet);
+      }
+      if (identityConnector_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(IdentityConnector);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -516,9 +651,6 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
-      if (other.GcpOracleZone.Length != 0) {
-        GcpOracleZone = other.GcpOracleZone;
-      }
       if (other.properties_ != null) {
         if (properties_ == null) {
           Properties = new global::Google.Cloud.OracleDatabase.V1.CloudVmClusterProperties();
@@ -540,6 +672,24 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (other.Network.Length != 0) {
         Network = other.Network;
+      }
+      if (other.GcpOracleZone.Length != 0) {
+        GcpOracleZone = other.GcpOracleZone;
+      }
+      if (other.OdbNetwork.Length != 0) {
+        OdbNetwork = other.OdbNetwork;
+      }
+      if (other.OdbSubnet.Length != 0) {
+        OdbSubnet = other.OdbSubnet;
+      }
+      if (other.BackupOdbSubnet.Length != 0) {
+        BackupOdbSubnet = other.BackupOdbSubnet;
+      }
+      if (other.identityConnector_ != null) {
+        if (identityConnector_ == null) {
+          IdentityConnector = new global::Google.Cloud.OracleDatabase.V1.IdentityConnector();
+        }
+        IdentityConnector.MergeFrom(other.IdentityConnector);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -602,6 +752,25 @@ namespace Google.Cloud.OracleDatabase.V1 {
             GcpOracleZone = input.ReadString();
             break;
           }
+          case 106: {
+            OdbNetwork = input.ReadString();
+            break;
+          }
+          case 114: {
+            OdbSubnet = input.ReadString();
+            break;
+          }
+          case 122: {
+            BackupOdbSubnet = input.ReadString();
+            break;
+          }
+          case 130: {
+            if (identityConnector_ == null) {
+              IdentityConnector = new global::Google.Cloud.OracleDatabase.V1.IdentityConnector();
+            }
+            input.ReadMessage(IdentityConnector);
+            break;
+          }
         }
       }
     #endif
@@ -661,6 +830,25 @@ namespace Google.Cloud.OracleDatabase.V1 {
           }
           case 98: {
             GcpOracleZone = input.ReadString();
+            break;
+          }
+          case 106: {
+            OdbNetwork = input.ReadString();
+            break;
+          }
+          case 114: {
+            OdbSubnet = input.ReadString();
+            break;
+          }
+          case 122: {
+            BackupOdbSubnet = input.ReadString();
+            break;
+          }
+          case 130: {
+            if (identityConnector_ == null) {
+              IdentityConnector = new global::Google.Cloud.OracleDatabase.V1.IdentityConnector();
+            }
+            input.ReadMessage(IdentityConnector);
             break;
           }
         }
@@ -740,6 +928,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       compartmentId_ = other.compartmentId_;
       dnsListenerIp_ = other.dnsListenerIp_;
       clusterName_ = other.clusterName_;
+      computeModel_ = other.computeModel_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1230,6 +1419,21 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
     }
 
+    /// <summary>Field number for the "compute_model" field.</summary>
+    public const int ComputeModelFieldNumber = 37;
+    private global::Google.Cloud.OracleDatabase.V1.ComputeModel computeModel_ = global::Google.Cloud.OracleDatabase.V1.ComputeModel.Unspecified;
+    /// <summary>
+    /// Output only. The compute model of the VM Cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.OracleDatabase.V1.ComputeModel ComputeModel {
+      get { return computeModel_; }
+      set {
+        computeModel_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1277,6 +1481,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (CompartmentId != other.CompartmentId) return false;
       if (DnsListenerIp != other.DnsListenerIp) return false;
       if (ClusterName != other.ClusterName) return false;
+      if (ComputeModel != other.ComputeModel) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1316,6 +1521,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (CompartmentId.Length != 0) hash ^= CompartmentId.GetHashCode();
       if (DnsListenerIp.Length != 0) hash ^= DnsListenerIp.GetHashCode();
       if (ClusterName.Length != 0) hash ^= ClusterName.GetHashCode();
+      if (ComputeModel != global::Google.Cloud.OracleDatabase.V1.ComputeModel.Unspecified) hash ^= ComputeModel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1453,6 +1659,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(162, 2);
         output.WriteString(ClusterName);
       }
+      if (ComputeModel != global::Google.Cloud.OracleDatabase.V1.ComputeModel.Unspecified) {
+        output.WriteRawTag(168, 2);
+        output.WriteEnum((int) ComputeModel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1582,6 +1792,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(162, 2);
         output.WriteString(ClusterName);
       }
+      if (ComputeModel != global::Google.Cloud.OracleDatabase.V1.ComputeModel.Unspecified) {
+        output.WriteRawTag(168, 2);
+        output.WriteEnum((int) ComputeModel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1681,6 +1895,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (ClusterName.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(ClusterName);
+      }
+      if (ComputeModel != global::Google.Cloud.OracleDatabase.V1.ComputeModel.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) ComputeModel);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1789,6 +2006,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (other.ClusterName.Length != 0) {
         ClusterName = other.ClusterName;
+      }
+      if (other.ComputeModel != global::Google.Cloud.OracleDatabase.V1.ComputeModel.Unspecified) {
+        ComputeModel = other.ComputeModel;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1939,6 +2159,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
             ClusterName = input.ReadString();
             break;
           }
+          case 296: {
+            ComputeModel = (global::Google.Cloud.OracleDatabase.V1.ComputeModel) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -2086,6 +2310,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
           }
           case 290: {
             ClusterName = input.ReadString();
+            break;
+          }
+          case 296: {
+            ComputeModel = (global::Google.Cloud.OracleDatabase.V1.ComputeModel) input.ReadEnum();
             break;
           }
         }

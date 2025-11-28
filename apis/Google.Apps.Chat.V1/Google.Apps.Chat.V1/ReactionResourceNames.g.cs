@@ -263,6 +263,217 @@ namespace Google.Apps.Chat.V1
         public static bool operator !=(ReactionName a, ReactionName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>CustomEmoji</c> resource.</summary>
+    public sealed partial class CustomEmojiName : gax::IResourceName, sys::IEquatable<CustomEmojiName>
+    {
+        /// <summary>The possible contents of <see cref="CustomEmojiName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>A resource name with pattern <c>customEmojis/{custom_emoji}</c>.</summary>
+            CustomEmoji = 1,
+        }
+
+        private static gax::PathTemplate s_customEmoji = new gax::PathTemplate("customEmojis/{custom_emoji}");
+
+        /// <summary>Creates a <see cref="CustomEmojiName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="CustomEmojiName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static CustomEmojiName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new CustomEmojiName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="CustomEmojiName"/> with the pattern <c>customEmojis/{custom_emoji}</c>.
+        /// </summary>
+        /// <param name="customEmojiId">The <c>CustomEmoji</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="CustomEmojiName"/> constructed from the provided ids.</returns>
+        public static CustomEmojiName FromCustomEmoji(string customEmojiId) =>
+            new CustomEmojiName(ResourceNameType.CustomEmoji, customEmojiId: gax::GaxPreconditions.CheckNotNullOrEmpty(customEmojiId, nameof(customEmojiId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="CustomEmojiName"/> with pattern
+        /// <c>customEmojis/{custom_emoji}</c>.
+        /// </summary>
+        /// <param name="customEmojiId">The <c>CustomEmoji</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="CustomEmojiName"/> with pattern <c>customEmojis/{custom_emoji}</c>
+        /// .
+        /// </returns>
+        public static string Format(string customEmojiId) => FormatCustomEmoji(customEmojiId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="CustomEmojiName"/> with pattern
+        /// <c>customEmojis/{custom_emoji}</c>.
+        /// </summary>
+        /// <param name="customEmojiId">The <c>CustomEmoji</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="CustomEmojiName"/> with pattern <c>customEmojis/{custom_emoji}</c>
+        /// .
+        /// </returns>
+        public static string FormatCustomEmoji(string customEmojiId) =>
+            s_customEmoji.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(customEmojiId, nameof(customEmojiId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="CustomEmojiName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>customEmojis/{custom_emoji}</c></description></item></list>
+        /// </remarks>
+        /// <param name="customEmojiName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="CustomEmojiName"/> if successful.</returns>
+        public static CustomEmojiName Parse(string customEmojiName) => Parse(customEmojiName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="CustomEmojiName"/> instance; optionally allowing
+        /// an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>customEmojis/{custom_emoji}</c></description></item></list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="customEmojiName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="CustomEmojiName"/> if successful.</returns>
+        public static CustomEmojiName Parse(string customEmojiName, bool allowUnparsed) =>
+            TryParse(customEmojiName, allowUnparsed, out CustomEmojiName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="CustomEmojiName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>customEmojis/{custom_emoji}</c></description></item></list>
+        /// </remarks>
+        /// <param name="customEmojiName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="CustomEmojiName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string customEmojiName, out CustomEmojiName result) =>
+            TryParse(customEmojiName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="CustomEmojiName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>customEmojis/{custom_emoji}</c></description></item></list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="customEmojiName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="CustomEmojiName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string customEmojiName, bool allowUnparsed, out CustomEmojiName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(customEmojiName, nameof(customEmojiName));
+            gax::TemplatedResourceName resourceName;
+            if (s_customEmoji.TryParseName(customEmojiName, out resourceName))
+            {
+                result = FromCustomEmoji(resourceName[0]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(customEmojiName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private CustomEmojiName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string customEmojiId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            CustomEmojiId = customEmojiId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="CustomEmojiName"/> class from the component parts of pattern
+        /// <c>customEmojis/{custom_emoji}</c>
+        /// </summary>
+        /// <param name="customEmojiId">The <c>CustomEmoji</c> ID. Must not be <c>null</c> or empty.</param>
+        public CustomEmojiName(string customEmojiId) : this(ResourceNameType.CustomEmoji, customEmojiId: gax::GaxPreconditions.CheckNotNullOrEmpty(customEmojiId, nameof(customEmojiId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>CustomEmoji</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string CustomEmojiId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.CustomEmoji: return s_customEmoji.Expand(CustomEmojiId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as CustomEmojiName);
+
+        /// <inheritdoc/>
+        public bool Equals(CustomEmojiName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(CustomEmojiName a, CustomEmojiName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(CustomEmojiName a, CustomEmojiName b) => !(a == b);
+    }
+
     public partial class Reaction
     {
         /// <summary>
@@ -271,6 +482,18 @@ namespace Google.Apps.Chat.V1
         public gacv::ReactionName ReactionName
         {
             get => string.IsNullOrEmpty(Name) ? null : gacv::ReactionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CustomEmoji
+    {
+        /// <summary>
+        /// <see cref="gacv::CustomEmojiName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gacv::CustomEmojiName CustomEmojiName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gacv::CustomEmojiName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -307,6 +530,30 @@ namespace Google.Apps.Chat.V1
         public gacv::ReactionName ReactionName
         {
             get => string.IsNullOrEmpty(Name) ? null : gacv::ReactionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetCustomEmojiRequest
+    {
+        /// <summary>
+        /// <see cref="gacv::CustomEmojiName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gacv::CustomEmojiName CustomEmojiName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gacv::CustomEmojiName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteCustomEmojiRequest
+    {
+        /// <summary>
+        /// <see cref="gacv::CustomEmojiName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gacv::CustomEmojiName CustomEmojiName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gacv::CustomEmojiName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

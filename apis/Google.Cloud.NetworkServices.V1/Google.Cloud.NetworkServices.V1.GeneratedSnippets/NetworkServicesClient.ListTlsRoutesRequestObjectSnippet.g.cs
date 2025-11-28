@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             ListTlsRoutesRequest request = new ListTlsRoutesRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ListTlsRoutesResponse, TlsRoute> response = networkServicesClient.ListTlsRoutes(request);

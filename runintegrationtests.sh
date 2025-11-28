@@ -16,6 +16,7 @@ RETRY_ARG=
 SMOKE_ARG=
 EXCLUDED_APIS=()
 DRY_RUN_ARG=
+RELEASEMANAGER_ARGS=
 
 while (( "$#" )); do
   if [[ "$1" == "--retry" ]]
@@ -27,6 +28,9 @@ while (( "$#" )); do
   elif [[ "$1" == "--dry-run" ]]
   then
     DRY_RUN_ARG=yes
+  elif [[ "$1" == "--no-build-releasemanager" ]]
+  then
+    RELEASEMANAGER_ARGS="--no-build --no-restore"
   elif [[ "$1" == "--exclude" ]]
   then
     shift
@@ -127,7 +131,7 @@ do
     # If we've found a smoketests.json file (which really isn't a "test directory" of course),
     # run it via ReleaseManager
     echo "Running $testdir"
-    dotnet run --project ../tools/Google.Cloud.Tools.ReleaseManager -- \
+    dotnet run $RELEASEMANAGER_ARGS --project ../tools/Google.Cloud.Tools.ReleaseManager -- \
       smoke-test $(dirname $testdir) \
       || echo "$testdir" >> $FAILURE_TEMP_FILE
   else

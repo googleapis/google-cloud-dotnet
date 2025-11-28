@@ -89,7 +89,9 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1 {
     public abstract partial class PublicCertificateAuthorityServiceBase
     {
       /// <summary>
-      /// Creates a new [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey] bound to the project.
+      /// Creates a new
+      /// [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey]
+      /// bound to the project.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -130,7 +132,9 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1 {
       }
 
       /// <summary>
-      /// Creates a new [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey] bound to the project.
+      /// Creates a new
+      /// [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey]
+      /// bound to the project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -143,7 +147,9 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1 {
         return CreateExternalAccountKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey] bound to the project.
+      /// Creates a new
+      /// [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey]
+      /// bound to the project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -154,7 +160,9 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateExternalAccountKey, null, options, request);
       }
       /// <summary>
-      /// Creates a new [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey] bound to the project.
+      /// Creates a new
+      /// [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey]
+      /// bound to the project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -167,7 +175,9 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1 {
         return CreateExternalAccountKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey] bound to the project.
+      /// Creates a new
+      /// [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey]
+      /// bound to the project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

@@ -897,7 +897,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
             : base()
         { }
 
-        public NoBufferWarningLoggerTestApplication(double traceQps)
+        protected NoBufferWarningLoggerTestApplication(double traceQps)
             : base(traceQps)
         { }
 

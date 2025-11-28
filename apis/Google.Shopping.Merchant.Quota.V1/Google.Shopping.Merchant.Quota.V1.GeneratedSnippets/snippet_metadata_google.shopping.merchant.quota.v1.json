@@ -1,0 +1,939 @@
+{
+  "clientLibrary": {
+    "name": "Google.Shopping.Merchant.Quota.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.shopping.merchant.quota.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "merchantapi_v1_generated_AccountLimitsService_GetAccountLimit_sync",
+      "title": "GetAccountLimitRequestObject",
+      "description": "Snippet for GetAccountLimit",
+      "file": "AccountLimitsServiceClient.GetAccountLimitRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccountLimit",
+        "fullName": "Google.Shopping.Merchant.Quota.V1.AccountLimitsServiceClient.GetAccountLimit",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Quota.V1.GetAccountLimitRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Quota.V1.AccountLimit",
+        "client": {
+          "shortName": "AccountLimitsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Quota.V1.AccountLimitsServiceClient"
+        },
+        "method": {
+          "shortName": "GetAccountLimit",
+          "fullName": "google.shopping.merchant.quota.v1.AccountLimitsService.GetAccountLimit",
+          "service": {
+            "shortName": "AccountLimitsService",
+            "fullName": "google.shopping.merchant.quota.v1.AccountLimitsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_AccountLimitsService_GetAccountLimit_async",
+      "title": "GetAccountLimitRequestObjectAsync",
+      "description": "Snippet for GetAccountLimitAsync",
+      "file": "AccountLimitsServiceClient.GetAccountLimitRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccountLimitAsync",
+        "fullName": "Google.Shopping.Merchant.Quota.V1.AccountLimitsServiceClient.GetAccountLimitAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Quota.V1.GetAccountLimitRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Quota.V1.AccountLimit>",
+        "client": {
+          "shortName": "AccountLimitsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Quota.V1.AccountLimitsServiceClient"
+        },
+        "method": {
+          "shortName": "GetAccountLimit",
+          "fullName": "google.shopping.merchant.quota.v1.AccountLimitsService.GetAccountLimit",
+          "service": {
+            "shortName": "AccountLimitsService",
+            "fullName": "google.shopping.merchant.quota.v1.AccountLimitsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_AccountLimitsService_GetAccountLimit_sync_flattened",
+      "title": "GetAccountLimit",
+      "description": "Snippet for GetAccountLimit",
+      "file": "AccountLimitsServiceClient.GetAccountLimitSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccountLimit",
+        "fullName": "Google.Shopping.Merchant.Quota.V1.AccountLimitsServiceClient.GetAccountLimit",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Quota.V1.AccountLimit",
+        "client": {
+          "shortName": "AccountLimitsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Quota.V1.AccountLimitsServiceClient"
+        },
+        "method": {
+          "shortName": "GetAccountLimit",
+          "fullName": "google.shopping.merchant.quota.v1.AccountLimitsService.GetAccountLimit",
+          "service": {
+            "shortName": "AccountLimitsService",
+            "fullName": "google.shopping.merchant.quota.v1.AccountLimitsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_AccountLimitsService_GetAccountLimit_async_flattened",
+      "title": "GetAccountLimitAsync",
+      "description": "Snippet for GetAccountLimitAsync",
+      "file": "AccountLimitsServiceClient.GetAccountLimitAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccountLimitAsync",
+        "fullName": "Google.Shopping.Merchant.Quota.V1.AccountLimitsServiceClient.GetAccountLimitAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Quota.V1.AccountLimit>",
+        "client": {
+          "shortName": "AccountLimitsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Quota.V1.AccountLimitsServiceClient"
+        },
+        "method": {
+          "shortName": "GetAccountLimit",
+          "fullName": "google.shopping.merchant.quota.v1.AccountLimitsService.GetAccountLimit",
+          "service": {
+            "shortName": "AccountLimitsService",
+            "fullName": "google.shopping.merchant.quota.v1.AccountLimitsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_AccountLimitsService_GetAccountLimit_sync_flattened_resourceNames",
+      "title": "GetAccountLimitResourceNames",
+      "description": "Snippet for GetAccountLimit",
+      "file": "AccountLimitsServiceClient.GetAccountLimitResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccountLimit",
+        "fullName": "Google.Shopping.Merchant.Quota.V1.AccountLimitsServiceClient.GetAccountLimit",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Quota.V1.AccountLimitName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Quota.V1.AccountLimit",
+        "client": {
+          "shortName": "AccountLimitsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Quota.V1.AccountLimitsServiceClient"
+        },
+        "method": {
+          "shortName": "GetAccountLimit",
+          "fullName": "google.shopping.merchant.quota.v1.AccountLimitsService.GetAccountLimit",
+          "service": {
+            "shortName": "AccountLimitsService",
+            "fullName": "google.shopping.merchant.quota.v1.AccountLimitsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_AccountLimitsService_GetAccountLimit_async_flattened_resourceNames",
+      "title": "GetAccountLimitResourceNamesAsync",
+      "description": "Snippet for GetAccountLimitAsync",
+      "file": "AccountLimitsServiceClient.GetAccountLimitResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAccountLimitAsync",
+        "fullName": "Google.Shopping.Merchant.Quota.V1.AccountLimitsServiceClient.GetAccountLimitAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Quota.V1.AccountLimitName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Quota.V1.AccountLimit>",
+        "client": {
+          "shortName": "AccountLimitsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Quota.V1.AccountLimitsServiceClient"
+        },
+        "method": {
+          "shortName": "GetAccountLimit",
+          "fullName": "google.shopping.merchant.quota.v1.AccountLimitsService.GetAccountLimit",
+          "service": {
+            "shortName": "AccountLimitsService",
+            "fullName": "google.shopping.merchant.quota.v1.AccountLimitsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_AccountLimitsService_ListAccountLimits_sync",
+      "title": "ListAccountLimitsRequestObject",
+      "description": "Snippet for ListAccountLimits",
+      "file": "AccountLimitsServiceClient.ListAccountLimitsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccountLimits",
+        "fullName": "Google.Shopping.Merchant.Quota.V1.AccountLimitsServiceClient.ListAccountLimits",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Quota.V1.ListAccountLimitsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Quota.V1.ListAccountLimitsResponse, Google.Shopping.Merchant.Quota.V1.AccountLimit>",
+        "client": {
+          "shortName": "AccountLimitsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Quota.V1.AccountLimitsServiceClient"
+        },
+        "method": {
+          "shortName": "ListAccountLimits",
+          "fullName": "google.shopping.merchant.quota.v1.AccountLimitsService.ListAccountLimits",
+          "service": {
+            "shortName": "AccountLimitsService",
+            "fullName": "google.shopping.merchant.quota.v1.AccountLimitsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_AccountLimitsService_ListAccountLimits_async",
+      "title": "ListAccountLimitsRequestObjectAsync",
+      "description": "Snippet for ListAccountLimitsAsync",
+      "file": "AccountLimitsServiceClient.ListAccountLimitsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccountLimitsAsync",
+        "fullName": "Google.Shopping.Merchant.Quota.V1.AccountLimitsServiceClient.ListAccountLimitsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Quota.V1.ListAccountLimitsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Quota.V1.ListAccountLimitsResponse, Google.Shopping.Merchant.Quota.V1.AccountLimit>",
+        "client": {
+          "shortName": "AccountLimitsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Quota.V1.AccountLimitsServiceClient"
+        },
+        "method": {
+          "shortName": "ListAccountLimits",
+          "fullName": "google.shopping.merchant.quota.v1.AccountLimitsService.ListAccountLimits",
+          "service": {
+            "shortName": "AccountLimitsService",
+            "fullName": "google.shopping.merchant.quota.v1.AccountLimitsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_AccountLimitsService_ListAccountLimits_sync_flattened",
+      "title": "ListAccountLimits",
+      "description": "Snippet for ListAccountLimits",
+      "file": "AccountLimitsServiceClient.ListAccountLimitsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccountLimits",
+        "fullName": "Google.Shopping.Merchant.Quota.V1.AccountLimitsServiceClient.ListAccountLimits",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Quota.V1.ListAccountLimitsResponse, Google.Shopping.Merchant.Quota.V1.AccountLimit>",
+        "client": {
+          "shortName": "AccountLimitsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Quota.V1.AccountLimitsServiceClient"
+        },
+        "method": {
+          "shortName": "ListAccountLimits",
+          "fullName": "google.shopping.merchant.quota.v1.AccountLimitsService.ListAccountLimits",
+          "service": {
+            "shortName": "AccountLimitsService",
+            "fullName": "google.shopping.merchant.quota.v1.AccountLimitsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_AccountLimitsService_ListAccountLimits_async_flattened",
+      "title": "ListAccountLimitsAsync",
+      "description": "Snippet for ListAccountLimitsAsync",
+      "file": "AccountLimitsServiceClient.ListAccountLimitsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccountLimitsAsync",
+        "fullName": "Google.Shopping.Merchant.Quota.V1.AccountLimitsServiceClient.ListAccountLimitsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Quota.V1.ListAccountLimitsResponse, Google.Shopping.Merchant.Quota.V1.AccountLimit>",
+        "client": {
+          "shortName": "AccountLimitsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Quota.V1.AccountLimitsServiceClient"
+        },
+        "method": {
+          "shortName": "ListAccountLimits",
+          "fullName": "google.shopping.merchant.quota.v1.AccountLimitsService.ListAccountLimits",
+          "service": {
+            "shortName": "AccountLimitsService",
+            "fullName": "google.shopping.merchant.quota.v1.AccountLimitsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_AccountLimitsService_ListAccountLimits_sync_flattened_resourceNames",
+      "title": "ListAccountLimitsResourceNames",
+      "description": "Snippet for ListAccountLimits",
+      "file": "AccountLimitsServiceClient.ListAccountLimitsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccountLimits",
+        "fullName": "Google.Shopping.Merchant.Quota.V1.AccountLimitsServiceClient.ListAccountLimits",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Quota.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Quota.V1.ListAccountLimitsResponse, Google.Shopping.Merchant.Quota.V1.AccountLimit>",
+        "client": {
+          "shortName": "AccountLimitsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Quota.V1.AccountLimitsServiceClient"
+        },
+        "method": {
+          "shortName": "ListAccountLimits",
+          "fullName": "google.shopping.merchant.quota.v1.AccountLimitsService.ListAccountLimits",
+          "service": {
+            "shortName": "AccountLimitsService",
+            "fullName": "google.shopping.merchant.quota.v1.AccountLimitsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_AccountLimitsService_ListAccountLimits_async_flattened_resourceNames",
+      "title": "ListAccountLimitsResourceNamesAsync",
+      "description": "Snippet for ListAccountLimitsAsync",
+      "file": "AccountLimitsServiceClient.ListAccountLimitsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAccountLimitsAsync",
+        "fullName": "Google.Shopping.Merchant.Quota.V1.AccountLimitsServiceClient.ListAccountLimitsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Quota.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Quota.V1.ListAccountLimitsResponse, Google.Shopping.Merchant.Quota.V1.AccountLimit>",
+        "client": {
+          "shortName": "AccountLimitsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Quota.V1.AccountLimitsServiceClient"
+        },
+        "method": {
+          "shortName": "ListAccountLimits",
+          "fullName": "google.shopping.merchant.quota.v1.AccountLimitsService.ListAccountLimits",
+          "service": {
+            "shortName": "AccountLimitsService",
+            "fullName": "google.shopping.merchant.quota.v1.AccountLimitsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_QuotaService_ListQuotaGroups_sync",
+      "title": "ListQuotaGroupsRequestObject",
+      "description": "Snippet for ListQuotaGroups",
+      "file": "QuotaServiceClient.ListQuotaGroupsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaGroups",
+        "fullName": "Google.Shopping.Merchant.Quota.V1.QuotaServiceClient.ListQuotaGroups",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Quota.V1.ListQuotaGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Quota.V1.ListQuotaGroupsResponse, Google.Shopping.Merchant.Quota.V1.QuotaGroup>",
+        "client": {
+          "shortName": "QuotaServiceClient",
+          "fullName": "Google.Shopping.Merchant.Quota.V1.QuotaServiceClient"
+        },
+        "method": {
+          "shortName": "ListQuotaGroups",
+          "fullName": "google.shopping.merchant.quota.v1.QuotaService.ListQuotaGroups",
+          "service": {
+            "shortName": "QuotaService",
+            "fullName": "google.shopping.merchant.quota.v1.QuotaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_QuotaService_ListQuotaGroups_async",
+      "title": "ListQuotaGroupsRequestObjectAsync",
+      "description": "Snippet for ListQuotaGroupsAsync",
+      "file": "QuotaServiceClient.ListQuotaGroupsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaGroupsAsync",
+        "fullName": "Google.Shopping.Merchant.Quota.V1.QuotaServiceClient.ListQuotaGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Quota.V1.ListQuotaGroupsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Quota.V1.ListQuotaGroupsResponse, Google.Shopping.Merchant.Quota.V1.QuotaGroup>",
+        "client": {
+          "shortName": "QuotaServiceClient",
+          "fullName": "Google.Shopping.Merchant.Quota.V1.QuotaServiceClient"
+        },
+        "method": {
+          "shortName": "ListQuotaGroups",
+          "fullName": "google.shopping.merchant.quota.v1.QuotaService.ListQuotaGroups",
+          "service": {
+            "shortName": "QuotaService",
+            "fullName": "google.shopping.merchant.quota.v1.QuotaService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_QuotaService_ListQuotaGroups_sync_flattened",
+      "title": "ListQuotaGroups",
+      "description": "Snippet for ListQuotaGroups",
+      "file": "QuotaServiceClient.ListQuotaGroupsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaGroups",
+        "fullName": "Google.Shopping.Merchant.Quota.V1.QuotaServiceClient.ListQuotaGroups",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Quota.V1.ListQuotaGroupsResponse, Google.Shopping.Merchant.Quota.V1.QuotaGroup>",
+        "client": {
+          "shortName": "QuotaServiceClient",
+          "fullName": "Google.Shopping.Merchant.Quota.V1.QuotaServiceClient"
+        },
+        "method": {
+          "shortName": "ListQuotaGroups",
+          "fullName": "google.shopping.merchant.quota.v1.QuotaService.ListQuotaGroups",
+          "service": {
+            "shortName": "QuotaService",
+            "fullName": "google.shopping.merchant.quota.v1.QuotaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_QuotaService_ListQuotaGroups_async_flattened",
+      "title": "ListQuotaGroupsAsync",
+      "description": "Snippet for ListQuotaGroupsAsync",
+      "file": "QuotaServiceClient.ListQuotaGroupsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaGroupsAsync",
+        "fullName": "Google.Shopping.Merchant.Quota.V1.QuotaServiceClient.ListQuotaGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Quota.V1.ListQuotaGroupsResponse, Google.Shopping.Merchant.Quota.V1.QuotaGroup>",
+        "client": {
+          "shortName": "QuotaServiceClient",
+          "fullName": "Google.Shopping.Merchant.Quota.V1.QuotaServiceClient"
+        },
+        "method": {
+          "shortName": "ListQuotaGroups",
+          "fullName": "google.shopping.merchant.quota.v1.QuotaService.ListQuotaGroups",
+          "service": {
+            "shortName": "QuotaService",
+            "fullName": "google.shopping.merchant.quota.v1.QuotaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_QuotaService_ListQuotaGroups_sync_flattened_resourceNames",
+      "title": "ListQuotaGroupsResourceNames",
+      "description": "Snippet for ListQuotaGroups",
+      "file": "QuotaServiceClient.ListQuotaGroupsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaGroups",
+        "fullName": "Google.Shopping.Merchant.Quota.V1.QuotaServiceClient.ListQuotaGroups",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Quota.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Quota.V1.ListQuotaGroupsResponse, Google.Shopping.Merchant.Quota.V1.QuotaGroup>",
+        "client": {
+          "shortName": "QuotaServiceClient",
+          "fullName": "Google.Shopping.Merchant.Quota.V1.QuotaServiceClient"
+        },
+        "method": {
+          "shortName": "ListQuotaGroups",
+          "fullName": "google.shopping.merchant.quota.v1.QuotaService.ListQuotaGroups",
+          "service": {
+            "shortName": "QuotaService",
+            "fullName": "google.shopping.merchant.quota.v1.QuotaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1_generated_QuotaService_ListQuotaGroups_async_flattened_resourceNames",
+      "title": "ListQuotaGroupsResourceNamesAsync",
+      "description": "Snippet for ListQuotaGroupsAsync",
+      "file": "QuotaServiceClient.ListQuotaGroupsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaGroupsAsync",
+        "fullName": "Google.Shopping.Merchant.Quota.V1.QuotaServiceClient.ListQuotaGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Quota.V1.AccountName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Quota.V1.ListQuotaGroupsResponse, Google.Shopping.Merchant.Quota.V1.QuotaGroup>",
+        "client": {
+          "shortName": "QuotaServiceClient",
+          "fullName": "Google.Shopping.Merchant.Quota.V1.QuotaServiceClient"
+        },
+        "method": {
+          "shortName": "ListQuotaGroups",
+          "fullName": "google.shopping.merchant.quota.v1.QuotaService.ListQuotaGroups",
+          "service": {
+            "shortName": "QuotaService",
+            "fullName": "google.shopping.merchant.quota.v1.QuotaService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

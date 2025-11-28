@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START container_v1_generated_ClusterManager_UpdateNodePool_async]
     using Google.Cloud.Container.V1;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedClusterManagerClientSnippets
@@ -68,6 +69,9 @@ namespace GoogleCSharpSnippets
                 ContainerdConfig = new ContainerdConfig(),
                 QueuedProvisioning = new NodePool.Types.QueuedProvisioning(),
                 StoragePools = { "", },
+                MaxRunDuration = new Duration(),
+                FlexStart = false,
+                BootDisk = new BootDisk(),
             };
             // Make the request
             Operation response = await clusterManagerClient.UpdateNodePoolAsync(request);

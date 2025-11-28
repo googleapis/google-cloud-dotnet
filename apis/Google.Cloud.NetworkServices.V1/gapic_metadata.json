@@ -10,6 +10,18 @@
         "grpc": {
           "libraryClient": "DepServiceClient",
           "rpcs": {
+            "CreateAuthzExtension": {
+              "methods": [
+                "CreateAuthzExtension",
+                "CreateAuthzExtensionAsync"
+              ]
+            },
+            "CreateLbEdgeExtension": {
+              "methods": [
+                "CreateLbEdgeExtension",
+                "CreateLbEdgeExtensionAsync"
+              ]
+            },
             "CreateLbRouteExtension": {
               "methods": [
                 "CreateLbRouteExtension",
@@ -20,6 +32,18 @@
               "methods": [
                 "CreateLbTrafficExtension",
                 "CreateLbTrafficExtensionAsync"
+              ]
+            },
+            "DeleteAuthzExtension": {
+              "methods": [
+                "DeleteAuthzExtension",
+                "DeleteAuthzExtensionAsync"
+              ]
+            },
+            "DeleteLbEdgeExtension": {
+              "methods": [
+                "DeleteLbEdgeExtension",
+                "DeleteLbEdgeExtensionAsync"
               ]
             },
             "DeleteLbRouteExtension": {
@@ -34,6 +58,18 @@
                 "DeleteLbTrafficExtensionAsync"
               ]
             },
+            "GetAuthzExtension": {
+              "methods": [
+                "GetAuthzExtension",
+                "GetAuthzExtensionAsync"
+              ]
+            },
+            "GetLbEdgeExtension": {
+              "methods": [
+                "GetLbEdgeExtension",
+                "GetLbEdgeExtensionAsync"
+              ]
+            },
             "GetLbRouteExtension": {
               "methods": [
                 "GetLbRouteExtension",
@@ -46,6 +82,18 @@
                 "GetLbTrafficExtensionAsync"
               ]
             },
+            "ListAuthzExtensions": {
+              "methods": [
+                "ListAuthzExtensions",
+                "ListAuthzExtensionsAsync"
+              ]
+            },
+            "ListLbEdgeExtensions": {
+              "methods": [
+                "ListLbEdgeExtensions",
+                "ListLbEdgeExtensionsAsync"
+              ]
+            },
             "ListLbRouteExtensions": {
               "methods": [
                 "ListLbRouteExtensions",
@@ -56,6 +104,18 @@
               "methods": [
                 "ListLbTrafficExtensions",
                 "ListLbTrafficExtensionsAsync"
+              ]
+            },
+            "UpdateAuthzExtension": {
+              "methods": [
+                "UpdateAuthzExtension",
+                "UpdateAuthzExtensionAsync"
+              ]
+            },
+            "UpdateLbEdgeExtension": {
+              "methods": [
+                "UpdateLbEdgeExtension",
+                "UpdateLbEdgeExtensionAsync"
               ]
             },
             "UpdateLbRouteExtension": {
@@ -115,6 +175,12 @@
                 "CreateServiceBindingAsync"
               ]
             },
+            "CreateServiceLbPolicy": {
+              "methods": [
+                "CreateServiceLbPolicy",
+                "CreateServiceLbPolicyAsync"
+              ]
+            },
             "CreateTcpRoute": {
               "methods": [
                 "CreateTcpRoute",
@@ -125,6 +191,18 @@
               "methods": [
                 "CreateTlsRoute",
                 "CreateTlsRouteAsync"
+              ]
+            },
+            "CreateWasmPlugin": {
+              "methods": [
+                "CreateWasmPlugin",
+                "CreateWasmPluginAsync"
+              ]
+            },
+            "CreateWasmPluginVersion": {
+              "methods": [
+                "CreateWasmPluginVersion",
+                "CreateWasmPluginVersionAsync"
               ]
             },
             "DeleteEndpointPolicy": {
@@ -163,6 +241,12 @@
                 "DeleteServiceBindingAsync"
               ]
             },
+            "DeleteServiceLbPolicy": {
+              "methods": [
+                "DeleteServiceLbPolicy",
+                "DeleteServiceLbPolicyAsync"
+              ]
+            },
             "DeleteTcpRoute": {
               "methods": [
                 "DeleteTcpRoute",
@@ -175,6 +259,18 @@
                 "DeleteTlsRouteAsync"
               ]
             },
+            "DeleteWasmPlugin": {
+              "methods": [
+                "DeleteWasmPlugin",
+                "DeleteWasmPluginAsync"
+              ]
+            },
+            "DeleteWasmPluginVersion": {
+              "methods": [
+                "DeleteWasmPluginVersion",
+                "DeleteWasmPluginVersionAsync"
+              ]
+            },
             "GetEndpointPolicy": {
               "methods": [
                 "GetEndpointPolicy",
@@ -185,6 +281,12 @@
               "methods": [
                 "GetGateway",
                 "GetGatewayAsync"
+              ]
+            },
+            "GetGatewayRouteView": {
+              "methods": [
+                "GetGatewayRouteView",
+                "GetGatewayRouteViewAsync"
               ]
             },
             "GetGrpcRoute": {
@@ -205,10 +307,22 @@
                 "GetMeshAsync"
               ]
             },
+            "GetMeshRouteView": {
+              "methods": [
+                "GetMeshRouteView",
+                "GetMeshRouteViewAsync"
+              ]
+            },
             "GetServiceBinding": {
               "methods": [
                 "GetServiceBinding",
                 "GetServiceBindingAsync"
+              ]
+            },
+            "GetServiceLbPolicy": {
+              "methods": [
+                "GetServiceLbPolicy",
+                "GetServiceLbPolicyAsync"
               ]
             },
             "GetTcpRoute": {
@@ -223,10 +337,28 @@
                 "GetTlsRouteAsync"
               ]
             },
+            "GetWasmPlugin": {
+              "methods": [
+                "GetWasmPlugin",
+                "GetWasmPluginAsync"
+              ]
+            },
+            "GetWasmPluginVersion": {
+              "methods": [
+                "GetWasmPluginVersion",
+                "GetWasmPluginVersionAsync"
+              ]
+            },
             "ListEndpointPolicies": {
               "methods": [
                 "ListEndpointPolicies",
                 "ListEndpointPoliciesAsync"
+              ]
+            },
+            "ListGatewayRouteViews": {
+              "methods": [
+                "ListGatewayRouteViews",
+                "ListGatewayRouteViewsAsync"
               ]
             },
             "ListGateways": {
@@ -247,6 +379,12 @@
                 "ListHttpRoutesAsync"
               ]
             },
+            "ListMeshRouteViews": {
+              "methods": [
+                "ListMeshRouteViews",
+                "ListMeshRouteViewsAsync"
+              ]
+            },
             "ListMeshes": {
               "methods": [
                 "ListMeshes",
@@ -259,6 +397,12 @@
                 "ListServiceBindingsAsync"
               ]
             },
+            "ListServiceLbPolicies": {
+              "methods": [
+                "ListServiceLbPolicies",
+                "ListServiceLbPoliciesAsync"
+              ]
+            },
             "ListTcpRoutes": {
               "methods": [
                 "ListTcpRoutes",
@@ -269,6 +413,18 @@
               "methods": [
                 "ListTlsRoutes",
                 "ListTlsRoutesAsync"
+              ]
+            },
+            "ListWasmPluginVersions": {
+              "methods": [
+                "ListWasmPluginVersions",
+                "ListWasmPluginVersionsAsync"
+              ]
+            },
+            "ListWasmPlugins": {
+              "methods": [
+                "ListWasmPlugins",
+                "ListWasmPluginsAsync"
               ]
             },
             "UpdateEndpointPolicy": {
@@ -301,6 +457,18 @@
                 "UpdateMeshAsync"
               ]
             },
+            "UpdateServiceBinding": {
+              "methods": [
+                "UpdateServiceBinding",
+                "UpdateServiceBindingAsync"
+              ]
+            },
+            "UpdateServiceLbPolicy": {
+              "methods": [
+                "UpdateServiceLbPolicy",
+                "UpdateServiceLbPolicyAsync"
+              ]
+            },
             "UpdateTcpRoute": {
               "methods": [
                 "UpdateTcpRoute",
@@ -311,6 +479,12 @@
               "methods": [
                 "UpdateTlsRoute",
                 "UpdateTlsRouteAsync"
+              ]
+            },
+            "UpdateWasmPlugin": {
+              "methods": [
+                "UpdateWasmPlugin",
+                "UpdateWasmPluginAsync"
               ]
             }
           }

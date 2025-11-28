@@ -1,5 +1,58 @@
 # Version history
 
+## Version 4.22.0, released 2025-11-05
+
+### New features
+
+- Update dependencies
+
+## Version 4.21.0, released 2025-10-14
+
+### New features
+
+- Inspect and deid templates in RedactImage
+- Store DlpJob findings in a Cloud Storage bucket
+- Publish DlpJob findings to Dataplex Universal Catalog
+- Cloud Storage discovery filters based on tag filters
+
+### Documentation improvements
+
+- Clarify ListProjectDataProfiles API supports filter by project_id
+- Clarify List*DataProfiles APIs supports filter by profile_last_generated
+- Clarify filter syntax for List* APIs
+
+## Version 4.20.0, released 2025-09-16
+
+### New features
+
+- Add LocationSupport,Domain,DocumentFallbackLocation
+
+### Documentation improvements
+
+- Minor doc revision
+
+## Version 4.19.0, released 2025-06-25
+
+### New features
+
+- Add SaveToGcsFindingsOutput
+
+### Documentation improvements
+
+- Minor doc revision
+
+## Version 4.18.0, released 2025-05-28
+
+### New features
+
+- Add Dataplex Catalog action for discovery configs
+- Add a project ID to table reference so that org parents can create single table discovery configs.
+- New fields for data profile finding.
+
+### Documentation improvements
+
+- Various doc revisions
+
 ## Version 4.17.0, released 2025-03-24
 
 ### New features

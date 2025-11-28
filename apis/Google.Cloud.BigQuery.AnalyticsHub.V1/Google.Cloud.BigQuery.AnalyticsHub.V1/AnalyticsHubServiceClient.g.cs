@@ -74,6 +74,13 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             GetIamPolicySettings = existing.GetIamPolicySettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
+            CreateQueryTemplateSettings = existing.CreateQueryTemplateSettings;
+            GetQueryTemplateSettings = existing.GetQueryTemplateSettings;
+            ListQueryTemplatesSettings = existing.ListQueryTemplatesSettings;
+            UpdateQueryTemplateSettings = existing.UpdateQueryTemplateSettings;
+            DeleteQueryTemplateSettings = existing.DeleteQueryTemplateSettings;
+            SubmitQueryTemplateSettings = existing.SubmitQueryTemplateSettings;
+            ApproveQueryTemplateSettings = existing.ApproveQueryTemplateSettings;
             OnCopy(existing);
         }
 
@@ -608,6 +615,160 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </remarks>
         public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsHubServiceClient.CreateQueryTemplate</c> and
+        /// <c>AnalyticsHubServiceClient.CreateQueryTemplateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateQueryTemplateSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsHubServiceClient.GetQueryTemplate</c> and <c>AnalyticsHubServiceClient.GetQueryTemplateAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetQueryTemplateSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsHubServiceClient.ListQueryTemplates</c> and <c>AnalyticsHubServiceClient.ListQueryTemplatesAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListQueryTemplatesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsHubServiceClient.UpdateQueryTemplate</c> and
+        /// <c>AnalyticsHubServiceClient.UpdateQueryTemplateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateQueryTemplateSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsHubServiceClient.DeleteQueryTemplate</c> and
+        /// <c>AnalyticsHubServiceClient.DeleteQueryTemplateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteQueryTemplateSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsHubServiceClient.SubmitQueryTemplate</c> and
+        /// <c>AnalyticsHubServiceClient.SubmitQueryTemplateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SubmitQueryTemplateSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsHubServiceClient.ApproveQueryTemplate</c> and
+        /// <c>AnalyticsHubServiceClient.ApproveQueryTemplateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ApproveQueryTemplateSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AnalyticsHubServiceSettings"/> object.</returns>
         public AnalyticsHubServiceSettings Clone() => new AnalyticsHubServiceSettings(this);
@@ -782,7 +943,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the data exchanges.
-        /// e.g. `projects/myproject/locations/US`.
+        /// e.g. `projects/myproject/locations/us`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -816,7 +977,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the data exchanges.
-        /// e.g. `projects/myproject/locations/US`.
+        /// e.g. `projects/myproject/locations/us`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -850,7 +1011,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the data exchanges.
-        /// e.g. `projects/myproject/locations/US`.
+        /// e.g. `projects/myproject/locations/us`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -884,7 +1045,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the data exchanges.
-        /// e.g. `projects/myproject/locations/US`.
+        /// e.g. `projects/myproject/locations/us`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -939,7 +1100,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="organization">
         /// Required. The organization resource path of the projects containing
-        /// DataExchanges. e.g. `organizations/myorg/locations/US`.
+        /// DataExchanges. e.g. `organizations/myorg/locations/us`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -974,7 +1135,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="organization">
         /// Required. The organization resource path of the projects containing
-        /// DataExchanges. e.g. `organizations/myorg/locations/US`.
+        /// DataExchanges. e.g. `organizations/myorg/locations/us`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1035,7 +1196,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the data exchange.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1050,7 +1211,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the data exchange.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1065,7 +1226,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the data exchange.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1077,7 +1238,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the data exchange.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1092,7 +1253,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the data exchange.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1107,7 +1268,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the data exchange.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1146,7 +1307,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the data exchange.
-        /// e.g. `projects/myproject/locations/US`.
+        /// e.g. `projects/myproject/locations/us`.
         /// </param>
         /// <param name="dataExchange">
         /// Required. The data exchange to create.
@@ -1165,7 +1326,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the data exchange.
-        /// e.g. `projects/myproject/locations/US`.
+        /// e.g. `projects/myproject/locations/us`.
         /// </param>
         /// <param name="dataExchange">
         /// Required. The data exchange to create.
@@ -1184,7 +1345,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the data exchange.
-        /// e.g. `projects/myproject/locations/US`.
+        /// e.g. `projects/myproject/locations/us`.
         /// </param>
         /// <param name="dataExchange">
         /// Required. The data exchange to create.
@@ -1199,7 +1360,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the data exchange.
-        /// e.g. `projects/myproject/locations/US`.
+        /// e.g. `projects/myproject/locations/us`.
         /// </param>
         /// <param name="dataExchange">
         /// Required. The data exchange to create.
@@ -1218,7 +1379,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the data exchange.
-        /// e.g. `projects/myproject/locations/US`.
+        /// e.g. `projects/myproject/locations/us`.
         /// </param>
         /// <param name="dataExchange">
         /// Required. The data exchange to create.
@@ -1237,7 +1398,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the data exchange.
-        /// e.g. `projects/myproject/locations/US`.
+        /// e.g. `projects/myproject/locations/us`.
         /// </param>
         /// <param name="dataExchange">
         /// Required. The data exchange to create.
@@ -1362,7 +1523,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the data exchange resource that you want to
-        /// delete. For example, `projects/myproject/locations/US/dataExchanges/123`.
+        /// delete. For example, `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1377,7 +1538,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the data exchange resource that you want to
-        /// delete. For example, `projects/myproject/locations/US/dataExchanges/123`.
+        /// delete. For example, `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1392,7 +1553,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the data exchange resource that you want to
-        /// delete. For example, `projects/myproject/locations/US/dataExchanges/123`.
+        /// delete. For example, `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1404,7 +1565,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the data exchange resource that you want to
-        /// delete. For example, `projects/myproject/locations/US/dataExchanges/123`.
+        /// delete. For example, `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1419,7 +1580,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the data exchange resource that you want to
-        /// delete. For example, `projects/myproject/locations/US/dataExchanges/123`.
+        /// delete. For example, `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1434,7 +1595,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The full name of the data exchange resource that you want to
-        /// delete. For example, `projects/myproject/locations/US/dataExchanges/123`.
+        /// delete. For example, `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1464,7 +1625,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1498,7 +1659,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1532,7 +1693,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1566,7 +1727,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1627,7 +1788,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1642,7 +1803,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1657,7 +1818,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1669,7 +1830,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1684,7 +1845,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1699,7 +1860,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1738,7 +1899,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="listing">
         /// Required. The listing to create.
@@ -1757,7 +1918,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="listing">
         /// Required. The listing to create.
@@ -1776,7 +1937,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="listing">
         /// Required. The listing to create.
@@ -1791,7 +1952,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="listing">
         /// Required. The listing to create.
@@ -1810,7 +1971,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="listing">
         /// Required. The listing to create.
@@ -1829,7 +1990,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
         /// </param>
         /// <param name="listing">
         /// Required. The listing to create.
@@ -1954,7 +2115,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing to delete.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1969,7 +2130,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing to delete.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1984,7 +2145,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing to delete.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1996,7 +2157,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing to delete.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2011,7 +2172,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing to delete.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2026,7 +2187,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing to delete.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2085,7 +2246,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing that you want to subscribe to.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2105,7 +2266,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing that you want to subscribe to.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2125,7 +2286,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing that you want to subscribe to.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2142,7 +2303,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing that you want to subscribe to.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2162,7 +2323,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing that you want to subscribe to.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2182,7 +2343,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing that you want to subscribe to.
-        /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2190,8 +2351,10 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             SubscribeListingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a Subscription to a Data Clean Room. This is a long-running
-        /// operation as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a
+        /// long-running operation as it will create one or more linked datasets.
+        /// Throws a Bad Request error if the Data Exchange does not contain any
+        /// listings.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2200,8 +2363,10 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a Subscription to a Data Clean Room. This is a long-running
-        /// operation as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a
+        /// long-running operation as it will create one or more linked datasets.
+        /// Throws a Bad Request error if the Data Exchange does not contain any
+        /// listings.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2210,8 +2375,10 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a Subscription to a Data Clean Room. This is a long-running
-        /// operation as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a
+        /// long-running operation as it will create one or more linked datasets.
+        /// Throws a Bad Request error if the Data Exchange does not contain any
+        /// listings.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2247,12 +2414,14 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             lro::Operation<SubscribeDataExchangeResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SubscribeDataExchangeOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a Subscription to a Data Clean Room. This is a long-running
-        /// operation as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a
+        /// long-running operation as it will create one or more linked datasets.
+        /// Throws a Bad Request error if the Data Exchange does not contain any
+        /// listings.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Data Exchange.
-        /// e.g. `projects/publisherproject/locations/US/dataExchanges/123`
+        /// e.g. `projects/publisherproject/locations/us/dataExchanges/123`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2263,12 +2432,14 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a Subscription to a Data Clean Room. This is a long-running
-        /// operation as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a
+        /// long-running operation as it will create one or more linked datasets.
+        /// Throws a Bad Request error if the Data Exchange does not contain any
+        /// listings.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Data Exchange.
-        /// e.g. `projects/publisherproject/locations/US/dataExchanges/123`
+        /// e.g. `projects/publisherproject/locations/us/dataExchanges/123`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2279,12 +2450,14 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a Subscription to a Data Clean Room. This is a long-running
-        /// operation as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a
+        /// long-running operation as it will create one or more linked datasets.
+        /// Throws a Bad Request error if the Data Exchange does not contain any
+        /// listings.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Data Exchange.
-        /// e.g. `projects/publisherproject/locations/US/dataExchanges/123`
+        /// e.g. `projects/publisherproject/locations/us/dataExchanges/123`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2292,12 +2465,14 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             SubscribeDataExchangeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a Subscription to a Data Clean Room. This is a long-running
-        /// operation as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a
+        /// long-running operation as it will create one or more linked datasets.
+        /// Throws a Bad Request error if the Data Exchange does not contain any
+        /// listings.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Data Exchange.
-        /// e.g. `projects/publisherproject/locations/US/dataExchanges/123`
+        /// e.g. `projects/publisherproject/locations/us/dataExchanges/123`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2308,12 +2483,14 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a Subscription to a Data Clean Room. This is a long-running
-        /// operation as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a
+        /// long-running operation as it will create one or more linked datasets.
+        /// Throws a Bad Request error if the Data Exchange does not contain any
+        /// listings.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Data Exchange.
-        /// e.g. `projects/publisherproject/locations/US/dataExchanges/123`
+        /// e.g. `projects/publisherproject/locations/us/dataExchanges/123`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2324,12 +2501,14 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a Subscription to a Data Clean Room. This is a long-running
-        /// operation as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a
+        /// long-running operation as it will create one or more linked datasets.
+        /// Throws a Bad Request error if the Data Exchange does not contain any
+        /// listings.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Data Exchange.
-        /// e.g. `projects/publisherproject/locations/US/dataExchanges/123`
+        /// e.g. `projects/publisherproject/locations/us/dataExchanges/123`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2403,7 +2582,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Subscription to refresh.
-        /// e.g. `projects/subscriberproject/locations/US/subscriptions/123`
+        /// e.g. `projects/subscriberproject/locations/us/subscriptions/123`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2420,7 +2599,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Subscription to refresh.
-        /// e.g. `projects/subscriberproject/locations/US/subscriptions/123`
+        /// e.g. `projects/subscriberproject/locations/us/subscriptions/123`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2437,7 +2616,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Subscription to refresh.
-        /// e.g. `projects/subscriberproject/locations/US/subscriptions/123`
+        /// e.g. `projects/subscriberproject/locations/us/subscriptions/123`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2451,7 +2630,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Subscription to refresh.
-        /// e.g. `projects/subscriberproject/locations/US/subscriptions/123`
+        /// e.g. `projects/subscriberproject/locations/us/subscriptions/123`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2468,7 +2647,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Subscription to refresh.
-        /// e.g. `projects/subscriberproject/locations/US/subscriptions/123`
+        /// e.g. `projects/subscriberproject/locations/us/subscriptions/123`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2485,7 +2664,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Subscription to refresh.
-        /// e.g. `projects/subscriberproject/locations/US/subscriptions/123`
+        /// e.g. `projects/subscriberproject/locations/us/subscriptions/123`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2524,7 +2703,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2539,7 +2718,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2554,7 +2733,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2566,7 +2745,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2581,7 +2760,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2596,7 +2775,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2626,7 +2805,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the subscription.
-        /// e.g. projects/myproject/locations/US
+        /// e.g. projects/myproject/locations/us
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2660,7 +2839,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the subscription.
-        /// e.g. projects/myproject/locations/US
+        /// e.g. projects/myproject/locations/us
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2694,7 +2873,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the subscription.
-        /// e.g. projects/myproject/locations/US
+        /// e.g. projects/myproject/locations/us
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2728,7 +2907,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the subscription.
-        /// e.g. projects/myproject/locations/US
+        /// e.g. projects/myproject/locations/us
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2781,8 +2960,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// <param name="resource">
         /// Required. Resource name of the requested target. This resource may be
         /// either a Listing or a DataExchange. e.g.
-        /// projects/123/locations/US/dataExchanges/456 OR e.g.
-        /// projects/123/locations/US/dataExchanges/456/listings/789
+        /// projects/123/locations/us/dataExchanges/456 OR e.g.
+        /// projects/123/locations/us/dataExchanges/456/listings/789
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2817,8 +2996,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// <param name="resource">
         /// Required. Resource name of the requested target. This resource may be
         /// either a Listing or a DataExchange. e.g.
-        /// projects/123/locations/US/dataExchanges/456 OR e.g.
-        /// projects/123/locations/US/dataExchanges/456/listings/789
+        /// projects/123/locations/us/dataExchanges/456 OR e.g.
+        /// projects/123/locations/us/dataExchanges/456/listings/789
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2853,8 +3032,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// <param name="resource">
         /// Required. Resource name of the requested target. This resource may be
         /// either a Listing or a DataExchange. e.g.
-        /// projects/123/locations/US/dataExchanges/456 OR e.g.
-        /// projects/123/locations/US/dataExchanges/456/listings/789
+        /// projects/123/locations/us/dataExchanges/456 OR e.g.
+        /// projects/123/locations/us/dataExchanges/456/listings/789
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2889,8 +3068,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// <param name="resource">
         /// Required. Resource name of the requested target. This resource may be
         /// either a Listing or a DataExchange. e.g.
-        /// projects/123/locations/US/dataExchanges/456 OR e.g.
-        /// projects/123/locations/US/dataExchanges/456/listings/789
+        /// projects/123/locations/us/dataExchanges/456 OR e.g.
+        /// projects/123/locations/us/dataExchanges/456/listings/789
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2951,7 +3130,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription to revoke.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2966,7 +3145,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription to revoke.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2981,7 +3160,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription to revoke.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2993,7 +3172,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription to revoke.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3008,7 +3187,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription to revoke.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3023,7 +3202,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription to revoke.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3089,7 +3268,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription to delete.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3104,7 +3283,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription to delete.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3119,7 +3298,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription to delete.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3131,7 +3310,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription to delete.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3146,7 +3325,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription to delete.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3161,7 +3340,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the subscription to delete.
-        /// e.g. projects/123/locations/US/subscriptions/456
+        /// e.g. projects/123/locations/us/subscriptions/456
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3248,6 +3427,884 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gciv::TestIamPermissionsRequest request, st::CancellationToken cancellationToken) =>
             TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new QueryTemplate
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QueryTemplate CreateQueryTemplate(CreateQueryTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new QueryTemplate
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> CreateQueryTemplateAsync(CreateQueryTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new QueryTemplate
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> CreateQueryTemplateAsync(CreateQueryTemplateRequest request, st::CancellationToken cancellationToken) =>
+            CreateQueryTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new QueryTemplate
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myQueryTemplate`.
+        /// </param>
+        /// <param name="queryTemplate">
+        /// Required. The QueryTemplate to create.
+        /// </param>
+        /// <param name="queryTemplateId">
+        /// Required. The ID of the QueryTemplate to create.
+        /// Must contain only Unicode letters, numbers (0-9), underscores (_).
+        /// Max length: 100 bytes.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QueryTemplate CreateQueryTemplate(string parent, QueryTemplate queryTemplate, string queryTemplateId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateQueryTemplate(new CreateQueryTemplateRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                QueryTemplateId = gax::GaxPreconditions.CheckNotNullOrEmpty(queryTemplateId, nameof(queryTemplateId)),
+                QueryTemplate = gax::GaxPreconditions.CheckNotNull(queryTemplate, nameof(queryTemplate)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new QueryTemplate
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myQueryTemplate`.
+        /// </param>
+        /// <param name="queryTemplate">
+        /// Required. The QueryTemplate to create.
+        /// </param>
+        /// <param name="queryTemplateId">
+        /// Required. The ID of the QueryTemplate to create.
+        /// Must contain only Unicode letters, numbers (0-9), underscores (_).
+        /// Max length: 100 bytes.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> CreateQueryTemplateAsync(string parent, QueryTemplate queryTemplate, string queryTemplateId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateQueryTemplateAsync(new CreateQueryTemplateRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                QueryTemplateId = gax::GaxPreconditions.CheckNotNullOrEmpty(queryTemplateId, nameof(queryTemplateId)),
+                QueryTemplate = gax::GaxPreconditions.CheckNotNull(queryTemplate, nameof(queryTemplate)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new QueryTemplate
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myQueryTemplate`.
+        /// </param>
+        /// <param name="queryTemplate">
+        /// Required. The QueryTemplate to create.
+        /// </param>
+        /// <param name="queryTemplateId">
+        /// Required. The ID of the QueryTemplate to create.
+        /// Must contain only Unicode letters, numbers (0-9), underscores (_).
+        /// Max length: 100 bytes.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> CreateQueryTemplateAsync(string parent, QueryTemplate queryTemplate, string queryTemplateId, st::CancellationToken cancellationToken) =>
+            CreateQueryTemplateAsync(parent, queryTemplate, queryTemplateId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new QueryTemplate
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myQueryTemplate`.
+        /// </param>
+        /// <param name="queryTemplate">
+        /// Required. The QueryTemplate to create.
+        /// </param>
+        /// <param name="queryTemplateId">
+        /// Required. The ID of the QueryTemplate to create.
+        /// Must contain only Unicode letters, numbers (0-9), underscores (_).
+        /// Max length: 100 bytes.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QueryTemplate CreateQueryTemplate(DataExchangeName parent, QueryTemplate queryTemplate, string queryTemplateId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateQueryTemplate(new CreateQueryTemplateRequest
+            {
+                ParentAsDataExchangeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                QueryTemplateId = gax::GaxPreconditions.CheckNotNullOrEmpty(queryTemplateId, nameof(queryTemplateId)),
+                QueryTemplate = gax::GaxPreconditions.CheckNotNull(queryTemplate, nameof(queryTemplate)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new QueryTemplate
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myQueryTemplate`.
+        /// </param>
+        /// <param name="queryTemplate">
+        /// Required. The QueryTemplate to create.
+        /// </param>
+        /// <param name="queryTemplateId">
+        /// Required. The ID of the QueryTemplate to create.
+        /// Must contain only Unicode letters, numbers (0-9), underscores (_).
+        /// Max length: 100 bytes.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> CreateQueryTemplateAsync(DataExchangeName parent, QueryTemplate queryTemplate, string queryTemplateId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateQueryTemplateAsync(new CreateQueryTemplateRequest
+            {
+                ParentAsDataExchangeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                QueryTemplateId = gax::GaxPreconditions.CheckNotNullOrEmpty(queryTemplateId, nameof(queryTemplateId)),
+                QueryTemplate = gax::GaxPreconditions.CheckNotNull(queryTemplate, nameof(queryTemplate)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new QueryTemplate
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myQueryTemplate`.
+        /// </param>
+        /// <param name="queryTemplate">
+        /// Required. The QueryTemplate to create.
+        /// </param>
+        /// <param name="queryTemplateId">
+        /// Required. The ID of the QueryTemplate to create.
+        /// Must contain only Unicode letters, numbers (0-9), underscores (_).
+        /// Max length: 100 bytes.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> CreateQueryTemplateAsync(DataExchangeName parent, QueryTemplate queryTemplate, string queryTemplateId, st::CancellationToken cancellationToken) =>
+            CreateQueryTemplateAsync(parent, queryTemplate, queryTemplateId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a QueryTemplate
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QueryTemplate GetQueryTemplate(GetQueryTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a QueryTemplate
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> GetQueryTemplateAsync(GetQueryTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a QueryTemplate
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> GetQueryTemplateAsync(GetQueryTemplateRequest request, st::CancellationToken cancellationToken) =>
+            GetQueryTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a QueryTemplate
+        /// </summary>
+        /// <param name="name">
+        /// Required. The parent resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QueryTemplate GetQueryTemplate(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetQueryTemplate(new GetQueryTemplateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a QueryTemplate
+        /// </summary>
+        /// <param name="name">
+        /// Required. The parent resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> GetQueryTemplateAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetQueryTemplateAsync(new GetQueryTemplateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a QueryTemplate
+        /// </summary>
+        /// <param name="name">
+        /// Required. The parent resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> GetQueryTemplateAsync(string name, st::CancellationToken cancellationToken) =>
+            GetQueryTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a QueryTemplate
+        /// </summary>
+        /// <param name="name">
+        /// Required. The parent resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QueryTemplate GetQueryTemplate(QueryTemplateName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetQueryTemplate(new GetQueryTemplateRequest
+            {
+                QueryTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a QueryTemplate
+        /// </summary>
+        /// <param name="name">
+        /// Required. The parent resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> GetQueryTemplateAsync(QueryTemplateName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetQueryTemplateAsync(new GetQueryTemplateRequest
+            {
+                QueryTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a QueryTemplate
+        /// </summary>
+        /// <param name="name">
+        /// Required. The parent resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> GetQueryTemplateAsync(QueryTemplateName name, st::CancellationToken cancellationToken) =>
+            GetQueryTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all QueryTemplates in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="QueryTemplate"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListQueryTemplatesResponse, QueryTemplate> ListQueryTemplates(ListQueryTemplatesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all QueryTemplates in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="QueryTemplate"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListQueryTemplatesResponse, QueryTemplate> ListQueryTemplatesAsync(ListQueryTemplatesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all QueryTemplates in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource path of the QueryTemplates.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="QueryTemplate"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListQueryTemplatesResponse, QueryTemplate> ListQueryTemplates(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQueryTemplatesRequest request = new ListQueryTemplatesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQueryTemplates(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all QueryTemplates in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource path of the QueryTemplates.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="QueryTemplate"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListQueryTemplatesResponse, QueryTemplate> ListQueryTemplatesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQueryTemplatesRequest request = new ListQueryTemplatesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQueryTemplatesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all QueryTemplates in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource path of the QueryTemplates.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="QueryTemplate"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListQueryTemplatesResponse, QueryTemplate> ListQueryTemplates(DataExchangeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQueryTemplatesRequest request = new ListQueryTemplatesRequest
+            {
+                ParentAsDataExchangeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQueryTemplates(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all QueryTemplates in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource path of the QueryTemplates.
+        /// e.g. `projects/myproject/locations/us/dataExchanges/123`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="QueryTemplate"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListQueryTemplatesResponse, QueryTemplate> ListQueryTemplatesAsync(DataExchangeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQueryTemplatesRequest request = new ListQueryTemplatesRequest
+            {
+                ParentAsDataExchangeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQueryTemplatesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an existing QueryTemplate
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QueryTemplate UpdateQueryTemplate(UpdateQueryTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an existing QueryTemplate
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> UpdateQueryTemplateAsync(UpdateQueryTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an existing QueryTemplate
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> UpdateQueryTemplateAsync(UpdateQueryTemplateRequest request, st::CancellationToken cancellationToken) =>
+            UpdateQueryTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an existing QueryTemplate
+        /// </summary>
+        /// <param name="queryTemplate">
+        /// Required. The QueryTemplate to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask specifies the fields to update in the query template
+        /// resource. The fields specified in the `updateMask` are relative to the
+        /// resource and are not a full request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QueryTemplate UpdateQueryTemplate(QueryTemplate queryTemplate, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateQueryTemplate(new UpdateQueryTemplateRequest
+            {
+                UpdateMask = updateMask,
+                QueryTemplate = gax::GaxPreconditions.CheckNotNull(queryTemplate, nameof(queryTemplate)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing QueryTemplate
+        /// </summary>
+        /// <param name="queryTemplate">
+        /// Required. The QueryTemplate to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask specifies the fields to update in the query template
+        /// resource. The fields specified in the `updateMask` are relative to the
+        /// resource and are not a full request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> UpdateQueryTemplateAsync(QueryTemplate queryTemplate, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateQueryTemplateAsync(new UpdateQueryTemplateRequest
+            {
+                UpdateMask = updateMask,
+                QueryTemplate = gax::GaxPreconditions.CheckNotNull(queryTemplate, nameof(queryTemplate)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing QueryTemplate
+        /// </summary>
+        /// <param name="queryTemplate">
+        /// Required. The QueryTemplate to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask specifies the fields to update in the query template
+        /// resource. The fields specified in the `updateMask` are relative to the
+        /// resource and are not a full request.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> UpdateQueryTemplateAsync(QueryTemplate queryTemplate, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateQueryTemplateAsync(queryTemplate, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a query template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteQueryTemplate(DeleteQueryTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a query template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteQueryTemplateAsync(DeleteQueryTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a query template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteQueryTemplateAsync(DeleteQueryTemplateRequest request, st::CancellationToken cancellationToken) =>
+            DeleteQueryTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a query template.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteQueryTemplate(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteQueryTemplate(new DeleteQueryTemplateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a query template.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteQueryTemplateAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteQueryTemplateAsync(new DeleteQueryTemplateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a query template.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteQueryTemplateAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteQueryTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a query template.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteQueryTemplate(QueryTemplateName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteQueryTemplate(new DeleteQueryTemplateRequest
+            {
+                QueryTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a query template.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteQueryTemplateAsync(QueryTemplateName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteQueryTemplateAsync(new DeleteQueryTemplateRequest
+            {
+                QueryTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a query template.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteQueryTemplateAsync(QueryTemplateName name, st::CancellationToken cancellationToken) =>
+            DeleteQueryTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Submits a query template for approval.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QueryTemplate SubmitQueryTemplate(SubmitQueryTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Submits a query template for approval.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> SubmitQueryTemplateAsync(SubmitQueryTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Submits a query template for approval.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> SubmitQueryTemplateAsync(SubmitQueryTemplateRequest request, st::CancellationToken cancellationToken) =>
+            SubmitQueryTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Submits a query template for approval.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QueryTemplate SubmitQueryTemplate(string name, gaxgrpc::CallSettings callSettings = null) =>
+            SubmitQueryTemplate(new SubmitQueryTemplateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Submits a query template for approval.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> SubmitQueryTemplateAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            SubmitQueryTemplateAsync(new SubmitQueryTemplateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Submits a query template for approval.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> SubmitQueryTemplateAsync(string name, st::CancellationToken cancellationToken) =>
+            SubmitQueryTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Submits a query template for approval.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QueryTemplate SubmitQueryTemplate(QueryTemplateName name, gaxgrpc::CallSettings callSettings = null) =>
+            SubmitQueryTemplate(new SubmitQueryTemplateRequest
+            {
+                QueryTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Submits a query template for approval.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> SubmitQueryTemplateAsync(QueryTemplateName name, gaxgrpc::CallSettings callSettings = null) =>
+            SubmitQueryTemplateAsync(new SubmitQueryTemplateRequest
+            {
+                QueryTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Submits a query template for approval.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> SubmitQueryTemplateAsync(QueryTemplateName name, st::CancellationToken cancellationToken) =>
+            SubmitQueryTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Approves a query template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QueryTemplate ApproveQueryTemplate(ApproveQueryTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Approves a query template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> ApproveQueryTemplateAsync(ApproveQueryTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Approves a query template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> ApproveQueryTemplateAsync(ApproveQueryTemplateRequest request, st::CancellationToken cancellationToken) =>
+            ApproveQueryTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Approves a query template.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QueryTemplate ApproveQueryTemplate(string name, gaxgrpc::CallSettings callSettings = null) =>
+            ApproveQueryTemplate(new ApproveQueryTemplateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Approves a query template.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> ApproveQueryTemplateAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            ApproveQueryTemplateAsync(new ApproveQueryTemplateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Approves a query template.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> ApproveQueryTemplateAsync(string name, st::CancellationToken cancellationToken) =>
+            ApproveQueryTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Approves a query template.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QueryTemplate ApproveQueryTemplate(QueryTemplateName name, gaxgrpc::CallSettings callSettings = null) =>
+            ApproveQueryTemplate(new ApproveQueryTemplateRequest
+            {
+                QueryTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Approves a query template.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> ApproveQueryTemplateAsync(QueryTemplateName name, gaxgrpc::CallSettings callSettings = null) =>
+            ApproveQueryTemplateAsync(new ApproveQueryTemplateRequest
+            {
+                QueryTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Approves a query template.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource path of the QueryTemplate.
+        /// e.g.
+        /// `projects/myproject/locations/us/dataExchanges/123/queryTemplates/myqueryTemplate`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryTemplate> ApproveQueryTemplateAsync(QueryTemplateName name, st::CancellationToken cancellationToken) =>
+            ApproveQueryTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>AnalyticsHubService client wrapper implementation, for convenient use.</summary>
@@ -3304,6 +4361,20 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         private readonly gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> _callSetIamPolicy;
 
         private readonly gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> _callTestIamPermissions;
+
+        private readonly gaxgrpc::ApiCall<CreateQueryTemplateRequest, QueryTemplate> _callCreateQueryTemplate;
+
+        private readonly gaxgrpc::ApiCall<GetQueryTemplateRequest, QueryTemplate> _callGetQueryTemplate;
+
+        private readonly gaxgrpc::ApiCall<ListQueryTemplatesRequest, ListQueryTemplatesResponse> _callListQueryTemplates;
+
+        private readonly gaxgrpc::ApiCall<UpdateQueryTemplateRequest, QueryTemplate> _callUpdateQueryTemplate;
+
+        private readonly gaxgrpc::ApiCall<DeleteQueryTemplateRequest, wkt::Empty> _callDeleteQueryTemplate;
+
+        private readonly gaxgrpc::ApiCall<SubmitQueryTemplateRequest, QueryTemplate> _callSubmitQueryTemplate;
+
+        private readonly gaxgrpc::ApiCall<ApproveQueryTemplateRequest, QueryTemplate> _callApproveQueryTemplate;
 
         /// <summary>
         /// Constructs a client wrapper for the AnalyticsHubService service, with the specified gRPC client and
@@ -3390,6 +4461,27 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
+            _callCreateQueryTemplate = clientHelper.BuildApiCall<CreateQueryTemplateRequest, QueryTemplate>("CreateQueryTemplate", grpcClient.CreateQueryTemplateAsync, grpcClient.CreateQueryTemplate, effectiveSettings.CreateQueryTemplateSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateQueryTemplate);
+            Modify_CreateQueryTemplateApiCall(ref _callCreateQueryTemplate);
+            _callGetQueryTemplate = clientHelper.BuildApiCall<GetQueryTemplateRequest, QueryTemplate>("GetQueryTemplate", grpcClient.GetQueryTemplateAsync, grpcClient.GetQueryTemplate, effectiveSettings.GetQueryTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetQueryTemplate);
+            Modify_GetQueryTemplateApiCall(ref _callGetQueryTemplate);
+            _callListQueryTemplates = clientHelper.BuildApiCall<ListQueryTemplatesRequest, ListQueryTemplatesResponse>("ListQueryTemplates", grpcClient.ListQueryTemplatesAsync, grpcClient.ListQueryTemplates, effectiveSettings.ListQueryTemplatesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListQueryTemplates);
+            Modify_ListQueryTemplatesApiCall(ref _callListQueryTemplates);
+            _callUpdateQueryTemplate = clientHelper.BuildApiCall<UpdateQueryTemplateRequest, QueryTemplate>("UpdateQueryTemplate", grpcClient.UpdateQueryTemplateAsync, grpcClient.UpdateQueryTemplate, effectiveSettings.UpdateQueryTemplateSettings).WithGoogleRequestParam("query_template.name", request => request.QueryTemplate?.Name);
+            Modify_ApiCall(ref _callUpdateQueryTemplate);
+            Modify_UpdateQueryTemplateApiCall(ref _callUpdateQueryTemplate);
+            _callDeleteQueryTemplate = clientHelper.BuildApiCall<DeleteQueryTemplateRequest, wkt::Empty>("DeleteQueryTemplate", grpcClient.DeleteQueryTemplateAsync, grpcClient.DeleteQueryTemplate, effectiveSettings.DeleteQueryTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteQueryTemplate);
+            Modify_DeleteQueryTemplateApiCall(ref _callDeleteQueryTemplate);
+            _callSubmitQueryTemplate = clientHelper.BuildApiCall<SubmitQueryTemplateRequest, QueryTemplate>("SubmitQueryTemplate", grpcClient.SubmitQueryTemplateAsync, grpcClient.SubmitQueryTemplate, effectiveSettings.SubmitQueryTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callSubmitQueryTemplate);
+            Modify_SubmitQueryTemplateApiCall(ref _callSubmitQueryTemplate);
+            _callApproveQueryTemplate = clientHelper.BuildApiCall<ApproveQueryTemplateRequest, QueryTemplate>("ApproveQueryTemplate", grpcClient.ApproveQueryTemplateAsync, grpcClient.ApproveQueryTemplate, effectiveSettings.ApproveQueryTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callApproveQueryTemplate);
+            Modify_ApproveQueryTemplateApiCall(ref _callApproveQueryTemplate);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3439,6 +4531,20 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
 
         partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> call);
 
+        partial void Modify_CreateQueryTemplateApiCall(ref gaxgrpc::ApiCall<CreateQueryTemplateRequest, QueryTemplate> call);
+
+        partial void Modify_GetQueryTemplateApiCall(ref gaxgrpc::ApiCall<GetQueryTemplateRequest, QueryTemplate> call);
+
+        partial void Modify_ListQueryTemplatesApiCall(ref gaxgrpc::ApiCall<ListQueryTemplatesRequest, ListQueryTemplatesResponse> call);
+
+        partial void Modify_UpdateQueryTemplateApiCall(ref gaxgrpc::ApiCall<UpdateQueryTemplateRequest, QueryTemplate> call);
+
+        partial void Modify_DeleteQueryTemplateApiCall(ref gaxgrpc::ApiCall<DeleteQueryTemplateRequest, wkt::Empty> call);
+
+        partial void Modify_SubmitQueryTemplateApiCall(ref gaxgrpc::ApiCall<SubmitQueryTemplateRequest, QueryTemplate> call);
+
+        partial void Modify_ApproveQueryTemplateApiCall(ref gaxgrpc::ApiCall<ApproveQueryTemplateRequest, QueryTemplate> call);
+
         partial void OnConstruction(AnalyticsHubService.AnalyticsHubServiceClient grpcClient, AnalyticsHubServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC AnalyticsHubService client</summary>
@@ -3487,6 +4593,20 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         partial void Modify_SetIamPolicyRequest(ref gciv::SetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateQueryTemplateRequest(ref CreateQueryTemplateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetQueryTemplateRequest(ref GetQueryTemplateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListQueryTemplatesRequest(ref ListQueryTemplatesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateQueryTemplateRequest(ref UpdateQueryTemplateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteQueryTemplateRequest(ref DeleteQueryTemplateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SubmitQueryTemplateRequest(ref SubmitQueryTemplateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ApproveQueryTemplateRequest(ref ApproveQueryTemplateRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists all data exchanges in a given project and location.
@@ -3792,8 +4912,10 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         public override lro::OperationsClient SubscribeDataExchangeOperationsClient { get; }
 
         /// <summary>
-        /// Creates a Subscription to a Data Clean Room. This is a long-running
-        /// operation as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a
+        /// long-running operation as it will create one or more linked datasets.
+        /// Throws a Bad Request error if the Data Exchange does not contain any
+        /// listings.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3805,8 +4927,10 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         }
 
         /// <summary>
-        /// Creates a Subscription to a Data Clean Room. This is a long-running
-        /// operation as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a
+        /// long-running operation as it will create one or more linked datasets.
+        /// Throws a Bad Request error if the Data Exchange does not contain any
+        /// listings.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4042,6 +5166,174 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Creates a new QueryTemplate
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override QueryTemplate CreateQueryTemplate(CreateQueryTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateQueryTemplateRequest(ref request, ref callSettings);
+            return _callCreateQueryTemplate.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new QueryTemplate
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<QueryTemplate> CreateQueryTemplateAsync(CreateQueryTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateQueryTemplateRequest(ref request, ref callSettings);
+            return _callCreateQueryTemplate.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a QueryTemplate
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override QueryTemplate GetQueryTemplate(GetQueryTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetQueryTemplateRequest(ref request, ref callSettings);
+            return _callGetQueryTemplate.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a QueryTemplate
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<QueryTemplate> GetQueryTemplateAsync(GetQueryTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetQueryTemplateRequest(ref request, ref callSettings);
+            return _callGetQueryTemplate.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all QueryTemplates in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="QueryTemplate"/> resources.</returns>
+        public override gax::PagedEnumerable<ListQueryTemplatesResponse, QueryTemplate> ListQueryTemplates(ListQueryTemplatesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListQueryTemplatesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListQueryTemplatesRequest, ListQueryTemplatesResponse, QueryTemplate>(_callListQueryTemplates, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all QueryTemplates in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="QueryTemplate"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListQueryTemplatesResponse, QueryTemplate> ListQueryTemplatesAsync(ListQueryTemplatesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListQueryTemplatesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListQueryTemplatesRequest, ListQueryTemplatesResponse, QueryTemplate>(_callListQueryTemplates, request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an existing QueryTemplate
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override QueryTemplate UpdateQueryTemplate(UpdateQueryTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateQueryTemplateRequest(ref request, ref callSettings);
+            return _callUpdateQueryTemplate.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates an existing QueryTemplate
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<QueryTemplate> UpdateQueryTemplateAsync(UpdateQueryTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateQueryTemplateRequest(ref request, ref callSettings);
+            return _callUpdateQueryTemplate.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a query template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteQueryTemplate(DeleteQueryTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteQueryTemplateRequest(ref request, ref callSettings);
+            _callDeleteQueryTemplate.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a query template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteQueryTemplateAsync(DeleteQueryTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteQueryTemplateRequest(ref request, ref callSettings);
+            return _callDeleteQueryTemplate.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Submits a query template for approval.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override QueryTemplate SubmitQueryTemplate(SubmitQueryTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SubmitQueryTemplateRequest(ref request, ref callSettings);
+            return _callSubmitQueryTemplate.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Submits a query template for approval.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<QueryTemplate> SubmitQueryTemplateAsync(SubmitQueryTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SubmitQueryTemplateRequest(ref request, ref callSettings);
+            return _callSubmitQueryTemplate.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Approves a query template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override QueryTemplate ApproveQueryTemplate(ApproveQueryTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ApproveQueryTemplateRequest(ref request, ref callSettings);
+            return _callApproveQueryTemplate.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Approves a query template.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<QueryTemplate> ApproveQueryTemplateAsync(ApproveQueryTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ApproveQueryTemplateRequest(ref request, ref callSettings);
+            return _callApproveQueryTemplate.Async(request, callSettings);
+        }
     }
 
     public partial class ListDataExchangesRequest : gaxgrpc::IPageRequest
@@ -4061,6 +5353,10 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
     }
 
     public partial class ListSharedResourceSubscriptionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListQueryTemplatesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -4100,6 +5396,14 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Subscription> GetEnumerator() => SharedResourceSubscriptions.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListQueryTemplatesResponse : gaxgrpc::IPageResponse<QueryTemplate>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<QueryTemplate> GetEnumerator() => QueryTemplates.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

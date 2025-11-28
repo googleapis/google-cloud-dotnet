@@ -34,7 +34,7 @@ namespace GoogleCSharpSnippets
             // Create client
             CustomTargetingValueServiceClient customTargetingValueServiceClient = CustomTargetingValueServiceClient.Create();
             // Initialize request argument(s)
-            CustomTargetingValueName name = CustomTargetingValueName.FromNetworkCodeCustomTargetingKeyCustomTargetingValue("[NETWORK_CODE]", "[CUSTOM_TARGETING_KEY]", "[CUSTOM_TARGETING_VALUE]");
+            CustomTargetingValueName name = CustomTargetingValueName.FromNetworkCodeCustomTargetingValue("[NETWORK_CODE]", "[CUSTOM_TARGETING_VALUE]");
             // Make the request
             CustomTargetingValue response = customTargetingValueServiceClient.GetCustomTargetingValue(name);
         }

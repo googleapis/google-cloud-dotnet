@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             ListGiVersionsRequest request = new ListGiVersionsRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<ListGiVersionsResponse, GiVersion> response = oracleDatabaseClient.ListGiVersions(request);

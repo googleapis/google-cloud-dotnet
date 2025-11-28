@@ -87,6 +87,8 @@ namespace Google.Maps.RouteOptimization.V1 {
     static readonly grpc::Marshaller<global::Google.Maps.RouteOptimization.V1.BatchOptimizeToursRequest> __Marshaller_google_maps_routeoptimization_v1_BatchOptimizeToursRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.RouteOptimization.V1.BatchOptimizeToursRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Maps.RouteOptimization.V1.OptimizeToursUriRequest> __Marshaller_google_maps_routeoptimization_v1_OptimizeToursUriRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.RouteOptimization.V1.OptimizeToursUriRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Maps.RouteOptimization.V1.OptimizeToursRequest, global::Google.Maps.RouteOptimization.V1.OptimizeToursResponse> __Method_OptimizeTours = new grpc::Method<global::Google.Maps.RouteOptimization.V1.OptimizeToursRequest, global::Google.Maps.RouteOptimization.V1.OptimizeToursResponse>(
@@ -102,6 +104,22 @@ namespace Google.Maps.RouteOptimization.V1 {
         __ServiceName,
         "BatchOptimizeTours",
         __Marshaller_google_maps_routeoptimization_v1_BatchOptimizeToursRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Maps.RouteOptimization.V1.OptimizeToursRequest, global::Google.LongRunning.Operation> __Method_OptimizeToursLongRunning = new grpc::Method<global::Google.Maps.RouteOptimization.V1.OptimizeToursRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "OptimizeToursLongRunning",
+        __Marshaller_google_maps_routeoptimization_v1_OptimizeToursRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Maps.RouteOptimization.V1.OptimizeToursUriRequest, global::Google.LongRunning.Operation> __Method_OptimizeToursUri = new grpc::Method<global::Google.Maps.RouteOptimization.V1.OptimizeToursUriRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "OptimizeToursUri",
+        __Marshaller_google_maps_routeoptimization_v1_OptimizeToursUriRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -168,6 +186,75 @@ namespace Google.Maps.RouteOptimization.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BatchOptimizeTours(global::Google.Maps.RouteOptimization.V1.BatchOptimizeToursRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// This is a variant of the
+      /// [OptimizeTours][google.maps.routeoptimization.v1.RouteOptimization.OptimizeTours]
+      /// method designed for
+      /// optimizations with large timeout values. It should be preferred over the
+      /// `OptimizeTours` method for optimizations that take longer than
+      /// a few minutes.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] (LRO)
+      /// will have a name of the format
+      /// `&lt;parent>/operations/&lt;operation_id>` and can be used to track
+      /// progress of the computation. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [OptimizeToursLongRunningMetadata][google.maps.routeoptimization.v1.OptimizeToursLongRunningMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [OptimizeToursResponse][google.maps.routeoptimization.v1.OptimizeToursResponse],
+      /// if successful.
+      ///
+      /// Experimental: See
+      /// https://developers.google.com/maps/tt/route-optimization/experimental/otlr/make-request
+      /// for more details.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> OptimizeToursLongRunning(global::Google.Maps.RouteOptimization.V1.OptimizeToursRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// This is a variant of the
+      /// [OptimizeToursLongRunning][google.maps.routeoptimization.v1.RouteOptimization.OptimizeToursLongRunning]
+      /// method designed for optimizations with large timeout values and large
+      /// input/output sizes.
+      ///
+      /// The client specifies the URI of the `OptimizeToursRequest` stored
+      /// in Google Cloud Storage and the server writes the `OptimizeToursResponse`
+      /// to a client-specified Google Cloud Storage URI.
+      ///
+      /// This method should be preferred over the `OptimizeTours` method for
+      /// optimizations that take longer than a few minutes and input/output sizes
+      /// that are larger than 8MB, though it can be used for shorter and smaller
+      /// optimizations as well.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] (LRO)
+      /// will have a name of the format
+      /// `&lt;parent>/operations/&lt;operation_id>` and can be used to track
+      /// progress of the computation. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [OptimizeToursLongRunningMetadata][google.maps.routeoptimization.v1.OptimizeToursUriMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [OptimizeToursUriResponse][google.maps.routeoptimization.v1.OptimizeToursUriResponse],
+      /// if successful.
+      ///
+      /// Experimental: See
+      /// https://developers.google.com/maps/tt/route-optimization/experimental/otlr/make-request
+      /// for more details.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> OptimizeToursUri(global::Google.Maps.RouteOptimization.V1.OptimizeToursUriRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -433,6 +520,282 @@ namespace Google.Maps.RouteOptimization.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchOptimizeTours, null, options, request);
       }
+      /// <summary>
+      /// This is a variant of the
+      /// [OptimizeTours][google.maps.routeoptimization.v1.RouteOptimization.OptimizeTours]
+      /// method designed for
+      /// optimizations with large timeout values. It should be preferred over the
+      /// `OptimizeTours` method for optimizations that take longer than
+      /// a few minutes.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] (LRO)
+      /// will have a name of the format
+      /// `&lt;parent>/operations/&lt;operation_id>` and can be used to track
+      /// progress of the computation. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [OptimizeToursLongRunningMetadata][google.maps.routeoptimization.v1.OptimizeToursLongRunningMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [OptimizeToursResponse][google.maps.routeoptimization.v1.OptimizeToursResponse],
+      /// if successful.
+      ///
+      /// Experimental: See
+      /// https://developers.google.com/maps/tt/route-optimization/experimental/otlr/make-request
+      /// for more details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation OptimizeToursLongRunning(global::Google.Maps.RouteOptimization.V1.OptimizeToursRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return OptimizeToursLongRunning(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a variant of the
+      /// [OptimizeTours][google.maps.routeoptimization.v1.RouteOptimization.OptimizeTours]
+      /// method designed for
+      /// optimizations with large timeout values. It should be preferred over the
+      /// `OptimizeTours` method for optimizations that take longer than
+      /// a few minutes.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] (LRO)
+      /// will have a name of the format
+      /// `&lt;parent>/operations/&lt;operation_id>` and can be used to track
+      /// progress of the computation. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [OptimizeToursLongRunningMetadata][google.maps.routeoptimization.v1.OptimizeToursLongRunningMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [OptimizeToursResponse][google.maps.routeoptimization.v1.OptimizeToursResponse],
+      /// if successful.
+      ///
+      /// Experimental: See
+      /// https://developers.google.com/maps/tt/route-optimization/experimental/otlr/make-request
+      /// for more details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation OptimizeToursLongRunning(global::Google.Maps.RouteOptimization.V1.OptimizeToursRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_OptimizeToursLongRunning, null, options, request);
+      }
+      /// <summary>
+      /// This is a variant of the
+      /// [OptimizeTours][google.maps.routeoptimization.v1.RouteOptimization.OptimizeTours]
+      /// method designed for
+      /// optimizations with large timeout values. It should be preferred over the
+      /// `OptimizeTours` method for optimizations that take longer than
+      /// a few minutes.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] (LRO)
+      /// will have a name of the format
+      /// `&lt;parent>/operations/&lt;operation_id>` and can be used to track
+      /// progress of the computation. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [OptimizeToursLongRunningMetadata][google.maps.routeoptimization.v1.OptimizeToursLongRunningMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [OptimizeToursResponse][google.maps.routeoptimization.v1.OptimizeToursResponse],
+      /// if successful.
+      ///
+      /// Experimental: See
+      /// https://developers.google.com/maps/tt/route-optimization/experimental/otlr/make-request
+      /// for more details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> OptimizeToursLongRunningAsync(global::Google.Maps.RouteOptimization.V1.OptimizeToursRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return OptimizeToursLongRunningAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a variant of the
+      /// [OptimizeTours][google.maps.routeoptimization.v1.RouteOptimization.OptimizeTours]
+      /// method designed for
+      /// optimizations with large timeout values. It should be preferred over the
+      /// `OptimizeTours` method for optimizations that take longer than
+      /// a few minutes.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] (LRO)
+      /// will have a name of the format
+      /// `&lt;parent>/operations/&lt;operation_id>` and can be used to track
+      /// progress of the computation. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [OptimizeToursLongRunningMetadata][google.maps.routeoptimization.v1.OptimizeToursLongRunningMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [OptimizeToursResponse][google.maps.routeoptimization.v1.OptimizeToursResponse],
+      /// if successful.
+      ///
+      /// Experimental: See
+      /// https://developers.google.com/maps/tt/route-optimization/experimental/otlr/make-request
+      /// for more details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> OptimizeToursLongRunningAsync(global::Google.Maps.RouteOptimization.V1.OptimizeToursRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_OptimizeToursLongRunning, null, options, request);
+      }
+      /// <summary>
+      /// This is a variant of the
+      /// [OptimizeToursLongRunning][google.maps.routeoptimization.v1.RouteOptimization.OptimizeToursLongRunning]
+      /// method designed for optimizations with large timeout values and large
+      /// input/output sizes.
+      ///
+      /// The client specifies the URI of the `OptimizeToursRequest` stored
+      /// in Google Cloud Storage and the server writes the `OptimizeToursResponse`
+      /// to a client-specified Google Cloud Storage URI.
+      ///
+      /// This method should be preferred over the `OptimizeTours` method for
+      /// optimizations that take longer than a few minutes and input/output sizes
+      /// that are larger than 8MB, though it can be used for shorter and smaller
+      /// optimizations as well.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] (LRO)
+      /// will have a name of the format
+      /// `&lt;parent>/operations/&lt;operation_id>` and can be used to track
+      /// progress of the computation. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [OptimizeToursLongRunningMetadata][google.maps.routeoptimization.v1.OptimizeToursUriMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [OptimizeToursUriResponse][google.maps.routeoptimization.v1.OptimizeToursUriResponse],
+      /// if successful.
+      ///
+      /// Experimental: See
+      /// https://developers.google.com/maps/tt/route-optimization/experimental/otlr/make-request
+      /// for more details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation OptimizeToursUri(global::Google.Maps.RouteOptimization.V1.OptimizeToursUriRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return OptimizeToursUri(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a variant of the
+      /// [OptimizeToursLongRunning][google.maps.routeoptimization.v1.RouteOptimization.OptimizeToursLongRunning]
+      /// method designed for optimizations with large timeout values and large
+      /// input/output sizes.
+      ///
+      /// The client specifies the URI of the `OptimizeToursRequest` stored
+      /// in Google Cloud Storage and the server writes the `OptimizeToursResponse`
+      /// to a client-specified Google Cloud Storage URI.
+      ///
+      /// This method should be preferred over the `OptimizeTours` method for
+      /// optimizations that take longer than a few minutes and input/output sizes
+      /// that are larger than 8MB, though it can be used for shorter and smaller
+      /// optimizations as well.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] (LRO)
+      /// will have a name of the format
+      /// `&lt;parent>/operations/&lt;operation_id>` and can be used to track
+      /// progress of the computation. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [OptimizeToursLongRunningMetadata][google.maps.routeoptimization.v1.OptimizeToursUriMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [OptimizeToursUriResponse][google.maps.routeoptimization.v1.OptimizeToursUriResponse],
+      /// if successful.
+      ///
+      /// Experimental: See
+      /// https://developers.google.com/maps/tt/route-optimization/experimental/otlr/make-request
+      /// for more details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation OptimizeToursUri(global::Google.Maps.RouteOptimization.V1.OptimizeToursUriRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_OptimizeToursUri, null, options, request);
+      }
+      /// <summary>
+      /// This is a variant of the
+      /// [OptimizeToursLongRunning][google.maps.routeoptimization.v1.RouteOptimization.OptimizeToursLongRunning]
+      /// method designed for optimizations with large timeout values and large
+      /// input/output sizes.
+      ///
+      /// The client specifies the URI of the `OptimizeToursRequest` stored
+      /// in Google Cloud Storage and the server writes the `OptimizeToursResponse`
+      /// to a client-specified Google Cloud Storage URI.
+      ///
+      /// This method should be preferred over the `OptimizeTours` method for
+      /// optimizations that take longer than a few minutes and input/output sizes
+      /// that are larger than 8MB, though it can be used for shorter and smaller
+      /// optimizations as well.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] (LRO)
+      /// will have a name of the format
+      /// `&lt;parent>/operations/&lt;operation_id>` and can be used to track
+      /// progress of the computation. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [OptimizeToursLongRunningMetadata][google.maps.routeoptimization.v1.OptimizeToursUriMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [OptimizeToursUriResponse][google.maps.routeoptimization.v1.OptimizeToursUriResponse],
+      /// if successful.
+      ///
+      /// Experimental: See
+      /// https://developers.google.com/maps/tt/route-optimization/experimental/otlr/make-request
+      /// for more details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> OptimizeToursUriAsync(global::Google.Maps.RouteOptimization.V1.OptimizeToursUriRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return OptimizeToursUriAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This is a variant of the
+      /// [OptimizeToursLongRunning][google.maps.routeoptimization.v1.RouteOptimization.OptimizeToursLongRunning]
+      /// method designed for optimizations with large timeout values and large
+      /// input/output sizes.
+      ///
+      /// The client specifies the URI of the `OptimizeToursRequest` stored
+      /// in Google Cloud Storage and the server writes the `OptimizeToursResponse`
+      /// to a client-specified Google Cloud Storage URI.
+      ///
+      /// This method should be preferred over the `OptimizeTours` method for
+      /// optimizations that take longer than a few minutes and input/output sizes
+      /// that are larger than 8MB, though it can be used for shorter and smaller
+      /// optimizations as well.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] (LRO)
+      /// will have a name of the format
+      /// `&lt;parent>/operations/&lt;operation_id>` and can be used to track
+      /// progress of the computation. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [OptimizeToursLongRunningMetadata][google.maps.routeoptimization.v1.OptimizeToursUriMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [OptimizeToursUriResponse][google.maps.routeoptimization.v1.OptimizeToursUriResponse],
+      /// if successful.
+      ///
+      /// Experimental: See
+      /// https://developers.google.com/maps/tt/route-optimization/experimental/otlr/make-request
+      /// for more details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> OptimizeToursUriAsync(global::Google.Maps.RouteOptimization.V1.OptimizeToursUriRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_OptimizeToursUri, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override RouteOptimizationClient NewInstance(ClientBaseConfiguration configuration)
@@ -448,7 +811,9 @@ namespace Google.Maps.RouteOptimization.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_OptimizeTours, serviceImpl.OptimizeTours)
-          .AddMethod(__Method_BatchOptimizeTours, serviceImpl.BatchOptimizeTours).Build();
+          .AddMethod(__Method_BatchOptimizeTours, serviceImpl.BatchOptimizeTours)
+          .AddMethod(__Method_OptimizeToursLongRunning, serviceImpl.OptimizeToursLongRunning)
+          .AddMethod(__Method_OptimizeToursUri, serviceImpl.OptimizeToursUri).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -460,6 +825,8 @@ namespace Google.Maps.RouteOptimization.V1 {
     {
       serviceBinder.AddMethod(__Method_OptimizeTours, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.RouteOptimization.V1.OptimizeToursRequest, global::Google.Maps.RouteOptimization.V1.OptimizeToursResponse>(serviceImpl.OptimizeTours));
       serviceBinder.AddMethod(__Method_BatchOptimizeTours, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.RouteOptimization.V1.BatchOptimizeToursRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchOptimizeTours));
+      serviceBinder.AddMethod(__Method_OptimizeToursLongRunning, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.RouteOptimization.V1.OptimizeToursRequest, global::Google.LongRunning.Operation>(serviceImpl.OptimizeToursLongRunning));
+      serviceBinder.AddMethod(__Method_OptimizeToursUri, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.RouteOptimization.V1.OptimizeToursUriRequest, global::Google.LongRunning.Operation>(serviceImpl.OptimizeToursUri));
     }
 
   }

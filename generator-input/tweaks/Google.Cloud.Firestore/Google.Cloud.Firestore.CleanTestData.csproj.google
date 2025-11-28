@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <PackageReference Include="Google.Cloud.Firestore.Admin.V1" VersionOverride="3.16.0" />
+  </ItemGroup>
+</Project>

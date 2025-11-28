@@ -10,6 +10,18 @@
         "grpc": {
           "libraryClient": "ManagedKafkaClient",
           "rpcs": {
+            "AddAclEntry": {
+              "methods": [
+                "AddAclEntry",
+                "AddAclEntryAsync"
+              ]
+            },
+            "CreateAcl": {
+              "methods": [
+                "CreateAcl",
+                "CreateAclAsync"
+              ]
+            },
             "CreateCluster": {
               "methods": [
                 "CreateCluster",
@@ -20,6 +32,12 @@
               "methods": [
                 "CreateTopic",
                 "CreateTopicAsync"
+              ]
+            },
+            "DeleteAcl": {
+              "methods": [
+                "DeleteAcl",
+                "DeleteAclAsync"
               ]
             },
             "DeleteCluster": {
@@ -40,6 +58,12 @@
                 "DeleteTopicAsync"
               ]
             },
+            "GetAcl": {
+              "methods": [
+                "GetAcl",
+                "GetAclAsync"
+              ]
+            },
             "GetCluster": {
               "methods": [
                 "GetCluster",
@@ -58,6 +82,12 @@
                 "GetTopicAsync"
               ]
             },
+            "ListAcls": {
+              "methods": [
+                "ListAcls",
+                "ListAclsAsync"
+              ]
+            },
             "ListClusters": {
               "methods": [
                 "ListClusters",
@@ -74,6 +104,18 @@
               "methods": [
                 "ListTopics",
                 "ListTopicsAsync"
+              ]
+            },
+            "RemoveAclEntry": {
+              "methods": [
+                "RemoveAclEntry",
+                "RemoveAclEntryAsync"
+              ]
+            },
+            "UpdateAcl": {
+              "methods": [
+                "UpdateAcl",
+                "UpdateAclAsync"
               ]
             },
             "UpdateCluster": {
