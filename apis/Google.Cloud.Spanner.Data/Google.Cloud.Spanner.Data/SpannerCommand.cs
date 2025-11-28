@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
+using Google.LongRunning;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -506,6 +507,39 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>A task whose result is a lower bound for the number of rows affected.</returns>
         public Task<long> ExecutePartitionedUpdateAsync(CancellationToken cancellationToken = default) =>
             CreateExecutableCommand().ExecutePartitionedUpdateAsync(cancellationToken);
+
+        /// <summary>
+        /// Executes this command as DDL. The command must contain one or more DDL statements;
+        /// <see cref="SpannerConnection.CreateDdlCommand(string, string[])"/> for details.
+        /// </summary>
+        /// <param name="pollUntilCompleted">
+        /// If true, the returned task will wait for the DDL operation to finish execution on Spanner.
+        /// Otherwise, the returned task will finish as soon as the DDL operation has successfully been started on
+        /// Spanner, and the caller can monitor the progress of the long-running operation.
+        /// </param>
+        /// <returns>
+        /// A reference to the long-running operation that was started for the DDL statement(s).
+        /// Note: The operation is null for DropDatabase commands.
+        /// </returns>
+        public Operation ExecuteDdl(bool pollUntilCompleted = false) =>
+            Task.Run(() => ExecuteDdlAsync(pollUntilCompleted, _synchronousCancellationTokenSource.Token)).ResultWithUnwrappedExceptions();
+
+        /// <summary>
+        /// Executes this command as DDL. The command must contain one or more DDL statements;
+        /// <see cref="SpannerConnection.CreateDdlCommand(string, string[])"/> for details.
+        /// </summary>
+        /// <param name="pollUntilCompleted">
+        /// If true, the returned task will wait for the DDL operation to finish execution on Spanner.
+        /// Otherwise, the returned task will finish as soon as the DDL operation has successfully been started on
+        /// Spanner, and the caller can monitor the progress of the long-running operation.
+        /// </param>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <returns>
+        /// A reference to the long-running operation that was started for the DDL statement(s).
+        /// Note: The operation is null for DropDatabase commands.
+        /// </returns>
+        public Task<Operation> ExecuteDdlAsync(bool pollUntilCompleted = false, CancellationToken cancellationToken = default) =>
+            CreateExecutableCommand().ExecuteDdlAsync(pollUntilCompleted, cancellationToken);
 
         /// <summary>
         /// Creates an executable command that captures all the necessary information from this command.

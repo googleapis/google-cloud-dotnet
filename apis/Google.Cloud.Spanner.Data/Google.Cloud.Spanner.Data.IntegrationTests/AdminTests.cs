@@ -239,17 +239,19 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var connection = new SpannerConnection(builder.WithDatabase(dbName)))
             {
                 var dropSingersCmd = connection.CreateDdlCommand("DROP TABLE Singers");
-                var dropAlbumsCmd = connection.CreateDdlCommand("DROP TABLE Albums");
+                var dropBothTablesCmd = connection.CreateDdlCommand("DROP TABLE Albums", "DROP TABLE Singers");
 
                 await Assert.ThrowsAsync<SpannerException>(() => dropSingersCmd.ExecuteNonQueryAsync());
-                await dropAlbumsCmd.ExecuteNonQueryAsync();
-                await dropSingersCmd.ExecuteNonQueryAsync();
+                var operation = await dropBothTablesCmd.ExecuteDdlAsync();
+                Assert.NotNull(operation?.Name);
             }
 
             using (var connection = new SpannerConnection(builder))
             {
                 var dropCommand = connection.CreateDdlCommand($"DROP DATABASE {dbName}");
-                await dropCommand.ExecuteNonQueryAsync();
+                var operation = await dropCommand.ExecuteDdlAsync();
+                // DropDatabase does not return a long-running operation.
+                Assert.Null(operation);
             }
         }
     }
