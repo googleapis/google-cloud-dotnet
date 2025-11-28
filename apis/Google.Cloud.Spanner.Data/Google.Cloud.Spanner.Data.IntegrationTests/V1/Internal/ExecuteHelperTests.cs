@@ -30,37 +30,17 @@ public class ExecuteHelperTests
     public ExecuteHelperTests(SpannerDatabaseFixture fixture) =>
         _fixture = fixture;
 
-    [Fact]
-    public Task SessionNotFound() => WithSessionPool(async pool =>
-    {
-        var session = await pool.Client.CreateSessionAsync(_fixture.DatabaseName);
-        await pool.Client.DeleteSessionAsync(session.SessionName);
-
-        // The session doesn't become invalid immediately after deletion.
-        // Wait for a minute to ensure the session is really expired.
-        await Task.Delay(TimeSpan.FromMinutes(1));
-
-        var request = new ExecuteSqlRequest
-        {
-            Sql = $"SELECT 1",
-            Session = session.Name
-        };
-        var exception = await Assert.ThrowsAsync<RpcException>(() => pool.Client.ExecuteSqlAsync(request));
-        Assert.True(ExecuteHelper.IsSessionExpiredError(exception));
-    });
-
     // This code is separated out in case we need more tests. It's really just fluff.
-    private async Task WithSessionPool(Func<SessionPool, Task> action)
+    private async Task WithManagedSession(Func<ManagedSession, Task> action)
     {
         var builder = new SpannerConnectionStringBuilder(_fixture.ConnectionString);
-        var pool = await builder.AcquireSessionPoolAsync();
+        var managedSession = await builder.AcquireManagedSessionAsync();
         try
         {
-            await action(pool);
+            await action(managedSession);
         }
         finally
         {
-            builder.SessionPoolManager.Release(pool);
         }
     }
 }

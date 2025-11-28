@@ -95,8 +95,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 var dropCommand = connection.CreateDdlCommand($"DROP DATABASE {dbName}");
                 await dropCommand.ExecuteNonQueryAsync();
             }
-
-            await SessionPoolHelpers.ShutdownPoolAsync(builder.WithDatabase(dbName));
         }
 
         [Fact]
@@ -146,8 +144,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 var dropCommand = connection.CreateDdlCommand($"DROP DATABASE {dbName}");
                 await dropCommand.ExecuteNonQueryAsync();
             }
-
-            await SessionPoolHelpers.ShutdownPoolAsync(builder.WithDatabase(dbName));
         }
 
         [Fact]
