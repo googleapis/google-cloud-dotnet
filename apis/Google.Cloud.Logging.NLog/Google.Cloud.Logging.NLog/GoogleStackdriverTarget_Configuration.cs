@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Logging.V2;
 using Google.Protobuf.WellKnownTypes;
 using NLog.Config;
@@ -39,6 +40,13 @@ namespace Google.Cloud.Logging.NLog
         /// Must not be set if <see cref="CredentialFile"/> is set.
         /// </summary>
         public Layout CredentialJson { get; set; }
+
+        /// <summary>
+        /// The type of credential to load when either <see cref="CredentialFile"/> or <see cref="CredentialJson"/> is specified.
+        /// Valid strings can be found in the <see cref="JsonCredentialParameters"/> class.
+        /// Defaults to <see cref="JsonCredentialParameters.ServiceAccountCredentialType"/>.
+        /// </summary>
+        public Layout CredentialType { get; set; } = JsonCredentialParameters.ServiceAccountCredentialType;
 
         /// <summary>
         /// If set, disables resource-type detection based on platform,
