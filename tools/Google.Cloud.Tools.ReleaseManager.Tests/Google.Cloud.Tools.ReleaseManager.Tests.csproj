@@ -12,6 +12,7 @@
     <PackageReference Include="xunit" />
     <PackageReference Include="xunit.runner.visualstudio" />
     <ProjectReference Include="..\Google.Cloud.Tools.ReleaseManager\Google.Cloud.Tools.ReleaseManager.csproj" />
+    <EmbeddedResource Include="ReleaseDependencyUpdatesCommandTest.json" />
   </ItemGroup>
 
 </Project>

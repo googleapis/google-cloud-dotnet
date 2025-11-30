@@ -24,6 +24,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
+// Make ProjectVersionValue and DefaultVersionValue available without qualification.
+using static Google.Cloud.Tools.Common.ApiMetadata;
+
 namespace Google.Cloud.Tools.ReleaseManager;
 
 /// <summary>
@@ -41,21 +44,11 @@ namespace Google.Cloud.Tools.ReleaseManager;
 /// </summary>
 internal sealed class NonSourceGenerator
 {
-    internal const string ProjectVersionValue = "project";
-    internal const string DefaultVersionValue = "default";
     internal const string DefaultNetstandardTarget = "netstandard2.0";
 
     private const string ClientTestingName = "Google.Cloud.ClientTesting";
     private const string RootRelativeClientTestingDirectory = @"..\..\tools\Google.Cloud.ClientTesting";
 
-    /// <summary>
-    /// In "new major version mode", *all* references between different APIs become project references
-    /// in the csproj file, and all GAX/gRPC references are treated as being for the default versions,
-    /// regardless of anything explicitly specified. This makes it easier to create new major versions
-    /// without manually changing apis.json.
-    /// </summary>
-    /// <remarks>This isn't a constant, as otherwise the compiler complains about unreachable code.</remarks>
-    private static readonly bool NewMajorVersionMode = false;
 
     private static readonly Regex AnyVersionPattern = new Regex(@"^[0-9]\d*\.\d+\.\d+(\.\d+)?(-.*)?$");
     private static readonly Regex AnyDesktopFramework = new Regex(@";net4\d+");
@@ -79,29 +72,8 @@ internal sealed class NonSourceGenerator
     private const string ConsoleTargetFramework = "net8.0";
     private const string DefaultTestTargetFrameworks = "net8.0;net462";
 
-    private static readonly Dictionary<ApiType, string[]> PackageTypeToImplicitDependencies = new Dictionary<ApiType, string[]>
-    {
-        {  ApiType.Rest, new[] { "Google.Api.Gax.Rest" } },
-        {  ApiType.Grpc, new[] { "Grpc.Core", "Google.Api.Gax.Grpc" } },
-        {  ApiType.Regapic, new[] { "Google.Api.Gax.Grpc" } },
-    };
-
     private const string GrpcCorePackage = "Grpc.Core";
     private const string GrpcCorePackageConditionFramework = "net462";
-
-    // These are the packages where in "new major version mode" we ignore overrides, and always use the defaults.
-    private static readonly HashSet<string> NewMajorVersionDefaultPackages = new()
-    {
-        "Google.Api.Gax",
-        "Google.Api.Gax.Rest",
-        "Google.Api.Gax.Grpc",
-        "Google.Api.Gax.Testing",
-        "Google.Api.Gax.Grpc.Testing",
-        GrpcCorePackage,
-        "Grpc.Core.Testing",
-        "Google.Api.CommonProtos",
-        "Google.Protobuf",
-    };
 
     // Hard-coded versions for all test packages. These can be defaulted even for stable packages, whereas
     // the packages in DefaultPackageVersions should be specified precisely in stable packages.
@@ -230,22 +202,9 @@ internal sealed class NonSourceGenerator
 
             var dependencies = new SortedList<string, string>(CommonHiddenProductionDependencies, StringComparer.Ordinal);
 
-            // Default dependencies by package type
-            if (PackageTypeToImplicitDependencies.TryGetValue(api.Type, out var implicitDependencies))
+            foreach (var dependency in api.DeriveDependencies())
             {
-                foreach (var dependency in implicitDependencies)
-                {
-                    dependencies[dependency] = DefaultVersionValue;
-                }
-            }
-
-            // Deliberately not using Add, so that a project can override the defaults.
-            foreach (var dependency in api.Dependencies)
-            {
-                dependencies[dependency.Key] = !NewMajorVersionMode ? dependency.Value
-                    : NewMajorVersionDefaultPackages.Contains(dependency.Key) ? DefaultVersionValue
-                    : apiNames.Contains(dependency.Key) ? ProjectVersionValue
-                    : dependency.Value;
+                dependencies.Add(dependency.Key, dependency.Value);
             }
 
             var propertyGroup = new XElement("PropertyGroup",
@@ -282,10 +241,7 @@ internal sealed class NonSourceGenerator
             // Deliberately not using Add, so that a project can override the defaults.
             foreach (var dependency in api.TestDependencies)
             {
-                dependencies[dependency.Key] = !NewMajorVersionMode ? dependency.Value
-                        : NewMajorVersionDefaultPackages.Contains(dependency.Key) ? DefaultVersionValue
-                        : apiNames.Contains(dependency.Key) ? ProjectVersionValue
-                        : dependency.Value;
+                dependencies[dependency.Key] = dependency.Value;
             }
 
             var testTargetFrameworks = api.TestTargetFrameworks ?? DefaultTestTargetFrameworks;

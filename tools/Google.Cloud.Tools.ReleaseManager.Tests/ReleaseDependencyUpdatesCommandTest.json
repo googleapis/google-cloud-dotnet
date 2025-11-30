@@ -1,0 +1,158 @@
+{
+    "resolveStatusesTests": [
+        {
+            "id": "NoUpdateNeeded",
+            "apiCatalog": {
+                "apis": [
+                    {
+                        "id": "A",
+                        "version": "1.0.0",
+                        "dependencies": {
+                            "Ext": "default"
+                        }
+                    }
+                ]
+            },
+            "blockedPackages": [],
+            "externalPackageVersions": {
+                "Ext": "1.0.0"
+            },
+            "lastReleaseDependenciesByPackage": {
+                "A": {
+                    "Ext": "1.0.0"
+                }
+            },
+            "expectedReleaseDecisions": {
+                "A": "UpToDate"
+            }
+        },
+        {
+            "id": "ExternalUpdateNeeded",
+            "apiCatalog": {
+                "apis": [
+                    {
+                        "id": "A",
+                        "version": "1.0.0",
+                        "dependencies": {
+                            "Ext": "default"
+                        }
+                    }
+                ]
+            },
+            "blockedPackages": [],
+            "externalPackageVersions": {
+                "Ext": "1.1.0"
+            },
+            "lastReleaseDependenciesByPackage": {
+                "A": {
+                    "Ext": "1.0.0"
+                }
+            },
+            "expectedReleaseDecisions": {
+                "A": "NeedsUpdate"
+            }
+        },
+        {
+            "id": "DependencyNeedsUpdate",
+            "apiCatalog": {
+                "apis": [
+                    {
+                        "id": "A",
+                        "version": "1.0.0",
+                        "dependencies": {
+                            "Ext": "default"
+                        }
+                    },
+                    {
+                        "id": "B",
+                        "version": "1.0.0",
+                        "dependencies": {
+                            "A": "1.0.0"
+                        }
+                    }
+                ]
+            },
+            "blockedPackages": [],
+            "externalPackageVersions": {
+                "Ext": "1.1.0"
+            },
+            "lastReleaseDependenciesByPackage": {
+                "A": {
+                    "Ext": "1.0.0"
+                },
+                "B": {
+                    "A": "1.0.0"
+                }
+            },
+            "expectedReleaseDecisions": {
+                "A": "NeedsUpdate",
+                "B": "DependencyNeedsUpdate"
+            }
+        }
+    ],
+
+    "createUpdateBatchTests": [
+        {
+            "id": "SimpleLimit",
+            "batchSize": 3,
+            "apiCatalog": {
+                "apis": [
+                    {
+                        "id": "A",
+                        "version": "1.0.0"
+                    },
+                    {
+                        "id": "B",
+                        "version": "1.0.0"
+                    },
+                    {
+                        "id": "C",
+                        "version": "1.0.0"
+                    },
+                    {
+                        "id": "D",
+                        "version": "1.0.0"
+                    }
+                ]
+            },
+            "releaseDecisions": {
+                "A": "NeedsUpdate",
+                "B": "NeedsUpdate",
+                "C": "NeedsUpdate",
+                "D": "NeedsUpdate"
+            },
+            "expectedUpdateBatch": [ "A", "B", "C" ]
+        },
+        {
+            "id": "FilteredByDecision",
+            "batchSize": 3,
+            "apiCatalog": {
+                "apis": [
+                    {
+                        "id": "A",
+                        "version": "1.0.0"
+                    },
+                    {
+                        "id": "B",
+                        "version": "1.0.0"
+                    },
+                    {
+                        "id": "C",
+                        "version": "1.0.0"
+                    },
+                    {
+                        "id": "D",
+                        "version": "1.0.0"
+                    }
+                ]
+            },
+            "releaseDecisions": {
+                "A": "NeedsUpdate",
+                "B": "UpToDate",
+                "C": "NeedsUpdate",
+                "D": "DependencyNeedsUpdate"
+            },
+            "expectedUpdateBatch": [ "A", "C" ]
+        }
+    ]
+}

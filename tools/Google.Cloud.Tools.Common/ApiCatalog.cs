@@ -39,19 +39,13 @@ namespace Google.Cloud.Tools.Common
         /// Groups of related packages which need to be released together.
         /// </summary>
         [JsonProperty("packageGroups")]
-        public List<PackageGroup> PackageGroups { get; set; }
+        public List<PackageGroup> PackageGroups { get; set; } = new();
 
         /// <summary>
         /// The APIs within the catalog.
         /// </summary>
         [JsonProperty("apis")]
-        public List<ApiMetadata> Apis { get; set; }
-
-        /// <summary>
-        /// Proto paths for APIs we knowingly don't generate. The values are the reasons for not generating.
-        /// </summary>
-        [JsonProperty("ignoredPaths")]
-        public Dictionary<string, string> IgnoredPaths { get; set; }
+        public List<ApiMetadata> Apis { get; set; } = new();
 
         /// <summary>
         /// The JSON representation of the catalog. This is populated by <see cref="Load"/> and
@@ -178,6 +172,19 @@ namespace Google.Cloud.Tools.Common
             {
                 Json["apis"] = new JArray(api.Json);
             }
+        }
+
+        // Obsolete members, preserved so that we can still load old configs.
+
+        /// <summary>
+        /// Proto paths for APIs we knowingly don't generate. The values are the reasons for not generating.
+        /// </summary>
+        [Obsolete]
+        [JsonProperty("ignoredPaths"), JsonIgnore]
+        public Dictionary<string, string> IgnoredPaths
+        {
+            get => throw new NotSupportedException();
+            set => throw new NotSupportedException();
         }
     }
 }
