@@ -15,7 +15,6 @@
 using Google.Cloud.AIPlatform.V1;
 using Google.Cloud.ClientTesting;
 using Microsoft.Extensions.AI;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
