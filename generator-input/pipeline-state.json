@@ -4773,7 +4773,7 @@
         "google/cloud/configdelivery/v1alpha",
         "google/cloud/geminidataanalytics/v1alpha",
         "google/shopping/merchant/reports/v1alpha",
-        "google/cloud/hypercomputecluster/v1beta",
+        "google/cloud/networksecurity/v1alpha1",
         "google/cloud/securesourcemanager/v1",
         "google/maps/weather/v1"
     ]
