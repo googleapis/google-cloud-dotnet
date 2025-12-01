@@ -4066,6 +4066,27 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.NetworkSecurity.V1Alpha1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Network Security",
+      "productUrl": "https://cloud.google.com/products/networking",
+      "description": "",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/networksecurity/v1alpha1",
+      "includeCommonResourcesProto": true,
+      "shortName": "networksecurity",
+      "serviceConfigFile": "networksecurity_v1alpha1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.NetworkSecurity.V1Beta1",
       "version": "2.0.0-beta07",
       "type": "grpc",
