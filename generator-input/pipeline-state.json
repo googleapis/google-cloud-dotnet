@@ -1608,12 +1608,12 @@
         },
         {
             "id": "Google.Cloud.Eventarc.V1",
-            "currentVersion": "2.8.0",
+            "currentVersion": "2.9.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-05T17:00:39.088049878Z",
+            "releaseTimestamp": "2025-12-01T14:19:08.547447720Z",
             "lastGeneratedCommit": "c9ff4f1cd26f1fe63e6d1c11a198366b70ebdb84",
-            "lastReleasedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
+            "lastReleasedCommit": "c9ff4f1cd26f1fe63e6d1c11a198366b70ebdb84",
             "apiPaths": [
                 "google/cloud/eventarc/v1"
             ],

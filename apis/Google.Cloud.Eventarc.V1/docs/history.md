@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.9.0, released 2025-12-01
+
+### New features
+
+- Add wide-scope Eventarc GoogleApiSource flags
+- Add Eventarc Trigger RetryPolicy
+
 ## Version 2.8.0, released 2025-11-05
 
 ### New features
