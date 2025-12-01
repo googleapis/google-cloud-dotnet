@@ -146,6 +146,31 @@ public static class VertexAIExtensions
         return client.AsIImageGenerator(defaultModelId);
     }
 
+    /// <summary>Creates an <see cref="AITool"/> to represent a raw <see cref="Tool"/>.</summary>
+    /// <param name="tool">The tool to wrap as an <see cref="AITool"/>.</param>
+    /// <returns>The <paramref name="tool"/> wrapped as an <see cref="AITool"/>.</returns>
+    /// <remarks>
+    /// <para>
+    /// The returned tool is only suitable for use with the <see cref="IChatClient"/> returned by
+    /// <see cref="AsIChatClient"/> or <see cref="BuildIChatClient"/> (or <see cref="IChatClient"/>s that delegate
+    /// to such an instance). It is likely to be ignored by any other <see cref="IChatClient"/> implementation.
+    /// </para>
+    /// <para>
+    /// When a tool has a corresponding <see cref="AITool"/>-derived type already defined in Microsoft.Extensions.AI,
+    /// such as <see cref="AIFunction"/> or <see cref="HostedWebSearchTool"/>, those types should be preferred instead
+    /// of this method, as they are more portable, capable of being respected by any <see cref="IChatClient"/> implementation.
+    /// This method does not attempt to map the supplied <see cref="Tool"/> to any of those types, it simply wraps it as-is:
+    /// the <see cref="IChatClient"/> returned by <see cref="AsIChatClient"/>/<see cref="BuildIChatClient"/> will
+    /// be able to unwrap the <see cref="Tool"/> when it processes the list of tools.
+    /// </para>
+    /// </remarks>
+    public static AITool AsAITool(this Tool tool)
+    {
+        GaxPreconditions.CheckNotNull(tool, nameof(tool));
+
+        return new PredictionServiceChatClient.ToolAITool(tool);
+    }
+
     /// <summary>Gets the name of the provider for use as the metadata provider name.</summary>
     internal static string ProviderName { get; } = "gcp.vertex_ai";
 
@@ -157,4 +182,42 @@ public static class VertexAIExtensions
         resourceName is null ? null :
         EndpointName.TryParse(resourceName, out EndpointName? endpointName) && !string.IsNullOrWhiteSpace(endpointName.ModelId) ? endpointName.ModelId :
         resourceName;
+
+    /// <summary>Creates a <see cref="UsageDetails"/> populated from the supplied <paramref name="usageMetadata"/>.</summary>
+    internal static UsageDetails? ExtractUsageDetails(UsageMetadata usageMetadata)
+    {
+        if (usageMetadata.TotalTokenCount == 0 &&
+            usageMetadata.PromptTokenCount == 0 &&
+            usageMetadata.CandidatesTokenCount == 0 &&
+            usageMetadata.CachedContentTokenCount == 0 &&
+            usageMetadata.ThoughtsTokenCount == 0 &&
+            usageMetadata.ToolUsePromptTokenCount == 0)
+        {
+            return null;
+        }
+
+        UsageDetails usage = new()
+        {
+            InputTokenCount = usageMetadata.PromptTokenCount,
+            OutputTokenCount = usageMetadata.CandidatesTokenCount,
+            TotalTokenCount = usageMetadata.TotalTokenCount,
+        };
+
+        if (usageMetadata.CachedContentTokenCount != 0)
+        {
+            (usage.AdditionalCounts ??= [])[nameof(usageMetadata.CachedContentTokenCount)] = usageMetadata.CachedContentTokenCount;
+        }
+
+        if (usageMetadata.ThoughtsTokenCount != 0)
+        {
+            (usage.AdditionalCounts ??= [])[nameof(usageMetadata.ThoughtsTokenCount)] = usageMetadata.ThoughtsTokenCount;
+        }
+
+        if (usageMetadata.ToolUsePromptTokenCount != 0)
+        {
+            (usage.AdditionalCounts ??= [])[nameof(usageMetadata.ToolUsePromptTokenCount)] = usageMetadata.ToolUsePromptTokenCount;
+        }
+
+        return usage;
+    }
 }

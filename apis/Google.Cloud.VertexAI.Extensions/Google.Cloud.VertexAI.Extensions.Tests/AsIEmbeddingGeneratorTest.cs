@@ -16,10 +16,8 @@ using Google.Cloud.AIPlatform.V1;
 using Grpc.Core;
 using Microsoft.Extensions.AI;
 using System;
-using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
-using Value = Google.Protobuf.WellKnownTypes.Value;
 
 namespace Google.Cloud.VertexAI.Extensions.Tests;
 
@@ -102,10 +100,10 @@ public class AsIEmbeddingGeneratorTest
     {
         DelegateCallInvoker invoker = new()
         {
-            OnPredictRequest = request =>
+            OnEmbedRequest = request =>
             {
-                PredictResponse response = new();
-                response.Predictions.Add(CreateEmbeddingPrediction([0.1f, 0.2f, 0.3f]));
+                EmbedContentResponse response = new() { Embedding = new() };
+                response.Embedding.Values.AddRange([0.1f, 0.2f, 0.3f]);
                 return response;
             }
         };
@@ -121,20 +119,20 @@ public class AsIEmbeddingGeneratorTest
     [Fact]
     public async Task IEmbeddingGenerator_GenerateAsync_MultipleInputs()
     {
+        int callCount = 0;
+        string[] expectedInputs = ["Hello", "World", "Test"];
+        float[][] expectedEmbeddings = [[0.1f, 0.2f, 0.3f], [0.4f, 0.5f, 0.6f], [0.7f, 0.8f, 0.9f]];
+
         DelegateCallInvoker invoker = new()
         {
-            OnPredictRequest = request =>
+            OnEmbedRequest = request =>
             {
-                // Verify multiple inputs were sent
-                Assert.Equal(3, request.Instances.Count);
-                Assert.Equal("Hello", request.Instances[0].StructValue.Fields["content"].StringValue);
-                Assert.Equal("World", request.Instances[1].StructValue.Fields["content"].StringValue);
-                Assert.Equal("Test", request.Instances[2].StructValue.Fields["content"].StringValue);
+                // Verify each input was sent in sequence
+                Assert.Equal(expectedInputs[callCount], request.Content.Parts[0].Text);
 
-                PredictResponse response = new();
-                response.Predictions.Add(CreateEmbeddingPrediction([0.1f, 0.2f, 0.3f]));
-                response.Predictions.Add(CreateEmbeddingPrediction([0.4f, 0.5f, 0.6f]));
-                response.Predictions.Add(CreateEmbeddingPrediction([0.7f, 0.8f, 0.9f]));
+                EmbedContentResponse response = new() { Embedding = new() };
+                response.Embedding.Values.AddRange(expectedEmbeddings[callCount]);
+                callCount++;
                 return response;
             }
         };
@@ -154,19 +152,16 @@ public class AsIEmbeddingGeneratorTest
     {
         DelegateCallInvoker invoker = new()
         {
-            OnPredictRequest = request =>
+            OnEmbedRequest = request =>
             {
                 // Verify the model ID was set from options
-                Assert.Equal("projects/test/locations/us-central1/publishers/google/models/text-embedding-004", request.Endpoint);
+                Assert.Equal("projects/test/locations/us-central1/publishers/google/models/text-embedding-004", request.Model);
 
                 // Verify dimensions parameter was set
-                Assert.NotNull(request.Parameters);
-                Assert.NotNull(request.Parameters.StructValue);
-                Assert.True(request.Parameters.StructValue.Fields.ContainsKey("outputDimensionality"));
-                Assert.Equal(512, request.Parameters.StructValue.Fields["outputDimensionality"].NumberValue);
+                Assert.Equal(512, request.OutputDimensionality);
 
-                PredictResponse response = new();
-                response.Predictions.Add(CreateEmbeddingPrediction([0.1f, 0.2f, 0.3f, 0.4f]));
+                EmbedContentResponse response = new() { Embedding = new() };
+                response.Embedding.Values.AddRange([0.1f, 0.2f, 0.3f, 0.4f]);
                 return response;
             }
         };
@@ -191,16 +186,13 @@ public class AsIEmbeddingGeneratorTest
     {
         DelegateCallInvoker invoker = new()
         {
-            OnPredictRequest = request =>
+            OnEmbedRequest = request =>
             {
                 // Verify default dimensions were used
-                Assert.NotNull(request.Parameters);
-                Assert.NotNull(request.Parameters.StructValue);
-                Assert.True(request.Parameters.StructValue.Fields.ContainsKey("outputDimensionality"));
-                Assert.Equal(768, request.Parameters.StructValue.Fields["outputDimensionality"].NumberValue);
+                Assert.Equal(768, request.OutputDimensionality);
 
-                PredictResponse response = new();
-                response.Predictions.Add(CreateEmbeddingPrediction([0.1f, 0.2f, 0.3f]));
+                EmbedContentResponse response = new() { Embedding = new() };
+                response.Embedding.Values.AddRange([0.1f, 0.2f, 0.3f]);
                 return response;
             }
         };
@@ -219,16 +211,13 @@ public class AsIEmbeddingGeneratorTest
     {
         DelegateCallInvoker invoker = new()
         {
-            OnPredictRequest = request =>
+            OnEmbedRequest = request =>
             {
                 // Verify options dimensions override default
-                Assert.NotNull(request.Parameters);
-                Assert.NotNull(request.Parameters.StructValue);
-                Assert.True(request.Parameters.StructValue.Fields.ContainsKey("outputDimensionality"));
-                Assert.Equal(1024, request.Parameters.StructValue.Fields["outputDimensionality"].NumberValue);
+                Assert.Equal(1024, request.OutputDimensionality);
 
-                PredictResponse response = new();
-                response.Predictions.Add(CreateEmbeddingPrediction([0.1f, 0.2f, 0.3f]));
+                EmbedContentResponse response = new() { Embedding = new() };
+                response.Embedding.Values.AddRange([0.1f, 0.2f, 0.3f]);
                 return response;
             }
         };
@@ -252,10 +241,14 @@ public class AsIEmbeddingGeneratorTest
     {
         DelegateCallInvoker invoker = new()
         {
-            OnPredictRequest = request =>
+            OnEmbedRequest = request =>
             {
-                PredictResponse response = new();
-                response.Predictions.Add(CreateEmbeddingPredictionWithTokens([0.1f, 0.2f, 0.3f], 5));
+                EmbedContentResponse response = new() 
+                { 
+                    Embedding = new(),
+                    UsageMetadata = new() { PromptTokenCount = 5 }
+                };
+                response.Embedding.Values.AddRange([0.1f, 0.2f, 0.3f]);
                 return response;
             }
         };
@@ -272,18 +265,30 @@ public class AsIEmbeddingGeneratorTest
     [Fact]
     public async Task IEmbeddingGenerator_GenerateAsync_WithMultipleUsageMetadata()
     {
+        int callCount = 0;
+        int[] expectedPromptTokens = [3, 7];
+        int[] expectedCandidatesTokens = [0, 0];
+        int[] expectedTotalTokens = [3, 7];
+        int[] expectedCachedTokens = [1, 2];
+        float[][] expectedEmbeddings = [[0.1f, 0.2f, 0.3f], [0.4f, 0.5f, 0.6f]];
+
         DelegateCallInvoker invoker = new()
         {
-            OnPredictRequest = request =>
+            OnEmbedRequest = request =>
             {
-                PredictResponse response = new();
-                
-                // First embedding with 3 tokens
-                response.Predictions.Add(CreateEmbeddingPredictionWithTokens([0.1f, 0.2f, 0.3f], 3));
-                
-                // Second embedding with 7 tokens
-                response.Predictions.Add(CreateEmbeddingPredictionWithTokens([0.4f, 0.5f, 0.6f], 7));
-
+                EmbedContentResponse response = new() 
+                { 
+                    Embedding = new(),
+                    UsageMetadata = new() 
+                    { 
+                        PromptTokenCount = expectedPromptTokens[callCount],
+                        CandidatesTokenCount = expectedCandidatesTokens[callCount],
+                        TotalTokenCount = expectedTotalTokens[callCount],
+                        CachedContentTokenCount = expectedCachedTokens[callCount]
+                    }
+                };
+                response.Embedding.Values.AddRange(expectedEmbeddings[callCount]);
+                callCount++;
                 return response;
             }
         };
@@ -296,6 +301,14 @@ public class AsIEmbeddingGeneratorTest
         Assert.Equal(2, result.Count);
         Assert.Equal([0.1f, 0.2f, 0.3f], result[0].Vector.ToArray());
         Assert.Equal([0.4f, 0.5f, 0.6f], result[1].Vector.ToArray());
+        
+        // Verify usage metadata is properly accumulated
+        Assert.NotNull(result.Usage);
+        Assert.Equal(10, result.Usage.InputTokenCount);  // 3 + 7 = 10
+        Assert.Equal(0, result.Usage.OutputTokenCount);  // 0 + 0 = 0
+        Assert.Equal(10, result.Usage.TotalTokenCount);  // 3 + 7 = 10
+        Assert.NotNull(result.Usage.AdditionalCounts);
+        Assert.Equal(3, result.Usage.AdditionalCounts["CachedContentTokenCount"]);  // 1 + 2 = 3
     }
 
     [Fact]
@@ -303,19 +316,16 @@ public class AsIEmbeddingGeneratorTest
     {
         DelegateCallInvoker invoker = new()
         {
-            OnPredictRequest = request =>
+            OnEmbedRequest = request =>
             {
-                // Verify custom parameter was set via RawRepresentationFactory
-                Assert.NotNull(request.Parameters);
-                Assert.NotNull(request.Parameters.StructValue);
-                Assert.True(request.Parameters.StructValue.Fields.ContainsKey("customParameter"));
-                Assert.Equal("customValue", request.Parameters.StructValue.Fields["customParameter"].StringValue);
-                
-                // Verify endpoint was set via RawRepresentationFactory
-                Assert.Equal("custom-endpoint", request.Endpoint);
+                // Verify model was set via RawRepresentationFactory
+                Assert.Equal("custom-model", request.Model);
 
-                PredictResponse response = new();
-                response.Predictions.Add(CreateEmbeddingPrediction([0.1f, 0.2f, 0.3f]));
+                // Verify custom title was set via RawRepresentationFactory
+                Assert.Equal("custom-title", request.Title);
+
+                EmbedContentResponse response = new() { Embedding = new() };
+                response.Embedding.Values.AddRange([0.1f, 0.2f, 0.3f]);
                 return response;
             }
         };
@@ -326,16 +336,10 @@ public class AsIEmbeddingGeneratorTest
         {
             RawRepresentationFactory = (generator) =>
             {
-                PredictRequest request = new()
+                EmbedContentRequest request = new()
                 {
-                    Endpoint = "custom-endpoint",
-                    Parameters = new Value
-                    {
-                        StructValue = new()
-                        {
-                            Fields = { { "customParameter", Value.ForString("customValue") } }
-                        }
-                    }
+                    Model = "custom-model",
+                    Title = "custom-title"
                 };
                 return request;
             }
@@ -349,14 +353,14 @@ public class AsIEmbeddingGeneratorTest
     }
 
     [Fact]
-    public async Task IEmbeddingGenerator_GenerateAsync_EmptyPredictions()
+    public async Task IEmbeddingGenerator_GenerateAsync_EmptyEmbedding()
     {
         DelegateCallInvoker invoker = new()
         {
-            OnPredictRequest = request =>
+            OnEmbedRequest = request =>
             {
-                PredictResponse response = new();
-                // No predictions in response
+                EmbedContentResponse response = new();
+                // No embedding in response
                 return response;
             }
         };
@@ -370,22 +374,16 @@ public class AsIEmbeddingGeneratorTest
     }
 
     [Fact]
-    public async Task IEmbeddingGenerator_GenerateAsync_MalformedPrediction()
+    public async Task IEmbeddingGenerator_GenerateAsync_MalformedEmbedding()
     {
         DelegateCallInvoker invoker = new()
         {
-            OnPredictRequest = request =>
+            OnEmbedRequest = request =>
             {
-                PredictResponse response = new();
+                EmbedContentResponse response = new();
                 
-                // Add a malformed prediction (missing embeddings field)
-                response.Predictions.Add(new Value
-                {
-                    StructValue = new()
-                    {
-                        Fields = { { "invalid", Value.ForString("data") } }
-                    }
-                });
+                // Add a malformed embedding (with no values)
+                response.Embedding = new EmbedContentResponse.Types.Embedding();
 
                 return response;
             }
@@ -396,7 +394,8 @@ public class AsIEmbeddingGeneratorTest
         GeneratedEmbeddings<Embedding<float>> result = await embeddingGenerator.GenerateAsync(["Test"]);
 
         Assert.NotNull(result);
-        Assert.Empty(result); // Should handle gracefully and return empty results
+        Assert.Single(result);
+        Assert.Empty(result[0].Vector.ToArray());
     }
 
     [Fact]
@@ -412,13 +411,10 @@ public class AsIEmbeddingGeneratorTest
     {
         DelegateCallInvoker invoker = new()
         {
-            OnPredictRequest = request =>
+            OnEmbedRequest = request =>
             {
-                // Verify no instances were added for empty input
-                Assert.Empty(request.Instances);
-
-                PredictResponse response = new();
-                return response;
+                // This should never be called for empty input
+                throw new InvalidOperationException("Should not be called for empty values");
             }
         };
 
@@ -435,13 +431,13 @@ public class AsIEmbeddingGeneratorTest
     {
         DelegateCallInvoker invoker = new()
         {
-            OnPredictRequest = request =>
+            OnEmbedRequest = request =>
             {
                 // Verify the full resource model ID was used
-                Assert.Equal("projects/test-project/locations/us-central1/publishers/google/models/text-embedding-004", request.Endpoint);
+                Assert.Equal("projects/test-project/locations/us-central1/publishers/google/models/text-embedding-004", request.Model);
 
-                PredictResponse response = new();
-                response.Predictions.Add(CreateEmbeddingPrediction([0.1f, 0.2f, 0.3f]));
+                EmbedContentResponse response = new() { Embedding = new() };
+                response.Embedding.Values.AddRange([0.1f, 0.2f, 0.3f]);
                 return response;
             }
         };
@@ -465,13 +461,13 @@ public class AsIEmbeddingGeneratorTest
     {
         DelegateCallInvoker invoker = new()
         {
-            OnPredictRequest = request =>
+            OnEmbedRequest = request =>
             {
                 // Verify default model was used
-                Assert.Equal("projects/test-project/locations/us-central1/publishers/google/models/default-model-id", request.Endpoint);
+                Assert.Equal("projects/test-project/locations/us-central1/publishers/google/models/default-model-id", request.Model);
 
-                PredictResponse response = new();
-                response.Predictions.Add(CreateEmbeddingPrediction([0.1f, 0.2f, 0.3f]));
+                EmbedContentResponse response = new() { Embedding = new() };
+                response.Embedding.Values.AddRange([0.1f, 0.2f, 0.3f]);
                 return response;
             }
         };
@@ -489,13 +485,13 @@ public class AsIEmbeddingGeneratorTest
     {
         DelegateCallInvoker invoker = new()
         {
-            OnPredictRequest = request =>
+            OnEmbedRequest = request =>
             {
                 // Verify complex path with multiple segments was used as-is
-                Assert.Equal("projects/prod-project/locations/asia-southeast1/endpoints/custom-endpoint-123", request.Endpoint);
+                Assert.Equal("projects/prod-project/locations/asia-southeast1/endpoints/custom-endpoint-123", request.Model);
 
-                PredictResponse response = new();
-                response.Predictions.Add(CreateEmbeddingPrediction([0.4f, 0.5f, 0.6f]));
+                EmbedContentResponse response = new() { Embedding = new() };
+                response.Embedding.Values.AddRange([0.4f, 0.5f, 0.6f]);
                 return response;
             }
         };
@@ -514,79 +510,6 @@ public class AsIEmbeddingGeneratorTest
         Assert.Equal([0.4f, 0.5f, 0.6f], result[0].Vector.ToArray());
     }
 
-    private static Value CreateEmbeddingPrediction(float[] embedding) =>
-        new()
-        {
-            StructValue = new()
-            {
-                Fields =
-                {
-                    {
-                        "embeddings", new Value
-                        {
-                            StructValue = new()
-                            {
-                                Fields =
-                                {
-                                    {
-                                        "values", new()
-                                        {
-                                            ListValue = new()
-                                            {
-                                                Values = { embedding.Select(f => Value.ForNumber(f)) }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        };
-
-    private static Value CreateEmbeddingPredictionWithTokens(float[] embedding, int tokenCount)
-    {
-        return new Value
-        {
-            StructValue = new()
-            {
-                Fields =
-                {
-                    {
-                        "embeddings", new()
-                        {
-                            StructValue = new()
-                            {
-                                Fields =
-                                {
-                                    {
-                                        "values", new()
-                                        {
-                                            ListValue = new()
-                                            {
-                                                Values = { embedding.Select(f => Value.ForNumber(f)) }
-                                            }
-                                        }
-                                    },
-                                    {
-                                        "statistics", new()
-                                        {
-                                            StructValue = new()
-                                            {
-                                                Fields = { { "token_count", Value.ForNumber(tokenCount) } }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        };
-    }
-
     private static PredictionServiceClient CreateClient(CallInvoker? callInvoker = null) =>
         new PredictionServiceClientBuilder()
         {
@@ -596,26 +519,26 @@ public class AsIEmbeddingGeneratorTest
 
     private sealed class DelegateCallInvoker : CallInvoker
     {
-        public Func<PredictRequest, PredictResponse>? OnPredictRequest { get; set; }
+        public Func<EmbedContentRequest, EmbedContentResponse>? OnEmbedRequest { get; set; }
 
         public override AsyncUnaryCall<TResponse> AsyncUnaryCall<TRequest, TResponse>(Method<TRequest, TResponse> method, string? host, CallOptions options, TRequest request)
         {
-            if (OnPredictRequest is null)
+            if (OnEmbedRequest is null)
             {
-                throw new NotSupportedException($"{nameof(AsyncUnaryCall)} was invoked but no {nameof(OnPredictRequest)} was provided.");
+                throw new NotSupportedException($"{nameof(AsyncUnaryCall)} was invoked but no {nameof(OnEmbedRequest)} was provided.");
             }
 
-            if (typeof(TRequest) != typeof(PredictRequest))
+            if (typeof(TRequest) != typeof(EmbedContentRequest))
             {
-                throw new NotSupportedException($"{nameof(AsyncUnaryCall)} was invoked with unexpected request type {typeof(TRequest).FullName}. Expected {typeof(PredictRequest).FullName}.");
+                throw new NotSupportedException($"{nameof(AsyncUnaryCall)} was invoked with unexpected request type {typeof(TRequest).FullName}. Expected {typeof(EmbedContentRequest).FullName}.");
             }
 
-            if (typeof(TResponse) != typeof(PredictResponse))
+            if (typeof(TResponse) != typeof(EmbedContentResponse))
             {
-                throw new NotSupportedException($"{nameof(AsyncUnaryCall)} was invoked with unexpected response type {typeof(TResponse).FullName}. Expected {typeof(PredictResponse).FullName}.");
+                throw new NotSupportedException($"{nameof(AsyncUnaryCall)} was invoked with unexpected response type {typeof(TResponse).FullName}. Expected {typeof(EmbedContentResponse).FullName}.");
             }
 
-            TResponse response = (TResponse)(object)OnPredictRequest((PredictRequest)(object)request);
+            TResponse response = (TResponse)(object)OnEmbedRequest((EmbedContentRequest)(object)request);
             return new(Task.FromResult(response), Task.FromResult(new Metadata()), () => Status.DefaultSuccess, () => [], () => { });
         }
 
