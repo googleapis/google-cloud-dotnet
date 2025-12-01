@@ -48,7 +48,7 @@
     <PackageVersion Include="SharpCompress" Version="0.41.0" />
     <PackageVersion Include="NodaTime" Version="3.2.2" />
     <PackageVersion Include="LibGit2Sharp" Version="0.30.0" />
-    <PackageVersion Include="NuGet.Protocol" Version="7.0.0" />
+    <PackageVersion Include="NuGet.Protocol" Version="7.0.1" />
     <PackageVersion Include="Octokit" Version="14.0.0" />
     <PackageVersion Include="GitHubJwt" Version="0.0.6" />
     <PackageVersion Include="Mono.Cecil" Version="0.11.6" />
