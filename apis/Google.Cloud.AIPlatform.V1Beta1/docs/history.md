@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.0.0-beta62, released 2025-12-01
+
+### New features
+
+- Expose zone when creating a FeatureOnlineStore
+- Add `ReplicatedVoiceConfig` to `VoiceConfig` to enable Gemini TTS voice replication
+- Add support for developer connect based deployment
+
+### Documentation improvements
+
+- A comment for message `ReasoningEngineSpec` is changed
+- A comment for field `package_spec` in message `.google.cloud.aiplatform.v1beta1.ReasoningEngineSpec` is changed
+
 ## Version 1.0.0-beta61, released 2025-11-05
 
 ### New features
