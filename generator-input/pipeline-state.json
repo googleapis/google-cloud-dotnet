@@ -938,12 +938,12 @@
         },
         {
             "id": "Google.Cloud.CloudBuild.V1",
-            "currentVersion": "2.17.0",
+            "currentVersion": "2.18.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-05T08:57:32.239715099Z",
+            "releaseTimestamp": "2025-12-01T14:14:20.766648931Z",
             "lastGeneratedCommit": "943025a9f8f2902af19781e504eb80c7428f7836",
-            "lastReleasedCommit": "a53e1e09d16d311ff6064d237abed3ddd7a5d1fe",
+            "lastReleasedCommit": "943025a9f8f2902af19781e504eb80c7428f7836",
             "apiPaths": [
                 "google/devtools/cloudbuild/v1"
             ],
