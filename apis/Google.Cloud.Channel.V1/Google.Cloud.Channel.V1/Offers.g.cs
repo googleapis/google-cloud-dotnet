@@ -68,46 +68,57 @@ namespace Google.Cloud.Channel.V1 {
             "DjIlLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLlJlc291cmNlVHlwZRItCgVw",
             "cmljZRgCIAEoCzIeLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLlByaWNlEjkK",
             "DHByaWNlX3BoYXNlcxgDIAMoCzIjLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYx",
-            "LlByaWNlUGhhc2UiigEKBVByaWNlEiYKCmJhc2VfcHJpY2UYASABKAsyEi5n",
+            "LlByaWNlUGhhc2UiigIKBVByaWNlEiYKCmJhc2VfcHJpY2UYASABKAsyEi5n",
             "b29nbGUudHlwZS5Nb25leRIQCghkaXNjb3VudBgCIAEoARIrCg9lZmZlY3Rp",
-            "dmVfcHJpY2UYAyABKAsyEi5nb29nbGUudHlwZS5Nb25leRIaChJleHRlcm5h",
-            "bF9wcmljZV91cmkYBCABKAki2QEKClByaWNlUGhhc2USOAoLcGVyaW9kX3R5",
-            "cGUYASABKA4yIy5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5QZXJpb2RUeXBl",
-            "EhQKDGZpcnN0X3BlcmlvZBgCIAEoBRITCgtsYXN0X3BlcmlvZBgDIAEoBRIt",
-            "CgVwcmljZRgEIAEoCzIeLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLlByaWNl",
-            "EjcKC3ByaWNlX3RpZXJzGAUgAygLMiIuZ29vZ2xlLmNsb3VkLmNoYW5uZWwu",
-            "djEuUHJpY2VUaWVyImkKCVByaWNlVGllchIWCg5maXJzdF9yZXNvdXJjZRgB",
-            "IAEoBRIVCg1sYXN0X3Jlc291cmNlGAIgASgFEi0KBXByaWNlGAMgASgLMh4u",
-            "Z29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuUHJpY2UiVAoGUGVyaW9kEhAKCGR1",
-            "cmF0aW9uGAEgASgFEjgKC3BlcmlvZF90eXBlGAIgASgOMiMuZ29vZ2xlLmNs",
-            "b3VkLmNoYW5uZWwudjEuUGVyaW9kVHlwZSptChRQcm9tb3Rpb25hbE9yZGVy",
-            "VHlwZRIgChxQUk9NT1RJT05BTF9UWVBFX1VOU1BFQ0lGSUVEEAASDwoLTkVX",
-            "X1VQR1JBREUQARIMCghUUkFOU0ZFUhACEhQKEFBST01PVElPTl9TV0lUQ0gQ",
-            "AyprCgtQYXltZW50UGxhbhIcChhQQVlNRU5UX1BMQU5fVU5TUEVDSUZJRUQQ",
-            "ABIOCgpDT01NSVRNRU5UEAESDAoIRkxFWElCTEUQAhIICgRGUkVFEAMSCQoF",
-            "VFJJQUwQBBILCgdPRkZMSU5FEAUqRAoLUGF5bWVudFR5cGUSHAoYUEFZTUVO",
-            "VF9UWVBFX1VOU1BFQ0lGSUVEEAASCgoGUFJFUEFZEAESCwoHUE9TVFBBWRAC",
-            "KooBCgxSZXNvdXJjZVR5cGUSHQoZUkVTT1VSQ0VfVFlQRV9VTlNQRUNJRklF",
-            "RBAAEggKBFNFQVQQARIHCgNNQVUQAhIGCgJHQhADEhEKDUxJQ0VOU0VEX1VT",
-            "RVIQBBILCgdNSU5VVEVTEAUSDgoKSUFBU19VU0FHRRAGEhAKDFNVQlNDUklQ",
-            "VElPThAHKkcKClBlcmlvZFR5cGUSGwoXUEVSSU9EX1RZUEVfVU5TUEVDSUZJ",
-            "RUQQABIHCgNEQVkQARIJCgVNT05USBACEggKBFlFQVIQA0JjChtjb20uZ29v",
-            "Z2xlLmNsb3VkLmNoYW5uZWwudjFCC09mZmVyc1Byb3RvUAFaNWNsb3VkLmdv",
-            "b2dsZS5jb20vZ28vY2hhbm5lbC9hcGl2MS9jaGFubmVscGI7Y2hhbm5lbHBi",
-            "YgZwcm90bzM="));
+            "dmVfcHJpY2UYAyABKAsyEi5nb29nbGUudHlwZS5Nb25leRI1CgxwcmljZV9w",
+            "ZXJpb2QYBiABKAsyHy5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5QZXJpb2QS",
+            "GgoSZXh0ZXJuYWxfcHJpY2VfdXJpGAQgASgJEkcKE2Rpc2NvdW50X2NvbXBv",
+            "bmVudHMYBSADKAsyKi5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5EaXNjb3Vu",
+            "dENvbXBvbmVudCLZAQoKUHJpY2VQaGFzZRI4CgtwZXJpb2RfdHlwZRgBIAEo",
+            "DjIjLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLlBlcmlvZFR5cGUSFAoMZmly",
+            "c3RfcGVyaW9kGAIgASgFEhMKC2xhc3RfcGVyaW9kGAMgASgFEi0KBXByaWNl",
+            "GAQgASgLMh4uZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuUHJpY2USNwoLcHJp",
+            "Y2VfdGllcnMYBSADKAsyIi5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5Qcmlj",
+            "ZVRpZXIiaQoJUHJpY2VUaWVyEhYKDmZpcnN0X3Jlc291cmNlGAEgASgFEhUK",
+            "DWxhc3RfcmVzb3VyY2UYAiABKAUSLQoFcHJpY2UYAyABKAsyHi5nb29nbGUu",
+            "Y2xvdWQuY2hhbm5lbC52MS5QcmljZSJUCgZQZXJpb2QSEAoIZHVyYXRpb24Y",
+            "ASABKAUSOAoLcGVyaW9kX3R5cGUYAiABKA4yIy5nb29nbGUuY2xvdWQuY2hh",
+            "bm5lbC52MS5QZXJpb2RUeXBlIrMBChFEaXNjb3VudENvbXBvbmVudBIdChNk",
+            "aXNjb3VudF9wZXJjZW50YWdlGAMgASgBSAASLwoRZGlzY291bnRfYWJzb2x1",
+            "dGUYBCABKAsyEi5nb29nbGUudHlwZS5Nb25leUgAEjwKDWRpc2NvdW50X3R5",
+            "cGUYAiABKA4yJS5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5EaXNjb3VudFR5",
+            "cGVCEAoOZGlzY291bnRfdmFsdWUqbQoUUHJvbW90aW9uYWxPcmRlclR5cGUS",
+            "IAocUFJPTU9USU9OQUxfVFlQRV9VTlNQRUNJRklFRBAAEg8KC05FV19VUEdS",
+            "QURFEAESDAoIVFJBTlNGRVIQAhIUChBQUk9NT1RJT05fU1dJVENIEAMqawoL",
+            "UGF5bWVudFBsYW4SHAoYUEFZTUVOVF9QTEFOX1VOU1BFQ0lGSUVEEAASDgoK",
+            "Q09NTUlUTUVOVBABEgwKCEZMRVhJQkxFEAISCAoERlJFRRADEgkKBVRSSUFM",
+            "EAQSCwoHT0ZGTElORRAFKkQKC1BheW1lbnRUeXBlEhwKGFBBWU1FTlRfVFlQ",
+            "RV9VTlNQRUNJRklFRBAAEgoKBlBSRVBBWRABEgsKB1BPU1RQQVkQAiqKAQoM",
+            "UmVzb3VyY2VUeXBlEh0KGVJFU09VUkNFX1RZUEVfVU5TUEVDSUZJRUQQABII",
+            "CgRTRUFUEAESBwoDTUFVEAISBgoCR0IQAxIRCg1MSUNFTlNFRF9VU0VSEAQS",
+            "CwoHTUlOVVRFUxAFEg4KCklBQVNfVVNBR0UQBhIQCgxTVUJTQ1JJUFRJT04Q",
+            "BypHCgpQZXJpb2RUeXBlEhsKF1BFUklPRF9UWVBFX1VOU1BFQ0lGSUVEEAAS",
+            "BwoDREFZEAESCQoFTU9OVEgQAhIICgRZRUFSEAMqlgEKDERpc2NvdW50VHlw",
+            "ZRIdChlESVNDT1VOVF9UWVBFX1VOU1BFQ0lGSUVEEAASFQoRUkVHSU9OQUxf",
+            "RElTQ09VTlQQARIYChRQUk9NT1RJT05BTF9ESVNDT1VOVBACEhIKDlNBTEVT",
+            "X0RJU0NPVU5UEAMSEwoPUkVTRUxMRVJfTUFSR0lOEAQSDQoJREVBTF9DT0RF",
+            "EAVCYwobY29tLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxQgtPZmZlcnNQcm90",
+            "b1ABWjVjbG91ZC5nb29nbGUuY29tL2dvL2NoYW5uZWwvYXBpdjEvY2hhbm5l",
+            "bHBiO2NoYW5uZWxwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Channel.V1.CommonReflection.Descriptor, global::Google.Cloud.Channel.V1.ProductsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Channel.V1.PromotionalOrderType), typeof(global::Google.Cloud.Channel.V1.PaymentPlan), typeof(global::Google.Cloud.Channel.V1.PaymentType), typeof(global::Google.Cloud.Channel.V1.ResourceType), typeof(global::Google.Cloud.Channel.V1.PeriodType), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Channel.V1.PromotionalOrderType), typeof(global::Google.Cloud.Channel.V1.PaymentPlan), typeof(global::Google.Cloud.Channel.V1.PaymentType), typeof(global::Google.Cloud.Channel.V1.ResourceType), typeof(global::Google.Cloud.Channel.V1.PeriodType), typeof(global::Google.Cloud.Channel.V1.DiscountType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.Offer), global::Google.Cloud.Channel.V1.Offer.Parser, new[]{ "Name", "MarketingInfo", "Sku", "Plan", "Constraints", "PriceByResources", "StartTime", "EndTime", "ParameterDefinitions", "DealCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.ParameterDefinition), global::Google.Cloud.Channel.V1.ParameterDefinition.Parser, new[]{ "Name", "ParameterType", "MinValue", "MaxValue", "AllowedValues", "Optional" }, null, new[]{ typeof(global::Google.Cloud.Channel.V1.ParameterDefinition.Types.ParameterType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.Constraints), global::Google.Cloud.Channel.V1.Constraints.Parser, new[]{ "CustomerConstraints" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.CustomerConstraints), global::Google.Cloud.Channel.V1.CustomerConstraints.Parser, new[]{ "AllowedRegions", "AllowedCustomerTypes", "PromotionalOrderTypes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.Plan), global::Google.Cloud.Channel.V1.Plan.Parser, new[]{ "PaymentPlan", "PaymentType", "PaymentCycle", "TrialPeriod", "BillingAccount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.PriceByResource), global::Google.Cloud.Channel.V1.PriceByResource.Parser, new[]{ "ResourceType", "Price", "PricePhases" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.Price), global::Google.Cloud.Channel.V1.Price.Parser, new[]{ "BasePrice", "Discount", "EffectivePrice", "ExternalPriceUri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.Price), global::Google.Cloud.Channel.V1.Price.Parser, new[]{ "BasePrice", "Discount", "EffectivePrice", "PricePeriod", "ExternalPriceUri", "DiscountComponents" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.PricePhase), global::Google.Cloud.Channel.V1.PricePhase.Parser, new[]{ "PeriodType", "FirstPeriod", "LastPeriod", "Price", "PriceTiers" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.PriceTier), global::Google.Cloud.Channel.V1.PriceTier.Parser, new[]{ "FirstResource", "LastResource", "Price" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.Period), global::Google.Cloud.Channel.V1.Period.Parser, new[]{ "Duration", "PeriodType" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.Period), global::Google.Cloud.Channel.V1.Period.Parser, new[]{ "Duration", "PeriodType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.DiscountComponent), global::Google.Cloud.Channel.V1.DiscountComponent.Parser, new[]{ "DiscountPercentage", "DiscountAbsolute", "DiscountType" }, new[]{ "DiscountValue" }, null, null, null)
           }));
     }
     #endregion
@@ -247,6 +258,36 @@ namespace Google.Cloud.Channel.V1 {
     /// Year.
     /// </summary>
     [pbr::OriginalName("YEAR")] Year = 3,
+  }
+
+  /// <summary>
+  /// Discount Type.
+  /// </summary>
+  public enum DiscountType {
+    /// <summary>
+    /// Not used.
+    /// </summary>
+    [pbr::OriginalName("DISCOUNT_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Regional discount.
+    /// </summary>
+    [pbr::OriginalName("REGIONAL_DISCOUNT")] RegionalDiscount = 1,
+    /// <summary>
+    /// Promotional discount.
+    /// </summary>
+    [pbr::OriginalName("PROMOTIONAL_DISCOUNT")] PromotionalDiscount = 2,
+    /// <summary>
+    /// Sales-provided discount.
+    /// </summary>
+    [pbr::OriginalName("SALES_DISCOUNT")] SalesDiscount = 3,
+    /// <summary>
+    /// Reseller margin.
+    /// </summary>
+    [pbr::OriginalName("RESELLER_MARGIN")] ResellerMargin = 4,
+    /// <summary>
+    /// Deal code discount.
+    /// </summary>
+    [pbr::OriginalName("DEAL_CODE")] DealCode = 5,
   }
 
   #endregion
@@ -2436,7 +2477,9 @@ namespace Google.Cloud.Channel.V1 {
       basePrice_ = other.basePrice_ != null ? other.basePrice_.Clone() : null;
       discount_ = other.discount_;
       effectivePrice_ = other.effectivePrice_ != null ? other.effectivePrice_.Clone() : null;
+      pricePeriod_ = other.pricePeriod_ != null ? other.pricePeriod_.Clone() : null;
       externalPriceUri_ = other.externalPriceUri_;
+      discountComponents_ = other.discountComponents_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2492,6 +2535,23 @@ namespace Google.Cloud.Channel.V1 {
       }
     }
 
+    /// <summary>Field number for the "price_period" field.</summary>
+    public const int PricePeriodFieldNumber = 6;
+    private global::Google.Cloud.Channel.V1.Period pricePeriod_;
+    /// <summary>
+    /// The time period with respect to which base and effective prices are
+    /// defined.
+    /// Example: 1 month, 6 months, 1 year, etc.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Channel.V1.Period PricePeriod {
+      get { return pricePeriod_; }
+      set {
+        pricePeriod_ = value;
+      }
+    }
+
     /// <summary>Field number for the "external_price_uri" field.</summary>
     public const int ExternalPriceUriFieldNumber = 4;
     private string externalPriceUri_ = "";
@@ -2505,6 +2565,21 @@ namespace Google.Cloud.Channel.V1 {
       set {
         externalPriceUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "discount_components" field.</summary>
+    public const int DiscountComponentsFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Channel.V1.DiscountComponent> _repeated_discountComponents_codec
+        = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Channel.V1.DiscountComponent.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Channel.V1.DiscountComponent> discountComponents_ = new pbc::RepeatedField<global::Google.Cloud.Channel.V1.DiscountComponent>();
+    /// <summary>
+    /// Breakdown of the discount into its components.
+    /// This will be empty if there is no discount present.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Channel.V1.DiscountComponent> DiscountComponents {
+      get { return discountComponents_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2525,7 +2600,9 @@ namespace Google.Cloud.Channel.V1 {
       if (!object.Equals(BasePrice, other.BasePrice)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Discount, other.Discount)) return false;
       if (!object.Equals(EffectivePrice, other.EffectivePrice)) return false;
+      if (!object.Equals(PricePeriod, other.PricePeriod)) return false;
       if (ExternalPriceUri != other.ExternalPriceUri) return false;
+      if(!discountComponents_.Equals(other.discountComponents_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2536,7 +2613,9 @@ namespace Google.Cloud.Channel.V1 {
       if (basePrice_ != null) hash ^= BasePrice.GetHashCode();
       if (Discount != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Discount);
       if (effectivePrice_ != null) hash ^= EffectivePrice.GetHashCode();
+      if (pricePeriod_ != null) hash ^= PricePeriod.GetHashCode();
       if (ExternalPriceUri.Length != 0) hash ^= ExternalPriceUri.GetHashCode();
+      hash ^= discountComponents_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2571,6 +2650,11 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(34);
         output.WriteString(ExternalPriceUri);
       }
+      discountComponents_.WriteTo(output, _repeated_discountComponents_codec);
+      if (pricePeriod_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(PricePeriod);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2597,6 +2681,11 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(34);
         output.WriteString(ExternalPriceUri);
       }
+      discountComponents_.WriteTo(ref output, _repeated_discountComponents_codec);
+      if (pricePeriod_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(PricePeriod);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2616,9 +2705,13 @@ namespace Google.Cloud.Channel.V1 {
       if (effectivePrice_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EffectivePrice);
       }
+      if (pricePeriod_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PricePeriod);
+      }
       if (ExternalPriceUri.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ExternalPriceUri);
       }
+      size += discountComponents_.CalculateSize(_repeated_discountComponents_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2646,9 +2739,16 @@ namespace Google.Cloud.Channel.V1 {
         }
         EffectivePrice.MergeFrom(other.EffectivePrice);
       }
+      if (other.pricePeriod_ != null) {
+        if (pricePeriod_ == null) {
+          PricePeriod = new global::Google.Cloud.Channel.V1.Period();
+        }
+        PricePeriod.MergeFrom(other.PricePeriod);
+      }
       if (other.ExternalPriceUri.Length != 0) {
         ExternalPriceUri = other.ExternalPriceUri;
       }
+      discountComponents_.Add(other.discountComponents_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2686,6 +2786,17 @@ namespace Google.Cloud.Channel.V1 {
             ExternalPriceUri = input.ReadString();
             break;
           }
+          case 42: {
+            discountComponents_.AddEntriesFrom(input, _repeated_discountComponents_codec);
+            break;
+          }
+          case 50: {
+            if (pricePeriod_ == null) {
+              PricePeriod = new global::Google.Cloud.Channel.V1.Period();
+            }
+            input.ReadMessage(PricePeriod);
+            break;
+          }
         }
       }
     #endif
@@ -2721,6 +2832,17 @@ namespace Google.Cloud.Channel.V1 {
           }
           case 34: {
             ExternalPriceUri = input.ReadString();
+            break;
+          }
+          case 42: {
+            discountComponents_.AddEntriesFrom(ref input, _repeated_discountComponents_codec);
+            break;
+          }
+          case 50: {
+            if (pricePeriod_ == null) {
+              PricePeriod = new global::Google.Cloud.Channel.V1.Period();
+            }
+            input.ReadMessage(PricePeriod);
             break;
           }
         }
@@ -3605,6 +3727,343 @@ namespace Google.Cloud.Channel.V1 {
           }
           case 16: {
             PeriodType = (global::Google.Cloud.Channel.V1.PeriodType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Represents a single component of the total discount applicable on a Price.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DiscountComponent : pb::IMessage<DiscountComponent>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DiscountComponent> _parser = new pb::MessageParser<DiscountComponent>(() => new DiscountComponent());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DiscountComponent> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Channel.V1.OffersReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DiscountComponent() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DiscountComponent(DiscountComponent other) : this() {
+      discountType_ = other.discountType_;
+      switch (other.DiscountValueCase) {
+        case DiscountValueOneofCase.DiscountPercentage:
+          DiscountPercentage = other.DiscountPercentage;
+          break;
+        case DiscountValueOneofCase.DiscountAbsolute:
+          DiscountAbsolute = other.DiscountAbsolute.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DiscountComponent Clone() {
+      return new DiscountComponent(this);
+    }
+
+    /// <summary>Field number for the "discount_percentage" field.</summary>
+    public const int DiscountPercentageFieldNumber = 3;
+    /// <summary>
+    /// Discount percentage, represented as decimal.
+    /// For example, a 20% discount will be represented as 0.2.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double DiscountPercentage {
+      get { return HasDiscountPercentage ? (double) discountValue_ : 0D; }
+      set {
+        discountValue_ = value;
+        discountValueCase_ = DiscountValueOneofCase.DiscountPercentage;
+      }
+    }
+    /// <summary>Gets whether the "discount_percentage" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDiscountPercentage {
+      get { return discountValueCase_ == DiscountValueOneofCase.DiscountPercentage; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "discount_percentage" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDiscountPercentage() {
+      if (HasDiscountPercentage) {
+        ClearDiscountValue();
+      }
+    }
+
+    /// <summary>Field number for the "discount_absolute" field.</summary>
+    public const int DiscountAbsoluteFieldNumber = 4;
+    /// <summary>
+    /// Fixed value discount.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Type.Money DiscountAbsolute {
+      get { return discountValueCase_ == DiscountValueOneofCase.DiscountAbsolute ? (global::Google.Type.Money) discountValue_ : null; }
+      set {
+        discountValue_ = value;
+        discountValueCase_ = value == null ? DiscountValueOneofCase.None : DiscountValueOneofCase.DiscountAbsolute;
+      }
+    }
+
+    /// <summary>Field number for the "discount_type" field.</summary>
+    public const int DiscountTypeFieldNumber = 2;
+    private global::Google.Cloud.Channel.V1.DiscountType discountType_ = global::Google.Cloud.Channel.V1.DiscountType.Unspecified;
+    /// <summary>
+    /// Type of the discount.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Channel.V1.DiscountType DiscountType {
+      get { return discountType_; }
+      set {
+        discountType_ = value;
+      }
+    }
+
+    private object discountValue_;
+    /// <summary>Enum of possible cases for the "discount_value" oneof.</summary>
+    public enum DiscountValueOneofCase {
+      None = 0,
+      DiscountPercentage = 3,
+      DiscountAbsolute = 4,
+    }
+    private DiscountValueOneofCase discountValueCase_ = DiscountValueOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DiscountValueOneofCase DiscountValueCase {
+      get { return discountValueCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDiscountValue() {
+      discountValueCase_ = DiscountValueOneofCase.None;
+      discountValue_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DiscountComponent);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DiscountComponent other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(DiscountPercentage, other.DiscountPercentage)) return false;
+      if (!object.Equals(DiscountAbsolute, other.DiscountAbsolute)) return false;
+      if (DiscountType != other.DiscountType) return false;
+      if (DiscountValueCase != other.DiscountValueCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasDiscountPercentage) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DiscountPercentage);
+      if (discountValueCase_ == DiscountValueOneofCase.DiscountAbsolute) hash ^= DiscountAbsolute.GetHashCode();
+      if (DiscountType != global::Google.Cloud.Channel.V1.DiscountType.Unspecified) hash ^= DiscountType.GetHashCode();
+      hash ^= (int) discountValueCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (DiscountType != global::Google.Cloud.Channel.V1.DiscountType.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) DiscountType);
+      }
+      if (HasDiscountPercentage) {
+        output.WriteRawTag(25);
+        output.WriteDouble(DiscountPercentage);
+      }
+      if (discountValueCase_ == DiscountValueOneofCase.DiscountAbsolute) {
+        output.WriteRawTag(34);
+        output.WriteMessage(DiscountAbsolute);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DiscountType != global::Google.Cloud.Channel.V1.DiscountType.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) DiscountType);
+      }
+      if (HasDiscountPercentage) {
+        output.WriteRawTag(25);
+        output.WriteDouble(DiscountPercentage);
+      }
+      if (discountValueCase_ == DiscountValueOneofCase.DiscountAbsolute) {
+        output.WriteRawTag(34);
+        output.WriteMessage(DiscountAbsolute);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasDiscountPercentage) {
+        size += 1 + 8;
+      }
+      if (discountValueCase_ == DiscountValueOneofCase.DiscountAbsolute) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DiscountAbsolute);
+      }
+      if (DiscountType != global::Google.Cloud.Channel.V1.DiscountType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DiscountType);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DiscountComponent other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DiscountType != global::Google.Cloud.Channel.V1.DiscountType.Unspecified) {
+        DiscountType = other.DiscountType;
+      }
+      switch (other.DiscountValueCase) {
+        case DiscountValueOneofCase.DiscountPercentage:
+          DiscountPercentage = other.DiscountPercentage;
+          break;
+        case DiscountValueOneofCase.DiscountAbsolute:
+          if (DiscountAbsolute == null) {
+            DiscountAbsolute = new global::Google.Type.Money();
+          }
+          DiscountAbsolute.MergeFrom(other.DiscountAbsolute);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 16: {
+            DiscountType = (global::Google.Cloud.Channel.V1.DiscountType) input.ReadEnum();
+            break;
+          }
+          case 25: {
+            DiscountPercentage = input.ReadDouble();
+            break;
+          }
+          case 34: {
+            global::Google.Type.Money subBuilder = new global::Google.Type.Money();
+            if (discountValueCase_ == DiscountValueOneofCase.DiscountAbsolute) {
+              subBuilder.MergeFrom(DiscountAbsolute);
+            }
+            input.ReadMessage(subBuilder);
+            DiscountAbsolute = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 16: {
+            DiscountType = (global::Google.Cloud.Channel.V1.DiscountType) input.ReadEnum();
+            break;
+          }
+          case 25: {
+            DiscountPercentage = input.ReadDouble();
+            break;
+          }
+          case 34: {
+            global::Google.Type.Money subBuilder = new global::Google.Type.Money();
+            if (discountValueCase_ == DiscountValueOneofCase.DiscountAbsolute) {
+              subBuilder.MergeFrom(DiscountAbsolute);
+            }
+            input.ReadMessage(subBuilder);
+            DiscountAbsolute = subBuilder;
             break;
           }
         }

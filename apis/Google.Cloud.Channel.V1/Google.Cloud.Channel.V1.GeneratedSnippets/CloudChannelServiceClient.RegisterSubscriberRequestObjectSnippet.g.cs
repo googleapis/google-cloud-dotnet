@@ -36,8 +36,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             RegisterSubscriberRequest request = new RegisterSubscriberRequest
             {
-                Account = "",
+                AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 ServiceAccount = "",
+                Integrator = "",
             };
             // Make the request
             RegisterSubscriberResponse response = cloudChannelServiceClient.RegisterSubscriber(request);
