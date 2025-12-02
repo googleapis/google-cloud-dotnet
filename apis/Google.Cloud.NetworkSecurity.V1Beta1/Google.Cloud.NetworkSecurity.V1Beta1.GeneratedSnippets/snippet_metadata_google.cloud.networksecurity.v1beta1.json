@@ -11,6 +11,1415 @@
   },
   "snippets": [
     {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_ListDnsThreatDetectors_sync",
+      "title": "ListDnsThreatDetectorsRequestObject",
+      "description": "Snippet for ListDnsThreatDetectors",
+      "file": "DnsThreatDetectorServiceClient.ListDnsThreatDetectorsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDnsThreatDetectors",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.ListDnsThreatDetectors",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ListDnsThreatDetectorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkSecurity.V1Beta1.ListDnsThreatDetectorsResponse, Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector>",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "ListDnsThreatDetectors",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.ListDnsThreatDetectors",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_ListDnsThreatDetectors_async",
+      "title": "ListDnsThreatDetectorsRequestObjectAsync",
+      "description": "Snippet for ListDnsThreatDetectorsAsync",
+      "file": "DnsThreatDetectorServiceClient.ListDnsThreatDetectorsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDnsThreatDetectorsAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.ListDnsThreatDetectorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.ListDnsThreatDetectorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkSecurity.V1Beta1.ListDnsThreatDetectorsResponse, Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector>",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "ListDnsThreatDetectors",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.ListDnsThreatDetectors",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_ListDnsThreatDetectors_sync_flattened",
+      "title": "ListDnsThreatDetectors",
+      "description": "Snippet for ListDnsThreatDetectors",
+      "file": "DnsThreatDetectorServiceClient.ListDnsThreatDetectorsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDnsThreatDetectors",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.ListDnsThreatDetectors",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkSecurity.V1Beta1.ListDnsThreatDetectorsResponse, Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector>",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "ListDnsThreatDetectors",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.ListDnsThreatDetectors",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_ListDnsThreatDetectors_async_flattened",
+      "title": "ListDnsThreatDetectorsAsync",
+      "description": "Snippet for ListDnsThreatDetectorsAsync",
+      "file": "DnsThreatDetectorServiceClient.ListDnsThreatDetectorsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDnsThreatDetectorsAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.ListDnsThreatDetectorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkSecurity.V1Beta1.ListDnsThreatDetectorsResponse, Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector>",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "ListDnsThreatDetectors",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.ListDnsThreatDetectors",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_ListDnsThreatDetectors_sync_flattened_resourceNames",
+      "title": "ListDnsThreatDetectorsResourceNames",
+      "description": "Snippet for ListDnsThreatDetectors",
+      "file": "DnsThreatDetectorServiceClient.ListDnsThreatDetectorsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDnsThreatDetectors",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.ListDnsThreatDetectors",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkSecurity.V1Beta1.ListDnsThreatDetectorsResponse, Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector>",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "ListDnsThreatDetectors",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.ListDnsThreatDetectors",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_ListDnsThreatDetectors_async_flattened_resourceNames",
+      "title": "ListDnsThreatDetectorsResourceNamesAsync",
+      "description": "Snippet for ListDnsThreatDetectorsAsync",
+      "file": "DnsThreatDetectorServiceClient.ListDnsThreatDetectorsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDnsThreatDetectorsAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.ListDnsThreatDetectorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkSecurity.V1Beta1.ListDnsThreatDetectorsResponse, Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector>",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "ListDnsThreatDetectors",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.ListDnsThreatDetectors",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_GetDnsThreatDetector_sync",
+      "title": "GetDnsThreatDetectorRequestObject",
+      "description": "Snippet for GetDnsThreatDetector",
+      "file": "DnsThreatDetectorServiceClient.GetDnsThreatDetectorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDnsThreatDetector",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.GetDnsThreatDetector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.GetDnsThreatDetectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "GetDnsThreatDetector",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.GetDnsThreatDetector",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_GetDnsThreatDetector_async",
+      "title": "GetDnsThreatDetectorRequestObjectAsync",
+      "description": "Snippet for GetDnsThreatDetectorAsync",
+      "file": "DnsThreatDetectorServiceClient.GetDnsThreatDetectorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDnsThreatDetectorAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.GetDnsThreatDetectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.GetDnsThreatDetectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector>",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "GetDnsThreatDetector",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.GetDnsThreatDetector",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_GetDnsThreatDetector_sync_flattened",
+      "title": "GetDnsThreatDetector",
+      "description": "Snippet for GetDnsThreatDetector",
+      "file": "DnsThreatDetectorServiceClient.GetDnsThreatDetectorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDnsThreatDetector",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.GetDnsThreatDetector",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "GetDnsThreatDetector",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.GetDnsThreatDetector",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_GetDnsThreatDetector_async_flattened",
+      "title": "GetDnsThreatDetectorAsync",
+      "description": "Snippet for GetDnsThreatDetectorAsync",
+      "file": "DnsThreatDetectorServiceClient.GetDnsThreatDetectorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDnsThreatDetectorAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.GetDnsThreatDetectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector>",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "GetDnsThreatDetector",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.GetDnsThreatDetector",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_GetDnsThreatDetector_sync_flattened_resourceNames",
+      "title": "GetDnsThreatDetectorResourceNames",
+      "description": "Snippet for GetDnsThreatDetector",
+      "file": "DnsThreatDetectorServiceClient.GetDnsThreatDetectorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDnsThreatDetector",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.GetDnsThreatDetector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "GetDnsThreatDetector",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.GetDnsThreatDetector",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_GetDnsThreatDetector_async_flattened_resourceNames",
+      "title": "GetDnsThreatDetectorResourceNamesAsync",
+      "description": "Snippet for GetDnsThreatDetectorAsync",
+      "file": "DnsThreatDetectorServiceClient.GetDnsThreatDetectorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDnsThreatDetectorAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.GetDnsThreatDetectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector>",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "GetDnsThreatDetector",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.GetDnsThreatDetector",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_CreateDnsThreatDetector_sync",
+      "title": "CreateDnsThreatDetectorRequestObject",
+      "description": "Snippet for CreateDnsThreatDetector",
+      "file": "DnsThreatDetectorServiceClient.CreateDnsThreatDetectorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDnsThreatDetector",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.CreateDnsThreatDetector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.CreateDnsThreatDetectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDnsThreatDetector",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.CreateDnsThreatDetector",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_CreateDnsThreatDetector_async",
+      "title": "CreateDnsThreatDetectorRequestObjectAsync",
+      "description": "Snippet for CreateDnsThreatDetectorAsync",
+      "file": "DnsThreatDetectorServiceClient.CreateDnsThreatDetectorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDnsThreatDetectorAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.CreateDnsThreatDetectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.CreateDnsThreatDetectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector>",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDnsThreatDetector",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.CreateDnsThreatDetector",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_CreateDnsThreatDetector_sync_flattened",
+      "title": "CreateDnsThreatDetector",
+      "description": "Snippet for CreateDnsThreatDetector",
+      "file": "DnsThreatDetectorServiceClient.CreateDnsThreatDetectorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDnsThreatDetector",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.CreateDnsThreatDetector",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector",
+            "name": "dnsThreatDetector"
+          },
+          {
+            "type": "System.String",
+            "name": "dnsThreatDetectorId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDnsThreatDetector",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.CreateDnsThreatDetector",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_CreateDnsThreatDetector_async_flattened",
+      "title": "CreateDnsThreatDetectorAsync",
+      "description": "Snippet for CreateDnsThreatDetectorAsync",
+      "file": "DnsThreatDetectorServiceClient.CreateDnsThreatDetectorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDnsThreatDetectorAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.CreateDnsThreatDetectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector",
+            "name": "dnsThreatDetector"
+          },
+          {
+            "type": "System.String",
+            "name": "dnsThreatDetectorId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector>",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDnsThreatDetector",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.CreateDnsThreatDetector",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_CreateDnsThreatDetector_sync_flattened_resourceNames",
+      "title": "CreateDnsThreatDetectorResourceNames",
+      "description": "Snippet for CreateDnsThreatDetector",
+      "file": "DnsThreatDetectorServiceClient.CreateDnsThreatDetectorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDnsThreatDetector",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.CreateDnsThreatDetector",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector",
+            "name": "dnsThreatDetector"
+          },
+          {
+            "type": "System.String",
+            "name": "dnsThreatDetectorId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDnsThreatDetector",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.CreateDnsThreatDetector",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_CreateDnsThreatDetector_async_flattened_resourceNames",
+      "title": "CreateDnsThreatDetectorResourceNamesAsync",
+      "description": "Snippet for CreateDnsThreatDetectorAsync",
+      "file": "DnsThreatDetectorServiceClient.CreateDnsThreatDetectorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDnsThreatDetectorAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.CreateDnsThreatDetectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector",
+            "name": "dnsThreatDetector"
+          },
+          {
+            "type": "System.String",
+            "name": "dnsThreatDetectorId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector>",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDnsThreatDetector",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.CreateDnsThreatDetector",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_UpdateDnsThreatDetector_sync",
+      "title": "UpdateDnsThreatDetectorRequestObject",
+      "description": "Snippet for UpdateDnsThreatDetector",
+      "file": "DnsThreatDetectorServiceClient.UpdateDnsThreatDetectorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDnsThreatDetector",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.UpdateDnsThreatDetector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.UpdateDnsThreatDetectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDnsThreatDetector",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.UpdateDnsThreatDetector",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_UpdateDnsThreatDetector_async",
+      "title": "UpdateDnsThreatDetectorRequestObjectAsync",
+      "description": "Snippet for UpdateDnsThreatDetectorAsync",
+      "file": "DnsThreatDetectorServiceClient.UpdateDnsThreatDetectorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDnsThreatDetectorAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.UpdateDnsThreatDetectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.UpdateDnsThreatDetectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector>",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDnsThreatDetector",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.UpdateDnsThreatDetector",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_UpdateDnsThreatDetector_sync_flattened",
+      "title": "UpdateDnsThreatDetector",
+      "description": "Snippet for UpdateDnsThreatDetector",
+      "file": "DnsThreatDetectorServiceClient.UpdateDnsThreatDetectorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDnsThreatDetector",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.UpdateDnsThreatDetector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector",
+            "name": "dnsThreatDetector"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDnsThreatDetector",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.UpdateDnsThreatDetector",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_UpdateDnsThreatDetector_async_flattened",
+      "title": "UpdateDnsThreatDetectorAsync",
+      "description": "Snippet for UpdateDnsThreatDetectorAsync",
+      "file": "DnsThreatDetectorServiceClient.UpdateDnsThreatDetectorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDnsThreatDetectorAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.UpdateDnsThreatDetectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector",
+            "name": "dnsThreatDetector"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetector>",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDnsThreatDetector",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.UpdateDnsThreatDetector",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_DeleteDnsThreatDetector_sync",
+      "title": "DeleteDnsThreatDetectorRequestObject",
+      "description": "Snippet for DeleteDnsThreatDetector",
+      "file": "DnsThreatDetectorServiceClient.DeleteDnsThreatDetectorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDnsThreatDetector",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.DeleteDnsThreatDetector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.DeleteDnsThreatDetectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDnsThreatDetector",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.DeleteDnsThreatDetector",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_DeleteDnsThreatDetector_async",
+      "title": "DeleteDnsThreatDetectorRequestObjectAsync",
+      "description": "Snippet for DeleteDnsThreatDetectorAsync",
+      "file": "DnsThreatDetectorServiceClient.DeleteDnsThreatDetectorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDnsThreatDetectorAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.DeleteDnsThreatDetectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.DeleteDnsThreatDetectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDnsThreatDetector",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.DeleteDnsThreatDetector",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_DeleteDnsThreatDetector_sync_flattened",
+      "title": "DeleteDnsThreatDetector",
+      "description": "Snippet for DeleteDnsThreatDetector",
+      "file": "DnsThreatDetectorServiceClient.DeleteDnsThreatDetectorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDnsThreatDetector",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.DeleteDnsThreatDetector",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDnsThreatDetector",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.DeleteDnsThreatDetector",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_DeleteDnsThreatDetector_async_flattened",
+      "title": "DeleteDnsThreatDetectorAsync",
+      "description": "Snippet for DeleteDnsThreatDetectorAsync",
+      "file": "DnsThreatDetectorServiceClient.DeleteDnsThreatDetectorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDnsThreatDetectorAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.DeleteDnsThreatDetectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDnsThreatDetector",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.DeleteDnsThreatDetector",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_DeleteDnsThreatDetector_sync_flattened_resourceNames",
+      "title": "DeleteDnsThreatDetectorResourceNames",
+      "description": "Snippet for DeleteDnsThreatDetector",
+      "file": "DnsThreatDetectorServiceClient.DeleteDnsThreatDetectorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDnsThreatDetector",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.DeleteDnsThreatDetector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDnsThreatDetector",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.DeleteDnsThreatDetector",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networksecurity_v1beta1_generated_DnsThreatDetectorService_DeleteDnsThreatDetector_async_flattened_resourceNames",
+      "title": "DeleteDnsThreatDetectorResourceNamesAsync",
+      "description": "Snippet for DeleteDnsThreatDetectorAsync",
+      "file": "DnsThreatDetectorServiceClient.DeleteDnsThreatDetectorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDnsThreatDetectorAsync",
+        "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient.DeleteDnsThreatDetectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DnsThreatDetectorServiceClient",
+          "fullName": "Google.Cloud.NetworkSecurity.V1Beta1.DnsThreatDetectorServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDnsThreatDetector",
+          "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService.DeleteDnsThreatDetector",
+          "service": {
+            "shortName": "DnsThreatDetectorService",
+            "fullName": "google.cloud.networksecurity.v1beta1.DnsThreatDetectorService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListAuthorizationPolicies_sync",
       "title": "ListAuthorizationPoliciesRequestObject",
       "description": "Snippet for ListAuthorizationPolicies",
