@@ -1079,6 +1079,7 @@ namespace GoogleCSharpSnippets
                 PurchaseOrderId = "",
                 RequestId = "",
                 BillingAccount = "",
+                PriceReferenceId = "",
             };
             // Make the request
             Operation<Entitlement, OperationMetadata> response = cloudChannelServiceClient.ChangeOffer(request);
@@ -1117,6 +1118,7 @@ namespace GoogleCSharpSnippets
                 PurchaseOrderId = "",
                 RequestId = "",
                 BillingAccount = "",
+                PriceReferenceId = "",
             };
             // Make the request
             Operation<Entitlement, OperationMetadata> response = await cloudChannelServiceClient.ChangeOfferAsync(request);
@@ -3995,8 +3997,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             RegisterSubscriberRequest request = new RegisterSubscriberRequest
             {
-                Account = "",
+                AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 ServiceAccount = "",
+                Integrator = "",
             };
             // Make the request
             RegisterSubscriberResponse response = cloudChannelServiceClient.RegisterSubscriber(request);
@@ -4013,8 +4016,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             RegisterSubscriberRequest request = new RegisterSubscriberRequest
             {
-                Account = "",
+                AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 ServiceAccount = "",
+                Integrator = "",
             };
             // Make the request
             RegisterSubscriberResponse response = await cloudChannelServiceClient.RegisterSubscriberAsync(request);
@@ -4030,8 +4034,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UnregisterSubscriberRequest request = new UnregisterSubscriberRequest
             {
-                Account = "",
+                AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 ServiceAccount = "",
+                Integrator = "",
             };
             // Make the request
             UnregisterSubscriberResponse response = cloudChannelServiceClient.UnregisterSubscriber(request);
@@ -4048,8 +4053,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UnregisterSubscriberRequest request = new UnregisterSubscriberRequest
             {
-                Account = "",
+                AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 ServiceAccount = "",
+                Integrator = "",
             };
             // Make the request
             UnregisterSubscriberResponse response = await cloudChannelServiceClient.UnregisterSubscriberAsync(request);
@@ -4063,7 +4069,11 @@ namespace GoogleCSharpSnippets
             // Create client
             CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
             // Initialize request argument(s)
-            ListSubscribersRequest request = new ListSubscribersRequest { Account = "", };
+            ListSubscribersRequest request = new ListSubscribersRequest
+            {
+                AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+                Integrator = "",
+            };
             // Make the request
             PagedEnumerable<ListSubscribersResponse, string> response = cloudChannelServiceClient.ListSubscribers(request);
 
@@ -4108,7 +4118,11 @@ namespace GoogleCSharpSnippets
             // Create client
             CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListSubscribersRequest request = new ListSubscribersRequest { Account = "", };
+            ListSubscribersRequest request = new ListSubscribersRequest
+            {
+                AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+                Integrator = "",
+            };
             // Make the request
             PagedAsyncEnumerable<ListSubscribersResponse, string> response = cloudChannelServiceClient.ListSubscribersAsync(request);
 

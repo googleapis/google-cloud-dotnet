@@ -129,7 +129,7 @@ namespace Google.Cloud.Channel.V1 {
     public const int EventTypeFieldNumber = 2;
     private global::Google.Cloud.Channel.V1.CustomerEvent.Types.Type eventType_ = global::Google.Cloud.Channel.V1.CustomerEvent.Types.Type.Unspecified;
     /// <summary>
-    /// Type of event which happened on the customer.
+    /// Type of event which happened for the customer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -392,7 +392,7 @@ namespace Google.Cloud.Channel.V1 {
     public const int EventTypeFieldNumber = 2;
     private global::Google.Cloud.Channel.V1.EntitlementEvent.Types.Type eventType_ = global::Google.Cloud.Channel.V1.EntitlementEvent.Types.Type.Unspecified;
     /// <summary>
-    /// Type of event which happened on the entitlement.
+    /// Type of event which happened for the entitlement.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

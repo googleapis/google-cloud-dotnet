@@ -36,8 +36,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             UnregisterSubscriberRequest request = new UnregisterSubscriberRequest
             {
-                Account = "",
+                AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 ServiceAccount = "",
+                Integrator = "",
             };
             // Make the request
             UnregisterSubscriberResponse response = cloudChannelServiceClient.UnregisterSubscriber(request);

@@ -36,7 +36,11 @@ namespace GoogleCSharpSnippets
             // Create client
             CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
             // Initialize request argument(s)
-            ListSubscribersRequest request = new ListSubscribersRequest { Account = "", };
+            ListSubscribersRequest request = new ListSubscribersRequest
+            {
+                AccountAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+                Integrator = "",
+            };
             // Make the request
             PagedEnumerable<ListSubscribersResponse, string> response = cloudChannelServiceClient.ListSubscribers(request);
 

@@ -2023,8 +2023,8 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
-      /// topic for this Channel Services account. After you create a
+      /// Registers a service account with subscriber privileges on the Pub/Sub
+      /// topic for this Channel Services account or integrator. After you create a
       /// subscriber, you get the events through
       /// [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
       ///
@@ -2052,10 +2052,10 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Unregisters a service account with subscriber privileges on the Cloud
-      /// Pub/Sub topic created for this Channel Services account. If there are no
-      /// service accounts left with subscriber privileges, this deletes the topic.
-      /// You can call ListSubscribers to check for these accounts.
+      /// Unregisters a service account with subscriber privileges on the Pub/Sub
+      /// topic created for this Channel Services account or integrator. If there are
+      /// no service accounts left with subscriber privileges, this deletes the
+      /// topic. You can call ListSubscribers to check for these accounts.
       ///
       /// Possible error codes:
       ///
@@ -2084,8 +2084,8 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Lists service accounts with subscriber privileges on the Cloud Pub/Sub
-      /// topic created for this Channel Services account.
+      /// Lists service accounts with subscriber privileges on the Pub/Sub topic
+      /// created for this Channel Services account or integrator.
       ///
       /// Possible error codes:
       ///
@@ -7700,8 +7700,8 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_QueryEligibleBillingAccounts, null, options, request);
       }
       /// <summary>
-      /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
-      /// topic for this Channel Services account. After you create a
+      /// Registers a service account with subscriber privileges on the Pub/Sub
+      /// topic for this Channel Services account or integrator. After you create a
       /// subscriber, you get the events through
       /// [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
       ///
@@ -7730,8 +7730,8 @@ namespace Google.Cloud.Channel.V1 {
         return RegisterSubscriber(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
-      /// topic for this Channel Services account. After you create a
+      /// Registers a service account with subscriber privileges on the Pub/Sub
+      /// topic for this Channel Services account or integrator. After you create a
       /// subscriber, you get the events through
       /// [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
       ///
@@ -7758,8 +7758,8 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_RegisterSubscriber, null, options, request);
       }
       /// <summary>
-      /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
-      /// topic for this Channel Services account. After you create a
+      /// Registers a service account with subscriber privileges on the Pub/Sub
+      /// topic for this Channel Services account or integrator. After you create a
       /// subscriber, you get the events through
       /// [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
       ///
@@ -7788,8 +7788,8 @@ namespace Google.Cloud.Channel.V1 {
         return RegisterSubscriberAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
-      /// topic for this Channel Services account. After you create a
+      /// Registers a service account with subscriber privileges on the Pub/Sub
+      /// topic for this Channel Services account or integrator. After you create a
       /// subscriber, you get the events through
       /// [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
       ///
@@ -7816,10 +7816,10 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_RegisterSubscriber, null, options, request);
       }
       /// <summary>
-      /// Unregisters a service account with subscriber privileges on the Cloud
-      /// Pub/Sub topic created for this Channel Services account. If there are no
-      /// service accounts left with subscriber privileges, this deletes the topic.
-      /// You can call ListSubscribers to check for these accounts.
+      /// Unregisters a service account with subscriber privileges on the Pub/Sub
+      /// topic created for this Channel Services account or integrator. If there are
+      /// no service accounts left with subscriber privileges, this deletes the
+      /// topic. You can call ListSubscribers to check for these accounts.
       ///
       /// Possible error codes:
       ///
@@ -7849,10 +7849,10 @@ namespace Google.Cloud.Channel.V1 {
         return UnregisterSubscriber(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Unregisters a service account with subscriber privileges on the Cloud
-      /// Pub/Sub topic created for this Channel Services account. If there are no
-      /// service accounts left with subscriber privileges, this deletes the topic.
-      /// You can call ListSubscribers to check for these accounts.
+      /// Unregisters a service account with subscriber privileges on the Pub/Sub
+      /// topic created for this Channel Services account or integrator. If there are
+      /// no service accounts left with subscriber privileges, this deletes the
+      /// topic. You can call ListSubscribers to check for these accounts.
       ///
       /// Possible error codes:
       ///
@@ -7880,10 +7880,10 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UnregisterSubscriber, null, options, request);
       }
       /// <summary>
-      /// Unregisters a service account with subscriber privileges on the Cloud
-      /// Pub/Sub topic created for this Channel Services account. If there are no
-      /// service accounts left with subscriber privileges, this deletes the topic.
-      /// You can call ListSubscribers to check for these accounts.
+      /// Unregisters a service account with subscriber privileges on the Pub/Sub
+      /// topic created for this Channel Services account or integrator. If there are
+      /// no service accounts left with subscriber privileges, this deletes the
+      /// topic. You can call ListSubscribers to check for these accounts.
       ///
       /// Possible error codes:
       ///
@@ -7913,10 +7913,10 @@ namespace Google.Cloud.Channel.V1 {
         return UnregisterSubscriberAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Unregisters a service account with subscriber privileges on the Cloud
-      /// Pub/Sub topic created for this Channel Services account. If there are no
-      /// service accounts left with subscriber privileges, this deletes the topic.
-      /// You can call ListSubscribers to check for these accounts.
+      /// Unregisters a service account with subscriber privileges on the Pub/Sub
+      /// topic created for this Channel Services account or integrator. If there are
+      /// no service accounts left with subscriber privileges, this deletes the
+      /// topic. You can call ListSubscribers to check for these accounts.
       ///
       /// Possible error codes:
       ///
@@ -7944,8 +7944,8 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UnregisterSubscriber, null, options, request);
       }
       /// <summary>
-      /// Lists service accounts with subscriber privileges on the Cloud Pub/Sub
-      /// topic created for this Channel Services account.
+      /// Lists service accounts with subscriber privileges on the Pub/Sub topic
+      /// created for this Channel Services account or integrator.
       ///
       /// Possible error codes:
       ///
@@ -7973,8 +7973,8 @@ namespace Google.Cloud.Channel.V1 {
         return ListSubscribers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists service accounts with subscriber privileges on the Cloud Pub/Sub
-      /// topic created for this Channel Services account.
+      /// Lists service accounts with subscriber privileges on the Pub/Sub topic
+      /// created for this Channel Services account or integrator.
       ///
       /// Possible error codes:
       ///
@@ -8000,8 +8000,8 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListSubscribers, null, options, request);
       }
       /// <summary>
-      /// Lists service accounts with subscriber privileges on the Cloud Pub/Sub
-      /// topic created for this Channel Services account.
+      /// Lists service accounts with subscriber privileges on the Pub/Sub topic
+      /// created for this Channel Services account or integrator.
       ///
       /// Possible error codes:
       ///
@@ -8029,8 +8029,8 @@ namespace Google.Cloud.Channel.V1 {
         return ListSubscribersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists service accounts with subscriber privileges on the Cloud Pub/Sub
-      /// topic created for this Channel Services account.
+      /// Lists service accounts with subscriber privileges on the Pub/Sub topic
+      /// created for this Channel Services account or integrator.
       ///
       /// Possible error codes:
       ///
