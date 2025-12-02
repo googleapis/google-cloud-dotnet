@@ -3138,8 +3138,8 @@
       "version": "1.0.0-beta00",
       "type": "grpc",
       "productName": "Cluster Director",
-      "productUrl": "https://cloud.google.com/blog/products/compute/managed-slurm-and-other-cluster-director-enhancements",
-      "description": "",
+      "productUrl": "https://cloud.google.com/cluster-director/docs",
+      "description": "Cluster Director is a Google Cloud product that automates the complex setup and configuration of clusters, helping you configure compute, networking, and storage resources for your clusters to maximize performance and minimize downtimes.",
       "tags": [],
       "dependencies": {
         "Google.Cloud.Location": "2.4.0",
