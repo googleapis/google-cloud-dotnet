@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.4.0, released 2025-12-03
+
+### New features
+
+- A new field `radius_area` is added to message `.google.shopping.merchant.accounts.v1.Region`
+
 ## Version 1.3.0, released 2025-11-17
 
 ### New features
