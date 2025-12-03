@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.3.0, released 2025-12-03
+
+### New features
+
+- Add transfer metadata options proto definition
+
+### Documentation improvements
+
+- Update tickets component number
+
 ## Version 1.2.0, released 2025-11-06
 
 ### New features
