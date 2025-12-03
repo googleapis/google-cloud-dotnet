@@ -1298,11 +1298,10 @@
         },
         {
             "id": "Google.Cloud.Datastore.V1",
-            "currentVersion": "4.17.0",
-            "nextVersion": "5.0.0",
+            "currentVersion": "5.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-18T16:33:43.297661837Z",
+            "releaseTimestamp": "2025-12-03T08:52:27.892547424Z",
             "lastGeneratedCommit": "4823efd0b9944891ec5c387104dcc2ec401307a8",
             "lastReleasedCommit": "4823efd0b9944891ec5c387104dcc2ec401307a8",
             "apiPaths": [
