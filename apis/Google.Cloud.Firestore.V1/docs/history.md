@@ -4,6 +4,12 @@ This package is primarily a dependency of Google.Cloud.Firestore. See the
 [Google.Cloud.Firestore version history](https://googleapis.dev/dotnet/Google.Cloud.Firestore/latest/history.html)
 for more details.
 
+## Version 4.0.0, released 2025-12-03
+
+### New features
+
+- Update from System.Linq.Async to System.Linq.AsyncEnumerable
+
 ## Version 3.13.0, released 2025-11-18
 
 ### New features
