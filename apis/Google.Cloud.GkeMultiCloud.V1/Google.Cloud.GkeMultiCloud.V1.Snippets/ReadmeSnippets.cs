@@ -1,4 +1,4 @@
-﻿// Copyright 2022 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -35,14 +35,14 @@ namespace Google.Cloud.GkeMultiCloud.V1.Snippets
             string projectId = _fixture.ProjectId;
             // Sample: Endpoint
             string region = "us-west1";
-            AzureClustersClient client = new AzureClustersClientBuilder
+            AttachedClustersClient client = new AttachedClustersClientBuilder
             {
                 Endpoint = $"{region}-gkemulticloud.googleapis.com"
             }.Build();
 
             LocationName location = new LocationName(projectId, region);
-            PagedEnumerable<ListAzureClustersResponse, AzureCluster> clusters = client.ListAzureClusters(location);
-            foreach (AzureCluster cluster in clusters)
+            PagedEnumerable<ListAttachedClustersResponse, AttachedCluster> clusters = client.ListAttachedClusters(location);
+            foreach (AttachedCluster cluster in clusters)
             {
                 Console.WriteLine(cluster.Name);
             }
