@@ -1,5 +1,15 @@
 # Version history
 
+## Version 5.8.0, released 2025-12-03
+
+### New features
+
+- Add Spanner location API
+
+### Documentation improvements
+
+- Minor update for Spanner Location API
+
 ## Version 5.7.0, released 2025-11-17
 
 ### New features
