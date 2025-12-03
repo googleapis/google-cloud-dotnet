@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.18.0, released 2025-12-03
+
+### New features
+
+- Update GCB with latest proto changes
+
 ## Version 2.17.0, released 2025-11-05
 
 ### New features
