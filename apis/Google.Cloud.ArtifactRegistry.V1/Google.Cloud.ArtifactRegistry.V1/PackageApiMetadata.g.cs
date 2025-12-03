@@ -54,6 +54,7 @@ namespace Google.Cloud.ArtifactRegistry.V1
             yield return AptArtifactReflection.Descriptor;
             yield return ArtifactReflection.Descriptor;
             yield return AttachmentReflection.Descriptor;
+            yield return ExportReflection.Descriptor;
             yield return FileReflection.Descriptor;
             yield return GenericReflection.Descriptor;
             yield return GoReflection.Descriptor;
