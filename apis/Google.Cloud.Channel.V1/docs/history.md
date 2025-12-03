@@ -1,5 +1,32 @@
 # Version history
 
+## Version 2.17.0, released 2025-12-03
+
+### Bug fixes
+
+- Changed field behavior for an existing field `entitlement_granularity` in message `.google.cloud.channel.v1.RepricingConfig`
+
+### Documentation improvements
+
+- A comment for enum `CustomerAttestationState` is changed
+- A comment for field `customer_attestation_state` in message `.google.cloud.channel.v1.Customer` is changed
+- A comment for field `entitlement_granularity` in message `.google.cloud.channel.v1.RepricingConfig` is changed
+- A comment for method `RegisterSubscriber` in service `CloudChannelService` is changed
+- A comment for method `UnregisterSubscriber` in service `CloudChannelService` is changed
+- A comment for method `ListSubscribers` in service `CloudChannelService` is changed
+- A comment for field `owned` in message `.google.cloud.channel.v1.CloudIdentityCustomerAccount` is changed
+- A comment for field `page_token` in message `.google.cloud.channel.v1.ListSkuGroupsRequest` is changed
+- A comment for field `page_token` in message `.google.cloud.channel.v1.ListSkuGroupBillableSkusRequest` is changed
+- A comment for field `next_page_token` in message `.google.cloud.channel.v1.ListSkuGroupsResponse` is changed
+- A comment for field `next_page_token` in message `.google.cloud.channel.v1.ListSkuGroupBillableSkusResponse` is changed
+- A comment for message `ChangeParametersRequest` is changed
+- A comment for field `offers` in message `.google.cloud.channel.v1.ListOffersResponse` is changed
+- A comment for field `account` in message `.google.cloud.channel.v1.RegisterSubscriberRequest` is changed
+- A comment for field `account` in message `.google.cloud.channel.v1.UnregisterSubscriberRequest` is changed
+- A comment for field `account` in message `.google.cloud.channel.v1.ListSubscribersRequest` is changed
+- A comment for field `event_type` in message `.google.cloud.channel.v1.CustomerEvent` is changed
+- A comment for field `event_type` in message `.google.cloud.channel.v1.EntitlementEvent` is changed
+
 ## Version 2.16.0, released 2025-11-05
 
 ### New features
