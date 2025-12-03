@@ -408,12 +408,12 @@
         },
         {
             "id": "Google.Cloud.ArtifactRegistry.V1",
-            "currentVersion": "2.12.0",
+            "currentVersion": "2.13.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-17T14:06:09.195835665Z",
+            "releaseTimestamp": "2025-12-03T08:43:36.979604179Z",
             "lastGeneratedCommit": "535d161c24965e9ed1a0b27032cc1c8b4beab818",
-            "lastReleasedCommit": "cf0434f4bd20618db60ddd16a1e7db2c0dfb9158",
+            "lastReleasedCommit": "535d161c24965e9ed1a0b27032cc1c8b4beab818",
             "apiPaths": [
                 "google/devtools/artifactregistry/v1"
             ],

@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.13.0, released 2025-12-03
+
+### New features
+
+- Add ExportArtifact API
+
 ## Version 2.12.0, released 2025-11-17
 
 ### New features
