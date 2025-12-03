@@ -1,5 +1,32 @@
 # Version history
 
+## Version 1.0.0-beta62, released 2025-12-03
+
+### New features
+
+- Expose FullFineTunedResources for full fine tuned deployments
+- Introduce RagManagedVertexVectorSearch as a new vector db option
+- Add RagCorpus.satisfies_pzs and RagCorpus.satisfies_pzi
+- A new field `min_gpu_driver_version` is added to message `.google.cloud.aiplatform.v1beta1.MachineSpec`
+- Expose zone when creating a FeatureOnlineStore
+- Add `ReplicatedVoiceConfig` to `VoiceConfig` to enable Gemini TTS voice replication
+- Add support for developer connect based deployment
+
+### Documentation improvements
+
+- Update `ReplicatedVoiceConfig.mime_type` comment
+- A comment for field `rag_files_count` in message `.google.cloud.aiplatform.v1beta1.RagCorpus` is changed
+- A comment for field `user_metadata` in message `.google.cloud.aiplatform.v1beta1.RagFile` is changed
+- A comment for field `gcs_metadata_schema_source` in message `.google.cloud.aiplatform.v1beta1.RagFileMetadataConfig` is changed
+- A comment for field `google_drive_metadata_schema_source` in message `.google.cloud.aiplatform.v1beta1.RagFileMetadataConfig` is changed
+- A comment for field `gcs_metadata_source` in message `.google.cloud.aiplatform.v1beta1.RagFileMetadataConfig` is changed
+- A comment for field `google_drive_metadata_source` in message `.google.cloud.aiplatform.v1beta1.RagFileMetadataConfig` is changed
+- A comment for message `RagManagedDbConfig` is changed
+- A comment for field `enterprise` in message `.google.cloud.aiplatform.v1beta1.RagManagedDbConfig` is changed
+- A comment for field `scaled` in message `.google.cloud.aiplatform.v1beta1.RagManagedDbConfig` is changed
+- A comment for message `ReasoningEngineSpec` is changed
+- A comment for field `package_spec` in message `.google.cloud.aiplatform.v1beta1.ReasoningEngineSpec` is changed
+
 ## Version 1.0.0-beta61, released 2025-11-05
 
 ### New features
