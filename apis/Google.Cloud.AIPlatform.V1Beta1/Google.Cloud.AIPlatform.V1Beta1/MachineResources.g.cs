@@ -61,26 +61,32 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "Z19yZXBsaWNhX2NvdW50GAIgASgFQgPgQQUSHgoRbWF4X3JlcGxpY2FfY291",
             "bnQYAyABKAVCA+BBBRJGCgpmbGV4X3N0YXJ0GAQgASgLMiouZ29vZ2xlLmNs",
             "b3VkLmFpcGxhdGZvcm0udjFiZXRhMS5GbGV4U3RhcnRCBuBBBeBBARIRCgRz",
-            "cG90GAUgASgIQgPgQQEiLwoRUmVzb3VyY2VzQ29uc3VtZWQSGgoNcmVwbGlj",
-            "YV9ob3VycxgBIAEoAUID4EEDIj0KCERpc2tTcGVjEhYKDmJvb3RfZGlza190",
-            "eXBlGAEgASgJEhkKEWJvb3RfZGlza19zaXplX2diGAIgASgFIj0KElBlcnNp",
-            "c3RlbnREaXNrU3BlYxIRCglkaXNrX3R5cGUYASABKAkSFAoMZGlza19zaXpl",
-            "X2diGAIgASgDIkwKCE5mc01vdW50EhMKBnNlcnZlchgBIAEoCUID4EECEhEK",
-            "BHBhdGgYAiABKAlCA+BBAhIYCgttb3VudF9wb2ludBgDIAEoCUID4EECIv4B",
-            "ChVBdXRvc2NhbGluZ01ldHJpY1NwZWMSGAoLbWV0cmljX25hbWUYASABKAlC",
-            "A+BBAhIOCgZ0YXJnZXQYAiABKAUSewoZbW9uaXRvcmVkX3Jlc291cmNlX2xh",
-            "YmVscxgDIAMoCzJTLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEu",
-            "QXV0b3NjYWxpbmdNZXRyaWNTcGVjLk1vbml0b3JlZFJlc291cmNlTGFiZWxz",
-            "RW50cnlCA+BBARo+ChxNb25pdG9yZWRSZXNvdXJjZUxhYmVsc0VudHJ5EgsK",
-            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiLgoQU2hpZWxkZWRWbUNv",
-            "bmZpZxIaChJlbmFibGVfc2VjdXJlX2Jvb3QYASABKAgiRAoJRmxleFN0YXJ0",
-            "EjcKFG1heF9ydW50aW1lX2R1cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnByb3Rv",
-            "YnVmLkR1cmF0aW9uQuwBCiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djFiZXRhMUIVTWFjaGluZVJlc291cmNlc1Byb3RvUAFaQ2Nsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxhdGZvcm1wYjth",
-            "aXBsYXRmb3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMUJldGEx",
-            "ygIfR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoCIkdvb2dsZTo6",
-            "Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
+            "cG90GAUgASgIQgPgQQEijgIKFkZ1bGxGaW5lVHVuZWRSZXNvdXJjZXMSZAoP",
+            "ZGVwbG95bWVudF90eXBlGAEgASgOMkYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjFiZXRhMS5GdWxsRmluZVR1bmVkUmVzb3VyY2VzLkRlcGxveW1lbnRU",
+            "eXBlQgPgQQISJwoabW9kZWxfaW5mZXJlbmNlX3VuaXRfY291bnQYAiABKAVC",
+            "A+BBASJlCg5EZXBsb3ltZW50VHlwZRIfChtERVBMT1lNRU5UX1RZUEVfVU5T",
+            "UEVDSUZJRUQQABIYChRERVBMT1lNRU5UX1RZUEVfRVZBTBABEhgKFERFUExP",
+            "WU1FTlRfVFlQRV9QUk9EEAIiLwoRUmVzb3VyY2VzQ29uc3VtZWQSGgoNcmVw",
+            "bGljYV9ob3VycxgBIAEoAUID4EEDIj0KCERpc2tTcGVjEhYKDmJvb3RfZGlz",
+            "a190eXBlGAEgASgJEhkKEWJvb3RfZGlza19zaXplX2diGAIgASgFIj0KElBl",
+            "cnNpc3RlbnREaXNrU3BlYxIRCglkaXNrX3R5cGUYASABKAkSFAoMZGlza19z",
+            "aXplX2diGAIgASgDIkwKCE5mc01vdW50EhMKBnNlcnZlchgBIAEoCUID4EEC",
+            "EhEKBHBhdGgYAiABKAlCA+BBAhIYCgttb3VudF9wb2ludBgDIAEoCUID4EEC",
+            "Iv4BChVBdXRvc2NhbGluZ01ldHJpY1NwZWMSGAoLbWV0cmljX25hbWUYASAB",
+            "KAlCA+BBAhIOCgZ0YXJnZXQYAiABKAUSewoZbW9uaXRvcmVkX3Jlc291cmNl",
+            "X2xhYmVscxgDIAMoCzJTLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0",
+            "YTEuQXV0b3NjYWxpbmdNZXRyaWNTcGVjLk1vbml0b3JlZFJlc291cmNlTGFi",
+            "ZWxzRW50cnlCA+BBARo+ChxNb25pdG9yZWRSZXNvdXJjZUxhYmVsc0VudHJ5",
+            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiLgoQU2hpZWxkZWRW",
+            "bUNvbmZpZxIaChJlbmFibGVfc2VjdXJlX2Jvb3QYASABKAgiRAoJRmxleFN0",
+            "YXJ0EjcKFG1heF9ydW50aW1lX2R1cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnBy",
+            "b3RvYnVmLkR1cmF0aW9uQuwBCiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjFiZXRhMUIVTWFjaGluZVJlc291cmNlc1Byb3RvUAFaQ2Nsb3VkLmdv",
+            "b2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxhdGZvcm1w",
+            "YjthaXBsYXRmb3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMUJl",
+            "dGExygIfR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoCIkdvb2ds",
+            "ZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.AcceleratorTypeReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ReservationAffinityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -88,6 +94,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources), global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources.Parser, new[]{ "MachineSpec", "MinReplicaCount", "MaxReplicaCount", "RequiredReplicaCount", "InitialReplicaCount", "AutoscalingMetricSpecs", "Spot", "FlexStart", "ScaleToZeroSpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources.Types.ScaleToZeroSpec), global::Google.Cloud.AIPlatform.V1Beta1.DedicatedResources.Types.ScaleToZeroSpec.Parser, new[]{ "MinScaleupPeriod", "IdleScaledownPeriod" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.AutomaticResources), global::Google.Cloud.AIPlatform.V1Beta1.AutomaticResources.Parser, new[]{ "MinReplicaCount", "MaxReplicaCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.BatchDedicatedResources), global::Google.Cloud.AIPlatform.V1Beta1.BatchDedicatedResources.Parser, new[]{ "MachineSpec", "StartingReplicaCount", "MaxReplicaCount", "FlexStart", "Spot" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.FullFineTunedResources), global::Google.Cloud.AIPlatform.V1Beta1.FullFineTunedResources.Parser, new[]{ "DeploymentType", "ModelInferenceUnitCount" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.FullFineTunedResources.Types.DeploymentType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ResourcesConsumed), global::Google.Cloud.AIPlatform.V1Beta1.ResourcesConsumed.Parser, new[]{ "ReplicaHours" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DiskSpec), global::Google.Cloud.AIPlatform.V1Beta1.DiskSpec.Parser, new[]{ "BootDiskType", "BootDiskSizeGb" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PersistentDiskSpec), global::Google.Cloud.AIPlatform.V1Beta1.PersistentDiskSpec.Parser, new[]{ "DiskType", "DiskSizeGb" }, null, null, null, null),
@@ -2107,6 +2114,283 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
   }
 
   /// <summary>
+  /// Resources for an fft model.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class FullFineTunedResources : pb::IMessage<FullFineTunedResources>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FullFineTunedResources> _parser = new pb::MessageParser<FullFineTunedResources>(() => new FullFineTunedResources());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<FullFineTunedResources> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FullFineTunedResources() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FullFineTunedResources(FullFineTunedResources other) : this() {
+      deploymentType_ = other.deploymentType_;
+      modelInferenceUnitCount_ = other.modelInferenceUnitCount_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FullFineTunedResources Clone() {
+      return new FullFineTunedResources(this);
+    }
+
+    /// <summary>Field number for the "deployment_type" field.</summary>
+    public const int DeploymentTypeFieldNumber = 1;
+    private global::Google.Cloud.AIPlatform.V1Beta1.FullFineTunedResources.Types.DeploymentType deploymentType_ = global::Google.Cloud.AIPlatform.V1Beta1.FullFineTunedResources.Types.DeploymentType.Unspecified;
+    /// <summary>
+    /// Required. The kind of deployment.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.FullFineTunedResources.Types.DeploymentType DeploymentType {
+      get { return deploymentType_; }
+      set {
+        deploymentType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "model_inference_unit_count" field.</summary>
+    public const int ModelInferenceUnitCountFieldNumber = 2;
+    private int modelInferenceUnitCount_;
+    /// <summary>
+    /// Optional. The number of model inference units to use for this deployment.
+    /// This can only be specified for DEPLOYMENT_TYPE_PROD.
+    /// The following table lists the number of model inference units for different
+    /// model types:
+    /// * Gemini 2.5 Flash
+    ///   * Foundation FMIU: 25
+    ///   * Expansion FMIU: 4
+    /// * Gemini 2.5 Pro
+    ///   * Foundation FMIU: 32
+    ///   * Expansion FMIU: 16
+    /// * Veo 3.0 (undistilled)
+    ///   * Foundation FMIU: 63
+    ///   * Expansion FMIU: 7
+    /// * Veo 3.0 (distilled)
+    ///   * Foundation FMIU: 30
+    ///   * Expansion FMIU: 10
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int ModelInferenceUnitCount {
+      get { return modelInferenceUnitCount_; }
+      set {
+        modelInferenceUnitCount_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as FullFineTunedResources);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(FullFineTunedResources other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DeploymentType != other.DeploymentType) return false;
+      if (ModelInferenceUnitCount != other.ModelInferenceUnitCount) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DeploymentType != global::Google.Cloud.AIPlatform.V1Beta1.FullFineTunedResources.Types.DeploymentType.Unspecified) hash ^= DeploymentType.GetHashCode();
+      if (ModelInferenceUnitCount != 0) hash ^= ModelInferenceUnitCount.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (DeploymentType != global::Google.Cloud.AIPlatform.V1Beta1.FullFineTunedResources.Types.DeploymentType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) DeploymentType);
+      }
+      if (ModelInferenceUnitCount != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(ModelInferenceUnitCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DeploymentType != global::Google.Cloud.AIPlatform.V1Beta1.FullFineTunedResources.Types.DeploymentType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) DeploymentType);
+      }
+      if (ModelInferenceUnitCount != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(ModelInferenceUnitCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (DeploymentType != global::Google.Cloud.AIPlatform.V1Beta1.FullFineTunedResources.Types.DeploymentType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DeploymentType);
+      }
+      if (ModelInferenceUnitCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ModelInferenceUnitCount);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(FullFineTunedResources other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DeploymentType != global::Google.Cloud.AIPlatform.V1Beta1.FullFineTunedResources.Types.DeploymentType.Unspecified) {
+        DeploymentType = other.DeploymentType;
+      }
+      if (other.ModelInferenceUnitCount != 0) {
+        ModelInferenceUnitCount = other.ModelInferenceUnitCount;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            DeploymentType = (global::Google.Cloud.AIPlatform.V1Beta1.FullFineTunedResources.Types.DeploymentType) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            ModelInferenceUnitCount = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            DeploymentType = (global::Google.Cloud.AIPlatform.V1Beta1.FullFineTunedResources.Types.DeploymentType) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            ModelInferenceUnitCount = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the FullFineTunedResources message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The type of deployment.
+      /// </summary>
+      public enum DeploymentType {
+        /// <summary>
+        /// Unspecified deployment type.
+        /// </summary>
+        [pbr::OriginalName("DEPLOYMENT_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Eval deployment type.
+        /// </summary>
+        [pbr::OriginalName("DEPLOYMENT_TYPE_EVAL")] Eval = 1,
+        /// <summary>
+        /// Prod deployment type.
+        /// </summary>
+        [pbr::OriginalName("DEPLOYMENT_TYPE_PROD")] Prod = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// Statistics information about resource consumption.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -2124,7 +2408,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2322,7 +2606,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2562,7 +2846,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2802,7 +3086,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3083,7 +3367,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3361,7 +3645,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3564,7 +3848,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
