@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.0.0, released 2025-12-03
+
+### New features
+
+- Update from System.Linq.Async to System.Linq.AsyncEnumerable
+
 ## Version 3.13.0, released 2025-11-18
 
 ### New features
