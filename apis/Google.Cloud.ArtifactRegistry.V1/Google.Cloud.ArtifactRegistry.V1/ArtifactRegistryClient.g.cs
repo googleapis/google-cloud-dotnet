@@ -109,6 +109,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
             CreateAttachmentOperationsSettings = existing.CreateAttachmentOperationsSettings.Clone();
             DeleteAttachmentSettings = existing.DeleteAttachmentSettings;
             DeleteAttachmentOperationsSettings = existing.DeleteAttachmentOperationsSettings.Clone();
+            ExportArtifactSettings = existing.ExportArtifactSettings;
+            ExportArtifactOperationsSettings = existing.ExportArtifactOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -881,6 +883,36 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteAttachmentOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.ExportArtifact</c> and <c>ArtifactRegistryClient.ExportArtifactAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExportArtifactSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ArtifactRegistryClient.ExportArtifact</c> and
+        /// <c>ArtifactRegistryClient.ExportArtifactAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ExportArtifactOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -6303,6 +6335,59 @@ namespace Google.Cloud.ArtifactRegistry.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAttachmentAsync(AttachmentName name, st::CancellationToken cancellationToken) =>
             DeleteAttachmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Exports an artifact.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExportArtifactResponse, ExportArtifactMetadata> ExportArtifact(ExportArtifactRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports an artifact.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportArtifactResponse, ExportArtifactMetadata>> ExportArtifactAsync(ExportArtifactRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports an artifact.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportArtifactResponse, ExportArtifactMetadata>> ExportArtifactAsync(ExportArtifactRequest request, st::CancellationToken cancellationToken) =>
+            ExportArtifactAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ExportArtifact</c>.</summary>
+        public virtual lro::OperationsClient ExportArtifactOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ExportArtifact</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ExportArtifactResponse, ExportArtifactMetadata> PollOnceExportArtifact(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExportArtifactResponse, ExportArtifactMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportArtifactOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ExportArtifact</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ExportArtifactResponse, ExportArtifactMetadata>> PollOnceExportArtifactAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExportArtifactResponse, ExportArtifactMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportArtifactOperationsClient, callSettings);
     }
 
     /// <summary>ArtifactRegistry client wrapper implementation, for convenient use.</summary>
@@ -6421,6 +6506,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
 
         private readonly gaxgrpc::ApiCall<DeleteAttachmentRequest, lro::Operation> _callDeleteAttachment;
 
+        private readonly gaxgrpc::ApiCall<ExportArtifactRequest, lro::Operation> _callExportArtifact;
+
         /// <summary>
         /// Constructs a client wrapper for the ArtifactRegistry service, with the specified gRPC client and settings.
         /// </summary>
@@ -6446,6 +6533,7 @@ namespace Google.Cloud.ArtifactRegistry.V1
             DeleteFileOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFileOperationsSettings, logger);
             CreateAttachmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAttachmentOperationsSettings, logger);
             DeleteAttachmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAttachmentOperationsSettings, logger);
+            ExportArtifactOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportArtifactOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListDockerImages = clientHelper.BuildApiCall<ListDockerImagesRequest, ListDockerImagesResponse>("ListDockerImages", grpcClient.ListDockerImagesAsync, grpcClient.ListDockerImages, effectiveSettings.ListDockerImagesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDockerImages);
@@ -6594,6 +6682,9 @@ namespace Google.Cloud.ArtifactRegistry.V1
             _callDeleteAttachment = clientHelper.BuildApiCall<DeleteAttachmentRequest, lro::Operation>("DeleteAttachment", grpcClient.DeleteAttachmentAsync, grpcClient.DeleteAttachment, effectiveSettings.DeleteAttachmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAttachment);
             Modify_DeleteAttachmentApiCall(ref _callDeleteAttachment);
+            _callExportArtifact = clientHelper.BuildApiCall<ExportArtifactRequest, lro::Operation>("ExportArtifact", grpcClient.ExportArtifactAsync, grpcClient.ExportArtifact, effectiveSettings.ExportArtifactSettings).WithGoogleRequestParam("repository", request => request.Repository);
+            Modify_ApiCall(ref _callExportArtifact);
+            Modify_ExportArtifactApiCall(ref _callExportArtifact);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -6696,6 +6787,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
         partial void Modify_CreateAttachmentApiCall(ref gaxgrpc::ApiCall<CreateAttachmentRequest, lro::Operation> call);
 
         partial void Modify_DeleteAttachmentApiCall(ref gaxgrpc::ApiCall<DeleteAttachmentRequest, lro::Operation> call);
+
+        partial void Modify_ExportArtifactApiCall(ref gaxgrpc::ApiCall<ExportArtifactRequest, lro::Operation> call);
 
         partial void OnConstruction(ArtifactRegistry.ArtifactRegistryClient grpcClient, ArtifactRegistrySettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -6802,6 +6895,8 @@ namespace Google.Cloud.ArtifactRegistry.V1
         partial void Modify_CreateAttachmentRequest(ref CreateAttachmentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteAttachmentRequest(ref DeleteAttachmentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExportArtifactRequest(ref ExportArtifactRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists docker images.
@@ -8041,6 +8136,33 @@ namespace Google.Cloud.ArtifactRegistry.V1
         {
             Modify_DeleteAttachmentRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteAttachment.Async(request, callSettings).ConfigureAwait(false), DeleteAttachmentOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>ExportArtifact</c>.</summary>
+        public override lro::OperationsClient ExportArtifactOperationsClient { get; }
+
+        /// <summary>
+        /// Exports an artifact.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ExportArtifactResponse, ExportArtifactMetadata> ExportArtifact(ExportArtifactRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportArtifactRequest(ref request, ref callSettings);
+            return new lro::Operation<ExportArtifactResponse, ExportArtifactMetadata>(_callExportArtifact.Sync(request, callSettings), ExportArtifactOperationsClient);
+        }
+
+        /// <summary>
+        /// Exports an artifact.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ExportArtifactResponse, ExportArtifactMetadata>> ExportArtifactAsync(ExportArtifactRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportArtifactRequest(ref request, ref callSettings);
+            return new lro::Operation<ExportArtifactResponse, ExportArtifactMetadata>(await _callExportArtifact.Async(request, callSettings).ConfigureAwait(false), ExportArtifactOperationsClient);
         }
     }
 

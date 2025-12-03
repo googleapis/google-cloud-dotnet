@@ -6412,5 +6412,74 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for ExportArtifact</summary>
+        public void ExportArtifactRequestObject()
+        {
+            // Snippet: ExportArtifact(ExportArtifactRequest, CallSettings)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = gcav::ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            gcav::ExportArtifactRequest request = new gcav::ExportArtifactRequest
+            {
+                RepositoryAsRepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                SourceVersionAsVersionName = gcav::VersionName.FromProjectLocationRepositoryPackageVersion("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]", "[VERSION]"),
+                GcsPath = "",
+            };
+            // Make the request
+            Operation<gcav::ExportArtifactResponse, gcav::ExportArtifactMetadata> response = artifactRegistryClient.ExportArtifact(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcav::ExportArtifactResponse, gcav::ExportArtifactMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcav::ExportArtifactResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcav::ExportArtifactResponse, gcav::ExportArtifactMetadata> retrievedResponse = artifactRegistryClient.PollOnceExportArtifact(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcav::ExportArtifactResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportArtifactAsync</summary>
+        public async Task ExportArtifactRequestObjectAsync()
+        {
+            // Snippet: ExportArtifactAsync(ExportArtifactRequest, CallSettings)
+            // Additional: ExportArtifactAsync(ExportArtifactRequest, CancellationToken)
+            // Create client
+            gcav::ArtifactRegistryClient artifactRegistryClient = await gcav::ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::ExportArtifactRequest request = new gcav::ExportArtifactRequest
+            {
+                RepositoryAsRepositoryName = gcav::RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                SourceVersionAsVersionName = gcav::VersionName.FromProjectLocationRepositoryPackageVersion("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[PACKAGE]", "[VERSION]"),
+                GcsPath = "",
+            };
+            // Make the request
+            Operation<gcav::ExportArtifactResponse, gcav::ExportArtifactMetadata> response = await artifactRegistryClient.ExportArtifactAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcav::ExportArtifactResponse, gcav::ExportArtifactMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcav::ExportArtifactResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcav::ExportArtifactResponse, gcav::ExportArtifactMetadata> retrievedResponse = await artifactRegistryClient.PollOnceExportArtifactAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcav::ExportArtifactResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }
