@@ -3135,7 +3135,7 @@
     },
     {
       "id": "Google.Cloud.HypercomputeCluster.V1Beta",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Cluster Director",
       "productUrl": "https://cloud.google.com/cluster-director/docs",
