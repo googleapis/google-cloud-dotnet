@@ -1195,7 +1195,8 @@ namespace Google.Cloud.Compute.V1
             GetAssociationAsync(firewallPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1204,7 +1205,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1213,7 +1215,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1222,7 +1225,8 @@ namespace Google.Cloud.Compute.V1
             GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="resource">
         /// Name or id of the resource for this request.
@@ -1236,7 +1240,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="resource">
         /// Name or id of the resource for this request.
@@ -1250,7 +1255,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="resource">
         /// Name or id of the resource for this request.
@@ -1327,7 +1333,8 @@ namespace Google.Cloud.Compute.V1
             GetRuleAsync(firewallPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new policy in the specified project using the data included in the request.
+        /// Creates a new policy in the specified project using the data included in
+        /// the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1336,7 +1343,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new policy in the specified project using the data included in the request.
+        /// Creates a new policy in the specified project using the data included in
+        /// the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1345,7 +1353,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new policy in the specified project using the data included in the request.
+        /// Creates a new policy in the specified project using the data included in
+        /// the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1380,10 +1389,13 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a new policy in the specified project using the data included in the request.
+        /// Creates a new policy in the specified project using the data included in
+        /// the request.
         /// </summary>
         /// <param name="parentId">
-        /// Parent ID for this request. The ID can be either be "folders/[FOLDER_ID]" if the parent is a folder or "organizations/[ORGANIZATION_ID]" if the parent is an organization.
+        /// Parent ID for this request. The ID can be either be "folders/[FOLDER_ID]"
+        /// if the parent is a folder or "organizations/[ORGANIZATION_ID]" if the
+        /// parent is an organization.
         /// </param>
         /// <param name="firewallPolicyResource">
         /// The body resource for this request
@@ -1398,10 +1410,13 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new policy in the specified project using the data included in the request.
+        /// Creates a new policy in the specified project using the data included in
+        /// the request.
         /// </summary>
         /// <param name="parentId">
-        /// Parent ID for this request. The ID can be either be "folders/[FOLDER_ID]" if the parent is a folder or "organizations/[ORGANIZATION_ID]" if the parent is an organization.
+        /// Parent ID for this request. The ID can be either be "folders/[FOLDER_ID]"
+        /// if the parent is a folder or "organizations/[ORGANIZATION_ID]" if the
+        /// parent is an organization.
         /// </param>
         /// <param name="firewallPolicyResource">
         /// The body resource for this request
@@ -1416,10 +1431,13 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new policy in the specified project using the data included in the request.
+        /// Creates a new policy in the specified project using the data included in
+        /// the request.
         /// </summary>
         /// <param name="parentId">
-        /// Parent ID for this request. The ID can be either be "folders/[FOLDER_ID]" if the parent is a folder or "organizations/[ORGANIZATION_ID]" if the parent is an organization.
+        /// Parent ID for this request. The ID can be either be "folders/[FOLDER_ID]"
+        /// if the parent is a folder or "organizations/[ORGANIZATION_ID]" if the
+        /// parent is an organization.
         /// </param>
         /// <param name="firewallPolicyResource">
         /// The body resource for this request
@@ -1430,7 +1448,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(parentId, firewallPolicyResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists all the policies that have been configured for the specified folder or organization.
+        /// Lists all the policies that have been configured for the specified
+        /// folder or organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1439,7 +1458,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all the policies that have been configured for the specified folder or organization.
+        /// Lists all the policies that have been configured for the specified
+        /// folder or organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1448,7 +1468,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all the policies that have been configured for the specified folder or organization.
+        /// Lists all the policies that have been configured for the specified
+        /// folder or organization.
         /// </summary>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1475,7 +1496,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists all the policies that have been configured for the specified folder or organization.
+        /// Lists all the policies that have been configured for the specified
+        /// folder or organization.
         /// </summary>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1612,7 +1634,9 @@ namespace Google.Cloud.Compute.V1
         /// Name of the firewall policy to update.
         /// </param>
         /// <param name="parentId">
-        /// The new parent of the firewall policy. The ID can be either be "folders/[FOLDER_ID]" if the parent is a folder or "organizations/[ORGANIZATION_ID]" if the parent is an organization.
+        /// The new parent of the firewall policy. The ID can be either be
+        /// "folders/[FOLDER_ID]" if the parent is a folder or
+        /// "organizations/[ORGANIZATION_ID]" if the parent is an organization.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1630,7 +1654,9 @@ namespace Google.Cloud.Compute.V1
         /// Name of the firewall policy to update.
         /// </param>
         /// <param name="parentId">
-        /// The new parent of the firewall policy. The ID can be either be "folders/[FOLDER_ID]" if the parent is a folder or "organizations/[ORGANIZATION_ID]" if the parent is an organization.
+        /// The new parent of the firewall policy. The ID can be either be
+        /// "folders/[FOLDER_ID]" if the parent is a folder or
+        /// "organizations/[ORGANIZATION_ID]" if the parent is an organization.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1648,7 +1674,9 @@ namespace Google.Cloud.Compute.V1
         /// Name of the firewall policy to update.
         /// </param>
         /// <param name="parentId">
-        /// The new parent of the firewall policy. The ID can be either be "folders/[FOLDER_ID]" if the parent is a folder or "organizations/[ORGANIZATION_ID]" if the parent is an organization.
+        /// The new parent of the firewall policy. The ID can be either be
+        /// "folders/[FOLDER_ID]" if the parent is a folder or
+        /// "organizations/[ORGANIZATION_ID]" if the parent is an organization.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2047,7 +2075,8 @@ namespace Google.Cloud.Compute.V1
             RemoveRuleAsync(firewallPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2056,7 +2085,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2065,7 +2095,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2074,7 +2105,8 @@ namespace Google.Cloud.Compute.V1
             SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="resource">
         /// Name or id of the resource for this request.
@@ -2092,7 +2124,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="resource">
         /// Name or id of the resource for this request.
@@ -2110,7 +2143,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="resource">
         /// Name or id of the resource for this request.
@@ -2585,7 +2619,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2597,7 +2632,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2636,7 +2672,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a new policy in the specified project using the data included in the request.
+        /// Creates a new policy in the specified project using the data included in
+        /// the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2651,7 +2688,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a new policy in the specified project using the data included in the request.
+        /// Creates a new policy in the specified project using the data included in
+        /// the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2666,7 +2704,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists all the policies that have been configured for the specified folder or organization.
+        /// Lists all the policies that have been configured for the specified
+        /// folder or organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2678,7 +2717,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists all the policies that have been configured for the specified folder or organization.
+        /// Lists all the policies that have been configured for the specified
+        /// folder or organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2879,7 +2919,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2891,7 +2932,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

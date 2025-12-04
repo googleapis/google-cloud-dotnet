@@ -405,7 +405,10 @@ namespace Google.Cloud.Compute.V1
         public virtual InstantSnapshots.InstantSnapshotsClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of instantSnapshots. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of instantSnapshots.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -414,7 +417,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of instantSnapshots. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of instantSnapshots.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -425,7 +431,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of instantSnapshots. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of instantSnapshots.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -458,7 +467,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of instantSnapshots. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of instantSnapshots.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -493,7 +505,14 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Deletes the specified InstantSnapshot resource. Keep in mind that deleting a single instantSnapshot might not necessarily delete all the data on that instantSnapshot. If any data on the instantSnapshot that is marked for deletion is needed for subsequent instantSnapshots, the data will be moved to the next corresponding instantSnapshot. For more information, see Deleting instantSnapshots.
+        /// Deletes the specified InstantSnapshot resource. Keep in mind that deleting
+        /// a single instantSnapshot might not necessarily delete all the data on that
+        /// instantSnapshot. If any data on the instantSnapshot that is marked for
+        /// deletion is needed for subsequent instantSnapshots, the data will be moved
+        /// to the next corresponding instantSnapshot.
+        /// 
+        /// For more information, seeDeleting
+        /// instantSnapshots.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -502,7 +521,14 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified InstantSnapshot resource. Keep in mind that deleting a single instantSnapshot might not necessarily delete all the data on that instantSnapshot. If any data on the instantSnapshot that is marked for deletion is needed for subsequent instantSnapshots, the data will be moved to the next corresponding instantSnapshot. For more information, see Deleting instantSnapshots.
+        /// Deletes the specified InstantSnapshot resource. Keep in mind that deleting
+        /// a single instantSnapshot might not necessarily delete all the data on that
+        /// instantSnapshot. If any data on the instantSnapshot that is marked for
+        /// deletion is needed for subsequent instantSnapshots, the data will be moved
+        /// to the next corresponding instantSnapshot.
+        /// 
+        /// For more information, seeDeleting
+        /// instantSnapshots.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -511,7 +537,14 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified InstantSnapshot resource. Keep in mind that deleting a single instantSnapshot might not necessarily delete all the data on that instantSnapshot. If any data on the instantSnapshot that is marked for deletion is needed for subsequent instantSnapshots, the data will be moved to the next corresponding instantSnapshot. For more information, see Deleting instantSnapshots.
+        /// Deletes the specified InstantSnapshot resource. Keep in mind that deleting
+        /// a single instantSnapshot might not necessarily delete all the data on that
+        /// instantSnapshot. If any data on the instantSnapshot that is marked for
+        /// deletion is needed for subsequent instantSnapshots, the data will be moved
+        /// to the next corresponding instantSnapshot.
+        /// 
+        /// For more information, seeDeleting
+        /// instantSnapshots.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -546,7 +579,14 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes the specified InstantSnapshot resource. Keep in mind that deleting a single instantSnapshot might not necessarily delete all the data on that instantSnapshot. If any data on the instantSnapshot that is marked for deletion is needed for subsequent instantSnapshots, the data will be moved to the next corresponding instantSnapshot. For more information, see Deleting instantSnapshots.
+        /// Deletes the specified InstantSnapshot resource. Keep in mind that deleting
+        /// a single instantSnapshot might not necessarily delete all the data on that
+        /// instantSnapshot. If any data on the instantSnapshot that is marked for
+        /// deletion is needed for subsequent instantSnapshots, the data will be moved
+        /// to the next corresponding instantSnapshot.
+        /// 
+        /// For more information, seeDeleting
+        /// instantSnapshots.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -568,7 +608,14 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified InstantSnapshot resource. Keep in mind that deleting a single instantSnapshot might not necessarily delete all the data on that instantSnapshot. If any data on the instantSnapshot that is marked for deletion is needed for subsequent instantSnapshots, the data will be moved to the next corresponding instantSnapshot. For more information, see Deleting instantSnapshots.
+        /// Deletes the specified InstantSnapshot resource. Keep in mind that deleting
+        /// a single instantSnapshot might not necessarily delete all the data on that
+        /// instantSnapshot. If any data on the instantSnapshot that is marked for
+        /// deletion is needed for subsequent instantSnapshots, the data will be moved
+        /// to the next corresponding instantSnapshot.
+        /// 
+        /// For more information, seeDeleting
+        /// instantSnapshots.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -590,7 +637,14 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified InstantSnapshot resource. Keep in mind that deleting a single instantSnapshot might not necessarily delete all the data on that instantSnapshot. If any data on the instantSnapshot that is marked for deletion is needed for subsequent instantSnapshots, the data will be moved to the next corresponding instantSnapshot. For more information, see Deleting instantSnapshots.
+        /// Deletes the specified InstantSnapshot resource. Keep in mind that deleting
+        /// a single instantSnapshot might not necessarily delete all the data on that
+        /// instantSnapshot. If any data on the instantSnapshot that is marked for
+        /// deletion is needed for subsequent instantSnapshots, the data will be moved
+        /// to the next corresponding instantSnapshot.
+        /// 
+        /// For more information, seeDeleting
+        /// instantSnapshots.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -695,7 +749,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, zone, instantSnapshot, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -704,7 +759,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -713,7 +769,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -722,7 +779,8 @@ namespace Google.Cloud.Compute.V1
             GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -744,7 +802,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -766,7 +825,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -897,7 +957,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, zone, instantSnapshotResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the list of InstantSnapshot resources contained within the specified zone.
+        /// Retrieves the list of InstantSnapshot resources contained within
+        /// the specified zone.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -906,7 +967,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of InstantSnapshot resources contained within the specified zone.
+        /// Retrieves the list of InstantSnapshot resources contained within
+        /// the specified zone.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -915,7 +977,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of InstantSnapshot resources contained within the specified zone.
+        /// Retrieves the list of InstantSnapshot resources contained within
+        /// the specified zone.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -952,7 +1015,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of InstantSnapshot resources contained within the specified zone.
+        /// Retrieves the list of InstantSnapshot resources contained within
+        /// the specified zone.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -989,7 +1053,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -998,7 +1063,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1007,7 +1073,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1016,7 +1083,8 @@ namespace Google.Cloud.Compute.V1
             SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1042,7 +1110,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1068,7 +1137,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1088,7 +1158,9 @@ namespace Google.Cloud.Compute.V1
             SetIamPolicyAsync(project, zone, resource, zoneSetPolicyRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the labels on a instantSnapshot in the given zone. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on a instantSnapshot in the given zone. To learn more about
+        /// labels, read the Labeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1097,7 +1169,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the labels on a instantSnapshot in the given zone. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on a instantSnapshot in the given zone. To learn more about
+        /// labels, read the Labeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1106,7 +1180,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the labels on a instantSnapshot in the given zone. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on a instantSnapshot in the given zone. To learn more about
+        /// labels, read the Labeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1141,7 +1217,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetLabelsOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets the labels on a instantSnapshot in the given zone. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on a instantSnapshot in the given zone. To learn more about
+        /// labels, read the Labeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1167,7 +1245,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the labels on a instantSnapshot in the given zone. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on a instantSnapshot in the given zone. To learn more about
+        /// labels, read the Labeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1193,7 +1273,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the labels on a instantSnapshot in the given zone. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on a instantSnapshot in the given zone. To learn more about
+        /// labels, read the Labeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1428,7 +1510,10 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_TestIamPermissionsInstantSnapshotRequest(ref TestIamPermissionsInstantSnapshotRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Retrieves an aggregated list of instantSnapshots. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of instantSnapshots.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1440,7 +1525,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of instantSnapshots. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of instantSnapshots.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1457,7 +1545,14 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient DeleteOperationsClient { get; }
 
         /// <summary>
-        /// Deletes the specified InstantSnapshot resource. Keep in mind that deleting a single instantSnapshot might not necessarily delete all the data on that instantSnapshot. If any data on the instantSnapshot that is marked for deletion is needed for subsequent instantSnapshots, the data will be moved to the next corresponding instantSnapshot. For more information, see Deleting instantSnapshots.
+        /// Deletes the specified InstantSnapshot resource. Keep in mind that deleting
+        /// a single instantSnapshot might not necessarily delete all the data on that
+        /// instantSnapshot. If any data on the instantSnapshot that is marked for
+        /// deletion is needed for subsequent instantSnapshots, the data will be moved
+        /// to the next corresponding instantSnapshot.
+        /// 
+        /// For more information, seeDeleting
+        /// instantSnapshots.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1472,7 +1567,14 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Deletes the specified InstantSnapshot resource. Keep in mind that deleting a single instantSnapshot might not necessarily delete all the data on that instantSnapshot. If any data on the instantSnapshot that is marked for deletion is needed for subsequent instantSnapshots, the data will be moved to the next corresponding instantSnapshot. For more information, see Deleting instantSnapshots.
+        /// Deletes the specified InstantSnapshot resource. Keep in mind that deleting
+        /// a single instantSnapshot might not necessarily delete all the data on that
+        /// instantSnapshot. If any data on the instantSnapshot that is marked for
+        /// deletion is needed for subsequent instantSnapshots, the data will be moved
+        /// to the next corresponding instantSnapshot.
+        /// 
+        /// For more information, seeDeleting
+        /// instantSnapshots.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1511,7 +1613,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1523,7 +1626,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1568,7 +1672,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of InstantSnapshot resources contained within the specified zone.
+        /// Retrieves the list of InstantSnapshot resources contained within
+        /// the specified zone.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1580,7 +1685,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of InstantSnapshot resources contained within the specified zone.
+        /// Retrieves the list of InstantSnapshot resources contained within
+        /// the specified zone.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1592,7 +1698,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1604,7 +1711,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1619,7 +1727,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetLabelsOperationsClient { get; }
 
         /// <summary>
-        /// Sets the labels on a instantSnapshot in the given zone. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on a instantSnapshot in the given zone. To learn more about
+        /// labels, read the Labeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1634,7 +1744,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the labels on a instantSnapshot in the given zone. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on a instantSnapshot in the given zone. To learn more about
+        /// labels, read the Labeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

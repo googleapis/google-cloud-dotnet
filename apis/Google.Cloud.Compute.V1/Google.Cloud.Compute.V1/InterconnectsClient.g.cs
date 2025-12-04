@@ -514,7 +514,8 @@ namespace Google.Cloud.Compute.V1
             DeleteAsync(project, interconnect, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the specified Interconnect. Get a list of available Interconnects by making a list() request.
+        /// Returns the specified Interconnect. Get a list of available Interconnects
+        /// by making a list() request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -523,7 +524,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified Interconnect. Get a list of available Interconnects by making a list() request.
+        /// Returns the specified Interconnect. Get a list of available Interconnects
+        /// by making a list() request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -532,7 +534,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified Interconnect. Get a list of available Interconnects by making a list() request.
+        /// Returns the specified Interconnect. Get a list of available Interconnects
+        /// by making a list() request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -541,7 +544,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the specified Interconnect. Get a list of available Interconnects by making a list() request.
+        /// Returns the specified Interconnect. Get a list of available Interconnects
+        /// by making a list() request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -559,7 +563,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the specified Interconnect. Get a list of available Interconnects by making a list() request.
+        /// Returns the specified Interconnect. Get a list of available Interconnects
+        /// by making a list() request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -577,7 +582,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the specified Interconnect. Get a list of available Interconnects by making a list() request.
+        /// Returns the specified Interconnect. Get a list of available Interconnects
+        /// by making a list() request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -591,7 +597,16 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, interconnect, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the interconnectDiagnostics for the specified Interconnect. In the event of a global outage, do not use this API to make decisions about where to redirect your network traffic. Unlike a VLAN attachment, which is regional, a Cloud Interconnect connection is a global resource. A global outage can prevent this API from functioning properly.
+        /// Returns the interconnectDiagnostics for the specified
+        /// Interconnect.
+        /// 
+        /// In the event of a
+        /// global outage, do not use this API to make decisions about where to
+        /// redirect your network traffic.
+        /// 
+        /// Unlike a VLAN attachment, which is regional, a Cloud Interconnect
+        /// connection is a global resource. A global outage can prevent this
+        /// API from functioning properly.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -600,7 +615,16 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the interconnectDiagnostics for the specified Interconnect. In the event of a global outage, do not use this API to make decisions about where to redirect your network traffic. Unlike a VLAN attachment, which is regional, a Cloud Interconnect connection is a global resource. A global outage can prevent this API from functioning properly.
+        /// Returns the interconnectDiagnostics for the specified
+        /// Interconnect.
+        /// 
+        /// In the event of a
+        /// global outage, do not use this API to make decisions about where to
+        /// redirect your network traffic.
+        /// 
+        /// Unlike a VLAN attachment, which is regional, a Cloud Interconnect
+        /// connection is a global resource. A global outage can prevent this
+        /// API from functioning properly.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -609,7 +633,16 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the interconnectDiagnostics for the specified Interconnect. In the event of a global outage, do not use this API to make decisions about where to redirect your network traffic. Unlike a VLAN attachment, which is regional, a Cloud Interconnect connection is a global resource. A global outage can prevent this API from functioning properly.
+        /// Returns the interconnectDiagnostics for the specified
+        /// Interconnect.
+        /// 
+        /// In the event of a
+        /// global outage, do not use this API to make decisions about where to
+        /// redirect your network traffic.
+        /// 
+        /// Unlike a VLAN attachment, which is regional, a Cloud Interconnect
+        /// connection is a global resource. A global outage can prevent this
+        /// API from functioning properly.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -618,7 +651,16 @@ namespace Google.Cloud.Compute.V1
             GetDiagnosticsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the interconnectDiagnostics for the specified Interconnect. In the event of a global outage, do not use this API to make decisions about where to redirect your network traffic. Unlike a VLAN attachment, which is regional, a Cloud Interconnect connection is a global resource. A global outage can prevent this API from functioning properly.
+        /// Returns the interconnectDiagnostics for the specified
+        /// Interconnect.
+        /// 
+        /// In the event of a
+        /// global outage, do not use this API to make decisions about where to
+        /// redirect your network traffic.
+        /// 
+        /// Unlike a VLAN attachment, which is regional, a Cloud Interconnect
+        /// connection is a global resource. A global outage can prevent this
+        /// API from functioning properly.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -636,7 +678,16 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the interconnectDiagnostics for the specified Interconnect. In the event of a global outage, do not use this API to make decisions about where to redirect your network traffic. Unlike a VLAN attachment, which is regional, a Cloud Interconnect connection is a global resource. A global outage can prevent this API from functioning properly.
+        /// Returns the interconnectDiagnostics for the specified
+        /// Interconnect.
+        /// 
+        /// In the event of a
+        /// global outage, do not use this API to make decisions about where to
+        /// redirect your network traffic.
+        /// 
+        /// Unlike a VLAN attachment, which is regional, a Cloud Interconnect
+        /// connection is a global resource. A global outage can prevent this
+        /// API from functioning properly.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -654,7 +705,16 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the interconnectDiagnostics for the specified Interconnect. In the event of a global outage, do not use this API to make decisions about where to redirect your network traffic. Unlike a VLAN attachment, which is regional, a Cloud Interconnect connection is a global resource. A global outage can prevent this API from functioning properly.
+        /// Returns the interconnectDiagnostics for the specified
+        /// Interconnect.
+        /// 
+        /// In the event of a
+        /// global outage, do not use this API to make decisions about where to
+        /// redirect your network traffic.
+        /// 
+        /// Unlike a VLAN attachment, which is regional, a Cloud Interconnect
+        /// connection is a global resource. A global outage can prevent this
+        /// API from functioning properly.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -668,7 +728,8 @@ namespace Google.Cloud.Compute.V1
             GetDiagnosticsAsync(project, interconnect, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the interconnectMacsecConfig for the specified Interconnect.
+        /// Returns the interconnectMacsecConfig for the specified
+        /// Interconnect.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -677,7 +738,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the interconnectMacsecConfig for the specified Interconnect.
+        /// Returns the interconnectMacsecConfig for the specified
+        /// Interconnect.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -686,7 +748,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the interconnectMacsecConfig for the specified Interconnect.
+        /// Returns the interconnectMacsecConfig for the specified
+        /// Interconnect.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -695,7 +758,8 @@ namespace Google.Cloud.Compute.V1
             GetMacsecConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the interconnectMacsecConfig for the specified Interconnect.
+        /// Returns the interconnectMacsecConfig for the specified
+        /// Interconnect.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -713,7 +777,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the interconnectMacsecConfig for the specified Interconnect.
+        /// Returns the interconnectMacsecConfig for the specified
+        /// Interconnect.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -731,7 +796,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the interconnectMacsecConfig for the specified Interconnect.
+        /// Returns the interconnectMacsecConfig for the specified
+        /// Interconnect.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -745,7 +811,8 @@ namespace Google.Cloud.Compute.V1
             GetMacsecConfigAsync(project, interconnect, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an Interconnect in the specified project using the data included in the request.
+        /// Creates an Interconnect in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -754,7 +821,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an Interconnect in the specified project using the data included in the request.
+        /// Creates an Interconnect in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -763,7 +831,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an Interconnect in the specified project using the data included in the request.
+        /// Creates an Interconnect in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -798,7 +867,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates an Interconnect in the specified project using the data included in the request.
+        /// Creates an Interconnect in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -816,7 +886,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an Interconnect in the specified project using the data included in the request.
+        /// Creates an Interconnect in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -834,7 +905,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an Interconnect in the specified project using the data included in the request.
+        /// Creates an Interconnect in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -932,7 +1004,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Updates the specified Interconnect with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the specified Interconnect with the data included in the request.
+        /// This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -941,7 +1016,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the specified Interconnect with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the specified Interconnect with the data included in the request.
+        /// This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -950,7 +1028,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the specified Interconnect with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the specified Interconnect with the data included in the request.
+        /// This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -985,7 +1066,10 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates the specified Interconnect with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the specified Interconnect with the data included in the request.
+        /// This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1007,7 +1091,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the specified Interconnect with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the specified Interconnect with the data included in the request.
+        /// This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1029,7 +1116,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the specified Interconnect with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the specified Interconnect with the data included in the request.
+        /// This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1046,7 +1136,9 @@ namespace Google.Cloud.Compute.V1
             PatchAsync(project, interconnect, interconnectResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the labels on an Interconnect. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an Interconnect. To learn more about labels,
+        /// read the Labeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1055,7 +1147,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the labels on an Interconnect. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an Interconnect. To learn more about labels,
+        /// read the Labeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1064,7 +1158,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the labels on an Interconnect. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an Interconnect. To learn more about labels,
+        /// read the Labeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1099,7 +1195,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetLabelsOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets the labels on an Interconnect. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an Interconnect. To learn more about labels,
+        /// read the Labeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1121,7 +1219,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the labels on an Interconnect. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an Interconnect. To learn more about labels,
+        /// read the Labeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1143,7 +1243,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the labels on an Interconnect. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an Interconnect. To learn more about labels,
+        /// read the Labeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1301,7 +1403,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the specified Interconnect. Get a list of available Interconnects by making a list() request.
+        /// Returns the specified Interconnect. Get a list of available Interconnects
+        /// by making a list() request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1313,7 +1416,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the specified Interconnect. Get a list of available Interconnects by making a list() request.
+        /// Returns the specified Interconnect. Get a list of available Interconnects
+        /// by making a list() request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1325,7 +1429,16 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the interconnectDiagnostics for the specified Interconnect. In the event of a global outage, do not use this API to make decisions about where to redirect your network traffic. Unlike a VLAN attachment, which is regional, a Cloud Interconnect connection is a global resource. A global outage can prevent this API from functioning properly.
+        /// Returns the interconnectDiagnostics for the specified
+        /// Interconnect.
+        /// 
+        /// In the event of a
+        /// global outage, do not use this API to make decisions about where to
+        /// redirect your network traffic.
+        /// 
+        /// Unlike a VLAN attachment, which is regional, a Cloud Interconnect
+        /// connection is a global resource. A global outage can prevent this
+        /// API from functioning properly.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1337,7 +1450,16 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the interconnectDiagnostics for the specified Interconnect. In the event of a global outage, do not use this API to make decisions about where to redirect your network traffic. Unlike a VLAN attachment, which is regional, a Cloud Interconnect connection is a global resource. A global outage can prevent this API from functioning properly.
+        /// Returns the interconnectDiagnostics for the specified
+        /// Interconnect.
+        /// 
+        /// In the event of a
+        /// global outage, do not use this API to make decisions about where to
+        /// redirect your network traffic.
+        /// 
+        /// Unlike a VLAN attachment, which is regional, a Cloud Interconnect
+        /// connection is a global resource. A global outage can prevent this
+        /// API from functioning properly.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1349,7 +1471,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the interconnectMacsecConfig for the specified Interconnect.
+        /// Returns the interconnectMacsecConfig for the specified
+        /// Interconnect.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1361,7 +1484,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the interconnectMacsecConfig for the specified Interconnect.
+        /// Returns the interconnectMacsecConfig for the specified
+        /// Interconnect.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1376,7 +1500,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates an Interconnect in the specified project using the data included in the request.
+        /// Creates an Interconnect in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1391,7 +1516,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates an Interconnect in the specified project using the data included in the request.
+        /// Creates an Interconnect in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1433,7 +1559,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient PatchOperationsClient { get; }
 
         /// <summary>
-        /// Updates the specified Interconnect with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the specified Interconnect with the data included in the request.
+        /// This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1448,7 +1577,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Updates the specified Interconnect with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the specified Interconnect with the data included in the request.
+        /// This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1466,7 +1598,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetLabelsOperationsClient { get; }
 
         /// <summary>
-        /// Sets the labels on an Interconnect. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an Interconnect. To learn more about labels,
+        /// read the Labeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1481,7 +1615,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the labels on an Interconnect. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an Interconnect. To learn more about labels,
+        /// read the Labeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

@@ -455,7 +455,8 @@ namespace Google.Cloud.Compute.V1
             DeleteAsync(project, externalVpnGateway, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the specified externalVpnGateway. Get a list of available externalVpnGateways by making a list() request.
+        /// Returns the specified externalVpnGateway. Get a list of available
+        /// externalVpnGateways by making a list() request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -464,7 +465,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified externalVpnGateway. Get a list of available externalVpnGateways by making a list() request.
+        /// Returns the specified externalVpnGateway. Get a list of available
+        /// externalVpnGateways by making a list() request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -473,7 +475,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified externalVpnGateway. Get a list of available externalVpnGateways by making a list() request.
+        /// Returns the specified externalVpnGateway. Get a list of available
+        /// externalVpnGateways by making a list() request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -482,7 +485,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the specified externalVpnGateway. Get a list of available externalVpnGateways by making a list() request.
+        /// Returns the specified externalVpnGateway. Get a list of available
+        /// externalVpnGateways by making a list() request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -500,7 +504,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the specified externalVpnGateway. Get a list of available externalVpnGateways by making a list() request.
+        /// Returns the specified externalVpnGateway. Get a list of available
+        /// externalVpnGateways by making a list() request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -518,7 +523,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the specified externalVpnGateway. Get a list of available externalVpnGateways by making a list() request.
+        /// Returns the specified externalVpnGateway. Get a list of available
+        /// externalVpnGateways by making a list() request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -532,7 +538,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, externalVpnGateway, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a ExternalVpnGateway in the specified project using the data included in the request.
+        /// Creates a ExternalVpnGateway in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -541,7 +548,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a ExternalVpnGateway in the specified project using the data included in the request.
+        /// Creates a ExternalVpnGateway in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -550,7 +558,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a ExternalVpnGateway in the specified project using the data included in the request.
+        /// Creates a ExternalVpnGateway in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -585,7 +594,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a ExternalVpnGateway in the specified project using the data included in the request.
+        /// Creates a ExternalVpnGateway in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -603,7 +613,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a ExternalVpnGateway in the specified project using the data included in the request.
+        /// Creates a ExternalVpnGateway in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -621,7 +632,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a ExternalVpnGateway in the specified project using the data included in the request.
+        /// Creates a ExternalVpnGateway in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -635,7 +647,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, externalVpnGatewayResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the list of ExternalVpnGateway available to the specified project.
+        /// Retrieves the list of ExternalVpnGateway available to the specified
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -644,7 +657,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of ExternalVpnGateway available to the specified project.
+        /// Retrieves the list of ExternalVpnGateway available to the specified
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -653,7 +667,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of ExternalVpnGateway available to the specified project.
+        /// Retrieves the list of ExternalVpnGateway available to the specified
+        /// project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -686,7 +701,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of ExternalVpnGateway available to the specified project.
+        /// Retrieves the list of ExternalVpnGateway available to the specified
+        /// project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -719,7 +735,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the labels on an ExternalVpnGateway. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an ExternalVpnGateway. To learn more about labels,
+        /// read the Labeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -728,7 +746,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the labels on an ExternalVpnGateway. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an ExternalVpnGateway. To learn more about labels,
+        /// read the Labeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -737,7 +757,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the labels on an ExternalVpnGateway. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an ExternalVpnGateway. To learn more about labels,
+        /// read the Labeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -772,7 +794,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetLabelsOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets the labels on an ExternalVpnGateway. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an ExternalVpnGateway. To learn more about labels,
+        /// read the Labeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -794,7 +818,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the labels on an ExternalVpnGateway. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an ExternalVpnGateway. To learn more about labels,
+        /// read the Labeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -816,7 +842,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the labels on an ExternalVpnGateway. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an ExternalVpnGateway. To learn more about labels,
+        /// read the Labeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1044,7 +1072,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the specified externalVpnGateway. Get a list of available externalVpnGateways by making a list() request.
+        /// Returns the specified externalVpnGateway. Get a list of available
+        /// externalVpnGateways by making a list() request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1056,7 +1085,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the specified externalVpnGateway. Get a list of available externalVpnGateways by making a list() request.
+        /// Returns the specified externalVpnGateway. Get a list of available
+        /// externalVpnGateways by making a list() request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1071,7 +1101,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a ExternalVpnGateway in the specified project using the data included in the request.
+        /// Creates a ExternalVpnGateway in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1086,7 +1117,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a ExternalVpnGateway in the specified project using the data included in the request.
+        /// Creates a ExternalVpnGateway in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1101,7 +1133,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of ExternalVpnGateway available to the specified project.
+        /// Retrieves the list of ExternalVpnGateway available to the specified
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1113,7 +1146,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of ExternalVpnGateway available to the specified project.
+        /// Retrieves the list of ExternalVpnGateway available to the specified
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1128,7 +1162,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetLabelsOperationsClient { get; }
 
         /// <summary>
-        /// Sets the labels on an ExternalVpnGateway. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an ExternalVpnGateway. To learn more about labels,
+        /// read the Labeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1143,7 +1179,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the labels on an ExternalVpnGateway. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an ExternalVpnGateway. To learn more about labels,
+        /// read the Labeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

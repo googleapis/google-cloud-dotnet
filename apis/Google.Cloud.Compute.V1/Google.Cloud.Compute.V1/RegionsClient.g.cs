@@ -238,7 +238,24 @@ namespace Google.Cloud.Compute.V1
         public virtual Regions.RegionsClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified Region resource. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request. This method fails if the quota information is unavailable for the region and if the organization policy constraint compute.requireBasicQuotaInResponse is enforced. This constraint, when enforced, disables the fail-open behaviour when quota information (the `items.quotas` field) is unavailable for the region. It is recommended to use the default setting for the constraint unless your application requires the fail-closed behaviour for this method.
+        /// Returns the specified Region resource.
+        /// 
+        /// To decrease latency for this method, you can optionally omit any unneeded
+        /// information from the response by using a field mask. This practice is
+        /// especially recommended for unused quota information (the `quotas` field).
+        /// To exclude one or more fields, set your request's `fields` query parameter
+        /// to only include the fields you need. For example, to only include the `id`
+        /// and `selfLink` fields, add the query parameter `?fields=id,selfLink` to
+        /// your request.
+        /// 
+        /// This method fails if the quota information is unavailable for the region
+        /// and if the organization policy constraint
+        /// compute.requireBasicQuotaInResponse is enforced. This
+        /// constraint, when enforced, disables the fail-open behaviour when quota
+        /// information (the `items.quotas` field) is unavailable for the region.
+        /// It is recommended to use the default setting
+        /// for the constraint unless your application requires the fail-closed
+        /// behaviour for this method.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -247,7 +264,24 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified Region resource. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request. This method fails if the quota information is unavailable for the region and if the organization policy constraint compute.requireBasicQuotaInResponse is enforced. This constraint, when enforced, disables the fail-open behaviour when quota information (the `items.quotas` field) is unavailable for the region. It is recommended to use the default setting for the constraint unless your application requires the fail-closed behaviour for this method.
+        /// Returns the specified Region resource.
+        /// 
+        /// To decrease latency for this method, you can optionally omit any unneeded
+        /// information from the response by using a field mask. This practice is
+        /// especially recommended for unused quota information (the `quotas` field).
+        /// To exclude one or more fields, set your request's `fields` query parameter
+        /// to only include the fields you need. For example, to only include the `id`
+        /// and `selfLink` fields, add the query parameter `?fields=id,selfLink` to
+        /// your request.
+        /// 
+        /// This method fails if the quota information is unavailable for the region
+        /// and if the organization policy constraint
+        /// compute.requireBasicQuotaInResponse is enforced. This
+        /// constraint, when enforced, disables the fail-open behaviour when quota
+        /// information (the `items.quotas` field) is unavailable for the region.
+        /// It is recommended to use the default setting
+        /// for the constraint unless your application requires the fail-closed
+        /// behaviour for this method.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -256,7 +290,24 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified Region resource. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request. This method fails if the quota information is unavailable for the region and if the organization policy constraint compute.requireBasicQuotaInResponse is enforced. This constraint, when enforced, disables the fail-open behaviour when quota information (the `items.quotas` field) is unavailable for the region. It is recommended to use the default setting for the constraint unless your application requires the fail-closed behaviour for this method.
+        /// Returns the specified Region resource.
+        /// 
+        /// To decrease latency for this method, you can optionally omit any unneeded
+        /// information from the response by using a field mask. This practice is
+        /// especially recommended for unused quota information (the `quotas` field).
+        /// To exclude one or more fields, set your request's `fields` query parameter
+        /// to only include the fields you need. For example, to only include the `id`
+        /// and `selfLink` fields, add the query parameter `?fields=id,selfLink` to
+        /// your request.
+        /// 
+        /// This method fails if the quota information is unavailable for the region
+        /// and if the organization policy constraint
+        /// compute.requireBasicQuotaInResponse is enforced. This
+        /// constraint, when enforced, disables the fail-open behaviour when quota
+        /// information (the `items.quotas` field) is unavailable for the region.
+        /// It is recommended to use the default setting
+        /// for the constraint unless your application requires the fail-closed
+        /// behaviour for this method.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -265,7 +316,24 @@ namespace Google.Cloud.Compute.V1
             GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the specified Region resource. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request. This method fails if the quota information is unavailable for the region and if the organization policy constraint compute.requireBasicQuotaInResponse is enforced. This constraint, when enforced, disables the fail-open behaviour when quota information (the `items.quotas` field) is unavailable for the region. It is recommended to use the default setting for the constraint unless your application requires the fail-closed behaviour for this method.
+        /// Returns the specified Region resource.
+        /// 
+        /// To decrease latency for this method, you can optionally omit any unneeded
+        /// information from the response by using a field mask. This practice is
+        /// especially recommended for unused quota information (the `quotas` field).
+        /// To exclude one or more fields, set your request's `fields` query parameter
+        /// to only include the fields you need. For example, to only include the `id`
+        /// and `selfLink` fields, add the query parameter `?fields=id,selfLink` to
+        /// your request.
+        /// 
+        /// This method fails if the quota information is unavailable for the region
+        /// and if the organization policy constraint
+        /// compute.requireBasicQuotaInResponse is enforced. This
+        /// constraint, when enforced, disables the fail-open behaviour when quota
+        /// information (the `items.quotas` field) is unavailable for the region.
+        /// It is recommended to use the default setting
+        /// for the constraint unless your application requires the fail-closed
+        /// behaviour for this method.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -283,7 +351,24 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the specified Region resource. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request. This method fails if the quota information is unavailable for the region and if the organization policy constraint compute.requireBasicQuotaInResponse is enforced. This constraint, when enforced, disables the fail-open behaviour when quota information (the `items.quotas` field) is unavailable for the region. It is recommended to use the default setting for the constraint unless your application requires the fail-closed behaviour for this method.
+        /// Returns the specified Region resource.
+        /// 
+        /// To decrease latency for this method, you can optionally omit any unneeded
+        /// information from the response by using a field mask. This practice is
+        /// especially recommended for unused quota information (the `quotas` field).
+        /// To exclude one or more fields, set your request's `fields` query parameter
+        /// to only include the fields you need. For example, to only include the `id`
+        /// and `selfLink` fields, add the query parameter `?fields=id,selfLink` to
+        /// your request.
+        /// 
+        /// This method fails if the quota information is unavailable for the region
+        /// and if the organization policy constraint
+        /// compute.requireBasicQuotaInResponse is enforced. This
+        /// constraint, when enforced, disables the fail-open behaviour when quota
+        /// information (the `items.quotas` field) is unavailable for the region.
+        /// It is recommended to use the default setting
+        /// for the constraint unless your application requires the fail-closed
+        /// behaviour for this method.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -301,7 +386,24 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the specified Region resource. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request. This method fails if the quota information is unavailable for the region and if the organization policy constraint compute.requireBasicQuotaInResponse is enforced. This constraint, when enforced, disables the fail-open behaviour when quota information (the `items.quotas` field) is unavailable for the region. It is recommended to use the default setting for the constraint unless your application requires the fail-closed behaviour for this method.
+        /// Returns the specified Region resource.
+        /// 
+        /// To decrease latency for this method, you can optionally omit any unneeded
+        /// information from the response by using a field mask. This practice is
+        /// especially recommended for unused quota information (the `quotas` field).
+        /// To exclude one or more fields, set your request's `fields` query parameter
+        /// to only include the fields you need. For example, to only include the `id`
+        /// and `selfLink` fields, add the query parameter `?fields=id,selfLink` to
+        /// your request.
+        /// 
+        /// This method fails if the quota information is unavailable for the region
+        /// and if the organization policy constraint
+        /// compute.requireBasicQuotaInResponse is enforced. This
+        /// constraint, when enforced, disables the fail-open behaviour when quota
+        /// information (the `items.quotas` field) is unavailable for the region.
+        /// It is recommended to use the default setting
+        /// for the constraint unless your application requires the fail-closed
+        /// behaviour for this method.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -315,7 +417,25 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, region, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the list of region resources available to the specified project. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `items.quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request. This method fails if the quota information is unavailable for the region and if the organization policy constraint compute.requireBasicQuotaInResponse is enforced. This constraint, when enforced, disables the fail-open behaviour when quota information (the `items.quotas` field) is unavailable for the region. It is recommended to use the default setting for the constraint unless your application requires the fail-closed behaviour for this method.
+        /// Retrieves the list of region resources available to the specified project.
+        /// 
+        /// To decrease latency for this method, you can optionally omit any unneeded
+        /// information from the response by using a field mask. This practice is
+        /// especially recommended for unused quota information
+        /// (the `items.quotas` field).
+        /// To exclude one or more fields, set your request's `fields` query parameter
+        /// to only include the fields you need. For example, to only include the `id`
+        /// and `selfLink` fields, add the query parameter `?fields=id,selfLink` to
+        /// your request.
+        /// 
+        /// This method fails if the quota information is unavailable for the region
+        /// and if the organization policy constraint
+        /// compute.requireBasicQuotaInResponse is enforced. This
+        /// constraint, when enforced, disables the fail-open behaviour when quota
+        /// information (the `items.quotas` field) is unavailable for the region.
+        /// It is recommended to use the default setting
+        /// for the constraint unless your application requires the fail-closed
+        /// behaviour for this method.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -324,7 +444,25 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of region resources available to the specified project. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `items.quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request. This method fails if the quota information is unavailable for the region and if the organization policy constraint compute.requireBasicQuotaInResponse is enforced. This constraint, when enforced, disables the fail-open behaviour when quota information (the `items.quotas` field) is unavailable for the region. It is recommended to use the default setting for the constraint unless your application requires the fail-closed behaviour for this method.
+        /// Retrieves the list of region resources available to the specified project.
+        /// 
+        /// To decrease latency for this method, you can optionally omit any unneeded
+        /// information from the response by using a field mask. This practice is
+        /// especially recommended for unused quota information
+        /// (the `items.quotas` field).
+        /// To exclude one or more fields, set your request's `fields` query parameter
+        /// to only include the fields you need. For example, to only include the `id`
+        /// and `selfLink` fields, add the query parameter `?fields=id,selfLink` to
+        /// your request.
+        /// 
+        /// This method fails if the quota information is unavailable for the region
+        /// and if the organization policy constraint
+        /// compute.requireBasicQuotaInResponse is enforced. This
+        /// constraint, when enforced, disables the fail-open behaviour when quota
+        /// information (the `items.quotas` field) is unavailable for the region.
+        /// It is recommended to use the default setting
+        /// for the constraint unless your application requires the fail-closed
+        /// behaviour for this method.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -333,7 +471,25 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of region resources available to the specified project. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `items.quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request. This method fails if the quota information is unavailable for the region and if the organization policy constraint compute.requireBasicQuotaInResponse is enforced. This constraint, when enforced, disables the fail-open behaviour when quota information (the `items.quotas` field) is unavailable for the region. It is recommended to use the default setting for the constraint unless your application requires the fail-closed behaviour for this method.
+        /// Retrieves the list of region resources available to the specified project.
+        /// 
+        /// To decrease latency for this method, you can optionally omit any unneeded
+        /// information from the response by using a field mask. This practice is
+        /// especially recommended for unused quota information
+        /// (the `items.quotas` field).
+        /// To exclude one or more fields, set your request's `fields` query parameter
+        /// to only include the fields you need. For example, to only include the `id`
+        /// and `selfLink` fields, add the query parameter `?fields=id,selfLink` to
+        /// your request.
+        /// 
+        /// This method fails if the quota information is unavailable for the region
+        /// and if the organization policy constraint
+        /// compute.requireBasicQuotaInResponse is enforced. This
+        /// constraint, when enforced, disables the fail-open behaviour when quota
+        /// information (the `items.quotas` field) is unavailable for the region.
+        /// It is recommended to use the default setting
+        /// for the constraint unless your application requires the fail-closed
+        /// behaviour for this method.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -366,7 +522,25 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of region resources available to the specified project. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `items.quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request. This method fails if the quota information is unavailable for the region and if the organization policy constraint compute.requireBasicQuotaInResponse is enforced. This constraint, when enforced, disables the fail-open behaviour when quota information (the `items.quotas` field) is unavailable for the region. It is recommended to use the default setting for the constraint unless your application requires the fail-closed behaviour for this method.
+        /// Retrieves the list of region resources available to the specified project.
+        /// 
+        /// To decrease latency for this method, you can optionally omit any unneeded
+        /// information from the response by using a field mask. This practice is
+        /// especially recommended for unused quota information
+        /// (the `items.quotas` field).
+        /// To exclude one or more fields, set your request's `fields` query parameter
+        /// to only include the fields you need. For example, to only include the `id`
+        /// and `selfLink` fields, add the query parameter `?fields=id,selfLink` to
+        /// your request.
+        /// 
+        /// This method fails if the quota information is unavailable for the region
+        /// and if the organization policy constraint
+        /// compute.requireBasicQuotaInResponse is enforced. This
+        /// constraint, when enforced, disables the fail-open behaviour when quota
+        /// information (the `items.quotas` field) is unavailable for the region.
+        /// It is recommended to use the default setting
+        /// for the constraint unless your application requires the fail-closed
+        /// behaviour for this method.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -449,7 +623,24 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_ListRegionsRequest(ref ListRegionsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Returns the specified Region resource. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request. This method fails if the quota information is unavailable for the region and if the organization policy constraint compute.requireBasicQuotaInResponse is enforced. This constraint, when enforced, disables the fail-open behaviour when quota information (the `items.quotas` field) is unavailable for the region. It is recommended to use the default setting for the constraint unless your application requires the fail-closed behaviour for this method.
+        /// Returns the specified Region resource.
+        /// 
+        /// To decrease latency for this method, you can optionally omit any unneeded
+        /// information from the response by using a field mask. This practice is
+        /// especially recommended for unused quota information (the `quotas` field).
+        /// To exclude one or more fields, set your request's `fields` query parameter
+        /// to only include the fields you need. For example, to only include the `id`
+        /// and `selfLink` fields, add the query parameter `?fields=id,selfLink` to
+        /// your request.
+        /// 
+        /// This method fails if the quota information is unavailable for the region
+        /// and if the organization policy constraint
+        /// compute.requireBasicQuotaInResponse is enforced. This
+        /// constraint, when enforced, disables the fail-open behaviour when quota
+        /// information (the `items.quotas` field) is unavailable for the region.
+        /// It is recommended to use the default setting
+        /// for the constraint unless your application requires the fail-closed
+        /// behaviour for this method.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -461,7 +652,24 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the specified Region resource. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request. This method fails if the quota information is unavailable for the region and if the organization policy constraint compute.requireBasicQuotaInResponse is enforced. This constraint, when enforced, disables the fail-open behaviour when quota information (the `items.quotas` field) is unavailable for the region. It is recommended to use the default setting for the constraint unless your application requires the fail-closed behaviour for this method.
+        /// Returns the specified Region resource.
+        /// 
+        /// To decrease latency for this method, you can optionally omit any unneeded
+        /// information from the response by using a field mask. This practice is
+        /// especially recommended for unused quota information (the `quotas` field).
+        /// To exclude one or more fields, set your request's `fields` query parameter
+        /// to only include the fields you need. For example, to only include the `id`
+        /// and `selfLink` fields, add the query parameter `?fields=id,selfLink` to
+        /// your request.
+        /// 
+        /// This method fails if the quota information is unavailable for the region
+        /// and if the organization policy constraint
+        /// compute.requireBasicQuotaInResponse is enforced. This
+        /// constraint, when enforced, disables the fail-open behaviour when quota
+        /// information (the `items.quotas` field) is unavailable for the region.
+        /// It is recommended to use the default setting
+        /// for the constraint unless your application requires the fail-closed
+        /// behaviour for this method.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -473,7 +681,25 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of region resources available to the specified project. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `items.quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request. This method fails if the quota information is unavailable for the region and if the organization policy constraint compute.requireBasicQuotaInResponse is enforced. This constraint, when enforced, disables the fail-open behaviour when quota information (the `items.quotas` field) is unavailable for the region. It is recommended to use the default setting for the constraint unless your application requires the fail-closed behaviour for this method.
+        /// Retrieves the list of region resources available to the specified project.
+        /// 
+        /// To decrease latency for this method, you can optionally omit any unneeded
+        /// information from the response by using a field mask. This practice is
+        /// especially recommended for unused quota information
+        /// (the `items.quotas` field).
+        /// To exclude one or more fields, set your request's `fields` query parameter
+        /// to only include the fields you need. For example, to only include the `id`
+        /// and `selfLink` fields, add the query parameter `?fields=id,selfLink` to
+        /// your request.
+        /// 
+        /// This method fails if the quota information is unavailable for the region
+        /// and if the organization policy constraint
+        /// compute.requireBasicQuotaInResponse is enforced. This
+        /// constraint, when enforced, disables the fail-open behaviour when quota
+        /// information (the `items.quotas` field) is unavailable for the region.
+        /// It is recommended to use the default setting
+        /// for the constraint unless your application requires the fail-closed
+        /// behaviour for this method.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -485,7 +711,25 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of region resources available to the specified project. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `items.quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request. This method fails if the quota information is unavailable for the region and if the organization policy constraint compute.requireBasicQuotaInResponse is enforced. This constraint, when enforced, disables the fail-open behaviour when quota information (the `items.quotas` field) is unavailable for the region. It is recommended to use the default setting for the constraint unless your application requires the fail-closed behaviour for this method.
+        /// Retrieves the list of region resources available to the specified project.
+        /// 
+        /// To decrease latency for this method, you can optionally omit any unneeded
+        /// information from the response by using a field mask. This practice is
+        /// especially recommended for unused quota information
+        /// (the `items.quotas` field).
+        /// To exclude one or more fields, set your request's `fields` query parameter
+        /// to only include the fields you need. For example, to only include the `id`
+        /// and `selfLink` fields, add the query parameter `?fields=id,selfLink` to
+        /// your request.
+        /// 
+        /// This method fails if the quota information is unavailable for the region
+        /// and if the organization policy constraint
+        /// compute.requireBasicQuotaInResponse is enforced. This
+        /// constraint, when enforced, disables the fail-open behaviour when quota
+        /// information (the `items.quotas` field) is unavailable for the region.
+        /// It is recommended to use the default setting
+        /// for the constraint unless your application requires the fail-closed
+        /// behaviour for this method.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

@@ -702,7 +702,11 @@ namespace Google.Cloud.Compute.V1
             AddNodesAsync(project, zone, nodeGroup, nodeGroupsAddNodesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves an aggregated list of node groups. Note: use nodeGroups.listNodes for more details about each group. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of node groups.
+        /// Note: use nodeGroups.listNodes for more details about each group.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -711,7 +715,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of node groups. Note: use nodeGroups.listNodes for more details about each group. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of node groups.
+        /// Note: use nodeGroups.listNodes for more details about each group.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -722,7 +730,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of node groups. Note: use nodeGroups.listNodes for more details about each group. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of node groups.
+        /// Note: use nodeGroups.listNodes for more details about each group.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -755,7 +767,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of node groups. Note: use nodeGroups.listNodes for more details about each group. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of node groups.
+        /// Note: use nodeGroups.listNodes for more details about each group.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1029,7 +1045,10 @@ namespace Google.Cloud.Compute.V1
             DeleteNodesAsync(project, zone, nodeGroup, nodeGroupsDeleteNodesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the specified NodeGroup. Get a list of available NodeGroups by making a list() request. Note: the "nodes" field should not be used. Use nodeGroups.listNodes instead.
+        /// Returns the specified NodeGroup. Get a list of available NodeGroups
+        /// by making a list() request.
+        /// Note: the "nodes" field should not be used. Use nodeGroups.listNodes
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1038,7 +1057,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified NodeGroup. Get a list of available NodeGroups by making a list() request. Note: the "nodes" field should not be used. Use nodeGroups.listNodes instead.
+        /// Returns the specified NodeGroup. Get a list of available NodeGroups
+        /// by making a list() request.
+        /// Note: the "nodes" field should not be used. Use nodeGroups.listNodes
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1047,7 +1069,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified NodeGroup. Get a list of available NodeGroups by making a list() request. Note: the "nodes" field should not be used. Use nodeGroups.listNodes instead.
+        /// Returns the specified NodeGroup. Get a list of available NodeGroups
+        /// by making a list() request.
+        /// Note: the "nodes" field should not be used. Use nodeGroups.listNodes
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1056,7 +1081,10 @@ namespace Google.Cloud.Compute.V1
             GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the specified NodeGroup. Get a list of available NodeGroups by making a list() request. Note: the "nodes" field should not be used. Use nodeGroups.listNodes instead.
+        /// Returns the specified NodeGroup. Get a list of available NodeGroups
+        /// by making a list() request.
+        /// Note: the "nodes" field should not be used. Use nodeGroups.listNodes
+        /// instead.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1078,7 +1106,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the specified NodeGroup. Get a list of available NodeGroups by making a list() request. Note: the "nodes" field should not be used. Use nodeGroups.listNodes instead.
+        /// Returns the specified NodeGroup. Get a list of available NodeGroups
+        /// by making a list() request.
+        /// Note: the "nodes" field should not be used. Use nodeGroups.listNodes
+        /// instead.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1100,7 +1131,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the specified NodeGroup. Get a list of available NodeGroups by making a list() request. Note: the "nodes" field should not be used. Use nodeGroups.listNodes instead.
+        /// Returns the specified NodeGroup. Get a list of available NodeGroups
+        /// by making a list() request.
+        /// Note: the "nodes" field should not be used. Use nodeGroups.listNodes
+        /// instead.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1117,7 +1151,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, zone, nodeGroup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1126,7 +1161,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1135,7 +1171,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1144,7 +1181,8 @@ namespace Google.Cloud.Compute.V1
             GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1166,7 +1204,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1188,7 +1227,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1205,7 +1245,8 @@ namespace Google.Cloud.Compute.V1
             GetIamPolicyAsync(project, zone, resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a NodeGroup resource in the specified project using the data included in the request.
+        /// Creates a NodeGroup resource in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1214,7 +1255,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a NodeGroup resource in the specified project using the data included in the request.
+        /// Creates a NodeGroup resource in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1223,7 +1265,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a NodeGroup resource in the specified project using the data included in the request.
+        /// Creates a NodeGroup resource in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1258,7 +1301,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a NodeGroup resource in the specified project using the data included in the request.
+        /// Creates a NodeGroup resource in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1284,7 +1328,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a NodeGroup resource in the specified project using the data included in the request.
+        /// Creates a NodeGroup resource in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1310,7 +1355,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a NodeGroup resource in the specified project using the data included in the request.
+        /// Creates a NodeGroup resource in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1330,7 +1376,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, zone, initialNodeCount, nodeGroupResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a list of node groups available to the specified project. Note: use nodeGroups.listNodes for more details about each group.
+        /// Retrieves a list of node groups available to the specified project.
+        /// Note: use nodeGroups.listNodes for more details about each group.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1339,7 +1386,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of node groups available to the specified project. Note: use nodeGroups.listNodes for more details about each group.
+        /// Retrieves a list of node groups available to the specified project.
+        /// Note: use nodeGroups.listNodes for more details about each group.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1348,7 +1396,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of node groups available to the specified project. Note: use nodeGroups.listNodes for more details about each group.
+        /// Retrieves a list of node groups available to the specified project.
+        /// Note: use nodeGroups.listNodes for more details about each group.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1385,7 +1434,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of node groups available to the specified project. Note: use nodeGroups.listNodes for more details about each group.
+        /// Retrieves a list of node groups available to the specified project.
+        /// Note: use nodeGroups.listNodes for more details about each group.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1773,7 +1823,8 @@ namespace Google.Cloud.Compute.V1
             PerformMaintenanceAsync(project, zone, nodeGroup, nodeGroupsPerformMaintenanceRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1782,7 +1833,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1791,7 +1843,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1800,7 +1853,8 @@ namespace Google.Cloud.Compute.V1
             SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1826,7 +1880,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1852,7 +1907,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2060,7 +2116,8 @@ namespace Google.Cloud.Compute.V1
         /// The name of the zone for this request.
         /// </param>
         /// <param name="nodeGroup">
-        /// Name of the NodeGroup resource whose nodes will go under maintenance simulation.
+        /// Name of the NodeGroup resource whose nodes will go under maintenance
+        /// simulation.
         /// </param>
         /// <param name="nodeGroupsSimulateMaintenanceEventRequestResource">
         /// The body resource for this request
@@ -2086,7 +2143,8 @@ namespace Google.Cloud.Compute.V1
         /// The name of the zone for this request.
         /// </param>
         /// <param name="nodeGroup">
-        /// Name of the NodeGroup resource whose nodes will go under maintenance simulation.
+        /// Name of the NodeGroup resource whose nodes will go under maintenance
+        /// simulation.
         /// </param>
         /// <param name="nodeGroupsSimulateMaintenanceEventRequestResource">
         /// The body resource for this request
@@ -2112,7 +2170,8 @@ namespace Google.Cloud.Compute.V1
         /// The name of the zone for this request.
         /// </param>
         /// <param name="nodeGroup">
-        /// Name of the NodeGroup resource whose nodes will go under maintenance simulation.
+        /// Name of the NodeGroup resource whose nodes will go under maintenance
+        /// simulation.
         /// </param>
         /// <param name="nodeGroupsSimulateMaintenanceEventRequestResource">
         /// The body resource for this request
@@ -2430,7 +2489,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of node groups. Note: use nodeGroups.listNodes for more details about each group. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of node groups.
+        /// Note: use nodeGroups.listNodes for more details about each group.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2442,7 +2505,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of node groups. Note: use nodeGroups.listNodes for more details about each group. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of node groups.
+        /// Note: use nodeGroups.listNodes for more details about each group.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2522,7 +2589,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the specified NodeGroup. Get a list of available NodeGroups by making a list() request. Note: the "nodes" field should not be used. Use nodeGroups.listNodes instead.
+        /// Returns the specified NodeGroup. Get a list of available NodeGroups
+        /// by making a list() request.
+        /// Note: the "nodes" field should not be used. Use nodeGroups.listNodes
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2534,7 +2604,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the specified NodeGroup. Get a list of available NodeGroups by making a list() request. Note: the "nodes" field should not be used. Use nodeGroups.listNodes instead.
+        /// Returns the specified NodeGroup. Get a list of available NodeGroups
+        /// by making a list() request.
+        /// Note: the "nodes" field should not be used. Use nodeGroups.listNodes
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2546,7 +2619,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2558,7 +2632,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2573,7 +2648,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a NodeGroup resource in the specified project using the data included in the request.
+        /// Creates a NodeGroup resource in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2588,7 +2664,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a NodeGroup resource in the specified project using the data included in the request.
+        /// Creates a NodeGroup resource in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2603,7 +2680,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of node groups available to the specified project. Note: use nodeGroups.listNodes for more details about each group.
+        /// Retrieves a list of node groups available to the specified project.
+        /// Note: use nodeGroups.listNodes for more details about each group.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2615,7 +2693,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of node groups available to the specified project. Note: use nodeGroups.listNodes for more details about each group.
+        /// Retrieves a list of node groups available to the specified project.
+        /// Note: use nodeGroups.listNodes for more details about each group.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2717,7 +2796,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2729,7 +2809,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

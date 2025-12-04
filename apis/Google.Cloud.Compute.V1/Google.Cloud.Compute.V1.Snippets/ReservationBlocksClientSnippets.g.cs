@@ -102,6 +102,80 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicyRequestObject()
+        {
+            // Snippet: GetIamPolicy(GetIamPolicyReservationBlockRequest, CallSettings)
+            // Create client
+            ReservationBlocksClient reservationBlocksClient = ReservationBlocksClient.Create();
+            // Initialize request argument(s)
+            GetIamPolicyReservationBlockRequest request = new GetIamPolicyReservationBlockRequest
+            {
+                Zone = "",
+                ParentResource = "",
+                Resource = "",
+                Project = "",
+                OptionsRequestedPolicyVersion = 0,
+            };
+            // Make the request
+            Policy response = reservationBlocksClient.GetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyRequestObjectAsync()
+        {
+            // Snippet: GetIamPolicyAsync(GetIamPolicyReservationBlockRequest, CallSettings)
+            // Additional: GetIamPolicyAsync(GetIamPolicyReservationBlockRequest, CancellationToken)
+            // Create client
+            ReservationBlocksClient reservationBlocksClient = await ReservationBlocksClient.CreateAsync();
+            // Initialize request argument(s)
+            GetIamPolicyReservationBlockRequest request = new GetIamPolicyReservationBlockRequest
+            {
+                Zone = "",
+                ParentResource = "",
+                Resource = "",
+                Project = "",
+                OptionsRequestedPolicyVersion = 0,
+            };
+            // Make the request
+            Policy response = await reservationBlocksClient.GetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicy()
+        {
+            // Snippet: GetIamPolicy(string, string, string, string, CallSettings)
+            // Create client
+            ReservationBlocksClient reservationBlocksClient = ReservationBlocksClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string parentResource = "";
+            string resource = "";
+            // Make the request
+            Policy response = reservationBlocksClient.GetIamPolicy(project, zone, parentResource, resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyAsync()
+        {
+            // Snippet: GetIamPolicyAsync(string, string, string, string, CallSettings)
+            // Additional: GetIamPolicyAsync(string, string, string, string, CancellationToken)
+            // Create client
+            ReservationBlocksClient reservationBlocksClient = await ReservationBlocksClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string parentResource = "";
+            string resource = "";
+            // Make the request
+            Policy response = await reservationBlocksClient.GetIamPolicyAsync(project, zone, parentResource, resource);
+            // End snippet
+        }
+
         /// <summary>Snippet for List</summary>
         public void ListRequestObject()
         {
@@ -441,6 +515,158 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 Operation retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicyRequestObject()
+        {
+            // Snippet: SetIamPolicy(SetIamPolicyReservationBlockRequest, CallSettings)
+            // Create client
+            ReservationBlocksClient reservationBlocksClient = ReservationBlocksClient.Create();
+            // Initialize request argument(s)
+            SetIamPolicyReservationBlockRequest request = new SetIamPolicyReservationBlockRequest
+            {
+                Zone = "",
+                ParentResource = "",
+                Resource = "",
+                Project = "",
+                ZoneSetNestedPolicyRequestResource = new ZoneSetNestedPolicyRequest(),
+            };
+            // Make the request
+            Policy response = reservationBlocksClient.SetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyRequestObjectAsync()
+        {
+            // Snippet: SetIamPolicyAsync(SetIamPolicyReservationBlockRequest, CallSettings)
+            // Additional: SetIamPolicyAsync(SetIamPolicyReservationBlockRequest, CancellationToken)
+            // Create client
+            ReservationBlocksClient reservationBlocksClient = await ReservationBlocksClient.CreateAsync();
+            // Initialize request argument(s)
+            SetIamPolicyReservationBlockRequest request = new SetIamPolicyReservationBlockRequest
+            {
+                Zone = "",
+                ParentResource = "",
+                Resource = "",
+                Project = "",
+                ZoneSetNestedPolicyRequestResource = new ZoneSetNestedPolicyRequest(),
+            };
+            // Make the request
+            Policy response = await reservationBlocksClient.SetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicy()
+        {
+            // Snippet: SetIamPolicy(string, string, string, string, ZoneSetNestedPolicyRequest, CallSettings)
+            // Create client
+            ReservationBlocksClient reservationBlocksClient = ReservationBlocksClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string parentResource = "";
+            string resource = "";
+            ZoneSetNestedPolicyRequest zoneSetNestedPolicyRequestResource = new ZoneSetNestedPolicyRequest();
+            // Make the request
+            Policy response = reservationBlocksClient.SetIamPolicy(project, zone, parentResource, resource, zoneSetNestedPolicyRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyAsync()
+        {
+            // Snippet: SetIamPolicyAsync(string, string, string, string, ZoneSetNestedPolicyRequest, CallSettings)
+            // Additional: SetIamPolicyAsync(string, string, string, string, ZoneSetNestedPolicyRequest, CancellationToken)
+            // Create client
+            ReservationBlocksClient reservationBlocksClient = await ReservationBlocksClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string parentResource = "";
+            string resource = "";
+            ZoneSetNestedPolicyRequest zoneSetNestedPolicyRequestResource = new ZoneSetNestedPolicyRequest();
+            // Make the request
+            Policy response = await reservationBlocksClient.SetIamPolicyAsync(project, zone, parentResource, resource, zoneSetNestedPolicyRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissionsRequestObject()
+        {
+            // Snippet: TestIamPermissions(TestIamPermissionsReservationBlockRequest, CallSettings)
+            // Create client
+            ReservationBlocksClient reservationBlocksClient = ReservationBlocksClient.Create();
+            // Initialize request argument(s)
+            TestIamPermissionsReservationBlockRequest request = new TestIamPermissionsReservationBlockRequest
+            {
+                Zone = "",
+                ParentResource = "",
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = reservationBlocksClient.TestIamPermissions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsRequestObjectAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(TestIamPermissionsReservationBlockRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsReservationBlockRequest, CancellationToken)
+            // Create client
+            ReservationBlocksClient reservationBlocksClient = await ReservationBlocksClient.CreateAsync();
+            // Initialize request argument(s)
+            TestIamPermissionsReservationBlockRequest request = new TestIamPermissionsReservationBlockRequest
+            {
+                Zone = "",
+                ParentResource = "",
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = await reservationBlocksClient.TestIamPermissionsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissions()
+        {
+            // Snippet: TestIamPermissions(string, string, string, string, TestPermissionsRequest, CallSettings)
+            // Create client
+            ReservationBlocksClient reservationBlocksClient = ReservationBlocksClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string parentResource = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = reservationBlocksClient.TestIamPermissions(project, zone, parentResource, resource, testPermissionsRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(string, string, string, string, TestPermissionsRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(string, string, string, string, TestPermissionsRequest, CancellationToken)
+            // Create client
+            ReservationBlocksClient reservationBlocksClient = await ReservationBlocksClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string parentResource = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = await reservationBlocksClient.TestIamPermissionsAsync(project, zone, parentResource, resource, testPermissionsRequestResource);
             // End snippet
         }
     }

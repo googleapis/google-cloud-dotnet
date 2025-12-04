@@ -510,7 +510,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, region, targetTcpProxy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a TargetTcpProxy resource in the specified project and region using the data included in the request.
+        /// Creates a TargetTcpProxy resource in the specified project and region using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -519,7 +520,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a TargetTcpProxy resource in the specified project and region using the data included in the request.
+        /// Creates a TargetTcpProxy resource in the specified project and region using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -528,7 +530,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a TargetTcpProxy resource in the specified project and region using the data included in the request.
+        /// Creates a TargetTcpProxy resource in the specified project and region using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -563,7 +566,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a TargetTcpProxy resource in the specified project and region using the data included in the request.
+        /// Creates a TargetTcpProxy resource in the specified project and region using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -585,7 +589,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a TargetTcpProxy resource in the specified project and region using the data included in the request.
+        /// Creates a TargetTcpProxy resource in the specified project and region using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -607,7 +612,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a TargetTcpProxy resource in the specified project and region using the data included in the request.
+        /// Creates a TargetTcpProxy resource in the specified project and region using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -624,7 +630,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, region, targetTcpProxyResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a list of TargetTcpProxy resources available to the specified project in a given region.
+        /// Retrieves a list of TargetTcpProxy resources
+        /// available to the specified project in a given region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -633,7 +640,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of TargetTcpProxy resources available to the specified project in a given region.
+        /// Retrieves a list of TargetTcpProxy resources
+        /// available to the specified project in a given region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -642,7 +650,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of TargetTcpProxy resources available to the specified project in a given region.
+        /// Retrieves a list of TargetTcpProxy resources
+        /// available to the specified project in a given region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -679,7 +688,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of TargetTcpProxy resources available to the specified project in a given region.
+        /// Retrieves a list of TargetTcpProxy resources
+        /// available to the specified project in a given region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -849,7 +859,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a TargetTcpProxy resource in the specified project and region using the data included in the request.
+        /// Creates a TargetTcpProxy resource in the specified project and region using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -864,7 +875,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a TargetTcpProxy resource in the specified project and region using the data included in the request.
+        /// Creates a TargetTcpProxy resource in the specified project and region using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -879,7 +891,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of TargetTcpProxy resources available to the specified project in a given region.
+        /// Retrieves a list of TargetTcpProxy resources
+        /// available to the specified project in a given region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -891,7 +904,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of TargetTcpProxy resources available to the specified project in a given region.
+        /// Retrieves a list of TargetTcpProxy resources
+        /// available to the specified project in a given region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

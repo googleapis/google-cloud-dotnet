@@ -644,7 +644,11 @@ namespace Google.Cloud.Compute.V1
             AddRuleAsync(project, securityPolicy, securityPolicyRuleResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the list of all SecurityPolicy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of all SecurityPolicy resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -653,7 +657,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of all SecurityPolicy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of all SecurityPolicy resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -664,7 +672,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of all SecurityPolicy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of all SecurityPolicy resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Name of the project scoping this request.
@@ -697,7 +709,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of all SecurityPolicy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of all SecurityPolicy resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Name of the project scoping this request.
@@ -989,7 +1005,8 @@ namespace Google.Cloud.Compute.V1
             GetRuleAsync(project, securityPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new policy in the specified project using the data included in the request.
+        /// Creates a new policy in the specified project using the data included in
+        /// the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -998,7 +1015,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new policy in the specified project using the data included in the request.
+        /// Creates a new policy in the specified project using the data included in
+        /// the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1007,7 +1025,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new policy in the specified project using the data included in the request.
+        /// Creates a new policy in the specified project using the data included in
+        /// the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1042,7 +1061,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a new policy in the specified project using the data included in the request.
+        /// Creates a new policy in the specified project using the data included in
+        /// the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1060,7 +1080,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new policy in the specified project using the data included in the request.
+        /// Creates a new policy in the specified project using the data included in
+        /// the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1078,7 +1099,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new policy in the specified project using the data included in the request.
+        /// Creates a new policy in the specified project using the data included in
+        /// the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1176,7 +1198,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the current list of preconfigured Web Application Firewall (WAF) expressions.
+        /// Gets the current list of preconfigured Web Application Firewall (WAF)
+        /// expressions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1185,7 +1208,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the current list of preconfigured Web Application Firewall (WAF) expressions.
+        /// Gets the current list of preconfigured Web Application Firewall (WAF)
+        /// expressions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1194,7 +1218,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the current list of preconfigured Web Application Firewall (WAF) expressions.
+        /// Gets the current list of preconfigured Web Application Firewall (WAF)
+        /// expressions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1203,7 +1228,8 @@ namespace Google.Cloud.Compute.V1
             ListPreconfiguredExpressionSetsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the current list of preconfigured Web Application Firewall (WAF) expressions.
+        /// Gets the current list of preconfigured Web Application Firewall (WAF)
+        /// expressions.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1217,7 +1243,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the current list of preconfigured Web Application Firewall (WAF) expressions.
+        /// Gets the current list of preconfigured Web Application Firewall (WAF)
+        /// expressions.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1231,7 +1258,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the current list of preconfigured Web Application Firewall (WAF) expressions.
+        /// Gets the current list of preconfigured Web Application Firewall (WAF)
+        /// expressions.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1242,7 +1270,11 @@ namespace Google.Cloud.Compute.V1
             ListPreconfiguredExpressionSetsAsync(project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Patches the specified policy with the data included in the request. To clear fields in the policy, leave the fields empty and specify them in the updateMask. This cannot be used to be update the rules in the policy. Please use the per rule methods like addRule, patchRule, and removeRule instead.
+        /// Patches the specified policy with the data included in the request. To
+        /// clear fields in the policy, leave the fields empty and specify them in the
+        /// updateMask. This cannot be used to be update the rules in the policy.
+        /// Please use the per rule methods like addRule, patchRule, and removeRule
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1251,7 +1283,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified policy with the data included in the request. To clear fields in the policy, leave the fields empty and specify them in the updateMask. This cannot be used to be update the rules in the policy. Please use the per rule methods like addRule, patchRule, and removeRule instead.
+        /// Patches the specified policy with the data included in the request. To
+        /// clear fields in the policy, leave the fields empty and specify them in the
+        /// updateMask. This cannot be used to be update the rules in the policy.
+        /// Please use the per rule methods like addRule, patchRule, and removeRule
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1260,7 +1296,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified policy with the data included in the request. To clear fields in the policy, leave the fields empty and specify them in the updateMask. This cannot be used to be update the rules in the policy. Please use the per rule methods like addRule, patchRule, and removeRule instead.
+        /// Patches the specified policy with the data included in the request. To
+        /// clear fields in the policy, leave the fields empty and specify them in the
+        /// updateMask. This cannot be used to be update the rules in the policy.
+        /// Please use the per rule methods like addRule, patchRule, and removeRule
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1295,7 +1335,11 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchOperationsClient, callSettings);
 
         /// <summary>
-        /// Patches the specified policy with the data included in the request. To clear fields in the policy, leave the fields empty and specify them in the updateMask. This cannot be used to be update the rules in the policy. Please use the per rule methods like addRule, patchRule, and removeRule instead.
+        /// Patches the specified policy with the data included in the request. To
+        /// clear fields in the policy, leave the fields empty and specify them in the
+        /// updateMask. This cannot be used to be update the rules in the policy.
+        /// Please use the per rule methods like addRule, patchRule, and removeRule
+        /// instead.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1317,7 +1361,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified policy with the data included in the request. To clear fields in the policy, leave the fields empty and specify them in the updateMask. This cannot be used to be update the rules in the policy. Please use the per rule methods like addRule, patchRule, and removeRule instead.
+        /// Patches the specified policy with the data included in the request. To
+        /// clear fields in the policy, leave the fields empty and specify them in the
+        /// updateMask. This cannot be used to be update the rules in the policy.
+        /// Please use the per rule methods like addRule, patchRule, and removeRule
+        /// instead.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1339,7 +1387,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified policy with the data included in the request. To clear fields in the policy, leave the fields empty and specify them in the updateMask. This cannot be used to be update the rules in the policy. Please use the per rule methods like addRule, patchRule, and removeRule instead.
+        /// Patches the specified policy with the data included in the request. To
+        /// clear fields in the policy, leave the fields empty and specify them in the
+        /// updateMask. This cannot be used to be update the rules in the policy.
+        /// Please use the per rule methods like addRule, patchRule, and removeRule
+        /// instead.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1356,7 +1408,8 @@ namespace Google.Cloud.Compute.V1
             PatchAsync(project, securityPolicy, securityPolicyResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Patches a rule at the specified priority. To clear fields in the rule, leave the fields empty and specify them in the updateMask.
+        /// Patches a rule at the specified priority. To clear fields in the rule,
+        /// leave the fields empty and specify them in the updateMask.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1365,7 +1418,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches a rule at the specified priority. To clear fields in the rule, leave the fields empty and specify them in the updateMask.
+        /// Patches a rule at the specified priority. To clear fields in the rule,
+        /// leave the fields empty and specify them in the updateMask.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1374,7 +1428,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches a rule at the specified priority. To clear fields in the rule, leave the fields empty and specify them in the updateMask.
+        /// Patches a rule at the specified priority. To clear fields in the rule,
+        /// leave the fields empty and specify them in the updateMask.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1409,7 +1464,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchRuleOperationsClient, callSettings);
 
         /// <summary>
-        /// Patches a rule at the specified priority. To clear fields in the rule, leave the fields empty and specify them in the updateMask.
+        /// Patches a rule at the specified priority. To clear fields in the rule,
+        /// leave the fields empty and specify them in the updateMask.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1431,7 +1487,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches a rule at the specified priority. To clear fields in the rule, leave the fields empty and specify them in the updateMask.
+        /// Patches a rule at the specified priority. To clear fields in the rule,
+        /// leave the fields empty and specify them in the updateMask.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1453,7 +1510,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches a rule at the specified priority. To clear fields in the rule, leave the fields empty and specify them in the updateMask.
+        /// Patches a rule at the specified priority. To clear fields in the rule,
+        /// leave the fields empty and specify them in the updateMask.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1573,7 +1631,9 @@ namespace Google.Cloud.Compute.V1
             RemoveRuleAsync(project, securityPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the labels on a security policy. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on a security policy. To learn more about labels,
+        /// read the Labeling Resources
+        /// documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1582,7 +1642,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the labels on a security policy. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on a security policy. To learn more about labels,
+        /// read the Labeling Resources
+        /// documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1591,7 +1653,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the labels on a security policy. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on a security policy. To learn more about labels,
+        /// read the Labeling Resources
+        /// documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1626,7 +1690,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetLabelsOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets the labels on a security policy. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on a security policy. To learn more about labels,
+        /// read the Labeling Resources
+        /// documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1648,7 +1714,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the labels on a security policy. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on a security policy. To learn more about labels,
+        /// read the Labeling Resources
+        /// documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1670,7 +1738,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the labels on a security policy. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on a security policy. To learn more about labels,
+        /// read the Labeling Resources
+        /// documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1867,7 +1937,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of all SecurityPolicy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of all SecurityPolicy resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1879,7 +1953,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of all SecurityPolicy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of all SecurityPolicy resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1977,7 +2055,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a new policy in the specified project using the data included in the request.
+        /// Creates a new policy in the specified project using the data included in
+        /// the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1992,7 +2071,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a new policy in the specified project using the data included in the request.
+        /// Creates a new policy in the specified project using the data included in
+        /// the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2031,7 +2111,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the current list of preconfigured Web Application Firewall (WAF) expressions.
+        /// Gets the current list of preconfigured Web Application Firewall (WAF)
+        /// expressions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2043,7 +2124,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the current list of preconfigured Web Application Firewall (WAF) expressions.
+        /// Gets the current list of preconfigured Web Application Firewall (WAF)
+        /// expressions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2058,7 +2140,11 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient PatchOperationsClient { get; }
 
         /// <summary>
-        /// Patches the specified policy with the data included in the request. To clear fields in the policy, leave the fields empty and specify them in the updateMask. This cannot be used to be update the rules in the policy. Please use the per rule methods like addRule, patchRule, and removeRule instead.
+        /// Patches the specified policy with the data included in the request. To
+        /// clear fields in the policy, leave the fields empty and specify them in the
+        /// updateMask. This cannot be used to be update the rules in the policy.
+        /// Please use the per rule methods like addRule, patchRule, and removeRule
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2073,7 +2159,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches the specified policy with the data included in the request. To clear fields in the policy, leave the fields empty and specify them in the updateMask. This cannot be used to be update the rules in the policy. Please use the per rule methods like addRule, patchRule, and removeRule instead.
+        /// Patches the specified policy with the data included in the request. To
+        /// clear fields in the policy, leave the fields empty and specify them in the
+        /// updateMask. This cannot be used to be update the rules in the policy.
+        /// Please use the per rule methods like addRule, patchRule, and removeRule
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2091,7 +2181,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient PatchRuleOperationsClient { get; }
 
         /// <summary>
-        /// Patches a rule at the specified priority. To clear fields in the rule, leave the fields empty and specify them in the updateMask.
+        /// Patches a rule at the specified priority. To clear fields in the rule,
+        /// leave the fields empty and specify them in the updateMask.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2106,7 +2197,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches a rule at the specified priority. To clear fields in the rule, leave the fields empty and specify them in the updateMask.
+        /// Patches a rule at the specified priority. To clear fields in the rule,
+        /// leave the fields empty and specify them in the updateMask.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2157,7 +2249,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetLabelsOperationsClient { get; }
 
         /// <summary>
-        /// Sets the labels on a security policy. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on a security policy. To learn more about labels,
+        /// read the Labeling Resources
+        /// documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2172,7 +2266,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the labels on a security policy. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on a security policy. To learn more about labels,
+        /// read the Labeling Resources
+        /// documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

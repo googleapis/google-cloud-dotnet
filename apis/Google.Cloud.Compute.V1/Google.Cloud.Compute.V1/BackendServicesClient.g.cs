@@ -624,7 +624,8 @@ namespace Google.Cloud.Compute.V1
         public virtual BackendServices.BackendServicesClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Adds a key for validating requests with signed URLs for this backend service.
+        /// Adds a key for validating requests with signed URLs for this backend
+        /// service.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -633,7 +634,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Adds a key for validating requests with signed URLs for this backend service.
+        /// Adds a key for validating requests with signed URLs for this backend
+        /// service.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -642,7 +644,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Adds a key for validating requests with signed URLs for this backend service.
+        /// Adds a key for validating requests with signed URLs for this backend
+        /// service.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -677,13 +680,15 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddSignedUrlKeyOperationsClient, callSettings);
 
         /// <summary>
-        /// Adds a key for validating requests with signed URLs for this backend service.
+        /// Adds a key for validating requests with signed URLs for this backend
+        /// service.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="backendService">
-        /// Name of the BackendService resource to which the Signed URL Key should be added. The name should conform to RFC1035.
+        /// Name of the BackendService resource to which the Signed URL Key should be
+        /// added. The name should conform to RFC1035.
         /// </param>
         /// <param name="signedUrlKeyResource">
         /// The body resource for this request
@@ -699,13 +704,15 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Adds a key for validating requests with signed URLs for this backend service.
+        /// Adds a key for validating requests with signed URLs for this backend
+        /// service.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="backendService">
-        /// Name of the BackendService resource to which the Signed URL Key should be added. The name should conform to RFC1035.
+        /// Name of the BackendService resource to which the Signed URL Key should be
+        /// added. The name should conform to RFC1035.
         /// </param>
         /// <param name="signedUrlKeyResource">
         /// The body resource for this request
@@ -721,13 +728,15 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Adds a key for validating requests with signed URLs for this backend service.
+        /// Adds a key for validating requests with signed URLs for this backend
+        /// service.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="backendService">
-        /// Name of the BackendService resource to which the Signed URL Key should be added. The name should conform to RFC1035.
+        /// Name of the BackendService resource to which the Signed URL Key should be
+        /// added. The name should conform to RFC1035.
         /// </param>
         /// <param name="signedUrlKeyResource">
         /// The body resource for this request
@@ -738,7 +747,11 @@ namespace Google.Cloud.Compute.V1
             AddSignedUrlKeyAsync(project, backendService, signedUrlKeyResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the list of all BackendService resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of all BackendService resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -747,7 +760,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of all BackendService resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of all BackendService resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -758,7 +775,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of all BackendService resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of all BackendService resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Name of the project scoping this request.
@@ -791,7 +812,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of all BackendService resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of all BackendService resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Name of the project scoping this request.
@@ -929,7 +954,8 @@ namespace Google.Cloud.Compute.V1
             DeleteAsync(project, backendService, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a key for validating requests with signed URLs for this backend service.
+        /// Deletes a key for validating requests with signed URLs for this backend
+        /// service.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -938,7 +964,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a key for validating requests with signed URLs for this backend service.
+        /// Deletes a key for validating requests with signed URLs for this backend
+        /// service.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -947,7 +974,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a key for validating requests with signed URLs for this backend service.
+        /// Deletes a key for validating requests with signed URLs for this backend
+        /// service.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -983,13 +1011,15 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteSignedUrlKeyOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes a key for validating requests with signed URLs for this backend service.
+        /// Deletes a key for validating requests with signed URLs for this backend
+        /// service.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="backendService">
-        /// Name of the BackendService resource to which the Signed URL Key should be added. The name should conform to RFC1035.
+        /// Name of the BackendService resource to which the Signed URL Key should be
+        /// added. The name should conform to RFC1035.
         /// </param>
         /// <param name="keyName">
         /// The name of the Signed URL Key to delete.
@@ -1005,13 +1035,15 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a key for validating requests with signed URLs for this backend service.
+        /// Deletes a key for validating requests with signed URLs for this backend
+        /// service.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="backendService">
-        /// Name of the BackendService resource to which the Signed URL Key should be added. The name should conform to RFC1035.
+        /// Name of the BackendService resource to which the Signed URL Key should be
+        /// added. The name should conform to RFC1035.
         /// </param>
         /// <param name="keyName">
         /// The name of the Signed URL Key to delete.
@@ -1027,13 +1059,15 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a key for validating requests with signed URLs for this backend service.
+        /// Deletes a key for validating requests with signed URLs for this backend
+        /// service.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="backendService">
-        /// Name of the BackendService resource to which the Signed URL Key should be added. The name should conform to RFC1035.
+        /// Name of the BackendService resource to which the Signed URL Key should be
+        /// added. The name should conform to RFC1035.
         /// </param>
         /// <param name="keyName">
         /// The name of the Signed URL Key to delete.
@@ -1198,7 +1232,14 @@ namespace Google.Cloud.Compute.V1
             GetEffectiveSecurityPoliciesAsync(project, backendService, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the most recent health check results for this BackendService. Example request body: { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
+        /// Gets the most recent health check results for this
+        /// BackendService.
+        /// 
+        /// Example request body:
+        /// 
+        /// {
+        /// "group": "/zones/us-east1-b/instanceGroups/lb-backend-example"
+        /// }
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1207,7 +1248,14 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the most recent health check results for this BackendService. Example request body: { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
+        /// Gets the most recent health check results for this
+        /// BackendService.
+        /// 
+        /// Example request body:
+        /// 
+        /// {
+        /// "group": "/zones/us-east1-b/instanceGroups/lb-backend-example"
+        /// }
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1216,7 +1264,14 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the most recent health check results for this BackendService. Example request body: { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
+        /// Gets the most recent health check results for this
+        /// BackendService.
+        /// 
+        /// Example request body:
+        /// 
+        /// {
+        /// "group": "/zones/us-east1-b/instanceGroups/lb-backend-example"
+        /// }
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1225,7 +1280,14 @@ namespace Google.Cloud.Compute.V1
             GetHealthAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the most recent health check results for this BackendService. Example request body: { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
+        /// Gets the most recent health check results for this
+        /// BackendService.
+        /// 
+        /// Example request body:
+        /// 
+        /// {
+        /// "group": "/zones/us-east1-b/instanceGroups/lb-backend-example"
+        /// }
         /// </summary>
         /// <param name="project">
         /// </param>
@@ -1246,7 +1308,14 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the most recent health check results for this BackendService. Example request body: { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
+        /// Gets the most recent health check results for this
+        /// BackendService.
+        /// 
+        /// Example request body:
+        /// 
+        /// {
+        /// "group": "/zones/us-east1-b/instanceGroups/lb-backend-example"
+        /// }
         /// </summary>
         /// <param name="project">
         /// </param>
@@ -1267,7 +1336,14 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the most recent health check results for this BackendService. Example request body: { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
+        /// Gets the most recent health check results for this
+        /// BackendService.
+        /// 
+        /// Example request body:
+        /// 
+        /// {
+        /// "group": "/zones/us-east1-b/instanceGroups/lb-backend-example"
+        /// }
         /// </summary>
         /// <param name="project">
         /// </param>
@@ -1283,7 +1359,8 @@ namespace Google.Cloud.Compute.V1
             GetHealthAsync(project, backendService, resourceGroupReferenceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1292,7 +1369,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1301,7 +1379,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1310,7 +1389,8 @@ namespace Google.Cloud.Compute.V1
             GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1328,7 +1408,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1346,7 +1427,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1360,7 +1442,9 @@ namespace Google.Cloud.Compute.V1
             GetIamPolicyAsync(project, resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see Backend services overview .
+        /// Creates a BackendService resource in the specified project using
+        /// the data included in the request. For more information, see
+        /// Backend services overview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1369,7 +1453,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see Backend services overview .
+        /// Creates a BackendService resource in the specified project using
+        /// the data included in the request. For more information, see
+        /// Backend services overview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1378,7 +1464,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see Backend services overview .
+        /// Creates a BackendService resource in the specified project using
+        /// the data included in the request. For more information, see
+        /// Backend services overview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1413,7 +1501,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see Backend services overview .
+        /// Creates a BackendService resource in the specified project using
+        /// the data included in the request. For more information, see
+        /// Backend services overview.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1431,7 +1521,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see Backend services overview .
+        /// Creates a BackendService resource in the specified project using
+        /// the data included in the request. For more information, see
+        /// Backend services overview.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1449,7 +1541,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see Backend services overview .
+        /// Creates a BackendService resource in the specified project using
+        /// the data included in the request. For more information, see
+        /// Backend services overview.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1463,7 +1557,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, backendServiceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the list of BackendService resources available to the specified project.
+        /// Retrieves the list of BackendService resources available to the specified
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1472,7 +1567,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of BackendService resources available to the specified project.
+        /// Retrieves the list of BackendService resources available to the specified
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1481,7 +1577,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of BackendService resources available to the specified project.
+        /// Retrieves the list of BackendService resources available to the specified
+        /// project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1514,7 +1611,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of BackendService resources available to the specified project.
+        /// Retrieves the list of BackendService resources available to the specified
+        /// project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1631,7 +1729,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches the specified BackendService resource with the data included in the request. For more information, see Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Patches the specified BackendService resource with the data included in the
+        /// request. For more information, see
+        /// Backend services overview. This method
+        /// supports PATCH semantics and uses the JSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1640,7 +1742,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified BackendService resource with the data included in the request. For more information, see Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Patches the specified BackendService resource with the data included in the
+        /// request. For more information, see
+        /// Backend services overview. This method
+        /// supports PATCH semantics and uses the JSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1649,7 +1755,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified BackendService resource with the data included in the request. For more information, see Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Patches the specified BackendService resource with the data included in the
+        /// request. For more information, see
+        /// Backend services overview. This method
+        /// supports PATCH semantics and uses the JSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1684,7 +1794,11 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchOperationsClient, callSettings);
 
         /// <summary>
-        /// Patches the specified BackendService resource with the data included in the request. For more information, see Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Patches the specified BackendService resource with the data included in the
+        /// request. For more information, see
+        /// Backend services overview. This method
+        /// supports PATCH semantics and uses the JSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1706,7 +1820,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified BackendService resource with the data included in the request. For more information, see Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Patches the specified BackendService resource with the data included in the
+        /// request. For more information, see
+        /// Backend services overview. This method
+        /// supports PATCH semantics and uses the JSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1728,7 +1846,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified BackendService resource with the data included in the request. For more information, see Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Patches the specified BackendService resource with the data included in the
+        /// request. For more information, see
+        /// Backend services overview. This method
+        /// supports PATCH semantics and uses the JSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1805,7 +1927,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="backendService">
-        /// Name of the BackendService resource to which the edge security policy should be set. The name should conform to RFC1035.
+        /// Name of the BackendService resource to which the edge security policy
+        /// should be set. The name should conform to RFC1035.
         /// </param>
         /// <param name="securityPolicyReferenceResource">
         /// The body resource for this request
@@ -1827,7 +1950,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="backendService">
-        /// Name of the BackendService resource to which the edge security policy should be set. The name should conform to RFC1035.
+        /// Name of the BackendService resource to which the edge security policy
+        /// should be set. The name should conform to RFC1035.
         /// </param>
         /// <param name="securityPolicyReferenceResource">
         /// The body resource for this request
@@ -1849,7 +1973,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="backendService">
-        /// Name of the BackendService resource to which the edge security policy should be set. The name should conform to RFC1035.
+        /// Name of the BackendService resource to which the edge security policy
+        /// should be set. The name should conform to RFC1035.
         /// </param>
         /// <param name="securityPolicyReferenceResource">
         /// The body resource for this request
@@ -1860,7 +1985,8 @@ namespace Google.Cloud.Compute.V1
             SetEdgeSecurityPolicyAsync(project, backendService, securityPolicyReferenceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1869,7 +1995,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1878,7 +2005,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1887,7 +2015,8 @@ namespace Google.Cloud.Compute.V1
             SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1909,7 +2038,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1931,7 +2061,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1948,7 +2079,9 @@ namespace Google.Cloud.Compute.V1
             SetIamPolicyAsync(project, resource, globalSetPolicyRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the Google Cloud Armor security policy for the specified backend service. For more information, see Google Cloud Armor Overview
+        /// Sets the Google Cloud Armor security policy for the specified backend
+        /// service. For more information, seeGoogle
+        /// Cloud Armor Overview
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1957,7 +2090,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the Google Cloud Armor security policy for the specified backend service. For more information, see Google Cloud Armor Overview
+        /// Sets the Google Cloud Armor security policy for the specified backend
+        /// service. For more information, seeGoogle
+        /// Cloud Armor Overview
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1966,7 +2101,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the Google Cloud Armor security policy for the specified backend service. For more information, see Google Cloud Armor Overview
+        /// Sets the Google Cloud Armor security policy for the specified backend
+        /// service. For more information, seeGoogle
+        /// Cloud Armor Overview
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2002,13 +2139,16 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetSecurityPolicyOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets the Google Cloud Armor security policy for the specified backend service. For more information, see Google Cloud Armor Overview
+        /// Sets the Google Cloud Armor security policy for the specified backend
+        /// service. For more information, seeGoogle
+        /// Cloud Armor Overview
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="backendService">
-        /// Name of the BackendService resource to which the security policy should be set. The name should conform to RFC1035.
+        /// Name of the BackendService resource to which the security policy should be
+        /// set. The name should conform to RFC1035.
         /// </param>
         /// <param name="securityPolicyReferenceResource">
         /// The body resource for this request
@@ -2024,13 +2164,16 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the Google Cloud Armor security policy for the specified backend service. For more information, see Google Cloud Armor Overview
+        /// Sets the Google Cloud Armor security policy for the specified backend
+        /// service. For more information, seeGoogle
+        /// Cloud Armor Overview
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="backendService">
-        /// Name of the BackendService resource to which the security policy should be set. The name should conform to RFC1035.
+        /// Name of the BackendService resource to which the security policy should be
+        /// set. The name should conform to RFC1035.
         /// </param>
         /// <param name="securityPolicyReferenceResource">
         /// The body resource for this request
@@ -2046,13 +2189,16 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the Google Cloud Armor security policy for the specified backend service. For more information, see Google Cloud Armor Overview
+        /// Sets the Google Cloud Armor security policy for the specified backend
+        /// service. For more information, seeGoogle
+        /// Cloud Armor Overview
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="backendService">
-        /// Name of the BackendService resource to which the security policy should be set. The name should conform to RFC1035.
+        /// Name of the BackendService resource to which the security policy should be
+        /// set. The name should conform to RFC1035.
         /// </param>
         /// <param name="securityPolicyReferenceResource">
         /// The body resource for this request
@@ -2151,7 +2297,9 @@ namespace Google.Cloud.Compute.V1
             TestIamPermissionsAsync(project, resource, testPermissionsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates the specified BackendService resource with the data included in the request. For more information, see Backend services overview.
+        /// Updates the specified BackendService resource with the data included in the
+        /// request. For more information, seeBackend
+        /// services overview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2160,7 +2308,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the specified BackendService resource with the data included in the request. For more information, see Backend services overview.
+        /// Updates the specified BackendService resource with the data included in the
+        /// request. For more information, seeBackend
+        /// services overview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2169,7 +2319,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the specified BackendService resource with the data included in the request. For more information, see Backend services overview.
+        /// Updates the specified BackendService resource with the data included in the
+        /// request. For more information, seeBackend
+        /// services overview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2204,7 +2356,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates the specified BackendService resource with the data included in the request. For more information, see Backend services overview.
+        /// Updates the specified BackendService resource with the data included in the
+        /// request. For more information, seeBackend
+        /// services overview.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2226,7 +2380,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the specified BackendService resource with the data included in the request. For more information, see Backend services overview.
+        /// Updates the specified BackendService resource with the data included in the
+        /// request. For more information, seeBackend
+        /// services overview.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2248,7 +2404,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the specified BackendService resource with the data included in the request. For more information, see Backend services overview.
+        /// Updates the specified BackendService resource with the data included in the
+        /// request. For more information, seeBackend
+        /// services overview.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2461,7 +2619,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient AddSignedUrlKeyOperationsClient { get; }
 
         /// <summary>
-        /// Adds a key for validating requests with signed URLs for this backend service.
+        /// Adds a key for validating requests with signed URLs for this backend
+        /// service.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2476,7 +2635,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Adds a key for validating requests with signed URLs for this backend service.
+        /// Adds a key for validating requests with signed URLs for this backend
+        /// service.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2491,7 +2651,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of all BackendService resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of all BackendService resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2503,7 +2667,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of all BackendService resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of all BackendService resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2553,7 +2721,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient DeleteSignedUrlKeyOperationsClient { get; }
 
         /// <summary>
-        /// Deletes a key for validating requests with signed URLs for this backend service.
+        /// Deletes a key for validating requests with signed URLs for this backend
+        /// service.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2568,7 +2737,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Deletes a key for validating requests with signed URLs for this backend service.
+        /// Deletes a key for validating requests with signed URLs for this backend
+        /// service.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2631,7 +2801,14 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the most recent health check results for this BackendService. Example request body: { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
+        /// Gets the most recent health check results for this
+        /// BackendService.
+        /// 
+        /// Example request body:
+        /// 
+        /// {
+        /// "group": "/zones/us-east1-b/instanceGroups/lb-backend-example"
+        /// }
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2643,7 +2820,14 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the most recent health check results for this BackendService. Example request body: { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
+        /// Gets the most recent health check results for this
+        /// BackendService.
+        /// 
+        /// Example request body:
+        /// 
+        /// {
+        /// "group": "/zones/us-east1-b/instanceGroups/lb-backend-example"
+        /// }
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2655,7 +2839,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2667,7 +2852,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2682,7 +2868,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see Backend services overview .
+        /// Creates a BackendService resource in the specified project using
+        /// the data included in the request. For more information, see
+        /// Backend services overview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2697,7 +2885,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see Backend services overview .
+        /// Creates a BackendService resource in the specified project using
+        /// the data included in the request. For more information, see
+        /// Backend services overview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2712,7 +2902,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of BackendService resources available to the specified project.
+        /// Retrieves the list of BackendService resources available to the specified
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2724,7 +2915,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of BackendService resources available to the specified project.
+        /// Retrieves the list of BackendService resources available to the specified
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2763,7 +2955,11 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient PatchOperationsClient { get; }
 
         /// <summary>
-        /// Patches the specified BackendService resource with the data included in the request. For more information, see Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Patches the specified BackendService resource with the data included in the
+        /// request. For more information, see
+        /// Backend services overview. This method
+        /// supports PATCH semantics and uses the JSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2778,7 +2974,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches the specified BackendService resource with the data included in the request. For more information, see Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Patches the specified BackendService resource with the data included in the
+        /// request. For more information, see
+        /// Backend services overview. This method
+        /// supports PATCH semantics and uses the JSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2826,7 +3026,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2838,7 +3039,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2853,7 +3055,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetSecurityPolicyOperationsClient { get; }
 
         /// <summary>
-        /// Sets the Google Cloud Armor security policy for the specified backend service. For more information, see Google Cloud Armor Overview
+        /// Sets the Google Cloud Armor security policy for the specified backend
+        /// service. For more information, seeGoogle
+        /// Cloud Armor Overview
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2868,7 +3072,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the Google Cloud Armor security policy for the specified backend service. For more information, see Google Cloud Armor Overview
+        /// Sets the Google Cloud Armor security policy for the specified backend
+        /// service. For more information, seeGoogle
+        /// Cloud Armor Overview
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2910,7 +3116,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient UpdateOperationsClient { get; }
 
         /// <summary>
-        /// Updates the specified BackendService resource with the data included in the request. For more information, see Backend services overview.
+        /// Updates the specified BackendService resource with the data included in the
+        /// request. For more information, seeBackend
+        /// services overview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2925,7 +3133,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Updates the specified BackendService resource with the data included in the request. For more information, see Backend services overview.
+        /// Updates the specified BackendService resource with the data included in the
+        /// request. For more information, seeBackend
+        /// services overview.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

@@ -378,7 +378,11 @@ namespace Google.Cloud.Compute.V1
         public virtual SslPolicies.SslPoliciesClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of all SslPolicy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of all SslPolicy resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -387,7 +391,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of all SslPolicy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of all SslPolicy resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -398,7 +406,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of all SslPolicy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of all SslPolicy resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Name of the project scoping this request.
@@ -431,7 +443,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of all SslPolicy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of all SslPolicy resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Name of the project scoping this request.
@@ -466,7 +482,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Deletes the specified SSL policy. The SSL policy resource can be deleted only if it is not in use by any TargetHttpsProxy or TargetSslProxy resources.
+        /// Deletes the specified SSL policy. The SSL policy resource can be deleted
+        /// only if it is not in use by any TargetHttpsProxy or TargetSslProxy
+        /// resources.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -475,7 +493,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified SSL policy. The SSL policy resource can be deleted only if it is not in use by any TargetHttpsProxy or TargetSslProxy resources.
+        /// Deletes the specified SSL policy. The SSL policy resource can be deleted
+        /// only if it is not in use by any TargetHttpsProxy or TargetSslProxy
+        /// resources.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -484,7 +504,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified SSL policy. The SSL policy resource can be deleted only if it is not in use by any TargetHttpsProxy or TargetSslProxy resources.
+        /// Deletes the specified SSL policy. The SSL policy resource can be deleted
+        /// only if it is not in use by any TargetHttpsProxy or TargetSslProxy
+        /// resources.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -519,13 +541,16 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes the specified SSL policy. The SSL policy resource can be deleted only if it is not in use by any TargetHttpsProxy or TargetSslProxy resources.
+        /// Deletes the specified SSL policy. The SSL policy resource can be deleted
+        /// only if it is not in use by any TargetHttpsProxy or TargetSslProxy
+        /// resources.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="sslPolicy">
-        /// Name of the SSL policy to delete. The name must be 1-63 characters long, and comply with RFC1035.
+        /// Name of the SSL policy to delete. The name must be 1-63 characters long,
+        /// and comply with RFC1035.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -537,13 +562,16 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified SSL policy. The SSL policy resource can be deleted only if it is not in use by any TargetHttpsProxy or TargetSslProxy resources.
+        /// Deletes the specified SSL policy. The SSL policy resource can be deleted
+        /// only if it is not in use by any TargetHttpsProxy or TargetSslProxy
+        /// resources.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="sslPolicy">
-        /// Name of the SSL policy to delete. The name must be 1-63 characters long, and comply with RFC1035.
+        /// Name of the SSL policy to delete. The name must be 1-63 characters long,
+        /// and comply with RFC1035.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -555,13 +583,16 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified SSL policy. The SSL policy resource can be deleted only if it is not in use by any TargetHttpsProxy or TargetSslProxy resources.
+        /// Deletes the specified SSL policy. The SSL policy resource can be deleted
+        /// only if it is not in use by any TargetHttpsProxy or TargetSslProxy
+        /// resources.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="sslPolicy">
-        /// Name of the SSL policy to delete. The name must be 1-63 characters long, and comply with RFC1035.
+        /// Name of the SSL policy to delete. The name must be 1-63 characters long,
+        /// and comply with RFC1035.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -602,7 +633,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="sslPolicy">
-        /// Name of the SSL policy to update. The name must be 1-63 characters long, and comply with RFC1035.
+        /// Name of the SSL policy to update. The name must be 1-63 characters long,
+        /// and comply with RFC1035.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -620,7 +652,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="sslPolicy">
-        /// Name of the SSL policy to update. The name must be 1-63 characters long, and comply with RFC1035.
+        /// Name of the SSL policy to update. The name must be 1-63 characters long,
+        /// and comply with RFC1035.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -638,7 +671,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="sslPolicy">
-        /// Name of the SSL policy to update. The name must be 1-63 characters long, and comply with RFC1035.
+        /// Name of the SSL policy to update. The name must be 1-63 characters long,
+        /// and comply with RFC1035.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -749,7 +783,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, sslPolicyResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists all the SSL policies that have been configured for the specified project.
+        /// Lists all the SSL policies that have been configured for the specified
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -758,7 +793,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all the SSL policies that have been configured for the specified project.
+        /// Lists all the SSL policies that have been configured for the specified
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -767,7 +803,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all the SSL policies that have been configured for the specified project.
+        /// Lists all the SSL policies that have been configured for the specified
+        /// project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -800,7 +837,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists all the SSL policies that have been configured for the specified project.
+        /// Lists all the SSL policies that have been configured for the specified
+        /// project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -833,7 +871,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists all features that can be specified in the SSL policy when using custom profile.
+        /// Lists all features that can be specified in the SSL policy when using
+        /// custom profile.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -842,7 +881,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all features that can be specified in the SSL policy when using custom profile.
+        /// Lists all features that can be specified in the SSL policy when using
+        /// custom profile.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -851,7 +891,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all features that can be specified in the SSL policy when using custom profile.
+        /// Lists all features that can be specified in the SSL policy when using
+        /// custom profile.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -860,7 +901,8 @@ namespace Google.Cloud.Compute.V1
             ListAvailableFeaturesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists all features that can be specified in the SSL policy when using custom profile.
+        /// Lists all features that can be specified in the SSL policy when using
+        /// custom profile.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -874,7 +916,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists all features that can be specified in the SSL policy when using custom profile.
+        /// Lists all features that can be specified in the SSL policy when using
+        /// custom profile.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -888,7 +931,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists all features that can be specified in the SSL policy when using custom profile.
+        /// Lists all features that can be specified in the SSL policy when using
+        /// custom profile.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -958,7 +1002,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="sslPolicy">
-        /// Name of the SSL policy to update. The name must be 1-63 characters long, and comply with RFC1035.
+        /// Name of the SSL policy to update. The name must be 1-63 characters long,
+        /// and comply with RFC1035.
         /// </param>
         /// <param name="sslPolicyResource">
         /// The body resource for this request
@@ -980,7 +1025,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="sslPolicy">
-        /// Name of the SSL policy to update. The name must be 1-63 characters long, and comply with RFC1035.
+        /// Name of the SSL policy to update. The name must be 1-63 characters long,
+        /// and comply with RFC1035.
         /// </param>
         /// <param name="sslPolicyResource">
         /// The body resource for this request
@@ -1002,7 +1048,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="sslPolicy">
-        /// Name of the SSL policy to update. The name must be 1-63 characters long, and comply with RFC1035.
+        /// Name of the SSL policy to update. The name must be 1-63 characters long,
+        /// and comply with RFC1035.
         /// </param>
         /// <param name="sslPolicyResource">
         /// The body resource for this request
@@ -1111,7 +1158,11 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_PatchSslPolicyRequest(ref PatchSslPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Retrieves the list of all SslPolicy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of all SslPolicy resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1123,7 +1174,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of all SslPolicy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of all SslPolicy resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1140,7 +1195,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient DeleteOperationsClient { get; }
 
         /// <summary>
-        /// Deletes the specified SSL policy. The SSL policy resource can be deleted only if it is not in use by any TargetHttpsProxy or TargetSslProxy resources.
+        /// Deletes the specified SSL policy. The SSL policy resource can be deleted
+        /// only if it is not in use by any TargetHttpsProxy or TargetSslProxy
+        /// resources.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1155,7 +1212,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Deletes the specified SSL policy. The SSL policy resource can be deleted only if it is not in use by any TargetHttpsProxy or TargetSslProxy resources.
+        /// Deletes the specified SSL policy. The SSL policy resource can be deleted
+        /// only if it is not in use by any TargetHttpsProxy or TargetSslProxy
+        /// resources.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1227,7 +1286,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists all the SSL policies that have been configured for the specified project.
+        /// Lists all the SSL policies that have been configured for the specified
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1239,7 +1299,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists all the SSL policies that have been configured for the specified project.
+        /// Lists all the SSL policies that have been configured for the specified
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1251,7 +1312,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists all features that can be specified in the SSL policy when using custom profile.
+        /// Lists all features that can be specified in the SSL policy when using
+        /// custom profile.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1263,7 +1325,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists all features that can be specified in the SSL policy when using custom profile.
+        /// Lists all features that can be specified in the SSL policy when using
+        /// custom profile.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

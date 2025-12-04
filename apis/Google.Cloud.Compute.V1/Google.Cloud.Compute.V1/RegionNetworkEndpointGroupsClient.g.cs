@@ -447,10 +447,13 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region where you want to create the network endpoint group. It should comply with RFC1035.
+        /// The name of the region where
+        /// you want to create the network endpoint group. It should comply with
+        /// RFC1035.
         /// </param>
         /// <param name="networkEndpointGroup">
-        /// The name of the network endpoint group where you are attaching network endpoints to. It should comply with RFC1035.
+        /// The name of the network endpoint group where you are attaching network
+        /// endpoints to. It should comply with RFC1035.
         /// </param>
         /// <param name="regionNetworkEndpointGroupsAttachEndpointsRequestResource">
         /// The body resource for this request
@@ -473,10 +476,13 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region where you want to create the network endpoint group. It should comply with RFC1035.
+        /// The name of the region where
+        /// you want to create the network endpoint group. It should comply with
+        /// RFC1035.
         /// </param>
         /// <param name="networkEndpointGroup">
-        /// The name of the network endpoint group where you are attaching network endpoints to. It should comply with RFC1035.
+        /// The name of the network endpoint group where you are attaching network
+        /// endpoints to. It should comply with RFC1035.
         /// </param>
         /// <param name="regionNetworkEndpointGroupsAttachEndpointsRequestResource">
         /// The body resource for this request
@@ -499,10 +505,13 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region where you want to create the network endpoint group. It should comply with RFC1035.
+        /// The name of the region where
+        /// you want to create the network endpoint group. It should comply with
+        /// RFC1035.
         /// </param>
         /// <param name="networkEndpointGroup">
-        /// The name of the network endpoint group where you are attaching network endpoints to. It should comply with RFC1035.
+        /// The name of the network endpoint group where you are attaching network
+        /// endpoints to. It should comply with RFC1035.
         /// </param>
         /// <param name="regionNetworkEndpointGroupsAttachEndpointsRequestResource">
         /// The body resource for this request
@@ -513,7 +522,8 @@ namespace Google.Cloud.Compute.V1
             AttachNetworkEndpointsAsync(project, region, networkEndpointGroup, regionNetworkEndpointGroupsAttachEndpointsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified network endpoint group. Note that the NEG cannot be deleted if it is configured as a backend of a backend service.
+        /// Deletes the specified network endpoint group. Note that the NEG cannot be
+        /// deleted if it is configured as a backend of a backend service.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -522,7 +532,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified network endpoint group. Note that the NEG cannot be deleted if it is configured as a backend of a backend service.
+        /// Deletes the specified network endpoint group. Note that the NEG cannot be
+        /// deleted if it is configured as a backend of a backend service.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -531,7 +542,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified network endpoint group. Note that the NEG cannot be deleted if it is configured as a backend of a backend service.
+        /// Deletes the specified network endpoint group. Note that the NEG cannot be
+        /// deleted if it is configured as a backend of a backend service.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -566,16 +578,19 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes the specified network endpoint group. Note that the NEG cannot be deleted if it is configured as a backend of a backend service.
+        /// Deletes the specified network endpoint group. Note that the NEG cannot be
+        /// deleted if it is configured as a backend of a backend service.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region where the network endpoint group is located. It should comply with RFC1035.
+        /// The name of the region where
+        /// the network endpoint group is located. It should comply with RFC1035.
         /// </param>
         /// <param name="networkEndpointGroup">
-        /// The name of the network endpoint group to delete. It should comply with RFC1035.
+        /// The name of the network endpoint group to delete. It should comply with
+        /// RFC1035.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -588,16 +603,19 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified network endpoint group. Note that the NEG cannot be deleted if it is configured as a backend of a backend service.
+        /// Deletes the specified network endpoint group. Note that the NEG cannot be
+        /// deleted if it is configured as a backend of a backend service.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region where the network endpoint group is located. It should comply with RFC1035.
+        /// The name of the region where
+        /// the network endpoint group is located. It should comply with RFC1035.
         /// </param>
         /// <param name="networkEndpointGroup">
-        /// The name of the network endpoint group to delete. It should comply with RFC1035.
+        /// The name of the network endpoint group to delete. It should comply with
+        /// RFC1035.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -610,16 +628,19 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified network endpoint group. Note that the NEG cannot be deleted if it is configured as a backend of a backend service.
+        /// Deletes the specified network endpoint group. Note that the NEG cannot be
+        /// deleted if it is configured as a backend of a backend service.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region where the network endpoint group is located. It should comply with RFC1035.
+        /// The name of the region where
+        /// the network endpoint group is located. It should comply with RFC1035.
         /// </param>
         /// <param name="networkEndpointGroup">
-        /// The name of the network endpoint group to delete. It should comply with RFC1035.
+        /// The name of the network endpoint group to delete. It should comply with
+        /// RFC1035.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -687,10 +708,13 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region where the network endpoint group is located. It should comply with RFC1035.
+        /// The name of the region where
+        /// the network endpoint group is located. It should comply with
+        /// RFC1035.
         /// </param>
         /// <param name="networkEndpointGroup">
-        /// The name of the network endpoint group you are detaching network endpoints from. It should comply with RFC1035.
+        /// The name of the network endpoint group you are detaching network
+        /// endpoints from. It should comply with RFC1035.
         /// </param>
         /// <param name="regionNetworkEndpointGroupsDetachEndpointsRequestResource">
         /// The body resource for this request
@@ -713,10 +737,13 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region where the network endpoint group is located. It should comply with RFC1035.
+        /// The name of the region where
+        /// the network endpoint group is located. It should comply with
+        /// RFC1035.
         /// </param>
         /// <param name="networkEndpointGroup">
-        /// The name of the network endpoint group you are detaching network endpoints from. It should comply with RFC1035.
+        /// The name of the network endpoint group you are detaching network
+        /// endpoints from. It should comply with RFC1035.
         /// </param>
         /// <param name="regionNetworkEndpointGroupsDetachEndpointsRequestResource">
         /// The body resource for this request
@@ -739,10 +766,13 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region where the network endpoint group is located. It should comply with RFC1035.
+        /// The name of the region where
+        /// the network endpoint group is located. It should comply with
+        /// RFC1035.
         /// </param>
         /// <param name="networkEndpointGroup">
-        /// The name of the network endpoint group you are detaching network endpoints from. It should comply with RFC1035.
+        /// The name of the network endpoint group you are detaching network
+        /// endpoints from. It should comply with RFC1035.
         /// </param>
         /// <param name="regionNetworkEndpointGroupsDetachEndpointsRequestResource">
         /// The body resource for this request
@@ -786,7 +816,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region where the network endpoint group is located. It should comply with RFC1035.
+        /// The name of the region where
+        /// the network endpoint group is located. It should comply with RFC1035.
         /// </param>
         /// <param name="networkEndpointGroup">
         /// The name of the network endpoint group. It should comply with RFC1035.
@@ -808,7 +839,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region where the network endpoint group is located. It should comply with RFC1035.
+        /// The name of the region where
+        /// the network endpoint group is located. It should comply with RFC1035.
         /// </param>
         /// <param name="networkEndpointGroup">
         /// The name of the network endpoint group. It should comply with RFC1035.
@@ -830,7 +862,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region where the network endpoint group is located. It should comply with RFC1035.
+        /// The name of the region where
+        /// the network endpoint group is located. It should comply with RFC1035.
         /// </param>
         /// <param name="networkEndpointGroup">
         /// The name of the network endpoint group. It should comply with RFC1035.
@@ -841,7 +874,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, region, networkEndpointGroup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a network endpoint group in the specified project using the parameters that are included in the request.
+        /// Creates a network endpoint group in the specified project using the
+        /// parameters that are included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -850,7 +884,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a network endpoint group in the specified project using the parameters that are included in the request.
+        /// Creates a network endpoint group in the specified project using the
+        /// parameters that are included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -859,7 +894,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a network endpoint group in the specified project using the parameters that are included in the request.
+        /// Creates a network endpoint group in the specified project using the
+        /// parameters that are included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -894,13 +930,16 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a network endpoint group in the specified project using the parameters that are included in the request.
+        /// Creates a network endpoint group in the specified project using the
+        /// parameters that are included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region where you want to create the network endpoint group. It should comply with RFC1035.
+        /// The name of the region where
+        /// you want to create the network endpoint group. It should comply with
+        /// RFC1035.
         /// </param>
         /// <param name="networkEndpointGroupResource">
         /// The body resource for this request
@@ -916,13 +955,16 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a network endpoint group in the specified project using the parameters that are included in the request.
+        /// Creates a network endpoint group in the specified project using the
+        /// parameters that are included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region where you want to create the network endpoint group. It should comply with RFC1035.
+        /// The name of the region where
+        /// you want to create the network endpoint group. It should comply with
+        /// RFC1035.
         /// </param>
         /// <param name="networkEndpointGroupResource">
         /// The body resource for this request
@@ -938,13 +980,16 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a network endpoint group in the specified project using the parameters that are included in the request.
+        /// Creates a network endpoint group in the specified project using the
+        /// parameters that are included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region where you want to create the network endpoint group. It should comply with RFC1035.
+        /// The name of the region where
+        /// you want to create the network endpoint group. It should comply with
+        /// RFC1035.
         /// </param>
         /// <param name="networkEndpointGroupResource">
         /// The body resource for this request
@@ -955,7 +1000,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, region, networkEndpointGroupResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the list of regional network endpoint groups available to the specified project in the given region.
+        /// Retrieves the list of regional network endpoint groups available to the
+        /// specified project in the given region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -964,7 +1010,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of regional network endpoint groups available to the specified project in the given region.
+        /// Retrieves the list of regional network endpoint groups available to the
+        /// specified project in the given region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -973,13 +1020,15 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of regional network endpoint groups available to the specified project in the given region.
+        /// Retrieves the list of regional network endpoint groups available to the
+        /// specified project in the given region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region where the network endpoint group is located. It should comply with RFC1035.
+        /// The name of theregion
+        /// where the network endpoint group is located. It should comply with RFC1035.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1010,13 +1059,15 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of regional network endpoint groups available to the specified project in the given region.
+        /// Retrieves the list of regional network endpoint groups available to the
+        /// specified project in the given region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region where the network endpoint group is located. It should comply with RFC1035.
+        /// The name of theregion
+        /// where the network endpoint group is located. It should comply with RFC1035.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1073,10 +1124,12 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region where the network endpoint group is located. It should comply with RFC1035.
+        /// The name of theregion
+        /// where the network endpoint group is located. It should comply with RFC1035.
         /// </param>
         /// <param name="networkEndpointGroup">
-        /// The name of the network endpoint group from which you want to generate a list of included network endpoints. It should comply with RFC1035.
+        /// The name of the network endpoint group from which you want to generate a
+        /// list of included network endpoints. It should comply with RFC1035.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1114,10 +1167,12 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region where the network endpoint group is located. It should comply with RFC1035.
+        /// The name of theregion
+        /// where the network endpoint group is located. It should comply with RFC1035.
         /// </param>
         /// <param name="networkEndpointGroup">
-        /// The name of the network endpoint group from which you want to generate a list of included network endpoints. It should comply with RFC1035.
+        /// The name of the network endpoint group from which you want to generate a
+        /// list of included network endpoints. It should comply with RFC1035.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1289,7 +1344,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient DeleteOperationsClient { get; }
 
         /// <summary>
-        /// Deletes the specified network endpoint group. Note that the NEG cannot be deleted if it is configured as a backend of a backend service.
+        /// Deletes the specified network endpoint group. Note that the NEG cannot be
+        /// deleted if it is configured as a backend of a backend service.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1304,7 +1360,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Deletes the specified network endpoint group. Note that the NEG cannot be deleted if it is configured as a backend of a backend service.
+        /// Deletes the specified network endpoint group. Note that the NEG cannot be
+        /// deleted if it is configured as a backend of a backend service.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1379,7 +1436,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a network endpoint group in the specified project using the parameters that are included in the request.
+        /// Creates a network endpoint group in the specified project using the
+        /// parameters that are included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1394,7 +1452,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a network endpoint group in the specified project using the parameters that are included in the request.
+        /// Creates a network endpoint group in the specified project using the
+        /// parameters that are included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1409,7 +1468,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of regional network endpoint groups available to the specified project in the given region.
+        /// Retrieves the list of regional network endpoint groups available to the
+        /// specified project in the given region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1421,7 +1481,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of regional network endpoint groups available to the specified project in the given region.
+        /// Retrieves the list of regional network endpoint groups available to the
+        /// specified project in the given region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

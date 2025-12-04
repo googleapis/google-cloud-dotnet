@@ -1871,7 +1871,8 @@ namespace Google.Cloud.Compute.V1
         /// The name of the zone for this request.
         /// </param>
         /// <param name="instance">
-        /// The instance name for this request stored as resource_id. Name should conform to RFC1035 or be an unsigned long integer.
+        /// The instance name for this request stored as resource_id.
+        /// Name should conform to RFC1035 or be an unsigned long integer.
         /// </param>
         /// <param name="networkInterfaceResource">
         /// The body resource for this request
@@ -1897,7 +1898,8 @@ namespace Google.Cloud.Compute.V1
         /// The name of the zone for this request.
         /// </param>
         /// <param name="instance">
-        /// The instance name for this request stored as resource_id. Name should conform to RFC1035 or be an unsigned long integer.
+        /// The instance name for this request stored as resource_id.
+        /// Name should conform to RFC1035 or be an unsigned long integer.
         /// </param>
         /// <param name="networkInterfaceResource">
         /// The body resource for this request
@@ -1923,7 +1925,8 @@ namespace Google.Cloud.Compute.V1
         /// The name of the zone for this request.
         /// </param>
         /// <param name="instance">
-        /// The instance name for this request stored as resource_id. Name should conform to RFC1035 or be an unsigned long integer.
+        /// The instance name for this request stored as resource_id.
+        /// Name should conform to RFC1035 or be an unsigned long integer.
         /// </param>
         /// <param name="networkInterfaceResource">
         /// The body resource for this request
@@ -1934,7 +1937,9 @@ namespace Google.Cloud.Compute.V1
             AddNetworkInterfaceAsync(project, zone, instance, networkInterfaceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Adds existing resource policies to an instance. You can only add one policy right now which will be applied to this instance for scheduling live migrations.
+        /// Adds existing resource policies to an instance. You can only add one
+        /// policy right now which will be applied to this instance for scheduling live
+        /// migrations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1943,7 +1948,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Adds existing resource policies to an instance. You can only add one policy right now which will be applied to this instance for scheduling live migrations.
+        /// Adds existing resource policies to an instance. You can only add one
+        /// policy right now which will be applied to this instance for scheduling live
+        /// migrations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1952,7 +1959,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Adds existing resource policies to an instance. You can only add one policy right now which will be applied to this instance for scheduling live migrations.
+        /// Adds existing resource policies to an instance. You can only add one
+        /// policy right now which will be applied to this instance for scheduling live
+        /// migrations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1988,7 +1997,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddResourcePoliciesOperationsClient, callSettings);
 
         /// <summary>
-        /// Adds existing resource policies to an instance. You can only add one policy right now which will be applied to this instance for scheduling live migrations.
+        /// Adds existing resource policies to an instance. You can only add one
+        /// policy right now which will be applied to this instance for scheduling live
+        /// migrations.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2014,7 +2025,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Adds existing resource policies to an instance. You can only add one policy right now which will be applied to this instance for scheduling live migrations.
+        /// Adds existing resource policies to an instance. You can only add one
+        /// policy right now which will be applied to this instance for scheduling live
+        /// migrations.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2040,7 +2053,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Adds existing resource policies to an instance. You can only add one policy right now which will be applied to this instance for scheduling live migrations.
+        /// Adds existing resource policies to an instance. You can only add one
+        /// policy right now which will be applied to this instance for scheduling live
+        /// migrations.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2060,7 +2075,14 @@ namespace Google.Cloud.Compute.V1
             AddResourcePoliciesAsync(project, zone, instance, instancesAddResourcePoliciesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves an aggregated list of all of the instances in your project across all regions and zones. The performance of this method degrades when a filter is specified on a project that has a very large number of instances. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of all of the instances in your project
+        /// across all regions and zones.
+        /// 
+        /// The performance of this method degrades when a filter is specified on a
+        /// project that has a very large number of instances.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2069,7 +2091,14 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of all of the instances in your project across all regions and zones. The performance of this method degrades when a filter is specified on a project that has a very large number of instances. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of all of the instances in your project
+        /// across all regions and zones.
+        /// 
+        /// The performance of this method degrades when a filter is specified on a
+        /// project that has a very large number of instances.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2080,7 +2109,14 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of all of the instances in your project across all regions and zones. The performance of this method degrades when a filter is specified on a project that has a very large number of instances. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of all of the instances in your project
+        /// across all regions and zones.
+        /// 
+        /// The performance of this method degrades when a filter is specified on a
+        /// project that has a very large number of instances.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2113,7 +2149,14 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of all of the instances in your project across all regions and zones. The performance of this method degrades when a filter is specified on a project that has a very large number of instances. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of all of the instances in your project
+        /// across all regions and zones.
+        /// 
+        /// The performance of this method degrades when a filter is specified on a
+        /// project that has a very large number of instances.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2148,7 +2191,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Attaches an existing Disk resource to an instance. You must first create the disk before you can attach it. It is not possible to create and attach a disk at the same time. For more information, read Adding a persistent disk to your instance.
+        /// Attaches an existing Disk resource to an instance. You must first
+        /// create the disk before you can attach it. It is not possible to create
+        /// and attach a disk at the same time. For more information, readAdding a
+        /// persistent disk to your instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2157,7 +2203,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Attaches an existing Disk resource to an instance. You must first create the disk before you can attach it. It is not possible to create and attach a disk at the same time. For more information, read Adding a persistent disk to your instance.
+        /// Attaches an existing Disk resource to an instance. You must first
+        /// create the disk before you can attach it. It is not possible to create
+        /// and attach a disk at the same time. For more information, readAdding a
+        /// persistent disk to your instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2166,7 +2215,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Attaches an existing Disk resource to an instance. You must first create the disk before you can attach it. It is not possible to create and attach a disk at the same time. For more information, read Adding a persistent disk to your instance.
+        /// Attaches an existing Disk resource to an instance. You must first
+        /// create the disk before you can attach it. It is not possible to create
+        /// and attach a disk at the same time. For more information, readAdding a
+        /// persistent disk to your instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2201,7 +2253,10 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AttachDiskOperationsClient, callSettings);
 
         /// <summary>
-        /// Attaches an existing Disk resource to an instance. You must first create the disk before you can attach it. It is not possible to create and attach a disk at the same time. For more information, read Adding a persistent disk to your instance.
+        /// Attaches an existing Disk resource to an instance. You must first
+        /// create the disk before you can attach it. It is not possible to create
+        /// and attach a disk at the same time. For more information, readAdding a
+        /// persistent disk to your instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2227,7 +2282,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Attaches an existing Disk resource to an instance. You must first create the disk before you can attach it. It is not possible to create and attach a disk at the same time. For more information, read Adding a persistent disk to your instance.
+        /// Attaches an existing Disk resource to an instance. You must first
+        /// create the disk before you can attach it. It is not possible to create
+        /// and attach a disk at the same time. For more information, readAdding a
+        /// persistent disk to your instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2253,7 +2311,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Attaches an existing Disk resource to an instance. You must first create the disk before you can attach it. It is not possible to create and attach a disk at the same time. For more information, read Adding a persistent disk to your instance.
+        /// Attaches an existing Disk resource to an instance. You must first
+        /// create the disk before you can attach it. It is not possible to create
+        /// and attach a disk at the same time. For more information, readAdding a
+        /// persistent disk to your instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2273,7 +2334,9 @@ namespace Google.Cloud.Compute.V1
             AttachDiskAsync(project, zone, instance, attachedDiskResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates multiple instances. Count specifies the number of instances to create. For more information, see About bulk creation of VMs.
+        /// Creates multiple instances. Count specifies the number of instances to
+        /// create. For more information, seeAbout bulk
+        /// creation of VMs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2282,7 +2345,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates multiple instances. Count specifies the number of instances to create. For more information, see About bulk creation of VMs.
+        /// Creates multiple instances. Count specifies the number of instances to
+        /// create. For more information, seeAbout bulk
+        /// creation of VMs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2291,7 +2356,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates multiple instances. Count specifies the number of instances to create. For more information, see About bulk creation of VMs.
+        /// Creates multiple instances. Count specifies the number of instances to
+        /// create. For more information, seeAbout bulk
+        /// creation of VMs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2326,7 +2393,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BulkInsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates multiple instances. Count specifies the number of instances to create. For more information, see About bulk creation of VMs.
+        /// Creates multiple instances. Count specifies the number of instances to
+        /// create. For more information, seeAbout bulk
+        /// creation of VMs.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2348,7 +2417,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates multiple instances. Count specifies the number of instances to create. For more information, see About bulk creation of VMs.
+        /// Creates multiple instances. Count specifies the number of instances to
+        /// create. For more information, seeAbout bulk
+        /// creation of VMs.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2370,7 +2441,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates multiple instances. Count specifies the number of instances to create. For more information, see About bulk creation of VMs.
+        /// Creates multiple instances. Count specifies the number of instances to
+        /// create. For more information, seeAbout bulk
+        /// creation of VMs.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2387,7 +2460,8 @@ namespace Google.Cloud.Compute.V1
             BulkInsertAsync(project, zone, bulkInsertInstanceResourceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified Instance resource. For more information, see Deleting an instance.
+        /// Deletes the specified Instance resource. For more information, seeDeleting
+        /// an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2396,7 +2470,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified Instance resource. For more information, see Deleting an instance.
+        /// Deletes the specified Instance resource. For more information, seeDeleting
+        /// an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2405,7 +2480,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified Instance resource. For more information, see Deleting an instance.
+        /// Deletes the specified Instance resource. For more information, seeDeleting
+        /// an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2440,7 +2516,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes the specified Instance resource. For more information, see Deleting an instance.
+        /// Deletes the specified Instance resource. For more information, seeDeleting
+        /// an instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2462,7 +2539,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified Instance resource. For more information, see Deleting an instance.
+        /// Deletes the specified Instance resource. For more information, seeDeleting
+        /// an instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2484,7 +2562,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified Instance resource. For more information, see Deleting an instance.
+        /// Deletes the specified Instance resource. For more information, seeDeleting
+        /// an instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2638,7 +2717,11 @@ namespace Google.Cloud.Compute.V1
             DeleteAccessConfigAsync(project, zone, instance, accessConfig, networkInterface, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes one dynamic network interface from an active instance. InstancesDeleteNetworkInterfaceRequest indicates: - instance from which to delete, using project+zone+resource_id fields; - dynamic network interface to be deleted, using network_interface_name field;
+        /// Deletes one dynamic network interface from an active instance.
+        /// InstancesDeleteNetworkInterfaceRequest indicates:
+        /// - instance from which to delete, using project+zone+resource_id fields;
+        /// - dynamic network interface to be deleted, using network_interface_name
+        /// field;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2647,7 +2730,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes one dynamic network interface from an active instance. InstancesDeleteNetworkInterfaceRequest indicates: - instance from which to delete, using project+zone+resource_id fields; - dynamic network interface to be deleted, using network_interface_name field;
+        /// Deletes one dynamic network interface from an active instance.
+        /// InstancesDeleteNetworkInterfaceRequest indicates:
+        /// - instance from which to delete, using project+zone+resource_id fields;
+        /// - dynamic network interface to be deleted, using network_interface_name
+        /// field;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2656,7 +2743,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes one dynamic network interface from an active instance. InstancesDeleteNetworkInterfaceRequest indicates: - instance from which to delete, using project+zone+resource_id fields; - dynamic network interface to be deleted, using network_interface_name field;
+        /// Deletes one dynamic network interface from an active instance.
+        /// InstancesDeleteNetworkInterfaceRequest indicates:
+        /// - instance from which to delete, using project+zone+resource_id fields;
+        /// - dynamic network interface to be deleted, using network_interface_name
+        /// field;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2692,7 +2783,11 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteNetworkInterfaceOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes one dynamic network interface from an active instance. InstancesDeleteNetworkInterfaceRequest indicates: - instance from which to delete, using project+zone+resource_id fields; - dynamic network interface to be deleted, using network_interface_name field;
+        /// Deletes one dynamic network interface from an active instance.
+        /// InstancesDeleteNetworkInterfaceRequest indicates:
+        /// - instance from which to delete, using project+zone+resource_id fields;
+        /// - dynamic network interface to be deleted, using network_interface_name
+        /// field;
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2701,7 +2796,8 @@ namespace Google.Cloud.Compute.V1
         /// The name of the zone for this request.
         /// </param>
         /// <param name="instance">
-        /// The instance name for this request stored as resource_id. Name should conform to RFC1035 or be an unsigned long integer.
+        /// The instance name for this request stored as resource_id.
+        /// Name should conform to RFC1035 or be an unsigned long integer.
         /// </param>
         /// <param name="networkInterfaceName">
         /// The name of the dynamic network interface to be deleted from the instance.
@@ -2718,7 +2814,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes one dynamic network interface from an active instance. InstancesDeleteNetworkInterfaceRequest indicates: - instance from which to delete, using project+zone+resource_id fields; - dynamic network interface to be deleted, using network_interface_name field;
+        /// Deletes one dynamic network interface from an active instance.
+        /// InstancesDeleteNetworkInterfaceRequest indicates:
+        /// - instance from which to delete, using project+zone+resource_id fields;
+        /// - dynamic network interface to be deleted, using network_interface_name
+        /// field;
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2727,7 +2827,8 @@ namespace Google.Cloud.Compute.V1
         /// The name of the zone for this request.
         /// </param>
         /// <param name="instance">
-        /// The instance name for this request stored as resource_id. Name should conform to RFC1035 or be an unsigned long integer.
+        /// The instance name for this request stored as resource_id.
+        /// Name should conform to RFC1035 or be an unsigned long integer.
         /// </param>
         /// <param name="networkInterfaceName">
         /// The name of the dynamic network interface to be deleted from the instance.
@@ -2744,7 +2845,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes one dynamic network interface from an active instance. InstancesDeleteNetworkInterfaceRequest indicates: - instance from which to delete, using project+zone+resource_id fields; - dynamic network interface to be deleted, using network_interface_name field;
+        /// Deletes one dynamic network interface from an active instance.
+        /// InstancesDeleteNetworkInterfaceRequest indicates:
+        /// - instance from which to delete, using project+zone+resource_id fields;
+        /// - dynamic network interface to be deleted, using network_interface_name
+        /// field;
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2753,7 +2858,8 @@ namespace Google.Cloud.Compute.V1
         /// The name of the zone for this request.
         /// </param>
         /// <param name="instance">
-        /// The instance name for this request stored as resource_id. Name should conform to RFC1035 or be an unsigned long integer.
+        /// The instance name for this request stored as resource_id.
+        /// Name should conform to RFC1035 or be an unsigned long integer.
         /// </param>
         /// <param name="networkInterfaceName">
         /// The name of the dynamic network interface to be deleted from the instance.
@@ -2829,7 +2935,8 @@ namespace Google.Cloud.Compute.V1
         /// Instance name for this request.
         /// </param>
         /// <param name="deviceName">
-        /// The device name of the disk to detach. Make a get() request on the instance to view currently attached disks and device names.
+        /// The device name of the disk to detach. Make a get() request on
+        /// the instance to view currently attached disks and device names.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2855,7 +2962,8 @@ namespace Google.Cloud.Compute.V1
         /// Instance name for this request.
         /// </param>
         /// <param name="deviceName">
-        /// The device name of the disk to detach. Make a get() request on the instance to view currently attached disks and device names.
+        /// The device name of the disk to detach. Make a get() request on
+        /// the instance to view currently attached disks and device names.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2881,7 +2989,8 @@ namespace Google.Cloud.Compute.V1
         /// Instance name for this request.
         /// </param>
         /// <param name="deviceName">
-        /// The device name of the disk to detach. Make a get() request on the instance to view currently attached disks and device names.
+        /// The device name of the disk to detach. Make a get() request on
+        /// the instance to view currently attached disks and device names.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3164,7 +3273,8 @@ namespace Google.Cloud.Compute.V1
             GetGuestAttributesAsync(project, zone, instance, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3173,7 +3283,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3182,7 +3293,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3191,7 +3303,8 @@ namespace Google.Cloud.Compute.V1
             GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3213,7 +3326,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3235,7 +3349,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3516,7 +3631,8 @@ namespace Google.Cloud.Compute.V1
             GetShieldedInstanceIdentityAsync(project, zone, instance, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an instance resource in the specified project using the data included in the request.
+        /// Creates an instance resource in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3525,7 +3641,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an instance resource in the specified project using the data included in the request.
+        /// Creates an instance resource in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3534,7 +3651,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an instance resource in the specified project using the data included in the request.
+        /// Creates an instance resource in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3569,7 +3687,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates an instance resource in the specified project using the data included in the request.
+        /// Creates an instance resource in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3591,7 +3710,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an instance resource in the specified project using the data included in the request.
+        /// Creates an instance resource in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3613,7 +3733,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an instance resource in the specified project using the data included in the request.
+        /// Creates an instance resource in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3630,7 +3751,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, zone, instanceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the list of instances contained within the specified zone.
+        /// Retrieves the list of instances contained within
+        /// the specified zone.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3639,7 +3761,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of instances contained within the specified zone.
+        /// Retrieves the list of instances contained within
+        /// the specified zone.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3648,7 +3771,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of instances contained within the specified zone.
+        /// Retrieves the list of instances contained within
+        /// the specified zone.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3685,7 +3809,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of instances contained within the specified zone.
+        /// Retrieves the list of instances contained within
+        /// the specified zone.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3722,7 +3847,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of resources that refer to the VM instance specified in the request. For example, if the VM instance is part of a managed or unmanaged instance group, the referrers list includes the instance group. For more information, read Viewing referrers to VM instances.
+        /// Retrieves a list of resources that refer to the VM instance specified in
+        /// the request. For example, if the VM instance is part of a managed or
+        /// unmanaged instance group, the referrers list includes the instance group.
+        /// For more information, readViewing
+        /// referrers to VM instances.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3731,7 +3860,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of resources that refer to the VM instance specified in the request. For example, if the VM instance is part of a managed or unmanaged instance group, the referrers list includes the instance group. For more information, read Viewing referrers to VM instances.
+        /// Retrieves a list of resources that refer to the VM instance specified in
+        /// the request. For example, if the VM instance is part of a managed or
+        /// unmanaged instance group, the referrers list includes the instance group.
+        /// For more information, readViewing
+        /// referrers to VM instances.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3740,7 +3873,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of resources that refer to the VM instance specified in the request. For example, if the VM instance is part of a managed or unmanaged instance group, the referrers list includes the instance group. For more information, read Viewing referrers to VM instances.
+        /// Retrieves a list of resources that refer to the VM instance specified in
+        /// the request. For example, if the VM instance is part of a managed or
+        /// unmanaged instance group, the referrers list includes the instance group.
+        /// For more information, readViewing
+        /// referrers to VM instances.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3749,7 +3886,8 @@ namespace Google.Cloud.Compute.V1
         /// The name of the zone for this request.
         /// </param>
         /// <param name="instance">
-        /// Name of the target instance scoping this request, or '-' if the request should span over all instances in the container.
+        /// Name of the target instance scoping this request, or '-' if the
+        /// request should span over all instances in the container.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3781,7 +3919,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of resources that refer to the VM instance specified in the request. For example, if the VM instance is part of a managed or unmanaged instance group, the referrers list includes the instance group. For more information, read Viewing referrers to VM instances.
+        /// Retrieves a list of resources that refer to the VM instance specified in
+        /// the request. For example, if the VM instance is part of a managed or
+        /// unmanaged instance group, the referrers list includes the instance group.
+        /// For more information, readViewing
+        /// referrers to VM instances.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3790,7 +3932,8 @@ namespace Google.Cloud.Compute.V1
         /// The name of the zone for this request.
         /// </param>
         /// <param name="instance">
-        /// Name of the target instance scoping this request, or '-' if the request should span over all instances in the container.
+        /// Name of the target instance scoping this request, or '-' if the
+        /// request should span over all instances in the container.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4189,7 +4332,9 @@ namespace Google.Cloud.Compute.V1
             ReportHostAsFaultyAsync(project, zone, instance, instancesReportHostAsFaultyRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Performs a reset on the instance. This is a hard reset. The VM does not do a graceful shutdown. For more information, see Resetting an instance.
+        /// Performs a reset on the instance. This is a hard reset. The VM
+        /// does not do a graceful shutdown. For more information, seeResetting
+        /// an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4198,7 +4343,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Performs a reset on the instance. This is a hard reset. The VM does not do a graceful shutdown. For more information, see Resetting an instance.
+        /// Performs a reset on the instance. This is a hard reset. The VM
+        /// does not do a graceful shutdown. For more information, seeResetting
+        /// an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4207,7 +4354,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Performs a reset on the instance. This is a hard reset. The VM does not do a graceful shutdown. For more information, see Resetting an instance.
+        /// Performs a reset on the instance. This is a hard reset. The VM
+        /// does not do a graceful shutdown. For more information, seeResetting
+        /// an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4242,7 +4391,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ResetOperationsClient, callSettings);
 
         /// <summary>
-        /// Performs a reset on the instance. This is a hard reset. The VM does not do a graceful shutdown. For more information, see Resetting an instance.
+        /// Performs a reset on the instance. This is a hard reset. The VM
+        /// does not do a graceful shutdown. For more information, seeResetting
+        /// an instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -4264,7 +4415,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Performs a reset on the instance. This is a hard reset. The VM does not do a graceful shutdown. For more information, see Resetting an instance.
+        /// Performs a reset on the instance. This is a hard reset. The VM
+        /// does not do a graceful shutdown. For more information, seeResetting
+        /// an instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -4286,7 +4439,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Performs a reset on the instance. This is a hard reset. The VM does not do a graceful shutdown. For more information, see Resetting an instance.
+        /// Performs a reset on the instance. This is a hard reset. The VM
+        /// does not do a graceful shutdown. For more information, seeResetting
+        /// an instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -4303,7 +4458,8 @@ namespace Google.Cloud.Compute.V1
             ResetAsync(project, zone, instance, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Resumes an instance that was suspended using the instances().suspend method.
+        /// Resumes an instance that was suspended using theinstances().suspend
+        /// method.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4312,7 +4468,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Resumes an instance that was suspended using the instances().suspend method.
+        /// Resumes an instance that was suspended using theinstances().suspend
+        /// method.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4321,7 +4478,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Resumes an instance that was suspended using the instances().suspend method.
+        /// Resumes an instance that was suspended using theinstances().suspend
+        /// method.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4356,7 +4514,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ResumeOperationsClient, callSettings);
 
         /// <summary>
-        /// Resumes an instance that was suspended using the instances().suspend method.
+        /// Resumes an instance that was suspended using theinstances().suspend
+        /// method.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -4378,7 +4537,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Resumes an instance that was suspended using the instances().suspend method.
+        /// Resumes an instance that was suspended using theinstances().suspend
+        /// method.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -4400,7 +4560,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Resumes an instance that was suspended using the instances().suspend method.
+        /// Resumes an instance that was suspended using theinstances().suspend
+        /// method.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -4689,7 +4850,8 @@ namespace Google.Cloud.Compute.V1
         /// Whether to auto-delete the disk when the instance is deleted.
         /// </param>
         /// <param name="deviceName">
-        /// The device name of the disk to modify. Make a get() request on the instance to view currently attached disks and device names.
+        /// The device name of the disk to modify. Make a get() request
+        /// on the instance to view currently attached disks and device names.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4719,7 +4881,8 @@ namespace Google.Cloud.Compute.V1
         /// Whether to auto-delete the disk when the instance is deleted.
         /// </param>
         /// <param name="deviceName">
-        /// The device name of the disk to modify. Make a get() request on the instance to view currently attached disks and device names.
+        /// The device name of the disk to modify. Make a get() request
+        /// on the instance to view currently attached disks and device names.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4749,7 +4912,8 @@ namespace Google.Cloud.Compute.V1
         /// Whether to auto-delete the disk when the instance is deleted.
         /// </param>
         /// <param name="deviceName">
-        /// The device name of the disk to modify. Make a get() request on the instance to view currently attached disks and device names.
+        /// The device name of the disk to modify. Make a get() request
+        /// on the instance to view currently attached disks and device names.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4757,7 +4921,8 @@ namespace Google.Cloud.Compute.V1
             SetDiskAutoDeleteAsync(project, zone, instance, autoDelete, deviceName, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4766,7 +4931,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4775,7 +4941,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4784,7 +4951,8 @@ namespace Google.Cloud.Compute.V1
             SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -4810,7 +4978,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -4836,7 +5005,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -4856,7 +5026,8 @@ namespace Google.Cloud.Compute.V1
             SetIamPolicyAsync(project, zone, resource, zoneSetPolicyRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets labels on an instance. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets labels on an instance.  To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4865,7 +5036,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets labels on an instance. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets labels on an instance.  To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4874,7 +5046,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets labels on an instance. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets labels on an instance.  To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4909,7 +5082,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetLabelsOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets labels on an instance. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets labels on an instance.  To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -4935,7 +5109,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets labels on an instance. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets labels on an instance.  To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -4961,7 +5136,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets labels on an instance. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets labels on an instance.  To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -4981,7 +5157,8 @@ namespace Google.Cloud.Compute.V1
             SetLabelsAsync(project, zone, instance, instancesSetLabelsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Changes the number and/or type of accelerator for a stopped instance to the values specified in the request.
+        /// Changes the number and/or type of accelerator for a stopped instance to the
+        /// values specified in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4990,7 +5167,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Changes the number and/or type of accelerator for a stopped instance to the values specified in the request.
+        /// Changes the number and/or type of accelerator for a stopped instance to the
+        /// values specified in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4999,7 +5177,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Changes the number and/or type of accelerator for a stopped instance to the values specified in the request.
+        /// Changes the number and/or type of accelerator for a stopped instance to the
+        /// values specified in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -5035,7 +5214,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetMachineResourcesOperationsClient, callSettings);
 
         /// <summary>
-        /// Changes the number and/or type of accelerator for a stopped instance to the values specified in the request.
+        /// Changes the number and/or type of accelerator for a stopped instance to the
+        /// values specified in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5061,7 +5241,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Changes the number and/or type of accelerator for a stopped instance to the values specified in the request.
+        /// Changes the number and/or type of accelerator for a stopped instance to the
+        /// values specified in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5087,7 +5268,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Changes the number and/or type of accelerator for a stopped instance to the values specified in the request.
+        /// Changes the number and/or type of accelerator for a stopped instance to the
+        /// values specified in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5107,7 +5289,8 @@ namespace Google.Cloud.Compute.V1
             SetMachineResourcesAsync(project, zone, instance, instancesSetMachineResourcesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Changes the machine type for a stopped instance to the machine type specified in the request.
+        /// Changes the machine type for a stopped instance to the machine
+        /// type specified in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5116,7 +5299,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Changes the machine type for a stopped instance to the machine type specified in the request.
+        /// Changes the machine type for a stopped instance to the machine
+        /// type specified in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5125,7 +5309,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Changes the machine type for a stopped instance to the machine type specified in the request.
+        /// Changes the machine type for a stopped instance to the machine
+        /// type specified in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -5160,7 +5345,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetMachineTypeOperationsClient, callSettings);
 
         /// <summary>
-        /// Changes the machine type for a stopped instance to the machine type specified in the request.
+        /// Changes the machine type for a stopped instance to the machine
+        /// type specified in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5186,7 +5372,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Changes the machine type for a stopped instance to the machine type specified in the request.
+        /// Changes the machine type for a stopped instance to the machine
+        /// type specified in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5212,7 +5399,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Changes the machine type for a stopped instance to the machine type specified in the request.
+        /// Changes the machine type for a stopped instance to the machine
+        /// type specified in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5232,7 +5420,8 @@ namespace Google.Cloud.Compute.V1
             SetMachineTypeAsync(project, zone, instance, instancesSetMachineTypeRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets metadata for the specified instance to the data included in the request.
+        /// Sets metadata for the specified instance to the data included
+        /// in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5241,7 +5430,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets metadata for the specified instance to the data included in the request.
+        /// Sets metadata for the specified instance to the data included
+        /// in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5250,7 +5440,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets metadata for the specified instance to the data included in the request.
+        /// Sets metadata for the specified instance to the data included
+        /// in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -5285,7 +5476,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetMetadataOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets metadata for the specified instance to the data included in the request.
+        /// Sets metadata for the specified instance to the data included
+        /// in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5311,7 +5503,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets metadata for the specified instance to the data included in the request.
+        /// Sets metadata for the specified instance to the data included
+        /// in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5337,7 +5530,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets metadata for the specified instance to the data included in the request.
+        /// Sets metadata for the specified instance to the data included
+        /// in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5357,7 +5551,10 @@ namespace Google.Cloud.Compute.V1
             SetMetadataAsync(project, zone, instance, metadataResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Changes the minimum CPU platform that this instance should use. This method can only be called on a stopped instance. For more information, read Specifying a Minimum CPU Platform.
+        /// Changes the minimum CPU platform that this instance should use.
+        /// This method can only
+        /// be called on a stopped instance. For more information, readSpecifying a
+        /// Minimum CPU Platform.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5366,7 +5563,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Changes the minimum CPU platform that this instance should use. This method can only be called on a stopped instance. For more information, read Specifying a Minimum CPU Platform.
+        /// Changes the minimum CPU platform that this instance should use.
+        /// This method can only
+        /// be called on a stopped instance. For more information, readSpecifying a
+        /// Minimum CPU Platform.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5375,7 +5575,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Changes the minimum CPU platform that this instance should use. This method can only be called on a stopped instance. For more information, read Specifying a Minimum CPU Platform.
+        /// Changes the minimum CPU platform that this instance should use.
+        /// This method can only
+        /// be called on a stopped instance. For more information, readSpecifying a
+        /// Minimum CPU Platform.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -5411,7 +5614,10 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetMinCpuPlatformOperationsClient, callSettings);
 
         /// <summary>
-        /// Changes the minimum CPU platform that this instance should use. This method can only be called on a stopped instance. For more information, read Specifying a Minimum CPU Platform.
+        /// Changes the minimum CPU platform that this instance should use.
+        /// This method can only
+        /// be called on a stopped instance. For more information, readSpecifying a
+        /// Minimum CPU Platform.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5437,7 +5643,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Changes the minimum CPU platform that this instance should use. This method can only be called on a stopped instance. For more information, read Specifying a Minimum CPU Platform.
+        /// Changes the minimum CPU platform that this instance should use.
+        /// This method can only
+        /// be called on a stopped instance. For more information, readSpecifying a
+        /// Minimum CPU Platform.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5463,7 +5672,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Changes the minimum CPU platform that this instance should use. This method can only be called on a stopped instance. For more information, read Specifying a Minimum CPU Platform.
+        /// Changes the minimum CPU platform that this instance should use.
+        /// This method can only
+        /// be called on a stopped instance. For more information, readSpecifying a
+        /// Minimum CPU Platform.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5608,7 +5820,11 @@ namespace Google.Cloud.Compute.V1
             SetNameAsync(project, zone, instance, instancesSetNameRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states. For more information about setting scheduling options for a VM, see Set VM host maintenance policy.
+        /// Sets an instance's scheduling options. You can only call this method on astopped instance,
+        /// that is, a VM instance that is in a `TERMINATED` state. SeeInstance Life
+        /// Cycle for more information on the possible instance states.
+        /// For more information about setting scheduling options for a VM, seeSet
+        /// VM host maintenance policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5617,7 +5833,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states. For more information about setting scheduling options for a VM, see Set VM host maintenance policy.
+        /// Sets an instance's scheduling options. You can only call this method on astopped instance,
+        /// that is, a VM instance that is in a `TERMINATED` state. SeeInstance Life
+        /// Cycle for more information on the possible instance states.
+        /// For more information about setting scheduling options for a VM, seeSet
+        /// VM host maintenance policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5626,7 +5846,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states. For more information about setting scheduling options for a VM, see Set VM host maintenance policy.
+        /// Sets an instance's scheduling options. You can only call this method on astopped instance,
+        /// that is, a VM instance that is in a `TERMINATED` state. SeeInstance Life
+        /// Cycle for more information on the possible instance states.
+        /// For more information about setting scheduling options for a VM, seeSet
+        /// VM host maintenance policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -5661,7 +5885,11 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetSchedulingOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states. For more information about setting scheduling options for a VM, see Set VM host maintenance policy.
+        /// Sets an instance's scheduling options. You can only call this method on astopped instance,
+        /// that is, a VM instance that is in a `TERMINATED` state. SeeInstance Life
+        /// Cycle for more information on the possible instance states.
+        /// For more information about setting scheduling options for a VM, seeSet
+        /// VM host maintenance policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5687,7 +5915,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states. For more information about setting scheduling options for a VM, see Set VM host maintenance policy.
+        /// Sets an instance's scheduling options. You can only call this method on astopped instance,
+        /// that is, a VM instance that is in a `TERMINATED` state. SeeInstance Life
+        /// Cycle for more information on the possible instance states.
+        /// For more information about setting scheduling options for a VM, seeSet
+        /// VM host maintenance policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5713,7 +5945,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states. For more information about setting scheduling options for a VM, see Set VM host maintenance policy.
+        /// Sets an instance's scheduling options. You can only call this method on astopped instance,
+        /// that is, a VM instance that is in a `TERMINATED` state. SeeInstance Life
+        /// Cycle for more information on the possible instance states.
+        /// For more information about setting scheduling options for a VM, seeSet
+        /// VM host maintenance policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5733,7 +5969,9 @@ namespace Google.Cloud.Compute.V1
             SetSchedulingAsync(project, zone, instance, schedulingResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the Google Cloud Armor security policy for the specified instance. For more information, see Google Cloud Armor Overview
+        /// Sets the Google Cloud Armor security policy for the specified instance.
+        /// For more information, seeGoogle
+        /// Cloud Armor Overview
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5742,7 +5980,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the Google Cloud Armor security policy for the specified instance. For more information, see Google Cloud Armor Overview
+        /// Sets the Google Cloud Armor security policy for the specified instance.
+        /// For more information, seeGoogle
+        /// Cloud Armor Overview
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5751,7 +5991,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the Google Cloud Armor security policy for the specified instance. For more information, see Google Cloud Armor Overview
+        /// Sets the Google Cloud Armor security policy for the specified instance.
+        /// For more information, seeGoogle
+        /// Cloud Armor Overview
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -5787,7 +6029,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetSecurityPolicyOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets the Google Cloud Armor security policy for the specified instance. For more information, see Google Cloud Armor Overview
+        /// Sets the Google Cloud Armor security policy for the specified instance.
+        /// For more information, seeGoogle
+        /// Cloud Armor Overview
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5796,7 +6040,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the zone scoping this request.
         /// </param>
         /// <param name="instance">
-        /// Name of the Instance resource to which the security policy should be set. The name should conform to RFC1035.
+        /// Name of the Instance resource to which the security policy should be
+        /// set. The name should conform to RFC1035.
         /// </param>
         /// <param name="instancesSetSecurityPolicyRequestResource">
         /// The body resource for this request
@@ -5813,7 +6058,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the Google Cloud Armor security policy for the specified instance. For more information, see Google Cloud Armor Overview
+        /// Sets the Google Cloud Armor security policy for the specified instance.
+        /// For more information, seeGoogle
+        /// Cloud Armor Overview
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5822,7 +6069,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the zone scoping this request.
         /// </param>
         /// <param name="instance">
-        /// Name of the Instance resource to which the security policy should be set. The name should conform to RFC1035.
+        /// Name of the Instance resource to which the security policy should be
+        /// set. The name should conform to RFC1035.
         /// </param>
         /// <param name="instancesSetSecurityPolicyRequestResource">
         /// The body resource for this request
@@ -5839,7 +6087,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the Google Cloud Armor security policy for the specified instance. For more information, see Google Cloud Armor Overview
+        /// Sets the Google Cloud Armor security policy for the specified instance.
+        /// For more information, seeGoogle
+        /// Cloud Armor Overview
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5848,7 +6098,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the zone scoping this request.
         /// </param>
         /// <param name="instance">
-        /// Name of the Instance resource to which the security policy should be set. The name should conform to RFC1035.
+        /// Name of the Instance resource to which the security policy should be
+        /// set. The name should conform to RFC1035.
         /// </param>
         /// <param name="instancesSetSecurityPolicyRequestResource">
         /// The body resource for this request
@@ -5859,7 +6110,9 @@ namespace Google.Cloud.Compute.V1
             SetSecurityPolicyAsync(project, zone, instance, instancesSetSecurityPolicyRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the service account on the instance. For more information, read Changing the service account and access scopes for an instance.
+        /// Sets the service account on the instance. For more information,
+        /// readChanging
+        /// the service account and access scopes for an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5868,7 +6121,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the service account on the instance. For more information, read Changing the service account and access scopes for an instance.
+        /// Sets the service account on the instance. For more information,
+        /// readChanging
+        /// the service account and access scopes for an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5877,7 +6132,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the service account on the instance. For more information, read Changing the service account and access scopes for an instance.
+        /// Sets the service account on the instance. For more information,
+        /// readChanging
+        /// the service account and access scopes for an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -5913,7 +6170,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetServiceAccountOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets the service account on the instance. For more information, read Changing the service account and access scopes for an instance.
+        /// Sets the service account on the instance. For more information,
+        /// readChanging
+        /// the service account and access scopes for an instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5939,7 +6198,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the service account on the instance. For more information, read Changing the service account and access scopes for an instance.
+        /// Sets the service account on the instance. For more information,
+        /// readChanging
+        /// the service account and access scopes for an instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5965,7 +6226,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the service account on the instance. For more information, read Changing the service account and access scopes for an instance.
+        /// Sets the service account on the instance. For more information,
+        /// readChanging
+        /// the service account and access scopes for an instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5985,7 +6248,10 @@ namespace Google.Cloud.Compute.V1
             SetServiceAccountAsync(project, zone, instance, instancesSetServiceAccountRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the Shielded Instance integrity policy for an instance. You can only use this method on a running instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Sets the Shielded Instance integrity policy for an instance. You can
+        /// only use this method on a running instance. This method
+        /// supports PATCH semantics and uses the JSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5994,7 +6260,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the Shielded Instance integrity policy for an instance. You can only use this method on a running instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Sets the Shielded Instance integrity policy for an instance. You can
+        /// only use this method on a running instance. This method
+        /// supports PATCH semantics and uses the JSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6003,7 +6272,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the Shielded Instance integrity policy for an instance. You can only use this method on a running instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Sets the Shielded Instance integrity policy for an instance. You can
+        /// only use this method on a running instance. This method
+        /// supports PATCH semantics and uses the JSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -6039,7 +6311,10 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetShieldedInstanceIntegrityPolicyOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets the Shielded Instance integrity policy for an instance. You can only use this method on a running instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Sets the Shielded Instance integrity policy for an instance. You can
+        /// only use this method on a running instance. This method
+        /// supports PATCH semantics and uses the JSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -6065,7 +6340,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the Shielded Instance integrity policy for an instance. You can only use this method on a running instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Sets the Shielded Instance integrity policy for an instance. You can
+        /// only use this method on a running instance. This method
+        /// supports PATCH semantics and uses the JSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -6091,7 +6369,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the Shielded Instance integrity policy for an instance. You can only use this method on a running instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Sets the Shielded Instance integrity policy for an instance. You can
+        /// only use this method on a running instance. This method
+        /// supports PATCH semantics and uses the JSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -6111,7 +6392,8 @@ namespace Google.Cloud.Compute.V1
             SetShieldedInstanceIntegrityPolicyAsync(project, zone, instance, shieldedInstanceIntegrityPolicyResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets network tags for the specified instance to the data included in the request.
+        /// Sets network tags
+        /// for the specified instance to the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6120,7 +6402,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets network tags for the specified instance to the data included in the request.
+        /// Sets network tags
+        /// for the specified instance to the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6129,7 +6412,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets network tags for the specified instance to the data included in the request.
+        /// Sets network tags
+        /// for the specified instance to the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -6164,7 +6448,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetTagsOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets network tags for the specified instance to the data included in the request.
+        /// Sets network tags
+        /// for the specified instance to the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -6190,7 +6475,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets network tags for the specified instance to the data included in the request.
+        /// Sets network tags
+        /// for the specified instance to the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -6216,7 +6502,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets network tags for the specified instance to the data included in the request.
+        /// Sets network tags
+        /// for the specified instance to the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -6236,7 +6523,8 @@ namespace Google.Cloud.Compute.V1
             SetTagsAsync(project, zone, instance, tagsResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Simulates a host maintenance event on a VM. For more information, see Simulate a host maintenance event.
+        /// Simulates a host maintenance event on a VM. For more information, see
+        /// Simulate a host maintenance event.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6245,7 +6533,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Simulates a host maintenance event on a VM. For more information, see Simulate a host maintenance event.
+        /// Simulates a host maintenance event on a VM. For more information, see
+        /// Simulate a host maintenance event.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6254,7 +6543,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Simulates a host maintenance event on a VM. For more information, see Simulate a host maintenance event.
+        /// Simulates a host maintenance event on a VM. For more information, see
+        /// Simulate a host maintenance event.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -6290,7 +6580,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SimulateMaintenanceEventOperationsClient, callSettings);
 
         /// <summary>
-        /// Simulates a host maintenance event on a VM. For more information, see Simulate a host maintenance event.
+        /// Simulates a host maintenance event on a VM. For more information, see
+        /// Simulate a host maintenance event.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -6312,7 +6603,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Simulates a host maintenance event on a VM. For more information, see Simulate a host maintenance event.
+        /// Simulates a host maintenance event on a VM. For more information, see
+        /// Simulate a host maintenance event.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -6334,7 +6626,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Simulates a host maintenance event on a VM. For more information, see Simulate a host maintenance event.
+        /// Simulates a host maintenance event on a VM. For more information, see
+        /// Simulate a host maintenance event.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -6351,7 +6644,9 @@ namespace Google.Cloud.Compute.V1
             SimulateMaintenanceEventAsync(project, zone, instance, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
+        /// Starts an instance that was stopped using theinstances().stop
+        /// method. For more information, seeRestart an
+        /// instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6360,7 +6655,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
+        /// Starts an instance that was stopped using theinstances().stop
+        /// method. For more information, seeRestart an
+        /// instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6369,7 +6666,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
+        /// Starts an instance that was stopped using theinstances().stop
+        /// method. For more information, seeRestart an
+        /// instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -6404,7 +6703,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StartOperationsClient, callSettings);
 
         /// <summary>
-        /// Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
+        /// Starts an instance that was stopped using theinstances().stop
+        /// method. For more information, seeRestart an
+        /// instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -6426,7 +6727,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
+        /// Starts an instance that was stopped using theinstances().stop
+        /// method. For more information, seeRestart an
+        /// instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -6448,7 +6751,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
+        /// Starts an instance that was stopped using theinstances().stop
+        /// method. For more information, seeRestart an
+        /// instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -6465,7 +6770,9 @@ namespace Google.Cloud.Compute.V1
             StartAsync(project, zone, instance, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
+        /// Starts an instance that was stopped using theinstances().stop
+        /// method. For more information, seeRestart an
+        /// instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6474,7 +6781,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
+        /// Starts an instance that was stopped using theinstances().stop
+        /// method. For more information, seeRestart an
+        /// instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6483,7 +6792,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
+        /// Starts an instance that was stopped using theinstances().stop
+        /// method. For more information, seeRestart an
+        /// instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -6519,7 +6830,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StartWithEncryptionKeyOperationsClient, callSettings);
 
         /// <summary>
-        /// Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
+        /// Starts an instance that was stopped using theinstances().stop
+        /// method. For more information, seeRestart an
+        /// instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -6545,7 +6858,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
+        /// Starts an instance that was stopped using theinstances().stop
+        /// method. For more information, seeRestart an
+        /// instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -6571,7 +6886,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
+        /// Starts an instance that was stopped using theinstances().stop
+        /// method. For more information, seeRestart an
+        /// instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -6591,7 +6908,12 @@ namespace Google.Cloud.Compute.V1
             StartWithEncryptionKeyAsync(project, zone, instance, instancesStartWithEncryptionKeyRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Stops a running instance, shutting it down cleanly, and allows you to restart the instance at a later time. Stopped instances do not incur VM usage charges while they are stopped. However, resources that the VM is using, such as persistent disks and static IP addresses, will continue to be charged until they are deleted. For more information, see Stopping an instance.
+        /// Stops a running instance, shutting it down cleanly, and allows
+        /// you to restart the instance at a later time. Stopped instances do not incur
+        /// VM usage charges while they are stopped. However, resources that the VM is
+        /// using, such as persistent disks and static IP addresses, will continue to
+        /// be charged until they are deleted. For more information, seeStopping
+        /// an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6600,7 +6922,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Stops a running instance, shutting it down cleanly, and allows you to restart the instance at a later time. Stopped instances do not incur VM usage charges while they are stopped. However, resources that the VM is using, such as persistent disks and static IP addresses, will continue to be charged until they are deleted. For more information, see Stopping an instance.
+        /// Stops a running instance, shutting it down cleanly, and allows
+        /// you to restart the instance at a later time. Stopped instances do not incur
+        /// VM usage charges while they are stopped. However, resources that the VM is
+        /// using, such as persistent disks and static IP addresses, will continue to
+        /// be charged until they are deleted. For more information, seeStopping
+        /// an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6609,7 +6936,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Stops a running instance, shutting it down cleanly, and allows you to restart the instance at a later time. Stopped instances do not incur VM usage charges while they are stopped. However, resources that the VM is using, such as persistent disks and static IP addresses, will continue to be charged until they are deleted. For more information, see Stopping an instance.
+        /// Stops a running instance, shutting it down cleanly, and allows
+        /// you to restart the instance at a later time. Stopped instances do not incur
+        /// VM usage charges while they are stopped. However, resources that the VM is
+        /// using, such as persistent disks and static IP addresses, will continue to
+        /// be charged until they are deleted. For more information, seeStopping
+        /// an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -6644,7 +6976,12 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StopOperationsClient, callSettings);
 
         /// <summary>
-        /// Stops a running instance, shutting it down cleanly, and allows you to restart the instance at a later time. Stopped instances do not incur VM usage charges while they are stopped. However, resources that the VM is using, such as persistent disks and static IP addresses, will continue to be charged until they are deleted. For more information, see Stopping an instance.
+        /// Stops a running instance, shutting it down cleanly, and allows
+        /// you to restart the instance at a later time. Stopped instances do not incur
+        /// VM usage charges while they are stopped. However, resources that the VM is
+        /// using, such as persistent disks and static IP addresses, will continue to
+        /// be charged until they are deleted. For more information, seeStopping
+        /// an instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -6666,7 +7003,12 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Stops a running instance, shutting it down cleanly, and allows you to restart the instance at a later time. Stopped instances do not incur VM usage charges while they are stopped. However, resources that the VM is using, such as persistent disks and static IP addresses, will continue to be charged until they are deleted. For more information, see Stopping an instance.
+        /// Stops a running instance, shutting it down cleanly, and allows
+        /// you to restart the instance at a later time. Stopped instances do not incur
+        /// VM usage charges while they are stopped. However, resources that the VM is
+        /// using, such as persistent disks and static IP addresses, will continue to
+        /// be charged until they are deleted. For more information, seeStopping
+        /// an instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -6688,7 +7030,12 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Stops a running instance, shutting it down cleanly, and allows you to restart the instance at a later time. Stopped instances do not incur VM usage charges while they are stopped. However, resources that the VM is using, such as persistent disks and static IP addresses, will continue to be charged until they are deleted. For more information, see Stopping an instance.
+        /// Stops a running instance, shutting it down cleanly, and allows
+        /// you to restart the instance at a later time. Stopped instances do not incur
+        /// VM usage charges while they are stopped. However, resources that the VM is
+        /// using, such as persistent disks and static IP addresses, will continue to
+        /// be charged until they are deleted. For more information, seeStopping
+        /// an instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -6705,7 +7052,14 @@ namespace Google.Cloud.Compute.V1
             StopAsync(project, zone, instance, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// This method suspends a running instance, saving its state to persistent storage, and allows you to resume the instance at a later time. Suspended instances have no compute costs (cores or RAM), and incur only storage charges for the saved VM memory and localSSD data. Any charged resources the virtual machine was using, such as persistent disks and static IP addresses, will continue to be charged while the instance is suspended. For more information, see Suspending and resuming an instance.
+        /// This method suspends a running instance, saving its state to persistent
+        /// storage, and allows you to resume the instance at a later time. Suspended
+        /// instances have no compute costs (cores or RAM), and incur only storage
+        /// charges for the saved VM memory and localSSD data. Any charged resources
+        /// the virtual machine was using, such as persistent disks and static IP
+        /// addresses, will continue to be charged while the instance is suspended.
+        /// For more information, see
+        /// Suspending and resuming an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6714,7 +7068,14 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// This method suspends a running instance, saving its state to persistent storage, and allows you to resume the instance at a later time. Suspended instances have no compute costs (cores or RAM), and incur only storage charges for the saved VM memory and localSSD data. Any charged resources the virtual machine was using, such as persistent disks and static IP addresses, will continue to be charged while the instance is suspended. For more information, see Suspending and resuming an instance.
+        /// This method suspends a running instance, saving its state to persistent
+        /// storage, and allows you to resume the instance at a later time. Suspended
+        /// instances have no compute costs (cores or RAM), and incur only storage
+        /// charges for the saved VM memory and localSSD data. Any charged resources
+        /// the virtual machine was using, such as persistent disks and static IP
+        /// addresses, will continue to be charged while the instance is suspended.
+        /// For more information, see
+        /// Suspending and resuming an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6723,7 +7084,14 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// This method suspends a running instance, saving its state to persistent storage, and allows you to resume the instance at a later time. Suspended instances have no compute costs (cores or RAM), and incur only storage charges for the saved VM memory and localSSD data. Any charged resources the virtual machine was using, such as persistent disks and static IP addresses, will continue to be charged while the instance is suspended. For more information, see Suspending and resuming an instance.
+        /// This method suspends a running instance, saving its state to persistent
+        /// storage, and allows you to resume the instance at a later time. Suspended
+        /// instances have no compute costs (cores or RAM), and incur only storage
+        /// charges for the saved VM memory and localSSD data. Any charged resources
+        /// the virtual machine was using, such as persistent disks and static IP
+        /// addresses, will continue to be charged while the instance is suspended.
+        /// For more information, see
+        /// Suspending and resuming an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -6758,7 +7126,14 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SuspendOperationsClient, callSettings);
 
         /// <summary>
-        /// This method suspends a running instance, saving its state to persistent storage, and allows you to resume the instance at a later time. Suspended instances have no compute costs (cores or RAM), and incur only storage charges for the saved VM memory and localSSD data. Any charged resources the virtual machine was using, such as persistent disks and static IP addresses, will continue to be charged while the instance is suspended. For more information, see Suspending and resuming an instance.
+        /// This method suspends a running instance, saving its state to persistent
+        /// storage, and allows you to resume the instance at a later time. Suspended
+        /// instances have no compute costs (cores or RAM), and incur only storage
+        /// charges for the saved VM memory and localSSD data. Any charged resources
+        /// the virtual machine was using, such as persistent disks and static IP
+        /// addresses, will continue to be charged while the instance is suspended.
+        /// For more information, see
+        /// Suspending and resuming an instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -6780,7 +7155,14 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// This method suspends a running instance, saving its state to persistent storage, and allows you to resume the instance at a later time. Suspended instances have no compute costs (cores or RAM), and incur only storage charges for the saved VM memory and localSSD data. Any charged resources the virtual machine was using, such as persistent disks and static IP addresses, will continue to be charged while the instance is suspended. For more information, see Suspending and resuming an instance.
+        /// This method suspends a running instance, saving its state to persistent
+        /// storage, and allows you to resume the instance at a later time. Suspended
+        /// instances have no compute costs (cores or RAM), and incur only storage
+        /// charges for the saved VM memory and localSSD data. Any charged resources
+        /// the virtual machine was using, such as persistent disks and static IP
+        /// addresses, will continue to be charged while the instance is suspended.
+        /// For more information, see
+        /// Suspending and resuming an instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -6802,7 +7184,14 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// This method suspends a running instance, saving its state to persistent storage, and allows you to resume the instance at a later time. Suspended instances have no compute costs (cores or RAM), and incur only storage charges for the saved VM memory and localSSD data. Any charged resources the virtual machine was using, such as persistent disks and static IP addresses, will continue to be charged while the instance is suspended. For more information, see Suspending and resuming an instance.
+        /// This method suspends a running instance, saving its state to persistent
+        /// storage, and allows you to resume the instance at a later time. Suspended
+        /// instances have no compute costs (cores or RAM), and incur only storage
+        /// charges for the saved VM memory and localSSD data. Any charged resources
+        /// the virtual machine was using, such as persistent disks and static IP
+        /// addresses, will continue to be charged while the instance is suspended.
+        /// For more information, see
+        /// Suspending and resuming an instance.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -6918,7 +7307,10 @@ namespace Google.Cloud.Compute.V1
             TestIamPermissionsAsync(project, zone, resource, testPermissionsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See Updating a running instance for a list of updatable instance properties.
+        /// Updates an instance only if the necessary resources are available. This
+        /// method can update only a specific set of instance properties. See
+        /// Updating a running instance for a list of updatable instance
+        /// properties.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6927,7 +7319,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See Updating a running instance for a list of updatable instance properties.
+        /// Updates an instance only if the necessary resources are available. This
+        /// method can update only a specific set of instance properties. See
+        /// Updating a running instance for a list of updatable instance
+        /// properties.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6936,7 +7331,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See Updating a running instance for a list of updatable instance properties.
+        /// Updates an instance only if the necessary resources are available. This
+        /// method can update only a specific set of instance properties. See
+        /// Updating a running instance for a list of updatable instance
+        /// properties.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -6971,7 +7369,10 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See Updating a running instance for a list of updatable instance properties.
+        /// Updates an instance only if the necessary resources are available. This
+        /// method can update only a specific set of instance properties. See
+        /// Updating a running instance for a list of updatable instance
+        /// properties.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -6997,7 +7398,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See Updating a running instance for a list of updatable instance properties.
+        /// Updates an instance only if the necessary resources are available. This
+        /// method can update only a specific set of instance properties. See
+        /// Updating a running instance for a list of updatable instance
+        /// properties.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -7023,7 +7427,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See Updating a running instance for a list of updatable instance properties.
+        /// Updates an instance only if the necessary resources are available. This
+        /// method can update only a specific set of instance properties. See
+        /// Updating a running instance for a list of updatable instance
+        /// properties.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -7043,7 +7450,10 @@ namespace Google.Cloud.Compute.V1
             UpdateAsync(project, zone, instance, instanceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates the specified access config from an instance's network interface with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the specified access config from an instance's network interface
+        /// with the data included in the request. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7052,7 +7462,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the specified access config from an instance's network interface with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the specified access config from an instance's network interface
+        /// with the data included in the request. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7061,7 +7474,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the specified access config from an instance's network interface with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the specified access config from an instance's network interface
+        /// with the data included in the request. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -7097,7 +7513,10 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAccessConfigOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates the specified access config from an instance's network interface with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the specified access config from an instance's network interface
+        /// with the data included in the request. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -7127,7 +7546,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the specified access config from an instance's network interface with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the specified access config from an instance's network interface
+        /// with the data included in the request. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -7157,7 +7579,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the specified access config from an instance's network interface with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the specified access config from an instance's network interface
+        /// with the data included in the request. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -7180,7 +7605,10 @@ namespace Google.Cloud.Compute.V1
             UpdateAccessConfigAsync(project, zone, instance, networkInterface, accessConfigResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates the Display config for a VM instance. You can only use this method on a stopped VM instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the Display config for a VM instance. You can
+        /// only use this method on a stopped VM instance. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7189,7 +7617,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the Display config for a VM instance. You can only use this method on a stopped VM instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the Display config for a VM instance. You can
+        /// only use this method on a stopped VM instance. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7198,7 +7629,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the Display config for a VM instance. You can only use this method on a stopped VM instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the Display config for a VM instance. You can
+        /// only use this method on a stopped VM instance. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -7234,7 +7668,10 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDisplayDeviceOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates the Display config for a VM instance. You can only use this method on a stopped VM instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the Display config for a VM instance. You can
+        /// only use this method on a stopped VM instance. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -7260,7 +7697,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the Display config for a VM instance. You can only use this method on a stopped VM instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the Display config for a VM instance. You can
+        /// only use this method on a stopped VM instance. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -7286,7 +7726,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the Display config for a VM instance. You can only use this method on a stopped VM instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the Display config for a VM instance. You can
+        /// only use this method on a stopped VM instance. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -7306,7 +7749,12 @@ namespace Google.Cloud.Compute.V1
             UpdateDisplayDeviceAsync(project, zone, instance, displayDeviceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an instance's network interface. This method can only update an interface's alias IP range and attached network. See Modifying alias IP ranges for an existing instance for instructions on changing alias IP ranges. See Migrating a VM between networks for instructions on migrating an interface. This method follows PATCH semantics.
+        /// Updates an instance's network interface. This method can only update an
+        /// interface's alias IP range and attached network. See Modifying
+        /// alias IP ranges for an existing instance for instructions on
+        /// changing alias IP ranges. See Migrating
+        /// a VM between networks for instructions on migrating an interface.
+        /// This method follows PATCH semantics.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7315,7 +7763,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an instance's network interface. This method can only update an interface's alias IP range and attached network. See Modifying alias IP ranges for an existing instance for instructions on changing alias IP ranges. See Migrating a VM between networks for instructions on migrating an interface. This method follows PATCH semantics.
+        /// Updates an instance's network interface. This method can only update an
+        /// interface's alias IP range and attached network. See Modifying
+        /// alias IP ranges for an existing instance for instructions on
+        /// changing alias IP ranges. See Migrating
+        /// a VM between networks for instructions on migrating an interface.
+        /// This method follows PATCH semantics.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7324,7 +7777,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an instance's network interface. This method can only update an interface's alias IP range and attached network. See Modifying alias IP ranges for an existing instance for instructions on changing alias IP ranges. See Migrating a VM between networks for instructions on migrating an interface. This method follows PATCH semantics.
+        /// Updates an instance's network interface. This method can only update an
+        /// interface's alias IP range and attached network. See Modifying
+        /// alias IP ranges for an existing instance for instructions on
+        /// changing alias IP ranges. See Migrating
+        /// a VM between networks for instructions on migrating an interface.
+        /// This method follows PATCH semantics.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -7360,7 +7818,12 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateNetworkInterfaceOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates an instance's network interface. This method can only update an interface's alias IP range and attached network. See Modifying alias IP ranges for an existing instance for instructions on changing alias IP ranges. See Migrating a VM between networks for instructions on migrating an interface. This method follows PATCH semantics.
+        /// Updates an instance's network interface. This method can only update an
+        /// interface's alias IP range and attached network. See Modifying
+        /// alias IP ranges for an existing instance for instructions on
+        /// changing alias IP ranges. See Migrating
+        /// a VM between networks for instructions on migrating an interface.
+        /// This method follows PATCH semantics.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -7390,7 +7853,12 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an instance's network interface. This method can only update an interface's alias IP range and attached network. See Modifying alias IP ranges for an existing instance for instructions on changing alias IP ranges. See Migrating a VM between networks for instructions on migrating an interface. This method follows PATCH semantics.
+        /// Updates an instance's network interface. This method can only update an
+        /// interface's alias IP range and attached network. See Modifying
+        /// alias IP ranges for an existing instance for instructions on
+        /// changing alias IP ranges. See Migrating
+        /// a VM between networks for instructions on migrating an interface.
+        /// This method follows PATCH semantics.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -7420,7 +7888,12 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an instance's network interface. This method can only update an interface's alias IP range and attached network. See Modifying alias IP ranges for an existing instance for instructions on changing alias IP ranges. See Migrating a VM between networks for instructions on migrating an interface. This method follows PATCH semantics.
+        /// Updates an instance's network interface. This method can only update an
+        /// interface's alias IP range and attached network. See Modifying
+        /// alias IP ranges for an existing instance for instructions on
+        /// changing alias IP ranges. See Migrating
+        /// a VM between networks for instructions on migrating an interface.
+        /// This method follows PATCH semantics.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -7443,7 +7916,10 @@ namespace Google.Cloud.Compute.V1
             UpdateNetworkInterfaceAsync(project, zone, instance, networkInterface, networkInterfaceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates the Shielded Instance config for an instance. You can only use this method on a stopped instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the Shielded Instance config for an instance. You can
+        /// only use this method on a stopped instance. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7452,7 +7928,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the Shielded Instance config for an instance. You can only use this method on a stopped instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the Shielded Instance config for an instance. You can
+        /// only use this method on a stopped instance. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7461,7 +7940,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the Shielded Instance config for an instance. You can only use this method on a stopped instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the Shielded Instance config for an instance. You can
+        /// only use this method on a stopped instance. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -7497,7 +7979,10 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateShieldedInstanceConfigOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates the Shielded Instance config for an instance. You can only use this method on a stopped instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the Shielded Instance config for an instance. You can
+        /// only use this method on a stopped instance. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -7523,7 +8008,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the Shielded Instance config for an instance. You can only use this method on a stopped instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the Shielded Instance config for an instance. You can
+        /// only use this method on a stopped instance. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -7549,7 +8037,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the Shielded Instance config for an instance. You can only use this method on a stopped instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the Shielded Instance config for an instance. You can
+        /// only use this method on a stopped instance. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -8167,7 +8658,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient AddResourcePoliciesOperationsClient { get; }
 
         /// <summary>
-        /// Adds existing resource policies to an instance. You can only add one policy right now which will be applied to this instance for scheduling live migrations.
+        /// Adds existing resource policies to an instance. You can only add one
+        /// policy right now which will be applied to this instance for scheduling live
+        /// migrations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8182,7 +8675,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Adds existing resource policies to an instance. You can only add one policy right now which will be applied to this instance for scheduling live migrations.
+        /// Adds existing resource policies to an instance. You can only add one
+        /// policy right now which will be applied to this instance for scheduling live
+        /// migrations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8197,7 +8692,14 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of all of the instances in your project across all regions and zones. The performance of this method degrades when a filter is specified on a project that has a very large number of instances. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of all of the instances in your project
+        /// across all regions and zones.
+        /// 
+        /// The performance of this method degrades when a filter is specified on a
+        /// project that has a very large number of instances.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8209,7 +8711,14 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of all of the instances in your project across all regions and zones. The performance of this method degrades when a filter is specified on a project that has a very large number of instances. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of all of the instances in your project
+        /// across all regions and zones.
+        /// 
+        /// The performance of this method degrades when a filter is specified on a
+        /// project that has a very large number of instances.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8226,7 +8735,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient AttachDiskOperationsClient { get; }
 
         /// <summary>
-        /// Attaches an existing Disk resource to an instance. You must first create the disk before you can attach it. It is not possible to create and attach a disk at the same time. For more information, read Adding a persistent disk to your instance.
+        /// Attaches an existing Disk resource to an instance. You must first
+        /// create the disk before you can attach it. It is not possible to create
+        /// and attach a disk at the same time. For more information, readAdding a
+        /// persistent disk to your instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8241,7 +8753,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Attaches an existing Disk resource to an instance. You must first create the disk before you can attach it. It is not possible to create and attach a disk at the same time. For more information, read Adding a persistent disk to your instance.
+        /// Attaches an existing Disk resource to an instance. You must first
+        /// create the disk before you can attach it. It is not possible to create
+        /// and attach a disk at the same time. For more information, readAdding a
+        /// persistent disk to your instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8259,7 +8774,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient BulkInsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates multiple instances. Count specifies the number of instances to create. For more information, see About bulk creation of VMs.
+        /// Creates multiple instances. Count specifies the number of instances to
+        /// create. For more information, seeAbout bulk
+        /// creation of VMs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8274,7 +8791,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates multiple instances. Count specifies the number of instances to create. For more information, see About bulk creation of VMs.
+        /// Creates multiple instances. Count specifies the number of instances to
+        /// create. For more information, seeAbout bulk
+        /// creation of VMs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8292,7 +8811,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient DeleteOperationsClient { get; }
 
         /// <summary>
-        /// Deletes the specified Instance resource. For more information, see Deleting an instance.
+        /// Deletes the specified Instance resource. For more information, seeDeleting
+        /// an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8307,7 +8827,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Deletes the specified Instance resource. For more information, see Deleting an instance.
+        /// Deletes the specified Instance resource. For more information, seeDeleting
+        /// an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8358,7 +8879,11 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient DeleteNetworkInterfaceOperationsClient { get; }
 
         /// <summary>
-        /// Deletes one dynamic network interface from an active instance. InstancesDeleteNetworkInterfaceRequest indicates: - instance from which to delete, using project+zone+resource_id fields; - dynamic network interface to be deleted, using network_interface_name field;
+        /// Deletes one dynamic network interface from an active instance.
+        /// InstancesDeleteNetworkInterfaceRequest indicates:
+        /// - instance from which to delete, using project+zone+resource_id fields;
+        /// - dynamic network interface to be deleted, using network_interface_name
+        /// field;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8373,7 +8898,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Deletes one dynamic network interface from an active instance. InstancesDeleteNetworkInterfaceRequest indicates: - instance from which to delete, using project+zone+resource_id fields; - dynamic network interface to be deleted, using network_interface_name field;
+        /// Deletes one dynamic network interface from an active instance.
+        /// InstancesDeleteNetworkInterfaceRequest indicates:
+        /// - instance from which to delete, using project+zone+resource_id fields;
+        /// - dynamic network interface to be deleted, using network_interface_name
+        /// field;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8493,7 +9022,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8505,7 +9035,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8592,7 +9123,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates an instance resource in the specified project using the data included in the request.
+        /// Creates an instance resource in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8607,7 +9139,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates an instance resource in the specified project using the data included in the request.
+        /// Creates an instance resource in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8622,7 +9155,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of instances contained within the specified zone.
+        /// Retrieves the list of instances contained within
+        /// the specified zone.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8634,7 +9168,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of instances contained within the specified zone.
+        /// Retrieves the list of instances contained within
+        /// the specified zone.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8646,7 +9181,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of resources that refer to the VM instance specified in the request. For example, if the VM instance is part of a managed or unmanaged instance group, the referrers list includes the instance group. For more information, read Viewing referrers to VM instances.
+        /// Retrieves a list of resources that refer to the VM instance specified in
+        /// the request. For example, if the VM instance is part of a managed or
+        /// unmanaged instance group, the referrers list includes the instance group.
+        /// For more information, readViewing
+        /// referrers to VM instances.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8658,7 +9197,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of resources that refer to the VM instance specified in the request. For example, if the VM instance is part of a managed or unmanaged instance group, the referrers list includes the instance group. For more information, read Viewing referrers to VM instances.
+        /// Retrieves a list of resources that refer to the VM instance specified in
+        /// the request. For example, if the VM instance is part of a managed or
+        /// unmanaged instance group, the referrers list includes the instance group.
+        /// For more information, readViewing
+        /// referrers to VM instances.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8772,7 +9315,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient ResetOperationsClient { get; }
 
         /// <summary>
-        /// Performs a reset on the instance. This is a hard reset. The VM does not do a graceful shutdown. For more information, see Resetting an instance.
+        /// Performs a reset on the instance. This is a hard reset. The VM
+        /// does not do a graceful shutdown. For more information, seeResetting
+        /// an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8787,7 +9332,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Performs a reset on the instance. This is a hard reset. The VM does not do a graceful shutdown. For more information, see Resetting an instance.
+        /// Performs a reset on the instance. This is a hard reset. The VM
+        /// does not do a graceful shutdown. For more information, seeResetting
+        /// an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8805,7 +9352,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient ResumeOperationsClient { get; }
 
         /// <summary>
-        /// Resumes an instance that was suspended using the instances().suspend method.
+        /// Resumes an instance that was suspended using theinstances().suspend
+        /// method.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8820,7 +9368,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Resumes an instance that was suspended using the instances().suspend method.
+        /// Resumes an instance that was suspended using theinstances().suspend
+        /// method.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8925,7 +9474,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8937,7 +9487,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8952,7 +9503,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetLabelsOperationsClient { get; }
 
         /// <summary>
-        /// Sets labels on an instance. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets labels on an instance.  To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8967,7 +9519,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets labels on an instance. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets labels on an instance.  To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8985,7 +9538,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetMachineResourcesOperationsClient { get; }
 
         /// <summary>
-        /// Changes the number and/or type of accelerator for a stopped instance to the values specified in the request.
+        /// Changes the number and/or type of accelerator for a stopped instance to the
+        /// values specified in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9000,7 +9554,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Changes the number and/or type of accelerator for a stopped instance to the values specified in the request.
+        /// Changes the number and/or type of accelerator for a stopped instance to the
+        /// values specified in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9018,7 +9573,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetMachineTypeOperationsClient { get; }
 
         /// <summary>
-        /// Changes the machine type for a stopped instance to the machine type specified in the request.
+        /// Changes the machine type for a stopped instance to the machine
+        /// type specified in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9033,7 +9589,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Changes the machine type for a stopped instance to the machine type specified in the request.
+        /// Changes the machine type for a stopped instance to the machine
+        /// type specified in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9051,7 +9608,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetMetadataOperationsClient { get; }
 
         /// <summary>
-        /// Sets metadata for the specified instance to the data included in the request.
+        /// Sets metadata for the specified instance to the data included
+        /// in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9066,7 +9624,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets metadata for the specified instance to the data included in the request.
+        /// Sets metadata for the specified instance to the data included
+        /// in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9084,7 +9643,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetMinCpuPlatformOperationsClient { get; }
 
         /// <summary>
-        /// Changes the minimum CPU platform that this instance should use. This method can only be called on a stopped instance. For more information, read Specifying a Minimum CPU Platform.
+        /// Changes the minimum CPU platform that this instance should use.
+        /// This method can only
+        /// be called on a stopped instance. For more information, readSpecifying a
+        /// Minimum CPU Platform.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9099,7 +9661,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Changes the minimum CPU platform that this instance should use. This method can only be called on a stopped instance. For more information, read Specifying a Minimum CPU Platform.
+        /// Changes the minimum CPU platform that this instance should use.
+        /// This method can only
+        /// be called on a stopped instance. For more information, readSpecifying a
+        /// Minimum CPU Platform.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9150,7 +9715,11 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetSchedulingOperationsClient { get; }
 
         /// <summary>
-        /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states. For more information about setting scheduling options for a VM, see Set VM host maintenance policy.
+        /// Sets an instance's scheduling options. You can only call this method on astopped instance,
+        /// that is, a VM instance that is in a `TERMINATED` state. SeeInstance Life
+        /// Cycle for more information on the possible instance states.
+        /// For more information about setting scheduling options for a VM, seeSet
+        /// VM host maintenance policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9165,7 +9734,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states. For more information about setting scheduling options for a VM, see Set VM host maintenance policy.
+        /// Sets an instance's scheduling options. You can only call this method on astopped instance,
+        /// that is, a VM instance that is in a `TERMINATED` state. SeeInstance Life
+        /// Cycle for more information on the possible instance states.
+        /// For more information about setting scheduling options for a VM, seeSet
+        /// VM host maintenance policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9183,7 +9756,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetSecurityPolicyOperationsClient { get; }
 
         /// <summary>
-        /// Sets the Google Cloud Armor security policy for the specified instance. For more information, see Google Cloud Armor Overview
+        /// Sets the Google Cloud Armor security policy for the specified instance.
+        /// For more information, seeGoogle
+        /// Cloud Armor Overview
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9198,7 +9773,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the Google Cloud Armor security policy for the specified instance. For more information, see Google Cloud Armor Overview
+        /// Sets the Google Cloud Armor security policy for the specified instance.
+        /// For more information, seeGoogle
+        /// Cloud Armor Overview
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9216,7 +9793,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetServiceAccountOperationsClient { get; }
 
         /// <summary>
-        /// Sets the service account on the instance. For more information, read Changing the service account and access scopes for an instance.
+        /// Sets the service account on the instance. For more information,
+        /// readChanging
+        /// the service account and access scopes for an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9231,7 +9810,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the service account on the instance. For more information, read Changing the service account and access scopes for an instance.
+        /// Sets the service account on the instance. For more information,
+        /// readChanging
+        /// the service account and access scopes for an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9249,7 +9830,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetShieldedInstanceIntegrityPolicyOperationsClient { get; }
 
         /// <summary>
-        /// Sets the Shielded Instance integrity policy for an instance. You can only use this method on a running instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Sets the Shielded Instance integrity policy for an instance. You can
+        /// only use this method on a running instance. This method
+        /// supports PATCH semantics and uses the JSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9264,7 +9848,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the Shielded Instance integrity policy for an instance. You can only use this method on a running instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Sets the Shielded Instance integrity policy for an instance. You can
+        /// only use this method on a running instance. This method
+        /// supports PATCH semantics and uses the JSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9282,7 +9869,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetTagsOperationsClient { get; }
 
         /// <summary>
-        /// Sets network tags for the specified instance to the data included in the request.
+        /// Sets network tags
+        /// for the specified instance to the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9297,7 +9885,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets network tags for the specified instance to the data included in the request.
+        /// Sets network tags
+        /// for the specified instance to the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9315,7 +9904,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SimulateMaintenanceEventOperationsClient { get; }
 
         /// <summary>
-        /// Simulates a host maintenance event on a VM. For more information, see Simulate a host maintenance event.
+        /// Simulates a host maintenance event on a VM. For more information, see
+        /// Simulate a host maintenance event.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9330,7 +9920,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Simulates a host maintenance event on a VM. For more information, see Simulate a host maintenance event.
+        /// Simulates a host maintenance event on a VM. For more information, see
+        /// Simulate a host maintenance event.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9348,7 +9939,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient StartOperationsClient { get; }
 
         /// <summary>
-        /// Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
+        /// Starts an instance that was stopped using theinstances().stop
+        /// method. For more information, seeRestart an
+        /// instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9363,7 +9956,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
+        /// Starts an instance that was stopped using theinstances().stop
+        /// method. For more information, seeRestart an
+        /// instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9381,7 +9976,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient StartWithEncryptionKeyOperationsClient { get; }
 
         /// <summary>
-        /// Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
+        /// Starts an instance that was stopped using theinstances().stop
+        /// method. For more information, seeRestart an
+        /// instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9396,7 +9993,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
+        /// Starts an instance that was stopped using theinstances().stop
+        /// method. For more information, seeRestart an
+        /// instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9414,7 +10013,12 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient StopOperationsClient { get; }
 
         /// <summary>
-        /// Stops a running instance, shutting it down cleanly, and allows you to restart the instance at a later time. Stopped instances do not incur VM usage charges while they are stopped. However, resources that the VM is using, such as persistent disks and static IP addresses, will continue to be charged until they are deleted. For more information, see Stopping an instance.
+        /// Stops a running instance, shutting it down cleanly, and allows
+        /// you to restart the instance at a later time. Stopped instances do not incur
+        /// VM usage charges while they are stopped. However, resources that the VM is
+        /// using, such as persistent disks and static IP addresses, will continue to
+        /// be charged until they are deleted. For more information, seeStopping
+        /// an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9429,7 +10033,12 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Stops a running instance, shutting it down cleanly, and allows you to restart the instance at a later time. Stopped instances do not incur VM usage charges while they are stopped. However, resources that the VM is using, such as persistent disks and static IP addresses, will continue to be charged until they are deleted. For more information, see Stopping an instance.
+        /// Stops a running instance, shutting it down cleanly, and allows
+        /// you to restart the instance at a later time. Stopped instances do not incur
+        /// VM usage charges while they are stopped. However, resources that the VM is
+        /// using, such as persistent disks and static IP addresses, will continue to
+        /// be charged until they are deleted. For more information, seeStopping
+        /// an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9447,7 +10056,14 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SuspendOperationsClient { get; }
 
         /// <summary>
-        /// This method suspends a running instance, saving its state to persistent storage, and allows you to resume the instance at a later time. Suspended instances have no compute costs (cores or RAM), and incur only storage charges for the saved VM memory and localSSD data. Any charged resources the virtual machine was using, such as persistent disks and static IP addresses, will continue to be charged while the instance is suspended. For more information, see Suspending and resuming an instance.
+        /// This method suspends a running instance, saving its state to persistent
+        /// storage, and allows you to resume the instance at a later time. Suspended
+        /// instances have no compute costs (cores or RAM), and incur only storage
+        /// charges for the saved VM memory and localSSD data. Any charged resources
+        /// the virtual machine was using, such as persistent disks and static IP
+        /// addresses, will continue to be charged while the instance is suspended.
+        /// For more information, see
+        /// Suspending and resuming an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9462,7 +10078,14 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// This method suspends a running instance, saving its state to persistent storage, and allows you to resume the instance at a later time. Suspended instances have no compute costs (cores or RAM), and incur only storage charges for the saved VM memory and localSSD data. Any charged resources the virtual machine was using, such as persistent disks and static IP addresses, will continue to be charged while the instance is suspended. For more information, see Suspending and resuming an instance.
+        /// This method suspends a running instance, saving its state to persistent
+        /// storage, and allows you to resume the instance at a later time. Suspended
+        /// instances have no compute costs (cores or RAM), and incur only storage
+        /// charges for the saved VM memory and localSSD data. Any charged resources
+        /// the virtual machine was using, such as persistent disks and static IP
+        /// addresses, will continue to be charged while the instance is suspended.
+        /// For more information, see
+        /// Suspending and resuming an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9504,7 +10127,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient UpdateOperationsClient { get; }
 
         /// <summary>
-        /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See Updating a running instance for a list of updatable instance properties.
+        /// Updates an instance only if the necessary resources are available. This
+        /// method can update only a specific set of instance properties. See
+        /// Updating a running instance for a list of updatable instance
+        /// properties.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9519,7 +10145,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See Updating a running instance for a list of updatable instance properties.
+        /// Updates an instance only if the necessary resources are available. This
+        /// method can update only a specific set of instance properties. See
+        /// Updating a running instance for a list of updatable instance
+        /// properties.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9537,7 +10166,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient UpdateAccessConfigOperationsClient { get; }
 
         /// <summary>
-        /// Updates the specified access config from an instance's network interface with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the specified access config from an instance's network interface
+        /// with the data included in the request. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9552,7 +10184,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Updates the specified access config from an instance's network interface with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the specified access config from an instance's network interface
+        /// with the data included in the request. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9570,7 +10205,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient UpdateDisplayDeviceOperationsClient { get; }
 
         /// <summary>
-        /// Updates the Display config for a VM instance. You can only use this method on a stopped VM instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the Display config for a VM instance. You can
+        /// only use this method on a stopped VM instance. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9585,7 +10223,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Updates the Display config for a VM instance. You can only use this method on a stopped VM instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the Display config for a VM instance. You can
+        /// only use this method on a stopped VM instance. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9603,7 +10244,12 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient UpdateNetworkInterfaceOperationsClient { get; }
 
         /// <summary>
-        /// Updates an instance's network interface. This method can only update an interface's alias IP range and attached network. See Modifying alias IP ranges for an existing instance for instructions on changing alias IP ranges. See Migrating a VM between networks for instructions on migrating an interface. This method follows PATCH semantics.
+        /// Updates an instance's network interface. This method can only update an
+        /// interface's alias IP range and attached network. See Modifying
+        /// alias IP ranges for an existing instance for instructions on
+        /// changing alias IP ranges. See Migrating
+        /// a VM between networks for instructions on migrating an interface.
+        /// This method follows PATCH semantics.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9618,7 +10264,12 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Updates an instance's network interface. This method can only update an interface's alias IP range and attached network. See Modifying alias IP ranges for an existing instance for instructions on changing alias IP ranges. See Migrating a VM between networks for instructions on migrating an interface. This method follows PATCH semantics.
+        /// Updates an instance's network interface. This method can only update an
+        /// interface's alias IP range and attached network. See Modifying
+        /// alias IP ranges for an existing instance for instructions on
+        /// changing alias IP ranges. See Migrating
+        /// a VM between networks for instructions on migrating an interface.
+        /// This method follows PATCH semantics.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9636,7 +10287,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient UpdateShieldedInstanceConfigOperationsClient { get; }
 
         /// <summary>
-        /// Updates the Shielded Instance config for an instance. You can only use this method on a stopped instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the Shielded Instance config for an instance. You can
+        /// only use this method on a stopped instance. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9651,7 +10305,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Updates the Shielded Instance config for an instance. You can only use this method on a stopped instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the Shielded Instance config for an instance. You can
+        /// only use this method on a stopped instance. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

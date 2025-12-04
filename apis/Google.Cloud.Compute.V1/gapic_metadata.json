@@ -332,6 +332,45 @@
         }
       }
     },
+    "CrossSiteNetworks": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CrossSiteNetworksClient",
+          "rpcs": {
+            "Delete": {
+              "methods": [
+                "Delete",
+                "DeleteAsync"
+              ]
+            },
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            },
+            "Insert": {
+              "methods": [
+                "Insert",
+                "InsertAsync"
+              ]
+            },
+            "List": {
+              "methods": [
+                "List",
+                "ListAsync"
+              ]
+            },
+            "Patch": {
+              "methods": [
+                "Patch",
+                "PatchAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "DiskTypes": {
       "clients": {
         "grpc": {
@@ -679,6 +718,12 @@
                 "PatchAsync"
               ]
             },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            },
             "Update": {
               "methods": [
                 "Update",
@@ -740,6 +785,57 @@
               "methods": [
                 "SetTarget",
                 "SetTargetAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "FutureReservations": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "FutureReservationsClient",
+          "rpcs": {
+            "AggregatedList": {
+              "methods": [
+                "AggregatedList",
+                "AggregatedListAsync"
+              ]
+            },
+            "Cancel": {
+              "methods": [
+                "Cancel",
+                "CancelAsync"
+              ]
+            },
+            "Delete": {
+              "methods": [
+                "Delete",
+                "DeleteAsync"
+              ]
+            },
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            },
+            "Insert": {
+              "methods": [
+                "Insert",
+                "InsertAsync"
+              ]
+            },
+            "List": {
+              "methods": [
+                "List",
+                "ListAsync"
+              ]
+            },
+            "Update": {
+              "methods": [
+                "Update",
+                "UpdateAsync"
               ]
             }
           }
@@ -4543,6 +4639,12 @@
                 "GetAsync"
               ]
             },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
             "List": {
               "methods": [
                 "List",
@@ -4553,6 +4655,18 @@
               "methods": [
                 "PerformMaintenance",
                 "PerformMaintenanceAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
               ]
             }
           }
@@ -4568,6 +4682,12 @@
               "methods": [
                 "Get",
                 "GetAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
               ]
             },
             "List": {
@@ -4586,6 +4706,18 @@
               "methods": [
                 "ReportFaulty",
                 "ReportFaultyAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
               ]
             }
           }
@@ -5984,6 +6116,45 @@
               "methods": [
                 "SetLabels",
                 "SetLabelsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "WireGroups": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "WireGroupsClient",
+          "rpcs": {
+            "Delete": {
+              "methods": [
+                "Delete",
+                "DeleteAsync"
+              ]
+            },
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            },
+            "Insert": {
+              "methods": [
+                "Insert",
+                "InsertAsync"
+              ]
+            },
+            "List": {
+              "methods": [
+                "List",
+                "ListAsync"
+              ]
+            },
+            "Patch": {
+              "methods": [
+                "Patch",
+                "PatchAsync"
               ]
             }
           }

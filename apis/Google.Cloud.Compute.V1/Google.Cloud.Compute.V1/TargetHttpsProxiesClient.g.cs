@@ -522,7 +522,11 @@ namespace Google.Cloud.Compute.V1
         public virtual TargetHttpsProxies.TargetHttpsProxiesClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of all TargetHttpsProxy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of all TargetHttpsProxy resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -531,7 +535,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of all TargetHttpsProxy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of all TargetHttpsProxy resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -542,7 +550,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of all TargetHttpsProxy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of all TargetHttpsProxy resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Name of the project scoping this request.
@@ -575,7 +587,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of all TargetHttpsProxy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of all TargetHttpsProxy resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Name of the project scoping this request.
@@ -790,7 +806,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, targetHttpsProxy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a TargetHttpsProxy resource in the specified project using the data included in the request.
+        /// Creates a TargetHttpsProxy resource in the specified
+        /// project using the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -799,7 +816,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a TargetHttpsProxy resource in the specified project using the data included in the request.
+        /// Creates a TargetHttpsProxy resource in the specified
+        /// project using the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -808,7 +826,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a TargetHttpsProxy resource in the specified project using the data included in the request.
+        /// Creates a TargetHttpsProxy resource in the specified
+        /// project using the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -843,7 +862,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a TargetHttpsProxy resource in the specified project using the data included in the request.
+        /// Creates a TargetHttpsProxy resource in the specified
+        /// project using the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -861,7 +881,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a TargetHttpsProxy resource in the specified project using the data included in the request.
+        /// Creates a TargetHttpsProxy resource in the specified
+        /// project using the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -879,7 +900,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a TargetHttpsProxy resource in the specified project using the data included in the request.
+        /// Creates a TargetHttpsProxy resource in the specified
+        /// project using the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -893,7 +915,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, targetHttpsProxyResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the list of TargetHttpsProxy resources available to the specified project.
+        /// Retrieves the list of TargetHttpsProxy resources
+        /// available to the specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -902,7 +925,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of TargetHttpsProxy resources available to the specified project.
+        /// Retrieves the list of TargetHttpsProxy resources
+        /// available to the specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -911,7 +935,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of TargetHttpsProxy resources available to the specified project.
+        /// Retrieves the list of TargetHttpsProxy resources
+        /// available to the specified project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -944,7 +969,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of TargetHttpsProxy resources available to the specified project.
+        /// Retrieves the list of TargetHttpsProxy resources
+        /// available to the specified project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -977,7 +1003,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches the specified TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified TargetHttpsProxy resource with the data included in
+        /// the request. This method supports PATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -986,7 +1015,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified TargetHttpsProxy resource with the data included in
+        /// the request. This method supports PATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -995,7 +1027,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified TargetHttpsProxy resource with the data included in
+        /// the request. This method supports PATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1030,7 +1065,10 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchOperationsClient, callSettings);
 
         /// <summary>
-        /// Patches the specified TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified TargetHttpsProxy resource with the data included in
+        /// the request. This method supports PATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1052,7 +1090,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified TargetHttpsProxy resource with the data included in
+        /// the request. This method supports PATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1074,7 +1115,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified TargetHttpsProxy resource with the data included in
+        /// the request. This method supports PATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1151,7 +1195,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="targetHttpsProxy">
-        /// Name of the TargetHttpsProxy resource whose CertificateMap is to be set. The name must be 1-63 characters long, and comply with RFC1035.
+        /// Name of the TargetHttpsProxy resource whose CertificateMap is
+        /// to be set. The name must be 1-63 characters long, and comply with RFC1035.
         /// </param>
         /// <param name="targetHttpsProxiesSetCertificateMapRequestResource">
         /// The body resource for this request
@@ -1173,7 +1218,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="targetHttpsProxy">
-        /// Name of the TargetHttpsProxy resource whose CertificateMap is to be set. The name must be 1-63 characters long, and comply with RFC1035.
+        /// Name of the TargetHttpsProxy resource whose CertificateMap is
+        /// to be set. The name must be 1-63 characters long, and comply with RFC1035.
         /// </param>
         /// <param name="targetHttpsProxiesSetCertificateMapRequestResource">
         /// The body resource for this request
@@ -1195,7 +1241,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="targetHttpsProxy">
-        /// Name of the TargetHttpsProxy resource whose CertificateMap is to be set. The name must be 1-63 characters long, and comply with RFC1035.
+        /// Name of the TargetHttpsProxy resource whose CertificateMap is
+        /// to be set. The name must be 1-63 characters long, and comply with RFC1035.
         /// </param>
         /// <param name="targetHttpsProxiesSetCertificateMapRequestResource">
         /// The body resource for this request
@@ -1265,7 +1312,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="targetHttpsProxy">
-        /// Name of the TargetHttpsProxy resource to set the QUIC override policy for. The name should conform to RFC1035.
+        /// Name of the TargetHttpsProxy resource to set the QUIC override policy for.
+        /// The name should conform to RFC1035.
         /// </param>
         /// <param name="targetHttpsProxiesSetQuicOverrideRequestResource">
         /// The body resource for this request
@@ -1287,7 +1335,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="targetHttpsProxy">
-        /// Name of the TargetHttpsProxy resource to set the QUIC override policy for. The name should conform to RFC1035.
+        /// Name of the TargetHttpsProxy resource to set the QUIC override policy for.
+        /// The name should conform to RFC1035.
         /// </param>
         /// <param name="targetHttpsProxiesSetQuicOverrideRequestResource">
         /// The body resource for this request
@@ -1309,7 +1358,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="targetHttpsProxy">
-        /// Name of the TargetHttpsProxy resource to set the QUIC override policy for. The name should conform to RFC1035.
+        /// Name of the TargetHttpsProxy resource to set the QUIC override policy for.
+        /// The name should conform to RFC1035.
         /// </param>
         /// <param name="targetHttpsProxiesSetQuicOverrideRequestResource">
         /// The body resource for this request
@@ -1380,7 +1430,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="targetHttpsProxy">
-        /// Name of the TargetHttpsProxy resource to set an SslCertificates resource for.
+        /// Name of the TargetHttpsProxy resource to set an
+        /// SslCertificates resource for.
         /// </param>
         /// <param name="targetHttpsProxiesSetSslCertificatesRequestResource">
         /// The body resource for this request
@@ -1402,7 +1453,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="targetHttpsProxy">
-        /// Name of the TargetHttpsProxy resource to set an SslCertificates resource for.
+        /// Name of the TargetHttpsProxy resource to set an
+        /// SslCertificates resource for.
         /// </param>
         /// <param name="targetHttpsProxiesSetSslCertificatesRequestResource">
         /// The body resource for this request
@@ -1424,7 +1476,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="targetHttpsProxy">
-        /// Name of the TargetHttpsProxy resource to set an SslCertificates resource for.
+        /// Name of the TargetHttpsProxy resource to set an
+        /// SslCertificates resource for.
         /// </param>
         /// <param name="targetHttpsProxiesSetSslCertificatesRequestResource">
         /// The body resource for this request
@@ -1435,7 +1488,10 @@ namespace Google.Cloud.Compute.V1
             SetSslCertificatesAsync(project, targetHttpsProxy, targetHttpsProxiesSetSslCertificatesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the SSL policy for TargetHttpsProxy. The SSL policy specifies the server-side support for SSL features. This affects connections between clients and the HTTPS proxy load balancer. They do not affect the connection between the load balancer and the backends.
+        /// Sets the SSL policy for TargetHttpsProxy. The SSL policy specifies the
+        /// server-side support for SSL features. This affects connections between
+        /// clients and the HTTPS proxy load balancer. They do not affect the
+        /// connection between the load balancer and the backends.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1444,7 +1500,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the SSL policy for TargetHttpsProxy. The SSL policy specifies the server-side support for SSL features. This affects connections between clients and the HTTPS proxy load balancer. They do not affect the connection between the load balancer and the backends.
+        /// Sets the SSL policy for TargetHttpsProxy. The SSL policy specifies the
+        /// server-side support for SSL features. This affects connections between
+        /// clients and the HTTPS proxy load balancer. They do not affect the
+        /// connection between the load balancer and the backends.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1453,7 +1512,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the SSL policy for TargetHttpsProxy. The SSL policy specifies the server-side support for SSL features. This affects connections between clients and the HTTPS proxy load balancer. They do not affect the connection between the load balancer and the backends.
+        /// Sets the SSL policy for TargetHttpsProxy. The SSL policy specifies the
+        /// server-side support for SSL features. This affects connections between
+        /// clients and the HTTPS proxy load balancer. They do not affect the
+        /// connection between the load balancer and the backends.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1488,13 +1550,17 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetSslPolicyOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets the SSL policy for TargetHttpsProxy. The SSL policy specifies the server-side support for SSL features. This affects connections between clients and the HTTPS proxy load balancer. They do not affect the connection between the load balancer and the backends.
+        /// Sets the SSL policy for TargetHttpsProxy. The SSL policy specifies the
+        /// server-side support for SSL features. This affects connections between
+        /// clients and the HTTPS proxy load balancer. They do not affect the
+        /// connection between the load balancer and the backends.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="targetHttpsProxy">
-        /// Name of the TargetHttpsProxy resource whose SSL policy is to be set. The name must be 1-63 characters long, and comply with RFC1035.
+        /// Name of the TargetHttpsProxy resource whose SSL policy is
+        /// to be set. The name must be 1-63 characters long, and comply with RFC1035.
         /// </param>
         /// <param name="sslPolicyReferenceResource">
         /// The body resource for this request
@@ -1510,13 +1576,17 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the SSL policy for TargetHttpsProxy. The SSL policy specifies the server-side support for SSL features. This affects connections between clients and the HTTPS proxy load balancer. They do not affect the connection between the load balancer and the backends.
+        /// Sets the SSL policy for TargetHttpsProxy. The SSL policy specifies the
+        /// server-side support for SSL features. This affects connections between
+        /// clients and the HTTPS proxy load balancer. They do not affect the
+        /// connection between the load balancer and the backends.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="targetHttpsProxy">
-        /// Name of the TargetHttpsProxy resource whose SSL policy is to be set. The name must be 1-63 characters long, and comply with RFC1035.
+        /// Name of the TargetHttpsProxy resource whose SSL policy is
+        /// to be set. The name must be 1-63 characters long, and comply with RFC1035.
         /// </param>
         /// <param name="sslPolicyReferenceResource">
         /// The body resource for this request
@@ -1532,13 +1602,17 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the SSL policy for TargetHttpsProxy. The SSL policy specifies the server-side support for SSL features. This affects connections between clients and the HTTPS proxy load balancer. They do not affect the connection between the load balancer and the backends.
+        /// Sets the SSL policy for TargetHttpsProxy. The SSL policy specifies the
+        /// server-side support for SSL features. This affects connections between
+        /// clients and the HTTPS proxy load balancer. They do not affect the
+        /// connection between the load balancer and the backends.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="targetHttpsProxy">
-        /// Name of the TargetHttpsProxy resource whose SSL policy is to be set. The name must be 1-63 characters long, and comply with RFC1035.
+        /// Name of the TargetHttpsProxy resource whose SSL policy is
+        /// to be set. The name must be 1-63 characters long, and comply with RFC1035.
         /// </param>
         /// <param name="sslPolicyReferenceResource">
         /// The body resource for this request
@@ -1608,7 +1682,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="targetHttpsProxy">
-        /// Name of the TargetHttpsProxy resource whose URL map is to be set.
+        /// Name of the TargetHttpsProxy resource whose URL map is
+        /// to be set.
         /// </param>
         /// <param name="urlMapReferenceResource">
         /// The body resource for this request
@@ -1630,7 +1705,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="targetHttpsProxy">
-        /// Name of the TargetHttpsProxy resource whose URL map is to be set.
+        /// Name of the TargetHttpsProxy resource whose URL map is
+        /// to be set.
         /// </param>
         /// <param name="urlMapReferenceResource">
         /// The body resource for this request
@@ -1652,7 +1728,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="targetHttpsProxy">
-        /// Name of the TargetHttpsProxy resource whose URL map is to be set.
+        /// Name of the TargetHttpsProxy resource whose URL map is
+        /// to be set.
         /// </param>
         /// <param name="urlMapReferenceResource">
         /// The body resource for this request
@@ -1802,7 +1879,11 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_SetUrlMapTargetHttpsProxyRequest(ref SetUrlMapTargetHttpsProxyRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Retrieves the list of all TargetHttpsProxy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of all TargetHttpsProxy resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1814,7 +1895,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of all TargetHttpsProxy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of all TargetHttpsProxy resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1888,7 +1973,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a TargetHttpsProxy resource in the specified project using the data included in the request.
+        /// Creates a TargetHttpsProxy resource in the specified
+        /// project using the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1903,7 +1989,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a TargetHttpsProxy resource in the specified project using the data included in the request.
+        /// Creates a TargetHttpsProxy resource in the specified
+        /// project using the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1918,7 +2005,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of TargetHttpsProxy resources available to the specified project.
+        /// Retrieves the list of TargetHttpsProxy resources
+        /// available to the specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1930,7 +2018,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of TargetHttpsProxy resources available to the specified project.
+        /// Retrieves the list of TargetHttpsProxy resources
+        /// available to the specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1945,7 +2034,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient PatchOperationsClient { get; }
 
         /// <summary>
-        /// Patches the specified TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified TargetHttpsProxy resource with the data included in
+        /// the request. This method supports PATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1960,7 +2052,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches the specified TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified TargetHttpsProxy resource with the data included in
+        /// the request. This method supports PATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2077,7 +2172,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetSslPolicyOperationsClient { get; }
 
         /// <summary>
-        /// Sets the SSL policy for TargetHttpsProxy. The SSL policy specifies the server-side support for SSL features. This affects connections between clients and the HTTPS proxy load balancer. They do not affect the connection between the load balancer and the backends.
+        /// Sets the SSL policy for TargetHttpsProxy. The SSL policy specifies the
+        /// server-side support for SSL features. This affects connections between
+        /// clients and the HTTPS proxy load balancer. They do not affect the
+        /// connection between the load balancer and the backends.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2092,7 +2190,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the SSL policy for TargetHttpsProxy. The SSL policy specifies the server-side support for SSL features. This affects connections between clients and the HTTPS proxy load balancer. They do not affect the connection between the load balancer and the backends.
+        /// Sets the SSL policy for TargetHttpsProxy. The SSL policy specifies the
+        /// server-side support for SSL features. This affects connections between
+        /// clients and the HTTPS proxy load balancer. They do not affect the
+        /// connection between the load balancer and the backends.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

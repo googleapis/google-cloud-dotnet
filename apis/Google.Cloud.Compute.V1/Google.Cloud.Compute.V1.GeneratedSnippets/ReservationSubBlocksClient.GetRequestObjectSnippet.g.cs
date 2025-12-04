@@ -36,6 +36,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             GetReservationSubBlockRequest request = new GetReservationSubBlockRequest
             {
+                View = "",
                 Zone = "",
                 ReservationSubBlock = "",
                 Project = "",
