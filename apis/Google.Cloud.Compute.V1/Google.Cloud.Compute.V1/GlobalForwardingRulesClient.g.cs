@@ -506,7 +506,8 @@ namespace Google.Cloud.Compute.V1
             DeleteAsync(project, forwardingRule, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the specified GlobalForwardingRule resource. Gets a list of available forwarding rules by making a list() request.
+        /// Returns the specified GlobalForwardingRule resource. Gets a list of
+        /// available forwarding rules by making a list() request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -515,7 +516,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified GlobalForwardingRule resource. Gets a list of available forwarding rules by making a list() request.
+        /// Returns the specified GlobalForwardingRule resource. Gets a list of
+        /// available forwarding rules by making a list() request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -524,7 +526,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified GlobalForwardingRule resource. Gets a list of available forwarding rules by making a list() request.
+        /// Returns the specified GlobalForwardingRule resource. Gets a list of
+        /// available forwarding rules by making a list() request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -533,7 +536,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the specified GlobalForwardingRule resource. Gets a list of available forwarding rules by making a list() request.
+        /// Returns the specified GlobalForwardingRule resource. Gets a list of
+        /// available forwarding rules by making a list() request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -551,7 +555,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the specified GlobalForwardingRule resource. Gets a list of available forwarding rules by making a list() request.
+        /// Returns the specified GlobalForwardingRule resource. Gets a list of
+        /// available forwarding rules by making a list() request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -569,7 +574,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the specified GlobalForwardingRule resource. Gets a list of available forwarding rules by making a list() request.
+        /// Returns the specified GlobalForwardingRule resource. Gets a list of
+        /// available forwarding rules by making a list() request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -583,7 +589,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, forwardingRule, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a GlobalForwardingRule resource in the specified project using the data included in the request.
+        /// Creates a GlobalForwardingRule resource in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -592,7 +599,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a GlobalForwardingRule resource in the specified project using the data included in the request.
+        /// Creates a GlobalForwardingRule resource in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -601,7 +609,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a GlobalForwardingRule resource in the specified project using the data included in the request.
+        /// Creates a GlobalForwardingRule resource in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -636,7 +645,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a GlobalForwardingRule resource in the specified project using the data included in the request.
+        /// Creates a GlobalForwardingRule resource in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -654,7 +664,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a GlobalForwardingRule resource in the specified project using the data included in the request.
+        /// Creates a GlobalForwardingRule resource in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -672,7 +683,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a GlobalForwardingRule resource in the specified project using the data included in the request.
+        /// Creates a GlobalForwardingRule resource in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -686,7 +698,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, forwardingRuleResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a list of GlobalForwardingRule resources available to the specified project.
+        /// Retrieves a list of GlobalForwardingRule resources available to the
+        /// specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -695,7 +708,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of GlobalForwardingRule resources available to the specified project.
+        /// Retrieves a list of GlobalForwardingRule resources available to the
+        /// specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -704,7 +718,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of GlobalForwardingRule resources available to the specified project.
+        /// Retrieves a list of GlobalForwardingRule resources available to the
+        /// specified project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -737,7 +752,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of GlobalForwardingRule resources available to the specified project.
+        /// Retrieves a list of GlobalForwardingRule resources available to the
+        /// specified project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -770,7 +786,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Updates the specified forwarding rule with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. Currently, you can only patch the network_tier field.
+        /// Updates the specified forwarding rule with the data included in the
+        /// request. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules. Currently, you can only
+        /// patch the network_tier field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -779,7 +799,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the specified forwarding rule with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. Currently, you can only patch the network_tier field.
+        /// Updates the specified forwarding rule with the data included in the
+        /// request. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules. Currently, you can only
+        /// patch the network_tier field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -788,7 +812,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the specified forwarding rule with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. Currently, you can only patch the network_tier field.
+        /// Updates the specified forwarding rule with the data included in the
+        /// request. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules. Currently, you can only
+        /// patch the network_tier field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -823,7 +851,11 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates the specified forwarding rule with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. Currently, you can only patch the network_tier field.
+        /// Updates the specified forwarding rule with the data included in the
+        /// request. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules. Currently, you can only
+        /// patch the network_tier field.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -845,7 +877,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the specified forwarding rule with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. Currently, you can only patch the network_tier field.
+        /// Updates the specified forwarding rule with the data included in the
+        /// request. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules. Currently, you can only
+        /// patch the network_tier field.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -867,7 +903,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the specified forwarding rule with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. Currently, you can only patch the network_tier field.
+        /// Updates the specified forwarding rule with the data included in the
+        /// request. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules. Currently, you can only
+        /// patch the network_tier field.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -884,7 +924,9 @@ namespace Google.Cloud.Compute.V1
             PatchAsync(project, forwardingRule, forwardingRuleResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the labels on the specified resource. To learn more about labels, read the Labeling resources documentation.
+        /// Sets the labels on the specified resource. To learn more about labels,
+        /// read the
+        /// Labeling resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -893,7 +935,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the labels on the specified resource. To learn more about labels, read the Labeling resources documentation.
+        /// Sets the labels on the specified resource. To learn more about labels,
+        /// read the
+        /// Labeling resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -902,7 +946,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the labels on the specified resource. To learn more about labels, read the Labeling resources documentation.
+        /// Sets the labels on the specified resource. To learn more about labels,
+        /// read the
+        /// Labeling resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -937,7 +983,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetLabelsOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets the labels on the specified resource. To learn more about labels, read the Labeling resources documentation.
+        /// Sets the labels on the specified resource. To learn more about labels,
+        /// read the
+        /// Labeling resources documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -959,7 +1007,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the labels on the specified resource. To learn more about labels, read the Labeling resources documentation.
+        /// Sets the labels on the specified resource. To learn more about labels,
+        /// read the
+        /// Labeling resources documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -981,7 +1031,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the labels on the specified resource. To learn more about labels, read the Labeling resources documentation.
+        /// Sets the labels on the specified resource. To learn more about labels,
+        /// read the
+        /// Labeling resources documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -998,7 +1050,8 @@ namespace Google.Cloud.Compute.V1
             SetLabelsAsync(project, resource, globalSetLabelsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Changes target URL for the GlobalForwardingRule resource. The new target should be of the same type as the old target.
+        /// Changes target URL for the GlobalForwardingRule resource. The new target
+        /// should be of the same type as the old target.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1007,7 +1060,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Changes target URL for the GlobalForwardingRule resource. The new target should be of the same type as the old target.
+        /// Changes target URL for the GlobalForwardingRule resource. The new target
+        /// should be of the same type as the old target.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1016,7 +1070,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Changes target URL for the GlobalForwardingRule resource. The new target should be of the same type as the old target.
+        /// Changes target URL for the GlobalForwardingRule resource. The new target
+        /// should be of the same type as the old target.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1051,7 +1106,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetTargetOperationsClient, callSettings);
 
         /// <summary>
-        /// Changes target URL for the GlobalForwardingRule resource. The new target should be of the same type as the old target.
+        /// Changes target URL for the GlobalForwardingRule resource. The new target
+        /// should be of the same type as the old target.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1073,7 +1129,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Changes target URL for the GlobalForwardingRule resource. The new target should be of the same type as the old target.
+        /// Changes target URL for the GlobalForwardingRule resource. The new target
+        /// should be of the same type as the old target.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1095,7 +1152,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Changes target URL for the GlobalForwardingRule resource. The new target should be of the same type as the old target.
+        /// Changes target URL for the GlobalForwardingRule resource. The new target
+        /// should be of the same type as the old target.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1246,7 +1304,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the specified GlobalForwardingRule resource. Gets a list of available forwarding rules by making a list() request.
+        /// Returns the specified GlobalForwardingRule resource. Gets a list of
+        /// available forwarding rules by making a list() request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1258,7 +1317,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the specified GlobalForwardingRule resource. Gets a list of available forwarding rules by making a list() request.
+        /// Returns the specified GlobalForwardingRule resource. Gets a list of
+        /// available forwarding rules by making a list() request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1273,7 +1333,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a GlobalForwardingRule resource in the specified project using the data included in the request.
+        /// Creates a GlobalForwardingRule resource in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1288,7 +1349,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a GlobalForwardingRule resource in the specified project using the data included in the request.
+        /// Creates a GlobalForwardingRule resource in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1303,7 +1365,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of GlobalForwardingRule resources available to the specified project.
+        /// Retrieves a list of GlobalForwardingRule resources available to the
+        /// specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1315,7 +1378,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of GlobalForwardingRule resources available to the specified project.
+        /// Retrieves a list of GlobalForwardingRule resources available to the
+        /// specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1330,7 +1394,11 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient PatchOperationsClient { get; }
 
         /// <summary>
-        /// Updates the specified forwarding rule with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. Currently, you can only patch the network_tier field.
+        /// Updates the specified forwarding rule with the data included in the
+        /// request. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules. Currently, you can only
+        /// patch the network_tier field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1345,7 +1413,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Updates the specified forwarding rule with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. Currently, you can only patch the network_tier field.
+        /// Updates the specified forwarding rule with the data included in the
+        /// request. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules. Currently, you can only
+        /// patch the network_tier field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1363,7 +1435,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetLabelsOperationsClient { get; }
 
         /// <summary>
-        /// Sets the labels on the specified resource. To learn more about labels, read the Labeling resources documentation.
+        /// Sets the labels on the specified resource. To learn more about labels,
+        /// read the
+        /// Labeling resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1378,7 +1452,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the labels on the specified resource. To learn more about labels, read the Labeling resources documentation.
+        /// Sets the labels on the specified resource. To learn more about labels,
+        /// read the
+        /// Labeling resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1396,7 +1472,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetTargetOperationsClient { get; }
 
         /// <summary>
-        /// Changes target URL for the GlobalForwardingRule resource. The new target should be of the same type as the old target.
+        /// Changes target URL for the GlobalForwardingRule resource. The new target
+        /// should be of the same type as the old target.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1411,7 +1488,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Changes target URL for the GlobalForwardingRule resource. The new target should be of the same type as the old target.
+        /// Changes target URL for the GlobalForwardingRule resource. The new target
+        /// should be of the same type as the old target.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

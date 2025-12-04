@@ -607,7 +607,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, region, targetHttpsProxy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a TargetHttpsProxy resource in the specified project and region using the data included in the request.
+        /// Creates a TargetHttpsProxy resource in the specified project and region
+        /// using the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -616,7 +617,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a TargetHttpsProxy resource in the specified project and region using the data included in the request.
+        /// Creates a TargetHttpsProxy resource in the specified project and region
+        /// using the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -625,7 +627,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a TargetHttpsProxy resource in the specified project and region using the data included in the request.
+        /// Creates a TargetHttpsProxy resource in the specified project and region
+        /// using the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -660,7 +663,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a TargetHttpsProxy resource in the specified project and region using the data included in the request.
+        /// Creates a TargetHttpsProxy resource in the specified project and region
+        /// using the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -682,7 +686,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a TargetHttpsProxy resource in the specified project and region using the data included in the request.
+        /// Creates a TargetHttpsProxy resource in the specified project and region
+        /// using the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -704,7 +709,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a TargetHttpsProxy resource in the specified project and region using the data included in the request.
+        /// Creates a TargetHttpsProxy resource in the specified project and region
+        /// using the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -721,7 +727,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, region, targetHttpsProxyResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the list of TargetHttpsProxy resources available to the specified project in the specified region.
+        /// Retrieves the list of TargetHttpsProxy resources available
+        /// to the specified project in the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -730,7 +737,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of TargetHttpsProxy resources available to the specified project in the specified region.
+        /// Retrieves the list of TargetHttpsProxy resources available
+        /// to the specified project in the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -739,7 +747,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of TargetHttpsProxy resources available to the specified project in the specified region.
+        /// Retrieves the list of TargetHttpsProxy resources available
+        /// to the specified project in the specified region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -776,7 +785,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of TargetHttpsProxy resources available to the specified project in the specified region.
+        /// Retrieves the list of TargetHttpsProxy resources available
+        /// to the specified project in the specified region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -813,7 +823,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches the specified regional TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified regional TargetHttpsProxy resource with the data
+        /// included in the request. This method supports PATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -822,7 +835,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified regional TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified regional TargetHttpsProxy resource with the data
+        /// included in the request. This method supports PATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -831,7 +847,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified regional TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified regional TargetHttpsProxy resource with the data
+        /// included in the request. This method supports PATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -866,7 +885,10 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchOperationsClient, callSettings);
 
         /// <summary>
-        /// Patches the specified regional TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified regional TargetHttpsProxy resource with the data
+        /// included in the request. This method supports PATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -892,7 +914,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified regional TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified regional TargetHttpsProxy resource with the data
+        /// included in the request. This method supports PATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -918,7 +943,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified regional TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified regional TargetHttpsProxy resource with the data
+        /// included in the request. This method supports PATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1001,7 +1029,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region scoping this request.
         /// </param>
         /// <param name="targetHttpsProxy">
-        /// Name of the TargetHttpsProxy resource to set an SslCertificates resource for.
+        /// Name of the TargetHttpsProxy resource to set an
+        /// SslCertificates resource for.
         /// </param>
         /// <param name="regionTargetHttpsProxiesSetSslCertificatesRequestResource">
         /// The body resource for this request
@@ -1027,7 +1056,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region scoping this request.
         /// </param>
         /// <param name="targetHttpsProxy">
-        /// Name of the TargetHttpsProxy resource to set an SslCertificates resource for.
+        /// Name of the TargetHttpsProxy resource to set an
+        /// SslCertificates resource for.
         /// </param>
         /// <param name="regionTargetHttpsProxiesSetSslCertificatesRequestResource">
         /// The body resource for this request
@@ -1053,7 +1083,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region scoping this request.
         /// </param>
         /// <param name="targetHttpsProxy">
-        /// Name of the TargetHttpsProxy resource to set an SslCertificates resource for.
+        /// Name of the TargetHttpsProxy resource to set an
+        /// SslCertificates resource for.
         /// </param>
         /// <param name="regionTargetHttpsProxiesSetSslCertificatesRequestResource">
         /// The body resource for this request
@@ -1352,7 +1383,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a TargetHttpsProxy resource in the specified project and region using the data included in the request.
+        /// Creates a TargetHttpsProxy resource in the specified project and region
+        /// using the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1367,7 +1399,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a TargetHttpsProxy resource in the specified project and region using the data included in the request.
+        /// Creates a TargetHttpsProxy resource in the specified project and region
+        /// using the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1382,7 +1415,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of TargetHttpsProxy resources available to the specified project in the specified region.
+        /// Retrieves the list of TargetHttpsProxy resources available
+        /// to the specified project in the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1394,7 +1428,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of TargetHttpsProxy resources available to the specified project in the specified region.
+        /// Retrieves the list of TargetHttpsProxy resources available
+        /// to the specified project in the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1409,7 +1444,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient PatchOperationsClient { get; }
 
         /// <summary>
-        /// Patches the specified regional TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified regional TargetHttpsProxy resource with the data
+        /// included in the request. This method supports PATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1424,7 +1462,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches the specified regional TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified regional TargetHttpsProxy resource with the data
+        /// included in the request. This method supports PATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

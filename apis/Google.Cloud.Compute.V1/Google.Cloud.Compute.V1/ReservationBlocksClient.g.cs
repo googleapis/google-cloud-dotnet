@@ -47,9 +47,12 @@ namespace Google.Cloud.Compute.V1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetSettings = existing.GetSettings;
+            GetIamPolicySettings = existing.GetIamPolicySettings;
             ListSettings = existing.ListSettings;
             PerformMaintenanceSettings = existing.PerformMaintenanceSettings;
             PerformMaintenanceOperationsSettings = existing.PerformMaintenanceOperationsSettings.Clone();
+            SetIamPolicySettings = existing.SetIamPolicySettings;
+            TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
             OnCopy(existing);
         }
 
@@ -75,6 +78,27 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ReservationBlocksClient.GetIamPolicy</c> and <c>ReservationBlocksClient.GetIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetIamPolicySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -127,6 +151,31 @@ namespace Google.Cloud.Compute.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ReservationBlocksClient.SetIamPolicy</c> and <c>ReservationBlocksClient.SetIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ReservationBlocksClient.TestIamPermissions</c> and <c>ReservationBlocksClient.TestIamPermissionsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ReservationBlocksSettings"/> object.</returns>
@@ -308,10 +357,12 @@ namespace Google.Cloud.Compute.V1
         /// Name of the zone for this request. Zone name should conform to RFC1035.
         /// </param>
         /// <param name="reservation">
-        /// The name of the reservation. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the reservation.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="reservationBlock">
-        /// The name of the reservation block. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the reservation block.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -334,10 +385,12 @@ namespace Google.Cloud.Compute.V1
         /// Name of the zone for this request. Zone name should conform to RFC1035.
         /// </param>
         /// <param name="reservation">
-        /// The name of the reservation. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the reservation.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="reservationBlock">
-        /// The name of the reservation block. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the reservation block.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -360,15 +413,122 @@ namespace Google.Cloud.Compute.V1
         /// Name of the zone for this request. Zone name should conform to RFC1035.
         /// </param>
         /// <param name="reservation">
-        /// The name of the reservation. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the reservation.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="reservationBlock">
-        /// The name of the reservation block. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the reservation block.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ReservationBlocksGetResponse> GetAsync(string project, string zone, string reservation, string reservationBlock, st::CancellationToken cancellationToken) =>
             GetAsync(project, zone, reservation, reservationBlock, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Policy GetIamPolicy(GetIamPolicyReservationBlockRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> GetIamPolicyAsync(GetIamPolicyReservationBlockRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> GetIamPolicyAsync(GetIamPolicyReservationBlockRequest request, st::CancellationToken cancellationToken) =>
+            GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="parentResource">
+        /// Name or id of parent resource of the resource for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Policy GetIamPolicy(string project, string zone, string parentResource, string resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicy(new GetIamPolicyReservationBlockRequest
+            {
+                ParentResource = gax::GaxPreconditions.CheckNotNullOrEmpty(parentResource, nameof(parentResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="parentResource">
+        /// Name or id of parent resource of the resource for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> GetIamPolicyAsync(string project, string zone, string parentResource, string resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicyAsync(new GetIamPolicyReservationBlockRequest
+            {
+                ParentResource = gax::GaxPreconditions.CheckNotNullOrEmpty(parentResource, nameof(parentResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="parentResource">
+        /// Name or id of parent resource of the resource for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> GetIamPolicyAsync(string project, string zone, string parentResource, string resource, st::CancellationToken cancellationToken) =>
+            GetIamPolicyAsync(project, zone, parentResource, resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves a list of reservation blocks under a single reservation.
@@ -398,7 +558,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the zone for this request. Zone name should conform to RFC1035.
         /// </param>
         /// <param name="reservation">
-        /// The name of the reservation. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the reservation.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -439,7 +600,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the zone for this request. Zone name should conform to RFC1035.
         /// </param>
         /// <param name="reservation">
-        /// The name of the reservation. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the reservation.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -534,10 +696,12 @@ namespace Google.Cloud.Compute.V1
         /// Name of the zone for this request. Zone name should conform to RFC1035.
         /// </param>
         /// <param name="reservation">
-        /// The name of the reservation. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the reservation.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="reservationBlock">
-        /// The name of the reservation block. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the reservation block.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="reservationsBlocksPerformMaintenanceRequestResource">
         /// The body resource for this request
@@ -564,10 +728,12 @@ namespace Google.Cloud.Compute.V1
         /// Name of the zone for this request. Zone name should conform to RFC1035.
         /// </param>
         /// <param name="reservation">
-        /// The name of the reservation. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the reservation.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="reservationBlock">
-        /// The name of the reservation block. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the reservation block.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="reservationsBlocksPerformMaintenanceRequestResource">
         /// The body resource for this request
@@ -594,10 +760,12 @@ namespace Google.Cloud.Compute.V1
         /// Name of the zone for this request. Zone name should conform to RFC1035.
         /// </param>
         /// <param name="reservation">
-        /// The name of the reservation. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the reservation.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="reservationBlock">
-        /// The name of the reservation block. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the reservation block.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="reservationsBlocksPerformMaintenanceRequestResource">
         /// The body resource for this request
@@ -606,6 +774,232 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Operation, Operation>> PerformMaintenanceAsync(string project, string zone, string reservation, string reservationBlock, ReservationsBlocksPerformMaintenanceRequest reservationsBlocksPerformMaintenanceRequestResource, st::CancellationToken cancellationToken) =>
             PerformMaintenanceAsync(project, zone, reservation, reservationBlock, reservationsBlocksPerformMaintenanceRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Policy SetIamPolicy(SetIamPolicyReservationBlockRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> SetIamPolicyAsync(SetIamPolicyReservationBlockRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> SetIamPolicyAsync(SetIamPolicyReservationBlockRequest request, st::CancellationToken cancellationToken) =>
+            SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="parentResource">
+        /// Name or id of parent resource of the resource for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="zoneSetNestedPolicyRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Policy SetIamPolicy(string project, string zone, string parentResource, string resource, ZoneSetNestedPolicyRequest zoneSetNestedPolicyRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            SetIamPolicy(new SetIamPolicyReservationBlockRequest
+            {
+                ParentResource = gax::GaxPreconditions.CheckNotNullOrEmpty(parentResource, nameof(parentResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                ZoneSetNestedPolicyRequestResource = gax::GaxPreconditions.CheckNotNull(zoneSetNestedPolicyRequestResource, nameof(zoneSetNestedPolicyRequestResource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="parentResource">
+        /// Name or id of parent resource of the resource for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="zoneSetNestedPolicyRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> SetIamPolicyAsync(string project, string zone, string parentResource, string resource, ZoneSetNestedPolicyRequest zoneSetNestedPolicyRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            SetIamPolicyAsync(new SetIamPolicyReservationBlockRequest
+            {
+                ParentResource = gax::GaxPreconditions.CheckNotNullOrEmpty(parentResource, nameof(parentResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+                ZoneSetNestedPolicyRequestResource = gax::GaxPreconditions.CheckNotNull(zoneSetNestedPolicyRequestResource, nameof(zoneSetNestedPolicyRequestResource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="parentResource">
+        /// Name or id of parent resource of the resource for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="zoneSetNestedPolicyRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Policy> SetIamPolicyAsync(string project, string zone, string parentResource, string resource, ZoneSetNestedPolicyRequest zoneSetNestedPolicyRequestResource, st::CancellationToken cancellationToken) =>
+            SetIamPolicyAsync(project, zone, parentResource, resource, zoneSetNestedPolicyRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TestPermissionsResponse TestIamPermissions(TestIamPermissionsReservationBlockRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestPermissionsResponse> TestIamPermissionsAsync(TestIamPermissionsReservationBlockRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestPermissionsResponse> TestIamPermissionsAsync(TestIamPermissionsReservationBlockRequest request, st::CancellationToken cancellationToken) =>
+            TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="parentResource">
+        /// Name or id of parent resource of the resource for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="testPermissionsRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TestPermissionsResponse TestIamPermissions(string project, string zone, string parentResource, string resource, TestPermissionsRequest testPermissionsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            TestIamPermissions(new TestIamPermissionsReservationBlockRequest
+            {
+                ParentResource = gax::GaxPreconditions.CheckNotNullOrEmpty(parentResource, nameof(parentResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                TestPermissionsRequestResource = gax::GaxPreconditions.CheckNotNull(testPermissionsRequestResource, nameof(testPermissionsRequestResource)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="parentResource">
+        /// Name or id of parent resource of the resource for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="testPermissionsRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestPermissionsResponse> TestIamPermissionsAsync(string project, string zone, string parentResource, string resource, TestPermissionsRequest testPermissionsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            TestIamPermissionsAsync(new TestIamPermissionsReservationBlockRequest
+            {
+                ParentResource = gax::GaxPreconditions.CheckNotNullOrEmpty(parentResource, nameof(parentResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                TestPermissionsRequestResource = gax::GaxPreconditions.CheckNotNull(testPermissionsRequestResource, nameof(testPermissionsRequestResource)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="parentResource">
+        /// Name or id of parent resource of the resource for this request.
+        /// </param>
+        /// <param name="resource">
+        /// Name or id of the resource for this request.
+        /// </param>
+        /// <param name="testPermissionsRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestPermissionsResponse> TestIamPermissionsAsync(string project, string zone, string parentResource, string resource, TestPermissionsRequest testPermissionsRequestResource, st::CancellationToken cancellationToken) =>
+            TestIamPermissionsAsync(project, zone, parentResource, resource, testPermissionsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ReservationBlocks client wrapper implementation, for convenient use.</summary>
@@ -616,9 +1010,15 @@ namespace Google.Cloud.Compute.V1
     {
         private readonly gaxgrpc::ApiCall<GetReservationBlockRequest, ReservationBlocksGetResponse> _callGet;
 
+        private readonly gaxgrpc::ApiCall<GetIamPolicyReservationBlockRequest, Policy> _callGetIamPolicy;
+
         private readonly gaxgrpc::ApiCall<ListReservationBlocksRequest, ReservationBlocksListResponse> _callList;
 
         private readonly gaxgrpc::ApiCall<PerformMaintenanceReservationBlockRequest, Operation> _callPerformMaintenance;
+
+        private readonly gaxgrpc::ApiCall<SetIamPolicyReservationBlockRequest, Policy> _callSetIamPolicy;
+
+        private readonly gaxgrpc::ApiCall<TestIamPermissionsReservationBlockRequest, TestPermissionsResponse> _callTestIamPermissions;
 
         /// <summary>
         /// Constructs a client wrapper for the ReservationBlocks service, with the specified gRPC client and settings.
@@ -639,12 +1039,21 @@ namespace Google.Cloud.Compute.V1
             _callGet = clientHelper.BuildApiCall<GetReservationBlockRequest, ReservationBlocksGetResponse>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("reservation", request => request.Reservation).WithGoogleRequestParam("reservation_block", request => request.ReservationBlock);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
+            _callGetIamPolicy = clientHelper.BuildApiCall<GetIamPolicyReservationBlockRequest, Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("parent_resource", request => request.ParentResource).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callGetIamPolicy);
+            Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
             _callList = clientHelper.BuildApiCall<ListReservationBlocksRequest, ReservationBlocksListResponse>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("reservation", request => request.Reservation);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
             _callPerformMaintenance = clientHelper.BuildApiCall<PerformMaintenanceReservationBlockRequest, Operation>("PerformMaintenance", grpcClient.PerformMaintenanceAsync, grpcClient.PerformMaintenance, effectiveSettings.PerformMaintenanceSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("reservation", request => request.Reservation).WithGoogleRequestParam("reservation_block", request => request.ReservationBlock);
             Modify_ApiCall(ref _callPerformMaintenance);
             Modify_PerformMaintenanceApiCall(ref _callPerformMaintenance);
+            _callSetIamPolicy = clientHelper.BuildApiCall<SetIamPolicyReservationBlockRequest, Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("parent_resource", request => request.ParentResource).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callSetIamPolicy);
+            Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
+            _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsReservationBlockRequest, TestPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("parent_resource", request => request.ParentResource).WithGoogleRequestParam("resource", request => request.Resource);
+            Modify_ApiCall(ref _callTestIamPermissions);
+            Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -652,9 +1061,15 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_GetApiCall(ref gaxgrpc::ApiCall<GetReservationBlockRequest, ReservationBlocksGetResponse> call);
 
+        partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<GetIamPolicyReservationBlockRequest, Policy> call);
+
         partial void Modify_ListApiCall(ref gaxgrpc::ApiCall<ListReservationBlocksRequest, ReservationBlocksListResponse> call);
 
         partial void Modify_PerformMaintenanceApiCall(ref gaxgrpc::ApiCall<PerformMaintenanceReservationBlockRequest, Operation> call);
+
+        partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<SetIamPolicyReservationBlockRequest, Policy> call);
+
+        partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<TestIamPermissionsReservationBlockRequest, TestPermissionsResponse> call);
 
         partial void OnConstruction(ReservationBlocks.ReservationBlocksClient grpcClient, ReservationBlocksSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -663,9 +1078,15 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_GetReservationBlockRequest(ref GetReservationBlockRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_GetIamPolicyReservationBlockRequest(ref GetIamPolicyReservationBlockRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_ListReservationBlocksRequest(ref ListReservationBlocksRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PerformMaintenanceReservationBlockRequest(ref PerformMaintenanceReservationBlockRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SetIamPolicyReservationBlockRequest(ref SetIamPolicyReservationBlockRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_TestIamPermissionsReservationBlockRequest(ref TestIamPermissionsReservationBlockRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Retrieves information about the specified reservation block.
@@ -689,6 +1110,32 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_GetReservationBlockRequest(ref request, ref callSettings);
             return _callGet.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Policy GetIamPolicy(GetIamPolicyReservationBlockRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIamPolicyReservationBlockRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Policy> GetIamPolicyAsync(GetIamPolicyReservationBlockRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIamPolicyReservationBlockRequest(ref request, ref callSettings);
+            return _callGetIamPolicy.Async(request, callSettings);
         }
 
         /// <summary>
@@ -746,6 +1193,56 @@ namespace Google.Cloud.Compute.V1
             GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PerformMaintenanceOperationsClient);
+        }
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Policy SetIamPolicy(SetIamPolicyReservationBlockRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetIamPolicyReservationBlockRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Policy> SetIamPolicyAsync(SetIamPolicyReservationBlockRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetIamPolicyReservationBlockRequest(ref request, ref callSettings);
+            return _callSetIamPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override TestPermissionsResponse TestIamPermissions(TestIamPermissionsReservationBlockRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TestIamPermissionsReservationBlockRequest(ref request, ref callSettings);
+            return _callTestIamPermissions.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<TestPermissionsResponse> TestIamPermissionsAsync(TestIamPermissionsReservationBlockRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TestIamPermissionsReservationBlockRequest(ref request, ref callSettings);
+            return _callTestIamPermissions.Async(request, callSettings);
         }
     }
 

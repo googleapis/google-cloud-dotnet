@@ -422,7 +422,9 @@ namespace Google.Cloud.Compute.V1
             DeleteAsync(project, region, sslCertificate, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the specified SslCertificate resource in the specified region. Get a list of available SSL certificates by making a list() request.
+        /// Returns the specified SslCertificate resource in the specified region. Get
+        /// a list of available SSL certificates by making a list()
+        /// request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -431,7 +433,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified SslCertificate resource in the specified region. Get a list of available SSL certificates by making a list() request.
+        /// Returns the specified SslCertificate resource in the specified region. Get
+        /// a list of available SSL certificates by making a list()
+        /// request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -440,7 +444,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified SslCertificate resource in the specified region. Get a list of available SSL certificates by making a list() request.
+        /// Returns the specified SslCertificate resource in the specified region. Get
+        /// a list of available SSL certificates by making a list()
+        /// request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -449,7 +455,9 @@ namespace Google.Cloud.Compute.V1
             GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the specified SslCertificate resource in the specified region. Get a list of available SSL certificates by making a list() request.
+        /// Returns the specified SslCertificate resource in the specified region. Get
+        /// a list of available SSL certificates by making a list()
+        /// request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -471,7 +479,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the specified SslCertificate resource in the specified region. Get a list of available SSL certificates by making a list() request.
+        /// Returns the specified SslCertificate resource in the specified region. Get
+        /// a list of available SSL certificates by making a list()
+        /// request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -493,7 +503,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the specified SslCertificate resource in the specified region. Get a list of available SSL certificates by making a list() request.
+        /// Returns the specified SslCertificate resource in the specified region. Get
+        /// a list of available SSL certificates by making a list()
+        /// request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -510,7 +522,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, region, sslCertificate, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a SslCertificate resource in the specified project and region using the data included in the request
+        /// Creates a SslCertificate resource in the specified project and region using
+        /// the data included in the request
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -519,7 +532,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a SslCertificate resource in the specified project and region using the data included in the request
+        /// Creates a SslCertificate resource in the specified project and region using
+        /// the data included in the request
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -528,7 +542,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a SslCertificate resource in the specified project and region using the data included in the request
+        /// Creates a SslCertificate resource in the specified project and region using
+        /// the data included in the request
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -563,7 +578,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a SslCertificate resource in the specified project and region using the data included in the request
+        /// Creates a SslCertificate resource in the specified project and region using
+        /// the data included in the request
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -585,7 +601,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a SslCertificate resource in the specified project and region using the data included in the request
+        /// Creates a SslCertificate resource in the specified project and region using
+        /// the data included in the request
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -607,7 +624,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a SslCertificate resource in the specified project and region using the data included in the request
+        /// Creates a SslCertificate resource in the specified project and region using
+        /// the data included in the request
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -624,7 +642,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, region, sslCertificateResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the list of SslCertificate resources available to the specified project in the specified region.
+        /// Retrieves the list of SslCertificate resources available to the specified
+        /// project in the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -633,7 +652,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of SslCertificate resources available to the specified project in the specified region.
+        /// Retrieves the list of SslCertificate resources available to the specified
+        /// project in the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -642,7 +662,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of SslCertificate resources available to the specified project in the specified region.
+        /// Retrieves the list of SslCertificate resources available to the specified
+        /// project in the specified region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -679,7 +700,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of SslCertificate resources available to the specified project in the specified region.
+        /// Retrieves the list of SslCertificate resources available to the specified
+        /// project in the specified region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -820,7 +842,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the specified SslCertificate resource in the specified region. Get a list of available SSL certificates by making a list() request.
+        /// Returns the specified SslCertificate resource in the specified region. Get
+        /// a list of available SSL certificates by making a list()
+        /// request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -832,7 +856,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the specified SslCertificate resource in the specified region. Get a list of available SSL certificates by making a list() request.
+        /// Returns the specified SslCertificate resource in the specified region. Get
+        /// a list of available SSL certificates by making a list()
+        /// request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -847,7 +873,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a SslCertificate resource in the specified project and region using the data included in the request
+        /// Creates a SslCertificate resource in the specified project and region using
+        /// the data included in the request
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -862,7 +889,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a SslCertificate resource in the specified project and region using the data included in the request
+        /// Creates a SslCertificate resource in the specified project and region using
+        /// the data included in the request
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -877,7 +905,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of SslCertificate resources available to the specified project in the specified region.
+        /// Retrieves the list of SslCertificate resources available to the specified
+        /// project in the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -889,7 +918,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of SslCertificate resources available to the specified project in the specified region.
+        /// Retrieves the list of SslCertificate resources available to the specified
+        /// project in the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

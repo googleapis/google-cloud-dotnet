@@ -307,7 +307,8 @@ namespace Google.Cloud.Compute.V1
         public virtual RegionInstanceTemplates.RegionInstanceTemplatesClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified instance template. Deleting an instance template is permanent and cannot be undone.
+        /// Deletes the specified instance template. Deleting an instance template is
+        /// permanent and cannot be undone.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -316,7 +317,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified instance template. Deleting an instance template is permanent and cannot be undone.
+        /// Deletes the specified instance template. Deleting an instance template is
+        /// permanent and cannot be undone.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -325,7 +327,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified instance template. Deleting an instance template is permanent and cannot be undone.
+        /// Deletes the specified instance template. Deleting an instance template is
+        /// permanent and cannot be undone.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -360,7 +363,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes the specified instance template. Deleting an instance template is permanent and cannot be undone.
+        /// Deletes the specified instance template. Deleting an instance template is
+        /// permanent and cannot be undone.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -382,7 +386,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified instance template. Deleting an instance template is permanent and cannot be undone.
+        /// Deletes the specified instance template. Deleting an instance template is
+        /// permanent and cannot be undone.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -404,7 +409,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified instance template. Deleting an instance template is permanent and cannot be undone.
+        /// Deletes the specified instance template. Deleting an instance template is
+        /// permanent and cannot be undone.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -509,7 +515,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, region, instanceTemplate, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an instance template in the specified project and region using the global instance template whose URL is included in the request.
+        /// Creates an instance template in the specified project and region using the
+        /// global instance template whose URL is included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -518,7 +525,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an instance template in the specified project and region using the global instance template whose URL is included in the request.
+        /// Creates an instance template in the specified project and region using the
+        /// global instance template whose URL is included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -527,7 +535,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an instance template in the specified project and region using the global instance template whose URL is included in the request.
+        /// Creates an instance template in the specified project and region using the
+        /// global instance template whose URL is included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -562,7 +571,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates an instance template in the specified project and region using the global instance template whose URL is included in the request.
+        /// Creates an instance template in the specified project and region using the
+        /// global instance template whose URL is included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -584,7 +594,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an instance template in the specified project and region using the global instance template whose URL is included in the request.
+        /// Creates an instance template in the specified project and region using the
+        /// global instance template whose URL is included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -606,7 +617,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an instance template in the specified project and region using the global instance template whose URL is included in the request.
+        /// Creates an instance template in the specified project and region using the
+        /// global instance template whose URL is included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -623,7 +635,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, region, instanceTemplateResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a list of instance templates that are contained within the specified project and region.
+        /// Retrieves a list of instance templates that are contained within the
+        /// specified project and region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -632,7 +645,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of instance templates that are contained within the specified project and region.
+        /// Retrieves a list of instance templates that are contained within the
+        /// specified project and region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -641,7 +655,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of instance templates that are contained within the specified project and region.
+        /// Retrieves a list of instance templates that are contained within the
+        /// specified project and region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -678,7 +693,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of instance templates that are contained within the specified project and region.
+        /// Retrieves a list of instance templates that are contained within the
+        /// specified project and region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -791,7 +807,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient DeleteOperationsClient { get; }
 
         /// <summary>
-        /// Deletes the specified instance template. Deleting an instance template is permanent and cannot be undone.
+        /// Deletes the specified instance template. Deleting an instance template is
+        /// permanent and cannot be undone.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -806,7 +823,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Deletes the specified instance template. Deleting an instance template is permanent and cannot be undone.
+        /// Deletes the specified instance template. Deleting an instance template is
+        /// permanent and cannot be undone.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -848,7 +866,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates an instance template in the specified project and region using the global instance template whose URL is included in the request.
+        /// Creates an instance template in the specified project and region using the
+        /// global instance template whose URL is included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -863,7 +882,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates an instance template in the specified project and region using the global instance template whose URL is included in the request.
+        /// Creates an instance template in the specified project and region using the
+        /// global instance template whose URL is included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -878,7 +898,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of instance templates that are contained within the specified project and region.
+        /// Retrieves a list of instance templates that are contained within the
+        /// specified project and region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -890,7 +911,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of instance templates that are contained within the specified project and region.
+        /// Retrieves a list of instance templates that are contained within the
+        /// specified project and region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

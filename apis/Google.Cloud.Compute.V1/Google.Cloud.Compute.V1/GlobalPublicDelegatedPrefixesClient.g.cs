@@ -523,7 +523,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, publicDelegatedPrefix, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a global PublicDelegatedPrefix in the specified project using the parameters that are included in the request.
+        /// Creates a global PublicDelegatedPrefix in the specified project using the
+        /// parameters that are included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -532,7 +533,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a global PublicDelegatedPrefix in the specified project using the parameters that are included in the request.
+        /// Creates a global PublicDelegatedPrefix in the specified project using the
+        /// parameters that are included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -541,7 +543,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a global PublicDelegatedPrefix in the specified project using the parameters that are included in the request.
+        /// Creates a global PublicDelegatedPrefix in the specified project using the
+        /// parameters that are included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -576,7 +579,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a global PublicDelegatedPrefix in the specified project using the parameters that are included in the request.
+        /// Creates a global PublicDelegatedPrefix in the specified project using the
+        /// parameters that are included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -594,7 +598,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a global PublicDelegatedPrefix in the specified project using the parameters that are included in the request.
+        /// Creates a global PublicDelegatedPrefix in the specified project using the
+        /// parameters that are included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -612,7 +617,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a global PublicDelegatedPrefix in the specified project using the parameters that are included in the request.
+        /// Creates a global PublicDelegatedPrefix in the specified project using the
+        /// parameters that are included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -710,7 +716,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches the specified global PublicDelegatedPrefix resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified global PublicDelegatedPrefix resource with the data
+        /// included in the request. This method supportsPATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -719,7 +728,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified global PublicDelegatedPrefix resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified global PublicDelegatedPrefix resource with the data
+        /// included in the request. This method supportsPATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -728,7 +740,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified global PublicDelegatedPrefix resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified global PublicDelegatedPrefix resource with the data
+        /// included in the request. This method supportsPATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -763,7 +778,10 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchOperationsClient, callSettings);
 
         /// <summary>
-        /// Patches the specified global PublicDelegatedPrefix resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified global PublicDelegatedPrefix resource with the data
+        /// included in the request. This method supportsPATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -785,7 +803,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified global PublicDelegatedPrefix resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified global PublicDelegatedPrefix resource with the data
+        /// included in the request. This method supportsPATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -807,7 +828,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified global PublicDelegatedPrefix resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified global PublicDelegatedPrefix resource with the data
+        /// included in the request. This method supportsPATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -967,7 +991,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a global PublicDelegatedPrefix in the specified project using the parameters that are included in the request.
+        /// Creates a global PublicDelegatedPrefix in the specified project using the
+        /// parameters that are included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -982,7 +1007,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a global PublicDelegatedPrefix in the specified project using the parameters that are included in the request.
+        /// Creates a global PublicDelegatedPrefix in the specified project using the
+        /// parameters that are included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1024,7 +1050,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient PatchOperationsClient { get; }
 
         /// <summary>
-        /// Patches the specified global PublicDelegatedPrefix resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified global PublicDelegatedPrefix resource with the data
+        /// included in the request. This method supportsPATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1039,7 +1068,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches the specified global PublicDelegatedPrefix resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified global PublicDelegatedPrefix resource with the data
+        /// included in the request. This method supportsPATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

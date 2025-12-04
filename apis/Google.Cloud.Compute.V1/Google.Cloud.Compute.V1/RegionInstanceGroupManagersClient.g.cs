@@ -885,7 +885,21 @@ namespace Google.Cloud.Compute.V1
         public virtual RegionInstanceGroupManagers.RegionInstanceGroupManagersClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Flags the specified instances to be immediately removed from the managed instance group. Abandoning an instance does not delete the instance, but it does remove the instance from any target pools that are applied by the managed instance group. This method reduces the targetSize of the managed instance group by the number of instances that you abandon. This operation is marked as DONE when the action is scheduled even if the instances have not yet been removed from the group. You must separately verify the status of the abandoning action with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances to be immediately removed from the managed
+        /// instance group. Abandoning an instance does not delete the
+        /// instance, but it does remove the instance from any target pools that are
+        /// applied by the managed instance group. This method reduces thetargetSize of the managed instance group by the
+        /// number of instances that you abandon. This operation is marked asDONE when the action is scheduled even if the instances have
+        /// not yet been removed from the group. You must separately verify the
+        /// status of the abandoning action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -894,7 +908,21 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Flags the specified instances to be immediately removed from the managed instance group. Abandoning an instance does not delete the instance, but it does remove the instance from any target pools that are applied by the managed instance group. This method reduces the targetSize of the managed instance group by the number of instances that you abandon. This operation is marked as DONE when the action is scheduled even if the instances have not yet been removed from the group. You must separately verify the status of the abandoning action with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances to be immediately removed from the managed
+        /// instance group. Abandoning an instance does not delete the
+        /// instance, but it does remove the instance from any target pools that are
+        /// applied by the managed instance group. This method reduces thetargetSize of the managed instance group by the
+        /// number of instances that you abandon. This operation is marked asDONE when the action is scheduled even if the instances have
+        /// not yet been removed from the group. You must separately verify the
+        /// status of the abandoning action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -903,7 +931,21 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Flags the specified instances to be immediately removed from the managed instance group. Abandoning an instance does not delete the instance, but it does remove the instance from any target pools that are applied by the managed instance group. This method reduces the targetSize of the managed instance group by the number of instances that you abandon. This operation is marked as DONE when the action is scheduled even if the instances have not yet been removed from the group. You must separately verify the status of the abandoning action with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances to be immediately removed from the managed
+        /// instance group. Abandoning an instance does not delete the
+        /// instance, but it does remove the instance from any target pools that are
+        /// applied by the managed instance group. This method reduces thetargetSize of the managed instance group by the
+        /// number of instances that you abandon. This operation is marked asDONE when the action is scheduled even if the instances have
+        /// not yet been removed from the group. You must separately verify the
+        /// status of the abandoning action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -938,7 +980,21 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AbandonInstancesOperationsClient, callSettings);
 
         /// <summary>
-        /// Flags the specified instances to be immediately removed from the managed instance group. Abandoning an instance does not delete the instance, but it does remove the instance from any target pools that are applied by the managed instance group. This method reduces the targetSize of the managed instance group by the number of instances that you abandon. This operation is marked as DONE when the action is scheduled even if the instances have not yet been removed from the group. You must separately verify the status of the abandoning action with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances to be immediately removed from the managed
+        /// instance group. Abandoning an instance does not delete the
+        /// instance, but it does remove the instance from any target pools that are
+        /// applied by the managed instance group. This method reduces thetargetSize of the managed instance group by the
+        /// number of instances that you abandon. This operation is marked asDONE when the action is scheduled even if the instances have
+        /// not yet been removed from the group. You must separately verify the
+        /// status of the abandoning action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -964,7 +1020,21 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Flags the specified instances to be immediately removed from the managed instance group. Abandoning an instance does not delete the instance, but it does remove the instance from any target pools that are applied by the managed instance group. This method reduces the targetSize of the managed instance group by the number of instances that you abandon. This operation is marked as DONE when the action is scheduled even if the instances have not yet been removed from the group. You must separately verify the status of the abandoning action with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances to be immediately removed from the managed
+        /// instance group. Abandoning an instance does not delete the
+        /// instance, but it does remove the instance from any target pools that are
+        /// applied by the managed instance group. This method reduces thetargetSize of the managed instance group by the
+        /// number of instances that you abandon. This operation is marked asDONE when the action is scheduled even if the instances have
+        /// not yet been removed from the group. You must separately verify the
+        /// status of the abandoning action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -990,7 +1060,21 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Flags the specified instances to be immediately removed from the managed instance group. Abandoning an instance does not delete the instance, but it does remove the instance from any target pools that are applied by the managed instance group. This method reduces the targetSize of the managed instance group by the number of instances that you abandon. This operation is marked as DONE when the action is scheduled even if the instances have not yet been removed from the group. You must separately verify the status of the abandoning action with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances to be immediately removed from the managed
+        /// instance group. Abandoning an instance does not delete the
+        /// instance, but it does remove the instance from any target pools that are
+        /// applied by the managed instance group. This method reduces thetargetSize of the managed instance group by the
+        /// number of instances that you abandon. This operation is marked asDONE when the action is scheduled even if the instances have
+        /// not yet been removed from the group. You must separately verify the
+        /// status of the abandoning action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1136,7 +1220,12 @@ namespace Google.Cloud.Compute.V1
             ApplyUpdatesToInstancesAsync(project, region, instanceGroupManager, regionInstanceGroupManagersApplyUpdatesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates instances with per-instance configurations in this regional managed instance group. Instances are created using the current instance template. The create instances operation is marked DONE if the createInstances request is successful. The underlying actions take additional time. You must separately verify the status of the creating or actions with the listmanagedinstances method.
+        /// Creates instances with per-instance configurations in this regional managed
+        /// instance group. Instances are created using the current instance template.
+        /// The create instances operation is marked DONE if
+        /// the createInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of thecreating or actions with the listmanagedinstances
+        /// method.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1145,7 +1234,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates instances with per-instance configurations in this regional managed instance group. Instances are created using the current instance template. The create instances operation is marked DONE if the createInstances request is successful. The underlying actions take additional time. You must separately verify the status of the creating or actions with the listmanagedinstances method.
+        /// Creates instances with per-instance configurations in this regional managed
+        /// instance group. Instances are created using the current instance template.
+        /// The create instances operation is marked DONE if
+        /// the createInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of thecreating or actions with the listmanagedinstances
+        /// method.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1154,7 +1248,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates instances with per-instance configurations in this regional managed instance group. Instances are created using the current instance template. The create instances operation is marked DONE if the createInstances request is successful. The underlying actions take additional time. You must separately verify the status of the creating or actions with the listmanagedinstances method.
+        /// Creates instances with per-instance configurations in this regional managed
+        /// instance group. Instances are created using the current instance template.
+        /// The create instances operation is marked DONE if
+        /// the createInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of thecreating or actions with the listmanagedinstances
+        /// method.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1189,16 +1288,24 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateInstancesOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates instances with per-instance configurations in this regional managed instance group. Instances are created using the current instance template. The create instances operation is marked DONE if the createInstances request is successful. The underlying actions take additional time. You must separately verify the status of the creating or actions with the listmanagedinstances method.
+        /// Creates instances with per-instance configurations in this regional managed
+        /// instance group. Instances are created using the current instance template.
+        /// The create instances operation is marked DONE if
+        /// the createInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of thecreating or actions with the listmanagedinstances
+        /// method.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region where the managed instance group is located. It should conform to RFC1035.
+        /// The name of theregion
+        /// where the managed instance group is located.
+        /// It should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
-        /// The name of the managed instance group. It should conform to RFC1035.
+        /// The name of the managed instance group.
+        /// It should conform to RFC1035.
         /// </param>
         /// <param name="regionInstanceGroupManagersCreateInstancesRequestResource">
         /// The body resource for this request
@@ -1215,16 +1322,24 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates instances with per-instance configurations in this regional managed instance group. Instances are created using the current instance template. The create instances operation is marked DONE if the createInstances request is successful. The underlying actions take additional time. You must separately verify the status of the creating or actions with the listmanagedinstances method.
+        /// Creates instances with per-instance configurations in this regional managed
+        /// instance group. Instances are created using the current instance template.
+        /// The create instances operation is marked DONE if
+        /// the createInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of thecreating or actions with the listmanagedinstances
+        /// method.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region where the managed instance group is located. It should conform to RFC1035.
+        /// The name of theregion
+        /// where the managed instance group is located.
+        /// It should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
-        /// The name of the managed instance group. It should conform to RFC1035.
+        /// The name of the managed instance group.
+        /// It should conform to RFC1035.
         /// </param>
         /// <param name="regionInstanceGroupManagersCreateInstancesRequestResource">
         /// The body resource for this request
@@ -1241,16 +1356,24 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates instances with per-instance configurations in this regional managed instance group. Instances are created using the current instance template. The create instances operation is marked DONE if the createInstances request is successful. The underlying actions take additional time. You must separately verify the status of the creating or actions with the listmanagedinstances method.
+        /// Creates instances with per-instance configurations in this regional managed
+        /// instance group. Instances are created using the current instance template.
+        /// The create instances operation is marked DONE if
+        /// the createInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of thecreating or actions with the listmanagedinstances
+        /// method.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region where the managed instance group is located. It should conform to RFC1035.
+        /// The name of theregion
+        /// where the managed instance group is located.
+        /// It should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
-        /// The name of the managed instance group. It should conform to RFC1035.
+        /// The name of the managed instance group.
+        /// It should conform to RFC1035.
         /// </param>
         /// <param name="regionInstanceGroupManagersCreateInstancesRequestResource">
         /// The body resource for this request
@@ -1261,7 +1384,8 @@ namespace Google.Cloud.Compute.V1
             CreateInstancesAsync(project, region, instanceGroupManager, regionInstanceGroupManagersCreateInstancesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified managed instance group and all of the instances in that group.
+        /// Deletes the specified managed instance group and all of the instances
+        /// in that group.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1270,7 +1394,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified managed instance group and all of the instances in that group.
+        /// Deletes the specified managed instance group and all of the instances
+        /// in that group.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1279,7 +1404,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified managed instance group and all of the instances in that group.
+        /// Deletes the specified managed instance group and all of the instances
+        /// in that group.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1314,7 +1440,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes the specified managed instance group and all of the instances in that group.
+        /// Deletes the specified managed instance group and all of the instances
+        /// in that group.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1336,7 +1463,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified managed instance group and all of the instances in that group.
+        /// Deletes the specified managed instance group and all of the instances
+        /// in that group.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1358,7 +1486,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified managed instance group and all of the instances in that group.
+        /// Deletes the specified managed instance group and all of the instances
+        /// in that group.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1375,7 +1504,21 @@ namespace Google.Cloud.Compute.V1
             DeleteAsync(project, region, instanceGroupManager, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be immediately deleted. The instances are also removed from any target pools of which they were a member. This method reduces the targetSize of the managed instance group by the number of instances that you delete. The deleteInstances operation is marked DONE if the deleteInstances request is successful. The underlying actions take additional time. You must separately verify the status of the deleting action with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// immediately deleted. The instances are also removed from any target
+        /// pools of which they were a member. This method reduces thetargetSize of the managed instance group by the number of
+        /// instances that you delete.
+        /// The deleteInstances operation is marked DONE if
+        /// the deleteInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of thedeleting action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1384,7 +1527,21 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be immediately deleted. The instances are also removed from any target pools of which they were a member. This method reduces the targetSize of the managed instance group by the number of instances that you delete. The deleteInstances operation is marked DONE if the deleteInstances request is successful. The underlying actions take additional time. You must separately verify the status of the deleting action with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// immediately deleted. The instances are also removed from any target
+        /// pools of which they were a member. This method reduces thetargetSize of the managed instance group by the number of
+        /// instances that you delete.
+        /// The deleteInstances operation is marked DONE if
+        /// the deleteInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of thedeleting action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1393,7 +1550,21 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be immediately deleted. The instances are also removed from any target pools of which they were a member. This method reduces the targetSize of the managed instance group by the number of instances that you delete. The deleteInstances operation is marked DONE if the deleteInstances request is successful. The underlying actions take additional time. You must separately verify the status of the deleting action with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// immediately deleted. The instances are also removed from any target
+        /// pools of which they were a member. This method reduces thetargetSize of the managed instance group by the number of
+        /// instances that you delete.
+        /// The deleteInstances operation is marked DONE if
+        /// the deleteInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of thedeleting action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1428,7 +1599,21 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteInstancesOperationsClient, callSettings);
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be immediately deleted. The instances are also removed from any target pools of which they were a member. This method reduces the targetSize of the managed instance group by the number of instances that you delete. The deleteInstances operation is marked DONE if the deleteInstances request is successful. The underlying actions take additional time. You must separately verify the status of the deleting action with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// immediately deleted. The instances are also removed from any target
+        /// pools of which they were a member. This method reduces thetargetSize of the managed instance group by the number of
+        /// instances that you delete.
+        /// The deleteInstances operation is marked DONE if
+        /// the deleteInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of thedeleting action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1454,7 +1639,21 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be immediately deleted. The instances are also removed from any target pools of which they were a member. This method reduces the targetSize of the managed instance group by the number of instances that you delete. The deleteInstances operation is marked DONE if the deleteInstances request is successful. The underlying actions take additional time. You must separately verify the status of the deleting action with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// immediately deleted. The instances are also removed from any target
+        /// pools of which they were a member. This method reduces thetargetSize of the managed instance group by the number of
+        /// instances that you delete.
+        /// The deleteInstances operation is marked DONE if
+        /// the deleteInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of thedeleting action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1480,7 +1679,21 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be immediately deleted. The instances are also removed from any target pools of which they were a member. This method reduces the targetSize of the managed instance group by the number of instances that you delete. The deleteInstances operation is marked DONE if the deleteInstances request is successful. The underlying actions take additional time. You must separately verify the status of the deleting action with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// immediately deleted. The instances are also removed from any target
+        /// pools of which they were a member. This method reduces thetargetSize of the managed instance group by the number of
+        /// instances that you delete.
+        /// The deleteInstances operation is marked DONE if
+        /// the deleteInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of thedeleting action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1500,7 +1713,8 @@ namespace Google.Cloud.Compute.V1
             DeleteInstancesAsync(project, region, instanceGroupManager, regionInstanceGroupManagersDeleteInstancesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes selected per-instance configurations for the managed instance group.
+        /// Deletes selected per-instance configurations for the managed instance
+        /// group.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1509,7 +1723,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes selected per-instance configurations for the managed instance group.
+        /// Deletes selected per-instance configurations for the managed instance
+        /// group.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1518,7 +1733,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes selected per-instance configurations for the managed instance group.
+        /// Deletes selected per-instance configurations for the managed instance
+        /// group.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1554,7 +1770,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeletePerInstanceConfigsOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes selected per-instance configurations for the managed instance group.
+        /// Deletes selected per-instance configurations for the managed instance
+        /// group.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1580,7 +1797,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes selected per-instance configurations for the managed instance group.
+        /// Deletes selected per-instance configurations for the managed instance
+        /// group.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1606,7 +1824,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes selected per-instance configurations for the managed instance group.
+        /// Deletes selected per-instance configurations for the managed instance
+        /// group.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1714,7 +1933,15 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, region, instanceGroupManager, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a managed instance group using the information that you specify in the request. After the group is created, instances in the group are created using the specified instance template. This operation is marked as DONE when the group is created even if the instances in the group have not yet been created. You must separately verify the status of the individual instances with the listmanagedinstances method. A regional managed instance group can contain up to 2000 instances.
+        /// Creates a managed instance group using the information that you specify
+        /// in the request. After the group is created, instances in the group are
+        /// created using the specified instance template.
+        /// This operation is marked as DONE when the group is created
+        /// even if the instances in the group have not yet been created. You must
+        /// separately verify the status of the individual instances with thelistmanagedinstances
+        /// method.
+        /// 
+        /// A regional managed instance group can contain up to 2000 instances.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1723,7 +1950,15 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a managed instance group using the information that you specify in the request. After the group is created, instances in the group are created using the specified instance template. This operation is marked as DONE when the group is created even if the instances in the group have not yet been created. You must separately verify the status of the individual instances with the listmanagedinstances method. A regional managed instance group can contain up to 2000 instances.
+        /// Creates a managed instance group using the information that you specify
+        /// in the request. After the group is created, instances in the group are
+        /// created using the specified instance template.
+        /// This operation is marked as DONE when the group is created
+        /// even if the instances in the group have not yet been created. You must
+        /// separately verify the status of the individual instances with thelistmanagedinstances
+        /// method.
+        /// 
+        /// A regional managed instance group can contain up to 2000 instances.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1732,7 +1967,15 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a managed instance group using the information that you specify in the request. After the group is created, instances in the group are created using the specified instance template. This operation is marked as DONE when the group is created even if the instances in the group have not yet been created. You must separately verify the status of the individual instances with the listmanagedinstances method. A regional managed instance group can contain up to 2000 instances.
+        /// Creates a managed instance group using the information that you specify
+        /// in the request. After the group is created, instances in the group are
+        /// created using the specified instance template.
+        /// This operation is marked as DONE when the group is created
+        /// even if the instances in the group have not yet been created. You must
+        /// separately verify the status of the individual instances with thelistmanagedinstances
+        /// method.
+        /// 
+        /// A regional managed instance group can contain up to 2000 instances.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1767,7 +2010,15 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a managed instance group using the information that you specify in the request. After the group is created, instances in the group are created using the specified instance template. This operation is marked as DONE when the group is created even if the instances in the group have not yet been created. You must separately verify the status of the individual instances with the listmanagedinstances method. A regional managed instance group can contain up to 2000 instances.
+        /// Creates a managed instance group using the information that you specify
+        /// in the request. After the group is created, instances in the group are
+        /// created using the specified instance template.
+        /// This operation is marked as DONE when the group is created
+        /// even if the instances in the group have not yet been created. You must
+        /// separately verify the status of the individual instances with thelistmanagedinstances
+        /// method.
+        /// 
+        /// A regional managed instance group can contain up to 2000 instances.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1789,7 +2040,15 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a managed instance group using the information that you specify in the request. After the group is created, instances in the group are created using the specified instance template. This operation is marked as DONE when the group is created even if the instances in the group have not yet been created. You must separately verify the status of the individual instances with the listmanagedinstances method. A regional managed instance group can contain up to 2000 instances.
+        /// Creates a managed instance group using the information that you specify
+        /// in the request. After the group is created, instances in the group are
+        /// created using the specified instance template.
+        /// This operation is marked as DONE when the group is created
+        /// even if the instances in the group have not yet been created. You must
+        /// separately verify the status of the individual instances with thelistmanagedinstances
+        /// method.
+        /// 
+        /// A regional managed instance group can contain up to 2000 instances.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1811,7 +2070,15 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a managed instance group using the information that you specify in the request. After the group is created, instances in the group are created using the specified instance template. This operation is marked as DONE when the group is created even if the instances in the group have not yet been created. You must separately verify the status of the individual instances with the listmanagedinstances method. A regional managed instance group can contain up to 2000 instances.
+        /// Creates a managed instance group using the information that you specify
+        /// in the request. After the group is created, instances in the group are
+        /// created using the specified instance template.
+        /// This operation is marked as DONE when the group is created
+        /// even if the instances in the group have not yet been created. You must
+        /// separately verify the status of the individual instances with thelistmanagedinstances
+        /// method.
+        /// 
+        /// A regional managed instance group can contain up to 2000 instances.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1828,7 +2095,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, region, instanceGroupManagerResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the list of managed instance groups that are contained within the specified region.
+        /// Retrieves the list of managed instance groups that are contained
+        /// within the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1837,7 +2105,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of managed instance groups that are contained within the specified region.
+        /// Retrieves the list of managed instance groups that are contained
+        /// within the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1846,7 +2115,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of managed instance groups that are contained within the specified region.
+        /// Retrieves the list of managed instance groups that are contained
+        /// within the specified region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1883,7 +2153,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of managed instance groups that are contained within the specified region.
+        /// Retrieves the list of managed instance groups that are contained
+        /// within the specified region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1920,7 +2191,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists all errors thrown by actions on instances for a given regional managed instance group. The filter and orderBy query parameters are not supported.
+        /// Lists all errors thrown by actions on instances for a given regional
+        /// managed instance group. The filter andorderBy query parameters are not supported.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1929,7 +2201,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all errors thrown by actions on instances for a given regional managed instance group. The filter and orderBy query parameters are not supported.
+        /// Lists all errors thrown by actions on instances for a given regional
+        /// managed instance group. The filter andorderBy query parameters are not supported.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1938,16 +2211,21 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all errors thrown by actions on instances for a given regional managed instance group. The filter and orderBy query parameters are not supported.
+        /// Lists all errors thrown by actions on instances for a given regional
+        /// managed instance group. The filter andorderBy query parameters are not supported.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// Name of the region scoping this request. This should conform to RFC1035.
+        /// Name of the region scoping this request.
+        /// This should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
-        /// The name of the managed instance group. It must be a string that meets the requirements in RFC1035, or an unsigned long integer: must match regexp pattern: (?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?)|1-9{0,19}.
+        /// The name of the managed instance group.
+        /// It must be a string that meets the requirements in RFC1035, or an
+        /// unsigned long integer: must match regexp pattern:
+        /// (?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?)|1-9{0,19}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1979,16 +2257,21 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists all errors thrown by actions on instances for a given regional managed instance group. The filter and orderBy query parameters are not supported.
+        /// Lists all errors thrown by actions on instances for a given regional
+        /// managed instance group. The filter andorderBy query parameters are not supported.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// Name of the region scoping this request. This should conform to RFC1035.
+        /// Name of the region scoping this request.
+        /// This should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
-        /// The name of the managed instance group. It must be a string that meets the requirements in RFC1035, or an unsigned long integer: must match regexp pattern: (?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?)|1-9{0,19}.
+        /// The name of the managed instance group.
+        /// It must be a string that meets the requirements in RFC1035, or an
+        /// unsigned long integer: must match regexp pattern:
+        /// (?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?)|1-9{0,19}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2020,7 +2303,12 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists the instances in the managed instance group and instances that are scheduled to be created. The list includes any current actions that the group has scheduled for its instances. The orderBy query parameter is not supported. The `pageToken` query parameter is supported only if the group's `listManagedInstancesResults` field is set to `PAGINATED`.
+        /// Lists the instances in the managed instance group and instances that are
+        /// scheduled to be created. The list includes any current actions
+        /// that the group has scheduled for its instances. The orderBy
+        /// query parameter is not supported.   The `pageToken` query parameter is
+        /// supported only if the group's `listManagedInstancesResults` field is set
+        /// to `PAGINATED`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2029,7 +2317,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists the instances in the managed instance group and instances that are scheduled to be created. The list includes any current actions that the group has scheduled for its instances. The orderBy query parameter is not supported. The `pageToken` query parameter is supported only if the group's `listManagedInstancesResults` field is set to `PAGINATED`.
+        /// Lists the instances in the managed instance group and instances that are
+        /// scheduled to be created. The list includes any current actions
+        /// that the group has scheduled for its instances. The orderBy
+        /// query parameter is not supported.   The `pageToken` query parameter is
+        /// supported only if the group's `listManagedInstancesResults` field is set
+        /// to `PAGINATED`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2038,7 +2331,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists the instances in the managed instance group and instances that are scheduled to be created. The list includes any current actions that the group has scheduled for its instances. The orderBy query parameter is not supported. The `pageToken` query parameter is supported only if the group's `listManagedInstancesResults` field is set to `PAGINATED`.
+        /// Lists the instances in the managed instance group and instances that are
+        /// scheduled to be created. The list includes any current actions
+        /// that the group has scheduled for its instances. The orderBy
+        /// query parameter is not supported.   The `pageToken` query parameter is
+        /// supported only if the group's `listManagedInstancesResults` field is set
+        /// to `PAGINATED`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2079,7 +2377,12 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists the instances in the managed instance group and instances that are scheduled to be created. The list includes any current actions that the group has scheduled for its instances. The orderBy query parameter is not supported. The `pageToken` query parameter is supported only if the group's `listManagedInstancesResults` field is set to `PAGINATED`.
+        /// Lists the instances in the managed instance group and instances that are
+        /// scheduled to be created. The list includes any current actions
+        /// that the group has scheduled for its instances. The orderBy
+        /// query parameter is not supported.   The `pageToken` query parameter is
+        /// supported only if the group's `listManagedInstancesResults` field is set
+        /// to `PAGINATED`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2120,7 +2423,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists all of the per-instance configurations defined for the managed instance group. The orderBy query parameter is not supported.
+        /// Lists all of the per-instance configurations defined for the managed
+        /// instance group. The orderBy query parameter is not supported.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2129,7 +2433,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all of the per-instance configurations defined for the managed instance group. The orderBy query parameter is not supported.
+        /// Lists all of the per-instance configurations defined for the managed
+        /// instance group. The orderBy query parameter is not supported.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2138,7 +2443,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all of the per-instance configurations defined for the managed instance group. The orderBy query parameter is not supported.
+        /// Lists all of the per-instance configurations defined for the managed
+        /// instance group. The orderBy query parameter is not supported.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2179,7 +2485,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists all of the per-instance configurations defined for the managed instance group. The orderBy query parameter is not supported.
+        /// Lists all of the per-instance configurations defined for the managed
+        /// instance group. The orderBy query parameter is not supported.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2220,7 +2527,21 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Updates a managed instance group using the information that you specify in the request. This operation is marked as DONE when the group is patched even if the instances in the group are still in the process of being patched. You must separately verify the status of the individual instances with the listmanagedinstances method. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. If you update your group to specify a new template or instance configuration, it's possible that your intended specification for each VM in the group is different from the current state of that VM. To learn how to apply an updated configuration to the VMs in a MIG, see Updating instances in a MIG.
+        /// Updates a managed instance group using the information that you specify
+        /// in the request.
+        /// This operation is marked as DONE when the group is patched
+        /// even if the instances in the group are still in the process of being
+        /// patched. You must separately verify the status of the individual instances
+        /// with the listmanagedinstances
+        /// method. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
+        /// 
+        /// If you update your group to specify a new template or instance
+        /// configuration, it's possible that your intended specification for each VM
+        /// in the group is different from the current state of that VM. To learn how
+        /// to apply an updated configuration to the VMs in a MIG, seeUpdating instances in
+        /// a MIG.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2229,7 +2550,21 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a managed instance group using the information that you specify in the request. This operation is marked as DONE when the group is patched even if the instances in the group are still in the process of being patched. You must separately verify the status of the individual instances with the listmanagedinstances method. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. If you update your group to specify a new template or instance configuration, it's possible that your intended specification for each VM in the group is different from the current state of that VM. To learn how to apply an updated configuration to the VMs in a MIG, see Updating instances in a MIG.
+        /// Updates a managed instance group using the information that you specify
+        /// in the request.
+        /// This operation is marked as DONE when the group is patched
+        /// even if the instances in the group are still in the process of being
+        /// patched. You must separately verify the status of the individual instances
+        /// with the listmanagedinstances
+        /// method. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
+        /// 
+        /// If you update your group to specify a new template or instance
+        /// configuration, it's possible that your intended specification for each VM
+        /// in the group is different from the current state of that VM. To learn how
+        /// to apply an updated configuration to the VMs in a MIG, seeUpdating instances in
+        /// a MIG.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2238,7 +2573,21 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a managed instance group using the information that you specify in the request. This operation is marked as DONE when the group is patched even if the instances in the group are still in the process of being patched. You must separately verify the status of the individual instances with the listmanagedinstances method. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. If you update your group to specify a new template or instance configuration, it's possible that your intended specification for each VM in the group is different from the current state of that VM. To learn how to apply an updated configuration to the VMs in a MIG, see Updating instances in a MIG.
+        /// Updates a managed instance group using the information that you specify
+        /// in the request.
+        /// This operation is marked as DONE when the group is patched
+        /// even if the instances in the group are still in the process of being
+        /// patched. You must separately verify the status of the individual instances
+        /// with the listmanagedinstances
+        /// method. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
+        /// 
+        /// If you update your group to specify a new template or instance
+        /// configuration, it's possible that your intended specification for each VM
+        /// in the group is different from the current state of that VM. To learn how
+        /// to apply an updated configuration to the VMs in a MIG, seeUpdating instances in
+        /// a MIG.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2273,7 +2622,21 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates a managed instance group using the information that you specify in the request. This operation is marked as DONE when the group is patched even if the instances in the group are still in the process of being patched. You must separately verify the status of the individual instances with the listmanagedinstances method. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. If you update your group to specify a new template or instance configuration, it's possible that your intended specification for each VM in the group is different from the current state of that VM. To learn how to apply an updated configuration to the VMs in a MIG, see Updating instances in a MIG.
+        /// Updates a managed instance group using the information that you specify
+        /// in the request.
+        /// This operation is marked as DONE when the group is patched
+        /// even if the instances in the group are still in the process of being
+        /// patched. You must separately verify the status of the individual instances
+        /// with the listmanagedinstances
+        /// method. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
+        /// 
+        /// If you update your group to specify a new template or instance
+        /// configuration, it's possible that your intended specification for each VM
+        /// in the group is different from the current state of that VM. To learn how
+        /// to apply an updated configuration to the VMs in a MIG, seeUpdating instances in
+        /// a MIG.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2299,7 +2662,21 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates a managed instance group using the information that you specify in the request. This operation is marked as DONE when the group is patched even if the instances in the group are still in the process of being patched. You must separately verify the status of the individual instances with the listmanagedinstances method. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. If you update your group to specify a new template or instance configuration, it's possible that your intended specification for each VM in the group is different from the current state of that VM. To learn how to apply an updated configuration to the VMs in a MIG, see Updating instances in a MIG.
+        /// Updates a managed instance group using the information that you specify
+        /// in the request.
+        /// This operation is marked as DONE when the group is patched
+        /// even if the instances in the group are still in the process of being
+        /// patched. You must separately verify the status of the individual instances
+        /// with the listmanagedinstances
+        /// method. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
+        /// 
+        /// If you update your group to specify a new template or instance
+        /// configuration, it's possible that your intended specification for each VM
+        /// in the group is different from the current state of that VM. To learn how
+        /// to apply an updated configuration to the VMs in a MIG, seeUpdating instances in
+        /// a MIG.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2325,7 +2702,21 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates a managed instance group using the information that you specify in the request. This operation is marked as DONE when the group is patched even if the instances in the group are still in the process of being patched. You must separately verify the status of the individual instances with the listmanagedinstances method. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. If you update your group to specify a new template or instance configuration, it's possible that your intended specification for each VM in the group is different from the current state of that VM. To learn how to apply an updated configuration to the VMs in a MIG, see Updating instances in a MIG.
+        /// Updates a managed instance group using the information that you specify
+        /// in the request.
+        /// This operation is marked as DONE when the group is patched
+        /// even if the instances in the group are still in the process of being
+        /// patched. You must separately verify the status of the individual instances
+        /// with the listmanagedinstances
+        /// method. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
+        /// 
+        /// If you update your group to specify a new template or instance
+        /// configuration, it's possible that your intended specification for each VM
+        /// in the group is different from the current state of that VM. To learn how
+        /// to apply an updated configuration to the VMs in a MIG, seeUpdating instances in
+        /// a MIG.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2345,7 +2736,9 @@ namespace Google.Cloud.Compute.V1
             PatchAsync(project, region, instanceGroupManager, instanceGroupManagerResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Inserts or patches per-instance configurations for the managed instance group. perInstanceConfig.name serves as a key used to distinguish whether to perform insert or patch.
+        /// Inserts or patches per-instance configurations for the managed instance
+        /// group. perInstanceConfig.name serves as a key used to
+        /// distinguish whether to perform insert or patch.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2354,7 +2747,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Inserts or patches per-instance configurations for the managed instance group. perInstanceConfig.name serves as a key used to distinguish whether to perform insert or patch.
+        /// Inserts or patches per-instance configurations for the managed instance
+        /// group. perInstanceConfig.name serves as a key used to
+        /// distinguish whether to perform insert or patch.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2363,7 +2758,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Inserts or patches per-instance configurations for the managed instance group. perInstanceConfig.name serves as a key used to distinguish whether to perform insert or patch.
+        /// Inserts or patches per-instance configurations for the managed instance
+        /// group. perInstanceConfig.name serves as a key used to
+        /// distinguish whether to perform insert or patch.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2399,7 +2796,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchPerInstanceConfigsOperationsClient, callSettings);
 
         /// <summary>
-        /// Inserts or patches per-instance configurations for the managed instance group. perInstanceConfig.name serves as a key used to distinguish whether to perform insert or patch.
+        /// Inserts or patches per-instance configurations for the managed instance
+        /// group. perInstanceConfig.name serves as a key used to
+        /// distinguish whether to perform insert or patch.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2408,7 +2807,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region scoping this request, should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
-        /// The name of the managed instance group. It should conform to RFC1035.
+        /// The name of the managed instance group.
+        /// It should conform to RFC1035.
         /// </param>
         /// <param name="regionInstanceGroupManagerPatchInstanceConfigReqResource">
         /// The body resource for this request
@@ -2425,7 +2825,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Inserts or patches per-instance configurations for the managed instance group. perInstanceConfig.name serves as a key used to distinguish whether to perform insert or patch.
+        /// Inserts or patches per-instance configurations for the managed instance
+        /// group. perInstanceConfig.name serves as a key used to
+        /// distinguish whether to perform insert or patch.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2434,7 +2836,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region scoping this request, should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
-        /// The name of the managed instance group. It should conform to RFC1035.
+        /// The name of the managed instance group.
+        /// It should conform to RFC1035.
         /// </param>
         /// <param name="regionInstanceGroupManagerPatchInstanceConfigReqResource">
         /// The body resource for this request
@@ -2451,7 +2854,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Inserts or patches per-instance configurations for the managed instance group. perInstanceConfig.name serves as a key used to distinguish whether to perform insert or patch.
+        /// Inserts or patches per-instance configurations for the managed instance
+        /// group. perInstanceConfig.name serves as a key used to
+        /// distinguish whether to perform insert or patch.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2460,7 +2865,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region scoping this request, should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
-        /// The name of the managed instance group. It should conform to RFC1035.
+        /// The name of the managed instance group.
+        /// It should conform to RFC1035.
         /// </param>
         /// <param name="regionInstanceGroupManagerPatchInstanceConfigReqResource">
         /// The body resource for this request
@@ -2471,7 +2877,19 @@ namespace Google.Cloud.Compute.V1
             PatchPerInstanceConfigsAsync(project, region, instanceGroupManager, regionInstanceGroupManagerPatchInstanceConfigReqResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Flags the specified VM instances in the managed instance group to be immediately recreated. Each instance is recreated using the group's current configuration. This operation is marked as DONE when the flag is set even if the instances have not yet been recreated. You must separately verify the status of each instance by checking its currentAction field; for more information, see Checking the status of managed instances. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified VM instances in the managed instance group to be
+        /// immediately recreated. Each instance is recreated using the group's current
+        /// configuration. This operation is marked as DONE when the flag
+        /// is set even if the instances have not yet been recreated. You must
+        /// separately verify the status of each instance by checking itscurrentAction field; for more information, see Checking
+        /// the status of managed instances.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2480,7 +2898,19 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Flags the specified VM instances in the managed instance group to be immediately recreated. Each instance is recreated using the group's current configuration. This operation is marked as DONE when the flag is set even if the instances have not yet been recreated. You must separately verify the status of each instance by checking its currentAction field; for more information, see Checking the status of managed instances. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified VM instances in the managed instance group to be
+        /// immediately recreated. Each instance is recreated using the group's current
+        /// configuration. This operation is marked as DONE when the flag
+        /// is set even if the instances have not yet been recreated. You must
+        /// separately verify the status of each instance by checking itscurrentAction field; for more information, see Checking
+        /// the status of managed instances.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2489,7 +2919,19 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Flags the specified VM instances in the managed instance group to be immediately recreated. Each instance is recreated using the group's current configuration. This operation is marked as DONE when the flag is set even if the instances have not yet been recreated. You must separately verify the status of each instance by checking its currentAction field; for more information, see Checking the status of managed instances. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified VM instances in the managed instance group to be
+        /// immediately recreated. Each instance is recreated using the group's current
+        /// configuration. This operation is marked as DONE when the flag
+        /// is set even if the instances have not yet been recreated. You must
+        /// separately verify the status of each instance by checking itscurrentAction field; for more information, see Checking
+        /// the status of managed instances.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2525,7 +2967,19 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RecreateInstancesOperationsClient, callSettings);
 
         /// <summary>
-        /// Flags the specified VM instances in the managed instance group to be immediately recreated. Each instance is recreated using the group's current configuration. This operation is marked as DONE when the flag is set even if the instances have not yet been recreated. You must separately verify the status of each instance by checking its currentAction field; for more information, see Checking the status of managed instances. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified VM instances in the managed instance group to be
+        /// immediately recreated. Each instance is recreated using the group's current
+        /// configuration. This operation is marked as DONE when the flag
+        /// is set even if the instances have not yet been recreated. You must
+        /// separately verify the status of each instance by checking itscurrentAction field; for more information, see Checking
+        /// the status of managed instances.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2551,7 +3005,19 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Flags the specified VM instances in the managed instance group to be immediately recreated. Each instance is recreated using the group's current configuration. This operation is marked as DONE when the flag is set even if the instances have not yet been recreated. You must separately verify the status of each instance by checking its currentAction field; for more information, see Checking the status of managed instances. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified VM instances in the managed instance group to be
+        /// immediately recreated. Each instance is recreated using the group's current
+        /// configuration. This operation is marked as DONE when the flag
+        /// is set even if the instances have not yet been recreated. You must
+        /// separately verify the status of each instance by checking itscurrentAction field; for more information, see Checking
+        /// the status of managed instances.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2577,7 +3043,19 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Flags the specified VM instances in the managed instance group to be immediately recreated. Each instance is recreated using the group's current configuration. This operation is marked as DONE when the flag is set even if the instances have not yet been recreated. You must separately verify the status of each instance by checking its currentAction field; for more information, see Checking the status of managed instances. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified VM instances in the managed instance group to be
+        /// immediately recreated. Each instance is recreated using the group's current
+        /// configuration. This operation is marked as DONE when the flag
+        /// is set even if the instances have not yet been recreated. You must
+        /// separately verify the status of each instance by checking itscurrentAction field; for more information, see Checking
+        /// the status of managed instances.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2597,7 +3075,19 @@ namespace Google.Cloud.Compute.V1
             RecreateInstancesAsync(project, region, instanceGroupManager, regionInstanceGroupManagersRecreateRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Changes the intended size of the managed instance group. If you increase the size, the group creates new instances using the current instance template. If you decrease the size, the group deletes one or more instances. The resize operation is marked DONE if the resize request is successful. The underlying actions take additional time. You must separately verify the status of the creating or deleting actions with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted.
+        /// Changes the intended size of the managed instance group. If you increase
+        /// the size, the group creates new instances using the current instance
+        /// template. If you decrease the size, the group deletes one or more
+        /// instances.
+        /// 
+        /// The resize operation is marked DONE if theresize request is successful. The underlying actions take
+        /// additional time. You must separately verify the status of thecreating or deleting actions with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2606,7 +3096,19 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Changes the intended size of the managed instance group. If you increase the size, the group creates new instances using the current instance template. If you decrease the size, the group deletes one or more instances. The resize operation is marked DONE if the resize request is successful. The underlying actions take additional time. You must separately verify the status of the creating or deleting actions with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted.
+        /// Changes the intended size of the managed instance group. If you increase
+        /// the size, the group creates new instances using the current instance
+        /// template. If you decrease the size, the group deletes one or more
+        /// instances.
+        /// 
+        /// The resize operation is marked DONE if theresize request is successful. The underlying actions take
+        /// additional time. You must separately verify the status of thecreating or deleting actions with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2615,7 +3117,19 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Changes the intended size of the managed instance group. If you increase the size, the group creates new instances using the current instance template. If you decrease the size, the group deletes one or more instances. The resize operation is marked DONE if the resize request is successful. The underlying actions take additional time. You must separately verify the status of the creating or deleting actions with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted.
+        /// Changes the intended size of the managed instance group. If you increase
+        /// the size, the group creates new instances using the current instance
+        /// template. If you decrease the size, the group deletes one or more
+        /// instances.
+        /// 
+        /// The resize operation is marked DONE if theresize request is successful. The underlying actions take
+        /// additional time. You must separately verify the status of thecreating or deleting actions with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2650,7 +3164,19 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ResizeOperationsClient, callSettings);
 
         /// <summary>
-        /// Changes the intended size of the managed instance group. If you increase the size, the group creates new instances using the current instance template. If you decrease the size, the group deletes one or more instances. The resize operation is marked DONE if the resize request is successful. The underlying actions take additional time. You must separately verify the status of the creating or deleting actions with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted.
+        /// Changes the intended size of the managed instance group. If you increase
+        /// the size, the group creates new instances using the current instance
+        /// template. If you decrease the size, the group deletes one or more
+        /// instances.
+        /// 
+        /// The resize operation is marked DONE if theresize request is successful. The underlying actions take
+        /// additional time. You must separately verify the status of thecreating or deleting actions with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2662,7 +3188,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the managed instance group.
         /// </param>
         /// <param name="size">
-        /// Number of instances that should exist in this instance group manager.
+        /// Number of instances that should exist in this instance group
+        /// manager.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2676,7 +3203,19 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Changes the intended size of the managed instance group. If you increase the size, the group creates new instances using the current instance template. If you decrease the size, the group deletes one or more instances. The resize operation is marked DONE if the resize request is successful. The underlying actions take additional time. You must separately verify the status of the creating or deleting actions with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted.
+        /// Changes the intended size of the managed instance group. If you increase
+        /// the size, the group creates new instances using the current instance
+        /// template. If you decrease the size, the group deletes one or more
+        /// instances.
+        /// 
+        /// The resize operation is marked DONE if theresize request is successful. The underlying actions take
+        /// additional time. You must separately verify the status of thecreating or deleting actions with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2688,7 +3227,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the managed instance group.
         /// </param>
         /// <param name="size">
-        /// Number of instances that should exist in this instance group manager.
+        /// Number of instances that should exist in this instance group
+        /// manager.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2702,7 +3242,19 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Changes the intended size of the managed instance group. If you increase the size, the group creates new instances using the current instance template. If you decrease the size, the group deletes one or more instances. The resize operation is marked DONE if the resize request is successful. The underlying actions take additional time. You must separately verify the status of the creating or deleting actions with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted.
+        /// Changes the intended size of the managed instance group. If you increase
+        /// the size, the group creates new instances using the current instance
+        /// template. If you decrease the size, the group deletes one or more
+        /// instances.
+        /// 
+        /// The resize operation is marked DONE if theresize request is successful. The underlying actions take
+        /// additional time. You must separately verify the status of thecreating or deleting actions with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2714,7 +3266,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the managed instance group.
         /// </param>
         /// <param name="size">
-        /// Number of instances that should exist in this instance group manager.
+        /// Number of instances that should exist in this instance group
+        /// manager.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2722,7 +3275,22 @@ namespace Google.Cloud.Compute.V1
             ResizeAsync(project, region, instanceGroupManager, size, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be resumed. This method increases the targetSize and decreases the targetSuspendedSize of the managed instance group by the number of instances that you resume. The resumeInstances operation is marked DONE if the resumeInstances request is successful. The underlying actions take additional time. You must separately verify the status of the RESUMING action with the listmanagedinstances method. In this request, you can only specify instances that are suspended. For example, if an instance was previously suspended using the suspendInstances method, it can be resumed using the resumeInstances method. If a health check is attached to the managed instance group, the specified instances will be verified as healthy after they are resumed. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// resumed. This method increases thetargetSize and decreases the targetSuspendedSize
+        /// of the managed instance group by the number of instances that you resume.
+        /// The resumeInstances operation is marked DONE if
+        /// the resumeInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theRESUMING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// In this request, you can only specify instances that are suspended. For
+        /// example, if an instance was previously suspended using the suspendInstances
+        /// method, it can be resumed using the resumeInstances method.
+        /// 
+        /// If a health check is attached to the managed instance group, the specified
+        /// instances will be verified as healthy after they are resumed.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2731,7 +3299,22 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be resumed. This method increases the targetSize and decreases the targetSuspendedSize of the managed instance group by the number of instances that you resume. The resumeInstances operation is marked DONE if the resumeInstances request is successful. The underlying actions take additional time. You must separately verify the status of the RESUMING action with the listmanagedinstances method. In this request, you can only specify instances that are suspended. For example, if an instance was previously suspended using the suspendInstances method, it can be resumed using the resumeInstances method. If a health check is attached to the managed instance group, the specified instances will be verified as healthy after they are resumed. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// resumed. This method increases thetargetSize and decreases the targetSuspendedSize
+        /// of the managed instance group by the number of instances that you resume.
+        /// The resumeInstances operation is marked DONE if
+        /// the resumeInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theRESUMING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// In this request, you can only specify instances that are suspended. For
+        /// example, if an instance was previously suspended using the suspendInstances
+        /// method, it can be resumed using the resumeInstances method.
+        /// 
+        /// If a health check is attached to the managed instance group, the specified
+        /// instances will be verified as healthy after they are resumed.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2740,7 +3323,22 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be resumed. This method increases the targetSize and decreases the targetSuspendedSize of the managed instance group by the number of instances that you resume. The resumeInstances operation is marked DONE if the resumeInstances request is successful. The underlying actions take additional time. You must separately verify the status of the RESUMING action with the listmanagedinstances method. In this request, you can only specify instances that are suspended. For example, if an instance was previously suspended using the suspendInstances method, it can be resumed using the resumeInstances method. If a health check is attached to the managed instance group, the specified instances will be verified as healthy after they are resumed. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// resumed. This method increases thetargetSize and decreases the targetSuspendedSize
+        /// of the managed instance group by the number of instances that you resume.
+        /// The resumeInstances operation is marked DONE if
+        /// the resumeInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theRESUMING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// In this request, you can only specify instances that are suspended. For
+        /// example, if an instance was previously suspended using the suspendInstances
+        /// method, it can be resumed using the resumeInstances method.
+        /// 
+        /// If a health check is attached to the managed instance group, the specified
+        /// instances will be verified as healthy after they are resumed.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2775,7 +3373,22 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ResumeInstancesOperationsClient, callSettings);
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be resumed. This method increases the targetSize and decreases the targetSuspendedSize of the managed instance group by the number of instances that you resume. The resumeInstances operation is marked DONE if the resumeInstances request is successful. The underlying actions take additional time. You must separately verify the status of the RESUMING action with the listmanagedinstances method. In this request, you can only specify instances that are suspended. For example, if an instance was previously suspended using the suspendInstances method, it can be resumed using the resumeInstances method. If a health check is attached to the managed instance group, the specified instances will be verified as healthy after they are resumed. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// resumed. This method increases thetargetSize and decreases the targetSuspendedSize
+        /// of the managed instance group by the number of instances that you resume.
+        /// The resumeInstances operation is marked DONE if
+        /// the resumeInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theRESUMING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// In this request, you can only specify instances that are suspended. For
+        /// example, if an instance was previously suspended using the suspendInstances
+        /// method, it can be resumed using the resumeInstances method.
+        /// 
+        /// If a health check is attached to the managed instance group, the specified
+        /// instances will be verified as healthy after they are resumed.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2801,7 +3414,22 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be resumed. This method increases the targetSize and decreases the targetSuspendedSize of the managed instance group by the number of instances that you resume. The resumeInstances operation is marked DONE if the resumeInstances request is successful. The underlying actions take additional time. You must separately verify the status of the RESUMING action with the listmanagedinstances method. In this request, you can only specify instances that are suspended. For example, if an instance was previously suspended using the suspendInstances method, it can be resumed using the resumeInstances method. If a health check is attached to the managed instance group, the specified instances will be verified as healthy after they are resumed. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// resumed. This method increases thetargetSize and decreases the targetSuspendedSize
+        /// of the managed instance group by the number of instances that you resume.
+        /// The resumeInstances operation is marked DONE if
+        /// the resumeInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theRESUMING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// In this request, you can only specify instances that are suspended. For
+        /// example, if an instance was previously suspended using the suspendInstances
+        /// method, it can be resumed using the resumeInstances method.
+        /// 
+        /// If a health check is attached to the managed instance group, the specified
+        /// instances will be verified as healthy after they are resumed.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2827,7 +3455,22 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be resumed. This method increases the targetSize and decreases the targetSuspendedSize of the managed instance group by the number of instances that you resume. The resumeInstances operation is marked DONE if the resumeInstances request is successful. The underlying actions take additional time. You must separately verify the status of the RESUMING action with the listmanagedinstances method. In this request, you can only specify instances that are suspended. For example, if an instance was previously suspended using the suspendInstances method, it can be resumed using the resumeInstances method. If a health check is attached to the managed instance group, the specified instances will be verified as healthy after they are resumed. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// resumed. This method increases thetargetSize and decreases the targetSuspendedSize
+        /// of the managed instance group by the number of instances that you resume.
+        /// The resumeInstances operation is marked DONE if
+        /// the resumeInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theRESUMING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// In this request, you can only specify instances that are suspended. For
+        /// example, if an instance was previously suspended using the suspendInstances
+        /// method, it can be resumed using the resumeInstances method.
+        /// 
+        /// If a health check is attached to the managed instance group, the specified
+        /// instances will be verified as healthy after they are resumed.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2847,7 +3490,8 @@ namespace Google.Cloud.Compute.V1
             ResumeInstancesAsync(project, region, instanceGroupManager, regionInstanceGroupManagersResumeInstancesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the instance template to use when creating new instances or recreating instances in this group. Existing instances are not affected.
+        /// Sets the instance template to use when creating new instances or recreating
+        /// instances in this group. Existing instances are not affected.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2856,7 +3500,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the instance template to use when creating new instances or recreating instances in this group. Existing instances are not affected.
+        /// Sets the instance template to use when creating new instances or recreating
+        /// instances in this group. Existing instances are not affected.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2865,7 +3510,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the instance template to use when creating new instances or recreating instances in this group. Existing instances are not affected.
+        /// Sets the instance template to use when creating new instances or recreating
+        /// instances in this group. Existing instances are not affected.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2901,7 +3547,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetInstanceTemplateOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets the instance template to use when creating new instances or recreating instances in this group. Existing instances are not affected.
+        /// Sets the instance template to use when creating new instances or recreating
+        /// instances in this group. Existing instances are not affected.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2927,7 +3574,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the instance template to use when creating new instances or recreating instances in this group. Existing instances are not affected.
+        /// Sets the instance template to use when creating new instances or recreating
+        /// instances in this group. Existing instances are not affected.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2953,7 +3601,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the instance template to use when creating new instances or recreating instances in this group. Existing instances are not affected.
+        /// Sets the instance template to use when creating new instances or recreating
+        /// instances in this group. Existing instances are not affected.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2973,7 +3622,8 @@ namespace Google.Cloud.Compute.V1
             SetInstanceTemplateAsync(project, region, instanceGroupManager, regionInstanceGroupManagersSetTemplateRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Modifies the target pools to which all new instances in this group are assigned. Existing instances in the group are not affected.
+        /// Modifies the target pools to which all new instances in this group are
+        /// assigned. Existing instances in the group are not affected.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2982,7 +3632,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Modifies the target pools to which all new instances in this group are assigned. Existing instances in the group are not affected.
+        /// Modifies the target pools to which all new instances in this group are
+        /// assigned. Existing instances in the group are not affected.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2991,7 +3642,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Modifies the target pools to which all new instances in this group are assigned. Existing instances in the group are not affected.
+        /// Modifies the target pools to which all new instances in this group are
+        /// assigned. Existing instances in the group are not affected.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3026,7 +3678,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetTargetPoolsOperationsClient, callSettings);
 
         /// <summary>
-        /// Modifies the target pools to which all new instances in this group are assigned. Existing instances in the group are not affected.
+        /// Modifies the target pools to which all new instances in this group are
+        /// assigned. Existing instances in the group are not affected.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3052,7 +3705,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Modifies the target pools to which all new instances in this group are assigned. Existing instances in the group are not affected.
+        /// Modifies the target pools to which all new instances in this group are
+        /// assigned. Existing instances in the group are not affected.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3078,7 +3732,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Modifies the target pools to which all new instances in this group are assigned. Existing instances in the group are not affected.
+        /// Modifies the target pools to which all new instances in this group are
+        /// assigned. Existing instances in the group are not affected.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3098,7 +3753,22 @@ namespace Google.Cloud.Compute.V1
             SetTargetPoolsAsync(project, region, instanceGroupManager, regionInstanceGroupManagersSetTargetPoolsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be started. This method increases the targetSize and decreases the targetStoppedSize of the managed instance group by the number of instances that you start. The startInstances operation is marked DONE if the startInstances request is successful. The underlying actions take additional time. You must separately verify the status of the STARTING action with the listmanagedinstances method. In this request, you can only specify instances that are stopped. For example, if an instance was previously stopped using the stopInstances method, it can be started using the startInstances method. If a health check is attached to the managed instance group, the specified instances will be verified as healthy after they are started. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// started. This method increases thetargetSize and decreases the targetStoppedSize
+        /// of the managed instance group by the number of instances that you start.
+        /// The startInstances operation is marked DONE if
+        /// the startInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theSTARTING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// In this request, you can only specify instances that are stopped. For
+        /// example, if an instance was previously stopped using the stopInstances
+        /// method, it can be started using the startInstances method.
+        /// 
+        /// If a health check is attached to the managed instance group, the specified
+        /// instances will be verified as healthy after they are started.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3107,7 +3777,22 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be started. This method increases the targetSize and decreases the targetStoppedSize of the managed instance group by the number of instances that you start. The startInstances operation is marked DONE if the startInstances request is successful. The underlying actions take additional time. You must separately verify the status of the STARTING action with the listmanagedinstances method. In this request, you can only specify instances that are stopped. For example, if an instance was previously stopped using the stopInstances method, it can be started using the startInstances method. If a health check is attached to the managed instance group, the specified instances will be verified as healthy after they are started. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// started. This method increases thetargetSize and decreases the targetStoppedSize
+        /// of the managed instance group by the number of instances that you start.
+        /// The startInstances operation is marked DONE if
+        /// the startInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theSTARTING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// In this request, you can only specify instances that are stopped. For
+        /// example, if an instance was previously stopped using the stopInstances
+        /// method, it can be started using the startInstances method.
+        /// 
+        /// If a health check is attached to the managed instance group, the specified
+        /// instances will be verified as healthy after they are started.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3116,7 +3801,22 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be started. This method increases the targetSize and decreases the targetStoppedSize of the managed instance group by the number of instances that you start. The startInstances operation is marked DONE if the startInstances request is successful. The underlying actions take additional time. You must separately verify the status of the STARTING action with the listmanagedinstances method. In this request, you can only specify instances that are stopped. For example, if an instance was previously stopped using the stopInstances method, it can be started using the startInstances method. If a health check is attached to the managed instance group, the specified instances will be verified as healthy after they are started. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// started. This method increases thetargetSize and decreases the targetStoppedSize
+        /// of the managed instance group by the number of instances that you start.
+        /// The startInstances operation is marked DONE if
+        /// the startInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theSTARTING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// In this request, you can only specify instances that are stopped. For
+        /// example, if an instance was previously stopped using the stopInstances
+        /// method, it can be started using the startInstances method.
+        /// 
+        /// If a health check is attached to the managed instance group, the specified
+        /// instances will be verified as healthy after they are started.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3151,7 +3851,22 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StartInstancesOperationsClient, callSettings);
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be started. This method increases the targetSize and decreases the targetStoppedSize of the managed instance group by the number of instances that you start. The startInstances operation is marked DONE if the startInstances request is successful. The underlying actions take additional time. You must separately verify the status of the STARTING action with the listmanagedinstances method. In this request, you can only specify instances that are stopped. For example, if an instance was previously stopped using the stopInstances method, it can be started using the startInstances method. If a health check is attached to the managed instance group, the specified instances will be verified as healthy after they are started. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// started. This method increases thetargetSize and decreases the targetStoppedSize
+        /// of the managed instance group by the number of instances that you start.
+        /// The startInstances operation is marked DONE if
+        /// the startInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theSTARTING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// In this request, you can only specify instances that are stopped. For
+        /// example, if an instance was previously stopped using the stopInstances
+        /// method, it can be started using the startInstances method.
+        /// 
+        /// If a health check is attached to the managed instance group, the specified
+        /// instances will be verified as healthy after they are started.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3177,7 +3892,22 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be started. This method increases the targetSize and decreases the targetStoppedSize of the managed instance group by the number of instances that you start. The startInstances operation is marked DONE if the startInstances request is successful. The underlying actions take additional time. You must separately verify the status of the STARTING action with the listmanagedinstances method. In this request, you can only specify instances that are stopped. For example, if an instance was previously stopped using the stopInstances method, it can be started using the startInstances method. If a health check is attached to the managed instance group, the specified instances will be verified as healthy after they are started. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// started. This method increases thetargetSize and decreases the targetStoppedSize
+        /// of the managed instance group by the number of instances that you start.
+        /// The startInstances operation is marked DONE if
+        /// the startInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theSTARTING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// In this request, you can only specify instances that are stopped. For
+        /// example, if an instance was previously stopped using the stopInstances
+        /// method, it can be started using the startInstances method.
+        /// 
+        /// If a health check is attached to the managed instance group, the specified
+        /// instances will be verified as healthy after they are started.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3203,7 +3933,22 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be started. This method increases the targetSize and decreases the targetStoppedSize of the managed instance group by the number of instances that you start. The startInstances operation is marked DONE if the startInstances request is successful. The underlying actions take additional time. You must separately verify the status of the STARTING action with the listmanagedinstances method. In this request, you can only specify instances that are stopped. For example, if an instance was previously stopped using the stopInstances method, it can be started using the startInstances method. If a health check is attached to the managed instance group, the specified instances will be verified as healthy after they are started. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// started. This method increases thetargetSize and decreases the targetStoppedSize
+        /// of the managed instance group by the number of instances that you start.
+        /// The startInstances operation is marked DONE if
+        /// the startInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theSTARTING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// In this request, you can only specify instances that are stopped. For
+        /// example, if an instance was previously stopped using the stopInstances
+        /// method, it can be started using the startInstances method.
+        /// 
+        /// If a health check is attached to the managed instance group, the specified
+        /// instances will be verified as healthy after they are started.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3223,7 +3968,31 @@ namespace Google.Cloud.Compute.V1
             StartInstancesAsync(project, region, instanceGroupManager, regionInstanceGroupManagersStartInstancesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be immediately stopped. You can only specify instances that are running in this request. This method reduces the targetSize and increases the targetStoppedSize of the managed instance group by the number of instances that you stop. The stopInstances operation is marked DONE if the stopInstances request is successful. The underlying actions take additional time. You must separately verify the status of the STOPPING action with the listmanagedinstances method. If the standbyPolicy.initialDelaySec field is set, the group delays stopping the instances until initialDelaySec have passed from instance.creationTimestamp (that is, when the instance was created). This delay gives your application time to set itself up and initialize on the instance. If more than initialDelaySec seconds have passed since instance.creationTimestamp when this method is called, there will be zero delay. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is stopped. Stopped instances can be started using the startInstances method. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// immediately stopped. You can only specify instances that are running in
+        /// this request. This method reduces thetargetSize and increases the targetStoppedSize
+        /// of the managed instance group by the number of instances that you stop.
+        /// The stopInstances operation is marked DONE if
+        /// the stopInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theSTOPPING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the standbyPolicy.initialDelaySec field is set, the group
+        /// delays stopping the instances until initialDelaySec have
+        /// passed from instance.creationTimestamp (that is, when the
+        /// instance was created). This delay gives your application time to
+        /// set itself up and initialize on the instance. If more thaninitialDelaySec seconds have passed sinceinstance.creationTimestamp when this method is called, there
+        /// will be zero delay.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is stopped.
+        /// 
+        /// Stopped instances can be started using the startInstances
+        /// method.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3232,7 +4001,31 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be immediately stopped. You can only specify instances that are running in this request. This method reduces the targetSize and increases the targetStoppedSize of the managed instance group by the number of instances that you stop. The stopInstances operation is marked DONE if the stopInstances request is successful. The underlying actions take additional time. You must separately verify the status of the STOPPING action with the listmanagedinstances method. If the standbyPolicy.initialDelaySec field is set, the group delays stopping the instances until initialDelaySec have passed from instance.creationTimestamp (that is, when the instance was created). This delay gives your application time to set itself up and initialize on the instance. If more than initialDelaySec seconds have passed since instance.creationTimestamp when this method is called, there will be zero delay. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is stopped. Stopped instances can be started using the startInstances method. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// immediately stopped. You can only specify instances that are running in
+        /// this request. This method reduces thetargetSize and increases the targetStoppedSize
+        /// of the managed instance group by the number of instances that you stop.
+        /// The stopInstances operation is marked DONE if
+        /// the stopInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theSTOPPING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the standbyPolicy.initialDelaySec field is set, the group
+        /// delays stopping the instances until initialDelaySec have
+        /// passed from instance.creationTimestamp (that is, when the
+        /// instance was created). This delay gives your application time to
+        /// set itself up and initialize on the instance. If more thaninitialDelaySec seconds have passed sinceinstance.creationTimestamp when this method is called, there
+        /// will be zero delay.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is stopped.
+        /// 
+        /// Stopped instances can be started using the startInstances
+        /// method.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3241,7 +4034,31 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be immediately stopped. You can only specify instances that are running in this request. This method reduces the targetSize and increases the targetStoppedSize of the managed instance group by the number of instances that you stop. The stopInstances operation is marked DONE if the stopInstances request is successful. The underlying actions take additional time. You must separately verify the status of the STOPPING action with the listmanagedinstances method. If the standbyPolicy.initialDelaySec field is set, the group delays stopping the instances until initialDelaySec have passed from instance.creationTimestamp (that is, when the instance was created). This delay gives your application time to set itself up and initialize on the instance. If more than initialDelaySec seconds have passed since instance.creationTimestamp when this method is called, there will be zero delay. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is stopped. Stopped instances can be started using the startInstances method. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// immediately stopped. You can only specify instances that are running in
+        /// this request. This method reduces thetargetSize and increases the targetStoppedSize
+        /// of the managed instance group by the number of instances that you stop.
+        /// The stopInstances operation is marked DONE if
+        /// the stopInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theSTOPPING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the standbyPolicy.initialDelaySec field is set, the group
+        /// delays stopping the instances until initialDelaySec have
+        /// passed from instance.creationTimestamp (that is, when the
+        /// instance was created). This delay gives your application time to
+        /// set itself up and initialize on the instance. If more thaninitialDelaySec seconds have passed sinceinstance.creationTimestamp when this method is called, there
+        /// will be zero delay.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is stopped.
+        /// 
+        /// Stopped instances can be started using the startInstances
+        /// method.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3276,7 +4093,31 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StopInstancesOperationsClient, callSettings);
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be immediately stopped. You can only specify instances that are running in this request. This method reduces the targetSize and increases the targetStoppedSize of the managed instance group by the number of instances that you stop. The stopInstances operation is marked DONE if the stopInstances request is successful. The underlying actions take additional time. You must separately verify the status of the STOPPING action with the listmanagedinstances method. If the standbyPolicy.initialDelaySec field is set, the group delays stopping the instances until initialDelaySec have passed from instance.creationTimestamp (that is, when the instance was created). This delay gives your application time to set itself up and initialize on the instance. If more than initialDelaySec seconds have passed since instance.creationTimestamp when this method is called, there will be zero delay. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is stopped. Stopped instances can be started using the startInstances method. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// immediately stopped. You can only specify instances that are running in
+        /// this request. This method reduces thetargetSize and increases the targetStoppedSize
+        /// of the managed instance group by the number of instances that you stop.
+        /// The stopInstances operation is marked DONE if
+        /// the stopInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theSTOPPING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the standbyPolicy.initialDelaySec field is set, the group
+        /// delays stopping the instances until initialDelaySec have
+        /// passed from instance.creationTimestamp (that is, when the
+        /// instance was created). This delay gives your application time to
+        /// set itself up and initialize on the instance. If more thaninitialDelaySec seconds have passed sinceinstance.creationTimestamp when this method is called, there
+        /// will be zero delay.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is stopped.
+        /// 
+        /// Stopped instances can be started using the startInstances
+        /// method.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3302,7 +4143,31 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be immediately stopped. You can only specify instances that are running in this request. This method reduces the targetSize and increases the targetStoppedSize of the managed instance group by the number of instances that you stop. The stopInstances operation is marked DONE if the stopInstances request is successful. The underlying actions take additional time. You must separately verify the status of the STOPPING action with the listmanagedinstances method. If the standbyPolicy.initialDelaySec field is set, the group delays stopping the instances until initialDelaySec have passed from instance.creationTimestamp (that is, when the instance was created). This delay gives your application time to set itself up and initialize on the instance. If more than initialDelaySec seconds have passed since instance.creationTimestamp when this method is called, there will be zero delay. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is stopped. Stopped instances can be started using the startInstances method. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// immediately stopped. You can only specify instances that are running in
+        /// this request. This method reduces thetargetSize and increases the targetStoppedSize
+        /// of the managed instance group by the number of instances that you stop.
+        /// The stopInstances operation is marked DONE if
+        /// the stopInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theSTOPPING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the standbyPolicy.initialDelaySec field is set, the group
+        /// delays stopping the instances until initialDelaySec have
+        /// passed from instance.creationTimestamp (that is, when the
+        /// instance was created). This delay gives your application time to
+        /// set itself up and initialize on the instance. If more thaninitialDelaySec seconds have passed sinceinstance.creationTimestamp when this method is called, there
+        /// will be zero delay.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is stopped.
+        /// 
+        /// Stopped instances can be started using the startInstances
+        /// method.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3328,7 +4193,31 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be immediately stopped. You can only specify instances that are running in this request. This method reduces the targetSize and increases the targetStoppedSize of the managed instance group by the number of instances that you stop. The stopInstances operation is marked DONE if the stopInstances request is successful. The underlying actions take additional time. You must separately verify the status of the STOPPING action with the listmanagedinstances method. If the standbyPolicy.initialDelaySec field is set, the group delays stopping the instances until initialDelaySec have passed from instance.creationTimestamp (that is, when the instance was created). This delay gives your application time to set itself up and initialize on the instance. If more than initialDelaySec seconds have passed since instance.creationTimestamp when this method is called, there will be zero delay. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is stopped. Stopped instances can be started using the startInstances method. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// immediately stopped. You can only specify instances that are running in
+        /// this request. This method reduces thetargetSize and increases the targetStoppedSize
+        /// of the managed instance group by the number of instances that you stop.
+        /// The stopInstances operation is marked DONE if
+        /// the stopInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theSTOPPING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the standbyPolicy.initialDelaySec field is set, the group
+        /// delays stopping the instances until initialDelaySec have
+        /// passed from instance.creationTimestamp (that is, when the
+        /// instance was created). This delay gives your application time to
+        /// set itself up and initialize on the instance. If more thaninitialDelaySec seconds have passed sinceinstance.creationTimestamp when this method is called, there
+        /// will be zero delay.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is stopped.
+        /// 
+        /// Stopped instances can be started using the startInstances
+        /// method.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3348,7 +4237,31 @@ namespace Google.Cloud.Compute.V1
             StopInstancesAsync(project, region, instanceGroupManager, regionInstanceGroupManagersStopInstancesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be immediately suspended. You can only specify instances that are running in this request. This method reduces the targetSize and increases the targetSuspendedSize of the managed instance group by the number of instances that you suspend. The suspendInstances operation is marked DONE if the suspendInstances request is successful. The underlying actions take additional time. You must separately verify the status of the SUSPENDING action with the listmanagedinstances method. If the standbyPolicy.initialDelaySec field is set, the group delays suspension of the instances until initialDelaySec have passed from instance.creationTimestamp (that is, when the instance was created). This delay gives your application time to set itself up and initialize on the instance. If more than initialDelaySec seconds have passed since instance.creationTimestamp when this method is called, there will be zero delay. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is suspended. Suspended instances can be resumed using the resumeInstances method. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// immediately suspended. You can only specify instances that are running in
+        /// this request. This method reduces thetargetSize and increases the targetSuspendedSize
+        /// of the managed instance group by the number of instances that you suspend.
+        /// The suspendInstances operation is marked DONE if
+        /// the suspendInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theSUSPENDING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the standbyPolicy.initialDelaySec field is set, the group
+        /// delays suspension of the instances until initialDelaySec have
+        /// passed from instance.creationTimestamp (that is, when the
+        /// instance was created). This delay gives your application time to
+        /// set itself up and initialize on the instance. If more thaninitialDelaySec seconds have passed sinceinstance.creationTimestamp when this method is called, there
+        /// will be zero delay.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is suspended.
+        /// 
+        /// Suspended instances can be resumed using the resumeInstances
+        /// method.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3357,7 +4270,31 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be immediately suspended. You can only specify instances that are running in this request. This method reduces the targetSize and increases the targetSuspendedSize of the managed instance group by the number of instances that you suspend. The suspendInstances operation is marked DONE if the suspendInstances request is successful. The underlying actions take additional time. You must separately verify the status of the SUSPENDING action with the listmanagedinstances method. If the standbyPolicy.initialDelaySec field is set, the group delays suspension of the instances until initialDelaySec have passed from instance.creationTimestamp (that is, when the instance was created). This delay gives your application time to set itself up and initialize on the instance. If more than initialDelaySec seconds have passed since instance.creationTimestamp when this method is called, there will be zero delay. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is suspended. Suspended instances can be resumed using the resumeInstances method. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// immediately suspended. You can only specify instances that are running in
+        /// this request. This method reduces thetargetSize and increases the targetSuspendedSize
+        /// of the managed instance group by the number of instances that you suspend.
+        /// The suspendInstances operation is marked DONE if
+        /// the suspendInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theSUSPENDING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the standbyPolicy.initialDelaySec field is set, the group
+        /// delays suspension of the instances until initialDelaySec have
+        /// passed from instance.creationTimestamp (that is, when the
+        /// instance was created). This delay gives your application time to
+        /// set itself up and initialize on the instance. If more thaninitialDelaySec seconds have passed sinceinstance.creationTimestamp when this method is called, there
+        /// will be zero delay.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is suspended.
+        /// 
+        /// Suspended instances can be resumed using the resumeInstances
+        /// method.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3366,7 +4303,31 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be immediately suspended. You can only specify instances that are running in this request. This method reduces the targetSize and increases the targetSuspendedSize of the managed instance group by the number of instances that you suspend. The suspendInstances operation is marked DONE if the suspendInstances request is successful. The underlying actions take additional time. You must separately verify the status of the SUSPENDING action with the listmanagedinstances method. If the standbyPolicy.initialDelaySec field is set, the group delays suspension of the instances until initialDelaySec have passed from instance.creationTimestamp (that is, when the instance was created). This delay gives your application time to set itself up and initialize on the instance. If more than initialDelaySec seconds have passed since instance.creationTimestamp when this method is called, there will be zero delay. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is suspended. Suspended instances can be resumed using the resumeInstances method. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// immediately suspended. You can only specify instances that are running in
+        /// this request. This method reduces thetargetSize and increases the targetSuspendedSize
+        /// of the managed instance group by the number of instances that you suspend.
+        /// The suspendInstances operation is marked DONE if
+        /// the suspendInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theSUSPENDING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the standbyPolicy.initialDelaySec field is set, the group
+        /// delays suspension of the instances until initialDelaySec have
+        /// passed from instance.creationTimestamp (that is, when the
+        /// instance was created). This delay gives your application time to
+        /// set itself up and initialize on the instance. If more thaninitialDelaySec seconds have passed sinceinstance.creationTimestamp when this method is called, there
+        /// will be zero delay.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is suspended.
+        /// 
+        /// Suspended instances can be resumed using the resumeInstances
+        /// method.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3401,7 +4362,31 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SuspendInstancesOperationsClient, callSettings);
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be immediately suspended. You can only specify instances that are running in this request. This method reduces the targetSize and increases the targetSuspendedSize of the managed instance group by the number of instances that you suspend. The suspendInstances operation is marked DONE if the suspendInstances request is successful. The underlying actions take additional time. You must separately verify the status of the SUSPENDING action with the listmanagedinstances method. If the standbyPolicy.initialDelaySec field is set, the group delays suspension of the instances until initialDelaySec have passed from instance.creationTimestamp (that is, when the instance was created). This delay gives your application time to set itself up and initialize on the instance. If more than initialDelaySec seconds have passed since instance.creationTimestamp when this method is called, there will be zero delay. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is suspended. Suspended instances can be resumed using the resumeInstances method. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// immediately suspended. You can only specify instances that are running in
+        /// this request. This method reduces thetargetSize and increases the targetSuspendedSize
+        /// of the managed instance group by the number of instances that you suspend.
+        /// The suspendInstances operation is marked DONE if
+        /// the suspendInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theSUSPENDING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the standbyPolicy.initialDelaySec field is set, the group
+        /// delays suspension of the instances until initialDelaySec have
+        /// passed from instance.creationTimestamp (that is, when the
+        /// instance was created). This delay gives your application time to
+        /// set itself up and initialize on the instance. If more thaninitialDelaySec seconds have passed sinceinstance.creationTimestamp when this method is called, there
+        /// will be zero delay.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is suspended.
+        /// 
+        /// Suspended instances can be resumed using the resumeInstances
+        /// method.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3427,7 +4412,31 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be immediately suspended. You can only specify instances that are running in this request. This method reduces the targetSize and increases the targetSuspendedSize of the managed instance group by the number of instances that you suspend. The suspendInstances operation is marked DONE if the suspendInstances request is successful. The underlying actions take additional time. You must separately verify the status of the SUSPENDING action with the listmanagedinstances method. If the standbyPolicy.initialDelaySec field is set, the group delays suspension of the instances until initialDelaySec have passed from instance.creationTimestamp (that is, when the instance was created). This delay gives your application time to set itself up and initialize on the instance. If more than initialDelaySec seconds have passed since instance.creationTimestamp when this method is called, there will be zero delay. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is suspended. Suspended instances can be resumed using the resumeInstances method. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// immediately suspended. You can only specify instances that are running in
+        /// this request. This method reduces thetargetSize and increases the targetSuspendedSize
+        /// of the managed instance group by the number of instances that you suspend.
+        /// The suspendInstances operation is marked DONE if
+        /// the suspendInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theSUSPENDING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the standbyPolicy.initialDelaySec field is set, the group
+        /// delays suspension of the instances until initialDelaySec have
+        /// passed from instance.creationTimestamp (that is, when the
+        /// instance was created). This delay gives your application time to
+        /// set itself up and initialize on the instance. If more thaninitialDelaySec seconds have passed sinceinstance.creationTimestamp when this method is called, there
+        /// will be zero delay.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is suspended.
+        /// 
+        /// Suspended instances can be resumed using the resumeInstances
+        /// method.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3453,7 +4462,31 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be immediately suspended. You can only specify instances that are running in this request. This method reduces the targetSize and increases the targetSuspendedSize of the managed instance group by the number of instances that you suspend. The suspendInstances operation is marked DONE if the suspendInstances request is successful. The underlying actions take additional time. You must separately verify the status of the SUSPENDING action with the listmanagedinstances method. If the standbyPolicy.initialDelaySec field is set, the group delays suspension of the instances until initialDelaySec have passed from instance.creationTimestamp (that is, when the instance was created). This delay gives your application time to set itself up and initialize on the instance. If more than initialDelaySec seconds have passed since instance.creationTimestamp when this method is called, there will be zero delay. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is suspended. Suspended instances can be resumed using the resumeInstances method. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// immediately suspended. You can only specify instances that are running in
+        /// this request. This method reduces thetargetSize and increases the targetSuspendedSize
+        /// of the managed instance group by the number of instances that you suspend.
+        /// The suspendInstances operation is marked DONE if
+        /// the suspendInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theSUSPENDING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the standbyPolicy.initialDelaySec field is set, the group
+        /// delays suspension of the instances until initialDelaySec have
+        /// passed from instance.creationTimestamp (that is, when the
+        /// instance was created). This delay gives your application time to
+        /// set itself up and initialize on the instance. If more thaninitialDelaySec seconds have passed sinceinstance.creationTimestamp when this method is called, there
+        /// will be zero delay.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is suspended.
+        /// 
+        /// Suspended instances can be resumed using the resumeInstances
+        /// method.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3473,7 +4506,9 @@ namespace Google.Cloud.Compute.V1
             SuspendInstancesAsync(project, region, instanceGroupManager, regionInstanceGroupManagersSuspendInstancesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Inserts or updates per-instance configurations for the managed instance group. perInstanceConfig.name serves as a key used to distinguish whether to perform insert or patch.
+        /// Inserts or updates per-instance configurations for the managed instance
+        /// group. perInstanceConfig.name serves as a key used to
+        /// distinguish whether to perform insert or patch.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3482,7 +4517,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Inserts or updates per-instance configurations for the managed instance group. perInstanceConfig.name serves as a key used to distinguish whether to perform insert or patch.
+        /// Inserts or updates per-instance configurations for the managed instance
+        /// group. perInstanceConfig.name serves as a key used to
+        /// distinguish whether to perform insert or patch.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3491,7 +4528,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Inserts or updates per-instance configurations for the managed instance group. perInstanceConfig.name serves as a key used to distinguish whether to perform insert or patch.
+        /// Inserts or updates per-instance configurations for the managed instance
+        /// group. perInstanceConfig.name serves as a key used to
+        /// distinguish whether to perform insert or patch.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3527,7 +4566,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdatePerInstanceConfigsOperationsClient, callSettings);
 
         /// <summary>
-        /// Inserts or updates per-instance configurations for the managed instance group. perInstanceConfig.name serves as a key used to distinguish whether to perform insert or patch.
+        /// Inserts or updates per-instance configurations for the managed instance
+        /// group. perInstanceConfig.name serves as a key used to
+        /// distinguish whether to perform insert or patch.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3536,7 +4577,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region scoping this request, should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
-        /// The name of the managed instance group. It should conform to RFC1035.
+        /// The name of the managed instance group.
+        /// It should conform to RFC1035.
         /// </param>
         /// <param name="regionInstanceGroupManagerUpdateInstanceConfigReqResource">
         /// The body resource for this request
@@ -3553,7 +4595,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Inserts or updates per-instance configurations for the managed instance group. perInstanceConfig.name serves as a key used to distinguish whether to perform insert or patch.
+        /// Inserts or updates per-instance configurations for the managed instance
+        /// group. perInstanceConfig.name serves as a key used to
+        /// distinguish whether to perform insert or patch.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3562,7 +4606,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region scoping this request, should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
-        /// The name of the managed instance group. It should conform to RFC1035.
+        /// The name of the managed instance group.
+        /// It should conform to RFC1035.
         /// </param>
         /// <param name="regionInstanceGroupManagerUpdateInstanceConfigReqResource">
         /// The body resource for this request
@@ -3579,7 +4624,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Inserts or updates per-instance configurations for the managed instance group. perInstanceConfig.name serves as a key used to distinguish whether to perform insert or patch.
+        /// Inserts or updates per-instance configurations for the managed instance
+        /// group. perInstanceConfig.name serves as a key used to
+        /// distinguish whether to perform insert or patch.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3588,7 +4635,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region scoping this request, should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
-        /// The name of the managed instance group. It should conform to RFC1035.
+        /// The name of the managed instance group.
+        /// It should conform to RFC1035.
         /// </param>
         /// <param name="regionInstanceGroupManagerUpdateInstanceConfigReqResource">
         /// The body resource for this request
@@ -3862,7 +4910,21 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient AbandonInstancesOperationsClient { get; }
 
         /// <summary>
-        /// Flags the specified instances to be immediately removed from the managed instance group. Abandoning an instance does not delete the instance, but it does remove the instance from any target pools that are applied by the managed instance group. This method reduces the targetSize of the managed instance group by the number of instances that you abandon. This operation is marked as DONE when the action is scheduled even if the instances have not yet been removed from the group. You must separately verify the status of the abandoning action with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances to be immediately removed from the managed
+        /// instance group. Abandoning an instance does not delete the
+        /// instance, but it does remove the instance from any target pools that are
+        /// applied by the managed instance group. This method reduces thetargetSize of the managed instance group by the
+        /// number of instances that you abandon. This operation is marked asDONE when the action is scheduled even if the instances have
+        /// not yet been removed from the group. You must separately verify the
+        /// status of the abandoning action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3877,7 +4939,21 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Flags the specified instances to be immediately removed from the managed instance group. Abandoning an instance does not delete the instance, but it does remove the instance from any target pools that are applied by the managed instance group. This method reduces the targetSize of the managed instance group by the number of instances that you abandon. This operation is marked as DONE when the action is scheduled even if the instances have not yet been removed from the group. You must separately verify the status of the abandoning action with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances to be immediately removed from the managed
+        /// instance group. Abandoning an instance does not delete the
+        /// instance, but it does remove the instance from any target pools that are
+        /// applied by the managed instance group. This method reduces thetargetSize of the managed instance group by the
+        /// number of instances that you abandon. This operation is marked asDONE when the action is scheduled even if the instances have
+        /// not yet been removed from the group. You must separately verify the
+        /// status of the abandoning action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3928,7 +5004,12 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient CreateInstancesOperationsClient { get; }
 
         /// <summary>
-        /// Creates instances with per-instance configurations in this regional managed instance group. Instances are created using the current instance template. The create instances operation is marked DONE if the createInstances request is successful. The underlying actions take additional time. You must separately verify the status of the creating or actions with the listmanagedinstances method.
+        /// Creates instances with per-instance configurations in this regional managed
+        /// instance group. Instances are created using the current instance template.
+        /// The create instances operation is marked DONE if
+        /// the createInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of thecreating or actions with the listmanagedinstances
+        /// method.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3943,7 +5024,12 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates instances with per-instance configurations in this regional managed instance group. Instances are created using the current instance template. The create instances operation is marked DONE if the createInstances request is successful. The underlying actions take additional time. You must separately verify the status of the creating or actions with the listmanagedinstances method.
+        /// Creates instances with per-instance configurations in this regional managed
+        /// instance group. Instances are created using the current instance template.
+        /// The create instances operation is marked DONE if
+        /// the createInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of thecreating or actions with the listmanagedinstances
+        /// method.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3961,7 +5047,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient DeleteOperationsClient { get; }
 
         /// <summary>
-        /// Deletes the specified managed instance group and all of the instances in that group.
+        /// Deletes the specified managed instance group and all of the instances
+        /// in that group.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3976,7 +5063,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Deletes the specified managed instance group and all of the instances in that group.
+        /// Deletes the specified managed instance group and all of the instances
+        /// in that group.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3994,7 +5082,21 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient DeleteInstancesOperationsClient { get; }
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be immediately deleted. The instances are also removed from any target pools of which they were a member. This method reduces the targetSize of the managed instance group by the number of instances that you delete. The deleteInstances operation is marked DONE if the deleteInstances request is successful. The underlying actions take additional time. You must separately verify the status of the deleting action with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// immediately deleted. The instances are also removed from any target
+        /// pools of which they were a member. This method reduces thetargetSize of the managed instance group by the number of
+        /// instances that you delete.
+        /// The deleteInstances operation is marked DONE if
+        /// the deleteInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of thedeleting action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4009,7 +5111,21 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be immediately deleted. The instances are also removed from any target pools of which they were a member. This method reduces the targetSize of the managed instance group by the number of instances that you delete. The deleteInstances operation is marked DONE if the deleteInstances request is successful. The underlying actions take additional time. You must separately verify the status of the deleting action with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// immediately deleted. The instances are also removed from any target
+        /// pools of which they were a member. This method reduces thetargetSize of the managed instance group by the number of
+        /// instances that you delete.
+        /// The deleteInstances operation is marked DONE if
+        /// the deleteInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of thedeleting action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4027,7 +5143,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient DeletePerInstanceConfigsOperationsClient { get; }
 
         /// <summary>
-        /// Deletes selected per-instance configurations for the managed instance group.
+        /// Deletes selected per-instance configurations for the managed instance
+        /// group.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4042,7 +5159,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Deletes selected per-instance configurations for the managed instance group.
+        /// Deletes selected per-instance configurations for the managed instance
+        /// group.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4084,7 +5202,15 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a managed instance group using the information that you specify in the request. After the group is created, instances in the group are created using the specified instance template. This operation is marked as DONE when the group is created even if the instances in the group have not yet been created. You must separately verify the status of the individual instances with the listmanagedinstances method. A regional managed instance group can contain up to 2000 instances.
+        /// Creates a managed instance group using the information that you specify
+        /// in the request. After the group is created, instances in the group are
+        /// created using the specified instance template.
+        /// This operation is marked as DONE when the group is created
+        /// even if the instances in the group have not yet been created. You must
+        /// separately verify the status of the individual instances with thelistmanagedinstances
+        /// method.
+        /// 
+        /// A regional managed instance group can contain up to 2000 instances.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4099,7 +5225,15 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a managed instance group using the information that you specify in the request. After the group is created, instances in the group are created using the specified instance template. This operation is marked as DONE when the group is created even if the instances in the group have not yet been created. You must separately verify the status of the individual instances with the listmanagedinstances method. A regional managed instance group can contain up to 2000 instances.
+        /// Creates a managed instance group using the information that you specify
+        /// in the request. After the group is created, instances in the group are
+        /// created using the specified instance template.
+        /// This operation is marked as DONE when the group is created
+        /// even if the instances in the group have not yet been created. You must
+        /// separately verify the status of the individual instances with thelistmanagedinstances
+        /// method.
+        /// 
+        /// A regional managed instance group can contain up to 2000 instances.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4114,7 +5248,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of managed instance groups that are contained within the specified region.
+        /// Retrieves the list of managed instance groups that are contained
+        /// within the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4126,7 +5261,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of managed instance groups that are contained within the specified region.
+        /// Retrieves the list of managed instance groups that are contained
+        /// within the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4138,7 +5274,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists all errors thrown by actions on instances for a given regional managed instance group. The filter and orderBy query parameters are not supported.
+        /// Lists all errors thrown by actions on instances for a given regional
+        /// managed instance group. The filter andorderBy query parameters are not supported.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4150,7 +5287,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists all errors thrown by actions on instances for a given regional managed instance group. The filter and orderBy query parameters are not supported.
+        /// Lists all errors thrown by actions on instances for a given regional
+        /// managed instance group. The filter andorderBy query parameters are not supported.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4162,7 +5300,12 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists the instances in the managed instance group and instances that are scheduled to be created. The list includes any current actions that the group has scheduled for its instances. The orderBy query parameter is not supported. The `pageToken` query parameter is supported only if the group's `listManagedInstancesResults` field is set to `PAGINATED`.
+        /// Lists the instances in the managed instance group and instances that are
+        /// scheduled to be created. The list includes any current actions
+        /// that the group has scheduled for its instances. The orderBy
+        /// query parameter is not supported.   The `pageToken` query parameter is
+        /// supported only if the group's `listManagedInstancesResults` field is set
+        /// to `PAGINATED`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4174,7 +5317,12 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists the instances in the managed instance group and instances that are scheduled to be created. The list includes any current actions that the group has scheduled for its instances. The orderBy query parameter is not supported. The `pageToken` query parameter is supported only if the group's `listManagedInstancesResults` field is set to `PAGINATED`.
+        /// Lists the instances in the managed instance group and instances that are
+        /// scheduled to be created. The list includes any current actions
+        /// that the group has scheduled for its instances. The orderBy
+        /// query parameter is not supported.   The `pageToken` query parameter is
+        /// supported only if the group's `listManagedInstancesResults` field is set
+        /// to `PAGINATED`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4186,7 +5334,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists all of the per-instance configurations defined for the managed instance group. The orderBy query parameter is not supported.
+        /// Lists all of the per-instance configurations defined for the managed
+        /// instance group. The orderBy query parameter is not supported.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4198,7 +5347,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists all of the per-instance configurations defined for the managed instance group. The orderBy query parameter is not supported.
+        /// Lists all of the per-instance configurations defined for the managed
+        /// instance group. The orderBy query parameter is not supported.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4213,7 +5363,21 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient PatchOperationsClient { get; }
 
         /// <summary>
-        /// Updates a managed instance group using the information that you specify in the request. This operation is marked as DONE when the group is patched even if the instances in the group are still in the process of being patched. You must separately verify the status of the individual instances with the listmanagedinstances method. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. If you update your group to specify a new template or instance configuration, it's possible that your intended specification for each VM in the group is different from the current state of that VM. To learn how to apply an updated configuration to the VMs in a MIG, see Updating instances in a MIG.
+        /// Updates a managed instance group using the information that you specify
+        /// in the request.
+        /// This operation is marked as DONE when the group is patched
+        /// even if the instances in the group are still in the process of being
+        /// patched. You must separately verify the status of the individual instances
+        /// with the listmanagedinstances
+        /// method. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
+        /// 
+        /// If you update your group to specify a new template or instance
+        /// configuration, it's possible that your intended specification for each VM
+        /// in the group is different from the current state of that VM. To learn how
+        /// to apply an updated configuration to the VMs in a MIG, seeUpdating instances in
+        /// a MIG.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4228,7 +5392,21 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Updates a managed instance group using the information that you specify in the request. This operation is marked as DONE when the group is patched even if the instances in the group are still in the process of being patched. You must separately verify the status of the individual instances with the listmanagedinstances method. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. If you update your group to specify a new template or instance configuration, it's possible that your intended specification for each VM in the group is different from the current state of that VM. To learn how to apply an updated configuration to the VMs in a MIG, see Updating instances in a MIG.
+        /// Updates a managed instance group using the information that you specify
+        /// in the request.
+        /// This operation is marked as DONE when the group is patched
+        /// even if the instances in the group are still in the process of being
+        /// patched. You must separately verify the status of the individual instances
+        /// with the listmanagedinstances
+        /// method. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
+        /// 
+        /// If you update your group to specify a new template or instance
+        /// configuration, it's possible that your intended specification for each VM
+        /// in the group is different from the current state of that VM. To learn how
+        /// to apply an updated configuration to the VMs in a MIG, seeUpdating instances in
+        /// a MIG.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4246,7 +5424,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient PatchPerInstanceConfigsOperationsClient { get; }
 
         /// <summary>
-        /// Inserts or patches per-instance configurations for the managed instance group. perInstanceConfig.name serves as a key used to distinguish whether to perform insert or patch.
+        /// Inserts or patches per-instance configurations for the managed instance
+        /// group. perInstanceConfig.name serves as a key used to
+        /// distinguish whether to perform insert or patch.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4261,7 +5441,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Inserts or patches per-instance configurations for the managed instance group. perInstanceConfig.name serves as a key used to distinguish whether to perform insert or patch.
+        /// Inserts or patches per-instance configurations for the managed instance
+        /// group. perInstanceConfig.name serves as a key used to
+        /// distinguish whether to perform insert or patch.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4279,7 +5461,19 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient RecreateInstancesOperationsClient { get; }
 
         /// <summary>
-        /// Flags the specified VM instances in the managed instance group to be immediately recreated. Each instance is recreated using the group's current configuration. This operation is marked as DONE when the flag is set even if the instances have not yet been recreated. You must separately verify the status of each instance by checking its currentAction field; for more information, see Checking the status of managed instances. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified VM instances in the managed instance group to be
+        /// immediately recreated. Each instance is recreated using the group's current
+        /// configuration. This operation is marked as DONE when the flag
+        /// is set even if the instances have not yet been recreated. You must
+        /// separately verify the status of each instance by checking itscurrentAction field; for more information, see Checking
+        /// the status of managed instances.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4294,7 +5488,19 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Flags the specified VM instances in the managed instance group to be immediately recreated. Each instance is recreated using the group's current configuration. This operation is marked as DONE when the flag is set even if the instances have not yet been recreated. You must separately verify the status of each instance by checking its currentAction field; for more information, see Checking the status of managed instances. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified VM instances in the managed instance group to be
+        /// immediately recreated. Each instance is recreated using the group's current
+        /// configuration. This operation is marked as DONE when the flag
+        /// is set even if the instances have not yet been recreated. You must
+        /// separately verify the status of each instance by checking itscurrentAction field; for more information, see Checking
+        /// the status of managed instances.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4312,7 +5518,19 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient ResizeOperationsClient { get; }
 
         /// <summary>
-        /// Changes the intended size of the managed instance group. If you increase the size, the group creates new instances using the current instance template. If you decrease the size, the group deletes one or more instances. The resize operation is marked DONE if the resize request is successful. The underlying actions take additional time. You must separately verify the status of the creating or deleting actions with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted.
+        /// Changes the intended size of the managed instance group. If you increase
+        /// the size, the group creates new instances using the current instance
+        /// template. If you decrease the size, the group deletes one or more
+        /// instances.
+        /// 
+        /// The resize operation is marked DONE if theresize request is successful. The underlying actions take
+        /// additional time. You must separately verify the status of thecreating or deleting actions with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4327,7 +5545,19 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Changes the intended size of the managed instance group. If you increase the size, the group creates new instances using the current instance template. If you decrease the size, the group deletes one or more instances. The resize operation is marked DONE if the resize request is successful. The underlying actions take additional time. You must separately verify the status of the creating or deleting actions with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted.
+        /// Changes the intended size of the managed instance group. If you increase
+        /// the size, the group creates new instances using the current instance
+        /// template. If you decrease the size, the group deletes one or more
+        /// instances.
+        /// 
+        /// The resize operation is marked DONE if theresize request is successful. The underlying actions take
+        /// additional time. You must separately verify the status of thecreating or deleting actions with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is removed or deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4345,7 +5575,22 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient ResumeInstancesOperationsClient { get; }
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be resumed. This method increases the targetSize and decreases the targetSuspendedSize of the managed instance group by the number of instances that you resume. The resumeInstances operation is marked DONE if the resumeInstances request is successful. The underlying actions take additional time. You must separately verify the status of the RESUMING action with the listmanagedinstances method. In this request, you can only specify instances that are suspended. For example, if an instance was previously suspended using the suspendInstances method, it can be resumed using the resumeInstances method. If a health check is attached to the managed instance group, the specified instances will be verified as healthy after they are resumed. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// resumed. This method increases thetargetSize and decreases the targetSuspendedSize
+        /// of the managed instance group by the number of instances that you resume.
+        /// The resumeInstances operation is marked DONE if
+        /// the resumeInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theRESUMING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// In this request, you can only specify instances that are suspended. For
+        /// example, if an instance was previously suspended using the suspendInstances
+        /// method, it can be resumed using the resumeInstances method.
+        /// 
+        /// If a health check is attached to the managed instance group, the specified
+        /// instances will be verified as healthy after they are resumed.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4360,7 +5605,22 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be resumed. This method increases the targetSize and decreases the targetSuspendedSize of the managed instance group by the number of instances that you resume. The resumeInstances operation is marked DONE if the resumeInstances request is successful. The underlying actions take additional time. You must separately verify the status of the RESUMING action with the listmanagedinstances method. In this request, you can only specify instances that are suspended. For example, if an instance was previously suspended using the suspendInstances method, it can be resumed using the resumeInstances method. If a health check is attached to the managed instance group, the specified instances will be verified as healthy after they are resumed. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// resumed. This method increases thetargetSize and decreases the targetSuspendedSize
+        /// of the managed instance group by the number of instances that you resume.
+        /// The resumeInstances operation is marked DONE if
+        /// the resumeInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theRESUMING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// In this request, you can only specify instances that are suspended. For
+        /// example, if an instance was previously suspended using the suspendInstances
+        /// method, it can be resumed using the resumeInstances method.
+        /// 
+        /// If a health check is attached to the managed instance group, the specified
+        /// instances will be verified as healthy after they are resumed.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4378,7 +5638,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetInstanceTemplateOperationsClient { get; }
 
         /// <summary>
-        /// Sets the instance template to use when creating new instances or recreating instances in this group. Existing instances are not affected.
+        /// Sets the instance template to use when creating new instances or recreating
+        /// instances in this group. Existing instances are not affected.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4393,7 +5654,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the instance template to use when creating new instances or recreating instances in this group. Existing instances are not affected.
+        /// Sets the instance template to use when creating new instances or recreating
+        /// instances in this group. Existing instances are not affected.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4411,7 +5673,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetTargetPoolsOperationsClient { get; }
 
         /// <summary>
-        /// Modifies the target pools to which all new instances in this group are assigned. Existing instances in the group are not affected.
+        /// Modifies the target pools to which all new instances in this group are
+        /// assigned. Existing instances in the group are not affected.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4426,7 +5689,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Modifies the target pools to which all new instances in this group are assigned. Existing instances in the group are not affected.
+        /// Modifies the target pools to which all new instances in this group are
+        /// assigned. Existing instances in the group are not affected.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4444,7 +5708,22 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient StartInstancesOperationsClient { get; }
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be started. This method increases the targetSize and decreases the targetStoppedSize of the managed instance group by the number of instances that you start. The startInstances operation is marked DONE if the startInstances request is successful. The underlying actions take additional time. You must separately verify the status of the STARTING action with the listmanagedinstances method. In this request, you can only specify instances that are stopped. For example, if an instance was previously stopped using the stopInstances method, it can be started using the startInstances method. If a health check is attached to the managed instance group, the specified instances will be verified as healthy after they are started. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// started. This method increases thetargetSize and decreases the targetStoppedSize
+        /// of the managed instance group by the number of instances that you start.
+        /// The startInstances operation is marked DONE if
+        /// the startInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theSTARTING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// In this request, you can only specify instances that are stopped. For
+        /// example, if an instance was previously stopped using the stopInstances
+        /// method, it can be started using the startInstances method.
+        /// 
+        /// If a health check is attached to the managed instance group, the specified
+        /// instances will be verified as healthy after they are started.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4459,7 +5738,22 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be started. This method increases the targetSize and decreases the targetStoppedSize of the managed instance group by the number of instances that you start. The startInstances operation is marked DONE if the startInstances request is successful. The underlying actions take additional time. You must separately verify the status of the STARTING action with the listmanagedinstances method. In this request, you can only specify instances that are stopped. For example, if an instance was previously stopped using the stopInstances method, it can be started using the startInstances method. If a health check is attached to the managed instance group, the specified instances will be verified as healthy after they are started. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// started. This method increases thetargetSize and decreases the targetStoppedSize
+        /// of the managed instance group by the number of instances that you start.
+        /// The startInstances operation is marked DONE if
+        /// the startInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theSTARTING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// In this request, you can only specify instances that are stopped. For
+        /// example, if an instance was previously stopped using the stopInstances
+        /// method, it can be started using the startInstances method.
+        /// 
+        /// If a health check is attached to the managed instance group, the specified
+        /// instances will be verified as healthy after they are started.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4477,7 +5771,31 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient StopInstancesOperationsClient { get; }
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be immediately stopped. You can only specify instances that are running in this request. This method reduces the targetSize and increases the targetStoppedSize of the managed instance group by the number of instances that you stop. The stopInstances operation is marked DONE if the stopInstances request is successful. The underlying actions take additional time. You must separately verify the status of the STOPPING action with the listmanagedinstances method. If the standbyPolicy.initialDelaySec field is set, the group delays stopping the instances until initialDelaySec have passed from instance.creationTimestamp (that is, when the instance was created). This delay gives your application time to set itself up and initialize on the instance. If more than initialDelaySec seconds have passed since instance.creationTimestamp when this method is called, there will be zero delay. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is stopped. Stopped instances can be started using the startInstances method. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// immediately stopped. You can only specify instances that are running in
+        /// this request. This method reduces thetargetSize and increases the targetStoppedSize
+        /// of the managed instance group by the number of instances that you stop.
+        /// The stopInstances operation is marked DONE if
+        /// the stopInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theSTOPPING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the standbyPolicy.initialDelaySec field is set, the group
+        /// delays stopping the instances until initialDelaySec have
+        /// passed from instance.creationTimestamp (that is, when the
+        /// instance was created). This delay gives your application time to
+        /// set itself up and initialize on the instance. If more thaninitialDelaySec seconds have passed sinceinstance.creationTimestamp when this method is called, there
+        /// will be zero delay.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is stopped.
+        /// 
+        /// Stopped instances can be started using the startInstances
+        /// method.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4492,7 +5810,31 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be immediately stopped. You can only specify instances that are running in this request. This method reduces the targetSize and increases the targetStoppedSize of the managed instance group by the number of instances that you stop. The stopInstances operation is marked DONE if the stopInstances request is successful. The underlying actions take additional time. You must separately verify the status of the STOPPING action with the listmanagedinstances method. If the standbyPolicy.initialDelaySec field is set, the group delays stopping the instances until initialDelaySec have passed from instance.creationTimestamp (that is, when the instance was created). This delay gives your application time to set itself up and initialize on the instance. If more than initialDelaySec seconds have passed since instance.creationTimestamp when this method is called, there will be zero delay. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is stopped. Stopped instances can be started using the startInstances method. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// immediately stopped. You can only specify instances that are running in
+        /// this request. This method reduces thetargetSize and increases the targetStoppedSize
+        /// of the managed instance group by the number of instances that you stop.
+        /// The stopInstances operation is marked DONE if
+        /// the stopInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theSTOPPING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the standbyPolicy.initialDelaySec field is set, the group
+        /// delays stopping the instances until initialDelaySec have
+        /// passed from instance.creationTimestamp (that is, when the
+        /// instance was created). This delay gives your application time to
+        /// set itself up and initialize on the instance. If more thaninitialDelaySec seconds have passed sinceinstance.creationTimestamp when this method is called, there
+        /// will be zero delay.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is stopped.
+        /// 
+        /// Stopped instances can be started using the startInstances
+        /// method.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4510,7 +5852,31 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SuspendInstancesOperationsClient { get; }
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be immediately suspended. You can only specify instances that are running in this request. This method reduces the targetSize and increases the targetSuspendedSize of the managed instance group by the number of instances that you suspend. The suspendInstances operation is marked DONE if the suspendInstances request is successful. The underlying actions take additional time. You must separately verify the status of the SUSPENDING action with the listmanagedinstances method. If the standbyPolicy.initialDelaySec field is set, the group delays suspension of the instances until initialDelaySec have passed from instance.creationTimestamp (that is, when the instance was created). This delay gives your application time to set itself up and initialize on the instance. If more than initialDelaySec seconds have passed since instance.creationTimestamp when this method is called, there will be zero delay. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is suspended. Suspended instances can be resumed using the resumeInstances method. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// immediately suspended. You can only specify instances that are running in
+        /// this request. This method reduces thetargetSize and increases the targetSuspendedSize
+        /// of the managed instance group by the number of instances that you suspend.
+        /// The suspendInstances operation is marked DONE if
+        /// the suspendInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theSUSPENDING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the standbyPolicy.initialDelaySec field is set, the group
+        /// delays suspension of the instances until initialDelaySec have
+        /// passed from instance.creationTimestamp (that is, when the
+        /// instance was created). This delay gives your application time to
+        /// set itself up and initialize on the instance. If more thaninitialDelaySec seconds have passed sinceinstance.creationTimestamp when this method is called, there
+        /// will be zero delay.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is suspended.
+        /// 
+        /// Suspended instances can be resumed using the resumeInstances
+        /// method.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4525,7 +5891,31 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Flags the specified instances in the managed instance group to be immediately suspended. You can only specify instances that are running in this request. This method reduces the targetSize and increases the targetSuspendedSize of the managed instance group by the number of instances that you suspend. The suspendInstances operation is marked DONE if the suspendInstances request is successful. The underlying actions take additional time. You must separately verify the status of the SUSPENDING action with the listmanagedinstances method. If the standbyPolicy.initialDelaySec field is set, the group delays suspension of the instances until initialDelaySec have passed from instance.creationTimestamp (that is, when the instance was created). This delay gives your application time to set itself up and initialize on the instance. If more than initialDelaySec seconds have passed since instance.creationTimestamp when this method is called, there will be zero delay. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is suspended. Suspended instances can be resumed using the resumeInstances method. You can specify a maximum of 1000 instances with this method per request.
+        /// Flags the specified instances in the managed instance group to be
+        /// immediately suspended. You can only specify instances that are running in
+        /// this request. This method reduces thetargetSize and increases the targetSuspendedSize
+        /// of the managed instance group by the number of instances that you suspend.
+        /// The suspendInstances operation is marked DONE if
+        /// the suspendInstances request is successful. The underlying
+        /// actions take additional time. You must separately verify the status of theSUSPENDING action with thelistmanagedinstances
+        /// method.
+        /// 
+        /// If the standbyPolicy.initialDelaySec field is set, the group
+        /// delays suspension of the instances until initialDelaySec have
+        /// passed from instance.creationTimestamp (that is, when the
+        /// instance was created). This delay gives your application time to
+        /// set itself up and initialize on the instance. If more thaninitialDelaySec seconds have passed sinceinstance.creationTimestamp when this method is called, there
+        /// will be zero delay.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration has elapsed before the VM instance is suspended.
+        /// 
+        /// Suspended instances can be resumed using the resumeInstances
+        /// method.
+        /// 
+        /// You can specify a maximum of 1000 instances with this method per request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4543,7 +5933,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient UpdatePerInstanceConfigsOperationsClient { get; }
 
         /// <summary>
-        /// Inserts or updates per-instance configurations for the managed instance group. perInstanceConfig.name serves as a key used to distinguish whether to perform insert or patch.
+        /// Inserts or updates per-instance configurations for the managed instance
+        /// group. perInstanceConfig.name serves as a key used to
+        /// distinguish whether to perform insert or patch.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4558,7 +5950,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Inserts or updates per-instance configurations for the managed instance group. perInstanceConfig.name serves as a key used to distinguish whether to perform insert or patch.
+        /// Inserts or updates per-instance configurations for the managed instance
+        /// group. perInstanceConfig.name serves as a key used to
+        /// distinguish whether to perform insert or patch.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

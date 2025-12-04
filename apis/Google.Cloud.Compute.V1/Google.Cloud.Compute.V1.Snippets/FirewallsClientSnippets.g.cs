@@ -678,6 +678,74 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissionsRequestObject()
+        {
+            // Snippet: TestIamPermissions(TestIamPermissionsFirewallRequest, CallSettings)
+            // Create client
+            FirewallsClient firewallsClient = FirewallsClient.Create();
+            // Initialize request argument(s)
+            TestIamPermissionsFirewallRequest request = new TestIamPermissionsFirewallRequest
+            {
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = firewallsClient.TestIamPermissions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsRequestObjectAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(TestIamPermissionsFirewallRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(TestIamPermissionsFirewallRequest, CancellationToken)
+            // Create client
+            FirewallsClient firewallsClient = await FirewallsClient.CreateAsync();
+            // Initialize request argument(s)
+            TestIamPermissionsFirewallRequest request = new TestIamPermissionsFirewallRequest
+            {
+                Resource = "",
+                Project = "",
+                TestPermissionsRequestResource = new TestPermissionsRequest(),
+            };
+            // Make the request
+            TestPermissionsResponse response = await firewallsClient.TestIamPermissionsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissions</summary>
+        public void TestIamPermissions()
+        {
+            // Snippet: TestIamPermissions(string, string, TestPermissionsRequest, CallSettings)
+            // Create client
+            FirewallsClient firewallsClient = FirewallsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = firewallsClient.TestIamPermissions(project, resource, testPermissionsRequestResource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestIamPermissionsAsync</summary>
+        public async Task TestIamPermissionsAsync()
+        {
+            // Snippet: TestIamPermissionsAsync(string, string, TestPermissionsRequest, CallSettings)
+            // Additional: TestIamPermissionsAsync(string, string, TestPermissionsRequest, CancellationToken)
+            // Create client
+            FirewallsClient firewallsClient = await FirewallsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string resource = "";
+            TestPermissionsRequest testPermissionsRequestResource = new TestPermissionsRequest();
+            // Make the request
+            TestPermissionsResponse response = await firewallsClient.TestIamPermissionsAsync(project, resource, testPermissionsRequestResource);
+            // End snippet
+        }
+
         /// <summary>Snippet for Update</summary>
         public void UpdateRequestObject()
         {

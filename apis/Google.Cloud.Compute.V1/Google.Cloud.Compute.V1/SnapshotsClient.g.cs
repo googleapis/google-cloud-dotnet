@@ -382,7 +382,14 @@ namespace Google.Cloud.Compute.V1
         public virtual Snapshots.SnapshotsClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified Snapshot resource. Keep in mind that deleting a single snapshot might not necessarily delete all the data on that snapshot. If any data on the snapshot that is marked for deletion is needed for subsequent snapshots, the data will be moved to the next corresponding snapshot. For more information, see Deleting snapshots.
+        /// Deletes the specified Snapshot resource. Keep in mind that deleting
+        /// a single snapshot might not necessarily delete all the data on that
+        /// snapshot. If any data on the snapshot that is marked for deletion is
+        /// needed for subsequent snapshots, the data will be moved to the next
+        /// corresponding snapshot.
+        /// 
+        /// For more information, seeDeleting
+        /// snapshots.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -391,7 +398,14 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified Snapshot resource. Keep in mind that deleting a single snapshot might not necessarily delete all the data on that snapshot. If any data on the snapshot that is marked for deletion is needed for subsequent snapshots, the data will be moved to the next corresponding snapshot. For more information, see Deleting snapshots.
+        /// Deletes the specified Snapshot resource. Keep in mind that deleting
+        /// a single snapshot might not necessarily delete all the data on that
+        /// snapshot. If any data on the snapshot that is marked for deletion is
+        /// needed for subsequent snapshots, the data will be moved to the next
+        /// corresponding snapshot.
+        /// 
+        /// For more information, seeDeleting
+        /// snapshots.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -400,7 +414,14 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified Snapshot resource. Keep in mind that deleting a single snapshot might not necessarily delete all the data on that snapshot. If any data on the snapshot that is marked for deletion is needed for subsequent snapshots, the data will be moved to the next corresponding snapshot. For more information, see Deleting snapshots.
+        /// Deletes the specified Snapshot resource. Keep in mind that deleting
+        /// a single snapshot might not necessarily delete all the data on that
+        /// snapshot. If any data on the snapshot that is marked for deletion is
+        /// needed for subsequent snapshots, the data will be moved to the next
+        /// corresponding snapshot.
+        /// 
+        /// For more information, seeDeleting
+        /// snapshots.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -435,7 +456,14 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes the specified Snapshot resource. Keep in mind that deleting a single snapshot might not necessarily delete all the data on that snapshot. If any data on the snapshot that is marked for deletion is needed for subsequent snapshots, the data will be moved to the next corresponding snapshot. For more information, see Deleting snapshots.
+        /// Deletes the specified Snapshot resource. Keep in mind that deleting
+        /// a single snapshot might not necessarily delete all the data on that
+        /// snapshot. If any data on the snapshot that is marked for deletion is
+        /// needed for subsequent snapshots, the data will be moved to the next
+        /// corresponding snapshot.
+        /// 
+        /// For more information, seeDeleting
+        /// snapshots.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -453,7 +481,14 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified Snapshot resource. Keep in mind that deleting a single snapshot might not necessarily delete all the data on that snapshot. If any data on the snapshot that is marked for deletion is needed for subsequent snapshots, the data will be moved to the next corresponding snapshot. For more information, see Deleting snapshots.
+        /// Deletes the specified Snapshot resource. Keep in mind that deleting
+        /// a single snapshot might not necessarily delete all the data on that
+        /// snapshot. If any data on the snapshot that is marked for deletion is
+        /// needed for subsequent snapshots, the data will be moved to the next
+        /// corresponding snapshot.
+        /// 
+        /// For more information, seeDeleting
+        /// snapshots.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -471,7 +506,14 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified Snapshot resource. Keep in mind that deleting a single snapshot might not necessarily delete all the data on that snapshot. If any data on the snapshot that is marked for deletion is needed for subsequent snapshots, the data will be moved to the next corresponding snapshot. For more information, see Deleting snapshots.
+        /// Deletes the specified Snapshot resource. Keep in mind that deleting
+        /// a single snapshot might not necessarily delete all the data on that
+        /// snapshot. If any data on the snapshot that is marked for deletion is
+        /// needed for subsequent snapshots, the data will be moved to the next
+        /// corresponding snapshot.
+        /// 
+        /// For more information, seeDeleting
+        /// snapshots.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -562,7 +604,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, snapshot, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -571,7 +614,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -580,7 +624,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -589,7 +634,8 @@ namespace Google.Cloud.Compute.V1
             GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -607,7 +653,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -625,7 +672,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -639,7 +687,11 @@ namespace Google.Cloud.Compute.V1
             GetIamPolicyAsync(project, resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a snapshot in the specified project using the data included in the request. For regular snapshot creation, consider using this method instead of disks.createSnapshot, as this method supports more features, such as creating snapshots in a project different from the source disk project.
+        /// Creates a snapshot in the specified project using the data included
+        /// in the request. For regular snapshot creation, consider using this method
+        /// instead of disks.createSnapshot,
+        /// as this method supports more features, such as creating snapshots in a
+        /// project different from the source disk project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -648,7 +700,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a snapshot in the specified project using the data included in the request. For regular snapshot creation, consider using this method instead of disks.createSnapshot, as this method supports more features, such as creating snapshots in a project different from the source disk project.
+        /// Creates a snapshot in the specified project using the data included
+        /// in the request. For regular snapshot creation, consider using this method
+        /// instead of disks.createSnapshot,
+        /// as this method supports more features, such as creating snapshots in a
+        /// project different from the source disk project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -657,7 +713,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a snapshot in the specified project using the data included in the request. For regular snapshot creation, consider using this method instead of disks.createSnapshot, as this method supports more features, such as creating snapshots in a project different from the source disk project.
+        /// Creates a snapshot in the specified project using the data included
+        /// in the request. For regular snapshot creation, consider using this method
+        /// instead of disks.createSnapshot,
+        /// as this method supports more features, such as creating snapshots in a
+        /// project different from the source disk project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -692,7 +752,11 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a snapshot in the specified project using the data included in the request. For regular snapshot creation, consider using this method instead of disks.createSnapshot, as this method supports more features, such as creating snapshots in a project different from the source disk project.
+        /// Creates a snapshot in the specified project using the data included
+        /// in the request. For regular snapshot creation, consider using this method
+        /// instead of disks.createSnapshot,
+        /// as this method supports more features, such as creating snapshots in a
+        /// project different from the source disk project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -710,7 +774,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a snapshot in the specified project using the data included in the request. For regular snapshot creation, consider using this method instead of disks.createSnapshot, as this method supports more features, such as creating snapshots in a project different from the source disk project.
+        /// Creates a snapshot in the specified project using the data included
+        /// in the request. For regular snapshot creation, consider using this method
+        /// instead of disks.createSnapshot,
+        /// as this method supports more features, such as creating snapshots in a
+        /// project different from the source disk project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -728,7 +796,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a snapshot in the specified project using the data included in the request. For regular snapshot creation, consider using this method instead of disks.createSnapshot, as this method supports more features, such as creating snapshots in a project different from the source disk project.
+        /// Creates a snapshot in the specified project using the data included
+        /// in the request. For regular snapshot creation, consider using this method
+        /// instead of disks.createSnapshot,
+        /// as this method supports more features, such as creating snapshots in a
+        /// project different from the source disk project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -742,7 +814,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, snapshotResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the list of Snapshot resources contained within the specified project.
+        /// Retrieves the list of Snapshot resources contained within
+        /// the specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -751,7 +824,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of Snapshot resources contained within the specified project.
+        /// Retrieves the list of Snapshot resources contained within
+        /// the specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -760,7 +834,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of Snapshot resources contained within the specified project.
+        /// Retrieves the list of Snapshot resources contained within
+        /// the specified project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -793,7 +868,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of Snapshot resources contained within the specified project.
+        /// Retrieves the list of Snapshot resources contained within
+        /// the specified project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -826,7 +902,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -835,7 +912,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -844,7 +922,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -853,7 +932,8 @@ namespace Google.Cloud.Compute.V1
             SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -875,7 +955,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -897,7 +978,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -914,7 +996,8 @@ namespace Google.Cloud.Compute.V1
             SetIamPolicyAsync(project, resource, globalSetPolicyRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the labels on a snapshot. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on a snapshot. To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -923,7 +1006,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the labels on a snapshot. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on a snapshot. To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -932,7 +1016,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the labels on a snapshot. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on a snapshot. To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -967,7 +1052,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetLabelsOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets the labels on a snapshot. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on a snapshot. To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -989,7 +1075,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the labels on a snapshot. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on a snapshot. To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1011,7 +1098,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the labels on a snapshot. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on a snapshot. To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1226,7 +1314,14 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient DeleteOperationsClient { get; }
 
         /// <summary>
-        /// Deletes the specified Snapshot resource. Keep in mind that deleting a single snapshot might not necessarily delete all the data on that snapshot. If any data on the snapshot that is marked for deletion is needed for subsequent snapshots, the data will be moved to the next corresponding snapshot. For more information, see Deleting snapshots.
+        /// Deletes the specified Snapshot resource. Keep in mind that deleting
+        /// a single snapshot might not necessarily delete all the data on that
+        /// snapshot. If any data on the snapshot that is marked for deletion is
+        /// needed for subsequent snapshots, the data will be moved to the next
+        /// corresponding snapshot.
+        /// 
+        /// For more information, seeDeleting
+        /// snapshots.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1241,7 +1336,14 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Deletes the specified Snapshot resource. Keep in mind that deleting a single snapshot might not necessarily delete all the data on that snapshot. If any data on the snapshot that is marked for deletion is needed for subsequent snapshots, the data will be moved to the next corresponding snapshot. For more information, see Deleting snapshots.
+        /// Deletes the specified Snapshot resource. Keep in mind that deleting
+        /// a single snapshot might not necessarily delete all the data on that
+        /// snapshot. If any data on the snapshot that is marked for deletion is
+        /// needed for subsequent snapshots, the data will be moved to the next
+        /// corresponding snapshot.
+        /// 
+        /// For more information, seeDeleting
+        /// snapshots.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1280,7 +1382,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1292,7 +1395,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1307,7 +1411,11 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a snapshot in the specified project using the data included in the request. For regular snapshot creation, consider using this method instead of disks.createSnapshot, as this method supports more features, such as creating snapshots in a project different from the source disk project.
+        /// Creates a snapshot in the specified project using the data included
+        /// in the request. For regular snapshot creation, consider using this method
+        /// instead of disks.createSnapshot,
+        /// as this method supports more features, such as creating snapshots in a
+        /// project different from the source disk project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1322,7 +1430,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a snapshot in the specified project using the data included in the request. For regular snapshot creation, consider using this method instead of disks.createSnapshot, as this method supports more features, such as creating snapshots in a project different from the source disk project.
+        /// Creates a snapshot in the specified project using the data included
+        /// in the request. For regular snapshot creation, consider using this method
+        /// instead of disks.createSnapshot,
+        /// as this method supports more features, such as creating snapshots in a
+        /// project different from the source disk project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1337,7 +1449,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of Snapshot resources contained within the specified project.
+        /// Retrieves the list of Snapshot resources contained within
+        /// the specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1349,7 +1462,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of Snapshot resources contained within the specified project.
+        /// Retrieves the list of Snapshot resources contained within
+        /// the specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1361,7 +1475,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1373,7 +1488,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1388,7 +1504,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetLabelsOperationsClient { get; }
 
         /// <summary>
-        /// Sets the labels on a snapshot. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on a snapshot. To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1403,7 +1520,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the labels on a snapshot. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on a snapshot. To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

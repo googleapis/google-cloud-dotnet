@@ -349,7 +349,10 @@ namespace Google.Cloud.Compute.V1
         public virtual InstanceGroupManagerResizeRequests.InstanceGroupManagerResizeRequestsClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Cancels the specified resize request and removes it from the queue. Cancelled resize request does no longer wait for the resources to be provisioned. Cancel is only possible for requests that are accepted in the queue.
+        /// Cancels the specified resize request and removes it from the queue.
+        /// Cancelled resize request does no longer wait for the resources to be
+        /// provisioned. Cancel is only possible for requests that are accepted in the
+        /// queue.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -358,7 +361,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Cancels the specified resize request and removes it from the queue. Cancelled resize request does no longer wait for the resources to be provisioned. Cancel is only possible for requests that are accepted in the queue.
+        /// Cancels the specified resize request and removes it from the queue.
+        /// Cancelled resize request does no longer wait for the resources to be
+        /// provisioned. Cancel is only possible for requests that are accepted in the
+        /// queue.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -367,7 +373,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Cancels the specified resize request and removes it from the queue. Cancelled resize request does no longer wait for the resources to be provisioned. Cancel is only possible for requests that are accepted in the queue.
+        /// Cancels the specified resize request and removes it from the queue.
+        /// Cancelled resize request does no longer wait for the resources to be
+        /// provisioned. Cancel is only possible for requests that are accepted in the
+        /// queue.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -402,19 +411,25 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CancelOperationsClient, callSettings);
 
         /// <summary>
-        /// Cancels the specified resize request and removes it from the queue. Cancelled resize request does no longer wait for the resources to be provisioned. Cancel is only possible for requests that are accepted in the queue.
+        /// Cancels the specified resize request and removes it from the queue.
+        /// Cancelled resize request does no longer wait for the resources to be
+        /// provisioned. Cancel is only possible for requests that are accepted in the
+        /// queue.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the managed instance group is located. The name should conform to RFC1035.
+        /// The name of thezone where the managed
+        /// instance group is located. The name should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
-        /// The name of the managed instance group. The name should conform to RFC1035 or be a resource ID.
+        /// The name of the managed instance group.
+        /// The name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="resizeRequest">
-        /// The name of the resize request to cancel. The name should conform to RFC1035 or be a resource ID.
+        /// The name of the resize request to cancel.
+        /// The name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -428,19 +443,25 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Cancels the specified resize request and removes it from the queue. Cancelled resize request does no longer wait for the resources to be provisioned. Cancel is only possible for requests that are accepted in the queue.
+        /// Cancels the specified resize request and removes it from the queue.
+        /// Cancelled resize request does no longer wait for the resources to be
+        /// provisioned. Cancel is only possible for requests that are accepted in the
+        /// queue.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the managed instance group is located. The name should conform to RFC1035.
+        /// The name of thezone where the managed
+        /// instance group is located. The name should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
-        /// The name of the managed instance group. The name should conform to RFC1035 or be a resource ID.
+        /// The name of the managed instance group.
+        /// The name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="resizeRequest">
-        /// The name of the resize request to cancel. The name should conform to RFC1035 or be a resource ID.
+        /// The name of the resize request to cancel.
+        /// The name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -454,19 +475,25 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Cancels the specified resize request and removes it from the queue. Cancelled resize request does no longer wait for the resources to be provisioned. Cancel is only possible for requests that are accepted in the queue.
+        /// Cancels the specified resize request and removes it from the queue.
+        /// Cancelled resize request does no longer wait for the resources to be
+        /// provisioned. Cancel is only possible for requests that are accepted in the
+        /// queue.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the managed instance group is located. The name should conform to RFC1035.
+        /// The name of thezone where the managed
+        /// instance group is located. The name should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
-        /// The name of the managed instance group. The name should conform to RFC1035 or be a resource ID.
+        /// The name of the managed instance group.
+        /// The name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="resizeRequest">
-        /// The name of the resize request to cancel. The name should conform to RFC1035 or be a resource ID.
+        /// The name of the resize request to cancel.
+        /// The name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -474,7 +501,9 @@ namespace Google.Cloud.Compute.V1
             CancelAsync(project, zone, instanceGroupManager, resizeRequest, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified, inactive resize request. Requests that are still active cannot be deleted. Deleting request does not delete instances that were provisioned previously.
+        /// Deletes the specified, inactive resize request. Requests that are still
+        /// active cannot be deleted. Deleting request does not delete instances that
+        /// were provisioned previously.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -483,7 +512,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified, inactive resize request. Requests that are still active cannot be deleted. Deleting request does not delete instances that were provisioned previously.
+        /// Deletes the specified, inactive resize request. Requests that are still
+        /// active cannot be deleted. Deleting request does not delete instances that
+        /// were provisioned previously.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -492,7 +523,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified, inactive resize request. Requests that are still active cannot be deleted. Deleting request does not delete instances that were provisioned previously.
+        /// Deletes the specified, inactive resize request. Requests that are still
+        /// active cannot be deleted. Deleting request does not delete instances that
+        /// were provisioned previously.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -527,19 +560,24 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes the specified, inactive resize request. Requests that are still active cannot be deleted. Deleting request does not delete instances that were provisioned previously.
+        /// Deletes the specified, inactive resize request. Requests that are still
+        /// active cannot be deleted. Deleting request does not delete instances that
+        /// were provisioned previously.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the managed instance group is located. The name should conform to RFC1035.
+        /// The name of thezone where the managed
+        /// instance group is located. The name should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
-        /// The name of the managed instance group. The name should conform to RFC1035 or be a resource ID.
+        /// The name of the managed instance group.
+        /// The name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="resizeRequest">
-        /// The name of the resize request to delete. The name should conform to RFC1035 or be a resource ID.
+        /// The name of the resize request to delete.
+        /// The name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -553,19 +591,24 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified, inactive resize request. Requests that are still active cannot be deleted. Deleting request does not delete instances that were provisioned previously.
+        /// Deletes the specified, inactive resize request. Requests that are still
+        /// active cannot be deleted. Deleting request does not delete instances that
+        /// were provisioned previously.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the managed instance group is located. The name should conform to RFC1035.
+        /// The name of thezone where the managed
+        /// instance group is located. The name should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
-        /// The name of the managed instance group. The name should conform to RFC1035 or be a resource ID.
+        /// The name of the managed instance group.
+        /// The name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="resizeRequest">
-        /// The name of the resize request to delete. The name should conform to RFC1035 or be a resource ID.
+        /// The name of the resize request to delete.
+        /// The name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -579,19 +622,24 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified, inactive resize request. Requests that are still active cannot be deleted. Deleting request does not delete instances that were provisioned previously.
+        /// Deletes the specified, inactive resize request. Requests that are still
+        /// active cannot be deleted. Deleting request does not delete instances that
+        /// were provisioned previously.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the managed instance group is located. The name should conform to RFC1035.
+        /// The name of thezone where the managed
+        /// instance group is located. The name should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
-        /// The name of the managed instance group. The name should conform to RFC1035 or be a resource ID.
+        /// The name of the managed instance group.
+        /// The name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="resizeRequest">
-        /// The name of the resize request to delete. The name should conform to RFC1035 or be a resource ID.
+        /// The name of the resize request to delete.
+        /// The name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -632,13 +680,16 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// Name of the href="/compute/docs/regions-zones/#available"&gt;zone scoping this request. Name should conform to RFC1035.
+        /// Name of the href="/compute/docs/regions-zones/#available"&gt;zone
+        /// scoping this request. Name should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
-        /// The name of the managed instance group. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the managed instance group.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="resizeRequest">
-        /// The name of the resize request. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the resize request.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -658,13 +709,16 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// Name of the href="/compute/docs/regions-zones/#available"&gt;zone scoping this request. Name should conform to RFC1035.
+        /// Name of the href="/compute/docs/regions-zones/#available"&gt;zone
+        /// scoping this request. Name should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
-        /// The name of the managed instance group. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the managed instance group.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="resizeRequest">
-        /// The name of the resize request. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the resize request.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -684,13 +738,16 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// Name of the href="/compute/docs/regions-zones/#available"&gt;zone scoping this request. Name should conform to RFC1035.
+        /// Name of the href="/compute/docs/regions-zones/#available"&gt;zone
+        /// scoping this request. Name should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
-        /// The name of the managed instance group. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the managed instance group.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="resizeRequest">
-        /// The name of the resize request. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the resize request.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -698,7 +755,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, zone, instanceGroupManager, resizeRequest, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new resize request that starts provisioning VMs immediately or queues VM creation.
+        /// Creates a new resize request that starts provisioning VMs immediately
+        /// or queues VM creation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -707,7 +765,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new resize request that starts provisioning VMs immediately or queues VM creation.
+        /// Creates a new resize request that starts provisioning VMs immediately
+        /// or queues VM creation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -716,7 +775,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new resize request that starts provisioning VMs immediately or queues VM creation.
+        /// Creates a new resize request that starts provisioning VMs immediately
+        /// or queues VM creation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -751,16 +811,21 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a new resize request that starts provisioning VMs immediately or queues VM creation.
+        /// Creates a new resize request that starts provisioning VMs immediately
+        /// or queues VM creation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the managed instance group is located and where the resize request will be created. Name should conform to RFC1035.
+        /// The name of thezone where the managed
+        /// instance group is located and where the resize request will be created.
+        /// Name should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
-        /// The name of the managed instance group to which the resize request will be added. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the managed instance group to which the resize request will
+        /// be added.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="instanceGroupManagerResizeRequestResource">
         /// The body resource for this request
@@ -777,16 +842,21 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new resize request that starts provisioning VMs immediately or queues VM creation.
+        /// Creates a new resize request that starts provisioning VMs immediately
+        /// or queues VM creation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the managed instance group is located and where the resize request will be created. Name should conform to RFC1035.
+        /// The name of thezone where the managed
+        /// instance group is located and where the resize request will be created.
+        /// Name should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
-        /// The name of the managed instance group to which the resize request will be added. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the managed instance group to which the resize request will
+        /// be added.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="instanceGroupManagerResizeRequestResource">
         /// The body resource for this request
@@ -803,16 +873,21 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new resize request that starts provisioning VMs immediately or queues VM creation.
+        /// Creates a new resize request that starts provisioning VMs immediately
+        /// or queues VM creation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the managed instance group is located and where the resize request will be created. Name should conform to RFC1035.
+        /// The name of thezone where the managed
+        /// instance group is located and where the resize request will be created.
+        /// Name should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
-        /// The name of the managed instance group to which the resize request will be added. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the managed instance group to which the resize request will
+        /// be added.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="instanceGroupManagerResizeRequestResource">
         /// The body resource for this request
@@ -823,7 +898,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, zone, instanceGroupManager, instanceGroupManagerResizeRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a list of resize requests that are contained in the managed instance group.
+        /// Retrieves a list of resize requests that are contained in the
+        /// managed instance group.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -832,7 +908,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of resize requests that are contained in the managed instance group.
+        /// Retrieves a list of resize requests that are contained in the
+        /// managed instance group.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -843,13 +920,15 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of resize requests that are contained in the managed instance group.
+        /// Retrieves a list of resize requests that are contained in the
+        /// managed instance group.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the managed instance group is located. The name should conform to RFC1035.
+        /// The name of thezone where the managed
+        /// instance group is located. The name should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
         /// The name of the managed instance group. The name should conform to RFC1035.
@@ -884,13 +963,15 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of resize requests that are contained in the managed instance group.
+        /// Retrieves a list of resize requests that are contained in the
+        /// managed instance group.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the managed instance group is located. The name should conform to RFC1035.
+        /// The name of thezone where the managed
+        /// instance group is located. The name should conform to RFC1035.
         /// </param>
         /// <param name="instanceGroupManager">
         /// The name of the managed instance group. The name should conform to RFC1035.
@@ -1013,7 +1094,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient CancelOperationsClient { get; }
 
         /// <summary>
-        /// Cancels the specified resize request and removes it from the queue. Cancelled resize request does no longer wait for the resources to be provisioned. Cancel is only possible for requests that are accepted in the queue.
+        /// Cancels the specified resize request and removes it from the queue.
+        /// Cancelled resize request does no longer wait for the resources to be
+        /// provisioned. Cancel is only possible for requests that are accepted in the
+        /// queue.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1028,7 +1112,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Cancels the specified resize request and removes it from the queue. Cancelled resize request does no longer wait for the resources to be provisioned. Cancel is only possible for requests that are accepted in the queue.
+        /// Cancels the specified resize request and removes it from the queue.
+        /// Cancelled resize request does no longer wait for the resources to be
+        /// provisioned. Cancel is only possible for requests that are accepted in the
+        /// queue.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1046,7 +1133,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient DeleteOperationsClient { get; }
 
         /// <summary>
-        /// Deletes the specified, inactive resize request. Requests that are still active cannot be deleted. Deleting request does not delete instances that were provisioned previously.
+        /// Deletes the specified, inactive resize request. Requests that are still
+        /// active cannot be deleted. Deleting request does not delete instances that
+        /// were provisioned previously.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1061,7 +1150,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Deletes the specified, inactive resize request. Requests that are still active cannot be deleted. Deleting request does not delete instances that were provisioned previously.
+        /// Deletes the specified, inactive resize request. Requests that are still
+        /// active cannot be deleted. Deleting request does not delete instances that
+        /// were provisioned previously.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1103,7 +1194,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a new resize request that starts provisioning VMs immediately or queues VM creation.
+        /// Creates a new resize request that starts provisioning VMs immediately
+        /// or queues VM creation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1118,7 +1210,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a new resize request that starts provisioning VMs immediately or queues VM creation.
+        /// Creates a new resize request that starts provisioning VMs immediately
+        /// or queues VM creation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1133,7 +1226,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of resize requests that are contained in the managed instance group.
+        /// Retrieves a list of resize requests that are contained in the
+        /// managed instance group.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1145,7 +1239,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of resize requests that are contained in the managed instance group.
+        /// Retrieves a list of resize requests that are contained in the
+        /// managed instance group.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

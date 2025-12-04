@@ -662,7 +662,16 @@ namespace Google.Cloud.Compute.V1
         public virtual OrganizationSecurityPolicies.OrganizationSecurityPoliciesClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Inserts an association for the specified security policy. This has billing implications. Projects in the hierarchy with effective hierarchical security policies will be automatically enrolled into Cloud Armor Enterprise if not already enrolled. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.addAssociation instead if possible.
+        /// Inserts an association for the specified security policy.
+        /// 
+        /// This has billing implications.  Projects in the hierarchy with effective
+        /// hierarchical security policies will be automatically enrolled into Cloud
+        /// Armor Enterprise if not already enrolled.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.addAssociation
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -671,7 +680,16 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Inserts an association for the specified security policy. This has billing implications. Projects in the hierarchy with effective hierarchical security policies will be automatically enrolled into Cloud Armor Enterprise if not already enrolled. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.addAssociation instead if possible.
+        /// Inserts an association for the specified security policy.
+        /// 
+        /// This has billing implications.  Projects in the hierarchy with effective
+        /// hierarchical security policies will be automatically enrolled into Cloud
+        /// Armor Enterprise if not already enrolled.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.addAssociation
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -680,7 +698,16 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Inserts an association for the specified security policy. This has billing implications. Projects in the hierarchy with effective hierarchical security policies will be automatically enrolled into Cloud Armor Enterprise if not already enrolled. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.addAssociation instead if possible.
+        /// Inserts an association for the specified security policy.
+        /// 
+        /// This has billing implications.  Projects in the hierarchy with effective
+        /// hierarchical security policies will be automatically enrolled into Cloud
+        /// Armor Enterprise if not already enrolled.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.addAssociation
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -715,7 +742,16 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddAssociationOperationsClient, callSettings);
 
         /// <summary>
-        /// Inserts an association for the specified security policy. This has billing implications. Projects in the hierarchy with effective hierarchical security policies will be automatically enrolled into Cloud Armor Enterprise if not already enrolled. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.addAssociation instead if possible.
+        /// Inserts an association for the specified security policy.
+        /// 
+        /// This has billing implications.  Projects in the hierarchy with effective
+        /// hierarchical security policies will be automatically enrolled into Cloud
+        /// Armor Enterprise if not already enrolled.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.addAssociation
+        /// instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to update.
@@ -733,7 +769,16 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Inserts an association for the specified security policy. This has billing implications. Projects in the hierarchy with effective hierarchical security policies will be automatically enrolled into Cloud Armor Enterprise if not already enrolled. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.addAssociation instead if possible.
+        /// Inserts an association for the specified security policy.
+        /// 
+        /// This has billing implications.  Projects in the hierarchy with effective
+        /// hierarchical security policies will be automatically enrolled into Cloud
+        /// Armor Enterprise if not already enrolled.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.addAssociation
+        /// instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to update.
@@ -751,7 +796,16 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Inserts an association for the specified security policy. This has billing implications. Projects in the hierarchy with effective hierarchical security policies will be automatically enrolled into Cloud Armor Enterprise if not already enrolled. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.addAssociation instead if possible.
+        /// Inserts an association for the specified security policy.
+        /// 
+        /// This has billing implications.  Projects in the hierarchy with effective
+        /// hierarchical security policies will be automatically enrolled into Cloud
+        /// Armor Enterprise if not already enrolled.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.addAssociation
+        /// instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to update.
@@ -766,6 +820,10 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Inserts a rule into a security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.addRule instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -775,6 +833,10 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Inserts a rule into a security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.addRule instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -784,6 +846,10 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Inserts a rule into a security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.addRule instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -819,6 +885,10 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Inserts a rule into a security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.addRule instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to update.
@@ -837,6 +907,10 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Inserts a rule into a security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.addRule instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to update.
@@ -855,6 +929,10 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Inserts a rule into a security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.addRule instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to update.
@@ -868,7 +946,12 @@ namespace Google.Cloud.Compute.V1
             AddRuleAsync(securityPolicy, securityPolicyRuleResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Copies rules to the specified security policy. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.copyRules instead.
+        /// Copies rules to the specified security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.cloneRules
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -877,7 +960,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Copies rules to the specified security policy. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.copyRules instead.
+        /// Copies rules to the specified security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.cloneRules
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -886,7 +974,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Copies rules to the specified security policy. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.copyRules instead.
+        /// Copies rules to the specified security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.cloneRules
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -921,7 +1014,12 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CopyRulesOperationsClient, callSettings);
 
         /// <summary>
-        /// Copies rules to the specified security policy. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.copyRules instead.
+        /// Copies rules to the specified security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.cloneRules
+        /// instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to update.
@@ -935,7 +1033,12 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Copies rules to the specified security policy. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.copyRules instead.
+        /// Copies rules to the specified security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.cloneRules
+        /// instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to update.
@@ -949,7 +1052,12 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Copies rules to the specified security policy. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.copyRules instead.
+        /// Copies rules to the specified security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.cloneRules
+        /// instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to update.
@@ -960,7 +1068,11 @@ namespace Google.Cloud.Compute.V1
             CopyRulesAsync(securityPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified policy. Use of this API to remove firewall policies is deprecated. Use firewallPolicies.delete instead.
+        /// Deletes the specified policy.
+        /// 
+        /// Use this API to remove Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to remove firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.delete instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -969,7 +1081,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified policy. Use of this API to remove firewall policies is deprecated. Use firewallPolicies.delete instead.
+        /// Deletes the specified policy.
+        /// 
+        /// Use this API to remove Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to remove firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.delete instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -978,7 +1094,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified policy. Use of this API to remove firewall policies is deprecated. Use firewallPolicies.delete instead.
+        /// Deletes the specified policy.
+        /// 
+        /// Use this API to remove Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to remove firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.delete instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1013,7 +1133,11 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes the specified policy. Use of this API to remove firewall policies is deprecated. Use firewallPolicies.delete instead.
+        /// Deletes the specified policy.
+        /// 
+        /// Use this API to remove Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to remove firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.delete instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to delete.
@@ -1027,7 +1151,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified policy. Use of this API to remove firewall policies is deprecated. Use firewallPolicies.delete instead.
+        /// Deletes the specified policy.
+        /// 
+        /// Use this API to remove Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to remove firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.delete instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to delete.
@@ -1041,7 +1169,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified policy. Use of this API to remove firewall policies is deprecated. Use firewallPolicies.delete instead.
+        /// Deletes the specified policy.
+        /// 
+        /// Use this API to remove Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to remove firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.delete instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to delete.
@@ -1052,7 +1184,11 @@ namespace Google.Cloud.Compute.V1
             DeleteAsync(securityPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// List all of the ordered rules present in a single specified policy. Use of this API to read firewall policies is deprecated. Use firewallPolicies.get instead.
+        /// List all of the ordered rules present in a single specified policy.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.get instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1061,7 +1197,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List all of the ordered rules present in a single specified policy. Use of this API to read firewall policies is deprecated. Use firewallPolicies.get instead.
+        /// List all of the ordered rules present in a single specified policy.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.get instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1070,7 +1210,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List all of the ordered rules present in a single specified policy. Use of this API to read firewall policies is deprecated. Use firewallPolicies.get instead.
+        /// List all of the ordered rules present in a single specified policy.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.get instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1079,7 +1223,11 @@ namespace Google.Cloud.Compute.V1
             GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// List all of the ordered rules present in a single specified policy. Use of this API to read firewall policies is deprecated. Use firewallPolicies.get instead.
+        /// List all of the ordered rules present in a single specified policy.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.get instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to get.
@@ -1093,7 +1241,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// List all of the ordered rules present in a single specified policy. Use of this API to read firewall policies is deprecated. Use firewallPolicies.get instead.
+        /// List all of the ordered rules present in a single specified policy.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.get instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to get.
@@ -1107,7 +1259,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// List all of the ordered rules present in a single specified policy. Use of this API to read firewall policies is deprecated. Use firewallPolicies.get instead.
+        /// List all of the ordered rules present in a single specified policy.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.get instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to get.
@@ -1118,7 +1274,12 @@ namespace Google.Cloud.Compute.V1
             GetAsync(securityPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets an association with the specified name. Use of this API to read firewall policies is deprecated. Use firewallPolicies.getAssociation instead if possible.
+        /// Gets an association with the specified name.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.getAssociation
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1127,7 +1288,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets an association with the specified name. Use of this API to read firewall policies is deprecated. Use firewallPolicies.getAssociation instead if possible.
+        /// Gets an association with the specified name.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.getAssociation
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1136,7 +1302,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets an association with the specified name. Use of this API to read firewall policies is deprecated. Use firewallPolicies.getAssociation instead if possible.
+        /// Gets an association with the specified name.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.getAssociation
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1145,7 +1316,12 @@ namespace Google.Cloud.Compute.V1
             GetAssociationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets an association with the specified name. Use of this API to read firewall policies is deprecated. Use firewallPolicies.getAssociation instead if possible.
+        /// Gets an association with the specified name.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.getAssociation
+        /// instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to which the queried rule belongs.
@@ -1159,7 +1335,12 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets an association with the specified name. Use of this API to read firewall policies is deprecated. Use firewallPolicies.getAssociation instead if possible.
+        /// Gets an association with the specified name.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.getAssociation
+        /// instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to which the queried rule belongs.
@@ -1173,7 +1354,12 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets an association with the specified name. Use of this API to read firewall policies is deprecated. Use firewallPolicies.getAssociation instead if possible.
+        /// Gets an association with the specified name.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.getAssociation
+        /// instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to which the queried rule belongs.
@@ -1184,7 +1370,11 @@ namespace Google.Cloud.Compute.V1
             GetAssociationAsync(securityPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a rule at the specified priority. Use of this API to read firewall policies is deprecated. Use firewallPolicies.getRule instead.
+        /// Gets a rule at the specified priority.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.getRule instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1193,7 +1383,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a rule at the specified priority. Use of this API to read firewall policies is deprecated. Use firewallPolicies.getRule instead.
+        /// Gets a rule at the specified priority.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.getRule instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1202,7 +1396,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a rule at the specified priority. Use of this API to read firewall policies is deprecated. Use firewallPolicies.getRule instead.
+        /// Gets a rule at the specified priority.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.getRule instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1211,7 +1409,11 @@ namespace Google.Cloud.Compute.V1
             GetRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a rule at the specified priority. Use of this API to read firewall policies is deprecated. Use firewallPolicies.getRule instead.
+        /// Gets a rule at the specified priority.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.getRule instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to which the queried rule belongs.
@@ -1225,7 +1427,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets a rule at the specified priority. Use of this API to read firewall policies is deprecated. Use firewallPolicies.getRule instead.
+        /// Gets a rule at the specified priority.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.getRule instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to which the queried rule belongs.
@@ -1239,7 +1445,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets a rule at the specified priority. Use of this API to read firewall policies is deprecated. Use firewallPolicies.getRule instead.
+        /// Gets a rule at the specified priority.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.getRule instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to which the queried rule belongs.
@@ -1250,7 +1460,12 @@ namespace Google.Cloud.Compute.V1
             GetRuleAsync(securityPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new policy in the specified project using the data included in the request. Use of this API to insert firewall policies is deprecated. Use firewallPolicies.insert instead.
+        /// Creates a new policy in the specified organization using the data included
+        /// in the request.
+        /// 
+        /// Use this API to add Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to add firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.insert instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1259,7 +1474,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new policy in the specified project using the data included in the request. Use of this API to insert firewall policies is deprecated. Use firewallPolicies.insert instead.
+        /// Creates a new policy in the specified organization using the data included
+        /// in the request.
+        /// 
+        /// Use this API to add Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to add firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.insert instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1268,7 +1488,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new policy in the specified project using the data included in the request. Use of this API to insert firewall policies is deprecated. Use firewallPolicies.insert instead.
+        /// Creates a new policy in the specified organization using the data included
+        /// in the request.
+        /// 
+        /// Use this API to add Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to add firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.insert instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1303,7 +1528,12 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a new policy in the specified project using the data included in the request. Use of this API to insert firewall policies is deprecated. Use firewallPolicies.insert instead.
+        /// Creates a new policy in the specified organization using the data included
+        /// in the request.
+        /// 
+        /// Use this API to add Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to add firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.insert instead.
         /// </summary>
         /// <param name="securityPolicyResource">
         /// The body resource for this request
@@ -1317,7 +1547,12 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new policy in the specified project using the data included in the request. Use of this API to insert firewall policies is deprecated. Use firewallPolicies.insert instead.
+        /// Creates a new policy in the specified organization using the data included
+        /// in the request.
+        /// 
+        /// Use this API to add Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to add firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.insert instead.
         /// </summary>
         /// <param name="securityPolicyResource">
         /// The body resource for this request
@@ -1331,7 +1566,12 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new policy in the specified project using the data included in the request. Use of this API to insert firewall policies is deprecated. Use firewallPolicies.insert instead.
+        /// Creates a new policy in the specified organization using the data included
+        /// in the request.
+        /// 
+        /// Use this API to add Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to add firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.insert instead.
         /// </summary>
         /// <param name="securityPolicyResource">
         /// The body resource for this request
@@ -1342,7 +1582,12 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(securityPolicyResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// List all the policies that have been configured for the specified project. Use of this API to read firewall policies is deprecated. Use firewallPolicies.list instead.
+        /// List all the policies that have been configured for the specified
+        /// organization.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.list instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1351,7 +1596,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List all the policies that have been configured for the specified project. Use of this API to read firewall policies is deprecated. Use firewallPolicies.list instead.
+        /// List all the policies that have been configured for the specified
+        /// organization.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.list instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1360,7 +1610,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// List all the policies that have been configured for the specified project. Use of this API to read firewall policies is deprecated. Use firewallPolicies.list instead.
+        /// List all the policies that have been configured for the specified
+        /// organization.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.list instead.
         /// </summary>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1387,7 +1642,12 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// List all the policies that have been configured for the specified project. Use of this API to read firewall policies is deprecated. Use firewallPolicies.list instead.
+        /// List all the policies that have been configured for the specified
+        /// organization.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.list instead.
         /// </summary>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1414,7 +1674,12 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists associations of a specified target, i.e., organization or folder. Use of this API to read firewall policies is deprecated. Use firewallPolicies.listAssociations instead if possible.
+        /// Lists associations of a specified target, i.e., organization or folder.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.listAssociations
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1423,7 +1688,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists associations of a specified target, i.e., organization or folder. Use of this API to read firewall policies is deprecated. Use firewallPolicies.listAssociations instead if possible.
+        /// Lists associations of a specified target, i.e., organization or folder.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.listAssociations
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1432,7 +1702,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists associations of a specified target, i.e., organization or folder. Use of this API to read firewall policies is deprecated. Use firewallPolicies.listAssociations instead if possible.
+        /// Lists associations of a specified target, i.e., organization or folder.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.listAssociations
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1441,7 +1716,12 @@ namespace Google.Cloud.Compute.V1
             ListAssociationsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists associations of a specified target, i.e., organization or folder. Use of this API to read firewall policies is deprecated. Use firewallPolicies.listAssociations instead if possible.
+        /// Lists associations of a specified target, i.e., organization or folder.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.listAssociations
+        /// instead.
         /// </summary>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1449,7 +1729,12 @@ namespace Google.Cloud.Compute.V1
             ListAssociations(new ListAssociationsOrganizationSecurityPolicyRequest { }, callSettings);
 
         /// <summary>
-        /// Lists associations of a specified target, i.e., organization or folder. Use of this API to read firewall policies is deprecated. Use firewallPolicies.listAssociations instead if possible.
+        /// Lists associations of a specified target, i.e., organization or folder.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.listAssociations
+        /// instead.
         /// </summary>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1457,7 +1742,12 @@ namespace Google.Cloud.Compute.V1
             ListAssociationsAsync(new ListAssociationsOrganizationSecurityPolicyRequest { }, callSettings);
 
         /// <summary>
-        /// Lists associations of a specified target, i.e., organization or folder. Use of this API to read firewall policies is deprecated. Use firewallPolicies.listAssociations instead if possible.
+        /// Lists associations of a specified target, i.e., organization or folder.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.listAssociations
+        /// instead.
         /// </summary>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1465,7 +1755,8 @@ namespace Google.Cloud.Compute.V1
             ListAssociationsAsync(gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the current list of preconfigured Web Application Firewall (WAF) expressions.
+        /// Gets the current list of preconfigured Web Application Firewall (WAF)
+        /// expressions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1474,7 +1765,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the current list of preconfigured Web Application Firewall (WAF) expressions.
+        /// Gets the current list of preconfigured Web Application Firewall (WAF)
+        /// expressions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1483,7 +1775,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the current list of preconfigured Web Application Firewall (WAF) expressions.
+        /// Gets the current list of preconfigured Web Application Firewall (WAF)
+        /// expressions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1492,7 +1785,8 @@ namespace Google.Cloud.Compute.V1
             ListPreconfiguredExpressionSetsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the current list of preconfigured Web Application Firewall (WAF) expressions.
+        /// Gets the current list of preconfigured Web Application Firewall (WAF)
+        /// expressions.
         /// </summary>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1500,7 +1794,8 @@ namespace Google.Cloud.Compute.V1
             ListPreconfiguredExpressionSets(new ListPreconfiguredExpressionSetsOrganizationSecurityPoliciesRequest { }, callSettings);
 
         /// <summary>
-        /// Gets the current list of preconfigured Web Application Firewall (WAF) expressions.
+        /// Gets the current list of preconfigured Web Application Firewall (WAF)
+        /// expressions.
         /// </summary>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1508,7 +1803,8 @@ namespace Google.Cloud.Compute.V1
             ListPreconfiguredExpressionSetsAsync(new ListPreconfiguredExpressionSetsOrganizationSecurityPoliciesRequest { }, callSettings);
 
         /// <summary>
-        /// Gets the current list of preconfigured Web Application Firewall (WAF) expressions.
+        /// Gets the current list of preconfigured Web Application Firewall (WAF)
+        /// expressions.
         /// </summary>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1516,7 +1812,11 @@ namespace Google.Cloud.Compute.V1
             ListPreconfiguredExpressionSetsAsync(gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Moves the specified security policy. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.move instead.
+        /// Moves the specified security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.move instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1525,7 +1825,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Moves the specified security policy. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.move instead.
+        /// Moves the specified security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.move instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1534,7 +1838,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Moves the specified security policy. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.move instead.
+        /// Moves the specified security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.move instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1569,7 +1877,11 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), MoveOperationsClient, callSettings);
 
         /// <summary>
-        /// Moves the specified security policy. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.move instead.
+        /// Moves the specified security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.move instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to update.
@@ -1583,7 +1895,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Moves the specified security policy. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.move instead.
+        /// Moves the specified security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.move instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to update.
@@ -1597,7 +1913,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Moves the specified security policy. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.move instead.
+        /// Moves the specified security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.move instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to update.
@@ -1608,7 +1928,11 @@ namespace Google.Cloud.Compute.V1
             MoveAsync(securityPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Patches the specified policy with the data included in the request. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.patch instead.
+        /// Patches the specified policy with the data included in the request.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.patch instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1617,7 +1941,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified policy with the data included in the request. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.patch instead.
+        /// Patches the specified policy with the data included in the request.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.patch instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1626,7 +1954,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified policy with the data included in the request. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.patch instead.
+        /// Patches the specified policy with the data included in the request.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.patch instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1661,7 +1993,11 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchOperationsClient, callSettings);
 
         /// <summary>
-        /// Patches the specified policy with the data included in the request. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.patch instead.
+        /// Patches the specified policy with the data included in the request.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.patch instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to update.
@@ -1679,7 +2015,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified policy with the data included in the request. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.patch instead.
+        /// Patches the specified policy with the data included in the request.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.patch instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to update.
@@ -1697,7 +2037,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified policy with the data included in the request. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.patch instead.
+        /// Patches the specified policy with the data included in the request.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.patch instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to update.
@@ -1711,7 +2055,12 @@ namespace Google.Cloud.Compute.V1
             PatchAsync(securityPolicy, securityPolicyResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Patches a rule at the specified priority. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.patchRule instead.
+        /// Patches a rule at the specified priority.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.patchRule
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1720,7 +2069,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches a rule at the specified priority. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.patchRule instead.
+        /// Patches a rule at the specified priority.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.patchRule
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1729,7 +2083,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches a rule at the specified priority. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.patchRule instead.
+        /// Patches a rule at the specified priority.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.patchRule
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1764,7 +2123,12 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchRuleOperationsClient, callSettings);
 
         /// <summary>
-        /// Patches a rule at the specified priority. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.patchRule instead.
+        /// Patches a rule at the specified priority.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.patchRule
+        /// instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to update.
@@ -1782,7 +2146,12 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches a rule at the specified priority. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.patchRule instead.
+        /// Patches a rule at the specified priority.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.patchRule
+        /// instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to update.
@@ -1800,7 +2169,12 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches a rule at the specified priority. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.patchRule instead.
+        /// Patches a rule at the specified priority.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.patchRule
+        /// instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to update.
@@ -1814,7 +2188,12 @@ namespace Google.Cloud.Compute.V1
             PatchRuleAsync(securityPolicy, securityPolicyRuleResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Removes an association for the specified security policy. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.removeAssociation instead if possible.
+        /// Removes an association for the specified security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.removeAssociation
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1823,7 +2202,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Removes an association for the specified security policy. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.removeAssociation instead if possible.
+        /// Removes an association for the specified security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.removeAssociation
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1832,7 +2216,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Removes an association for the specified security policy. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.removeAssociation instead if possible.
+        /// Removes an association for the specified security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.removeAssociation
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1868,7 +2257,12 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RemoveAssociationOperationsClient, callSettings);
 
         /// <summary>
-        /// Removes an association for the specified security policy. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.removeAssociation instead if possible.
+        /// Removes an association for the specified security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.removeAssociation
+        /// instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to update.
@@ -1882,7 +2276,12 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Removes an association for the specified security policy. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.removeAssociation instead if possible.
+        /// Removes an association for the specified security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.removeAssociation
+        /// instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to update.
@@ -1896,7 +2295,12 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Removes an association for the specified security policy. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.removeAssociation instead if possible.
+        /// Removes an association for the specified security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.removeAssociation
+        /// instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to update.
@@ -1908,6 +2312,11 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Deletes a rule at the specified priority.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.removeRule
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1917,6 +2326,11 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Deletes a rule at the specified priority.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.removeRule
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1926,6 +2340,11 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Deletes a rule at the specified priority.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.removeRule
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1961,6 +2380,11 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Deletes a rule at the specified priority.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.removeRule
+        /// instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to update.
@@ -1975,6 +2399,11 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Deletes a rule at the specified priority.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.removeRule
+        /// instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to update.
@@ -1989,6 +2418,11 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Deletes a rule at the specified priority.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.removeRule
+        /// instead.
         /// </summary>
         /// <param name="securityPolicy">
         /// Name of the security policy to update.
@@ -2191,7 +2625,16 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient AddAssociationOperationsClient { get; }
 
         /// <summary>
-        /// Inserts an association for the specified security policy. This has billing implications. Projects in the hierarchy with effective hierarchical security policies will be automatically enrolled into Cloud Armor Enterprise if not already enrolled. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.addAssociation instead if possible.
+        /// Inserts an association for the specified security policy.
+        /// 
+        /// This has billing implications.  Projects in the hierarchy with effective
+        /// hierarchical security policies will be automatically enrolled into Cloud
+        /// Armor Enterprise if not already enrolled.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.addAssociation
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2206,7 +2649,16 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Inserts an association for the specified security policy. This has billing implications. Projects in the hierarchy with effective hierarchical security policies will be automatically enrolled into Cloud Armor Enterprise if not already enrolled. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.addAssociation instead if possible.
+        /// Inserts an association for the specified security policy.
+        /// 
+        /// This has billing implications.  Projects in the hierarchy with effective
+        /// hierarchical security policies will be automatically enrolled into Cloud
+        /// Armor Enterprise if not already enrolled.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.addAssociation
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2225,6 +2677,10 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Inserts a rule into a security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.addRule instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2240,6 +2696,10 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Inserts a rule into a security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.addRule instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2257,7 +2717,12 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient CopyRulesOperationsClient { get; }
 
         /// <summary>
-        /// Copies rules to the specified security policy. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.copyRules instead.
+        /// Copies rules to the specified security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.cloneRules
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2272,7 +2737,12 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Copies rules to the specified security policy. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.copyRules instead.
+        /// Copies rules to the specified security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.cloneRules
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2290,7 +2760,11 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient DeleteOperationsClient { get; }
 
         /// <summary>
-        /// Deletes the specified policy. Use of this API to remove firewall policies is deprecated. Use firewallPolicies.delete instead.
+        /// Deletes the specified policy.
+        /// 
+        /// Use this API to remove Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to remove firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.delete instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2305,7 +2779,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Deletes the specified policy. Use of this API to remove firewall policies is deprecated. Use firewallPolicies.delete instead.
+        /// Deletes the specified policy.
+        /// 
+        /// Use this API to remove Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to remove firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.delete instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2320,7 +2798,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// List all of the ordered rules present in a single specified policy. Use of this API to read firewall policies is deprecated. Use firewallPolicies.get instead.
+        /// List all of the ordered rules present in a single specified policy.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.get instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2332,7 +2814,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// List all of the ordered rules present in a single specified policy. Use of this API to read firewall policies is deprecated. Use firewallPolicies.get instead.
+        /// List all of the ordered rules present in a single specified policy.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.get instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2344,7 +2830,12 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets an association with the specified name. Use of this API to read firewall policies is deprecated. Use firewallPolicies.getAssociation instead if possible.
+        /// Gets an association with the specified name.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.getAssociation
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2356,7 +2847,12 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets an association with the specified name. Use of this API to read firewall policies is deprecated. Use firewallPolicies.getAssociation instead if possible.
+        /// Gets an association with the specified name.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.getAssociation
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2368,7 +2864,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets a rule at the specified priority. Use of this API to read firewall policies is deprecated. Use firewallPolicies.getRule instead.
+        /// Gets a rule at the specified priority.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.getRule instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2380,7 +2880,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets a rule at the specified priority. Use of this API to read firewall policies is deprecated. Use firewallPolicies.getRule instead.
+        /// Gets a rule at the specified priority.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.getRule instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2395,7 +2899,12 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a new policy in the specified project using the data included in the request. Use of this API to insert firewall policies is deprecated. Use firewallPolicies.insert instead.
+        /// Creates a new policy in the specified organization using the data included
+        /// in the request.
+        /// 
+        /// Use this API to add Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to add firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.insert instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2410,7 +2919,12 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a new policy in the specified project using the data included in the request. Use of this API to insert firewall policies is deprecated. Use firewallPolicies.insert instead.
+        /// Creates a new policy in the specified organization using the data included
+        /// in the request.
+        /// 
+        /// Use this API to add Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to add firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.insert instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2425,7 +2939,12 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// List all the policies that have been configured for the specified project. Use of this API to read firewall policies is deprecated. Use firewallPolicies.list instead.
+        /// List all the policies that have been configured for the specified
+        /// organization.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.list instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2437,7 +2956,12 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// List all the policies that have been configured for the specified project. Use of this API to read firewall policies is deprecated. Use firewallPolicies.list instead.
+        /// List all the policies that have been configured for the specified
+        /// organization.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is now
+        /// disabled for most organizations. Use firewallPolicies.list instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2449,7 +2973,12 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists associations of a specified target, i.e., organization or folder. Use of this API to read firewall policies is deprecated. Use firewallPolicies.listAssociations instead if possible.
+        /// Lists associations of a specified target, i.e., organization or folder.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.listAssociations
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2461,7 +2990,12 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists associations of a specified target, i.e., organization or folder. Use of this API to read firewall policies is deprecated. Use firewallPolicies.listAssociations instead if possible.
+        /// Lists associations of a specified target, i.e., organization or folder.
+        /// 
+        /// Use this API to read Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to read firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.listAssociations
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2473,7 +3007,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the current list of preconfigured Web Application Firewall (WAF) expressions.
+        /// Gets the current list of preconfigured Web Application Firewall (WAF)
+        /// expressions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2485,7 +3020,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the current list of preconfigured Web Application Firewall (WAF) expressions.
+        /// Gets the current list of preconfigured Web Application Firewall (WAF)
+        /// expressions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2500,7 +3036,11 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient MoveOperationsClient { get; }
 
         /// <summary>
-        /// Moves the specified security policy. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.move instead.
+        /// Moves the specified security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.move instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2515,7 +3055,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Moves the specified security policy. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.move instead.
+        /// Moves the specified security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.move instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2533,7 +3077,11 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient PatchOperationsClient { get; }
 
         /// <summary>
-        /// Patches the specified policy with the data included in the request. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.patch instead.
+        /// Patches the specified policy with the data included in the request.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.patch instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2548,7 +3096,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches the specified policy with the data included in the request. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.patch instead.
+        /// Patches the specified policy with the data included in the request.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.patch instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2566,7 +3118,12 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient PatchRuleOperationsClient { get; }
 
         /// <summary>
-        /// Patches a rule at the specified priority. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.patchRule instead.
+        /// Patches a rule at the specified priority.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.patchRule
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2581,7 +3138,12 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches a rule at the specified priority. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.patchRule instead.
+        /// Patches a rule at the specified priority.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.patchRule
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2599,7 +3161,12 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient RemoveAssociationOperationsClient { get; }
 
         /// <summary>
-        /// Removes an association for the specified security policy. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.removeAssociation instead if possible.
+        /// Removes an association for the specified security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.removeAssociation
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2614,7 +3181,12 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Removes an association for the specified security policy. Use of this API to modify firewall policies is deprecated. Use firewallPolicies.removeAssociation instead if possible.
+        /// Removes an association for the specified security policy.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.removeAssociation
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2633,6 +3205,11 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Deletes a rule at the specified priority.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.removeRule
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2648,6 +3225,11 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// Deletes a rule at the specified priority.
+        /// 
+        /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
+        /// versions of this API were used to modify firewall policies. This usage is
+        /// now disabled for most organizations. Use firewallPolicies.removeRule
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

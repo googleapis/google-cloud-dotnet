@@ -167,6 +167,21 @@ namespace Google.Cloud.Compute.V1
         internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
     }
 
+    public partial class DeleteCrossSiteNetworkRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
+    public partial class InsertCrossSiteNetworkRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
+    public partial class PatchCrossSiteNetworkRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
     public partial class AddResourcePoliciesDiskRequest
     {
         internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
@@ -428,6 +443,42 @@ namespace Google.Cloud.Compute.V1
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
         {
             pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class CancelFutureReservationRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class DeleteFutureReservationRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class InsertFutureReservationRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class UpdateFutureReservationRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
             pollRequest.Project = Project;
         }
     }
@@ -3348,6 +3399,21 @@ namespace Google.Cloud.Compute.V1
             pollRequest.Region = Region;
             pollRequest.Project = Project;
         }
+    }
+
+    public partial class DeleteWireGroupRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
+    public partial class InsertWireGroupRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
+    public partial class PatchWireGroupRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
     }
 
     public partial class GetGlobalOperationRequest

@@ -491,7 +491,10 @@ namespace Google.Cloud.Compute.V1
         public virtual Subnetworks.SubnetworksClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of subnetworks. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of subnetworks.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -500,7 +503,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of subnetworks. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of subnetworks.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -511,7 +517,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of subnetworks. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of subnetworks.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -544,7 +553,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of subnetworks. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of subnetworks.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -907,7 +919,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, region, subnetwork, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -916,7 +929,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -925,7 +939,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -934,7 +949,8 @@ namespace Google.Cloud.Compute.V1
             GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -956,7 +972,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -978,7 +995,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -995,7 +1013,8 @@ namespace Google.Cloud.Compute.V1
             GetIamPolicyAsync(project, region, resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a subnetwork in the specified project using the data included in the request.
+        /// Creates a subnetwork in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1004,7 +1023,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a subnetwork in the specified project using the data included in the request.
+        /// Creates a subnetwork in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1013,7 +1033,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a subnetwork in the specified project using the data included in the request.
+        /// Creates a subnetwork in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1048,7 +1069,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a subnetwork in the specified project using the data included in the request.
+        /// Creates a subnetwork in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1070,7 +1092,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a subnetwork in the specified project using the data included in the request.
+        /// Creates a subnetwork in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1092,7 +1115,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a subnetwork in the specified project using the data included in the request.
+        /// Creates a subnetwork in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1109,7 +1133,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, region, subnetworkResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a list of subnetworks available to the specified project.
+        /// Retrieves a list of subnetworks available to the specified
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1118,7 +1143,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of subnetworks available to the specified project.
+        /// Retrieves a list of subnetworks available to the specified
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1127,7 +1153,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of subnetworks available to the specified project.
+        /// Retrieves a list of subnetworks available to the specified
+        /// project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1164,7 +1191,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of subnetworks available to the specified project.
+        /// Retrieves a list of subnetworks available to the specified
+        /// project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1285,7 +1313,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches the specified subnetwork with the data included in the request. Only certain fields can be updated with a patch request as indicated in the field descriptions. You must specify the current fingerprint of the subnetwork resource being patched.
+        /// Patches the specified subnetwork with the data included in the request.
+        /// Only certain fields can be updated with a patch request
+        /// as indicated in the field descriptions.
+        /// You must specify the current fingerprint of the
+        /// subnetwork resource being patched.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1294,7 +1326,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified subnetwork with the data included in the request. Only certain fields can be updated with a patch request as indicated in the field descriptions. You must specify the current fingerprint of the subnetwork resource being patched.
+        /// Patches the specified subnetwork with the data included in the request.
+        /// Only certain fields can be updated with a patch request
+        /// as indicated in the field descriptions.
+        /// You must specify the current fingerprint of the
+        /// subnetwork resource being patched.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1303,7 +1339,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified subnetwork with the data included in the request. Only certain fields can be updated with a patch request as indicated in the field descriptions. You must specify the current fingerprint of the subnetwork resource being patched.
+        /// Patches the specified subnetwork with the data included in the request.
+        /// Only certain fields can be updated with a patch request
+        /// as indicated in the field descriptions.
+        /// You must specify the current fingerprint of the
+        /// subnetwork resource being patched.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1338,7 +1378,11 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchOperationsClient, callSettings);
 
         /// <summary>
-        /// Patches the specified subnetwork with the data included in the request. Only certain fields can be updated with a patch request as indicated in the field descriptions. You must specify the current fingerprint of the subnetwork resource being patched.
+        /// Patches the specified subnetwork with the data included in the request.
+        /// Only certain fields can be updated with a patch request
+        /// as indicated in the field descriptions.
+        /// You must specify the current fingerprint of the
+        /// subnetwork resource being patched.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1364,7 +1408,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified subnetwork with the data included in the request. Only certain fields can be updated with a patch request as indicated in the field descriptions. You must specify the current fingerprint of the subnetwork resource being patched.
+        /// Patches the specified subnetwork with the data included in the request.
+        /// Only certain fields can be updated with a patch request
+        /// as indicated in the field descriptions.
+        /// You must specify the current fingerprint of the
+        /// subnetwork resource being patched.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1390,7 +1438,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified subnetwork with the data included in the request. Only certain fields can be updated with a patch request as indicated in the field descriptions. You must specify the current fingerprint of the subnetwork resource being patched.
+        /// Patches the specified subnetwork with the data included in the request.
+        /// Only certain fields can be updated with a patch request
+        /// as indicated in the field descriptions.
+        /// You must specify the current fingerprint of the
+        /// subnetwork resource being patched.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1410,7 +1462,8 @@ namespace Google.Cloud.Compute.V1
             PatchAsync(project, region, subnetwork, subnetworkResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1419,7 +1472,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1428,7 +1482,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1437,7 +1492,8 @@ namespace Google.Cloud.Compute.V1
             SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1463,7 +1519,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1489,7 +1546,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1509,7 +1567,8 @@ namespace Google.Cloud.Compute.V1
             SetIamPolicyAsync(project, region, resource, regionSetPolicyRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Set whether VMs in this subnet can access Google services without assigning external IP addresses through Private Google Access.
+        /// Set whether VMs in this subnet can access Google services without assigning
+        /// external IP addresses through Private Google Access.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1518,7 +1577,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Set whether VMs in this subnet can access Google services without assigning external IP addresses through Private Google Access.
+        /// Set whether VMs in this subnet can access Google services without assigning
+        /// external IP addresses through Private Google Access.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1527,7 +1587,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Set whether VMs in this subnet can access Google services without assigning external IP addresses through Private Google Access.
+        /// Set whether VMs in this subnet can access Google services without assigning
+        /// external IP addresses through Private Google Access.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1563,7 +1624,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetPrivateIpGoogleAccessOperationsClient, callSettings);
 
         /// <summary>
-        /// Set whether VMs in this subnet can access Google services without assigning external IP addresses through Private Google Access.
+        /// Set whether VMs in this subnet can access Google services without assigning
+        /// external IP addresses through Private Google Access.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1589,7 +1651,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Set whether VMs in this subnet can access Google services without assigning external IP addresses through Private Google Access.
+        /// Set whether VMs in this subnet can access Google services without assigning
+        /// external IP addresses through Private Google Access.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1615,7 +1678,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Set whether VMs in this subnet can access Google services without assigning external IP addresses through Private Google Access.
+        /// Set whether VMs in this subnet can access Google services without assigning
+        /// external IP addresses through Private Google Access.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1879,7 +1943,10 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_TestIamPermissionsSubnetworkRequest(ref TestIamPermissionsSubnetworkRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Retrieves an aggregated list of subnetworks. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of subnetworks.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1891,7 +1958,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of subnetworks. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of subnetworks.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1995,7 +2065,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2007,7 +2078,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2022,7 +2094,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a subnetwork in the specified project using the data included in the request.
+        /// Creates a subnetwork in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2037,7 +2110,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a subnetwork in the specified project using the data included in the request.
+        /// Creates a subnetwork in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2052,7 +2126,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of subnetworks available to the specified project.
+        /// Retrieves a list of subnetworks available to the specified
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2064,7 +2139,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of subnetworks available to the specified project.
+        /// Retrieves a list of subnetworks available to the specified
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2103,7 +2179,11 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient PatchOperationsClient { get; }
 
         /// <summary>
-        /// Patches the specified subnetwork with the data included in the request. Only certain fields can be updated with a patch request as indicated in the field descriptions. You must specify the current fingerprint of the subnetwork resource being patched.
+        /// Patches the specified subnetwork with the data included in the request.
+        /// Only certain fields can be updated with a patch request
+        /// as indicated in the field descriptions.
+        /// You must specify the current fingerprint of the
+        /// subnetwork resource being patched.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2118,7 +2198,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches the specified subnetwork with the data included in the request. Only certain fields can be updated with a patch request as indicated in the field descriptions. You must specify the current fingerprint of the subnetwork resource being patched.
+        /// Patches the specified subnetwork with the data included in the request.
+        /// Only certain fields can be updated with a patch request
+        /// as indicated in the field descriptions.
+        /// You must specify the current fingerprint of the
+        /// subnetwork resource being patched.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2133,7 +2217,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2145,7 +2230,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2160,7 +2246,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetPrivateIpGoogleAccessOperationsClient { get; }
 
         /// <summary>
-        /// Set whether VMs in this subnet can access Google services without assigning external IP addresses through Private Google Access.
+        /// Set whether VMs in this subnet can access Google services without assigning
+        /// external IP addresses through Private Google Access.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2175,7 +2262,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Set whether VMs in this subnet can access Google services without assigning external IP addresses through Private Google Access.
+        /// Set whether VMs in this subnet can access Google services without assigning
+        /// external IP addresses through Private Google Access.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

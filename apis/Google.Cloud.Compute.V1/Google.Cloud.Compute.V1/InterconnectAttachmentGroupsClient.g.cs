@@ -517,7 +517,8 @@ namespace Google.Cloud.Compute.V1
             DeleteAsync(project, interconnectAttachmentGroup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the specified InterconnectAttachmentGroup resource in the given scope.
+        /// Returns the specified InterconnectAttachmentGroup resource in the given
+        /// scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -526,7 +527,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified InterconnectAttachmentGroup resource in the given scope.
+        /// Returns the specified InterconnectAttachmentGroup resource in the given
+        /// scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -535,7 +537,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified InterconnectAttachmentGroup resource in the given scope.
+        /// Returns the specified InterconnectAttachmentGroup resource in the given
+        /// scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -544,7 +547,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the specified InterconnectAttachmentGroup resource in the given scope.
+        /// Returns the specified InterconnectAttachmentGroup resource in the given
+        /// scope.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -562,7 +566,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the specified InterconnectAttachmentGroup resource in the given scope.
+        /// Returns the specified InterconnectAttachmentGroup resource in the given
+        /// scope.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -580,7 +585,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the specified InterconnectAttachmentGroup resource in the given scope.
+        /// Returns the specified InterconnectAttachmentGroup resource in the given
+        /// scope.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -594,7 +600,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, interconnectAttachmentGroup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -603,7 +610,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -612,7 +620,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -621,7 +630,8 @@ namespace Google.Cloud.Compute.V1
             GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -639,7 +649,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -657,7 +668,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -671,7 +683,8 @@ namespace Google.Cloud.Compute.V1
             GetIamPolicyAsync(project, resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the InterconnectAttachmentStatuses for the specified InterconnectAttachmentGroup resource.
+        /// Returns the InterconnectAttachmentStatuses for the specified
+        /// InterconnectAttachmentGroup resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -680,7 +693,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the InterconnectAttachmentStatuses for the specified InterconnectAttachmentGroup resource.
+        /// Returns the InterconnectAttachmentStatuses for the specified
+        /// InterconnectAttachmentGroup resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -689,7 +703,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the InterconnectAttachmentStatuses for the specified InterconnectAttachmentGroup resource.
+        /// Returns the InterconnectAttachmentStatuses for the specified
+        /// InterconnectAttachmentGroup resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -698,7 +713,8 @@ namespace Google.Cloud.Compute.V1
             GetOperationalStatusAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the InterconnectAttachmentStatuses for the specified InterconnectAttachmentGroup resource.
+        /// Returns the InterconnectAttachmentStatuses for the specified
+        /// InterconnectAttachmentGroup resource.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -716,7 +732,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the InterconnectAttachmentStatuses for the specified InterconnectAttachmentGroup resource.
+        /// Returns the InterconnectAttachmentStatuses for the specified
+        /// InterconnectAttachmentGroup resource.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -734,7 +751,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the InterconnectAttachmentStatuses for the specified InterconnectAttachmentGroup resource.
+        /// Returns the InterconnectAttachmentStatuses for the specified
+        /// InterconnectAttachmentGroup resource.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -748,7 +766,8 @@ namespace Google.Cloud.Compute.V1
             GetOperationalStatusAsync(project, interconnectAttachmentGroup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a InterconnectAttachmentGroup in the specified project in the given scope using the parameters that are included in the request.
+        /// Creates a InterconnectAttachmentGroup in the specified project in the given
+        /// scope using the parameters that are included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -757,7 +776,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a InterconnectAttachmentGroup in the specified project in the given scope using the parameters that are included in the request.
+        /// Creates a InterconnectAttachmentGroup in the specified project in the given
+        /// scope using the parameters that are included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -766,7 +786,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a InterconnectAttachmentGroup in the specified project in the given scope using the parameters that are included in the request.
+        /// Creates a InterconnectAttachmentGroup in the specified project in the given
+        /// scope using the parameters that are included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -801,7 +822,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a InterconnectAttachmentGroup in the specified project in the given scope using the parameters that are included in the request.
+        /// Creates a InterconnectAttachmentGroup in the specified project in the given
+        /// scope using the parameters that are included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -819,7 +841,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a InterconnectAttachmentGroup in the specified project in the given scope using the parameters that are included in the request.
+        /// Creates a InterconnectAttachmentGroup in the specified project in the given
+        /// scope using the parameters that are included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -837,7 +860,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a InterconnectAttachmentGroup in the specified project in the given scope using the parameters that are included in the request.
+        /// Creates a InterconnectAttachmentGroup in the specified project in the given
+        /// scope using the parameters that are included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -935,7 +959,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches the specified InterconnectAttachmentGroup resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified InterconnectAttachmentGroup resource with the data
+        /// included in the request. This method supports PATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -944,7 +971,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified InterconnectAttachmentGroup resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified InterconnectAttachmentGroup resource with the data
+        /// included in the request. This method supports PATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -953,7 +983,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified InterconnectAttachmentGroup resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified InterconnectAttachmentGroup resource with the data
+        /// included in the request. This method supports PATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -988,7 +1021,10 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchOperationsClient, callSettings);
 
         /// <summary>
-        /// Patches the specified InterconnectAttachmentGroup resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified InterconnectAttachmentGroup resource with the data
+        /// included in the request. This method supports PATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1010,7 +1046,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified InterconnectAttachmentGroup resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified InterconnectAttachmentGroup resource with the data
+        /// included in the request. This method supports PATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1032,7 +1071,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified InterconnectAttachmentGroup resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified InterconnectAttachmentGroup resource with the data
+        /// included in the request. This method supports PATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1049,7 +1091,8 @@ namespace Google.Cloud.Compute.V1
             PatchAsync(project, interconnectAttachmentGroup, interconnectAttachmentGroupResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1058,7 +1101,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1067,7 +1111,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1076,7 +1121,8 @@ namespace Google.Cloud.Compute.V1
             SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1098,7 +1144,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1120,7 +1167,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1377,7 +1425,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the specified InterconnectAttachmentGroup resource in the given scope.
+        /// Returns the specified InterconnectAttachmentGroup resource in the given
+        /// scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1389,7 +1438,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the specified InterconnectAttachmentGroup resource in the given scope.
+        /// Returns the specified InterconnectAttachmentGroup resource in the given
+        /// scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1401,7 +1451,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1413,7 +1464,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1425,7 +1477,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the InterconnectAttachmentStatuses for the specified InterconnectAttachmentGroup resource.
+        /// Returns the InterconnectAttachmentStatuses for the specified
+        /// InterconnectAttachmentGroup resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1437,7 +1490,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the InterconnectAttachmentStatuses for the specified InterconnectAttachmentGroup resource.
+        /// Returns the InterconnectAttachmentStatuses for the specified
+        /// InterconnectAttachmentGroup resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1452,7 +1506,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a InterconnectAttachmentGroup in the specified project in the given scope using the parameters that are included in the request.
+        /// Creates a InterconnectAttachmentGroup in the specified project in the given
+        /// scope using the parameters that are included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1467,7 +1522,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a InterconnectAttachmentGroup in the specified project in the given scope using the parameters that are included in the request.
+        /// Creates a InterconnectAttachmentGroup in the specified project in the given
+        /// scope using the parameters that are included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1509,7 +1565,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient PatchOperationsClient { get; }
 
         /// <summary>
-        /// Patches the specified InterconnectAttachmentGroup resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified InterconnectAttachmentGroup resource with the data
+        /// included in the request. This method supports PATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1524,7 +1583,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches the specified InterconnectAttachmentGroup resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified InterconnectAttachmentGroup resource with the data
+        /// included in the request. This method supports PATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1539,7 +1601,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1551,7 +1614,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

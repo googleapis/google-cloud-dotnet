@@ -373,7 +373,10 @@ namespace Google.Cloud.Compute.V1
         public virtual NodeTemplates.NodeTemplatesClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of node templates. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of node templates.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -382,7 +385,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of node templates. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of node templates.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -393,7 +399,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of node templates. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of node templates.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -426,7 +435,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of node templates. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of node templates.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -663,7 +675,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, region, nodeTemplate, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -672,7 +685,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -681,7 +695,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -690,7 +705,8 @@ namespace Google.Cloud.Compute.V1
             GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -712,7 +728,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -734,7 +751,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -751,7 +769,8 @@ namespace Google.Cloud.Compute.V1
             GetIamPolicyAsync(project, region, resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a NodeTemplate resource in the specified project using the data included in the request.
+        /// Creates a NodeTemplate resource in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -760,7 +779,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a NodeTemplate resource in the specified project using the data included in the request.
+        /// Creates a NodeTemplate resource in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -769,7 +789,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a NodeTemplate resource in the specified project using the data included in the request.
+        /// Creates a NodeTemplate resource in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -804,7 +825,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a NodeTemplate resource in the specified project using the data included in the request.
+        /// Creates a NodeTemplate resource in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -826,7 +848,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a NodeTemplate resource in the specified project using the data included in the request.
+        /// Creates a NodeTemplate resource in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -848,7 +871,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a NodeTemplate resource in the specified project using the data included in the request.
+        /// Creates a NodeTemplate resource in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -865,7 +889,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, region, nodeTemplateResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a list of node templates available to the specified project.
+        /// Retrieves a list of node templates available to the specified
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -874,7 +899,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of node templates available to the specified project.
+        /// Retrieves a list of node templates available to the specified
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -883,7 +909,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of node templates available to the specified project.
+        /// Retrieves a list of node templates available to the specified
+        /// project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -920,7 +947,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of node templates available to the specified project.
+        /// Retrieves a list of node templates available to the specified
+        /// project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -957,7 +985,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -966,7 +995,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -975,7 +1005,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -984,7 +1015,8 @@ namespace Google.Cloud.Compute.V1
             SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1010,7 +1042,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1036,7 +1069,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1261,7 +1295,10 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_TestIamPermissionsNodeTemplateRequest(ref TestIamPermissionsNodeTemplateRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Retrieves an aggregated list of node templates. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of node templates.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1273,7 +1310,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of node templates. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of node templates.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1344,7 +1384,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1356,7 +1397,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1371,7 +1413,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a NodeTemplate resource in the specified project using the data included in the request.
+        /// Creates a NodeTemplate resource in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1386,7 +1429,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a NodeTemplate resource in the specified project using the data included in the request.
+        /// Creates a NodeTemplate resource in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1401,7 +1445,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of node templates available to the specified project.
+        /// Retrieves a list of node templates available to the specified
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1413,7 +1458,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of node templates available to the specified project.
+        /// Retrieves a list of node templates available to the specified
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1425,7 +1471,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1437,7 +1484,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

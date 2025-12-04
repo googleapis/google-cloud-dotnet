@@ -401,7 +401,10 @@ namespace Google.Cloud.Compute.V1
         public virtual Addresses.AddressesClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of addresses. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of addresses.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -410,7 +413,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of addresses. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of addresses.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -421,7 +427,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of addresses. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of addresses.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -454,7 +463,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of addresses. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of addresses.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -691,7 +703,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, region, address, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an address resource in the specified project by using the data included in the request.
+        /// Creates an address resource in the specified project by using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -700,7 +713,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an address resource in the specified project by using the data included in the request.
+        /// Creates an address resource in the specified project by using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -709,7 +723,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an address resource in the specified project by using the data included in the request.
+        /// Creates an address resource in the specified project by using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -744,7 +759,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates an address resource in the specified project by using the data included in the request.
+        /// Creates an address resource in the specified project by using the data
+        /// included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -766,7 +782,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an address resource in the specified project by using the data included in the request.
+        /// Creates an address resource in the specified project by using the data
+        /// included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -788,7 +805,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an address resource in the specified project by using the data included in the request.
+        /// Creates an address resource in the specified project by using the data
+        /// included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -805,7 +823,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, region, addressResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a list of addresses contained within the specified region.
+        /// Retrieves a list of addresses contained within
+        /// the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -814,7 +833,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of addresses contained within the specified region.
+        /// Retrieves a list of addresses contained within
+        /// the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -823,7 +843,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of addresses contained within the specified region.
+        /// Retrieves a list of addresses contained within
+        /// the specified region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -860,7 +881,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of addresses contained within the specified region.
+        /// Retrieves a list of addresses contained within
+        /// the specified region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1022,7 +1044,8 @@ namespace Google.Cloud.Compute.V1
             MoveAsync(project, region, address, regionAddressesMoveRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the labels on an Address. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an Address. To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1031,7 +1054,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the labels on an Address. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an Address. To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1040,7 +1064,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the labels on an Address. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an Address. To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1075,7 +1100,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetLabelsOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets the labels on an Address. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an Address. To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1101,7 +1127,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the labels on an Address. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an Address. To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1127,7 +1154,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the labels on an Address. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an Address. To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1354,7 +1382,10 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_TestIamPermissionsAddressRequest(ref TestIamPermissionsAddressRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Retrieves an aggregated list of addresses. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of addresses.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1366,7 +1397,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of addresses. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of addresses.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1440,7 +1474,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates an address resource in the specified project by using the data included in the request.
+        /// Creates an address resource in the specified project by using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1455,7 +1490,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates an address resource in the specified project by using the data included in the request.
+        /// Creates an address resource in the specified project by using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1470,7 +1506,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of addresses contained within the specified region.
+        /// Retrieves a list of addresses contained within
+        /// the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1482,7 +1519,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of addresses contained within the specified region.
+        /// Retrieves a list of addresses contained within
+        /// the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1530,7 +1568,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetLabelsOperationsClient { get; }
 
         /// <summary>
-        /// Sets the labels on an Address. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an Address. To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1545,7 +1584,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the labels on an Address. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an Address. To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

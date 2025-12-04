@@ -567,7 +567,9 @@ namespace Google.Cloud.Compute.V1
             DeleteAsync(project, image, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the deprecation status of an image. If an empty request body is given, clears the deprecation status instead.
+        /// Sets the deprecation status of an image.
+        /// 
+        /// If an empty request body is given, clears the deprecation status instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -576,7 +578,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the deprecation status of an image. If an empty request body is given, clears the deprecation status instead.
+        /// Sets the deprecation status of an image.
+        /// 
+        /// If an empty request body is given, clears the deprecation status instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -585,7 +589,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the deprecation status of an image. If an empty request body is given, clears the deprecation status instead.
+        /// Sets the deprecation status of an image.
+        /// 
+        /// If an empty request body is given, clears the deprecation status instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -620,7 +626,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeprecateOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets the deprecation status of an image. If an empty request body is given, clears the deprecation status instead.
+        /// Sets the deprecation status of an image.
+        /// 
+        /// If an empty request body is given, clears the deprecation status instead.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -642,7 +650,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the deprecation status of an image. If an empty request body is given, clears the deprecation status instead.
+        /// Sets the deprecation status of an image.
+        /// 
+        /// If an empty request body is given, clears the deprecation status instead.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -664,7 +674,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the deprecation status of an image. If an empty request body is given, clears the deprecation status instead.
+        /// Sets the deprecation status of an image.
+        /// 
+        /// If an empty request body is given, clears the deprecation status instead.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -758,7 +770,9 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, image, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the latest image that is part of an image family and is not deprecated. For more information on image families, see Public image families documentation.
+        /// Returns the latest image that is part of an image family and is not
+        /// deprecated. For more information on image families, seePublic
+        /// image families documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -767,7 +781,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the latest image that is part of an image family and is not deprecated. For more information on image families, see Public image families documentation.
+        /// Returns the latest image that is part of an image family and is not
+        /// deprecated. For more information on image families, seePublic
+        /// image families documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -776,7 +792,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the latest image that is part of an image family and is not deprecated. For more information on image families, see Public image families documentation.
+        /// Returns the latest image that is part of an image family and is not
+        /// deprecated. For more information on image families, seePublic
+        /// image families documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -785,10 +803,13 @@ namespace Google.Cloud.Compute.V1
             GetFromFamilyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the latest image that is part of an image family and is not deprecated. For more information on image families, see Public image families documentation.
+        /// Returns the latest image that is part of an image family and is not
+        /// deprecated. For more information on image families, seePublic
+        /// image families documentation.
         /// </summary>
         /// <param name="project">
-        /// The image project that the image belongs to. For example, to get a CentOS image, specify centos-cloud as the image project.
+        /// The image project that the image belongs to. For example, to get a CentOS
+        /// image, specify centos-cloud as the image project.
         /// </param>
         /// <param name="family">
         /// Name of the image family to search for.
@@ -803,10 +824,13 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the latest image that is part of an image family and is not deprecated. For more information on image families, see Public image families documentation.
+        /// Returns the latest image that is part of an image family and is not
+        /// deprecated. For more information on image families, seePublic
+        /// image families documentation.
         /// </summary>
         /// <param name="project">
-        /// The image project that the image belongs to. For example, to get a CentOS image, specify centos-cloud as the image project.
+        /// The image project that the image belongs to. For example, to get a CentOS
+        /// image, specify centos-cloud as the image project.
         /// </param>
         /// <param name="family">
         /// Name of the image family to search for.
@@ -821,10 +845,13 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the latest image that is part of an image family and is not deprecated. For more information on image families, see Public image families documentation.
+        /// Returns the latest image that is part of an image family and is not
+        /// deprecated. For more information on image families, seePublic
+        /// image families documentation.
         /// </summary>
         /// <param name="project">
-        /// The image project that the image belongs to. For example, to get a CentOS image, specify centos-cloud as the image project.
+        /// The image project that the image belongs to. For example, to get a CentOS
+        /// image, specify centos-cloud as the image project.
         /// </param>
         /// <param name="family">
         /// Name of the image family to search for.
@@ -835,7 +862,8 @@ namespace Google.Cloud.Compute.V1
             GetFromFamilyAsync(project, family, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -844,7 +872,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -853,7 +882,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -862,7 +892,8 @@ namespace Google.Cloud.Compute.V1
             GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -880,7 +911,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -898,7 +930,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -912,7 +945,8 @@ namespace Google.Cloud.Compute.V1
             GetIamPolicyAsync(project, resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an image in the specified project using the data included in the request.
+        /// Creates an image in the specified project using the data included
+        /// in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -921,7 +955,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an image in the specified project using the data included in the request.
+        /// Creates an image in the specified project using the data included
+        /// in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -930,7 +965,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an image in the specified project using the data included in the request.
+        /// Creates an image in the specified project using the data included
+        /// in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -965,7 +1001,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates an image in the specified project using the data included in the request.
+        /// Creates an image in the specified project using the data included
+        /// in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -983,7 +1020,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an image in the specified project using the data included in the request.
+        /// Creates an image in the specified project using the data included
+        /// in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1001,7 +1039,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an image in the specified project using the data included in the request.
+        /// Creates an image in the specified project using the data included
+        /// in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1015,7 +1054,13 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, imageResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the list of custom images available to the specified project. Custom images are images you create that belong to your project. This method does not get any images that belong to other projects, including publicly-available images, like Debian 8. If you want to get a list of publicly-available images, use this method to make a request to the respective image project, such as debian-cloud or windows-cloud.
+        /// Retrieves the list of custom images
+        /// available to the specified project. Custom images are images you
+        /// create that belong to your project. This method does not
+        /// get any images that belong to other projects, including publicly-available
+        /// images, like Debian 8. If you want to get a list of publicly-available
+        /// images, use this method to make a request to the respective image project,
+        /// such as debian-cloud or windows-cloud.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1024,7 +1069,13 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of custom images available to the specified project. Custom images are images you create that belong to your project. This method does not get any images that belong to other projects, including publicly-available images, like Debian 8. If you want to get a list of publicly-available images, use this method to make a request to the respective image project, such as debian-cloud or windows-cloud.
+        /// Retrieves the list of custom images
+        /// available to the specified project. Custom images are images you
+        /// create that belong to your project. This method does not
+        /// get any images that belong to other projects, including publicly-available
+        /// images, like Debian 8. If you want to get a list of publicly-available
+        /// images, use this method to make a request to the respective image project,
+        /// such as debian-cloud or windows-cloud.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1033,7 +1084,13 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of custom images available to the specified project. Custom images are images you create that belong to your project. This method does not get any images that belong to other projects, including publicly-available images, like Debian 8. If you want to get a list of publicly-available images, use this method to make a request to the respective image project, such as debian-cloud or windows-cloud.
+        /// Retrieves the list of custom images
+        /// available to the specified project. Custom images are images you
+        /// create that belong to your project. This method does not
+        /// get any images that belong to other projects, including publicly-available
+        /// images, like Debian 8. If you want to get a list of publicly-available
+        /// images, use this method to make a request to the respective image project,
+        /// such as debian-cloud or windows-cloud.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1066,7 +1123,13 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of custom images available to the specified project. Custom images are images you create that belong to your project. This method does not get any images that belong to other projects, including publicly-available images, like Debian 8. If you want to get a list of publicly-available images, use this method to make a request to the respective image project, such as debian-cloud or windows-cloud.
+        /// Retrieves the list of custom images
+        /// available to the specified project. Custom images are images you
+        /// create that belong to your project. This method does not
+        /// get any images that belong to other projects, including publicly-available
+        /// images, like Debian 8. If you want to get a list of publicly-available
+        /// images, use this method to make a request to the respective image project,
+        /// such as debian-cloud or windows-cloud.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1099,7 +1162,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches the specified image with the data included in the request. Only the following fields can be modified: family, description, deprecation status.
+        /// Patches the specified image with the data included in the request.
+        /// Only the following fields can be modified: family, description,
+        /// deprecation status.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1108,7 +1173,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified image with the data included in the request. Only the following fields can be modified: family, description, deprecation status.
+        /// Patches the specified image with the data included in the request.
+        /// Only the following fields can be modified: family, description,
+        /// deprecation status.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1117,7 +1184,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified image with the data included in the request. Only the following fields can be modified: family, description, deprecation status.
+        /// Patches the specified image with the data included in the request.
+        /// Only the following fields can be modified: family, description,
+        /// deprecation status.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1152,7 +1221,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchOperationsClient, callSettings);
 
         /// <summary>
-        /// Patches the specified image with the data included in the request. Only the following fields can be modified: family, description, deprecation status.
+        /// Patches the specified image with the data included in the request.
+        /// Only the following fields can be modified: family, description,
+        /// deprecation status.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1174,7 +1245,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified image with the data included in the request. Only the following fields can be modified: family, description, deprecation status.
+        /// Patches the specified image with the data included in the request.
+        /// Only the following fields can be modified: family, description,
+        /// deprecation status.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1196,7 +1269,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified image with the data included in the request. Only the following fields can be modified: family, description, deprecation status.
+        /// Patches the specified image with the data included in the request.
+        /// Only the following fields can be modified: family, description,
+        /// deprecation status.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1213,7 +1288,8 @@ namespace Google.Cloud.Compute.V1
             PatchAsync(project, image, imageResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1222,7 +1298,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1231,7 +1308,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1240,7 +1318,8 @@ namespace Google.Cloud.Compute.V1
             SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1262,7 +1341,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1284,7 +1364,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1301,7 +1382,8 @@ namespace Google.Cloud.Compute.V1
             SetIamPolicyAsync(project, resource, globalSetPolicyRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the labels on an image. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an image. To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1310,7 +1392,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the labels on an image. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an image. To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1319,7 +1402,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the labels on an image. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an image. To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1354,7 +1438,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetLabelsOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets the labels on an image. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an image. To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1376,7 +1461,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the labels on an image. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an image. To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1398,7 +1484,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the labels on an image. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an image. To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1675,7 +1762,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient DeprecateOperationsClient { get; }
 
         /// <summary>
-        /// Sets the deprecation status of an image. If an empty request body is given, clears the deprecation status instead.
+        /// Sets the deprecation status of an image.
+        /// 
+        /// If an empty request body is given, clears the deprecation status instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1690,7 +1779,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the deprecation status of an image. If an empty request body is given, clears the deprecation status instead.
+        /// Sets the deprecation status of an image.
+        /// 
+        /// If an empty request body is given, clears the deprecation status instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1729,7 +1820,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the latest image that is part of an image family and is not deprecated. For more information on image families, see Public image families documentation.
+        /// Returns the latest image that is part of an image family and is not
+        /// deprecated. For more information on image families, seePublic
+        /// image families documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1741,7 +1834,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the latest image that is part of an image family and is not deprecated. For more information on image families, see Public image families documentation.
+        /// Returns the latest image that is part of an image family and is not
+        /// deprecated. For more information on image families, seePublic
+        /// image families documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1753,7 +1848,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1765,7 +1861,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1780,7 +1877,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates an image in the specified project using the data included in the request.
+        /// Creates an image in the specified project using the data included
+        /// in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1795,7 +1893,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates an image in the specified project using the data included in the request.
+        /// Creates an image in the specified project using the data included
+        /// in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1810,7 +1909,13 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of custom images available to the specified project. Custom images are images you create that belong to your project. This method does not get any images that belong to other projects, including publicly-available images, like Debian 8. If you want to get a list of publicly-available images, use this method to make a request to the respective image project, such as debian-cloud or windows-cloud.
+        /// Retrieves the list of custom images
+        /// available to the specified project. Custom images are images you
+        /// create that belong to your project. This method does not
+        /// get any images that belong to other projects, including publicly-available
+        /// images, like Debian 8. If you want to get a list of publicly-available
+        /// images, use this method to make a request to the respective image project,
+        /// such as debian-cloud or windows-cloud.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1822,7 +1927,13 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of custom images available to the specified project. Custom images are images you create that belong to your project. This method does not get any images that belong to other projects, including publicly-available images, like Debian 8. If you want to get a list of publicly-available images, use this method to make a request to the respective image project, such as debian-cloud or windows-cloud.
+        /// Retrieves the list of custom images
+        /// available to the specified project. Custom images are images you
+        /// create that belong to your project. This method does not
+        /// get any images that belong to other projects, including publicly-available
+        /// images, like Debian 8. If you want to get a list of publicly-available
+        /// images, use this method to make a request to the respective image project,
+        /// such as debian-cloud or windows-cloud.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1837,7 +1948,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient PatchOperationsClient { get; }
 
         /// <summary>
-        /// Patches the specified image with the data included in the request. Only the following fields can be modified: family, description, deprecation status.
+        /// Patches the specified image with the data included in the request.
+        /// Only the following fields can be modified: family, description,
+        /// deprecation status.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1852,7 +1965,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches the specified image with the data included in the request. Only the following fields can be modified: family, description, deprecation status.
+        /// Patches the specified image with the data included in the request.
+        /// Only the following fields can be modified: family, description,
+        /// deprecation status.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1867,7 +1982,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1879,7 +1995,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1894,7 +2011,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetLabelsOperationsClient { get; }
 
         /// <summary>
-        /// Sets the labels on an image. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an image. To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1909,7 +2027,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the labels on an image. To learn more about labels, read the Labeling Resources documentation.
+        /// Sets the labels on an image. To learn more about labels, read theLabeling
+        /// Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

@@ -447,7 +447,10 @@ namespace Google.Cloud.Compute.V1
         public virtual InstanceGroups.InstanceGroupsClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Adds a list of instances to the specified instance group. All of the instances in the instance group must be in the same network/subnetwork. Read Adding instances for more information.
+        /// Adds a list of instances to the specified instance group.  All of the
+        /// instances in the instance group must be in the same network/subnetwork.
+        /// Read
+        /// Adding instances for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -456,7 +459,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Adds a list of instances to the specified instance group. All of the instances in the instance group must be in the same network/subnetwork. Read Adding instances for more information.
+        /// Adds a list of instances to the specified instance group.  All of the
+        /// instances in the instance group must be in the same network/subnetwork.
+        /// Read
+        /// Adding instances for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -465,7 +471,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Adds a list of instances to the specified instance group. All of the instances in the instance group must be in the same network/subnetwork. Read Adding instances for more information.
+        /// Adds a list of instances to the specified instance group.  All of the
+        /// instances in the instance group must be in the same network/subnetwork.
+        /// Read
+        /// Adding instances for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -500,13 +509,17 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddInstancesOperationsClient, callSettings);
 
         /// <summary>
-        /// Adds a list of instances to the specified instance group. All of the instances in the instance group must be in the same network/subnetwork. Read Adding instances for more information.
+        /// Adds a list of instances to the specified instance group.  All of the
+        /// instances in the instance group must be in the same network/subnetwork.
+        /// Read
+        /// Adding instances for more information.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the instance group is located.
+        /// The name of the zone
+        /// where the instance group is located.
         /// </param>
         /// <param name="instanceGroup">
         /// The name of the instance group where you are adding instances.
@@ -526,13 +539,17 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Adds a list of instances to the specified instance group. All of the instances in the instance group must be in the same network/subnetwork. Read Adding instances for more information.
+        /// Adds a list of instances to the specified instance group.  All of the
+        /// instances in the instance group must be in the same network/subnetwork.
+        /// Read
+        /// Adding instances for more information.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the instance group is located.
+        /// The name of the zone
+        /// where the instance group is located.
         /// </param>
         /// <param name="instanceGroup">
         /// The name of the instance group where you are adding instances.
@@ -552,13 +569,17 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Adds a list of instances to the specified instance group. All of the instances in the instance group must be in the same network/subnetwork. Read Adding instances for more information.
+        /// Adds a list of instances to the specified instance group.  All of the
+        /// instances in the instance group must be in the same network/subnetwork.
+        /// Read
+        /// Adding instances for more information.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the instance group is located.
+        /// The name of the zone
+        /// where the instance group is located.
         /// </param>
         /// <param name="instanceGroup">
         /// The name of the instance group where you are adding instances.
@@ -572,7 +593,10 @@ namespace Google.Cloud.Compute.V1
             AddInstancesAsync(project, zone, instanceGroup, instanceGroupsAddInstancesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the list of instance groups and sorts them by zone. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of instance groups and sorts them by zone.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -581,7 +605,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of instance groups and sorts them by zone. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of instance groups and sorts them by zone.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -592,7 +619,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of instance groups and sorts them by zone. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of instance groups and sorts them by zone.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -625,7 +655,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of instance groups and sorts them by zone. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of instance groups and sorts them by zone.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -660,7 +693,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Deletes the specified instance group. The instances in the group are not deleted. Note that instance group must not belong to a backend service. Read Deleting an instance group for more information.
+        /// Deletes the specified instance group. The instances in the group are not
+        /// deleted. Note that instance group must not belong to a backend service.
+        /// Read
+        /// Deleting an instance group for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -669,7 +705,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified instance group. The instances in the group are not deleted. Note that instance group must not belong to a backend service. Read Deleting an instance group for more information.
+        /// Deletes the specified instance group. The instances in the group are not
+        /// deleted. Note that instance group must not belong to a backend service.
+        /// Read
+        /// Deleting an instance group for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -678,7 +717,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified instance group. The instances in the group are not deleted. Note that instance group must not belong to a backend service. Read Deleting an instance group for more information.
+        /// Deletes the specified instance group. The instances in the group are not
+        /// deleted. Note that instance group must not belong to a backend service.
+        /// Read
+        /// Deleting an instance group for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -713,13 +755,17 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes the specified instance group. The instances in the group are not deleted. Note that instance group must not belong to a backend service. Read Deleting an instance group for more information.
+        /// Deletes the specified instance group. The instances in the group are not
+        /// deleted. Note that instance group must not belong to a backend service.
+        /// Read
+        /// Deleting an instance group for more information.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the instance group is located.
+        /// The name of the zone
+        /// where the instance group is located.
         /// </param>
         /// <param name="instanceGroup">
         /// The name of the instance group to delete.
@@ -735,13 +781,17 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified instance group. The instances in the group are not deleted. Note that instance group must not belong to a backend service. Read Deleting an instance group for more information.
+        /// Deletes the specified instance group. The instances in the group are not
+        /// deleted. Note that instance group must not belong to a backend service.
+        /// Read
+        /// Deleting an instance group for more information.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the instance group is located.
+        /// The name of the zone
+        /// where the instance group is located.
         /// </param>
         /// <param name="instanceGroup">
         /// The name of the instance group to delete.
@@ -757,13 +807,17 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified instance group. The instances in the group are not deleted. Note that instance group must not belong to a backend service. Read Deleting an instance group for more information.
+        /// Deletes the specified instance group. The instances in the group are not
+        /// deleted. Note that instance group must not belong to a backend service.
+        /// Read
+        /// Deleting an instance group for more information.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the instance group is located.
+        /// The name of the zone
+        /// where the instance group is located.
         /// </param>
         /// <param name="instanceGroup">
         /// The name of the instance group to delete.
@@ -774,7 +828,12 @@ namespace Google.Cloud.Compute.V1
             DeleteAsync(project, zone, instanceGroup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the specified zonal instance group. Get a list of available zonal instance groups by making a list() request. For managed instance groups, use the instanceGroupManagers or regionInstanceGroupManagers methods instead.
+        /// Returns the specified zonal instance group. Get a list of available zonal
+        /// instance groups by making a list() request.
+        /// 
+        /// For managed instance groups, use theinstanceGroupManagers
+        /// or regionInstanceGroupManagers
+        /// methods instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -783,7 +842,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified zonal instance group. Get a list of available zonal instance groups by making a list() request. For managed instance groups, use the instanceGroupManagers or regionInstanceGroupManagers methods instead.
+        /// Returns the specified zonal instance group. Get a list of available zonal
+        /// instance groups by making a list() request.
+        /// 
+        /// For managed instance groups, use theinstanceGroupManagers
+        /// or regionInstanceGroupManagers
+        /// methods instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -792,7 +856,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified zonal instance group. Get a list of available zonal instance groups by making a list() request. For managed instance groups, use the instanceGroupManagers or regionInstanceGroupManagers methods instead.
+        /// Returns the specified zonal instance group. Get a list of available zonal
+        /// instance groups by making a list() request.
+        /// 
+        /// For managed instance groups, use theinstanceGroupManagers
+        /// or regionInstanceGroupManagers
+        /// methods instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -801,13 +870,19 @@ namespace Google.Cloud.Compute.V1
             GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the specified zonal instance group. Get a list of available zonal instance groups by making a list() request. For managed instance groups, use the instanceGroupManagers or regionInstanceGroupManagers methods instead.
+        /// Returns the specified zonal instance group. Get a list of available zonal
+        /// instance groups by making a list() request.
+        /// 
+        /// For managed instance groups, use theinstanceGroupManagers
+        /// or regionInstanceGroupManagers
+        /// methods instead.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the instance group is located.
+        /// The name of the zone
+        /// where the instance group is located.
         /// </param>
         /// <param name="instanceGroup">
         /// The name of the instance group.
@@ -823,13 +898,19 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the specified zonal instance group. Get a list of available zonal instance groups by making a list() request. For managed instance groups, use the instanceGroupManagers or regionInstanceGroupManagers methods instead.
+        /// Returns the specified zonal instance group. Get a list of available zonal
+        /// instance groups by making a list() request.
+        /// 
+        /// For managed instance groups, use theinstanceGroupManagers
+        /// or regionInstanceGroupManagers
+        /// methods instead.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the instance group is located.
+        /// The name of the zone
+        /// where the instance group is located.
         /// </param>
         /// <param name="instanceGroup">
         /// The name of the instance group.
@@ -845,13 +926,19 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the specified zonal instance group. Get a list of available zonal instance groups by making a list() request. For managed instance groups, use the instanceGroupManagers or regionInstanceGroupManagers methods instead.
+        /// Returns the specified zonal instance group. Get a list of available zonal
+        /// instance groups by making a list() request.
+        /// 
+        /// For managed instance groups, use theinstanceGroupManagers
+        /// or regionInstanceGroupManagers
+        /// methods instead.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the instance group is located.
+        /// The name of the zone
+        /// where the instance group is located.
         /// </param>
         /// <param name="instanceGroup">
         /// The name of the instance group.
@@ -862,7 +949,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, zone, instanceGroup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an instance group in the specified project using the parameters that are included in the request.
+        /// Creates an instance group in the specified project using the
+        /// parameters that are included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -871,7 +959,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an instance group in the specified project using the parameters that are included in the request.
+        /// Creates an instance group in the specified project using the
+        /// parameters that are included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -880,7 +969,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an instance group in the specified project using the parameters that are included in the request.
+        /// Creates an instance group in the specified project using the
+        /// parameters that are included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -915,13 +1005,15 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates an instance group in the specified project using the parameters that are included in the request.
+        /// Creates an instance group in the specified project using the
+        /// parameters that are included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where you want to create the instance group.
+        /// The name of the zone
+        /// where you want to create the instance group.
         /// </param>
         /// <param name="instanceGroupResource">
         /// The body resource for this request
@@ -937,13 +1029,15 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an instance group in the specified project using the parameters that are included in the request.
+        /// Creates an instance group in the specified project using the
+        /// parameters that are included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where you want to create the instance group.
+        /// The name of the zone
+        /// where you want to create the instance group.
         /// </param>
         /// <param name="instanceGroupResource">
         /// The body resource for this request
@@ -959,13 +1053,15 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an instance group in the specified project using the parameters that are included in the request.
+        /// Creates an instance group in the specified project using the
+        /// parameters that are included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where you want to create the instance group.
+        /// The name of the zone
+        /// where you want to create the instance group.
         /// </param>
         /// <param name="instanceGroupResource">
         /// The body resource for this request
@@ -976,7 +1072,12 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, zone, instanceGroupResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the list of zonal instance group resources contained within the specified zone. For managed instance groups, use the instanceGroupManagers or regionInstanceGroupManagers methods instead.
+        /// Retrieves the list of zonal instance group resources contained within the
+        /// specified zone.
+        /// 
+        /// For managed instance groups, use theinstanceGroupManagers
+        /// or regionInstanceGroupManagers
+        /// methods instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -985,7 +1086,12 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of zonal instance group resources contained within the specified zone. For managed instance groups, use the instanceGroupManagers or regionInstanceGroupManagers methods instead.
+        /// Retrieves the list of zonal instance group resources contained within the
+        /// specified zone.
+        /// 
+        /// For managed instance groups, use theinstanceGroupManagers
+        /// or regionInstanceGroupManagers
+        /// methods instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -994,13 +1100,19 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of zonal instance group resources contained within the specified zone. For managed instance groups, use the instanceGroupManagers or regionInstanceGroupManagers methods instead.
+        /// Retrieves the list of zonal instance group resources contained within the
+        /// specified zone.
+        /// 
+        /// For managed instance groups, use theinstanceGroupManagers
+        /// or regionInstanceGroupManagers
+        /// methods instead.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the instance group is located.
+        /// The name of thezone
+        /// where the instance group is located.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1031,13 +1143,19 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of zonal instance group resources contained within the specified zone. For managed instance groups, use the instanceGroupManagers or regionInstanceGroupManagers methods instead.
+        /// Retrieves the list of zonal instance group resources contained within the
+        /// specified zone.
+        /// 
+        /// For managed instance groups, use theinstanceGroupManagers
+        /// or regionInstanceGroupManagers
+        /// methods instead.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the instance group is located.
+        /// The name of thezone
+        /// where the instance group is located.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1068,7 +1186,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists the instances in the specified instance group. The orderBy query parameter is not supported. The filter query parameter is supported, but only for expressions that use `eq` (equal) or `ne` (not equal) operators.
+        /// Lists the instances in the specified instance group.
+        /// The orderBy query parameter is not supported.
+        /// The filter query parameter is supported, but only for
+        /// expressions that use `eq` (equal) or `ne` (not equal) operators.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1077,7 +1198,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists the instances in the specified instance group. The orderBy query parameter is not supported. The filter query parameter is supported, but only for expressions that use `eq` (equal) or `ne` (not equal) operators.
+        /// Lists the instances in the specified instance group.
+        /// The orderBy query parameter is not supported.
+        /// The filter query parameter is supported, but only for
+        /// expressions that use `eq` (equal) or `ne` (not equal) operators.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1086,16 +1210,21 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists the instances in the specified instance group. The orderBy query parameter is not supported. The filter query parameter is supported, but only for expressions that use `eq` (equal) or `ne` (not equal) operators.
+        /// Lists the instances in the specified instance group.
+        /// The orderBy query parameter is not supported.
+        /// The filter query parameter is supported, but only for
+        /// expressions that use `eq` (equal) or `ne` (not equal) operators.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the instance group is located.
+        /// The name of the zone
+        /// where the instance group is located.
         /// </param>
         /// <param name="instanceGroup">
-        /// The name of the instance group from which you want to generate a list of included instances.
+        /// The name of the instance group from which you want to generate a list
+        /// of included instances.
         /// </param>
         /// <param name="instanceGroupsListInstancesRequestResource">
         /// The body resource for this request
@@ -1131,16 +1260,21 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists the instances in the specified instance group. The orderBy query parameter is not supported. The filter query parameter is supported, but only for expressions that use `eq` (equal) or `ne` (not equal) operators.
+        /// Lists the instances in the specified instance group.
+        /// The orderBy query parameter is not supported.
+        /// The filter query parameter is supported, but only for
+        /// expressions that use `eq` (equal) or `ne` (not equal) operators.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the instance group is located.
+        /// The name of the zone
+        /// where the instance group is located.
         /// </param>
         /// <param name="instanceGroup">
-        /// The name of the instance group from which you want to generate a list of included instances.
+        /// The name of the instance group from which you want to generate a list
+        /// of included instances.
         /// </param>
         /// <param name="instanceGroupsListInstancesRequestResource">
         /// The body resource for this request
@@ -1176,7 +1310,13 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Removes one or more instances from the specified instance group, but does not delete those instances. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration before the VM instance is removed or deleted.
+        /// Removes one or more instances from the specified instance group, but does
+        /// not delete those instances.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration before the VM instance is removed or deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1185,7 +1325,13 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Removes one or more instances from the specified instance group, but does not delete those instances. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration before the VM instance is removed or deleted.
+        /// Removes one or more instances from the specified instance group, but does
+        /// not delete those instances.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration before the VM instance is removed or deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1194,7 +1340,13 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Removes one or more instances from the specified instance group, but does not delete those instances. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration before the VM instance is removed or deleted.
+        /// Removes one or more instances from the specified instance group, but does
+        /// not delete those instances.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration before the VM instance is removed or deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1229,16 +1381,24 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RemoveInstancesOperationsClient, callSettings);
 
         /// <summary>
-        /// Removes one or more instances from the specified instance group, but does not delete those instances. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration before the VM instance is removed or deleted.
+        /// Removes one or more instances from the specified instance group, but does
+        /// not delete those instances.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration before the VM instance is removed or deleted.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the instance group is located.
+        /// The name of the zone
+        /// where the instance group is located.
         /// </param>
         /// <param name="instanceGroup">
-        /// The name of the instance group where the specified instances will be removed.
+        /// The name of the instance group where the specified instances will be
+        /// removed.
         /// </param>
         /// <param name="instanceGroupsRemoveInstancesRequestResource">
         /// The body resource for this request
@@ -1255,16 +1415,24 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Removes one or more instances from the specified instance group, but does not delete those instances. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration before the VM instance is removed or deleted.
+        /// Removes one or more instances from the specified instance group, but does
+        /// not delete those instances.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration before the VM instance is removed or deleted.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the instance group is located.
+        /// The name of the zone
+        /// where the instance group is located.
         /// </param>
         /// <param name="instanceGroup">
-        /// The name of the instance group where the specified instances will be removed.
+        /// The name of the instance group where the specified instances will be
+        /// removed.
         /// </param>
         /// <param name="instanceGroupsRemoveInstancesRequestResource">
         /// The body resource for this request
@@ -1281,16 +1449,24 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Removes one or more instances from the specified instance group, but does not delete those instances. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration before the VM instance is removed or deleted.
+        /// Removes one or more instances from the specified instance group, but does
+        /// not delete those instances.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration before the VM instance is removed or deleted.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the instance group is located.
+        /// The name of the zone
+        /// where the instance group is located.
         /// </param>
         /// <param name="instanceGroup">
-        /// The name of the instance group where the specified instances will be removed.
+        /// The name of the instance group where the specified instances will be
+        /// removed.
         /// </param>
         /// <param name="instanceGroupsRemoveInstancesRequestResource">
         /// The body resource for this request
@@ -1360,7 +1536,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the instance group is located.
+        /// The name of the zone
+        /// where the instance group is located.
         /// </param>
         /// <param name="instanceGroup">
         /// The name of the instance group where the named ports are updated.
@@ -1386,7 +1563,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the instance group is located.
+        /// The name of the zone
+        /// where the instance group is located.
         /// </param>
         /// <param name="instanceGroup">
         /// The name of the instance group where the named ports are updated.
@@ -1412,7 +1590,8 @@ namespace Google.Cloud.Compute.V1
         /// Project ID for this request.
         /// </param>
         /// <param name="zone">
-        /// The name of the zone where the instance group is located.
+        /// The name of the zone
+        /// where the instance group is located.
         /// </param>
         /// <param name="instanceGroup">
         /// The name of the instance group where the named ports are updated.
@@ -1655,7 +1834,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient AddInstancesOperationsClient { get; }
 
         /// <summary>
-        /// Adds a list of instances to the specified instance group. All of the instances in the instance group must be in the same network/subnetwork. Read Adding instances for more information.
+        /// Adds a list of instances to the specified instance group.  All of the
+        /// instances in the instance group must be in the same network/subnetwork.
+        /// Read
+        /// Adding instances for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1670,7 +1852,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Adds a list of instances to the specified instance group. All of the instances in the instance group must be in the same network/subnetwork. Read Adding instances for more information.
+        /// Adds a list of instances to the specified instance group.  All of the
+        /// instances in the instance group must be in the same network/subnetwork.
+        /// Read
+        /// Adding instances for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1685,7 +1870,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of instance groups and sorts them by zone. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of instance groups and sorts them by zone.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1697,7 +1885,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of instance groups and sorts them by zone. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves the list of instance groups and sorts them by zone.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1714,7 +1905,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient DeleteOperationsClient { get; }
 
         /// <summary>
-        /// Deletes the specified instance group. The instances in the group are not deleted. Note that instance group must not belong to a backend service. Read Deleting an instance group for more information.
+        /// Deletes the specified instance group. The instances in the group are not
+        /// deleted. Note that instance group must not belong to a backend service.
+        /// Read
+        /// Deleting an instance group for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1729,7 +1923,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Deletes the specified instance group. The instances in the group are not deleted. Note that instance group must not belong to a backend service. Read Deleting an instance group for more information.
+        /// Deletes the specified instance group. The instances in the group are not
+        /// deleted. Note that instance group must not belong to a backend service.
+        /// Read
+        /// Deleting an instance group for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1744,7 +1941,12 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the specified zonal instance group. Get a list of available zonal instance groups by making a list() request. For managed instance groups, use the instanceGroupManagers or regionInstanceGroupManagers methods instead.
+        /// Returns the specified zonal instance group. Get a list of available zonal
+        /// instance groups by making a list() request.
+        /// 
+        /// For managed instance groups, use theinstanceGroupManagers
+        /// or regionInstanceGroupManagers
+        /// methods instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1756,7 +1958,12 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the specified zonal instance group. Get a list of available zonal instance groups by making a list() request. For managed instance groups, use the instanceGroupManagers or regionInstanceGroupManagers methods instead.
+        /// Returns the specified zonal instance group. Get a list of available zonal
+        /// instance groups by making a list() request.
+        /// 
+        /// For managed instance groups, use theinstanceGroupManagers
+        /// or regionInstanceGroupManagers
+        /// methods instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1771,7 +1978,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates an instance group in the specified project using the parameters that are included in the request.
+        /// Creates an instance group in the specified project using the
+        /// parameters that are included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1786,7 +1994,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates an instance group in the specified project using the parameters that are included in the request.
+        /// Creates an instance group in the specified project using the
+        /// parameters that are included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1801,7 +2010,12 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of zonal instance group resources contained within the specified zone. For managed instance groups, use the instanceGroupManagers or regionInstanceGroupManagers methods instead.
+        /// Retrieves the list of zonal instance group resources contained within the
+        /// specified zone.
+        /// 
+        /// For managed instance groups, use theinstanceGroupManagers
+        /// or regionInstanceGroupManagers
+        /// methods instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1813,7 +2027,12 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of zonal instance group resources contained within the specified zone. For managed instance groups, use the instanceGroupManagers or regionInstanceGroupManagers methods instead.
+        /// Retrieves the list of zonal instance group resources contained within the
+        /// specified zone.
+        /// 
+        /// For managed instance groups, use theinstanceGroupManagers
+        /// or regionInstanceGroupManagers
+        /// methods instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1825,7 +2044,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists the instances in the specified instance group. The orderBy query parameter is not supported. The filter query parameter is supported, but only for expressions that use `eq` (equal) or `ne` (not equal) operators.
+        /// Lists the instances in the specified instance group.
+        /// The orderBy query parameter is not supported.
+        /// The filter query parameter is supported, but only for
+        /// expressions that use `eq` (equal) or `ne` (not equal) operators.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1837,7 +2059,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists the instances in the specified instance group. The orderBy query parameter is not supported. The filter query parameter is supported, but only for expressions that use `eq` (equal) or `ne` (not equal) operators.
+        /// Lists the instances in the specified instance group.
+        /// The orderBy query parameter is not supported.
+        /// The filter query parameter is supported, but only for
+        /// expressions that use `eq` (equal) or `ne` (not equal) operators.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1852,7 +2077,13 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient RemoveInstancesOperationsClient { get; }
 
         /// <summary>
-        /// Removes one or more instances from the specified instance group, but does not delete those instances. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration before the VM instance is removed or deleted.
+        /// Removes one or more instances from the specified instance group, but does
+        /// not delete those instances.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration before the VM instance is removed or deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1867,7 +2098,13 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Removes one or more instances from the specified instance group, but does not delete those instances. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration before the VM instance is removed or deleted.
+        /// Removes one or more instances from the specified instance group, but does
+        /// not delete those instances.
+        /// 
+        /// If the group is part of a backend
+        /// service that has enabled
+        /// connection draining, it can take up to 60 seconds after the connection
+        /// draining duration before the VM instance is removed or deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

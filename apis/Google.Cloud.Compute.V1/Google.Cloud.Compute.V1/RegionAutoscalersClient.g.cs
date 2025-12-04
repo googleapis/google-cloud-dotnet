@@ -569,7 +569,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, region, autoscaler, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an autoscaler in the specified project using the data included in the request.
+        /// Creates an autoscaler in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -578,7 +579,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an autoscaler in the specified project using the data included in the request.
+        /// Creates an autoscaler in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -587,7 +589,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an autoscaler in the specified project using the data included in the request.
+        /// Creates an autoscaler in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -622,7 +625,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates an autoscaler in the specified project using the data included in the request.
+        /// Creates an autoscaler in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -644,7 +648,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an autoscaler in the specified project using the data included in the request.
+        /// Creates an autoscaler in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -666,7 +671,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an autoscaler in the specified project using the data included in the request.
+        /// Creates an autoscaler in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -683,7 +689,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, region, autoscalerResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a list of autoscalers contained within the specified region.
+        /// Retrieves a list of autoscalers contained within
+        /// the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -692,7 +699,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of autoscalers contained within the specified region.
+        /// Retrieves a list of autoscalers contained within
+        /// the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -701,7 +709,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of autoscalers contained within the specified region.
+        /// Retrieves a list of autoscalers contained within
+        /// the specified region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -738,7 +747,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of autoscalers contained within the specified region.
+        /// Retrieves a list of autoscalers contained within
+        /// the specified region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -775,7 +785,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Updates an autoscaler in the specified project using the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates an autoscaler in the specified project using
+        /// the data included in the request. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -784,7 +797,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an autoscaler in the specified project using the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates an autoscaler in the specified project using
+        /// the data included in the request. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -793,7 +809,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an autoscaler in the specified project using the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates an autoscaler in the specified project using
+        /// the data included in the request. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -828,7 +847,10 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates an autoscaler in the specified project using the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates an autoscaler in the specified project using
+        /// the data included in the request. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -850,7 +872,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an autoscaler in the specified project using the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates an autoscaler in the specified project using
+        /// the data included in the request. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -872,7 +897,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an autoscaler in the specified project using the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates an autoscaler in the specified project using
+        /// the data included in the request. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -889,7 +917,8 @@ namespace Google.Cloud.Compute.V1
             PatchAsync(project, region, autoscalerResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an autoscaler in the specified project using the data included in the request.
+        /// Updates an autoscaler in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -898,7 +927,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an autoscaler in the specified project using the data included in the request.
+        /// Updates an autoscaler in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -907,7 +937,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an autoscaler in the specified project using the data included in the request.
+        /// Updates an autoscaler in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -942,7 +973,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates an autoscaler in the specified project using the data included in the request.
+        /// Updates an autoscaler in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -964,7 +996,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an autoscaler in the specified project using the data included in the request.
+        /// Updates an autoscaler in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -986,7 +1019,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an autoscaler in the specified project using the data included in the request.
+        /// Updates an autoscaler in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1153,7 +1187,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates an autoscaler in the specified project using the data included in the request.
+        /// Creates an autoscaler in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1168,7 +1203,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates an autoscaler in the specified project using the data included in the request.
+        /// Creates an autoscaler in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1183,7 +1219,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of autoscalers contained within the specified region.
+        /// Retrieves a list of autoscalers contained within
+        /// the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1195,7 +1232,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of autoscalers contained within the specified region.
+        /// Retrieves a list of autoscalers contained within
+        /// the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1210,7 +1248,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient PatchOperationsClient { get; }
 
         /// <summary>
-        /// Updates an autoscaler in the specified project using the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates an autoscaler in the specified project using
+        /// the data included in the request. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1225,7 +1266,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Updates an autoscaler in the specified project using the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates an autoscaler in the specified project using
+        /// the data included in the request. This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1243,7 +1287,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient UpdateOperationsClient { get; }
 
         /// <summary>
-        /// Updates an autoscaler in the specified project using the data included in the request.
+        /// Updates an autoscaler in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1258,7 +1303,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Updates an autoscaler in the specified project using the data included in the request.
+        /// Updates an autoscaler in the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

@@ -325,7 +325,10 @@ namespace Google.Cloud.Compute.V1
         public virtual RegionCommitments.RegionCommitmentsClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of commitments by region. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of commitments by region.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -334,7 +337,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of commitments by region. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of commitments by region.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -345,7 +351,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of commitments by region. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of commitments by region.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -378,7 +387,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of commitments by region. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of commitments by region.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -501,7 +513,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, region, commitment, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a commitment in the specified project using the data included in the request.
+        /// Creates a commitment in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -510,7 +523,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a commitment in the specified project using the data included in the request.
+        /// Creates a commitment in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -519,7 +533,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a commitment in the specified project using the data included in the request.
+        /// Creates a commitment in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -554,7 +569,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a commitment in the specified project using the data included in the request.
+        /// Creates a commitment in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -576,7 +592,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a commitment in the specified project using the data included in the request.
+        /// Creates a commitment in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -598,7 +615,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a commitment in the specified project using the data included in the request.
+        /// Creates a commitment in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -615,7 +633,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, region, commitmentResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a list of commitments contained within the specified region.
+        /// Retrieves a list of commitments contained within
+        /// the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -624,7 +643,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of commitments contained within the specified region.
+        /// Retrieves a list of commitments contained within
+        /// the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -633,7 +653,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of commitments contained within the specified region.
+        /// Retrieves a list of commitments contained within
+        /// the specified region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -670,7 +691,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of commitments contained within the specified region.
+        /// Retrieves a list of commitments contained within
+        /// the specified region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -707,7 +729,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Updates the specified commitment with the data included in the request. Update is performed only on selected fields included as part of update-mask. Only the following fields can be updated: auto_renew and plan.
+        /// Updates the specified commitment with the data included in the request.
+        /// Update is performed only on selected fields included as part of
+        /// update-mask. Only the following fields can be updated: auto_renew and plan.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -716,7 +740,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the specified commitment with the data included in the request. Update is performed only on selected fields included as part of update-mask. Only the following fields can be updated: auto_renew and plan.
+        /// Updates the specified commitment with the data included in the request.
+        /// Update is performed only on selected fields included as part of
+        /// update-mask. Only the following fields can be updated: auto_renew and plan.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -725,7 +751,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the specified commitment with the data included in the request. Update is performed only on selected fields included as part of update-mask. Only the following fields can be updated: auto_renew and plan.
+        /// Updates the specified commitment with the data included in the request.
+        /// Update is performed only on selected fields included as part of
+        /// update-mask. Only the following fields can be updated: auto_renew and plan.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -760,7 +788,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates the specified commitment with the data included in the request. Update is performed only on selected fields included as part of update-mask. Only the following fields can be updated: auto_renew and plan.
+        /// Updates the specified commitment with the data included in the request.
+        /// Update is performed only on selected fields included as part of
+        /// update-mask. Only the following fields can be updated: auto_renew and plan.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -786,7 +816,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the specified commitment with the data included in the request. Update is performed only on selected fields included as part of update-mask. Only the following fields can be updated: auto_renew and plan.
+        /// Updates the specified commitment with the data included in the request.
+        /// Update is performed only on selected fields included as part of
+        /// update-mask. Only the following fields can be updated: auto_renew and plan.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -812,7 +844,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the specified commitment with the data included in the request. Update is performed only on selected fields included as part of update-mask. Only the following fields can be updated: auto_renew and plan.
+        /// Updates the specified commitment with the data included in the request.
+        /// Update is performed only on selected fields included as part of
+        /// update-mask. Only the following fields can be updated: auto_renew and plan.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -911,7 +945,10 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_UpdateRegionCommitmentRequest(ref UpdateRegionCommitmentRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Retrieves an aggregated list of commitments by region. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of commitments by region.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -923,7 +960,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of commitments by region. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of commitments by region.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -964,7 +1004,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a commitment in the specified project using the data included in the request.
+        /// Creates a commitment in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -979,7 +1020,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a commitment in the specified project using the data included in the request.
+        /// Creates a commitment in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -994,7 +1036,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of commitments contained within the specified region.
+        /// Retrieves a list of commitments contained within
+        /// the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1006,7 +1049,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of commitments contained within the specified region.
+        /// Retrieves a list of commitments contained within
+        /// the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1021,7 +1065,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient UpdateOperationsClient { get; }
 
         /// <summary>
-        /// Updates the specified commitment with the data included in the request. Update is performed only on selected fields included as part of update-mask. Only the following fields can be updated: auto_renew and plan.
+        /// Updates the specified commitment with the data included in the request.
+        /// Update is performed only on selected fields included as part of
+        /// update-mask. Only the following fields can be updated: auto_renew and plan.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1036,7 +1082,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Updates the specified commitment with the data included in the request. Update is performed only on selected fields included as part of update-mask. Only the following fields can be updated: auto_renew and plan.
+        /// Updates the specified commitment with the data included in the request.
+        /// Update is performed only on selected fields included as part of
+        /// update-mask. Only the following fields can be updated: auto_renew and plan.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

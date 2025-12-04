@@ -317,7 +317,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, networkProfile, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a list of network profiles available to the specified project.
+        /// Retrieves a list of network profiles available to the specified
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -326,7 +327,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of network profiles available to the specified project.
+        /// Retrieves a list of network profiles available to the specified
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -335,7 +337,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of network profiles available to the specified project.
+        /// Retrieves a list of network profiles available to the specified
+        /// project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -368,7 +371,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of network profiles available to the specified project.
+        /// Retrieves a list of network profiles available to the specified
+        /// project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -475,7 +479,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of network profiles available to the specified project.
+        /// Retrieves a list of network profiles available to the specified
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -487,7 +492,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of network profiles available to the specified project.
+        /// Retrieves a list of network profiles available to the specified
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

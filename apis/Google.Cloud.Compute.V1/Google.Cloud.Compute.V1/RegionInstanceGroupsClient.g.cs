@@ -389,7 +389,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, region, instanceGroup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the list of instance group resources contained within the specified region.
+        /// Retrieves the list of instance group resources contained within
+        /// the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -398,7 +399,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of instance group resources contained within the specified region.
+        /// Retrieves the list of instance group resources contained within
+        /// the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -407,7 +409,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of instance group resources contained within the specified region.
+        /// Retrieves the list of instance group resources contained within
+        /// the specified region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -444,7 +447,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of instance group resources contained within the specified region.
+        /// Retrieves the list of instance group resources contained within
+        /// the specified region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -481,7 +485,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists the instances in the specified instance group and displays information about the named ports. Depending on the specified options, this method can list all instances or only the instances that are running. The orderBy query parameter is not supported.
+        /// Lists the instances in the specified instance group and displays
+        /// information about the named ports. Depending on the specified options, this
+        /// method can list all instances or only the instances that are running.
+        /// The orderBy query parameter is not supported.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -490,7 +497,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists the instances in the specified instance group and displays information about the named ports. Depending on the specified options, this method can list all instances or only the instances that are running. The orderBy query parameter is not supported.
+        /// Lists the instances in the specified instance group and displays
+        /// information about the named ports. Depending on the specified options, this
+        /// method can list all instances or only the instances that are running.
+        /// The orderBy query parameter is not supported.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -499,7 +509,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists the instances in the specified instance group and displays information about the named ports. Depending on the specified options, this method can list all instances or only the instances that are running. The orderBy query parameter is not supported.
+        /// Lists the instances in the specified instance group and displays
+        /// information about the named ports. Depending on the specified options, this
+        /// method can list all instances or only the instances that are running.
+        /// The orderBy query parameter is not supported.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -508,7 +521,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region scoping this request.
         /// </param>
         /// <param name="instanceGroup">
-        /// Name of the regional instance group for which we want to list the instances.
+        /// Name of the regional instance group for which we want to list the
+        /// instances.
         /// </param>
         /// <param name="regionInstanceGroupsListInstancesRequestResource">
         /// The body resource for this request
@@ -544,7 +558,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists the instances in the specified instance group and displays information about the named ports. Depending on the specified options, this method can list all instances or only the instances that are running. The orderBy query parameter is not supported.
+        /// Lists the instances in the specified instance group and displays
+        /// information about the named ports. Depending on the specified options, this
+        /// method can list all instances or only the instances that are running.
+        /// The orderBy query parameter is not supported.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -553,7 +570,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region scoping this request.
         /// </param>
         /// <param name="instanceGroup">
-        /// Name of the regional instance group for which we want to list the instances.
+        /// Name of the regional instance group for which we want to list the
+        /// instances.
         /// </param>
         /// <param name="regionInstanceGroupsListInstancesRequestResource">
         /// The body resource for this request
@@ -916,7 +934,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of instance group resources contained within the specified region.
+        /// Retrieves the list of instance group resources contained within
+        /// the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -928,7 +947,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of instance group resources contained within the specified region.
+        /// Retrieves the list of instance group resources contained within
+        /// the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -940,7 +960,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists the instances in the specified instance group and displays information about the named ports. Depending on the specified options, this method can list all instances or only the instances that are running. The orderBy query parameter is not supported.
+        /// Lists the instances in the specified instance group and displays
+        /// information about the named ports. Depending on the specified options, this
+        /// method can list all instances or only the instances that are running.
+        /// The orderBy query parameter is not supported.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -952,7 +975,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists the instances in the specified instance group and displays information about the named ports. Depending on the specified options, this method can list all instances or only the instances that are running. The orderBy query parameter is not supported.
+        /// Lists the instances in the specified instance group and displays
+        /// information about the named ports. Depending on the specified options, this
+        /// method can list all instances or only the instances that are running.
+        /// The orderBy query parameter is not supported.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
