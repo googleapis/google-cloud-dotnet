@@ -231,6 +231,7 @@ namespace Google.Cloud.Tools.Common
         /// Never null, but may be empty. The dependencies are alway external,
         /// i.e. never within the API catalog.
         /// </summary>
+        [JsonIgnore]
         public IEnumerable<string> ImplicitProductionDependencies =>
             PackageTypeToImplicitDependencies.TryGetValue(Type, out var array) ? array : Enumerable.Empty<string>();
 
