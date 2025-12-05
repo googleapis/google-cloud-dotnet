@@ -781,6 +781,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="gcgv::AwsClusterName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcgv::AwsClusterName AwsClusterName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcgv::AwsClusterName.Parse(Name, allowUnparsed: true);
@@ -793,6 +794,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="gcgv::AwsNodePoolName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcgv::AwsNodePoolName AwsNodePoolName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcgv::AwsNodePoolName.Parse(Name, allowUnparsed: true);
@@ -805,6 +807,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="gcgv::AwsServerConfigName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcgv::AwsServerConfigName AwsServerConfigName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcgv::AwsServerConfigName.Parse(Name, allowUnparsed: true);

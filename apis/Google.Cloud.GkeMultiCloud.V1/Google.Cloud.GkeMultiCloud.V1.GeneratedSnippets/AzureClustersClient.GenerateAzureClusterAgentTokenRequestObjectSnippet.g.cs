@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START gkemulticloud_v1_generated_AzureClusters_GenerateAzureClusterAgentToken_sync]
     using Google.Cloud.GkeMultiCloud.V1;
+    using System;
 
     public sealed partial class GeneratedAzureClustersClientSnippets
     {
@@ -29,26 +30,19 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void GenerateAzureClusterAgentTokenRequestObject()
         {
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
-            GenerateAzureClusterAgentTokenRequest request = new GenerateAzureClusterAgentTokenRequest
-            {
-                AzureClusterAsAzureClusterName = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]"),
-                SubjectToken = "",
-                SubjectTokenType = "",
-                Version = "",
-                NodePoolId = "",
-                GrantType = "",
-                Audience = "",
-                Scope = "",
-                RequestedTokenType = "",
-                Options = "",
-            };
+#pragma warning disable CS0612
+            GenerateAzureClusterAgentTokenRequest request = new GenerateAzureClusterAgentTokenRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             GenerateAzureClusterAgentTokenResponse response = azureClustersClient.GenerateAzureClusterAgentToken(request);
+#pragma warning restore CS0612
         }
     }
     // [END gkemulticloud_v1_generated_AzureClusters_GenerateAzureClusterAgentToken_sync]

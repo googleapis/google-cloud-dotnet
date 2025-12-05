@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START gkemulticloud_v1_generated_AwsClusters_CreateAwsCluster_sync_flattened]
     using Google.Cloud.GkeMultiCloud.V1;
     using Google.LongRunning;
+    using System;
 
     public sealed partial class GeneratedAwsClustersClientSnippets
     {
@@ -30,31 +31,44 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void CreateAwsCluster()
         {
             // Create client
             AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
+#pragma warning disable CS0612
             AwsCluster awsCluster = new AwsCluster();
+#pragma warning restore CS0612
             string awsClusterId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> response = awsClustersClient.CreateAwsCluster(parent, awsCluster, awsClusterId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsCluster result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> retrievedResponse = awsClustersClient.PollOnceCreateAwsCluster(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsCluster retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
         }
     }

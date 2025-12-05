@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START gkemulticloud_v1_generated_AwsClusters_GetAwsNodePool_async_flattened]
     using Google.Cloud.GkeMultiCloud.V1;
+    using System;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedAwsClustersClientSnippets
@@ -30,6 +31,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public async Task GetAwsNodePoolAsync()
         {
             // Create client
@@ -37,7 +39,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/awsClusters/[AWS_CLUSTER]/awsNodePools/[AWS_NODE_POOL]";
             // Make the request
+#pragma warning disable CS0612
             AwsNodePool response = await awsClustersClient.GetAwsNodePoolAsync(name);
+#pragma warning restore CS0612
         }
     }
     // [END gkemulticloud_v1_generated_AwsClusters_GetAwsNodePool_async_flattened]

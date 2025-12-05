@@ -72,6 +72,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// An optional action to invoke on the client builder. This is invoked before services from
         /// <paramref name="services"/> are used.
         /// </param>
+        [sys::ObsoleteAttribute]
         public static IServiceCollection AddAwsClustersClient(this IServiceCollection services, sys::Action<gcgv::AwsClustersClientBuilder> action = null) =>
             services.AddSingleton(provider =>
             {
@@ -88,6 +89,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// An optional action to invoke on the client builder. This is invoked before services from
         /// <paramref name="services"/> are used.
         /// </param>
+        [sys::ObsoleteAttribute]
         public static IServiceCollection AddAwsClustersClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcgv::AwsClustersClientBuilder> action) =>
             services.AddSingleton(provider =>
             {
@@ -104,6 +106,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// An optional action to invoke on the client builder. This is invoked before services from
         /// <paramref name="services"/> are used.
         /// </param>
+        [sys::ObsoleteAttribute]
         public static IServiceCollection AddAzureClustersClient(this IServiceCollection services, sys::Action<gcgv::AzureClustersClientBuilder> action = null) =>
             services.AddSingleton(provider =>
             {
@@ -120,6 +123,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// An optional action to invoke on the client builder. This is invoked before services from
         /// <paramref name="services"/> are used.
         /// </param>
+        [sys::ObsoleteAttribute]
         public static IServiceCollection AddAzureClustersClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcgv::AzureClustersClientBuilder> action) =>
             services.AddSingleton(provider =>
             {

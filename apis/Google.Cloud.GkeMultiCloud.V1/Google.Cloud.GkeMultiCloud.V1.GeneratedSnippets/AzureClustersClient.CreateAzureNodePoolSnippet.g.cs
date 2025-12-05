@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START gkemulticloud_v1_generated_AzureClusters_CreateAzureNodePool_sync_flattened]
     using Google.Cloud.GkeMultiCloud.V1;
     using Google.LongRunning;
+    using System;
 
     public sealed partial class GeneratedAzureClustersClientSnippets
     {
@@ -30,31 +31,44 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void CreateAzureNodePool()
         {
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/azureClusters/[AZURE_CLUSTER]";
+#pragma warning disable CS0612
             AzureNodePool azureNodePool = new AzureNodePool();
+#pragma warning restore CS0612
             string azureNodePoolId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> response = azureClustersClient.CreateAzureNodePool(parent, azureNodePool, azureNodePoolId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> retrievedResponse = azureClustersClient.PollOnceCreateAzureNodePool(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
         }
     }

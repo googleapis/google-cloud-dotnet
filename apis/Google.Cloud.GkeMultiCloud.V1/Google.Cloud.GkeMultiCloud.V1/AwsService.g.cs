@@ -33,161 +33,164 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
             "bG91ZC92MS9jb21tb25fcmVzb3VyY2VzLnByb3RvGiNnb29nbGUvbG9uZ3J1",
             "bm5pbmcvb3BlcmF0aW9ucy5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5",
             "LnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90bxofZ29v",
-            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLTAQoXQ3JlYXRlQXdzQ2x1",
+            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLXAQoXQ3JlYXRlQXdzQ2x1",
             "c3RlclJlcXVlc3QSPwoGcGFyZW50GAEgASgJQi/gQQL6QSkSJ2drZW11bHRp",
             "Y2xvdWQuZ29vZ2xlYXBpcy5jb20vQXdzQ2x1c3RlchJDCgthd3NfY2x1c3Rl",
             "chgCIAEoCzIpLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c0Ns",
             "dXN0ZXJCA+BBAhIbCg5hd3NfY2x1c3Rlcl9pZBgDIAEoCUID4EECEhUKDXZh",
-            "bGlkYXRlX29ubHkYBCABKAgiqwEKF1VwZGF0ZUF3c0NsdXN0ZXJSZXF1ZXN0",
-            "EkMKC2F3c19jbHVzdGVyGAEgASgLMikuZ29vZ2xlLmNsb3VkLmdrZW11bHRp",
-            "Y2xvdWQudjEuQXdzQ2x1c3RlckID4EECEhUKDXZhbGlkYXRlX29ubHkYAiAB",
-            "KAgSNAoLdXBkYXRlX21hc2sYBCABKAsyGi5nb29nbGUucHJvdG9idWYuRmll",
-            "bGRNYXNrQgPgQQIiVQoUR2V0QXdzQ2x1c3RlclJlcXVlc3QSPQoEbmFtZRgB",
-            "IAEoCUIv4EEC+kEpCidna2VtdWx0aWNsb3VkLmdvb2dsZWFwaXMuY29tL0F3",
-            "c0NsdXN0ZXIigAEKFkxpc3RBd3NDbHVzdGVyc1JlcXVlc3QSPwoGcGFyZW50",
-            "GAEgASgJQi/gQQL6QSkSJ2drZW11bHRpY2xvdWQuZ29vZ2xlYXBpcy5jb20v",
-            "QXdzQ2x1c3RlchIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgD",
-            "IAEoCSJzChdMaXN0QXdzQ2x1c3RlcnNSZXNwb25zZRI/Cgxhd3NfY2x1c3Rl",
-            "cnMYASADKAsyKS5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5Bd3ND",
-            "bHVzdGVyEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKwAQoXRGVsZXRlQXdz",
-            "Q2x1c3RlclJlcXVlc3QSPQoEbmFtZRgBIAEoCUIv4EEC+kEpCidna2VtdWx0",
-            "aWNsb3VkLmdvb2dsZWFwaXMuY29tL0F3c0NsdXN0ZXISFQoNdmFsaWRhdGVf",
-            "b25seRgCIAEoCBIVCg1hbGxvd19taXNzaW5nGAMgASgIEhoKDWlnbm9yZV9l",
-            "cnJvcnMYBSABKAhCA+BBARIMCgRldGFnGAQgASgJItoBChhDcmVhdGVBd3NO",
-            "b2RlUG9vbFJlcXVlc3QSQAoGcGFyZW50GAEgASgJQjDgQQL6QSoSKGdrZW11",
-            "bHRpY2xvdWQuZ29vZ2xlYXBpcy5jb20vQXdzTm9kZVBvb2wSRgoNYXdzX25v",
-            "ZGVfcG9vbBgCIAEoCzIqLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYx",
-            "LkF3c05vZGVQb29sQgPgQQISHQoQYXdzX25vZGVfcG9vbF9pZBgDIAEoCUID",
-            "4EECEhUKDXZhbGlkYXRlX29ubHkYBCABKAgirwEKGFVwZGF0ZUF3c05vZGVQ",
-            "b29sUmVxdWVzdBJGCg1hd3Nfbm9kZV9wb29sGAEgASgLMiouZ29vZ2xlLmNs",
-            "b3VkLmdrZW11bHRpY2xvdWQudjEuQXdzTm9kZVBvb2xCA+BBAhIVCg12YWxp",
-            "ZGF0ZV9vbmx5GAIgASgIEjQKC3VwZGF0ZV9tYXNrGAMgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLkZpZWxkTWFza0ID4EECInwKIFJvbGxiYWNrQXdzTm9kZVBv",
-            "b2xVcGRhdGVSZXF1ZXN0Ej4KBG5hbWUYASABKAlCMOBBAvpBKgooZ2tlbXVs",
-            "dGljbG91ZC5nb29nbGVhcGlzLmNvbS9Bd3NOb2RlUG9vbBIYCgtyZXNwZWN0",
-            "X3BkYhgCIAEoCEID4EEBIlcKFUdldEF3c05vZGVQb29sUmVxdWVzdBI+CgRu",
-            "YW1lGAEgASgJQjDgQQL6QSoKKGdrZW11bHRpY2xvdWQuZ29vZ2xlYXBpcy5j",
-            "b20vQXdzTm9kZVBvb2wiggEKF0xpc3RBd3NOb2RlUG9vbHNSZXF1ZXN0EkAK",
-            "BnBhcmVudBgBIAEoCUIw4EEC+kEqEihna2VtdWx0aWNsb3VkLmdvb2dsZWFw",
-            "aXMuY29tL0F3c05vZGVQb29sEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdl",
-            "X3Rva2VuGAMgASgJIncKGExpc3RBd3NOb2RlUG9vbHNSZXNwb25zZRJCCg5h",
+            "bGlkYXRlX29ubHkYBCABKAg6AhgBIq8BChdVcGRhdGVBd3NDbHVzdGVyUmVx",
+            "dWVzdBJDCgthd3NfY2x1c3RlchgBIAEoCzIpLmdvb2dsZS5jbG91ZC5na2Vt",
+            "dWx0aWNsb3VkLnYxLkF3c0NsdXN0ZXJCA+BBAhIVCg12YWxpZGF0ZV9vbmx5",
+            "GAIgASgIEjQKC3VwZGF0ZV9tYXNrGAQgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LkZpZWxkTWFza0ID4EECOgIYASJZChRHZXRBd3NDbHVzdGVyUmVxdWVzdBI9",
+            "CgRuYW1lGAEgASgJQi/gQQL6QSkKJ2drZW11bHRpY2xvdWQuZ29vZ2xlYXBp",
+            "cy5jb20vQXdzQ2x1c3RlcjoCGAEihAEKFkxpc3RBd3NDbHVzdGVyc1JlcXVl",
+            "c3QSPwoGcGFyZW50GAEgASgJQi/gQQL6QSkSJ2drZW11bHRpY2xvdWQuZ29v",
+            "Z2xlYXBpcy5jb20vQXdzQ2x1c3RlchIRCglwYWdlX3NpemUYAiABKAUSEgoK",
+            "cGFnZV90b2tlbhgDIAEoCToCGAEidwoXTGlzdEF3c0NsdXN0ZXJzUmVzcG9u",
+            "c2USPwoMYXdzX2NsdXN0ZXJzGAEgAygLMikuZ29vZ2xlLmNsb3VkLmdrZW11",
+            "bHRpY2xvdWQudjEuQXdzQ2x1c3RlchIXCg9uZXh0X3BhZ2VfdG9rZW4YAiAB",
+            "KAk6AhgBIrQBChdEZWxldGVBd3NDbHVzdGVyUmVxdWVzdBI9CgRuYW1lGAEg",
+            "ASgJQi/gQQL6QSkKJ2drZW11bHRpY2xvdWQuZ29vZ2xlYXBpcy5jb20vQXdz",
+            "Q2x1c3RlchIVCg12YWxpZGF0ZV9vbmx5GAIgASgIEhUKDWFsbG93X21pc3Np",
+            "bmcYAyABKAgSGgoNaWdub3JlX2Vycm9ycxgFIAEoCEID4EEBEgwKBGV0YWcY",
+            "BCABKAk6AhgBIt4BChhDcmVhdGVBd3NOb2RlUG9vbFJlcXVlc3QSQAoGcGFy",
+            "ZW50GAEgASgJQjDgQQL6QSoSKGdrZW11bHRpY2xvdWQuZ29vZ2xlYXBpcy5j",
+            "b20vQXdzTm9kZVBvb2wSRgoNYXdzX25vZGVfcG9vbBgCIAEoCzIqLmdvb2ds",
+            "ZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c05vZGVQb29sQgPgQQISHQoQ",
+            "YXdzX25vZGVfcG9vbF9pZBgDIAEoCUID4EECEhUKDXZhbGlkYXRlX29ubHkY",
+            "BCABKAg6AhgBIrMBChhVcGRhdGVBd3NOb2RlUG9vbFJlcXVlc3QSRgoNYXdz",
+            "X25vZGVfcG9vbBgBIAEoCzIqLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3Vk",
+            "LnYxLkF3c05vZGVQb29sQgPgQQISFQoNdmFsaWRhdGVfb25seRgCIAEoCBI0",
+            "Cgt1cGRhdGVfbWFzaxgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1h",
+            "c2tCA+BBAjoCGAEigAEKIFJvbGxiYWNrQXdzTm9kZVBvb2xVcGRhdGVSZXF1",
+            "ZXN0Ej4KBG5hbWUYASABKAlCMOBBAvpBKgooZ2tlbXVsdGljbG91ZC5nb29n",
+            "bGVhcGlzLmNvbS9Bd3NOb2RlUG9vbBIYCgtyZXNwZWN0X3BkYhgCIAEoCEID",
+            "4EEBOgIYASJbChVHZXRBd3NOb2RlUG9vbFJlcXVlc3QSPgoEbmFtZRgBIAEo",
+            "CUIw4EEC+kEqCihna2VtdWx0aWNsb3VkLmdvb2dsZWFwaXMuY29tL0F3c05v",
+            "ZGVQb29sOgIYASKGAQoXTGlzdEF3c05vZGVQb29sc1JlcXVlc3QSQAoGcGFy",
+            "ZW50GAEgASgJQjDgQQL6QSoSKGdrZW11bHRpY2xvdWQuZ29vZ2xlYXBpcy5j",
+            "b20vQXdzTm9kZVBvb2wSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9r",
+            "ZW4YAyABKAk6AhgBInsKGExpc3RBd3NOb2RlUG9vbHNSZXNwb25zZRJCCg5h",
             "d3Nfbm9kZV9wb29scxgBIAMoCzIqLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNs",
-            "b3VkLnYxLkF3c05vZGVQb29sEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKy",
-            "AQoYRGVsZXRlQXdzTm9kZVBvb2xSZXF1ZXN0Ej4KBG5hbWUYASABKAlCMOBB",
-            "AvpBKgooZ2tlbXVsdGljbG91ZC5nb29nbGVhcGlzLmNvbS9Bd3NOb2RlUG9v",
-            "bBIVCg12YWxpZGF0ZV9vbmx5GAIgASgIEhUKDWFsbG93X21pc3NpbmcYAyAB",
-            "KAgSGgoNaWdub3JlX2Vycm9ycxgFIAEoCEID4EEBEgwKBGV0YWcYBCABKAki",
-            "YQoZR2V0QXdzT3BlbklkQ29uZmlnUmVxdWVzdBJECgthd3NfY2x1c3RlchgB",
-            "IAEoCUIv4EEC+kEpCidna2VtdWx0aWNsb3VkLmdvb2dsZWFwaXMuY29tL0F3",
-            "c0NsdXN0ZXIiYAoYR2V0QXdzSnNvbldlYktleXNSZXF1ZXN0EkQKC2F3c19j",
+            "b3VkLnYxLkF3c05vZGVQb29sEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCToC",
+            "GAEitgEKGERlbGV0ZUF3c05vZGVQb29sUmVxdWVzdBI+CgRuYW1lGAEgASgJ",
+            "QjDgQQL6QSoKKGdrZW11bHRpY2xvdWQuZ29vZ2xlYXBpcy5jb20vQXdzTm9k",
+            "ZVBvb2wSFQoNdmFsaWRhdGVfb25seRgCIAEoCBIVCg1hbGxvd19taXNzaW5n",
+            "GAMgASgIEhoKDWlnbm9yZV9lcnJvcnMYBSABKAhCA+BBARIMCgRldGFnGAQg",
+            "ASgJOgIYASJlChlHZXRBd3NPcGVuSWRDb25maWdSZXF1ZXN0EkQKC2F3c19j",
             "bHVzdGVyGAEgASgJQi/gQQL6QSkKJ2drZW11bHRpY2xvdWQuZ29vZ2xlYXBp",
-            "cy5jb20vQXdzQ2x1c3RlciJfChlHZXRBd3NTZXJ2ZXJDb25maWdSZXF1ZXN0",
-            "EkIKBG5hbWUYASABKAlCNOBBAvpBLgosZ2tlbXVsdGljbG91ZC5nb29nbGVh",
-            "cGlzLmNvbS9Bd3NTZXJ2ZXJDb25maWciZQodR2VuZXJhdGVBd3NBY2Nlc3NU",
-            "b2tlblJlcXVlc3QSRAoLYXdzX2NsdXN0ZXIYASABKAlCL+BBAvpBKQonZ2tl",
-            "bXVsdGljbG91ZC5nb29nbGVhcGlzLmNvbS9Bd3NDbHVzdGVyInUKHkdlbmVy",
-            "YXRlQXdzQWNjZXNzVG9rZW5SZXNwb25zZRIZCgxhY2Nlc3NfdG9rZW4YASAB",
-            "KAlCA+BBAxI4Cg9leHBpcmF0aW9uX3RpbWUYAiABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQMi1gIKI0dlbmVyYXRlQXdzQ2x1c3RlckFn",
-            "ZW50VG9rZW5SZXF1ZXN0EkQKC2F3c19jbHVzdGVyGAEgASgJQi/gQQL6QSkK",
-            "J2drZW11bHRpY2xvdWQuZ29vZ2xlYXBpcy5jb20vQXdzQ2x1c3RlchIaCg1z",
-            "dWJqZWN0X3Rva2VuGAIgASgJQgPgQQISHwoSc3ViamVjdF90b2tlbl90eXBl",
-            "GAMgASgJQgPgQQISFAoHdmVyc2lvbhgEIAEoCUID4EECEhkKDG5vZGVfcG9v",
-            "bF9pZBgFIAEoCUID4EEBEhcKCmdyYW50X3R5cGUYBiABKAlCA+BBARIVCghh",
-            "dWRpZW5jZRgHIAEoCUID4EEBEhIKBXNjb3BlGAggASgJQgPgQQESIQoUcmVx",
-            "dWVzdGVkX3Rva2VuX3R5cGUYCSABKAlCA+BBARIUCgdvcHRpb25zGAogASgJ",
-            "QgPgQQEiZAokR2VuZXJhdGVBd3NDbHVzdGVyQWdlbnRUb2tlblJlc3BvbnNl",
-            "EhQKDGFjY2Vzc190b2tlbhgBIAEoCRISCgpleHBpcmVzX2luGAIgASgFEhIK",
-            "CnRva2VuX3R5cGUYAyABKAkyqR0KC0F3c0NsdXN0ZXJzEvYBChBDcmVhdGVB",
-            "d3NDbHVzdGVyEjYuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQ3Jl",
-            "YXRlQXdzQ2x1c3RlclJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
-            "cmF0aW9uIooBykEfCgpBd3NDbHVzdGVyEhFPcGVyYXRpb25NZXRhZGF0YdpB",
-            "IXBhcmVudCxhd3NfY2x1c3Rlcixhd3NfY2x1c3Rlcl9pZILT5JMCPiIvL3Yx",
-            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vYXdzQ2x1c3RlcnM6",
-            "C2F3c19jbHVzdGVyEvgBChBVcGRhdGVBd3NDbHVzdGVyEjYuZ29vZ2xlLmNs",
-            "b3VkLmdrZW11bHRpY2xvdWQudjEuVXBkYXRlQXdzQ2x1c3RlclJlcXVlc3Qa",
-            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIowBykEfCgpBd3NDbHVz",
-            "dGVyEhFPcGVyYXRpb25NZXRhZGF0YdpBF2F3c19jbHVzdGVyLHVwZGF0ZV9t",
-            "YXNrgtPkkwJKMjsvdjEve2F3c19jbHVzdGVyLm5hbWU9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi9hd3NDbHVzdGVycy8qfToLYXdzX2NsdXN0ZXISrwEKDUdl",
-            "dEF3c0NsdXN0ZXISMy5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5H",
-            "ZXRBd3NDbHVzdGVyUmVxdWVzdBopLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNs",
-            "b3VkLnYxLkF3c0NsdXN0ZXIiPtpBBG5hbWWC0+STAjESLy92MS97bmFtZT1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2F3c0NsdXN0ZXJzLyp9EsIBCg9MaXN0",
-            "QXdzQ2x1c3RlcnMSNS5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5M",
-            "aXN0QXdzQ2x1c3RlcnNSZXF1ZXN0GjYuZ29vZ2xlLmNsb3VkLmdrZW11bHRp",
-            "Y2xvdWQudjEuTGlzdEF3c0NsdXN0ZXJzUmVzcG9uc2UiQNpBBnBhcmVudILT",
-            "5JMCMRIvL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vYXdz",
-            "Q2x1c3RlcnMS1gEKEERlbGV0ZUF3c0NsdXN0ZXISNi5nb29nbGUuY2xvdWQu",
-            "Z2tlbXVsdGljbG91ZC52MS5EZWxldGVBd3NDbHVzdGVyUmVxdWVzdBodLmdv",
-            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ia8pBKgoVZ29vZ2xlLnByb3Rv",
+            "cy5jb20vQXdzQ2x1c3RlcjoCGAEiZAoYR2V0QXdzSnNvbldlYktleXNSZXF1",
+            "ZXN0EkQKC2F3c19jbHVzdGVyGAEgASgJQi/gQQL6QSkKJ2drZW11bHRpY2xv",
+            "dWQuZ29vZ2xlYXBpcy5jb20vQXdzQ2x1c3RlcjoCGAEiYwoZR2V0QXdzU2Vy",
+            "dmVyQ29uZmlnUmVxdWVzdBJCCgRuYW1lGAEgASgJQjTgQQL6QS4KLGdrZW11",
+            "bHRpY2xvdWQuZ29vZ2xlYXBpcy5jb20vQXdzU2VydmVyQ29uZmlnOgIYASJp",
+            "Ch1HZW5lcmF0ZUF3c0FjY2Vzc1Rva2VuUmVxdWVzdBJECgthd3NfY2x1c3Rl",
+            "chgBIAEoCUIv4EEC+kEpCidna2VtdWx0aWNsb3VkLmdvb2dsZWFwaXMuY29t",
+            "L0F3c0NsdXN0ZXI6AhgBInkKHkdlbmVyYXRlQXdzQWNjZXNzVG9rZW5SZXNw",
+            "b25zZRIZCgxhY2Nlc3NfdG9rZW4YASABKAlCA+BBAxI4Cg9leHBpcmF0aW9u",
+            "X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQM6",
+            "AhgBItoCCiNHZW5lcmF0ZUF3c0NsdXN0ZXJBZ2VudFRva2VuUmVxdWVzdBJE",
+            "Cgthd3NfY2x1c3RlchgBIAEoCUIv4EEC+kEpCidna2VtdWx0aWNsb3VkLmdv",
+            "b2dsZWFwaXMuY29tL0F3c0NsdXN0ZXISGgoNc3ViamVjdF90b2tlbhgCIAEo",
+            "CUID4EECEh8KEnN1YmplY3RfdG9rZW5fdHlwZRgDIAEoCUID4EECEhQKB3Zl",
+            "cnNpb24YBCABKAlCA+BBAhIZCgxub2RlX3Bvb2xfaWQYBSABKAlCA+BBARIX",
+            "CgpncmFudF90eXBlGAYgASgJQgPgQQESFQoIYXVkaWVuY2UYByABKAlCA+BB",
+            "ARISCgVzY29wZRgIIAEoCUID4EEBEiEKFHJlcXVlc3RlZF90b2tlbl90eXBl",
+            "GAkgASgJQgPgQQESFAoHb3B0aW9ucxgKIAEoCUID4EEBOgIYASKOAQokR2Vu",
+            "ZXJhdGVBd3NDbHVzdGVyQWdlbnRUb2tlblJlc3BvbnNlEiIKDGFjY2Vzc190",
+            "b2tlbhgBIAEoCVIMYWNjZXNzX3Rva2VuEh4KCmV4cGlyZXNfaW4YAiABKAVS",
+            "CmV4cGlyZXNfaW4SHgoKdG9rZW5fdHlwZRgDIAEoCVIKdG9rZW5fdHlwZToC",
+            "GAEy3B0KC0F3c0NsdXN0ZXJzEvkBChBDcmVhdGVBd3NDbHVzdGVyEjYuZ29v",
+            "Z2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQ3JlYXRlQXdzQ2x1c3RlclJl",
+            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIo0BiAIBykEf",
+            "CgpBd3NDbHVzdGVyEhFPcGVyYXRpb25NZXRhZGF0YdpBIXBhcmVudCxhd3Nf",
+            "Y2x1c3Rlcixhd3NfY2x1c3Rlcl9pZILT5JMCPiIvL3YxL3twYXJlbnQ9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKn0vYXdzQ2x1c3RlcnM6C2F3c19jbHVzdGVy",
+            "EvsBChBVcGRhdGVBd3NDbHVzdGVyEjYuZ29vZ2xlLmNsb3VkLmdrZW11bHRp",
+            "Y2xvdWQudjEuVXBkYXRlQXdzQ2x1c3RlclJlcXVlc3QaHS5nb29nbGUubG9u",
+            "Z3J1bm5pbmcuT3BlcmF0aW9uIo8BiAIBykEfCgpBd3NDbHVzdGVyEhFPcGVy",
+            "YXRpb25NZXRhZGF0YdpBF2F3c19jbHVzdGVyLHVwZGF0ZV9tYXNrgtPkkwJK",
+            "MjsvdjEve2F3c19jbHVzdGVyLm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9hd3NDbHVzdGVycy8qfToLYXdzX2NsdXN0ZXISsgEKDUdldEF3c0NsdXN0",
+            "ZXISMy5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5HZXRBd3NDbHVz",
+            "dGVyUmVxdWVzdBopLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3",
+            "c0NsdXN0ZXIiQYgCAdpBBG5hbWWC0+STAjESLy92MS97bmFtZT1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qL2F3c0NsdXN0ZXJzLyp9EsUBCg9MaXN0QXdzQ2x1",
+            "c3RlcnMSNS5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5MaXN0QXdz",
+            "Q2x1c3RlcnNSZXF1ZXN0GjYuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQu",
+            "djEuTGlzdEF3c0NsdXN0ZXJzUmVzcG9uc2UiQ4gCAdpBBnBhcmVudILT5JMC",
+            "MRIvL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vYXdzQ2x1",
+            "c3RlcnMS2QEKEERlbGV0ZUF3c0NsdXN0ZXISNi5nb29nbGUuY2xvdWQuZ2tl",
+            "bXVsdGljbG91ZC52MS5EZWxldGVBd3NDbHVzdGVyUmVxdWVzdBodLmdvb2ds",
+            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24ibogCAcpBKgoVZ29vZ2xlLnByb3Rv",
             "YnVmLkVtcHR5EhFPcGVyYXRpb25NZXRhZGF0YdpBBG5hbWWC0+STAjEqLy92",
             "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2F3c0NsdXN0ZXJzLyp9",
-            "EocCChxHZW5lcmF0ZUF3c0NsdXN0ZXJBZ2VudFRva2VuEkIuZ29vZ2xlLmNs",
+            "EooCChxHZW5lcmF0ZUF3c0NsdXN0ZXJBZ2VudFRva2VuEkIuZ29vZ2xlLmNs",
             "b3VkLmdrZW11bHRpY2xvdWQudjEuR2VuZXJhdGVBd3NDbHVzdGVyQWdlbnRU",
             "b2tlblJlcXVlc3QaQy5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5H",
-            "ZW5lcmF0ZUF3c0NsdXN0ZXJBZ2VudFRva2VuUmVzcG9uc2UiXoLT5JMCWCJT",
-            "L3YxL3thd3NfY2x1c3Rlcj1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2F3c0Ns",
-            "dXN0ZXJzLyp9OmdlbmVyYXRlQXdzQ2x1c3RlckFnZW50VG9rZW46ASoS7AEK",
-            "FkdlbmVyYXRlQXdzQWNjZXNzVG9rZW4SPC5nb29nbGUuY2xvdWQuZ2tlbXVs",
-            "dGljbG91ZC52MS5HZW5lcmF0ZUF3c0FjY2Vzc1Rva2VuUmVxdWVzdBo9Lmdv",
-            "b2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkdlbmVyYXRlQXdzQWNjZXNz",
-            "VG9rZW5SZXNwb25zZSJVgtPkkwJPEk0vdjEve2F3c19jbHVzdGVyPXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovYXdzQ2x1c3RlcnMvKn06Z2VuZXJhdGVBd3NB",
-            "Y2Nlc3NUb2tlbhKOAgoRQ3JlYXRlQXdzTm9kZVBvb2wSNy5nb29nbGUuY2xv",
-            "dWQuZ2tlbXVsdGljbG91ZC52MS5DcmVhdGVBd3NOb2RlUG9vbFJlcXVlc3Qa",
-            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqABykEgCgtBd3NOb2Rl",
-            "UG9vbBIRT3BlcmF0aW9uTWV0YWRhdGHaQSVwYXJlbnQsYXdzX25vZGVfcG9v",
-            "bCxhd3Nfbm9kZV9wb29sX2lkgtPkkwJPIj4vdjEve3BhcmVudD1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL2F3c0NsdXN0ZXJzLyp9L2F3c05vZGVQb29sczoN",
-            "YXdzX25vZGVfcG9vbBKQAgoRVXBkYXRlQXdzTm9kZVBvb2wSNy5nb29nbGUu",
-            "Y2xvdWQuZ2tlbXVsdGljbG91ZC52MS5VcGRhdGVBd3NOb2RlUG9vbFJlcXVl",
-            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqIBykEgCgtBd3NO",
-            "b2RlUG9vbBIRT3BlcmF0aW9uTWV0YWRhdGHaQRlhd3Nfbm9kZV9wb29sLHVw",
-            "ZGF0ZV9tYXNrgtPkkwJdMkwvdjEve2F3c19ub2RlX3Bvb2wubmFtZT1wcm9q",
+            "ZW5lcmF0ZUF3c0NsdXN0ZXJBZ2VudFRva2VuUmVzcG9uc2UiYYgCAYLT5JMC",
+            "WCJTL3YxL3thd3NfY2x1c3Rlcj1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2F3",
+            "c0NsdXN0ZXJzLyp9OmdlbmVyYXRlQXdzQ2x1c3RlckFnZW50VG9rZW46ASoS",
+            "7wEKFkdlbmVyYXRlQXdzQWNjZXNzVG9rZW4SPC5nb29nbGUuY2xvdWQuZ2tl",
+            "bXVsdGljbG91ZC52MS5HZW5lcmF0ZUF3c0FjY2Vzc1Rva2VuUmVxdWVzdBo9",
+            "Lmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkdlbmVyYXRlQXdzQWNj",
+            "ZXNzVG9rZW5SZXNwb25zZSJYiAIBgtPkkwJPEk0vdjEve2F3c19jbHVzdGVy",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovYXdzQ2x1c3RlcnMvKn06Z2VuZXJh",
+            "dGVBd3NBY2Nlc3NUb2tlbhKRAgoRQ3JlYXRlQXdzTm9kZVBvb2wSNy5nb29n",
+            "bGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5DcmVhdGVBd3NOb2RlUG9vbFJl",
+            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqMBiAIBykEg",
+            "CgtBd3NOb2RlUG9vbBIRT3BlcmF0aW9uTWV0YWRhdGHaQSVwYXJlbnQsYXdz",
+            "X25vZGVfcG9vbCxhd3Nfbm9kZV9wb29sX2lkgtPkkwJPIj4vdjEve3BhcmVu",
+            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2F3c0NsdXN0ZXJzLyp9L2F3c05v",
+            "ZGVQb29sczoNYXdzX25vZGVfcG9vbBKTAgoRVXBkYXRlQXdzTm9kZVBvb2wS",
+            "Ny5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5VcGRhdGVBd3NOb2Rl",
+            "UG9vbFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqUB",
+            "iAIBykEgCgtBd3NOb2RlUG9vbBIRT3BlcmF0aW9uTWV0YWRhdGHaQRlhd3Nf",
+            "bm9kZV9wb29sLHVwZGF0ZV9tYXNrgtPkkwJdMkwvdjEve2F3c19ub2RlX3Bv",
+            "b2wubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2F3c0NsdXN0ZXJzLyov",
+            "YXdzTm9kZVBvb2xzLyp9Og1hd3Nfbm9kZV9wb29sEvwBChlSb2xsYmFja0F3",
+            "c05vZGVQb29sVXBkYXRlEj8uZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQu",
+            "djEuUm9sbGJhY2tBd3NOb2RlUG9vbFVwZGF0ZVJlcXVlc3QaHS5nb29nbGUu",
+            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uIn+IAgHKQSAKC0F3c05vZGVQb29sEhFP",
+            "cGVyYXRpb25NZXRhZGF0YdpBBG5hbWWC0+STAkwiRy92MS97bmFtZT1wcm9q",
             "ZWN0cy8qL2xvY2F0aW9ucy8qL2F3c0NsdXN0ZXJzLyovYXdzTm9kZVBvb2xz",
-            "Lyp9Og1hd3Nfbm9kZV9wb29sEvkBChlSb2xsYmFja0F3c05vZGVQb29sVXBk",
-            "YXRlEj8uZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuUm9sbGJhY2tB",
-            "d3NOb2RlUG9vbFVwZGF0ZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcu",
-            "T3BlcmF0aW9uInzKQSAKC0F3c05vZGVQb29sEhFPcGVyYXRpb25NZXRhZGF0",
-            "YdpBBG5hbWWC0+STAkwiRy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL2F3c0NsdXN0ZXJzLyovYXdzTm9kZVBvb2xzLyp9OnJvbGxiYWNrOgEq",
-            "EsEBCg5HZXRBd3NOb2RlUG9vbBI0Lmdvb2dsZS5jbG91ZC5na2VtdWx0aWNs",
-            "b3VkLnYxLkdldEF3c05vZGVQb29sUmVxdWVzdBoqLmdvb2dsZS5jbG91ZC5n",
-            "a2VtdWx0aWNsb3VkLnYxLkF3c05vZGVQb29sIk3aQQRuYW1lgtPkkwJAEj4v",
-            "djEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hd3NDbHVzdGVycy8q",
-            "L2F3c05vZGVQb29scy8qfRLUAQoQTGlzdEF3c05vZGVQb29scxI2Lmdvb2ds",
-            "ZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkxpc3RBd3NOb2RlUG9vbHNSZXF1",
-            "ZXN0GjcuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuTGlzdEF3c05v",
-            "ZGVQb29sc1Jlc3BvbnNlIk/aQQZwYXJlbnSC0+STAkASPi92MS97cGFyZW50",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovYXdzQ2x1c3RlcnMvKn0vYXdzTm9k",
-            "ZVBvb2xzEucBChFEZWxldGVBd3NOb2RlUG9vbBI3Lmdvb2dsZS5jbG91ZC5n",
-            "a2VtdWx0aWNsb3VkLnYxLkRlbGV0ZUF3c05vZGVQb29sUmVxdWVzdBodLmdv",
-            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iespBKgoVZ29vZ2xlLnByb3Rv",
-            "YnVmLkVtcHR5EhFPcGVyYXRpb25NZXRhZGF0YdpBBG5hbWWC0+STAkAqPi92",
-            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2F3c0NsdXN0ZXJzLyov",
-            "YXdzTm9kZVBvb2xzLyp9Et8BChJHZXRBd3NPcGVuSWRDb25maWcSOC5nb29n",
-            "bGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5HZXRBd3NPcGVuSWRDb25maWdS",
-            "ZXF1ZXN0Gi4uZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdzT3Bl",
-            "bklkQ29uZmlnIl+C0+STAlkSVy92MS97YXdzX2NsdXN0ZXI9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9hd3NDbHVzdGVycy8qfS8ud2VsbC1rbm93bi9vcGVu",
-            "aWQtY29uZmlndXJhdGlvbhLAAQoRR2V0QXdzSnNvbldlYktleXMSNy5nb29n",
-            "bGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5HZXRBd3NKc29uV2ViS2V5c1Jl",
-            "cXVlc3QaLS5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5Bd3NKc29u",
-            "V2ViS2V5cyJDgtPkkwI9EjsvdjEve2F3c19jbHVzdGVyPXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyovYXdzQ2x1c3RlcnMvKn0vandrcxLAAQoSR2V0QXdzU2Vy",
-            "dmVyQ29uZmlnEjguZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuR2V0",
-            "QXdzU2VydmVyQ29uZmlnUmVxdWVzdBouLmdvb2dsZS5jbG91ZC5na2VtdWx0",
-            "aWNsb3VkLnYxLkF3c1NlcnZlckNvbmZpZyJA2kEEbmFtZYLT5JMCMxIxL3Yx",
-            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYXdzU2VydmVyQ29uZmln",
-            "fRpQykEcZ2tlbXVsdGljbG91ZC5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8v",
-            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C4gEKIWNv",
-            "bS5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MUIPQXdzU2VydmljZVBy",
-            "b3RvUAFaR2Nsb3VkLmdvb2dsZS5jb20vZ28vZ2tlbXVsdGljbG91ZC9hcGl2",
-            "MS9na2VtdWx0aWNsb3VkcGI7Z2tlbXVsdGljbG91ZHBiqgIdR29vZ2xlLkNs",
-            "b3VkLkdrZU11bHRpQ2xvdWQuVjHKAh1Hb29nbGVcQ2xvdWRcR2tlTXVsdGlD",
-            "bG91ZFxWMeoCIEdvb2dsZTo6Q2xvdWQ6OkdrZU11bHRpQ2xvdWQ6OlYxYgZw",
-            "cm90bzM="));
+            "Lyp9OnJvbGxiYWNrOgEqEsQBCg5HZXRBd3NOb2RlUG9vbBI0Lmdvb2dsZS5j",
+            "bG91ZC5na2VtdWx0aWNsb3VkLnYxLkdldEF3c05vZGVQb29sUmVxdWVzdBoq",
+            "Lmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c05vZGVQb29sIlCI",
+            "AgHaQQRuYW1lgtPkkwJAEj4vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9hd3NDbHVzdGVycy8qL2F3c05vZGVQb29scy8qfRLXAQoQTGlzdEF3",
+            "c05vZGVQb29scxI2Lmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkxp",
+            "c3RBd3NOb2RlUG9vbHNSZXF1ZXN0GjcuZ29vZ2xlLmNsb3VkLmdrZW11bHRp",
+            "Y2xvdWQudjEuTGlzdEF3c05vZGVQb29sc1Jlc3BvbnNlIlKIAgHaQQZwYXJl",
+            "bnSC0+STAkASPi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "YXdzQ2x1c3RlcnMvKn0vYXdzTm9kZVBvb2xzEuoBChFEZWxldGVBd3NOb2Rl",
+            "UG9vbBI3Lmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkRlbGV0ZUF3",
+            "c05vZGVQb29sUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
+            "b24ifYgCAcpBKgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhFPcGVyYXRpb25N",
+            "ZXRhZGF0YdpBBG5hbWWC0+STAkAqPi92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL2F3c0NsdXN0ZXJzLyovYXdzTm9kZVBvb2xzLyp9EuIBChJH",
+            "ZXRBd3NPcGVuSWRDb25maWcSOC5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91",
+            "ZC52MS5HZXRBd3NPcGVuSWRDb25maWdSZXF1ZXN0Gi4uZ29vZ2xlLmNsb3Vk",
+            "LmdrZW11bHRpY2xvdWQudjEuQXdzT3BlbklkQ29uZmlnImKIAgGC0+STAlkS",
+            "Vy92MS97YXdzX2NsdXN0ZXI9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hd3ND",
+            "bHVzdGVycy8qfS8ud2VsbC1rbm93bi9vcGVuaWQtY29uZmlndXJhdGlvbhLD",
+            "AQoRR2V0QXdzSnNvbldlYktleXMSNy5nb29nbGUuY2xvdWQuZ2tlbXVsdGlj",
+            "bG91ZC52MS5HZXRBd3NKc29uV2ViS2V5c1JlcXVlc3QaLS5nb29nbGUuY2xv",
+            "dWQuZ2tlbXVsdGljbG91ZC52MS5Bd3NKc29uV2ViS2V5cyJGiAIBgtPkkwI9",
+            "EjsvdjEve2F3c19jbHVzdGVyPXByb2plY3RzLyovbG9jYXRpb25zLyovYXdz",
+            "Q2x1c3RlcnMvKn0vandrcxLDAQoSR2V0QXdzU2VydmVyQ29uZmlnEjguZ29v",
+            "Z2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuR2V0QXdzU2VydmVyQ29uZmln",
+            "UmVxdWVzdBouLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c1Nl",
+            "cnZlckNvbmZpZyJDiAIB2kEEbmFtZYLT5JMCMxIxL3YxL3tuYW1lPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovYXdzU2VydmVyQ29uZmlnfRpTiAIBykEcZ2tl",
+            "bXVsdGljbG91ZC5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2ds",
+            "ZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C4gEKIWNvbS5nb29nbGUu",
+            "Y2xvdWQuZ2tlbXVsdGljbG91ZC52MUIPQXdzU2VydmljZVByb3RvUAFaR2Ns",
+            "b3VkLmdvb2dsZS5jb20vZ28vZ2tlbXVsdGljbG91ZC9hcGl2MS9na2VtdWx0",
+            "aWNsb3VkcGI7Z2tlbXVsdGljbG91ZHBiqgIdR29vZ2xlLkNsb3VkLkdrZU11",
+            "bHRpQ2xvdWQuVjHKAh1Hb29nbGVcQ2xvdWRcR2tlTXVsdGlDbG91ZFxWMeoC",
+            "IEdvb2dsZTo6Q2xvdWQ6OkdrZU11bHRpQ2xvdWQ6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GkeMultiCloud.V1.AwsResourcesReflection.Descriptor, global::Google.Cloud.GkeMultiCloud.V1.CommonResourcesReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -220,6 +223,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Request message for `AwsClusters.CreateAwsCluster` method.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateAwsClusterRequest : pb::IMessage<CreateAwsClusterRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -297,6 +301,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// Required. The specification of the
     /// [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] to create.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.AwsCluster AwsCluster {
@@ -561,6 +566,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Request message for `AwsClusters.UpdateAwsCluster` method.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateAwsClusterRequest : pb::IMessage<UpdateAwsClusterRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -615,6 +621,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// Required. The [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
     /// resource to update.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.AwsCluster AwsCluster {
@@ -886,6 +893,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Request message for `AwsClusters.GetAwsCluster` method.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetAwsClusterRequest : pb::IMessage<GetAwsClusterRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1090,6 +1098,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Request message for `AwsClusters.ListAwsClusters` method.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAwsClustersRequest : pb::IMessage<ListAwsClustersRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1380,6 +1389,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Response message for `AwsClusters.ListAwsClusters` method.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAwsClustersResponse : pb::IMessage<ListAwsClustersResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1435,6 +1445,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// A list of [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster] resources
     /// in the specified Google Cloud Platform project and region region.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AwsCluster> AwsClusters {
@@ -1607,6 +1618,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Request message for `AwsClusters.DeleteAwsCluster` method.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteAwsClusterRequest : pb::IMessage<DeleteAwsClusterRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1984,6 +1996,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Response message for `AwsClusters.CreateAwsNodePool` method.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateAwsNodePoolRequest : pb::IMessage<CreateAwsNodePoolRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2061,6 +2074,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// Required. The specification of the
     /// [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool] to create.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool AwsNodePool {
@@ -2326,6 +2340,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Request message for `AwsClusters.UpdateAwsNodePool` method.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateAwsNodePoolRequest : pb::IMessage<UpdateAwsNodePoolRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2380,6 +2395,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// Required. The [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
     /// resource to update.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool AwsNodePool {
@@ -2654,6 +2670,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Request message for `AwsClusters.RollbackAwsNodePoolUpdate` method.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RollbackAwsNodePoolUpdateRequest : pb::IMessage<RollbackAwsNodePoolUpdateRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2899,6 +2916,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Request message for `AwsClusters.GetAwsNodePool` method.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetAwsNodePoolRequest : pb::IMessage<GetAwsNodePoolRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3103,6 +3121,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Request message for `AwsClusters.ListAwsNodePools` method.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAwsNodePoolsRequest : pb::IMessage<ListAwsNodePoolsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3394,6 +3413,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Response message for `AwsClusters.ListAwsNodePools` method.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAwsNodePoolsResponse : pb::IMessage<ListAwsNodePoolsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3449,6 +3469,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// A list of [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool]
     /// resources in the specified `AwsCluster`.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool> AwsNodePools {
@@ -3621,6 +3642,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Request message for `AwsClusters.DeleteAwsNodePool` method.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteAwsNodePoolRequest : pb::IMessage<DeleteAwsNodePoolRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4000,6 +4022,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// GetAwsOpenIdConfigRequest gets the OIDC discovery document for the
   /// cluster. See the OpenID Connect Discovery 1.0 specification for details.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetAwsOpenIdConfigRequest : pb::IMessage<GetAwsOpenIdConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4201,6 +4224,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// document returned by getOpenIDConfig. See the OpenID Connect
   /// Discovery 1.0 specification for details.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetAwsJsonWebKeysRequest : pb::IMessage<GetAwsJsonWebKeysRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4399,6 +4423,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// GetAwsServerConfigRequest gets the server config of GKE cluster on AWS.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetAwsServerConfigRequest : pb::IMessage<GetAwsServerConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4603,6 +4628,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Request message for `AwsClusters.GenerateAwsAccessToken` method.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GenerateAwsAccessTokenRequest : pb::IMessage<GenerateAwsAccessTokenRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4807,6 +4833,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Response message for `AwsClusters.GenerateAwsAccessToken` method.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GenerateAwsAccessTokenResponse : pb::IMessage<GenerateAwsAccessTokenResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5049,6 +5076,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
 
   }
 
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GenerateAwsClusterAgentTokenRequest : pb::IMessage<GenerateAwsClusterAgentTokenRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5602,6 +5630,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
 
   }
 
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GenerateAwsClusterAgentTokenResponse : pb::IMessage<GenerateAwsClusterAgentTokenResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
