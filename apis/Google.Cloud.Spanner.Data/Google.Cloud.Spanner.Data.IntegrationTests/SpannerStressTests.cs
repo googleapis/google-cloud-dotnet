@@ -150,13 +150,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             // The maximum roundtrip time for Spanner (and MySQL) is about 200ms per
             // write. If we initialize with the target sustained # sessions,
             // we shouldn't see any more sessions created.
-            int countToPreWarm = Math.Min(TargetQps / 4, 800);
-            var options = new SessionPoolOptions
-            {
-                MaximumActiveSessions = Math.Max(countToPreWarm + 50, 400),
-                MinimumPooledSessions = countToPreWarm,
-                MaximumConcurrentSessionCreates = Math.Min(countToPreWarm, 50)
-            };
+            var options = new ManagedSessionOptions();
 
             var sessionPoolManager = SessionPoolManager.Create(options);
             var connectionStringBuilder = new SpannerConnectionStringBuilder(_fixture.ConnectionString)
@@ -164,16 +158,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 SessionPoolManager = sessionPoolManager,
                 MaximumGrpcChannels = Math.Max(4, 8 * TargetQps / 2000)
             };
-            var pool = await connectionStringBuilder.AcquireSessionPoolAsync();
+            var managedSession = await connectionStringBuilder.AcquireManagedSessionAsync();
             var logger = Logger.DefaultLogger;
             logger.ResetPerformanceData();
 
             logger.Info("Prewarming session pool for stress test");
             // Prewarm step: allow up to 30 seconds for the session pool to be populated.
             var cancellationToken = new CancellationTokenSource(30000).Token;
-            await pool.WhenPoolReady(_fixture.DatabaseName, cancellationToken);
-
-            logger.Info($"Prewarm complete. Pool stats: {pool.GetSegmentStatisticsSnapshot(_fixture.DatabaseName)}");
 
             // Now run the test, with performance logging enabled, but without debug logging.
             // (Debug logging can write a lot to our log file, breaking the test.)
@@ -192,8 +183,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 logger.LogPerformanceTraces = false;
             }
             logger.Info($"Spanner latency = {latencyMs}ms");
-
-            await SessionPoolHelpers.ShutdownPoolAsync(connectionStringBuilder);
 
             // Spanner latency with 100 qps simulated is usually around 75ms.
             // We allow for a latency multiplier from callers, because callers may be executing,

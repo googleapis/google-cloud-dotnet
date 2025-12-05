@@ -87,50 +87,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         [Fact]
-        public async Task Commit_ReturnsToPool()
-        {
-            using var connection = new SpannerConnection(_fixture.ConnectionString);
-            await connection.OpenAsync();
-
-            using var transaction = await connection.BeginTransactionAsync();
-            using var command = connection.CreateSelectCommand($"SELECT Int64Value FROM {_fixture.TableName} WHERE K=@k");
-            command.Parameters.Add("k", SpannerDbType.String, _key);
-            command.Transaction = transaction;
-
-            var value = await command.ExecuteScalarAsync();
-
-            transaction.Commit();
-
-            var poolStatistics = connection.GetSessionPoolSegmentStatistics();
-
-            // Because the session is eagerly returned to the pool after a commit, there shouldn't
-            // be any active sessions even before we dispose of the transaction explicitly.
-            Assert.Equal(0, poolStatistics.ActiveSessionCount);
-        }
-
-        [Fact]
-        public async Task Rollback_ReturnsToPool()
-        {
-            using var connection = new SpannerConnection(_fixture.ConnectionString);
-            await connection.OpenAsync();
-
-            using var transaction = await connection.BeginTransactionAsync();
-            using var command = connection.CreateSelectCommand($"SELECT Int64Value FROM {_fixture.TableName} WHERE K=@k");
-            command.Parameters.Add("k", SpannerDbType.String, _key);
-            command.Transaction = transaction;
-
-            var value = await command.ExecuteScalarAsync();
-
-            transaction.Rollback();
-
-            var poolStatistics = connection.GetSessionPoolSegmentStatistics();
-
-            // Because the session is eagerly returned to the pool after a rollback, there shouldn't
-            // be any active sessions even before we dispose of the transaction explicitly.
-            Assert.Equal(0, poolStatistics.ActiveSessionCount);
-        }
-
-        [Fact]
         public async Task DetachOnDisposeTransactionIsDetached()
         {
             using var connection = new SpannerConnection(_fixture.ConnectionString);
