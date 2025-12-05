@@ -29,7 +29,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
             "L2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJj",
             "ZS5wcm90bxo0Z29vZ2xlL2Nsb3VkL2drZW11bHRpY2xvdWQvdjEvY29tbW9u",
             "X3Jlc291cmNlcy5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5w",
-            "cm90bxoWZ29vZ2xlL3R5cGUvZGF0ZS5wcm90byKdCwoKQXdzQ2x1c3RlchIM",
+            "cm90bxoWZ29vZ2xlL3R5cGUvZGF0ZS5wcm90byKfCwoKQXdzQ2x1c3RlchIM",
             "CgRuYW1lGAEgASgJEhgKC2Rlc2NyaXB0aW9uGAIgASgJQgPgQQESTAoKbmV0",
             "d29ya2luZxgDIAEoCzIzLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYx",
             "LkF3c0NsdXN0ZXJOZXR3b3JraW5nQgPgQQISFwoKYXdzX3JlZ2lvbhgEIAEo",
@@ -59,138 +59,143 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
             "KAkSDQoFdmFsdWUYAiABKAk6AjgBInUKBVN0YXRlEhUKEVNUQVRFX1VOU1BF",
             "Q0lGSUVEEAASEAoMUFJPVklTSU9OSU5HEAESCwoHUlVOTklORxACEg8KC1JF",
             "Q09OQ0lMSU5HEAMSDAoIU1RPUFBJTkcQBBIJCgVFUlJPUhAFEgwKCERFR1JB",
-            "REVEEAY6b+pBbAonZ2tlbXVsdGljbG91ZC5nb29nbGVhcGlzLmNvbS9Bd3ND",
-            "bHVzdGVyEkFwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
-            "bn0vYXdzQ2x1c3RlcnMve2F3c19jbHVzdGVyfSKoBwoPQXdzQ29udHJvbFBs",
-            "YW5lEhQKB3ZlcnNpb24YASABKAlCA+BBAhIaCg1pbnN0YW5jZV90eXBlGAIg",
-            "ASgJQgPgQQESRAoKc3NoX2NvbmZpZxgOIAEoCzIrLmdvb2dsZS5jbG91ZC5n",
-            "a2VtdWx0aWNsb3VkLnYxLkF3c1NzaENvbmZpZ0ID4EEBEhcKCnN1Ym5ldF9p",
-            "ZHMYBCADKAlCA+BBAhIfChJzZWN1cml0eV9ncm91cF9pZHMYBSADKAlCA+BB",
-            "ARIhChRpYW1faW5zdGFuY2VfcHJvZmlsZRgHIAEoCUID4EECEkoKC3Jvb3Rf",
-            "dm9sdW1lGAggASgLMjAuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEu",
-            "QXdzVm9sdW1lVGVtcGxhdGVCA+BBARJKCgttYWluX3ZvbHVtZRgJIAEoCzIw",
-            "Lmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c1ZvbHVtZVRlbXBs",
-            "YXRlQgPgQQESVgoTZGF0YWJhc2VfZW5jcnlwdGlvbhgKIAEoCzI0Lmdvb2ds",
-            "ZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c0RhdGFiYXNlRW5jcnlwdGlv",
-            "bkID4EECEksKBHRhZ3MYCyADKAsyOC5nb29nbGUuY2xvdWQuZ2tlbXVsdGlj",
-            "bG91ZC52MS5Bd3NDb250cm9sUGxhbmUuVGFnc0VudHJ5QgPgQQESYgobYXdz",
-            "X3NlcnZpY2VzX2F1dGhlbnRpY2F0aW9uGAwgASgLMjguZ29vZ2xlLmNsb3Vk",
-            "LmdrZW11bHRpY2xvdWQudjEuQXdzU2VydmljZXNBdXRoZW50aWNhdGlvbkID",
-            "4EECEkgKDHByb3h5X2NvbmZpZxgQIAEoCzItLmdvb2dsZS5jbG91ZC5na2Vt",
-            "dWx0aWNsb3VkLnYxLkF3c1Byb3h5Q29uZmlnQgPgQQESUgoRY29uZmlnX2Vu",
-            "Y3J5cHRpb24YESABKAsyMi5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52",
-            "MS5Bd3NDb25maWdFbmNyeXB0aW9uQgPgQQISVAoSaW5zdGFuY2VfcGxhY2Vt",
-            "ZW50GBIgASgLMjMuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdz",
-            "SW5zdGFuY2VQbGFjZW1lbnRCA+BBARorCglUYWdzRW50cnkSCwoDa2V5GAEg",
-            "ASgJEg0KBXZhbHVlGAIgASgJOgI4ASJSChlBd3NTZXJ2aWNlc0F1dGhlbnRp",
-            "Y2F0aW9uEhUKCHJvbGVfYXJuGAEgASgJQgPgQQISHgoRcm9sZV9zZXNzaW9u",
-            "X25hbWUYAiABKAlCA+BBASKmAQoQQXdzQXV0aG9yaXphdGlvbhJHCgthZG1p",
-            "bl91c2VycxgBIAMoCzItLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYx",
-            "LkF3c0NsdXN0ZXJVc2VyQgPgQQESSQoMYWRtaW5fZ3JvdXBzGAIgAygLMi4u",
-            "Z29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdzQ2x1c3Rlckdyb3Vw",
-            "QgPgQQEiJwoOQXdzQ2x1c3RlclVzZXISFQoIdXNlcm5hbWUYASABKAlCA+BB",
-            "AiIlCg9Bd3NDbHVzdGVyR3JvdXASEgoFZ3JvdXAYASABKAlCA+BBAiIxChVB",
-            "d3NEYXRhYmFzZUVuY3J5cHRpb24SGAoLa21zX2tleV9hcm4YASABKAlCA+BB",
-            "AiKEAgoRQXdzVm9sdW1lVGVtcGxhdGUSFQoIc2l6ZV9naWIYASABKAVCA+BB",
-            "ARJVCgt2b2x1bWVfdHlwZRgCIAEoDjI7Lmdvb2dsZS5jbG91ZC5na2VtdWx0",
-            "aWNsb3VkLnYxLkF3c1ZvbHVtZVRlbXBsYXRlLlZvbHVtZVR5cGVCA+BBARIR",
-            "CgRpb3BzGAMgASgFQgPgQQESFwoKdGhyb3VnaHB1dBgFIAEoBUID4EEBEhgK",
-            "C2ttc19rZXlfYXJuGAQgASgJQgPgQQEiOwoKVm9sdW1lVHlwZRIbChdWT0xV",
-            "TUVfVFlQRV9VTlNQRUNJRklFRBAAEgcKA0dQMhABEgcKA0dQMxACIqkBChRB",
-            "d3NDbHVzdGVyTmV0d29ya2luZxITCgZ2cGNfaWQYASABKAlCA+BBAhIkChdw",
-            "b2RfYWRkcmVzc19jaWRyX2Jsb2NrcxgCIAMoCUID4EECEigKG3NlcnZpY2Vf",
-            "YWRkcmVzc19jaWRyX2Jsb2NrcxgDIAMoCUID4EECEiwKH3Blcl9ub2RlX3Bv",
-            "b2xfc2dfcnVsZXNfZGlzYWJsZWQYBSABKAhCA+BBASLdCQoLQXdzTm9kZVBv",
-            "b2wSDAoEbmFtZRgBIAEoCRIUCgd2ZXJzaW9uGAMgASgJQgPgQQISQQoGY29u",
-            "ZmlnGBwgASgLMiwuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdz",
-            "Tm9kZUNvbmZpZ0ID4EECEk8KC2F1dG9zY2FsaW5nGBkgASgLMjUuZ29vZ2xl",
-            "LmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdzTm9kZVBvb2xBdXRvc2NhbGlu",
-            "Z0ID4EECEhYKCXN1Ym5ldF9pZBgGIAEoCUID4EECEkQKBXN0YXRlGBAgASgO",
-            "MjAuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdzTm9kZVBvb2wu",
-            "U3RhdGVCA+BBAxIQCgN1aWQYESABKAlCA+BBAxIYCgtyZWNvbmNpbGluZxgS",
-            "IAEoCEID4EEDEjQKC2NyZWF0ZV90aW1lGBMgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGBQgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEgwKBGV0YWcYFSABKAkSVQoL",
-            "YW5ub3RhdGlvbnMYFiADKAsyOy5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91",
-            "ZC52MS5Bd3NOb2RlUG9vbC5Bbm5vdGF0aW9uc0VudHJ5QgPgQQESUgoTbWF4",
-            "X3BvZHNfY29uc3RyYWludBgbIAEoCzIwLmdvb2dsZS5jbG91ZC5na2VtdWx0",
-            "aWNsb3VkLnYxLk1heFBvZHNDb25zdHJhaW50QgPgQQISRAoGZXJyb3JzGB0g",
-            "AygLMi8uZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdzTm9kZVBv",
-            "b2xFcnJvckID4EEDEkkKCm1hbmFnZW1lbnQYHiABKAsyMC5nb29nbGUuY2xv",
-            "dWQuZ2tlbXVsdGljbG91ZC52MS5Bd3NOb2RlTWFuYWdlbWVudEID4EEBEk0K",
-            "Dmt1YmVsZXRfY29uZmlnGB8gASgLMjAuZ29vZ2xlLmNsb3VkLmdrZW11bHRp",
-            "Y2xvdWQudjEuTm9kZUt1YmVsZXRDb25maWdCA+BBARJLCg91cGRhdGVfc2V0",
-            "dGluZ3MYICABKAsyLS5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5V",
-            "cGRhdGVTZXR0aW5nc0ID4EEBGjIKEEFubm90YXRpb25zRW50cnkSCwoDa2V5",
-            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJ1CgVTdGF0ZRIVChFTVEFURV9V",
-            "TlNQRUNJRklFRBAAEhAKDFBST1ZJU0lPTklORxABEgsKB1JVTk5JTkcQAhIP",
-            "CgtSRUNPTkNJTElORxADEgwKCFNUT1BQSU5HEAQSCQoFRVJST1IQBRIMCghE",
-            "RUdSQURFRBAGOo4B6kGKAQooZ2tlbXVsdGljbG91ZC5nb29nbGVhcGlzLmNv",
-            "bS9Bd3NOb2RlUG9vbBJecHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259L2F3c0NsdXN0ZXJzL3thd3NfY2x1c3Rlcn0vYXdzTm9kZVBv",
-            "b2xzL3thd3Nfbm9kZV9wb29sfSJbCg5VcGRhdGVTZXR0aW5ncxJJCg5zdXJn",
-            "ZV9zZXR0aW5ncxgBIAEoCzIsLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3Vk",
-            "LnYxLlN1cmdlU2V0dGluZ3NCA+BBASJFCg1TdXJnZVNldHRpbmdzEhYKCW1h",
-            "eF9zdXJnZRgBIAEoBUID4EEBEhwKD21heF91bmF2YWlsYWJsZRgCIAEoBUID",
-            "4EEBIi0KEUF3c05vZGVNYW5hZ2VtZW50EhgKC2F1dG9fcmVwYWlyGAEgASgI",
-            "QgPgQQEi+gcKDUF3c05vZGVDb25maWcSGgoNaW5zdGFuY2VfdHlwZRgBIAEo",
-            "CUID4EEBEkoKC3Jvb3Rfdm9sdW1lGAIgASgLMjAuZ29vZ2xlLmNsb3VkLmdr",
-            "ZW11bHRpY2xvdWQudjEuQXdzVm9sdW1lVGVtcGxhdGVCA+BBARI9CgZ0YWlu",
-            "dHMYAyADKAsyKC5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5Ob2Rl",
-            "VGFpbnRCA+BBARJNCgZsYWJlbHMYBCADKAsyOC5nb29nbGUuY2xvdWQuZ2tl",
-            "bXVsdGljbG91ZC52MS5Bd3NOb2RlQ29uZmlnLkxhYmVsc0VudHJ5QgPgQQES",
-            "SQoEdGFncxgFIAMoCzI2Lmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYx",
-            "LkF3c05vZGVDb25maWcuVGFnc0VudHJ5QgPgQQESIQoUaWFtX2luc3RhbmNl",
-            "X3Byb2ZpbGUYBiABKAlCA+BBAhIXCgppbWFnZV90eXBlGAsgASgJQgPgQQES",
-            "RAoKc3NoX2NvbmZpZxgJIAEoCzIrLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNs",
-            "b3VkLnYxLkF3c1NzaENvbmZpZ0ID4EEBEh8KEnNlY3VyaXR5X2dyb3VwX2lk",
-            "cxgKIAMoCUID4EEBEkgKDHByb3h5X2NvbmZpZxgMIAEoCzItLmdvb2dsZS5j",
-            "bG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c1Byb3h5Q29uZmlnQgPgQQESUgoR",
-            "Y29uZmlnX2VuY3J5cHRpb24YDSABKAsyMi5nb29nbGUuY2xvdWQuZ2tlbXVs",
-            "dGljbG91ZC52MS5Bd3NDb25maWdFbmNyeXB0aW9uQgPgQQISVAoSaW5zdGFu",
-            "Y2VfcGxhY2VtZW50GA4gASgLMjMuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xv",
-            "dWQudjEuQXdzSW5zdGFuY2VQbGFjZW1lbnRCA+BBARJwCh5hdXRvc2NhbGlu",
-            "Z19tZXRyaWNzX2NvbGxlY3Rpb24YDyABKAsyQy5nb29nbGUuY2xvdWQuZ2tl",
-            "bXVsdGljbG91ZC52MS5Bd3NBdXRvc2NhbGluZ0dyb3VwTWV0cmljc0NvbGxl",
-            "Y3Rpb25CA+BBARJDCgtzcG90X2NvbmZpZxgQIAEoCzIpLmdvb2dsZS5jbG91",
-            "ZC5na2VtdWx0aWNsb3VkLnYxLlNwb3RDb25maWdCA+BBARotCgtMYWJlbHNF",
-            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGisKCVRhZ3NF",
-            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIlIKFkF3c05v",
-            "ZGVQb29sQXV0b3NjYWxpbmcSGwoObWluX25vZGVfY291bnQYASABKAVCA+BB",
-            "AhIbCg5tYXhfbm9kZV9jb3VudBgCIAEoBUID4EECItQBCg9Bd3NPcGVuSWRD",
-            "b25maWcSDgoGaXNzdWVyGAEgASgJEhAKCGp3a3NfdXJpGAIgASgJEiAKGHJl",
-            "c3BvbnNlX3R5cGVzX3N1cHBvcnRlZBgDIAMoCRIfChdzdWJqZWN0X3R5cGVz",
-            "X3N1cHBvcnRlZBgEIAMoCRItCiVpZF90b2tlbl9zaWduaW5nX2FsZ192YWx1",
-            "ZXNfc3VwcG9ydGVkGAUgAygJEhgKEGNsYWltc19zdXBwb3J0ZWQYBiADKAkS",
-            "EwoLZ3JhbnRfdHlwZXMYByADKAkiQgoOQXdzSnNvbldlYktleXMSMAoEa2V5",
-            "cxgBIAMoCzIiLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkp3ayL0",
-            "AQoPQXdzU2VydmVyQ29uZmlnEgwKBG5hbWUYASABKAkSSAoOdmFsaWRfdmVy",
-            "c2lvbnMYAiADKAsyMC5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5B",
-            "d3NLOHNWZXJzaW9uSW5mbxIdChVzdXBwb3J0ZWRfYXdzX3JlZ2lvbnMYAyAD",
-            "KAk6aupBZwosZ2tlbXVsdGljbG91ZC5nb29nbGVhcGlzLmNvbS9Bd3NTZXJ2",
-            "ZXJDb25maWcSN3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
-            "aW9ufS9hd3NTZXJ2ZXJDb25maWcitAEKEUF3c0s4c1ZlcnNpb25JbmZvEg8K",
-            "B3ZlcnNpb24YASABKAkSFAoHZW5hYmxlZBgDIAEoCEID4EEBEhgKC2VuZF9v",
-            "Zl9saWZlGAQgASgIQgPgQQESMAoQZW5kX29mX2xpZmVfZGF0ZRgFIAEoCzIR",
-            "Lmdvb2dsZS50eXBlLkRhdGVCA+BBARIsCgxyZWxlYXNlX2RhdGUYBiABKAsy",
-            "ES5nb29nbGUudHlwZS5EYXRlQgPgQQEiKQoMQXdzU3NoQ29uZmlnEhkKDGVj",
-            "Ml9rZXlfcGFpchgBIAEoCUID4EECIjwKDkF3c1Byb3h5Q29uZmlnEhIKCnNl",
-            "Y3JldF9hcm4YASABKAkSFgoOc2VjcmV0X3ZlcnNpb24YAiABKAkiLwoTQXdz",
-            "Q29uZmlnRW5jcnlwdGlvbhIYCgtrbXNfa2V5X2FybhgBIAEoCUID4EECIrMB",
-            "ChRBd3NJbnN0YW5jZVBsYWNlbWVudBJRCgd0ZW5hbmN5GAEgASgOMjsuZ29v",
-            "Z2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdzSW5zdGFuY2VQbGFjZW1l",
-            "bnQuVGVuYW5jeUID4EECIkgKB1RlbmFuY3kSFwoTVEVOQU5DWV9VTlNQRUNJ",
-            "RklFRBAAEgsKB0RFRkFVTFQQARINCglERURJQ0FURUQQAhIICgRIT1NUEAMi",
-            "VgokQXdzQXV0b3NjYWxpbmdHcm91cE1ldHJpY3NDb2xsZWN0aW9uEhgKC2dy",
-            "YW51bGFyaXR5GAEgASgJQgPgQQISFAoHbWV0cmljcxgCIAMoCUID4EEBIikK",
-            "ClNwb3RDb25maWcSGwoOaW5zdGFuY2VfdHlwZXMYASADKAlCA+BBAiIiCg9B",
-            "d3NDbHVzdGVyRXJyb3ISDwoHbWVzc2FnZRgBIAEoCSIjChBBd3NOb2RlUG9v",
-            "bEVycm9yEg8KB21lc3NhZ2UYASABKAlC5AEKIWNvbS5nb29nbGUuY2xvdWQu",
-            "Z2tlbXVsdGljbG91ZC52MUIRQXdzUmVzb3VyY2VzUHJvdG9QAVpHY2xvdWQu",
-            "Z29vZ2xlLmNvbS9nby9na2VtdWx0aWNsb3VkL2FwaXYxL2drZW11bHRpY2xv",
-            "dWRwYjtna2VtdWx0aWNsb3VkcGKqAh1Hb29nbGUuQ2xvdWQuR2tlTXVsdGlD",
-            "bG91ZC5WMcoCHUdvb2dsZVxDbG91ZFxHa2VNdWx0aUNsb3VkXFYx6gIgR29v",
-            "Z2xlOjpDbG91ZDo6R2tlTXVsdGlDbG91ZDo6VjFiBnByb3RvMw=="));
+            "REVEEAY6cRgB6kFsCidna2VtdWx0aWNsb3VkLmdvb2dsZWFwaXMuY29tL0F3",
+            "c0NsdXN0ZXISQXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
+            "aW9ufS9hd3NDbHVzdGVycy97YXdzX2NsdXN0ZXJ9IqwHCg9Bd3NDb250cm9s",
+            "UGxhbmUSFAoHdmVyc2lvbhgBIAEoCUID4EECEhoKDWluc3RhbmNlX3R5cGUY",
+            "AiABKAlCA+BBARJECgpzc2hfY29uZmlnGA4gASgLMisuZ29vZ2xlLmNsb3Vk",
+            "LmdrZW11bHRpY2xvdWQudjEuQXdzU3NoQ29uZmlnQgPgQQESFwoKc3VibmV0",
+            "X2lkcxgEIAMoCUID4EECEh8KEnNlY3VyaXR5X2dyb3VwX2lkcxgFIAMoCUID",
+            "4EEBEiEKFGlhbV9pbnN0YW5jZV9wcm9maWxlGAcgASgJQgPgQQISSgoLcm9v",
+            "dF92b2x1bWUYCCABKAsyMC5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52",
+            "MS5Bd3NWb2x1bWVUZW1wbGF0ZUID4EEBEkoKC21haW5fdm9sdW1lGAkgASgL",
+            "MjAuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdzVm9sdW1lVGVt",
+            "cGxhdGVCA+BBARJWChNkYXRhYmFzZV9lbmNyeXB0aW9uGAogASgLMjQuZ29v",
+            "Z2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdzRGF0YWJhc2VFbmNyeXB0",
+            "aW9uQgPgQQISSwoEdGFncxgLIAMoCzI4Lmdvb2dsZS5jbG91ZC5na2VtdWx0",
+            "aWNsb3VkLnYxLkF3c0NvbnRyb2xQbGFuZS5UYWdzRW50cnlCA+BBARJiChth",
+            "d3Nfc2VydmljZXNfYXV0aGVudGljYXRpb24YDCABKAsyOC5nb29nbGUuY2xv",
+            "dWQuZ2tlbXVsdGljbG91ZC52MS5Bd3NTZXJ2aWNlc0F1dGhlbnRpY2F0aW9u",
+            "QgPgQQISSAoMcHJveHlfY29uZmlnGBAgASgLMi0uZ29vZ2xlLmNsb3VkLmdr",
+            "ZW11bHRpY2xvdWQudjEuQXdzUHJveHlDb25maWdCA+BBARJSChFjb25maWdf",
+            "ZW5jcnlwdGlvbhgRIAEoCzIyLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3Vk",
+            "LnYxLkF3c0NvbmZpZ0VuY3J5cHRpb25CA+BBAhJUChJpbnN0YW5jZV9wbGFj",
+            "ZW1lbnQYEiABKAsyMy5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5B",
+            "d3NJbnN0YW5jZVBsYWNlbWVudEID4EEBGisKCVRhZ3NFbnRyeRILCgNrZXkY",
+            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOgIYASJWChlBd3NTZXJ2aWNlc0F1",
+            "dGhlbnRpY2F0aW9uEhUKCHJvbGVfYXJuGAEgASgJQgPgQQISHgoRcm9sZV9z",
+            "ZXNzaW9uX25hbWUYAiABKAlCA+BBAToCGAEiqgEKEEF3c0F1dGhvcml6YXRp",
+            "b24SRwoLYWRtaW5fdXNlcnMYASADKAsyLS5nb29nbGUuY2xvdWQuZ2tlbXVs",
+            "dGljbG91ZC52MS5Bd3NDbHVzdGVyVXNlckID4EEBEkkKDGFkbWluX2dyb3Vw",
+            "cxgCIAMoCzIuLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c0Ns",
+            "dXN0ZXJHcm91cEID4EEBOgIYASIrCg5Bd3NDbHVzdGVyVXNlchIVCgh1c2Vy",
+            "bmFtZRgBIAEoCUID4EECOgIYASIpCg9Bd3NDbHVzdGVyR3JvdXASEgoFZ3Jv",
+            "dXAYASABKAlCA+BBAjoCGAEiNQoVQXdzRGF0YWJhc2VFbmNyeXB0aW9uEhgK",
+            "C2ttc19rZXlfYXJuGAEgASgJQgPgQQI6AhgBIogCChFBd3NWb2x1bWVUZW1w",
+            "bGF0ZRIVCghzaXplX2dpYhgBIAEoBUID4EEBElUKC3ZvbHVtZV90eXBlGAIg",
+            "ASgOMjsuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdzVm9sdW1l",
+            "VGVtcGxhdGUuVm9sdW1lVHlwZUID4EEBEhEKBGlvcHMYAyABKAVCA+BBARIX",
+            "Cgp0aHJvdWdocHV0GAUgASgFQgPgQQESGAoLa21zX2tleV9hcm4YBCABKAlC",
+            "A+BBASI7CgpWb2x1bWVUeXBlEhsKF1ZPTFVNRV9UWVBFX1VOU1BFQ0lGSUVE",
+            "EAASBwoDR1AyEAESBwoDR1AzEAI6AhgBIq0BChRBd3NDbHVzdGVyTmV0d29y",
+            "a2luZxITCgZ2cGNfaWQYASABKAlCA+BBAhIkChdwb2RfYWRkcmVzc19jaWRy",
+            "X2Jsb2NrcxgCIAMoCUID4EECEigKG3NlcnZpY2VfYWRkcmVzc19jaWRyX2Js",
+            "b2NrcxgDIAMoCUID4EECEiwKH3Blcl9ub2RlX3Bvb2xfc2dfcnVsZXNfZGlz",
+            "YWJsZWQYBSABKAhCA+BBAToCGAEi3wkKC0F3c05vZGVQb29sEgwKBG5hbWUY",
+            "ASABKAkSFAoHdmVyc2lvbhgDIAEoCUID4EECEkEKBmNvbmZpZxgcIAEoCzIs",
+            "Lmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c05vZGVDb25maWdC",
+            "A+BBAhJPCgthdXRvc2NhbGluZxgZIAEoCzI1Lmdvb2dsZS5jbG91ZC5na2Vt",
+            "dWx0aWNsb3VkLnYxLkF3c05vZGVQb29sQXV0b3NjYWxpbmdCA+BBAhIWCglz",
+            "dWJuZXRfaWQYBiABKAlCA+BBAhJECgVzdGF0ZRgQIAEoDjIwLmdvb2dsZS5j",
+            "bG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c05vZGVQb29sLlN0YXRlQgPgQQMS",
+            "EAoDdWlkGBEgASgJQgPgQQMSGAoLcmVjb25jaWxpbmcYEiABKAhCA+BBAxI0",
+            "CgtjcmVhdGVfdGltZRgTIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgUIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCA+BBAxIMCgRldGFnGBUgASgJElUKC2Fubm90YXRpb25z",
+            "GBYgAygLMjsuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXdzTm9k",
+            "ZVBvb2wuQW5ub3RhdGlvbnNFbnRyeUID4EEBElIKE21heF9wb2RzX2NvbnN0",
+            "cmFpbnQYGyABKAsyMC5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5N",
+            "YXhQb2RzQ29uc3RyYWludEID4EECEkQKBmVycm9ycxgdIAMoCzIvLmdvb2ds",
+            "ZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c05vZGVQb29sRXJyb3JCA+BB",
+            "AxJJCgptYW5hZ2VtZW50GB4gASgLMjAuZ29vZ2xlLmNsb3VkLmdrZW11bHRp",
+            "Y2xvdWQudjEuQXdzTm9kZU1hbmFnZW1lbnRCA+BBARJNCg5rdWJlbGV0X2Nv",
+            "bmZpZxgfIAEoCzIwLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLk5v",
+            "ZGVLdWJlbGV0Q29uZmlnQgPgQQESSwoPdXBkYXRlX3NldHRpbmdzGCAgASgL",
+            "Mi0uZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuVXBkYXRlU2V0dGlu",
+            "Z3NCA+BBARoyChBBbm5vdGF0aW9uc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
+            "YWx1ZRgCIAEoCToCOAEidQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQ",
+            "ABIQCgxQUk9WSVNJT05JTkcQARILCgdSVU5OSU5HEAISDwoLUkVDT05DSUxJ",
+            "TkcQAxIMCghTVE9QUElORxAEEgkKBUVSUk9SEAUSDAoIREVHUkFERUQQBjqQ",
+            "ARgB6kGKAQooZ2tlbXVsdGljbG91ZC5nb29nbGVhcGlzLmNvbS9Bd3NOb2Rl",
+            "UG9vbBJecHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
+            "L2F3c0NsdXN0ZXJzL3thd3NfY2x1c3Rlcn0vYXdzTm9kZVBvb2xzL3thd3Nf",
+            "bm9kZV9wb29sfSJfCg5VcGRhdGVTZXR0aW5ncxJJCg5zdXJnZV9zZXR0aW5n",
+            "cxgBIAEoCzIsLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLlN1cmdl",
+            "U2V0dGluZ3NCA+BBAToCGAEiSQoNU3VyZ2VTZXR0aW5ncxIWCgltYXhfc3Vy",
+            "Z2UYASABKAVCA+BBARIcCg9tYXhfdW5hdmFpbGFibGUYAiABKAVCA+BBAToC",
+            "GAEiMQoRQXdzTm9kZU1hbmFnZW1lbnQSGAoLYXV0b19yZXBhaXIYASABKAhC",
+            "A+BBAToCGAEi/gcKDUF3c05vZGVDb25maWcSGgoNaW5zdGFuY2VfdHlwZRgB",
+            "IAEoCUID4EEBEkoKC3Jvb3Rfdm9sdW1lGAIgASgLMjAuZ29vZ2xlLmNsb3Vk",
+            "LmdrZW11bHRpY2xvdWQudjEuQXdzVm9sdW1lVGVtcGxhdGVCA+BBARI9CgZ0",
+            "YWludHMYAyADKAsyKC5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5O",
+            "b2RlVGFpbnRCA+BBARJNCgZsYWJlbHMYBCADKAsyOC5nb29nbGUuY2xvdWQu",
+            "Z2tlbXVsdGljbG91ZC52MS5Bd3NOb2RlQ29uZmlnLkxhYmVsc0VudHJ5QgPg",
+            "QQESSQoEdGFncxgFIAMoCzI2Lmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3Vk",
+            "LnYxLkF3c05vZGVDb25maWcuVGFnc0VudHJ5QgPgQQESIQoUaWFtX2luc3Rh",
+            "bmNlX3Byb2ZpbGUYBiABKAlCA+BBAhIXCgppbWFnZV90eXBlGAsgASgJQgPg",
+            "QQESRAoKc3NoX2NvbmZpZxgJIAEoCzIrLmdvb2dsZS5jbG91ZC5na2VtdWx0",
+            "aWNsb3VkLnYxLkF3c1NzaENvbmZpZ0ID4EEBEh8KEnNlY3VyaXR5X2dyb3Vw",
+            "X2lkcxgKIAMoCUID4EEBEkgKDHByb3h5X2NvbmZpZxgMIAEoCzItLmdvb2ds",
+            "ZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF3c1Byb3h5Q29uZmlnQgPgQQES",
+            "UgoRY29uZmlnX2VuY3J5cHRpb24YDSABKAsyMi5nb29nbGUuY2xvdWQuZ2tl",
+            "bXVsdGljbG91ZC52MS5Bd3NDb25maWdFbmNyeXB0aW9uQgPgQQISVAoSaW5z",
+            "dGFuY2VfcGxhY2VtZW50GA4gASgLMjMuZ29vZ2xlLmNsb3VkLmdrZW11bHRp",
+            "Y2xvdWQudjEuQXdzSW5zdGFuY2VQbGFjZW1lbnRCA+BBARJwCh5hdXRvc2Nh",
+            "bGluZ19tZXRyaWNzX2NvbGxlY3Rpb24YDyABKAsyQy5nb29nbGUuY2xvdWQu",
+            "Z2tlbXVsdGljbG91ZC52MS5Bd3NBdXRvc2NhbGluZ0dyb3VwTWV0cmljc0Nv",
+            "bGxlY3Rpb25CA+BBARJDCgtzcG90X2NvbmZpZxgQIAEoCzIpLmdvb2dsZS5j",
+            "bG91ZC5na2VtdWx0aWNsb3VkLnYxLlNwb3RDb25maWdCA+BBARotCgtMYWJl",
+            "bHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGisKCVRh",
+            "Z3NFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOgIYASJW",
+            "ChZBd3NOb2RlUG9vbEF1dG9zY2FsaW5nEhsKDm1pbl9ub2RlX2NvdW50GAEg",
+            "ASgFQgPgQQISGwoObWF4X25vZGVfY291bnQYAiABKAVCA+BBAjoCGAEi2wIK",
+            "D0F3c09wZW5JZENvbmZpZxIOCgZpc3N1ZXIYASABKAkSGgoIandrc191cmkY",
+            "AiABKAlSCGp3a3NfdXJpEjoKGHJlc3BvbnNlX3R5cGVzX3N1cHBvcnRlZBgD",
+            "IAMoCVIYcmVzcG9uc2VfdHlwZXNfc3VwcG9ydGVkEjgKF3N1YmplY3RfdHlw",
+            "ZXNfc3VwcG9ydGVkGAQgAygJUhdzdWJqZWN0X3R5cGVzX3N1cHBvcnRlZBJU",
+            "CiVpZF90b2tlbl9zaWduaW5nX2FsZ192YWx1ZXNfc3VwcG9ydGVkGAUgAygJ",
+            "UiVpZF90b2tlbl9zaWduaW5nX2FsZ192YWx1ZXNfc3VwcG9ydGVkEioKEGNs",
+            "YWltc19zdXBwb3J0ZWQYBiADKAlSEGNsYWltc19zdXBwb3J0ZWQSIAoLZ3Jh",
+            "bnRfdHlwZXMYByADKAlSC2dyYW50X3R5cGVzOgIYASJGCg5Bd3NKc29uV2Vi",
+            "S2V5cxIwCgRrZXlzGAEgAygLMiIuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xv",
+            "dWQudjEuSndrOgIYASL2AQoPQXdzU2VydmVyQ29uZmlnEgwKBG5hbWUYASAB",
+            "KAkSSAoOdmFsaWRfdmVyc2lvbnMYAiADKAsyMC5nb29nbGUuY2xvdWQuZ2tl",
+            "bXVsdGljbG91ZC52MS5Bd3NLOHNWZXJzaW9uSW5mbxIdChVzdXBwb3J0ZWRf",
+            "YXdzX3JlZ2lvbnMYAyADKAk6bBgB6kFnCixna2VtdWx0aWNsb3VkLmdvb2ds",
+            "ZWFwaXMuY29tL0F3c1NlcnZlckNvbmZpZxI3cHJvamVjdHMve3Byb2plY3R9",
+            "L2xvY2F0aW9ucy97bG9jYXRpb259L2F3c1NlcnZlckNvbmZpZyK4AQoRQXdz",
+            "SzhzVmVyc2lvbkluZm8SDwoHdmVyc2lvbhgBIAEoCRIUCgdlbmFibGVkGAMg",
+            "ASgIQgPgQQESGAoLZW5kX29mX2xpZmUYBCABKAhCA+BBARIwChBlbmRfb2Zf",
+            "bGlmZV9kYXRlGAUgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUID4EEBEiwKDHJl",
+            "bGVhc2VfZGF0ZRgGIAEoCzIRLmdvb2dsZS50eXBlLkRhdGVCA+BBAToCGAEi",
+            "LQoMQXdzU3NoQ29uZmlnEhkKDGVjMl9rZXlfcGFpchgBIAEoCUID4EECOgIY",
+            "ASJACg5Bd3NQcm94eUNvbmZpZxISCgpzZWNyZXRfYXJuGAEgASgJEhYKDnNl",
+            "Y3JldF92ZXJzaW9uGAIgASgJOgIYASIzChNBd3NDb25maWdFbmNyeXB0aW9u",
+            "EhgKC2ttc19rZXlfYXJuGAEgASgJQgPgQQI6AhgBIrcBChRBd3NJbnN0YW5j",
+            "ZVBsYWNlbWVudBJRCgd0ZW5hbmN5GAEgASgOMjsuZ29vZ2xlLmNsb3VkLmdr",
+            "ZW11bHRpY2xvdWQudjEuQXdzSW5zdGFuY2VQbGFjZW1lbnQuVGVuYW5jeUID",
+            "4EECIkgKB1RlbmFuY3kSFwoTVEVOQU5DWV9VTlNQRUNJRklFRBAAEgsKB0RF",
+            "RkFVTFQQARINCglERURJQ0FURUQQAhIICgRIT1NUEAM6AhgBIloKJEF3c0F1",
+            "dG9zY2FsaW5nR3JvdXBNZXRyaWNzQ29sbGVjdGlvbhIYCgtncmFudWxhcml0",
+            "eRgBIAEoCUID4EECEhQKB21ldHJpY3MYAiADKAlCA+BBAToCGAEiLQoKU3Bv",
+            "dENvbmZpZxIbCg5pbnN0YW5jZV90eXBlcxgBIAMoCUID4EECOgIYASImCg9B",
+            "d3NDbHVzdGVyRXJyb3ISDwoHbWVzc2FnZRgBIAEoCToCGAEiJwoQQXdzTm9k",
+            "ZVBvb2xFcnJvchIPCgdtZXNzYWdlGAEgASgJOgIYAULkAQohY29tLmdvb2ds",
+            "ZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxQhFBd3NSZXNvdXJjZXNQcm90b1AB",
+            "WkdjbG91ZC5nb29nbGUuY29tL2dvL2drZW11bHRpY2xvdWQvYXBpdjEvZ2tl",
+            "bXVsdGljbG91ZHBiO2drZW11bHRpY2xvdWRwYqoCHUdvb2dsZS5DbG91ZC5H",
+            "a2VNdWx0aUNsb3VkLlYxygIdR29vZ2xlXENsb3VkXEdrZU11bHRpQ2xvdWRc",
+            "VjHqAiBHb29nbGU6OkNsb3VkOjpHa2VNdWx0aUNsb3VkOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GkeMultiCloud.V1.CommonResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -230,6 +235,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// An Anthos cluster running on AWS.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AwsCluster : pb::IMessage<AwsCluster>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -338,6 +344,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// <summary>
     /// Required. Cluster-wide networking configuration.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.AwsClusterNetworking Networking {
@@ -373,6 +380,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// <summary>
     /// Required. Configuration related to the cluster control plane.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.AwsControlPlane ControlPlane {
@@ -388,6 +396,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// <summary>
     /// Required. Configuration related to the cluster RBAC settings.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.AwsAuthorization Authorization {
@@ -596,6 +605,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// <summary>
     /// Output only. A set of errors found in the cluster.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AwsClusterError> Errors {
@@ -1364,6 +1374,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// ControlPlane defines common parameters between control plane nodes.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AwsControlPlane : pb::IMessage<AwsControlPlane>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1466,6 +1477,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// Optional. SSH configuration for how to access the underlying control plane
     /// machines.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.AwsSshConfig SshConfig {
@@ -1536,6 +1548,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     ///
     /// When unspecified, it defaults to 32 GiB with the GP2 volume type.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.AwsVolumeTemplate RootVolume {
@@ -1558,6 +1571,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     ///
     /// When unspecified, it defaults to 8 GiB with the GP2 volume type.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.AwsVolumeTemplate MainVolume {
@@ -1573,6 +1587,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// <summary>
     /// Required. The ARN of the AWS KMS key used to encrypt cluster secrets.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.AwsDatabaseEncryption DatabaseEncryption {
@@ -1607,6 +1622,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// <summary>
     /// Required. Authentication configuration for management of AWS resources.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.AwsServicesAuthentication AwsServicesAuthentication {
@@ -1622,6 +1638,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// <summary>
     /// Optional. Proxy configuration for outbound HTTP(S) traffic.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.AwsProxyConfig ProxyConfig {
@@ -1637,6 +1654,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// <summary>
     /// Required. Config encryption for user data.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.AwsConfigEncryption ConfigEncryption {
@@ -1653,6 +1671,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// Optional. The placement to use on control plane instances.
     /// When unspecified, the VPC's default tenancy will be used.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.AwsInstancePlacement InstancePlacement {
@@ -2152,6 +2171,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Authentication configuration for the management of AWS resources.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AwsServicesAuthentication : pb::IMessage<AwsServicesAuthentication>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2391,6 +2411,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Configuration related to the cluster RBAC settings.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AwsAuthorization : pb::IMessage<AwsAuthorization>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2450,6 +2471,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// For more info on RBAC, see
     /// https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AwsClusterUser> AdminUsers {
@@ -2469,6 +2491,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// For more info on RBAC, see
     /// https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AwsClusterGroup> AdminGroups {
@@ -2615,6 +2638,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Identities of a user-type subject for AWS clusters.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AwsClusterUser : pb::IMessage<AwsClusterUser>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2811,6 +2835,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Identities of a group-type subject for AWS clusters.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AwsClusterGroup : pb::IMessage<AwsClusterGroup>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3007,6 +3032,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Configuration related to application-layer secrets encryption.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AwsDatabaseEncryption : pb::IMessage<AwsDatabaseEncryption>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3203,6 +3229,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Configuration template for AWS EBS volumes.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AwsVolumeTemplate : pb::IMessage<AwsVolumeTemplate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3310,7 +3337,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// Optional. The throughput that the volume supports, in MiB/s. Only valid if
     /// volume_type is GP3.
     ///
-    /// If the volume_type is GP3 and this is not speficied, it defaults to 125.
+    /// If the volume_type is GP3 and this is not specified, it defaults to 125.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3604,6 +3631,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// Anthos clusters on AWS run on a single VPC. This includes control
   /// plane replicas and node pool nodes.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AwsClusterNetworking : pb::IMessage<AwsClusterNetworking>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3909,6 +3937,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// An Anthos node pool running on AWS.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AwsNodePool : pb::IMessage<AwsNodePool>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4017,6 +4046,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// <summary>
     /// Required. The configuration of the node pool.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.AwsNodeConfig Config {
@@ -4032,6 +4062,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// <summary>
     /// Required. Autoscaler configuration for this node pool.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.AwsNodePoolAutoscaling Autoscaling {
@@ -4197,6 +4228,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// <summary>
     /// Output only. A set of errors found in the node pool.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AwsNodePoolError> Errors {
@@ -4209,6 +4241,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// <summary>
     /// Optional. The Management configuration for this node pool.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.AwsNodeManagement Management {
@@ -4239,6 +4272,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// <summary>
     /// Optional. Update settings control the speed and disruption of the update.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.UpdateSettings UpdateSettings {
@@ -4887,6 +4921,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// 3. (max_surge + max_unavailable) determines the level of parallelism (i.e.,
   /// the number of nodes being updated at the same time).
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateSettings : pb::IMessage<UpdateSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4938,6 +4973,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// <summary>
     /// Optional. Settings for surge update.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.SurgeSettings SurgeSettings {
@@ -5092,6 +5128,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// SurgeSettings contains the parameters for Surge update.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SurgeSettings : pb::IMessage<SurgeSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5332,6 +5369,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// AwsNodeManagement defines the set of node management features turned on for
   /// an AWS node pool.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AwsNodeManagement : pb::IMessage<AwsNodeManagement>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5531,6 +5569,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Parameters that describe the nodes in a cluster.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AwsNodeConfig : pb::IMessage<AwsNodeConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5617,6 +5656,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     ///
     /// When unspecified, it defaults to 32 GiB with the GP2 volume type.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.AwsVolumeTemplate RootVolume {
@@ -5713,6 +5753,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// <summary>
     /// Optional. The SSH configuration.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.AwsSshConfig SshConfig {
@@ -5744,6 +5785,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// <summary>
     /// Optional. Proxy configuration for outbound HTTP(S) traffic.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.AwsProxyConfig ProxyConfig {
@@ -5759,6 +5801,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// <summary>
     /// Required. Config encryption for user data.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.AwsConfigEncryption ConfigEncryption {
@@ -5775,6 +5818,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// Optional. Placement related info for this node.
     /// When unspecified, the VPC's default tenancy will be used.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.AwsInstancePlacement InstancePlacement {
@@ -5793,6 +5837,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     ///
     /// When unspecified, metrics collection is disabled.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.AwsAutoscalingGroupMetricsCollection AutoscalingMetricsCollection {
@@ -5812,6 +5857,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// of spot_config.instance_types.
     /// This field is mutually exclusive with `instance_type`.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeMultiCloud.V1.SpotConfig SpotConfig {
@@ -6293,6 +6339,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// AwsNodePoolAutoscaling contains information required by cluster autoscaler
   /// to adjust the size of the node pool to the current cluster usage.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AwsNodePoolAutoscaling : pb::IMessage<AwsNodePoolAutoscaling>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6532,6 +6579,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// AwsOpenIdConfig is an OIDC discovery document for the cluster.
   /// See the OpenID Connect Discovery 1.0 specification for details.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AwsOpenIdConfig : pb::IMessage<AwsOpenIdConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6913,6 +6961,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// AwsJsonWebKeys is a valid JSON Web Key Set as specififed in RFC 7517.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AwsJsonWebKeys : pb::IMessage<AwsJsonWebKeys>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7099,6 +7148,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// AwsServerConfig is the configuration of GKE cluster on AWS.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AwsServerConfig : pb::IMessage<AwsServerConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7172,6 +7222,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// property to limit to currently available versions.
     /// Valid versions supported for both create and update operations
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.GkeMultiCloud.V1.AwsK8sVersionInfo> ValidVersions {
@@ -7356,6 +7407,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Kubernetes version information of GKE cluster on AWS.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AwsK8sVersionInfo : pb::IMessage<AwsK8sVersionInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7738,6 +7790,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// SSH configuration for AWS resources.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AwsSshConfig : pb::IMessage<AwsSshConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7934,6 +7987,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Details of a proxy config stored in AWS Secret Manager.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AwsProxyConfig : pb::IMessage<AwsProxyConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8176,6 +8230,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// Config encryption for user data.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AwsConfigEncryption : pb::IMessage<AwsConfigEncryption>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8376,6 +8431,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   ///  * T3 instances that use the unlimited CPU credit option don't support host
   ///  tenancy.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AwsInstancePlacement : pb::IMessage<AwsInstancePlacement>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8603,6 +8659,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// Configuration related to CloudWatch metrics collection in an AWS
   /// Auto Scaling group.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AwsAutoscalingGroupMetricsCollection : pb::IMessage<AwsAutoscalingGroupMetricsCollection>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8832,6 +8889,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// SpotConfig has configuration info for Spot node.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SpotConfig : pb::IMessage<SpotConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9017,6 +9075,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// AwsClusterError describes errors found on AWS clusters.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AwsClusterError : pb::IMessage<AwsClusterError>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9213,6 +9272,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// <summary>
   /// AwsNodePoolError describes errors found on AWS node pools.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AwsNodePoolError : pb::IMessage<AwsNodePoolError>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

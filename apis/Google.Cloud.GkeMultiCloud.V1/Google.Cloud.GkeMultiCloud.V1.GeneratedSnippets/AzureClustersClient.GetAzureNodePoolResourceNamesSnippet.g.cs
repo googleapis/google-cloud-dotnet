@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START gkemulticloud_v1_generated_AzureClusters_GetAzureNodePool_sync_flattened_resourceNames]
     using Google.Cloud.GkeMultiCloud.V1;
+    using System;
 
     public sealed partial class GeneratedAzureClustersClientSnippets
     {
@@ -29,6 +30,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void GetAzureNodePoolResourceNames()
         {
             // Create client
@@ -36,7 +38,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AzureNodePoolName name = AzureNodePoolName.FromProjectLocationAzureClusterAzureNodePool("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]", "[AZURE_NODE_POOL]");
             // Make the request
+#pragma warning disable CS0612
             AzureNodePool response = azureClustersClient.GetAzureNodePool(name);
+#pragma warning restore CS0612
         }
     }
     // [END gkemulticloud_v1_generated_AzureClusters_GetAzureNodePool_sync_flattened_resourceNames]

@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START gkemulticloud_v1_generated_AwsClusters_GetAwsOpenIdConfig_sync]
     using Google.Cloud.GkeMultiCloud.V1;
+    using System;
 
     public sealed partial class GeneratedAwsClustersClientSnippets
     {
@@ -29,17 +30,19 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void GetAwsOpenIdConfigRequestObject()
         {
             // Create client
             AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
-            GetAwsOpenIdConfigRequest request = new GetAwsOpenIdConfigRequest
-            {
-                AwsClusterAsAwsClusterName = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]"),
-            };
+#pragma warning disable CS0612
+            GetAwsOpenIdConfigRequest request = new GetAwsOpenIdConfigRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             AwsOpenIdConfig response = awsClustersClient.GetAwsOpenIdConfig(request);
+#pragma warning restore CS0612
         }
     }
     // [END gkemulticloud_v1_generated_AwsClusters_GetAwsOpenIdConfig_sync]

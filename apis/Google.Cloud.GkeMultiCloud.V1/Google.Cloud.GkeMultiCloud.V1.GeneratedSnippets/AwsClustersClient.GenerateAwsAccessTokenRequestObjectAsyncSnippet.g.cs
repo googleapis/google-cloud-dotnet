@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START gkemulticloud_v1_generated_AwsClusters_GenerateAwsAccessToken_async]
     using Google.Cloud.GkeMultiCloud.V1;
+    using System;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedAwsClustersClientSnippets
@@ -30,17 +31,19 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public async Task GenerateAwsAccessTokenRequestObjectAsync()
         {
             // Create client
             AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
             // Initialize request argument(s)
-            GenerateAwsAccessTokenRequest request = new GenerateAwsAccessTokenRequest
-            {
-                AwsClusterAsAwsClusterName = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]"),
-            };
+#pragma warning disable CS0612
+            GenerateAwsAccessTokenRequest request = new GenerateAwsAccessTokenRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             GenerateAwsAccessTokenResponse response = await awsClustersClient.GenerateAwsAccessTokenAsync(request);
+#pragma warning restore CS0612
         }
     }
     // [END gkemulticloud_v1_generated_AwsClusters_GenerateAwsAccessToken_async]

@@ -26,6 +26,7 @@ namespace GoogleCSharpSnippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
+    [ObsoleteAttribute]
     public sealed class AllGeneratedAzureClustersClientSnippets
     {
         /// <summary>Snippet for CreateAzureClient</summary>
@@ -35,30 +36,36 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
-            CreateAzureClientRequest request = new CreateAzureClientRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                AzureClient = new AzureClient(),
-                ValidateOnly = false,
-                AzureClientId = "",
-            };
+#pragma warning disable CS0612
+            CreateAzureClientRequest request = new CreateAzureClientRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureClient, OperationMetadata> response = azureClustersClient.CreateAzureClient(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureClient, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureClient result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureClient, OperationMetadata> retrievedResponse = azureClustersClient.PollOnceCreateAzureClient(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureClient retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -71,30 +78,36 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
-            CreateAzureClientRequest request = new CreateAzureClientRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                AzureClient = new AzureClient(),
-                ValidateOnly = false,
-                AzureClientId = "",
-            };
+#pragma warning disable CS0612
+            CreateAzureClientRequest request = new CreateAzureClientRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureClient, OperationMetadata> response = await azureClustersClient.CreateAzureClientAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureClient, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureClient result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureClient, OperationMetadata> retrievedResponse = await azureClustersClient.PollOnceCreateAzureClientAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureClient retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -107,25 +120,37 @@ namespace GoogleCSharpSnippets
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
+#pragma warning disable CS0612
             AzureClient azureClient = new AzureClient();
+#pragma warning restore CS0612
             string azureClientId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureClient, OperationMetadata> response = azureClustersClient.CreateAzureClient(parent, azureClient, azureClientId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureClient, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureClient result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureClient, OperationMetadata> retrievedResponse = azureClustersClient.PollOnceCreateAzureClient(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureClient retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -139,25 +164,37 @@ namespace GoogleCSharpSnippets
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
+#pragma warning disable CS0612
             AzureClient azureClient = new AzureClient();
+#pragma warning restore CS0612
             string azureClientId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureClient, OperationMetadata> response = await azureClustersClient.CreateAzureClientAsync(parent, azureClient, azureClientId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureClient, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureClient result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureClient, OperationMetadata> retrievedResponse = await azureClustersClient.PollOnceCreateAzureClientAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureClient retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -170,25 +207,37 @@ namespace GoogleCSharpSnippets
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+#pragma warning disable CS0612
             AzureClient azureClient = new AzureClient();
+#pragma warning restore CS0612
             string azureClientId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureClient, OperationMetadata> response = azureClustersClient.CreateAzureClient(parent, azureClient, azureClientId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureClient, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureClient result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureClient, OperationMetadata> retrievedResponse = azureClustersClient.PollOnceCreateAzureClient(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureClient retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -202,25 +251,37 @@ namespace GoogleCSharpSnippets
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+#pragma warning disable CS0612
             AzureClient azureClient = new AzureClient();
+#pragma warning restore CS0612
             string azureClientId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureClient, OperationMetadata> response = await azureClustersClient.CreateAzureClientAsync(parent, azureClient, azureClientId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureClient, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureClient result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureClient, OperationMetadata> retrievedResponse = await azureClustersClient.PollOnceCreateAzureClientAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureClient retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -232,12 +293,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
-            GetAzureClientRequest request = new GetAzureClientRequest
-            {
-                AzureClientName = AzureClientName.FromProjectLocationAzureClient("[PROJECT]", "[LOCATION]", "[AZURE_CLIENT]"),
-            };
+#pragma warning disable CS0612
+            GetAzureClientRequest request = new GetAzureClientRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             AzureClient response = azureClustersClient.GetAzureClient(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -249,12 +311,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
-            GetAzureClientRequest request = new GetAzureClientRequest
-            {
-                AzureClientName = AzureClientName.FromProjectLocationAzureClient("[PROJECT]", "[LOCATION]", "[AZURE_CLIENT]"),
-            };
+#pragma warning disable CS0612
+            GetAzureClientRequest request = new GetAzureClientRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             AzureClient response = await azureClustersClient.GetAzureClientAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -267,7 +330,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/azureClients/[AZURE_CLIENT]";
             // Make the request
+#pragma warning disable CS0612
             AzureClient response = azureClustersClient.GetAzureClient(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -281,7 +346,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/azureClients/[AZURE_CLIENT]";
             // Make the request
+#pragma warning disable CS0612
             AzureClient response = await azureClustersClient.GetAzureClientAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -294,7 +361,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AzureClientName name = AzureClientName.FromProjectLocationAzureClient("[PROJECT]", "[LOCATION]", "[AZURE_CLIENT]");
             // Make the request
+#pragma warning disable CS0612
             AzureClient response = azureClustersClient.GetAzureClient(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -308,7 +377,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AzureClientName name = AzureClientName.FromProjectLocationAzureClient("[PROJECT]", "[LOCATION]", "[AZURE_CLIENT]");
             // Make the request
+#pragma warning disable CS0612
             AzureClient response = await azureClustersClient.GetAzureClientAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -319,26 +390,33 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
-            ListAzureClientsRequest request = new ListAzureClientsRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-            };
+#pragma warning disable CS0612
+            ListAzureClientsRequest request = new ListAzureClientsRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAzureClientsResponse, AzureClient> response = azureClustersClient.ListAzureClients(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             foreach (AzureClient item in response)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             foreach (ListAzureClientsResponse page in response.AsRawResponses())
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AzureClient item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -347,10 +425,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AzureClient> singlePage = response.ReadPage(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AzureClient item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -367,26 +449,33 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
-            ListAzureClientsRequest request = new ListAzureClientsRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-            };
+#pragma warning disable CS0612
+            ListAzureClientsRequest request = new ListAzureClientsRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAzureClientsResponse, AzureClient> response = azureClustersClient.ListAzureClientsAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             await response.ForEachAsync((AzureClient item) =>
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((ListAzureClientsResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AzureClient item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -395,10 +484,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AzureClient> singlePage = await response.ReadPageAsync(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AzureClient item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -417,21 +510,29 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAzureClientsResponse, AzureClient> response = azureClustersClient.ListAzureClients(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             foreach (AzureClient item in response)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             foreach (ListAzureClientsResponse page in response.AsRawResponses())
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AzureClient item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -440,10 +541,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AzureClient> singlePage = response.ReadPage(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AzureClient item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -462,21 +567,29 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAzureClientsResponse, AzureClient> response = azureClustersClient.ListAzureClientsAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             await response.ForEachAsync((AzureClient item) =>
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((ListAzureClientsResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AzureClient item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -485,10 +598,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AzureClient> singlePage = await response.ReadPageAsync(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AzureClient item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -507,21 +624,29 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAzureClientsResponse, AzureClient> response = azureClustersClient.ListAzureClients(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             foreach (AzureClient item in response)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             foreach (ListAzureClientsResponse page in response.AsRawResponses())
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AzureClient item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -530,10 +655,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AzureClient> singlePage = response.ReadPage(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AzureClient item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -552,21 +681,29 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAzureClientsResponse, AzureClient> response = azureClustersClient.ListAzureClientsAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             await response.ForEachAsync((AzureClient item) =>
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((ListAzureClientsResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AzureClient item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -575,10 +712,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AzureClient> singlePage = await response.ReadPageAsync(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AzureClient item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -595,14 +736,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
-            DeleteAzureClientRequest request = new DeleteAzureClientRequest
-            {
-                AzureClientName = AzureClientName.FromProjectLocationAzureClient("[PROJECT]", "[LOCATION]", "[AZURE_CLIENT]"),
-                AllowMissing = false,
-                ValidateOnly = false,
-            };
+#pragma warning disable CS0612
+            DeleteAzureClientRequest request = new DeleteAzureClientRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = azureClustersClient.DeleteAzureClient(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -612,7 +752,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = azureClustersClient.PollOnceDeleteAzureClient(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -630,14 +772,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteAzureClientRequest request = new DeleteAzureClientRequest
-            {
-                AzureClientName = AzureClientName.FromProjectLocationAzureClient("[PROJECT]", "[LOCATION]", "[AZURE_CLIENT]"),
-                AllowMissing = false,
-                ValidateOnly = false,
-            };
+#pragma warning disable CS0612
+            DeleteAzureClientRequest request = new DeleteAzureClientRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = await azureClustersClient.DeleteAzureClientAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -647,7 +788,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = await azureClustersClient.PollOnceDeleteAzureClientAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -666,7 +809,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/azureClients/[AZURE_CLIENT]";
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = azureClustersClient.DeleteAzureClient(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -676,7 +821,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = azureClustersClient.PollOnceDeleteAzureClient(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -696,7 +843,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/azureClients/[AZURE_CLIENT]";
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = await azureClustersClient.DeleteAzureClientAsync(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -706,7 +855,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = await azureClustersClient.PollOnceDeleteAzureClientAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -725,7 +876,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AzureClientName name = AzureClientName.FromProjectLocationAzureClient("[PROJECT]", "[LOCATION]", "[AZURE_CLIENT]");
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = azureClustersClient.DeleteAzureClient(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -735,7 +888,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = azureClustersClient.PollOnceDeleteAzureClient(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -755,7 +910,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AzureClientName name = AzureClientName.FromProjectLocationAzureClient("[PROJECT]", "[LOCATION]", "[AZURE_CLIENT]");
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = await azureClustersClient.DeleteAzureClientAsync(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -765,7 +922,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = await azureClustersClient.PollOnceDeleteAzureClientAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -782,30 +941,36 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
-            CreateAzureClusterRequest request = new CreateAzureClusterRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                AzureCluster = new AzureCluster(),
-                AzureClusterId = "",
-                ValidateOnly = false,
-            };
+#pragma warning disable CS0612
+            CreateAzureClusterRequest request = new CreateAzureClusterRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> response = azureClustersClient.CreateAzureCluster(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureCluster result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> retrievedResponse = azureClustersClient.PollOnceCreateAzureCluster(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureCluster retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -818,30 +983,36 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
-            CreateAzureClusterRequest request = new CreateAzureClusterRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                AzureCluster = new AzureCluster(),
-                AzureClusterId = "",
-                ValidateOnly = false,
-            };
+#pragma warning disable CS0612
+            CreateAzureClusterRequest request = new CreateAzureClusterRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> response = await azureClustersClient.CreateAzureClusterAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureCluster result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> retrievedResponse = await azureClustersClient.PollOnceCreateAzureClusterAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureCluster retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -854,25 +1025,37 @@ namespace GoogleCSharpSnippets
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
+#pragma warning disable CS0612
             AzureCluster azureCluster = new AzureCluster();
+#pragma warning restore CS0612
             string azureClusterId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> response = azureClustersClient.CreateAzureCluster(parent, azureCluster, azureClusterId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureCluster result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> retrievedResponse = azureClustersClient.PollOnceCreateAzureCluster(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureCluster retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -886,25 +1069,37 @@ namespace GoogleCSharpSnippets
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
+#pragma warning disable CS0612
             AzureCluster azureCluster = new AzureCluster();
+#pragma warning restore CS0612
             string azureClusterId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> response = await azureClustersClient.CreateAzureClusterAsync(parent, azureCluster, azureClusterId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureCluster result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> retrievedResponse = await azureClustersClient.PollOnceCreateAzureClusterAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureCluster retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -917,25 +1112,37 @@ namespace GoogleCSharpSnippets
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+#pragma warning disable CS0612
             AzureCluster azureCluster = new AzureCluster();
+#pragma warning restore CS0612
             string azureClusterId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> response = azureClustersClient.CreateAzureCluster(parent, azureCluster, azureClusterId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureCluster result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> retrievedResponse = azureClustersClient.PollOnceCreateAzureCluster(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureCluster retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -949,25 +1156,37 @@ namespace GoogleCSharpSnippets
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+#pragma warning disable CS0612
             AzureCluster azureCluster = new AzureCluster();
+#pragma warning restore CS0612
             string azureClusterId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> response = await azureClustersClient.CreateAzureClusterAsync(parent, azureCluster, azureClusterId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureCluster result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> retrievedResponse = await azureClustersClient.PollOnceCreateAzureClusterAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureCluster retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -979,29 +1198,36 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
-            UpdateAzureClusterRequest request = new UpdateAzureClusterRequest
-            {
-                AzureCluster = new AzureCluster(),
-                ValidateOnly = false,
-                UpdateMask = new FieldMask(),
-            };
+#pragma warning disable CS0612
+            UpdateAzureClusterRequest request = new UpdateAzureClusterRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> response = azureClustersClient.UpdateAzureCluster(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureCluster result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> retrievedResponse = azureClustersClient.PollOnceUpdateAzureCluster(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureCluster retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1014,29 +1240,36 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateAzureClusterRequest request = new UpdateAzureClusterRequest
-            {
-                AzureCluster = new AzureCluster(),
-                ValidateOnly = false,
-                UpdateMask = new FieldMask(),
-            };
+#pragma warning disable CS0612
+            UpdateAzureClusterRequest request = new UpdateAzureClusterRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> response = await azureClustersClient.UpdateAzureClusterAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureCluster result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> retrievedResponse = await azureClustersClient.PollOnceUpdateAzureClusterAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureCluster retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1048,25 +1281,37 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
+#pragma warning disable CS0612
             AzureCluster azureCluster = new AzureCluster();
+#pragma warning restore CS0612
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> response = azureClustersClient.UpdateAzureCluster(azureCluster, updateMask);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureCluster result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> retrievedResponse = azureClustersClient.PollOnceUpdateAzureCluster(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureCluster retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1079,25 +1324,37 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
+#pragma warning disable CS0612
             AzureCluster azureCluster = new AzureCluster();
+#pragma warning restore CS0612
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> response = await azureClustersClient.UpdateAzureClusterAsync(azureCluster, updateMask);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureCluster result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureCluster, OperationMetadata> retrievedResponse = await azureClustersClient.PollOnceUpdateAzureClusterAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureCluster retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1109,12 +1366,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
-            GetAzureClusterRequest request = new GetAzureClusterRequest
-            {
-                AzureClusterName = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]"),
-            };
+#pragma warning disable CS0612
+            GetAzureClusterRequest request = new GetAzureClusterRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             AzureCluster response = azureClustersClient.GetAzureCluster(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1126,12 +1384,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
-            GetAzureClusterRequest request = new GetAzureClusterRequest
-            {
-                AzureClusterName = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]"),
-            };
+#pragma warning disable CS0612
+            GetAzureClusterRequest request = new GetAzureClusterRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             AzureCluster response = await azureClustersClient.GetAzureClusterAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1144,7 +1403,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/azureClusters/[AZURE_CLUSTER]";
             // Make the request
+#pragma warning disable CS0612
             AzureCluster response = azureClustersClient.GetAzureCluster(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1158,7 +1419,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/azureClusters/[AZURE_CLUSTER]";
             // Make the request
+#pragma warning disable CS0612
             AzureCluster response = await azureClustersClient.GetAzureClusterAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1171,7 +1434,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AzureClusterName name = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]");
             // Make the request
+#pragma warning disable CS0612
             AzureCluster response = azureClustersClient.GetAzureCluster(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1185,7 +1450,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AzureClusterName name = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]");
             // Make the request
+#pragma warning disable CS0612
             AzureCluster response = await azureClustersClient.GetAzureClusterAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1196,26 +1463,33 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
-            ListAzureClustersRequest request = new ListAzureClustersRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-            };
+#pragma warning disable CS0612
+            ListAzureClustersRequest request = new ListAzureClustersRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAzureClustersResponse, AzureCluster> response = azureClustersClient.ListAzureClusters(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             foreach (AzureCluster item in response)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             foreach (ListAzureClustersResponse page in response.AsRawResponses())
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AzureCluster item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1224,10 +1498,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AzureCluster> singlePage = response.ReadPage(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AzureCluster item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1244,26 +1522,33 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
-            ListAzureClustersRequest request = new ListAzureClustersRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-            };
+#pragma warning disable CS0612
+            ListAzureClustersRequest request = new ListAzureClustersRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAzureClustersResponse, AzureCluster> response = azureClustersClient.ListAzureClustersAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             await response.ForEachAsync((AzureCluster item) =>
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((ListAzureClustersResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AzureCluster item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1272,10 +1557,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AzureCluster> singlePage = await response.ReadPageAsync(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AzureCluster item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1294,21 +1583,29 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAzureClustersResponse, AzureCluster> response = azureClustersClient.ListAzureClusters(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             foreach (AzureCluster item in response)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             foreach (ListAzureClustersResponse page in response.AsRawResponses())
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AzureCluster item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1317,10 +1614,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AzureCluster> singlePage = response.ReadPage(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AzureCluster item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1339,21 +1640,29 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAzureClustersResponse, AzureCluster> response = azureClustersClient.ListAzureClustersAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             await response.ForEachAsync((AzureCluster item) =>
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((ListAzureClustersResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AzureCluster item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1362,10 +1671,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AzureCluster> singlePage = await response.ReadPageAsync(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AzureCluster item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1384,21 +1697,29 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAzureClustersResponse, AzureCluster> response = azureClustersClient.ListAzureClusters(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             foreach (AzureCluster item in response)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             foreach (ListAzureClustersResponse page in response.AsRawResponses())
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AzureCluster item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1407,10 +1728,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AzureCluster> singlePage = response.ReadPage(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AzureCluster item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1429,21 +1754,29 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAzureClustersResponse, AzureCluster> response = azureClustersClient.ListAzureClustersAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             await response.ForEachAsync((AzureCluster item) =>
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((ListAzureClustersResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AzureCluster item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1452,10 +1785,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AzureCluster> singlePage = await response.ReadPageAsync(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AzureCluster item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1472,16 +1809,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
-            DeleteAzureClusterRequest request = new DeleteAzureClusterRequest
-            {
-                AzureClusterName = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]"),
-                AllowMissing = false,
-                ValidateOnly = false,
-                Etag = "",
-                IgnoreErrors = false,
-            };
+#pragma warning disable CS0612
+            DeleteAzureClusterRequest request = new DeleteAzureClusterRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = azureClustersClient.DeleteAzureCluster(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -1491,7 +1825,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = azureClustersClient.PollOnceDeleteAzureCluster(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1509,16 +1845,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteAzureClusterRequest request = new DeleteAzureClusterRequest
-            {
-                AzureClusterName = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]"),
-                AllowMissing = false,
-                ValidateOnly = false,
-                Etag = "",
-                IgnoreErrors = false,
-            };
+#pragma warning disable CS0612
+            DeleteAzureClusterRequest request = new DeleteAzureClusterRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = await azureClustersClient.DeleteAzureClusterAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -1528,7 +1861,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = await azureClustersClient.PollOnceDeleteAzureClusterAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1547,7 +1882,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/azureClusters/[AZURE_CLUSTER]";
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = azureClustersClient.DeleteAzureCluster(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -1557,7 +1894,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = azureClustersClient.PollOnceDeleteAzureCluster(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1577,7 +1916,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/azureClusters/[AZURE_CLUSTER]";
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = await azureClustersClient.DeleteAzureClusterAsync(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -1587,7 +1928,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = await azureClustersClient.PollOnceDeleteAzureClusterAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1606,7 +1949,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AzureClusterName name = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]");
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = azureClustersClient.DeleteAzureCluster(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -1616,7 +1961,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = azureClustersClient.PollOnceDeleteAzureCluster(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1636,7 +1983,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AzureClusterName name = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]");
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = await azureClustersClient.DeleteAzureClusterAsync(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -1646,7 +1995,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = await azureClustersClient.PollOnceDeleteAzureClusterAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1663,21 +2014,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
-            GenerateAzureClusterAgentTokenRequest request = new GenerateAzureClusterAgentTokenRequest
-            {
-                AzureClusterAsAzureClusterName = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]"),
-                SubjectToken = "",
-                SubjectTokenType = "",
-                Version = "",
-                NodePoolId = "",
-                GrantType = "",
-                Audience = "",
-                Scope = "",
-                RequestedTokenType = "",
-                Options = "",
-            };
+#pragma warning disable CS0612
+            GenerateAzureClusterAgentTokenRequest request = new GenerateAzureClusterAgentTokenRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             GenerateAzureClusterAgentTokenResponse response = azureClustersClient.GenerateAzureClusterAgentToken(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1689,21 +2032,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
-            GenerateAzureClusterAgentTokenRequest request = new GenerateAzureClusterAgentTokenRequest
-            {
-                AzureClusterAsAzureClusterName = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]"),
-                SubjectToken = "",
-                SubjectTokenType = "",
-                Version = "",
-                NodePoolId = "",
-                GrantType = "",
-                Audience = "",
-                Scope = "",
-                RequestedTokenType = "",
-                Options = "",
-            };
+#pragma warning disable CS0612
+            GenerateAzureClusterAgentTokenRequest request = new GenerateAzureClusterAgentTokenRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             GenerateAzureClusterAgentTokenResponse response = await azureClustersClient.GenerateAzureClusterAgentTokenAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1714,12 +2049,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
-            GenerateAzureAccessTokenRequest request = new GenerateAzureAccessTokenRequest
-            {
-                AzureClusterAsAzureClusterName = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]"),
-            };
+#pragma warning disable CS0612
+            GenerateAzureAccessTokenRequest request = new GenerateAzureAccessTokenRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             GenerateAzureAccessTokenResponse response = azureClustersClient.GenerateAzureAccessToken(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1731,12 +2067,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
-            GenerateAzureAccessTokenRequest request = new GenerateAzureAccessTokenRequest
-            {
-                AzureClusterAsAzureClusterName = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]"),
-            };
+#pragma warning disable CS0612
+            GenerateAzureAccessTokenRequest request = new GenerateAzureAccessTokenRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             GenerateAzureAccessTokenResponse response = await azureClustersClient.GenerateAzureAccessTokenAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1747,30 +2084,36 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
-            CreateAzureNodePoolRequest request = new CreateAzureNodePoolRequest
-            {
-                ParentAsAzureClusterName = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]"),
-                AzureNodePool = new AzureNodePool(),
-                AzureNodePoolId = "",
-                ValidateOnly = false,
-            };
+#pragma warning disable CS0612
+            CreateAzureNodePoolRequest request = new CreateAzureNodePoolRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> response = azureClustersClient.CreateAzureNodePool(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> retrievedResponse = azureClustersClient.PollOnceCreateAzureNodePool(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1783,30 +2126,36 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
-            CreateAzureNodePoolRequest request = new CreateAzureNodePoolRequest
-            {
-                ParentAsAzureClusterName = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]"),
-                AzureNodePool = new AzureNodePool(),
-                AzureNodePoolId = "",
-                ValidateOnly = false,
-            };
+#pragma warning disable CS0612
+            CreateAzureNodePoolRequest request = new CreateAzureNodePoolRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> response = await azureClustersClient.CreateAzureNodePoolAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> retrievedResponse = await azureClustersClient.PollOnceCreateAzureNodePoolAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1819,25 +2168,37 @@ namespace GoogleCSharpSnippets
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/azureClusters/[AZURE_CLUSTER]";
+#pragma warning disable CS0612
             AzureNodePool azureNodePool = new AzureNodePool();
+#pragma warning restore CS0612
             string azureNodePoolId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> response = azureClustersClient.CreateAzureNodePool(parent, azureNodePool, azureNodePoolId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> retrievedResponse = azureClustersClient.PollOnceCreateAzureNodePool(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1851,25 +2212,37 @@ namespace GoogleCSharpSnippets
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/azureClusters/[AZURE_CLUSTER]";
+#pragma warning disable CS0612
             AzureNodePool azureNodePool = new AzureNodePool();
+#pragma warning restore CS0612
             string azureNodePoolId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> response = await azureClustersClient.CreateAzureNodePoolAsync(parent, azureNodePool, azureNodePoolId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> retrievedResponse = await azureClustersClient.PollOnceCreateAzureNodePoolAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1882,25 +2255,37 @@ namespace GoogleCSharpSnippets
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
             AzureClusterName parent = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]");
+#pragma warning disable CS0612
             AzureNodePool azureNodePool = new AzureNodePool();
+#pragma warning restore CS0612
             string azureNodePoolId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> response = azureClustersClient.CreateAzureNodePool(parent, azureNodePool, azureNodePoolId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> retrievedResponse = azureClustersClient.PollOnceCreateAzureNodePool(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1914,25 +2299,37 @@ namespace GoogleCSharpSnippets
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
             AzureClusterName parent = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]");
+#pragma warning disable CS0612
             AzureNodePool azureNodePool = new AzureNodePool();
+#pragma warning restore CS0612
             string azureNodePoolId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> response = await azureClustersClient.CreateAzureNodePoolAsync(parent, azureNodePool, azureNodePoolId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> retrievedResponse = await azureClustersClient.PollOnceCreateAzureNodePoolAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1944,29 +2341,36 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
-            UpdateAzureNodePoolRequest request = new UpdateAzureNodePoolRequest
-            {
-                AzureNodePool = new AzureNodePool(),
-                ValidateOnly = false,
-                UpdateMask = new FieldMask(),
-            };
+#pragma warning disable CS0612
+            UpdateAzureNodePoolRequest request = new UpdateAzureNodePoolRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> response = azureClustersClient.UpdateAzureNodePool(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> retrievedResponse = azureClustersClient.PollOnceUpdateAzureNodePool(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1979,29 +2383,36 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateAzureNodePoolRequest request = new UpdateAzureNodePoolRequest
-            {
-                AzureNodePool = new AzureNodePool(),
-                ValidateOnly = false,
-                UpdateMask = new FieldMask(),
-            };
+#pragma warning disable CS0612
+            UpdateAzureNodePoolRequest request = new UpdateAzureNodePoolRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> response = await azureClustersClient.UpdateAzureNodePoolAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> retrievedResponse = await azureClustersClient.PollOnceUpdateAzureNodePoolAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -2013,25 +2424,37 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
+#pragma warning disable CS0612
             AzureNodePool azureNodePool = new AzureNodePool();
+#pragma warning restore CS0612
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> response = azureClustersClient.UpdateAzureNodePool(azureNodePool, updateMask);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> retrievedResponse = azureClustersClient.PollOnceUpdateAzureNodePool(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -2044,25 +2467,37 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
+#pragma warning disable CS0612
             AzureNodePool azureNodePool = new AzureNodePool();
+#pragma warning restore CS0612
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> response = await azureClustersClient.UpdateAzureNodePoolAsync(azureNodePool, updateMask);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AzureNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AzureNodePool, OperationMetadata> retrievedResponse = await azureClustersClient.PollOnceUpdateAzureNodePoolAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AzureNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -2074,12 +2509,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
-            GetAzureNodePoolRequest request = new GetAzureNodePoolRequest
-            {
-                AzureNodePoolName = AzureNodePoolName.FromProjectLocationAzureClusterAzureNodePool("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]", "[AZURE_NODE_POOL]"),
-            };
+#pragma warning disable CS0612
+            GetAzureNodePoolRequest request = new GetAzureNodePoolRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             AzureNodePool response = azureClustersClient.GetAzureNodePool(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2091,12 +2527,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
-            GetAzureNodePoolRequest request = new GetAzureNodePoolRequest
-            {
-                AzureNodePoolName = AzureNodePoolName.FromProjectLocationAzureClusterAzureNodePool("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]", "[AZURE_NODE_POOL]"),
-            };
+#pragma warning disable CS0612
+            GetAzureNodePoolRequest request = new GetAzureNodePoolRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             AzureNodePool response = await azureClustersClient.GetAzureNodePoolAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2109,7 +2546,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/azureClusters/[AZURE_CLUSTER]/azureNodePools/[AZURE_NODE_POOL]";
             // Make the request
+#pragma warning disable CS0612
             AzureNodePool response = azureClustersClient.GetAzureNodePool(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2123,7 +2562,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/azureClusters/[AZURE_CLUSTER]/azureNodePools/[AZURE_NODE_POOL]";
             // Make the request
+#pragma warning disable CS0612
             AzureNodePool response = await azureClustersClient.GetAzureNodePoolAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2136,7 +2577,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AzureNodePoolName name = AzureNodePoolName.FromProjectLocationAzureClusterAzureNodePool("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]", "[AZURE_NODE_POOL]");
             // Make the request
+#pragma warning disable CS0612
             AzureNodePool response = azureClustersClient.GetAzureNodePool(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2150,7 +2593,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AzureNodePoolName name = AzureNodePoolName.FromProjectLocationAzureClusterAzureNodePool("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]", "[AZURE_NODE_POOL]");
             // Make the request
+#pragma warning disable CS0612
             AzureNodePool response = await azureClustersClient.GetAzureNodePoolAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2161,26 +2606,33 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
-            ListAzureNodePoolsRequest request = new ListAzureNodePoolsRequest
-            {
-                ParentAsAzureClusterName = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]"),
-            };
+#pragma warning disable CS0612
+            ListAzureNodePoolsRequest request = new ListAzureNodePoolsRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAzureNodePoolsResponse, AzureNodePool> response = azureClustersClient.ListAzureNodePools(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             foreach (AzureNodePool item in response)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             foreach (ListAzureNodePoolsResponse page in response.AsRawResponses())
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AzureNodePool item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2189,10 +2641,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AzureNodePool> singlePage = response.ReadPage(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AzureNodePool item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2209,26 +2665,33 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
-            ListAzureNodePoolsRequest request = new ListAzureNodePoolsRequest
-            {
-                ParentAsAzureClusterName = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]"),
-            };
+#pragma warning disable CS0612
+            ListAzureNodePoolsRequest request = new ListAzureNodePoolsRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAzureNodePoolsResponse, AzureNodePool> response = azureClustersClient.ListAzureNodePoolsAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             await response.ForEachAsync((AzureNodePool item) =>
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((ListAzureNodePoolsResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AzureNodePool item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2237,10 +2700,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AzureNodePool> singlePage = await response.ReadPageAsync(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AzureNodePool item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2259,21 +2726,29 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/azureClusters/[AZURE_CLUSTER]";
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAzureNodePoolsResponse, AzureNodePool> response = azureClustersClient.ListAzureNodePools(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             foreach (AzureNodePool item in response)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             foreach (ListAzureNodePoolsResponse page in response.AsRawResponses())
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AzureNodePool item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2282,10 +2757,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AzureNodePool> singlePage = response.ReadPage(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AzureNodePool item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2304,21 +2783,29 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/azureClusters/[AZURE_CLUSTER]";
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAzureNodePoolsResponse, AzureNodePool> response = azureClustersClient.ListAzureNodePoolsAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             await response.ForEachAsync((AzureNodePool item) =>
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((ListAzureNodePoolsResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AzureNodePool item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2327,10 +2814,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AzureNodePool> singlePage = await response.ReadPageAsync(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AzureNodePool item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2349,21 +2840,29 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AzureClusterName parent = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]");
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAzureNodePoolsResponse, AzureNodePool> response = azureClustersClient.ListAzureNodePools(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             foreach (AzureNodePool item in response)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             foreach (ListAzureNodePoolsResponse page in response.AsRawResponses())
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AzureNodePool item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2372,10 +2871,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AzureNodePool> singlePage = response.ReadPage(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AzureNodePool item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2394,21 +2897,29 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AzureClusterName parent = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]");
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAzureNodePoolsResponse, AzureNodePool> response = azureClustersClient.ListAzureNodePoolsAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             await response.ForEachAsync((AzureNodePool item) =>
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((ListAzureNodePoolsResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AzureNodePool item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2417,10 +2928,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AzureNodePool> singlePage = await response.ReadPageAsync(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AzureNodePool item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2437,16 +2952,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
-            DeleteAzureNodePoolRequest request = new DeleteAzureNodePoolRequest
-            {
-                AzureNodePoolName = AzureNodePoolName.FromProjectLocationAzureClusterAzureNodePool("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]", "[AZURE_NODE_POOL]"),
-                ValidateOnly = false,
-                AllowMissing = false,
-                Etag = "",
-                IgnoreErrors = false,
-            };
+#pragma warning disable CS0612
+            DeleteAzureNodePoolRequest request = new DeleteAzureNodePoolRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = azureClustersClient.DeleteAzureNodePool(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -2456,7 +2968,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = azureClustersClient.PollOnceDeleteAzureNodePool(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2474,16 +2988,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteAzureNodePoolRequest request = new DeleteAzureNodePoolRequest
-            {
-                AzureNodePoolName = AzureNodePoolName.FromProjectLocationAzureClusterAzureNodePool("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]", "[AZURE_NODE_POOL]"),
-                ValidateOnly = false,
-                AllowMissing = false,
-                Etag = "",
-                IgnoreErrors = false,
-            };
+#pragma warning disable CS0612
+            DeleteAzureNodePoolRequest request = new DeleteAzureNodePoolRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = await azureClustersClient.DeleteAzureNodePoolAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -2493,7 +3004,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = await azureClustersClient.PollOnceDeleteAzureNodePoolAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2512,7 +3025,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/azureClusters/[AZURE_CLUSTER]/azureNodePools/[AZURE_NODE_POOL]";
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = azureClustersClient.DeleteAzureNodePool(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -2522,7 +3037,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = azureClustersClient.PollOnceDeleteAzureNodePool(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2542,7 +3059,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/azureClusters/[AZURE_CLUSTER]/azureNodePools/[AZURE_NODE_POOL]";
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = await azureClustersClient.DeleteAzureNodePoolAsync(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -2552,7 +3071,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = await azureClustersClient.PollOnceDeleteAzureNodePoolAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2571,7 +3092,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AzureNodePoolName name = AzureNodePoolName.FromProjectLocationAzureClusterAzureNodePool("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]", "[AZURE_NODE_POOL]");
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = azureClustersClient.DeleteAzureNodePool(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -2581,7 +3104,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = azureClustersClient.PollOnceDeleteAzureNodePool(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2601,7 +3126,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AzureNodePoolName name = AzureNodePoolName.FromProjectLocationAzureClusterAzureNodePool("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]", "[AZURE_NODE_POOL]");
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = await azureClustersClient.DeleteAzureNodePoolAsync(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -2611,7 +3138,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = await azureClustersClient.PollOnceDeleteAzureNodePoolAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2628,12 +3157,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
-            GetAzureOpenIdConfigRequest request = new GetAzureOpenIdConfigRequest
-            {
-                AzureClusterAsAzureClusterName = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]"),
-            };
+#pragma warning disable CS0612
+            GetAzureOpenIdConfigRequest request = new GetAzureOpenIdConfigRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             AzureOpenIdConfig response = azureClustersClient.GetAzureOpenIdConfig(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2645,12 +3175,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
-            GetAzureOpenIdConfigRequest request = new GetAzureOpenIdConfigRequest
-            {
-                AzureClusterAsAzureClusterName = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]"),
-            };
+#pragma warning disable CS0612
+            GetAzureOpenIdConfigRequest request = new GetAzureOpenIdConfigRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             AzureOpenIdConfig response = await azureClustersClient.GetAzureOpenIdConfigAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2663,7 +3194,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string azureCluster = "projects/[PROJECT]/locations/[LOCATION]/azureClusters/[AZURE_CLUSTER]";
             // Make the request
+#pragma warning disable CS0612
             AzureOpenIdConfig response = azureClustersClient.GetAzureOpenIdConfig(azureCluster);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2677,7 +3210,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string azureCluster = "projects/[PROJECT]/locations/[LOCATION]/azureClusters/[AZURE_CLUSTER]";
             // Make the request
+#pragma warning disable CS0612
             AzureOpenIdConfig response = await azureClustersClient.GetAzureOpenIdConfigAsync(azureCluster);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2690,7 +3225,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AzureClusterName azureCluster = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]");
             // Make the request
+#pragma warning disable CS0612
             AzureOpenIdConfig response = azureClustersClient.GetAzureOpenIdConfig(azureCluster);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2704,7 +3241,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AzureClusterName azureCluster = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]");
             // Make the request
+#pragma warning disable CS0612
             AzureOpenIdConfig response = await azureClustersClient.GetAzureOpenIdConfigAsync(azureCluster);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2715,12 +3254,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
-            GetAzureJsonWebKeysRequest request = new GetAzureJsonWebKeysRequest
-            {
-                AzureClusterAsAzureClusterName = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]"),
-            };
+#pragma warning disable CS0612
+            GetAzureJsonWebKeysRequest request = new GetAzureJsonWebKeysRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             AzureJsonWebKeys response = azureClustersClient.GetAzureJsonWebKeys(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2732,12 +3272,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
-            GetAzureJsonWebKeysRequest request = new GetAzureJsonWebKeysRequest
-            {
-                AzureClusterAsAzureClusterName = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]"),
-            };
+#pragma warning disable CS0612
+            GetAzureJsonWebKeysRequest request = new GetAzureJsonWebKeysRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             AzureJsonWebKeys response = await azureClustersClient.GetAzureJsonWebKeysAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2750,7 +3291,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string azureCluster = "projects/[PROJECT]/locations/[LOCATION]/azureClusters/[AZURE_CLUSTER]";
             // Make the request
+#pragma warning disable CS0612
             AzureJsonWebKeys response = azureClustersClient.GetAzureJsonWebKeys(azureCluster);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2764,7 +3307,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string azureCluster = "projects/[PROJECT]/locations/[LOCATION]/azureClusters/[AZURE_CLUSTER]";
             // Make the request
+#pragma warning disable CS0612
             AzureJsonWebKeys response = await azureClustersClient.GetAzureJsonWebKeysAsync(azureCluster);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2777,7 +3322,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AzureClusterName azureCluster = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]");
             // Make the request
+#pragma warning disable CS0612
             AzureJsonWebKeys response = azureClustersClient.GetAzureJsonWebKeys(azureCluster);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2791,7 +3338,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AzureClusterName azureCluster = AzureClusterName.FromProjectLocationAzureCluster("[PROJECT]", "[LOCATION]", "[AZURE_CLUSTER]");
             // Make the request
+#pragma warning disable CS0612
             AzureJsonWebKeys response = await azureClustersClient.GetAzureJsonWebKeysAsync(azureCluster);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2802,12 +3351,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
-            GetAzureServerConfigRequest request = new GetAzureServerConfigRequest
-            {
-                AzureServerConfigName = AzureServerConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-            };
+#pragma warning disable CS0612
+            GetAzureServerConfigRequest request = new GetAzureServerConfigRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             AzureServerConfig response = azureClustersClient.GetAzureServerConfig(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2819,12 +3369,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AzureClustersClient azureClustersClient = await AzureClustersClient.CreateAsync();
             // Initialize request argument(s)
-            GetAzureServerConfigRequest request = new GetAzureServerConfigRequest
-            {
-                AzureServerConfigName = AzureServerConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-            };
+#pragma warning disable CS0612
+            GetAzureServerConfigRequest request = new GetAzureServerConfigRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             AzureServerConfig response = await azureClustersClient.GetAzureServerConfigAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2837,7 +3388,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/azureServerConfig";
             // Make the request
+#pragma warning disable CS0612
             AzureServerConfig response = azureClustersClient.GetAzureServerConfig(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2851,7 +3404,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/azureServerConfig";
             // Make the request
+#pragma warning disable CS0612
             AzureServerConfig response = await azureClustersClient.GetAzureServerConfigAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2864,7 +3419,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AzureServerConfigName name = AzureServerConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
+#pragma warning disable CS0612
             AzureServerConfig response = azureClustersClient.GetAzureServerConfig(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2878,7 +3435,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AzureServerConfigName name = AzureServerConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
+#pragma warning disable CS0612
             AzureServerConfig response = await azureClustersClient.GetAzureServerConfigAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
     }

@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gagr = Google.Api.Gax.ResourceNames;
 using gcgv = Google.Cloud.GkeMultiCloud.V1;
+using sys = System;
 
 namespace Google.Cloud.GkeMultiCloud.V1
 {
@@ -25,6 +26,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gagr::LocationName ParentAsLocationName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
@@ -37,6 +39,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="gcgv::AzureClusterName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcgv::AzureClusterName AzureClusterName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcgv::AzureClusterName.Parse(Name, allowUnparsed: true);
@@ -49,6 +52,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gagr::LocationName ParentAsLocationName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
@@ -61,6 +65,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="gcgv::AzureClusterName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcgv::AzureClusterName AzureClusterName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcgv::AzureClusterName.Parse(Name, allowUnparsed: true);
@@ -73,6 +78,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="AzureClusterName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public AzureClusterName ParentAsAzureClusterName
         {
             get => string.IsNullOrEmpty(Parent) ? null : AzureClusterName.Parse(Parent, allowUnparsed: true);
@@ -85,6 +91,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="gcgv::AzureNodePoolName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcgv::AzureNodePoolName AzureNodePoolName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcgv::AzureNodePoolName.Parse(Name, allowUnparsed: true);
@@ -97,6 +104,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="AzureClusterName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public AzureClusterName ParentAsAzureClusterName
         {
             get => string.IsNullOrEmpty(Parent) ? null : AzureClusterName.Parse(Parent, allowUnparsed: true);
@@ -109,6 +117,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="gcgv::AzureNodePoolName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcgv::AzureNodePoolName AzureNodePoolName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcgv::AzureNodePoolName.Parse(Name, allowUnparsed: true);
@@ -121,6 +130,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="AzureClusterName"/>-typed view over the <see cref="AzureCluster"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public AzureClusterName AzureClusterAsAzureClusterName
         {
             get => string.IsNullOrEmpty(AzureCluster) ? null : AzureClusterName.Parse(AzureCluster, allowUnparsed: true);
@@ -133,6 +143,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="AzureClusterName"/>-typed view over the <see cref="AzureCluster"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public AzureClusterName AzureClusterAsAzureClusterName
         {
             get => string.IsNullOrEmpty(AzureCluster) ? null : AzureClusterName.Parse(AzureCluster, allowUnparsed: true);
@@ -145,6 +156,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="gcgv::AzureServerConfigName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcgv::AzureServerConfigName AzureServerConfigName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcgv::AzureServerConfigName.Parse(Name, allowUnparsed: true);
@@ -157,6 +169,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gagr::LocationName ParentAsLocationName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
@@ -169,6 +182,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="gcgv::AzureClientName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcgv::AzureClientName AzureClientName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcgv::AzureClientName.Parse(Name, allowUnparsed: true);
@@ -181,6 +195,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gagr::LocationName ParentAsLocationName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
@@ -193,6 +208,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="gcgv::AzureClientName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcgv::AzureClientName AzureClientName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcgv::AzureClientName.Parse(Name, allowUnparsed: true);
@@ -205,6 +221,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="AzureClusterName"/>-typed view over the <see cref="AzureCluster"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public AzureClusterName AzureClusterAsAzureClusterName
         {
             get => string.IsNullOrEmpty(AzureCluster) ? null : AzureClusterName.Parse(AzureCluster, allowUnparsed: true);
@@ -217,6 +234,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="AzureClusterName"/>-typed view over the <see cref="AzureCluster"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public AzureClusterName AzureClusterAsAzureClusterName
         {
             get => string.IsNullOrEmpty(AzureCluster) ? null : AzureClusterName.Parse(AzureCluster, allowUnparsed: true);
