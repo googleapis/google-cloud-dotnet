@@ -432,31 +432,31 @@ public sealed partial class SubscriberClientImpl
                 var msgs = receivedMessages.ToList();
                 receivedMessages.Clear();
                 // Get all ack-ids, used to extend leases as required.
-                var msgIds = new HashSet<string>(msgs.Select(x => x.AckId));
+                var activeMessageIds = new HashSet<string>(msgs.Select(x => x.AckId));
                 _receiptModAckForExactlyOnceDelivery = _exactlyOnceDeliveryEnabled;
                 if (_exactlyOnceDeliveryEnabled)
                 {
                     // Populate receipt ModAck dictionary before the lease extends are send.
                     // Add and initialize all Ack IDs with a null value to indicate that their receipt ModAck request hasn't started or is in progress.
-                    UpdateReceiptModAckStatus(msgIds, status: null);
+                    UpdateReceiptModAckStatus(activeMessageIds, status: null);
                     // Send an initial "lease-extension"; which starts the server timer.
-                    HandleExtendLease(msgIds, null);
+                    HandleExtendLease(activeMessageIds, null);
                     // In the exactly-once delivery flow, we must send only those messages to the user handler which had successful receipt ModAck responses.
                     // This is necessary to prevent message redelivery. We get the status of success and permanent failure as soon as response arrives.
                     // However, temporary failures are retried for up to three times and may eventaully succeed, result in permanent failure, or remain as temporary failure.
                     // Therefore, we must wait for all receipt ModAck responses to complete to obtain the final status.
                     // Then, the messages with successful receipt ModAcks are sent to the user, while those with failed ModAcks are removed from further processing.
                     Add(_eventReceiptModAckForExactlyOnceDelivery.WaitAsync(_softStopCts.Token)
-                        .ContinueWith(task => ProcessSuccessfulMessages(msgs, msgIds), CancellationToken.None, TaskContinuationOptions.ExecuteSynchronously, _taskHelper.TaskScheduler)
+                        .ContinueWith(task => ProcessSuccessfulMessages(msgs, activeMessageIds), CancellationToken.None, TaskContinuationOptions.ExecuteSynchronously, _taskHelper.TaskScheduler)
                         , Next(true, () => HandlePullMoveNext(null)));
                 }
                 else
                 {
                     // Send an initial "lease-extension"; which starts the server timer.
-                    HandleExtendLease(msgIds, null);
+                    HandleExtendLease(activeMessageIds, null);
                     // Asynchonously start message processing. Handles flow, and calls the user-supplied message handler.
                     // Uses Task.Run(), so not to clog up this "master" thread with per-message processing.
-                    Task messagesTask = _taskHelper.Run(() => ProcessPullMessagesAsync(msgs, msgIds));
+                    Task messagesTask = _taskHelper.Run(() => ProcessPullMessagesAsync(msgs, activeMessageIds));
                     // Once all received messages have been queued for processing, read the stream for more messages.
                     Add(messagesTask, Next(true, () => HandlePullMoveNext(null)));
                 }
@@ -496,21 +496,32 @@ public sealed partial class SubscriberClientImpl
             }
         }
 
-        private async Task ProcessPullMessagesAsync(List<ReceivedMessage> msgs, HashSet<string> msgIds)
+        private async Task ProcessPullMessagesAsync(List<ReceivedMessage> msgs, HashSet<string> activeMessageIds)
         {
             // Running async. Common data needs locking
             for (int msgIndex = 0; msgIndex < msgs.Count; msgIndex++)
             {
-                _softStopCts.Token.ThrowIfCancellationRequested();
                 var msg = msgs[msgIndex];
                 msgs[msgIndex] = null;
+
+                if (_softStopCts.IsCancellationRequested)
+                {
+                    RemoveFromActiveMessages(msg);
+                    continue;
+                }
+
                 // Prepare to call user message handler, _flow.Process(...) enforces the user-handler concurrency constraints.
                 await _taskHelper.ConfigureAwait(_flow.Process(msg.CalculateSize(), _messageOrderingEnabled ? msg.Message.OrderingKey ?? "" : "", async () =>
                 {
+                    if (_softStopCts.IsCancellationRequested)
+                    {
+                        RemoveFromActiveMessages(msg);
+                        return;
+                    }
+
                     // Running async. Common data needs locking
                     lock (_lock)
                     {
-                        _softStopCts.Token.ThrowIfCancellationRequested();
                         _userHandlerInFlight += 1;
                     }
                     if (msg.DeliveryAttempt > 0)
@@ -519,11 +530,7 @@ public sealed partial class SubscriberClientImpl
                     }
                     // Call user message handler
                     var reply = await _taskHelper.ConfigureAwaitHideErrors(() => _handler.HandleMessage(msg.Message, _hardStopCts.Token), Reply.Nack);
-                    // Lock msgsIds, this is accessed concurrently here and in HandleExtendLease().
-                    lock (msgIds)
-                    {
-                        msgIds.Remove(msg.AckId);
-                    }
+                    RemoveFromActiveMessages(msg);
                     // Lock ack/nack-queues, this is accessed concurrently here and in "master" thread.
                     lock (_lock)
                     {
@@ -534,6 +541,17 @@ public sealed partial class SubscriberClientImpl
                     // Ids have been added to ack/nack-queue, so trigger a push.
                     _eventPush.Set();
                 }));
+            }
+
+            void RemoveFromActiveMessages(ReceivedMessage message)
+            {
+                lock (activeMessageIds)
+                {
+                    // Removing the message's Ack ID from this set signals to HandleExtendLease
+                    // that the message is no longer actively being processed, preventing further
+                    // lease extensions for it.
+                    activeMessageIds.Remove(message.AckId);
+                }
             }
         }
 
@@ -589,11 +607,18 @@ public sealed partial class SubscriberClientImpl
             }
         }
 
-        private void HandleExtendLease(HashSet<string> msgIds, LeaseCancellation cancellation)
+        /// <summary>
+        /// Continuously schedules lease extensions for the passed message IDs.
+        /// The extension loop continues until the <paramref name="activeMessageIds"/> set is empty
+        /// (which happens as the user handler processes messages) or until a hard stop is requested.
+        /// </summary>
+        /// <param name="activeMessageIds">The set of message IDs to extend leases for. This set is modified by the message processing logic.</param>
+        /// <param name="cancellation">The cancellation token source wrapper used to manage the extension loop's lifetime, or null to start a new loop.</param>
+        private void HandleExtendLease(HashSet<string> activeMessageIds, LeaseCancellation cancellation)
         {
-            if (_softStopCts.IsCancellationRequested)
+            if (_hardStopCts.IsCancellationRequested)
             {
-                // No further lease extensions once stop is requested.
+                // No further lease extensions once a hard stop is requested.
                 return;
             }
             // The first call to this method happens as soon as messages in this chunk start to be processed.
@@ -602,15 +627,16 @@ public sealed partial class SubscriberClientImpl
             {
                 // Create a task to cancel lease-extension once `_maxExtensionDuration` has been reached.
                 // This set up once for each chunk of received messages, and passed through to each future call to this method.
-                cancellation = new LeaseCancellation(_softStopCts);
+                // Use hard stop token so lease extension persists during soft stop (draining).
+                cancellation = new LeaseCancellation(_hardStopCts);
                 Add(_scheduler.Delay(_maxExtensionDuration, cancellation.Token), Next(false, () =>
                 {
                     // This is executed when `_maxExtensionDuration` has expired, or when `cancellation` is cancelled,
                     // Which ensures `cancellation` is aways disposed of.
                     cancellation.Dispose();
-                    lock (msgIds)
+                    lock (activeMessageIds)
                     {
-                        msgIds.Clear();
+                        activeMessageIds.Clear();
                     }
                 }));
             }
@@ -618,14 +644,14 @@ public sealed partial class SubscriberClientImpl
             {
                 // If `_maxExtensionDuration` has not expired, then schedule a further lease extension.
                 bool anyMsgIds;
-                lock (msgIds)
+                lock (activeMessageIds)
                 {
-                    anyMsgIds = msgIds.Count > 0;
+                    anyMsgIds = activeMessageIds.Count > 0;
                     if (anyMsgIds)
                     {
                         lock (_lock)
                         {
-                            _extendQueue.Enqueue(msgIds.Select(x => new TimedId(_extendThrottleHigh + 1, x)));
+                            _extendQueue.Enqueue(activeMessageIds.Select(x => new TimedId(_extendThrottleHigh + 1, x)));
                         }
                     }
                 }
@@ -635,10 +661,11 @@ public sealed partial class SubscriberClientImpl
                     _eventPush.Set();
                     // Some ids still exist, schedule another extension.
                     // The overall `_maxExtensionDuration` is maintained by passing through the existing `cancellation`.
-                    Add(_scheduler.Delay(EffectiveLeaseTiming.AutoExtendDelay, _softStopCts.Token), Next(false, () => HandleExtendLease(msgIds, cancellation)));
+                    // Use hard stop token to ensure lease extension continues even during soft stop (shutdown), until the client is fully disposed.
+                    Add(_scheduler.Delay(EffectiveLeaseTiming.AutoExtendDelay, _hardStopCts.Token), Next(false, () => HandleExtendLease(activeMessageIds, cancellation)));
                     // Increment _extendThrottles.
                     _extendThrottleHigh += 1;
-                    Add(_scheduler.Delay(EffectiveLeaseTiming.ExtendQueueThrottleInterval, _softStopCts.Token), Next(false, () => _extendThrottleLow += 1));
+                    Add(_scheduler.Delay(EffectiveLeaseTiming.ExtendQueueThrottleInterval, _hardStopCts.Token), Next(false, () => _extendThrottleLow += 1));
                 }
                 else
                 {
