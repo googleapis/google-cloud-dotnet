@@ -85,7 +85,7 @@ namespace Google.Cloud.Run.V2 {
             "Mi5FeGVjdXRpb25SZWZlcmVuY2VCA+BBAxIYCgtyZWNvbmNpbGluZxgXIAEo",
             "CEID4EEDEhoKDXNhdGlzZmllc19wenMYGSABKAhCA+BBAxIfChVzdGFydF9l",
             "eGVjdXRpb25fdG9rZW4YGiABKAlIABIdChNydW5fZXhlY3V0aW9uX3Rva2Vu",
-            "GBsgASgJSAASEQoEZXRhZxhjIAEoCUID4EEDGi0KC0xhYmVsc0VudHJ5EgsK",
+            "GBsgASgJSAASEQoEZXRhZxhjIAEoCUID4EEBGi0KC0xhYmVsc0VudHJ5EgsK",
             "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaMgoQQW5ub3RhdGlvbnNF",
             "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOlLqQU8KFnJ1",
             "bi5nb29nbGVhcGlzLmNvbS9Kb2ISMnByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
@@ -3273,7 +3273,7 @@ namespace Google.Cloud.Run.V2 {
     public const int EtagFieldNumber = 99;
     private string etag_ = "";
     /// <summary>
-    /// Output only. A system-generated fingerprint for this version of the
+    /// Optional. A system-generated fingerprint for this version of the
     /// resource. May be used to detect modification conflict during updates.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -56,7 +56,7 @@ namespace Google.Cloud.Run.V2 {
             "Lmdvb2dsZWFwaXMuY29tL1dvcmtlclBvb2wieAoXRGVsZXRlV29ya2VyUG9v",
             "bFJlcXVlc3QSMwoEbmFtZRgBIAEoCUIl4EEC+kEfCh1ydW4uZ29vZ2xlYXBp",
             "cy5jb20vV29ya2VyUG9vbBIaCg12YWxpZGF0ZV9vbmx5GAIgASgIQgPgQQES",
-            "DAoEZXRhZxgDIAEoCSKjDAoKV29ya2VyUG9vbBIMCgRuYW1lGAEgASgJEhMK",
+            "DAoEZXRhZxgDIAEoCSLKDAoKV29ya2VyUG9vbBIMCgRuYW1lGAEgASgJEhMK",
             "C2Rlc2NyaXB0aW9uGAIgASgJEhAKA3VpZBgDIAEoCUID4EEDEhcKCmdlbmVy",
             "YXRpb24YBCABKANCA+BBAxJACgZsYWJlbHMYBSADKAsyKy5nb29nbGUuY2xv",
             "dWQucnVuLnYyLldvcmtlclBvb2wuTGFiZWxzRW50cnlCA+BBARJKCgthbm5v",
@@ -83,58 +83,59 @@ namespace Google.Cloud.Run.V2 {
             "cnVuLmdvb2dsZWFwaXMuY29tL1JldmlzaW9uEkQKF2xhdGVzdF9jcmVhdGVk",
             "X3JldmlzaW9uGCIgASgJQiPgQQP6QR0KG3J1bi5nb29nbGVhcGlzLmNvbS9S",
             "ZXZpc2lvbhJOChdpbnN0YW5jZV9zcGxpdF9zdGF0dXNlcxgbIAMoCzIoLmdv",
-            "b2dsZS5jbG91ZC5ydW4udjIuSW5zdGFuY2VTcGxpdFN0YXR1c0ID4EEDEhgK",
-            "EGN1c3RvbV9hdWRpZW5jZXMYJSADKAkSGgoNc2F0aXNmaWVzX3B6cxgmIAEo",
-            "CEID4EEDEhgKC3JlY29uY2lsaW5nGGIgASgIQgPgQQMSEQoEZXRhZxhjIAEo",
-            "CUID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
-            "IAEoCToCOAEaMgoQQW5ub3RhdGlvbnNFbnRyeRILCgNrZXkYASABKAkSDQoF",
-            "dmFsdWUYAiABKAk6AjgBOoEB6kF+Ch1ydW4uZ29vZ2xlYXBpcy5jb20vV29y",
-            "a2VyUG9vbBJBcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L3dvcmtlclBvb2xzL3t3b3JrZXJfcG9vbH0qC3dvcmtlclBvb2xzMgp3",
-            "b3JrZXJQb29sUgEBMr4OCgtXb3JrZXJQb29scxKYAgoQQ3JlYXRlV29ya2Vy",
-            "UG9vbBIsLmdvb2dsZS5jbG91ZC5ydW4udjIuQ3JlYXRlV29ya2VyUG9vbFJl",
-            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIrYBykEYCgpX",
-            "b3JrZXJQb29sEgpXb3JrZXJQb29s2kEhcGFyZW50LHdvcmtlcl9wb29sLHdv",
-            "cmtlcl9wb29sX2lkgtPkkwI+Ii8vdjIve3BhcmVudD1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qfS93b3JrZXJQb29sczoLd29ya2VyX3Bvb2yK0+STAi0SKwoG",
-            "cGFyZW50EiFwcm9qZWN0cy8qL2xvY2F0aW9ucy97bG9jYXRpb249Kn0SzwEK",
-            "DUdldFdvcmtlclBvb2wSKS5nb29nbGUuY2xvdWQucnVuLnYyLkdldFdvcmtl",
-            "clBvb2xSZXF1ZXN0Gh8uZ29vZ2xlLmNsb3VkLnJ1bi52Mi5Xb3JrZXJQb29s",
-            "InLaQQRuYW1lgtPkkwIxEi8vdjIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi93b3JrZXJQb29scy8qfYrT5JMCLhIsCgRuYW1lEiRwcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy97bG9jYXRpb249Kn0vKioS4QEKD0xpc3RXb3JrZXJQb29s",
-            "cxIrLmdvb2dsZS5jbG91ZC5ydW4udjIuTGlzdFdvcmtlclBvb2xzUmVxdWVz",
-            "dBosLmdvb2dsZS5jbG91ZC5ydW4udjIuTGlzdFdvcmtlclBvb2xzUmVzcG9u",
-            "c2Uic9pBBnBhcmVudILT5JMCMRIvL3YyL3twYXJlbnQ9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKn0vd29ya2VyUG9vbHOK0+STAi0SKwoGcGFyZW50EiFwcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy97bG9jYXRpb249Kn0StQIKEFVwZGF0ZVdvcmtl",
-            "clBvb2wSLC5nb29nbGUuY2xvdWQucnVuLnYyLlVwZGF0ZVdvcmtlclBvb2xS",
-            "ZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiLTAcpBGAoK",
-            "V29ya2VyUG9vbBIKV29ya2VyUG9vbNpBC3dvcmtlcl9wb29s2kEXd29ya2Vy",
-            "X3Bvb2wsdXBkYXRlX21hc2uC0+STAkoyOy92Mi97d29ya2VyX3Bvb2wubmFt",
-            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtlclBvb2xzLyp9Ogt3b3Jr",
-            "ZXJfcG9vbIrT5JMCOhI4ChB3b3JrZXJfcG9vbC5uYW1lEiRwcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy97bG9jYXRpb249Kn0vKioS7wEKEERlbGV0ZVdvcmtlclBv",
-            "b2wSLC5nb29nbGUuY2xvdWQucnVuLnYyLkRlbGV0ZVdvcmtlclBvb2xSZXF1",
-            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKNAcpBGAoKV29y",
-            "a2VyUG9vbBIKV29ya2VyUG9vbNpBBG5hbWWC0+STAjEqLy92Mi97bmFtZT1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtlclBvb2xzLyp9itPkkwIuEiwK",
-            "BG5hbWUSJHByb2plY3RzLyovbG9jYXRpb25zL3tsb2NhdGlvbj0qfS8qKhKT",
-            "AQoMR2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5HZXRJYW1Qb2xpY3lS",
-            "ZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiSILT5JMCQhJAL3YyL3ty",
-            "ZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtlclBvb2xzLyp9",
-            "OmdldElhbVBvbGljeRKWAQoMU2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52",
-            "MS5TZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3ki",
-            "S4LT5JMCRSJAL3YyL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L3dvcmtlclBvb2xzLyp9OnNldElhbVBvbGljeToBKhK8AQoSVGVzdElhbVBl",
-            "cm1pc3Npb25zEiguZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNS",
-            "ZXF1ZXN0GikuZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXNw",
-            "b25zZSJRgtPkkwJLIkYvdjIve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovd29ya2VyUG9vbHMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEqGkbK",
-            "QRJydW4uZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlz",
-            "LmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQlcKF2NvbS5nb29nbGUuY2xvdWQu",
-            "cnVuLnYyQg9Xb3JrZXJQb29sUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9ydW4vYXBpdjIvcnVucGI7cnVucGJiBnByb3RvMw=="));
+            "b2dsZS5jbG91ZC5ydW4udjIuSW5zdGFuY2VTcGxpdFN0YXR1c0ID4EEDEiUK",
+            "GHRocmVhdF9kZXRlY3Rpb25fZW5hYmxlZBgcIAEoCEID4EEDEhgKEGN1c3Rv",
+            "bV9hdWRpZW5jZXMYJSADKAkSGgoNc2F0aXNmaWVzX3B6cxgmIAEoCEID4EED",
+            "EhgKC3JlY29uY2lsaW5nGGIgASgIQgPgQQMSEQoEZXRhZxhjIAEoCUID4EEB",
+            "Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
+            "OAEaMgoQQW5ub3RhdGlvbnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAk6AjgBOoEB6kF+Ch1ydW4uZ29vZ2xlYXBpcy5jb20vV29ya2VyUG9v",
+            "bBJBcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3dv",
+            "cmtlclBvb2xzL3t3b3JrZXJfcG9vbH0qC3dvcmtlclBvb2xzMgp3b3JrZXJQ",
+            "b29sUgEBMr4OCgtXb3JrZXJQb29scxKYAgoQQ3JlYXRlV29ya2VyUG9vbBIs",
+            "Lmdvb2dsZS5jbG91ZC5ydW4udjIuQ3JlYXRlV29ya2VyUG9vbFJlcXVlc3Qa",
+            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIrYBykEYCgpXb3JrZXJQ",
+            "b29sEgpXb3JrZXJQb29s2kEhcGFyZW50LHdvcmtlcl9wb29sLHdvcmtlcl9w",
+            "b29sX2lkgtPkkwI+Ii8vdjIve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qfS93b3JrZXJQb29sczoLd29ya2VyX3Bvb2yK0+STAi0SKwoGcGFyZW50",
+            "EiFwcm9qZWN0cy8qL2xvY2F0aW9ucy97bG9jYXRpb249Kn0SzwEKDUdldFdv",
+            "cmtlclBvb2wSKS5nb29nbGUuY2xvdWQucnVuLnYyLkdldFdvcmtlclBvb2xS",
+            "ZXF1ZXN0Gh8uZ29vZ2xlLmNsb3VkLnJ1bi52Mi5Xb3JrZXJQb29sInLaQQRu",
+            "YW1lgtPkkwIxEi8vdjIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi93",
+            "b3JrZXJQb29scy8qfYrT5JMCLhIsCgRuYW1lEiRwcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy97bG9jYXRpb249Kn0vKioS4QEKD0xpc3RXb3JrZXJQb29scxIrLmdv",
+            "b2dsZS5jbG91ZC5ydW4udjIuTGlzdFdvcmtlclBvb2xzUmVxdWVzdBosLmdv",
+            "b2dsZS5jbG91ZC5ydW4udjIuTGlzdFdvcmtlclBvb2xzUmVzcG9uc2Uic9pB",
+            "BnBhcmVudILT5JMCMRIvL3YyL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKn0vd29ya2VyUG9vbHOK0+STAi0SKwoGcGFyZW50EiFwcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy97bG9jYXRpb249Kn0StQIKEFVwZGF0ZVdvcmtlclBvb2wS",
+            "LC5nb29nbGUuY2xvdWQucnVuLnYyLlVwZGF0ZVdvcmtlclBvb2xSZXF1ZXN0",
+            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiLTAcpBGAoKV29ya2Vy",
+            "UG9vbBIKV29ya2VyUG9vbNpBC3dvcmtlcl9wb29s2kEXd29ya2VyX3Bvb2ws",
+            "dXBkYXRlX21hc2uC0+STAkoyOy92Mi97d29ya2VyX3Bvb2wubmFtZT1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtlclBvb2xzLyp9Ogt3b3JrZXJfcG9v",
+            "bIrT5JMCOhI4ChB3b3JrZXJfcG9vbC5uYW1lEiRwcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy97bG9jYXRpb249Kn0vKioS7wEKEERlbGV0ZVdvcmtlclBvb2wSLC5n",
+            "b29nbGUuY2xvdWQucnVuLnYyLkRlbGV0ZVdvcmtlclBvb2xSZXF1ZXN0Gh0u",
+            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKNAcpBGAoKV29ya2VyUG9v",
+            "bBIKV29ya2VyUG9vbNpBBG5hbWWC0+STAjEqLy92Mi97bmFtZT1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qL3dvcmtlclBvb2xzLyp9itPkkwIuEiwKBG5hbWUS",
+            "JHByb2plY3RzLyovbG9jYXRpb25zL3tsb2NhdGlvbj0qfS8qKhKTAQoMR2V0",
+            "SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5HZXRJYW1Qb2xpY3lSZXF1ZXN0",
+            "GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiSILT5JMCQhJAL3YyL3tyZXNvdXJj",
+            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtlclBvb2xzLyp9OmdldElh",
+            "bVBvbGljeRKWAQoMU2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5TZXRJ",
+            "YW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiS4LT5JMC",
+            "RSJAL3YyL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtl",
+            "clBvb2xzLyp9OnNldElhbVBvbGljeToBKhK8AQoSVGVzdElhbVBlcm1pc3Np",
+            "b25zEiguZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0",
+            "GikuZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXNwb25zZSJR",
+            "gtPkkwJLIkYvdjIve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "d29ya2VyUG9vbHMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEqGkbKQRJydW4u",
+            "Z29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
+            "dXRoL2Nsb3VkLXBsYXRmb3JtQlcKF2NvbS5nb29nbGUuY2xvdWQucnVuLnYy",
+            "Qg9Xb3JrZXJQb29sUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9ydW4v",
+            "YXBpdjIvcnVucGI7cnVucGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.LaunchStageReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.RoutingReflection.Descriptor, global::Google.Cloud.Run.V2.ConditionReflection.Descriptor, global::Google.Cloud.Run.V2.InstanceSplitReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.Cloud.Run.V2.WorkerPoolRevisionTemplateReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -144,7 +145,7 @@ namespace Google.Cloud.Run.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ListWorkerPoolsResponse), global::Google.Cloud.Run.V2.ListWorkerPoolsResponse.Parser, new[]{ "WorkerPools", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.GetWorkerPoolRequest), global::Google.Cloud.Run.V2.GetWorkerPoolRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.DeleteWorkerPoolRequest), global::Google.Cloud.Run.V2.DeleteWorkerPoolRequest.Parser, new[]{ "Name", "ValidateOnly", "Etag" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.WorkerPool), global::Google.Cloud.Run.V2.WorkerPool.Parser, new[]{ "Name", "Description", "Uid", "Generation", "Labels", "Annotations", "CreateTime", "UpdateTime", "DeleteTime", "ExpireTime", "Creator", "LastModifier", "Client", "ClientVersion", "LaunchStage", "BinaryAuthorization", "Template", "InstanceSplits", "Scaling", "ObservedGeneration", "TerminalCondition", "Conditions", "LatestReadyRevision", "LatestCreatedRevision", "InstanceSplitStatuses", "CustomAudiences", "SatisfiesPzs", "Reconciling", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.WorkerPool), global::Google.Cloud.Run.V2.WorkerPool.Parser, new[]{ "Name", "Description", "Uid", "Generation", "Labels", "Annotations", "CreateTime", "UpdateTime", "DeleteTime", "ExpireTime", "Creator", "LastModifier", "Client", "ClientVersion", "LaunchStage", "BinaryAuthorization", "Template", "InstanceSplits", "Scaling", "ObservedGeneration", "TerminalCondition", "Conditions", "LatestReadyRevision", "LatestCreatedRevision", "InstanceSplitStatuses", "ThreatDetectionEnabled", "CustomAudiences", "SatisfiesPzs", "Reconciling", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -1960,6 +1961,7 @@ namespace Google.Cloud.Run.V2 {
       latestReadyRevision_ = other.latestReadyRevision_;
       latestCreatedRevision_ = other.latestCreatedRevision_;
       instanceSplitStatuses_ = other.instanceSplitStatuses_.Clone();
+      threatDetectionEnabled_ = other.threatDetectionEnabled_;
       customAudiences_ = other.customAudiences_.Clone();
       satisfiesPzs_ = other.satisfiesPzs_;
       reconciling_ = other.reconciling_;
@@ -2304,7 +2306,7 @@ namespace Google.Cloud.Run.V2 {
     public const int ObservedGenerationFieldNumber = 30;
     private long observedGeneration_;
     /// <summary>
-    /// Output only. The generation of this WorkerPool currently serving traffic.
+    /// Output only. The generation of this WorkerPool currently serving workloads.
     /// See comments in `reconciling` for additional information on reconciliation
     /// process in Cloud Run. Please note that unlike v1, this is an int64 value.
     /// As with most Google APIs, its JSON representation will be a `string`
@@ -2358,7 +2360,7 @@ namespace Google.Cloud.Run.V2 {
     public const int LatestReadyRevisionFieldNumber = 33;
     private string latestReadyRevision_ = "";
     /// <summary>
-    /// Output only. Name of the latest revision that is serving traffic. See
+    /// Output only. Name of the latest revision that is serving workloads. See
     /// comments in `reconciling` for additional information on reconciliation
     /// process in Cloud Run.
     /// </summary>
@@ -2404,17 +2406,29 @@ namespace Google.Cloud.Run.V2 {
       get { return instanceSplitStatuses_; }
     }
 
+    /// <summary>Field number for the "threat_detection_enabled" field.</summary>
+    public const int ThreatDetectionEnabledFieldNumber = 28;
+    private bool threatDetectionEnabled_;
+    /// <summary>
+    /// Output only. Indicates whether Cloud Run Threat Detection monitoring is
+    /// enabled for the parent project of this worker pool.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ThreatDetectionEnabled {
+      get { return threatDetectionEnabled_; }
+      set {
+        threatDetectionEnabled_ = value;
+      }
+    }
+
     /// <summary>Field number for the "custom_audiences" field.</summary>
     public const int CustomAudiencesFieldNumber = 37;
     private static readonly pb::FieldCodec<string> _repeated_customAudiences_codec
         = pb::FieldCodec.ForString(298);
     private readonly pbc::RepeatedField<string> customAudiences_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// One or more custom audiences that you want this worker pool to support.
-    /// Specify each custom audience as the full URL in a string. The custom
-    /// audiences are encoded in the token and used to authenticate requests. For
-    /// more information, see
-    /// https://cloud.google.com/run/docs/configuring/custom-audiences.
+    /// Not supported, and ignored by Cloud Run.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2448,21 +2462,21 @@ namespace Google.Cloud.Run.V2 {
     /// will asynchronously perform all necessary steps to bring the WorkerPool to
     /// the desired serving state. This process is called reconciliation. While
     /// reconciliation is in process, `observed_generation`,
-    /// `latest_ready_revison`, `traffic_statuses`, and `uri` will have transient
-    /// values that might mismatch the intended state: Once reconciliation is over
-    /// (and this field is false), there are two possible outcomes: reconciliation
-    /// succeeded and the serving state matches the WorkerPool, or there was an
-    /// error, and reconciliation failed. This state can be found in
-    /// `terminal_condition.state`.
+    /// `latest_ready_revison`, `instance_split_statuses`, and `uri` will have
+    /// transient values that might mismatch the intended state: Once
+    /// reconciliation is over (and this field is false), there are two possible
+    /// outcomes: reconciliation succeeded and the serving state matches the
+    /// WorkerPool, or there was an error, and reconciliation failed. This state
+    /// can be found in `terminal_condition.state`.
     ///
-    /// If reconciliation succeeded, the following fields will match: `traffic` and
-    /// `traffic_statuses`, `observed_generation` and `generation`,
-    /// `latest_ready_revision` and `latest_created_revision`.
+    /// If reconciliation succeeded, the following fields will match:
+    /// `instance_splits` and `instance_split_statuses`, `observed_generation` and
+    /// `generation`, `latest_ready_revision` and `latest_created_revision`.
     ///
-    /// If reconciliation failed, `traffic_statuses`, `observed_generation`, and
-    /// `latest_ready_revision` will have the state of the last serving revision,
-    /// or empty for newly created WorkerPools. Additional information on the
-    /// failure can be found in `terminal_condition` and `conditions`.
+    /// If reconciliation failed, `instance_split_statuses`, `observed_generation`,
+    /// and `latest_ready_revision` will have the state of the last serving
+    /// revision, or empty for newly created WorkerPools. Additional information on
+    /// the failure can be found in `terminal_condition` and `conditions`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2477,7 +2491,7 @@ namespace Google.Cloud.Run.V2 {
     public const int EtagFieldNumber = 99;
     private string etag_ = "";
     /// <summary>
-    /// Output only. A system-generated fingerprint for this version of the
+    /// Optional. A system-generated fingerprint for this version of the
     /// resource. May be used to detect modification conflict during updates.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2529,6 +2543,7 @@ namespace Google.Cloud.Run.V2 {
       if (LatestReadyRevision != other.LatestReadyRevision) return false;
       if (LatestCreatedRevision != other.LatestCreatedRevision) return false;
       if(!instanceSplitStatuses_.Equals(other.instanceSplitStatuses_)) return false;
+      if (ThreatDetectionEnabled != other.ThreatDetectionEnabled) return false;
       if(!customAudiences_.Equals(other.customAudiences_)) return false;
       if (SatisfiesPzs != other.SatisfiesPzs) return false;
       if (Reconciling != other.Reconciling) return false;
@@ -2565,6 +2580,7 @@ namespace Google.Cloud.Run.V2 {
       if (LatestReadyRevision.Length != 0) hash ^= LatestReadyRevision.GetHashCode();
       if (LatestCreatedRevision.Length != 0) hash ^= LatestCreatedRevision.GetHashCode();
       hash ^= instanceSplitStatuses_.GetHashCode();
+      if (ThreatDetectionEnabled != false) hash ^= ThreatDetectionEnabled.GetHashCode();
       hash ^= customAudiences_.GetHashCode();
       if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
       if (Reconciling != false) hash ^= Reconciling.GetHashCode();
@@ -2655,6 +2671,10 @@ namespace Google.Cloud.Run.V2 {
       }
       instanceSplits_.WriteTo(output, _repeated_instanceSplits_codec);
       instanceSplitStatuses_.WriteTo(output, _repeated_instanceSplitStatuses_codec);
+      if (ThreatDetectionEnabled != false) {
+        output.WriteRawTag(224, 1);
+        output.WriteBool(ThreatDetectionEnabled);
+      }
       if (ObservedGeneration != 0L) {
         output.WriteRawTag(240, 1);
         output.WriteInt64(ObservedGeneration);
@@ -2763,6 +2783,10 @@ namespace Google.Cloud.Run.V2 {
       }
       instanceSplits_.WriteTo(ref output, _repeated_instanceSplits_codec);
       instanceSplitStatuses_.WriteTo(ref output, _repeated_instanceSplitStatuses_codec);
+      if (ThreatDetectionEnabled != false) {
+        output.WriteRawTag(224, 1);
+        output.WriteBool(ThreatDetectionEnabled);
+      }
       if (ObservedGeneration != 0L) {
         output.WriteRawTag(240, 1);
         output.WriteInt64(ObservedGeneration);
@@ -2868,6 +2892,9 @@ namespace Google.Cloud.Run.V2 {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(LatestCreatedRevision);
       }
       size += instanceSplitStatuses_.CalculateSize(_repeated_instanceSplitStatuses_codec);
+      if (ThreatDetectionEnabled != false) {
+        size += 2 + 1;
+      }
       size += customAudiences_.CalculateSize(_repeated_customAudiences_codec);
       if (SatisfiesPzs != false) {
         size += 2 + 1;
@@ -2979,6 +3006,9 @@ namespace Google.Cloud.Run.V2 {
         LatestCreatedRevision = other.LatestCreatedRevision;
       }
       instanceSplitStatuses_.Add(other.instanceSplitStatuses_);
+      if (other.ThreatDetectionEnabled != false) {
+        ThreatDetectionEnabled = other.ThreatDetectionEnabled;
+      }
       customAudiences_.Add(other.customAudiences_);
       if (other.SatisfiesPzs != false) {
         SatisfiesPzs = other.SatisfiesPzs;
@@ -3103,6 +3133,10 @@ namespace Google.Cloud.Run.V2 {
           }
           case 218: {
             instanceSplitStatuses_.AddEntriesFrom(input, _repeated_instanceSplitStatuses_codec);
+            break;
+          }
+          case 224: {
+            ThreatDetectionEnabled = input.ReadBool();
             break;
           }
           case 240: {
@@ -3258,6 +3292,10 @@ namespace Google.Cloud.Run.V2 {
           }
           case 218: {
             instanceSplitStatuses_.AddEntriesFrom(ref input, _repeated_instanceSplitStatuses_codec);
+            break;
+          }
+          case 224: {
+            ThreatDetectionEnabled = input.ReadBool();
             break;
           }
           case 240: {
