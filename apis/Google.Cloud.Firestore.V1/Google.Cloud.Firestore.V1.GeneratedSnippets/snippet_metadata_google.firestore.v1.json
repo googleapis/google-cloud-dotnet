@@ -1281,6 +1281,54 @@
       ]
     },
     {
+      "regionTag": "firestore_v1_generated_Firestore_ExecutePipeline_sync",
+      "title": "ExecutePipelineRequestObject",
+      "description": "Snippet for ExecutePipeline",
+      "file": "FirestoreClient.ExecutePipelineRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExecutePipeline",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.ExecutePipeline",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.ExecutePipelineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.V1.FirestoreClient+ExecutePipelineStream",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "ExecutePipeline",
+          "fullName": "google.firestore.v1.Firestore.ExecutePipeline",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "firestore_v1_generated_Firestore_RunAggregationQuery_sync",
       "title": "RunAggregationQueryRequestObject",
       "description": "Snippet for RunAggregationQuery",
