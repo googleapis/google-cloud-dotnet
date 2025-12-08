@@ -13,7 +13,7 @@ jobs:
         regex: ["'Google\\.Cloud\\.[A-L].*'", "'Google\\.Cloud\\.[M-Z].*'", "'!Google\\.Cloud'"]
     
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@v6
       with:
         submodules: true
         fetch-depth: 100
