@@ -3654,6 +3654,25 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Cloud.Maintenance.Api.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Maintenance",
+      "productUrl": "https://cloud.google.com/unified-maintenance/docs/overview",
+      "description": "The Maintenance API provides a centralized view of planned disruptive maintenance events across supported Google Cloud products. It offers users visibility into upcoming, ongoing, and completed maintenance, along with controls to manage certain maintenance activities, such as mainteance windows, rescheduling, and on-demand updates.",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Location": "2.4.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/maintenance/api/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "maintenance",
+      "serviceConfigFile": "maintenance_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Maintenance.Api.V1Beta",
       "version": "1.0.0-beta02",
       "type": "grpc",
