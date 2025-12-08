@@ -611,7 +611,7 @@ namespace Google.Cloud.PubSub.V1
         /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the subscription. It must have the format
+        /// Required. Identifier. The name of the subscription. It must have the format
         /// `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must
         /// start with a letter, and contain only letters (`[A-Za-z]`), numbers
         /// (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`),
@@ -674,7 +674,7 @@ namespace Google.Cloud.PubSub.V1
         /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the subscription. It must have the format
+        /// Required. Identifier. The name of the subscription. It must have the format
         /// `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must
         /// start with a letter, and contain only letters (`[A-Za-z]`), numbers
         /// (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`),
@@ -737,7 +737,7 @@ namespace Google.Cloud.PubSub.V1
         /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the subscription. It must have the format
+        /// Required. Identifier. The name of the subscription. It must have the format
         /// `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must
         /// start with a letter, and contain only letters (`[A-Za-z]`), numbers
         /// (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`),
@@ -794,7 +794,7 @@ namespace Google.Cloud.PubSub.V1
         /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the subscription. It must have the format
+        /// Required. Identifier. The name of the subscription. It must have the format
         /// `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must
         /// start with a letter, and contain only letters (`[A-Za-z]`), numbers
         /// (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`),
@@ -857,7 +857,7 @@ namespace Google.Cloud.PubSub.V1
         /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the subscription. It must have the format
+        /// Required. Identifier. The name of the subscription. It must have the format
         /// `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must
         /// start with a letter, and contain only letters (`[A-Za-z]`), numbers
         /// (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`),
@@ -920,7 +920,7 @@ namespace Google.Cloud.PubSub.V1
         /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the subscription. It must have the format
+        /// Required. Identifier. The name of the subscription. It must have the format
         /// `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must
         /// start with a letter, and contain only letters (`[A-Za-z]`), numbers
         /// (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`),
@@ -994,7 +994,7 @@ namespace Google.Cloud.PubSub.V1
         /// Gets the configuration details of a subscription.
         /// </summary>
         /// <param name="subscription">
-        /// Required. The name of the subscription to get.
+        /// Required. Identifier. The name of the subscription to get.
         /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1009,7 +1009,7 @@ namespace Google.Cloud.PubSub.V1
         /// Gets the configuration details of a subscription.
         /// </summary>
         /// <param name="subscription">
-        /// Required. The name of the subscription to get.
+        /// Required. Identifier. The name of the subscription to get.
         /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1024,7 +1024,7 @@ namespace Google.Cloud.PubSub.V1
         /// Gets the configuration details of a subscription.
         /// </summary>
         /// <param name="subscription">
-        /// Required. The name of the subscription to get.
+        /// Required. Identifier. The name of the subscription to get.
         /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1036,7 +1036,7 @@ namespace Google.Cloud.PubSub.V1
         /// Gets the configuration details of a subscription.
         /// </summary>
         /// <param name="subscription">
-        /// Required. The name of the subscription to get.
+        /// Required. Identifier. The name of the subscription to get.
         /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1051,7 +1051,7 @@ namespace Google.Cloud.PubSub.V1
         /// Gets the configuration details of a subscription.
         /// </summary>
         /// <param name="subscription">
-        /// Required. The name of the subscription to get.
+        /// Required. Identifier. The name of the subscription to get.
         /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1066,7 +1066,7 @@ namespace Google.Cloud.PubSub.V1
         /// Gets the configuration details of a subscription.
         /// </summary>
         /// <param name="subscription">
-        /// Required. The name of the subscription to get.
+        /// Required. Identifier. The name of the subscription to get.
         /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1188,8 +1188,8 @@ namespace Google.Cloud.PubSub.V1
         /// Lists matching subscriptions.
         /// </summary>
         /// <param name="project">
-        /// Required. The name of the project in which to list subscriptions.
-        /// Format is `projects/{project-id}`.
+        /// Required. Identifier. The name of the project in which to list
+        /// subscriptions. Format is `projects/{project-id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1222,8 +1222,8 @@ namespace Google.Cloud.PubSub.V1
         /// Lists matching subscriptions.
         /// </summary>
         /// <param name="project">
-        /// Required. The name of the project in which to list subscriptions.
-        /// Format is `projects/{project-id}`.
+        /// Required. Identifier. The name of the project in which to list
+        /// subscriptions. Format is `projects/{project-id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1256,8 +1256,8 @@ namespace Google.Cloud.PubSub.V1
         /// Lists matching subscriptions.
         /// </summary>
         /// <param name="project">
-        /// Required. The name of the project in which to list subscriptions.
-        /// Format is `projects/{project-id}`.
+        /// Required. Identifier. The name of the project in which to list
+        /// subscriptions. Format is `projects/{project-id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1290,8 +1290,8 @@ namespace Google.Cloud.PubSub.V1
         /// Lists matching subscriptions.
         /// </summary>
         /// <param name="project">
-        /// Required. The name of the project in which to list subscriptions.
-        /// Format is `projects/{project-id}`.
+        /// Required. Identifier. The name of the project in which to list
+        /// subscriptions. Format is `projects/{project-id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1367,7 +1367,7 @@ namespace Google.Cloud.PubSub.V1
         /// subscription or its topic unless the same topic is specified.
         /// </summary>
         /// <param name="subscription">
-        /// Required. The subscription to delete.
+        /// Required. Identifier. The subscription to delete.
         /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1386,7 +1386,7 @@ namespace Google.Cloud.PubSub.V1
         /// subscription or its topic unless the same topic is specified.
         /// </summary>
         /// <param name="subscription">
-        /// Required. The subscription to delete.
+        /// Required. Identifier. The subscription to delete.
         /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1405,7 +1405,7 @@ namespace Google.Cloud.PubSub.V1
         /// subscription or its topic unless the same topic is specified.
         /// </summary>
         /// <param name="subscription">
-        /// Required. The subscription to delete.
+        /// Required. Identifier. The subscription to delete.
         /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1421,7 +1421,7 @@ namespace Google.Cloud.PubSub.V1
         /// subscription or its topic unless the same topic is specified.
         /// </summary>
         /// <param name="subscription">
-        /// Required. The subscription to delete.
+        /// Required. Identifier. The subscription to delete.
         /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1440,7 +1440,7 @@ namespace Google.Cloud.PubSub.V1
         /// subscription or its topic unless the same topic is specified.
         /// </summary>
         /// <param name="subscription">
-        /// Required. The subscription to delete.
+        /// Required. Identifier. The subscription to delete.
         /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1459,7 +1459,7 @@ namespace Google.Cloud.PubSub.V1
         /// subscription or its topic unless the same topic is specified.
         /// </summary>
         /// <param name="subscription">
-        /// Required. The subscription to delete.
+        /// Required. Identifier. The subscription to delete.
         /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2534,7 +2534,7 @@ namespace Google.Cloud.PubSub.V1
         /// state captured by a snapshot.
         /// </summary>
         /// <param name="snapshot">
-        /// Required. The name of the snapshot to get.
+        /// Required. Identifier. The name of the snapshot to get.
         /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2553,7 +2553,7 @@ namespace Google.Cloud.PubSub.V1
         /// state captured by a snapshot.
         /// </summary>
         /// <param name="snapshot">
-        /// Required. The name of the snapshot to get.
+        /// Required. Identifier. The name of the snapshot to get.
         /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2572,7 +2572,7 @@ namespace Google.Cloud.PubSub.V1
         /// state captured by a snapshot.
         /// </summary>
         /// <param name="snapshot">
-        /// Required. The name of the snapshot to get.
+        /// Required. Identifier. The name of the snapshot to get.
         /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2588,7 +2588,7 @@ namespace Google.Cloud.PubSub.V1
         /// state captured by a snapshot.
         /// </summary>
         /// <param name="snapshot">
-        /// Required. The name of the snapshot to get.
+        /// Required. Identifier. The name of the snapshot to get.
         /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2607,7 +2607,7 @@ namespace Google.Cloud.PubSub.V1
         /// state captured by a snapshot.
         /// </summary>
         /// <param name="snapshot">
-        /// Required. The name of the snapshot to get.
+        /// Required. Identifier. The name of the snapshot to get.
         /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2626,7 +2626,7 @@ namespace Google.Cloud.PubSub.V1
         /// state captured by a snapshot.
         /// </summary>
         /// <param name="snapshot">
-        /// Required. The name of the snapshot to get.
+        /// Required. Identifier. The name of the snapshot to get.
         /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2668,7 +2668,7 @@ namespace Google.Cloud.PubSub.V1
         /// state captured by a snapshot.
         /// </summary>
         /// <param name="project">
-        /// Required. The name of the project in which to list snapshots.
+        /// Required. Identifier. The name of the project in which to list snapshots.
         /// Format is `projects/{project-id}`.
         /// </param>
         /// <param name="pageToken">
@@ -2706,7 +2706,7 @@ namespace Google.Cloud.PubSub.V1
         /// state captured by a snapshot.
         /// </summary>
         /// <param name="project">
-        /// Required. The name of the project in which to list snapshots.
+        /// Required. Identifier. The name of the project in which to list snapshots.
         /// Format is `projects/{project-id}`.
         /// </param>
         /// <param name="pageToken">
@@ -2744,7 +2744,7 @@ namespace Google.Cloud.PubSub.V1
         /// state captured by a snapshot.
         /// </summary>
         /// <param name="project">
-        /// Required. The name of the project in which to list snapshots.
+        /// Required. Identifier. The name of the project in which to list snapshots.
         /// Format is `projects/{project-id}`.
         /// </param>
         /// <param name="pageToken">
@@ -2782,7 +2782,7 @@ namespace Google.Cloud.PubSub.V1
         /// state captured by a snapshot.
         /// </summary>
         /// <param name="project">
-        /// Required. The name of the project in which to list snapshots.
+        /// Required. Identifier. The name of the project in which to list snapshots.
         /// Format is `projects/{project-id}`.
         /// </param>
         /// <param name="pageToken">
@@ -2903,10 +2903,10 @@ namespace Google.Cloud.PubSub.V1
         /// REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
-        /// Required. User-provided name for this snapshot. If the name is not provided
-        /// in the request, the server will assign a random name for this snapshot on
-        /// the same project as the subscription. Note that for REST API requests, you
-        /// must specify a name.  See the [resource name
+        /// Required. Identifier. User-provided name for this snapshot. If the name is
+        /// not provided in the request, the server will assign a random name for this
+        /// snapshot on the same project as the subscription. Note that for REST API
+        /// requests, you must specify a name.  See the [resource name
         /// rules](https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
@@ -2949,10 +2949,10 @@ namespace Google.Cloud.PubSub.V1
         /// REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
-        /// Required. User-provided name for this snapshot. If the name is not provided
-        /// in the request, the server will assign a random name for this snapshot on
-        /// the same project as the subscription. Note that for REST API requests, you
-        /// must specify a name.  See the [resource name
+        /// Required. Identifier. User-provided name for this snapshot. If the name is
+        /// not provided in the request, the server will assign a random name for this
+        /// snapshot on the same project as the subscription. Note that for REST API
+        /// requests, you must specify a name.  See the [resource name
         /// rules](https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
@@ -2995,10 +2995,10 @@ namespace Google.Cloud.PubSub.V1
         /// REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
-        /// Required. User-provided name for this snapshot. If the name is not provided
-        /// in the request, the server will assign a random name for this snapshot on
-        /// the same project as the subscription. Note that for REST API requests, you
-        /// must specify a name.  See the [resource name
+        /// Required. Identifier. User-provided name for this snapshot. If the name is
+        /// not provided in the request, the server will assign a random name for this
+        /// snapshot on the same project as the subscription. Note that for REST API
+        /// requests, you must specify a name.  See the [resource name
         /// rules](https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
@@ -3037,10 +3037,10 @@ namespace Google.Cloud.PubSub.V1
         /// REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
-        /// Required. User-provided name for this snapshot. If the name is not provided
-        /// in the request, the server will assign a random name for this snapshot on
-        /// the same project as the subscription. Note that for REST API requests, you
-        /// must specify a name.  See the [resource name
+        /// Required. Identifier. User-provided name for this snapshot. If the name is
+        /// not provided in the request, the server will assign a random name for this
+        /// snapshot on the same project as the subscription. Note that for REST API
+        /// requests, you must specify a name.  See the [resource name
         /// rules](https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
@@ -3083,10 +3083,10 @@ namespace Google.Cloud.PubSub.V1
         /// REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
-        /// Required. User-provided name for this snapshot. If the name is not provided
-        /// in the request, the server will assign a random name for this snapshot on
-        /// the same project as the subscription. Note that for REST API requests, you
-        /// must specify a name.  See the [resource name
+        /// Required. Identifier. User-provided name for this snapshot. If the name is
+        /// not provided in the request, the server will assign a random name for this
+        /// snapshot on the same project as the subscription. Note that for REST API
+        /// requests, you must specify a name.  See the [resource name
         /// rules](https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
@@ -3129,10 +3129,10 @@ namespace Google.Cloud.PubSub.V1
         /// REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
-        /// Required. User-provided name for this snapshot. If the name is not provided
-        /// in the request, the server will assign a random name for this snapshot on
-        /// the same project as the subscription. Note that for REST API requests, you
-        /// must specify a name.  See the [resource name
+        /// Required. Identifier. User-provided name for this snapshot. If the name is
+        /// not provided in the request, the server will assign a random name for this
+        /// snapshot on the same project as the subscription. Note that for REST API
+        /// requests, you must specify a name.  See the [resource name
         /// rules](https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
         /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
@@ -3325,7 +3325,7 @@ namespace Google.Cloud.PubSub.V1
         /// snapshot or its subscription, unless the same subscription is specified.
         /// </summary>
         /// <param name="snapshot">
-        /// Required. The name of the snapshot to delete.
+        /// Required. Identifier. The name of the snapshot to delete.
         /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3348,7 +3348,7 @@ namespace Google.Cloud.PubSub.V1
         /// snapshot or its subscription, unless the same subscription is specified.
         /// </summary>
         /// <param name="snapshot">
-        /// Required. The name of the snapshot to delete.
+        /// Required. Identifier. The name of the snapshot to delete.
         /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3371,7 +3371,7 @@ namespace Google.Cloud.PubSub.V1
         /// snapshot or its subscription, unless the same subscription is specified.
         /// </summary>
         /// <param name="snapshot">
-        /// Required. The name of the snapshot to delete.
+        /// Required. Identifier. The name of the snapshot to delete.
         /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3391,7 +3391,7 @@ namespace Google.Cloud.PubSub.V1
         /// snapshot or its subscription, unless the same subscription is specified.
         /// </summary>
         /// <param name="snapshot">
-        /// Required. The name of the snapshot to delete.
+        /// Required. Identifier. The name of the snapshot to delete.
         /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3414,7 +3414,7 @@ namespace Google.Cloud.PubSub.V1
         /// snapshot or its subscription, unless the same subscription is specified.
         /// </summary>
         /// <param name="snapshot">
-        /// Required. The name of the snapshot to delete.
+        /// Required. Identifier. The name of the snapshot to delete.
         /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3437,7 +3437,7 @@ namespace Google.Cloud.PubSub.V1
         /// snapshot or its subscription, unless the same subscription is specified.
         /// </summary>
         /// <param name="snapshot">
-        /// Required. The name of the snapshot to delete.
+        /// Required. Identifier. The name of the snapshot to delete.
         /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
