@@ -25,10 +25,10 @@ jobs:
   conformance:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@v6
       with:
         submodules: true
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@v6
       with:
         repository: googleapis/cloud-bigtable-clients-test
         ref: main
