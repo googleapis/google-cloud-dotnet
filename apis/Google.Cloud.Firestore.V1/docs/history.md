@@ -4,6 +4,16 @@ This package is primarily a dependency of Google.Cloud.Firestore. See the
 [Google.Cloud.Firestore version history](https://googleapis.dev/dotnet/Google.Cloud.Firestore/latest/history.html)
 for more details.
 
+## Version 4.1.0, released 2025-12-08
+
+### New features
+
+- Publish the pipelines API to the stable branch
+
+### Documentation improvements
+
+- Minor api documentation changes
+
 ## Version 4.0.0, released 2025-12-03
 
 ### New features

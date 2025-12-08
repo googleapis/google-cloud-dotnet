@@ -4111,12 +4111,12 @@
         },
         {
             "id": "Google.Cloud.Firestore",
-            "currentVersion": "4.0.0",
+            "currentVersion": "4.1.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-12-03T09:30:32.565774126Z",
+            "releaseTimestamp": "2025-12-08T14:18:22.842451943Z",
             "lastGeneratedCommit": "534adc56f58b36a6a3e4b5b1cb7f9ee25a8e8a25",
-            "lastReleasedCommit": "4823efd0b9944891ec5c387104dcc2ec401307a8",
+            "lastReleasedCommit": "534adc56f58b36a6a3e4b5b1cb7f9ee25a8e8a25",
             "apiPaths": [
                 "google/firestore/v1"
             ],
