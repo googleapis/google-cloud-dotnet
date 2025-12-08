@@ -4777,6 +4777,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.HypercomputeCluster.V1Beta/Google.Cloud.HypercomputeCluster.V1Beta"
             ]
+        },
+        {
+            "id": "Google.Cloud.Maintenance.Api.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/maintenance/api/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.Maintenance.Api.V1/Google.Cloud.Maintenance.Api.V1"
+            ]
         }
     ],
     "ignoredApiPaths": [
