@@ -46,6 +46,12 @@
                 "DeleteDocumentAsync"
               ]
             },
+            "ExecutePipeline": {
+              "methods": [
+                "ExecutePipeline",
+                "ExecutePipelineAsync"
+              ]
+            },
             "GetDocument": {
               "methods": [
                 "GetDocument",

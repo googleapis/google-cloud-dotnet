@@ -35,7 +35,9 @@ namespace Google.Cloud.Firestore.V1
             yield return BloomFilterReflection.Descriptor;
             yield return CommonReflection.Descriptor;
             yield return DocumentReflection.Descriptor;
+            yield return ExplainStatsReflection.Descriptor;
             yield return FirestoreReflection.Descriptor;
+            yield return PipelineReflection.Descriptor;
             yield return QueryReflection.Descriptor;
             yield return QueryProfileReflection.Descriptor;
             yield return WriteReflection.Descriptor;

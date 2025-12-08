@@ -58,6 +58,7 @@ namespace Google.Cloud.Firestore.V1
             CommitSettings = existing.CommitSettings;
             RollbackSettings = existing.RollbackSettings;
             RunQuerySettings = existing.RunQuerySettings;
+            ExecutePipelineSettings = existing.ExecutePipelineSettings;
             RunAggregationQuerySettings = existing.RunAggregationQuerySettings;
             PartitionQuerySettings = existing.PartitionQuerySettings;
             WriteSettings = existing.WriteSettings;
@@ -238,6 +239,13 @@ namespace Google.Cloud.Firestore.V1
         /// </summary>
         /// <remarks>Timeout: 300 seconds.</remarks>
         public gaxgrpc::CallSettings RunQuerySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreClient.ExecutePipeline</c> and <c>FirestoreClient.ExecutePipelineAsync</c>.
+        /// </summary>
+        /// <remarks>Timeout: 300 seconds.</remarks>
+        public gaxgrpc::CallSettings ExecutePipelineSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1012,6 +1020,22 @@ namespace Google.Cloud.Firestore.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Server streaming methods for <see cref="ExecutePipeline(ExecutePipelineRequest,gaxgrpc::CallSettings)"/>.
+        /// </summary>
+        public abstract partial class ExecutePipelineStream : gaxgrpc::ServerStreamingBase<ExecutePipelineResponse>
+        {
+        }
+
+        /// <summary>
+        /// Executes a pipeline query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual ExecutePipelineStream ExecutePipeline(ExecutePipelineRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
         /// Server streaming methods for
         /// <see cref="RunAggregationQuery(RunAggregationQueryRequest,gaxgrpc::CallSettings)"/>.
         /// </summary>
@@ -1301,6 +1325,8 @@ namespace Google.Cloud.Firestore.V1
 
         private readonly gaxgrpc::ApiServerStreamingCall<RunQueryRequest, RunQueryResponse> _callRunQuery;
 
+        private readonly gaxgrpc::ApiServerStreamingCall<ExecutePipelineRequest, ExecutePipelineResponse> _callExecutePipeline;
+
         private readonly gaxgrpc::ApiServerStreamingCall<RunAggregationQueryRequest, RunAggregationQueryResponse> _callRunAggregationQuery;
 
         private readonly gaxgrpc::ApiCall<PartitionQueryRequest, PartitionQueryResponse> _callPartitionQuery;
@@ -1358,6 +1384,9 @@ namespace Google.Cloud.Firestore.V1
             _callRunQuery = clientHelper.BuildApiCall<RunQueryRequest, RunQueryResponse>("RunQuery", grpcClient.RunQuery, effectiveSettings.RunQuerySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callRunQuery);
             Modify_RunQueryApiCall(ref _callRunQuery);
+            _callExecutePipeline = clientHelper.BuildApiCall<ExecutePipelineRequest, ExecutePipelineResponse>("ExecutePipeline", grpcClient.ExecutePipeline, effectiveSettings.ExecutePipelineSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ExecutePipelineRequest>().WithExtractedParameter("project_id", "^projects/([^/]+)(?:/.*)?$", request => request.Database).WithExtractedParameter("database_id", "^projects/[^/]+/databases/([^/]+)(?:/.*)?$", request => request.Database));
+            Modify_ApiCall(ref _callExecutePipeline);
+            Modify_ExecutePipelineApiCall(ref _callExecutePipeline);
             _callRunAggregationQuery = clientHelper.BuildApiCall<RunAggregationQueryRequest, RunAggregationQueryResponse>("RunAggregationQuery", grpcClient.RunAggregationQuery, effectiveSettings.RunAggregationQuerySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callRunAggregationQuery);
             Modify_RunAggregationQueryApiCall(ref _callRunAggregationQuery);
@@ -1406,6 +1435,8 @@ namespace Google.Cloud.Firestore.V1
 
         partial void Modify_RunQueryApiCall(ref gaxgrpc::ApiServerStreamingCall<RunQueryRequest, RunQueryResponse> call);
 
+        partial void Modify_ExecutePipelineApiCall(ref gaxgrpc::ApiServerStreamingCall<ExecutePipelineRequest, ExecutePipelineResponse> call);
+
         partial void Modify_RunAggregationQueryApiCall(ref gaxgrpc::ApiServerStreamingCall<RunAggregationQueryRequest, RunAggregationQueryResponse> call);
 
         partial void Modify_PartitionQueryApiCall(ref gaxgrpc::ApiCall<PartitionQueryRequest, PartitionQueryResponse> call);
@@ -1445,6 +1476,8 @@ namespace Google.Cloud.Firestore.V1
         partial void Modify_RollbackRequest(ref RollbackRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RunQueryRequest(ref RunQueryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExecutePipelineRequest(ref ExecutePipelineRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RunAggregationQueryRequest(ref RunAggregationQueryRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1675,6 +1708,27 @@ namespace Google.Cloud.Firestore.V1
         {
             Modify_RunQueryRequest(ref request, ref callSettings);
             return new RunQueryStreamImpl(_callRunQuery.Call(request, callSettings));
+        }
+
+        internal sealed partial class ExecutePipelineStreamImpl : ExecutePipelineStream
+        {
+            /// <summary>Construct the server streaming method for <c>ExecutePipeline</c>.</summary>
+            /// <param name="call">The underlying gRPC server streaming call.</param>
+            public ExecutePipelineStreamImpl(grpccore::AsyncServerStreamingCall<ExecutePipelineResponse> call) => GrpcCall = call;
+
+            public override grpccore::AsyncServerStreamingCall<ExecutePipelineResponse> GrpcCall { get; }
+        }
+
+        /// <summary>
+        /// Executes a pipeline query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public override FirestoreClient.ExecutePipelineStream ExecutePipeline(ExecutePipelineRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExecutePipelineRequest(ref request, ref callSettings);
+            return new ExecutePipelineStreamImpl(_callExecutePipeline.Call(request, callSettings));
         }
 
         internal sealed partial class RunAggregationQueryStreamImpl : RunAggregationQueryStream
