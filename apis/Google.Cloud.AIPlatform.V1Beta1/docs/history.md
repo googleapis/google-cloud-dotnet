@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta63, released 2025-12-08
+
+### Bug fixes
+
+- Fix issue when using UrlContext tool
+
 ## Version 1.0.0-beta62, released 2025-12-03
 
 ### New features
