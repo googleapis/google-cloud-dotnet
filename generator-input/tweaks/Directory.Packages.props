@@ -6,7 +6,7 @@
     <PackageVersion Include="Google.Api.Gax.Grpc" Version="[4.12.1, 5.0.0)" />
     <PackageVersion Include="Google.Api.CommonProtos" Version="[2.17.0, 3.0.0)" />
     <PackageVersion Include="Google.LongRunning" Version="[3.4.0, 4.0.0)" />
-    <PackageVersion Include="Google.Protobuf" Version="3.31.1"/>
+    <PackageVersion Include="Google.Protobuf" Version="3.33.2"/>
     
     <PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="4.14.0" />
     <PackageVersion Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.14.0" />

@@ -16,7 +16,7 @@
       - the current Google.Api.CommonProtos version depends on.
       -->
     <PackageVersion Include="Google.Api.CommonProtos" Version="[2.17.0, 3.0.0)" />
-    <PackageVersion Include="Google.Protobuf" Version="3.31.1" />
+    <PackageVersion Include="Google.Protobuf" Version="3.33.2" />
 
     <!-- System packages -->
     <PackageVersion Include="Microsoft.Bcl.AsyncInterfaces" Version="10.0.0" />
