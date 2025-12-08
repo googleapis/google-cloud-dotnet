@@ -26,7 +26,7 @@ namespace Google.Cloud.Run.V2 {
           string.Concat(
             "CiNnb29nbGUvY2xvdWQvcnVuL3YyL2NvbmRpdGlvbi5wcm90bxITZ29vZ2xl",
             "LmNsb3VkLnJ1bi52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
-            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLHDAoJQ29uZGl0",
+            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLiDAoJQ29uZGl0",
             "aW9uEgwKBHR5cGUYASABKAkSMwoFc3RhdGUYAiABKA4yJC5nb29nbGUuY2xv",
             "dWQucnVuLnYyLkNvbmRpdGlvbi5TdGF0ZRIPCgdtZXNzYWdlGAMgASgJEjgK",
             "FGxhc3RfdHJhbnNpdGlvbl90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVm",
@@ -58,13 +58,14 @@ namespace Google.Cloud.Run.V2 {
             "SVpFRF9QQVRIX1JFU1BPTlNFX1BFTkRJTkcQBxIhCh1NSU5fSU5TVEFOQ0VT",
             "X05PVF9QUk9WSVNJT05FRBAIEiEKHUFDVElWRV9SRVZJU0lPTl9MSU1JVF9S",
             "RUFDSEVEEAkSEQoNTk9fREVQTE9ZTUVOVBAKEhgKFEhFQUxUSF9DSEVDS19T",
-            "S0lQUEVEEAsSGQoVTUlOX0lOU1RBTkNFU19XQVJNSU5HEAwimwEKD0V4ZWN1",
+            "S0lQUEVEEAsSGQoVTUlOX0lOU1RBTkNFU19XQVJNSU5HEAwitgEKD0V4ZWN1",
             "dGlvblJlYXNvbhIeChpFWEVDVVRJT05fUkVBU09OX1VOREVGSU5FRBAAEiQK",
             "IEpPQl9TVEFUVVNfU0VSVklDRV9QT0xMSU5HX0VSUk9SEAESFgoSTk9OX1pF",
             "Uk9fRVhJVF9DT0RFEAISDQoJQ0FOQ0VMTEVEEAMSDgoKQ0FOQ0VMTElORxAE",
-            "EgsKB0RFTEVURUQQBUIJCgdyZWFzb25zQlYKF2NvbS5nb29nbGUuY2xvdWQu",
-            "cnVuLnYyQg5Db25kaXRpb25Qcm90b1ABWiljbG91ZC5nb29nbGUuY29tL2dv",
-            "L3J1bi9hcGl2Mi9ydW5wYjtydW5wYmIGcHJvdG8z"));
+            "EgsKB0RFTEVURUQQBRIZChVERUxBWUVEX1NUQVJUX1BFTkRJTkcQBkIJCgdy",
+            "ZWFzb25zQlYKF2NvbS5nb29nbGUuY2xvdWQucnVuLnYyQg5Db25kaXRpb25Q",
+            "cm90b1ABWiljbG91ZC5nb29nbGUuY29tL2dvL3J1bi9hcGl2Mi9ydW5wYjty",
+            "dW5wYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -863,6 +864,10 @@ namespace Google.Cloud.Run.V2 {
         /// The execution was deleted.
         /// </summary>
         [pbr::OriginalName("DELETED")] Deleted = 5,
+        /// <summary>
+        /// A delayed execution is waiting for a start time.
+        /// </summary>
+        [pbr::OriginalName("DELAYED_START_PENDING")] DelayedStartPending = 6,
       }
 
     }
