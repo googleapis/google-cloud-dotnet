@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,10 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc;
 using Google.Api.Gax.ResourceNames;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.PubSub.V1;
 using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Tools.Snippets
@@ -44,6 +46,14 @@ namespace Google.Cloud.Tools.Snippets
         /// Create a subscription ID with a prefix which is used to check which subscriptions to delete at the end of the test.
         /// </summary>
         internal string CreateSubscriptionId() => IdGenerator.FromGuid(prefix: SubscriptionPrefix);
+
+        internal string CreateTopic()
+        {
+            PublisherServiceApiClient client = PublisherServiceApiClient.Create();
+            TopicName topicName = new TopicName(ProjectId, CreateTopicId());
+            Topic topic = client.CreateTopic(topicName);
+            return topic.Name;
+        }
 
         public override void Dispose()
         {
