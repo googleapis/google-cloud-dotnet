@@ -1788,12 +1788,12 @@
         },
         {
             "id": "Google.Cloud.GkeMultiCloud.V1",
-            "currentVersion": "2.9.0",
+            "currentVersion": "2.10.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-05T17:10:45.968624470Z",
+            "releaseTimestamp": "2025-12-08T14:15:15.981749744Z",
             "lastGeneratedCommit": "9f786b58f34980b058b854d1e5d33f4435946d0a",
-            "lastReleasedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
+            "lastReleasedCommit": "9f786b58f34980b058b854d1e5d33f4435946d0a",
             "apiPaths": [
                 "google/cloud/gkemulticloud/v1"
             ],
@@ -2823,12 +2823,12 @@
         },
         {
             "id": "Google.Cloud.Run.V2",
-            "currentVersion": "2.17.0",
+            "currentVersion": "2.18.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-06T09:34:53.481058287Z",
+            "releaseTimestamp": "2025-12-08T14:16:13.747984058Z",
             "lastGeneratedCommit": "d534d01c1eefcc9efc7b9182a2b98e9fe5b0922b",
-            "lastReleasedCommit": "9070e63a1f574261c153ef6e94afc55677200337",
+            "lastReleasedCommit": "d534d01c1eefcc9efc7b9182a2b98e9fe5b0922b",
             "apiPaths": [
                 "google/cloud/run/v2"
             ],
