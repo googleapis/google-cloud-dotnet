@@ -24,37 +24,26 @@ using Value = Google.Protobuf.WellKnownTypes.Value;
 
 namespace Google.Cloud.VertexAI.Extensions.Tests;
 
-public class AsIImageGeneratorTest
+public class BuildIImageGeneratorTest
 {
-    [Fact]
-    public void AsIImageGenerator_ValidArguments_CreatesIImageGeneratorSuccessfully()
-    {
-        PredictionServiceClient client = CreateClient();
-        IImageGenerator generator = client.AsIImageGenerator();
-        Assert.NotNull(generator);
-        Assert.Same(client, generator.GetService<PredictionServiceClient>());
-    }
-
     [Fact]
     public void BuildIImageGenerator_ValidArguments_CreatesIImageGeneratorSuccessfully()
     {
-        IImageGenerator generator = new PredictionServiceClientBuilder() { ApiKey = "fake-api-key" }.BuildIImageGenerator();
+        IImageGenerator generator = CreateClientBuilder().BuildIImageGenerator();
         Assert.NotNull(generator.GetService<PredictionServiceClient>());
     }
 
 
     [Fact]
-    public void AsIImageGenerator_InvalidArguments_Throws()
+    public void BuildIImageGenerator_InvalidArguments_Throws()
     {
-        Assert.Throws<ArgumentNullException>("client", () => VertexAIExtensions.AsIImageGenerator(null!));
+        Assert.Throws<ArgumentNullException>("builder", () => VertexAIExtensions.BuildIImageGenerator(null!));
     }
 
     [Fact]
     public void IImageGenerator_GetService_InvalidArguments_Throws()
     {
-        PredictionServiceClient client = CreateClient();
-
-        IImageGenerator imageGenerator = client.AsIImageGenerator();
+        IImageGenerator imageGenerator = CreateClientBuilder().BuildIImageGenerator();
         Assert.NotNull(imageGenerator);
 
         Assert.Throws<ArgumentNullException>("serviceType", () => imageGenerator.GetService(null!));
@@ -66,12 +55,10 @@ public class AsIImageGeneratorTest
     [InlineData("projects/test-project/locations/us-central1/publishers/google/models/imagen-3.0-generate-001")]
     public void IImageGenerator_GetService_ReturnsExpectedInstance(string? defaultModelId)
     {
-        PredictionServiceClient client = CreateClient();
-
-        IImageGenerator imageGenerator = client.AsIImageGenerator(defaultModelId);
+        IImageGenerator imageGenerator = CreateClientBuilder().BuildIImageGenerator(defaultModelId);
         Assert.NotNull(imageGenerator);
 
-        Assert.Same(client, imageGenerator.GetService<PredictionServiceClient>());
+        Assert.Same(imageGenerator.GetService<PredictionServiceClient>(), imageGenerator.GetService<PredictionServiceClient>());
 
         Assert.Same(imageGenerator, imageGenerator.GetService<IImageGenerator>());
         Assert.Same(imageGenerator, imageGenerator.GetService<IDisposable>());
@@ -86,14 +73,12 @@ public class AsIImageGeneratorTest
     [Fact]
     public void IImageGenerator_Dispose_Nop()
     {
-        PredictionServiceClient client = CreateClient();
-
-        IImageGenerator imageGenerator = client.AsIImageGenerator();
+        IImageGenerator imageGenerator = CreateClientBuilder().BuildIImageGenerator();
         Assert.NotNull(imageGenerator);
 
         imageGenerator.Dispose();
 
-        Assert.Same(client, imageGenerator.GetService<PredictionServiceClient>());
+        Assert.NotNull(imageGenerator.GetService<PredictionServiceClient>());
     }
 
     [Fact]
@@ -111,7 +96,7 @@ public class AsIImageGeneratorTest
             }
         };
 
-        IImageGenerator imageGenerator = CreateClient(invoker).AsIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+        IImageGenerator imageGenerator = CreateClientBuilder(invoker).BuildIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
 
         ImageGenerationRequest request = new() { Prompt = "A beautiful sunset" };
         ImageGenerationResponse result = await imageGenerator.GenerateAsync(request);
@@ -143,7 +128,7 @@ public class AsIImageGeneratorTest
             }
         };
 
-        IImageGenerator imageGenerator = CreateClient(invoker).AsIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+        IImageGenerator imageGenerator = CreateClientBuilder(invoker).BuildIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ImageGenerationRequest request = new() { Prompt = "Generate a colorful landscape" };
 
         ImageGenerationResponse result = await imageGenerator.GenerateAsync(request);
@@ -174,7 +159,7 @@ public class AsIImageGeneratorTest
             }
         };
 
-        IImageGenerator imageGenerator = CreateClient(invoker).AsIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+        IImageGenerator imageGenerator = CreateClientBuilder(invoker).BuildIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ImageGenerationRequest request = new() { Prompt = "" };
 
         ImageGenerationResponse result = await imageGenerator.GenerateAsync(request);
@@ -204,7 +189,7 @@ public class AsIImageGeneratorTest
             }
         };
 
-        IImageGenerator imageGenerator = CreateClient(invoker).AsIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+        IImageGenerator imageGenerator = CreateClientBuilder(invoker).BuildIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         ImageGenerationRequest request = new() { Prompt = null };
 
         ImageGenerationResponse result = await imageGenerator.GenerateAsync(request);
@@ -247,7 +232,7 @@ public class AsIImageGeneratorTest
             }
         };
 
-        IImageGenerator imageGenerator = CreateClient(invoker).AsIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/default-model");
+        IImageGenerator imageGenerator = CreateClientBuilder(invoker).BuildIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/default-model");
         
         ImageGenerationRequest request = new() { Prompt = "Test image generation" };
         ImageGenerationOptions options = new()
@@ -290,7 +275,7 @@ public class AsIImageGeneratorTest
             }
         };
 
-        IImageGenerator imageGenerator = CreateClient(invoker).AsIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+        IImageGenerator imageGenerator = CreateClientBuilder(invoker).BuildIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         
         ImageGenerationRequest request = new() { Prompt = "Multiple images" };
         ImageGenerationOptions options = new() { Count = 3 };
@@ -330,7 +315,7 @@ public class AsIImageGeneratorTest
             }
         };
 
-        IImageGenerator imageGenerator = CreateClient(invoker).AsIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+        IImageGenerator imageGenerator = CreateClientBuilder(invoker).BuildIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         
         ImageGenerationRequest request = new() { Prompt = "Image with specific size" };
         ImageGenerationOptions options = new() 
@@ -367,7 +352,7 @@ public class AsIImageGeneratorTest
             }
         };
 
-        IImageGenerator imageGenerator = CreateClient(invoker).AsIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+        IImageGenerator imageGenerator = CreateClientBuilder(invoker).BuildIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         
         ImageGenerationRequest request = new() { Prompt = "Square image" };
         ImageGenerationOptions options = new() 
@@ -402,7 +387,7 @@ public class AsIImageGeneratorTest
             }
         };
 
-        IImageGenerator imageGenerator = CreateClient(invoker).AsIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+        IImageGenerator imageGenerator = CreateClientBuilder(invoker).BuildIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         
         ImageGenerationRequest request = new() { Prompt = "Image with invalid size" };
         ImageGenerationOptions options = new() 
@@ -434,7 +419,7 @@ public class AsIImageGeneratorTest
             }
         };
 
-        IImageGenerator imageGenerator = CreateClient(invoker).AsIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+        IImageGenerator imageGenerator = CreateClientBuilder(invoker).BuildIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         
         ImageGenerationRequest request = new() { Prompt = "Custom request" };
         ImageGenerationOptions options = new()
@@ -496,7 +481,7 @@ public class AsIImageGeneratorTest
             }
         };
 
-        IImageGenerator imageGenerator = CreateClient(invoker).AsIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/default-model");
+        IImageGenerator imageGenerator = CreateClientBuilder(invoker).BuildIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/default-model");
         
         ImageGenerationRequest request = new() { Prompt = "Complete test" };
         ImageGenerationOptions options = new()
@@ -536,7 +521,7 @@ public class AsIImageGeneratorTest
             }
         };
 
-        IImageGenerator imageGenerator = CreateClient(invoker).AsIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+        IImageGenerator imageGenerator = CreateClientBuilder(invoker).BuildIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         
         ImageGenerationRequest request = new() { Prompt = "Test raw representation" };
 
@@ -560,7 +545,7 @@ public class AsIImageGeneratorTest
             }
         };
 
-        IImageGenerator imageGenerator = CreateClient(invoker).AsIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+        IImageGenerator imageGenerator = CreateClientBuilder(invoker).BuildIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         
         ImageGenerationRequest request = new() { Prompt = "Empty response test" };
 
@@ -592,7 +577,7 @@ public class AsIImageGeneratorTest
             }
         };
 
-        IImageGenerator imageGenerator = CreateClient(invoker).AsIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+        IImageGenerator imageGenerator = CreateClientBuilder(invoker).BuildIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         
         ImageGenerationRequest request = new() { Prompt = "Malformed test" };
 
@@ -629,7 +614,7 @@ public class AsIImageGeneratorTest
             }
         };
 
-        IImageGenerator imageGenerator = CreateClient(invoker).AsIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+        IImageGenerator imageGenerator = CreateClientBuilder(invoker).BuildIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
         
         ImageGenerationRequest request = new() { Prompt = "No mime type test" };
 
@@ -660,7 +645,7 @@ public class AsIImageGeneratorTest
             }
         };
 
-        IImageGenerator imageGenerator = CreateClient(invoker).AsIImageGenerator();
+        IImageGenerator imageGenerator = CreateClientBuilder(invoker).BuildIImageGenerator();
         
         ImageGenerationRequest request = new() { Prompt = "Test with full resource model ID" };
         ImageGenerationOptions options = new()
@@ -694,7 +679,7 @@ public class AsIImageGeneratorTest
             }
         };
 
-        IImageGenerator imageGenerator = CreateClient(invoker).AsIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/default-model-id");
+        IImageGenerator imageGenerator = CreateClientBuilder(invoker).BuildIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/default-model-id");
         
         ImageGenerationRequest request = new() { Prompt = "Default model test" };
 
@@ -722,7 +707,7 @@ public class AsIImageGeneratorTest
             }
         };
 
-        IImageGenerator imageGenerator = CreateClient(invoker).AsIImageGenerator();
+        IImageGenerator imageGenerator = CreateClientBuilder(invoker).BuildIImageGenerator();
         
         ImageGenerationRequest request = new() { Prompt = "Test with complex endpoint" };
         ImageGenerationOptions options = new()
@@ -742,7 +727,7 @@ public class AsIImageGeneratorTest
     [Fact]
     public async Task IImageGenerator_GenerateAsync_NullRequest_ThrowsArgumentNullException()
     {
-        IImageGenerator imageGenerator = CreateClient().AsIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+        IImageGenerator imageGenerator = CreateClientBuilder().BuildIImageGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
 
         await Assert.ThrowsAsync<ArgumentNullException>("request", () => imageGenerator.GenerateAsync(null!));
     }
@@ -760,12 +745,12 @@ public class AsIImageGeneratorTest
             }
         };
 
-    private static PredictionServiceClient CreateClient(CallInvoker? callInvoker = null) =>
+    private static PredictionServiceClientBuilder CreateClientBuilder(CallInvoker? callInvoker = null) =>
         new PredictionServiceClientBuilder()
         {
             ApiKey = "fake-api-key",
             CallInvoker = callInvoker,
-        }.Build();
+        };
 
     private sealed class DelegateCallInvoker : CallInvoker
     {

@@ -29,7 +29,8 @@ public class VertexAIExtensionsTest
     [Fact]
     public async Task AsIChatClient_BasicRequestResponse_NonStreaming()
     {
-        IChatClient client = (await CreateClientAsync()).AsIChatClient(EndpointName.FormatProjectLocationPublisherModel(s_projectId, s_location, "google", "gemini-2.5-pro"));
+        IChatClient client = await new PredictionServiceClientBuilder()
+            .BuildIChatClientAsync(EndpointName.FormatProjectLocationPublisherModel(s_projectId, s_location, "google", "gemini-2.5-pro"));
         Assert.NotNull(client);
 
         var response = await client.GetResponseAsync("Hello");
@@ -40,7 +41,8 @@ public class VertexAIExtensionsTest
     [Fact]
     public async Task AsIChatClient_BasicRequestResponse_Streaming()
     {
-        IChatClient client = (await CreateClientAsync()).AsIChatClient(EndpointName.FormatProjectLocationPublisherModel(s_projectId, s_location, "google", "gemini-2.5-pro"));
+        IChatClient client = await new PredictionServiceClientBuilder()
+            .BuildIChatClientAsync(EndpointName.FormatProjectLocationPublisherModel(s_projectId, s_location, "google", "gemini-2.5-pro"));
         Assert.NotNull(client);
 
         ChatResponse response = await client.GetStreamingResponseAsync("Hello").ToChatResponseAsync();
@@ -51,7 +53,8 @@ public class VertexAIExtensionsTest
     [Fact]
     public async Task AsIEmbeddingGenerator_EmbedSeveralInputs()
     {
-        IEmbeddingGenerator<string, Embedding<float>> generator = (await CreateClientAsync()).AsIEmbeddingGenerator(EndpointName.FormatProjectLocationPublisherModel(s_projectId, s_location, "google", "gemini-embedding-001"));
+        IEmbeddingGenerator<string, Embedding<float>> generator = await new PredictionServiceClientBuilder()
+            .BuildIEmbeddingGeneratorAsync(EndpointName.FormatProjectLocationPublisherModel(s_projectId, s_location, "google", "gemini-embedding-001"));
         Assert.NotNull(generator);
 
         GeneratedEmbeddings<Embedding<float>> embeddings = await generator.GenerateAsync(["Hello", "World"]);
@@ -67,7 +70,8 @@ public class VertexAIExtensionsTest
     [Fact]
     public async Task AsIImageGenerator_GenerateImage()
     {
-        IImageGenerator generator = (await CreateClientAsync()).AsIImageGenerator(EndpointName.FormatProjectLocationPublisherModel(s_projectId, s_location, "google", "imagen-4.0-fast-generate-001"));
+        IImageGenerator generator = await new PredictionServiceClientBuilder()
+            .BuildIImageGeneratorAsync(EndpointName.FormatProjectLocationPublisherModel(s_projectId, s_location, "google", "imagen-4.0-fast-generate-001"));
         Assert.NotNull(generator);
 
         ImageGenerationResponse response = await generator.GenerateImagesAsync("A cute baby sea otter");
@@ -77,8 +81,5 @@ public class VertexAIExtensionsTest
         Assert.Equal("image/png", image.MediaType);
         Assert.InRange(image.Data.Length, 1, int.MaxValue);
     }
-
-    private static Task<PredictionServiceClient> CreateClientAsync() =>
-        PredictionServiceClient.CreateAsync();
 }
 
