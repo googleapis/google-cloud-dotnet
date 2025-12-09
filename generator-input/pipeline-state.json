@@ -1788,12 +1788,12 @@
         },
         {
             "id": "Google.Cloud.GkeMultiCloud.V1",
-            "currentVersion": "2.9.0",
+            "currentVersion": "2.10.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-05T17:10:45.968624470Z",
+            "releaseTimestamp": "2025-12-09T11:05:30.668975633Z",
             "lastGeneratedCommit": "9f786b58f34980b058b854d1e5d33f4435946d0a",
-            "lastReleasedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
+            "lastReleasedCommit": "9f786b58f34980b058b854d1e5d33f4435946d0a",
             "apiPaths": [
                 "google/cloud/gkemulticloud/v1"
             ],
