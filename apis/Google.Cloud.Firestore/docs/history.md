@@ -1,5 +1,15 @@
 # Version history
 
+## Version 4.1.0, released 2025-12-09
+
+### New features
+
+- Publish the pipelines API to the stable branch
+
+### Documentation improvements
+
+- Minor api documentation changes
+
 ## Version 4.0.0, released 2025-12-03
 
 ### New features
