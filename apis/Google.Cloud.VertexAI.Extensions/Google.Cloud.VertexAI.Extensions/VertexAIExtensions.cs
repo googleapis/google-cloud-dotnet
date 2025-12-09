@@ -57,7 +57,7 @@ public static class VertexAIExtensions
         this PredictionServiceClientBuilder builder,
         IServiceProvider? provider = null, string? defaultModelId = null)
     {
-        GaxPreconditions.CheckNotNull(builder, nameof(builder));
+        builder = builder.WithAssemblyVersionHeader();
 
         PredictionServiceClient client = provider is not null ?
             builder.Build(provider) :
@@ -83,7 +83,7 @@ public static class VertexAIExtensions
         IServiceProvider? provider = null, string? defaultModelId = null,
         CancellationToken cancellationToken = default)
     {
-        GaxPreconditions.CheckNotNull(builder, nameof(builder));
+        builder = builder.WithAssemblyVersionHeader();
 
         PredictionServiceClient client = await (provider is not null ?
             builder.BuildAsync(provider, cancellationToken) :
@@ -126,7 +126,7 @@ public static class VertexAIExtensions
         this PredictionServiceClientBuilder builder,
         IServiceProvider? provider = null, string? defaultModelId = null)
     {
-        GaxPreconditions.CheckNotNull(builder, nameof(builder));
+        builder = builder.WithAssemblyVersionHeader();
 
         PredictionServiceClient client = provider is not null ?
             builder.Build(provider) :
@@ -152,7 +152,7 @@ public static class VertexAIExtensions
         IServiceProvider? provider = null, string? defaultModelId = null,
         CancellationToken cancellationToken = default)
     {
-        GaxPreconditions.CheckNotNull(builder, nameof(builder));
+        builder = builder.WithAssemblyVersionHeader();
 
         PredictionServiceClient client = await (provider is not null ?
             builder.BuildAsync(provider, cancellationToken) :
@@ -194,7 +194,7 @@ public static class VertexAIExtensions
         this PredictionServiceClientBuilder builder,
         IServiceProvider? provider = null, string? defaultModelId = null)
     {
-        GaxPreconditions.CheckNotNull(builder, nameof(builder));
+        builder = builder.WithAssemblyVersionHeader();
 
         PredictionServiceClient client = provider is not null ?
             builder.Build(provider) :
@@ -220,7 +220,7 @@ public static class VertexAIExtensions
         IServiceProvider? provider = null, string? defaultModelId = null,
         CancellationToken cancellationToken = default)
     {
-        GaxPreconditions.CheckNotNull(builder, nameof(builder));
+        builder = builder.WithAssemblyVersionHeader();
 
         PredictionServiceClient client = await (provider is not null ?
             builder.BuildAsync(provider, cancellationToken) :
@@ -302,5 +302,43 @@ public static class VertexAIExtensions
         }
 
         return usage;
+    }
+
+    private static PredictionServiceClientBuilder WithAssemblyVersionHeader(this PredictionServiceClientBuilder builder)
+    {
+        GaxPreconditions.CheckNotNull(builder, nameof(builder));
+        var newBuilder = MemberwiseCloneBuilder();
+        newBuilder.Settings = newBuilder.Settings?.Clone() ?? new PredictionServiceSettings();
+        newBuilder.Settings.VersionHeaderBuilder.AppendAssemblyVersion("gccl", typeof(VertexAIExtensions));
+        return newBuilder;
+
+        // This is a shallow copy.
+        PredictionServiceClientBuilder MemberwiseCloneBuilder() => new PredictionServiceClientBuilder
+        {
+            ApiKey = builder.ApiKey,
+            CallInvoker = builder.CallInvoker,
+            ChannelCredentials = builder.ChannelCredentials,
+            Credential = builder.Credential,
+#pragma warning disable CS0618 // Type or member is obsolete
+            CredentialsPath = builder.CredentialsPath,
+#pragma warning restore CS0618 // Type or member is obsolete
+            Endpoint = builder.Endpoint,
+            GoogleCredential = builder.GoogleCredential,
+            GrpcAdapter = builder.GrpcAdapter,
+            GrpcChannelOptions = builder.GrpcChannelOptions,
+#pragma warning disable CS0618 // Type or member is obsolete
+            JsonCredentials = builder.JsonCredentials,
+#pragma warning restore CS0618 // Type or member is obsolete
+            Logger = builder.Logger,
+            QuotaProject = builder.QuotaProject,
+            Scopes = builder.Scopes,
+            Settings = builder.Settings,
+#pragma warning disable CS0618 // Type or member is obsolete
+            TokenAccessMethod = builder.TokenAccessMethod,
+#pragma warning restore CS0618 // Type or member is obsolete
+            UniverseDomain = builder.UniverseDomain,
+            UseJwtAccessWithScopes = builder.UseJwtAccessWithScopes,
+            UserAgent = builder.UserAgent,
+        };
     }
 }
