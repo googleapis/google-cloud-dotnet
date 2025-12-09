@@ -25,19 +25,25 @@ namespace Google.Cloud.VertexAI.Extensions;
 public static class VertexAIExtensions
 {
     /// <summary>
-    /// Creates an <see cref="IChatClient"/> wrapper around the specified <see cref="PredictionServiceClient"/>.
+    /// Builds a <see cref="PredictionServiceClient"/> and creates an <see cref="IChatClient"/> wrapper around it.
     /// </summary>
-    /// <param name="client">The <see cref="PredictionServiceClient"/> to wrap.</param>
+    /// <param name="builder">The <see cref="PredictionServiceClientBuilder"/> with which to build the <see cref="PredictionServiceClient"/>.</param>
     /// <param name="defaultModelId">
     /// The default model ID to use for chat requests if not specified in <see cref="ChatOptions.ModelId"/>.
     /// This must be the full resource name of the model, e.g. "projects/{projectId}/locations/{location}/publishers/{publisher}/models/{model}".
     /// </param>
-    /// <returns>An <see cref="IChatClient"/> that wraps the specified client.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="client"/> is <see langword="null"/>.</exception>
-    public static IChatClient AsIChatClient(
-        this PredictionServiceClient client, string? defaultModelId = null)
+    /// <param name="provider">An optional <see cref="IServiceProvider"/> from which services are requested when building the client.</param>
+    /// <returns>An <see cref="IChatClient"/> that wraps the built client.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="builder"/> is <see langword="null"/>.</exception>
+    public static IChatClient BuildIChatClient(
+        this PredictionServiceClientBuilder builder,
+        string? defaultModelId = null, IServiceProvider? provider = null)
     {
-        GaxPreconditions.CheckNotNull(client, nameof(client));
+        builder = builder.WithAssemblyVersionHeader();
+
+        PredictionServiceClient client = provider is not null ?
+            builder.Build(provider) :
+            builder.Build();
 
         return new PredictionServiceChatClient(client, defaultModelId);
     }
@@ -46,41 +52,17 @@ public static class VertexAIExtensions
     /// Builds a <see cref="PredictionServiceClient"/> and creates an <see cref="IChatClient"/> wrapper around it.
     /// </summary>
     /// <param name="builder">The <see cref="PredictionServiceClientBuilder"/> with which to build the <see cref="PredictionServiceClient"/>.</param>
-    /// <param name="provider">An optional <see cref="IServiceProvider"/> from which services are requested when building the client.</param>
     /// <param name="defaultModelId">
     /// The default model ID to use for chat requests if not specified in <see cref="ChatOptions.ModelId"/>.
     /// This must be the full resource name of the model, e.g. "projects/{projectId}/locations/{location}/publishers/{publisher}/models/{model}".
     /// </param>
-    /// <returns>An <see cref="IChatClient"/> that wraps the built client.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="builder"/> is <see langword="null"/>.</exception>
-    public static IChatClient BuildIChatClient(
-        this PredictionServiceClientBuilder builder,
-        IServiceProvider? provider = null, string? defaultModelId = null)
-    {
-        builder = builder.WithAssemblyVersionHeader();
-
-        PredictionServiceClient client = provider is not null ?
-            builder.Build(provider) :
-            builder.Build();
-
-        return client.AsIChatClient(defaultModelId);
-    }
-
-    /// <summary>
-    /// Builds a <see cref="PredictionServiceClient"/> and creates an <see cref="IChatClient"/> wrapper around it.
-    /// </summary>
-    /// <param name="builder">The <see cref="PredictionServiceClientBuilder"/> with which to build the <see cref="PredictionServiceClient"/>.</param>
     /// <param name="provider">An optional <see cref="IServiceProvider"/> from which services are requested when building the client.</param>
-    /// <param name="defaultModelId">
-    /// The default model ID to use for chat requests if not specified in <see cref="ChatOptions.ModelId"/>.
-    /// This must be the full resource name of the model, e.g. "projects/{projectId}/locations/{location}/publishers/{publisher}/models/{model}".
-    /// </param>
     /// <param name="cancellationToken">A token to cancel the async operation.</param>
     /// <returns>An <see cref="IChatClient"/> that wraps the built client.</returns>
     /// <exception cref="ArgumentNullException"><paramref name="builder"/> is <see langword="null"/>.</exception>
     public static async Task<IChatClient> BuildIChatClientAsync(
         this PredictionServiceClientBuilder builder,
-        IServiceProvider? provider = null, string? defaultModelId = null,
+        string? defaultModelId = null, IServiceProvider? provider = null,
         CancellationToken cancellationToken = default)
     {
         builder = builder.WithAssemblyVersionHeader();
@@ -89,24 +71,30 @@ public static class VertexAIExtensions
             builder.BuildAsync(provider, cancellationToken) :
             builder.BuildAsync(cancellationToken)).ConfigureAwait(false);
 
-        return client.AsIChatClient(defaultModelId);
+        return new PredictionServiceChatClient(client, defaultModelId);
     }
 
     /// <summary>
-    /// Creates an <see cref="IEmbeddingGenerator{String, Embedding}"/> wrapper around the specified <see cref="PredictionServiceClient"/>.
+    /// Builds a <see cref="PredictionServiceClient"/> and creates an <see cref="IEmbeddingGenerator{String, Embedding}"/> wrapper around it.
     /// </summary>
-    /// <param name="client">The <see cref="PredictionServiceClient"/> to wrap.</param>
+    /// <param name="builder">The <see cref="PredictionServiceClientBuilder"/> with which to build the <see cref="PredictionServiceClient"/>.</param>
     /// <param name="defaultModelId">
     /// The default model ID to use for chat requests if not specified in <see cref="EmbeddingGenerationOptions.ModelId"/>.
     /// This must be the full resource name of the model, e.g. "projects/{projectId}/locations/{location}/publishers/{publisher}/models/{model}".
     /// </param>
     /// <param name="defaultModelDimensions">The optional default output dimensions for the embeddings.</param>
-    /// <returns>An <see cref="IEmbeddingGenerator{String, Embedding}"/> that wraps the specified client.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="client"/> is <see langword="null"/>.</exception>
-    public static IEmbeddingGenerator<string, Embedding<float>> AsIEmbeddingGenerator(
-        this PredictionServiceClient client, string? defaultModelId = null, int? defaultModelDimensions = null)
+    /// <param name="provider">An optional <see cref="IServiceProvider"/> from which services are requested when building the client.</param>
+    /// <returns>An <see cref="IEmbeddingGenerator{String, Embedding}"/> that wraps the built client.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="builder"/> is <see langword="null"/>.</exception>
+    public static IEmbeddingGenerator<string, Embedding<float>> BuildIEmbeddingGenerator(
+        this PredictionServiceClientBuilder builder,
+        string? defaultModelId = null, int? defaultModelDimensions = null, IServiceProvider? provider = null)
     {
-        GaxPreconditions.CheckNotNull(client, nameof(client));
+        builder = builder.WithAssemblyVersionHeader();
+
+        PredictionServiceClient client = provider is not null ?
+            builder.Build(provider) :
+            builder.Build();
 
         return new PredictionServiceEmbeddingGenerator(client, defaultModelId, defaultModelDimensions);
     }
@@ -115,41 +103,18 @@ public static class VertexAIExtensions
     /// Builds a <see cref="PredictionServiceClient"/> and creates an <see cref="IEmbeddingGenerator{String, Embedding}"/> wrapper around it.
     /// </summary>
     /// <param name="builder">The <see cref="PredictionServiceClientBuilder"/> with which to build the <see cref="PredictionServiceClient"/>.</param>
-    /// <param name="provider">An optional <see cref="IServiceProvider"/> from which services are requested when building the client.</param>
     /// <param name="defaultModelId">
     /// The default model ID to use for chat requests if not specified in <see cref="EmbeddingGenerationOptions.ModelId"/>.
     /// This must be the full resource name of the model, e.g. "projects/{projectId}/locations/{location}/publishers/{publisher}/models/{model}".
     /// </param>
-    /// <returns>An <see cref="IEmbeddingGenerator{String, Embedding}"/> that wraps the built client.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="builder"/> is <see langword="null"/>.</exception>
-    public static IEmbeddingGenerator<string, Embedding<float>> BuildIEmbeddingGenerator(
-        this PredictionServiceClientBuilder builder,
-        IServiceProvider? provider = null, string? defaultModelId = null)
-    {
-        builder = builder.WithAssemblyVersionHeader();
-
-        PredictionServiceClient client = provider is not null ?
-            builder.Build(provider) :
-            builder.Build();
-
-        return client.AsIEmbeddingGenerator(defaultModelId);
-    }
-
-    /// <summary>
-    /// Builds a <see cref="PredictionServiceClient"/> and creates an <see cref="IEmbeddingGenerator{String, Embedding}"/> wrapper around it.
-    /// </summary>
-    /// <param name="builder">The <see cref="PredictionServiceClientBuilder"/> with which to build the <see cref="PredictionServiceClient"/>.</param>
+    /// <param name="defaultModelDimensions">The optional default output dimensions for the embeddings.</param>
     /// <param name="provider">An optional <see cref="IServiceProvider"/> from which services are requested when building the client.</param>
-    /// <param name="defaultModelId">
-    /// The default model ID to use for chat requests if not specified in <see cref="EmbeddingGenerationOptions.ModelId"/>.
-    /// This must be the full resource name of the model, e.g. "projects/{projectId}/locations/{location}/publishers/{publisher}/models/{model}".
-    /// </param>
     /// <param name="cancellationToken">A token to cancel the async operation.</param>
     /// <returns>An <see cref="IEmbeddingGenerator{String, Embedding}"/> that wraps the built client.</returns>
     /// <exception cref="ArgumentNullException"><paramref name="builder"/> is <see langword="null"/>.</exception>
     public static async Task<IEmbeddingGenerator<string, Embedding<float>>> BuildIEmbeddingGeneratorAsync(
         this PredictionServiceClientBuilder builder,
-        IServiceProvider? provider = null, string? defaultModelId = null,
+        string? defaultModelId = null, int? defaultModelDimensions = null, IServiceProvider? provider = null,
         CancellationToken cancellationToken = default)
     {
         builder = builder.WithAssemblyVersionHeader();
@@ -158,25 +123,7 @@ public static class VertexAIExtensions
             builder.BuildAsync(provider, cancellationToken) :
             builder.BuildAsync(cancellationToken)).ConfigureAwait(false);
 
-        return client.AsIEmbeddingGenerator(defaultModelId);
-    }
-
-    /// <summary>
-    /// Creates an <see cref="IImageGenerator"/> wrapper around the specified <see cref="PredictionServiceClient"/>.
-    /// </summary>
-    /// <param name="client">The <see cref="PredictionServiceClient"/> to wrap.</param>
-    /// <param name="defaultModelId">
-    /// The default model ID to use for chat requests if not specified in <see cref="ImageGenerationOptions.ModelId"/>.
-    /// This must be the full resource name of the model, e.g. "projects/{projectId}/locations/{location}/publishers/{publisher}/models/{model}".
-    /// </param>
-    /// <returns>An <see cref="IImageGenerator"/> that wraps the specified client.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="client"/> is <see langword="null"/>.</exception>
-    public static IImageGenerator AsIImageGenerator(
-        this PredictionServiceClient client, string? defaultModelId = null)
-    {
-        GaxPreconditions.CheckNotNull(client, nameof(client));
-
-        return new PredictionServiceImageGenerator(client, defaultModelId);
+        return new PredictionServiceEmbeddingGenerator(client, defaultModelId, defaultModelDimensions);
     }
 
     /// <summary>
@@ -192,7 +139,7 @@ public static class VertexAIExtensions
     /// <exception cref="ArgumentNullException"><paramref name="builder"/> is <see langword="null"/>.</exception>
     public static IImageGenerator BuildIImageGenerator(
         this PredictionServiceClientBuilder builder,
-        IServiceProvider? provider = null, string? defaultModelId = null)
+        string? defaultModelId = null, IServiceProvider? provider = null)
     {
         builder = builder.WithAssemblyVersionHeader();
 
@@ -200,7 +147,7 @@ public static class VertexAIExtensions
             builder.Build(provider) :
             builder.Build();
 
-        return client.AsIImageGenerator(defaultModelId);
+        return new PredictionServiceImageGenerator(client, defaultModelId);
     }
 
     /// <summary>
@@ -217,7 +164,7 @@ public static class VertexAIExtensions
     /// <exception cref="ArgumentNullException"><paramref name="builder"/> is <see langword="null"/>.</exception>
     public static async Task<IImageGenerator> BuildIImageGeneratorAsync(
         this PredictionServiceClientBuilder builder,
-        IServiceProvider? provider = null, string? defaultModelId = null,
+        string? defaultModelId = null, IServiceProvider? provider = null,
         CancellationToken cancellationToken = default)
     {
         builder = builder.WithAssemblyVersionHeader();
@@ -226,7 +173,7 @@ public static class VertexAIExtensions
             builder.BuildAsync(provider, cancellationToken) :
             builder.BuildAsync(cancellationToken)).ConfigureAwait(false);
 
-        return client.AsIImageGenerator(defaultModelId);
+        return new PredictionServiceImageGenerator(client, defaultModelId);
     }
 
     /// <summary>Creates an <see cref="AITool"/> to represent a raw <see cref="Tool"/>.</summary>
@@ -235,7 +182,7 @@ public static class VertexAIExtensions
     /// <remarks>
     /// <para>
     /// The returned tool is only suitable for use with the <see cref="IChatClient"/> returned by
-    /// <see cref="AsIChatClient"/> or <see cref="BuildIChatClient"/> (or <see cref="IChatClient"/>s that delegate
+    /// <see cref="BuildIChatClientAsync"/> or <see cref="BuildIChatClient"/> (or <see cref="IChatClient"/>s that delegate
     /// to such an instance). It is likely to be ignored by any other <see cref="IChatClient"/> implementation.
     /// </para>
     /// <para>
@@ -243,7 +190,7 @@ public static class VertexAIExtensions
     /// such as <see cref="AIFunction"/> or <see cref="HostedWebSearchTool"/>, those types should be preferred instead
     /// of this method, as they are more portable, capable of being respected by any <see cref="IChatClient"/> implementation.
     /// This method does not attempt to map the supplied <see cref="Tool"/> to any of those types, it simply wraps it as-is:
-    /// the <see cref="IChatClient"/> returned by <see cref="AsIChatClient"/>/<see cref="BuildIChatClient"/> will
+    /// the <see cref="IChatClient"/> returned by <see cref="BuildIChatClientAsync"/>/<see cref="BuildIChatClient"/> will
     /// be able to unwrap the <see cref="Tool"/> when it processes the list of tools.
     /// </para>
     /// </remarks>
