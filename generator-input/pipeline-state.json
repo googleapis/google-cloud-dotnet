@@ -4783,6 +4783,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "lastGeneratedCommit": "fe58211356a91f4140ed51893703910db05ade91",
             "apiPaths": [
                 "google/cloud/maintenance/api/v1"
             ],
