@@ -18,6 +18,9 @@ namespace GoogleCSharpSnippets
 {
     // [START admanager_v1_generated_NetworkService_ListNetworks_async]
     using Google.Ads.AdManager.V1;
+    using Google.Api.Gax;
+    using System;
+    using System.Linq;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedNetworkServiceClientSnippets
@@ -35,9 +38,41 @@ namespace GoogleCSharpSnippets
             // Create client
             NetworkServiceClient networkServiceClient = await NetworkServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListNetworksRequest request = new ListNetworksRequest { };
+            ListNetworksRequest request = new ListNetworksRequest { Skip = 0, };
             // Make the request
-            ListNetworksResponse response = await networkServiceClient.ListNetworksAsync(request);
+            PagedAsyncEnumerable<ListNetworksResponse, Network> response = networkServiceClient.ListNetworksAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Network item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListNetworksResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Network item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Network> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Network item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
         }
     }
     // [END admanager_v1_generated_NetworkService_ListNetworks_async]

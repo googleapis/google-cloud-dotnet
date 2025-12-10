@@ -75,6 +75,30 @@ namespace Google.Ads.AdManager.V1 {
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ListAdUnitSizesRequest> __Marshaller_google_ads_admanager_v1_ListAdUnitSizesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ListAdUnitSizesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ListAdUnitSizesResponse> __Marshaller_google_ads_admanager_v1_ListAdUnitSizesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ListAdUnitSizesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.CreateAdUnitRequest> __Marshaller_google_ads_admanager_v1_CreateAdUnitRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.CreateAdUnitRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.UpdateAdUnitRequest> __Marshaller_google_ads_admanager_v1_UpdateAdUnitRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.UpdateAdUnitRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchCreateAdUnitsRequest> __Marshaller_google_ads_admanager_v1_BatchCreateAdUnitsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchCreateAdUnitsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchCreateAdUnitsResponse> __Marshaller_google_ads_admanager_v1_BatchCreateAdUnitsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchCreateAdUnitsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdateAdUnitsRequest> __Marshaller_google_ads_admanager_v1_BatchUpdateAdUnitsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdateAdUnitsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdateAdUnitsResponse> __Marshaller_google_ads_admanager_v1_BatchUpdateAdUnitsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdateAdUnitsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchActivateAdUnitsRequest> __Marshaller_google_ads_admanager_v1_BatchActivateAdUnitsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchActivateAdUnitsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchActivateAdUnitsResponse> __Marshaller_google_ads_admanager_v1_BatchActivateAdUnitsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchActivateAdUnitsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchDeactivateAdUnitsRequest> __Marshaller_google_ads_admanager_v1_BatchDeactivateAdUnitsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchDeactivateAdUnitsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchDeactivateAdUnitsResponse> __Marshaller_google_ads_admanager_v1_BatchDeactivateAdUnitsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchDeactivateAdUnitsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchArchiveAdUnitsRequest> __Marshaller_google_ads_admanager_v1_BatchArchiveAdUnitsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchArchiveAdUnitsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchArchiveAdUnitsResponse> __Marshaller_google_ads_admanager_v1_BatchArchiveAdUnitsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchArchiveAdUnitsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Ads.AdManager.V1.GetAdUnitRequest, global::Google.Ads.AdManager.V1.AdUnit> __Method_GetAdUnit = new grpc::Method<global::Google.Ads.AdManager.V1.GetAdUnitRequest, global::Google.Ads.AdManager.V1.AdUnit>(
@@ -99,6 +123,62 @@ namespace Google.Ads.AdManager.V1 {
         "ListAdUnitSizes",
         __Marshaller_google_ads_admanager_v1_ListAdUnitSizesRequest,
         __Marshaller_google_ads_admanager_v1_ListAdUnitSizesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.CreateAdUnitRequest, global::Google.Ads.AdManager.V1.AdUnit> __Method_CreateAdUnit = new grpc::Method<global::Google.Ads.AdManager.V1.CreateAdUnitRequest, global::Google.Ads.AdManager.V1.AdUnit>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateAdUnit",
+        __Marshaller_google_ads_admanager_v1_CreateAdUnitRequest,
+        __Marshaller_google_ads_admanager_v1_AdUnit);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.UpdateAdUnitRequest, global::Google.Ads.AdManager.V1.AdUnit> __Method_UpdateAdUnit = new grpc::Method<global::Google.Ads.AdManager.V1.UpdateAdUnitRequest, global::Google.Ads.AdManager.V1.AdUnit>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateAdUnit",
+        __Marshaller_google_ads_admanager_v1_UpdateAdUnitRequest,
+        __Marshaller_google_ads_admanager_v1_AdUnit);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchCreateAdUnitsRequest, global::Google.Ads.AdManager.V1.BatchCreateAdUnitsResponse> __Method_BatchCreateAdUnits = new grpc::Method<global::Google.Ads.AdManager.V1.BatchCreateAdUnitsRequest, global::Google.Ads.AdManager.V1.BatchCreateAdUnitsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchCreateAdUnits",
+        __Marshaller_google_ads_admanager_v1_BatchCreateAdUnitsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchCreateAdUnitsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchUpdateAdUnitsRequest, global::Google.Ads.AdManager.V1.BatchUpdateAdUnitsResponse> __Method_BatchUpdateAdUnits = new grpc::Method<global::Google.Ads.AdManager.V1.BatchUpdateAdUnitsRequest, global::Google.Ads.AdManager.V1.BatchUpdateAdUnitsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchUpdateAdUnits",
+        __Marshaller_google_ads_admanager_v1_BatchUpdateAdUnitsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchUpdateAdUnitsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchActivateAdUnitsRequest, global::Google.Ads.AdManager.V1.BatchActivateAdUnitsResponse> __Method_BatchActivateAdUnits = new grpc::Method<global::Google.Ads.AdManager.V1.BatchActivateAdUnitsRequest, global::Google.Ads.AdManager.V1.BatchActivateAdUnitsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchActivateAdUnits",
+        __Marshaller_google_ads_admanager_v1_BatchActivateAdUnitsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchActivateAdUnitsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchDeactivateAdUnitsRequest, global::Google.Ads.AdManager.V1.BatchDeactivateAdUnitsResponse> __Method_BatchDeactivateAdUnits = new grpc::Method<global::Google.Ads.AdManager.V1.BatchDeactivateAdUnitsRequest, global::Google.Ads.AdManager.V1.BatchDeactivateAdUnitsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchDeactivateAdUnits",
+        __Marshaller_google_ads_admanager_v1_BatchDeactivateAdUnitsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchDeactivateAdUnitsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchArchiveAdUnitsRequest, global::Google.Ads.AdManager.V1.BatchArchiveAdUnitsResponse> __Method_BatchArchiveAdUnits = new grpc::Method<global::Google.Ads.AdManager.V1.BatchArchiveAdUnitsRequest, global::Google.Ads.AdManager.V1.BatchArchiveAdUnitsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchArchiveAdUnits",
+        __Marshaller_google_ads_admanager_v1_BatchArchiveAdUnitsRequest,
+        __Marshaller_google_ads_admanager_v1_BatchArchiveAdUnitsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -142,6 +222,90 @@ namespace Google.Ads.AdManager.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.ListAdUnitSizesResponse> ListAdUnitSizes(global::Google.Ads.AdManager.V1.ListAdUnitSizesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// API to create an `AdUnit` object.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.AdUnit> CreateAdUnit(global::Google.Ads.AdManager.V1.CreateAdUnitRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// API to update an `AdUnit` object.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.AdUnit> UpdateAdUnit(global::Google.Ads.AdManager.V1.UpdateAdUnitRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// API to batch create `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchCreateAdUnitsResponse> BatchCreateAdUnits(global::Google.Ads.AdManager.V1.BatchCreateAdUnitsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// API to batch update `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchUpdateAdUnitsResponse> BatchUpdateAdUnits(global::Google.Ads.AdManager.V1.BatchUpdateAdUnitsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// API to batch activate `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchActivateAdUnitsResponse> BatchActivateAdUnits(global::Google.Ads.AdManager.V1.BatchActivateAdUnitsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deactivates a list of `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchDeactivateAdUnitsResponse> BatchDeactivateAdUnits(global::Google.Ads.AdManager.V1.BatchDeactivateAdUnitsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Archives a list of `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchArchiveAdUnitsResponse> BatchArchiveAdUnits(global::Google.Ads.AdManager.V1.BatchArchiveAdUnitsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -319,6 +483,342 @@ namespace Google.Ads.AdManager.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListAdUnitSizes, null, options, request);
       }
+      /// <summary>
+      /// API to create an `AdUnit` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.AdUnit CreateAdUnit(global::Google.Ads.AdManager.V1.CreateAdUnitRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAdUnit(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to create an `AdUnit` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.AdUnit CreateAdUnit(global::Google.Ads.AdManager.V1.CreateAdUnitRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateAdUnit, null, options, request);
+      }
+      /// <summary>
+      /// API to create an `AdUnit` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.AdUnit> CreateAdUnitAsync(global::Google.Ads.AdManager.V1.CreateAdUnitRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAdUnitAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to create an `AdUnit` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.AdUnit> CreateAdUnitAsync(global::Google.Ads.AdManager.V1.CreateAdUnitRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateAdUnit, null, options, request);
+      }
+      /// <summary>
+      /// API to update an `AdUnit` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.AdUnit UpdateAdUnit(global::Google.Ads.AdManager.V1.UpdateAdUnitRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAdUnit(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to update an `AdUnit` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.AdUnit UpdateAdUnit(global::Google.Ads.AdManager.V1.UpdateAdUnitRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateAdUnit, null, options, request);
+      }
+      /// <summary>
+      /// API to update an `AdUnit` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.AdUnit> UpdateAdUnitAsync(global::Google.Ads.AdManager.V1.UpdateAdUnitRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAdUnitAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to update an `AdUnit` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.AdUnit> UpdateAdUnitAsync(global::Google.Ads.AdManager.V1.UpdateAdUnitRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateAdUnit, null, options, request);
+      }
+      /// <summary>
+      /// API to batch create `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchCreateAdUnitsResponse BatchCreateAdUnits(global::Google.Ads.AdManager.V1.BatchCreateAdUnitsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateAdUnits(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to batch create `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchCreateAdUnitsResponse BatchCreateAdUnits(global::Google.Ads.AdManager.V1.BatchCreateAdUnitsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchCreateAdUnits, null, options, request);
+      }
+      /// <summary>
+      /// API to batch create `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchCreateAdUnitsResponse> BatchCreateAdUnitsAsync(global::Google.Ads.AdManager.V1.BatchCreateAdUnitsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateAdUnitsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to batch create `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchCreateAdUnitsResponse> BatchCreateAdUnitsAsync(global::Google.Ads.AdManager.V1.BatchCreateAdUnitsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchCreateAdUnits, null, options, request);
+      }
+      /// <summary>
+      /// API to batch update `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUpdateAdUnitsResponse BatchUpdateAdUnits(global::Google.Ads.AdManager.V1.BatchUpdateAdUnitsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateAdUnits(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to batch update `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUpdateAdUnitsResponse BatchUpdateAdUnits(global::Google.Ads.AdManager.V1.BatchUpdateAdUnitsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchUpdateAdUnits, null, options, request);
+      }
+      /// <summary>
+      /// API to batch update `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUpdateAdUnitsResponse> BatchUpdateAdUnitsAsync(global::Google.Ads.AdManager.V1.BatchUpdateAdUnitsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateAdUnitsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to batch update `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUpdateAdUnitsResponse> BatchUpdateAdUnitsAsync(global::Google.Ads.AdManager.V1.BatchUpdateAdUnitsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchUpdateAdUnits, null, options, request);
+      }
+      /// <summary>
+      /// API to batch activate `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchActivateAdUnitsResponse BatchActivateAdUnits(global::Google.Ads.AdManager.V1.BatchActivateAdUnitsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchActivateAdUnits(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to batch activate `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchActivateAdUnitsResponse BatchActivateAdUnits(global::Google.Ads.AdManager.V1.BatchActivateAdUnitsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchActivateAdUnits, null, options, request);
+      }
+      /// <summary>
+      /// API to batch activate `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchActivateAdUnitsResponse> BatchActivateAdUnitsAsync(global::Google.Ads.AdManager.V1.BatchActivateAdUnitsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchActivateAdUnitsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to batch activate `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchActivateAdUnitsResponse> BatchActivateAdUnitsAsync(global::Google.Ads.AdManager.V1.BatchActivateAdUnitsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchActivateAdUnits, null, options, request);
+      }
+      /// <summary>
+      /// Deactivates a list of `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchDeactivateAdUnitsResponse BatchDeactivateAdUnits(global::Google.Ads.AdManager.V1.BatchDeactivateAdUnitsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeactivateAdUnits(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deactivates a list of `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchDeactivateAdUnitsResponse BatchDeactivateAdUnits(global::Google.Ads.AdManager.V1.BatchDeactivateAdUnitsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchDeactivateAdUnits, null, options, request);
+      }
+      /// <summary>
+      /// Deactivates a list of `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchDeactivateAdUnitsResponse> BatchDeactivateAdUnitsAsync(global::Google.Ads.AdManager.V1.BatchDeactivateAdUnitsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeactivateAdUnitsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deactivates a list of `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchDeactivateAdUnitsResponse> BatchDeactivateAdUnitsAsync(global::Google.Ads.AdManager.V1.BatchDeactivateAdUnitsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchDeactivateAdUnits, null, options, request);
+      }
+      /// <summary>
+      /// Archives a list of `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchArchiveAdUnitsResponse BatchArchiveAdUnits(global::Google.Ads.AdManager.V1.BatchArchiveAdUnitsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchArchiveAdUnits(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Archives a list of `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchArchiveAdUnitsResponse BatchArchiveAdUnits(global::Google.Ads.AdManager.V1.BatchArchiveAdUnitsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchArchiveAdUnits, null, options, request);
+      }
+      /// <summary>
+      /// Archives a list of `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchArchiveAdUnitsResponse> BatchArchiveAdUnitsAsync(global::Google.Ads.AdManager.V1.BatchArchiveAdUnitsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchArchiveAdUnitsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Archives a list of `AdUnit` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchArchiveAdUnitsResponse> BatchArchiveAdUnitsAsync(global::Google.Ads.AdManager.V1.BatchArchiveAdUnitsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchArchiveAdUnits, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AdUnitServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -335,7 +835,14 @@ namespace Google.Ads.AdManager.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetAdUnit, serviceImpl.GetAdUnit)
           .AddMethod(__Method_ListAdUnits, serviceImpl.ListAdUnits)
-          .AddMethod(__Method_ListAdUnitSizes, serviceImpl.ListAdUnitSizes).Build();
+          .AddMethod(__Method_ListAdUnitSizes, serviceImpl.ListAdUnitSizes)
+          .AddMethod(__Method_CreateAdUnit, serviceImpl.CreateAdUnit)
+          .AddMethod(__Method_UpdateAdUnit, serviceImpl.UpdateAdUnit)
+          .AddMethod(__Method_BatchCreateAdUnits, serviceImpl.BatchCreateAdUnits)
+          .AddMethod(__Method_BatchUpdateAdUnits, serviceImpl.BatchUpdateAdUnits)
+          .AddMethod(__Method_BatchActivateAdUnits, serviceImpl.BatchActivateAdUnits)
+          .AddMethod(__Method_BatchDeactivateAdUnits, serviceImpl.BatchDeactivateAdUnits)
+          .AddMethod(__Method_BatchArchiveAdUnits, serviceImpl.BatchArchiveAdUnits).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -348,6 +855,13 @@ namespace Google.Ads.AdManager.V1 {
       serviceBinder.AddMethod(__Method_GetAdUnit, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.GetAdUnitRequest, global::Google.Ads.AdManager.V1.AdUnit>(serviceImpl.GetAdUnit));
       serviceBinder.AddMethod(__Method_ListAdUnits, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.ListAdUnitsRequest, global::Google.Ads.AdManager.V1.ListAdUnitsResponse>(serviceImpl.ListAdUnits));
       serviceBinder.AddMethod(__Method_ListAdUnitSizes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.ListAdUnitSizesRequest, global::Google.Ads.AdManager.V1.ListAdUnitSizesResponse>(serviceImpl.ListAdUnitSizes));
+      serviceBinder.AddMethod(__Method_CreateAdUnit, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.CreateAdUnitRequest, global::Google.Ads.AdManager.V1.AdUnit>(serviceImpl.CreateAdUnit));
+      serviceBinder.AddMethod(__Method_UpdateAdUnit, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.UpdateAdUnitRequest, global::Google.Ads.AdManager.V1.AdUnit>(serviceImpl.UpdateAdUnit));
+      serviceBinder.AddMethod(__Method_BatchCreateAdUnits, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchCreateAdUnitsRequest, global::Google.Ads.AdManager.V1.BatchCreateAdUnitsResponse>(serviceImpl.BatchCreateAdUnits));
+      serviceBinder.AddMethod(__Method_BatchUpdateAdUnits, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchUpdateAdUnitsRequest, global::Google.Ads.AdManager.V1.BatchUpdateAdUnitsResponse>(serviceImpl.BatchUpdateAdUnits));
+      serviceBinder.AddMethod(__Method_BatchActivateAdUnits, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchActivateAdUnitsRequest, global::Google.Ads.AdManager.V1.BatchActivateAdUnitsResponse>(serviceImpl.BatchActivateAdUnits));
+      serviceBinder.AddMethod(__Method_BatchDeactivateAdUnits, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchDeactivateAdUnitsRequest, global::Google.Ads.AdManager.V1.BatchDeactivateAdUnitsResponse>(serviceImpl.BatchDeactivateAdUnits));
+      serviceBinder.AddMethod(__Method_BatchArchiveAdUnits, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchArchiveAdUnitsRequest, global::Google.Ads.AdManager.V1.BatchArchiveAdUnitsResponse>(serviceImpl.BatchArchiveAdUnits));
     }
 
   }

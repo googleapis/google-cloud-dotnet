@@ -30,28 +30,31 @@ namespace Google.Ads.AdManager.V1 {
             "bm90YXRpb25zLnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90bxofZ29v",
             "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNv",
             "dXJjZS5wcm90byJLChFHZXROZXR3b3JrUmVxdWVzdBI2CgRuYW1lGAEgASgJ",
-            "QijgQQL6QSIKIGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9OZXR3b3JrIhUK",
-            "E0xpc3ROZXR3b3Jrc1JlcXVlc3QiSgoUTGlzdE5ldHdvcmtzUmVzcG9uc2US",
-            "MgoIbmV0d29ya3MYASADKAsyIC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5O",
-            "ZXR3b3JrMuACCg5OZXR3b3JrU2VydmljZRKAAQoKR2V0TmV0d29yaxIqLmdv",
-            "b2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkdldE5ldHdvcmtSZXF1ZXN0GiAuZ29v",
-            "Z2xlLmFkcy5hZG1hbmFnZXIudjEuTmV0d29yayIk2kEEbmFtZYLT5JMCFxIV",
-            "L3YxL3tuYW1lPW5ldHdvcmtzLyp9EoEBCgxMaXN0TmV0d29ya3MSLC5nb29n",
-            "bGUuYWRzLmFkbWFuYWdlci52MS5MaXN0TmV0d29ya3NSZXF1ZXN0Gi0uZ29v",
-            "Z2xlLmFkcy5hZG1hbmFnZXIudjEuTGlzdE5ldHdvcmtzUmVzcG9uc2UiFILT",
-            "5JMCDhIML3YxL25ldHdvcmtzGkfKQRhhZG1hbmFnZXIuZ29vZ2xlYXBpcy5j",
-            "b23SQSlodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2FkbWFuYWdl",
-            "ckLHAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhNOZXR3b3JrU2Vy",
-            "dmljZVByb3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
-            "ZWFwaXMvYWRzL2FkbWFuYWdlci92MTthZG1hbmFnZXKqAhdHb29nbGUuQWRz",
-            "LkFkTWFuYWdlci5WMcoCF0dvb2dsZVxBZHNcQWRNYW5hZ2VyXFYx6gIaR29v",
-            "Z2xlOjpBZHM6OkFkTWFuYWdlcjo6VjFiBnByb3RvMw=="));
+            "QijgQQL6QSIKIGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9OZXR3b3JrIlkK",
+            "E0xpc3ROZXR3b3Jrc1JlcXVlc3QSFgoJcGFnZV9zaXplGAMgASgFQgPgQQES",
+            "FwoKcGFnZV90b2tlbhgEIAEoCUID4EEBEhEKBHNraXAYBSABKAVCA+BBASJ3",
+            "ChRMaXN0TmV0d29ya3NSZXNwb25zZRIyCghuZXR3b3JrcxgBIAMoCzIgLmdv",
+            "b2dsZS5hZHMuYWRtYW5hZ2VyLnYxLk5ldHdvcmsSFwoPbmV4dF9wYWdlX3Rv",
+            "a2VuGAIgASgJEhIKCnRvdGFsX3NpemUYAyABKAUy4AIKDk5ldHdvcmtTZXJ2",
+            "aWNlEoABCgpHZXROZXR3b3JrEiouZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEu",
+            "R2V0TmV0d29ya1JlcXVlc3QaIC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5O",
+            "ZXR3b3JrIiTaQQRuYW1lgtPkkwIXEhUvdjEve25hbWU9bmV0d29ya3MvKn0S",
+            "gQEKDExpc3ROZXR3b3JrcxIsLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkxp",
+            "c3ROZXR3b3Jrc1JlcXVlc3QaLS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5M",
+            "aXN0TmV0d29ya3NSZXNwb25zZSIUgtPkkwIOEgwvdjEvbmV0d29ya3MaR8pB",
+            "GGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbdJBKWh0dHBzOi8vd3d3Lmdvb2ds",
+            "ZWFwaXMuY29tL2F1dGgvYWRtYW5hZ2VyQscBChtjb20uZ29vZ2xlLmFkcy5h",
+            "ZG1hbmFnZXIudjFCE05ldHdvcmtTZXJ2aWNlUHJvdG9QAVpAZ29vZ2xlLmdv",
+            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3Yx",
+            "O2FkbWFuYWdlcqoCF0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xl",
+            "XEFkc1xBZE1hbmFnZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpW",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.NetworkMessagesReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.GetNetworkRequest), global::Google.Ads.AdManager.V1.GetNetworkRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ListNetworksRequest), global::Google.Ads.AdManager.V1.ListNetworksRequest.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ListNetworksResponse), global::Google.Ads.AdManager.V1.ListNetworksResponse.Parser, new[]{ "Networks" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ListNetworksRequest), global::Google.Ads.AdManager.V1.ListNetworksRequest.Parser, new[]{ "PageSize", "PageToken", "Skip" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ListNetworksResponse), global::Google.Ads.AdManager.V1.ListNetworksResponse.Parser, new[]{ "Networks", "NextPageToken", "TotalSize" }, null, null, null, null)
           }));
     }
     #endregion
@@ -293,6 +296,9 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListNetworksRequest(ListNetworksRequest other) : this() {
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      skip_ = other.skip_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -300,6 +306,58 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListNetworksRequest Clone() {
       return new ListNetworksRequest(this);
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 3;
+    private int pageSize_;
+    /// <summary>
+    /// Optional. The maximum number of `Network`s to return. The service may
+    /// return fewer than this value. If unspecified, at most 50 `Network`s will be
+    /// returned. The maximum value is 1000; values greater than 1000 will be
+    /// coerced to 1000.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 4;
+    private string pageToken_ = "";
+    /// <summary>
+    /// Optional. A page token, received from a previous `ListNetworks` call.
+    /// Provide this to retrieve the subsequent page.
+    ///
+    /// When paginating, all other parameters provided to `ListNetworks` must match
+    /// the call that provided the page token.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "skip" field.</summary>
+    public const int SkipFieldNumber = 5;
+    private int skip_;
+    /// <summary>
+    /// Optional. Number of individual resources to skip while paginating.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Skip {
+      get { return skip_; }
+      set {
+        skip_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -317,6 +375,9 @@ namespace Google.Ads.AdManager.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      if (Skip != other.Skip) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -324,6 +385,9 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (Skip != 0) hash ^= Skip.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -342,6 +406,18 @@ namespace Google.Ads.AdManager.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PageToken);
+      }
+      if (Skip != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(Skip);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -352,6 +428,18 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PageToken);
+      }
+      if (Skip != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(Skip);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -362,6 +450,15 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (Skip != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Skip);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -373,6 +470,15 @@ namespace Google.Ads.AdManager.V1 {
     public void MergeFrom(ListNetworksRequest other) {
       if (other == null) {
         return;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      if (other.Skip != 0) {
+        Skip = other.Skip;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -389,6 +495,18 @@ namespace Google.Ads.AdManager.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 40: {
+            Skip = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -404,6 +522,18 @@ namespace Google.Ads.AdManager.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 40: {
+            Skip = input.ReadInt32();
+            break;
+          }
         }
       }
     }
@@ -450,6 +580,8 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListNetworksResponse(ListNetworksResponse other) : this() {
       networks_ = other.networks_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      totalSize_ = other.totalSize_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -473,6 +605,45 @@ namespace Google.Ads.AdManager.V1 {
       get { return networks_; }
     }
 
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// A token, which can be sent as `page_token` to retrieve the next page.
+    /// If this field is omitted, there are no subsequent pages.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "total_size" field.</summary>
+    public const int TotalSizeFieldNumber = 3;
+    private int totalSize_;
+    /// <summary>
+    /// Total number of `Network`s.
+    ///
+    /// `total_size` won't be calculated in the response unless it has been
+    /// included in a response field mask. The response field mask can be provided
+    /// to the method by using the URL parameter `$fields` or `fields`, or by using
+    /// the HTTP/gRPC header `X-Goog-FieldMask`.
+    ///
+    /// For more information, see
+    /// https://developers.google.com/ad-manager/api/beta/field-masks
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int TotalSize {
+      get { return totalSize_; }
+      set {
+        totalSize_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -489,6 +660,8 @@ namespace Google.Ads.AdManager.V1 {
         return true;
       }
       if(!networks_.Equals(other.networks_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      if (TotalSize != other.TotalSize) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -497,6 +670,8 @@ namespace Google.Ads.AdManager.V1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= networks_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (TotalSize != 0) hash ^= TotalSize.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -516,6 +691,14 @@ namespace Google.Ads.AdManager.V1 {
       output.WriteRawMessage(this);
     #else
       networks_.WriteTo(output, _repeated_networks_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (TotalSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(TotalSize);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -527,6 +710,14 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       networks_.WriteTo(ref output, _repeated_networks_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (TotalSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(TotalSize);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -538,6 +729,12 @@ namespace Google.Ads.AdManager.V1 {
     public int CalculateSize() {
       int size = 0;
       size += networks_.CalculateSize(_repeated_networks_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (TotalSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalSize);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -551,6 +748,12 @@ namespace Google.Ads.AdManager.V1 {
         return;
       }
       networks_.Add(other.networks_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      if (other.TotalSize != 0) {
+        TotalSize = other.TotalSize;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -570,6 +773,14 @@ namespace Google.Ads.AdManager.V1 {
             networks_.AddEntriesFrom(input, _repeated_networks_codec);
             break;
           }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 24: {
+            TotalSize = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -587,6 +798,14 @@ namespace Google.Ads.AdManager.V1 {
             break;
           case 10: {
             networks_.AddEntriesFrom(ref input, _repeated_networks_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 24: {
+            TotalSize = input.ReadInt32();
             break;
           }
         }

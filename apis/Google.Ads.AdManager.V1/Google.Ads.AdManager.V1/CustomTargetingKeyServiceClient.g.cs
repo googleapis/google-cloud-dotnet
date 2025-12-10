@@ -27,6 +27,7 @@ using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Ads.AdManager.V1
 {
@@ -49,6 +50,12 @@ namespace Google.Ads.AdManager.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetCustomTargetingKeySettings = existing.GetCustomTargetingKeySettings;
             ListCustomTargetingKeysSettings = existing.ListCustomTargetingKeysSettings;
+            CreateCustomTargetingKeySettings = existing.CreateCustomTargetingKeySettings;
+            BatchCreateCustomTargetingKeysSettings = existing.BatchCreateCustomTargetingKeysSettings;
+            UpdateCustomTargetingKeySettings = existing.UpdateCustomTargetingKeySettings;
+            BatchUpdateCustomTargetingKeysSettings = existing.BatchUpdateCustomTargetingKeysSettings;
+            BatchActivateCustomTargetingKeysSettings = existing.BatchActivateCustomTargetingKeysSettings;
+            BatchDeactivateCustomTargetingKeysSettings = existing.BatchDeactivateCustomTargetingKeysSettings;
             OnCopy(existing);
         }
 
@@ -79,6 +86,84 @@ namespace Google.Ads.AdManager.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListCustomTargetingKeysSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CustomTargetingKeyServiceClient.CreateCustomTargetingKey</c> and
+        /// <c>CustomTargetingKeyServiceClient.CreateCustomTargetingKeyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateCustomTargetingKeySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CustomTargetingKeyServiceClient.BatchCreateCustomTargetingKeys</c> and
+        /// <c>CustomTargetingKeyServiceClient.BatchCreateCustomTargetingKeysAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchCreateCustomTargetingKeysSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CustomTargetingKeyServiceClient.UpdateCustomTargetingKey</c> and
+        /// <c>CustomTargetingKeyServiceClient.UpdateCustomTargetingKeyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateCustomTargetingKeySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CustomTargetingKeyServiceClient.BatchUpdateCustomTargetingKeys</c> and
+        /// <c>CustomTargetingKeyServiceClient.BatchUpdateCustomTargetingKeysAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchUpdateCustomTargetingKeysSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CustomTargetingKeyServiceClient.BatchActivateCustomTargetingKeys</c> and
+        /// <c>CustomTargetingKeyServiceClient.BatchActivateCustomTargetingKeysAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchActivateCustomTargetingKeysSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CustomTargetingKeyServiceClient.BatchDeactivateCustomTargetingKeys</c> and
+        /// <c>CustomTargetingKeyServiceClient.BatchDeactivateCustomTargetingKeysAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchDeactivateCustomTargetingKeysSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="CustomTargetingKeyServiceSettings"/> object.</returns>
@@ -494,6 +579,853 @@ namespace Google.Ads.AdManager.V1
             }
             return ListCustomTargetingKeysAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// API to create a `CustomTargetingKey` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomTargetingKey CreateCustomTargetingKey(CreateCustomTargetingKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to create a `CustomTargetingKey` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetingKey> CreateCustomTargetingKeyAsync(CreateCustomTargetingKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to create a `CustomTargetingKey` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetingKey> CreateCustomTargetingKeyAsync(CreateCustomTargetingKeyRequest request, st::CancellationToken cancellationToken) =>
+            CreateCustomTargetingKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to create a `CustomTargetingKey` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `CustomTargetingKey` will be
+        /// created. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="customTargetingKey">
+        /// Required. The `CustomTargetingKey` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomTargetingKey CreateCustomTargetingKey(string parent, CustomTargetingKey customTargetingKey, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomTargetingKey(new CreateCustomTargetingKeyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                CustomTargetingKey = gax::GaxPreconditions.CheckNotNull(customTargetingKey, nameof(customTargetingKey)),
+            }, callSettings);
+
+        /// <summary>
+        /// API to create a `CustomTargetingKey` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `CustomTargetingKey` will be
+        /// created. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="customTargetingKey">
+        /// Required. The `CustomTargetingKey` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetingKey> CreateCustomTargetingKeyAsync(string parent, CustomTargetingKey customTargetingKey, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomTargetingKeyAsync(new CreateCustomTargetingKeyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                CustomTargetingKey = gax::GaxPreconditions.CheckNotNull(customTargetingKey, nameof(customTargetingKey)),
+            }, callSettings);
+
+        /// <summary>
+        /// API to create a `CustomTargetingKey` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `CustomTargetingKey` will be
+        /// created. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="customTargetingKey">
+        /// Required. The `CustomTargetingKey` to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetingKey> CreateCustomTargetingKeyAsync(string parent, CustomTargetingKey customTargetingKey, st::CancellationToken cancellationToken) =>
+            CreateCustomTargetingKeyAsync(parent, customTargetingKey, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to create a `CustomTargetingKey` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `CustomTargetingKey` will be
+        /// created. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="customTargetingKey">
+        /// Required. The `CustomTargetingKey` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomTargetingKey CreateCustomTargetingKey(NetworkName parent, CustomTargetingKey customTargetingKey, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomTargetingKey(new CreateCustomTargetingKeyRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CustomTargetingKey = gax::GaxPreconditions.CheckNotNull(customTargetingKey, nameof(customTargetingKey)),
+            }, callSettings);
+
+        /// <summary>
+        /// API to create a `CustomTargetingKey` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `CustomTargetingKey` will be
+        /// created. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="customTargetingKey">
+        /// Required. The `CustomTargetingKey` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetingKey> CreateCustomTargetingKeyAsync(NetworkName parent, CustomTargetingKey customTargetingKey, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomTargetingKeyAsync(new CreateCustomTargetingKeyRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CustomTargetingKey = gax::GaxPreconditions.CheckNotNull(customTargetingKey, nameof(customTargetingKey)),
+            }, callSettings);
+
+        /// <summary>
+        /// API to create a `CustomTargetingKey` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `CustomTargetingKey` will be
+        /// created. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="customTargetingKey">
+        /// Required. The `CustomTargetingKey` to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetingKey> CreateCustomTargetingKeyAsync(NetworkName parent, CustomTargetingKey customTargetingKey, st::CancellationToken cancellationToken) =>
+            CreateCustomTargetingKeyAsync(parent, customTargetingKey, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to batch create `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateCustomTargetingKeysResponse BatchCreateCustomTargetingKeys(BatchCreateCustomTargetingKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to batch create `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateCustomTargetingKeysResponse> BatchCreateCustomTargetingKeysAsync(BatchCreateCustomTargetingKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to batch create `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateCustomTargetingKeysResponse> BatchCreateCustomTargetingKeysAsync(BatchCreateCustomTargetingKeysRequest request, st::CancellationToken cancellationToken) =>
+            BatchCreateCustomTargetingKeysAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to batch create `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `CustomTargetingKeys` will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateCustomTargetingKeyRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingKey` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateCustomTargetingKeysResponse BatchCreateCustomTargetingKeys(string parent, scg::IEnumerable<CreateCustomTargetingKeyRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateCustomTargetingKeys(new BatchCreateCustomTargetingKeysRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch create `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `CustomTargetingKeys` will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateCustomTargetingKeyRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingKey` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateCustomTargetingKeysResponse> BatchCreateCustomTargetingKeysAsync(string parent, scg::IEnumerable<CreateCustomTargetingKeyRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateCustomTargetingKeysAsync(new BatchCreateCustomTargetingKeysRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch create `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `CustomTargetingKeys` will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateCustomTargetingKeyRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingKey` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateCustomTargetingKeysResponse> BatchCreateCustomTargetingKeysAsync(string parent, scg::IEnumerable<CreateCustomTargetingKeyRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateCustomTargetingKeysAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to batch create `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `CustomTargetingKeys` will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateCustomTargetingKeyRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingKey` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateCustomTargetingKeysResponse BatchCreateCustomTargetingKeys(NetworkName parent, scg::IEnumerable<CreateCustomTargetingKeyRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateCustomTargetingKeys(new BatchCreateCustomTargetingKeysRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch create `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `CustomTargetingKeys` will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateCustomTargetingKeyRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingKey` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateCustomTargetingKeysResponse> BatchCreateCustomTargetingKeysAsync(NetworkName parent, scg::IEnumerable<CreateCustomTargetingKeyRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateCustomTargetingKeysAsync(new BatchCreateCustomTargetingKeysRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch create `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `CustomTargetingKeys` will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateCustomTargetingKeyRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingKey` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateCustomTargetingKeysResponse> BatchCreateCustomTargetingKeysAsync(NetworkName parent, scg::IEnumerable<CreateCustomTargetingKeyRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateCustomTargetingKeysAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to update a `CustomTargetingKey` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomTargetingKey UpdateCustomTargetingKey(UpdateCustomTargetingKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to update a `CustomTargetingKey` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetingKey> UpdateCustomTargetingKeyAsync(UpdateCustomTargetingKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to update a `CustomTargetingKey` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetingKey> UpdateCustomTargetingKeyAsync(UpdateCustomTargetingKeyRequest request, st::CancellationToken cancellationToken) =>
+            UpdateCustomTargetingKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to update a `CustomTargetingKey` object.
+        /// </summary>
+        /// <param name="customTargetingKey">
+        /// Required. The `CustomTargetingKey` to update.
+        /// 
+        /// The `CustomTargetingKey`'s `name` is used to identify the
+        /// `CustomTargetingKey` to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomTargetingKey UpdateCustomTargetingKey(CustomTargetingKey customTargetingKey, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCustomTargetingKey(new UpdateCustomTargetingKeyRequest
+            {
+                CustomTargetingKey = gax::GaxPreconditions.CheckNotNull(customTargetingKey, nameof(customTargetingKey)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// API to update a `CustomTargetingKey` object.
+        /// </summary>
+        /// <param name="customTargetingKey">
+        /// Required. The `CustomTargetingKey` to update.
+        /// 
+        /// The `CustomTargetingKey`'s `name` is used to identify the
+        /// `CustomTargetingKey` to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetingKey> UpdateCustomTargetingKeyAsync(CustomTargetingKey customTargetingKey, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCustomTargetingKeyAsync(new UpdateCustomTargetingKeyRequest
+            {
+                CustomTargetingKey = gax::GaxPreconditions.CheckNotNull(customTargetingKey, nameof(customTargetingKey)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// API to update a `CustomTargetingKey` object.
+        /// </summary>
+        /// <param name="customTargetingKey">
+        /// Required. The `CustomTargetingKey` to update.
+        /// 
+        /// The `CustomTargetingKey`'s `name` is used to identify the
+        /// `CustomTargetingKey` to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetingKey> UpdateCustomTargetingKeyAsync(CustomTargetingKey customTargetingKey, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateCustomTargetingKeyAsync(customTargetingKey, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to batch update `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdateCustomTargetingKeysResponse BatchUpdateCustomTargetingKeys(BatchUpdateCustomTargetingKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to batch update `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateCustomTargetingKeysResponse> BatchUpdateCustomTargetingKeysAsync(BatchUpdateCustomTargetingKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to batch update `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateCustomTargetingKeysResponse> BatchUpdateCustomTargetingKeysAsync(BatchUpdateCustomTargetingKeysRequest request, st::CancellationToken cancellationToken) =>
+            BatchUpdateCustomTargetingKeysAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to batch update `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `CustomTargetingKeys` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateCustomTargetingKeyRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingKey` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdateCustomTargetingKeysResponse BatchUpdateCustomTargetingKeys(string parent, scg::IEnumerable<UpdateCustomTargetingKeyRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateCustomTargetingKeys(new BatchUpdateCustomTargetingKeysRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch update `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `CustomTargetingKeys` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateCustomTargetingKeyRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingKey` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateCustomTargetingKeysResponse> BatchUpdateCustomTargetingKeysAsync(string parent, scg::IEnumerable<UpdateCustomTargetingKeyRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateCustomTargetingKeysAsync(new BatchUpdateCustomTargetingKeysRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch update `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `CustomTargetingKeys` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateCustomTargetingKeyRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingKey` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateCustomTargetingKeysResponse> BatchUpdateCustomTargetingKeysAsync(string parent, scg::IEnumerable<UpdateCustomTargetingKeyRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchUpdateCustomTargetingKeysAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to batch update `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `CustomTargetingKeys` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateCustomTargetingKeyRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingKey` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdateCustomTargetingKeysResponse BatchUpdateCustomTargetingKeys(NetworkName parent, scg::IEnumerable<UpdateCustomTargetingKeyRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateCustomTargetingKeys(new BatchUpdateCustomTargetingKeysRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch update `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `CustomTargetingKeys` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateCustomTargetingKeyRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingKey` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateCustomTargetingKeysResponse> BatchUpdateCustomTargetingKeysAsync(NetworkName parent, scg::IEnumerable<UpdateCustomTargetingKeyRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateCustomTargetingKeysAsync(new BatchUpdateCustomTargetingKeysRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch update `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `CustomTargetingKeys` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateCustomTargetingKeyRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingKey` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateCustomTargetingKeysResponse> BatchUpdateCustomTargetingKeysAsync(NetworkName parent, scg::IEnumerable<UpdateCustomTargetingKeyRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchUpdateCustomTargetingKeysAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to batch activate `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchActivateCustomTargetingKeysResponse BatchActivateCustomTargetingKeys(BatchActivateCustomTargetingKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to batch activate `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateCustomTargetingKeysResponse> BatchActivateCustomTargetingKeysAsync(BatchActivateCustomTargetingKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to batch activate `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateCustomTargetingKeysResponse> BatchActivateCustomTargetingKeysAsync(BatchActivateCustomTargetingKeysRequest request, st::CancellationToken cancellationToken) =>
+            BatchActivateCustomTargetingKeysAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to batch activate `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `CustomTargetingKey`s to activate.
+        /// Format:
+        /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchActivateCustomTargetingKeysResponse BatchActivateCustomTargetingKeys(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchActivateCustomTargetingKeys(new BatchActivateCustomTargetingKeysRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch activate `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `CustomTargetingKey`s to activate.
+        /// Format:
+        /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateCustomTargetingKeysResponse> BatchActivateCustomTargetingKeysAsync(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchActivateCustomTargetingKeysAsync(new BatchActivateCustomTargetingKeysRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch activate `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `CustomTargetingKey`s to activate.
+        /// Format:
+        /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateCustomTargetingKeysResponse> BatchActivateCustomTargetingKeysAsync(string parent, scg::IEnumerable<string> names, st::CancellationToken cancellationToken) =>
+            BatchActivateCustomTargetingKeysAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to batch activate `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `CustomTargetingKey`s to activate.
+        /// Format:
+        /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchActivateCustomTargetingKeysResponse BatchActivateCustomTargetingKeys(NetworkName parent, scg::IEnumerable<CustomTargetingKeyName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchActivateCustomTargetingKeys(new BatchActivateCustomTargetingKeysRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CustomTargetingKeyNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch activate `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `CustomTargetingKey`s to activate.
+        /// Format:
+        /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateCustomTargetingKeysResponse> BatchActivateCustomTargetingKeysAsync(NetworkName parent, scg::IEnumerable<CustomTargetingKeyName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchActivateCustomTargetingKeysAsync(new BatchActivateCustomTargetingKeysRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CustomTargetingKeyNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch activate `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `CustomTargetingKey`s to activate.
+        /// Format:
+        /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateCustomTargetingKeysResponse> BatchActivateCustomTargetingKeysAsync(NetworkName parent, scg::IEnumerable<CustomTargetingKeyName> names, st::CancellationToken cancellationToken) =>
+            BatchActivateCustomTargetingKeysAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deactivates a list of `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchDeactivateCustomTargetingKeysResponse BatchDeactivateCustomTargetingKeys(BatchDeactivateCustomTargetingKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deactivates a list of `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateCustomTargetingKeysResponse> BatchDeactivateCustomTargetingKeysAsync(BatchDeactivateCustomTargetingKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deactivates a list of `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateCustomTargetingKeysResponse> BatchDeactivateCustomTargetingKeysAsync(BatchDeactivateCustomTargetingKeysRequest request, st::CancellationToken cancellationToken) =>
+            BatchDeactivateCustomTargetingKeysAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deactivates a list of `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `CustomTargetingKey`s to deactivate.
+        /// Format:
+        /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchDeactivateCustomTargetingKeysResponse BatchDeactivateCustomTargetingKeys(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeactivateCustomTargetingKeys(new BatchDeactivateCustomTargetingKeysRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deactivates a list of `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `CustomTargetingKey`s to deactivate.
+        /// Format:
+        /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateCustomTargetingKeysResponse> BatchDeactivateCustomTargetingKeysAsync(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeactivateCustomTargetingKeysAsync(new BatchDeactivateCustomTargetingKeysRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deactivates a list of `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `CustomTargetingKey`s to deactivate.
+        /// Format:
+        /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateCustomTargetingKeysResponse> BatchDeactivateCustomTargetingKeysAsync(string parent, scg::IEnumerable<string> names, st::CancellationToken cancellationToken) =>
+            BatchDeactivateCustomTargetingKeysAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deactivates a list of `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `CustomTargetingKey`s to deactivate.
+        /// Format:
+        /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchDeactivateCustomTargetingKeysResponse BatchDeactivateCustomTargetingKeys(NetworkName parent, scg::IEnumerable<CustomTargetingKeyName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeactivateCustomTargetingKeys(new BatchDeactivateCustomTargetingKeysRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CustomTargetingKeyNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deactivates a list of `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `CustomTargetingKey`s to deactivate.
+        /// Format:
+        /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateCustomTargetingKeysResponse> BatchDeactivateCustomTargetingKeysAsync(NetworkName parent, scg::IEnumerable<CustomTargetingKeyName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeactivateCustomTargetingKeysAsync(new BatchDeactivateCustomTargetingKeysRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CustomTargetingKeyNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deactivates a list of `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `CustomTargetingKey`s to deactivate.
+        /// Format:
+        /// `networks/{network_code}/customTargetingKeys/{custom_targeting_key_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateCustomTargetingKeysResponse> BatchDeactivateCustomTargetingKeysAsync(NetworkName parent, scg::IEnumerable<CustomTargetingKeyName> names, st::CancellationToken cancellationToken) =>
+            BatchDeactivateCustomTargetingKeysAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CustomTargetingKeyService client wrapper implementation, for convenient use.</summary>
@@ -505,6 +1437,18 @@ namespace Google.Ads.AdManager.V1
         private readonly gaxgrpc::ApiCall<GetCustomTargetingKeyRequest, CustomTargetingKey> _callGetCustomTargetingKey;
 
         private readonly gaxgrpc::ApiCall<ListCustomTargetingKeysRequest, ListCustomTargetingKeysResponse> _callListCustomTargetingKeys;
+
+        private readonly gaxgrpc::ApiCall<CreateCustomTargetingKeyRequest, CustomTargetingKey> _callCreateCustomTargetingKey;
+
+        private readonly gaxgrpc::ApiCall<BatchCreateCustomTargetingKeysRequest, BatchCreateCustomTargetingKeysResponse> _callBatchCreateCustomTargetingKeys;
+
+        private readonly gaxgrpc::ApiCall<UpdateCustomTargetingKeyRequest, CustomTargetingKey> _callUpdateCustomTargetingKey;
+
+        private readonly gaxgrpc::ApiCall<BatchUpdateCustomTargetingKeysRequest, BatchUpdateCustomTargetingKeysResponse> _callBatchUpdateCustomTargetingKeys;
+
+        private readonly gaxgrpc::ApiCall<BatchActivateCustomTargetingKeysRequest, BatchActivateCustomTargetingKeysResponse> _callBatchActivateCustomTargetingKeys;
+
+        private readonly gaxgrpc::ApiCall<BatchDeactivateCustomTargetingKeysRequest, BatchDeactivateCustomTargetingKeysResponse> _callBatchDeactivateCustomTargetingKeys;
 
         /// <summary>
         /// Constructs a client wrapper for the CustomTargetingKeyService service, with the specified gRPC client and
@@ -530,6 +1474,24 @@ namespace Google.Ads.AdManager.V1
             _callListCustomTargetingKeys = clientHelper.BuildApiCall<ListCustomTargetingKeysRequest, ListCustomTargetingKeysResponse>("ListCustomTargetingKeys", grpcClient.ListCustomTargetingKeysAsync, grpcClient.ListCustomTargetingKeys, effectiveSettings.ListCustomTargetingKeysSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCustomTargetingKeys);
             Modify_ListCustomTargetingKeysApiCall(ref _callListCustomTargetingKeys);
+            _callCreateCustomTargetingKey = clientHelper.BuildApiCall<CreateCustomTargetingKeyRequest, CustomTargetingKey>("CreateCustomTargetingKey", grpcClient.CreateCustomTargetingKeyAsync, grpcClient.CreateCustomTargetingKey, effectiveSettings.CreateCustomTargetingKeySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateCustomTargetingKey);
+            Modify_CreateCustomTargetingKeyApiCall(ref _callCreateCustomTargetingKey);
+            _callBatchCreateCustomTargetingKeys = clientHelper.BuildApiCall<BatchCreateCustomTargetingKeysRequest, BatchCreateCustomTargetingKeysResponse>("BatchCreateCustomTargetingKeys", grpcClient.BatchCreateCustomTargetingKeysAsync, grpcClient.BatchCreateCustomTargetingKeys, effectiveSettings.BatchCreateCustomTargetingKeysSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchCreateCustomTargetingKeys);
+            Modify_BatchCreateCustomTargetingKeysApiCall(ref _callBatchCreateCustomTargetingKeys);
+            _callUpdateCustomTargetingKey = clientHelper.BuildApiCall<UpdateCustomTargetingKeyRequest, CustomTargetingKey>("UpdateCustomTargetingKey", grpcClient.UpdateCustomTargetingKeyAsync, grpcClient.UpdateCustomTargetingKey, effectiveSettings.UpdateCustomTargetingKeySettings).WithGoogleRequestParam("custom_targeting_key.name", request => request.CustomTargetingKey?.Name);
+            Modify_ApiCall(ref _callUpdateCustomTargetingKey);
+            Modify_UpdateCustomTargetingKeyApiCall(ref _callUpdateCustomTargetingKey);
+            _callBatchUpdateCustomTargetingKeys = clientHelper.BuildApiCall<BatchUpdateCustomTargetingKeysRequest, BatchUpdateCustomTargetingKeysResponse>("BatchUpdateCustomTargetingKeys", grpcClient.BatchUpdateCustomTargetingKeysAsync, grpcClient.BatchUpdateCustomTargetingKeys, effectiveSettings.BatchUpdateCustomTargetingKeysSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchUpdateCustomTargetingKeys);
+            Modify_BatchUpdateCustomTargetingKeysApiCall(ref _callBatchUpdateCustomTargetingKeys);
+            _callBatchActivateCustomTargetingKeys = clientHelper.BuildApiCall<BatchActivateCustomTargetingKeysRequest, BatchActivateCustomTargetingKeysResponse>("BatchActivateCustomTargetingKeys", grpcClient.BatchActivateCustomTargetingKeysAsync, grpcClient.BatchActivateCustomTargetingKeys, effectiveSettings.BatchActivateCustomTargetingKeysSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchActivateCustomTargetingKeys);
+            Modify_BatchActivateCustomTargetingKeysApiCall(ref _callBatchActivateCustomTargetingKeys);
+            _callBatchDeactivateCustomTargetingKeys = clientHelper.BuildApiCall<BatchDeactivateCustomTargetingKeysRequest, BatchDeactivateCustomTargetingKeysResponse>("BatchDeactivateCustomTargetingKeys", grpcClient.BatchDeactivateCustomTargetingKeysAsync, grpcClient.BatchDeactivateCustomTargetingKeys, effectiveSettings.BatchDeactivateCustomTargetingKeysSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchDeactivateCustomTargetingKeys);
+            Modify_BatchDeactivateCustomTargetingKeysApiCall(ref _callBatchDeactivateCustomTargetingKeys);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -539,6 +1501,18 @@ namespace Google.Ads.AdManager.V1
 
         partial void Modify_ListCustomTargetingKeysApiCall(ref gaxgrpc::ApiCall<ListCustomTargetingKeysRequest, ListCustomTargetingKeysResponse> call);
 
+        partial void Modify_CreateCustomTargetingKeyApiCall(ref gaxgrpc::ApiCall<CreateCustomTargetingKeyRequest, CustomTargetingKey> call);
+
+        partial void Modify_BatchCreateCustomTargetingKeysApiCall(ref gaxgrpc::ApiCall<BatchCreateCustomTargetingKeysRequest, BatchCreateCustomTargetingKeysResponse> call);
+
+        partial void Modify_UpdateCustomTargetingKeyApiCall(ref gaxgrpc::ApiCall<UpdateCustomTargetingKeyRequest, CustomTargetingKey> call);
+
+        partial void Modify_BatchUpdateCustomTargetingKeysApiCall(ref gaxgrpc::ApiCall<BatchUpdateCustomTargetingKeysRequest, BatchUpdateCustomTargetingKeysResponse> call);
+
+        partial void Modify_BatchActivateCustomTargetingKeysApiCall(ref gaxgrpc::ApiCall<BatchActivateCustomTargetingKeysRequest, BatchActivateCustomTargetingKeysResponse> call);
+
+        partial void Modify_BatchDeactivateCustomTargetingKeysApiCall(ref gaxgrpc::ApiCall<BatchDeactivateCustomTargetingKeysRequest, BatchDeactivateCustomTargetingKeysResponse> call);
+
         partial void OnConstruction(CustomTargetingKeyService.CustomTargetingKeyServiceClient grpcClient, CustomTargetingKeyServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC CustomTargetingKeyService client</summary>
@@ -547,6 +1521,18 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_GetCustomTargetingKeyRequest(ref GetCustomTargetingKeyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListCustomTargetingKeysRequest(ref ListCustomTargetingKeysRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateCustomTargetingKeyRequest(ref CreateCustomTargetingKeyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchCreateCustomTargetingKeysRequest(ref BatchCreateCustomTargetingKeysRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateCustomTargetingKeyRequest(ref UpdateCustomTargetingKeyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchUpdateCustomTargetingKeysRequest(ref BatchUpdateCustomTargetingKeysRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchActivateCustomTargetingKeysRequest(ref BatchActivateCustomTargetingKeysRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchDeactivateCustomTargetingKeysRequest(ref BatchDeactivateCustomTargetingKeysRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// API to retrieve a `CustomTargetingKey` object.
@@ -594,6 +1580,150 @@ namespace Google.Ads.AdManager.V1
         {
             Modify_ListCustomTargetingKeysRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListCustomTargetingKeysRequest, ListCustomTargetingKeysResponse, CustomTargetingKey>(_callListCustomTargetingKeys, request, callSettings);
+        }
+
+        /// <summary>
+        /// API to create a `CustomTargetingKey` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CustomTargetingKey CreateCustomTargetingKey(CreateCustomTargetingKeyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCustomTargetingKeyRequest(ref request, ref callSettings);
+            return _callCreateCustomTargetingKey.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to create a `CustomTargetingKey` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CustomTargetingKey> CreateCustomTargetingKeyAsync(CreateCustomTargetingKeyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCustomTargetingKeyRequest(ref request, ref callSettings);
+            return _callCreateCustomTargetingKey.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to batch create `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchCreateCustomTargetingKeysResponse BatchCreateCustomTargetingKeys(BatchCreateCustomTargetingKeysRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateCustomTargetingKeysRequest(ref request, ref callSettings);
+            return _callBatchCreateCustomTargetingKeys.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to batch create `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchCreateCustomTargetingKeysResponse> BatchCreateCustomTargetingKeysAsync(BatchCreateCustomTargetingKeysRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateCustomTargetingKeysRequest(ref request, ref callSettings);
+            return _callBatchCreateCustomTargetingKeys.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to update a `CustomTargetingKey` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CustomTargetingKey UpdateCustomTargetingKey(UpdateCustomTargetingKeyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCustomTargetingKeyRequest(ref request, ref callSettings);
+            return _callUpdateCustomTargetingKey.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to update a `CustomTargetingKey` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CustomTargetingKey> UpdateCustomTargetingKeyAsync(UpdateCustomTargetingKeyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCustomTargetingKeyRequest(ref request, ref callSettings);
+            return _callUpdateCustomTargetingKey.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to batch update `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchUpdateCustomTargetingKeysResponse BatchUpdateCustomTargetingKeys(BatchUpdateCustomTargetingKeysRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUpdateCustomTargetingKeysRequest(ref request, ref callSettings);
+            return _callBatchUpdateCustomTargetingKeys.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to batch update `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchUpdateCustomTargetingKeysResponse> BatchUpdateCustomTargetingKeysAsync(BatchUpdateCustomTargetingKeysRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUpdateCustomTargetingKeysRequest(ref request, ref callSettings);
+            return _callBatchUpdateCustomTargetingKeys.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to batch activate `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchActivateCustomTargetingKeysResponse BatchActivateCustomTargetingKeys(BatchActivateCustomTargetingKeysRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchActivateCustomTargetingKeysRequest(ref request, ref callSettings);
+            return _callBatchActivateCustomTargetingKeys.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to batch activate `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchActivateCustomTargetingKeysResponse> BatchActivateCustomTargetingKeysAsync(BatchActivateCustomTargetingKeysRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchActivateCustomTargetingKeysRequest(ref request, ref callSettings);
+            return _callBatchActivateCustomTargetingKeys.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deactivates a list of `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchDeactivateCustomTargetingKeysResponse BatchDeactivateCustomTargetingKeys(BatchDeactivateCustomTargetingKeysRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeactivateCustomTargetingKeysRequest(ref request, ref callSettings);
+            return _callBatchDeactivateCustomTargetingKeys.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deactivates a list of `CustomTargetingKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchDeactivateCustomTargetingKeysResponse> BatchDeactivateCustomTargetingKeysAsync(BatchDeactivateCustomTargetingKeysRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeactivateCustomTargetingKeysRequest(ref request, ref callSettings);
+            return _callBatchDeactivateCustomTargetingKeys.Async(request, callSettings);
         }
     }
 
