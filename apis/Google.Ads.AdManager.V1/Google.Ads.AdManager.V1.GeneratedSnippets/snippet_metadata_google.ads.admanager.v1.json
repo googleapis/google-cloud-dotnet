@@ -3222,6 +3222,2024 @@
       ]
     },
     {
+      "regionTag": "admanager_v1_generated_AdUnitService_CreateAdUnit_sync",
+      "title": "CreateAdUnitRequestObject",
+      "description": "Snippet for CreateAdUnit",
+      "file": "AdUnitServiceClient.CreateAdUnitRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAdUnit",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.CreateAdUnit",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.CreateAdUnitRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.AdUnit",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAdUnit",
+          "fullName": "google.ads.admanager.v1.AdUnitService.CreateAdUnit",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_CreateAdUnit_async",
+      "title": "CreateAdUnitRequestObjectAsync",
+      "description": "Snippet for CreateAdUnitAsync",
+      "file": "AdUnitServiceClient.CreateAdUnitRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAdUnitAsync",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.CreateAdUnitAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.CreateAdUnitRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.AdUnit>",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAdUnit",
+          "fullName": "google.ads.admanager.v1.AdUnitService.CreateAdUnit",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_CreateAdUnit_sync_flattened",
+      "title": "CreateAdUnit",
+      "description": "Snippet for CreateAdUnit",
+      "file": "AdUnitServiceClient.CreateAdUnitSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAdUnit",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.CreateAdUnit",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.AdUnit",
+            "name": "adUnit"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.AdUnit",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAdUnit",
+          "fullName": "google.ads.admanager.v1.AdUnitService.CreateAdUnit",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_CreateAdUnit_async_flattened",
+      "title": "CreateAdUnitAsync",
+      "description": "Snippet for CreateAdUnitAsync",
+      "file": "AdUnitServiceClient.CreateAdUnitAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAdUnitAsync",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.CreateAdUnitAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.AdUnit",
+            "name": "adUnit"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.AdUnit>",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAdUnit",
+          "fullName": "google.ads.admanager.v1.AdUnitService.CreateAdUnit",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_CreateAdUnit_sync_flattened_resourceNames",
+      "title": "CreateAdUnitResourceNames",
+      "description": "Snippet for CreateAdUnit",
+      "file": "AdUnitServiceClient.CreateAdUnitResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAdUnit",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.CreateAdUnit",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.AdUnit",
+            "name": "adUnit"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.AdUnit",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAdUnit",
+          "fullName": "google.ads.admanager.v1.AdUnitService.CreateAdUnit",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_CreateAdUnit_async_flattened_resourceNames",
+      "title": "CreateAdUnitResourceNamesAsync",
+      "description": "Snippet for CreateAdUnitAsync",
+      "file": "AdUnitServiceClient.CreateAdUnitResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAdUnitAsync",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.CreateAdUnitAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.AdUnit",
+            "name": "adUnit"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.AdUnit>",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "CreateAdUnit",
+          "fullName": "google.ads.admanager.v1.AdUnitService.CreateAdUnit",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_UpdateAdUnit_sync",
+      "title": "UpdateAdUnitRequestObject",
+      "description": "Snippet for UpdateAdUnit",
+      "file": "AdUnitServiceClient.UpdateAdUnitRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAdUnit",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.UpdateAdUnit",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.UpdateAdUnitRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.AdUnit",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAdUnit",
+          "fullName": "google.ads.admanager.v1.AdUnitService.UpdateAdUnit",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_UpdateAdUnit_async",
+      "title": "UpdateAdUnitRequestObjectAsync",
+      "description": "Snippet for UpdateAdUnitAsync",
+      "file": "AdUnitServiceClient.UpdateAdUnitRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAdUnitAsync",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.UpdateAdUnitAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.UpdateAdUnitRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.AdUnit>",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAdUnit",
+          "fullName": "google.ads.admanager.v1.AdUnitService.UpdateAdUnit",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_UpdateAdUnit_sync_flattened",
+      "title": "UpdateAdUnit",
+      "description": "Snippet for UpdateAdUnit",
+      "file": "AdUnitServiceClient.UpdateAdUnitSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAdUnit",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.UpdateAdUnit",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.AdUnit",
+            "name": "adUnit"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.AdUnit",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAdUnit",
+          "fullName": "google.ads.admanager.v1.AdUnitService.UpdateAdUnit",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_UpdateAdUnit_async_flattened",
+      "title": "UpdateAdUnitAsync",
+      "description": "Snippet for UpdateAdUnitAsync",
+      "file": "AdUnitServiceClient.UpdateAdUnitAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAdUnitAsync",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.UpdateAdUnitAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.AdUnit",
+            "name": "adUnit"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.AdUnit>",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAdUnit",
+          "fullName": "google.ads.admanager.v1.AdUnitService.UpdateAdUnit",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchCreateAdUnits_sync",
+      "title": "BatchCreateAdUnitsRequestObject",
+      "description": "Snippet for BatchCreateAdUnits",
+      "file": "AdUnitServiceClient.BatchCreateAdUnitsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateAdUnits",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchCreateAdUnits",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchCreateAdUnitsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchCreateAdUnitsResponse",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchCreateAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchCreateAdUnits_async",
+      "title": "BatchCreateAdUnitsRequestObjectAsync",
+      "description": "Snippet for BatchCreateAdUnitsAsync",
+      "file": "AdUnitServiceClient.BatchCreateAdUnitsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateAdUnitsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchCreateAdUnitsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchCreateAdUnitsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchCreateAdUnitsResponse>",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchCreateAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchCreateAdUnits_sync_flattened",
+      "title": "BatchCreateAdUnits",
+      "description": "Snippet for BatchCreateAdUnits",
+      "file": "AdUnitServiceClient.BatchCreateAdUnitsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateAdUnits",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchCreateAdUnits",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.CreateAdUnitRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchCreateAdUnitsResponse",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchCreateAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchCreateAdUnits_async_flattened",
+      "title": "BatchCreateAdUnitsAsync",
+      "description": "Snippet for BatchCreateAdUnitsAsync",
+      "file": "AdUnitServiceClient.BatchCreateAdUnitsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateAdUnitsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchCreateAdUnitsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.CreateAdUnitRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchCreateAdUnitsResponse>",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchCreateAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchCreateAdUnits_sync_flattened_resourceNames",
+      "title": "BatchCreateAdUnitsResourceNames",
+      "description": "Snippet for BatchCreateAdUnits",
+      "file": "AdUnitServiceClient.BatchCreateAdUnitsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateAdUnits",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchCreateAdUnits",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.CreateAdUnitRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchCreateAdUnitsResponse",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchCreateAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchCreateAdUnits_async_flattened_resourceNames",
+      "title": "BatchCreateAdUnitsResourceNamesAsync",
+      "description": "Snippet for BatchCreateAdUnitsAsync",
+      "file": "AdUnitServiceClient.BatchCreateAdUnitsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateAdUnitsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchCreateAdUnitsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.CreateAdUnitRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchCreateAdUnitsResponse>",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchCreateAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchUpdateAdUnits_sync",
+      "title": "BatchUpdateAdUnitsRequestObject",
+      "description": "Snippet for BatchUpdateAdUnits",
+      "file": "AdUnitServiceClient.BatchUpdateAdUnitsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateAdUnits",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchUpdateAdUnits",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchUpdateAdUnitsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchUpdateAdUnitsResponse",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchUpdateAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchUpdateAdUnits_async",
+      "title": "BatchUpdateAdUnitsRequestObjectAsync",
+      "description": "Snippet for BatchUpdateAdUnitsAsync",
+      "file": "AdUnitServiceClient.BatchUpdateAdUnitsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateAdUnitsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchUpdateAdUnitsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchUpdateAdUnitsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchUpdateAdUnitsResponse>",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchUpdateAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchUpdateAdUnits_sync_flattened",
+      "title": "BatchUpdateAdUnits",
+      "description": "Snippet for BatchUpdateAdUnits",
+      "file": "AdUnitServiceClient.BatchUpdateAdUnitsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateAdUnits",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchUpdateAdUnits",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.UpdateAdUnitRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchUpdateAdUnitsResponse",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchUpdateAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchUpdateAdUnits_async_flattened",
+      "title": "BatchUpdateAdUnitsAsync",
+      "description": "Snippet for BatchUpdateAdUnitsAsync",
+      "file": "AdUnitServiceClient.BatchUpdateAdUnitsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateAdUnitsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchUpdateAdUnitsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.UpdateAdUnitRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchUpdateAdUnitsResponse>",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchUpdateAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchUpdateAdUnits_sync_flattened_resourceNames",
+      "title": "BatchUpdateAdUnitsResourceNames",
+      "description": "Snippet for BatchUpdateAdUnits",
+      "file": "AdUnitServiceClient.BatchUpdateAdUnitsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateAdUnits",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchUpdateAdUnits",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.UpdateAdUnitRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchUpdateAdUnitsResponse",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchUpdateAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchUpdateAdUnits_async_flattened_resourceNames",
+      "title": "BatchUpdateAdUnitsResourceNamesAsync",
+      "description": "Snippet for BatchUpdateAdUnitsAsync",
+      "file": "AdUnitServiceClient.BatchUpdateAdUnitsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateAdUnitsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchUpdateAdUnitsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.UpdateAdUnitRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchUpdateAdUnitsResponse>",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchUpdateAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchActivateAdUnits_sync",
+      "title": "BatchActivateAdUnitsRequestObject",
+      "description": "Snippet for BatchActivateAdUnits",
+      "file": "AdUnitServiceClient.BatchActivateAdUnitsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchActivateAdUnits",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchActivateAdUnits",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchActivateAdUnitsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchActivateAdUnitsResponse",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchActivateAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchActivateAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchActivateAdUnits_async",
+      "title": "BatchActivateAdUnitsRequestObjectAsync",
+      "description": "Snippet for BatchActivateAdUnitsAsync",
+      "file": "AdUnitServiceClient.BatchActivateAdUnitsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchActivateAdUnitsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchActivateAdUnitsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchActivateAdUnitsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchActivateAdUnitsResponse>",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchActivateAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchActivateAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchActivateAdUnits_sync_flattened",
+      "title": "BatchActivateAdUnits",
+      "description": "Snippet for BatchActivateAdUnits",
+      "file": "AdUnitServiceClient.BatchActivateAdUnitsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchActivateAdUnits",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchActivateAdUnits",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchActivateAdUnitsResponse",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchActivateAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchActivateAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchActivateAdUnits_async_flattened",
+      "title": "BatchActivateAdUnitsAsync",
+      "description": "Snippet for BatchActivateAdUnitsAsync",
+      "file": "AdUnitServiceClient.BatchActivateAdUnitsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchActivateAdUnitsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchActivateAdUnitsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchActivateAdUnitsResponse>",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchActivateAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchActivateAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchActivateAdUnits_sync_flattened_resourceNames",
+      "title": "BatchActivateAdUnitsResourceNames",
+      "description": "Snippet for BatchActivateAdUnits",
+      "file": "AdUnitServiceClient.BatchActivateAdUnitsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchActivateAdUnits",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchActivateAdUnits",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.AdUnitName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchActivateAdUnitsResponse",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchActivateAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchActivateAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchActivateAdUnits_async_flattened_resourceNames",
+      "title": "BatchActivateAdUnitsResourceNamesAsync",
+      "description": "Snippet for BatchActivateAdUnitsAsync",
+      "file": "AdUnitServiceClient.BatchActivateAdUnitsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchActivateAdUnitsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchActivateAdUnitsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.AdUnitName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchActivateAdUnitsResponse>",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchActivateAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchActivateAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchDeactivateAdUnits_sync",
+      "title": "BatchDeactivateAdUnitsRequestObject",
+      "description": "Snippet for BatchDeactivateAdUnits",
+      "file": "AdUnitServiceClient.BatchDeactivateAdUnitsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeactivateAdUnits",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchDeactivateAdUnits",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchDeactivateAdUnitsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchDeactivateAdUnitsResponse",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeactivateAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchDeactivateAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchDeactivateAdUnits_async",
+      "title": "BatchDeactivateAdUnitsRequestObjectAsync",
+      "description": "Snippet for BatchDeactivateAdUnitsAsync",
+      "file": "AdUnitServiceClient.BatchDeactivateAdUnitsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeactivateAdUnitsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchDeactivateAdUnitsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchDeactivateAdUnitsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchDeactivateAdUnitsResponse>",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeactivateAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchDeactivateAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchDeactivateAdUnits_sync_flattened",
+      "title": "BatchDeactivateAdUnits",
+      "description": "Snippet for BatchDeactivateAdUnits",
+      "file": "AdUnitServiceClient.BatchDeactivateAdUnitsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeactivateAdUnits",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchDeactivateAdUnits",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchDeactivateAdUnitsResponse",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeactivateAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchDeactivateAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchDeactivateAdUnits_async_flattened",
+      "title": "BatchDeactivateAdUnitsAsync",
+      "description": "Snippet for BatchDeactivateAdUnitsAsync",
+      "file": "AdUnitServiceClient.BatchDeactivateAdUnitsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeactivateAdUnitsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchDeactivateAdUnitsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchDeactivateAdUnitsResponse>",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeactivateAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchDeactivateAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchDeactivateAdUnits_sync_flattened_resourceNames",
+      "title": "BatchDeactivateAdUnitsResourceNames",
+      "description": "Snippet for BatchDeactivateAdUnits",
+      "file": "AdUnitServiceClient.BatchDeactivateAdUnitsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeactivateAdUnits",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchDeactivateAdUnits",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.AdUnitName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchDeactivateAdUnitsResponse",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeactivateAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchDeactivateAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchDeactivateAdUnits_async_flattened_resourceNames",
+      "title": "BatchDeactivateAdUnitsResourceNamesAsync",
+      "description": "Snippet for BatchDeactivateAdUnitsAsync",
+      "file": "AdUnitServiceClient.BatchDeactivateAdUnitsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeactivateAdUnitsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchDeactivateAdUnitsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.AdUnitName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchDeactivateAdUnitsResponse>",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeactivateAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchDeactivateAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchArchiveAdUnits_sync",
+      "title": "BatchArchiveAdUnitsRequestObject",
+      "description": "Snippet for BatchArchiveAdUnits",
+      "file": "AdUnitServiceClient.BatchArchiveAdUnitsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchArchiveAdUnits",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchArchiveAdUnits",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchArchiveAdUnitsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchArchiveAdUnitsResponse",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchArchiveAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchArchiveAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchArchiveAdUnits_async",
+      "title": "BatchArchiveAdUnitsRequestObjectAsync",
+      "description": "Snippet for BatchArchiveAdUnitsAsync",
+      "file": "AdUnitServiceClient.BatchArchiveAdUnitsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchArchiveAdUnitsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchArchiveAdUnitsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchArchiveAdUnitsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchArchiveAdUnitsResponse>",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchArchiveAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchArchiveAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchArchiveAdUnits_sync_flattened",
+      "title": "BatchArchiveAdUnits",
+      "description": "Snippet for BatchArchiveAdUnits",
+      "file": "AdUnitServiceClient.BatchArchiveAdUnitsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchArchiveAdUnits",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchArchiveAdUnits",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchArchiveAdUnitsResponse",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchArchiveAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchArchiveAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchArchiveAdUnits_async_flattened",
+      "title": "BatchArchiveAdUnitsAsync",
+      "description": "Snippet for BatchArchiveAdUnitsAsync",
+      "file": "AdUnitServiceClient.BatchArchiveAdUnitsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchArchiveAdUnitsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchArchiveAdUnitsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchArchiveAdUnitsResponse>",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchArchiveAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchArchiveAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchArchiveAdUnits_sync_flattened_resourceNames",
+      "title": "BatchArchiveAdUnitsResourceNames",
+      "description": "Snippet for BatchArchiveAdUnits",
+      "file": "AdUnitServiceClient.BatchArchiveAdUnitsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchArchiveAdUnits",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchArchiveAdUnits",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.AdUnitName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchArchiveAdUnitsResponse",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchArchiveAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchArchiveAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_AdUnitService_BatchArchiveAdUnits_async_flattened_resourceNames",
+      "title": "BatchArchiveAdUnitsResourceNamesAsync",
+      "description": "Snippet for BatchArchiveAdUnitsAsync",
+      "file": "AdUnitServiceClient.BatchArchiveAdUnitsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchArchiveAdUnitsAsync",
+        "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient.BatchArchiveAdUnitsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.AdUnitName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchArchiveAdUnitsResponse>",
+        "client": {
+          "shortName": "AdUnitServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.AdUnitServiceClient"
+        },
+        "method": {
+          "shortName": "BatchArchiveAdUnits",
+          "fullName": "google.ads.admanager.v1.AdUnitService.BatchArchiveAdUnits",
+          "service": {
+            "shortName": "AdUnitService",
+            "fullName": "google.ads.admanager.v1.AdUnitService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "admanager_v1_generated_ApplicationService_GetApplication_sync",
       "title": "GetApplicationRequestObject",
       "description": "Snippet for GetApplication",
@@ -15136,6 +17154,1721 @@
       ]
     },
     {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_CreateCustomTargetingKey_sync",
+      "title": "CreateCustomTargetingKeyRequestObject",
+      "description": "Snippet for CreateCustomTargetingKey",
+      "file": "CustomTargetingKeyServiceClient.CreateCustomTargetingKeyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCustomTargetingKey",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.CreateCustomTargetingKey",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.CreateCustomTargetingKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.CustomTargetingKey",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCustomTargetingKey",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.CreateCustomTargetingKey",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_CreateCustomTargetingKey_async",
+      "title": "CreateCustomTargetingKeyRequestObjectAsync",
+      "description": "Snippet for CreateCustomTargetingKeyAsync",
+      "file": "CustomTargetingKeyServiceClient.CreateCustomTargetingKeyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCustomTargetingKeyAsync",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.CreateCustomTargetingKeyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.CreateCustomTargetingKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.CustomTargetingKey>",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCustomTargetingKey",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.CreateCustomTargetingKey",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_CreateCustomTargetingKey_sync_flattened",
+      "title": "CreateCustomTargetingKey",
+      "description": "Snippet for CreateCustomTargetingKey",
+      "file": "CustomTargetingKeyServiceClient.CreateCustomTargetingKeySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCustomTargetingKey",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.CreateCustomTargetingKey",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.CustomTargetingKey",
+            "name": "customTargetingKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.CustomTargetingKey",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCustomTargetingKey",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.CreateCustomTargetingKey",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_CreateCustomTargetingKey_async_flattened",
+      "title": "CreateCustomTargetingKeyAsync",
+      "description": "Snippet for CreateCustomTargetingKeyAsync",
+      "file": "CustomTargetingKeyServiceClient.CreateCustomTargetingKeyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCustomTargetingKeyAsync",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.CreateCustomTargetingKeyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.CustomTargetingKey",
+            "name": "customTargetingKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.CustomTargetingKey>",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCustomTargetingKey",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.CreateCustomTargetingKey",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_CreateCustomTargetingKey_sync_flattened_resourceNames",
+      "title": "CreateCustomTargetingKeyResourceNames",
+      "description": "Snippet for CreateCustomTargetingKey",
+      "file": "CustomTargetingKeyServiceClient.CreateCustomTargetingKeyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCustomTargetingKey",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.CreateCustomTargetingKey",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.CustomTargetingKey",
+            "name": "customTargetingKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.CustomTargetingKey",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCustomTargetingKey",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.CreateCustomTargetingKey",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_CreateCustomTargetingKey_async_flattened_resourceNames",
+      "title": "CreateCustomTargetingKeyResourceNamesAsync",
+      "description": "Snippet for CreateCustomTargetingKeyAsync",
+      "file": "CustomTargetingKeyServiceClient.CreateCustomTargetingKeyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCustomTargetingKeyAsync",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.CreateCustomTargetingKeyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.CustomTargetingKey",
+            "name": "customTargetingKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.CustomTargetingKey>",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "CreateCustomTargetingKey",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.CreateCustomTargetingKey",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_BatchCreateCustomTargetingKeys_sync",
+      "title": "BatchCreateCustomTargetingKeysRequestObject",
+      "description": "Snippet for BatchCreateCustomTargetingKeys",
+      "file": "CustomTargetingKeyServiceClient.BatchCreateCustomTargetingKeysRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateCustomTargetingKeys",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.BatchCreateCustomTargetingKeys",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchCreateCustomTargetingKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchCreateCustomTargetingKeysResponse",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateCustomTargetingKeys",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.BatchCreateCustomTargetingKeys",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_BatchCreateCustomTargetingKeys_async",
+      "title": "BatchCreateCustomTargetingKeysRequestObjectAsync",
+      "description": "Snippet for BatchCreateCustomTargetingKeysAsync",
+      "file": "CustomTargetingKeyServiceClient.BatchCreateCustomTargetingKeysRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateCustomTargetingKeysAsync",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.BatchCreateCustomTargetingKeysAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchCreateCustomTargetingKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchCreateCustomTargetingKeysResponse>",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateCustomTargetingKeys",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.BatchCreateCustomTargetingKeys",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_BatchCreateCustomTargetingKeys_sync_flattened",
+      "title": "BatchCreateCustomTargetingKeys",
+      "description": "Snippet for BatchCreateCustomTargetingKeys",
+      "file": "CustomTargetingKeyServiceClient.BatchCreateCustomTargetingKeysSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateCustomTargetingKeys",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.BatchCreateCustomTargetingKeys",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.CreateCustomTargetingKeyRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchCreateCustomTargetingKeysResponse",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateCustomTargetingKeys",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.BatchCreateCustomTargetingKeys",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_BatchCreateCustomTargetingKeys_async_flattened",
+      "title": "BatchCreateCustomTargetingKeysAsync",
+      "description": "Snippet for BatchCreateCustomTargetingKeysAsync",
+      "file": "CustomTargetingKeyServiceClient.BatchCreateCustomTargetingKeysAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateCustomTargetingKeysAsync",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.BatchCreateCustomTargetingKeysAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.CreateCustomTargetingKeyRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchCreateCustomTargetingKeysResponse>",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateCustomTargetingKeys",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.BatchCreateCustomTargetingKeys",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_BatchCreateCustomTargetingKeys_sync_flattened_resourceNames",
+      "title": "BatchCreateCustomTargetingKeysResourceNames",
+      "description": "Snippet for BatchCreateCustomTargetingKeys",
+      "file": "CustomTargetingKeyServiceClient.BatchCreateCustomTargetingKeysResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateCustomTargetingKeys",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.BatchCreateCustomTargetingKeys",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.CreateCustomTargetingKeyRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchCreateCustomTargetingKeysResponse",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateCustomTargetingKeys",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.BatchCreateCustomTargetingKeys",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_BatchCreateCustomTargetingKeys_async_flattened_resourceNames",
+      "title": "BatchCreateCustomTargetingKeysResourceNamesAsync",
+      "description": "Snippet for BatchCreateCustomTargetingKeysAsync",
+      "file": "CustomTargetingKeyServiceClient.BatchCreateCustomTargetingKeysResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchCreateCustomTargetingKeysAsync",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.BatchCreateCustomTargetingKeysAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.CreateCustomTargetingKeyRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchCreateCustomTargetingKeysResponse>",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "BatchCreateCustomTargetingKeys",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.BatchCreateCustomTargetingKeys",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_UpdateCustomTargetingKey_sync",
+      "title": "UpdateCustomTargetingKeyRequestObject",
+      "description": "Snippet for UpdateCustomTargetingKey",
+      "file": "CustomTargetingKeyServiceClient.UpdateCustomTargetingKeyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCustomTargetingKey",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.UpdateCustomTargetingKey",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.UpdateCustomTargetingKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.CustomTargetingKey",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCustomTargetingKey",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.UpdateCustomTargetingKey",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_UpdateCustomTargetingKey_async",
+      "title": "UpdateCustomTargetingKeyRequestObjectAsync",
+      "description": "Snippet for UpdateCustomTargetingKeyAsync",
+      "file": "CustomTargetingKeyServiceClient.UpdateCustomTargetingKeyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCustomTargetingKeyAsync",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.UpdateCustomTargetingKeyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.UpdateCustomTargetingKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.CustomTargetingKey>",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCustomTargetingKey",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.UpdateCustomTargetingKey",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_UpdateCustomTargetingKey_sync_flattened",
+      "title": "UpdateCustomTargetingKey",
+      "description": "Snippet for UpdateCustomTargetingKey",
+      "file": "CustomTargetingKeyServiceClient.UpdateCustomTargetingKeySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCustomTargetingKey",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.UpdateCustomTargetingKey",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.CustomTargetingKey",
+            "name": "customTargetingKey"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.CustomTargetingKey",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCustomTargetingKey",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.UpdateCustomTargetingKey",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_UpdateCustomTargetingKey_async_flattened",
+      "title": "UpdateCustomTargetingKeyAsync",
+      "description": "Snippet for UpdateCustomTargetingKeyAsync",
+      "file": "CustomTargetingKeyServiceClient.UpdateCustomTargetingKeyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCustomTargetingKeyAsync",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.UpdateCustomTargetingKeyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.CustomTargetingKey",
+            "name": "customTargetingKey"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.CustomTargetingKey>",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCustomTargetingKey",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.UpdateCustomTargetingKey",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_BatchUpdateCustomTargetingKeys_sync",
+      "title": "BatchUpdateCustomTargetingKeysRequestObject",
+      "description": "Snippet for BatchUpdateCustomTargetingKeys",
+      "file": "CustomTargetingKeyServiceClient.BatchUpdateCustomTargetingKeysRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateCustomTargetingKeys",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.BatchUpdateCustomTargetingKeys",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchUpdateCustomTargetingKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchUpdateCustomTargetingKeysResponse",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateCustomTargetingKeys",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.BatchUpdateCustomTargetingKeys",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_BatchUpdateCustomTargetingKeys_async",
+      "title": "BatchUpdateCustomTargetingKeysRequestObjectAsync",
+      "description": "Snippet for BatchUpdateCustomTargetingKeysAsync",
+      "file": "CustomTargetingKeyServiceClient.BatchUpdateCustomTargetingKeysRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateCustomTargetingKeysAsync",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.BatchUpdateCustomTargetingKeysAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchUpdateCustomTargetingKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchUpdateCustomTargetingKeysResponse>",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateCustomTargetingKeys",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.BatchUpdateCustomTargetingKeys",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_BatchUpdateCustomTargetingKeys_sync_flattened",
+      "title": "BatchUpdateCustomTargetingKeys",
+      "description": "Snippet for BatchUpdateCustomTargetingKeys",
+      "file": "CustomTargetingKeyServiceClient.BatchUpdateCustomTargetingKeysSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateCustomTargetingKeys",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.BatchUpdateCustomTargetingKeys",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.UpdateCustomTargetingKeyRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchUpdateCustomTargetingKeysResponse",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateCustomTargetingKeys",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.BatchUpdateCustomTargetingKeys",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_BatchUpdateCustomTargetingKeys_async_flattened",
+      "title": "BatchUpdateCustomTargetingKeysAsync",
+      "description": "Snippet for BatchUpdateCustomTargetingKeysAsync",
+      "file": "CustomTargetingKeyServiceClient.BatchUpdateCustomTargetingKeysAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateCustomTargetingKeysAsync",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.BatchUpdateCustomTargetingKeysAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.UpdateCustomTargetingKeyRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchUpdateCustomTargetingKeysResponse>",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateCustomTargetingKeys",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.BatchUpdateCustomTargetingKeys",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_BatchUpdateCustomTargetingKeys_sync_flattened_resourceNames",
+      "title": "BatchUpdateCustomTargetingKeysResourceNames",
+      "description": "Snippet for BatchUpdateCustomTargetingKeys",
+      "file": "CustomTargetingKeyServiceClient.BatchUpdateCustomTargetingKeysResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateCustomTargetingKeys",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.BatchUpdateCustomTargetingKeys",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.UpdateCustomTargetingKeyRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchUpdateCustomTargetingKeysResponse",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateCustomTargetingKeys",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.BatchUpdateCustomTargetingKeys",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_BatchUpdateCustomTargetingKeys_async_flattened_resourceNames",
+      "title": "BatchUpdateCustomTargetingKeysResourceNamesAsync",
+      "description": "Snippet for BatchUpdateCustomTargetingKeysAsync",
+      "file": "CustomTargetingKeyServiceClient.BatchUpdateCustomTargetingKeysResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateCustomTargetingKeysAsync",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.BatchUpdateCustomTargetingKeysAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Ads.AdManager.V1.UpdateCustomTargetingKeyRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchUpdateCustomTargetingKeysResponse>",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateCustomTargetingKeys",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.BatchUpdateCustomTargetingKeys",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_BatchActivateCustomTargetingKeys_sync",
+      "title": "BatchActivateCustomTargetingKeysRequestObject",
+      "description": "Snippet for BatchActivateCustomTargetingKeys",
+      "file": "CustomTargetingKeyServiceClient.BatchActivateCustomTargetingKeysRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchActivateCustomTargetingKeys",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.BatchActivateCustomTargetingKeys",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchActivateCustomTargetingKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchActivateCustomTargetingKeysResponse",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "BatchActivateCustomTargetingKeys",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.BatchActivateCustomTargetingKeys",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_BatchActivateCustomTargetingKeys_async",
+      "title": "BatchActivateCustomTargetingKeysRequestObjectAsync",
+      "description": "Snippet for BatchActivateCustomTargetingKeysAsync",
+      "file": "CustomTargetingKeyServiceClient.BatchActivateCustomTargetingKeysRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchActivateCustomTargetingKeysAsync",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.BatchActivateCustomTargetingKeysAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchActivateCustomTargetingKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchActivateCustomTargetingKeysResponse>",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "BatchActivateCustomTargetingKeys",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.BatchActivateCustomTargetingKeys",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_BatchActivateCustomTargetingKeys_sync_flattened",
+      "title": "BatchActivateCustomTargetingKeys",
+      "description": "Snippet for BatchActivateCustomTargetingKeys",
+      "file": "CustomTargetingKeyServiceClient.BatchActivateCustomTargetingKeysSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchActivateCustomTargetingKeys",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.BatchActivateCustomTargetingKeys",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchActivateCustomTargetingKeysResponse",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "BatchActivateCustomTargetingKeys",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.BatchActivateCustomTargetingKeys",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_BatchActivateCustomTargetingKeys_async_flattened",
+      "title": "BatchActivateCustomTargetingKeysAsync",
+      "description": "Snippet for BatchActivateCustomTargetingKeysAsync",
+      "file": "CustomTargetingKeyServiceClient.BatchActivateCustomTargetingKeysAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchActivateCustomTargetingKeysAsync",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.BatchActivateCustomTargetingKeysAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchActivateCustomTargetingKeysResponse>",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "BatchActivateCustomTargetingKeys",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.BatchActivateCustomTargetingKeys",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_BatchActivateCustomTargetingKeys_sync_flattened_resourceNames",
+      "title": "BatchActivateCustomTargetingKeysResourceNames",
+      "description": "Snippet for BatchActivateCustomTargetingKeys",
+      "file": "CustomTargetingKeyServiceClient.BatchActivateCustomTargetingKeysResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchActivateCustomTargetingKeys",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.BatchActivateCustomTargetingKeys",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.CustomTargetingKeyName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchActivateCustomTargetingKeysResponse",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "BatchActivateCustomTargetingKeys",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.BatchActivateCustomTargetingKeys",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_BatchActivateCustomTargetingKeys_async_flattened_resourceNames",
+      "title": "BatchActivateCustomTargetingKeysResourceNamesAsync",
+      "description": "Snippet for BatchActivateCustomTargetingKeysAsync",
+      "file": "CustomTargetingKeyServiceClient.BatchActivateCustomTargetingKeysResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchActivateCustomTargetingKeysAsync",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.BatchActivateCustomTargetingKeysAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.CustomTargetingKeyName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchActivateCustomTargetingKeysResponse>",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "BatchActivateCustomTargetingKeys",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.BatchActivateCustomTargetingKeys",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_BatchDeactivateCustomTargetingKeys_sync",
+      "title": "BatchDeactivateCustomTargetingKeysRequestObject",
+      "description": "Snippet for BatchDeactivateCustomTargetingKeys",
+      "file": "CustomTargetingKeyServiceClient.BatchDeactivateCustomTargetingKeysRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeactivateCustomTargetingKeys",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.BatchDeactivateCustomTargetingKeys",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingKeysResponse",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeactivateCustomTargetingKeys",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.BatchDeactivateCustomTargetingKeys",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_BatchDeactivateCustomTargetingKeys_async",
+      "title": "BatchDeactivateCustomTargetingKeysRequestObjectAsync",
+      "description": "Snippet for BatchDeactivateCustomTargetingKeysAsync",
+      "file": "CustomTargetingKeyServiceClient.BatchDeactivateCustomTargetingKeysRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeactivateCustomTargetingKeysAsync",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.BatchDeactivateCustomTargetingKeysAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingKeysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingKeysResponse>",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeactivateCustomTargetingKeys",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.BatchDeactivateCustomTargetingKeys",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_BatchDeactivateCustomTargetingKeys_sync_flattened",
+      "title": "BatchDeactivateCustomTargetingKeys",
+      "description": "Snippet for BatchDeactivateCustomTargetingKeys",
+      "file": "CustomTargetingKeyServiceClient.BatchDeactivateCustomTargetingKeysSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeactivateCustomTargetingKeys",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.BatchDeactivateCustomTargetingKeys",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingKeysResponse",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeactivateCustomTargetingKeys",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.BatchDeactivateCustomTargetingKeys",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_BatchDeactivateCustomTargetingKeys_async_flattened",
+      "title": "BatchDeactivateCustomTargetingKeysAsync",
+      "description": "Snippet for BatchDeactivateCustomTargetingKeysAsync",
+      "file": "CustomTargetingKeyServiceClient.BatchDeactivateCustomTargetingKeysAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeactivateCustomTargetingKeysAsync",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.BatchDeactivateCustomTargetingKeysAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingKeysResponse>",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeactivateCustomTargetingKeys",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.BatchDeactivateCustomTargetingKeys",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_BatchDeactivateCustomTargetingKeys_sync_flattened_resourceNames",
+      "title": "BatchDeactivateCustomTargetingKeysResourceNames",
+      "description": "Snippet for BatchDeactivateCustomTargetingKeys",
+      "file": "CustomTargetingKeyServiceClient.BatchDeactivateCustomTargetingKeysResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeactivateCustomTargetingKeys",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.BatchDeactivateCustomTargetingKeys",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.CustomTargetingKeyName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingKeysResponse",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeactivateCustomTargetingKeys",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.BatchDeactivateCustomTargetingKeys",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_CustomTargetingKeyService_BatchDeactivateCustomTargetingKeys_async_flattened_resourceNames",
+      "title": "BatchDeactivateCustomTargetingKeysResourceNamesAsync",
+      "description": "Snippet for BatchDeactivateCustomTargetingKeysAsync",
+      "file": "CustomTargetingKeyServiceClient.BatchDeactivateCustomTargetingKeysResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchDeactivateCustomTargetingKeysAsync",
+        "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient.BatchDeactivateCustomTargetingKeysAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Ads.AdManager.V1.CustomTargetingKeyName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingKeysResponse>",
+        "client": {
+          "shortName": "CustomTargetingKeyServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.CustomTargetingKeyServiceClient"
+        },
+        "method": {
+          "shortName": "BatchDeactivateCustomTargetingKeys",
+          "fullName": "google.ads.admanager.v1.CustomTargetingKeyService.BatchDeactivateCustomTargetingKeys",
+          "service": {
+            "shortName": "CustomTargetingKeyService",
+            "fullName": "google.ads.admanager.v1.CustomTargetingKeyService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "admanager_v1_generated_CustomTargetingValueService_GetCustomTargetingValue_sync",
       "title": "GetCustomTargetingValueRequestObject",
       "description": "Snippet for GetCustomTargetingValue",
@@ -19881,6 +23614,612 @@
       ]
     },
     {
+      "regionTag": "admanager_v1_generated_LineItemService_GetLineItem_sync",
+      "title": "GetLineItemRequestObject",
+      "description": "Snippet for GetLineItem",
+      "file": "LineItemServiceClient.GetLineItemRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLineItem",
+        "fullName": "Google.Ads.AdManager.V1.LineItemServiceClient.GetLineItem",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.GetLineItemRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.LineItem",
+        "client": {
+          "shortName": "LineItemServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.LineItemServiceClient"
+        },
+        "method": {
+          "shortName": "GetLineItem",
+          "fullName": "google.ads.admanager.v1.LineItemService.GetLineItem",
+          "service": {
+            "shortName": "LineItemService",
+            "fullName": "google.ads.admanager.v1.LineItemService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_LineItemService_GetLineItem_async",
+      "title": "GetLineItemRequestObjectAsync",
+      "description": "Snippet for GetLineItemAsync",
+      "file": "LineItemServiceClient.GetLineItemRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLineItemAsync",
+        "fullName": "Google.Ads.AdManager.V1.LineItemServiceClient.GetLineItemAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.GetLineItemRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.LineItem>",
+        "client": {
+          "shortName": "LineItemServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.LineItemServiceClient"
+        },
+        "method": {
+          "shortName": "GetLineItem",
+          "fullName": "google.ads.admanager.v1.LineItemService.GetLineItem",
+          "service": {
+            "shortName": "LineItemService",
+            "fullName": "google.ads.admanager.v1.LineItemService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_LineItemService_GetLineItem_sync_flattened",
+      "title": "GetLineItem",
+      "description": "Snippet for GetLineItem",
+      "file": "LineItemServiceClient.GetLineItemSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLineItem",
+        "fullName": "Google.Ads.AdManager.V1.LineItemServiceClient.GetLineItem",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.LineItem",
+        "client": {
+          "shortName": "LineItemServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.LineItemServiceClient"
+        },
+        "method": {
+          "shortName": "GetLineItem",
+          "fullName": "google.ads.admanager.v1.LineItemService.GetLineItem",
+          "service": {
+            "shortName": "LineItemService",
+            "fullName": "google.ads.admanager.v1.LineItemService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_LineItemService_GetLineItem_async_flattened",
+      "title": "GetLineItemAsync",
+      "description": "Snippet for GetLineItemAsync",
+      "file": "LineItemServiceClient.GetLineItemAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLineItemAsync",
+        "fullName": "Google.Ads.AdManager.V1.LineItemServiceClient.GetLineItemAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.LineItem>",
+        "client": {
+          "shortName": "LineItemServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.LineItemServiceClient"
+        },
+        "method": {
+          "shortName": "GetLineItem",
+          "fullName": "google.ads.admanager.v1.LineItemService.GetLineItem",
+          "service": {
+            "shortName": "LineItemService",
+            "fullName": "google.ads.admanager.v1.LineItemService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_LineItemService_GetLineItem_sync_flattened_resourceNames",
+      "title": "GetLineItemResourceNames",
+      "description": "Snippet for GetLineItem",
+      "file": "LineItemServiceClient.GetLineItemResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLineItem",
+        "fullName": "Google.Ads.AdManager.V1.LineItemServiceClient.GetLineItem",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.LineItemName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Ads.AdManager.V1.LineItem",
+        "client": {
+          "shortName": "LineItemServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.LineItemServiceClient"
+        },
+        "method": {
+          "shortName": "GetLineItem",
+          "fullName": "google.ads.admanager.v1.LineItemService.GetLineItem",
+          "service": {
+            "shortName": "LineItemService",
+            "fullName": "google.ads.admanager.v1.LineItemService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_LineItemService_GetLineItem_async_flattened_resourceNames",
+      "title": "GetLineItemResourceNamesAsync",
+      "description": "Snippet for GetLineItemAsync",
+      "file": "LineItemServiceClient.GetLineItemResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLineItemAsync",
+        "fullName": "Google.Ads.AdManager.V1.LineItemServiceClient.GetLineItemAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.LineItemName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.LineItem>",
+        "client": {
+          "shortName": "LineItemServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.LineItemServiceClient"
+        },
+        "method": {
+          "shortName": "GetLineItem",
+          "fullName": "google.ads.admanager.v1.LineItemService.GetLineItem",
+          "service": {
+            "shortName": "LineItemService",
+            "fullName": "google.ads.admanager.v1.LineItemService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_LineItemService_ListLineItems_sync",
+      "title": "ListLineItemsRequestObject",
+      "description": "Snippet for ListLineItems",
+      "file": "LineItemServiceClient.ListLineItemsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLineItems",
+        "fullName": "Google.Ads.AdManager.V1.LineItemServiceClient.ListLineItems",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.ListLineItemsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.AdManager.V1.ListLineItemsResponse, Google.Ads.AdManager.V1.LineItem>",
+        "client": {
+          "shortName": "LineItemServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.LineItemServiceClient"
+        },
+        "method": {
+          "shortName": "ListLineItems",
+          "fullName": "google.ads.admanager.v1.LineItemService.ListLineItems",
+          "service": {
+            "shortName": "LineItemService",
+            "fullName": "google.ads.admanager.v1.LineItemService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_LineItemService_ListLineItems_async",
+      "title": "ListLineItemsRequestObjectAsync",
+      "description": "Snippet for ListLineItemsAsync",
+      "file": "LineItemServiceClient.ListLineItemsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLineItemsAsync",
+        "fullName": "Google.Ads.AdManager.V1.LineItemServiceClient.ListLineItemsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.ListLineItemsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.AdManager.V1.ListLineItemsResponse, Google.Ads.AdManager.V1.LineItem>",
+        "client": {
+          "shortName": "LineItemServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.LineItemServiceClient"
+        },
+        "method": {
+          "shortName": "ListLineItems",
+          "fullName": "google.ads.admanager.v1.LineItemService.ListLineItems",
+          "service": {
+            "shortName": "LineItemService",
+            "fullName": "google.ads.admanager.v1.LineItemService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_LineItemService_ListLineItems_sync_flattened",
+      "title": "ListLineItems",
+      "description": "Snippet for ListLineItems",
+      "file": "LineItemServiceClient.ListLineItemsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLineItems",
+        "fullName": "Google.Ads.AdManager.V1.LineItemServiceClient.ListLineItems",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.AdManager.V1.ListLineItemsResponse, Google.Ads.AdManager.V1.LineItem>",
+        "client": {
+          "shortName": "LineItemServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.LineItemServiceClient"
+        },
+        "method": {
+          "shortName": "ListLineItems",
+          "fullName": "google.ads.admanager.v1.LineItemService.ListLineItems",
+          "service": {
+            "shortName": "LineItemService",
+            "fullName": "google.ads.admanager.v1.LineItemService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_LineItemService_ListLineItems_async_flattened",
+      "title": "ListLineItemsAsync",
+      "description": "Snippet for ListLineItemsAsync",
+      "file": "LineItemServiceClient.ListLineItemsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLineItemsAsync",
+        "fullName": "Google.Ads.AdManager.V1.LineItemServiceClient.ListLineItemsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.AdManager.V1.ListLineItemsResponse, Google.Ads.AdManager.V1.LineItem>",
+        "client": {
+          "shortName": "LineItemServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.LineItemServiceClient"
+        },
+        "method": {
+          "shortName": "ListLineItems",
+          "fullName": "google.ads.admanager.v1.LineItemService.ListLineItems",
+          "service": {
+            "shortName": "LineItemService",
+            "fullName": "google.ads.admanager.v1.LineItemService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_LineItemService_ListLineItems_sync_flattened_resourceNames",
+      "title": "ListLineItemsResourceNames",
+      "description": "Snippet for ListLineItems",
+      "file": "LineItemServiceClient.ListLineItemsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLineItems",
+        "fullName": "Google.Ads.AdManager.V1.LineItemServiceClient.ListLineItems",
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.AdManager.V1.ListLineItemsResponse, Google.Ads.AdManager.V1.LineItem>",
+        "client": {
+          "shortName": "LineItemServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.LineItemServiceClient"
+        },
+        "method": {
+          "shortName": "ListLineItems",
+          "fullName": "google.ads.admanager.v1.LineItemService.ListLineItems",
+          "service": {
+            "shortName": "LineItemService",
+            "fullName": "google.ads.admanager.v1.LineItemService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "admanager_v1_generated_LineItemService_ListLineItems_async_flattened_resourceNames",
+      "title": "ListLineItemsResourceNamesAsync",
+      "description": "Snippet for ListLineItemsAsync",
+      "file": "LineItemServiceClient.ListLineItemsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLineItemsAsync",
+        "fullName": "Google.Ads.AdManager.V1.LineItemServiceClient.ListLineItemsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Ads.AdManager.V1.NetworkName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.AdManager.V1.ListLineItemsResponse, Google.Ads.AdManager.V1.LineItem>",
+        "client": {
+          "shortName": "LineItemServiceClient",
+          "fullName": "Google.Ads.AdManager.V1.LineItemServiceClient"
+        },
+        "method": {
+          "shortName": "ListLineItems",
+          "fullName": "google.ads.admanager.v1.LineItemService.ListLineItems",
+          "service": {
+            "shortName": "LineItemService",
+            "fullName": "google.ads.admanager.v1.LineItemService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "admanager_v1_generated_MobileCarrierService_GetMobileCarrier_sync",
       "title": "GetMobileCarrierRequestObject",
       "description": "Snippet for GetMobileCarrier",
@@ -22004,7 +26343,7 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "Google.Ads.AdManager.V1.ListNetworksResponse",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Ads.AdManager.V1.ListNetworksResponse, Google.Ads.AdManager.V1.Network>",
         "client": {
           "shortName": "NetworkServiceClient",
           "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient"
@@ -22023,12 +26362,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 41,
+          "end": 75,
           "type": "FULL"
         },
         {
-          "start": 34,
-          "end": 39,
+          "start": 36,
+          "end": 73,
           "type": "SHORT"
         }
       ]
@@ -22053,7 +26392,7 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "System.Threading.Tasks.Task<Google.Ads.AdManager.V1.ListNetworksResponse>",
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Ads.AdManager.V1.ListNetworksResponse, Google.Ads.AdManager.V1.Network>",
         "client": {
           "shortName": "NetworkServiceClient",
           "fullName": "Google.Ads.AdManager.V1.NetworkServiceClient"
@@ -22072,12 +26411,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 42,
+          "end": 77,
           "type": "FULL"
         },
         {
-          "start": 35,
-          "end": 40,
+          "start": 38,
+          "end": 75,
           "type": "SHORT"
         }
       ]

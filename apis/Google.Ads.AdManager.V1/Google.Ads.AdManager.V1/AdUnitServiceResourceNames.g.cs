@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaav = Google.Ads.AdManager.V1;
+using gax = Google.Api.Gax;
 
 namespace Google.Ads.AdManager.V1
 {
@@ -43,6 +44,42 @@ namespace Google.Ads.AdManager.V1
         }
     }
 
+    public partial class CreateAdUnitRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchCreateAdUnitsRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchUpdateAdUnitsRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListAdUnitSizesRequest
     {
         /// <summary>
@@ -52,6 +89,60 @@ namespace Google.Ads.AdManager.V1
         {
             get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchActivateAdUnitsRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary><see cref="AdUnitName"/>-typed view over the <see cref="Names"/> resource name property.</summary>
+        public gax::ResourceNameList<AdUnitName> AdUnitNames
+        {
+            get => new gax::ResourceNameList<AdUnitName>(Names, s => string.IsNullOrEmpty(s) ? null : AdUnitName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class BatchDeactivateAdUnitsRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary><see cref="AdUnitName"/>-typed view over the <see cref="Names"/> resource name property.</summary>
+        public gax::ResourceNameList<AdUnitName> AdUnitNames
+        {
+            get => new gax::ResourceNameList<AdUnitName>(Names, s => string.IsNullOrEmpty(s) ? null : AdUnitName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class BatchArchiveAdUnitsRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary><see cref="AdUnitName"/>-typed view over the <see cref="Names"/> resource name property.</summary>
+        public gax::ResourceNameList<AdUnitName> AdUnitNames
+        {
+            get => new gax::ResourceNameList<AdUnitName>(Names, s => string.IsNullOrEmpty(s) ? null : AdUnitName.Parse(s, allowUnparsed: true));
         }
     }
 }

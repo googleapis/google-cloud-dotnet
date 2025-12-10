@@ -76,6 +76,42 @@
         "grpc": {
           "libraryClient": "AdUnitServiceClient",
           "rpcs": {
+            "BatchActivateAdUnits": {
+              "methods": [
+                "BatchActivateAdUnits",
+                "BatchActivateAdUnitsAsync"
+              ]
+            },
+            "BatchArchiveAdUnits": {
+              "methods": [
+                "BatchArchiveAdUnits",
+                "BatchArchiveAdUnitsAsync"
+              ]
+            },
+            "BatchCreateAdUnits": {
+              "methods": [
+                "BatchCreateAdUnits",
+                "BatchCreateAdUnitsAsync"
+              ]
+            },
+            "BatchDeactivateAdUnits": {
+              "methods": [
+                "BatchDeactivateAdUnits",
+                "BatchDeactivateAdUnitsAsync"
+              ]
+            },
+            "BatchUpdateAdUnits": {
+              "methods": [
+                "BatchUpdateAdUnits",
+                "BatchUpdateAdUnitsAsync"
+              ]
+            },
+            "CreateAdUnit": {
+              "methods": [
+                "CreateAdUnit",
+                "CreateAdUnitAsync"
+              ]
+            },
             "GetAdUnit": {
               "methods": [
                 "GetAdUnit",
@@ -92,6 +128,12 @@
               "methods": [
                 "ListAdUnits",
                 "ListAdUnitsAsync"
+              ]
+            },
+            "UpdateAdUnit": {
+              "methods": [
+                "UpdateAdUnit",
+                "UpdateAdUnitAsync"
               ]
             }
           }
@@ -457,6 +499,36 @@
         "grpc": {
           "libraryClient": "CustomTargetingKeyServiceClient",
           "rpcs": {
+            "BatchActivateCustomTargetingKeys": {
+              "methods": [
+                "BatchActivateCustomTargetingKeys",
+                "BatchActivateCustomTargetingKeysAsync"
+              ]
+            },
+            "BatchCreateCustomTargetingKeys": {
+              "methods": [
+                "BatchCreateCustomTargetingKeys",
+                "BatchCreateCustomTargetingKeysAsync"
+              ]
+            },
+            "BatchDeactivateCustomTargetingKeys": {
+              "methods": [
+                "BatchDeactivateCustomTargetingKeys",
+                "BatchDeactivateCustomTargetingKeysAsync"
+              ]
+            },
+            "BatchUpdateCustomTargetingKeys": {
+              "methods": [
+                "BatchUpdateCustomTargetingKeys",
+                "BatchUpdateCustomTargetingKeysAsync"
+              ]
+            },
+            "CreateCustomTargetingKey": {
+              "methods": [
+                "CreateCustomTargetingKey",
+                "CreateCustomTargetingKeyAsync"
+              ]
+            },
             "GetCustomTargetingKey": {
               "methods": [
                 "GetCustomTargetingKey",
@@ -467,6 +539,12 @@
               "methods": [
                 "ListCustomTargetingKeys",
                 "ListCustomTargetingKeysAsync"
+              ]
+            },
+            "UpdateCustomTargetingKey": {
+              "methods": [
+                "UpdateCustomTargetingKey",
+                "UpdateCustomTargetingKeyAsync"
               ]
             }
           }
@@ -617,6 +695,27 @@
               "methods": [
                 "ListGeoTargets",
                 "ListGeoTargetsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "LineItemService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "LineItemServiceClient",
+          "rpcs": {
+            "GetLineItem": {
+              "methods": [
+                "GetLineItem",
+                "GetLineItemAsync"
+              ]
+            },
+            "ListLineItems": {
+              "methods": [
+                "ListLineItems",
+                "ListLineItemsAsync"
               ]
             }
           }

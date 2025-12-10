@@ -225,7 +225,7 @@ namespace Google.Ads.AdManager.V1
         public virtual CmsMetadataValueService.CmsMetadataValueServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `CmsMetadataKey` object.
+        /// API to retrieve a `CmsMetadataValue` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -234,7 +234,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `CmsMetadataKey` object.
+        /// API to retrieve a `CmsMetadataValue` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -243,7 +243,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `CmsMetadataKey` object.
+        /// API to retrieve a `CmsMetadataValue` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -252,10 +252,10 @@ namespace Google.Ads.AdManager.V1
             GetCmsMetadataValueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `CmsMetadataKey` object.
+        /// API to retrieve a `CmsMetadataValue` object.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the CmsMetadataKey.
+        /// Required. The resource name of the CmsMetadataValue.
         /// Format: `networks/{network_code}/cmsMetadataValues/{cms_metadata_value_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -267,10 +267,10 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `CmsMetadataKey` object.
+        /// API to retrieve a `CmsMetadataValue` object.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the CmsMetadataKey.
+        /// Required. The resource name of the CmsMetadataValue.
         /// Format: `networks/{network_code}/cmsMetadataValues/{cms_metadata_value_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -282,10 +282,10 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `CmsMetadataKey` object.
+        /// API to retrieve a `CmsMetadataValue` object.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the CmsMetadataKey.
+        /// Required. The resource name of the CmsMetadataValue.
         /// Format: `networks/{network_code}/cmsMetadataValues/{cms_metadata_value_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -294,10 +294,10 @@ namespace Google.Ads.AdManager.V1
             GetCmsMetadataValueAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `CmsMetadataKey` object.
+        /// API to retrieve a `CmsMetadataValue` object.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the CmsMetadataKey.
+        /// Required. The resource name of the CmsMetadataValue.
         /// Format: `networks/{network_code}/cmsMetadataValues/{cms_metadata_value_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -309,10 +309,10 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `CmsMetadataKey` object.
+        /// API to retrieve a `CmsMetadataValue` object.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the CmsMetadataKey.
+        /// Required. The resource name of the CmsMetadataValue.
         /// Format: `networks/{network_code}/cmsMetadataValues/{cms_metadata_value_id}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -324,10 +324,10 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `CmsMetadataKey` object.
+        /// API to retrieve a `CmsMetadataValue` object.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the CmsMetadataKey.
+        /// Required. The resource name of the CmsMetadataValue.
         /// Format: `networks/{network_code}/cmsMetadataValues/{cms_metadata_value_id}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -543,7 +543,7 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_ListCmsMetadataValuesRequest(ref ListCmsMetadataValuesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// API to retrieve a `CmsMetadataKey` object.
+        /// API to retrieve a `CmsMetadataValue` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -555,7 +555,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a `CmsMetadataKey` object.
+        /// API to retrieve a `CmsMetadataValue` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

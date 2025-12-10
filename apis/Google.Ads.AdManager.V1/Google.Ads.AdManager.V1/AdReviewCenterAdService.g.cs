@@ -38,7 +38,7 @@ namespace Google.Ads.AdManager.V1 {
             "UHJvcGVydHkSFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tl",
             "bhgDIAEoCUID4EEBEl8KBnN0YXR1cxgEIAEoDjJKLmdvb2dsZS5hZHMuYWRt",
             "YW5hZ2VyLnYxLkFkUmV2aWV3Q2VudGVyQWRTdGF0dXNFbnVtLkFkUmV2aWV3",
-            "Q2VudGVyQWRTdGF0dXNCA+BBAhIjChZhZF9yZXZpZXdfY2VudGVyX2FkX2lk",
+            "Q2VudGVyQWRTdGF0dXNCA+BBARIjChZhZF9yZXZpZXdfY2VudGVyX2FkX2lk",
             "GAUgAygJQgPgQQESMwoPZGF0ZV90aW1lX3JhbmdlGAYgASgLMhUuZ29vZ2xl",
             "LnR5cGUuSW50ZXJ2YWxCA+BBARIYCgtzZWFyY2hfdGV4dBgHIAMoCUID4EEB",
             "Eh0KEGJ1eWVyX2FjY291bnRfaWQYCCADKANCA+BBASKDAQofU2VhcmNoQWRS",
@@ -222,7 +222,7 @@ namespace Google.Ads.AdManager.V1 {
     public const int StatusFieldNumber = 4;
     private global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Types.AdReviewCenterAdStatus status_ = global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Types.AdReviewCenterAdStatus.Unspecified;
     /// <summary>
-    /// Required. Only return ads with the given status.
+    /// Optional. Only return ads with the given status.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -239,7 +239,8 @@ namespace Google.Ads.AdManager.V1 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> adReviewCenterAdId_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. If provided, only return ads with the given AdReviewCenterAd IDs.
+    /// Optional. Only return ads with the given AdReviewCenterAd IDs. If provided,
+    /// no other filter can be set (other than page size and page token).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
