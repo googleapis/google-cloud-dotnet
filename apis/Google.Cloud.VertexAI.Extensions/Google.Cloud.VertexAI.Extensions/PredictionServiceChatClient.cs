@@ -417,7 +417,7 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                                 Struct.Parser.ParseJson(JsonSerializer.Serialize(functionCallContent.Arguments, AIJsonUtilities.DefaultOptions)) :
                                 new(),
                         },
-                        ThoughtSignature = ByteString.CopyFrom(thoughtSignature) ?? s_skipThoughtValidation,
+                        ThoughtSignature = thoughtSignature is not null ? ByteString.CopyFrom(thoughtSignature) : s_skipThoughtValidation,
                     };
                     break;
 

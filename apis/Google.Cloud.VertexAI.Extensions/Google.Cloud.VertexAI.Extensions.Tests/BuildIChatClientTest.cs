@@ -1012,6 +1012,47 @@ public class BuildIChatClientTest
     }
 
     [Fact]
+    public async Task IChatClient_GetResponseAsync_SendsFunctionCallContent_WithoutThoughtSignature()
+    {
+        DelegateCallInvoker invoker = new()
+        {
+            OnGenerateContentRequest = request =>
+            {
+                Assert.Equal(3, request.Contents.Count);
+
+                Assert.Equal("user", request.Contents[0].Role);
+                Assert.Single(request.Contents[0].Parts);
+                Assert.Equal("What's the weather?", request.Contents[0].Parts[0].Text);
+
+                Assert.Equal("model", request.Contents[1].Role);
+                Assert.Single(request.Contents[1].Parts);
+                Part functionCallPart = request.Contents[1].Parts[0];
+                Assert.NotNull(functionCallPart.FunctionCall);
+                Assert.Equal("get_weather", functionCallPart.FunctionCall.Name);
+                Assert.False(functionCallPart.ThoughtSignature.IsEmpty);
+                Assert.Equal("skip_thought_signature_validator", functionCallPart.ThoughtSignature.ToStringUtf8());
+
+                Assert.Equal("user", request.Contents[2].Role);
+
+                return CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "It's sunny." } } });
+            }
+        };
+
+        IChatClient chatClient = CreateClientBuilder(invoker).BuildIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+
+        ChatMessage[] messages =
+        [
+            new(ChatRole.User, "What's the weather?"),
+            new(ChatRole.Assistant, [new FunctionCallContent("fc_1", "get_weather", new Dictionary<string, object?> { ["location"] = "Seattle" })]),
+            new(ChatRole.User, [new FunctionResultContent("fc_1", "Sunny, 72°F")])
+        ];
+
+        ChatResponse result = await chatClient.GetResponseAsync(messages);
+        Assert.NotNull(result);
+        Assert.Equal("It's sunny.", ((TextContent)result.Messages[0].Contents[0]).Text);
+    }
+
+    [Fact]
     public async Task IChatClient_GetResponseAsync_CodeInterpreterToolCallContent()
     {
         DelegateCallInvoker invoker = new()
