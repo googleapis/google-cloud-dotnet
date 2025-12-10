@@ -52,13 +52,6 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         private static ICommand GetCommand(string[] args)
         {
-            // This is called a lot during local generation, and doesn't do much. The reflection required
-            // to instantiate all the commands is significant, so we bypass it when we can.
-            if (args.Length >= 1 && args[0] == QueryApiCatalogCommand.CommandName)
-            {
-                return new QueryApiCatalogCommand();
-            }
-
             var allCommands = typeof(Program).Assembly.GetTypes()
                 .Where(t => !t.IsAbstract && typeof(ICommand).IsAssignableFrom(t))
                 .Select(Activator.CreateInstance)
