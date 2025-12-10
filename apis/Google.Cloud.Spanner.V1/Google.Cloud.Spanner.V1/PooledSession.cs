@@ -17,8 +17,11 @@ using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.V1.Internal;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
+using Grpc.Core;
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 using static Google.Cloud.Spanner.V1.TransactionOptions;
@@ -392,6 +395,35 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
+        /// Decides whether we need a transaction ID or not and whether that can be obtained by transaction inlining.
+        /// Sets the correct transaction selector before executing the given command.
+        /// </summary>
+        /// <remarks>All RPCs executed within the session should call this method for guaranteeing they are
+        /// using the correct transaction selector.</remarks>
+        /// <typeparam name="TResponse">The type of the command response.</typeparam>
+        /// <param name="transactionSelectorSetter">Called by this method to set the correct transaction selector.</param>
+        /// <param name="command">The command (RPC) that will be executed after the transaction selector has maybe been set.
+        /// Callers may fail if command is executed but no transaction selector has been set.</param>
+        /// <param name="inlinedTransactionExtractor">Will extract transaction information from the command's response if
+        /// transaction inlining was succesful. May be null, which indicates that command does not support transaction inlining.</param>
+        /// <param name="skipTransactionCreation">If true, transaction creation may be skipped. This is used by commit and rollback
+        /// so that a transaction is not created just for inmediate commit or rollback. Note that if there are pending mutations, commit
+        /// should set this parameter to false.</param>
+        /// <param name="cancellationToken">The cancellation token for the operation.</param>
+        /// <returns>A task whose result will be the result from having executed <paramref name="command"/>.</returns>
+        internal TResponse ExecuteMaybeWithTransactionSelector<TResponse>(
+            Action<TransactionSelector> transactionSelectorSetter,
+            Func<TResponse> command,
+            Func<TResponse, Transaction> inlinedTransactionExtractor,
+            bool skipTransactionCreation,
+            CancellationToken cancellationToken) => Task.Run(async () => await ExecuteMaybeWithTransactionSelectorAsync(
+                    transactionSelectorSetter: transactionSelectorSetter,
+                    commandAsync: () => Task.FromResult(command()),
+                    inlinedTransactionExtractor: inlinedTransactionExtractor,
+                    skipTransactionCreation: skipTransactionCreation,
+                    cancellationToken: cancellationToken).ConfigureAwait(false)).GetAwaiter().GetResult();
+
+        /// <summary>
         /// Creates a PooledSession representing a freshly-created session, with no associated transaction.
         /// </summary>
         internal static PooledSession FromSessionName(SessionPool.ISessionPool pool, SessionName sessionName)
@@ -578,7 +610,7 @@ namespace Google.Cloud.Spanner.V1
                 skipTransactionCreation: request.Mutations.Count == 0, // If there are only mutations we won't have a transaction but we need one.
                 callSettings?.CancellationToken ?? default);
 
-            void SetCommandTransaction(TransactionSelector transactionSelector) 
+            void SetCommandTransaction(TransactionSelector transactionSelector)
             {
                 switch (transactionSelector.SelectorCase)
                 {
@@ -850,6 +882,42 @@ namespace Google.Cloud.Spanner.V1
             Transaction GetInlinedTransaction(ExecuteBatchDmlResponse response) => response?.ResultSets?.FirstOrDefault()?.Metadata?.Transaction;
         }
 
+        /// <summary>
+        /// Executes a BatchWrite RPC asynchronously, returning a stream of responses.
+        /// </summary>
+        /// <remarks>
+        /// This operation can only be run when the session is configured to use no transaction.
+        /// </remarks>
+        /// <param name="request">The batch write request. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>An asynchronous stream of <see cref="BatchWriteResponse"/> messages.</returns>
+        public IAsyncEnumerable<BatchWriteResponse> BatchWriteAsync(BatchWriteRequest request, CallSettings callSettings)
+        {
+            CheckNotDisposed();
+            GaxPreconditions.CheckNotNull(request, nameof(request));
+            // Fail early to prevent the creation of an unused transaction on the session.
+            GaxPreconditions.CheckState(TransactionOptions.ModeCase == ModeOneofCase.None, $"{nameof(BatchWriteAsync)} can only be used when the session is configured to use no transaction.");
+
+            request.SessionAsSessionName = SessionName;
+
+            return ExecuteMaybeWithTransactionSelector(
+                transactionSelectorSetter: SetCommandTransaction,
+                command: BatchWriteAsync,
+                inlinedTransactionExtractor: GetInlinedTransaction,
+                skipTransactionCreation: true,
+                callSettings?.CancellationToken ?? default);
+
+            IAsyncEnumerable<BatchWriteResponse> BatchWriteAsync()
+            {
+                var stream = Client.BatchWrite(request, callSettings);
+                return StreamResponsesAndRecordSuccessAsync(stream.GetResponseStream());
+            }
+
+            // Batch write gRPC manages the transaction itself, if we are trying to explicitly set a transaction or inline, this is a bug.
+            void SetCommandTransaction(TransactionSelector transactionSelector) => throw new InvalidOperationException($"{nameof(BatchWriteAsync)} must be executed with no transaction. If you see this there is a bug in the code.");
+            Transaction GetInlinedTransaction(IAsyncEnumerable<BatchWriteResponse> response) => throw new InvalidOperationException($"{nameof(BatchWriteAsync)} cannot be executed with an inlined transaction. If you see this there is a bug in the code.");
+        }
+
         private void MaybeApplyDirectedReadOptions(IReadOrQueryRequest request)
         {
             if (TransactionMode == ModeOneofCase.ReadOnly // Directed reads apply only to single use or read only transactions. Single use are read only.
@@ -874,6 +942,22 @@ namespace Google.Cloud.Spanner.V1
         {
             await task.WithSessionExpiryChecking(Session).ConfigureAwait(false);
             UpdateRefreshTime();
+        }
+
+        private async IAsyncEnumerable<TResponse> StreamResponsesAndRecordSuccessAsync<TResponse>(AsyncResponseStream<TResponse> responseStream)
+        {
+            try
+            {
+                while (await responseStream.MoveNextAsync().WithSessionExpiryChecking(Session).ConfigureAwait(false))
+                {
+                    UpdateRefreshTime();
+                    yield return responseStream.Current;
+                }
+            }
+            finally
+            {
+                await responseStream.DisposeAsync().ConfigureAwait(false);
+            }
         }
 
         /// <summary>
