@@ -39,6 +39,33 @@ public class VertexAIExtensionsTest
     }
 
     [Fact]
+    public async Task AsIChatClient_TextReasoningContent_WithToolCall_DoesNotThrow()
+    {
+        IChatClient client = await new PredictionServiceClientBuilder()
+            .BuildIChatClientAsync(EndpointName.FormatProjectLocationPublisherModel(s_projectId, s_location, "google", "gemini-2.5-pro"));
+
+        ChatMessage[] messages =
+        [
+            new(ChatRole.User, "Tell me something I don't know"),
+            new(ChatRole.Assistant,
+            [
+                new TextContent("I'm not quite sure what you mean."),
+                new TextReasoningContent(null) { ProtectedData = "CqEDAY89a18A3AfzAjWZZvPxwakP5Fx0TRN6OH2t" },
+            ]),
+            new(ChatRole.Assistant,
+            [
+                new FunctionCallContent("final_result", "final_result"),
+            ]),
+            new(ChatRole.Tool,
+            [
+                new FunctionResultContent("final_result", "Success: Function completed."),
+            ]),
+        ];
+
+        await client.GetResponseAsync(messages);
+    }
+
+    [Fact]
     public async Task AsIChatClient_BasicRequestResponse_Streaming()
     {
         IChatClient client = await new PredictionServiceClientBuilder()
