@@ -14,8 +14,10 @@
 
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Common.V1;
+using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Spanner.Data.CommonTesting;
 
@@ -39,4 +41,6 @@ public abstract class CloudSpannerFixtureBase<TDatabase> : CloudProjectFixtureBa
     protected CloudSpannerFixtureBase(Func<string, TDatabase> databaseFactory) => Database = databaseFactory(ProjectId);
 
     public SpannerConnection GetConnection(Logger logger = null, bool logCommitStats = false) => Database.GetConnection(logger, logCommitStats);
+
+    public async Task<ManagedSession> GetManagedSession() => await Database.GetManagedSession().ConfigureAwait(false);
 }

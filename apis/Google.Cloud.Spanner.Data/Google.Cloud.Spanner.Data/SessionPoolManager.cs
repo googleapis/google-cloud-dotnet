@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
@@ -22,6 +23,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using static Google.Cloud.Spanner.V1.ManagedSession;
 using static Google.Cloud.Spanner.V1.SessionPool;
 
 namespace Google.Cloud.Spanner.Data
@@ -56,10 +58,20 @@ namespace Google.Cloud.Spanner.Data
         private readonly ConcurrentDictionary<SessionPool, TargetedPool> _poolReverseLookup =
             new ConcurrentDictionary<SessionPool, TargetedPool>();
 
+        // Dictionary to store the sessions managed by this manager
+        // Each session is keyed by a complex key, as each (multiplex) session is unique to a combination of client options and unique segment key
+        private readonly ConcurrentDictionary<(SpannerClientCreationOptions, SessionPoolSegmentKey), Task<ManagedSession>> _targetedSessions =
+            new ConcurrentDictionary<(SpannerClientCreationOptions options, SessionPoolSegmentKey segmentKey), Task<ManagedSession>>();
+
         /// <summary>
         /// The session pool options used for every <see cref="SessionPool"/> created by this session pool manager.
         /// </summary>
         public SessionPoolOptions SessionPoolOptions { get; }
+
+        /// <summary>
+        /// The options for every managed session created by this session pool manager.
+        /// </summary>
+        public ManagedSessionOptions ManagedSessionOptions { get; }
 
         /// <summary>
         /// The logger used by this SessionPoolManager and the session pools it creates.
@@ -100,6 +112,18 @@ namespace Google.Cloud.Spanner.Data
             _clientFactory = GaxPreconditions.CheckNotNull(clientFactory, nameof(clientFactory));
         }
 
+        internal SessionPoolManager(
+            ManagedSessionOptions options,
+            SpannerSettings spannerSettings,
+            Logger logger,
+            Func<SpannerClientCreationOptions, SpannerSettings, Task<SpannerClient>> clientFactory)
+        {
+            ManagedSessionOptions = GaxPreconditions.CheckNotNull(options, nameof(options));
+            SpannerSettings = AppendAssemblyVersionHeader(GaxPreconditions.CheckNotNull(spannerSettings, nameof(spannerSettings)));
+            Logger = GaxPreconditions.CheckNotNull(logger, nameof(logger));
+            _clientFactory = GaxPreconditions.CheckNotNull(clientFactory, nameof(clientFactory));
+        }
+
         /// <summary>
         /// Creates a <see cref="SessionPoolManager"/> with the specified options.
         /// </summary>
@@ -108,6 +132,15 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>A <see cref="SessionPoolManager"/> with the given options.</returns>
         public static SessionPoolManager Create(SessionPoolOptions options, Logger logger = null) =>
             new SessionPoolManager(options, CreateDefaultSpannerSettings(), logger ?? Logger.DefaultLogger, CreateClientAsync);
+
+        /// <summary>
+        /// Creates a <see cref="SessionPoolManager"/> with the specified options for managed sessions.
+        /// </summary>
+        /// <param name="options">Managed session options applied to all managed sessions in this session pool</param>
+        /// <param name="logger">The logger to use. May be null, in which case the default logger is used.</param>
+        /// <returns></returns>
+        public static SessionPoolManager Create(ManagedSessionOptions options, Logger logger = null) =>
+           new SessionPoolManager(options, CreateDefaultSpannerSettings(), logger ?? Logger.DefaultLogger, CreateClientAsync);
 
         /// <summary>
         /// Creates a <see cref="SessionPoolManager"/> with the specified SpannerSettings and options.
@@ -124,6 +157,38 @@ namespace Google.Cloud.Spanner.Data
             var targetedPool = _targetedPools.GetOrAdd(options, key => new TargetedPool(this, key));
             targetedPool.IncrementConnectionCount();
             return targetedPool.SessionPoolTask;
+        }
+
+        internal Task<ManagedSession> AcquireManagedSessionAsync(SpannerClientCreationOptions options, DatabaseName dbName, string dbRole)
+        {
+            SessionPoolSegmentKey segmentKey = SessionPoolSegmentKey.Create(dbName).WithDatabaseRole(dbRole);
+            GaxPreconditions.CheckNotNull(options, nameof(options));
+
+            if (_targetedSessions.ContainsKey((options, segmentKey)))
+            {
+                return _targetedSessions[(options, segmentKey)];
+            }
+            else
+            {
+                _targetedSessions[(options, segmentKey)] = CreateMultiplexSessionAsync();
+            }
+
+            var muxSession = _targetedSessions[(options, segmentKey)];
+
+            return muxSession;
+
+            async Task<ManagedSession> CreateMultiplexSessionAsync()
+            {
+                var client = await _clientFactory.Invoke(options, SpannerSettings).ConfigureAwait(false);
+                var managedSessionBuilder = new SessionBuilder(dbName, client)
+                {
+                    Options = ManagedSessionOptions,
+                    DatabaseRole = dbRole,
+                };
+
+                var managedSession = await managedSessionBuilder.BuildAsync().ConfigureAwait(false);
+                return managedSession;
+            }
         }
 
         /// <summary>
