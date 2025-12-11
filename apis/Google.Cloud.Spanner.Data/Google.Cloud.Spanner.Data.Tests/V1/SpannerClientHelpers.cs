@@ -90,6 +90,24 @@ namespace Google.Cloud.Spanner.V1.Tests
             return spannerClientMock;
         }
 
+        internal static SpannerClient SetupMultiplexSessionCreationAsync(this SpannerClient spannerClientMock)
+        {
+            spannerClientMock.Configure().CreateSessionAsync(Arg.Is<CreateSessionRequest>(x => x != null), Arg.Any<CallSettings>())
+                .Returns(args =>
+                {
+                    var request = (CreateSessionRequest) args[0];
+                    Session response = new Session();
+                    response.CreateTime = spannerClientMock.GetNowTimestamp();
+                    response.CreatorRole = request.Session.CreatorRole;
+                    response.Multiplexed = request.Session.Multiplexed;
+                    response.Name = Guid.NewGuid().ToString();
+                    response.SessionName = new SessionName(ProjectId, Instance, Database, response.Name);
+
+                    return Task.FromResult(response);
+                });
+            return spannerClientMock;
+        }
+
         internal static SpannerClient SetupBeginTransactionAsync(this SpannerClient spannerClientMock)
         {
             spannerClientMock.Configure()
