@@ -66,6 +66,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return AgentContextReflection.Descriptor;
             yield return ContextReflection.Descriptor;
             yield return ConversationReflection.Descriptor;
             yield return CredentialsReflection.Descriptor;

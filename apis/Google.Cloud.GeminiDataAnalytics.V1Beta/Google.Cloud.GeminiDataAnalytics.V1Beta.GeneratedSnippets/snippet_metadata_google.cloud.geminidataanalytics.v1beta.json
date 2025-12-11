@@ -3890,6 +3890,103 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1beta_generated_DataChatService_QueryData_sync",
+      "title": "QueryDataRequestObject",
+      "description": "Snippet for QueryData",
+      "file": "DataChatServiceClient.QueryDataRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryData",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataChatServiceClient.QueryData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1Beta.QueryDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GeminiDataAnalytics.V1Beta.QueryDataResponse",
+        "client": {
+          "shortName": "DataChatServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataChatServiceClient"
+        },
+        "method": {
+          "shortName": "QueryData",
+          "fullName": "google.cloud.geminidataanalytics.v1beta.DataChatService.QueryData",
+          "service": {
+            "shortName": "DataChatService",
+            "fullName": "google.cloud.geminidataanalytics.v1beta.DataChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "geminidataanalytics_v1beta_generated_DataChatService_QueryData_async",
+      "title": "QueryDataRequestObjectAsync",
+      "description": "Snippet for QueryDataAsync",
+      "file": "DataChatServiceClient.QueryDataRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryDataAsync",
+        "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataChatServiceClient.QueryDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GeminiDataAnalytics.V1Beta.QueryDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GeminiDataAnalytics.V1Beta.QueryDataResponse>",
+        "client": {
+          "shortName": "DataChatServiceClient",
+          "fullName": "Google.Cloud.GeminiDataAnalytics.V1Beta.DataChatServiceClient"
+        },
+        "method": {
+          "shortName": "QueryData",
+          "fullName": "google.cloud.geminidataanalytics.v1beta.DataChatService.QueryData",
+          "service": {
+            "shortName": "DataChatService",
+            "fullName": "google.cloud.geminidataanalytics.v1beta.DataChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

@@ -54,6 +54,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
             GetConversationSettings = existing.GetConversationSettings;
             ListConversationsSettings = existing.ListConversationsSettings;
             ListMessagesSettings = existing.ListMessagesSettings;
+            QueryDataSettings = existing.QueryDataSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -156,6 +157,24 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListMessagesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataChatServiceClient.QueryData</c> and <c>DataChatServiceClient.QueryDataAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings QueryDataSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1050,6 +1069,33 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
             }
             return ListMessagesAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Queries data from a natural language user query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QueryDataResponse QueryData(QueryDataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Queries data from a natural language user query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryDataResponse> QueryDataAsync(QueryDataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Queries data from a natural language user query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QueryDataResponse> QueryDataAsync(QueryDataRequest request, st::CancellationToken cancellationToken) =>
+            QueryDataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>DataChatService client wrapper implementation, for convenient use.</summary>
@@ -1071,6 +1117,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         private readonly gaxgrpc::ApiCall<ListConversationsRequest, ListConversationsResponse> _callListConversations;
 
         private readonly gaxgrpc::ApiCall<ListMessagesRequest, ListMessagesResponse> _callListMessages;
+
+        private readonly gaxgrpc::ApiCall<QueryDataRequest, QueryDataResponse> _callQueryData;
 
         /// <summary>
         /// Constructs a client wrapper for the DataChatService service, with the specified gRPC client and settings.
@@ -1106,6 +1154,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
             _callListMessages = clientHelper.BuildApiCall<ListMessagesRequest, ListMessagesResponse>("ListMessages", grpcClient.ListMessagesAsync, grpcClient.ListMessages, effectiveSettings.ListMessagesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListMessages);
             Modify_ListMessagesApiCall(ref _callListMessages);
+            _callQueryData = clientHelper.BuildApiCall<QueryDataRequest, QueryDataResponse>("QueryData", grpcClient.QueryDataAsync, grpcClient.QueryData, effectiveSettings.QueryDataSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callQueryData);
+            Modify_QueryDataApiCall(ref _callQueryData);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1124,6 +1175,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         partial void Modify_ListConversationsApiCall(ref gaxgrpc::ApiCall<ListConversationsRequest, ListConversationsResponse> call);
 
         partial void Modify_ListMessagesApiCall(ref gaxgrpc::ApiCall<ListMessagesRequest, ListMessagesResponse> call);
+
+        partial void Modify_QueryDataApiCall(ref gaxgrpc::ApiCall<QueryDataRequest, QueryDataResponse> call);
 
         partial void OnConstruction(DataChatService.DataChatServiceClient grpcClient, DataChatServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1144,6 +1197,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         partial void Modify_ListConversationsRequest(ref ListConversationsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListMessagesRequest(ref ListMessagesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_QueryDataRequest(ref QueryDataRequest request, ref gaxgrpc::CallSettings settings);
 
         internal sealed partial class ChatStreamImpl : ChatStream
         {
@@ -1287,6 +1342,30 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
         {
             Modify_ListMessagesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListMessagesRequest, ListMessagesResponse, StorageMessage>(_callListMessages, request, callSettings);
+        }
+
+        /// <summary>
+        /// Queries data from a natural language user query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override QueryDataResponse QueryData(QueryDataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryDataRequest(ref request, ref callSettings);
+            return _callQueryData.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Queries data from a natural language user query.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<QueryDataResponse> QueryDataAsync(QueryDataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryDataRequest(ref request, ref callSettings);
+            return _callQueryData.Async(request, callSettings);
         }
     }
 
