@@ -102,6 +102,12 @@
                 "ListMessages",
                 "ListMessagesAsync"
               ]
+            },
+            "QueryData": {
+              "methods": [
+                "QueryData",
+                "QueryDataAsync"
+              ]
             }
           }
         }
