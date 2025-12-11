@@ -17,7 +17,7 @@ using System;
 namespace Google.Cloud.Spanner.V1;
 
 /// <summary>
-/// 
+/// Options which can be set on the managed session
 /// </summary>
 public class ManagedSessionOptions
 {

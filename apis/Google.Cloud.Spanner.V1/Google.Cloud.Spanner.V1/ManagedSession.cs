@@ -247,7 +247,9 @@ public class ManagedSession
                                     if (SessionHasExpired(refreshInterval))
                                     {
                                         // Create/Refresh the session only if it is null or it is older than the refreshInterval
-                                        multiplexSession = await Client.CreateSessionAsync(_createSessionRequestTemplate, callSettings).ConfigureAwait(false);
+                                        multiplexSession = await Client.CreateSessionAsync(_createSessionRequestTemplate, callSettings)
+                                                                       .WithCancellationToken(cancellationToken).ConfigureAwait(false);
+
                                         Interlocked.Exchange(ref _session, multiplexSession);
                                     }
                                 }
@@ -296,12 +298,12 @@ public class ManagedSession
     }
 
     /// <summary>
-    /// 
+    /// Builder to build a <see cref="ManagedSession"/>
     /// </summary>
     public sealed partial class SessionBuilder
     {
         /// <summary>
-        /// 
+        /// Constructor with validations on essential parameters needed to build the ManagedSession
         /// </summary>
         public SessionBuilder(DatabaseName databaseName, SpannerClient client)
         {
@@ -330,9 +332,9 @@ public class ManagedSession
         public SpannerClient Client { get; set; }
 
         /// <summary>
-        /// 
+        /// Async method to build a managed session. This will fetch a valid session from backend Spanner and wrap it inside the managed session object.
         /// </summary>
-        /// <param name="cancellationToken"></param>
+        /// <param name="cancellationToken">Cancellation token to cancel this call</param>
         /// <returns></returns>
         public async Task<ManagedSession> BuildAsync(CancellationToken cancellationToken = default)
         {

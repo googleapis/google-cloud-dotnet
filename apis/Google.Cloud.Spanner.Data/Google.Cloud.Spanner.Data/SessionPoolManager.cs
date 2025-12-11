@@ -164,18 +164,7 @@ namespace Google.Cloud.Spanner.Data
             SessionPoolSegmentKey segmentKey = SessionPoolSegmentKey.Create(dbName).WithDatabaseRole(dbRole);
             GaxPreconditions.CheckNotNull(options, nameof(options));
 
-            if (_targetedSessions.ContainsKey((options, segmentKey)))
-            {
-                return _targetedSessions[(options, segmentKey)];
-            }
-            else
-            {
-                _targetedSessions[(options, segmentKey)] = CreateMultiplexSessionAsync();
-            }
-
-            var muxSession = _targetedSessions[(options, segmentKey)];
-
-            return muxSession;
+            return _targetedSessions.GetOrAdd((options, segmentKey), _ => CreateMultiplexSessionAsync());
 
             async Task<ManagedSession> CreateMultiplexSessionAsync()
             {

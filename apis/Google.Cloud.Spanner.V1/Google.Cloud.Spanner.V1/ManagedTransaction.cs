@@ -26,7 +26,7 @@ using static Google.Cloud.Spanner.V1.TransactionOptions;
 namespace Google.Cloud.Spanner.V1
 {
     /// <summary>
-    /// 
+    /// Class which manages an underlying Spanner Transaction and operations around it
     /// </summary>
     public partial class ManagedTransaction
     {
@@ -440,23 +440,8 @@ namespace Google.Cloud.Spanner.V1
                 // 2. It is a Delete mutation AND Keyset.Keys.Count >= 1
 
                 Mutation filteredMutationKey = mutations.FirstOrDefault(mutation =>
-                {
-                    // Condition 1: Check if it's NOT a Delete mutation
-                    bool isNotDelete = mutation.Delete == null;
+                    mutation.Delete is null || (mutation.Delete.KeySet?.Keys.Count ?? 0) >= 1);
 
-                    if (isNotDelete)
-                    {
-                        return true;
-                    }
-
-                    // The mutation MUST be a Delete mutation if we reach this point.
-                    // Condition 2: Check if it's a Delete mutation AND the keyset is not empty
-                    bool isDeleteWithNonEmptyKeySet = mutation.Delete != null &&
-                                            mutation.Delete.KeySet != null &&
-                                            mutation.Delete.KeySet.Keys.Count >= 1;
-
-                    return isDeleteWithNonEmptyKeySet;
-                });
 
                 return filteredMutationKey;
             }
