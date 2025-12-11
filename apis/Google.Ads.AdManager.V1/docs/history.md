@@ -1,5 +1,26 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2025-12-11
+
+### New features
+
+- Added LineItem service
+- Added additional Report metrics and dimensions
+- Added write methods for AdUnits
+- Added write methods for CustomTargetingKeys
+
+### Bug fixes
+
+- Added proto3 optional to Network primitive fields
+- Added pagination to ListNetworks
+- Renamed `USER_MESSAGES_CCPA_MESSAGES_SHOWN` `Metric` to `USER_MESSAGES_US_STATES_MESSAGES_SHOWN`
+
+### Documentation improvements
+
+- Updated documentation for `ad_review_center_ad_id` filter
+- Updated documentation for Report metrics and dimensions
+- Made `status` optional for SearchAdReviewCenterAds
+
 ## Version 1.0.0-beta04, released 2025-11-03
 
 ### New features
