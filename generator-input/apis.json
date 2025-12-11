@@ -6031,7 +6031,7 @@
     },
     {
       "id": "Google.Cloud.VertexAI.Extensions",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta00",
       "type": "other",
       "metadataType": "INTEGRATION",
       "description": "Vertex AI implementation of Microsoft.Extensions.AI.",
