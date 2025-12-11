@@ -77,8 +77,6 @@ public class ManagedSessionTests
         Assert.NotNull(transaction.TransactionId);
         Assert.True(transaction.PrecommitToken.SeqNum >= preCommitTokenSeqNumber);
 
-        preCommitTokenSeqNumber = transaction.PrecommitToken.SeqNum;
-
         // Commit the transaction
         var commitResponse = await transaction.CommitAsync(new CommitRequest(), null);
         Assert.NotNull(commitResponse);
@@ -131,12 +129,10 @@ public class ManagedSessionTests
             retryFilter: ignored => false,
             RetrySettings.RandomJitter);
         TimeSpan nextDelay = TimeSpan.Zero;
-        SpannerException spannerException;
         DateTime deadline = DateTime.UtcNow.AddSeconds(30);
 
         while (true)
         {
-            spannerException = null;
             try
             {
                 // We use manually created transactions here so the tests run on .NET Core.
@@ -154,14 +150,13 @@ public class ManagedSessionTests
                 }
 
 
-                ResultSet result;
                 if (current == 0)
                 {
-                    result = await ExecuteInsertInt64Value(transaction, uniqueRowId, current + 1);
+                    await ExecuteInsertInt64Value(transaction, uniqueRowId, current + 1);
                 }
                 else
                 {
-                    result = await ExecuteUpdateInt64Value(transaction, uniqueRowId, current + 1);
+                    await ExecuteUpdateInt64Value(transaction, uniqueRowId, current + 1);
                 }
 
                 await transaction.CommitAsync(new CommitRequest(), null);
@@ -172,7 +167,6 @@ public class ManagedSessionTests
             {
                 nextDelay = retrySettings.NextBackoff(nextDelay);
                 await Task.Delay(retrySettings.BackoffJitter.GetDelay(nextDelay));
-                spannerException = ex;
             }
         }
     }

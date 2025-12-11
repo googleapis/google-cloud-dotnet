@@ -325,7 +325,6 @@ public class DirectedReadTests
         }, logger: null);
 
         ManagedTransaction managedTransaction = await CreateManagedTransaction(spannerClient, s_transactionId, options, false);
-        //managedTransaction = managedTransaction.WithTransaction(s_transactionId, options, singleUseTransaction: false);
 
         await managedTransaction.ReadStreamReaderAsync(new ReadRequest(), callSettings: null).HasDataAsync(default);
         Assert.Null(grpcClient.LastReadRequest.DirectedReadOptions);
