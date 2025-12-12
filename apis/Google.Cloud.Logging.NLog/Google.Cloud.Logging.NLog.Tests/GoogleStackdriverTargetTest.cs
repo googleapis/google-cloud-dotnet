@@ -14,6 +14,7 @@
 
 using Google.Api;
 using Google.Api.Gax;
+using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Logging.V2;
 using Google.Protobuf.WellKnownTypes;
 using Newtonsoft.Json.Linq;
@@ -29,6 +30,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -55,6 +57,19 @@ namespace Google.Cloud.Logging.NLog.Tests
 
         private const string s_projectId = "projectId";
         private const string s_logId = "logId";
+
+        private const string s_DummyServiceAccountCredentialJson = @"{
+          ""type"": ""service_account"",
+          ""project_id"": ""test-project"",
+          ""private_key_id"": ""a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2"",
+          ""private_key"": ""-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"",
+          ""client_email"": ""test-service-account@test-project.iam.gserviceaccount.com"",
+          ""client_id"": ""123456789012"",
+          ""auth_uri"": ""https://accounts.google.com/o/oauth2/auth"",
+          ""token_uri"": ""https://oauth2.googleapis.com/token"",
+          ""auth_provider_x509_cert_url"": ""https://www.googleapis.com/oauth2/v1/certs"",
+          ""client_x509_cert_url"": ""https://www.googleapis.com/robot/v1/metadata/x509/test-service-account%40test-project.iam.gserviceaccount.com""
+        }";
 
         private async Task RunTest(
             Func<IEnumerable<LogEntry>, Task<WriteLogEntriesResponse>> handlerFn,
@@ -150,6 +165,41 @@ namespace Google.Cloud.Logging.NLog.Tests
             var innerEx = nlogEx.InnerException;
             Assert.IsType<InvalidOperationException>(innerEx);
             Assert.True(innerEx.Message.Contains("CredentialFile") && innerEx.Message.Contains("CredentialJson"));
+        }
+
+        [Fact]
+        public async Task GoogleStackdriverTarget_FromFile_InvalidType_ThrowsArgumentException()
+        {
+            var tempFile = Path.GetTempFileName();
+            File.WriteAllText(tempFile, s_DummyServiceAccountCredentialJson);
+            try
+            {
+                var target = new GoogleStackdriverTarget
+                {
+                    ProjectId = "a_project_id",
+                    CredentialFile = Layout.FromString(tempFile),
+                    CredentialType = Layout.FromString("invalid_type"),
+                };
+                var nlogEx = await Assert.ThrowsAsync<NLogRuntimeException>(() => ActivateTargetAsync(target));
+                Assert.IsType<InvalidOperationException>(nlogEx.InnerException);
+            }
+            finally
+            {
+                File.Delete(tempFile);
+            }
+        }
+
+        [Fact]
+        public async Task GoogleStackdriverTarget_FromJson_InvalidType_ThrowsArgumentException()
+        {
+            var target = new GoogleStackdriverTarget
+            {
+                ProjectId = "a_project_id",
+                CredentialJson = Layout.FromString(s_DummyServiceAccountCredentialJson),
+                CredentialType = Layout.FromString("invalid_type"),
+            };
+            var nlogEx = await Assert.ThrowsAsync<NLogRuntimeException>(() => ActivateTargetAsync(target));
+            Assert.IsType<InvalidOperationException>(nlogEx.InnerException);
         }
 
         [Fact]
