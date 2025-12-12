@@ -104,6 +104,7 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                 ModelId = !string.IsNullOrEmpty(generateResult.ModelVersion) ? generateResult.ModelVersion : request.Model,
                 RawRepresentation = generateResult,
                 ResponseId = generateResult.ResponseId,
+                MessageId = generateResult.ResponseId,
             };
 
             // Populate the response update contents.

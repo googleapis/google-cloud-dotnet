@@ -1757,6 +1757,11 @@ public class BuildIChatClientTest
 
         string[] texts = [.. updates.Select(u => ((TextContent) u.Contents[0]).Text)];
         Assert.Equal(["Hello", " world", "!"], texts);
+        string?[] messageIds = [.. updates.Select(u => u.MessageId)];
+        string?[] responseIds = [.. updates.Select(u => u.ResponseId)];
+        string[] expectedIds = ["response-1", "response-2", "response-3"];
+        Assert.Equal(expectedIds, messageIds);
+        Assert.Equal(expectedIds, responseIds);
     }
 
     [Fact]
