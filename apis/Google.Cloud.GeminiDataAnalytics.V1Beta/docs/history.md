@@ -1,5 +1,30 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2025-12-12
+
+### New features
+
+- Add a QueryData API for NL2SQL conversion
+- A new message `AgentContextReference` is added
+- A new method `QueryData` is added to service `DataChatService`
+- A new message `QueryDataRequest` is added
+- A new message `GenerationOptions` is added
+- A new message `QueryDataContext` is added
+- A new message `QueryDataResponse` is added
+- A new message `ExecutedQueryResult` is added
+- A new field `alloydb` is added to message `.google.cloud.geminidataanalytics.v1beta.DatasourceReferences`
+- A new field `spanner_reference` is added to message `.google.cloud.geminidataanalytics.v1beta.DatasourceReferences`
+- A new field `cloud_sql_reference` is added to message `.google.cloud.geminidataanalytics.v1beta.DatasourceReferences`
+- A new message `AlloyDbReference` is added
+- A new message `AlloyDbDatabaseReference` is added
+- A new message `SpannerReference` is added
+- A new message `SpannerDatabaseReference` is added
+- A new message `CloudSqlReference` is added
+- A new message `CloudSqlDatabaseReference` is added
+- A new field `alloy_db_reference` is added to message `.google.cloud.geminidataanalytics.v1beta.Datasource`
+- A new field `spanner_reference` is added to message `.google.cloud.geminidataanalytics.v1beta.Datasource`
+- A new field `cloud_sql_reference` is added to message `.google.cloud.geminidataanalytics.v1beta.Datasource`
+
 ## Version 1.0.0-beta04, released 2025-11-10
 
 ### New features
