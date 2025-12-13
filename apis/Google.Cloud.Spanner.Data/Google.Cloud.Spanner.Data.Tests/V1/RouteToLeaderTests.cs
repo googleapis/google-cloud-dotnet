@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and 
 // limitations under the License.
 
-using Google.Api.Gax;
-using Google.Api.Gax.Testing;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
@@ -122,64 +120,77 @@ public class RouteToLeaderTests
         Assert.DoesNotContain(grpcClient.LastCallOptions.Headers, header => header.Key == LeaderRoutingHeader && header.Value == true.ToString());
     }
 
-    public static TheoryData<Func<PooledSession, Task>> PooledSessionRoutesToLeader => new TheoryData<Func<PooledSession, Task>>
+    public static TheoryData<Func<ManagedSession, Task>> ManagedTransactionRoutesToLeader => new TheoryData<Func<ManagedSession, Task>>
     {
-        { pooledSession => pooledSession.WithTransaction(s_transactionId, s_partitionedDml, false).ExecuteSqlAsync(new ExecuteSqlRequest(), callSettings: null) },
-        { pooledSession => pooledSession.WithTransaction(s_transactionId, s_readWrite, false).ExecuteSqlAsync(new ExecuteSqlRequest(), callSettings: null) },
-        { pooledSession => pooledSession.WithTransaction(s_transactionId, s_partitionedDml, false).ReadStreamReader(new ReadRequest(), callSettings: null).NextAsync(default) },
-        { pooledSession => pooledSession.WithTransaction(s_transactionId, s_readWrite, false).ReadStreamReader(new ReadRequest(), callSettings: null).NextAsync(default) },
-        { pooledSession => pooledSession.WithTransaction(s_transactionId, s_partitionedDml, false).ExecuteSqlStreamReader(new ExecuteSqlRequest(), callSettings: null).NextAsync(default) },
-        { pooledSession => pooledSession.WithTransaction(s_transactionId, s_readWrite, false).ExecuteSqlStreamReader(new ExecuteSqlRequest(), callSettings: null).NextAsync(default) },
+        { async managedSession => await (await managedSession.CreateManagedTransactionWithSpannerTransaction(s_transactionId, s_partitionedDml, false)).ExecuteSqlAsync(new ExecuteSqlRequest(), callSettings: null) },
+        { async managedSession => await (await managedSession.CreateManagedTransactionWithSpannerTransaction(s_transactionId, s_readWrite, false)).ExecuteSqlAsync(new ExecuteSqlRequest(), callSettings: null) },
+        { async managedSession => await (await managedSession.CreateManagedTransactionWithSpannerTransaction(s_transactionId, s_partitionedDml, false)).ReadStreamReaderAsync(new ReadRequest(), callSettings: null).NextAsync(default) },
+        { async managedSession => await (await managedSession.CreateManagedTransactionWithSpannerTransaction(s_transactionId, s_readWrite, false)).ReadStreamReaderAsync(new ReadRequest(), callSettings: null).NextAsync(default) },
+        { async managedSession => await (await managedSession.CreateManagedTransactionWithSpannerTransaction(s_transactionId, s_partitionedDml, false)).ExecuteSqlStreamReaderAsync(new ExecuteSqlRequest(), callSettings: null).NextAsync(default) },
+        { async managedSession => await (await managedSession.CreateManagedTransactionWithSpannerTransaction(s_transactionId, s_readWrite, false)).ExecuteSqlStreamReaderAsync(new ExecuteSqlRequest(), callSettings: null).NextAsync(default) },
+        { async managedSession => await (await managedSession.CreateManagedTransactionWithSpannerTransaction(s_transactionId, s_readWrite, false)).ExecuteSqlStreamReaderAsync(new ExecuteSqlRequest(), callSettings: null).NextAsync(default) },
     };
 
-    public static TheoryData<Func<PooledSession, Task>> PooledSessionDoesNotRouteToLeader => new TheoryData<Func<PooledSession, Task>>
+    public static TheoryData<Func<ManagedSession, Task>> ManagedTransactionDoesNotRouteToLeader => new TheoryData<Func<ManagedSession, Task>>
     {
-        { pooledSession => pooledSession.WithTransaction(s_transactionId, s_readOnly, false).ExecuteSqlAsync(new ExecuteSqlRequest(), callSettings: null) },
-        { pooledSession => pooledSession.WithTransaction(s_transactionId, s_readOnly, false).ReadStreamReader(new ReadRequest(), callSettings: null).NextAsync(default) },
-        { pooledSession => pooledSession.WithTransaction(s_transactionId, s_readOnly, false).ExecuteSqlStreamReader(new ExecuteSqlRequest(), callSettings: null).NextAsync(default) },
+        { async managedSession => await (await managedSession.CreateManagedTransactionWithSpannerTransaction(s_transactionId, s_readOnly, false)).ExecuteSqlAsync(new ExecuteSqlRequest(), callSettings: null) },
+        { async managedSession => await (await managedSession.CreateManagedTransactionWithSpannerTransaction(s_transactionId, s_readOnly, false)).ReadStreamReaderAsync(new ReadRequest(), callSettings: null).NextAsync(default) },
+        { async managedSession => await (await managedSession.CreateManagedTransactionWithSpannerTransaction(s_transactionId, s_readOnly, false)).ExecuteSqlStreamReaderAsync(new ExecuteSqlRequest(), callSettings: null).NextAsync(default) },
     };
 
     [Theory]
-    [MemberData(nameof(PooledSessionRoutesToLeader))]
-    public async Task PooledSession_RoutesToLeaderWhenEnabled(Func<PooledSession, Task> operation)
+    [MemberData(nameof(ManagedTransactionRoutesToLeader))]
+    public async Task ManagedTransaction_RoutesToLeaderWhenEnabled(Func<ManagedSession, Task> operation)
     {
         var grpcClient = new FakeGrpcSpannerClient();
         var spannerClient = new SpannerClientImpl(grpcClient, settings: null, logger: null);
-        var sessionPool = new FakeSessionPool(spannerClient);
-        var session = PooledSession.FromSessionName(sessionPool, s_sessionName);
+        var managedTransaction = CreateManagedSession(spannerClient);
 
-        await operation(session);
+        await operation(managedTransaction);
 
         Assert.Contains(grpcClient.LastCallOptions.Headers, header => header.Key == LeaderRoutingHeader && header.Value == true.ToString());
     }
 
+
+
     [Theory]
-    [MemberData(nameof(PooledSessionDoesNotRouteToLeader))]
-    public async Task PooledSession_DoesNotRouteToLeaderWhenEnabled(Func<PooledSession, Task> operation)
+    [MemberData(nameof(ManagedTransactionDoesNotRouteToLeader))]
+    public async Task ManagedTransaction_DoesNotRouteToLeaderWhenEnabled(Func<ManagedSession, Task> operation)
     {
         var grpcClient = new FakeGrpcSpannerClient();
         var spannerClient = new SpannerClientImpl(grpcClient, settings: null, logger: null);
-        var sessionPool = new FakeSessionPool(spannerClient);
-        var session = PooledSession.FromSessionName(sessionPool, s_sessionName);
+        var managedTransaction = CreateManagedSession(spannerClient);
 
-        await operation(session);
+        await operation(managedTransaction);
 
         Assert.DoesNotContain(grpcClient.LastCallOptions.Headers, header => header.Key == LeaderRoutingHeader && header.Value == true.ToString());
     }
 
     [Theory]
-    [MemberData(nameof(PooledSessionRoutesToLeader))]
-    [MemberData(nameof(PooledSessionDoesNotRouteToLeader))]
-    public async Task PooledSession_DoesNotRouteToLeaderWhenNotEnabled(Func<PooledSession, Task> operation)
+    [MemberData(nameof(ManagedTransactionRoutesToLeader))]
+    [MemberData(nameof(ManagedTransactionDoesNotRouteToLeader))]
+    public async Task ManagedTransaction_DoesNotRouteToLeaderWhenNotEnabled(Func<ManagedSession, Task> operation)
     {
         var grpcClient = new FakeGrpcSpannerClient();
         var spannerClient = new SpannerClientImpl(grpcClient, new SpannerSettings { LeaderRoutingEnabled = false }, logger: null);
-        var sessionPool = new FakeSessionPool(spannerClient);
-        var session = PooledSession.FromSessionName(sessionPool, s_sessionName);
+        var managedTransaction = CreateManagedSession(spannerClient);
 
-        await operation(session);
+        await operation(managedTransaction);
 
         Assert.DoesNotContain(grpcClient.LastCallOptions.Headers, header => header.Key == LeaderRoutingHeader && header.Value == true.ToString());
+    }
+
+    private ManagedSession CreateManagedSession(SpannerClient client)
+    {
+        var managedSession = new ManagedSession(client, s_databaseName, null, null);
+        managedSession.Session = new Session
+        {
+            CreateTime = Timestamp.FromDateTime(DateTime.UtcNow),
+            SessionName = SessionName.FromProjectInstanceDatabaseSession("projectId", "instanceId", "databaseId", "testSessionId"),
+            Multiplexed = true
+        };
+
+        return managedSession;
     }
 
     private class FakeGrpcSpannerClient : V1.Spanner.SpannerClient
@@ -250,22 +261,6 @@ public class RouteToLeaderTests
                 () => new Metadata(),
                 () => { });
         }
-    }
-
-    private class FakeSessionPool : SessionPool.ISessionPool
-    {
-        public FakeSessionPool(SpannerClient spannerClient) => Client = spannerClient;
-        public SpannerClient Client { get; }
-
-        public IClock Clock => new FakeClock();
-
-        public SessionPoolOptions Options => new SessionPoolOptions();
-
-        public bool TracksSessions => throw new NotImplementedException();
-
-        public void Detach(PooledSession session) => throw new NotImplementedException();
-        public Task<PooledSession> RefreshedOrNewAsync(PooledSession session, TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken) => throw new NotImplementedException();
-        public void Release(PooledSession session, ByteString transactionToRollback, bool deleteSession) => throw new NotImplementedException();
     }
 
     private class FakeAsyncStreamReader : IAsyncStreamReader<PartialResultSet>
