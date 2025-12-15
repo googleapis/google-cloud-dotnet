@@ -1433,8 +1433,8 @@ public class BuildIChatClientTest
                     PromptTokenCount = 10,
                     CandidatesTokenCount = 5,
                     TotalTokenCount = 15,
-                    CachedContentTokenCount = 0,  // Should not appear
-                    ThoughtsTokenCount = 7         // Should appear
+                    CachedContentTokenCount = 0,
+                    ThoughtsTokenCount = 7
                 };
                 return response;
             }
@@ -1447,10 +1447,13 @@ public class BuildIChatClientTest
 
         Assert.NotNull(result);
         Assert.NotNull(result.Usage);
-        Assert.NotNull(result.Usage.AdditionalCounts);
-        Assert.Single(result.Usage.AdditionalCounts);
-        Assert.Equal(7, result.Usage.AdditionalCounts["ThoughtsTokenCount"]);
-        Assert.False(result.Usage.AdditionalCounts.ContainsKey("CachedContentTokenCount"));
+
+        Assert.Equal(10, result.Usage.InputTokenCount);
+        Assert.Equal(5, result.Usage.OutputTokenCount);
+        Assert.Equal(15, result.Usage.TotalTokenCount);
+        Assert.Equal(7, result.Usage.ReasoningTokenCount);
+        Assert.Null(result.Usage.CachedInputTokenCount);
+        Assert.Null(result.Usage.AdditionalCounts);
     }
 
     [Fact]
@@ -1586,9 +1589,9 @@ public class BuildIChatClientTest
         Assert.Equal(10, result.Usage.InputTokenCount);
         Assert.Equal(5, result.Usage.OutputTokenCount);
         Assert.Equal(15, result.Usage.TotalTokenCount);
-        Assert.NotNull(result.Usage.AdditionalCounts);
-        Assert.Equal(2, result.Usage.AdditionalCounts["CachedContentTokenCount"]);
-        Assert.Equal(3, result.Usage.AdditionalCounts["ThoughtsTokenCount"]);
+        Assert.Equal(2, result.Usage.CachedInputTokenCount);
+        Assert.Equal(3, result.Usage.ReasoningTokenCount);
+        Assert.Null(result.Usage.AdditionalCounts);
     }
 
     [Fact]
