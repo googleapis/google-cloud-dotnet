@@ -107,7 +107,12 @@ namespace Google.Ads.AdManager.V1
             yield return FrequencyCapReflection.Descriptor;
             yield return GeoTargetMessagesReflection.Descriptor;
             yield return GeoTargetServiceReflection.Descriptor;
+            yield return GoalReflection.Descriptor;
+            yield return GoalEnumsReflection.Descriptor;
             yield return LabelMessagesReflection.Descriptor;
+            yield return LineItemEnumsReflection.Descriptor;
+            yield return LineItemMessagesReflection.Descriptor;
+            yield return LineItemServiceReflection.Descriptor;
             yield return LiveStreamEventMessagesReflection.Descriptor;
             yield return MobileCarrierMessagesReflection.Descriptor;
             yield return MobileCarrierServiceReflection.Descriptor;

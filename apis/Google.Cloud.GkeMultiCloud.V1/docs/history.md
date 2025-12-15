@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.10.0, released 2025-12-09
+
+### New features
+
+- Added custom tolerations and labels support for Attached Clusters
+- Mark GKE-on-AWS and GKE-on-Azure protos as being deprecated to discourage any new usage as these services turn down
+
+### Documentation improvements
+
+- A comment for field `tags` in message `.google.cloud.gkemulticloud.v1.AttachedCluster` is changed
+- A comment for field `throughput` in message `.google.cloud.gkemulticloud.v1.AwsVolumeTemplate` is changed
+- A comment for field `requested_cancellation` in message `.google.cloud.gkemulticloud.v1.OperationMetadata` is changed
+
 ## Version 2.9.0, released 2025-11-05
 
 ### New features

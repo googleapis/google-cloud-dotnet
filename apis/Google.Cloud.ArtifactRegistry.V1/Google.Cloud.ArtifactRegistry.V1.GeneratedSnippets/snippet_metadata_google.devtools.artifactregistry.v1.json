@@ -12093,6 +12093,103 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ExportArtifact_sync",
+      "title": "ExportArtifactRequestObject",
+      "description": "Snippet for ExportArtifact",
+      "file": "ArtifactRegistryClient.ExportArtifactRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportArtifact",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ExportArtifact",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ExportArtifactRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ArtifactRegistry.V1.ExportArtifactResponse, Google.Cloud.ArtifactRegistry.V1.ExportArtifactMetadata>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ExportArtifact",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ExportArtifact",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "artifactregistry_v1_generated_ArtifactRegistry_ExportArtifact_async",
+      "title": "ExportArtifactRequestObjectAsync",
+      "description": "Snippet for ExportArtifactAsync",
+      "file": "ArtifactRegistryClient.ExportArtifactRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportArtifactAsync",
+        "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient.ExportArtifactAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ArtifactRegistry.V1.ExportArtifactRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ArtifactRegistry.V1.ExportArtifactResponse, Google.Cloud.ArtifactRegistry.V1.ExportArtifactMetadata>>",
+        "client": {
+          "shortName": "ArtifactRegistryClient",
+          "fullName": "Google.Cloud.ArtifactRegistry.V1.ArtifactRegistryClient"
+        },
+        "method": {
+          "shortName": "ExportArtifact",
+          "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry.ExportArtifact",
+          "service": {
+            "shortName": "ArtifactRegistry",
+            "fullName": "google.devtools.artifactregistry.v1.ArtifactRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

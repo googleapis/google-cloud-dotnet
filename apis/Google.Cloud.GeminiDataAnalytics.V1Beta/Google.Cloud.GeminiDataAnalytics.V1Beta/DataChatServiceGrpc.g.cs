@@ -87,6 +87,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     static readonly grpc::Marshaller<global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListMessagesRequest> __Marshaller_google_cloud_geminidataanalytics_v1beta_ListMessagesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListMessagesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListMessagesResponse> __Marshaller_google_cloud_geminidataanalytics_v1beta_ListMessagesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListMessagesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GeminiDataAnalytics.V1Beta.QueryDataRequest> __Marshaller_google_cloud_geminidataanalytics_v1beta_QueryDataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GeminiDataAnalytics.V1Beta.QueryDataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.GeminiDataAnalytics.V1Beta.QueryDataResponse> __Marshaller_google_cloud_geminidataanalytics_v1beta_QueryDataResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GeminiDataAnalytics.V1Beta.QueryDataResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GeminiDataAnalytics.V1Beta.ChatRequest, global::Google.Cloud.GeminiDataAnalytics.V1Beta.Message> __Method_Chat = new grpc::Method<global::Google.Cloud.GeminiDataAnalytics.V1Beta.ChatRequest, global::Google.Cloud.GeminiDataAnalytics.V1Beta.Message>(
@@ -135,6 +139,14 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         "ListMessages",
         __Marshaller_google_cloud_geminidataanalytics_v1beta_ListMessagesRequest,
         __Marshaller_google_cloud_geminidataanalytics_v1beta_ListMessagesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.GeminiDataAnalytics.V1Beta.QueryDataRequest, global::Google.Cloud.GeminiDataAnalytics.V1Beta.QueryDataResponse> __Method_QueryData = new grpc::Method<global::Google.Cloud.GeminiDataAnalytics.V1Beta.QueryDataRequest, global::Google.Cloud.GeminiDataAnalytics.V1Beta.QueryDataResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "QueryData",
+        __Marshaller_google_cloud_geminidataanalytics_v1beta_QueryDataRequest,
+        __Marshaller_google_cloud_geminidataanalytics_v1beta_QueryDataResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -217,6 +229,18 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListMessagesResponse> ListMessages(global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListMessagesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Queries data from a natural language user query.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GeminiDataAnalytics.V1Beta.QueryDataResponse> QueryData(global::Google.Cloud.GeminiDataAnalytics.V1Beta.QueryDataRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -520,6 +544,54 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListMessages, null, options, request);
       }
+      /// <summary>
+      /// Queries data from a natural language user query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GeminiDataAnalytics.V1Beta.QueryDataResponse QueryData(global::Google.Cloud.GeminiDataAnalytics.V1Beta.QueryDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return QueryData(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Queries data from a natural language user query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.GeminiDataAnalytics.V1Beta.QueryDataResponse QueryData(global::Google.Cloud.GeminiDataAnalytics.V1Beta.QueryDataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_QueryData, null, options, request);
+      }
+      /// <summary>
+      /// Queries data from a natural language user query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GeminiDataAnalytics.V1Beta.QueryDataResponse> QueryDataAsync(global::Google.Cloud.GeminiDataAnalytics.V1Beta.QueryDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return QueryDataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Queries data from a natural language user query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GeminiDataAnalytics.V1Beta.QueryDataResponse> QueryDataAsync(global::Google.Cloud.GeminiDataAnalytics.V1Beta.QueryDataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_QueryData, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DataChatServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -539,7 +611,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
           .AddMethod(__Method_DeleteConversation, serviceImpl.DeleteConversation)
           .AddMethod(__Method_GetConversation, serviceImpl.GetConversation)
           .AddMethod(__Method_ListConversations, serviceImpl.ListConversations)
-          .AddMethod(__Method_ListMessages, serviceImpl.ListMessages).Build();
+          .AddMethod(__Method_ListMessages, serviceImpl.ListMessages)
+          .AddMethod(__Method_QueryData, serviceImpl.QueryData).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -555,6 +628,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       serviceBinder.AddMethod(__Method_GetConversation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GeminiDataAnalytics.V1Beta.GetConversationRequest, global::Google.Cloud.GeminiDataAnalytics.V1Beta.Conversation>(serviceImpl.GetConversation));
       serviceBinder.AddMethod(__Method_ListConversations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListConversationsRequest, global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListConversationsResponse>(serviceImpl.ListConversations));
       serviceBinder.AddMethod(__Method_ListMessages, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListMessagesRequest, global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListMessagesResponse>(serviceImpl.ListMessages));
+      serviceBinder.AddMethod(__Method_QueryData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GeminiDataAnalytics.V1Beta.QueryDataRequest, global::Google.Cloud.GeminiDataAnalytics.V1Beta.QueryDataResponse>(serviceImpl.QueryData));
     }
 
   }

@@ -17,6 +17,7 @@
 namespace GoogleCSharpSnippets
 {
     // [START run_v2_generated_Builds_SubmitBuild_sync]
+    using Google.Api;
     using Google.Cloud.Run.V2;
 
     public sealed partial class GeneratedBuildsClientSnippets
@@ -43,6 +44,9 @@ namespace GoogleCSharpSnippets
                 ServiceAccount = "",
                 WorkerPoolAsBuildWorkerPoolName = BuildWorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
                 Tags = { "", },
+                MachineType = "",
+                ReleaseTrack = LaunchStage.Unspecified,
+                Client = "",
             };
             // Make the request
             SubmitBuildResponse response = buildsClient.SubmitBuild(request);

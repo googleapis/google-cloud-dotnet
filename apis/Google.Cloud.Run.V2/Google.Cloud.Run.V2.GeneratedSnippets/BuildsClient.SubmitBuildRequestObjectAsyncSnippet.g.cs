@@ -19,6 +19,7 @@
 namespace GoogleCSharpSnippets
 {
     // [START run_v2_generated_Builds_SubmitBuild_async]
+    using Google.Api;
     using System.Threading.Tasks;
     using gcrv = Google.Cloud.Run.V2;
 
@@ -46,6 +47,9 @@ namespace GoogleCSharpSnippets
                 ServiceAccount = "",
                 WorkerPoolAsBuildWorkerPoolName = gcrv::BuildWorkerPoolName.FromProjectLocationWorkerPool("[PROJECT]", "[LOCATION]", "[WORKER_POOL]"),
                 Tags = { "", },
+                MachineType = "",
+                ReleaseTrack = LaunchStage.Unspecified,
+                Client = "",
             };
             // Make the request
             gcrv::SubmitBuildResponse response = await buildsClient.SubmitBuildAsync(request);

@@ -432,7 +432,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches the given PreviewFeature. This method is used to enable or disable a PreviewFeature.
+        /// Patches the given PreviewFeature. This method is used to enable or disable
+        /// a PreviewFeature.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -441,7 +442,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the given PreviewFeature. This method is used to enable or disable a PreviewFeature.
+        /// Patches the given PreviewFeature. This method is used to enable or disable
+        /// a PreviewFeature.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -450,7 +452,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the given PreviewFeature. This method is used to enable or disable a PreviewFeature.
+        /// Patches the given PreviewFeature. This method is used to enable or disable
+        /// a PreviewFeature.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -485,7 +488,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateOperationsClient, callSettings);
 
         /// <summary>
-        /// Patches the given PreviewFeature. This method is used to enable or disable a PreviewFeature.
+        /// Patches the given PreviewFeature. This method is used to enable or disable
+        /// a PreviewFeature.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -507,7 +511,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the given PreviewFeature. This method is used to enable or disable a PreviewFeature.
+        /// Patches the given PreviewFeature. This method is used to enable or disable
+        /// a PreviewFeature.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -529,7 +534,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the given PreviewFeature. This method is used to enable or disable a PreviewFeature.
+        /// Patches the given PreviewFeature. This method is used to enable or disable
+        /// a PreviewFeature.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -657,7 +663,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient UpdateOperationsClient { get; }
 
         /// <summary>
-        /// Patches the given PreviewFeature. This method is used to enable or disable a PreviewFeature.
+        /// Patches the given PreviewFeature. This method is used to enable or disable
+        /// a PreviewFeature.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -672,7 +679,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches the given PreviewFeature. This method is used to enable or disable a PreviewFeature.
+        /// Patches the given PreviewFeature. This method is used to enable or disable
+        /// a PreviewFeature.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

@@ -286,7 +286,8 @@ namespace Google.Cloud.Compute.V1
         /// Deletes the specified Operations resource.
         /// </summary>
         /// <param name="operation">
-        /// Name of the Operations resource to delete, or its unique numeric identifier.
+        /// Name of the Operations resource to delete, or its unique numeric
+        /// identifier.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -300,7 +301,8 @@ namespace Google.Cloud.Compute.V1
         /// Deletes the specified Operations resource.
         /// </summary>
         /// <param name="operation">
-        /// Name of the Operations resource to delete, or its unique numeric identifier.
+        /// Name of the Operations resource to delete, or its unique numeric
+        /// identifier.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -314,7 +316,8 @@ namespace Google.Cloud.Compute.V1
         /// Deletes the specified Operations resource.
         /// </summary>
         /// <param name="operation">
-        /// Name of the Operations resource to delete, or its unique numeric identifier.
+        /// Name of the Operations resource to delete, or its unique numeric
+        /// identifier.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -322,7 +325,8 @@ namespace Google.Cloud.Compute.V1
             DeleteAsync(operation, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the specified Operations resource. Gets a list of operations by making a `list()` request.
+        /// Retrieves the specified Operations resource. Gets a list of operations
+        /// by making a `list()` request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -331,7 +335,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the specified Operations resource. Gets a list of operations by making a `list()` request.
+        /// Retrieves the specified Operations resource. Gets a list of operations
+        /// by making a `list()` request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -340,7 +345,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the specified Operations resource. Gets a list of operations by making a `list()` request.
+        /// Retrieves the specified Operations resource. Gets a list of operations
+        /// by making a `list()` request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -349,10 +355,12 @@ namespace Google.Cloud.Compute.V1
             GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the specified Operations resource. Gets a list of operations by making a `list()` request.
+        /// Retrieves the specified Operations resource. Gets a list of operations
+        /// by making a `list()` request.
         /// </summary>
         /// <param name="operation">
-        /// Name of the Operations resource to return. Parent is derived from this field.
+        /// Name of the Operations resource to return. Parent is derived from this
+        /// field.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -363,10 +371,12 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves the specified Operations resource. Gets a list of operations by making a `list()` request.
+        /// Retrieves the specified Operations resource. Gets a list of operations
+        /// by making a `list()` request.
         /// </summary>
         /// <param name="operation">
-        /// Name of the Operations resource to return. Parent is derived from this field.
+        /// Name of the Operations resource to return. Parent is derived from this
+        /// field.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -377,10 +387,12 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves the specified Operations resource. Gets a list of operations by making a `list()` request.
+        /// Retrieves the specified Operations resource. Gets a list of operations
+        /// by making a `list()` request.
         /// </summary>
         /// <param name="operation">
-        /// Name of the Operations resource to return. Parent is derived from this field.
+        /// Name of the Operations resource to return. Parent is derived from this
+        /// field.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -388,7 +400,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(operation, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a list of Operation resources contained within the specified organization.
+        /// Retrieves a list of Operation resources contained within the specified
+        /// organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -397,7 +410,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of Operation resources contained within the specified organization.
+        /// Retrieves a list of Operation resources contained within the specified
+        /// organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -406,7 +420,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of Operation resources contained within the specified organization.
+        /// Retrieves a list of Operation resources contained within the specified
+        /// organization.
         /// </summary>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -433,7 +448,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of Operation resources contained within the specified organization.
+        /// Retrieves a list of Operation resources contained within the specified
+        /// organization.
         /// </summary>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -546,7 +562,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the specified Operations resource. Gets a list of operations by making a `list()` request.
+        /// Retrieves the specified Operations resource. Gets a list of operations
+        /// by making a `list()` request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -558,7 +575,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the specified Operations resource. Gets a list of operations by making a `list()` request.
+        /// Retrieves the specified Operations resource. Gets a list of operations
+        /// by making a `list()` request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -570,7 +588,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of Operation resources contained within the specified organization.
+        /// Retrieves a list of Operation resources contained within the specified
+        /// organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -582,7 +601,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of Operation resources contained within the specified organization.
+        /// Retrieves a list of Operation resources contained within the specified
+        /// organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

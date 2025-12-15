@@ -48,12 +48,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 50,
+          "end": 54,
           "type": "FULL"
         },
         {
-          "start": 34,
-          "end": 48,
+          "start": 35,
+          "end": 52,
           "type": "SHORT"
         }
       ]
@@ -97,12 +97,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 53,
+          "end": 57,
           "type": "FULL"
         },
         {
-          "start": 37,
-          "end": 51,
+          "start": 38,
+          "end": 55,
           "type": "SHORT"
         }
       ]

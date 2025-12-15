@@ -18,7 +18,6 @@ namespace GoogleCSharpSnippets
 {
     // [START gkemulticloud_v1_generated_AzureClusters_ListAzureClusters_sync]
     using Google.Api.Gax;
-    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.GkeMultiCloud.V1;
     using System;
 
@@ -32,31 +31,39 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void ListAzureClustersRequestObject()
         {
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
-            ListAzureClustersRequest request = new ListAzureClustersRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-            };
+#pragma warning disable CS0612
+            ListAzureClustersRequest request = new ListAzureClustersRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAzureClustersResponse, AzureCluster> response = azureClustersClient.ListAzureClusters(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             foreach (AzureCluster item in response)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             foreach (ListAzureClustersResponse page in response.AsRawResponses())
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AzureCluster item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -65,10 +72,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AzureCluster> singlePage = response.ReadPage(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AzureCluster item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);

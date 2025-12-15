@@ -1,0 +1,1426 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.HypercomputeCluster.V1Beta",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.hypercomputecluster.v1beta",
+        "version": "v1beta"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_ListClusters_sync",
+      "title": "ListClustersRequestObject",
+      "description": "Snippet for ListClusters",
+      "file": "HypercomputeClusterClient.ListClustersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListClusters",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.ListClusters",
+        "parameters": [
+          {
+            "type": "Google.Cloud.HypercomputeCluster.V1Beta.ListClustersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.HypercomputeCluster.V1Beta.ListClustersResponse, Google.Cloud.HypercomputeCluster.V1Beta.Cluster>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "ListClusters",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.ListClusters",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_ListClusters_async",
+      "title": "ListClustersRequestObjectAsync",
+      "description": "Snippet for ListClustersAsync",
+      "file": "HypercomputeClusterClient.ListClustersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListClustersAsync",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.ListClustersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.HypercomputeCluster.V1Beta.ListClustersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.HypercomputeCluster.V1Beta.ListClustersResponse, Google.Cloud.HypercomputeCluster.V1Beta.Cluster>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "ListClusters",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.ListClusters",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_ListClusters_sync_flattened",
+      "title": "ListClusters",
+      "description": "Snippet for ListClusters",
+      "file": "HypercomputeClusterClient.ListClustersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListClusters",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.ListClusters",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.HypercomputeCluster.V1Beta.ListClustersResponse, Google.Cloud.HypercomputeCluster.V1Beta.Cluster>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "ListClusters",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.ListClusters",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_ListClusters_async_flattened",
+      "title": "ListClustersAsync",
+      "description": "Snippet for ListClustersAsync",
+      "file": "HypercomputeClusterClient.ListClustersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListClustersAsync",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.ListClustersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.HypercomputeCluster.V1Beta.ListClustersResponse, Google.Cloud.HypercomputeCluster.V1Beta.Cluster>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "ListClusters",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.ListClusters",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_ListClusters_sync_flattened_resourceNames",
+      "title": "ListClustersResourceNames",
+      "description": "Snippet for ListClusters",
+      "file": "HypercomputeClusterClient.ListClustersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListClusters",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.ListClusters",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.HypercomputeCluster.V1Beta.ListClustersResponse, Google.Cloud.HypercomputeCluster.V1Beta.Cluster>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "ListClusters",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.ListClusters",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_ListClusters_async_flattened_resourceNames",
+      "title": "ListClustersResourceNamesAsync",
+      "description": "Snippet for ListClustersAsync",
+      "file": "HypercomputeClusterClient.ListClustersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListClustersAsync",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.ListClustersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.HypercomputeCluster.V1Beta.ListClustersResponse, Google.Cloud.HypercomputeCluster.V1Beta.Cluster>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "ListClusters",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.ListClusters",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_GetCluster_sync",
+      "title": "GetClusterRequestObject",
+      "description": "Snippet for GetCluster",
+      "file": "HypercomputeClusterClient.GetClusterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCluster",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.GetCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.HypercomputeCluster.V1Beta.GetClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.HypercomputeCluster.V1Beta.Cluster",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "GetCluster",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.GetCluster",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_GetCluster_async",
+      "title": "GetClusterRequestObjectAsync",
+      "description": "Snippet for GetClusterAsync",
+      "file": "HypercomputeClusterClient.GetClusterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetClusterAsync",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.GetClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.HypercomputeCluster.V1Beta.GetClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.HypercomputeCluster.V1Beta.Cluster>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "GetCluster",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.GetCluster",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_GetCluster_sync_flattened",
+      "title": "GetCluster",
+      "description": "Snippet for GetCluster",
+      "file": "HypercomputeClusterClient.GetClusterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCluster",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.GetCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.HypercomputeCluster.V1Beta.Cluster",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "GetCluster",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.GetCluster",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_GetCluster_async_flattened",
+      "title": "GetClusterAsync",
+      "description": "Snippet for GetClusterAsync",
+      "file": "HypercomputeClusterClient.GetClusterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetClusterAsync",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.GetClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.HypercomputeCluster.V1Beta.Cluster>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "GetCluster",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.GetCluster",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_GetCluster_sync_flattened_resourceNames",
+      "title": "GetClusterResourceNames",
+      "description": "Snippet for GetCluster",
+      "file": "HypercomputeClusterClient.GetClusterResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetCluster",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.GetCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.HypercomputeCluster.V1Beta.ClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.HypercomputeCluster.V1Beta.Cluster",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "GetCluster",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.GetCluster",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_GetCluster_async_flattened_resourceNames",
+      "title": "GetClusterResourceNamesAsync",
+      "description": "Snippet for GetClusterAsync",
+      "file": "HypercomputeClusterClient.GetClusterResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetClusterAsync",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.GetClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.HypercomputeCluster.V1Beta.ClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.HypercomputeCluster.V1Beta.Cluster>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "GetCluster",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.GetCluster",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_CreateCluster_sync",
+      "title": "CreateClusterRequestObject",
+      "description": "Snippet for CreateCluster",
+      "file": "HypercomputeClusterClient.CreateClusterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCluster",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.CreateCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.HypercomputeCluster.V1Beta.CreateClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.HypercomputeCluster.V1Beta.Cluster, Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "CreateCluster",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.CreateCluster",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_CreateCluster_async",
+      "title": "CreateClusterRequestObjectAsync",
+      "description": "Snippet for CreateClusterAsync",
+      "file": "HypercomputeClusterClient.CreateClusterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateClusterAsync",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.CreateClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.HypercomputeCluster.V1Beta.CreateClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.HypercomputeCluster.V1Beta.Cluster, Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "CreateCluster",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.CreateCluster",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_CreateCluster_sync_flattened",
+      "title": "CreateCluster",
+      "description": "Snippet for CreateCluster",
+      "file": "HypercomputeClusterClient.CreateClusterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCluster",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.CreateCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.HypercomputeCluster.V1Beta.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.HypercomputeCluster.V1Beta.Cluster, Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "CreateCluster",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.CreateCluster",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_CreateCluster_async_flattened",
+      "title": "CreateClusterAsync",
+      "description": "Snippet for CreateClusterAsync",
+      "file": "HypercomputeClusterClient.CreateClusterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateClusterAsync",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.CreateClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.HypercomputeCluster.V1Beta.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.HypercomputeCluster.V1Beta.Cluster, Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "CreateCluster",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.CreateCluster",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_CreateCluster_sync_flattened_resourceNames",
+      "title": "CreateClusterResourceNames",
+      "description": "Snippet for CreateCluster",
+      "file": "HypercomputeClusterClient.CreateClusterResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateCluster",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.CreateCluster",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.HypercomputeCluster.V1Beta.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.HypercomputeCluster.V1Beta.Cluster, Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "CreateCluster",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.CreateCluster",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_CreateCluster_async_flattened_resourceNames",
+      "title": "CreateClusterResourceNamesAsync",
+      "description": "Snippet for CreateClusterAsync",
+      "file": "HypercomputeClusterClient.CreateClusterResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateClusterAsync",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.CreateClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.HypercomputeCluster.V1Beta.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "System.String",
+            "name": "clusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.HypercomputeCluster.V1Beta.Cluster, Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "CreateCluster",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.CreateCluster",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_UpdateCluster_sync",
+      "title": "UpdateClusterRequestObject",
+      "description": "Snippet for UpdateCluster",
+      "file": "HypercomputeClusterClient.UpdateClusterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCluster",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.UpdateCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.HypercomputeCluster.V1Beta.UpdateClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.HypercomputeCluster.V1Beta.Cluster, Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "UpdateCluster",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.UpdateCluster",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_UpdateCluster_async",
+      "title": "UpdateClusterRequestObjectAsync",
+      "description": "Snippet for UpdateClusterAsync",
+      "file": "HypercomputeClusterClient.UpdateClusterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateClusterAsync",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.UpdateClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.HypercomputeCluster.V1Beta.UpdateClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.HypercomputeCluster.V1Beta.Cluster, Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "UpdateCluster",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.UpdateCluster",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_UpdateCluster_sync_flattened",
+      "title": "UpdateCluster",
+      "description": "Snippet for UpdateCluster",
+      "file": "HypercomputeClusterClient.UpdateClusterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCluster",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.UpdateCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.HypercomputeCluster.V1Beta.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.HypercomputeCluster.V1Beta.Cluster, Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "UpdateCluster",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.UpdateCluster",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_UpdateCluster_async_flattened",
+      "title": "UpdateClusterAsync",
+      "description": "Snippet for UpdateClusterAsync",
+      "file": "HypercomputeClusterClient.UpdateClusterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateClusterAsync",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.UpdateClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.HypercomputeCluster.V1Beta.Cluster",
+            "name": "cluster"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.HypercomputeCluster.V1Beta.Cluster, Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "UpdateCluster",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.UpdateCluster",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_DeleteCluster_sync",
+      "title": "DeleteClusterRequestObject",
+      "description": "Snippet for DeleteCluster",
+      "file": "HypercomputeClusterClient.DeleteClusterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCluster",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.DeleteCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.HypercomputeCluster.V1Beta.DeleteClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "DeleteCluster",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.DeleteCluster",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_DeleteCluster_async",
+      "title": "DeleteClusterRequestObjectAsync",
+      "description": "Snippet for DeleteClusterAsync",
+      "file": "HypercomputeClusterClient.DeleteClusterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteClusterAsync",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.DeleteClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.HypercomputeCluster.V1Beta.DeleteClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "DeleteCluster",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.DeleteCluster",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_DeleteCluster_sync_flattened",
+      "title": "DeleteCluster",
+      "description": "Snippet for DeleteCluster",
+      "file": "HypercomputeClusterClient.DeleteClusterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCluster",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.DeleteCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "DeleteCluster",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.DeleteCluster",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_DeleteCluster_async_flattened",
+      "title": "DeleteClusterAsync",
+      "description": "Snippet for DeleteClusterAsync",
+      "file": "HypercomputeClusterClient.DeleteClusterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteClusterAsync",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.DeleteClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "DeleteCluster",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.DeleteCluster",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_DeleteCluster_sync_flattened_resourceNames",
+      "title": "DeleteClusterResourceNames",
+      "description": "Snippet for DeleteCluster",
+      "file": "HypercomputeClusterClient.DeleteClusterResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteCluster",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.DeleteCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.HypercomputeCluster.V1Beta.ClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "DeleteCluster",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.DeleteCluster",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "hypercomputecluster_v1beta_generated_HypercomputeCluster_DeleteCluster_async_flattened_resourceNames",
+      "title": "DeleteClusterResourceNamesAsync",
+      "description": "Snippet for DeleteClusterAsync",
+      "file": "HypercomputeClusterClient.DeleteClusterResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteClusterAsync",
+        "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient.DeleteClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.HypercomputeCluster.V1Beta.ClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.HypercomputeCluster.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "HypercomputeClusterClient",
+          "fullName": "Google.Cloud.HypercomputeCluster.V1Beta.HypercomputeClusterClient"
+        },
+        "method": {
+          "shortName": "DeleteCluster",
+          "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster.DeleteCluster",
+          "service": {
+            "shortName": "HypercomputeCluster",
+            "fullName": "google.cloud.hypercomputecluster.v1beta.HypercomputeCluster"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

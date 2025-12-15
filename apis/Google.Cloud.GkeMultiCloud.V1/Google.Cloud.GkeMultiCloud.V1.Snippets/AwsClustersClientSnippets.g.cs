@@ -26,6 +26,7 @@ namespace GoogleCSharpSnippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
+    [ObsoleteAttribute]
     public sealed class AllGeneratedAwsClustersClientSnippets
     {
         /// <summary>Snippet for CreateAwsCluster</summary>
@@ -35,30 +36,36 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
-            CreateAwsClusterRequest request = new CreateAwsClusterRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                AwsCluster = new AwsCluster(),
-                AwsClusterId = "",
-                ValidateOnly = false,
-            };
+#pragma warning disable CS0612
+            CreateAwsClusterRequest request = new CreateAwsClusterRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> response = awsClustersClient.CreateAwsCluster(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsCluster result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> retrievedResponse = awsClustersClient.PollOnceCreateAwsCluster(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsCluster retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -71,30 +78,36 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
             // Initialize request argument(s)
-            CreateAwsClusterRequest request = new CreateAwsClusterRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                AwsCluster = new AwsCluster(),
-                AwsClusterId = "",
-                ValidateOnly = false,
-            };
+#pragma warning disable CS0612
+            CreateAwsClusterRequest request = new CreateAwsClusterRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> response = await awsClustersClient.CreateAwsClusterAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsCluster result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> retrievedResponse = await awsClustersClient.PollOnceCreateAwsClusterAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsCluster retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -107,25 +120,37 @@ namespace GoogleCSharpSnippets
             AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
+#pragma warning disable CS0612
             AwsCluster awsCluster = new AwsCluster();
+#pragma warning restore CS0612
             string awsClusterId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> response = awsClustersClient.CreateAwsCluster(parent, awsCluster, awsClusterId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsCluster result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> retrievedResponse = awsClustersClient.PollOnceCreateAwsCluster(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsCluster retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -139,25 +164,37 @@ namespace GoogleCSharpSnippets
             AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
+#pragma warning disable CS0612
             AwsCluster awsCluster = new AwsCluster();
+#pragma warning restore CS0612
             string awsClusterId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> response = await awsClustersClient.CreateAwsClusterAsync(parent, awsCluster, awsClusterId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsCluster result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> retrievedResponse = await awsClustersClient.PollOnceCreateAwsClusterAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsCluster retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -170,25 +207,37 @@ namespace GoogleCSharpSnippets
             AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+#pragma warning disable CS0612
             AwsCluster awsCluster = new AwsCluster();
+#pragma warning restore CS0612
             string awsClusterId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> response = awsClustersClient.CreateAwsCluster(parent, awsCluster, awsClusterId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsCluster result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> retrievedResponse = awsClustersClient.PollOnceCreateAwsCluster(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsCluster retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -202,25 +251,37 @@ namespace GoogleCSharpSnippets
             AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+#pragma warning disable CS0612
             AwsCluster awsCluster = new AwsCluster();
+#pragma warning restore CS0612
             string awsClusterId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> response = await awsClustersClient.CreateAwsClusterAsync(parent, awsCluster, awsClusterId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsCluster result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> retrievedResponse = await awsClustersClient.PollOnceCreateAwsClusterAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsCluster retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -232,29 +293,36 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
-            UpdateAwsClusterRequest request = new UpdateAwsClusterRequest
-            {
-                AwsCluster = new AwsCluster(),
-                ValidateOnly = false,
-                UpdateMask = new FieldMask(),
-            };
+#pragma warning disable CS0612
+            UpdateAwsClusterRequest request = new UpdateAwsClusterRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> response = awsClustersClient.UpdateAwsCluster(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsCluster result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> retrievedResponse = awsClustersClient.PollOnceUpdateAwsCluster(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsCluster retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -267,29 +335,36 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateAwsClusterRequest request = new UpdateAwsClusterRequest
-            {
-                AwsCluster = new AwsCluster(),
-                ValidateOnly = false,
-                UpdateMask = new FieldMask(),
-            };
+#pragma warning disable CS0612
+            UpdateAwsClusterRequest request = new UpdateAwsClusterRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> response = await awsClustersClient.UpdateAwsClusterAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsCluster result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> retrievedResponse = await awsClustersClient.PollOnceUpdateAwsClusterAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsCluster retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -301,25 +376,37 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
+#pragma warning disable CS0612
             AwsCluster awsCluster = new AwsCluster();
+#pragma warning restore CS0612
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> response = awsClustersClient.UpdateAwsCluster(awsCluster, updateMask);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsCluster result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> retrievedResponse = awsClustersClient.PollOnceUpdateAwsCluster(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsCluster retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -332,25 +419,37 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
             // Initialize request argument(s)
+#pragma warning disable CS0612
             AwsCluster awsCluster = new AwsCluster();
+#pragma warning restore CS0612
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> response = await awsClustersClient.UpdateAwsClusterAsync(awsCluster, updateMask);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsCluster result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> retrievedResponse = await awsClustersClient.PollOnceUpdateAwsClusterAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsCluster retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -362,12 +461,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
-            GetAwsClusterRequest request = new GetAwsClusterRequest
-            {
-                AwsClusterName = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]"),
-            };
+#pragma warning disable CS0612
+            GetAwsClusterRequest request = new GetAwsClusterRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             AwsCluster response = awsClustersClient.GetAwsCluster(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -379,12 +479,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
             // Initialize request argument(s)
-            GetAwsClusterRequest request = new GetAwsClusterRequest
-            {
-                AwsClusterName = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]"),
-            };
+#pragma warning disable CS0612
+            GetAwsClusterRequest request = new GetAwsClusterRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             AwsCluster response = await awsClustersClient.GetAwsClusterAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -397,7 +498,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/awsClusters/[AWS_CLUSTER]";
             // Make the request
+#pragma warning disable CS0612
             AwsCluster response = awsClustersClient.GetAwsCluster(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -411,7 +514,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/awsClusters/[AWS_CLUSTER]";
             // Make the request
+#pragma warning disable CS0612
             AwsCluster response = await awsClustersClient.GetAwsClusterAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -424,7 +529,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AwsClusterName name = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]");
             // Make the request
+#pragma warning disable CS0612
             AwsCluster response = awsClustersClient.GetAwsCluster(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -438,7 +545,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AwsClusterName name = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]");
             // Make the request
+#pragma warning disable CS0612
             AwsCluster response = await awsClustersClient.GetAwsClusterAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -449,26 +558,33 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
-            ListAwsClustersRequest request = new ListAwsClustersRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-            };
+#pragma warning disable CS0612
+            ListAwsClustersRequest request = new ListAwsClustersRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAwsClustersResponse, AwsCluster> response = awsClustersClient.ListAwsClusters(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             foreach (AwsCluster item in response)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             foreach (ListAwsClustersResponse page in response.AsRawResponses())
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AwsCluster item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -477,10 +593,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AwsCluster> singlePage = response.ReadPage(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AwsCluster item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -497,26 +617,33 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
             // Initialize request argument(s)
-            ListAwsClustersRequest request = new ListAwsClustersRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-            };
+#pragma warning disable CS0612
+            ListAwsClustersRequest request = new ListAwsClustersRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAwsClustersResponse, AwsCluster> response = awsClustersClient.ListAwsClustersAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             await response.ForEachAsync((AwsCluster item) =>
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((ListAwsClustersResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AwsCluster item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -525,10 +652,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AwsCluster> singlePage = await response.ReadPageAsync(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AwsCluster item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -547,21 +678,29 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAwsClustersResponse, AwsCluster> response = awsClustersClient.ListAwsClusters(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             foreach (AwsCluster item in response)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             foreach (ListAwsClustersResponse page in response.AsRawResponses())
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AwsCluster item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -570,10 +709,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AwsCluster> singlePage = response.ReadPage(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AwsCluster item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -592,21 +735,29 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAwsClustersResponse, AwsCluster> response = awsClustersClient.ListAwsClustersAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             await response.ForEachAsync((AwsCluster item) =>
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((ListAwsClustersResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AwsCluster item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -615,10 +766,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AwsCluster> singlePage = await response.ReadPageAsync(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AwsCluster item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -637,21 +792,29 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAwsClustersResponse, AwsCluster> response = awsClustersClient.ListAwsClusters(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             foreach (AwsCluster item in response)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             foreach (ListAwsClustersResponse page in response.AsRawResponses())
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AwsCluster item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -660,10 +823,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AwsCluster> singlePage = response.ReadPage(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AwsCluster item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -682,21 +849,29 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAwsClustersResponse, AwsCluster> response = awsClustersClient.ListAwsClustersAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             await response.ForEachAsync((AwsCluster item) =>
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((ListAwsClustersResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AwsCluster item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -705,10 +880,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AwsCluster> singlePage = await response.ReadPageAsync(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AwsCluster item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -725,16 +904,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
-            DeleteAwsClusterRequest request = new DeleteAwsClusterRequest
-            {
-                AwsClusterName = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]"),
-                ValidateOnly = false,
-                AllowMissing = false,
-                Etag = "",
-                IgnoreErrors = false,
-            };
+#pragma warning disable CS0612
+            DeleteAwsClusterRequest request = new DeleteAwsClusterRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = awsClustersClient.DeleteAwsCluster(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -744,7 +920,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = awsClustersClient.PollOnceDeleteAwsCluster(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -762,16 +940,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteAwsClusterRequest request = new DeleteAwsClusterRequest
-            {
-                AwsClusterName = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]"),
-                ValidateOnly = false,
-                AllowMissing = false,
-                Etag = "",
-                IgnoreErrors = false,
-            };
+#pragma warning disable CS0612
+            DeleteAwsClusterRequest request = new DeleteAwsClusterRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = await awsClustersClient.DeleteAwsClusterAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -781,7 +956,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = await awsClustersClient.PollOnceDeleteAwsClusterAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -800,7 +977,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/awsClusters/[AWS_CLUSTER]";
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = awsClustersClient.DeleteAwsCluster(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -810,7 +989,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = awsClustersClient.PollOnceDeleteAwsCluster(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -830,7 +1011,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/awsClusters/[AWS_CLUSTER]";
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = await awsClustersClient.DeleteAwsClusterAsync(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -840,7 +1023,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = await awsClustersClient.PollOnceDeleteAwsClusterAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -859,7 +1044,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AwsClusterName name = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]");
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = awsClustersClient.DeleteAwsCluster(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -869,7 +1056,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = awsClustersClient.PollOnceDeleteAwsCluster(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -889,7 +1078,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AwsClusterName name = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]");
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = await awsClustersClient.DeleteAwsClusterAsync(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -899,7 +1090,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = await awsClustersClient.PollOnceDeleteAwsClusterAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -916,21 +1109,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
-            GenerateAwsClusterAgentTokenRequest request = new GenerateAwsClusterAgentTokenRequest
-            {
-                AwsClusterAsAwsClusterName = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]"),
-                SubjectToken = "",
-                SubjectTokenType = "",
-                Version = "",
-                NodePoolId = "",
-                GrantType = "",
-                Audience = "",
-                Scope = "",
-                RequestedTokenType = "",
-                Options = "",
-            };
+#pragma warning disable CS0612
+            GenerateAwsClusterAgentTokenRequest request = new GenerateAwsClusterAgentTokenRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             GenerateAwsClusterAgentTokenResponse response = awsClustersClient.GenerateAwsClusterAgentToken(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -942,21 +1127,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
             // Initialize request argument(s)
-            GenerateAwsClusterAgentTokenRequest request = new GenerateAwsClusterAgentTokenRequest
-            {
-                AwsClusterAsAwsClusterName = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]"),
-                SubjectToken = "",
-                SubjectTokenType = "",
-                Version = "",
-                NodePoolId = "",
-                GrantType = "",
-                Audience = "",
-                Scope = "",
-                RequestedTokenType = "",
-                Options = "",
-            };
+#pragma warning disable CS0612
+            GenerateAwsClusterAgentTokenRequest request = new GenerateAwsClusterAgentTokenRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             GenerateAwsClusterAgentTokenResponse response = await awsClustersClient.GenerateAwsClusterAgentTokenAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -967,12 +1144,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
-            GenerateAwsAccessTokenRequest request = new GenerateAwsAccessTokenRequest
-            {
-                AwsClusterAsAwsClusterName = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]"),
-            };
+#pragma warning disable CS0612
+            GenerateAwsAccessTokenRequest request = new GenerateAwsAccessTokenRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             GenerateAwsAccessTokenResponse response = awsClustersClient.GenerateAwsAccessToken(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -984,12 +1162,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
             // Initialize request argument(s)
-            GenerateAwsAccessTokenRequest request = new GenerateAwsAccessTokenRequest
-            {
-                AwsClusterAsAwsClusterName = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]"),
-            };
+#pragma warning disable CS0612
+            GenerateAwsAccessTokenRequest request = new GenerateAwsAccessTokenRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             GenerateAwsAccessTokenResponse response = await awsClustersClient.GenerateAwsAccessTokenAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1000,30 +1179,36 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
-            CreateAwsNodePoolRequest request = new CreateAwsNodePoolRequest
-            {
-                ParentAsAwsClusterName = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]"),
-                AwsNodePool = new AwsNodePool(),
-                AwsNodePoolId = "",
-                ValidateOnly = false,
-            };
+#pragma warning disable CS0612
+            CreateAwsNodePoolRequest request = new CreateAwsNodePoolRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> response = awsClustersClient.CreateAwsNodePool(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> retrievedResponse = awsClustersClient.PollOnceCreateAwsNodePool(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1036,30 +1221,36 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
             // Initialize request argument(s)
-            CreateAwsNodePoolRequest request = new CreateAwsNodePoolRequest
-            {
-                ParentAsAwsClusterName = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]"),
-                AwsNodePool = new AwsNodePool(),
-                AwsNodePoolId = "",
-                ValidateOnly = false,
-            };
+#pragma warning disable CS0612
+            CreateAwsNodePoolRequest request = new CreateAwsNodePoolRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> response = await awsClustersClient.CreateAwsNodePoolAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> retrievedResponse = await awsClustersClient.PollOnceCreateAwsNodePoolAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1072,25 +1263,37 @@ namespace GoogleCSharpSnippets
             AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/awsClusters/[AWS_CLUSTER]";
+#pragma warning disable CS0612
             AwsNodePool awsNodePool = new AwsNodePool();
+#pragma warning restore CS0612
             string awsNodePoolId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> response = awsClustersClient.CreateAwsNodePool(parent, awsNodePool, awsNodePoolId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> retrievedResponse = awsClustersClient.PollOnceCreateAwsNodePool(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1104,25 +1307,37 @@ namespace GoogleCSharpSnippets
             AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/awsClusters/[AWS_CLUSTER]";
+#pragma warning disable CS0612
             AwsNodePool awsNodePool = new AwsNodePool();
+#pragma warning restore CS0612
             string awsNodePoolId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> response = await awsClustersClient.CreateAwsNodePoolAsync(parent, awsNodePool, awsNodePoolId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> retrievedResponse = await awsClustersClient.PollOnceCreateAwsNodePoolAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1135,25 +1350,37 @@ namespace GoogleCSharpSnippets
             AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
             AwsClusterName parent = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]");
+#pragma warning disable CS0612
             AwsNodePool awsNodePool = new AwsNodePool();
+#pragma warning restore CS0612
             string awsNodePoolId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> response = awsClustersClient.CreateAwsNodePool(parent, awsNodePool, awsNodePoolId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> retrievedResponse = awsClustersClient.PollOnceCreateAwsNodePool(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1167,25 +1394,37 @@ namespace GoogleCSharpSnippets
             AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
             // Initialize request argument(s)
             AwsClusterName parent = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]");
+#pragma warning disable CS0612
             AwsNodePool awsNodePool = new AwsNodePool();
+#pragma warning restore CS0612
             string awsNodePoolId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> response = await awsClustersClient.CreateAwsNodePoolAsync(parent, awsNodePool, awsNodePoolId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> retrievedResponse = await awsClustersClient.PollOnceCreateAwsNodePoolAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1197,29 +1436,36 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
-            UpdateAwsNodePoolRequest request = new UpdateAwsNodePoolRequest
-            {
-                AwsNodePool = new AwsNodePool(),
-                ValidateOnly = false,
-                UpdateMask = new FieldMask(),
-            };
+#pragma warning disable CS0612
+            UpdateAwsNodePoolRequest request = new UpdateAwsNodePoolRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> response = awsClustersClient.UpdateAwsNodePool(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> retrievedResponse = awsClustersClient.PollOnceUpdateAwsNodePool(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1232,29 +1478,36 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateAwsNodePoolRequest request = new UpdateAwsNodePoolRequest
-            {
-                AwsNodePool = new AwsNodePool(),
-                ValidateOnly = false,
-                UpdateMask = new FieldMask(),
-            };
+#pragma warning disable CS0612
+            UpdateAwsNodePoolRequest request = new UpdateAwsNodePoolRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> response = await awsClustersClient.UpdateAwsNodePoolAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> retrievedResponse = await awsClustersClient.PollOnceUpdateAwsNodePoolAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1266,25 +1519,37 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
+#pragma warning disable CS0612
             AwsNodePool awsNodePool = new AwsNodePool();
+#pragma warning restore CS0612
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> response = awsClustersClient.UpdateAwsNodePool(awsNodePool, updateMask);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> retrievedResponse = awsClustersClient.PollOnceUpdateAwsNodePool(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1297,25 +1562,37 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
             // Initialize request argument(s)
+#pragma warning disable CS0612
             AwsNodePool awsNodePool = new AwsNodePool();
+#pragma warning restore CS0612
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> response = await awsClustersClient.UpdateAwsNodePoolAsync(awsNodePool, updateMask);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> retrievedResponse = await awsClustersClient.PollOnceUpdateAwsNodePoolAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1327,28 +1604,36 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
-            RollbackAwsNodePoolUpdateRequest request = new RollbackAwsNodePoolUpdateRequest
-            {
-                AwsNodePoolName = AwsNodePoolName.FromProjectLocationAwsClusterAwsNodePool("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]", "[AWS_NODE_POOL]"),
-                RespectPdb = false,
-            };
+#pragma warning disable CS0612
+            RollbackAwsNodePoolUpdateRequest request = new RollbackAwsNodePoolUpdateRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> response = awsClustersClient.RollbackAwsNodePoolUpdate(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> retrievedResponse = awsClustersClient.PollOnceRollbackAwsNodePoolUpdate(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1361,28 +1646,36 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
             // Initialize request argument(s)
-            RollbackAwsNodePoolUpdateRequest request = new RollbackAwsNodePoolUpdateRequest
-            {
-                AwsNodePoolName = AwsNodePoolName.FromProjectLocationAwsClusterAwsNodePool("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]", "[AWS_NODE_POOL]"),
-                RespectPdb = false,
-            };
+#pragma warning disable CS0612
+            RollbackAwsNodePoolUpdateRequest request = new RollbackAwsNodePoolUpdateRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> response = await awsClustersClient.RollbackAwsNodePoolUpdateAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> retrievedResponse = await awsClustersClient.PollOnceRollbackAwsNodePoolUpdateAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1396,22 +1689,32 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/awsClusters/[AWS_CLUSTER]/awsNodePools/[AWS_NODE_POOL]";
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> response = awsClustersClient.RollbackAwsNodePoolUpdate(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> retrievedResponse = awsClustersClient.PollOnceRollbackAwsNodePoolUpdate(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1426,22 +1729,32 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/awsClusters/[AWS_CLUSTER]/awsNodePools/[AWS_NODE_POOL]";
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> response = await awsClustersClient.RollbackAwsNodePoolUpdateAsync(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> retrievedResponse = await awsClustersClient.PollOnceRollbackAwsNodePoolUpdateAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1455,22 +1768,32 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AwsNodePoolName name = AwsNodePoolName.FromProjectLocationAwsClusterAwsNodePool("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]", "[AWS_NODE_POOL]");
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> response = awsClustersClient.RollbackAwsNodePoolUpdate(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> retrievedResponse = awsClustersClient.PollOnceRollbackAwsNodePoolUpdate(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1485,22 +1808,32 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AwsNodePoolName name = AwsNodePoolName.FromProjectLocationAwsClusterAwsNodePool("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]", "[AWS_NODE_POOL]");
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> response = await awsClustersClient.RollbackAwsNodePoolUpdateAsync(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsNodePool result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsNodePool, OperationMetadata> retrievedResponse = await awsClustersClient.PollOnceRollbackAwsNodePoolUpdateAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsNodePool retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -1512,12 +1845,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
-            GetAwsNodePoolRequest request = new GetAwsNodePoolRequest
-            {
-                AwsNodePoolName = AwsNodePoolName.FromProjectLocationAwsClusterAwsNodePool("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]", "[AWS_NODE_POOL]"),
-            };
+#pragma warning disable CS0612
+            GetAwsNodePoolRequest request = new GetAwsNodePoolRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             AwsNodePool response = awsClustersClient.GetAwsNodePool(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1529,12 +1863,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
             // Initialize request argument(s)
-            GetAwsNodePoolRequest request = new GetAwsNodePoolRequest
-            {
-                AwsNodePoolName = AwsNodePoolName.FromProjectLocationAwsClusterAwsNodePool("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]", "[AWS_NODE_POOL]"),
-            };
+#pragma warning disable CS0612
+            GetAwsNodePoolRequest request = new GetAwsNodePoolRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             AwsNodePool response = await awsClustersClient.GetAwsNodePoolAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1547,7 +1882,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/awsClusters/[AWS_CLUSTER]/awsNodePools/[AWS_NODE_POOL]";
             // Make the request
+#pragma warning disable CS0612
             AwsNodePool response = awsClustersClient.GetAwsNodePool(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1561,7 +1898,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/awsClusters/[AWS_CLUSTER]/awsNodePools/[AWS_NODE_POOL]";
             // Make the request
+#pragma warning disable CS0612
             AwsNodePool response = await awsClustersClient.GetAwsNodePoolAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1574,7 +1913,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AwsNodePoolName name = AwsNodePoolName.FromProjectLocationAwsClusterAwsNodePool("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]", "[AWS_NODE_POOL]");
             // Make the request
+#pragma warning disable CS0612
             AwsNodePool response = awsClustersClient.GetAwsNodePool(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1588,7 +1929,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AwsNodePoolName name = AwsNodePoolName.FromProjectLocationAwsClusterAwsNodePool("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]", "[AWS_NODE_POOL]");
             // Make the request
+#pragma warning disable CS0612
             AwsNodePool response = await awsClustersClient.GetAwsNodePoolAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1599,26 +1942,33 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
-            ListAwsNodePoolsRequest request = new ListAwsNodePoolsRequest
-            {
-                ParentAsAwsClusterName = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]"),
-            };
+#pragma warning disable CS0612
+            ListAwsNodePoolsRequest request = new ListAwsNodePoolsRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAwsNodePoolsResponse, AwsNodePool> response = awsClustersClient.ListAwsNodePools(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             foreach (AwsNodePool item in response)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             foreach (ListAwsNodePoolsResponse page in response.AsRawResponses())
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AwsNodePool item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1627,10 +1977,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AwsNodePool> singlePage = response.ReadPage(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AwsNodePool item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1647,26 +2001,33 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
             // Initialize request argument(s)
-            ListAwsNodePoolsRequest request = new ListAwsNodePoolsRequest
-            {
-                ParentAsAwsClusterName = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]"),
-            };
+#pragma warning disable CS0612
+            ListAwsNodePoolsRequest request = new ListAwsNodePoolsRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAwsNodePoolsResponse, AwsNodePool> response = awsClustersClient.ListAwsNodePoolsAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             await response.ForEachAsync((AwsNodePool item) =>
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((ListAwsNodePoolsResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AwsNodePool item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1675,10 +2036,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AwsNodePool> singlePage = await response.ReadPageAsync(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AwsNodePool item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1697,21 +2062,29 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/awsClusters/[AWS_CLUSTER]";
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAwsNodePoolsResponse, AwsNodePool> response = awsClustersClient.ListAwsNodePools(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             foreach (AwsNodePool item in response)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             foreach (ListAwsNodePoolsResponse page in response.AsRawResponses())
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AwsNodePool item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1720,10 +2093,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AwsNodePool> singlePage = response.ReadPage(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AwsNodePool item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1742,21 +2119,29 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/awsClusters/[AWS_CLUSTER]";
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAwsNodePoolsResponse, AwsNodePool> response = awsClustersClient.ListAwsNodePoolsAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             await response.ForEachAsync((AwsNodePool item) =>
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((ListAwsNodePoolsResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AwsNodePool item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1765,10 +2150,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AwsNodePool> singlePage = await response.ReadPageAsync(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AwsNodePool item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1787,21 +2176,29 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AwsClusterName parent = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]");
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListAwsNodePoolsResponse, AwsNodePool> response = awsClustersClient.ListAwsNodePools(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             foreach (AwsNodePool item in response)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             foreach (ListAwsNodePoolsResponse page in response.AsRawResponses())
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AwsNodePool item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1810,10 +2207,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AwsNodePool> singlePage = response.ReadPage(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AwsNodePool item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1832,21 +2233,29 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AwsClusterName parent = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]");
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAwsNodePoolsResponse, AwsNodePool> response = awsClustersClient.ListAwsNodePoolsAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
+#pragma warning disable CS0612
             await response.ForEachAsync((AwsNodePool item) =>
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((ListAwsNodePoolsResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
+#pragma warning disable CS0612
                 foreach (AwsNodePool item in page)
+#pragma warning restore CS0612
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1855,10 +2264,14 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
+#pragma warning disable CS0612
             Page<AwsNodePool> singlePage = await response.ReadPageAsync(pageSize);
+#pragma warning restore CS0612
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+#pragma warning disable CS0612
             foreach (AwsNodePool item in singlePage)
+#pragma warning restore CS0612
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1875,16 +2288,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
-            DeleteAwsNodePoolRequest request = new DeleteAwsNodePoolRequest
-            {
-                AwsNodePoolName = AwsNodePoolName.FromProjectLocationAwsClusterAwsNodePool("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]", "[AWS_NODE_POOL]"),
-                ValidateOnly = false,
-                AllowMissing = false,
-                Etag = "",
-                IgnoreErrors = false,
-            };
+#pragma warning disable CS0612
+            DeleteAwsNodePoolRequest request = new DeleteAwsNodePoolRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = awsClustersClient.DeleteAwsNodePool(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -1894,7 +2304,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = awsClustersClient.PollOnceDeleteAwsNodePool(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1912,16 +2324,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteAwsNodePoolRequest request = new DeleteAwsNodePoolRequest
-            {
-                AwsNodePoolName = AwsNodePoolName.FromProjectLocationAwsClusterAwsNodePool("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]", "[AWS_NODE_POOL]"),
-                ValidateOnly = false,
-                AllowMissing = false,
-                Etag = "",
-                IgnoreErrors = false,
-            };
+#pragma warning disable CS0612
+            DeleteAwsNodePoolRequest request = new DeleteAwsNodePoolRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = await awsClustersClient.DeleteAwsNodePoolAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -1931,7 +2340,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = await awsClustersClient.PollOnceDeleteAwsNodePoolAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1950,7 +2361,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/awsClusters/[AWS_CLUSTER]/awsNodePools/[AWS_NODE_POOL]";
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = awsClustersClient.DeleteAwsNodePool(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -1960,7 +2373,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = awsClustersClient.PollOnceDeleteAwsNodePool(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1980,7 +2395,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/awsClusters/[AWS_CLUSTER]/awsNodePools/[AWS_NODE_POOL]";
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = await awsClustersClient.DeleteAwsNodePoolAsync(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -1990,7 +2407,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = await awsClustersClient.PollOnceDeleteAwsNodePoolAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2009,7 +2428,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AwsNodePoolName name = AwsNodePoolName.FromProjectLocationAwsClusterAwsNodePool("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]", "[AWS_NODE_POOL]");
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = awsClustersClient.DeleteAwsNodePool(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -2019,7 +2440,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = awsClustersClient.PollOnceDeleteAwsNodePool(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2039,7 +2462,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AwsNodePoolName name = AwsNodePoolName.FromProjectLocationAwsClusterAwsNodePool("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]", "[AWS_NODE_POOL]");
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = await awsClustersClient.DeleteAwsNodePoolAsync(name);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -2049,7 +2474,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = await awsClustersClient.PollOnceDeleteAwsNodePoolAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2066,12 +2493,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
-            GetAwsOpenIdConfigRequest request = new GetAwsOpenIdConfigRequest
-            {
-                AwsClusterAsAwsClusterName = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]"),
-            };
+#pragma warning disable CS0612
+            GetAwsOpenIdConfigRequest request = new GetAwsOpenIdConfigRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             AwsOpenIdConfig response = awsClustersClient.GetAwsOpenIdConfig(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2083,12 +2511,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
             // Initialize request argument(s)
-            GetAwsOpenIdConfigRequest request = new GetAwsOpenIdConfigRequest
-            {
-                AwsClusterAsAwsClusterName = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]"),
-            };
+#pragma warning disable CS0612
+            GetAwsOpenIdConfigRequest request = new GetAwsOpenIdConfigRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             AwsOpenIdConfig response = await awsClustersClient.GetAwsOpenIdConfigAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2099,12 +2528,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
-            GetAwsJsonWebKeysRequest request = new GetAwsJsonWebKeysRequest
-            {
-                AwsClusterAsAwsClusterName = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]"),
-            };
+#pragma warning disable CS0612
+            GetAwsJsonWebKeysRequest request = new GetAwsJsonWebKeysRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             AwsJsonWebKeys response = awsClustersClient.GetAwsJsonWebKeys(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2116,12 +2546,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
             // Initialize request argument(s)
-            GetAwsJsonWebKeysRequest request = new GetAwsJsonWebKeysRequest
-            {
-                AwsClusterAsAwsClusterName = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]"),
-            };
+#pragma warning disable CS0612
+            GetAwsJsonWebKeysRequest request = new GetAwsJsonWebKeysRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             AwsJsonWebKeys response = await awsClustersClient.GetAwsJsonWebKeysAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2132,12 +2563,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = AwsClustersClient.Create();
             // Initialize request argument(s)
-            GetAwsServerConfigRequest request = new GetAwsServerConfigRequest
-            {
-                AwsServerConfigName = AwsServerConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-            };
+#pragma warning disable CS0612
+            GetAwsServerConfigRequest request = new GetAwsServerConfigRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             AwsServerConfig response = awsClustersClient.GetAwsServerConfig(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2149,12 +2581,13 @@ namespace GoogleCSharpSnippets
             // Create client
             AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
             // Initialize request argument(s)
-            GetAwsServerConfigRequest request = new GetAwsServerConfigRequest
-            {
-                AwsServerConfigName = AwsServerConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-            };
+#pragma warning disable CS0612
+            GetAwsServerConfigRequest request = new GetAwsServerConfigRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             AwsServerConfig response = await awsClustersClient.GetAwsServerConfigAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2167,7 +2600,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/awsServerConfig";
             // Make the request
+#pragma warning disable CS0612
             AwsServerConfig response = awsClustersClient.GetAwsServerConfig(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2181,7 +2616,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/awsServerConfig";
             // Make the request
+#pragma warning disable CS0612
             AwsServerConfig response = await awsClustersClient.GetAwsServerConfigAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2194,7 +2631,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AwsServerConfigName name = AwsServerConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
+#pragma warning disable CS0612
             AwsServerConfig response = awsClustersClient.GetAwsServerConfig(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2208,7 +2647,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AwsServerConfigName name = AwsServerConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
+#pragma warning disable CS0612
             AwsServerConfig response = await awsClustersClient.GetAwsServerConfigAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
     }

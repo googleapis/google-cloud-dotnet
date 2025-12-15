@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START gkemulticloud_v1_generated_AzureClusters_GetAzureServerConfig_sync]
     using Google.Cloud.GkeMultiCloud.V1;
+    using System;
 
     public sealed partial class GeneratedAzureClustersClientSnippets
     {
@@ -29,17 +30,19 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void GetAzureServerConfigRequestObject()
         {
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
-            GetAzureServerConfigRequest request = new GetAzureServerConfigRequest
-            {
-                AzureServerConfigName = AzureServerConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-            };
+#pragma warning disable CS0612
+            GetAzureServerConfigRequest request = new GetAzureServerConfigRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             AzureServerConfig response = azureClustersClient.GetAzureServerConfig(request);
+#pragma warning restore CS0612
         }
     }
     // [END gkemulticloud_v1_generated_AzureClusters_GetAzureServerConfig_sync]

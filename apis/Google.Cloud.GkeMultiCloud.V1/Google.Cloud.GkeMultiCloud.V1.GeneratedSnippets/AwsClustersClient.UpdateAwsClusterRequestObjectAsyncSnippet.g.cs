@@ -19,7 +19,7 @@ namespace GoogleCSharpSnippets
     // [START gkemulticloud_v1_generated_AwsClusters_UpdateAwsCluster_async]
     using Google.Cloud.GkeMultiCloud.V1;
     using Google.LongRunning;
-    using Google.Protobuf.WellKnownTypes;
+    using System;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedAwsClustersClientSnippets
@@ -32,34 +32,42 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public async Task UpdateAwsClusterRequestObjectAsync()
         {
             // Create client
             AwsClustersClient awsClustersClient = await AwsClustersClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateAwsClusterRequest request = new UpdateAwsClusterRequest
-            {
-                AwsCluster = new AwsCluster(),
-                ValidateOnly = false,
-                UpdateMask = new FieldMask(),
-            };
+#pragma warning disable CS0612
+            UpdateAwsClusterRequest request = new UpdateAwsClusterRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> response = await awsClustersClient.UpdateAwsClusterAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             AwsCluster result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<AwsCluster, OperationMetadata> retrievedResponse = await awsClustersClient.PollOnceUpdateAwsClusterAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 AwsCluster retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
         }
     }

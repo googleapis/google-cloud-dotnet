@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 PurchaseOrderId = "",
                 RequestId = "",
                 BillingAccount = "",
+                PriceReferenceId = "",
             };
             // Make the request
             Operation<Entitlement, OperationMetadata> response = cloudChannelServiceClient.ChangeOffer(request);

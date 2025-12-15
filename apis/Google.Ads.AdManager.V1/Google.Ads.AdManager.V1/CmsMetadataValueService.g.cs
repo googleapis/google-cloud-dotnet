@@ -120,7 +120,7 @@ namespace Google.Ads.AdManager.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the CmsMetadataKey.
+    /// Required. The resource name of the CmsMetadataValue.
     /// Format: `networks/{network_code}/cmsMetadataValues/{cms_metadata_value_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -229,6 +229,8 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.CreateAttachmentRequest> __Marshaller_google_devtools_artifactregistry_v1_CreateAttachmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.CreateAttachmentRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.DeleteAttachmentRequest> __Marshaller_google_devtools_artifactregistry_v1_DeleteAttachmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.DeleteAttachmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1.ExportArtifactRequest> __Marshaller_google_devtools_artifactregistry_v1_ExportArtifactRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1.ExportArtifactRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.ListDockerImagesRequest, global::Google.Cloud.ArtifactRegistry.V1.ListDockerImagesResponse> __Method_ListDockerImages = new grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.ListDockerImagesRequest, global::Google.Cloud.ArtifactRegistry.V1.ListDockerImagesResponse>(
@@ -620,6 +622,14 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         __ServiceName,
         "DeleteAttachment",
         __Marshaller_google_devtools_artifactregistry_v1_DeleteAttachmentRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.ExportArtifactRequest, global::Google.LongRunning.Operation> __Method_ExportArtifact = new grpc::Method<global::Google.Cloud.ArtifactRegistry.V1.ExportArtifactRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExportArtifact",
+        __Marshaller_google_devtools_artifactregistry_v1_ExportArtifactRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -1233,6 +1243,18 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteAttachment(global::Google.Cloud.ArtifactRegistry.V1.DeleteAttachmentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Exports an artifact.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExportArtifact(global::Google.Cloud.ArtifactRegistry.V1.ExportArtifactRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -3686,6 +3708,54 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteAttachment, null, options, request);
       }
+      /// <summary>
+      /// Exports an artifact.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ExportArtifact(global::Google.Cloud.ArtifactRegistry.V1.ExportArtifactRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportArtifact(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Exports an artifact.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ExportArtifact(global::Google.Cloud.ArtifactRegistry.V1.ExportArtifactRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExportArtifact, null, options, request);
+      }
+      /// <summary>
+      /// Exports an artifact.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportArtifactAsync(global::Google.Cloud.ArtifactRegistry.V1.ExportArtifactRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportArtifactAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Exports an artifact.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportArtifactAsync(global::Google.Cloud.ArtifactRegistry.V1.ExportArtifactRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExportArtifact, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ArtifactRegistryClient NewInstance(ClientBaseConfiguration configuration)
@@ -3748,7 +3818,8 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           .AddMethod(__Method_ListAttachments, serviceImpl.ListAttachments)
           .AddMethod(__Method_GetAttachment, serviceImpl.GetAttachment)
           .AddMethod(__Method_CreateAttachment, serviceImpl.CreateAttachment)
-          .AddMethod(__Method_DeleteAttachment, serviceImpl.DeleteAttachment).Build();
+          .AddMethod(__Method_DeleteAttachment, serviceImpl.DeleteAttachment)
+          .AddMethod(__Method_ExportArtifact, serviceImpl.ExportArtifact).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -3807,6 +3878,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       serviceBinder.AddMethod(__Method_GetAttachment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.GetAttachmentRequest, global::Google.Cloud.ArtifactRegistry.V1.Attachment>(serviceImpl.GetAttachment));
       serviceBinder.AddMethod(__Method_CreateAttachment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.CreateAttachmentRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateAttachment));
       serviceBinder.AddMethod(__Method_DeleteAttachment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.DeleteAttachmentRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteAttachment));
+      serviceBinder.AddMethod(__Method_ExportArtifact, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1.ExportArtifactRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportArtifact));
     }
 
   }

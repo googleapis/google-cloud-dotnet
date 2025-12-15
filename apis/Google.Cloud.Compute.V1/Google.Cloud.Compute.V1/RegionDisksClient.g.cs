@@ -670,7 +670,9 @@ namespace Google.Cloud.Compute.V1
         public virtual RegionDisks.RegionDisksClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Adds existing resource policies to a regional disk. You can only add one policy which will be applied to this disk for scheduling snapshot creation.
+        /// Adds existing resource policies to a regional disk. You can only add one
+        /// policy which will be applied to this disk for scheduling snapshot
+        /// creation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -679,7 +681,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Adds existing resource policies to a regional disk. You can only add one policy which will be applied to this disk for scheduling snapshot creation.
+        /// Adds existing resource policies to a regional disk. You can only add one
+        /// policy which will be applied to this disk for scheduling snapshot
+        /// creation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -688,7 +692,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Adds existing resource policies to a regional disk. You can only add one policy which will be applied to this disk for scheduling snapshot creation.
+        /// Adds existing resource policies to a regional disk. You can only add one
+        /// policy which will be applied to this disk for scheduling snapshot
+        /// creation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -724,7 +730,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddResourcePoliciesOperationsClient, callSettings);
 
         /// <summary>
-        /// Adds existing resource policies to a regional disk. You can only add one policy which will be applied to this disk for scheduling snapshot creation.
+        /// Adds existing resource policies to a regional disk. You can only add one
+        /// policy which will be applied to this disk for scheduling snapshot
+        /// creation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -750,7 +758,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Adds existing resource policies to a regional disk. You can only add one policy which will be applied to this disk for scheduling snapshot creation.
+        /// Adds existing resource policies to a regional disk. You can only add one
+        /// policy which will be applied to this disk for scheduling snapshot
+        /// creation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -776,7 +786,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Adds existing resource policies to a regional disk. You can only add one policy which will be applied to this disk for scheduling snapshot creation.
+        /// Adds existing resource policies to a regional disk. You can only add one
+        /// policy which will be applied to this disk for scheduling snapshot
+        /// creation.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -910,7 +922,10 @@ namespace Google.Cloud.Compute.V1
             BulkInsertAsync(project, region, bulkInsertDiskResourceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a snapshot of a specified persistent disk. For regular snapshot creation, consider using snapshots.insert instead, as that method supports more features, such as creating snapshots in a project different from the source disk project.
+        /// Creates a snapshot of a specified persistent disk. For regular snapshot
+        /// creation, consider using snapshots.insert
+        /// instead, as that method supports more features, such as creating snapshots
+        /// in a project different from the source disk project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -919,7 +934,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a snapshot of a specified persistent disk. For regular snapshot creation, consider using snapshots.insert instead, as that method supports more features, such as creating snapshots in a project different from the source disk project.
+        /// Creates a snapshot of a specified persistent disk. For regular snapshot
+        /// creation, consider using snapshots.insert
+        /// instead, as that method supports more features, such as creating snapshots
+        /// in a project different from the source disk project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -928,7 +946,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a snapshot of a specified persistent disk. For regular snapshot creation, consider using snapshots.insert instead, as that method supports more features, such as creating snapshots in a project different from the source disk project.
+        /// Creates a snapshot of a specified persistent disk. For regular snapshot
+        /// creation, consider using snapshots.insert
+        /// instead, as that method supports more features, such as creating snapshots
+        /// in a project different from the source disk project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -963,7 +984,10 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateSnapshotOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a snapshot of a specified persistent disk. For regular snapshot creation, consider using snapshots.insert instead, as that method supports more features, such as creating snapshots in a project different from the source disk project.
+        /// Creates a snapshot of a specified persistent disk. For regular snapshot
+        /// creation, consider using snapshots.insert
+        /// instead, as that method supports more features, such as creating snapshots
+        /// in a project different from the source disk project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -989,7 +1013,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a snapshot of a specified persistent disk. For regular snapshot creation, consider using snapshots.insert instead, as that method supports more features, such as creating snapshots in a project different from the source disk project.
+        /// Creates a snapshot of a specified persistent disk. For regular snapshot
+        /// creation, consider using snapshots.insert
+        /// instead, as that method supports more features, such as creating snapshots
+        /// in a project different from the source disk project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1015,7 +1042,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a snapshot of a specified persistent disk. For regular snapshot creation, consider using snapshots.insert instead, as that method supports more features, such as creating snapshots in a project different from the source disk project.
+        /// Creates a snapshot of a specified persistent disk. For regular snapshot
+        /// creation, consider using snapshots.insert
+        /// instead, as that method supports more features, such as creating snapshots
+        /// in a project different from the source disk project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1035,7 +1065,11 @@ namespace Google.Cloud.Compute.V1
             CreateSnapshotAsync(project, region, disk, snapshotResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified regional persistent disk. Deleting a regional disk removes all the replicas of its data permanently and is irreversible. However, deleting a disk does not delete any snapshots previously made from the disk. You must separately delete snapshots.
+        /// Deletes the specified regional persistent disk. Deleting a regional disk
+        /// removes all the replicas of its data permanently and is irreversible.
+        /// However, deleting a disk does not delete anysnapshots
+        /// previously made from the disk. You must separatelydelete
+        /// snapshots.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1044,7 +1078,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified regional persistent disk. Deleting a regional disk removes all the replicas of its data permanently and is irreversible. However, deleting a disk does not delete any snapshots previously made from the disk. You must separately delete snapshots.
+        /// Deletes the specified regional persistent disk. Deleting a regional disk
+        /// removes all the replicas of its data permanently and is irreversible.
+        /// However, deleting a disk does not delete anysnapshots
+        /// previously made from the disk. You must separatelydelete
+        /// snapshots.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1053,7 +1091,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the specified regional persistent disk. Deleting a regional disk removes all the replicas of its data permanently and is irreversible. However, deleting a disk does not delete any snapshots previously made from the disk. You must separately delete snapshots.
+        /// Deletes the specified regional persistent disk. Deleting a regional disk
+        /// removes all the replicas of its data permanently and is irreversible.
+        /// However, deleting a disk does not delete anysnapshots
+        /// previously made from the disk. You must separatelydelete
+        /// snapshots.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1088,7 +1130,11 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes the specified regional persistent disk. Deleting a regional disk removes all the replicas of its data permanently and is irreversible. However, deleting a disk does not delete any snapshots previously made from the disk. You must separately delete snapshots.
+        /// Deletes the specified regional persistent disk. Deleting a regional disk
+        /// removes all the replicas of its data permanently and is irreversible.
+        /// However, deleting a disk does not delete anysnapshots
+        /// previously made from the disk. You must separatelydelete
+        /// snapshots.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1110,7 +1156,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified regional persistent disk. Deleting a regional disk removes all the replicas of its data permanently and is irreversible. However, deleting a disk does not delete any snapshots previously made from the disk. You must separately delete snapshots.
+        /// Deletes the specified regional persistent disk. Deleting a regional disk
+        /// removes all the replicas of its data permanently and is irreversible.
+        /// However, deleting a disk does not delete anysnapshots
+        /// previously made from the disk. You must separatelydelete
+        /// snapshots.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1132,7 +1182,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the specified regional persistent disk. Deleting a regional disk removes all the replicas of its data permanently and is irreversible. However, deleting a disk does not delete any snapshots previously made from the disk. You must separately delete snapshots.
+        /// Deletes the specified regional persistent disk. Deleting a regional disk
+        /// removes all the replicas of its data permanently and is irreversible.
+        /// However, deleting a disk does not delete anysnapshots
+        /// previously made from the disk. You must separatelydelete
+        /// snapshots.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1237,7 +1291,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, region, disk, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1246,7 +1301,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1255,7 +1311,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1264,7 +1321,8 @@ namespace Google.Cloud.Compute.V1
             GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1286,7 +1344,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1308,7 +1367,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1325,7 +1385,8 @@ namespace Google.Cloud.Compute.V1
             GetIamPolicyAsync(project, region, resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a persistent regional disk in the specified project using the data included in the request.
+        /// Creates a persistent regional disk in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1334,7 +1395,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a persistent regional disk in the specified project using the data included in the request.
+        /// Creates a persistent regional disk in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1343,7 +1405,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a persistent regional disk in the specified project using the data included in the request.
+        /// Creates a persistent regional disk in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1378,7 +1441,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a persistent regional disk in the specified project using the data included in the request.
+        /// Creates a persistent regional disk in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1400,7 +1464,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a persistent regional disk in the specified project using the data included in the request.
+        /// Creates a persistent regional disk in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1422,7 +1487,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a persistent regional disk in the specified project using the data included in the request.
+        /// Creates a persistent regional disk in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1439,7 +1505,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, region, diskResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the list of persistent disks contained within the specified region.
+        /// Retrieves the list of persistent disks contained within
+        /// the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1448,7 +1515,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of persistent disks contained within the specified region.
+        /// Retrieves the list of persistent disks contained within
+        /// the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1457,7 +1525,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of persistent disks contained within the specified region.
+        /// Retrieves the list of persistent disks contained within
+        /// the specified region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1494,7 +1563,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of persistent disks contained within the specified region.
+        /// Retrieves the list of persistent disks contained within
+        /// the specified region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1782,7 +1852,8 @@ namespace Google.Cloud.Compute.V1
             ResizeAsync(project, region, disk, regionDisksResizeRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1791,7 +1862,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1800,7 +1872,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1809,7 +1882,8 @@ namespace Google.Cloud.Compute.V1
             SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1835,7 +1909,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1861,7 +1936,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2006,7 +2082,8 @@ namespace Google.Cloud.Compute.V1
             SetLabelsAsync(project, region, resource, regionSetLabelsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Starts asynchronous replication. Must be invoked on the primary disk.
+        /// Starts asynchronous replication.
+        /// Must be invoked on the primary disk.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2015,7 +2092,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Starts asynchronous replication. Must be invoked on the primary disk.
+        /// Starts asynchronous replication.
+        /// Must be invoked on the primary disk.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2024,7 +2102,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Starts asynchronous replication. Must be invoked on the primary disk.
+        /// Starts asynchronous replication.
+        /// Must be invoked on the primary disk.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2060,7 +2139,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StartAsyncReplicationOperationsClient, callSettings);
 
         /// <summary>
-        /// Starts asynchronous replication. Must be invoked on the primary disk.
+        /// Starts asynchronous replication.
+        /// Must be invoked on the primary disk.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2086,7 +2166,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Starts asynchronous replication. Must be invoked on the primary disk.
+        /// Starts asynchronous replication.
+        /// Must be invoked on the primary disk.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2112,7 +2193,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Starts asynchronous replication. Must be invoked on the primary disk.
+        /// Starts asynchronous replication.
+        /// Must be invoked on the primary disk.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2132,7 +2214,8 @@ namespace Google.Cloud.Compute.V1
             StartAsyncReplicationAsync(project, region, disk, regionDisksStartAsyncReplicationRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Stops asynchronous replication. Can be invoked either on the primary or on the secondary disk.
+        /// Stops asynchronous replication.
+        /// Can be invoked either on the primary or on the secondary disk.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2141,7 +2224,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Stops asynchronous replication. Can be invoked either on the primary or on the secondary disk.
+        /// Stops asynchronous replication.
+        /// Can be invoked either on the primary or on the secondary disk.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2150,7 +2234,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Stops asynchronous replication. Can be invoked either on the primary or on the secondary disk.
+        /// Stops asynchronous replication.
+        /// Can be invoked either on the primary or on the secondary disk.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2186,7 +2271,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StopAsyncReplicationOperationsClient, callSettings);
 
         /// <summary>
-        /// Stops asynchronous replication. Can be invoked either on the primary or on the secondary disk.
+        /// Stops asynchronous replication.
+        /// Can be invoked either on the primary or on the secondary disk.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2208,7 +2294,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Stops asynchronous replication. Can be invoked either on the primary or on the secondary disk.
+        /// Stops asynchronous replication.
+        /// Can be invoked either on the primary or on the secondary disk.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2230,7 +2317,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Stops asynchronous replication. Can be invoked either on the primary or on the secondary disk.
+        /// Stops asynchronous replication.
+        /// Can be invoked either on the primary or on the secondary disk.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2247,7 +2335,8 @@ namespace Google.Cloud.Compute.V1
             StopAsyncReplicationAsync(project, region, disk, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Stops asynchronous replication for a consistency group of disks. Can be invoked either in the primary or secondary scope.
+        /// Stops asynchronous replication for a consistency group of disks.
+        /// Can be invoked either in the primary or secondary scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2256,7 +2345,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Stops asynchronous replication for a consistency group of disks. Can be invoked either in the primary or secondary scope.
+        /// Stops asynchronous replication for a consistency group of disks.
+        /// Can be invoked either in the primary or secondary scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2265,7 +2355,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Stops asynchronous replication for a consistency group of disks. Can be invoked either in the primary or secondary scope.
+        /// Stops asynchronous replication for a consistency group of disks.
+        /// Can be invoked either in the primary or secondary scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2301,13 +2392,15 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StopGroupAsyncReplicationOperationsClient, callSettings);
 
         /// <summary>
-        /// Stops asynchronous replication for a consistency group of disks. Can be invoked either in the primary or secondary scope.
+        /// Stops asynchronous replication for a consistency group of disks.
+        /// Can be invoked either in the primary or secondary scope.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region for this request. This must be the region of the primary or secondary disks in the consistency group.
+        /// The name of the region for this request. This must be the region of the
+        /// primary or secondary disks in the consistency group.
         /// </param>
         /// <param name="disksStopGroupAsyncReplicationResourceResource">
         /// The body resource for this request
@@ -2323,13 +2416,15 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Stops asynchronous replication for a consistency group of disks. Can be invoked either in the primary or secondary scope.
+        /// Stops asynchronous replication for a consistency group of disks.
+        /// Can be invoked either in the primary or secondary scope.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region for this request. This must be the region of the primary or secondary disks in the consistency group.
+        /// The name of the region for this request. This must be the region of the
+        /// primary or secondary disks in the consistency group.
         /// </param>
         /// <param name="disksStopGroupAsyncReplicationResourceResource">
         /// The body resource for this request
@@ -2345,13 +2440,15 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Stops asynchronous replication for a consistency group of disks. Can be invoked either in the primary or secondary scope.
+        /// Stops asynchronous replication for a consistency group of disks.
+        /// Can be invoked either in the primary or secondary scope.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
         /// </param>
         /// <param name="region">
-        /// The name of the region for this request. This must be the region of the primary or secondary disks in the consistency group.
+        /// The name of the region for this request. This must be the region of the
+        /// primary or secondary disks in the consistency group.
         /// </param>
         /// <param name="disksStopGroupAsyncReplicationResourceResource">
         /// The body resource for this request
@@ -2461,7 +2558,9 @@ namespace Google.Cloud.Compute.V1
             TestIamPermissionsAsync(project, region, resource, testPermissionsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Update the specified disk with the data included in the request. Update is performed only on selected fields included as part of update-mask. Only the following fields can be modified: user_license.
+        /// Update the specified disk with the data included in the request. Update is
+        /// performed only on selected fields included as part of update-mask. Only the
+        /// following fields can be modified: user_license.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2470,7 +2569,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update the specified disk with the data included in the request. Update is performed only on selected fields included as part of update-mask. Only the following fields can be modified: user_license.
+        /// Update the specified disk with the data included in the request. Update is
+        /// performed only on selected fields included as part of update-mask. Only the
+        /// following fields can be modified: user_license.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2479,7 +2580,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update the specified disk with the data included in the request. Update is performed only on selected fields included as part of update-mask. Only the following fields can be modified: user_license.
+        /// Update the specified disk with the data included in the request. Update is
+        /// performed only on selected fields included as part of update-mask. Only the
+        /// following fields can be modified: user_license.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2514,7 +2617,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateOperationsClient, callSettings);
 
         /// <summary>
-        /// Update the specified disk with the data included in the request. Update is performed only on selected fields included as part of update-mask. Only the following fields can be modified: user_license.
+        /// Update the specified disk with the data included in the request. Update is
+        /// performed only on selected fields included as part of update-mask. Only the
+        /// following fields can be modified: user_license.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2540,7 +2645,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Update the specified disk with the data included in the request. Update is performed only on selected fields included as part of update-mask. Only the following fields can be modified: user_license.
+        /// Update the specified disk with the data included in the request. Update is
+        /// performed only on selected fields included as part of update-mask. Only the
+        /// following fields can be modified: user_license.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2566,7 +2673,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Update the specified disk with the data included in the request. Update is performed only on selected fields included as part of update-mask. Only the following fields can be modified: user_license.
+        /// Update the specified disk with the data included in the request. Update is
+        /// performed only on selected fields included as part of update-mask. Only the
+        /// following fields can be modified: user_license.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2786,7 +2895,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient AddResourcePoliciesOperationsClient { get; }
 
         /// <summary>
-        /// Adds existing resource policies to a regional disk. You can only add one policy which will be applied to this disk for scheduling snapshot creation.
+        /// Adds existing resource policies to a regional disk. You can only add one
+        /// policy which will be applied to this disk for scheduling snapshot
+        /// creation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2801,7 +2912,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Adds existing resource policies to a regional disk. You can only add one policy which will be applied to this disk for scheduling snapshot creation.
+        /// Adds existing resource policies to a regional disk. You can only add one
+        /// policy which will be applied to this disk for scheduling snapshot
+        /// creation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2852,7 +2965,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient CreateSnapshotOperationsClient { get; }
 
         /// <summary>
-        /// Creates a snapshot of a specified persistent disk. For regular snapshot creation, consider using snapshots.insert instead, as that method supports more features, such as creating snapshots in a project different from the source disk project.
+        /// Creates a snapshot of a specified persistent disk. For regular snapshot
+        /// creation, consider using snapshots.insert
+        /// instead, as that method supports more features, such as creating snapshots
+        /// in a project different from the source disk project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2867,7 +2983,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a snapshot of a specified persistent disk. For regular snapshot creation, consider using snapshots.insert instead, as that method supports more features, such as creating snapshots in a project different from the source disk project.
+        /// Creates a snapshot of a specified persistent disk. For regular snapshot
+        /// creation, consider using snapshots.insert
+        /// instead, as that method supports more features, such as creating snapshots
+        /// in a project different from the source disk project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2885,7 +3004,11 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient DeleteOperationsClient { get; }
 
         /// <summary>
-        /// Deletes the specified regional persistent disk. Deleting a regional disk removes all the replicas of its data permanently and is irreversible. However, deleting a disk does not delete any snapshots previously made from the disk. You must separately delete snapshots.
+        /// Deletes the specified regional persistent disk. Deleting a regional disk
+        /// removes all the replicas of its data permanently and is irreversible.
+        /// However, deleting a disk does not delete anysnapshots
+        /// previously made from the disk. You must separatelydelete
+        /// snapshots.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2900,7 +3023,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Deletes the specified regional persistent disk. Deleting a regional disk removes all the replicas of its data permanently and is irreversible. However, deleting a disk does not delete any snapshots previously made from the disk. You must separately delete snapshots.
+        /// Deletes the specified regional persistent disk. Deleting a regional disk
+        /// removes all the replicas of its data permanently and is irreversible.
+        /// However, deleting a disk does not delete anysnapshots
+        /// previously made from the disk. You must separatelydelete
+        /// snapshots.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2939,7 +3066,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2951,7 +3079,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2966,7 +3095,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a persistent regional disk in the specified project using the data included in the request.
+        /// Creates a persistent regional disk in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2981,7 +3111,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a persistent regional disk in the specified project using the data included in the request.
+        /// Creates a persistent regional disk in the specified project using the data
+        /// included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2996,7 +3127,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of persistent disks contained within the specified region.
+        /// Retrieves the list of persistent disks contained within
+        /// the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3008,7 +3140,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of persistent disks contained within the specified region.
+        /// Retrieves the list of persistent disks contained within
+        /// the specified region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3086,7 +3219,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3098,7 +3232,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3146,7 +3281,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient StartAsyncReplicationOperationsClient { get; }
 
         /// <summary>
-        /// Starts asynchronous replication. Must be invoked on the primary disk.
+        /// Starts asynchronous replication.
+        /// Must be invoked on the primary disk.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3161,7 +3297,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Starts asynchronous replication. Must be invoked on the primary disk.
+        /// Starts asynchronous replication.
+        /// Must be invoked on the primary disk.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3179,7 +3316,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient StopAsyncReplicationOperationsClient { get; }
 
         /// <summary>
-        /// Stops asynchronous replication. Can be invoked either on the primary or on the secondary disk.
+        /// Stops asynchronous replication.
+        /// Can be invoked either on the primary or on the secondary disk.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3194,7 +3332,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Stops asynchronous replication. Can be invoked either on the primary or on the secondary disk.
+        /// Stops asynchronous replication.
+        /// Can be invoked either on the primary or on the secondary disk.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3212,7 +3351,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient StopGroupAsyncReplicationOperationsClient { get; }
 
         /// <summary>
-        /// Stops asynchronous replication for a consistency group of disks. Can be invoked either in the primary or secondary scope.
+        /// Stops asynchronous replication for a consistency group of disks.
+        /// Can be invoked either in the primary or secondary scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3227,7 +3367,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Stops asynchronous replication for a consistency group of disks. Can be invoked either in the primary or secondary scope.
+        /// Stops asynchronous replication for a consistency group of disks.
+        /// Can be invoked either in the primary or secondary scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3269,7 +3410,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient UpdateOperationsClient { get; }
 
         /// <summary>
-        /// Update the specified disk with the data included in the request. Update is performed only on selected fields included as part of update-mask. Only the following fields can be modified: user_license.
+        /// Update the specified disk with the data included in the request. Update is
+        /// performed only on selected fields included as part of update-mask. Only the
+        /// following fields can be modified: user_license.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3284,7 +3427,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Update the specified disk with the data included in the request. Update is performed only on selected fields included as part of update-mask. Only the following fields can be modified: user_license.
+        /// Update the specified disk with the data included in the request. Update is
+        /// performed only on selected fields included as part of update-mask. Only the
+        /// following fields can be modified: user_license.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

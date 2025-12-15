@@ -241,7 +241,17 @@ namespace Google.Cloud.Spanner.Data
                 return 0;
             }
 
-            internal async Task<Operation> ExecuteDdlAsync(bool pollUntilCompleted, CancellationToken cancellationToken)
+            /// <summary>
+            /// Starts a DDL operation, but does not wait for the long-running operation to finish.
+            /// </summary>
+            /// <returns>The name of the long-running operation that was created</returns>
+            internal async Task<string> StartDdlAsync(CancellationToken cancellationToken)
+            {
+                var operation = await ExecuteDdlAsync(pollUntilCompleted: false, cancellationToken).ConfigureAwait(false);
+                return operation?.Name ?? "";
+            }
+
+            private async Task<Operation> ExecuteDdlAsync(bool pollUntilCompleted, CancellationToken cancellationToken)
             {
                 string commandText = CommandTextBuilder.CommandText;
                 var builder = Connection.Builder;
@@ -266,7 +276,6 @@ namespace Google.Cloud.Spanner.Data
                             ProtoDescriptors = CommandTextBuilder.ProtobufDescriptors?.ToByteString() ?? ByteString.Empty,
                         };
                         var response = await databaseAdminClient.CreateDatabaseAsync(request).ConfigureAwait(false);
-                        operation = response.RpcMessage;
                         if (pollUntilCompleted)
                         {
                             response = await response.PollUntilCompletedAsync().ConfigureAwait(false);
@@ -275,6 +284,7 @@ namespace Google.Cloud.Spanner.Data
                         {
                             throw SpannerException.FromOperationFailedException(response.Exception);
                         }
+                        operation = response.RpcMessage;
                     }
                     else if (CommandTextBuilder.IsDropDatabaseCommand)
                     {
@@ -307,7 +317,6 @@ namespace Google.Cloud.Spanner.Data
                         };
 
                         var response = await databaseAdminClient.UpdateDatabaseDdlAsync(request).ConfigureAwait(false);
-                        operation = response.RpcMessage;
                         if (pollUntilCompleted)
                         {
                             response = await response.PollUntilCompletedAsync().ConfigureAwait(false);
@@ -316,6 +325,7 @@ namespace Google.Cloud.Spanner.Data
                         {
                             throw SpannerException.FromOperationFailedException(response.Exception);
                         }
+                        operation = response.RpcMessage;
                     }
                 }
                 catch (RpcException gRpcException)

@@ -22,17 +22,25 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Text;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
-using Value = Google.Protobuf.WellKnownTypes.Value;
 using Struct = Google.Protobuf.WellKnownTypes.Struct;
+using Value = Google.Protobuf.WellKnownTypes.Value;
 
 namespace Google.Cloud.VertexAI.Extensions;
 
 /// <summary>Provides an <see cref="IChatClient"/> implementation based on <see cref="PredictionServiceClient"/>.</summary>
 internal sealed class PredictionServiceChatClient(PredictionServiceClient client, string? defaultModelId) : IChatClient
 {
+    /// <summary>A thought signature that can be used to skip thought validation when sending foreign function calls.</summary>
+    /// <remarks>
+    /// See https://ai.google.dev/gemini-api/docs/thought-signatures#faqs.
+    /// This is more common in agentic scenarios, where a chat history is built up across multiple providers/models.
+    /// </remarks>
+    private static readonly ByteString s_skipThoughtValidation = ByteString.CopyFromUtf8("skip_thought_signature_validator");
+
     /// <summary>The wrapped <see cref="PredictionServiceClient"/> instance.</summary>
     private readonly PredictionServiceClient _client = client;
 
@@ -57,7 +65,7 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
         ChatResponse chatResponse = new(new ChatMessage(ChatRole.Assistant, []))
         {
             CreatedAt = generateResult.CreateTime?.ToDateTimeOffset(),
-            ModelId = !string.IsNullOrWhiteSpace(generateResult.ModelVersion) ? generateResult.ModelVersion : request.Model,
+            ModelId = !string.IsNullOrEmpty(generateResult.ModelVersion) ? generateResult.ModelVersion : request.Model,
             RawRepresentation = generateResult,
             ResponseId = generateResult.ResponseId,
         };
@@ -93,18 +101,19 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
             ChatResponseUpdate responseUpdate = new(ChatRole.Assistant, [])
             {
                 CreatedAt = generateResult.CreateTime.ToDateTimeOffset(),
-                ModelId = !string.IsNullOrWhiteSpace(generateResult.ModelVersion) ? generateResult.ModelVersion : request.Model,
+                ModelId = !string.IsNullOrEmpty(generateResult.ModelVersion) ? generateResult.ModelVersion : request.Model,
                 RawRepresentation = generateResult,
                 ResponseId = generateResult.ResponseId,
+                MessageId = generateResult.ResponseId,
             };
 
             // Populate the response update contents.
             responseUpdate.FinishReason = PopulateResponseContents(generateResult, responseUpdate.Contents);
 
             // Populate usage information if there is any.
-            if (generateResult.UsageMetadata is { } usageMetadata)
+            if (generateResult.UsageMetadata is { } usageMetadata && ExtractUsageDetails(usageMetadata) is { } usage)
             {
-                responseUpdate.Contents.Add(new UsageContent(ExtractUsageDetails(usageMetadata)));
+                responseUpdate.Contents.Add(new UsageContent(usage));
             }
 
             // Yield the update.
@@ -155,7 +164,7 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
         // a new instance directly.
         GenerateContentRequest request = options?.RawRepresentationFactory?.Invoke(this) as GenerateContentRequest ?? new();
 
-        if (string.IsNullOrWhiteSpace(request.Model) && !string.IsNullOrWhiteSpace(_defaultModelId))
+        if (string.IsNullOrEmpty(request.Model) && !string.IsNullOrEmpty(_defaultModelId))
         {
             request.Model = _defaultModelId;
         }
@@ -181,7 +190,7 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                 request.GenerationConfig.MaxOutputTokens = maxOutputTokens;
             }
 
-            if (!string.IsNullOrWhiteSpace(options.ModelId))
+            if (!string.IsNullOrEmpty(options.ModelId))
             {
                 request.Model = options.ModelId;
             }
@@ -225,6 +234,10 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                 {
                     switch (tool)
                     {
+                        case ToolAITool raw:
+                            request.Tools.Add(raw.Tool);
+                            break;
+
                         case AIFunctionDeclaration af:
                             functionDeclarations ??= [];
                             functionDeclarations.Add(new FunctionDeclaration
@@ -313,7 +326,7 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
 
             foreach (var systemMessage in systemMessages)
             {
-                AddPartsForAIContents(systemMessage.Contents.OfType<TextContent>(), systemInstructions.Parts);
+                AddPartsForAIContents([.. systemMessage.Contents.OfType<TextContent>()], systemInstructions.Parts);
             }
 
             if (systemInstructions.Parts?.Count > 0)
@@ -332,84 +345,213 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
     }
 
     /// <summary>Creates <see cref="Part"/>s for <paramref name="contents"/> and adds them to <paramref name="parts"/>.</summary>
-    private static void AddPartsForAIContents(IEnumerable<AIContent> contents, RepeatedField<Part> parts)
+    private static void AddPartsForAIContents(IList<AIContent> contents, RepeatedField<Part> parts)
     {
-        foreach (AIContent content in contents)
+        for (int i = 0; i < contents.Count; i++)
         {
+            var content = contents[i];
+
+            // When AddAIContentsForParts added thought signatures, they were added as a separate part
+            // immediately after the main part. So if we see a TextReasoningContent with no text but with
+            // protected data, we treat that as the thought signature for the previous part.
+            byte[]? thoughtSignature = null;
+            if (content is not TextReasoningContent { ProtectedData: not null } &&
+                i + 1 < contents.Count &&
+                contents[i + 1] is TextReasoningContent nextReasoning &&
+                string.IsNullOrEmpty(nextReasoning.Text) &&
+                nextReasoning.ProtectedData is { } protectedData)
+            {
+                i++;
+                try
+                {
+                    thoughtSignature = Convert.FromBase64String(protectedData);
+                }
+                catch (FormatException)
+                {
+                    // Ignore base64 parsing failures
+                }
+            }
+
+            // Translate the AIContent into a Part.
+            Part? part = null;
             switch (content)
             {
-                case AIContent when content.RawRepresentation is Part part:
-                    parts.Add(part);
+                case AIContent when content.RawRepresentation is Part rawPart:
+                    // Roundtrip the raw representation directly if it's a Part. This case comes before
+                    // the others so that it's prioritized.
+                    part = rawPart;
                     break;
 
                 case TextContent textContent:
-                    parts.Add(new Part() { Text = textContent.Text });
+                    part = new Part() { Text = textContent.Text };
                     break;
 
                 case DataContent dataContent:
-                    parts.Add(new Part()
+                    part = new Part()
                     {
                         InlineData = new Blob
                         {
                             MimeType = dataContent.MediaType,
                             Data = ByteString.CopyFrom(dataContent.Data.Span)
                         }
-                    });
+                    };
                     break;
 
                 case UriContent uriContent:
-                    parts.Add(new Part()
+                    part = new Part()
                     {
                         FileData = new FileData
                         {
                             FileUri = uriContent.Uri.AbsoluteUri,
                             MimeType = uriContent.MediaType
                         }
-                    });
+                    };
                     break;
 
                 case FunctionCallContent functionCallContent:
-                    parts.Add(new Part()
+                    part = new Part()
                     {
                         FunctionCall = new FunctionCall
                         {
                             Name = functionCallContent.Name,
                             Args = functionCallContent.Arguments is not null ?
-                                Struct.Parser.ParseJson(JsonSerializer.Serialize(functionCallContent.Arguments)) :
-                                new()
-                        }
-                    });
+                                Struct.Parser.ParseJson(JsonSerializer.Serialize(functionCallContent.Arguments, AIJsonUtilities.DefaultOptions)) :
+                                new(),
+                        },
+                        ThoughtSignature = thoughtSignature is not null ? ByteString.CopyFrom(thoughtSignature) : s_skipThoughtValidation,
+                    };
                     break;
 
                 case FunctionResultContent functionResultContent:
-                    parts.Add(new Part()
+                    FunctionResponse funcResponse = new()
                     {
-                        FunctionResponse = new FunctionResponse
-                        {
-                            Name = functionResultContent.CallId,
-                            Response = functionResultContent.Result is not null ?
-                            Struct.Parser.ParseJson(JsonSerializer.Serialize(new { result = functionResultContent.Result })) :
-                            new()
-                        }
-                    });
+                        Name = functionResultContent.CallId,
+                    };
+
+                    switch (functionResultContent.Result)
+                    {
+                        case null:
+                            funcResponse.Response = new();
+                            break;
+
+                        case AIContent aic when ToFunctionResponsePart(aic) is { } singleContentBlob:
+                            funcResponse.Response = new();
+                            funcResponse.Parts.Add(singleContentBlob);
+                            break;
+
+                        case IEnumerable<AIContent> aiContents:
+                            List<AIContent>? nonBlobContent = null;
+                            foreach (var aiContent in aiContents)
+                            {
+                                if (ToFunctionResponsePart(aiContent) is { } contentBlob)
+                                {
+                                    funcResponse.Parts.Add(contentBlob);
+                                }
+                                else
+                                {
+                                    (nonBlobContent ??= []).Add(aiContent);
+                                }
+                            }
+
+                            funcResponse.Response = nonBlobContent is { Count: > 0 } ?
+                                Struct.Parser.ParseJson(JsonSerializer.Serialize(new { result = nonBlobContent }, AIJsonUtilities.DefaultOptions)) :
+                                new();
+                            break;
+
+                        case TextContent textContent:
+                            funcResponse.Response = Struct.Parser.ParseJson(JsonSerializer.Serialize(new { result = textContent.Text }, AIJsonUtilities.DefaultOptions));
+                            break;
+
+                        case TextReasoningContent textContent:
+                            funcResponse.Response = Struct.Parser.ParseJson(JsonSerializer.Serialize(new { result = textContent.Text }, AIJsonUtilities.DefaultOptions));
+                            break;
+
+                        default:
+                            funcResponse.Response = Struct.Parser.ParseJson(JsonSerializer.Serialize(new { result = functionResultContent.Result }, AIJsonUtilities.DefaultOptions));
+                            break;
+                    }
+
+                    part = new Part()
+                    {
+                        FunctionResponse = funcResponse
+                    };
                     break;
 
-                case TextReasoningContent reasoningContent when reasoningContent.ProtectedData is { } reasoningData:
-                    try
+                case TextReasoningContent reasoningContent:
+                    part = new Part()
                     {
-                        parts.Add(new Part()
+                        Thought = true,
+                        Text = !string.IsNullOrEmpty(reasoningContent.Text) ? reasoningContent.Text : null,
+                    };
+
+                    if (reasoningContent.ProtectedData is not null)
+                    {
+                        try
                         {
-                            Thought = true,
-                            ThoughtSignature = ByteString.FromBase64(reasoningData),
-                        });
-                    }
-                    catch
-                    {
-                        // Ignore reasoning data if we can't parse it.
+                            part.ThoughtSignature = ByteString.FromBase64(reasoningContent.ProtectedData);
+                        }
+                        catch
+                        {
+                            // Ignore reasoning data if we can't parse it.
+                        }
                     }
                     break;
             }
+
+            if (part is not null)
+            {
+                part.ThoughtSignature ??= ByteString.CopyFrom(thoughtSignature);
+                parts.Add(part);
+            }
+
+            thoughtSignature = null;
         }
+    }
+
+    private static FunctionResponsePart? ToFunctionResponsePart(AIContent content)
+    {
+        switch (content)
+        {
+            case AIContent when content.RawRepresentation is FunctionResponsePart functionResponsePart:
+                return functionResponsePart;
+
+            case DataContent dc when IsSupportedMediaType(dc.MediaType):
+                FunctionResponseBlob dataBlob = new()
+                {
+                    MimeType = dc.MediaType,
+                    Data = ByteString.CopyFrom(dc.Data.Span),
+                };
+
+                if (!string.IsNullOrEmpty(dc.Name))
+                {
+                    dataBlob.DisplayName = dc.Name;
+                }
+
+                return new() { InlineData = dataBlob };
+
+            case UriContent uc when IsSupportedMediaType(uc.MediaType):
+                return new()
+                {
+                    FileData = new()
+                    {
+                        MimeType = uc.MediaType,
+                        FileUri = uc.Uri.AbsoluteUri,
+                    }
+                };
+
+            default:
+                return null;
+        }
+
+        // https://docs.cloud.google.com/vertex-ai/generative-ai/docs/multimodal/function-calling#mm-fr
+        static bool IsSupportedMediaType(string mediaType) =>
+            // images
+            mediaType.Equals("image/png", StringComparison.OrdinalIgnoreCase) ||
+            mediaType.Equals("image/jpeg", StringComparison.OrdinalIgnoreCase) ||
+            mediaType.Equals("image/webp", StringComparison.OrdinalIgnoreCase) ||
+            // documents
+            mediaType.Equals("application/pdf", StringComparison.OrdinalIgnoreCase) ||
+            mediaType.Equals("text/plain", StringComparison.OrdinalIgnoreCase);
     }
 
     /// <summary>Creates <see cref="AIContent"/>s for <paramref name="parts"/> and adds them to <paramref name="contents"/>.</summary>
@@ -417,30 +559,62 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
     {
         foreach (var part in parts)
         {
-            AIContent? content = part.DataCase switch
+            AIContent content = part.DataCase switch
             {
-                Part.DataOneofCase.Text => new TextContent(part.Text),
+                Part.DataOneofCase.Text when !part.Thought => new TextContent(part.Text),
 
                 Part.DataOneofCase.InlineData => new DataContent(part.InlineData!.Data.ToByteArray(), part.InlineData.MimeType),
 
                 Part.DataOneofCase.FileData => new UriContent(new Uri(part.FileData!.FileUri), part.FileData.MimeType),
 
-                Part.DataOneofCase.FunctionCall => new FunctionCallContent(part.FunctionCall!.Name, part.FunctionCall.Name,
-                    part.FunctionCall.Args is not null ? JsonSerializer.Deserialize<Dictionary<string, object?>>(part.FunctionCall.Args.ToString()) : null),
+                Part.DataOneofCase.FunctionCall =>
+                    part.FunctionCall.Args is not null ?
+                        FunctionCallContent.CreateFromParsedArguments(
+                            part.FunctionCall.Args, part.FunctionCall!.Name, part.FunctionCall.Name,
+                            static args => JsonSerializer.Deserialize<Dictionary<string, object?>>(args.ToString(), AIJsonUtilities.DefaultOptions)) :
+                        new FunctionCallContent(part.FunctionCall!.Name, part.FunctionCall.Name, null),
 
                 Part.DataOneofCase.FunctionResponse => new FunctionResultContent(part.FunctionResponse!.Name,
-                    part.FunctionResponse.Response is not null ? JsonSerializer.Deserialize<object>(part.FunctionResponse.Response.ToString()) : null),
+                    part.FunctionResponse.Response is not null ?
+                        JsonSerializer.Deserialize<object>(part.FunctionResponse.Response.ToString()) :
+                        null),
 
-                _ when part.Thought => new TextReasoningContent(null) { ProtectedData = part.ThoughtSignature.ToBase64() },
+                Part.DataOneofCase.ExecutableCode when part.ExecutableCode is { } execCode =>
+                    new CodeInterpreterToolCallContent()
+                    {
+                        Inputs = [new DataContent(Encoding.UTF8.GetBytes(execCode.Code), LanguageToMimeType(execCode.Language))],
+                    },
 
-                _ => null,
+                Part.DataOneofCase.CodeExecutionResult when part.CodeExecutionResult is { Output: { } codeResultOutput } codeResult =>
+                    new CodeInterpreterToolResultContent()
+                    {
+                        Outputs = [codeResult.Outcome is CodeExecutionResult.Types.Outcome.Ok ?
+                            new TextContent(codeResultOutput) :
+                            new ErrorContent(codeResultOutput) { ErrorCode = codeResult.Outcome.ToString() }],
+                    },
+
+                _ when part.Thought => new TextReasoningContent(part.Text),
+
+                _ => new AIContent(),
             };
 
-            if (content is not null)
+            content.RawRepresentation = part;
+            contents.Add(content);
+
+            if (part.ThoughtSignature is { } thoughtSignature && !thoughtSignature.IsEmpty)
             {
-                contents.Add(content);
+                contents.Add(new TextReasoningContent(null)
+                {
+                    ProtectedData = Convert.ToBase64String(thoughtSignature.Span.ToArray()),
+                });
             }
         }
+
+        static string LanguageToMimeType(ExecutableCode.Types.Language language) => language switch
+        {
+            ExecutableCode.Types.Language.Python => "text/python",
+            _ => "text/x-source-code",
+        };
     }
 
     private static ChatFinishReason? PopulateResponseContents(GenerateContentResponse generateResult, IList<AIContent> responseContents)
@@ -496,27 +670,62 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
     private static ChatFinishReason ConvertFinishReason(Candidate.Types.FinishReason finishReason) =>
         finishReason switch
         {
-            Candidate.Types.FinishReason.MaxTokens => ChatFinishReason.Length,
+            Candidate.Types.FinishReason.Blocklist => ChatFinishReason.ContentFilter,
+            Candidate.Types.FinishReason.Recitation => ChatFinishReason.ContentFilter,
             Candidate.Types.FinishReason.MalformedFunctionCall => ChatFinishReason.ToolCalls,
-            Candidate.Types.FinishReason.Safety or
-                Candidate.Types.FinishReason.Recitation or
-                Candidate.Types.FinishReason.Blocklist or
-                Candidate.Types.FinishReason.ProhibitedContent or
-                Candidate.Types.FinishReason.Spii => ChatFinishReason.ContentFilter,
+            Candidate.Types.FinishReason.MaxTokens => ChatFinishReason.Length,
+            Candidate.Types.FinishReason.ModelArmor => ChatFinishReason.ContentFilter,
+            Candidate.Types.FinishReason.Other => ChatFinishReason.Stop,
+            Candidate.Types.FinishReason.ProhibitedContent => ChatFinishReason.ContentFilter,
+            Candidate.Types.FinishReason.Safety => ChatFinishReason.ContentFilter,
+            Candidate.Types.FinishReason.Spii => ChatFinishReason.ContentFilter,
+            Candidate.Types.FinishReason.Stop => ChatFinishReason.Stop,
+            Candidate.Types.FinishReason.Unspecified => ChatFinishReason.Stop,
             _ => ChatFinishReason.Stop
         };
 
     /// <summary>Creates a <see cref="UsageDetails"/> populated from the supplied <paramref name="usageMetadata"/>.</summary>
-    private static UsageDetails ExtractUsageDetails(GenerateContentResponse.Types.UsageMetadata usageMetadata) =>
-        new()
+    private static UsageDetails? ExtractUsageDetails(GenerateContentResponse.Types.UsageMetadata usageMetadata)
+    {
+        if (usageMetadata.TotalTokenCount == 0 &&
+            usageMetadata.PromptTokenCount == 0 &&
+            usageMetadata.CandidatesTokenCount == 0 &&
+            usageMetadata.CachedContentTokenCount == 0 &&
+            usageMetadata.ThoughtsTokenCount == 0)
+        {
+            return null;
+        }
+
+        UsageDetails usage = new()
         {
             InputTokenCount = usageMetadata.PromptTokenCount,
             OutputTokenCount = usageMetadata.CandidatesTokenCount,
             TotalTokenCount = usageMetadata.TotalTokenCount,
-            AdditionalCounts = new()
-            {
-                [nameof(usageMetadata.CachedContentTokenCount)] = usageMetadata.CachedContentTokenCount,
-                [nameof(usageMetadata.ThoughtsTokenCount)] = usageMetadata.ThoughtsTokenCount,
-            },
         };
+
+        if (usageMetadata.CachedContentTokenCount != 0)
+        {
+            (usage.AdditionalCounts ??= [])[nameof(usageMetadata.CachedContentTokenCount)] = usageMetadata.CachedContentTokenCount;
+        }
+
+        if (usageMetadata.ThoughtsTokenCount != 0)
+        {
+            (usage.AdditionalCounts ??= [])[nameof(usageMetadata.ThoughtsTokenCount)] = usageMetadata.ThoughtsTokenCount;
+        }
+
+        return usage;
+    }
+
+    /// <summary>Provides an <see cref="AITool"/> wrapper for a <see cref="Tool"/>.</summary>
+    internal sealed class ToolAITool(Tool tool) : AITool
+    {
+        public Tool Tool => tool;
+
+        public override string Name => Tool.GetType().Name;
+ 
+        /// <inheritdoc />
+        public override object? GetService(System.Type serviceType, object? serviceKey = null) =>
+            serviceKey is null && serviceType?.IsInstanceOfType(Tool) is true ? Tool :
+            base.GetService(serviceType!, serviceKey);
+    }
 }

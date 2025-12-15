@@ -1,5 +1,25 @@
 # Version history
 
+## Version 2.18.0, released 2025-12-09
+
+### New features
+
+- Add SourceCode proto to Run container config
+
+### Documentation improvements
+
+- A comment for field `etag` in message `.google.cloud.run.v2.Job` is changed
+- A comment for field `limits` in message `.google.cloud.run.v2.ResourceRequirements` is changed
+- A comment for field `items` in message `.google.cloud.run.v2.SecretVolumeSource` is changed
+- A comment for field `name` in message `.google.cloud.run.v2.Service` is changed
+- A comment for field `invoker_iam_disabled` in message `.google.cloud.run.v2.Service` is changed
+- A comment for field `etag` in message `.google.cloud.run.v2.Service` is changed
+- A comment for field `observed_generation` in message `.google.cloud.run.v2.WorkerPool` is changed
+- A comment for field `latest_ready_revision` in message `.google.cloud.run.v2.WorkerPool` is changed
+- A comment for field `custom_audiences` in message `.google.cloud.run.v2.WorkerPool` is changed
+- A comment for field `reconciling` in message `.google.cloud.run.v2.WorkerPool` is changed
+- A comment for field `etag` in message `.google.cloud.run.v2.WorkerPool` is changed
+
 ## Version 2.17.0, released 2025-11-06
 
 ### New features

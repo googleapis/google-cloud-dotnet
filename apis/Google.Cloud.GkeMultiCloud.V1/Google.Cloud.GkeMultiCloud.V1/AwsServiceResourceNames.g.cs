@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gagr = Google.Api.Gax.ResourceNames;
 using gcgv = Google.Cloud.GkeMultiCloud.V1;
+using sys = System;
 
 namespace Google.Cloud.GkeMultiCloud.V1
 {
@@ -25,6 +26,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gagr::LocationName ParentAsLocationName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
@@ -37,6 +39,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="gcgv::AwsClusterName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcgv::AwsClusterName AwsClusterName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcgv::AwsClusterName.Parse(Name, allowUnparsed: true);
@@ -49,6 +52,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gagr::LocationName ParentAsLocationName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
@@ -61,6 +65,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="gcgv::AwsClusterName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcgv::AwsClusterName AwsClusterName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcgv::AwsClusterName.Parse(Name, allowUnparsed: true);
@@ -73,6 +78,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="AwsClusterName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public AwsClusterName ParentAsAwsClusterName
         {
             get => string.IsNullOrEmpty(Parent) ? null : AwsClusterName.Parse(Parent, allowUnparsed: true);
@@ -85,6 +91,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="gcgv::AwsNodePoolName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcgv::AwsNodePoolName AwsNodePoolName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcgv::AwsNodePoolName.Parse(Name, allowUnparsed: true);
@@ -97,6 +104,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="gcgv::AwsNodePoolName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcgv::AwsNodePoolName AwsNodePoolName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcgv::AwsNodePoolName.Parse(Name, allowUnparsed: true);
@@ -109,6 +117,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="AwsClusterName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public AwsClusterName ParentAsAwsClusterName
         {
             get => string.IsNullOrEmpty(Parent) ? null : AwsClusterName.Parse(Parent, allowUnparsed: true);
@@ -121,6 +130,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="gcgv::AwsNodePoolName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcgv::AwsNodePoolName AwsNodePoolName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcgv::AwsNodePoolName.Parse(Name, allowUnparsed: true);
@@ -133,6 +143,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="AwsClusterName"/>-typed view over the <see cref="AwsCluster"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public AwsClusterName AwsClusterAsAwsClusterName
         {
             get => string.IsNullOrEmpty(AwsCluster) ? null : AwsClusterName.Parse(AwsCluster, allowUnparsed: true);
@@ -145,6 +156,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="AwsClusterName"/>-typed view over the <see cref="AwsCluster"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public AwsClusterName AwsClusterAsAwsClusterName
         {
             get => string.IsNullOrEmpty(AwsCluster) ? null : AwsClusterName.Parse(AwsCluster, allowUnparsed: true);
@@ -157,6 +169,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="gcgv::AwsServerConfigName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcgv::AwsServerConfigName AwsServerConfigName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcgv::AwsServerConfigName.Parse(Name, allowUnparsed: true);
@@ -169,6 +182,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="AwsClusterName"/>-typed view over the <see cref="AwsCluster"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public AwsClusterName AwsClusterAsAwsClusterName
         {
             get => string.IsNullOrEmpty(AwsCluster) ? null : AwsClusterName.Parse(AwsCluster, allowUnparsed: true);
@@ -181,6 +195,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <summary>
         /// <see cref="AwsClusterName"/>-typed view over the <see cref="AwsCluster"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public AwsClusterName AwsClusterAsAwsClusterName
         {
             get => string.IsNullOrEmpty(AwsCluster) ? null : AwsClusterName.Parse(AwsCluster, allowUnparsed: true);

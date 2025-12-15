@@ -33,7 +33,7 @@ namespace Google.Cloud.Firestore.V1 {
             "cmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
             "LwoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
             "YW1wGkkKC0ZpZWxkc0VudHJ5EgsKA2tleRgBIAEoCRIpCgV2YWx1ZRgCIAEo",
-            "CzIaLmdvb2dsZS5maXJlc3RvcmUudjEuVmFsdWU6AjgBIq4DCgVWYWx1ZRIw",
+            "CzIaLmdvb2dsZS5maXJlc3RvcmUudjEuVmFsdWU6AjgBIsEECgVWYWx1ZRIw",
             "CgpudWxsX3ZhbHVlGAsgASgOMhouZ29vZ2xlLnByb3RvYnVmLk51bGxWYWx1",
             "ZUgAEhcKDWJvb2xlYW5fdmFsdWUYASABKAhIABIXCg1pbnRlZ2VyX3ZhbHVl",
             "GAIgASgDSAASFgoMZG91YmxlX3ZhbHVlGAMgASgBSAASNQoPdGltZXN0YW1w",
@@ -43,23 +43,40 @@ namespace Google.Cloud.Firestore.V1 {
             "GAggASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nSAASNgoLYXJyYXlfdmFsdWUY",
             "CSABKAsyHy5nb29nbGUuZmlyZXN0b3JlLnYxLkFycmF5VmFsdWVIABIyCglt",
             "YXBfdmFsdWUYBiABKAsyHS5nb29nbGUuZmlyZXN0b3JlLnYxLk1hcFZhbHVl",
-            "SABCDAoKdmFsdWVfdHlwZSI4CgpBcnJheVZhbHVlEioKBnZhbHVlcxgBIAMo",
-            "CzIaLmdvb2dsZS5maXJlc3RvcmUudjEuVmFsdWUikAEKCE1hcFZhbHVlEjkK",
-            "BmZpZWxkcxgBIAMoCzIpLmdvb2dsZS5maXJlc3RvcmUudjEuTWFwVmFsdWUu",
-            "RmllbGRzRW50cnkaSQoLRmllbGRzRW50cnkSCwoDa2V5GAEgASgJEikKBXZh",
-            "bHVlGAIgASgLMhouZ29vZ2xlLmZpcmVzdG9yZS52MS5WYWx1ZToCOAFCxQEK",
-            "F2NvbS5nb29nbGUuZmlyZXN0b3JlLnYxQg1Eb2N1bWVudFByb3RvUAFaO2Ns",
-            "b3VkLmdvb2dsZS5jb20vZ28vZmlyZXN0b3JlL2FwaXYxL2ZpcmVzdG9yZXBi",
-            "O2ZpcmVzdG9yZXBiogIER0NGU6oCGUdvb2dsZS5DbG91ZC5GaXJlc3RvcmUu",
-            "VjHKAhlHb29nbGVcQ2xvdWRcRmlyZXN0b3JlXFYx6gIcR29vZ2xlOjpDbG91",
-            "ZDo6RmlyZXN0b3JlOjpWMWIGcHJvdG8z"));
+            "SAASHwoVZmllbGRfcmVmZXJlbmNlX3ZhbHVlGBMgASgJSAASNwoOZnVuY3Rp",
+            "b25fdmFsdWUYFCABKAsyHS5nb29nbGUuZmlyZXN0b3JlLnYxLkZ1bmN0aW9u",
+            "SAASNwoOcGlwZWxpbmVfdmFsdWUYFSABKAsyHS5nb29nbGUuZmlyZXN0b3Jl",
+            "LnYxLlBpcGVsaW5lSABCDAoKdmFsdWVfdHlwZSI4CgpBcnJheVZhbHVlEioK",
+            "BnZhbHVlcxgBIAMoCzIaLmdvb2dsZS5maXJlc3RvcmUudjEuVmFsdWUikAEK",
+            "CE1hcFZhbHVlEjkKBmZpZWxkcxgBIAMoCzIpLmdvb2dsZS5maXJlc3RvcmUu",
+            "djEuTWFwVmFsdWUuRmllbGRzRW50cnkaSQoLRmllbGRzRW50cnkSCwoDa2V5",
+            "GAEgASgJEikKBXZhbHVlGAIgASgLMhouZ29vZ2xlLmZpcmVzdG9yZS52MS5W",
+            "YWx1ZToCOAEi2gEKCEZ1bmN0aW9uEhEKBG5hbWUYASABKAlCA+BBAhItCgRh",
+            "cmdzGAIgAygLMhouZ29vZ2xlLmZpcmVzdG9yZS52MS5WYWx1ZUID4EEBEkAK",
+            "B29wdGlvbnMYAyADKAsyKi5nb29nbGUuZmlyZXN0b3JlLnYxLkZ1bmN0aW9u",
+            "Lk9wdGlvbnNFbnRyeUID4EEBGkoKDE9wdGlvbnNFbnRyeRILCgNrZXkYASAB",
+            "KAkSKQoFdmFsdWUYAiABKAsyGi5nb29nbGUuZmlyZXN0b3JlLnYxLlZhbHVl",
+            "OgI4ASKkAgoIUGlwZWxpbmUSOAoGc3RhZ2VzGAEgAygLMiMuZ29vZ2xlLmZp",
+            "cmVzdG9yZS52MS5QaXBlbGluZS5TdGFnZUID4EECGt0BCgVTdGFnZRIRCgRu",
+            "YW1lGAEgASgJQgPgQQISLQoEYXJncxgCIAMoCzIaLmdvb2dsZS5maXJlc3Rv",
+            "cmUudjEuVmFsdWVCA+BBARJGCgdvcHRpb25zGAMgAygLMjAuZ29vZ2xlLmZp",
+            "cmVzdG9yZS52MS5QaXBlbGluZS5TdGFnZS5PcHRpb25zRW50cnlCA+BBARpK",
+            "CgxPcHRpb25zRW50cnkSCwoDa2V5GAEgASgJEikKBXZhbHVlGAIgASgLMhou",
+            "Z29vZ2xlLmZpcmVzdG9yZS52MS5WYWx1ZToCOAFCxQEKF2NvbS5nb29nbGUu",
+            "ZmlyZXN0b3JlLnYxQg1Eb2N1bWVudFByb3RvUAFaO2Nsb3VkLmdvb2dsZS5j",
+            "b20vZ28vZmlyZXN0b3JlL2FwaXYxL2ZpcmVzdG9yZXBiO2ZpcmVzdG9yZXBi",
+            "ogIER0NGU6oCGUdvb2dsZS5DbG91ZC5GaXJlc3RvcmUuVjHKAhlHb29nbGVc",
+            "Q2xvdWRcRmlyZXN0b3JlXFYx6gIcR29vZ2xlOjpDbG91ZDo6RmlyZXN0b3Jl",
+            "OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Document), global::Google.Cloud.Firestore.V1.Document.Parser, new[]{ "Name", "Fields", "CreateTime", "UpdateTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Value), global::Google.Cloud.Firestore.V1.Value.Parser, new[]{ "NullValue", "BooleanValue", "IntegerValue", "DoubleValue", "TimestampValue", "StringValue", "BytesValue", "ReferenceValue", "GeoPointValue", "ArrayValue", "MapValue" }, new[]{ "ValueType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Value), global::Google.Cloud.Firestore.V1.Value.Parser, new[]{ "NullValue", "BooleanValue", "IntegerValue", "DoubleValue", "TimestampValue", "StringValue", "BytesValue", "ReferenceValue", "GeoPointValue", "ArrayValue", "MapValue", "FieldReferenceValue", "FunctionValue", "PipelineValue" }, new[]{ "ValueType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.ArrayValue), global::Google.Cloud.Firestore.V1.ArrayValue.Parser, new[]{ "Values" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.MapValue), global::Google.Cloud.Firestore.V1.MapValue.Parser, new[]{ "Fields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.MapValue), global::Google.Cloud.Firestore.V1.MapValue.Parser, new[]{ "Fields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Function), global::Google.Cloud.Firestore.V1.Function.Parser, new[]{ "Name", "Args", "Options" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Pipeline), global::Google.Cloud.Firestore.V1.Pipeline.Parser, new[]{ "Stages" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Pipeline.Types.Stage), global::Google.Cloud.Firestore.V1.Pipeline.Types.Stage.Parser, new[]{ "Name", "Args", "Options" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })})
           }));
     }
     #endregion
@@ -495,6 +512,15 @@ namespace Google.Cloud.Firestore.V1 {
         case ValueTypeOneofCase.MapValue:
           MapValue = other.MapValue.Clone();
           break;
+        case ValueTypeOneofCase.FieldReferenceValue:
+          FieldReferenceValue = other.FieldReferenceValue;
+          break;
+        case ValueTypeOneofCase.FunctionValue:
+          FunctionValue = other.FunctionValue.Clone();
+          break;
+        case ValueTypeOneofCase.PipelineValue:
+          PipelineValue = other.PipelineValue.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -783,6 +809,82 @@ namespace Google.Cloud.Firestore.V1 {
       }
     }
 
+    /// <summary>Field number for the "field_reference_value" field.</summary>
+    public const int FieldReferenceValueFieldNumber = 19;
+    /// <summary>
+    /// Value which references a field.
+    ///
+    /// This is considered relative (vs absolute) since it only refers to a field
+    /// and not a field within a particular document.
+    ///
+    /// **Requires:**
+    ///
+    /// * Must follow [field reference][FieldReference.field_path] limitations.
+    ///
+    /// * Not allowed to be used when writing documents.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FieldReferenceValue {
+      get { return HasFieldReferenceValue ? (string) valueType_ : ""; }
+      set {
+        valueType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        valueTypeCase_ = ValueTypeOneofCase.FieldReferenceValue;
+      }
+    }
+    /// <summary>Gets whether the "field_reference_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFieldReferenceValue {
+      get { return valueTypeCase_ == ValueTypeOneofCase.FieldReferenceValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "field_reference_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFieldReferenceValue() {
+      if (HasFieldReferenceValue) {
+        ClearValueType();
+      }
+    }
+
+    /// <summary>Field number for the "function_value" field.</summary>
+    public const int FunctionValueFieldNumber = 20;
+    /// <summary>
+    /// A value that represents an unevaluated expression.
+    ///
+    /// **Requires:**
+    ///
+    /// * Not allowed to be used when writing documents.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.V1.Function FunctionValue {
+      get { return valueTypeCase_ == ValueTypeOneofCase.FunctionValue ? (global::Google.Cloud.Firestore.V1.Function) valueType_ : null; }
+      set {
+        valueType_ = value;
+        valueTypeCase_ = value == null ? ValueTypeOneofCase.None : ValueTypeOneofCase.FunctionValue;
+      }
+    }
+
+    /// <summary>Field number for the "pipeline_value" field.</summary>
+    public const int PipelineValueFieldNumber = 21;
+    /// <summary>
+    /// A value that represents an unevaluated pipeline.
+    ///
+    /// **Requires:**
+    ///
+    /// * Not allowed to be used when writing documents.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.V1.Pipeline PipelineValue {
+      get { return valueTypeCase_ == ValueTypeOneofCase.PipelineValue ? (global::Google.Cloud.Firestore.V1.Pipeline) valueType_ : null; }
+      set {
+        valueType_ = value;
+        valueTypeCase_ = value == null ? ValueTypeOneofCase.None : ValueTypeOneofCase.PipelineValue;
+      }
+    }
+
     private object valueType_;
     /// <summary>Enum of possible cases for the "value_type" oneof.</summary>
     public enum ValueTypeOneofCase {
@@ -798,6 +900,9 @@ namespace Google.Cloud.Firestore.V1 {
       GeoPointValue = 8,
       ArrayValue = 9,
       MapValue = 6,
+      FieldReferenceValue = 19,
+      FunctionValue = 20,
+      PipelineValue = 21,
     }
     private ValueTypeOneofCase valueTypeCase_ = ValueTypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -839,6 +944,9 @@ namespace Google.Cloud.Firestore.V1 {
       if (!object.Equals(GeoPointValue, other.GeoPointValue)) return false;
       if (!object.Equals(ArrayValue, other.ArrayValue)) return false;
       if (!object.Equals(MapValue, other.MapValue)) return false;
+      if (FieldReferenceValue != other.FieldReferenceValue) return false;
+      if (!object.Equals(FunctionValue, other.FunctionValue)) return false;
+      if (!object.Equals(PipelineValue, other.PipelineValue)) return false;
       if (ValueTypeCase != other.ValueTypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -858,6 +966,9 @@ namespace Google.Cloud.Firestore.V1 {
       if (valueTypeCase_ == ValueTypeOneofCase.GeoPointValue) hash ^= GeoPointValue.GetHashCode();
       if (valueTypeCase_ == ValueTypeOneofCase.ArrayValue) hash ^= ArrayValue.GetHashCode();
       if (valueTypeCase_ == ValueTypeOneofCase.MapValue) hash ^= MapValue.GetHashCode();
+      if (HasFieldReferenceValue) hash ^= FieldReferenceValue.GetHashCode();
+      if (valueTypeCase_ == ValueTypeOneofCase.FunctionValue) hash ^= FunctionValue.GetHashCode();
+      if (valueTypeCase_ == ValueTypeOneofCase.PipelineValue) hash ^= PipelineValue.GetHashCode();
       hash ^= (int) valueTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -921,6 +1032,18 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(146, 1);
         output.WriteBytes(BytesValue);
       }
+      if (HasFieldReferenceValue) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(FieldReferenceValue);
+      }
+      if (valueTypeCase_ == ValueTypeOneofCase.FunctionValue) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(FunctionValue);
+      }
+      if (valueTypeCase_ == ValueTypeOneofCase.PipelineValue) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(PipelineValue);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -975,6 +1098,18 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(146, 1);
         output.WriteBytes(BytesValue);
       }
+      if (HasFieldReferenceValue) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(FieldReferenceValue);
+      }
+      if (valueTypeCase_ == ValueTypeOneofCase.FunctionValue) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(FunctionValue);
+      }
+      if (valueTypeCase_ == ValueTypeOneofCase.PipelineValue) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(PipelineValue);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1017,6 +1152,15 @@ namespace Google.Cloud.Firestore.V1 {
       }
       if (valueTypeCase_ == ValueTypeOneofCase.MapValue) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MapValue);
+      }
+      if (HasFieldReferenceValue) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(FieldReferenceValue);
+      }
+      if (valueTypeCase_ == ValueTypeOneofCase.FunctionValue) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(FunctionValue);
+      }
+      if (valueTypeCase_ == ValueTypeOneofCase.PipelineValue) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(PipelineValue);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1075,6 +1219,21 @@ namespace Google.Cloud.Firestore.V1 {
             MapValue = new global::Google.Cloud.Firestore.V1.MapValue();
           }
           MapValue.MergeFrom(other.MapValue);
+          break;
+        case ValueTypeOneofCase.FieldReferenceValue:
+          FieldReferenceValue = other.FieldReferenceValue;
+          break;
+        case ValueTypeOneofCase.FunctionValue:
+          if (FunctionValue == null) {
+            FunctionValue = new global::Google.Cloud.Firestore.V1.Function();
+          }
+          FunctionValue.MergeFrom(other.FunctionValue);
+          break;
+        case ValueTypeOneofCase.PipelineValue:
+          if (PipelineValue == null) {
+            PipelineValue = new global::Google.Cloud.Firestore.V1.Pipeline();
+          }
+          PipelineValue.MergeFrom(other.PipelineValue);
           break;
       }
 
@@ -1158,6 +1317,28 @@ namespace Google.Cloud.Firestore.V1 {
             BytesValue = input.ReadBytes();
             break;
           }
+          case 154: {
+            FieldReferenceValue = input.ReadString();
+            break;
+          }
+          case 162: {
+            global::Google.Cloud.Firestore.V1.Function subBuilder = new global::Google.Cloud.Firestore.V1.Function();
+            if (valueTypeCase_ == ValueTypeOneofCase.FunctionValue) {
+              subBuilder.MergeFrom(FunctionValue);
+            }
+            input.ReadMessage(subBuilder);
+            FunctionValue = subBuilder;
+            break;
+          }
+          case 170: {
+            global::Google.Cloud.Firestore.V1.Pipeline subBuilder = new global::Google.Cloud.Firestore.V1.Pipeline();
+            if (valueTypeCase_ == ValueTypeOneofCase.PipelineValue) {
+              subBuilder.MergeFrom(PipelineValue);
+            }
+            input.ReadMessage(subBuilder);
+            PipelineValue = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -1236,6 +1417,28 @@ namespace Google.Cloud.Firestore.V1 {
           }
           case 146: {
             BytesValue = input.ReadBytes();
+            break;
+          }
+          case 154: {
+            FieldReferenceValue = input.ReadString();
+            break;
+          }
+          case 162: {
+            global::Google.Cloud.Firestore.V1.Function subBuilder = new global::Google.Cloud.Firestore.V1.Function();
+            if (valueTypeCase_ == ValueTypeOneofCase.FunctionValue) {
+              subBuilder.MergeFrom(FunctionValue);
+            }
+            input.ReadMessage(subBuilder);
+            FunctionValue = subBuilder;
+            break;
+          }
+          case 170: {
+            global::Google.Cloud.Firestore.V1.Pipeline subBuilder = new global::Google.Cloud.Firestore.V1.Pipeline();
+            if (valueTypeCase_ == ValueTypeOneofCase.PipelineValue) {
+              subBuilder.MergeFrom(PipelineValue);
+            }
+            input.ReadMessage(subBuilder);
+            PipelineValue = subBuilder;
             break;
           }
         }
@@ -1617,6 +1820,741 @@ namespace Google.Cloud.Firestore.V1 {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// Represents an unevaluated scalar expression.
+  ///
+  /// For example, the expression `like(user_name, "%alice%")` is represented as:
+  ///
+  /// ```
+  /// name: "like"
+  /// args { field_reference: "user_name" }
+  /// args { string_value: "%alice%" }
+  /// ```
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Function : pb::IMessage<Function>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Function> _parser = new pb::MessageParser<Function>(() => new Function());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Function> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Firestore.V1.DocumentReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Function() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Function(Function other) : this() {
+      name_ = other.name_;
+      args_ = other.args_.Clone();
+      options_ = other.options_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Function Clone() {
+      return new Function(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the function to evaluate.
+    ///
+    /// **Requires:**
+    ///
+    /// * must be in snake case (lower case with underscore separator).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "args" field.</summary>
+    public const int ArgsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Firestore.V1.Value> _repeated_args_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Firestore.V1.Value.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Firestore.V1.Value> args_ = new pbc::RepeatedField<global::Google.Cloud.Firestore.V1.Value>();
+    /// <summary>
+    /// Optional. Ordered list of arguments the given function expects.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Firestore.V1.Value> Args {
+      get { return args_; }
+    }
+
+    /// <summary>Field number for the "options" field.</summary>
+    public const int OptionsFieldNumber = 3;
+    private static readonly pbc::MapField<string, global::Google.Cloud.Firestore.V1.Value>.Codec _map_options_codec
+        = new pbc::MapField<string, global::Google.Cloud.Firestore.V1.Value>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Firestore.V1.Value.Parser), 26);
+    private readonly pbc::MapField<string, global::Google.Cloud.Firestore.V1.Value> options_ = new pbc::MapField<string, global::Google.Cloud.Firestore.V1.Value>();
+    /// <summary>
+    /// Optional. Optional named arguments that certain functions may support.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, global::Google.Cloud.Firestore.V1.Value> Options {
+      get { return options_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Function);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Function other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if(!args_.Equals(other.args_)) return false;
+      if (!Options.Equals(other.Options)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      hash ^= args_.GetHashCode();
+      hash ^= Options.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      args_.WriteTo(output, _repeated_args_codec);
+      options_.WriteTo(output, _map_options_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      args_.WriteTo(ref output, _repeated_args_codec);
+      options_.WriteTo(ref output, _map_options_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      size += args_.CalculateSize(_repeated_args_codec);
+      size += options_.CalculateSize(_map_options_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Function other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      args_.Add(other.args_);
+      options_.MergeFrom(other.options_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            args_.AddEntriesFrom(input, _repeated_args_codec);
+            break;
+          }
+          case 26: {
+            options_.AddEntriesFrom(input, _map_options_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            args_.AddEntriesFrom(ref input, _repeated_args_codec);
+            break;
+          }
+          case 26: {
+            options_.AddEntriesFrom(ref input, _map_options_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A Firestore query represented as an ordered list of operations / stages.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Pipeline : pb::IMessage<Pipeline>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Pipeline> _parser = new pb::MessageParser<Pipeline>(() => new Pipeline());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Pipeline> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Firestore.V1.DocumentReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Pipeline() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Pipeline(Pipeline other) : this() {
+      stages_ = other.stages_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Pipeline Clone() {
+      return new Pipeline(this);
+    }
+
+    /// <summary>Field number for the "stages" field.</summary>
+    public const int StagesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Firestore.V1.Pipeline.Types.Stage> _repeated_stages_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Firestore.V1.Pipeline.Types.Stage.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Firestore.V1.Pipeline.Types.Stage> stages_ = new pbc::RepeatedField<global::Google.Cloud.Firestore.V1.Pipeline.Types.Stage>();
+    /// <summary>
+    /// Required. Ordered list of stages to evaluate.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Firestore.V1.Pipeline.Types.Stage> Stages {
+      get { return stages_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Pipeline);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Pipeline other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!stages_.Equals(other.stages_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= stages_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      stages_.WriteTo(output, _repeated_stages_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      stages_.WriteTo(ref output, _repeated_stages_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += stages_.CalculateSize(_repeated_stages_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Pipeline other) {
+      if (other == null) {
+        return;
+      }
+      stages_.Add(other.stages_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            stages_.AddEntriesFrom(input, _repeated_stages_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            stages_.AddEntriesFrom(ref input, _repeated_stages_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Pipeline message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// A single operation within a pipeline.
+      ///
+      /// A stage is made up of a unique name, and a list of arguments. The exact
+      /// number of arguments &amp; types is dependent on the stage type.
+      ///
+      /// To give an example, the stage `filter(state = "MD")` would be encoded as:
+      ///
+      /// ```
+      /// name: "filter"
+      /// args {
+      ///   function_value {
+      ///     name: "eq"
+      ///     args { field_reference_value: "state" }
+      ///     args { string_value: "MD" }
+      ///   }
+      /// }
+      /// ```
+      ///
+      /// See public documentation for the full list.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Stage : pb::IMessage<Stage>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Stage> _parser = new pb::MessageParser<Stage>(() => new Stage());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Stage> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Firestore.V1.Pipeline.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Stage() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Stage(Stage other) : this() {
+          name_ = other.name_;
+          args_ = other.args_.Clone();
+          options_ = other.options_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Stage Clone() {
+          return new Stage(this);
+        }
+
+        /// <summary>Field number for the "name" field.</summary>
+        public const int NameFieldNumber = 1;
+        private string name_ = "";
+        /// <summary>
+        /// Required. The name of the stage to evaluate.
+        ///
+        /// **Requires:**
+        ///
+        /// * must be in snake case (lower case with underscore separator).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Name {
+          get { return name_; }
+          set {
+            name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "args" field.</summary>
+        public const int ArgsFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Firestore.V1.Value> _repeated_args_codec
+            = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Firestore.V1.Value.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Firestore.V1.Value> args_ = new pbc::RepeatedField<global::Google.Cloud.Firestore.V1.Value>();
+        /// <summary>
+        /// Optional. Ordered list of arguments the given stage expects.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Firestore.V1.Value> Args {
+          get { return args_; }
+        }
+
+        /// <summary>Field number for the "options" field.</summary>
+        public const int OptionsFieldNumber = 3;
+        private static readonly pbc::MapField<string, global::Google.Cloud.Firestore.V1.Value>.Codec _map_options_codec
+            = new pbc::MapField<string, global::Google.Cloud.Firestore.V1.Value>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Firestore.V1.Value.Parser), 26);
+        private readonly pbc::MapField<string, global::Google.Cloud.Firestore.V1.Value> options_ = new pbc::MapField<string, global::Google.Cloud.Firestore.V1.Value>();
+        /// <summary>
+        /// Optional. Optional named arguments that certain functions may support.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::MapField<string, global::Google.Cloud.Firestore.V1.Value> Options {
+          get { return options_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Stage);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Stage other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Name != other.Name) return false;
+          if(!args_.Equals(other.args_)) return false;
+          if (!Options.Equals(other.Options)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Name.Length != 0) hash ^= Name.GetHashCode();
+          hash ^= args_.GetHashCode();
+          hash ^= Options.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          args_.WriteTo(output, _repeated_args_codec);
+          options_.WriteTo(output, _map_options_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          args_.WriteTo(ref output, _repeated_args_codec);
+          options_.WriteTo(ref output, _map_options_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Name.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+          }
+          size += args_.CalculateSize(_repeated_args_codec);
+          size += options_.CalculateSize(_map_options_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Stage other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Name.Length != 0) {
+            Name = other.Name;
+          }
+          args_.Add(other.args_);
+          options_.MergeFrom(other.options_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                args_.AddEntriesFrom(input, _repeated_args_codec);
+                break;
+              }
+              case 26: {
+                options_.AddEntriesFrom(input, _map_options_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                args_.AddEntriesFrom(ref input, _repeated_args_codec);
+                break;
+              }
+              case 26: {
+                options_.AddEntriesFrom(ref input, _map_options_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 

@@ -16,6 +16,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -24,6 +25,16 @@ namespace Google.Cloud.Tools.Common
 {
     public class ApiMetadata
     {
+        /// <summary>
+        /// The dependency value representing "use the project in this repo" (instead of a package dependency).
+        /// </summary>
+        public const string ProjectVersionValue = "project";
+
+        /// <summary>
+        /// The dependency value representing "use the default version for this dependency".
+        /// </summary>
+        public const string DefaultVersionValue = "default";
+
         /// <summary>
         /// Packages that should be treated as Cloud packages even though they don't start with Google.Cloud
         /// </summary>
@@ -39,6 +50,16 @@ namespace Google.Cloud.Tools.Common
             // Actually GCP-specific; should probably have a Google.Cloud prefix, but it's too late now.
             "Google.Identity.AccessContextManager.V1",
             "Google.Identity.AccessContextManager.Type"
+        };
+
+        /// <summary>
+        /// The implicit dependencies for each API type.
+        /// </summary>
+        private static readonly Dictionary<ApiType, string[]> PackageTypeToImplicitDependencies = new Dictionary<ApiType, string[]>
+        {
+            {  ApiType.Rest, new[] { "Google.Api.Gax.Rest" } },
+            {  ApiType.Grpc, new[] { "Grpc.Core", "Google.Api.Gax.Grpc" } },
+            {  ApiType.Regapic, new[] { "Google.Api.Gax.Grpc" } },
         };
 
         // Pattern to extract the underlying API version from the package name.
@@ -191,6 +212,29 @@ namespace Google.Cloud.Tools.Common
             }
         }
 
+        public ImmutableDictionary<string, string> DeriveDependencies()
+        {
+            var dependencies = new Dictionary<string, string>(Dependencies, StringComparer.Ordinal);
+            // Default dependencies by package type - only added if they're not already present.
+            foreach (var implicitDependency in PackageTypeToImplicitDependencies.TryGetValue(Type, out var array) ? array : Enumerable.Empty<string>())
+            {
+                if (!dependencies.ContainsKey(implicitDependency))
+                {
+                    dependencies[implicitDependency] = DefaultVersionValue;
+                }
+            }
+            return dependencies.ToImmutableDictionary(StringComparer.Ordinal);
+        }
+
+        /// <summary>
+        /// Returns the implicit production dependencies based on <see cref="Type"/>.
+        /// Never null, but may be empty. The dependencies are alway external,
+        /// i.e. never within the API catalog.
+        /// </summary>
+        [JsonIgnore]
+        public IEnumerable<string> ImplicitProductionDependencies =>
+            PackageTypeToImplicitDependencies.TryGetValue(Type, out var array) ? array : Enumerable.Empty<string>();
+
         /// <summary>
         /// The release level to record in .repo-metadata.json, if this differs from the one
         /// inferred from the JSON. (For example, we will have 2.0.0-alpha00 versions that didn't
@@ -294,5 +338,15 @@ namespace Google.Cloud.Tools.Common
         /// The option to pass to protoc for the "rest-numeric-enums" option.
         /// </summary>
         public bool RestNumericEnums { get; set; }
+
+        // Obsolete members, preserved so that we can still load old configs.
+
+        [Obsolete]
+        [JsonProperty("forceOwlBotRegeneration"), JsonIgnore]
+        public bool ForceOwlBotRegeneration
+        {
+            get => throw new NotSupportedException();
+            set => throw new NotSupportedException();
+        }
     }
 }

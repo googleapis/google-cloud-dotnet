@@ -245,7 +245,8 @@ namespace Google.Cloud.Compute.V1
         public virtual InterconnectRemoteLocations.InterconnectRemoteLocationsClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the details for the specified interconnect remote location. Gets a list of available interconnect remote locations by making a list() request.
+        /// Returns the details for the specified interconnect remote location. Gets a
+        /// list of available interconnect remote locations by making alist() request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -254,7 +255,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the details for the specified interconnect remote location. Gets a list of available interconnect remote locations by making a list() request.
+        /// Returns the details for the specified interconnect remote location. Gets a
+        /// list of available interconnect remote locations by making alist() request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -263,7 +265,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the details for the specified interconnect remote location. Gets a list of available interconnect remote locations by making a list() request.
+        /// Returns the details for the specified interconnect remote location. Gets a
+        /// list of available interconnect remote locations by making alist() request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -272,7 +275,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the details for the specified interconnect remote location. Gets a list of available interconnect remote locations by making a list() request.
+        /// Returns the details for the specified interconnect remote location. Gets a
+        /// list of available interconnect remote locations by making alist() request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -290,7 +294,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the details for the specified interconnect remote location. Gets a list of available interconnect remote locations by making a list() request.
+        /// Returns the details for the specified interconnect remote location. Gets a
+        /// list of available interconnect remote locations by making alist() request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -308,7 +313,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the details for the specified interconnect remote location. Gets a list of available interconnect remote locations by making a list() request.
+        /// Returns the details for the specified interconnect remote location. Gets a
+        /// list of available interconnect remote locations by making alist() request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -322,7 +328,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, interconnectRemoteLocation, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves the list of interconnect remote locations available to the specified project.
+        /// Retrieves the list of interconnect remote locations available to the
+        /// specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -331,7 +338,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of interconnect remote locations available to the specified project.
+        /// Retrieves the list of interconnect remote locations available to the
+        /// specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -340,7 +348,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of interconnect remote locations available to the specified project.
+        /// Retrieves the list of interconnect remote locations available to the
+        /// specified project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -373,7 +382,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of interconnect remote locations available to the specified project.
+        /// Retrieves the list of interconnect remote locations available to the
+        /// specified project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -459,7 +469,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_ListInterconnectRemoteLocationsRequest(ref ListInterconnectRemoteLocationsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Returns the details for the specified interconnect remote location. Gets a list of available interconnect remote locations by making a list() request.
+        /// Returns the details for the specified interconnect remote location. Gets a
+        /// list of available interconnect remote locations by making alist() request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -471,7 +482,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the details for the specified interconnect remote location. Gets a list of available interconnect remote locations by making a list() request.
+        /// Returns the details for the specified interconnect remote location. Gets a
+        /// list of available interconnect remote locations by making alist() request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -483,7 +495,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of interconnect remote locations available to the specified project.
+        /// Retrieves the list of interconnect remote locations available to the
+        /// specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -495,7 +508,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of interconnect remote locations available to the specified project.
+        /// Retrieves the list of interconnect remote locations available to the
+        /// specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

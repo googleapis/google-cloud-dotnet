@@ -103,6 +103,10 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.RunQueryResponse> __Marshaller_google_firestore_v1_RunQueryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.RunQueryResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ExecutePipelineRequest> __Marshaller_google_firestore_v1_ExecutePipelineRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.ExecutePipelineRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ExecutePipelineResponse> __Marshaller_google_firestore_v1_ExecutePipelineResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.ExecutePipelineResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.RunAggregationQueryRequest> __Marshaller_google_firestore_v1_RunAggregationQueryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.RunAggregationQueryRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.RunAggregationQueryResponse> __Marshaller_google_firestore_v1_RunAggregationQueryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.RunAggregationQueryResponse.Parser));
@@ -200,6 +204,14 @@ namespace Google.Cloud.Firestore.V1 {
         "RunQuery",
         __Marshaller_google_firestore_v1_RunQueryRequest,
         __Marshaller_google_firestore_v1_RunQueryResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Firestore.V1.ExecutePipelineRequest, global::Google.Cloud.Firestore.V1.ExecutePipelineResponse> __Method_ExecutePipeline = new grpc::Method<global::Google.Cloud.Firestore.V1.ExecutePipelineRequest, global::Google.Cloud.Firestore.V1.ExecutePipelineResponse>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "ExecutePipeline",
+        __Marshaller_google_firestore_v1_ExecutePipelineRequest,
+        __Marshaller_google_firestore_v1_ExecutePipelineResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.RunAggregationQueryRequest, global::Google.Cloud.Firestore.V1.RunAggregationQueryResponse> __Method_RunAggregationQuery = new grpc::Method<global::Google.Cloud.Firestore.V1.RunAggregationQueryRequest, global::Google.Cloud.Firestore.V1.RunAggregationQueryResponse>(
@@ -376,6 +388,19 @@ namespace Google.Cloud.Firestore.V1 {
       /// <returns>A task indicating completion of the handler.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task RunQuery(global::Google.Cloud.Firestore.V1.RunQueryRequest request, grpc::IServerStreamWriter<global::Google.Cloud.Firestore.V1.RunQueryResponse> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Executes a pipeline query.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task ExecutePipeline(global::Google.Cloud.Firestore.V1.ExecutePipelineRequest request, grpc::IServerStreamWriter<global::Google.Cloud.Firestore.V1.ExecutePipelineResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -912,6 +937,30 @@ namespace Google.Cloud.Firestore.V1 {
         return CallInvoker.AsyncServerStreamingCall(__Method_RunQuery, null, options, request);
       }
       /// <summary>
+      /// Executes a pipeline query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Firestore.V1.ExecutePipelineResponse> ExecutePipeline(global::Google.Cloud.Firestore.V1.ExecutePipelineRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExecutePipeline(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Executes a pipeline query.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Firestore.V1.ExecutePipelineResponse> ExecutePipeline(global::Google.Cloud.Firestore.V1.ExecutePipelineRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncServerStreamingCall(__Method_ExecutePipeline, null, options, request);
+      }
+      /// <summary>
       /// Runs an aggregation query.
       ///
       /// Rather than producing [Document][google.firestore.v1.Document] results like
@@ -1266,6 +1315,7 @@ namespace Google.Cloud.Firestore.V1 {
           .AddMethod(__Method_Commit, serviceImpl.Commit)
           .AddMethod(__Method_Rollback, serviceImpl.Rollback)
           .AddMethod(__Method_RunQuery, serviceImpl.RunQuery)
+          .AddMethod(__Method_ExecutePipeline, serviceImpl.ExecutePipeline)
           .AddMethod(__Method_RunAggregationQuery, serviceImpl.RunAggregationQuery)
           .AddMethod(__Method_PartitionQuery, serviceImpl.PartitionQuery)
           .AddMethod(__Method_Write, serviceImpl.Write)
@@ -1291,6 +1341,7 @@ namespace Google.Cloud.Firestore.V1 {
       serviceBinder.AddMethod(__Method_Commit, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.V1.CommitRequest, global::Google.Cloud.Firestore.V1.CommitResponse>(serviceImpl.Commit));
       serviceBinder.AddMethod(__Method_Rollback, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.V1.RollbackRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.Rollback));
       serviceBinder.AddMethod(__Method_RunQuery, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.Firestore.V1.RunQueryRequest, global::Google.Cloud.Firestore.V1.RunQueryResponse>(serviceImpl.RunQuery));
+      serviceBinder.AddMethod(__Method_ExecutePipeline, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.Firestore.V1.ExecutePipelineRequest, global::Google.Cloud.Firestore.V1.ExecutePipelineResponse>(serviceImpl.ExecutePipeline));
       serviceBinder.AddMethod(__Method_RunAggregationQuery, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.Firestore.V1.RunAggregationQueryRequest, global::Google.Cloud.Firestore.V1.RunAggregationQueryResponse>(serviceImpl.RunAggregationQuery));
       serviceBinder.AddMethod(__Method_PartitionQuery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.V1.PartitionQueryRequest, global::Google.Cloud.Firestore.V1.PartitionQueryResponse>(serviceImpl.PartitionQuery));
       serviceBinder.AddMethod(__Method_Write, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.Firestore.V1.WriteRequest, global::Google.Cloud.Firestore.V1.WriteResponse>(serviceImpl.Write));

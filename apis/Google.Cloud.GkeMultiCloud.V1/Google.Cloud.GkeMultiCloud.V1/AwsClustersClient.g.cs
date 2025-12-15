@@ -34,6 +34,7 @@ using wkt = Google.Protobuf.WellKnownTypes;
 namespace Google.Cloud.GkeMultiCloud.V1
 {
     /// <summary>Settings for <see cref="AwsClustersClient"/> instances.</summary>
+    [sys::ObsoleteAttribute]
     public sealed partial class AwsClustersSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>Get a new instance of the default <see cref="AwsClustersSettings"/>.</summary>
@@ -458,6 +459,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
     /// <summary>
     /// Builder class for <see cref="AwsClustersClient"/> to provide simple configuration of credentials, endpoint etc.
     /// </summary>
+    [sys::ObsoleteAttribute]
     public sealed partial class AwsClustersClientBuilder : gaxgrpc::ClientBuilderBase<AwsClustersClient>
     {
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
@@ -511,6 +513,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
     /// The AwsClusters API provides a single centrally managed service
     /// to create and manage Anthos clusters that run on AWS infrastructure.
     /// </remarks>
+    [sys::ObsoleteAttribute]
     public abstract partial class AwsClustersClient
     {
         /// <summary>
@@ -602,7 +605,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<AwsCluster, OperationMetadata> CreateAwsCluster(CreateAwsClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -616,7 +622,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsCluster, OperationMetadata>> CreateAwsClusterAsync(CreateAwsClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -630,7 +639,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsCluster, OperationMetadata>> CreateAwsClusterAsync(CreateAwsClusterRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             CreateAwsClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>The long-running operations client for <c>CreateAwsCluster</c>.</summary>
@@ -644,8 +656,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<AwsCluster, OperationMetadata> PollOnceCreateAwsCluster(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<AwsCluster, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAwsClusterOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
@@ -656,8 +671,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsCluster, OperationMetadata>> PollOnceCreateAwsClusterAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<AwsCluster, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAwsClusterOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Creates a new [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster]
@@ -694,8 +712,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<AwsCluster, OperationMetadata> CreateAwsCluster(string parent, AwsCluster awsCluster, string awsClusterId, gaxgrpc::CallSettings callSettings = null) =>
             CreateAwsCluster(new CreateAwsClusterRequest
+#pragma warning restore CS0612
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 AwsCluster = gax::GaxPreconditions.CheckNotNull(awsCluster, nameof(awsCluster)),
@@ -737,8 +758,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsCluster, OperationMetadata>> CreateAwsClusterAsync(string parent, AwsCluster awsCluster, string awsClusterId, gaxgrpc::CallSettings callSettings = null) =>
             CreateAwsClusterAsync(new CreateAwsClusterRequest
+#pragma warning restore CS0612
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 AwsCluster = gax::GaxPreconditions.CheckNotNull(awsCluster, nameof(awsCluster)),
@@ -780,7 +804,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsCluster, OperationMetadata>> CreateAwsClusterAsync(string parent, AwsCluster awsCluster, string awsClusterId, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             CreateAwsClusterAsync(parent, awsCluster, awsClusterId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -818,8 +845,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<AwsCluster, OperationMetadata> CreateAwsCluster(gagr::LocationName parent, AwsCluster awsCluster, string awsClusterId, gaxgrpc::CallSettings callSettings = null) =>
             CreateAwsCluster(new CreateAwsClusterRequest
+#pragma warning restore CS0612
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 AwsCluster = gax::GaxPreconditions.CheckNotNull(awsCluster, nameof(awsCluster)),
@@ -861,8 +891,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsCluster, OperationMetadata>> CreateAwsClusterAsync(gagr::LocationName parent, AwsCluster awsCluster, string awsClusterId, gaxgrpc::CallSettings callSettings = null) =>
             CreateAwsClusterAsync(new CreateAwsClusterRequest
+#pragma warning restore CS0612
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 AwsCluster = gax::GaxPreconditions.CheckNotNull(awsCluster, nameof(awsCluster)),
@@ -904,7 +937,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsCluster, OperationMetadata>> CreateAwsClusterAsync(gagr::LocationName parent, AwsCluster awsCluster, string awsClusterId, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             CreateAwsClusterAsync(parent, awsCluster, awsClusterId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -913,7 +949,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<AwsCluster, OperationMetadata> UpdateAwsCluster(UpdateAwsClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -922,7 +961,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsCluster, OperationMetadata>> UpdateAwsClusterAsync(UpdateAwsClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -931,7 +973,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsCluster, OperationMetadata>> UpdateAwsClusterAsync(UpdateAwsClusterRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             UpdateAwsClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>The long-running operations client for <c>UpdateAwsCluster</c>.</summary>
@@ -945,8 +990,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<AwsCluster, OperationMetadata> PollOnceUpdateAwsCluster(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<AwsCluster, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAwsClusterOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
@@ -957,8 +1005,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsCluster, OperationMetadata>> PollOnceUpdateAwsClusterAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<AwsCluster, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAwsClusterOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Updates an [AwsCluster][google.cloud.gkemulticloud.v1.AwsCluster].
@@ -1002,8 +1053,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<AwsCluster, OperationMetadata> UpdateAwsCluster(AwsCluster awsCluster, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateAwsCluster(new UpdateAwsClusterRequest
+#pragma warning restore CS0612
             {
                 AwsCluster = gax::GaxPreconditions.CheckNotNull(awsCluster, nameof(awsCluster)),
                 UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
@@ -1051,8 +1105,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsCluster, OperationMetadata>> UpdateAwsClusterAsync(AwsCluster awsCluster, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateAwsClusterAsync(new UpdateAwsClusterRequest
+#pragma warning restore CS0612
             {
                 AwsCluster = gax::GaxPreconditions.CheckNotNull(awsCluster, nameof(awsCluster)),
                 UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
@@ -1100,7 +1157,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsCluster, OperationMetadata>> UpdateAwsClusterAsync(AwsCluster awsCluster, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             UpdateAwsClusterAsync(awsCluster, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1110,7 +1170,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual AwsCluster GetAwsCluster(GetAwsClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1120,7 +1183,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<AwsCluster> GetAwsClusterAsync(GetAwsClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1130,7 +1196,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<AwsCluster> GetAwsClusterAsync(GetAwsClusterRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GetAwsClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1150,8 +1219,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual AwsCluster GetAwsCluster(string name, gaxgrpc::CallSettings callSettings = null) =>
             GetAwsCluster(new GetAwsClusterRequest
+#pragma warning restore CS0612
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
             }, callSettings);
@@ -1173,8 +1245,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<AwsCluster> GetAwsClusterAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             GetAwsClusterAsync(new GetAwsClusterRequest
+#pragma warning restore CS0612
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
             }, callSettings);
@@ -1196,7 +1271,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<AwsCluster> GetAwsClusterAsync(string name, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GetAwsClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1216,8 +1294,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual AwsCluster GetAwsCluster(AwsClusterName name, gaxgrpc::CallSettings callSettings = null) =>
             GetAwsCluster(new GetAwsClusterRequest
+#pragma warning restore CS0612
             {
                 AwsClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
@@ -1239,8 +1320,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<AwsCluster> GetAwsClusterAsync(AwsClusterName name, gaxgrpc::CallSettings callSettings = null) =>
             GetAwsClusterAsync(new GetAwsClusterRequest
+#pragma warning restore CS0612
             {
                 AwsClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
@@ -1262,7 +1346,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<AwsCluster> GetAwsClusterAsync(AwsClusterName name, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GetAwsClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1272,7 +1359,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AwsCluster"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedEnumerable<ListAwsClustersResponse, AwsCluster> ListAwsClusters(ListAwsClustersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1282,7 +1372,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AwsCluster"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedAsyncEnumerable<ListAwsClustersResponse, AwsCluster> ListAwsClustersAsync(ListAwsClustersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1308,9 +1401,14 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AwsCluster"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedEnumerable<ListAwsClustersResponse, AwsCluster> ListAwsClusters(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
+#pragma warning disable CS0612
             ListAwsClustersRequest request = new ListAwsClustersRequest
+#pragma warning restore CS0612
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
             };
@@ -1348,9 +1446,14 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AwsCluster"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedAsyncEnumerable<ListAwsClustersResponse, AwsCluster> ListAwsClustersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
+#pragma warning disable CS0612
             ListAwsClustersRequest request = new ListAwsClustersRequest
+#pragma warning restore CS0612
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
             };
@@ -1388,9 +1491,14 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AwsCluster"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedEnumerable<ListAwsClustersResponse, AwsCluster> ListAwsClusters(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
+#pragma warning disable CS0612
             ListAwsClustersRequest request = new ListAwsClustersRequest
+#pragma warning restore CS0612
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
             };
@@ -1428,9 +1536,14 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AwsCluster"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedAsyncEnumerable<ListAwsClustersResponse, AwsCluster> ListAwsClustersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
+#pragma warning disable CS0612
             ListAwsClustersRequest request = new ListAwsClustersRequest
+#pragma warning restore CS0612
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
             };
@@ -1459,7 +1572,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAwsCluster(DeleteAwsClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1476,7 +1592,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAwsClusterAsync(DeleteAwsClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1493,7 +1612,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAwsClusterAsync(DeleteAwsClusterRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             DeleteAwsClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>The long-running operations client for <c>DeleteAwsCluster</c>.</summary>
@@ -1507,6 +1629,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteAwsCluster(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAwsClusterOperationsClient, callSettings);
 
@@ -1519,6 +1642,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteAwsClusterAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAwsClusterOperationsClient, callSettings);
 
@@ -1545,8 +1669,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAwsCluster(string name, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning disable CS0612
             DeleteAwsCluster(new DeleteAwsClusterRequest
+#pragma warning restore CS0612
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
             }, callSettings);
@@ -1574,8 +1701,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAwsClusterAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning disable CS0612
             DeleteAwsClusterAsync(new DeleteAwsClusterRequest
+#pragma warning restore CS0612
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
             }, callSettings);
@@ -1603,6 +1733,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAwsClusterAsync(string name, st::CancellationToken cancellationToken) =>
             DeleteAwsClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1629,8 +1760,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAwsCluster(AwsClusterName name, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning disable CS0612
             DeleteAwsCluster(new DeleteAwsClusterRequest
+#pragma warning restore CS0612
             {
                 AwsClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
@@ -1658,8 +1792,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAwsClusterAsync(AwsClusterName name, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning disable CS0612
             DeleteAwsClusterAsync(new DeleteAwsClusterRequest
+#pragma warning restore CS0612
             {
                 AwsClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
@@ -1687,6 +1824,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAwsClusterAsync(AwsClusterName name, st::CancellationToken cancellationToken) =>
             DeleteAwsClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1696,7 +1834,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual GenerateAwsClusterAgentTokenResponse GenerateAwsClusterAgentToken(GenerateAwsClusterAgentTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1705,7 +1846,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<GenerateAwsClusterAgentTokenResponse> GenerateAwsClusterAgentTokenAsync(GenerateAwsClusterAgentTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1714,7 +1858,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<GenerateAwsClusterAgentTokenResponse> GenerateAwsClusterAgentTokenAsync(GenerateAwsClusterAgentTokenRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GenerateAwsClusterAgentTokenAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1724,7 +1871,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual GenerateAwsAccessTokenResponse GenerateAwsAccessToken(GenerateAwsAccessTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1734,7 +1884,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<GenerateAwsAccessTokenResponse> GenerateAwsAccessTokenAsync(GenerateAwsAccessTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1744,7 +1897,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<GenerateAwsAccessTokenResponse> GenerateAwsAccessTokenAsync(GenerateAwsAccessTokenRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GenerateAwsAccessTokenAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1758,7 +1914,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<AwsNodePool, OperationMetadata> CreateAwsNodePool(CreateAwsNodePoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1772,7 +1931,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> CreateAwsNodePoolAsync(CreateAwsNodePoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1786,7 +1948,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> CreateAwsNodePoolAsync(CreateAwsNodePoolRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             CreateAwsNodePoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>The long-running operations client for <c>CreateAwsNodePool</c>.</summary>
@@ -1801,8 +1966,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<AwsNodePool, OperationMetadata> PollOnceCreateAwsNodePool(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<AwsNodePool, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAwsNodePoolOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
@@ -1813,8 +1981,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> PollOnceCreateAwsNodePoolAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<AwsNodePool, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAwsNodePoolOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Creates a new [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool],
@@ -1851,8 +2022,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<AwsNodePool, OperationMetadata> CreateAwsNodePool(string parent, AwsNodePool awsNodePool, string awsNodePoolId, gaxgrpc::CallSettings callSettings = null) =>
             CreateAwsNodePool(new CreateAwsNodePoolRequest
+#pragma warning restore CS0612
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 AwsNodePool = gax::GaxPreconditions.CheckNotNull(awsNodePool, nameof(awsNodePool)),
@@ -1894,8 +2068,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> CreateAwsNodePoolAsync(string parent, AwsNodePool awsNodePool, string awsNodePoolId, gaxgrpc::CallSettings callSettings = null) =>
             CreateAwsNodePoolAsync(new CreateAwsNodePoolRequest
+#pragma warning restore CS0612
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 AwsNodePool = gax::GaxPreconditions.CheckNotNull(awsNodePool, nameof(awsNodePool)),
@@ -1937,7 +2114,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> CreateAwsNodePoolAsync(string parent, AwsNodePool awsNodePool, string awsNodePoolId, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             CreateAwsNodePoolAsync(parent, awsNodePool, awsNodePoolId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1975,8 +2155,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<AwsNodePool, OperationMetadata> CreateAwsNodePool(AwsClusterName parent, AwsNodePool awsNodePool, string awsNodePoolId, gaxgrpc::CallSettings callSettings = null) =>
             CreateAwsNodePool(new CreateAwsNodePoolRequest
+#pragma warning restore CS0612
             {
                 ParentAsAwsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 AwsNodePool = gax::GaxPreconditions.CheckNotNull(awsNodePool, nameof(awsNodePool)),
@@ -2018,8 +2201,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> CreateAwsNodePoolAsync(AwsClusterName parent, AwsNodePool awsNodePool, string awsNodePoolId, gaxgrpc::CallSettings callSettings = null) =>
             CreateAwsNodePoolAsync(new CreateAwsNodePoolRequest
+#pragma warning restore CS0612
             {
                 ParentAsAwsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 AwsNodePool = gax::GaxPreconditions.CheckNotNull(awsNodePool, nameof(awsNodePool)),
@@ -2061,7 +2247,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> CreateAwsNodePoolAsync(AwsClusterName parent, AwsNodePool awsNodePool, string awsNodePoolId, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             CreateAwsNodePoolAsync(parent, awsNodePool, awsNodePoolId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2070,7 +2259,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<AwsNodePool, OperationMetadata> UpdateAwsNodePool(UpdateAwsNodePoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2079,7 +2271,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> UpdateAwsNodePoolAsync(UpdateAwsNodePoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2088,7 +2283,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> UpdateAwsNodePoolAsync(UpdateAwsNodePoolRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             UpdateAwsNodePoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>The long-running operations client for <c>UpdateAwsNodePool</c>.</summary>
@@ -2103,8 +2301,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<AwsNodePool, OperationMetadata> PollOnceUpdateAwsNodePool(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<AwsNodePool, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAwsNodePoolOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
@@ -2115,8 +2316,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> PollOnceUpdateAwsNodePoolAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<AwsNodePool, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAwsNodePoolOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Updates an [AwsNodePool][google.cloud.gkemulticloud.v1.AwsNodePool].
@@ -2163,8 +2367,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<AwsNodePool, OperationMetadata> UpdateAwsNodePool(AwsNodePool awsNodePool, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateAwsNodePool(new UpdateAwsNodePoolRequest
+#pragma warning restore CS0612
             {
                 AwsNodePool = gax::GaxPreconditions.CheckNotNull(awsNodePool, nameof(awsNodePool)),
                 UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
@@ -2215,8 +2422,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> UpdateAwsNodePoolAsync(AwsNodePool awsNodePool, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateAwsNodePoolAsync(new UpdateAwsNodePoolRequest
+#pragma warning restore CS0612
             {
                 AwsNodePool = gax::GaxPreconditions.CheckNotNull(awsNodePool, nameof(awsNodePool)),
                 UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
@@ -2267,7 +2477,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> UpdateAwsNodePoolAsync(AwsNodePool awsNodePool, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             UpdateAwsNodePoolAsync(awsNodePool, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2281,7 +2494,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<AwsNodePool, OperationMetadata> RollbackAwsNodePoolUpdate(RollbackAwsNodePoolUpdateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2295,7 +2511,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> RollbackAwsNodePoolUpdateAsync(RollbackAwsNodePoolUpdateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2309,7 +2528,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> RollbackAwsNodePoolUpdateAsync(RollbackAwsNodePoolUpdateRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             RollbackAwsNodePoolUpdateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>The long-running operations client for <c>RollbackAwsNodePoolUpdate</c>.</summary>
@@ -2324,8 +2546,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<AwsNodePool, OperationMetadata> PollOnceRollbackAwsNodePoolUpdate(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<AwsNodePool, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RollbackAwsNodePoolUpdateOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
@@ -2336,8 +2561,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> PollOnceRollbackAwsNodePoolUpdateAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<AwsNodePool, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RollbackAwsNodePoolUpdateOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Rolls back a previously aborted or failed
@@ -2360,8 +2588,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<AwsNodePool, OperationMetadata> RollbackAwsNodePoolUpdate(string name, gaxgrpc::CallSettings callSettings = null) =>
             RollbackAwsNodePoolUpdate(new RollbackAwsNodePoolUpdateRequest
+#pragma warning restore CS0612
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
             }, callSettings);
@@ -2387,8 +2618,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> RollbackAwsNodePoolUpdateAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             RollbackAwsNodePoolUpdateAsync(new RollbackAwsNodePoolUpdateRequest
+#pragma warning restore CS0612
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
             }, callSettings);
@@ -2414,7 +2648,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> RollbackAwsNodePoolUpdateAsync(string name, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             RollbackAwsNodePoolUpdateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2438,8 +2675,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<AwsNodePool, OperationMetadata> RollbackAwsNodePoolUpdate(AwsNodePoolName name, gaxgrpc::CallSettings callSettings = null) =>
             RollbackAwsNodePoolUpdate(new RollbackAwsNodePoolUpdateRequest
+#pragma warning restore CS0612
             {
                 AwsNodePoolName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
@@ -2465,8 +2705,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> RollbackAwsNodePoolUpdateAsync(AwsNodePoolName name, gaxgrpc::CallSettings callSettings = null) =>
             RollbackAwsNodePoolUpdateAsync(new RollbackAwsNodePoolUpdateRequest
+#pragma warning restore CS0612
             {
                 AwsNodePoolName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
@@ -2492,7 +2735,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> RollbackAwsNodePoolUpdateAsync(AwsNodePoolName name, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             RollbackAwsNodePoolUpdateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2502,7 +2748,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual AwsNodePool GetAwsNodePool(GetAwsNodePoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2512,7 +2761,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<AwsNodePool> GetAwsNodePoolAsync(GetAwsNodePoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2522,7 +2774,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<AwsNodePool> GetAwsNodePoolAsync(GetAwsNodePoolRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GetAwsNodePoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2542,8 +2797,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual AwsNodePool GetAwsNodePool(string name, gaxgrpc::CallSettings callSettings = null) =>
             GetAwsNodePool(new GetAwsNodePoolRequest
+#pragma warning restore CS0612
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
             }, callSettings);
@@ -2565,8 +2823,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<AwsNodePool> GetAwsNodePoolAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             GetAwsNodePoolAsync(new GetAwsNodePoolRequest
+#pragma warning restore CS0612
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
             }, callSettings);
@@ -2588,7 +2849,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<AwsNodePool> GetAwsNodePoolAsync(string name, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GetAwsNodePoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2608,8 +2872,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual AwsNodePool GetAwsNodePool(AwsNodePoolName name, gaxgrpc::CallSettings callSettings = null) =>
             GetAwsNodePool(new GetAwsNodePoolRequest
+#pragma warning restore CS0612
             {
                 AwsNodePoolName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
@@ -2631,8 +2898,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<AwsNodePool> GetAwsNodePoolAsync(AwsNodePoolName name, gaxgrpc::CallSettings callSettings = null) =>
             GetAwsNodePoolAsync(new GetAwsNodePoolRequest
+#pragma warning restore CS0612
             {
                 AwsNodePoolName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
@@ -2654,7 +2924,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<AwsNodePool> GetAwsNodePoolAsync(AwsNodePoolName name, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GetAwsNodePoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2665,7 +2938,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AwsNodePool"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedEnumerable<ListAwsNodePoolsResponse, AwsNodePool> ListAwsNodePools(ListAwsNodePoolsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2676,7 +2952,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AwsNodePool"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedAsyncEnumerable<ListAwsNodePoolsResponse, AwsNodePool> ListAwsNodePoolsAsync(ListAwsNodePoolsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2704,9 +2983,14 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AwsNodePool"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedEnumerable<ListAwsNodePoolsResponse, AwsNodePool> ListAwsNodePools(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
+#pragma warning disable CS0612
             ListAwsNodePoolsRequest request = new ListAwsNodePoolsRequest
+#pragma warning restore CS0612
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
             };
@@ -2746,9 +3030,14 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AwsNodePool"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedAsyncEnumerable<ListAwsNodePoolsResponse, AwsNodePool> ListAwsNodePoolsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
+#pragma warning disable CS0612
             ListAwsNodePoolsRequest request = new ListAwsNodePoolsRequest
+#pragma warning restore CS0612
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
             };
@@ -2788,9 +3077,14 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AwsNodePool"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedEnumerable<ListAwsNodePoolsResponse, AwsNodePool> ListAwsNodePools(AwsClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
+#pragma warning disable CS0612
             ListAwsNodePoolsRequest request = new ListAwsNodePoolsRequest
+#pragma warning restore CS0612
             {
                 ParentAsAwsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
             };
@@ -2830,9 +3124,14 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AwsNodePool"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedAsyncEnumerable<ListAwsNodePoolsResponse, AwsNodePool> ListAwsNodePoolsAsync(AwsClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
+#pragma warning disable CS0612
             ListAwsNodePoolsRequest request = new ListAwsNodePoolsRequest
+#pragma warning restore CS0612
             {
                 ParentAsAwsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
             };
@@ -2858,7 +3157,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAwsNodePool(DeleteAwsNodePoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2872,7 +3174,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAwsNodePoolAsync(DeleteAwsNodePoolRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2886,7 +3191,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAwsNodePoolAsync(DeleteAwsNodePoolRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             DeleteAwsNodePoolAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>The long-running operations client for <c>DeleteAwsNodePool</c>.</summary>
@@ -2901,6 +3209,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteAwsNodePool(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAwsNodePoolOperationsClient, callSettings);
 
@@ -2913,6 +3222,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteAwsNodePoolAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAwsNodePoolOperationsClient, callSettings);
 
@@ -2936,8 +3246,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAwsNodePool(string name, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning disable CS0612
             DeleteAwsNodePool(new DeleteAwsNodePoolRequest
+#pragma warning restore CS0612
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
             }, callSettings);
@@ -2962,8 +3275,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAwsNodePoolAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning disable CS0612
             DeleteAwsNodePoolAsync(new DeleteAwsNodePoolRequest
+#pragma warning restore CS0612
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
             }, callSettings);
@@ -2988,6 +3304,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAwsNodePoolAsync(string name, st::CancellationToken cancellationToken) =>
             DeleteAwsNodePoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3011,8 +3328,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAwsNodePool(AwsNodePoolName name, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning disable CS0612
             DeleteAwsNodePool(new DeleteAwsNodePoolRequest
+#pragma warning restore CS0612
             {
                 AwsNodePoolName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
@@ -3037,8 +3357,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAwsNodePoolAsync(AwsNodePoolName name, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning disable CS0612
             DeleteAwsNodePoolAsync(new DeleteAwsNodePoolRequest
+#pragma warning restore CS0612
             {
                 AwsNodePoolName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
@@ -3063,6 +3386,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAwsNodePoolAsync(AwsNodePoolName name, st::CancellationToken cancellationToken) =>
             DeleteAwsNodePoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3076,7 +3400,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual AwsOpenIdConfig GetAwsOpenIdConfig(GetAwsOpenIdConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3089,7 +3416,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<AwsOpenIdConfig> GetAwsOpenIdConfigAsync(GetAwsOpenIdConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3102,7 +3432,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<AwsOpenIdConfig> GetAwsOpenIdConfigAsync(GetAwsOpenIdConfigRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GetAwsOpenIdConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -3112,7 +3445,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual AwsJsonWebKeys GetAwsJsonWebKeys(GetAwsJsonWebKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3122,7 +3458,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<AwsJsonWebKeys> GetAwsJsonWebKeysAsync(GetAwsJsonWebKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3132,7 +3471,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<AwsJsonWebKeys> GetAwsJsonWebKeysAsync(GetAwsJsonWebKeysRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GetAwsJsonWebKeysAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -3142,7 +3484,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual AwsServerConfig GetAwsServerConfig(GetAwsServerConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3152,7 +3497,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<AwsServerConfig> GetAwsServerConfigAsync(GetAwsServerConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3162,7 +3510,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<AwsServerConfig> GetAwsServerConfigAsync(GetAwsServerConfigRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GetAwsServerConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -3182,8 +3533,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual AwsServerConfig GetAwsServerConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
             GetAwsServerConfig(new GetAwsServerConfigRequest
+#pragma warning restore CS0612
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
             }, callSettings);
@@ -3205,8 +3559,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<AwsServerConfig> GetAwsServerConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             GetAwsServerConfigAsync(new GetAwsServerConfigRequest
+#pragma warning restore CS0612
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
             }, callSettings);
@@ -3228,7 +3585,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<AwsServerConfig> GetAwsServerConfigAsync(string name, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GetAwsServerConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -3248,8 +3608,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual AwsServerConfig GetAwsServerConfig(AwsServerConfigName name, gaxgrpc::CallSettings callSettings = null) =>
             GetAwsServerConfig(new GetAwsServerConfigRequest
+#pragma warning restore CS0612
             {
                 AwsServerConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
@@ -3271,8 +3634,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<AwsServerConfig> GetAwsServerConfigAsync(AwsServerConfigName name, gaxgrpc::CallSettings callSettings = null) =>
             GetAwsServerConfigAsync(new GetAwsServerConfigRequest
+#pragma warning restore CS0612
             {
                 AwsServerConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
@@ -3294,7 +3660,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<AwsServerConfig> GetAwsServerConfigAsync(AwsServerConfigName name, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GetAwsServerConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
@@ -3303,8 +3672,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
     /// The AwsClusters API provides a single centrally managed service
     /// to create and manage Anthos clusters that run on AWS infrastructure.
     /// </remarks>
+    [sys::ObsoleteAttribute]
     public sealed partial class AwsClustersClientImpl : AwsClustersClient
     {
+#pragma warning disable CS0612
         private readonly gaxgrpc::ApiCall<CreateAwsClusterRequest, lro::Operation> _callCreateAwsCluster;
 
         private readonly gaxgrpc::ApiCall<UpdateAwsClusterRequest, lro::Operation> _callUpdateAwsCluster;
@@ -3336,6 +3707,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         private readonly gaxgrpc::ApiCall<GetAwsJsonWebKeysRequest, AwsJsonWebKeys> _callGetAwsJsonWebKeys;
 
         private readonly gaxgrpc::ApiCall<GetAwsServerConfigRequest, AwsServerConfig> _callGetAwsServerConfig;
+#pragma warning restore CS0612
 
         /// <summary>
         /// Constructs a client wrapper for the AwsClusters service, with the specified gRPC client and settings.
@@ -3359,52 +3731,84 @@ namespace Google.Cloud.GkeMultiCloud.V1
             UpdateAwsNodePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAwsNodePoolOperationsSettings, logger);
             RollbackAwsNodePoolUpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RollbackAwsNodePoolUpdateOperationsSettings, logger);
             DeleteAwsNodePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAwsNodePoolOperationsSettings, logger);
+#pragma warning disable CS0612
             _callCreateAwsCluster = clientHelper.BuildApiCall<CreateAwsClusterRequest, lro::Operation>("CreateAwsCluster", grpcClient.CreateAwsClusterAsync, grpcClient.CreateAwsCluster, effectiveSettings.CreateAwsClusterSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callCreateAwsCluster);
             Modify_CreateAwsClusterApiCall(ref _callCreateAwsCluster);
+#pragma warning disable CS0612
             _callUpdateAwsCluster = clientHelper.BuildApiCall<UpdateAwsClusterRequest, lro::Operation>("UpdateAwsCluster", grpcClient.UpdateAwsClusterAsync, grpcClient.UpdateAwsCluster, effectiveSettings.UpdateAwsClusterSettings).WithGoogleRequestParam("aws_cluster.name", request => request.AwsCluster?.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callUpdateAwsCluster);
             Modify_UpdateAwsClusterApiCall(ref _callUpdateAwsCluster);
+#pragma warning disable CS0612
             _callGetAwsCluster = clientHelper.BuildApiCall<GetAwsClusterRequest, AwsCluster>("GetAwsCluster", grpcClient.GetAwsClusterAsync, grpcClient.GetAwsCluster, effectiveSettings.GetAwsClusterSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callGetAwsCluster);
             Modify_GetAwsClusterApiCall(ref _callGetAwsCluster);
+#pragma warning disable CS0612
             _callListAwsClusters = clientHelper.BuildApiCall<ListAwsClustersRequest, ListAwsClustersResponse>("ListAwsClusters", grpcClient.ListAwsClustersAsync, grpcClient.ListAwsClusters, effectiveSettings.ListAwsClustersSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callListAwsClusters);
             Modify_ListAwsClustersApiCall(ref _callListAwsClusters);
+#pragma warning disable CS0612
             _callDeleteAwsCluster = clientHelper.BuildApiCall<DeleteAwsClusterRequest, lro::Operation>("DeleteAwsCluster", grpcClient.DeleteAwsClusterAsync, grpcClient.DeleteAwsCluster, effectiveSettings.DeleteAwsClusterSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callDeleteAwsCluster);
             Modify_DeleteAwsClusterApiCall(ref _callDeleteAwsCluster);
+#pragma warning disable CS0612
             _callGenerateAwsClusterAgentToken = clientHelper.BuildApiCall<GenerateAwsClusterAgentTokenRequest, GenerateAwsClusterAgentTokenResponse>("GenerateAwsClusterAgentToken", grpcClient.GenerateAwsClusterAgentTokenAsync, grpcClient.GenerateAwsClusterAgentToken, effectiveSettings.GenerateAwsClusterAgentTokenSettings).WithGoogleRequestParam("aws_cluster", request => request.AwsCluster);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callGenerateAwsClusterAgentToken);
             Modify_GenerateAwsClusterAgentTokenApiCall(ref _callGenerateAwsClusterAgentToken);
+#pragma warning disable CS0612
             _callGenerateAwsAccessToken = clientHelper.BuildApiCall<GenerateAwsAccessTokenRequest, GenerateAwsAccessTokenResponse>("GenerateAwsAccessToken", grpcClient.GenerateAwsAccessTokenAsync, grpcClient.GenerateAwsAccessToken, effectiveSettings.GenerateAwsAccessTokenSettings).WithGoogleRequestParam("aws_cluster", request => request.AwsCluster);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callGenerateAwsAccessToken);
             Modify_GenerateAwsAccessTokenApiCall(ref _callGenerateAwsAccessToken);
+#pragma warning disable CS0612
             _callCreateAwsNodePool = clientHelper.BuildApiCall<CreateAwsNodePoolRequest, lro::Operation>("CreateAwsNodePool", grpcClient.CreateAwsNodePoolAsync, grpcClient.CreateAwsNodePool, effectiveSettings.CreateAwsNodePoolSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callCreateAwsNodePool);
             Modify_CreateAwsNodePoolApiCall(ref _callCreateAwsNodePool);
+#pragma warning disable CS0612
             _callUpdateAwsNodePool = clientHelper.BuildApiCall<UpdateAwsNodePoolRequest, lro::Operation>("UpdateAwsNodePool", grpcClient.UpdateAwsNodePoolAsync, grpcClient.UpdateAwsNodePool, effectiveSettings.UpdateAwsNodePoolSettings).WithGoogleRequestParam("aws_node_pool.name", request => request.AwsNodePool?.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callUpdateAwsNodePool);
             Modify_UpdateAwsNodePoolApiCall(ref _callUpdateAwsNodePool);
+#pragma warning disable CS0612
             _callRollbackAwsNodePoolUpdate = clientHelper.BuildApiCall<RollbackAwsNodePoolUpdateRequest, lro::Operation>("RollbackAwsNodePoolUpdate", grpcClient.RollbackAwsNodePoolUpdateAsync, grpcClient.RollbackAwsNodePoolUpdate, effectiveSettings.RollbackAwsNodePoolUpdateSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callRollbackAwsNodePoolUpdate);
             Modify_RollbackAwsNodePoolUpdateApiCall(ref _callRollbackAwsNodePoolUpdate);
+#pragma warning disable CS0612
             _callGetAwsNodePool = clientHelper.BuildApiCall<GetAwsNodePoolRequest, AwsNodePool>("GetAwsNodePool", grpcClient.GetAwsNodePoolAsync, grpcClient.GetAwsNodePool, effectiveSettings.GetAwsNodePoolSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callGetAwsNodePool);
             Modify_GetAwsNodePoolApiCall(ref _callGetAwsNodePool);
+#pragma warning disable CS0612
             _callListAwsNodePools = clientHelper.BuildApiCall<ListAwsNodePoolsRequest, ListAwsNodePoolsResponse>("ListAwsNodePools", grpcClient.ListAwsNodePoolsAsync, grpcClient.ListAwsNodePools, effectiveSettings.ListAwsNodePoolsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callListAwsNodePools);
             Modify_ListAwsNodePoolsApiCall(ref _callListAwsNodePools);
+#pragma warning disable CS0612
             _callDeleteAwsNodePool = clientHelper.BuildApiCall<DeleteAwsNodePoolRequest, lro::Operation>("DeleteAwsNodePool", grpcClient.DeleteAwsNodePoolAsync, grpcClient.DeleteAwsNodePool, effectiveSettings.DeleteAwsNodePoolSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callDeleteAwsNodePool);
             Modify_DeleteAwsNodePoolApiCall(ref _callDeleteAwsNodePool);
+#pragma warning disable CS0612
             _callGetAwsOpenIdConfig = clientHelper.BuildApiCall<GetAwsOpenIdConfigRequest, AwsOpenIdConfig>("GetAwsOpenIdConfig", grpcClient.GetAwsOpenIdConfigAsync, grpcClient.GetAwsOpenIdConfig, effectiveSettings.GetAwsOpenIdConfigSettings).WithGoogleRequestParam("aws_cluster", request => request.AwsCluster);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callGetAwsOpenIdConfig);
             Modify_GetAwsOpenIdConfigApiCall(ref _callGetAwsOpenIdConfig);
+#pragma warning disable CS0612
             _callGetAwsJsonWebKeys = clientHelper.BuildApiCall<GetAwsJsonWebKeysRequest, AwsJsonWebKeys>("GetAwsJsonWebKeys", grpcClient.GetAwsJsonWebKeysAsync, grpcClient.GetAwsJsonWebKeys, effectiveSettings.GetAwsJsonWebKeysSettings).WithGoogleRequestParam("aws_cluster", request => request.AwsCluster);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callGetAwsJsonWebKeys);
             Modify_GetAwsJsonWebKeysApiCall(ref _callGetAwsJsonWebKeys);
+#pragma warning disable CS0612
             _callGetAwsServerConfig = clientHelper.BuildApiCall<GetAwsServerConfigRequest, AwsServerConfig>("GetAwsServerConfig", grpcClient.GetAwsServerConfigAsync, grpcClient.GetAwsServerConfig, effectiveSettings.GetAwsServerConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callGetAwsServerConfig);
             Modify_GetAwsServerConfigApiCall(ref _callGetAwsServerConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -3412,6 +3816,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+#pragma warning disable CS0612
         partial void Modify_CreateAwsClusterApiCall(ref gaxgrpc::ApiCall<CreateAwsClusterRequest, lro::Operation> call);
 
         partial void Modify_UpdateAwsClusterApiCall(ref gaxgrpc::ApiCall<UpdateAwsClusterRequest, lro::Operation> call);
@@ -3443,12 +3848,14 @@ namespace Google.Cloud.GkeMultiCloud.V1
         partial void Modify_GetAwsJsonWebKeysApiCall(ref gaxgrpc::ApiCall<GetAwsJsonWebKeysRequest, AwsJsonWebKeys> call);
 
         partial void Modify_GetAwsServerConfigApiCall(ref gaxgrpc::ApiCall<GetAwsServerConfigRequest, AwsServerConfig> call);
+#pragma warning restore CS0612
 
         partial void OnConstruction(AwsClusters.AwsClustersClient grpcClient, AwsClustersSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC AwsClusters client</summary>
         public override AwsClusters.AwsClustersClient GrpcClient { get; }
 
+#pragma warning disable CS0612
         partial void Modify_CreateAwsClusterRequest(ref CreateAwsClusterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateAwsClusterRequest(ref UpdateAwsClusterRequest request, ref gaxgrpc::CallSettings settings);
@@ -3480,6 +3887,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         partial void Modify_GetAwsJsonWebKeysRequest(ref GetAwsJsonWebKeysRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetAwsServerConfigRequest(ref GetAwsServerConfigRequest request, ref gaxgrpc::CallSettings settings);
+#pragma warning restore CS0612
 
         /// <summary>The long-running operations client for <c>CreateAwsCluster</c>.</summary>
         public override lro::OperationsClient CreateAwsClusterOperationsClient { get; }
@@ -3495,10 +3903,15 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override lro::Operation<AwsCluster, OperationMetadata> CreateAwsCluster(CreateAwsClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_CreateAwsClusterRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<AwsCluster, OperationMetadata>(_callCreateAwsCluster.Sync(request, callSettings), CreateAwsClusterOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>
@@ -3512,10 +3925,15 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override async stt::Task<lro::Operation<AwsCluster, OperationMetadata>> CreateAwsClusterAsync(CreateAwsClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_CreateAwsClusterRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<AwsCluster, OperationMetadata>(await _callCreateAwsCluster.Async(request, callSettings).ConfigureAwait(false), CreateAwsClusterOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>The long-running operations client for <c>UpdateAwsCluster</c>.</summary>
@@ -3527,10 +3945,15 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override lro::Operation<AwsCluster, OperationMetadata> UpdateAwsCluster(UpdateAwsClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_UpdateAwsClusterRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<AwsCluster, OperationMetadata>(_callUpdateAwsCluster.Sync(request, callSettings), UpdateAwsClusterOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>
@@ -3539,10 +3962,15 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override async stt::Task<lro::Operation<AwsCluster, OperationMetadata>> UpdateAwsClusterAsync(UpdateAwsClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_UpdateAwsClusterRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<AwsCluster, OperationMetadata>(await _callUpdateAwsCluster.Async(request, callSettings).ConfigureAwait(false), UpdateAwsClusterOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>
@@ -3552,7 +3980,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override AwsCluster GetAwsCluster(GetAwsClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_GetAwsClusterRequest(ref request, ref callSettings);
             return _callGetAwsCluster.Sync(request, callSettings);
@@ -3565,7 +3996,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override stt::Task<AwsCluster> GetAwsClusterAsync(GetAwsClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_GetAwsClusterRequest(ref request, ref callSettings);
             return _callGetAwsCluster.Async(request, callSettings);
@@ -3578,10 +4012,15 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AwsCluster"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override gax::PagedEnumerable<ListAwsClustersResponse, AwsCluster> ListAwsClusters(ListAwsClustersRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_ListAwsClustersRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new gaxgrpc::GrpcPagedEnumerable<ListAwsClustersRequest, ListAwsClustersResponse, AwsCluster>(_callListAwsClusters, request, callSettings);
+#pragma warning restore CS0612
         }
 
         /// <summary>
@@ -3591,10 +4030,15 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AwsCluster"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override gax::PagedAsyncEnumerable<ListAwsClustersResponse, AwsCluster> ListAwsClustersAsync(ListAwsClustersRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_ListAwsClustersRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAwsClustersRequest, ListAwsClustersResponse, AwsCluster>(_callListAwsClusters, request, callSettings);
+#pragma warning restore CS0612
         }
 
         /// <summary>The long-running operations client for <c>DeleteAwsCluster</c>.</summary>
@@ -3614,7 +4058,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override lro::Operation<wkt::Empty, OperationMetadata> DeleteAwsCluster(DeleteAwsClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_DeleteAwsClusterRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteAwsCluster.Sync(request, callSettings), DeleteAwsClusterOperationsClient);
@@ -3634,7 +4081,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAwsClusterAsync(DeleteAwsClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_DeleteAwsClusterRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteAwsCluster.Async(request, callSettings).ConfigureAwait(false), DeleteAwsClusterOperationsClient);
@@ -3646,7 +4096,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override GenerateAwsClusterAgentTokenResponse GenerateAwsClusterAgentToken(GenerateAwsClusterAgentTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_GenerateAwsClusterAgentTokenRequest(ref request, ref callSettings);
             return _callGenerateAwsClusterAgentToken.Sync(request, callSettings);
@@ -3658,7 +4111,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override stt::Task<GenerateAwsClusterAgentTokenResponse> GenerateAwsClusterAgentTokenAsync(GenerateAwsClusterAgentTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_GenerateAwsClusterAgentTokenRequest(ref request, ref callSettings);
             return _callGenerateAwsClusterAgentToken.Async(request, callSettings);
@@ -3671,7 +4127,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override GenerateAwsAccessTokenResponse GenerateAwsAccessToken(GenerateAwsAccessTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_GenerateAwsAccessTokenRequest(ref request, ref callSettings);
             return _callGenerateAwsAccessToken.Sync(request, callSettings);
@@ -3684,7 +4143,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override stt::Task<GenerateAwsAccessTokenResponse> GenerateAwsAccessTokenAsync(GenerateAwsAccessTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_GenerateAwsAccessTokenRequest(ref request, ref callSettings);
             return _callGenerateAwsAccessToken.Async(request, callSettings);
@@ -3704,10 +4166,15 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override lro::Operation<AwsNodePool, OperationMetadata> CreateAwsNodePool(CreateAwsNodePoolRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_CreateAwsNodePoolRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<AwsNodePool, OperationMetadata>(_callCreateAwsNodePool.Sync(request, callSettings), CreateAwsNodePoolOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>
@@ -3721,10 +4188,15 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override async stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> CreateAwsNodePoolAsync(CreateAwsNodePoolRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_CreateAwsNodePoolRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<AwsNodePool, OperationMetadata>(await _callCreateAwsNodePool.Async(request, callSettings).ConfigureAwait(false), CreateAwsNodePoolOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>The long-running operations client for <c>UpdateAwsNodePool</c>.</summary>
@@ -3736,10 +4208,15 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override lro::Operation<AwsNodePool, OperationMetadata> UpdateAwsNodePool(UpdateAwsNodePoolRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_UpdateAwsNodePoolRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<AwsNodePool, OperationMetadata>(_callUpdateAwsNodePool.Sync(request, callSettings), UpdateAwsNodePoolOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>
@@ -3748,10 +4225,15 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override async stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> UpdateAwsNodePoolAsync(UpdateAwsNodePoolRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_UpdateAwsNodePoolRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<AwsNodePool, OperationMetadata>(await _callUpdateAwsNodePool.Async(request, callSettings).ConfigureAwait(false), UpdateAwsNodePoolOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>The long-running operations client for <c>RollbackAwsNodePoolUpdate</c>.</summary>
@@ -3768,10 +4250,15 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override lro::Operation<AwsNodePool, OperationMetadata> RollbackAwsNodePoolUpdate(RollbackAwsNodePoolUpdateRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_RollbackAwsNodePoolUpdateRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<AwsNodePool, OperationMetadata>(_callRollbackAwsNodePoolUpdate.Sync(request, callSettings), RollbackAwsNodePoolUpdateOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>
@@ -3785,10 +4272,15 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override async stt::Task<lro::Operation<AwsNodePool, OperationMetadata>> RollbackAwsNodePoolUpdateAsync(RollbackAwsNodePoolUpdateRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_RollbackAwsNodePoolUpdateRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<AwsNodePool, OperationMetadata>(await _callRollbackAwsNodePoolUpdate.Async(request, callSettings).ConfigureAwait(false), RollbackAwsNodePoolUpdateOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>
@@ -3798,7 +4290,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override AwsNodePool GetAwsNodePool(GetAwsNodePoolRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_GetAwsNodePoolRequest(ref request, ref callSettings);
             return _callGetAwsNodePool.Sync(request, callSettings);
@@ -3811,7 +4306,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override stt::Task<AwsNodePool> GetAwsNodePoolAsync(GetAwsNodePoolRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_GetAwsNodePoolRequest(ref request, ref callSettings);
             return _callGetAwsNodePool.Async(request, callSettings);
@@ -3825,10 +4323,15 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AwsNodePool"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override gax::PagedEnumerable<ListAwsNodePoolsResponse, AwsNodePool> ListAwsNodePools(ListAwsNodePoolsRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_ListAwsNodePoolsRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new gaxgrpc::GrpcPagedEnumerable<ListAwsNodePoolsRequest, ListAwsNodePoolsResponse, AwsNodePool>(_callListAwsNodePools, request, callSettings);
+#pragma warning restore CS0612
         }
 
         /// <summary>
@@ -3839,10 +4342,15 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AwsNodePool"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override gax::PagedAsyncEnumerable<ListAwsNodePoolsResponse, AwsNodePool> ListAwsNodePoolsAsync(ListAwsNodePoolsRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_ListAwsNodePoolsRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAwsNodePoolsRequest, ListAwsNodePoolsResponse, AwsNodePool>(_callListAwsNodePools, request, callSettings);
+#pragma warning restore CS0612
         }
 
         /// <summary>The long-running operations client for <c>DeleteAwsNodePool</c>.</summary>
@@ -3859,7 +4367,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override lro::Operation<wkt::Empty, OperationMetadata> DeleteAwsNodePool(DeleteAwsNodePoolRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_DeleteAwsNodePoolRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteAwsNodePool.Sync(request, callSettings), DeleteAwsNodePoolOperationsClient);
@@ -3876,7 +4387,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAwsNodePoolAsync(DeleteAwsNodePoolRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_DeleteAwsNodePoolRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteAwsNodePool.Async(request, callSettings).ConfigureAwait(false), DeleteAwsNodePoolOperationsClient);
@@ -3892,7 +4406,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override AwsOpenIdConfig GetAwsOpenIdConfig(GetAwsOpenIdConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_GetAwsOpenIdConfigRequest(ref request, ref callSettings);
             return _callGetAwsOpenIdConfig.Sync(request, callSettings);
@@ -3908,7 +4425,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override stt::Task<AwsOpenIdConfig> GetAwsOpenIdConfigAsync(GetAwsOpenIdConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_GetAwsOpenIdConfigRequest(ref request, ref callSettings);
             return _callGetAwsOpenIdConfig.Async(request, callSettings);
@@ -3921,7 +4441,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override AwsJsonWebKeys GetAwsJsonWebKeys(GetAwsJsonWebKeysRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_GetAwsJsonWebKeysRequest(ref request, ref callSettings);
             return _callGetAwsJsonWebKeys.Sync(request, callSettings);
@@ -3934,7 +4457,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override stt::Task<AwsJsonWebKeys> GetAwsJsonWebKeysAsync(GetAwsJsonWebKeysRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_GetAwsJsonWebKeysRequest(ref request, ref callSettings);
             return _callGetAwsJsonWebKeys.Async(request, callSettings);
@@ -3947,7 +4473,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override AwsServerConfig GetAwsServerConfig(GetAwsServerConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_GetAwsServerConfigRequest(ref request, ref callSettings);
             return _callGetAwsServerConfig.Sync(request, callSettings);
@@ -3960,7 +4489,10 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override stt::Task<AwsServerConfig> GetAwsServerConfigAsync(GetAwsServerConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_GetAwsServerConfigRequest(ref request, ref callSettings);
             return _callGetAwsServerConfig.Async(request, callSettings);
@@ -3975,18 +4507,26 @@ namespace Google.Cloud.GkeMultiCloud.V1
     {
     }
 
+#pragma warning disable CS0612
     public partial class ListAwsClustersResponse : gaxgrpc::IPageResponse<AwsCluster>
+#pragma warning restore CS0612
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+#pragma warning disable CS0612
         public scg::IEnumerator<AwsCluster> GetEnumerator() => AwsClusters.GetEnumerator();
+#pragma warning restore CS0612
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
+#pragma warning disable CS0612
     public partial class ListAwsNodePoolsResponse : gaxgrpc::IPageResponse<AwsNodePool>
+#pragma warning restore CS0612
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+#pragma warning disable CS0612
         public scg::IEnumerator<AwsNodePool> GetEnumerator() => AwsNodePools.GetEnumerator();
+#pragma warning restore CS0612
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

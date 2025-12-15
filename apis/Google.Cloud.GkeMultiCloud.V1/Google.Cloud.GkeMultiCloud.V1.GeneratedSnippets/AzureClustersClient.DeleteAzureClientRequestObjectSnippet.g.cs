@@ -20,6 +20,7 @@ namespace GoogleCSharpSnippets
     using Google.Cloud.GkeMultiCloud.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
+    using System;
 
     public sealed partial class GeneratedAzureClustersClientSnippets
     {
@@ -31,19 +32,19 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void DeleteAzureClientRequestObject()
         {
             // Create client
             AzureClustersClient azureClustersClient = AzureClustersClient.Create();
             // Initialize request argument(s)
-            DeleteAzureClientRequest request = new DeleteAzureClientRequest
-            {
-                AzureClientName = AzureClientName.FromProjectLocationAzureClient("[PROJECT]", "[LOCATION]", "[AZURE_CLIENT]"),
-                AllowMissing = false,
-                ValidateOnly = false,
-            };
+#pragma warning disable CS0612
+            DeleteAzureClientRequest request = new DeleteAzureClientRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> response = azureClustersClient.DeleteAzureClient(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
@@ -53,7 +54,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<Empty, OperationMetadata> retrievedResponse = azureClustersClient.PollOnceDeleteAzureClient(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

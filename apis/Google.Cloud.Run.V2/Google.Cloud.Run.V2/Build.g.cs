@@ -27,45 +27,48 @@ namespace Google.Cloud.Run.V2 {
             "Ch9nb29nbGUvY2xvdWQvcnVuL3YyL2J1aWxkLnByb3RvEhNnb29nbGUuY2xv",
             "dWQucnVuLnYyGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhdnb29n",
             "bGUvYXBpL2NsaWVudC5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlv",
-            "ci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxojZ29vZ2xlL2xv",
-            "bmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8ivwYKElN1Ym1pdEJ1aWxkUmVx",
-            "dWVzdBITCgZwYXJlbnQYASABKAlCA+BBAhJBCg5zdG9yYWdlX3NvdXJjZRgC",
-            "IAEoCzIiLmdvb2dsZS5jbG91ZC5ydW4udjIuU3RvcmFnZVNvdXJjZUID4EEC",
-            "SAASFgoJaW1hZ2VfdXJpGAMgASgJQgPgQQISUgoPYnVpbGRwYWNrX2J1aWxk",
-            "GAQgASgLMjcuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5TdWJtaXRCdWlsZFJlcXVl",
-            "c3QuQnVpbGRwYWNrc0J1aWxkSAESSwoMZG9ja2VyX2J1aWxkGAUgASgLMjMu",
-            "Z29vZ2xlLmNsb3VkLnJ1bi52Mi5TdWJtaXRCdWlsZFJlcXVlc3QuRG9ja2Vy",
-            "QnVpbGRIARIcCg9zZXJ2aWNlX2FjY291bnQYBiABKAlCA+BBARJGCgt3b3Jr",
-            "ZXJfcG9vbBgHIAEoCUIx4EEB+kErCiljbG91ZGJ1aWxkLmdvb2dsZWFwaXMu",
-            "Y29tL0J1aWxkV29ya2VyUG9vbBIRCgR0YWdzGAggAygJQgPgQQEaDQoLRG9j",
-            "a2VyQnVpbGQa9wIKD0J1aWxkcGFja3NCdWlsZBITCgdydW50aW1lGAEgASgJ",
-            "QgIYARIcCg9mdW5jdGlvbl90YXJnZXQYAiABKAlCA+BBARIcCg9jYWNoZV9p",
-            "bWFnZV91cmkYAyABKAlCA+BBARIXCgpiYXNlX2ltYWdlGAQgASgJQgPgQQES",
-            "dQoVZW52aXJvbm1lbnRfdmFyaWFibGVzGAUgAygLMlEuZ29vZ2xlLmNsb3Vk",
-            "LnJ1bi52Mi5TdWJtaXRCdWlsZFJlcXVlc3QuQnVpbGRwYWNrc0J1aWxkLkVu",
-            "dmlyb25tZW50VmFyaWFibGVzRW50cnlCA+BBARIlChhlbmFibGVfYXV0b21h",
-            "dGljX3VwZGF0ZXMYBiABKAhCA+BBARIfChJwcm9qZWN0X2Rlc2NyaXB0b3IY",
-            "ByABKAlCA+BBARo7ChlFbnZpcm9ubWVudFZhcmlhYmxlc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCCAoGc291cmNlQgwKCmJ1aWxk",
-            "X3R5cGUigQEKE1N1Ym1pdEJ1aWxkUmVzcG9uc2USNgoPYnVpbGRfb3BlcmF0",
-            "aW9uGAEgASgLMh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbhIWCg5i",
-            "YXNlX2ltYWdlX3VyaRgCIAEoCRIaChJiYXNlX2ltYWdlX3dhcm5pbmcYAyAB",
-            "KAkiUgoNU3RvcmFnZVNvdXJjZRITCgZidWNrZXQYASABKAlCA+BBAhITCgZv",
-            "YmplY3QYAiABKAlCA+BBAhIXCgpnZW5lcmF0aW9uGAMgASgDQgPgQQEy8QEK",
-            "BkJ1aWxkcxKeAQoLU3VibWl0QnVpbGQSJy5nb29nbGUuY2xvdWQucnVuLnYy",
-            "LlN1Ym1pdEJ1aWxkUmVxdWVzdBooLmdvb2dsZS5jbG91ZC5ydW4udjIuU3Vi",
-            "bWl0QnVpbGRSZXNwb25zZSI8gtPkkwI2IjEvdjIve3BhcmVudD1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qfS9idWlsZHM6c3VibWl0OgEqGkbKQRJydW4uZ29v",
-            "Z2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
-            "L2Nsb3VkLXBsYXRmb3JtQsMBChdjb20uZ29vZ2xlLmNsb3VkLnJ1bi52MkIK",
-            "QnVpbGRQcm90b1ABWiljbG91ZC5nb29nbGUuY29tL2dvL3J1bi9hcGl2Mi9y",
-            "dW5wYjtydW5wYupBbgopY2xvdWRidWlsZC5nb29nbGVhcGlzLmNvbS9CdWls",
-            "ZFdvcmtlclBvb2wSQXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS93b3JrZXJQb29scy97d29ya2VyX3Bvb2x9YgZwcm90bzM="));
+            "ci5wcm90bxodZ29vZ2xlL2FwaS9sYXVuY2hfc3RhZ2UucHJvdG8aGWdvb2ds",
+            "ZS9hcGkvcmVzb3VyY2UucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVy",
+            "YXRpb25zLnByb3RvIqQHChJTdWJtaXRCdWlsZFJlcXVlc3QSEwoGcGFyZW50",
+            "GAEgASgJQgPgQQISQQoOc3RvcmFnZV9zb3VyY2UYAiABKAsyIi5nb29nbGUu",
+            "Y2xvdWQucnVuLnYyLlN0b3JhZ2VTb3VyY2VCA+BBAkgAEhYKCWltYWdlX3Vy",
+            "aRgDIAEoCUID4EECElIKD2J1aWxkcGFja19idWlsZBgEIAEoCzI3Lmdvb2ds",
+            "ZS5jbG91ZC5ydW4udjIuU3VibWl0QnVpbGRSZXF1ZXN0LkJ1aWxkcGFja3NC",
+            "dWlsZEgBEksKDGRvY2tlcl9idWlsZBgFIAEoCzIzLmdvb2dsZS5jbG91ZC5y",
+            "dW4udjIuU3VibWl0QnVpbGRSZXF1ZXN0LkRvY2tlckJ1aWxkSAESHAoPc2Vy",
+            "dmljZV9hY2NvdW50GAYgASgJQgPgQQESRgoLd29ya2VyX3Bvb2wYByABKAlC",
+            "MeBBAfpBKwopY2xvdWRidWlsZC5nb29nbGVhcGlzLmNvbS9CdWlsZFdvcmtl",
+            "clBvb2wSEQoEdGFncxgIIAMoCUID4EEBEhkKDG1hY2hpbmVfdHlwZRgJIAEo",
+            "CUID4EEBEjMKDXJlbGVhc2VfdHJhY2sYCiABKA4yFy5nb29nbGUuYXBpLkxh",
+            "dW5jaFN0YWdlQgPgQQESEwoGY2xpZW50GAsgASgJQgPgQQEaDQoLRG9ja2Vy",
+            "QnVpbGQa9wIKD0J1aWxkcGFja3NCdWlsZBITCgdydW50aW1lGAEgASgJQgIY",
+            "ARIcCg9mdW5jdGlvbl90YXJnZXQYAiABKAlCA+BBARIcCg9jYWNoZV9pbWFn",
+            "ZV91cmkYAyABKAlCA+BBARIXCgpiYXNlX2ltYWdlGAQgASgJQgPgQQESdQoV",
+            "ZW52aXJvbm1lbnRfdmFyaWFibGVzGAUgAygLMlEuZ29vZ2xlLmNsb3VkLnJ1",
+            "bi52Mi5TdWJtaXRCdWlsZFJlcXVlc3QuQnVpbGRwYWNrc0J1aWxkLkVudmly",
+            "b25tZW50VmFyaWFibGVzRW50cnlCA+BBARIlChhlbmFibGVfYXV0b21hdGlj",
+            "X3VwZGF0ZXMYBiABKAhCA+BBARIfChJwcm9qZWN0X2Rlc2NyaXB0b3IYByAB",
+            "KAlCA+BBARo7ChlFbnZpcm9ubWVudFZhcmlhYmxlc0VudHJ5EgsKA2tleRgB",
+            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCCAoGc291cmNlQgwKCmJ1aWxkX3R5",
+            "cGUigQEKE1N1Ym1pdEJ1aWxkUmVzcG9uc2USNgoPYnVpbGRfb3BlcmF0aW9u",
+            "GAEgASgLMh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbhIWCg5iYXNl",
+            "X2ltYWdlX3VyaRgCIAEoCRIaChJiYXNlX2ltYWdlX3dhcm5pbmcYAyABKAki",
+            "UgoNU3RvcmFnZVNvdXJjZRITCgZidWNrZXQYASABKAlCA+BBAhITCgZvYmpl",
+            "Y3QYAiABKAlCA+BBAhIXCgpnZW5lcmF0aW9uGAMgASgDQgPgQQEy8QEKBkJ1",
+            "aWxkcxKeAQoLU3VibWl0QnVpbGQSJy5nb29nbGUuY2xvdWQucnVuLnYyLlN1",
+            "Ym1pdEJ1aWxkUmVxdWVzdBooLmdvb2dsZS5jbG91ZC5ydW4udjIuU3VibWl0",
+            "QnVpbGRSZXNwb25zZSI8gtPkkwI2IjEvdjIve3BhcmVudD1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qfS9idWlsZHM6c3VibWl0OgEqGkbKQRJydW4uZ29vZ2xl",
+            "YXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Ns",
+            "b3VkLXBsYXRmb3JtQsMBChdjb20uZ29vZ2xlLmNsb3VkLnJ1bi52MkIKQnVp",
+            "bGRQcm90b1ABWiljbG91ZC5nb29nbGUuY29tL2dvL3J1bi9hcGl2Mi9ydW5w",
+            "YjtydW5wYupBbgopY2xvdWRidWlsZC5nb29nbGVhcGlzLmNvbS9CdWlsZFdv",
+            "cmtlclBvb2wSQXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
+            "aW9ufS93b3JrZXJQb29scy97d29ya2VyX3Bvb2x9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.LaunchStageReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.SubmitBuildRequest), global::Google.Cloud.Run.V2.SubmitBuildRequest.Parser, new[]{ "Parent", "StorageSource", "ImageUri", "BuildpackBuild", "DockerBuild", "ServiceAccount", "WorkerPool", "Tags" }, new[]{ "Source", "BuildType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.SubmitBuildRequest.Types.DockerBuild), global::Google.Cloud.Run.V2.SubmitBuildRequest.Types.DockerBuild.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.SubmitBuildRequest), global::Google.Cloud.Run.V2.SubmitBuildRequest.Parser, new[]{ "Parent", "StorageSource", "ImageUri", "BuildpackBuild", "DockerBuild", "ServiceAccount", "WorkerPool", "Tags", "MachineType", "ReleaseTrack", "Client" }, new[]{ "Source", "BuildType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.SubmitBuildRequest.Types.DockerBuild), global::Google.Cloud.Run.V2.SubmitBuildRequest.Types.DockerBuild.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.SubmitBuildRequest.Types.BuildpacksBuild), global::Google.Cloud.Run.V2.SubmitBuildRequest.Types.BuildpacksBuild.Parser, new[]{ "Runtime", "FunctionTarget", "CacheImageUri", "BaseImage", "EnvironmentVariables", "EnableAutomaticUpdates", "ProjectDescriptor" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.SubmitBuildResponse), global::Google.Cloud.Run.V2.SubmitBuildResponse.Parser, new[]{ "BuildOperation", "BaseImageUri", "BaseImageWarning" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.StorageSource), global::Google.Cloud.Run.V2.StorageSource.Parser, new[]{ "Bucket", "Object", "Generation" }, null, null, null, null)
@@ -118,6 +121,9 @@ namespace Google.Cloud.Run.V2 {
       serviceAccount_ = other.serviceAccount_;
       workerPool_ = other.workerPool_;
       tags_ = other.tags_.Clone();
+      machineType_ = other.machineType_;
+      releaseTrack_ = other.releaseTrack_;
+      client_ = other.client_;
       switch (other.SourceCase) {
         case SourceOneofCase.StorageSource:
           StorageSource = other.StorageSource.Clone();
@@ -270,6 +276,53 @@ namespace Google.Cloud.Run.V2 {
       get { return tags_; }
     }
 
+    /// <summary>Field number for the "machine_type" field.</summary>
+    public const int MachineTypeFieldNumber = 9;
+    private string machineType_ = "";
+    /// <summary>
+    /// Optional. The machine type from default pool to use for the build. If left
+    /// blank, cloudbuild will use a sensible default. Currently only E2_HIGHCPU_8
+    /// is supported. If worker_pool is set, this field will be ignored.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MachineType {
+      get { return machineType_; }
+      set {
+        machineType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "release_track" field.</summary>
+    public const int ReleaseTrackFieldNumber = 10;
+    private global::Google.Api.LaunchStage releaseTrack_ = global::Google.Api.LaunchStage.Unspecified;
+    /// <summary>
+    /// Optional. The release track of the client that initiated the build request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Api.LaunchStage ReleaseTrack {
+      get { return releaseTrack_; }
+      set {
+        releaseTrack_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "client" field.</summary>
+    public const int ClientFieldNumber = 11;
+    private string client_ = "";
+    /// <summary>
+    /// Optional. The client that initiated the build request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Client {
+      get { return client_; }
+      set {
+        client_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     private object source_;
     /// <summary>Enum of possible cases for the "source" oneof.</summary>
     public enum SourceOneofCase {
@@ -334,6 +387,9 @@ namespace Google.Cloud.Run.V2 {
       if (ServiceAccount != other.ServiceAccount) return false;
       if (WorkerPool != other.WorkerPool) return false;
       if(!tags_.Equals(other.tags_)) return false;
+      if (MachineType != other.MachineType) return false;
+      if (ReleaseTrack != other.ReleaseTrack) return false;
+      if (Client != other.Client) return false;
       if (SourceCase != other.SourceCase) return false;
       if (BuildTypeCase != other.BuildTypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -351,6 +407,9 @@ namespace Google.Cloud.Run.V2 {
       if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
       if (WorkerPool.Length != 0) hash ^= WorkerPool.GetHashCode();
       hash ^= tags_.GetHashCode();
+      if (MachineType.Length != 0) hash ^= MachineType.GetHashCode();
+      if (ReleaseTrack != global::Google.Api.LaunchStage.Unspecified) hash ^= ReleaseTrack.GetHashCode();
+      if (Client.Length != 0) hash ^= Client.GetHashCode();
       hash ^= (int) sourceCase_;
       hash ^= (int) buildTypeCase_;
       if (_unknownFields != null) {
@@ -400,6 +459,18 @@ namespace Google.Cloud.Run.V2 {
         output.WriteString(WorkerPool);
       }
       tags_.WriteTo(output, _repeated_tags_codec);
+      if (MachineType.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(MachineType);
+      }
+      if (ReleaseTrack != global::Google.Api.LaunchStage.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) ReleaseTrack);
+      }
+      if (Client.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(Client);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -439,6 +510,18 @@ namespace Google.Cloud.Run.V2 {
         output.WriteString(WorkerPool);
       }
       tags_.WriteTo(ref output, _repeated_tags_codec);
+      if (MachineType.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(MachineType);
+      }
+      if (ReleaseTrack != global::Google.Api.LaunchStage.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) ReleaseTrack);
+      }
+      if (Client.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(Client);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -471,6 +554,15 @@ namespace Google.Cloud.Run.V2 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(WorkerPool);
       }
       size += tags_.CalculateSize(_repeated_tags_codec);
+      if (MachineType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MachineType);
+      }
+      if (ReleaseTrack != global::Google.Api.LaunchStage.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReleaseTrack);
+      }
+      if (Client.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Client);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -496,6 +588,15 @@ namespace Google.Cloud.Run.V2 {
         WorkerPool = other.WorkerPool;
       }
       tags_.Add(other.tags_);
+      if (other.MachineType.Length != 0) {
+        MachineType = other.MachineType;
+      }
+      if (other.ReleaseTrack != global::Google.Api.LaunchStage.Unspecified) {
+        ReleaseTrack = other.ReleaseTrack;
+      }
+      if (other.Client.Length != 0) {
+        Client = other.Client;
+      }
       switch (other.SourceCase) {
         case SourceOneofCase.StorageSource:
           if (StorageSource == null) {
@@ -582,6 +683,18 @@ namespace Google.Cloud.Run.V2 {
             tags_.AddEntriesFrom(input, _repeated_tags_codec);
             break;
           }
+          case 74: {
+            MachineType = input.ReadString();
+            break;
+          }
+          case 80: {
+            ReleaseTrack = (global::Google.Api.LaunchStage) input.ReadEnum();
+            break;
+          }
+          case 90: {
+            Client = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -642,6 +755,18 @@ namespace Google.Cloud.Run.V2 {
           }
           case 66: {
             tags_.AddEntriesFrom(ref input, _repeated_tags_codec);
+            break;
+          }
+          case 74: {
+            MachineType = input.ReadString();
+            break;
+          }
+          case 80: {
+            ReleaseTrack = (global::Google.Api.LaunchStage) input.ReadEnum();
+            break;
+          }
+          case 90: {
+            Client = input.ReadString();
             break;
           }
         }

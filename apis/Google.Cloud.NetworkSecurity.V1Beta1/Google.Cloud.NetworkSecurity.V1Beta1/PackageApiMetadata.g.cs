@@ -89,6 +89,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
             yield return AuthorizationPolicyReflection.Descriptor;
             yield return ClientTlsPolicyReflection.Descriptor;
             yield return CommonReflection.Descriptor;
+            yield return DnsThreatDetectorReflection.Descriptor;
             yield return NetworkSecurityReflection.Descriptor;
             yield return ServerTlsPolicyReflection.Descriptor;
             yield return TlsReflection.Descriptor;

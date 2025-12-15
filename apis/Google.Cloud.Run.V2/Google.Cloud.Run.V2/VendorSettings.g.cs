@@ -42,45 +42,45 @@ namespace Google.Cloud.Run.V2 {
             "D2JpbmF1dGh6X21ldGhvZCJTCg9SZXZpc2lvblNjYWxpbmcSHwoSbWluX2lu",
             "c3RhbmNlX2NvdW50GAEgASgFQgPgQQESHwoSbWF4X2luc3RhbmNlX2NvdW50",
             "GAIgASgFQgPgQQEiRQoLU2VydmljZU1lc2gSNgoEbWVzaBgBIAEoCUIo+kEl",
-            "CiNuZXR3b3Jrc2VydmljZXMuZ29vZ2xlYXBpcy5jb20vTWVzaCKIAgoOU2Vy",
+            "CiNuZXR3b3Jrc2VydmljZXMuZ29vZ2xlYXBpcy5jb20vTWVzaCKpAgoOU2Vy",
             "dmljZVNjYWxpbmcSHwoSbWluX2luc3RhbmNlX2NvdW50GAEgASgFQgPgQQES",
             "SgoMc2NhbGluZ19tb2RlGAMgASgOMi8uZ29vZ2xlLmNsb3VkLnJ1bi52Mi5T",
-            "ZXJ2aWNlU2NhbGluZy5TY2FsaW5nTW9kZUID4EEBEicKFW1hbnVhbF9pbnN0",
-            "YW5jZV9jb3VudBgGIAEoBUID4EEBSACIAQEiRgoLU2NhbGluZ01vZGUSHAoY",
-            "U0NBTElOR19NT0RFX1VOU1BFQ0lGSUVEEAASDQoJQVVUT01BVElDEAESCgoG",
-            "TUFOVUFMEAJCGAoWX21hbnVhbF9pbnN0YW5jZV9jb3VudCJWChFXb3JrZXJQ",
-            "b29sU2NhbGluZxInChVtYW51YWxfaW5zdGFuY2VfY291bnQYBiABKAVCA+BB",
-            "AUgAiAEBQhgKFl9tYW51YWxfaW5zdGFuY2VfY291bnQiKAoMTm9kZVNlbGVj",
-            "dG9yEhgKC2FjY2VsZXJhdG9yGAEgASgJQgPgQQIi1gMKC0J1aWxkQ29uZmln",
-            "EjUKBG5hbWUYASABKAlCJ+BBA/pBIQofY2xvdWRidWlsZC5nb29nbGVhcGlz",
-            "LmNvbS9CdWlsZBIXCg9zb3VyY2VfbG9jYXRpb24YAiABKAkSHAoPZnVuY3Rp",
-            "b25fdGFyZ2V0GAMgASgJQgPgQQESFgoJaW1hZ2VfdXJpGAQgASgJQgPgQQES",
-            "FwoKYmFzZV9pbWFnZRgFIAEoCUID4EEBEiUKGGVuYWJsZV9hdXRvbWF0aWNf",
-            "dXBkYXRlcxgGIAEoCEID4EEBEkYKC3dvcmtlcl9wb29sGAcgASgJQjHgQQH6",
-            "QSsKKWNsb3VkYnVpbGQuZ29vZ2xlYXBpcy5jb20vQnVpbGRXb3JrZXJQb29s",
-            "El4KFWVudmlyb25tZW50X3ZhcmlhYmxlcxgIIAMoCzI6Lmdvb2dsZS5jbG91",
-            "ZC5ydW4udjIuQnVpbGRDb25maWcuRW52aXJvbm1lbnRWYXJpYWJsZXNFbnRy",
-            "eUID4EEBEhwKD3NlcnZpY2VfYWNjb3VudBgJIAEoCUID4EEBGjsKGUVudmly",
-            "b25tZW50VmFyaWFibGVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
-            "ASgJOgI4ASqzAQoOSW5ncmVzc1RyYWZmaWMSHwobSU5HUkVTU19UUkFGRklD",
-            "X1VOU1BFQ0lGSUVEEAASFwoTSU5HUkVTU19UUkFGRklDX0FMTBABEiEKHUlO",
-            "R1JFU1NfVFJBRkZJQ19JTlRFUk5BTF9PTkxZEAISKgomSU5HUkVTU19UUkFG",
-            "RklDX0lOVEVSTkFMX0xPQURfQkFMQU5DRVIQAxIYChRJTkdSRVNTX1RSQUZG",
-            "SUNfTk9ORRAEKn0KFEV4ZWN1dGlvbkVudmlyb25tZW50EiUKIUVYRUNVVElP",
-            "Tl9FTlZJUk9OTUVOVF9VTlNQRUNJRklFRBAAEh4KGkVYRUNVVElPTl9FTlZJ",
-            "Uk9OTUVOVF9HRU4xEAESHgoaRVhFQ1VUSU9OX0VOVklST05NRU5UX0dFTjIQ",
-            "AipwCh1FbmNyeXB0aW9uS2V5UmV2b2NhdGlvbkFjdGlvbhIwCixFTkNSWVBU",
-            "SU9OX0tFWV9SRVZPQ0FUSU9OX0FDVElPTl9VTlNQRUNJRklFRBAAEg8KC1BS",
-            "RVZFTlRfTkVXEAESDAoIU0hVVERPV04QAkL8AgoXY29tLmdvb2dsZS5jbG91",
-            "ZC5ydW4udjJCE1ZlbmRvclNldHRpbmdzUHJvdG9QAVopY2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9ydW4vYXBpdjIvcnVucGI7cnVucGLqQWMKKWJpbmFyeWF1dGhv",
-            "cml6YXRpb24uZ29vZ2xlYXBpcy5jb20vUG9saWN5Ehlwcm9qZWN0cy97cHJv",
-            "amVjdH0vcG9saWN5Ehtsb2NhdGlvbnMve2xvY2F0aW9ufS9wb2xpY3nqQVwK",
-            "I25ldHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNvbS9NZXNoEjVwcm9qZWN0",
-            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbWVzaGVzL3ttZXNo",
-            "fepBWQofY2xvdWRidWlsZC5nb29nbGVhcGlzLmNvbS9CdWlsZBI2cHJvamVj",
-            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2J1aWxkcy97YnVp",
-            "bGR9YgZwcm90bzM="));
+            "ZXJ2aWNlU2NhbGluZy5TY2FsaW5nTW9kZUID4EEBEh8KEm1heF9pbnN0YW5j",
+            "ZV9jb3VudBgEIAEoBUID4EEBEicKFW1hbnVhbF9pbnN0YW5jZV9jb3VudBgG",
+            "IAEoBUID4EEBSACIAQEiRgoLU2NhbGluZ01vZGUSHAoYU0NBTElOR19NT0RF",
+            "X1VOU1BFQ0lGSUVEEAASDQoJQVVUT01BVElDEAESCgoGTUFOVUFMEAJCGAoW",
+            "X21hbnVhbF9pbnN0YW5jZV9jb3VudCJWChFXb3JrZXJQb29sU2NhbGluZxIn",
+            "ChVtYW51YWxfaW5zdGFuY2VfY291bnQYBiABKAVCA+BBAUgAiAEBQhgKFl9t",
+            "YW51YWxfaW5zdGFuY2VfY291bnQiKAoMTm9kZVNlbGVjdG9yEhgKC2FjY2Vs",
+            "ZXJhdG9yGAEgASgJQgPgQQIi1gMKC0J1aWxkQ29uZmlnEjUKBG5hbWUYASAB",
+            "KAlCJ+BBA/pBIQofY2xvdWRidWlsZC5nb29nbGVhcGlzLmNvbS9CdWlsZBIX",
+            "Cg9zb3VyY2VfbG9jYXRpb24YAiABKAkSHAoPZnVuY3Rpb25fdGFyZ2V0GAMg",
+            "ASgJQgPgQQESFgoJaW1hZ2VfdXJpGAQgASgJQgPgQQESFwoKYmFzZV9pbWFn",
+            "ZRgFIAEoCUID4EEBEiUKGGVuYWJsZV9hdXRvbWF0aWNfdXBkYXRlcxgGIAEo",
+            "CEID4EEBEkYKC3dvcmtlcl9wb29sGAcgASgJQjHgQQH6QSsKKWNsb3VkYnVp",
+            "bGQuZ29vZ2xlYXBpcy5jb20vQnVpbGRXb3JrZXJQb29sEl4KFWVudmlyb25t",
+            "ZW50X3ZhcmlhYmxlcxgIIAMoCzI6Lmdvb2dsZS5jbG91ZC5ydW4udjIuQnVp",
+            "bGRDb25maWcuRW52aXJvbm1lbnRWYXJpYWJsZXNFbnRyeUID4EEBEhwKD3Nl",
+            "cnZpY2VfYWNjb3VudBgJIAEoCUID4EEBGjsKGUVudmlyb25tZW50VmFyaWFi",
+            "bGVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASqzAQoO",
+            "SW5ncmVzc1RyYWZmaWMSHwobSU5HUkVTU19UUkFGRklDX1VOU1BFQ0lGSUVE",
+            "EAASFwoTSU5HUkVTU19UUkFGRklDX0FMTBABEiEKHUlOR1JFU1NfVFJBRkZJ",
+            "Q19JTlRFUk5BTF9PTkxZEAISKgomSU5HUkVTU19UUkFGRklDX0lOVEVSTkFM",
+            "X0xPQURfQkFMQU5DRVIQAxIYChRJTkdSRVNTX1RSQUZGSUNfTk9ORRAEKn0K",
+            "FEV4ZWN1dGlvbkVudmlyb25tZW50EiUKIUVYRUNVVElPTl9FTlZJUk9OTUVO",
+            "VF9VTlNQRUNJRklFRBAAEh4KGkVYRUNVVElPTl9FTlZJUk9OTUVOVF9HRU4x",
+            "EAESHgoaRVhFQ1VUSU9OX0VOVklST05NRU5UX0dFTjIQAipwCh1FbmNyeXB0",
+            "aW9uS2V5UmV2b2NhdGlvbkFjdGlvbhIwCixFTkNSWVBUSU9OX0tFWV9SRVZP",
+            "Q0FUSU9OX0FDVElPTl9VTlNQRUNJRklFRBAAEg8KC1BSRVZFTlRfTkVXEAES",
+            "DAoIU0hVVERPV04QAkL8AgoXY29tLmdvb2dsZS5jbG91ZC5ydW4udjJCE1Zl",
+            "bmRvclNldHRpbmdzUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9ydW4v",
+            "YXBpdjIvcnVucGI7cnVucGLqQWMKKWJpbmFyeWF1dGhvcml6YXRpb24uZ29v",
+            "Z2xlYXBpcy5jb20vUG9saWN5Ehlwcm9qZWN0cy97cHJvamVjdH0vcG9saWN5",
+            "Ehtsb2NhdGlvbnMve2xvY2F0aW9ufS9wb2xpY3nqQVwKI25ldHdvcmtzZXJ2",
+            "aWNlcy5nb29nbGVhcGlzLmNvbS9NZXNoEjVwcm9qZWN0cy97cHJvamVjdH0v",
+            "bG9jYXRpb25zL3tsb2NhdGlvbn0vbWVzaGVzL3ttZXNofepBWQofY2xvdWRi",
+            "dWlsZC5nb29nbGVhcGlzLmNvbS9CdWlsZBI2cHJvamVjdHMve3Byb2plY3R9",
+            "L2xvY2F0aW9ucy97bG9jYXRpb259L2J1aWxkcy97YnVpbGR9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Run.V2.IngressTraffic), typeof(global::Google.Cloud.Run.V2.ExecutionEnvironment), typeof(global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -88,7 +88,7 @@ namespace Google.Cloud.Run.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.BinaryAuthorization), global::Google.Cloud.Run.V2.BinaryAuthorization.Parser, new[]{ "UseDefault", "Policy", "BreakglassJustification" }, new[]{ "BinauthzMethod" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.RevisionScaling), global::Google.Cloud.Run.V2.RevisionScaling.Parser, new[]{ "MinInstanceCount", "MaxInstanceCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ServiceMesh), global::Google.Cloud.Run.V2.ServiceMesh.Parser, new[]{ "Mesh" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ServiceScaling), global::Google.Cloud.Run.V2.ServiceScaling.Parser, new[]{ "MinInstanceCount", "ScalingMode", "ManualInstanceCount" }, new[]{ "ManualInstanceCount" }, new[]{ typeof(global::Google.Cloud.Run.V2.ServiceScaling.Types.ScalingMode) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ServiceScaling), global::Google.Cloud.Run.V2.ServiceScaling.Parser, new[]{ "MinInstanceCount", "ScalingMode", "MaxInstanceCount", "ManualInstanceCount" }, new[]{ "ManualInstanceCount" }, new[]{ typeof(global::Google.Cloud.Run.V2.ServiceScaling.Types.ScalingMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.WorkerPoolScaling), global::Google.Cloud.Run.V2.WorkerPoolScaling.Parser, new[]{ "ManualInstanceCount" }, new[]{ "ManualInstanceCount" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.NodeSelector), global::Google.Cloud.Run.V2.NodeSelector.Parser, new[]{ "Accelerator" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.BuildConfig), global::Google.Cloud.Run.V2.BuildConfig.Parser, new[]{ "Name", "SourceLocation", "FunctionTarget", "ImageUri", "BaseImage", "EnableAutomaticUpdates", "WorkerPool", "EnvironmentVariables", "ServiceAccount" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
@@ -1558,6 +1558,7 @@ namespace Google.Cloud.Run.V2 {
       _hasBits0 = other._hasBits0;
       minInstanceCount_ = other.minInstanceCount_;
       scalingMode_ = other.scalingMode_;
+      maxInstanceCount_ = other.maxInstanceCount_;
       manualInstanceCount_ = other.manualInstanceCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1597,6 +1598,23 @@ namespace Google.Cloud.Run.V2 {
       get { return scalingMode_; }
       set {
         scalingMode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "max_instance_count" field.</summary>
+    public const int MaxInstanceCountFieldNumber = 4;
+    private int maxInstanceCount_;
+    /// <summary>
+    /// Optional. total max instances for the service. This number of instances is
+    /// divided among all revisions with specified traffic based on the percent
+    /// of traffic they are receiving.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MaxInstanceCount {
+      get { return maxInstanceCount_; }
+      set {
+        maxInstanceCount_ = value;
       }
     }
 
@@ -1649,6 +1667,7 @@ namespace Google.Cloud.Run.V2 {
       }
       if (MinInstanceCount != other.MinInstanceCount) return false;
       if (ScalingMode != other.ScalingMode) return false;
+      if (MaxInstanceCount != other.MaxInstanceCount) return false;
       if (ManualInstanceCount != other.ManualInstanceCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1659,6 +1678,7 @@ namespace Google.Cloud.Run.V2 {
       int hash = 1;
       if (MinInstanceCount != 0) hash ^= MinInstanceCount.GetHashCode();
       if (ScalingMode != global::Google.Cloud.Run.V2.ServiceScaling.Types.ScalingMode.Unspecified) hash ^= ScalingMode.GetHashCode();
+      if (MaxInstanceCount != 0) hash ^= MaxInstanceCount.GetHashCode();
       if (HasManualInstanceCount) hash ^= ManualInstanceCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1686,6 +1706,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(24);
         output.WriteEnum((int) ScalingMode);
       }
+      if (MaxInstanceCount != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(MaxInstanceCount);
+      }
       if (HasManualInstanceCount) {
         output.WriteRawTag(48);
         output.WriteInt32(ManualInstanceCount);
@@ -1708,6 +1732,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(24);
         output.WriteEnum((int) ScalingMode);
       }
+      if (MaxInstanceCount != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(MaxInstanceCount);
+      }
       if (HasManualInstanceCount) {
         output.WriteRawTag(48);
         output.WriteInt32(ManualInstanceCount);
@@ -1727,6 +1755,9 @@ namespace Google.Cloud.Run.V2 {
       }
       if (ScalingMode != global::Google.Cloud.Run.V2.ServiceScaling.Types.ScalingMode.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ScalingMode);
+      }
+      if (MaxInstanceCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxInstanceCount);
       }
       if (HasManualInstanceCount) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ManualInstanceCount);
@@ -1748,6 +1779,9 @@ namespace Google.Cloud.Run.V2 {
       }
       if (other.ScalingMode != global::Google.Cloud.Run.V2.ServiceScaling.Types.ScalingMode.Unspecified) {
         ScalingMode = other.ScalingMode;
+      }
+      if (other.MaxInstanceCount != 0) {
+        MaxInstanceCount = other.MaxInstanceCount;
       }
       if (other.HasManualInstanceCount) {
         ManualInstanceCount = other.ManualInstanceCount;
@@ -1775,6 +1809,10 @@ namespace Google.Cloud.Run.V2 {
             ScalingMode = (global::Google.Cloud.Run.V2.ServiceScaling.Types.ScalingMode) input.ReadEnum();
             break;
           }
+          case 32: {
+            MaxInstanceCount = input.ReadInt32();
+            break;
+          }
           case 48: {
             ManualInstanceCount = input.ReadInt32();
             break;
@@ -1800,6 +1838,10 @@ namespace Google.Cloud.Run.V2 {
           }
           case 24: {
             ScalingMode = (global::Google.Cloud.Run.V2.ServiceScaling.Types.ScalingMode) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            MaxInstanceCount = input.ReadInt32();
             break;
           }
           case 48: {

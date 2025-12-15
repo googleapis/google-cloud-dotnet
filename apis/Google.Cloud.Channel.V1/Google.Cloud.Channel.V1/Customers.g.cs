@@ -340,7 +340,7 @@ namespace Google.Cloud.Channel.V1 {
     public const int CustomerAttestationStateFieldNumber = 16;
     private global::Google.Cloud.Channel.V1.Customer.Types.CustomerAttestationState customerAttestationState_ = global::Google.Cloud.Channel.V1.Customer.Types.CustomerAttestationState.Unspecified;
     /// <summary>
-    /// Optional. Indicate whether a customer is attesting about the correctness of
+    /// Optional. Indicate if a customer is attesting about the correctness of
     /// provided information. Only required if creating a GCP Entitlement.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -846,7 +846,7 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The enum represents whether a customer belongs to public sector
+      /// The enum represents if a customer belongs to public sector
       /// </summary>
       public enum CustomerAttestationState {
         /// <summary>

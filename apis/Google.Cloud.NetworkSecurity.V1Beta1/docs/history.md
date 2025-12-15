@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta08, released 2025-12-03
+
+### New features
+
+- Publish networksecurity v1beta1 api
+
 ## Version 2.0.0-beta07, released 2025-11-05
 
 ### New features

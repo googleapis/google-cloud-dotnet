@@ -685,7 +685,8 @@ namespace Google.Cloud.Compute.V1
             DisableXpnHostAsync(project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Disable a service resource (also known as service project) associated with this host project.
+        /// Disable a service resource (also known as service project) associated with
+        /// this host project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -694,7 +695,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Disable a service resource (also known as service project) associated with this host project.
+        /// Disable a service resource (also known as service project) associated with
+        /// this host project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -703,7 +705,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Disable a service resource (also known as service project) associated with this host project.
+        /// Disable a service resource (also known as service project) associated with
+        /// this host project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -739,7 +742,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DisableXpnResourceOperationsClient, callSettings);
 
         /// <summary>
-        /// Disable a service resource (also known as service project) associated with this host project.
+        /// Disable a service resource (also known as service project) associated with
+        /// this host project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -757,7 +761,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Disable a service resource (also known as service project) associated with this host project.
+        /// Disable a service resource (also known as service project) associated with
+        /// this host project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -775,7 +780,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Disable a service resource (also known as service project) associated with this host project.
+        /// Disable a service resource (also known as service project) associated with
+        /// this host project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -881,7 +887,9 @@ namespace Google.Cloud.Compute.V1
             EnableXpnHostAsync(project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Enable service resource (a.k.a service project) for a host project, so that subnets in the host project can be used by instances in the service project.
+        /// Enable service resource (a.k.a service project) for a host project, so that
+        /// subnets in the host project can be used by instances in the service
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -890,7 +898,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Enable service resource (a.k.a service project) for a host project, so that subnets in the host project can be used by instances in the service project.
+        /// Enable service resource (a.k.a service project) for a host project, so that
+        /// subnets in the host project can be used by instances in the service
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -899,7 +909,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Enable service resource (a.k.a service project) for a host project, so that subnets in the host project can be used by instances in the service project.
+        /// Enable service resource (a.k.a service project) for a host project, so that
+        /// subnets in the host project can be used by instances in the service
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -935,7 +947,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), EnableXpnResourceOperationsClient, callSettings);
 
         /// <summary>
-        /// Enable service resource (a.k.a service project) for a host project, so that subnets in the host project can be used by instances in the service project.
+        /// Enable service resource (a.k.a service project) for a host project, so that
+        /// subnets in the host project can be used by instances in the service
+        /// project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -953,7 +967,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Enable service resource (a.k.a service project) for a host project, so that subnets in the host project can be used by instances in the service project.
+        /// Enable service resource (a.k.a service project) for a host project, so that
+        /// subnets in the host project can be used by instances in the service
+        /// project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -971,7 +987,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Enable service resource (a.k.a service project) for a host project, so that subnets in the host project can be used by instances in the service project.
+        /// Enable service resource (a.k.a service project) for a host project, so that
+        /// subnets in the host project can be used by instances in the service
+        /// project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -985,7 +1003,15 @@ namespace Google.Cloud.Compute.V1
             EnableXpnResourceAsync(project, projectsEnableXpnResourceRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the specified Project resource. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request.
+        /// Returns the specified Project resource.
+        /// 
+        /// To decrease latency for this method, you can optionally omit any unneeded
+        /// information from the response by using a field mask. This practice is
+        /// especially recommended for unused quota information (the `quotas` field).
+        /// To exclude one or more fields, set your request's `fields` query parameter
+        /// to only include the fields you need. For example, to only include the `id`
+        /// and `selfLink` fields, add the query parameter `?fields=id,selfLink` to
+        /// your request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -994,7 +1020,15 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified Project resource. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request.
+        /// Returns the specified Project resource.
+        /// 
+        /// To decrease latency for this method, you can optionally omit any unneeded
+        /// information from the response by using a field mask. This practice is
+        /// especially recommended for unused quota information (the `quotas` field).
+        /// To exclude one or more fields, set your request's `fields` query parameter
+        /// to only include the fields you need. For example, to only include the `id`
+        /// and `selfLink` fields, add the query parameter `?fields=id,selfLink` to
+        /// your request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1003,7 +1037,15 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the specified Project resource. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request.
+        /// Returns the specified Project resource.
+        /// 
+        /// To decrease latency for this method, you can optionally omit any unneeded
+        /// information from the response by using a field mask. This practice is
+        /// especially recommended for unused quota information (the `quotas` field).
+        /// To exclude one or more fields, set your request's `fields` query parameter
+        /// to only include the fields you need. For example, to only include the `id`
+        /// and `selfLink` fields, add the query parameter `?fields=id,selfLink` to
+        /// your request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1012,7 +1054,15 @@ namespace Google.Cloud.Compute.V1
             GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the specified Project resource. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request.
+        /// Returns the specified Project resource.
+        /// 
+        /// To decrease latency for this method, you can optionally omit any unneeded
+        /// information from the response by using a field mask. This practice is
+        /// especially recommended for unused quota information (the `quotas` field).
+        /// To exclude one or more fields, set your request's `fields` query parameter
+        /// to only include the fields you need. For example, to only include the `id`
+        /// and `selfLink` fields, add the query parameter `?fields=id,selfLink` to
+        /// your request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1026,7 +1076,15 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the specified Project resource. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request.
+        /// Returns the specified Project resource.
+        /// 
+        /// To decrease latency for this method, you can optionally omit any unneeded
+        /// information from the response by using a field mask. This practice is
+        /// especially recommended for unused quota information (the `quotas` field).
+        /// To exclude one or more fields, set your request's `fields` query parameter
+        /// to only include the fields you need. For example, to only include the `id`
+        /// and `selfLink` fields, add the query parameter `?fields=id,selfLink` to
+        /// your request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1040,7 +1098,15 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the specified Project resource. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request.
+        /// Returns the specified Project resource.
+        /// 
+        /// To decrease latency for this method, you can optionally omit any unneeded
+        /// information from the response by using a field mask. This practice is
+        /// especially recommended for unused quota information (the `quotas` field).
+        /// To exclude one or more fields, set your request's `fields` query parameter
+        /// to only include the fields you need. For example, to only include the `id`
+        /// and `selfLink` fields, add the query parameter `?fields=id,selfLink` to
+        /// your request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1051,7 +1117,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the shared VPC host project that this project links to. May be empty if no link exists.
+        /// Gets the shared VPC host project that this project links to. May be empty
+        /// if no link exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1060,7 +1127,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the shared VPC host project that this project links to. May be empty if no link exists.
+        /// Gets the shared VPC host project that this project links to. May be empty
+        /// if no link exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1069,7 +1137,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the shared VPC host project that this project links to. May be empty if no link exists.
+        /// Gets the shared VPC host project that this project links to. May be empty
+        /// if no link exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1078,7 +1147,8 @@ namespace Google.Cloud.Compute.V1
             GetXpnHostAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the shared VPC host project that this project links to. May be empty if no link exists.
+        /// Gets the shared VPC host project that this project links to. May be empty
+        /// if no link exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1092,7 +1162,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the shared VPC host project that this project links to. May be empty if no link exists.
+        /// Gets the shared VPC host project that this project links to. May be empty
+        /// if no link exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1106,7 +1177,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the shared VPC host project that this project links to. May be empty if no link exists.
+        /// Gets the shared VPC host project that this project links to. May be empty
+        /// if no link exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1117,7 +1189,8 @@ namespace Google.Cloud.Compute.V1
             GetXpnHostAsync(project, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets service resources (a.k.a service project) associated with this host project.
+        /// Gets service resources (a.k.a service project) associated with this host
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1126,7 +1199,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets service resources (a.k.a service project) associated with this host project.
+        /// Gets service resources (a.k.a service project) associated with this host
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1135,7 +1209,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets service resources (a.k.a service project) associated with this host project.
+        /// Gets service resources (a.k.a service project) associated with this host
+        /// project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1168,7 +1243,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets service resources (a.k.a service project) associated with this host project.
+        /// Gets service resources (a.k.a service project) associated with this host
+        /// project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1293,7 +1369,20 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Starting September 29, 2025, you can't use the moveDisk API on new projects. To move a disk to a different region or zone, follow the steps in [Change the location of a disk](https://{$universe.dns_names.final_documentation_domain}/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hd). Projects that already use the moveDisk API can continue usage until September 29, 2026. Starting November 1, 2025, API responses will include a warning message in the response body about the upcoming deprecation. You can skip the message to continue using the service without interruption.
+        /// Moves a persistent disk from one zone to another.
+        /// *Note*: The moveDisk API will be deprecated on September 29, 2026.
+        /// 
+        /// Starting September 29, 2025, you can't use the moveDisk API on new
+        /// projects. To move a disk to a different region or zone, follow the steps in
+        /// [Change the location of a
+        /// disk](https://cloud.google.com/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hd).
+        /// 
+        /// Projects that already use the moveDisk API can continue usage until
+        /// September 29, 2026.
+        /// 
+        /// Starting November 1, 2025, API responses will include a warning message in
+        /// the response body about the upcoming deprecation. You can skip the message
+        /// to continue using the service without interruption.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1302,7 +1391,20 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Starting September 29, 2025, you can't use the moveDisk API on new projects. To move a disk to a different region or zone, follow the steps in [Change the location of a disk](https://{$universe.dns_names.final_documentation_domain}/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hd). Projects that already use the moveDisk API can continue usage until September 29, 2026. Starting November 1, 2025, API responses will include a warning message in the response body about the upcoming deprecation. You can skip the message to continue using the service without interruption.
+        /// Moves a persistent disk from one zone to another.
+        /// *Note*: The moveDisk API will be deprecated on September 29, 2026.
+        /// 
+        /// Starting September 29, 2025, you can't use the moveDisk API on new
+        /// projects. To move a disk to a different region or zone, follow the steps in
+        /// [Change the location of a
+        /// disk](https://cloud.google.com/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hd).
+        /// 
+        /// Projects that already use the moveDisk API can continue usage until
+        /// September 29, 2026.
+        /// 
+        /// Starting November 1, 2025, API responses will include a warning message in
+        /// the response body about the upcoming deprecation. You can skip the message
+        /// to continue using the service without interruption.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1311,7 +1413,20 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Starting September 29, 2025, you can't use the moveDisk API on new projects. To move a disk to a different region or zone, follow the steps in [Change the location of a disk](https://{$universe.dns_names.final_documentation_domain}/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hd). Projects that already use the moveDisk API can continue usage until September 29, 2026. Starting November 1, 2025, API responses will include a warning message in the response body about the upcoming deprecation. You can skip the message to continue using the service without interruption.
+        /// Moves a persistent disk from one zone to another.
+        /// *Note*: The moveDisk API will be deprecated on September 29, 2026.
+        /// 
+        /// Starting September 29, 2025, you can't use the moveDisk API on new
+        /// projects. To move a disk to a different region or zone, follow the steps in
+        /// [Change the location of a
+        /// disk](https://cloud.google.com/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hd).
+        /// 
+        /// Projects that already use the moveDisk API can continue usage until
+        /// September 29, 2026.
+        /// 
+        /// Starting November 1, 2025, API responses will include a warning message in
+        /// the response body about the upcoming deprecation. You can skip the message
+        /// to continue using the service without interruption.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1346,7 +1461,20 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), MoveDiskOperationsClient, callSettings);
 
         /// <summary>
-        /// Starting September 29, 2025, you can't use the moveDisk API on new projects. To move a disk to a different region or zone, follow the steps in [Change the location of a disk](https://{$universe.dns_names.final_documentation_domain}/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hd). Projects that already use the moveDisk API can continue usage until September 29, 2026. Starting November 1, 2025, API responses will include a warning message in the response body about the upcoming deprecation. You can skip the message to continue using the service without interruption.
+        /// Moves a persistent disk from one zone to another.
+        /// *Note*: The moveDisk API will be deprecated on September 29, 2026.
+        /// 
+        /// Starting September 29, 2025, you can't use the moveDisk API on new
+        /// projects. To move a disk to a different region or zone, follow the steps in
+        /// [Change the location of a
+        /// disk](https://cloud.google.com/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hd).
+        /// 
+        /// Projects that already use the moveDisk API can continue usage until
+        /// September 29, 2026.
+        /// 
+        /// Starting November 1, 2025, API responses will include a warning message in
+        /// the response body about the upcoming deprecation. You can skip the message
+        /// to continue using the service without interruption.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1364,7 +1492,20 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Starting September 29, 2025, you can't use the moveDisk API on new projects. To move a disk to a different region or zone, follow the steps in [Change the location of a disk](https://{$universe.dns_names.final_documentation_domain}/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hd). Projects that already use the moveDisk API can continue usage until September 29, 2026. Starting November 1, 2025, API responses will include a warning message in the response body about the upcoming deprecation. You can skip the message to continue using the service without interruption.
+        /// Moves a persistent disk from one zone to another.
+        /// *Note*: The moveDisk API will be deprecated on September 29, 2026.
+        /// 
+        /// Starting September 29, 2025, you can't use the moveDisk API on new
+        /// projects. To move a disk to a different region or zone, follow the steps in
+        /// [Change the location of a
+        /// disk](https://cloud.google.com/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hd).
+        /// 
+        /// Projects that already use the moveDisk API can continue usage until
+        /// September 29, 2026.
+        /// 
+        /// Starting November 1, 2025, API responses will include a warning message in
+        /// the response body about the upcoming deprecation. You can skip the message
+        /// to continue using the service without interruption.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1382,7 +1523,20 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Starting September 29, 2025, you can't use the moveDisk API on new projects. To move a disk to a different region or zone, follow the steps in [Change the location of a disk](https://{$universe.dns_names.final_documentation_domain}/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hd). Projects that already use the moveDisk API can continue usage until September 29, 2026. Starting November 1, 2025, API responses will include a warning message in the response body about the upcoming deprecation. You can skip the message to continue using the service without interruption.
+        /// Moves a persistent disk from one zone to another.
+        /// *Note*: The moveDisk API will be deprecated on September 29, 2026.
+        /// 
+        /// Starting September 29, 2025, you can't use the moveDisk API on new
+        /// projects. To move a disk to a different region or zone, follow the steps in
+        /// [Change the location of a
+        /// disk](https://cloud.google.com/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hd).
+        /// 
+        /// Projects that already use the moveDisk API can continue usage until
+        /// September 29, 2026.
+        /// 
+        /// Starting November 1, 2025, API responses will include a warning message in
+        /// the response body about the upcoming deprecation. You can skip the message
+        /// to continue using the service without interruption.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1396,7 +1550,13 @@ namespace Google.Cloud.Compute.V1
             MoveDiskAsync(project, diskMoveRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior). [Deprecated] This method is deprecated. See [moving instance across zones](/compute/docs/instances/moving-instance-across-zones) instead.
+        /// Moves an instance and its attached persistent disks from one zone to
+        /// another.
+        /// *Note*: Moving VMs or disks by using this method might
+        /// cause unexpected behavior. For more information, see the [known
+        /// issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior).
+        /// [Deprecated] This method is deprecated. See [moving instance across
+        /// zones](/compute/docs/instances/moving-instance-across-zones) instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1405,7 +1565,13 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior). [Deprecated] This method is deprecated. See [moving instance across zones](/compute/docs/instances/moving-instance-across-zones) instead.
+        /// Moves an instance and its attached persistent disks from one zone to
+        /// another.
+        /// *Note*: Moving VMs or disks by using this method might
+        /// cause unexpected behavior. For more information, see the [known
+        /// issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior).
+        /// [Deprecated] This method is deprecated. See [moving instance across
+        /// zones](/compute/docs/instances/moving-instance-across-zones) instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1414,7 +1580,13 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior). [Deprecated] This method is deprecated. See [moving instance across zones](/compute/docs/instances/moving-instance-across-zones) instead.
+        /// Moves an instance and its attached persistent disks from one zone to
+        /// another.
+        /// *Note*: Moving VMs or disks by using this method might
+        /// cause unexpected behavior. For more information, see the [known
+        /// issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior).
+        /// [Deprecated] This method is deprecated. See [moving instance across
+        /// zones](/compute/docs/instances/moving-instance-across-zones) instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1449,7 +1621,13 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), MoveInstanceOperationsClient, callSettings);
 
         /// <summary>
-        /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior). [Deprecated] This method is deprecated. See [moving instance across zones](/compute/docs/instances/moving-instance-across-zones) instead.
+        /// Moves an instance and its attached persistent disks from one zone to
+        /// another.
+        /// *Note*: Moving VMs or disks by using this method might
+        /// cause unexpected behavior. For more information, see the [known
+        /// issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior).
+        /// [Deprecated] This method is deprecated. See [moving instance across
+        /// zones](/compute/docs/instances/moving-instance-across-zones) instead.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1467,7 +1645,13 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior). [Deprecated] This method is deprecated. See [moving instance across zones](/compute/docs/instances/moving-instance-across-zones) instead.
+        /// Moves an instance and its attached persistent disks from one zone to
+        /// another.
+        /// *Note*: Moving VMs or disks by using this method might
+        /// cause unexpected behavior. For more information, see the [known
+        /// issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior).
+        /// [Deprecated] This method is deprecated. See [moving instance across
+        /// zones](/compute/docs/instances/moving-instance-across-zones) instead.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1485,7 +1669,13 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior). [Deprecated] This method is deprecated. See [moving instance across zones](/compute/docs/instances/moving-instance-across-zones) instead.
+        /// Moves an instance and its attached persistent disks from one zone to
+        /// another.
+        /// *Note*: Moving VMs or disks by using this method might
+        /// cause unexpected behavior. For more information, see the [known
+        /// issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior).
+        /// [Deprecated] This method is deprecated. See [moving instance across
+        /// zones](/compute/docs/instances/moving-instance-across-zones) instead.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1499,7 +1689,10 @@ namespace Google.Cloud.Compute.V1
             MoveInstanceAsync(project, instanceMoveRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the billing account of the project must be subscribed to Cloud Armor Enterprise. See Subscribing to Cloud Armor Enterprise for more information.
+        /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the
+        /// billing account of the project must be subscribed to Cloud Armor
+        /// Enterprise. See Subscribing
+        /// to Cloud Armor Enterprise for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1508,7 +1701,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the billing account of the project must be subscribed to Cloud Armor Enterprise. See Subscribing to Cloud Armor Enterprise for more information.
+        /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the
+        /// billing account of the project must be subscribed to Cloud Armor
+        /// Enterprise. See Subscribing
+        /// to Cloud Armor Enterprise for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1517,7 +1713,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the billing account of the project must be subscribed to Cloud Armor Enterprise. See Subscribing to Cloud Armor Enterprise for more information.
+        /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the
+        /// billing account of the project must be subscribed to Cloud Armor
+        /// Enterprise. See Subscribing
+        /// to Cloud Armor Enterprise for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1553,7 +1752,10 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetCloudArmorTierOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the billing account of the project must be subscribed to Cloud Armor Enterprise. See Subscribing to Cloud Armor Enterprise for more information.
+        /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the
+        /// billing account of the project must be subscribed to Cloud Armor
+        /// Enterprise. See Subscribing
+        /// to Cloud Armor Enterprise for more information.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1571,7 +1773,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the billing account of the project must be subscribed to Cloud Armor Enterprise. See Subscribing to Cloud Armor Enterprise for more information.
+        /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the
+        /// billing account of the project must be subscribed to Cloud Armor
+        /// Enterprise. See Subscribing
+        /// to Cloud Armor Enterprise for more information.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1589,7 +1794,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the billing account of the project must be subscribed to Cloud Armor Enterprise. See Subscribing to Cloud Armor Enterprise for more information.
+        /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the
+        /// billing account of the project must be subscribed to Cloud Armor
+        /// Enterprise. See Subscribing
+        /// to Cloud Armor Enterprise for more information.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1603,7 +1811,8 @@ namespace Google.Cloud.Compute.V1
             SetCloudArmorTierAsync(project, projectsSetCloudArmorTierRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets metadata common to all instances within the specified project using the data included in the request.
+        /// Sets metadata common to all instances within the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1612,7 +1821,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets metadata common to all instances within the specified project using the data included in the request.
+        /// Sets metadata common to all instances within the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1621,7 +1831,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets metadata common to all instances within the specified project using the data included in the request.
+        /// Sets metadata common to all instances within the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1657,7 +1868,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetCommonInstanceMetadataOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets metadata common to all instances within the specified project using the data included in the request.
+        /// Sets metadata common to all instances within the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1675,7 +1887,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets metadata common to all instances within the specified project using the data included in the request.
+        /// Sets metadata common to all instances within the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1693,7 +1906,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets metadata common to all instances within the specified project using the data included in the request.
+        /// Sets metadata common to all instances within the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1707,7 +1921,9 @@ namespace Google.Cloud.Compute.V1
             SetCommonInstanceMetadataAsync(project, metadataResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the default network tier of the project. The default network tier is used when an address/forwardingRule/instance is created without specifying the network tier field.
+        /// Sets the default network tier of the project. The default network tier is
+        /// used when an address/forwardingRule/instance is created without specifying
+        /// the network tier field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1716,7 +1932,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the default network tier of the project. The default network tier is used when an address/forwardingRule/instance is created without specifying the network tier field.
+        /// Sets the default network tier of the project. The default network tier is
+        /// used when an address/forwardingRule/instance is created without specifying
+        /// the network tier field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1725,7 +1943,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the default network tier of the project. The default network tier is used when an address/forwardingRule/instance is created without specifying the network tier field.
+        /// Sets the default network tier of the project. The default network tier is
+        /// used when an address/forwardingRule/instance is created without specifying
+        /// the network tier field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1761,7 +1981,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetDefaultNetworkTierOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets the default network tier of the project. The default network tier is used when an address/forwardingRule/instance is created without specifying the network tier field.
+        /// Sets the default network tier of the project. The default network tier is
+        /// used when an address/forwardingRule/instance is created without specifying
+        /// the network tier field.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1779,7 +2001,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the default network tier of the project. The default network tier is used when an address/forwardingRule/instance is created without specifying the network tier field.
+        /// Sets the default network tier of the project. The default network tier is
+        /// used when an address/forwardingRule/instance is created without specifying
+        /// the network tier field.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1797,7 +2021,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the default network tier of the project. The default network tier is used when an address/forwardingRule/instance is created without specifying the network tier field.
+        /// Sets the default network tier of the project. The default network tier is
+        /// used when an address/forwardingRule/instance is created without specifying
+        /// the network tier field.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1811,7 +2037,9 @@ namespace Google.Cloud.Compute.V1
             SetDefaultNetworkTierAsync(project, projectsSetDefaultNetworkTierRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Enables the usage export feature and sets the usage export bucket where reports are stored. If you provide an empty request body using this method, the usage export feature will be disabled.
+        /// Enables the usage export feature and sets theusage export bucket
+        /// where reports are stored. If you provide an empty request body using this
+        /// method, the usage export feature will be disabled.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1820,7 +2048,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Enables the usage export feature and sets the usage export bucket where reports are stored. If you provide an empty request body using this method, the usage export feature will be disabled.
+        /// Enables the usage export feature and sets theusage export bucket
+        /// where reports are stored. If you provide an empty request body using this
+        /// method, the usage export feature will be disabled.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1829,7 +2059,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Enables the usage export feature and sets the usage export bucket where reports are stored. If you provide an empty request body using this method, the usage export feature will be disabled.
+        /// Enables the usage export feature and sets theusage export bucket
+        /// where reports are stored. If you provide an empty request body using this
+        /// method, the usage export feature will be disabled.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1865,7 +2097,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetUsageExportBucketOperationsClient, callSettings);
 
         /// <summary>
-        /// Enables the usage export feature and sets the usage export bucket where reports are stored. If you provide an empty request body using this method, the usage export feature will be disabled.
+        /// Enables the usage export feature and sets theusage export bucket
+        /// where reports are stored. If you provide an empty request body using this
+        /// method, the usage export feature will be disabled.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1883,7 +2117,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Enables the usage export feature and sets the usage export bucket where reports are stored. If you provide an empty request body using this method, the usage export feature will be disabled.
+        /// Enables the usage export feature and sets theusage export bucket
+        /// where reports are stored. If you provide an empty request body using this
+        /// method, the usage export feature will be disabled.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1901,7 +2137,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Enables the usage export feature and sets the usage export bucket where reports are stored. If you provide an empty request body using this method, the usage export feature will be disabled.
+        /// Enables the usage export feature and sets theusage export bucket
+        /// where reports are stored. If you provide an empty request body using this
+        /// method, the usage export feature will be disabled.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2119,7 +2357,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient DisableXpnResourceOperationsClient { get; }
 
         /// <summary>
-        /// Disable a service resource (also known as service project) associated with this host project.
+        /// Disable a service resource (also known as service project) associated with
+        /// this host project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2134,7 +2373,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Disable a service resource (also known as service project) associated with this host project.
+        /// Disable a service resource (also known as service project) associated with
+        /// this host project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2185,7 +2425,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient EnableXpnResourceOperationsClient { get; }
 
         /// <summary>
-        /// Enable service resource (a.k.a service project) for a host project, so that subnets in the host project can be used by instances in the service project.
+        /// Enable service resource (a.k.a service project) for a host project, so that
+        /// subnets in the host project can be used by instances in the service
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2200,7 +2442,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Enable service resource (a.k.a service project) for a host project, so that subnets in the host project can be used by instances in the service project.
+        /// Enable service resource (a.k.a service project) for a host project, so that
+        /// subnets in the host project can be used by instances in the service
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2215,7 +2459,15 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the specified Project resource. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request.
+        /// Returns the specified Project resource.
+        /// 
+        /// To decrease latency for this method, you can optionally omit any unneeded
+        /// information from the response by using a field mask. This practice is
+        /// especially recommended for unused quota information (the `quotas` field).
+        /// To exclude one or more fields, set your request's `fields` query parameter
+        /// to only include the fields you need. For example, to only include the `id`
+        /// and `selfLink` fields, add the query parameter `?fields=id,selfLink` to
+        /// your request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2227,7 +2479,15 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns the specified Project resource. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request.
+        /// Returns the specified Project resource.
+        /// 
+        /// To decrease latency for this method, you can optionally omit any unneeded
+        /// information from the response by using a field mask. This practice is
+        /// especially recommended for unused quota information (the `quotas` field).
+        /// To exclude one or more fields, set your request's `fields` query parameter
+        /// to only include the fields you need. For example, to only include the `id`
+        /// and `selfLink` fields, add the query parameter `?fields=id,selfLink` to
+        /// your request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2239,7 +2499,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the shared VPC host project that this project links to. May be empty if no link exists.
+        /// Gets the shared VPC host project that this project links to. May be empty
+        /// if no link exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2251,7 +2512,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the shared VPC host project that this project links to. May be empty if no link exists.
+        /// Gets the shared VPC host project that this project links to. May be empty
+        /// if no link exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2263,7 +2525,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets service resources (a.k.a service project) associated with this host project.
+        /// Gets service resources (a.k.a service project) associated with this host
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2275,7 +2538,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets service resources (a.k.a service project) associated with this host project.
+        /// Gets service resources (a.k.a service project) associated with this host
+        /// project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2314,7 +2578,20 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient MoveDiskOperationsClient { get; }
 
         /// <summary>
-        /// Starting September 29, 2025, you can't use the moveDisk API on new projects. To move a disk to a different region or zone, follow the steps in [Change the location of a disk](https://{$universe.dns_names.final_documentation_domain}/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hd). Projects that already use the moveDisk API can continue usage until September 29, 2026. Starting November 1, 2025, API responses will include a warning message in the response body about the upcoming deprecation. You can skip the message to continue using the service without interruption.
+        /// Moves a persistent disk from one zone to another.
+        /// *Note*: The moveDisk API will be deprecated on September 29, 2026.
+        /// 
+        /// Starting September 29, 2025, you can't use the moveDisk API on new
+        /// projects. To move a disk to a different region or zone, follow the steps in
+        /// [Change the location of a
+        /// disk](https://cloud.google.com/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hd).
+        /// 
+        /// Projects that already use the moveDisk API can continue usage until
+        /// September 29, 2026.
+        /// 
+        /// Starting November 1, 2025, API responses will include a warning message in
+        /// the response body about the upcoming deprecation. You can skip the message
+        /// to continue using the service without interruption.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2329,7 +2606,20 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Starting September 29, 2025, you can't use the moveDisk API on new projects. To move a disk to a different region or zone, follow the steps in [Change the location of a disk](https://{$universe.dns_names.final_documentation_domain}/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hd). Projects that already use the moveDisk API can continue usage until September 29, 2026. Starting November 1, 2025, API responses will include a warning message in the response body about the upcoming deprecation. You can skip the message to continue using the service without interruption.
+        /// Moves a persistent disk from one zone to another.
+        /// *Note*: The moveDisk API will be deprecated on September 29, 2026.
+        /// 
+        /// Starting September 29, 2025, you can't use the moveDisk API on new
+        /// projects. To move a disk to a different region or zone, follow the steps in
+        /// [Change the location of a
+        /// disk](https://cloud.google.com/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hd).
+        /// 
+        /// Projects that already use the moveDisk API can continue usage until
+        /// September 29, 2026.
+        /// 
+        /// Starting November 1, 2025, API responses will include a warning message in
+        /// the response body about the upcoming deprecation. You can skip the message
+        /// to continue using the service without interruption.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2347,7 +2637,13 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient MoveInstanceOperationsClient { get; }
 
         /// <summary>
-        /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior). [Deprecated] This method is deprecated. See [moving instance across zones](/compute/docs/instances/moving-instance-across-zones) instead.
+        /// Moves an instance and its attached persistent disks from one zone to
+        /// another.
+        /// *Note*: Moving VMs or disks by using this method might
+        /// cause unexpected behavior. For more information, see the [known
+        /// issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior).
+        /// [Deprecated] This method is deprecated. See [moving instance across
+        /// zones](/compute/docs/instances/moving-instance-across-zones) instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2362,7 +2658,13 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior). [Deprecated] This method is deprecated. See [moving instance across zones](/compute/docs/instances/moving-instance-across-zones) instead.
+        /// Moves an instance and its attached persistent disks from one zone to
+        /// another.
+        /// *Note*: Moving VMs or disks by using this method might
+        /// cause unexpected behavior. For more information, see the [known
+        /// issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior).
+        /// [Deprecated] This method is deprecated. See [moving instance across
+        /// zones](/compute/docs/instances/moving-instance-across-zones) instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2380,7 +2682,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetCloudArmorTierOperationsClient { get; }
 
         /// <summary>
-        /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the billing account of the project must be subscribed to Cloud Armor Enterprise. See Subscribing to Cloud Armor Enterprise for more information.
+        /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the
+        /// billing account of the project must be subscribed to Cloud Armor
+        /// Enterprise. See Subscribing
+        /// to Cloud Armor Enterprise for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2395,7 +2700,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the billing account of the project must be subscribed to Cloud Armor Enterprise. See Subscribing to Cloud Armor Enterprise for more information.
+        /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the
+        /// billing account of the project must be subscribed to Cloud Armor
+        /// Enterprise. See Subscribing
+        /// to Cloud Armor Enterprise for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2413,7 +2721,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetCommonInstanceMetadataOperationsClient { get; }
 
         /// <summary>
-        /// Sets metadata common to all instances within the specified project using the data included in the request.
+        /// Sets metadata common to all instances within the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2428,7 +2737,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets metadata common to all instances within the specified project using the data included in the request.
+        /// Sets metadata common to all instances within the specified project using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2446,7 +2756,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetDefaultNetworkTierOperationsClient { get; }
 
         /// <summary>
-        /// Sets the default network tier of the project. The default network tier is used when an address/forwardingRule/instance is created without specifying the network tier field.
+        /// Sets the default network tier of the project. The default network tier is
+        /// used when an address/forwardingRule/instance is created without specifying
+        /// the network tier field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2461,7 +2773,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the default network tier of the project. The default network tier is used when an address/forwardingRule/instance is created without specifying the network tier field.
+        /// Sets the default network tier of the project. The default network tier is
+        /// used when an address/forwardingRule/instance is created without specifying
+        /// the network tier field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2479,7 +2793,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetUsageExportBucketOperationsClient { get; }
 
         /// <summary>
-        /// Enables the usage export feature and sets the usage export bucket where reports are stored. If you provide an empty request body using this method, the usage export feature will be disabled.
+        /// Enables the usage export feature and sets theusage export bucket
+        /// where reports are stored. If you provide an empty request body using this
+        /// method, the usage export feature will be disabled.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2494,7 +2810,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Enables the usage export feature and sets the usage export bucket where reports are stored. If you provide an empty request body using this method, the usage export feature will be disabled.
+        /// Enables the usage export feature and sets theusage export bucket
+        /// where reports are stored. If you provide an empty request body using this
+        /// method, the usage export feature will be disabled.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

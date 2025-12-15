@@ -17,10 +17,11 @@ using Google.Cloud.AIPlatform.V1;
 using Microsoft.Extensions.AI;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Value = Google.Protobuf.WellKnownTypes.Value;
 using Struct = Google.Protobuf.WellKnownTypes.Struct;
+using Value = Google.Protobuf.WellKnownTypes.Value;
 
 namespace Google.Cloud.VertexAI.Extensions;
 
@@ -70,10 +71,9 @@ internal sealed class PredictionServiceEmbeddingGenerator(PredictionServiceClien
         // If a dimensionality is specified, add it to the parameters.
         if ((options?.Dimensions ?? _defaultModelDimensions) is { } outputDimensions)
         {
-            (request.Parameters ??= new()).StructValue ??= new Struct
-            {
-                Fields = { { "outputDimensionality", Value.ForNumber(outputDimensions) } },
-            };
+            request.Parameters ??= new Value();
+            request.Parameters.StructValue ??= new Struct();
+            request.Parameters.StructValue.Fields["outputDimensionality"] = Value.ForNumber(outputDimensions);
         }
 
         // Make the request.
@@ -97,13 +97,7 @@ internal sealed class PredictionServiceEmbeddingGenerator(PredictionServiceClien
                     {
                         Protobuf.Collections.RepeatedField<Value> numberValues = listValue.ListValue.Values;
 
-                        float[] embedding = new float[numberValues.Count];
-                        for (int j = 0; j < numberValues.Count; j++)
-                        {
-                            embedding[j] = (float) numberValues[j].NumberValue;
-                        }
-
-                        result.Add(new Embedding<float>(embedding)
+                        result.Add(new Embedding<float>(numberValues.Select(v => (float) v.NumberValue).ToArray())
                         {
                             CreatedAt = DateTimeOffset.UtcNow,
                             ModelId = !string.IsNullOrWhiteSpace(response.ModelVersionId) ? response.ModelVersionId : request.Endpoint,

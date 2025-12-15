@@ -885,5 +885,44 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for QueryData</summary>
+        public void QueryDataRequestObject()
+        {
+            // Snippet: QueryData(QueryDataRequest, CallSettings)
+            // Create client
+            DataChatServiceClient dataChatServiceClient = DataChatServiceClient.Create();
+            // Initialize request argument(s)
+            QueryDataRequest request = new QueryDataRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Prompt = "",
+                Context = new QueryDataContext(),
+                GenerationOptions = new GenerationOptions(),
+            };
+            // Make the request
+            QueryDataResponse response = dataChatServiceClient.QueryData(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for QueryDataAsync</summary>
+        public async Task QueryDataRequestObjectAsync()
+        {
+            // Snippet: QueryDataAsync(QueryDataRequest, CallSettings)
+            // Additional: QueryDataAsync(QueryDataRequest, CancellationToken)
+            // Create client
+            DataChatServiceClient dataChatServiceClient = await DataChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            QueryDataRequest request = new QueryDataRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Prompt = "",
+                Context = new QueryDataContext(),
+                GenerationOptions = new GenerationOptions(),
+            };
+            // Make the request
+            QueryDataResponse response = await dataChatServiceClient.QueryDataAsync(request);
+            // End snippet
+        }
     }
 }

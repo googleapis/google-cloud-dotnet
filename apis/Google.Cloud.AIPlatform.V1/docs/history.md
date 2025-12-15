@@ -1,5 +1,37 @@
 # Version history
 
+## Version 3.59.0, released 2025-12-12
+
+### New features
+
+- Add streaming function call argument API changes
+
+### Documentation improvements
+
+- A comment for field `name` in message `.google.cloud.aiplatform.v1.FunctionCall` is changed
+- A comment for field `args` in message `.google.cloud.aiplatform.v1.FunctionCall` is changed
+
+## Version 3.58.0, released 2025-12-09
+
+### Bug fixes
+
+- Fix issue when using UrlContext tool
+
+## Version 3.57.0, released 2025-12-03
+
+### New features
+
+- Expose zone when creating a FeatureOnlineStore
+- Add `ReplicatedVoiceConfig` to `VoiceConfig` to enable Gemini TTS voice replication
+- Add `gpu_partition_size` in `machine_spec` v1 api
+- Add support for developer connect based deployment
+
+### Documentation improvements
+
+- Update `ReplicatedVoiceConfig.mime_type` comment
+- A comment for message `ReasoningEngineSpec` is changed
+- A comment for field `package_spec` in message `.google.cloud.aiplatform.v1.ReasoningEngineSpec` is changed
+
 ## Version 3.56.0, released 2025-11-05
 
 ### New features

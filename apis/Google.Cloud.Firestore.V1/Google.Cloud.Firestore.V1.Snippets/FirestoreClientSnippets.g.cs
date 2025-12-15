@@ -552,6 +552,34 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ExecutePipeline</summary>
+        public async Task ExecutePipelineRequestObject()
+        {
+            // Snippet: ExecutePipeline(ExecutePipelineRequest, CallSettings)
+            // Create client
+            FirestoreClient firestoreClient = FirestoreClient.Create();
+            // Initialize request argument(s)
+            ExecutePipelineRequest request = new ExecutePipelineRequest
+            {
+                Database = "",
+                StructuredPipeline = new StructuredPipeline(),
+                Transaction = ByteString.Empty,
+            };
+            // Make the request, returning a streaming response
+            using FirestoreClient.ExecutePipelineStream response = firestoreClient.ExecutePipeline(request);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<ExecutePipelineResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                ExecutePipelineResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
         /// <summary>Snippet for RunAggregationQuery</summary>
         public async Task RunAggregationQueryRequestObject()
         {

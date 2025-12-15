@@ -5596,7 +5596,7 @@ namespace Google.Cloud.AlloyDb.V1 {
     public const int InitialUserFieldNumber = 14;
     private global::Google.Cloud.AlloyDb.V1.UserPassword initialUser_;
     /// <summary>
-    /// Input only. Initial user to setup during cluster creation. Required.
+    /// Input only. Initial user to setup during cluster creation.
     /// If used in `RestoreCluster` this is ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

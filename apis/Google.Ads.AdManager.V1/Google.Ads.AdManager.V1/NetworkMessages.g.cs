@@ -26,25 +26,29 @@ namespace Google.Ads.AdManager.V1 {
           string.Concat(
             "Ci5nb29nbGUvYWRzL2FkbWFuYWdlci92MS9uZXR3b3JrX21lc3NhZ2VzLnBy",
             "b3RvEhdnb29nbGUuYWRzLmFkbWFuYWdlci52MRofZ29vZ2xlL2FwaS9maWVs",
-            "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byKZ",
-            "AwoHTmV0d29yaxIRCgRuYW1lGAEgASgJQgPgQQgSGQoMZGlzcGxheV9uYW1l",
-            "GAIgASgJQgPgQQESGQoMbmV0d29ya19jb2RlGAMgASgJQgPgQQMSGgoNcHJv",
-            "cGVydHlfY29kZRgEIAEoCUID4EEDEhYKCXRpbWVfem9uZRgFIAEoCUID4EED",
-            "EhoKDWN1cnJlbmN5X2NvZGUYBiABKAlCA+BBAxIlChhzZWNvbmRhcnlfY3Vy",
-            "cmVuY3lfY29kZXMYByADKAlCA+BBARJHChZlZmZlY3RpdmVfcm9vdF9hZF91",
-            "bml0GAggASgJQifgQQP6QSEKH2FkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9B",
-            "ZFVuaXQSGQoMdGVzdF9uZXR3b3JrGAogASgIQgPgQQMSFwoKbmV0d29ya19p",
-            "ZBgLIAEoA0ID4EEDOlHqQU4KIGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9O",
-            "ZXR3b3JrEhduZXR3b3Jrcy97bmV0d29ya19jb2RlfSoIbmV0d29ya3MyB25l",
-            "dHdvcmtCyAEKG2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUIUTmV0d29y",
-            "a01lc3NhZ2VzUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
-            "Z29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoCF0dvb2ds",
-            "ZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1hbmFnZXJcVjHq",
-            "AhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byLQ",
+            "BAoHTmV0d29yaxIRCgRuYW1lGAEgASgJQgPgQQgSHgoMZGlzcGxheV9uYW1l",
+            "GAIgASgJQgPgQQFIAIgBARIeCgxuZXR3b3JrX2NvZGUYAyABKAlCA+BBA0gB",
+            "iAEBEh8KDXByb3BlcnR5X2NvZGUYBCABKAlCA+BBA0gCiAEBEhsKCXRpbWVf",
+            "em9uZRgFIAEoCUID4EEDSAOIAQESHwoNY3VycmVuY3lfY29kZRgGIAEoCUID",
+            "4EEDSASIAQESJQoYc2Vjb25kYXJ5X2N1cnJlbmN5X2NvZGVzGAcgAygJQgPg",
+            "QQESTAoWZWZmZWN0aXZlX3Jvb3RfYWRfdW5pdBgIIAEoCUIn4EED+kEhCh9h",
+            "ZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQWRVbml0SAWIAQESHgoMdGVzdF9u",
+            "ZXR3b3JrGAogASgIQgPgQQNIBogBARIcCgpuZXR3b3JrX2lkGAsgASgDQgPg",
+            "QQNIB4gBATpR6kFOCiBhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vTmV0d29y",
+            "axIXbmV0d29ya3Mve25ldHdvcmtfY29kZX0qCG5ldHdvcmtzMgduZXR3b3Jr",
+            "Qg8KDV9kaXNwbGF5X25hbWVCDwoNX25ldHdvcmtfY29kZUIQCg5fcHJvcGVy",
+            "dHlfY29kZUIMCgpfdGltZV96b25lQhAKDl9jdXJyZW5jeV9jb2RlQhkKF19l",
+            "ZmZlY3RpdmVfcm9vdF9hZF91bml0Qg8KDV90ZXN0X25ldHdvcmtCDQoLX25l",
+            "dHdvcmtfaWRCyAEKG2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUIUTmV0",
+            "d29ya01lc3NhZ2VzUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
+            "dG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoCF0dv",
+            "b2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1hbmFnZXJc",
+            "VjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Network), global::Google.Ads.AdManager.V1.Network.Parser, new[]{ "Name", "DisplayName", "NetworkCode", "PropertyCode", "TimeZone", "CurrencyCode", "SecondaryCurrencyCodes", "EffectiveRootAdUnit", "TestNetwork", "NetworkId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Network), global::Google.Ads.AdManager.V1.Network.Parser, new[]{ "Name", "DisplayName", "NetworkCode", "PropertyCode", "TimeZone", "CurrencyCode", "SecondaryCurrencyCodes", "EffectiveRootAdUnit", "TestNetwork", "NetworkId" }, new[]{ "DisplayName", "NetworkCode", "PropertyCode", "TimeZone", "CurrencyCode", "EffectiveRootAdUnit", "TestNetwork", "NetworkId" }, null, null, null)
           }));
     }
     #endregion
@@ -62,6 +66,7 @@ namespace Google.Ads.AdManager.V1 {
   {
     private static readonly pb::MessageParser<Network> _parser = new pb::MessageParser<Network>(() => new Network());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Network> Parser { get { return _parser; } }
@@ -89,6 +94,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Network(Network other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
       displayName_ = other.displayName_;
       networkCode_ = other.networkCode_;
@@ -126,52 +132,96 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "display_name" field.</summary>
     public const int DisplayNameFieldNumber = 2;
-    private string displayName_ = "";
+    private readonly static string DisplayNameDefaultValue = "";
+
+    private string displayName_;
     /// <summary>
     /// Optional. Display name for Network.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
-      get { return displayName_; }
+      get { return displayName_ ?? DisplayNameDefaultValue; }
       set {
         displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return displayName_ != null; }
+    }
+    /// <summary>Clears the value of the "display_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      displayName_ = null;
+    }
 
     /// <summary>Field number for the "network_code" field.</summary>
     public const int NetworkCodeFieldNumber = 3;
-    private string networkCode_ = "";
+    private readonly static string NetworkCodeDefaultValue = "";
+
+    private string networkCode_;
     /// <summary>
     /// Output only. Network Code.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string NetworkCode {
-      get { return networkCode_; }
+      get { return networkCode_ ?? NetworkCodeDefaultValue; }
       set {
         networkCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "network_code" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNetworkCode {
+      get { return networkCode_ != null; }
+    }
+    /// <summary>Clears the value of the "network_code" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNetworkCode() {
+      networkCode_ = null;
+    }
 
     /// <summary>Field number for the "property_code" field.</summary>
     public const int PropertyCodeFieldNumber = 4;
-    private string propertyCode_ = "";
+    private readonly static string PropertyCodeDefaultValue = "";
+
+    private string propertyCode_;
     /// <summary>
     /// Output only. Property code.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PropertyCode {
-      get { return propertyCode_; }
+      get { return propertyCode_ ?? PropertyCodeDefaultValue; }
       set {
         propertyCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "property_code" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPropertyCode {
+      get { return propertyCode_ != null; }
+    }
+    /// <summary>Clears the value of the "property_code" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPropertyCode() {
+      propertyCode_ = null;
+    }
 
     /// <summary>Field number for the "time_zone" field.</summary>
     public const int TimeZoneFieldNumber = 5;
-    private string timeZone_ = "";
+    private readonly static string TimeZoneDefaultValue = "";
+
+    private string timeZone_;
     /// <summary>
     /// Output only. Time zone associated with the delivery of orders and
     /// reporting.
@@ -179,25 +229,51 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TimeZone {
-      get { return timeZone_; }
+      get { return timeZone_ ?? TimeZoneDefaultValue; }
       set {
         timeZone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "time_zone" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTimeZone {
+      get { return timeZone_ != null; }
+    }
+    /// <summary>Clears the value of the "time_zone" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTimeZone() {
+      timeZone_ = null;
+    }
 
     /// <summary>Field number for the "currency_code" field.</summary>
     public const int CurrencyCodeFieldNumber = 6;
-    private string currencyCode_ = "";
+    private readonly static string CurrencyCodeDefaultValue = "";
+
+    private string currencyCode_;
     /// <summary>
     /// Output only. Primary currency code, in ISO-4217 format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CurrencyCode {
-      get { return currencyCode_; }
+      get { return currencyCode_ ?? CurrencyCodeDefaultValue; }
       set {
         currencyCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+    /// <summary>Gets whether the "currency_code" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCurrencyCode {
+      get { return currencyCode_ != null; }
+    }
+    /// <summary>Clears the value of the "currency_code" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCurrencyCode() {
+      currencyCode_ = null;
     }
 
     /// <summary>Field number for the "secondary_currency_codes" field.</summary>
@@ -217,7 +293,9 @@ namespace Google.Ads.AdManager.V1 {
 
     /// <summary>Field number for the "effective_root_ad_unit" field.</summary>
     public const int EffectiveRootAdUnitFieldNumber = 8;
-    private string effectiveRootAdUnit_ = "";
+    private readonly static string EffectiveRootAdUnitDefaultValue = "";
+
+    private string effectiveRootAdUnit_;
     /// <summary>
     /// Output only. Top most [Ad Unit](google.ads.admanager.v1.AdUnit) to which
     /// descendant Ad Units can be added.
@@ -226,14 +304,28 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string EffectiveRootAdUnit {
-      get { return effectiveRootAdUnit_; }
+      get { return effectiveRootAdUnit_ ?? EffectiveRootAdUnitDefaultValue; }
       set {
         effectiveRootAdUnit_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "effective_root_ad_unit" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEffectiveRootAdUnit {
+      get { return effectiveRootAdUnit_ != null; }
+    }
+    /// <summary>Clears the value of the "effective_root_ad_unit" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEffectiveRootAdUnit() {
+      effectiveRootAdUnit_ = null;
+    }
 
     /// <summary>Field number for the "test_network" field.</summary>
     public const int TestNetworkFieldNumber = 10;
+    private readonly static bool TestNetworkDefaultValue = false;
+
     private bool testNetwork_;
     /// <summary>
     /// Output only. Whether this is a test network.
@@ -241,14 +333,29 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool TestNetwork {
-      get { return testNetwork_; }
+      get { if ((_hasBits0 & 1) != 0) { return testNetwork_; } else { return TestNetworkDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         testNetwork_ = value;
       }
+    }
+    /// <summary>Gets whether the "test_network" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTestNetwork {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "test_network" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTestNetwork() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "network_id" field.</summary>
     public const int NetworkIdFieldNumber = 11;
+    private readonly static long NetworkIdDefaultValue = 0L;
+
     private long networkId_;
     /// <summary>
     /// Output only. Network ID.
@@ -256,10 +363,23 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long NetworkId {
-      get { return networkId_; }
+      get { if ((_hasBits0 & 2) != 0) { return networkId_; } else { return NetworkIdDefaultValue; } }
       set {
+        _hasBits0 |= 2;
         networkId_ = value;
       }
+    }
+    /// <summary>Gets whether the "network_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNetworkId {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "network_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNetworkId() {
+      _hasBits0 &= ~2;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -295,15 +415,15 @@ namespace Google.Ads.AdManager.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (NetworkCode.Length != 0) hash ^= NetworkCode.GetHashCode();
-      if (PropertyCode.Length != 0) hash ^= PropertyCode.GetHashCode();
-      if (TimeZone.Length != 0) hash ^= TimeZone.GetHashCode();
-      if (CurrencyCode.Length != 0) hash ^= CurrencyCode.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasNetworkCode) hash ^= NetworkCode.GetHashCode();
+      if (HasPropertyCode) hash ^= PropertyCode.GetHashCode();
+      if (HasTimeZone) hash ^= TimeZone.GetHashCode();
+      if (HasCurrencyCode) hash ^= CurrencyCode.GetHashCode();
       hash ^= secondaryCurrencyCodes_.GetHashCode();
-      if (EffectiveRootAdUnit.Length != 0) hash ^= EffectiveRootAdUnit.GetHashCode();
-      if (TestNetwork != false) hash ^= TestNetwork.GetHashCode();
-      if (NetworkId != 0L) hash ^= NetworkId.GetHashCode();
+      if (HasEffectiveRootAdUnit) hash ^= EffectiveRootAdUnit.GetHashCode();
+      if (HasTestNetwork) hash ^= TestNetwork.GetHashCode();
+      if (HasNetworkId) hash ^= NetworkId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -326,36 +446,36 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         output.WriteRawTag(18);
         output.WriteString(DisplayName);
       }
-      if (NetworkCode.Length != 0) {
+      if (HasNetworkCode) {
         output.WriteRawTag(26);
         output.WriteString(NetworkCode);
       }
-      if (PropertyCode.Length != 0) {
+      if (HasPropertyCode) {
         output.WriteRawTag(34);
         output.WriteString(PropertyCode);
       }
-      if (TimeZone.Length != 0) {
+      if (HasTimeZone) {
         output.WriteRawTag(42);
         output.WriteString(TimeZone);
       }
-      if (CurrencyCode.Length != 0) {
+      if (HasCurrencyCode) {
         output.WriteRawTag(50);
         output.WriteString(CurrencyCode);
       }
       secondaryCurrencyCodes_.WriteTo(output, _repeated_secondaryCurrencyCodes_codec);
-      if (EffectiveRootAdUnit.Length != 0) {
+      if (HasEffectiveRootAdUnit) {
         output.WriteRawTag(66);
         output.WriteString(EffectiveRootAdUnit);
       }
-      if (TestNetwork != false) {
+      if (HasTestNetwork) {
         output.WriteRawTag(80);
         output.WriteBool(TestNetwork);
       }
-      if (NetworkId != 0L) {
+      if (HasNetworkId) {
         output.WriteRawTag(88);
         output.WriteInt64(NetworkId);
       }
@@ -373,36 +493,36 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         output.WriteRawTag(18);
         output.WriteString(DisplayName);
       }
-      if (NetworkCode.Length != 0) {
+      if (HasNetworkCode) {
         output.WriteRawTag(26);
         output.WriteString(NetworkCode);
       }
-      if (PropertyCode.Length != 0) {
+      if (HasPropertyCode) {
         output.WriteRawTag(34);
         output.WriteString(PropertyCode);
       }
-      if (TimeZone.Length != 0) {
+      if (HasTimeZone) {
         output.WriteRawTag(42);
         output.WriteString(TimeZone);
       }
-      if (CurrencyCode.Length != 0) {
+      if (HasCurrencyCode) {
         output.WriteRawTag(50);
         output.WriteString(CurrencyCode);
       }
       secondaryCurrencyCodes_.WriteTo(ref output, _repeated_secondaryCurrencyCodes_codec);
-      if (EffectiveRootAdUnit.Length != 0) {
+      if (HasEffectiveRootAdUnit) {
         output.WriteRawTag(66);
         output.WriteString(EffectiveRootAdUnit);
       }
-      if (TestNetwork != false) {
+      if (HasTestNetwork) {
         output.WriteRawTag(80);
         output.WriteBool(TestNetwork);
       }
-      if (NetworkId != 0L) {
+      if (HasNetworkId) {
         output.WriteRawTag(88);
         output.WriteInt64(NetworkId);
       }
@@ -419,29 +539,29 @@ namespace Google.Ads.AdManager.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (DisplayName.Length != 0) {
+      if (HasDisplayName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
-      if (NetworkCode.Length != 0) {
+      if (HasNetworkCode) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NetworkCode);
       }
-      if (PropertyCode.Length != 0) {
+      if (HasPropertyCode) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PropertyCode);
       }
-      if (TimeZone.Length != 0) {
+      if (HasTimeZone) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TimeZone);
       }
-      if (CurrencyCode.Length != 0) {
+      if (HasCurrencyCode) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CurrencyCode);
       }
       size += secondaryCurrencyCodes_.CalculateSize(_repeated_secondaryCurrencyCodes_codec);
-      if (EffectiveRootAdUnit.Length != 0) {
+      if (HasEffectiveRootAdUnit) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(EffectiveRootAdUnit);
       }
-      if (TestNetwork != false) {
+      if (HasTestNetwork) {
         size += 1 + 1;
       }
-      if (NetworkId != 0L) {
+      if (HasNetworkId) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(NetworkId);
       }
       if (_unknownFields != null) {
@@ -459,29 +579,29 @@ namespace Google.Ads.AdManager.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.DisplayName.Length != 0) {
+      if (other.HasDisplayName) {
         DisplayName = other.DisplayName;
       }
-      if (other.NetworkCode.Length != 0) {
+      if (other.HasNetworkCode) {
         NetworkCode = other.NetworkCode;
       }
-      if (other.PropertyCode.Length != 0) {
+      if (other.HasPropertyCode) {
         PropertyCode = other.PropertyCode;
       }
-      if (other.TimeZone.Length != 0) {
+      if (other.HasTimeZone) {
         TimeZone = other.TimeZone;
       }
-      if (other.CurrencyCode.Length != 0) {
+      if (other.HasCurrencyCode) {
         CurrencyCode = other.CurrencyCode;
       }
       secondaryCurrencyCodes_.Add(other.secondaryCurrencyCodes_);
-      if (other.EffectiveRootAdUnit.Length != 0) {
+      if (other.HasEffectiveRootAdUnit) {
         EffectiveRootAdUnit = other.EffectiveRootAdUnit;
       }
-      if (other.TestNetwork != false) {
+      if (other.HasTestNetwork) {
         TestNetwork = other.TestNetwork;
       }
-      if (other.NetworkId != 0L) {
+      if (other.HasNetworkId) {
         NetworkId = other.NetworkId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);

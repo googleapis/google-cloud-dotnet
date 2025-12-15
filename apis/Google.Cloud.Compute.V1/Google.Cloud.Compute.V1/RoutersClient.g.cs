@@ -627,7 +627,10 @@ namespace Google.Cloud.Compute.V1
         public virtual Routers.RoutersClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of routers. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of routers.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -636,7 +639,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of routers. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of routers.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -647,7 +653,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of routers. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of routers.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -680,7 +689,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of routers. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of routers.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1068,7 +1080,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region for this request.
         /// </param>
         /// <param name="router">
-        /// Name of the Router resource to query for Nat IP information. The name should conform to RFC1035.
+        /// Name of the Router resource to query for Nat IP information. The name
+        /// should conform to RFC1035.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1090,7 +1103,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region for this request.
         /// </param>
         /// <param name="router">
-        /// Name of the Router resource to query for Nat IP information. The name should conform to RFC1035.
+        /// Name of the Router resource to query for Nat IP information. The name
+        /// should conform to RFC1035.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1112,7 +1126,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region for this request.
         /// </param>
         /// <param name="router">
-        /// Name of the Router resource to query for Nat IP information. The name should conform to RFC1035.
+        /// Name of the Router resource to query for Nat IP information. The name
+        /// should conform to RFC1035.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1147,7 +1162,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region for this request.
         /// </param>
         /// <param name="router">
-        /// Name of the Router resource to query for Nat Mapping information of VM endpoints.
+        /// Name of the Router resource to query for Nat Mapping information of
+        /// VM endpoints.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1188,7 +1204,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region for this request.
         /// </param>
         /// <param name="router">
-        /// Name of the Router resource to query for Nat Mapping information of VM endpoints.
+        /// Name of the Router resource to query for Nat Mapping information of
+        /// VM endpoints.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1256,7 +1273,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region for this request.
         /// </param>
         /// <param name="router">
-        /// Name of the Router resource to query for the route policy. The name should conform to RFC1035.
+        /// Name of the Router resource to query for the route policy. The name should
+        /// conform to RFC1035.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1278,7 +1296,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region for this request.
         /// </param>
         /// <param name="router">
-        /// Name of the Router resource to query for the route policy. The name should conform to RFC1035.
+        /// Name of the Router resource to query for the route policy. The name should
+        /// conform to RFC1035.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1300,7 +1319,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region for this request.
         /// </param>
         /// <param name="router">
-        /// Name of the Router resource to query for the route policy. The name should conform to RFC1035.
+        /// Name of the Router resource to query for the route policy. The name should
+        /// conform to RFC1035.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1396,7 +1416,8 @@ namespace Google.Cloud.Compute.V1
             GetRouterStatusAsync(project, region, router, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a Router resource in the specified project and region using the data included in the request.
+        /// Creates a Router resource in the specified project and region using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1405,7 +1426,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a Router resource in the specified project and region using the data included in the request.
+        /// Creates a Router resource in the specified project and region using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1414,7 +1436,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a Router resource in the specified project and region using the data included in the request.
+        /// Creates a Router resource in the specified project and region using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1449,7 +1472,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a Router resource in the specified project and region using the data included in the request.
+        /// Creates a Router resource in the specified project and region using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1471,7 +1495,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a Router resource in the specified project and region using the data included in the request.
+        /// Creates a Router resource in the specified project and region using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1493,7 +1518,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a Router resource in the specified project and region using the data included in the request.
+        /// Creates a Router resource in the specified project and region using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1629,7 +1655,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region for this request.
         /// </param>
         /// <param name="router">
-        /// Name or id of the resource for this request. Name should conform to RFC1035.
+        /// Name or id of the resource for this request.
+        /// Name should conform to RFC1035.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1670,7 +1697,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region for this request.
         /// </param>
         /// <param name="router">
-        /// Name or id of the resource for this request. Name should conform to RFC1035.
+        /// Name or id of the resource for this request.
+        /// Name should conform to RFC1035.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1702,7 +1730,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of router route policy subresources available to the specified project.
+        /// Retrieves a list of router route policy subresources available to the
+        /// specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1711,7 +1740,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of router route policy subresources available to the specified project.
+        /// Retrieves a list of router route policy subresources available to the
+        /// specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1720,7 +1750,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of router route policy subresources available to the specified project.
+        /// Retrieves a list of router route policy subresources available to the
+        /// specified project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1729,7 +1760,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region for this request.
         /// </param>
         /// <param name="router">
-        /// Name or id of the resource for this request. Name should conform to RFC1035.
+        /// Name or id of the resource for this request.
+        /// Name should conform to RFC1035.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1761,7 +1793,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of router route policy subresources available to the specified project.
+        /// Retrieves a list of router route policy subresources available to the
+        /// specified project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1770,7 +1803,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region for this request.
         /// </param>
         /// <param name="router">
-        /// Name or id of the resource for this request. Name should conform to RFC1035.
+        /// Name or id of the resource for this request.
+        /// Name should conform to RFC1035.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1802,7 +1836,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches the specified Router resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified Router resource with the data included in the
+        /// request. This method supportsPATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1811,7 +1848,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified Router resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified Router resource with the data included in the
+        /// request. This method supportsPATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1820,7 +1860,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified Router resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified Router resource with the data included in the
+        /// request. This method supportsPATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1855,7 +1898,10 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchOperationsClient, callSettings);
 
         /// <summary>
-        /// Patches the specified Router resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified Router resource with the data included in the
+        /// request. This method supportsPATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1881,7 +1927,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified Router resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified Router resource with the data included in the
+        /// request. This method supportsPATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1907,7 +1956,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified Router resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified Router resource with the data included in the
+        /// request. This method supportsPATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2052,7 +2104,8 @@ namespace Google.Cloud.Compute.V1
             PatchRoutePolicyAsync(project, region, router, routePolicyResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Preview fields auto-generated during router create and update operations. Calling this method does NOT create or update the router.
+        /// Preview fields auto-generated during router create andupdate operations.
+        /// Calling this method does NOT create or update the router.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2061,7 +2114,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Preview fields auto-generated during router create and update operations. Calling this method does NOT create or update the router.
+        /// Preview fields auto-generated during router create andupdate operations.
+        /// Calling this method does NOT create or update the router.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2070,7 +2124,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Preview fields auto-generated during router create and update operations. Calling this method does NOT create or update the router.
+        /// Preview fields auto-generated during router create andupdate operations.
+        /// Calling this method does NOT create or update the router.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2079,7 +2134,8 @@ namespace Google.Cloud.Compute.V1
             PreviewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Preview fields auto-generated during router create and update operations. Calling this method does NOT create or update the router.
+        /// Preview fields auto-generated during router create andupdate operations.
+        /// Calling this method does NOT create or update the router.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2105,7 +2161,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Preview fields auto-generated during router create and update operations. Calling this method does NOT create or update the router.
+        /// Preview fields auto-generated during router create andupdate operations.
+        /// Calling this method does NOT create or update the router.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2131,7 +2188,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Preview fields auto-generated during router create and update operations. Calling this method does NOT create or update the router.
+        /// Preview fields auto-generated during router create andupdate operations.
+        /// Calling this method does NOT create or update the router.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2151,7 +2209,10 @@ namespace Google.Cloud.Compute.V1
             PreviewAsync(project, region, router, routerResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates the specified Router resource with the data included in the request. This method conforms to PUT semantics, which requests that the state of the target resource be created or replaced with the state defined by the representation enclosed in the request message payload.
+        /// Updates the specified Router resource with the data included in the
+        /// request.  This method conforms toPUT semantics, which requests that the state of the
+        /// target resource be created or replaced with the state defined by the
+        /// representation enclosed in the request message payload.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2160,7 +2221,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the specified Router resource with the data included in the request. This method conforms to PUT semantics, which requests that the state of the target resource be created or replaced with the state defined by the representation enclosed in the request message payload.
+        /// Updates the specified Router resource with the data included in the
+        /// request.  This method conforms toPUT semantics, which requests that the state of the
+        /// target resource be created or replaced with the state defined by the
+        /// representation enclosed in the request message payload.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2169,7 +2233,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the specified Router resource with the data included in the request. This method conforms to PUT semantics, which requests that the state of the target resource be created or replaced with the state defined by the representation enclosed in the request message payload.
+        /// Updates the specified Router resource with the data included in the
+        /// request.  This method conforms toPUT semantics, which requests that the state of the
+        /// target resource be created or replaced with the state defined by the
+        /// representation enclosed in the request message payload.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2204,7 +2271,10 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates the specified Router resource with the data included in the request. This method conforms to PUT semantics, which requests that the state of the target resource be created or replaced with the state defined by the representation enclosed in the request message payload.
+        /// Updates the specified Router resource with the data included in the
+        /// request.  This method conforms toPUT semantics, which requests that the state of the
+        /// target resource be created or replaced with the state defined by the
+        /// representation enclosed in the request message payload.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2230,7 +2300,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the specified Router resource with the data included in the request. This method conforms to PUT semantics, which requests that the state of the target resource be created or replaced with the state defined by the representation enclosed in the request message payload.
+        /// Updates the specified Router resource with the data included in the
+        /// request.  This method conforms toPUT semantics, which requests that the state of the
+        /// target resource be created or replaced with the state defined by the
+        /// representation enclosed in the request message payload.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2256,7 +2329,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the specified Router resource with the data included in the request. This method conforms to PUT semantics, which requests that the state of the target resource be created or replaced with the state defined by the representation enclosed in the request message payload.
+        /// Updates the specified Router resource with the data included in the
+        /// request.  This method conforms toPUT semantics, which requests that the state of the
+        /// target resource be created or replaced with the state defined by the
+        /// representation enclosed in the request message payload.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2594,7 +2670,10 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_UpdateRoutePolicyRouterRequest(ref UpdateRoutePolicyRouterRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Retrieves an aggregated list of routers. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of routers.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2606,7 +2685,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of routers. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of routers.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2809,7 +2891,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a Router resource in the specified project and region using the data included in the request.
+        /// Creates a Router resource in the specified project and region using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2824,7 +2907,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a Router resource in the specified project and region using the data included in the request.
+        /// Creates a Router resource in the specified project and region using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2887,7 +2971,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of router route policy subresources available to the specified project.
+        /// Retrieves a list of router route policy subresources available to the
+        /// specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2899,7 +2984,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of router route policy subresources available to the specified project.
+        /// Retrieves a list of router route policy subresources available to the
+        /// specified project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2914,7 +3000,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient PatchOperationsClient { get; }
 
         /// <summary>
-        /// Patches the specified Router resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified Router resource with the data included in the
+        /// request. This method supportsPATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2929,7 +3018,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches the specified Router resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+        /// Patches the specified Router resource with the data included in the
+        /// request. This method supportsPATCH
+        /// semantics and usesJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2977,7 +3069,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Preview fields auto-generated during router create and update operations. Calling this method does NOT create or update the router.
+        /// Preview fields auto-generated during router create andupdate operations.
+        /// Calling this method does NOT create or update the router.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2989,7 +3082,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Preview fields auto-generated during router create and update operations. Calling this method does NOT create or update the router.
+        /// Preview fields auto-generated during router create andupdate operations.
+        /// Calling this method does NOT create or update the router.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3004,7 +3098,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient UpdateOperationsClient { get; }
 
         /// <summary>
-        /// Updates the specified Router resource with the data included in the request. This method conforms to PUT semantics, which requests that the state of the target resource be created or replaced with the state defined by the representation enclosed in the request message payload.
+        /// Updates the specified Router resource with the data included in the
+        /// request.  This method conforms toPUT semantics, which requests that the state of the
+        /// target resource be created or replaced with the state defined by the
+        /// representation enclosed in the request message payload.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3019,7 +3116,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Updates the specified Router resource with the data included in the request. This method conforms to PUT semantics, which requests that the state of the target resource be created or replaced with the state defined by the representation enclosed in the request message payload.
+        /// Updates the specified Router resource with the data included in the
+        /// request.  This method conforms toPUT semantics, which requests that the state of the
+        /// target resource be created or replaced with the state defined by the
+        /// representation enclosed in the request message payload.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

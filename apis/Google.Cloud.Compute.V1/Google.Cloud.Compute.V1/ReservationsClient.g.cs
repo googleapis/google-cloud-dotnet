@@ -468,7 +468,10 @@ namespace Google.Cloud.Compute.V1
         public virtual Reservations.ReservationsClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of reservations. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of reservations.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -477,7 +480,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of reservations. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of reservations.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -488,7 +494,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of reservations. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of reservations.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -521,7 +530,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of reservations. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of reservations.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -758,7 +770,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, zone, reservation, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -767,7 +780,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -776,7 +790,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -785,7 +800,8 @@ namespace Google.Cloud.Compute.V1
             GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -807,7 +823,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -829,7 +846,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -846,7 +864,8 @@ namespace Google.Cloud.Compute.V1
             GetIamPolicyAsync(project, zone, resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new reservation. For more information, read Reserving zonal resources.
+        /// Creates a new reservation. For more information, readReserving zonal
+        /// resources.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -855,7 +874,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new reservation. For more information, read Reserving zonal resources.
+        /// Creates a new reservation. For more information, readReserving zonal
+        /// resources.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -864,7 +884,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new reservation. For more information, read Reserving zonal resources.
+        /// Creates a new reservation. For more information, readReserving zonal
+        /// resources.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -899,7 +920,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a new reservation. For more information, read Reserving zonal resources.
+        /// Creates a new reservation. For more information, readReserving zonal
+        /// resources.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -921,7 +943,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new reservation. For more information, read Reserving zonal resources.
+        /// Creates a new reservation. For more information, readReserving zonal
+        /// resources.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -943,7 +966,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new reservation. For more information, read Reserving zonal resources.
+        /// Creates a new reservation. For more information, readReserving zonal
+        /// resources.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -960,7 +984,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, zone, reservationResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// A list of all the reservations that have been configured for the specified project in specified zone.
+        /// A list of all the reservations that have been configured for the
+        /// specified project in specified zone.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -969,7 +994,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// A list of all the reservations that have been configured for the specified project in specified zone.
+        /// A list of all the reservations that have been configured for the
+        /// specified project in specified zone.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -978,7 +1004,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// A list of all the reservations that have been configured for the specified project in specified zone.
+        /// A list of all the reservations that have been configured for the
+        /// specified project in specified zone.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1015,7 +1042,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// A list of all the reservations that have been configured for the specified project in specified zone.
+        /// A list of all the reservations that have been configured for the
+        /// specified project in specified zone.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1115,7 +1143,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the zone for this request. Zone name should conform to RFC1035.
         /// </param>
         /// <param name="reservation">
-        /// The name of the reservation. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the reservation.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="reservationsPerformMaintenanceRequestResource">
         /// The body resource for this request
@@ -1141,7 +1170,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the zone for this request. Zone name should conform to RFC1035.
         /// </param>
         /// <param name="reservation">
-        /// The name of the reservation. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the reservation.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="reservationsPerformMaintenanceRequestResource">
         /// The body resource for this request
@@ -1167,7 +1197,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the zone for this request. Zone name should conform to RFC1035.
         /// </param>
         /// <param name="reservation">
-        /// The name of the reservation. Name should conform to RFC1035 or be a resource ID.
+        /// The name of the reservation.
+        /// Name should conform to RFC1035 or be a resource ID.
         /// </param>
         /// <param name="reservationsPerformMaintenanceRequestResource">
         /// The body resource for this request
@@ -1178,7 +1209,9 @@ namespace Google.Cloud.Compute.V1
             PerformMaintenanceAsync(project, zone, reservation, reservationsPerformMaintenanceRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Resizes the reservation (applicable to standalone reservations only). For more information, read Modifying reservations.
+        /// Resizes the reservation (applicable to standalone reservations only). For
+        /// more information, readModifying
+        /// reservations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1187,7 +1220,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Resizes the reservation (applicable to standalone reservations only). For more information, read Modifying reservations.
+        /// Resizes the reservation (applicable to standalone reservations only). For
+        /// more information, readModifying
+        /// reservations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1196,7 +1231,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Resizes the reservation (applicable to standalone reservations only). For more information, read Modifying reservations.
+        /// Resizes the reservation (applicable to standalone reservations only). For
+        /// more information, readModifying
+        /// reservations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1231,7 +1268,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ResizeOperationsClient, callSettings);
 
         /// <summary>
-        /// Resizes the reservation (applicable to standalone reservations only). For more information, read Modifying reservations.
+        /// Resizes the reservation (applicable to standalone reservations only). For
+        /// more information, readModifying
+        /// reservations.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1257,7 +1296,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Resizes the reservation (applicable to standalone reservations only). For more information, read Modifying reservations.
+        /// Resizes the reservation (applicable to standalone reservations only). For
+        /// more information, readModifying
+        /// reservations.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1283,7 +1324,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Resizes the reservation (applicable to standalone reservations only). For more information, read Modifying reservations.
+        /// Resizes the reservation (applicable to standalone reservations only). For
+        /// more information, readModifying
+        /// reservations.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1303,7 +1346,8 @@ namespace Google.Cloud.Compute.V1
             ResizeAsync(project, zone, reservation, reservationsResizeRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1312,7 +1356,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1321,7 +1366,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1330,7 +1376,8 @@ namespace Google.Cloud.Compute.V1
             SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1356,7 +1403,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1382,7 +1430,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1762,7 +1811,10 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_UpdateReservationRequest(ref UpdateReservationRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Retrieves an aggregated list of reservations. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of reservations.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1774,7 +1826,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of reservations. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of reservations.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1845,7 +1900,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1857,7 +1913,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+        /// Gets the access control policy for a resource. May be empty if no such
+        /// policy or resource exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1872,7 +1929,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a new reservation. For more information, read Reserving zonal resources.
+        /// Creates a new reservation. For more information, readReserving zonal
+        /// resources.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1887,7 +1945,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a new reservation. For more information, read Reserving zonal resources.
+        /// Creates a new reservation. For more information, readReserving zonal
+        /// resources.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1902,7 +1961,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// A list of all the reservations that have been configured for the specified project in specified zone.
+        /// A list of all the reservations that have been configured for the
+        /// specified project in specified zone.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1914,7 +1974,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// A list of all the reservations that have been configured for the specified project in specified zone.
+        /// A list of all the reservations that have been configured for the
+        /// specified project in specified zone.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1962,7 +2023,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient ResizeOperationsClient { get; }
 
         /// <summary>
-        /// Resizes the reservation (applicable to standalone reservations only). For more information, read Modifying reservations.
+        /// Resizes the reservation (applicable to standalone reservations only). For
+        /// more information, readModifying
+        /// reservations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1977,7 +2040,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Resizes the reservation (applicable to standalone reservations only). For more information, read Modifying reservations.
+        /// Resizes the reservation (applicable to standalone reservations only). For
+        /// more information, readModifying
+        /// reservations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1992,7 +2057,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2004,7 +2070,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the access control policy on the specified resource. Replaces any existing policy.
+        /// Sets the access control policy on the specified resource.
+        /// Replaces any existing policy.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

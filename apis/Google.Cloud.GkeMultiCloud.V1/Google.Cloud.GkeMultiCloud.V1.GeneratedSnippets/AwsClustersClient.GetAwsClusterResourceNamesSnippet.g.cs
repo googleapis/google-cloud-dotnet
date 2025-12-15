@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START gkemulticloud_v1_generated_AwsClusters_GetAwsCluster_sync_flattened_resourceNames]
     using Google.Cloud.GkeMultiCloud.V1;
+    using System;
 
     public sealed partial class GeneratedAwsClustersClientSnippets
     {
@@ -29,6 +30,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void GetAwsClusterResourceNames()
         {
             // Create client
@@ -36,7 +38,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AwsClusterName name = AwsClusterName.FromProjectLocationAwsCluster("[PROJECT]", "[LOCATION]", "[AWS_CLUSTER]");
             // Make the request
+#pragma warning disable CS0612
             AwsCluster response = awsClustersClient.GetAwsCluster(name);
+#pragma warning restore CS0612
         }
     }
     // [END gkemulticloud_v1_generated_AwsClusters_GetAwsCluster_sync_flattened_resourceNames]

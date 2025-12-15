@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START gkemulticloud_v1_generated_AzureClusters_GetAzureOpenIdConfig_async_flattened]
     using Google.Cloud.GkeMultiCloud.V1;
+    using System;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedAzureClustersClientSnippets
@@ -30,6 +31,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public async Task GetAzureOpenIdConfigAsync()
         {
             // Create client
@@ -37,7 +39,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string azureCluster = "projects/[PROJECT]/locations/[LOCATION]/azureClusters/[AZURE_CLUSTER]";
             // Make the request
+#pragma warning disable CS0612
             AzureOpenIdConfig response = await azureClustersClient.GetAzureOpenIdConfigAsync(azureCluster);
+#pragma warning restore CS0612
         }
     }
     // [END gkemulticloud_v1_generated_AzureClusters_GetAzureOpenIdConfig_async_flattened]

@@ -402,7 +402,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region scoping this request.
         /// </param>
         /// <param name="healthCheckService">
-        /// Name of the HealthCheckService to delete. The name must be 1-63 characters long, and comply with RFC1035.
+        /// Name of the HealthCheckService to delete. The name
+        /// must be 1-63 characters long, and comply with RFC1035.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -424,7 +425,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region scoping this request.
         /// </param>
         /// <param name="healthCheckService">
-        /// Name of the HealthCheckService to delete. The name must be 1-63 characters long, and comply with RFC1035.
+        /// Name of the HealthCheckService to delete. The name
+        /// must be 1-63 characters long, and comply with RFC1035.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -446,7 +448,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region scoping this request.
         /// </param>
         /// <param name="healthCheckService">
-        /// Name of the HealthCheckService to delete. The name must be 1-63 characters long, and comply with RFC1035.
+        /// Name of the HealthCheckService to delete. The name
+        /// must be 1-63 characters long, and comply with RFC1035.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -490,7 +493,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region scoping this request.
         /// </param>
         /// <param name="healthCheckService">
-        /// Name of the HealthCheckService to update. The name must be 1-63 characters long, and comply with RFC1035.
+        /// Name of the HealthCheckService to update. The name
+        /// must be 1-63 characters long, and comply with RFC1035.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -512,7 +516,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region scoping this request.
         /// </param>
         /// <param name="healthCheckService">
-        /// Name of the HealthCheckService to update. The name must be 1-63 characters long, and comply with RFC1035.
+        /// Name of the HealthCheckService to update. The name
+        /// must be 1-63 characters long, and comply with RFC1035.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -534,7 +539,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region scoping this request.
         /// </param>
         /// <param name="healthCheckService">
-        /// Name of the HealthCheckService to update. The name must be 1-63 characters long, and comply with RFC1035.
+        /// Name of the HealthCheckService to update. The name
+        /// must be 1-63 characters long, and comply with RFC1035.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -542,7 +548,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, region, healthCheckService, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a regional HealthCheckService resource in the specified project and region using the data included in the request.
+        /// Creates a regional HealthCheckService resource in the
+        /// specified project and region using the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -551,7 +558,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a regional HealthCheckService resource in the specified project and region using the data included in the request.
+        /// Creates a regional HealthCheckService resource in the
+        /// specified project and region using the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -560,7 +568,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a regional HealthCheckService resource in the specified project and region using the data included in the request.
+        /// Creates a regional HealthCheckService resource in the
+        /// specified project and region using the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -595,7 +604,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a regional HealthCheckService resource in the specified project and region using the data included in the request.
+        /// Creates a regional HealthCheckService resource in the
+        /// specified project and region using the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -617,7 +627,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a regional HealthCheckService resource in the specified project and region using the data included in the request.
+        /// Creates a regional HealthCheckService resource in the
+        /// specified project and region using the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -639,7 +650,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a regional HealthCheckService resource in the specified project and region using the data included in the request.
+        /// Creates a regional HealthCheckService resource in the
+        /// specified project and region using the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -656,7 +668,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, region, healthCheckServiceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists all the HealthCheckService resources that have been configured for the specified project in the given region.
+        /// Lists all the HealthCheckService resources that have been
+        /// configured for the specified project in the given region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -665,7 +678,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all the HealthCheckService resources that have been configured for the specified project in the given region.
+        /// Lists all the HealthCheckService resources that have been
+        /// configured for the specified project in the given region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -674,7 +688,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all the HealthCheckService resources that have been configured for the specified project in the given region.
+        /// Lists all the HealthCheckService resources that have been
+        /// configured for the specified project in the given region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -711,7 +726,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists all the HealthCheckService resources that have been configured for the specified project in the given region.
+        /// Lists all the HealthCheckService resources that have been
+        /// configured for the specified project in the given region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -748,7 +764,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Updates the specified regional HealthCheckService resource with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the specified regional HealthCheckService resource
+        /// with the data included in the request.  This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -757,7 +776,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the specified regional HealthCheckService resource with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the specified regional HealthCheckService resource
+        /// with the data included in the request.  This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -766,7 +788,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the specified regional HealthCheckService resource with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the specified regional HealthCheckService resource
+        /// with the data included in the request.  This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -801,7 +826,10 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates the specified regional HealthCheckService resource with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the specified regional HealthCheckService resource
+        /// with the data included in the request.  This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -810,7 +838,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region scoping this request.
         /// </param>
         /// <param name="healthCheckService">
-        /// Name of the HealthCheckService to update. The name must be 1-63 characters long, and comply with RFC1035.
+        /// Name of the HealthCheckService to update. The name
+        /// must be 1-63 characters long, and comply with RFC1035.
         /// </param>
         /// <param name="healthCheckServiceResource">
         /// The body resource for this request
@@ -827,7 +856,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the specified regional HealthCheckService resource with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the specified regional HealthCheckService resource
+        /// with the data included in the request.  This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -836,7 +868,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region scoping this request.
         /// </param>
         /// <param name="healthCheckService">
-        /// Name of the HealthCheckService to update. The name must be 1-63 characters long, and comply with RFC1035.
+        /// Name of the HealthCheckService to update. The name
+        /// must be 1-63 characters long, and comply with RFC1035.
         /// </param>
         /// <param name="healthCheckServiceResource">
         /// The body resource for this request
@@ -853,7 +886,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the specified regional HealthCheckService resource with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the specified regional HealthCheckService resource
+        /// with the data included in the request.  This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -862,7 +898,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region scoping this request.
         /// </param>
         /// <param name="healthCheckService">
-        /// Name of the HealthCheckService to update. The name must be 1-63 characters long, and comply with RFC1035.
+        /// Name of the HealthCheckService to update. The name
+        /// must be 1-63 characters long, and comply with RFC1035.
         /// </param>
         /// <param name="healthCheckServiceResource">
         /// The body resource for this request
@@ -1016,7 +1053,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a regional HealthCheckService resource in the specified project and region using the data included in the request.
+        /// Creates a regional HealthCheckService resource in the
+        /// specified project and region using the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1031,7 +1069,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a regional HealthCheckService resource in the specified project and region using the data included in the request.
+        /// Creates a regional HealthCheckService resource in the
+        /// specified project and region using the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1046,7 +1085,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists all the HealthCheckService resources that have been configured for the specified project in the given region.
+        /// Lists all the HealthCheckService resources that have been
+        /// configured for the specified project in the given region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1058,7 +1098,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists all the HealthCheckService resources that have been configured for the specified project in the given region.
+        /// Lists all the HealthCheckService resources that have been
+        /// configured for the specified project in the given region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1073,7 +1114,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient PatchOperationsClient { get; }
 
         /// <summary>
-        /// Updates the specified regional HealthCheckService resource with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the specified regional HealthCheckService resource
+        /// with the data included in the request.  This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1088,7 +1132,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Updates the specified regional HealthCheckService resource with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Updates the specified regional HealthCheckService resource
+        /// with the data included in the request.  This method supportsPATCH
+        /// semantics and uses theJSON merge
+        /// patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

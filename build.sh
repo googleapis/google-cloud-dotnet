@@ -64,7 +64,7 @@ then
   # Build ReleaseManager first separately, so that we get any build messages
   # here rather than when we try to run it
   dotnet build tools/Google.Cloud.Tools.ReleaseManager
-  apis=(${tools} $(dotnet run --no-build --no-restore --project tools/Google.Cloud.Tools.ReleaseManager -- query-api-catalog list))
+  apis=(${tools} $(find apis -depth -mindepth 1 -maxdepth 1 -type d | sed 's#^apis/##'))
 fi
 
 # If we were given an API filter regex, apply it now.

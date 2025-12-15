@@ -82,6 +82,12 @@
                 "DeleteVersionAsync"
               ]
             },
+            "ExportArtifact": {
+              "methods": [
+                "ExportArtifact",
+                "ExportArtifactAsync"
+              ]
+            },
             "GetAttachment": {
               "methods": [
                 "GetAttachment",

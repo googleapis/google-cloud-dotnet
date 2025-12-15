@@ -921,6 +921,7 @@ namespace GoogleCSharpSnippets
                 DestinationParallelstore = new DestinationParallelstore(),
                 RequestId = "",
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                MetadataOptions = new TransferMetadataOptions(),
             };
             // Make the request
             Operation<ImportDataResponse, ImportDataMetadata> response = parallelstoreClient.ImportData(request);
@@ -958,6 +959,7 @@ namespace GoogleCSharpSnippets
                 DestinationParallelstore = new DestinationParallelstore(),
                 RequestId = "",
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                MetadataOptions = new TransferMetadataOptions(),
             };
             // Make the request
             Operation<ImportDataResponse, ImportDataMetadata> response = await parallelstoreClient.ImportDataAsync(request);
@@ -994,6 +996,7 @@ namespace GoogleCSharpSnippets
                 DestinationGcsBucket = new DestinationGcsBucket(),
                 RequestId = "",
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                MetadataOptions = new TransferMetadataOptions(),
             };
             // Make the request
             Operation<ExportDataResponse, ExportDataMetadata> response = parallelstoreClient.ExportData(request);
@@ -1031,6 +1034,7 @@ namespace GoogleCSharpSnippets
                 DestinationGcsBucket = new DestinationGcsBucket(),
                 RequestId = "",
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                MetadataOptions = new TransferMetadataOptions(),
             };
             // Make the request
             Operation<ExportDataResponse, ExportDataMetadata> response = await parallelstoreClient.ExportDataAsync(request);

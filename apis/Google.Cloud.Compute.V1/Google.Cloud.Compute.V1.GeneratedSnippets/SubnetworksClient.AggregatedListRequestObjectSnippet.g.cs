@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             AggregatedListSubnetworksRequest request = new AggregatedListSubnetworksRequest
             {
+                Views = "",
                 OrderBy = "",
                 Project = "",
                 ServiceProjectNumber = 0L,

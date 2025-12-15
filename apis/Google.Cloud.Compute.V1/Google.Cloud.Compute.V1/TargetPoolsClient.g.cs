@@ -792,7 +792,10 @@ namespace Google.Cloud.Compute.V1
             AddInstanceAsync(project, region, targetPool, targetPoolsAddInstanceRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves an aggregated list of target pools. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of target pools.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -801,7 +804,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of target pools. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of target pools.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -812,7 +818,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of target pools. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of target pools.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -845,7 +854,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of target pools. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of target pools.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1082,7 +1094,8 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, region, targetPool, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the most recent health check results for each IP for the instance that is referenced by the given target pool.
+        /// Gets the most recent health check results for each IP for the
+        /// instance that is referenced by the given target pool.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1091,7 +1104,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the most recent health check results for each IP for the instance that is referenced by the given target pool.
+        /// Gets the most recent health check results for each IP for the
+        /// instance that is referenced by the given target pool.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1100,7 +1114,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the most recent health check results for each IP for the instance that is referenced by the given target pool.
+        /// Gets the most recent health check results for each IP for the
+        /// instance that is referenced by the given target pool.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1109,7 +1124,8 @@ namespace Google.Cloud.Compute.V1
             GetHealthAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the most recent health check results for each IP for the instance that is referenced by the given target pool.
+        /// Gets the most recent health check results for each IP for the
+        /// instance that is referenced by the given target pool.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1135,7 +1151,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the most recent health check results for each IP for the instance that is referenced by the given target pool.
+        /// Gets the most recent health check results for each IP for the
+        /// instance that is referenced by the given target pool.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1161,7 +1178,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the most recent health check results for each IP for the instance that is referenced by the given target pool.
+        /// Gets the most recent health check results for each IP for the
+        /// instance that is referenced by the given target pool.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1181,7 +1199,8 @@ namespace Google.Cloud.Compute.V1
             GetHealthAsync(project, region, targetPool, instanceReferenceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a target pool in the specified project and region using the data included in the request.
+        /// Creates a target pool in the specified project and region using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1190,7 +1209,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a target pool in the specified project and region using the data included in the request.
+        /// Creates a target pool in the specified project and region using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1199,7 +1219,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a target pool in the specified project and region using the data included in the request.
+        /// Creates a target pool in the specified project and region using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1234,7 +1255,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a target pool in the specified project and region using the data included in the request.
+        /// Creates a target pool in the specified project and region using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1256,7 +1278,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a target pool in the specified project and region using the data included in the request.
+        /// Creates a target pool in the specified project and region using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1278,7 +1301,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a target pool in the specified project and region using the data included in the request.
+        /// Creates a target pool in the specified project and region using
+        /// the data included in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1295,7 +1319,8 @@ namespace Google.Cloud.Compute.V1
             InsertAsync(project, region, targetPoolResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a list of target pools available to the specified project and region.
+        /// Retrieves a list of target pools available to the specified
+        /// project and region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1304,7 +1329,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of target pools available to the specified project and region.
+        /// Retrieves a list of target pools available to the specified
+        /// project and region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1313,7 +1339,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of target pools available to the specified project and region.
+        /// Retrieves a list of target pools available to the specified
+        /// project and region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1350,7 +1377,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of target pools available to the specified project and region.
+        /// Retrieves a list of target pools available to the specified
+        /// project and region.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1763,7 +1791,9 @@ namespace Google.Cloud.Compute.V1
             SetBackupAsync(project, region, targetPool, targetReferenceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the Google Cloud Armor security policy for the specified target pool. For more information, see Google Cloud Armor Overview
+        /// Sets the Google Cloud Armor security policy for the specified target pool.
+        /// For more information, seeGoogle
+        /// Cloud Armor Overview
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1772,7 +1802,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the Google Cloud Armor security policy for the specified target pool. For more information, see Google Cloud Armor Overview
+        /// Sets the Google Cloud Armor security policy for the specified target pool.
+        /// For more information, seeGoogle
+        /// Cloud Armor Overview
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1781,7 +1813,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the Google Cloud Armor security policy for the specified target pool. For more information, see Google Cloud Armor Overview
+        /// Sets the Google Cloud Armor security policy for the specified target pool.
+        /// For more information, seeGoogle
+        /// Cloud Armor Overview
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1817,7 +1851,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetSecurityPolicyOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets the Google Cloud Armor security policy for the specified target pool. For more information, see Google Cloud Armor Overview
+        /// Sets the Google Cloud Armor security policy for the specified target pool.
+        /// For more information, seeGoogle
+        /// Cloud Armor Overview
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1826,7 +1862,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region scoping this request.
         /// </param>
         /// <param name="targetPool">
-        /// Name of the TargetPool resource to which the security policy should be set. The name should conform to RFC1035.
+        /// Name of the TargetPool resource to which the security policy should be
+        /// set. The name should conform to RFC1035.
         /// </param>
         /// <param name="securityPolicyReferenceResource">
         /// The body resource for this request
@@ -1843,7 +1880,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the Google Cloud Armor security policy for the specified target pool. For more information, see Google Cloud Armor Overview
+        /// Sets the Google Cloud Armor security policy for the specified target pool.
+        /// For more information, seeGoogle
+        /// Cloud Armor Overview
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1852,7 +1891,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region scoping this request.
         /// </param>
         /// <param name="targetPool">
-        /// Name of the TargetPool resource to which the security policy should be set. The name should conform to RFC1035.
+        /// Name of the TargetPool resource to which the security policy should be
+        /// set. The name should conform to RFC1035.
         /// </param>
         /// <param name="securityPolicyReferenceResource">
         /// The body resource for this request
@@ -1869,7 +1909,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the Google Cloud Armor security policy for the specified target pool. For more information, see Google Cloud Armor Overview
+        /// Sets the Google Cloud Armor security policy for the specified target pool.
+        /// For more information, seeGoogle
+        /// Cloud Armor Overview
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1878,7 +1920,8 @@ namespace Google.Cloud.Compute.V1
         /// Name of the region scoping this request.
         /// </param>
         /// <param name="targetPool">
-        /// Name of the TargetPool resource to which the security policy should be set. The name should conform to RFC1035.
+        /// Name of the TargetPool resource to which the security policy should be
+        /// set. The name should conform to RFC1035.
         /// </param>
         /// <param name="securityPolicyReferenceResource">
         /// The body resource for this request
@@ -2211,7 +2254,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of target pools. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of target pools.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2223,7 +2269,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of target pools. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// Retrieves an aggregated list of target pools.
+        /// 
+        /// To prevent failure, Google recommends that you set the
+        /// `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2294,7 +2343,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the most recent health check results for each IP for the instance that is referenced by the given target pool.
+        /// Gets the most recent health check results for each IP for the
+        /// instance that is referenced by the given target pool.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2306,7 +2356,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the most recent health check results for each IP for the instance that is referenced by the given target pool.
+        /// Gets the most recent health check results for each IP for the
+        /// instance that is referenced by the given target pool.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2321,7 +2372,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a target pool in the specified project and region using the data included in the request.
+        /// Creates a target pool in the specified project and region using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2336,7 +2388,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a target pool in the specified project and region using the data included in the request.
+        /// Creates a target pool in the specified project and region using
+        /// the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2351,7 +2404,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of target pools available to the specified project and region.
+        /// Retrieves a list of target pools available to the specified
+        /// project and region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2363,7 +2417,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of target pools available to the specified project and region.
+        /// Retrieves a list of target pools available to the specified
+        /// project and region.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2477,7 +2532,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient SetSecurityPolicyOperationsClient { get; }
 
         /// <summary>
-        /// Sets the Google Cloud Armor security policy for the specified target pool. For more information, see Google Cloud Armor Overview
+        /// Sets the Google Cloud Armor security policy for the specified target pool.
+        /// For more information, seeGoogle
+        /// Cloud Armor Overview
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2492,7 +2549,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the Google Cloud Armor security policy for the specified target pool. For more information, see Google Cloud Armor Overview
+        /// Sets the Google Cloud Armor security policy for the specified target pool.
+        /// For more information, seeGoogle
+        /// Cloud Armor Overview
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

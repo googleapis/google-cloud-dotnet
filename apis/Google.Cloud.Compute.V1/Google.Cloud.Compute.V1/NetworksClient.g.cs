@@ -909,7 +909,8 @@ namespace Google.Cloud.Compute.V1
             GetEffectiveFirewallsAsync(project, network, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a network in the specified project using the data included in the request.
+        /// Creates a network in the specified project using the data included
+        /// in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -918,7 +919,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a network in the specified project using the data included in the request.
+        /// Creates a network in the specified project using the data included
+        /// in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -927,7 +929,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a network in the specified project using the data included in the request.
+        /// Creates a network in the specified project using the data included
+        /// in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -962,7 +965,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a network in the specified project using the data included in the request.
+        /// Creates a network in the specified project using the data included
+        /// in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -980,7 +984,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a network in the specified project using the data included in the request.
+        /// Creates a network in the specified project using the data included
+        /// in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -998,7 +1003,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a network in the specified project using the data included in the request.
+        /// Creates a network in the specified project using the data included
+        /// in the request.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1188,7 +1194,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches the specified network with the data included in the request. Only routingConfig can be modified.
+        /// Patches the specified network with the data included in the request.
+        /// Only routingConfig can be modified.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1197,7 +1204,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified network with the data included in the request. Only routingConfig can be modified.
+        /// Patches the specified network with the data included in the request.
+        /// Only routingConfig can be modified.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1206,7 +1214,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified network with the data included in the request. Only routingConfig can be modified.
+        /// Patches the specified network with the data included in the request.
+        /// Only routingConfig can be modified.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1241,7 +1250,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchOperationsClient, callSettings);
 
         /// <summary>
-        /// Patches the specified network with the data included in the request. Only routingConfig can be modified.
+        /// Patches the specified network with the data included in the request.
+        /// Only routingConfig can be modified.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1263,7 +1273,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified network with the data included in the request. Only routingConfig can be modified.
+        /// Patches the specified network with the data included in the request.
+        /// Only routingConfig can be modified.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1285,7 +1296,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified network with the data included in the request. Only routingConfig can be modified.
+        /// Patches the specified network with the data included in the request.
+        /// Only routingConfig can be modified.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1416,7 +1428,8 @@ namespace Google.Cloud.Compute.V1
             RemovePeeringAsync(project, network, networksRemovePeeringRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Requests to remove a peering from the specified network. Applicable only for PeeringConnection with update_strategy=CONSENSUS.
+        /// Requests to remove a peering from the specified network. Applicable only
+        /// for PeeringConnection with update_strategy=CONSENSUS.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1425,7 +1438,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Requests to remove a peering from the specified network. Applicable only for PeeringConnection with update_strategy=CONSENSUS.
+        /// Requests to remove a peering from the specified network. Applicable only
+        /// for PeeringConnection with update_strategy=CONSENSUS.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1434,7 +1448,8 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Requests to remove a peering from the specified network. Applicable only for PeeringConnection with update_strategy=CONSENSUS.
+        /// Requests to remove a peering from the specified network. Applicable only
+        /// for PeeringConnection with update_strategy=CONSENSUS.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1470,7 +1485,8 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RequestRemovePeeringOperationsClient, callSettings);
 
         /// <summary>
-        /// Requests to remove a peering from the specified network. Applicable only for PeeringConnection with update_strategy=CONSENSUS.
+        /// Requests to remove a peering from the specified network. Applicable only
+        /// for PeeringConnection with update_strategy=CONSENSUS.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1492,7 +1508,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Requests to remove a peering from the specified network. Applicable only for PeeringConnection with update_strategy=CONSENSUS.
+        /// Requests to remove a peering from the specified network. Applicable only
+        /// for PeeringConnection with update_strategy=CONSENSUS.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1514,7 +1531,8 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Requests to remove a peering from the specified network. Applicable only for PeeringConnection with update_strategy=CONSENSUS.
+        /// Requests to remove a peering from the specified network. Applicable only
+        /// for PeeringConnection with update_strategy=CONSENSUS.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1635,7 +1653,9 @@ namespace Google.Cloud.Compute.V1
             SwitchToCustomModeAsync(project, network, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates the specified network peering with the data included in the request. You can only modify the NetworkPeering.export_custom_routes field and the NetworkPeering.import_custom_routes field.
+        /// Updates the specified network peering with the data included in the
+        /// request. You can only modify the NetworkPeering.export_custom_routes field
+        /// and the NetworkPeering.import_custom_routes field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1644,7 +1664,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the specified network peering with the data included in the request. You can only modify the NetworkPeering.export_custom_routes field and the NetworkPeering.import_custom_routes field.
+        /// Updates the specified network peering with the data included in the
+        /// request. You can only modify the NetworkPeering.export_custom_routes field
+        /// and the NetworkPeering.import_custom_routes field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1653,7 +1675,9 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the specified network peering with the data included in the request. You can only modify the NetworkPeering.export_custom_routes field and the NetworkPeering.import_custom_routes field.
+        /// Updates the specified network peering with the data included in the
+        /// request. You can only modify the NetworkPeering.export_custom_routes field
+        /// and the NetworkPeering.import_custom_routes field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1688,7 +1712,9 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdatePeeringOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates the specified network peering with the data included in the request. You can only modify the NetworkPeering.export_custom_routes field and the NetworkPeering.import_custom_routes field.
+        /// Updates the specified network peering with the data included in the
+        /// request. You can only modify the NetworkPeering.export_custom_routes field
+        /// and the NetworkPeering.import_custom_routes field.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1710,7 +1736,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the specified network peering with the data included in the request. You can only modify the NetworkPeering.export_custom_routes field and the NetworkPeering.import_custom_routes field.
+        /// Updates the specified network peering with the data included in the
+        /// request. You can only modify the NetworkPeering.export_custom_routes field
+        /// and the NetworkPeering.import_custom_routes field.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1732,7 +1760,9 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates the specified network peering with the data included in the request. You can only modify the NetworkPeering.export_custom_routes field and the NetworkPeering.import_custom_routes field.
+        /// Updates the specified network peering with the data included in the
+        /// request. You can only modify the NetworkPeering.export_custom_routes field
+        /// and the NetworkPeering.import_custom_routes field.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2014,7 +2044,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a network in the specified project using the data included in the request.
+        /// Creates a network in the specified project using the data included
+        /// in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2029,7 +2060,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a network in the specified project using the data included in the request.
+        /// Creates a network in the specified project using the data included
+        /// in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2095,7 +2127,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient PatchOperationsClient { get; }
 
         /// <summary>
-        /// Patches the specified network with the data included in the request. Only routingConfig can be modified.
+        /// Patches the specified network with the data included in the request.
+        /// Only routingConfig can be modified.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2110,7 +2143,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches the specified network with the data included in the request. Only routingConfig can be modified.
+        /// Patches the specified network with the data included in the request.
+        /// Only routingConfig can be modified.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2161,7 +2195,8 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient RequestRemovePeeringOperationsClient { get; }
 
         /// <summary>
-        /// Requests to remove a peering from the specified network. Applicable only for PeeringConnection with update_strategy=CONSENSUS.
+        /// Requests to remove a peering from the specified network. Applicable only
+        /// for PeeringConnection with update_strategy=CONSENSUS.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2176,7 +2211,8 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Requests to remove a peering from the specified network. Applicable only for PeeringConnection with update_strategy=CONSENSUS.
+        /// Requests to remove a peering from the specified network. Applicable only
+        /// for PeeringConnection with update_strategy=CONSENSUS.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2227,7 +2263,9 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient UpdatePeeringOperationsClient { get; }
 
         /// <summary>
-        /// Updates the specified network peering with the data included in the request. You can only modify the NetworkPeering.export_custom_routes field and the NetworkPeering.import_custom_routes field.
+        /// Updates the specified network peering with the data included in the
+        /// request. You can only modify the NetworkPeering.export_custom_routes field
+        /// and the NetworkPeering.import_custom_routes field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2242,7 +2280,9 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Updates the specified network peering with the data included in the request. You can only modify the NetworkPeering.export_custom_routes field and the NetworkPeering.import_custom_routes field.
+        /// Updates the specified network peering with the data included in the
+        /// request. You can only modify the NetworkPeering.export_custom_routes field
+        /// and the NetworkPeering.import_custom_routes field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

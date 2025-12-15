@@ -27,6 +27,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
   /// The AwsClusters API provides a single centrally managed service
   /// to create and manage Anthos clusters that run on AWS infrastructure.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public static partial class AwsClusters
   {
     static readonly string __ServiceName = "google.cloud.gkemulticloud.v1.AwsClusters";
@@ -252,6 +253,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     }
 
     /// <summary>Base class for server-side implementations of AwsClusters</summary>
+    [global::System.ObsoleteAttribute]
     [grpc::BindServiceMethod(typeof(AwsClusters), "BindService")]
     public abstract partial class AwsClustersBase
     {
@@ -266,6 +268,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateAwsCluster(global::Google.Cloud.GkeMultiCloud.V1.CreateAwsClusterRequest request, grpc::ServerCallContext context)
       {
@@ -278,6 +281,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateAwsCluster(global::Google.Cloud.GkeMultiCloud.V1.UpdateAwsClusterRequest request, grpc::ServerCallContext context)
       {
@@ -291,6 +295,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeMultiCloud.V1.AwsCluster> GetAwsCluster(global::Google.Cloud.GkeMultiCloud.V1.GetAwsClusterRequest request, grpc::ServerCallContext context)
       {
@@ -304,6 +309,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeMultiCloud.V1.ListAwsClustersResponse> ListAwsClusters(global::Google.Cloud.GkeMultiCloud.V1.ListAwsClustersRequest request, grpc::ServerCallContext context)
       {
@@ -324,6 +330,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteAwsCluster(global::Google.Cloud.GkeMultiCloud.V1.DeleteAwsClusterRequest request, grpc::ServerCallContext context)
       {
@@ -336,6 +343,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenResponse> GenerateAwsClusterAgentToken(global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenRequest request, grpc::ServerCallContext context)
       {
@@ -349,6 +357,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenResponse> GenerateAwsAccessToken(global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenRequest request, grpc::ServerCallContext context)
       {
@@ -366,6 +375,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateAwsNodePool(global::Google.Cloud.GkeMultiCloud.V1.CreateAwsNodePoolRequest request, grpc::ServerCallContext context)
       {
@@ -378,6 +388,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateAwsNodePool(global::Google.Cloud.GkeMultiCloud.V1.UpdateAwsNodePoolRequest request, grpc::ServerCallContext context)
       {
@@ -395,6 +406,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RollbackAwsNodePoolUpdate(global::Google.Cloud.GkeMultiCloud.V1.RollbackAwsNodePoolUpdateRequest request, grpc::ServerCallContext context)
       {
@@ -408,6 +420,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool> GetAwsNodePool(global::Google.Cloud.GkeMultiCloud.V1.GetAwsNodePoolRequest request, grpc::ServerCallContext context)
       {
@@ -422,6 +435,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsResponse> ListAwsNodePools(global::Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsRequest request, grpc::ServerCallContext context)
       {
@@ -439,6 +453,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteAwsNodePool(global::Google.Cloud.GkeMultiCloud.V1.DeleteAwsNodePoolRequest request, grpc::ServerCallContext context)
       {
@@ -455,6 +470,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeMultiCloud.V1.AwsOpenIdConfig> GetAwsOpenIdConfig(global::Google.Cloud.GkeMultiCloud.V1.GetAwsOpenIdConfigRequest request, grpc::ServerCallContext context)
       {
@@ -468,6 +484,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeMultiCloud.V1.AwsJsonWebKeys> GetAwsJsonWebKeys(global::Google.Cloud.GkeMultiCloud.V1.GetAwsJsonWebKeysRequest request, grpc::ServerCallContext context)
       {
@@ -481,6 +498,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeMultiCloud.V1.AwsServerConfig> GetAwsServerConfig(global::Google.Cloud.GkeMultiCloud.V1.GetAwsServerConfigRequest request, grpc::ServerCallContext context)
       {
@@ -490,6 +508,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     }
 
     /// <summary>Client for AwsClusters</summary>
+    [global::System.ObsoleteAttribute]
     public partial class AwsClustersClient : grpc::ClientBase<AwsClustersClient>
     {
       /// <summary>Creates a new client for AwsClusters</summary>
@@ -529,6 +548,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateAwsCluster(global::Google.Cloud.GkeMultiCloud.V1.CreateAwsClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -545,6 +565,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateAwsCluster(global::Google.Cloud.GkeMultiCloud.V1.CreateAwsClusterRequest request, grpc::CallOptions options)
       {
@@ -563,6 +584,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAwsClusterAsync(global::Google.Cloud.GkeMultiCloud.V1.CreateAwsClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -579,6 +601,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAwsClusterAsync(global::Google.Cloud.GkeMultiCloud.V1.CreateAwsClusterRequest request, grpc::CallOptions options)
       {
@@ -592,6 +615,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateAwsCluster(global::Google.Cloud.GkeMultiCloud.V1.UpdateAwsClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -603,6 +627,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateAwsCluster(global::Google.Cloud.GkeMultiCloud.V1.UpdateAwsClusterRequest request, grpc::CallOptions options)
       {
@@ -616,6 +641,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAwsClusterAsync(global::Google.Cloud.GkeMultiCloud.V1.UpdateAwsClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -627,6 +653,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAwsClusterAsync(global::Google.Cloud.GkeMultiCloud.V1.UpdateAwsClusterRequest request, grpc::CallOptions options)
       {
@@ -641,6 +668,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeMultiCloud.V1.AwsCluster GetAwsCluster(global::Google.Cloud.GkeMultiCloud.V1.GetAwsClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -653,6 +681,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeMultiCloud.V1.AwsCluster GetAwsCluster(global::Google.Cloud.GkeMultiCloud.V1.GetAwsClusterRequest request, grpc::CallOptions options)
       {
@@ -667,6 +696,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.AwsCluster> GetAwsClusterAsync(global::Google.Cloud.GkeMultiCloud.V1.GetAwsClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -679,6 +709,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.AwsCluster> GetAwsClusterAsync(global::Google.Cloud.GkeMultiCloud.V1.GetAwsClusterRequest request, grpc::CallOptions options)
       {
@@ -693,6 +724,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeMultiCloud.V1.ListAwsClustersResponse ListAwsClusters(global::Google.Cloud.GkeMultiCloud.V1.ListAwsClustersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -705,6 +737,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeMultiCloud.V1.ListAwsClustersResponse ListAwsClusters(global::Google.Cloud.GkeMultiCloud.V1.ListAwsClustersRequest request, grpc::CallOptions options)
       {
@@ -719,6 +752,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.ListAwsClustersResponse> ListAwsClustersAsync(global::Google.Cloud.GkeMultiCloud.V1.ListAwsClustersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -731,6 +765,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.ListAwsClustersResponse> ListAwsClustersAsync(global::Google.Cloud.GkeMultiCloud.V1.ListAwsClustersRequest request, grpc::CallOptions options)
       {
@@ -752,6 +787,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteAwsCluster(global::Google.Cloud.GkeMultiCloud.V1.DeleteAwsClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -771,6 +807,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteAwsCluster(global::Google.Cloud.GkeMultiCloud.V1.DeleteAwsClusterRequest request, grpc::CallOptions options)
       {
@@ -792,6 +829,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAwsClusterAsync(global::Google.Cloud.GkeMultiCloud.V1.DeleteAwsClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -811,6 +849,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAwsClusterAsync(global::Google.Cloud.GkeMultiCloud.V1.DeleteAwsClusterRequest request, grpc::CallOptions options)
       {
@@ -824,6 +863,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenResponse GenerateAwsClusterAgentToken(global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -835,6 +875,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenResponse GenerateAwsClusterAgentToken(global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenRequest request, grpc::CallOptions options)
       {
@@ -848,6 +889,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenResponse> GenerateAwsClusterAgentTokenAsync(global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -859,6 +901,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenResponse> GenerateAwsClusterAgentTokenAsync(global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsClusterAgentTokenRequest request, grpc::CallOptions options)
       {
@@ -873,6 +916,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenResponse GenerateAwsAccessToken(global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -885,6 +929,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenResponse GenerateAwsAccessToken(global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenRequest request, grpc::CallOptions options)
       {
@@ -899,6 +944,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenResponse> GenerateAwsAccessTokenAsync(global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -911,6 +957,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenResponse> GenerateAwsAccessTokenAsync(global::Google.Cloud.GkeMultiCloud.V1.GenerateAwsAccessTokenRequest request, grpc::CallOptions options)
       {
@@ -929,6 +976,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateAwsNodePool(global::Google.Cloud.GkeMultiCloud.V1.CreateAwsNodePoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -945,6 +993,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateAwsNodePool(global::Google.Cloud.GkeMultiCloud.V1.CreateAwsNodePoolRequest request, grpc::CallOptions options)
       {
@@ -963,6 +1012,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAwsNodePoolAsync(global::Google.Cloud.GkeMultiCloud.V1.CreateAwsNodePoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -979,6 +1029,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAwsNodePoolAsync(global::Google.Cloud.GkeMultiCloud.V1.CreateAwsNodePoolRequest request, grpc::CallOptions options)
       {
@@ -992,6 +1043,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateAwsNodePool(global::Google.Cloud.GkeMultiCloud.V1.UpdateAwsNodePoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1003,6 +1055,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateAwsNodePool(global::Google.Cloud.GkeMultiCloud.V1.UpdateAwsNodePoolRequest request, grpc::CallOptions options)
       {
@@ -1016,6 +1069,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAwsNodePoolAsync(global::Google.Cloud.GkeMultiCloud.V1.UpdateAwsNodePoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1027,6 +1081,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAwsNodePoolAsync(global::Google.Cloud.GkeMultiCloud.V1.UpdateAwsNodePoolRequest request, grpc::CallOptions options)
       {
@@ -1045,6 +1100,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation RollbackAwsNodePoolUpdate(global::Google.Cloud.GkeMultiCloud.V1.RollbackAwsNodePoolUpdateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1061,6 +1117,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation RollbackAwsNodePoolUpdate(global::Google.Cloud.GkeMultiCloud.V1.RollbackAwsNodePoolUpdateRequest request, grpc::CallOptions options)
       {
@@ -1079,6 +1136,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RollbackAwsNodePoolUpdateAsync(global::Google.Cloud.GkeMultiCloud.V1.RollbackAwsNodePoolUpdateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1095,6 +1153,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RollbackAwsNodePoolUpdateAsync(global::Google.Cloud.GkeMultiCloud.V1.RollbackAwsNodePoolUpdateRequest request, grpc::CallOptions options)
       {
@@ -1109,6 +1168,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool GetAwsNodePool(global::Google.Cloud.GkeMultiCloud.V1.GetAwsNodePoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1121,6 +1181,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool GetAwsNodePool(global::Google.Cloud.GkeMultiCloud.V1.GetAwsNodePoolRequest request, grpc::CallOptions options)
       {
@@ -1135,6 +1196,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool> GetAwsNodePoolAsync(global::Google.Cloud.GkeMultiCloud.V1.GetAwsNodePoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1147,6 +1209,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.AwsNodePool> GetAwsNodePoolAsync(global::Google.Cloud.GkeMultiCloud.V1.GetAwsNodePoolRequest request, grpc::CallOptions options)
       {
@@ -1162,6 +1225,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsResponse ListAwsNodePools(global::Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1175,6 +1239,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsResponse ListAwsNodePools(global::Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsRequest request, grpc::CallOptions options)
       {
@@ -1190,6 +1255,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsResponse> ListAwsNodePoolsAsync(global::Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1203,6 +1269,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsResponse> ListAwsNodePoolsAsync(global::Google.Cloud.GkeMultiCloud.V1.ListAwsNodePoolsRequest request, grpc::CallOptions options)
       {
@@ -1221,6 +1288,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteAwsNodePool(global::Google.Cloud.GkeMultiCloud.V1.DeleteAwsNodePoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1237,6 +1305,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteAwsNodePool(global::Google.Cloud.GkeMultiCloud.V1.DeleteAwsNodePoolRequest request, grpc::CallOptions options)
       {
@@ -1255,6 +1324,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAwsNodePoolAsync(global::Google.Cloud.GkeMultiCloud.V1.DeleteAwsNodePoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1271,6 +1341,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAwsNodePoolAsync(global::Google.Cloud.GkeMultiCloud.V1.DeleteAwsNodePoolRequest request, grpc::CallOptions options)
       {
@@ -1288,6 +1359,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeMultiCloud.V1.AwsOpenIdConfig GetAwsOpenIdConfig(global::Google.Cloud.GkeMultiCloud.V1.GetAwsOpenIdConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1303,6 +1375,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeMultiCloud.V1.AwsOpenIdConfig GetAwsOpenIdConfig(global::Google.Cloud.GkeMultiCloud.V1.GetAwsOpenIdConfigRequest request, grpc::CallOptions options)
       {
@@ -1320,6 +1393,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.AwsOpenIdConfig> GetAwsOpenIdConfigAsync(global::Google.Cloud.GkeMultiCloud.V1.GetAwsOpenIdConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1335,6 +1409,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.AwsOpenIdConfig> GetAwsOpenIdConfigAsync(global::Google.Cloud.GkeMultiCloud.V1.GetAwsOpenIdConfigRequest request, grpc::CallOptions options)
       {
@@ -1349,6 +1424,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeMultiCloud.V1.AwsJsonWebKeys GetAwsJsonWebKeys(global::Google.Cloud.GkeMultiCloud.V1.GetAwsJsonWebKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1361,6 +1437,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeMultiCloud.V1.AwsJsonWebKeys GetAwsJsonWebKeys(global::Google.Cloud.GkeMultiCloud.V1.GetAwsJsonWebKeysRequest request, grpc::CallOptions options)
       {
@@ -1375,6 +1452,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.AwsJsonWebKeys> GetAwsJsonWebKeysAsync(global::Google.Cloud.GkeMultiCloud.V1.GetAwsJsonWebKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1387,6 +1465,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.AwsJsonWebKeys> GetAwsJsonWebKeysAsync(global::Google.Cloud.GkeMultiCloud.V1.GetAwsJsonWebKeysRequest request, grpc::CallOptions options)
       {
@@ -1401,6 +1480,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeMultiCloud.V1.AwsServerConfig GetAwsServerConfig(global::Google.Cloud.GkeMultiCloud.V1.GetAwsServerConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1413,6 +1493,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeMultiCloud.V1.AwsServerConfig GetAwsServerConfig(global::Google.Cloud.GkeMultiCloud.V1.GetAwsServerConfigRequest request, grpc::CallOptions options)
       {
@@ -1427,6 +1508,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.AwsServerConfig> GetAwsServerConfigAsync(global::Google.Cloud.GkeMultiCloud.V1.GetAwsServerConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1439,6 +1521,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeMultiCloud.V1.AwsServerConfig> GetAwsServerConfigAsync(global::Google.Cloud.GkeMultiCloud.V1.GetAwsServerConfigRequest request, grpc::CallOptions options)
       {

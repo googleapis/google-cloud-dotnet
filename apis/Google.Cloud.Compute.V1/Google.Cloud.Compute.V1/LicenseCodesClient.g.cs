@@ -229,7 +229,11 @@ namespace Google.Cloud.Compute.V1
         public virtual LicenseCodes.LicenseCodesClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Return a specified license code. License codes are mirrored across all projects that have permissions to read the License Code. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
+        /// Return a specified license code. License codes are mirrored across
+        /// all projects that have permissions to read the License Code.
+        /// *Caution* This resource is intended
+        /// for use only by third-party partners who are creatingCloud Marketplace
+        /// images.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -238,7 +242,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Return a specified license code. License codes are mirrored across all projects that have permissions to read the License Code. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
+        /// Return a specified license code. License codes are mirrored across
+        /// all projects that have permissions to read the License Code.
+        /// *Caution* This resource is intended
+        /// for use only by third-party partners who are creatingCloud Marketplace
+        /// images.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -247,7 +255,11 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Return a specified license code. License codes are mirrored across all projects that have permissions to read the License Code. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
+        /// Return a specified license code. License codes are mirrored across
+        /// all projects that have permissions to read the License Code.
+        /// *Caution* This resource is intended
+        /// for use only by third-party partners who are creatingCloud Marketplace
+        /// images.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -256,7 +268,11 @@ namespace Google.Cloud.Compute.V1
             GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Return a specified license code. License codes are mirrored across all projects that have permissions to read the License Code. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
+        /// Return a specified license code. License codes are mirrored across
+        /// all projects that have permissions to read the License Code.
+        /// *Caution* This resource is intended
+        /// for use only by third-party partners who are creatingCloud Marketplace
+        /// images.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -274,7 +290,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Return a specified license code. License codes are mirrored across all projects that have permissions to read the License Code. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
+        /// Return a specified license code. License codes are mirrored across
+        /// all projects that have permissions to read the License Code.
+        /// *Caution* This resource is intended
+        /// for use only by third-party partners who are creatingCloud Marketplace
+        /// images.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -292,7 +312,11 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Return a specified license code. License codes are mirrored across all projects that have permissions to read the License Code. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
+        /// Return a specified license code. License codes are mirrored across
+        /// all projects that have permissions to read the License Code.
+        /// *Caution* This resource is intended
+        /// for use only by third-party partners who are creatingCloud Marketplace
+        /// images.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -306,7 +330,10 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, licenseCode, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified resource. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
+        /// Returns permissions that a caller has on the specified resource.
+        /// *Caution* This resource is intended
+        /// for use only by third-party partners who are creatingCloud Marketplace
+        /// images.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -315,7 +342,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified resource. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
+        /// Returns permissions that a caller has on the specified resource.
+        /// *Caution* This resource is intended
+        /// for use only by third-party partners who are creatingCloud Marketplace
+        /// images.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -324,7 +354,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified resource. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
+        /// Returns permissions that a caller has on the specified resource.
+        /// *Caution* This resource is intended
+        /// for use only by third-party partners who are creatingCloud Marketplace
+        /// images.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -333,7 +366,10 @@ namespace Google.Cloud.Compute.V1
             TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified resource. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
+        /// Returns permissions that a caller has on the specified resource.
+        /// *Caution* This resource is intended
+        /// for use only by third-party partners who are creatingCloud Marketplace
+        /// images.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -355,7 +391,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified resource. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
+        /// Returns permissions that a caller has on the specified resource.
+        /// *Caution* This resource is intended
+        /// for use only by third-party partners who are creatingCloud Marketplace
+        /// images.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -377,7 +416,10 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified resource. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
+        /// Returns permissions that a caller has on the specified resource.
+        /// *Caution* This resource is intended
+        /// for use only by third-party partners who are creatingCloud Marketplace
+        /// images.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -444,7 +486,11 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_TestIamPermissionsLicenseCodeRequest(ref TestIamPermissionsLicenseCodeRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Return a specified license code. License codes are mirrored across all projects that have permissions to read the License Code. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
+        /// Return a specified license code. License codes are mirrored across
+        /// all projects that have permissions to read the License Code.
+        /// *Caution* This resource is intended
+        /// for use only by third-party partners who are creatingCloud Marketplace
+        /// images.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -456,7 +502,11 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Return a specified license code. License codes are mirrored across all projects that have permissions to read the License Code. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
+        /// Return a specified license code. License codes are mirrored across
+        /// all projects that have permissions to read the License Code.
+        /// *Caution* This resource is intended
+        /// for use only by third-party partners who are creatingCloud Marketplace
+        /// images.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -468,7 +518,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified resource. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
+        /// Returns permissions that a caller has on the specified resource.
+        /// *Caution* This resource is intended
+        /// for use only by third-party partners who are creatingCloud Marketplace
+        /// images.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -480,7 +533,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified resource. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
+        /// Returns permissions that a caller has on the specified resource.
+        /// *Caution* This resource is intended
+        /// for use only by third-party partners who are creatingCloud Marketplace
+        /// images.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
