@@ -26,28 +26,34 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
           string.Concat(
             "CkBnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92MmJldGExL2FnZW50X2NvYWNo",
             "aW5nX2luc3RydWN0aW9uLnByb3RvEh9nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
-            "dy52MmJldGExGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvIqoE",
+            "dy52MmJldGExGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvIqsG",
             "ChhBZ2VudENvYWNoaW5nSW5zdHJ1Y3Rpb24SGQoMZGlzcGxheV9uYW1lGAEg",
             "ASgJQgPgQQESHAoPZGlzcGxheV9kZXRhaWxzGAIgASgJQgPgQQESFgoJY29u",
             "ZGl0aW9uGAMgASgJQgPgQQESGQoMYWdlbnRfYWN0aW9uGAQgASgJQgPgQQES",
             "GgoNc3lzdGVtX2FjdGlvbhgFIAEoCUID4EEBEnMKFmR1cGxpY2F0ZV9jaGVj",
             "a19yZXN1bHQYCCABKAsyTi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJl",
             "dGExLkFnZW50Q29hY2hpbmdJbnN0cnVjdGlvbi5EdXBsaWNhdGVDaGVja1Jl",
-            "c3VsdEID4EEDGpACChREdXBsaWNhdGVDaGVja1Jlc3VsdBKGAQoVZHVwbGlj",
-            "YXRlX3N1Z2dlc3Rpb25zGAEgAygLMmIuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
-            "b3cudjJiZXRhMS5BZ2VudENvYWNoaW5nSW5zdHJ1Y3Rpb24uRHVwbGljYXRl",
-            "Q2hlY2tSZXN1bHQuRHVwbGljYXRlU3VnZ2VzdGlvbkID4EEDGm8KE0R1cGxp",
-            "Y2F0ZVN1Z2dlc3Rpb24SGgoNYW5zd2VyX3JlY29yZBgBIAEoCUID4EEDEh0K",
-            "EHN1Z2dlc3Rpb25faW5kZXgYAyABKAVCA+BBAxIdChBzaW1pbGFyaXR5X3Nj",
-            "b3JlGAQgASgCQgPgQQNCsgEKI2NvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
-            "dy52MmJldGExQh1BZ2VudENvYWNoaW5nSW5zdHJ1Y3Rpb25Qcm90b1ABWkNj",
-            "bG91ZC5nb29nbGUuY29tL2dvL2RpYWxvZ2Zsb3cvYXBpdjJiZXRhMS9kaWFs",
-            "b2dmbG93cGI7ZGlhbG9nZmxvd3BiogICREaqAh9Hb29nbGUuQ2xvdWQuRGlh",
-            "bG9nZmxvdy5WMkJldGExYgZwcm90bzM="));
+            "c3VsdEID4EEDEmUKEHRyaWdnZXJpbmdfZXZlbnQYCiABKA4yRi5nb29nbGUu",
+            "Y2xvdWQuZGlhbG9nZmxvdy52MmJldGExLkFnZW50Q29hY2hpbmdJbnN0cnVj",
+            "dGlvbi5UcmlnZ2VyRXZlbnRCA+BBARqQAgoURHVwbGljYXRlQ2hlY2tSZXN1",
+            "bHQShgEKFWR1cGxpY2F0ZV9zdWdnZXN0aW9ucxgBIAMoCzJiLmdvb2dsZS5j",
+            "bG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuQWdlbnRDb2FjaGluZ0luc3RydWN0",
+            "aW9uLkR1cGxpY2F0ZUNoZWNrUmVzdWx0LkR1cGxpY2F0ZVN1Z2dlc3Rpb25C",
+            "A+BBAxpvChNEdXBsaWNhdGVTdWdnZXN0aW9uEhoKDWFuc3dlcl9yZWNvcmQY",
+            "ASABKAlCA+BBAxIdChBzdWdnZXN0aW9uX2luZGV4GAMgASgFQgPgQQMSHQoQ",
+            "c2ltaWxhcml0eV9zY29yZRgEIAEoAkID4EEDIpcBCgxUcmlnZ2VyRXZlbnQS",
+            "HQoZVFJJR0dFUl9FVkVOVF9VTlNQRUNJRklFRBAAEhQKEEVORF9PRl9VVFRF",
+            "UkFOQ0UQARIPCgtNQU5VQUxfQ0FMTBACEhQKEENVU1RPTUVSX01FU1NBR0UQ",
+            "AxIRCg1BR0VOVF9NRVNTQUdFEAQSGAoUVE9PTF9DQUxMX0NPTVBMRVRJT04Q",
+            "BUKyAQojY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTFCHUFn",
+            "ZW50Q29hY2hpbmdJbnN0cnVjdGlvblByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5j",
+            "b20vZ28vZGlhbG9nZmxvdy9hcGl2MmJldGExL2RpYWxvZ2Zsb3dwYjtkaWFs",
+            "b2dmbG93cGKiAgJERqoCH0dvb2dsZS5DbG91ZC5EaWFsb2dmbG93LlYyQmV0",
+            "YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction), global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction.Parser, new[]{ "DisplayName", "DisplayDetails", "Condition", "AgentAction", "SystemAction", "DuplicateCheckResult" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction.Types.DuplicateCheckResult), global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction.Types.DuplicateCheckResult.Parser, new[]{ "DuplicateSuggestions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction.Types.DuplicateCheckResult.Types.DuplicateSuggestion), global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction.Types.DuplicateCheckResult.Types.DuplicateSuggestion.Parser, new[]{ "AnswerRecord", "SuggestionIndex", "SimilarityScore" }, null, null, null, null)})})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction), global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction.Parser, new[]{ "DisplayName", "DisplayDetails", "Condition", "AgentAction", "SystemAction", "DuplicateCheckResult", "TriggeringEvent" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction.Types.TriggerEvent) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction.Types.DuplicateCheckResult), global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction.Types.DuplicateCheckResult.Parser, new[]{ "DuplicateSuggestions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction.Types.DuplicateCheckResult.Types.DuplicateSuggestion), global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction.Types.DuplicateCheckResult.Types.DuplicateSuggestion.Parser, new[]{ "AnswerRecord", "SuggestionIndex", "SimilarityScore" }, null, null, null, null)})})
           }));
     }
     #endregion
@@ -98,6 +104,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       agentAction_ = other.agentAction_;
       systemAction_ = other.systemAction_;
       duplicateCheckResult_ = other.duplicateCheckResult_ != null ? other.duplicateCheckResult_.Clone() : null;
+      triggeringEvent_ = other.triggeringEvent_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -204,6 +211,23 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       }
     }
 
+    /// <summary>Field number for the "triggering_event" field.</summary>
+    public const int TriggeringEventFieldNumber = 10;
+    private global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction.Types.TriggerEvent triggeringEvent_ = global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction.Types.TriggerEvent.Unspecified;
+    /// <summary>
+    /// Optional. The event that should trigger this instruction.
+    /// If UNSPECIFIED, the instruction triggering will be same as the generator's
+    /// trigger_event.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction.Types.TriggerEvent TriggeringEvent {
+      get { return triggeringEvent_; }
+      set {
+        triggeringEvent_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -225,6 +249,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       if (AgentAction != other.AgentAction) return false;
       if (SystemAction != other.SystemAction) return false;
       if (!object.Equals(DuplicateCheckResult, other.DuplicateCheckResult)) return false;
+      if (TriggeringEvent != other.TriggeringEvent) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -238,6 +263,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       if (AgentAction.Length != 0) hash ^= AgentAction.GetHashCode();
       if (SystemAction.Length != 0) hash ^= SystemAction.GetHashCode();
       if (duplicateCheckResult_ != null) hash ^= DuplicateCheckResult.GetHashCode();
+      if (TriggeringEvent != global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction.Types.TriggerEvent.Unspecified) hash ^= TriggeringEvent.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -280,6 +306,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         output.WriteRawTag(66);
         output.WriteMessage(DuplicateCheckResult);
       }
+      if (TriggeringEvent != global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction.Types.TriggerEvent.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) TriggeringEvent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -314,6 +344,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         output.WriteRawTag(66);
         output.WriteMessage(DuplicateCheckResult);
       }
+      if (TriggeringEvent != global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction.Types.TriggerEvent.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) TriggeringEvent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -341,6 +375,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       }
       if (duplicateCheckResult_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DuplicateCheckResult);
+      }
+      if (TriggeringEvent != global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction.Types.TriggerEvent.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TriggeringEvent);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -374,6 +411,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
           DuplicateCheckResult = new global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction.Types.DuplicateCheckResult();
         }
         DuplicateCheckResult.MergeFrom(other.DuplicateCheckResult);
+      }
+      if (other.TriggeringEvent != global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction.Types.TriggerEvent.Unspecified) {
+        TriggeringEvent = other.TriggeringEvent;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -415,6 +455,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
               DuplicateCheckResult = new global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction.Types.DuplicateCheckResult();
             }
             input.ReadMessage(DuplicateCheckResult);
+            break;
+          }
+          case 80: {
+            TriggeringEvent = (global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction.Types.TriggerEvent) input.ReadEnum();
             break;
           }
         }
@@ -459,6 +503,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             input.ReadMessage(DuplicateCheckResult);
             break;
           }
+          case 80: {
+            TriggeringEvent = (global::Google.Cloud.Dialogflow.V2Beta1.AgentCoachingInstruction.Types.TriggerEvent) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -469,6 +517,36 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// The event that should trigger this instruction.
+      /// </summary>
+      public enum TriggerEvent {
+        /// <summary>
+        /// Default value for TriggerEvent.
+        /// </summary>
+        [pbr::OriginalName("TRIGGER_EVENT_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Triggers when each chat message or voice utterance ends.
+        /// </summary>
+        [pbr::OriginalName("END_OF_UTTERANCE")] EndOfUtterance = 1,
+        /// <summary>
+        /// Triggers on the conversation manually by API calls.
+        /// </summary>
+        [pbr::OriginalName("MANUAL_CALL")] ManualCall = 2,
+        /// <summary>
+        /// Triggers after each customer message.
+        /// </summary>
+        [pbr::OriginalName("CUSTOMER_MESSAGE")] CustomerMessage = 3,
+        /// <summary>
+        /// Triggers after each agent message.
+        /// </summary>
+        [pbr::OriginalName("AGENT_MESSAGE")] AgentMessage = 4,
+        /// <summary>
+        /// Triggers on tool call completion.
+        /// </summary>
+        [pbr::OriginalName("TOOL_CALL_COMPLETION")] ToolCallCompletion = 5,
+      }
+
       /// <summary>
       /// Duplication check for the suggestion.
       /// </summary>
