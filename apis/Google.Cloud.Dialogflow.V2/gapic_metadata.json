@@ -575,6 +575,39 @@
         }
       }
     },
+    "GeneratorEvaluations": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "GeneratorEvaluationsClient",
+          "rpcs": {
+            "CreateGeneratorEvaluation": {
+              "methods": [
+                "CreateGeneratorEvaluation",
+                "CreateGeneratorEvaluationAsync"
+              ]
+            },
+            "DeleteGeneratorEvaluation": {
+              "methods": [
+                "DeleteGeneratorEvaluation",
+                "DeleteGeneratorEvaluationAsync"
+              ]
+            },
+            "GetGeneratorEvaluation": {
+              "methods": [
+                "GetGeneratorEvaluation",
+                "GetGeneratorEvaluationAsync"
+              ]
+            },
+            "ListGeneratorEvaluations": {
+              "methods": [
+                "ListGeneratorEvaluations",
+                "ListGeneratorEvaluationsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "Generators": {
       "clients": {
         "grpc": {
@@ -827,6 +860,84 @@
               "methods": [
                 "StreamingDetectIntent",
                 "StreamingDetectIntentAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "SipTrunks": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SipTrunksClient",
+          "rpcs": {
+            "CreateSipTrunk": {
+              "methods": [
+                "CreateSipTrunk",
+                "CreateSipTrunkAsync"
+              ]
+            },
+            "DeleteSipTrunk": {
+              "methods": [
+                "DeleteSipTrunk",
+                "DeleteSipTrunkAsync"
+              ]
+            },
+            "GetSipTrunk": {
+              "methods": [
+                "GetSipTrunk",
+                "GetSipTrunkAsync"
+              ]
+            },
+            "ListSipTrunks": {
+              "methods": [
+                "ListSipTrunks",
+                "ListSipTrunksAsync"
+              ]
+            },
+            "UpdateSipTrunk": {
+              "methods": [
+                "UpdateSipTrunk",
+                "UpdateSipTrunkAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Tools": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ToolsClient",
+          "rpcs": {
+            "CreateTool": {
+              "methods": [
+                "CreateTool",
+                "CreateToolAsync"
+              ]
+            },
+            "DeleteTool": {
+              "methods": [
+                "DeleteTool",
+                "DeleteToolAsync"
+              ]
+            },
+            "GetTool": {
+              "methods": [
+                "GetTool",
+                "GetToolAsync"
+              ]
+            },
+            "ListTools": {
+              "methods": [
+                "ListTools",
+                "ListToolsAsync"
+              ]
+            },
+            "UpdateTool": {
+              "methods": [
+                "UpdateTool",
+                "UpdateToolAsync"
               ]
             }
           }

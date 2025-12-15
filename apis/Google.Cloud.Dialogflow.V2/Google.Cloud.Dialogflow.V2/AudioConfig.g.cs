@@ -47,58 +47,66 @@ namespace Google.Cloud.Dialogflow.V2 {
             "dBIpCiFvcHRfb3V0X2NvbmZvcm1lcl9tb2RlbF9taWdyYXRpb24YGiABKAgi",
             "cAoUVm9pY2VTZWxlY3Rpb25QYXJhbXMSEQoEbmFtZRgBIAEoCUID4EEBEkUK",
             "C3NzbWxfZ2VuZGVyGAIgASgOMisuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
-            "djIuU3NtbFZvaWNlR2VuZGVyQgPgQQEizAEKFlN5bnRoZXNpemVTcGVlY2hD",
+            "djIuU3NtbFZvaWNlR2VuZGVyQgPgQQEioAIKFlN5bnRoZXNpemVTcGVlY2hD",
             "b25maWcSGgoNc3BlYWtpbmdfcmF0ZRgBIAEoAUID4EEBEhIKBXBpdGNoGAIg",
             "ASgBQgPgQQESGwoOdm9sdW1lX2dhaW5fZGIYAyABKAFCA+BBARIfChJlZmZl",
             "Y3RzX3Byb2ZpbGVfaWQYBSADKAlCA+BBARJECgV2b2ljZRgEIAEoCzIwLmdv",
             "b2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlZvaWNlU2VsZWN0aW9uUGFyYW1z",
-            "QgPgQQEi0gEKEU91dHB1dEF1ZGlvQ29uZmlnEkwKDmF1ZGlvX2VuY29kaW5n",
-            "GAEgASgOMi8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuT3V0cHV0QXVk",
-            "aW9FbmNvZGluZ0ID4EECEhkKEXNhbXBsZV9yYXRlX2hlcnR6GAIgASgFElQK",
-            "GHN5bnRoZXNpemVfc3BlZWNoX2NvbmZpZxgDIAEoCzIyLmdvb2dsZS5jbG91",
-            "ZC5kaWFsb2dmbG93LnYyLlN5bnRoZXNpemVTcGVlY2hDb25maWciVQoTVGVs",
-            "ZXBob255RHRtZkV2ZW50cxI+CgtkdG1mX2V2ZW50cxgBIAMoDjIpLmdvb2ds",
-            "ZS5jbG91ZC5kaWFsb2dmbG93LnYyLlRlbGVwaG9ueUR0bWYi4gIKElNwZWVj",
-            "aFRvVGV4dENvbmZpZxJMChRzcGVlY2hfbW9kZWxfdmFyaWFudBgBIAEoDjIu",
-            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlNwZWVjaE1vZGVsVmFyaWFu",
-            "dBINCgVtb2RlbBgCIAEoCRI5CgtwaHJhc2Vfc2V0cxgEIAMoCUIk+kEhCh9z",
-            "cGVlY2guZ29vZ2xlYXBpcy5jb20vUGhyYXNlU2V0EkEKDmF1ZGlvX2VuY29k",
-            "aW5nGAYgASgOMikuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuQXVkaW9F",
-            "bmNvZGluZxIZChFzYW1wbGVfcmF0ZV9oZXJ0ehgHIAEoBRIVCg1sYW5ndWFn",
-            "ZV9jb2RlGAggASgJEhgKEGVuYWJsZV93b3JkX2luZm8YCSABKAgSJQoddXNl",
-            "X3RpbWVvdXRfYmFzZWRfZW5kcG9pbnRpbmcYCyABKAgqlAIKDVRlbGVwaG9u",
-            "eUR0bWYSHgoaVEVMRVBIT05ZX0RUTUZfVU5TUEVDSUZJRUQQABIMCghEVE1G",
-            "X09ORRABEgwKCERUTUZfVFdPEAISDgoKRFRNRl9USFJFRRADEg0KCURUTUZf",
-            "Rk9VUhAEEg0KCURUTUZfRklWRRAFEgwKCERUTUZfU0lYEAYSDgoKRFRNRl9T",
-            "RVZFThAHEg4KCkRUTUZfRUlHSFQQCBINCglEVE1GX05JTkUQCRINCglEVE1G",
-            "X1pFUk8QChIKCgZEVE1GX0EQCxIKCgZEVE1GX0IQDBIKCgZEVE1GX0MQDRIK",
-            "CgZEVE1GX0QQDhINCglEVE1GX1NUQVIQDxIOCgpEVE1GX1BPVU5EEBAqlAIK",
-            "DUF1ZGlvRW5jb2RpbmcSHgoaQVVESU9fRU5DT0RJTkdfVU5TUEVDSUZJRUQQ",
-            "ABIcChhBVURJT19FTkNPRElOR19MSU5FQVJfMTYQARIXChNBVURJT19FTkNP",
-            "RElOR19GTEFDEAISGAoUQVVESU9fRU5DT0RJTkdfTVVMQVcQAxIWChJBVURJ",
-            "T19FTkNPRElOR19BTVIQBBIZChVBVURJT19FTkNPRElOR19BTVJfV0IQBRIb",
-            "ChdBVURJT19FTkNPRElOR19PR0dfT1BVUxAGEikKJUFVRElPX0VOQ09ESU5H",
-            "X1NQRUVYX1dJVEhfSEVBREVSX0JZVEUQBxIXChNBVURJT19FTkNPRElOR19B",
-            "TEFXEAgqdgoSU3BlZWNoTW9kZWxWYXJpYW50EiQKIFNQRUVDSF9NT0RFTF9W",
-            "QVJJQU5UX1VOU1BFQ0lGSUVEEAASFgoSVVNFX0JFU1RfQVZBSUxBQkxFEAES",
-            "EAoMVVNFX1NUQU5EQVJEEAISEAoMVVNFX0VOSEFOQ0VEEAMqjQEKD1NzbWxW",
-            "b2ljZUdlbmRlchIhCh1TU01MX1ZPSUNFX0dFTkRFUl9VTlNQRUNJRklFRBAA",
-            "EhoKFlNTTUxfVk9JQ0VfR0VOREVSX01BTEUQARIcChhTU01MX1ZPSUNFX0dF",
-            "TkRFUl9GRU1BTEUQAhIdChlTU01MX1ZPSUNFX0dFTkRFUl9ORVVUUkFMEAMq",
-            "jAIKE091dHB1dEF1ZGlvRW5jb2RpbmcSJQohT1VUUFVUX0FVRElPX0VOQ09E",
-            "SU5HX1VOU1BFQ0lGSUVEEAASIwofT1VUUFVUX0FVRElPX0VOQ09ESU5HX0xJ",
-            "TkVBUl8xNhABEh0KGU9VVFBVVF9BVURJT19FTkNPRElOR19NUDMQAhIlCiFP",
-            "VVRQVVRfQVVESU9fRU5DT0RJTkdfTVAzXzY0X0tCUFMQBBIiCh5PVVRQVVRf",
-            "QVVESU9fRU5DT0RJTkdfT0dHX09QVVMQAxIfChtPVVRQVVRfQVVESU9fRU5D",
-            "T0RJTkdfTVVMQVcQBRIeChpPVVRQVVRfQVVESU9fRU5DT0RJTkdfQUxBVxAG",
-            "QtMCCh5jb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJCEEF1ZGlvQ29u",
-            "ZmlnUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9kaWFsb2dmbG93L2Fw",
-            "aXYyL2RpYWxvZ2Zsb3dwYjtkaWFsb2dmbG93cGKiAgJERqoCGkdvb2dsZS5D",
-            "bG91ZC5EaWFsb2dmbG93LlYy6kFVChthdXRvbWwuZ29vZ2xlYXBpcy5jb20v",
-            "TW9kZWwSNnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
-            "fS9tb2RlbHMve21vZGVsfepBYgofc3BlZWNoLmdvb2dsZWFwaXMuY29tL1Bo",
-            "cmFzZVNldBI/cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L3BocmFzZVNldHMve3BocmFzZV9zZXR9YgZwcm90bzM="));
+            "QgPgQQESUgoOcHJvbnVuY2lhdGlvbnMYBiADKAsyNS5nb29nbGUuY2xvdWQu",
+            "ZGlhbG9nZmxvdy52Mi5DdXN0b21Qcm9udW5jaWF0aW9uUGFyYW1zQgPgQQEi",
+            "lgIKGUN1c3RvbVByb251bmNpYXRpb25QYXJhbXMSDgoGcGhyYXNlGAEgASgJ",
+            "EmEKEXBob25ldGljX2VuY29kaW5nGAIgASgOMkYuZ29vZ2xlLmNsb3VkLmRp",
+            "YWxvZ2Zsb3cudjIuQ3VzdG9tUHJvbnVuY2lhdGlvblBhcmFtcy5QaG9uZXRp",
+            "Y0VuY29kaW5nEhUKDXByb251bmNpYXRpb24YAyABKAkibwoQUGhvbmV0aWNF",
+            "bmNvZGluZxIhCh1QSE9ORVRJQ19FTkNPRElOR19VTlNQRUNJRklFRBAAEhkK",
+            "FVBIT05FVElDX0VOQ09ESU5HX0lQQRABEh0KGVBIT05FVElDX0VOQ09ESU5H",
+            "X1hfU0FNUEEQAiLSAQoRT3V0cHV0QXVkaW9Db25maWcSTAoOYXVkaW9fZW5j",
+            "b2RpbmcYASABKA4yLy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5PdXRw",
+            "dXRBdWRpb0VuY29kaW5nQgPgQQISGQoRc2FtcGxlX3JhdGVfaGVydHoYAiAB",
+            "KAUSVAoYc3ludGhlc2l6ZV9zcGVlY2hfY29uZmlnGAMgASgLMjIuZ29vZ2xl",
+            "LmNsb3VkLmRpYWxvZ2Zsb3cudjIuU3ludGhlc2l6ZVNwZWVjaENvbmZpZyJV",
+            "ChNUZWxlcGhvbnlEdG1mRXZlbnRzEj4KC2R0bWZfZXZlbnRzGAEgAygOMiku",
+            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuVGVsZXBob255RHRtZiLiAgoS",
+            "U3BlZWNoVG9UZXh0Q29uZmlnEkwKFHNwZWVjaF9tb2RlbF92YXJpYW50GAEg",
+            "ASgOMi4uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuU3BlZWNoTW9kZWxW",
+            "YXJpYW50Eg0KBW1vZGVsGAIgASgJEjkKC3BocmFzZV9zZXRzGAQgAygJQiT6",
+            "QSEKH3NwZWVjaC5nb29nbGVhcGlzLmNvbS9QaHJhc2VTZXQSQQoOYXVkaW9f",
+            "ZW5jb2RpbmcYBiABKA4yKS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5B",
+            "dWRpb0VuY29kaW5nEhkKEXNhbXBsZV9yYXRlX2hlcnR6GAcgASgFEhUKDWxh",
+            "bmd1YWdlX2NvZGUYCCABKAkSGAoQZW5hYmxlX3dvcmRfaW5mbxgJIAEoCBIl",
+            "Ch11c2VfdGltZW91dF9iYXNlZF9lbmRwb2ludGluZxgLIAEoCCqUAgoNVGVs",
+            "ZXBob255RHRtZhIeChpURUxFUEhPTllfRFRNRl9VTlNQRUNJRklFRBAAEgwK",
+            "CERUTUZfT05FEAESDAoIRFRNRl9UV08QAhIOCgpEVE1GX1RIUkVFEAMSDQoJ",
+            "RFRNRl9GT1VSEAQSDQoJRFRNRl9GSVZFEAUSDAoIRFRNRl9TSVgQBhIOCgpE",
+            "VE1GX1NFVkVOEAcSDgoKRFRNRl9FSUdIVBAIEg0KCURUTUZfTklORRAJEg0K",
+            "CURUTUZfWkVSTxAKEgoKBkRUTUZfQRALEgoKBkRUTUZfQhAMEgoKBkRUTUZf",
+            "QxANEgoKBkRUTUZfRBAOEg0KCURUTUZfU1RBUhAPEg4KCkRUTUZfUE9VTkQQ",
+            "ECqUAgoNQXVkaW9FbmNvZGluZxIeChpBVURJT19FTkNPRElOR19VTlNQRUNJ",
+            "RklFRBAAEhwKGEFVRElPX0VOQ09ESU5HX0xJTkVBUl8xNhABEhcKE0FVRElP",
+            "X0VOQ09ESU5HX0ZMQUMQAhIYChRBVURJT19FTkNPRElOR19NVUxBVxADEhYK",
+            "EkFVRElPX0VOQ09ESU5HX0FNUhAEEhkKFUFVRElPX0VOQ09ESU5HX0FNUl9X",
+            "QhAFEhsKF0FVRElPX0VOQ09ESU5HX09HR19PUFVTEAYSKQolQVVESU9fRU5D",
+            "T0RJTkdfU1BFRVhfV0lUSF9IRUFERVJfQllURRAHEhcKE0FVRElPX0VOQ09E",
+            "SU5HX0FMQVcQCCp2ChJTcGVlY2hNb2RlbFZhcmlhbnQSJAogU1BFRUNIX01P",
+            "REVMX1ZBUklBTlRfVU5TUEVDSUZJRUQQABIWChJVU0VfQkVTVF9BVkFJTEFC",
+            "TEUQARIQCgxVU0VfU1RBTkRBUkQQAhIQCgxVU0VfRU5IQU5DRUQQAyqNAQoP",
+            "U3NtbFZvaWNlR2VuZGVyEiEKHVNTTUxfVk9JQ0VfR0VOREVSX1VOU1BFQ0lG",
+            "SUVEEAASGgoWU1NNTF9WT0lDRV9HRU5ERVJfTUFMRRABEhwKGFNTTUxfVk9J",
+            "Q0VfR0VOREVSX0ZFTUFMRRACEh0KGVNTTUxfVk9JQ0VfR0VOREVSX05FVVRS",
+            "QUwQAyqMAgoTT3V0cHV0QXVkaW9FbmNvZGluZxIlCiFPVVRQVVRfQVVESU9f",
+            "RU5DT0RJTkdfVU5TUEVDSUZJRUQQABIjCh9PVVRQVVRfQVVESU9fRU5DT0RJ",
+            "TkdfTElORUFSXzE2EAESHQoZT1VUUFVUX0FVRElPX0VOQ09ESU5HX01QMxAC",
+            "EiUKIU9VVFBVVF9BVURJT19FTkNPRElOR19NUDNfNjRfS0JQUxAEEiIKHk9V",
+            "VFBVVF9BVURJT19FTkNPRElOR19PR0dfT1BVUxADEh8KG09VVFBVVF9BVURJ",
+            "T19FTkNPRElOR19NVUxBVxAFEh4KGk9VVFBVVF9BVURJT19FTkNPRElOR19B",
+            "TEFXEAZC0wIKHmNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MkIQQXVk",
+            "aW9Db25maWdQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2RpYWxvZ2Zs",
+            "b3cvYXBpdjIvZGlhbG9nZmxvd3BiO2RpYWxvZ2Zsb3dwYqICAkRGqgIaR29v",
+            "Z2xlLkNsb3VkLkRpYWxvZ2Zsb3cuVjLqQVUKG2F1dG9tbC5nb29nbGVhcGlz",
+            "LmNvbS9Nb2RlbBI2cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L21vZGVscy97bW9kZWx96kFiCh9zcGVlY2guZ29vZ2xlYXBpcy5j",
+            "b20vUGhyYXNlU2V0Ej9wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0vcGhyYXNlU2V0cy97cGhyYXNlX3NldH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2.TelephonyDtmf), typeof(global::Google.Cloud.Dialogflow.V2.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -106,7 +114,8 @@ namespace Google.Cloud.Dialogflow.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SpeechWordInfo), global::Google.Cloud.Dialogflow.V2.SpeechWordInfo.Parser, new[]{ "Word", "StartOffset", "EndOffset", "Confidence" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.InputAudioConfig), global::Google.Cloud.Dialogflow.V2.InputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "LanguageCode", "EnableWordInfo", "PhraseHints", "SpeechContexts", "Model", "ModelVariant", "SingleUtterance", "DisableNoSpeechRecognizedEvent", "EnableAutomaticPunctuation", "PhraseSets", "OptOutConformerModelMigration" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.VoiceSelectionParams), global::Google.Cloud.Dialogflow.V2.VoiceSelectionParams.Parser, new[]{ "Name", "SsmlGender" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig), global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig.Parser, new[]{ "SpeakingRate", "Pitch", "VolumeGainDb", "EffectsProfileId", "Voice" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig), global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig.Parser, new[]{ "SpeakingRate", "Pitch", "VolumeGainDb", "EffectsProfileId", "Voice", "Pronunciations" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.CustomPronunciationParams), global::Google.Cloud.Dialogflow.V2.CustomPronunciationParams.Parser, new[]{ "Phrase", "PhoneticEncoding", "Pronunciation" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.CustomPronunciationParams.Types.PhoneticEncoding) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioConfig), global::Google.Cloud.Dialogflow.V2.OutputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "SynthesizeSpeechConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.TelephonyDtmfEvents), global::Google.Cloud.Dialogflow.V2.TelephonyDtmfEvents.Parser, new[]{ "DtmfEvents" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig), global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Parser, new[]{ "SpeechModelVariant", "Model", "PhraseSets", "AudioEncoding", "SampleRateHertz", "LanguageCode", "EnableWordInfo", "UseTimeoutBasedEndpointing" }, null, null, null, null)
@@ -1063,6 +1072,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Support](https://cloud.google.com/dialogflow/docs/reference/language)
     /// for a list of the currently supported language codes. Note that queries in
     /// the same session do not necessarily need to specify the same language.
+    /// If not set, the language is inferred from the
+    /// [ConversationProfile.stt_config][google.cloud.dialogflow.v2.ConversationProfile.stt_config].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1936,6 +1947,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       volumeGainDb_ = other.volumeGainDb_;
       effectsProfileId_ = other.effectsProfileId_.Clone();
       voice_ = other.voice_ != null ? other.voice_.Clone() : null;
+      pronunciations_ = other.pronunciations_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2033,6 +2045,20 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
     }
 
+    /// <summary>Field number for the "pronunciations" field.</summary>
+    public const int PronunciationsFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dialogflow.V2.CustomPronunciationParams> _repeated_pronunciations_codec
+        = pb::FieldCodec.ForMessage(50, global::Google.Cloud.Dialogflow.V2.CustomPronunciationParams.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.CustomPronunciationParams> pronunciations_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.CustomPronunciationParams>();
+    /// <summary>
+    /// Optional. The custom pronunciations for the synthesized audio.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.CustomPronunciationParams> Pronunciations {
+      get { return pronunciations_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2053,6 +2079,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(VolumeGainDb, other.VolumeGainDb)) return false;
       if(!effectsProfileId_.Equals(other.effectsProfileId_)) return false;
       if (!object.Equals(Voice, other.Voice)) return false;
+      if(!pronunciations_.Equals(other.pronunciations_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2065,6 +2092,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (VolumeGainDb != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(VolumeGainDb);
       hash ^= effectsProfileId_.GetHashCode();
       if (voice_ != null) hash ^= Voice.GetHashCode();
+      hash ^= pronunciations_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2100,6 +2128,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteMessage(Voice);
       }
       effectsProfileId_.WriteTo(output, _repeated_effectsProfileId_codec);
+      pronunciations_.WriteTo(output, _repeated_pronunciations_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2127,6 +2156,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteMessage(Voice);
       }
       effectsProfileId_.WriteTo(ref output, _repeated_effectsProfileId_codec);
+      pronunciations_.WriteTo(ref output, _repeated_pronunciations_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2150,6 +2180,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (voice_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Voice);
       }
+      size += pronunciations_.CalculateSize(_repeated_pronunciations_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2178,6 +2209,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
         Voice.MergeFrom(other.Voice);
       }
+      pronunciations_.Add(other.pronunciations_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2214,6 +2246,10 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 42: {
             effectsProfileId_.AddEntriesFrom(input, _repeated_effectsProfileId_codec);
+            break;
+          }
+          case 50: {
+            pronunciations_.AddEntriesFrom(input, _repeated_pronunciations_codec);
             break;
           }
         }
@@ -2254,10 +2290,321 @@ namespace Google.Cloud.Dialogflow.V2 {
             effectsProfileId_.AddEntriesFrom(ref input, _repeated_effectsProfileId_codec);
             break;
           }
+          case 50: {
+            pronunciations_.AddEntriesFrom(ref input, _repeated_pronunciations_codec);
+            break;
+          }
         }
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// Pronunciation customization for a phrase.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CustomPronunciationParams : pb::IMessage<CustomPronunciationParams>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CustomPronunciationParams> _parser = new pb::MessageParser<CustomPronunciationParams>(() => new CustomPronunciationParams());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CustomPronunciationParams> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CustomPronunciationParams() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CustomPronunciationParams(CustomPronunciationParams other) : this() {
+      phrase_ = other.phrase_;
+      phoneticEncoding_ = other.phoneticEncoding_;
+      pronunciation_ = other.pronunciation_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CustomPronunciationParams Clone() {
+      return new CustomPronunciationParams(this);
+    }
+
+    /// <summary>Field number for the "phrase" field.</summary>
+    public const int PhraseFieldNumber = 1;
+    private string phrase_ = "";
+    /// <summary>
+    /// The phrase to which the customization is applied.
+    /// The phrase can be multiple words, such as proper nouns, but shouldn't span
+    /// the length of the sentence.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Phrase {
+      get { return phrase_; }
+      set {
+        phrase_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "phonetic_encoding" field.</summary>
+    public const int PhoneticEncodingFieldNumber = 2;
+    private global::Google.Cloud.Dialogflow.V2.CustomPronunciationParams.Types.PhoneticEncoding phoneticEncoding_ = global::Google.Cloud.Dialogflow.V2.CustomPronunciationParams.Types.PhoneticEncoding.Unspecified;
+    /// <summary>
+    /// The phonetic encoding of the phrase.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.V2.CustomPronunciationParams.Types.PhoneticEncoding PhoneticEncoding {
+      get { return phoneticEncoding_; }
+      set {
+        phoneticEncoding_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "pronunciation" field.</summary>
+    public const int PronunciationFieldNumber = 3;
+    private string pronunciation_ = "";
+    /// <summary>
+    /// The pronunciation of the phrase. This must be in the phonetic encoding
+    /// specified above.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Pronunciation {
+      get { return pronunciation_; }
+      set {
+        pronunciation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CustomPronunciationParams);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CustomPronunciationParams other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Phrase != other.Phrase) return false;
+      if (PhoneticEncoding != other.PhoneticEncoding) return false;
+      if (Pronunciation != other.Pronunciation) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Phrase.Length != 0) hash ^= Phrase.GetHashCode();
+      if (PhoneticEncoding != global::Google.Cloud.Dialogflow.V2.CustomPronunciationParams.Types.PhoneticEncoding.Unspecified) hash ^= PhoneticEncoding.GetHashCode();
+      if (Pronunciation.Length != 0) hash ^= Pronunciation.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Phrase.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Phrase);
+      }
+      if (PhoneticEncoding != global::Google.Cloud.Dialogflow.V2.CustomPronunciationParams.Types.PhoneticEncoding.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) PhoneticEncoding);
+      }
+      if (Pronunciation.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Pronunciation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Phrase.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Phrase);
+      }
+      if (PhoneticEncoding != global::Google.Cloud.Dialogflow.V2.CustomPronunciationParams.Types.PhoneticEncoding.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) PhoneticEncoding);
+      }
+      if (Pronunciation.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Pronunciation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Phrase.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Phrase);
+      }
+      if (PhoneticEncoding != global::Google.Cloud.Dialogflow.V2.CustomPronunciationParams.Types.PhoneticEncoding.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PhoneticEncoding);
+      }
+      if (Pronunciation.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Pronunciation);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CustomPronunciationParams other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Phrase.Length != 0) {
+        Phrase = other.Phrase;
+      }
+      if (other.PhoneticEncoding != global::Google.Cloud.Dialogflow.V2.CustomPronunciationParams.Types.PhoneticEncoding.Unspecified) {
+        PhoneticEncoding = other.PhoneticEncoding;
+      }
+      if (other.Pronunciation.Length != 0) {
+        Pronunciation = other.Pronunciation;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Phrase = input.ReadString();
+            break;
+          }
+          case 16: {
+            PhoneticEncoding = (global::Google.Cloud.Dialogflow.V2.CustomPronunciationParams.Types.PhoneticEncoding) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            Pronunciation = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Phrase = input.ReadString();
+            break;
+          }
+          case 16: {
+            PhoneticEncoding = (global::Google.Cloud.Dialogflow.V2.CustomPronunciationParams.Types.PhoneticEncoding) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            Pronunciation = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the CustomPronunciationParams message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The phonetic encoding of the phrase.
+      /// </summary>
+      public enum PhoneticEncoding {
+        /// <summary>
+        /// Not specified.
+        /// </summary>
+        [pbr::OriginalName("PHONETIC_ENCODING_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// IPA, such as apple -> ˈæpəl.
+        /// https://en.wikipedia.org/wiki/International_Phonetic_Alphabet
+        /// </summary>
+        [pbr::OriginalName("PHONETIC_ENCODING_IPA")] Ipa = 1,
+        /// <summary>
+        /// X-SAMPA, such as apple -> "{p@l".
+        /// https://en.wikipedia.org/wiki/X-SAMPA
+        /// </summary>
+        [pbr::OriginalName("PHONETIC_ENCODING_X_SAMPA")] XSampa = 2,
+      }
+
+    }
+    #endregion
 
   }
 
@@ -2281,7 +2628,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2570,7 +2917,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2758,7 +3105,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2912,6 +3259,9 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Support](https://cloud.google.com/dialogflow/docs/reference/language)
     /// for a list of the currently supported language codes. Note that queries in
     /// the same session do not necessarily need to specify the same language.
+    /// If not specified, the default language configured at
+    /// [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile] is
+    /// used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
