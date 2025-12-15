@@ -228,20 +228,12 @@ public static class VertexAIExtensions
 
         UsageDetails usage = new()
         {
-            InputTokenCount = usageMetadata.PromptTokenCount,
-            OutputTokenCount = usageMetadata.CandidatesTokenCount,
-            TotalTokenCount = usageMetadata.TotalTokenCount,
+            InputTokenCount = usageMetadata.PromptTokenCount != 0 ? usageMetadata.PromptTokenCount : null,
+            CachedInputTokenCount = usageMetadata.CachedContentTokenCount != 0 ? usageMetadata.CachedContentTokenCount : null,
+            OutputTokenCount = usageMetadata.CandidatesTokenCount != 0 ? usageMetadata.CandidatesTokenCount : null,
+            ReasoningTokenCount = usageMetadata.ThoughtsTokenCount != 0 ? usageMetadata.ThoughtsTokenCount : null,
+            TotalTokenCount = usageMetadata.TotalTokenCount != 0 ? usageMetadata.TotalTokenCount : null,
         };
-
-        if (usageMetadata.CachedContentTokenCount != 0)
-        {
-            (usage.AdditionalCounts ??= [])[nameof(usageMetadata.CachedContentTokenCount)] = usageMetadata.CachedContentTokenCount;
-        }
-
-        if (usageMetadata.ThoughtsTokenCount != 0)
-        {
-            (usage.AdditionalCounts ??= [])[nameof(usageMetadata.ThoughtsTokenCount)] = usageMetadata.ThoughtsTokenCount;
-        }
 
         if (usageMetadata.ToolUsePromptTokenCount != 0)
         {

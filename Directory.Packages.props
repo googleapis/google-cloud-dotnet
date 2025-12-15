@@ -19,7 +19,7 @@
     <PackageVersion Include="Google.Protobuf" Version="3.31.1" />
 
     <!-- System packages -->
-    <PackageVersion Include="Microsoft.Bcl.AsyncInterfaces" Version="10.0.0" />
+    <PackageVersion Include="Microsoft.Bcl.AsyncInterfaces" Version="10.0.1" />
 
     <!-- MS Extensions packages -->
     <PackageVersion Include="Microsoft.Extensions.Http" Version="8.0.1" />
@@ -29,7 +29,7 @@
     <PackageVersion Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
     <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.1" />
     <PackageVersion Include="Microsoft.Extensions.Logging.Console" Version= "8.0.1" />
-    <PackageVersion Include="Microsoft.Extensions.AI.Abstractions" Version= "10.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.AI.Abstractions" Version= "10.1.1" />
 
     <!-- Misc packages (might warrant a reorganization at some point) -->
     <PackageVersion Include="xunit" Version="2.9.3" />
@@ -39,7 +39,7 @@
     <PackageVersion Include="Xunit.SkippableFact" Version="1.5.23" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
     <PackageVersion Include="NSubstitute" Version="5.3.0" />
-    <PackageVersion Include="System.Linq.AsyncEnumerable" Version="10.0.0" />
+    <PackageVersion Include="System.Linq.AsyncEnumerable" Version="10.0.1" />
     <PackageVersion Include="Newtonsoft.Json" Version="13.0.4" />
     <PackageVersion Include="YamlDotNet" Version="16.3.0" />
     <PackageVersion Include="CommandLineParser" Version="2.9.1" />

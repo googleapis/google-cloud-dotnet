@@ -500,6 +500,83 @@ public class BuildIEmbeddingGeneratorTest
         Assert.Equal([0.4f, 0.5f, 0.6f], result[0].Vector.ToArray());
     }
 
+    [Fact]
+    public async Task IEmbeddingGenerator_GenerateAsync_UsageDetails_NoTokenCounts_ReturnsNull()
+    {
+        DelegateCallInvoker invoker = new()
+        {
+            OnPredictRequest = request =>
+            {
+                PredictResponse response = new();
+                response.Predictions.Add(CreateEmbeddingPrediction([0.1f, 0.2f, 0.3f]));
+                return response;
+            }
+        };
+
+        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClientBuilder(invoker).BuildIEmbeddingGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+
+        GeneratedEmbeddings<Embedding<float>> result = await embeddingGenerator.GenerateAsync(["Test"]);
+
+        Assert.NotNull(result);
+        Assert.Single(result);
+        Assert.Null(result.Usage);
+    }
+
+    [Fact]
+    public async Task IEmbeddingGenerator_GenerateAsync_UsageDetails_WithTokenCounts()
+    {
+        DelegateCallInvoker invoker = new()
+        {
+            OnPredictRequest = request =>
+            {
+                PredictResponse response = new();
+                response.Predictions.Add(CreateEmbeddingPredictionWithTokens([0.1f, 0.2f, 0.3f], 10));
+                return response;
+            }
+        };
+
+        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClientBuilder(invoker).BuildIEmbeddingGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+
+        GeneratedEmbeddings<Embedding<float>> result = await embeddingGenerator.GenerateAsync(["Test with tokens"]);
+
+        Assert.NotNull(result);
+        Assert.Single(result);
+        Assert.NotNull(result.Usage);
+        Assert.Equal(10, result.Usage.InputTokenCount);
+        Assert.Null(result.Usage.OutputTokenCount);
+        Assert.Null(result.Usage.ReasoningTokenCount);
+        Assert.Equal(10, result.Usage.TotalTokenCount);
+    }
+
+    [Fact]
+    public async Task IEmbeddingGenerator_GenerateAsync_UsageDetails_SumsMultipleTokenCounts()
+    {
+        DelegateCallInvoker invoker = new()
+        {
+            OnPredictRequest = request =>
+            {
+                PredictResponse response = new();
+                response.Predictions.Add(CreateEmbeddingPredictionWithTokens([0.1f, 0.2f, 0.3f], 5));
+                response.Predictions.Add(CreateEmbeddingPredictionWithTokens([0.4f, 0.5f, 0.6f], 8));
+                response.Predictions.Add(CreateEmbeddingPredictionWithTokens([0.7f, 0.8f, 0.9f], 12));
+                return response;
+            }
+        };
+
+        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateClientBuilder(invoker).BuildIEmbeddingGenerator("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+
+        GeneratedEmbeddings<Embedding<float>> result = await embeddingGenerator.GenerateAsync(["First", "Second", "Third"]);
+
+        Assert.NotNull(result);
+        Assert.Equal(3, result.Count);
+        Assert.NotNull(result.Usage);
+        Assert.Equal(25, result.Usage.InputTokenCount);
+        Assert.Null(result.Usage.OutputTokenCount);
+        Assert.Null(result.Usage.CachedInputTokenCount);
+        Assert.Null(result.Usage.ReasoningTokenCount);
+        Assert.Equal(25, result.Usage.TotalTokenCount);
+    }
+
     private static Value CreateEmbeddingPrediction(float[] embedding) =>
         new()
         {

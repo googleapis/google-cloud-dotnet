@@ -111,10 +111,12 @@ internal sealed class PredictionServiceEmbeddingGenerator(PredictionServiceClien
                         tokenCountValue.KindCase == Value.KindOneofCase.NumberValue)
                     {
                         int tokenCount = (int) tokenCountValue.NumberValue;
-
-                        result.Usage ??= new();
-                        result.Usage.InputTokenCount += tokenCount;
-                        result.Usage.TotalTokenCount += tokenCount;
+                        if (tokenCount > 0)
+                        {
+                            result.Usage ??= new();
+                            result.Usage.InputTokenCount = (result.Usage.InputTokenCount ?? 0) + tokenCount;
+                            result.Usage.TotalTokenCount = (result.Usage.TotalTokenCount ?? 0) + tokenCount;
+                        }
                     }
                 }
             }
