@@ -1,5 +1,19 @@
 # Version history
 
+## Version 2.20.0, released 2025-12-15
+
+### New features
+
+- Add verifiedBots field to RiskAnalysis and definitions for a Bot object to store metadata for a detected bot
+- Add risk reasons to FraudPreventionAssessment
+- Add a POLICY_BASED_CHALLENGE IntegrationType and associated settings
+- Add `phone_authentication_event` to `AnnotateAssessmentRequest`. This new field allows you to indicate the phone number associated with a multi-factor authentication event, i.e. `INITIATED_TWO_FACTOR`, `PASSED_TWO_FACTOR`, `FAILED_TWO_FACTOR` reasons, and the time of such an event
+
+### Documentation improvements
+
+- Document domain, package name and bundle id limits and validation
+- Clarify that WafFeature.EXPRESS is deprecated
+
 ## Version 2.19.0, released 2025-11-06
 
 ### New features
