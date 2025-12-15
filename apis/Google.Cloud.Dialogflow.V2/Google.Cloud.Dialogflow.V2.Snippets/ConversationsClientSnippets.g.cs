@@ -1256,6 +1256,7 @@ namespace GoogleCSharpSnippets
                 {
                     TriggerEvent.Unspecified,
                 },
+                SecuritySettings = "",
             };
             // Make the request
             GenerateStatelessSuggestionResponse response = conversationsClient.GenerateStatelessSuggestion(request);
@@ -1286,6 +1287,7 @@ namespace GoogleCSharpSnippets
                 {
                     TriggerEvent.Unspecified,
                 },
+                SecuritySettings = "",
             };
             // Make the request
             GenerateStatelessSuggestionResponse response = await conversationsClient.GenerateStatelessSuggestionAsync(request);
