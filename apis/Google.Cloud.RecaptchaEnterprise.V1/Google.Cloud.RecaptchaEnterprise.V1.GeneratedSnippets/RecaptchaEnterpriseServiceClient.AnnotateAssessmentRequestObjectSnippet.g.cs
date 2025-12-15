@@ -45,6 +45,7 @@ namespace GoogleCSharpSnippets
                 },
                 HashedAccountId = ByteString.Empty,
                 TransactionEvent = new TransactionEvent(),
+                PhoneAuthenticationEvent = new PhoneAuthenticationEvent(),
                 AccountId = "",
             };
             // Make the request
