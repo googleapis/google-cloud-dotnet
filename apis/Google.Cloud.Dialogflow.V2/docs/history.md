@@ -1,5 +1,15 @@
 # Version history
 
+## Version 4.28.0, released 2025-12-15
+
+### New features
+
+- Updated v2 dialogflow client libraries
+
+### Documentation improvements
+
+- Updated v2 dialogflow client libraries
+
 ## Version 4.27.0, released 2025-11-05
 
 ### New features
