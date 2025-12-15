@@ -1,5 +1,19 @@
 # Version history
 
+## Version 1.0.0-beta03, released 2025-12-15
+
+### New features
+
+- Add support for creating Job resource in dry-run mode
+- Add object retention setting to StorageBatchOperations API
+- Launch StorageBatchOperations permissions and roles to GA
+- Launch storagebatchoperations resource permissions to GA
+- Add inclusion scopes
+
+### Documentation improvements
+
+- Fix comment formatting
+
 ## Version 1.0.0-beta02, released 2025-11-06
 
 ### New features
