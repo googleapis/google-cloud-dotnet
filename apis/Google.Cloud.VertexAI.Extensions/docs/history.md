@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta02, released 2025-12-15
+
+### Bug fixes
+
+- Initialize ChatResponseUpdate.MessageId with ResponseId
+
 ## Version 1.0.0-beta01, released 2025-12-12
 
 ### New features
