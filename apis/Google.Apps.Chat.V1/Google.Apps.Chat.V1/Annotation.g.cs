@@ -46,7 +46,7 @@ namespace Google.Apps.Chat.V1 {
             "b21tYW5kTWV0YWRhdGEuVHlwZRIUCgxjb21tYW5kX25hbWUYAyABKAkSEgoK",
             "Y29tbWFuZF9pZBgEIAEoAxIXCg90cmlnZ2Vyc19kaWFsb2cYBSABKAgiMQoE",
             "VHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASBwoDQUREEAESCgoGSU5WT0tF",
-            "EAIi7QMKEFJpY2hMaW5rTWV0YWRhdGESCwoDdXJpGAEgASgJEkUKDnJpY2hf",
+            "EAIigQQKEFJpY2hMaW5rTWV0YWRhdGESCwoDdXJpGAEgASgJEkUKDnJpY2hf",
             "bGlua190eXBlGAIgASgOMi0uZ29vZ2xlLmNoYXQudjEuUmljaExpbmtNZXRh",
             "ZGF0YS5SaWNoTGlua1R5cGUSOAoPZHJpdmVfbGlua19kYXRhGAMgASgLMh0u",
             "Z29vZ2xlLmNoYXQudjEuRHJpdmVMaW5rRGF0YUgAEkEKFGNoYXRfc3BhY2Vf",
@@ -54,32 +54,32 @@ namespace Google.Apps.Chat.V1 {
             "a0RhdGFIABJBChRtZWV0X3NwYWNlX2xpbmtfZGF0YRgFIAEoCzIhLmdvb2ds",
             "ZS5jaGF0LnYxLk1lZXRTcGFjZUxpbmtEYXRhSAASSQoYY2FsZW5kYXJfZXZl",
             "bnRfbGlua19kYXRhGAYgASgLMiUuZ29vZ2xlLmNoYXQudjEuQ2FsZW5kYXJF",
-            "dmVudExpbmtEYXRhSAAicgoMUmljaExpbmtUeXBlEh4KGlJJQ0hfTElOS19U",
-            "WVBFX1VOU1BFQ0lGSUVEEAASDgoKRFJJVkVfRklMRRABEg4KCkNIQVRfU1BB",
-            "Q0UQAhIOCgpNRUVUX1NQQUNFEAQSEgoOQ0FMRU5EQVJfRVZFTlQQBUIGCgRk",
-            "YXRhIkgKE0N1c3RvbUVtb2ppTWV0YWRhdGESMQoMY3VzdG9tX2Vtb2ppGAEg",
-            "ASgLMhsuZ29vZ2xlLmNoYXQudjEuQ3VzdG9tRW1vamkiWAoNRHJpdmVMaW5r",
-            "RGF0YRI0Cg5kcml2ZV9kYXRhX3JlZhgBIAEoCzIcLmdvb2dsZS5jaGF0LnYx",
-            "LkRyaXZlRGF0YVJlZhIRCgltaW1lX3R5cGUYAiABKAkipgEKEUNoYXRTcGFj",
-            "ZUxpbmtEYXRhEi0KBXNwYWNlGAEgASgJQh76QRsKGWNoYXQuZ29vZ2xlYXBp",
-            "cy5jb20vU3BhY2USLwoGdGhyZWFkGAIgASgJQh/6QRwKGmNoYXQuZ29vZ2xl",
-            "YXBpcy5jb20vVGhyZWFkEjEKB21lc3NhZ2UYAyABKAlCIPpBHQobY2hhdC5n",
-            "b29nbGVhcGlzLmNvbS9NZXNzYWdlIrgCChFNZWV0U3BhY2VMaW5rRGF0YRIU",
-            "CgxtZWV0aW5nX2NvZGUYASABKAkSNAoEdHlwZRgCIAEoDjImLmdvb2dsZS5j",
-            "aGF0LnYxLk1lZXRTcGFjZUxpbmtEYXRhLlR5cGUSTQoNaHVkZGxlX3N0YXR1",
-            "cxgDIAEoDjIuLmdvb2dsZS5jaGF0LnYxLk1lZXRTcGFjZUxpbmtEYXRhLkh1",
-            "ZGRsZVN0YXR1c0IG4EEB4EEDIjUKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklF",
-            "RBAAEgsKB01FRVRJTkcQARIKCgZIVURETEUQAiJRCgxIdWRkbGVTdGF0dXMS",
-            "HQoZSFVERExFX1NUQVRVU19VTlNQRUNJRklFRBAAEgsKB1NUQVJURUQQARIJ",
-            "CgVFTkRFRBACEgoKBk1JU1NFRBADIj4KFUNhbGVuZGFyRXZlbnRMaW5rRGF0",
-            "YRITCgtjYWxlbmRhcl9pZBgBIAEoCRIQCghldmVudF9pZBgCIAEoCSp3Cg5B",
-            "bm5vdGF0aW9uVHlwZRIfChtBTk5PVEFUSU9OX1RZUEVfVU5TUEVDSUZJRUQQ",
-            "ABIQCgxVU0VSX01FTlRJT04QARIRCg1TTEFTSF9DT01NQU5EEAISDQoJUklD",
-            "SF9MSU5LEAMSEAoMQ1VTVE9NX0VNT0pJEARCqAEKEmNvbS5nb29nbGUuY2hh",
-            "dC52MUIPQW5ub3RhdGlvblByb3RvUAFaLGNsb3VkLmdvb2dsZS5jb20vZ28v",
-            "Y2hhdC9hcGl2MS9jaGF0cGI7Y2hhdHBiogILRFlOQVBJUHJvdG+qAhNHb29n",
-            "bGUuQXBwcy5DaGF0LlYxygITR29vZ2xlXEFwcHNcQ2hhdFxWMeoCFkdvb2ds",
-            "ZTo6QXBwczo6Q2hhdDo6VjFiBnByb3RvMw=="));
+            "dmVudExpbmtEYXRhSAAihQEKDFJpY2hMaW5rVHlwZRIeChpSSUNIX0xJTktf",
+            "VFlQRV9VTlNQRUNJRklFRBAAEg4KCkRSSVZFX0ZJTEUQARIOCgpDSEFUX1NQ",
+            "QUNFEAISEQoNR01BSUxfTUVTU0FHRRADEg4KCk1FRVRfU1BBQ0UQBBISCg5D",
+            "QUxFTkRBUl9FVkVOVBAFQgYKBGRhdGEiSAoTQ3VzdG9tRW1vamlNZXRhZGF0",
+            "YRIxCgxjdXN0b21fZW1vamkYASABKAsyGy5nb29nbGUuY2hhdC52MS5DdXN0",
+            "b21FbW9qaSJYCg1Ecml2ZUxpbmtEYXRhEjQKDmRyaXZlX2RhdGFfcmVmGAEg",
+            "ASgLMhwuZ29vZ2xlLmNoYXQudjEuRHJpdmVEYXRhUmVmEhEKCW1pbWVfdHlw",
+            "ZRgCIAEoCSKmAQoRQ2hhdFNwYWNlTGlua0RhdGESLQoFc3BhY2UYASABKAlC",
+            "HvpBGwoZY2hhdC5nb29nbGVhcGlzLmNvbS9TcGFjZRIvCgZ0aHJlYWQYAiAB",
+            "KAlCH/pBHAoaY2hhdC5nb29nbGVhcGlzLmNvbS9UaHJlYWQSMQoHbWVzc2Fn",
+            "ZRgDIAEoCUIg+kEdChtjaGF0Lmdvb2dsZWFwaXMuY29tL01lc3NhZ2UiuAIK",
+            "EU1lZXRTcGFjZUxpbmtEYXRhEhQKDG1lZXRpbmdfY29kZRgBIAEoCRI0CgR0",
+            "eXBlGAIgASgOMiYuZ29vZ2xlLmNoYXQudjEuTWVldFNwYWNlTGlua0RhdGEu",
+            "VHlwZRJNCg1odWRkbGVfc3RhdHVzGAMgASgOMi4uZ29vZ2xlLmNoYXQudjEu",
+            "TWVldFNwYWNlTGlua0RhdGEuSHVkZGxlU3RhdHVzQgbgQQHgQQMiNQoEVHlw",
+            "ZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCwoHTUVFVElORxABEgoKBkhVRERM",
+            "RRACIlEKDEh1ZGRsZVN0YXR1cxIdChlIVURETEVfU1RBVFVTX1VOU1BFQ0lG",
+            "SUVEEAASCwoHU1RBUlRFRBABEgkKBUVOREVEEAISCgoGTUlTU0VEEAMiPgoV",
+            "Q2FsZW5kYXJFdmVudExpbmtEYXRhEhMKC2NhbGVuZGFyX2lkGAEgASgJEhAK",
+            "CGV2ZW50X2lkGAIgASgJKncKDkFubm90YXRpb25UeXBlEh8KG0FOTk9UQVRJ",
+            "T05fVFlQRV9VTlNQRUNJRklFRBAAEhAKDFVTRVJfTUVOVElPThABEhEKDVNM",
+            "QVNIX0NPTU1BTkQQAhINCglSSUNIX0xJTksQAxIQCgxDVVNUT01fRU1PSkkQ",
+            "BEKoAQoSY29tLmdvb2dsZS5jaGF0LnYxQg9Bbm5vdGF0aW9uUHJvdG9QAVos",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9jaGF0L2FwaXYxL2NoYXRwYjtjaGF0cGKi",
+            "AgtEWU5BUElQcm90b6oCE0dvb2dsZS5BcHBzLkNoYXQuVjHKAhNHb29nbGVc",
+            "QXBwc1xDaGF0XFYx6gIWR29vZ2xlOjpBcHBzOjpDaGF0OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.AttachmentReflection.Descriptor, global::Google.Apps.Chat.V1.ReactionReflection.Descriptor, global::Google.Apps.Chat.V1.UserReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Apps.Chat.V1.AnnotationType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1865,6 +1865,12 @@ namespace Google.Apps.Chat.V1 {
         /// A Chat space rich link type. For example, a space smart chip.
         /// </summary>
         [pbr::OriginalName("CHAT_SPACE")] ChatSpace = 2,
+        /// <summary>
+        /// A Gmail message rich link type. Specifically, a Gmail chip from [Share to
+        /// Chat](https://support.google.com/chat?p=chat_gmail). The API only
+        /// supports reading messages with GMAIL_MESSAGE rich links.
+        /// </summary>
+        [pbr::OriginalName("GMAIL_MESSAGE")] GmailMessage = 3,
         /// <summary>
         /// A Meet message rich link type. For example, a Meet chip.
         /// </summary>
