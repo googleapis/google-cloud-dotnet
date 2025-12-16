@@ -89,6 +89,21 @@
         }
       }
     },
+    "Advice": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AdviceClient",
+          "rpcs": {
+            "CalendarMode": {
+              "methods": [
+                "CalendarMode",
+                "CalendarModeAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "Autoscalers": {
       "clients": {
         "grpc": {

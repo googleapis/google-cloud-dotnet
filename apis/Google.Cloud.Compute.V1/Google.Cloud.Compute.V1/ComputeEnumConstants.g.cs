@@ -51,6 +51,13 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>
                 /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.AcceleratorTopologiesInfoAcceleratorTopologyInfoInfoPerTopologyState.Types.State.Degraded"/>
+                /// .
+                /// </summary>
+                public const string Degraded = "DEGRADED";
+
+                /// <summary>
+                /// Wire representation of
                 /// <see cref="global::Google.Cloud.Compute.V1.AcceleratorTopologiesInfoAcceleratorTopologyInfoInfoPerTopologyState.Types.State.Running"/>
                 /// .
                 /// </summary>
@@ -2744,6 +2751,12 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>
                 /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.GraphicsOptimizedG4"/>.
+                /// </summary>
+                public const string GraphicsOptimizedG4 = "GRAPHICS_OPTIMIZED_G4";
+
+                /// <summary>
+                /// Wire representation of
                 /// <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.MemoryOptimized"/>.
                 /// </summary>
                 public const string MemoryOptimized = "MEMORY_OPTIMIZED";
@@ -4226,6 +4239,324 @@ namespace Google.Cloud.Compute.V1
                 /// .
                 /// </summary>
                 public const string Provisioning = "PROVISIONING";
+            }
+        }
+
+        /// <summary>
+        /// Container class for enums within the
+        /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesRecommendation"/> message.
+        /// </summary>
+        public static class FutureResourcesRecommendation
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesRecommendation.Types.RecommendationType"/>
+            /// enum.
+            /// </summary>
+            public static class RecommendationType
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesRecommendation.Types.RecommendationType.UndefinedRecommendationType"/>
+                /// .
+                /// </summary>
+                public const string UndefinedRecommendationType = "UNDEFINED_RECOMMENDATION_TYPE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesRecommendation.Types.RecommendationType.FutureReservation"/>
+                /// .
+                /// </summary>
+                public const string FutureReservation = "FUTURE_RESERVATION";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesRecommendation.Types.RecommendationType.Unspecified"/>
+                /// .
+                /// </summary>
+                public const string Unspecified = "RECOMMENDATION_TYPE_UNSPECIFIED";
+            }
+        }
+
+        /// <summary>
+        /// Container class for enums within the
+        /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesRecommendationOtherLocation"/> message.
+        /// </summary>
+        public static class FutureResourcesRecommendationOtherLocation
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesRecommendationOtherLocation.Types.Status"/>
+            /// enum.
+            /// </summary>
+            public static class Status
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesRecommendationOtherLocation.Types.Status.UndefinedStatus"/>
+                /// .
+                /// </summary>
+                public const string UndefinedStatus = "UNDEFINED_STATUS";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesRecommendationOtherLocation.Types.Status.ConditionsNotMet"/>
+                /// .
+                /// </summary>
+                public const string ConditionsNotMet = "CONDITIONS_NOT_MET";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesRecommendationOtherLocation.Types.Status.NotSupported"/>
+                /// .
+                /// </summary>
+                public const string NotSupported = "NOT_SUPPORTED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesRecommendationOtherLocation.Types.Status.NoCapacity"/>
+                /// .
+                /// </summary>
+                public const string NoCapacity = "NO_CAPACITY";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesRecommendationOtherLocation.Types.Status.OtherLocationStatusUndefined"/>
+                /// .
+                /// </summary>
+                public const string OtherLocationStatusUndefined = "OTHER_LOCATION_STATUS_UNDEFINED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesRecommendationOtherLocation.Types.Status.Recommended"/>
+                /// .
+                /// </summary>
+                public const string Recommended = "RECOMMENDED";
+            }
+        }
+
+        /// <summary>
+        /// Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpec"/>
+        /// message.
+        /// </summary>
+        public static class FutureResourcesSpec
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpec.Types.DeploymentType"/> enum.
+            /// </summary>
+            public static class DeploymentType
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpec.Types.DeploymentType.UndefinedDeploymentType"/>
+                /// .
+                /// </summary>
+                public const string UndefinedDeploymentType = "UNDEFINED_DEPLOYMENT_TYPE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpec.Types.DeploymentType.Dense"/>.
+                /// </summary>
+                public const string Dense = "DENSE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpec.Types.DeploymentType.Unspecified"/>.
+                /// </summary>
+                public const string Unspecified = "DEPLOYMENT_TYPE_UNSPECIFIED";
+            }
+        }
+
+        /// <summary>
+        /// Container class for enums within the
+        /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecAggregateResources"/> message.
+        /// </summary>
+        public static class FutureResourcesSpecAggregateResources
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecAggregateResources.Types.VmFamily"/> enum.
+            /// </summary>
+            public static class VmFamily
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecAggregateResources.Types.VmFamily.UndefinedVmFamily"/>
+                /// .
+                /// </summary>
+                public const string UndefinedVmFamily = "UNDEFINED_VM_FAMILY";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecAggregateResources.Types.VmFamily.CloudTpuDeviceCt3"/>
+                /// .
+                /// </summary>
+                public const string CloudTpuDeviceCt3 = "VM_FAMILY_CLOUD_TPU_DEVICE_CT3";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecAggregateResources.Types.VmFamily.CloudTpuLiteDeviceCt5L"/>
+                /// .
+                /// </summary>
+                public const string CloudTpuLiteDeviceCt5L = "VM_FAMILY_CLOUD_TPU_LITE_DEVICE_CT5L";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecAggregateResources.Types.VmFamily.CloudTpuLitePodSliceCt5Lp"/>
+                /// .
+                /// </summary>
+                public const string CloudTpuLitePodSliceCt5Lp = "VM_FAMILY_CLOUD_TPU_LITE_POD_SLICE_CT5LP";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecAggregateResources.Types.VmFamily.CloudTpuLitePodSliceCt6E"/>
+                /// .
+                /// </summary>
+                public const string CloudTpuLitePodSliceCt6E = "VM_FAMILY_CLOUD_TPU_LITE_POD_SLICE_CT6E";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecAggregateResources.Types.VmFamily.CloudTpuPodSliceCt3P"/>
+                /// .
+                /// </summary>
+                public const string CloudTpuPodSliceCt3P = "VM_FAMILY_CLOUD_TPU_POD_SLICE_CT3P";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecAggregateResources.Types.VmFamily.CloudTpuPodSliceCt4P"/>
+                /// .
+                /// </summary>
+                public const string CloudTpuPodSliceCt4P = "VM_FAMILY_CLOUD_TPU_POD_SLICE_CT4P";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecAggregateResources.Types.VmFamily.CloudTpuPodSliceCt5P"/>
+                /// .
+                /// </summary>
+                public const string CloudTpuPodSliceCt5P = "VM_FAMILY_CLOUD_TPU_POD_SLICE_CT5P";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecAggregateResources.Types.VmFamily.CloudTpuPodSliceTpu7X"/>
+                /// .
+                /// </summary>
+                public const string CloudTpuPodSliceTpu7X = "VM_FAMILY_CLOUD_TPU_POD_SLICE_TPU7X";
+            }
+
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecAggregateResources.Types.WorkloadType"/>
+            /// enum.
+            /// </summary>
+            public static class WorkloadType
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecAggregateResources.Types.WorkloadType.UndefinedWorkloadType"/>
+                /// .
+                /// </summary>
+                public const string UndefinedWorkloadType = "UNDEFINED_WORKLOAD_TYPE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecAggregateResources.Types.WorkloadType.Batch"/>
+                /// .
+                /// </summary>
+                public const string Batch = "BATCH";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecAggregateResources.Types.WorkloadType.Serving"/>
+                /// .
+                /// </summary>
+                public const string Serving = "SERVING";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecAggregateResources.Types.WorkloadType.Unspecified"/>
+                /// .
+                /// </summary>
+                public const string Unspecified = "UNSPECIFIED";
+            }
+        }
+
+        /// <summary>
+        /// Container class for enums within the
+        /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecLocalSsdPartition"/> message.
+        /// </summary>
+        public static class FutureResourcesSpecLocalSsdPartition
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecLocalSsdPartition.Types.DiskInterface"/>
+            /// enum.
+            /// </summary>
+            public static class DiskInterface
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecLocalSsdPartition.Types.DiskInterface.UndefinedDiskInterface"/>
+                /// .
+                /// </summary>
+                public const string UndefinedDiskInterface = "UNDEFINED_DISK_INTERFACE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecLocalSsdPartition.Types.DiskInterface.Nvme"/>
+                /// .
+                /// </summary>
+                public const string Nvme = "NVME";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecLocalSsdPartition.Types.DiskInterface.Scsi"/>
+                /// .
+                /// </summary>
+                public const string Scsi = "SCSI";
+            }
+        }
+
+        /// <summary>
+        /// Container class for enums within the
+        /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecLocationPolicyLocation"/> message.
+        /// </summary>
+        public static class FutureResourcesSpecLocationPolicyLocation
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecLocationPolicyLocation.Types.Preference"/>
+            /// enum.
+            /// </summary>
+            public static class Preference
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecLocationPolicyLocation.Types.Preference.UndefinedPreference"/>
+                /// .
+                /// </summary>
+                public const string UndefinedPreference = "UNDEFINED_PREFERENCE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecLocationPolicyLocation.Types.Preference.Allow"/>
+                /// .
+                /// </summary>
+                public const string Allow = "ALLOW";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecLocationPolicyLocation.Types.Preference.Deny"/>
+                /// .
+                /// </summary>
+                public const string Deny = "DENY";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.FutureResourcesSpecLocationPolicyLocation.Types.Preference.Unspecified"/>
+                /// .
+                /// </summary>
+                public const string Unspecified = "PREFERENCE_UNSPECIFIED";
             }
         }
 
