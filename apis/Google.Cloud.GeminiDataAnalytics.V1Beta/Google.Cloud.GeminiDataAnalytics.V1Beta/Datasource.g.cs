@@ -45,7 +45,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             "bmNlSABCDAoKcmVmZXJlbmNlcyJ5ChdCaWdRdWVyeVRhYmxlUmVmZXJlbmNl",
             "cxJeChB0YWJsZV9yZWZlcmVuY2VzGAEgAygLMj8uZ29vZ2xlLmNsb3VkLmdl",
             "bWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkJpZ1F1ZXJ5VGFibGVSZWZlcmVu",
-            "Y2VCA+BBAiKnAQoWQmlnUXVlcnlUYWJsZVJlZmVyZW5jZRIXCgpwcm9qZWN0",
+            "Y2VCA+BBASKnAQoWQmlnUXVlcnlUYWJsZVJlZmVyZW5jZRIXCgpwcm9qZWN0",
             "X2lkGAEgASgJQgPgQQISFwoKZGF0YXNldF9pZBgDIAEoCUID4EECEhUKCHRh",
             "YmxlX2lkGAQgASgJQgPgQQISRAoGc2NoZW1hGAYgASgLMi8uZ29vZ2xlLmNs",
             "b3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLlNjaGVtYUID4EEBInsK",
@@ -299,7 +299,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     /// <summary>Field number for the "alloydb" field.</summary>
     public const int AlloydbFieldNumber = 8;
     /// <summary>
-    /// Reference to an AlloyDB database.
+    /// Reference to an AlloyDB database. Only supported for the `QueryData`
+    /// method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -314,7 +315,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     /// <summary>Field number for the "spanner_reference" field.</summary>
     public const int SpannerReferenceFieldNumber = 9;
     /// <summary>
-    /// Reference to a Spanner database.
+    /// Reference to a Spanner database. Only supported for the `QueryData`
+    /// method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -329,7 +331,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     /// <summary>Field number for the "cloud_sql_reference" field.</summary>
     public const int CloudSqlReferenceFieldNumber = 10;
     /// <summary>
-    /// Reference to a CloudSql database.
+    /// Reference to a CloudSql database. Only supported for the `QueryData`
+    /// method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -703,7 +706,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
   }
 
   /// <summary>
-  /// Message representing references to BigQuery tables.
+  /// Message representing references to BigQuery tables and property graphs.
+  /// At least one of `table_references` or `property_graph_references` must be
+  /// populated.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQueryTableReferences : pb::IMessage<BigQueryTableReferences>
@@ -756,7 +761,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigQueryTableReference.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigQueryTableReference> tableReferences_ = new pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1Beta.BigQueryTableReference>();
     /// <summary>
-    /// Required. References to BigQuery tables.
+    /// Optional. References to BigQuery tables.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1595,6 +1600,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
 
   /// <summary>
   /// Message representing reference to an AlloyDB database and agent context.
+  /// Only supported for the `QueryData` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AlloyDbReference : pb::IMessage<AlloyDbReference>
@@ -2235,6 +2241,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
 
   /// <summary>
   /// Message representing reference to a Spanner database and agent context.
+  /// Only supported for the `QueryData` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SpannerReference : pb::IMessage<SpannerReference>
@@ -2901,6 +2908,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
 
   /// <summary>
   /// Message representing reference to a CloudSQL database and agent context.
+  /// Only supported for the `QueryData` method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudSqlReference : pb::IMessage<CloudSqlReference>
