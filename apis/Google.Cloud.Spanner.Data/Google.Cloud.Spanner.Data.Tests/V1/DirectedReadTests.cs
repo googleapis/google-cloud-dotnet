@@ -340,7 +340,7 @@ public class DirectedReadTests
             Multiplexed = true
         };
 
-        return managedSession.CreateManagedTransactionWithSpannerTransaction(transactionId, options, singleUseTransaction: singleUse);
+        return managedSession.CreateManagedTransaction(transactionId, options, singleUseTransaction: singleUse);
     }
 
     public class FakeGrpcSpannerClient : V1.Spanner.SpannerClient
