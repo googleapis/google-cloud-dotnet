@@ -27,7 +27,7 @@ namespace Google.Apps.Chat.V1 {
             "Ch9nb29nbGUvY2hhdC92MS9hdHRhY2htZW50LnByb3RvEg5nb29nbGUuY2hh",
             "dC52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xl",
             "L2FwaS9yZXNvdXJjZS5wcm90byL9AwoKQXR0YWNobWVudBIRCgRuYW1lGAEg",
-            "ASgJQgPgQQESGQoMY29udGVudF9uYW1lGAIgASgJQgPgQQMSGQoMY29udGVu",
+            "ASgJQgPgQQgSGQoMY29udGVudF9uYW1lGAIgASgJQgPgQQMSGQoMY29udGVu",
             "dF90eXBlGAMgASgJQgPgQQMSRQoTYXR0YWNobWVudF9kYXRhX3JlZhgEIAEo",
             "CzIhLmdvb2dsZS5jaGF0LnYxLkF0dGFjaG1lbnREYXRhUmVmQgPgQQFIABI7",
             "Cg5kcml2ZV9kYXRhX3JlZhgHIAEoCzIcLmdvb2dsZS5jaGF0LnYxLkRyaXZl",
@@ -132,8 +132,9 @@ namespace Google.Apps.Chat.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Optional. Resource name of the attachment, in the form
-    /// `spaces/{space}/messages/{message}/attachments/{attachment}`.
+    /// Identifier. Resource name of the attachment.
+    ///
+    /// Format: `spaces/{space}/messages/{message}/attachments/{attachment}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

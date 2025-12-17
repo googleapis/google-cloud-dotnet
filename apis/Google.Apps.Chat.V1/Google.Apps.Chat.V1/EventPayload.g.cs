@@ -1743,7 +1743,7 @@ namespace Google.Apps.Chat.V1 {
     public const int MessageFieldNumber = 1;
     private global::Google.Apps.Chat.V1.Message message_;
     /// <summary>
-    /// The deleted message. Only the `name`, `createTime`, `deleteTime`, and
+    /// The deleted message. Only the `name`, `createTime`, and
     /// `deletionMetadata` fields are populated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
