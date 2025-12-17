@@ -524,6 +524,9 @@ namespace Google.Cloud.Spanner.Data
         internal Task<SessionPool> AcquireSessionPoolAsync() =>
             SessionPoolManager.AcquireSessionPoolAsync(new SpannerClientCreationOptions(this));
 
+        internal Task<ManagedSession> AcquireManagedSessionAsync() =>
+            SessionPoolManager.AcquireManagedSessionAsync(new SpannerClientCreationOptions(this), DatabaseName, DatabaseRole);
+
         /// <summary>
         /// Copy constructor, used for cloning. (This allows for the use of object initializers, unlike
         /// the <see cref="Clone"/> method.)
@@ -650,19 +653,19 @@ namespace Google.Cloud.Spanner.Data
                 // TODO: Other validation? (For integer values etc?)
                 if (string.Equals(keyword, DataSourceKeyword, StringComparison.OrdinalIgnoreCase))
                 {
-                    value = ValidatedDataSource((string)value);
+                    value = ValidatedDataSource((string) value);
                 }
                 else if (string.Equals(keyword, ClrToSpannerTypeDefaultMappingsKeyword, StringComparison.OrdinalIgnoreCase))
                 {
-                    ConversionOptions = ConversionOptions.WithClrToSpannerMappings((string)value);
+                    ConversionOptions = ConversionOptions.WithClrToSpannerMappings((string) value);
                 }
                 else if (string.Equals(keyword, SpannerToClrTypeDefaultMappingsKeyword, StringComparison.OrdinalIgnoreCase))
                 {
-                    ConversionOptions = ConversionOptions.WithSpannerToClrMappings((string)value);
+                    ConversionOptions = ConversionOptions.WithSpannerToClrMappings((string) value);
                 }
                 else if (string.Equals(keyword, UseClrDefaultForNullKeyword, StringComparison.OrdinalIgnoreCase))
                 {
-                    ConversionOptions = ConversionOptions.WithClrDefaultForNullSetting(bool.Parse((string)value));
+                    ConversionOptions = ConversionOptions.WithClrDefaultForNullSetting(bool.Parse((string) value));
                 }
                 base[keyword] = value;
             }

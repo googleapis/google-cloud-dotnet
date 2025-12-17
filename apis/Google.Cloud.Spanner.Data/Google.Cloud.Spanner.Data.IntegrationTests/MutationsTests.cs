@@ -65,7 +65,8 @@ public class MutationsTests
         // "the amount of values does not match the number of columns in the key".
         if (!_fixture.RunningOnEmulator) // The message is different on the emulator.
         {
-            Assert.Contains("does not specify any value", exception.RpcException.Message);
+            // This error is expected for Multiplex Sesions as they expect a mutation key during commit for mutation only transactions
+            Assert.Contains("Failed to initialize transaction due to invalid mutation key.", exception.RpcException.Message);
         }
     }
 

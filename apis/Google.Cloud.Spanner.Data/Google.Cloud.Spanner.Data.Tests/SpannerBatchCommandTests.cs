@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Cloud.Spanner.V1.Tests;
@@ -51,10 +52,11 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void TransactionConstructor()
         {
             var connection = new SpannerConnection();
-            var pool = new FakeSessionPool();
-            var session = PooledSession.FromSessionName(pool, new SessionName("project", "instance", "database", "session"));
+            SpannerClient fakeClient = ManagedSessionTests.CreateFakeClient();
+            ManagedSession fakeManagedSession = new ManagedSession(fakeClient, null, null, null);
+            ManagedTransaction managedTransaction = new ManagedTransaction(fakeManagedSession, null, null, false, null);
 
-            var transaction = new SpannerTransaction(connection, session, SpannerTransactionCreationOptions.ReadWrite, transactionOptions: null, isRetriable: false);
+            var transaction = new SpannerTransaction(connection, managedTransaction, SpannerTransactionCreationOptions.ReadWrite, transactionOptions: null, isRetriable: false);
             var command = new SpannerBatchCommand(transaction);
 
             Assert.Empty(command.Commands);
@@ -125,8 +127,8 @@ namespace Google.Cloud.Spanner.Data.Tests
             var expectedCommandsInOrder = new List<string>();
             foreach (var testCase in ValidCommands)
             {
-                ((Action<SpannerBatchCommand>)testCase[0])(command);
-                expectedCommandsInOrder.Add((string)testCase[1]);
+                ((Action<SpannerBatchCommand>) testCase[0])(command);
+                expectedCommandsInOrder.Add((string) testCase[1]);
             }
 
             Assert.Equal(expectedCommandsInOrder, command.Commands.Select(c => c.CommandText), StringComparer.OrdinalIgnoreCase);
@@ -162,7 +164,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync();
+                .SetupMultiplexSessionCreationAsync();
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
             SpannerTransaction transaction = connection.BeginTransaction();
             var command = transaction.CreateBatchDmlCommand();
@@ -175,7 +177,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var priority = Priority.High;
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync()
+                .SetupMultiplexSessionCreationAsync()
                 .SetupExecuteBatchDmlAsync()
                 .SetupCommitAsync();
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
@@ -198,7 +200,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var priority = Priority.Medium;
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync()
+                .SetupMultiplexSessionCreationAsync()
                 .SetupExecuteBatchDmlAsync()
                 .SetupCommitAsync();
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
@@ -224,7 +226,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void MaxCommitDelay_DefaultsToNull()
         {
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
-            spannerClientMock.SetupBatchCreateSessionsAsync();
+            spannerClientMock.SetupMultiplexSessionCreationAsync();
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
             var command = connection.CreateBatchDmlCommand();
 
@@ -235,7 +237,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void MaxCommitDelay_Valid(TimeSpan? maxCommitDelay)
         {
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
-            spannerClientMock.SetupBatchCreateSessionsAsync();
+            spannerClientMock.SetupMultiplexSessionCreationAsync();
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
             var command = connection.CreateBatchDmlCommand();
 
@@ -248,7 +250,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void MaxCommitDelay_Invalid(TimeSpan? maxCommitDelay)
         {
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
-            spannerClientMock.SetupBatchCreateSessionsAsync();
+            spannerClientMock.SetupMultiplexSessionCreationAsync();
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
             var command = connection.CreateBatchDmlCommand();
 
@@ -260,7 +262,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync()
+                .SetupMultiplexSessionCreationAsync()
                 .SetupBeginTransactionAsync()
                 .SetupExecuteBatchDmlAsync()
                 .SetupCommitAsync();
@@ -282,7 +284,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync()
+                .SetupMultiplexSessionCreationAsync()
                 .SetupBeginTransactionAsync()
                 .SetupExecuteBatchDmlAsync()
                 .SetupCommitAsync();
@@ -306,7 +308,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync()
+                .SetupMultiplexSessionCreationAsync()
                 .SetupBeginTransactionAsync()
                 .SetupExecuteBatchDmlAsync()
                 .SetupCommitAsync();
@@ -333,7 +335,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync()
+                .SetupMultiplexSessionCreationAsync()
                 .SetupBeginTransactionAsync()
                 .SetupExecuteBatchDmlAsync()
                 .SetupCommitAsync();
@@ -360,7 +362,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync()
+                .SetupMultiplexSessionCreationAsync()
                 .SetupBeginTransactionAsync()
                 .SetupExecuteBatchDmlAsync()
                 .SetupCommitAsync();
@@ -389,7 +391,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync()
+                .SetupMultiplexSessionCreationAsync()
                 .SetupBeginTransactionAsync()
                 .SetupExecuteBatchDmlAsync()
                 .SetupCommitAsync();
@@ -418,7 +420,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var transactionTag = "transaction-tag-1";
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync()
+                .SetupMultiplexSessionCreationAsync()
                 .SetupExecuteBatchDmlAsync()
                 .SetupCommitAsync();
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
@@ -437,20 +439,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             await spannerClientMock.Received(1).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == transactionTag),
                 Arg.Any<CallSettings>());
-        }
-
-        private class FakeSessionPool : SessionPool.ISessionPool
-        {
-            public SpannerClient Client => throw new NotImplementedException();
-            public IClock Clock => SystemClock.Instance;
-            public SessionPoolOptions Options { get; } = new SessionPoolOptions();
-            public bool TracksSessions => throw new NotImplementedException();
-
-            public void Release(PooledSession session, ByteString transactionId, bool deleteSession) =>  throw new NotImplementedException();
-            public void Detach(PooledSession session) => throw new NotImplementedException();
-
-            public Task<PooledSession> RefreshedOrNewAsync(PooledSession session, V1.TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken) =>
-                throw new NotImplementedException();
         }
     }
 }

@@ -46,12 +46,12 @@ namespace Google.Cloud.Spanner.Data.Tests
             public async Task FirstCallSucceeds()
             {
                 SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
-                    .SetupBatchCreateSessionsAsync()
+                    .SetupMultiplexSessionCreationAsync()
                     .SetupExecuteBatchDmlAsync()
                     .SetupCommitAsync();
                 SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
 
-                var scheduler = (FakeScheduler)connection.Builder.SessionPoolManager.SpannerSettings.Scheduler;
+                var scheduler = (FakeScheduler) connection.Builder.SessionPoolManager.SpannerSettings.Scheduler;
                 var time0 = scheduler.Clock.GetCurrentDateTimeUtc();
                 var callee = new Callee(scheduler);
 
@@ -69,14 +69,14 @@ namespace Google.Cloud.Spanner.Data.Tests
             public async Task CommitAbortsTwice()
             {
                 SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
-                    .SetupBatchCreateSessionsAsync()
+                    .SetupMultiplexSessionCreationAsync()
                     .SetupExecuteBatchDmlAsync()
                     .SetupCommitAsync_Fails(failures: 2, statusCode: StatusCode.Aborted)
                     .SetupRollbackAsync();
 
                 SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
 
-                var scheduler = (FakeScheduler)connection.Builder.SessionPoolManager.SpannerSettings.Scheduler;
+                var scheduler = (FakeScheduler) connection.Builder.SessionPoolManager.SpannerSettings.Scheduler;
                 var time0 = scheduler.Clock.GetCurrentDateTimeUtc();
                 var callee = new Callee(scheduler);
 
@@ -95,7 +95,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             public async Task BatchDmlAbortsTwice()
             {
                 SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
-                    .SetupBatchCreateSessionsAsync()
+                    .SetupMultiplexSessionCreationAsync()
                     .SetupBeginTransactionAsync()
                     // With transaction inlining we need batch DML to fail 4 times to get the retriable transaction
                     // to abort twice. That is because on each run of the retriable transaction the batch DML command
@@ -108,7 +108,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
                 SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
 
-                var scheduler = (FakeScheduler)connection.Builder.SessionPoolManager.SpannerSettings.Scheduler;
+                var scheduler = (FakeScheduler) connection.Builder.SessionPoolManager.SpannerSettings.Scheduler;
                 var time0 = scheduler.Clock.GetCurrentDateTimeUtc();
                 var callee = new Callee(scheduler);
 
@@ -126,14 +126,14 @@ namespace Google.Cloud.Spanner.Data.Tests
             public async Task CommitAbortsTwice_RecommendedDelay()
             {
                 SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
-                    .SetupBatchCreateSessionsAsync()
+                    .SetupMultiplexSessionCreationAsync()
                     .SetupExecuteBatchDmlAsync()
                     .SetupCommitAsync_Fails(failures: 2, statusCode: StatusCode.Aborted, exceptionRetryDelay: TimeSpan.FromMilliseconds(ExceptionRetryDelayMs))
                     .SetupRollbackAsync();
 
                 SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
 
-                var scheduler = (FakeScheduler)connection.Builder.SessionPoolManager.SpannerSettings.Scheduler;
+                var scheduler = (FakeScheduler) connection.Builder.SessionPoolManager.SpannerSettings.Scheduler;
                 var time0 = scheduler.Clock.GetCurrentDateTimeUtc();
                 var callee = new Callee(scheduler, initialDelayMs: ExceptionRetryDelayMs, backoffMultiplier: ExceptionBackoffMultiplier);
 
@@ -151,14 +151,14 @@ namespace Google.Cloud.Spanner.Data.Tests
             public async Task CommitAbortsAlways_RespectsOverallDeadline()
             {
                 SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
-                    .SetupBatchCreateSessionsAsync()
+                    .SetupMultiplexSessionCreationAsync()
                     .SetupExecuteBatchDmlAsync()
                     .SetupCommitAsync_FailsAlways(statusCode: StatusCode.Aborted)
                     .SetupRollbackAsync();
 
                 SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
 
-                var scheduler = (FakeScheduler)connection.Builder.SessionPoolManager.SpannerSettings.Scheduler;
+                var scheduler = (FakeScheduler) connection.Builder.SessionPoolManager.SpannerSettings.Scheduler;
                 // This test needs a little bit more of real time, else it's flaky.
                 scheduler.RealTimeTimeout = TimeSpan.FromSeconds(60);
                 var time0 = scheduler.Clock.GetCurrentDateTimeUtc();
@@ -186,14 +186,14 @@ namespace Google.Cloud.Spanner.Data.Tests
             public async Task CommitFailsOtherThanAborted()
             {
                 SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
-                    .SetupBatchCreateSessionsAsync()
+                    .SetupMultiplexSessionCreationAsync()
                     .SetupExecuteBatchDmlAsync()
                     .SetupCommitAsync_Fails(failures: 1, StatusCode.Unknown)
                     .SetupRollbackAsync();
 
                 SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
 
-                var scheduler = (FakeScheduler)connection.Builder.SessionPoolManager.SpannerSettings.Scheduler;
+                var scheduler = (FakeScheduler) connection.Builder.SessionPoolManager.SpannerSettings.Scheduler;
                 var time0 = scheduler.Clock.GetCurrentDateTimeUtc();
                 var callee = new Callee(scheduler);
 
@@ -213,11 +213,11 @@ namespace Google.Cloud.Spanner.Data.Tests
             public async Task WorkFails()
             {
                 SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger)
-                    .SetupBatchCreateSessionsAsync();
+                    .SetupMultiplexSessionCreationAsync();
 
                 SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
 
-                var scheduler = (FakeScheduler)connection.Builder.SessionPoolManager.SpannerSettings.Scheduler;
+                var scheduler = (FakeScheduler) connection.Builder.SessionPoolManager.SpannerSettings.Scheduler;
                 var time0 = scheduler.Clock.GetCurrentDateTimeUtc();
                 var callee = new Callee(scheduler);
 
@@ -300,7 +300,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                     long lastCallTicks = time0.Ticks;
                     for (int i = 1; i < _callTimes.Count; i++)
                     {
-                        var minDelayTicks = (long)Math.Pow(_backoffMultiplier, i - 1) * _initialDelayTicks;
+                        var minDelayTicks = (long) Math.Pow(_backoffMultiplier, i - 1) * _initialDelayTicks;
                         var maxDelayTicks = minDelayTicks * _jitterMultiplier;
 
                         Assert.InRange(_callTimes[i].Ticks, lastCallTicks + minDelayTicks, lastCallTicks + maxDelayTicks);

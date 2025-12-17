@@ -14,6 +14,8 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
+using Google.Protobuf;
+using Google.Protobuf.WellKnownTypes;
 using System;
 using static Google.Cloud.Spanner.V1.TransactionOptions.Types;
 using IsolationLevel = System.Data.IsolationLevel;
@@ -99,7 +101,7 @@ public sealed class SpannerTransactionCreationOptions
     /// Isolation level for a read-write transaction.
     /// This will always be <see cref="IsolationLevel.Unspecified"/> for read-only transactions.
     /// </summary>
-    public IsolationLevel IsolationLevel {  get; }
+    public IsolationLevel IsolationLevel { get; }
 
     /// <summary>
     /// Whether changes executed within this transaction are recorded in change streams or not.
@@ -120,12 +122,17 @@ public sealed class SpannerTransactionCreationOptions
     /// </summary>
     public ReadLockMode ReadLockMode { get; }
 
+    /// <summary>
+    /// This will only be set by RetriableTransaction and is needed for Multiplex Sessions to work correctly during retries.
+    /// </summary>
+    internal ByteString PreviousTransactionId { get; set; }
+
     private SpannerTransactionCreationOptions(TimestampBound timestampBound, TransactionId transactionId, bool isDetached, bool isSingleUse, bool isPartitionedDml, bool excludeFromChangeStreams, IsolationLevel isolationLevel, ReadLockMode readLockMode)
     {
         GaxPreconditions.CheckArgument(
-            timestampBound is null || transactionId is null,
-            nameof(timestampBound),
-            $"At most one of {nameof(timestampBound)} and {nameof(transactionId)} may be set.");
+                timestampBound is null || transactionId is null,
+                nameof(timestampBound),
+                $"At most one of {nameof(timestampBound)} and {nameof(transactionId)} may be set.");
         GaxPreconditions.CheckArgument(
             transactionId is null || isDetached,
             nameof(isDetached),
@@ -214,9 +221,13 @@ public sealed class SpannerTransactionCreationOptions
             options.ExcludeTxnFromChangeStreams = ExcludeFromChangeStreams;
             options.IsolationLevel = ConvertToSpannerIsolatonLevel(IsolationLevel);
 
-            if(options.ReadWrite is not null)
+            if (options.ReadWrite is not null)
             {
                 options.ReadWrite.ReadLockMode = ReadLockModeConverter.ToProto(ReadLockMode);
+                if (PreviousTransactionId != null)
+                {
+                    options.ReadWrite.MultiplexedSessionPreviousTransactionId = PreviousTransactionId;
+                }
             }
         }
 
@@ -269,6 +280,17 @@ public sealed class SpannerTransactionCreationOptions
     /// </summary>
     public SpannerTransactionCreationOptions WithReadLockMode(ReadLockMode readLockMode) =>
         readLockMode == ReadLockMode ? this : new SpannerTransactionCreationOptions(TimestampBound, TransactionId, IsDetached, IsSingleUse, IsPartitionedDml, ExcludeFromChangeStreams, IsolationLevel, readLockMode);
+
+    internal SpannerTransactionCreationOptions WithPreviousTransactionId(ByteString previousTransactionId = null)
+    {
+        GaxPreconditions.CheckState(
+            TransactionMode == TransactionMode.ReadWrite,
+            "PreviousTransactionId is only settable on a ReadWrite transaction");
+
+        var options = new SpannerTransactionCreationOptions(TimestampBound, TransactionId, IsDetached, IsSingleUse, IsPartitionedDml, ExcludeFromChangeStreams, IsolationLevel, ReadLockMode);
+        options.PreviousTransactionId = previousTransactionId;
+        return options;
+    }
 }
 
 /// <summary>

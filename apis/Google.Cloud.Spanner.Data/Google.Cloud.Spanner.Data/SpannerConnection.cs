@@ -25,9 +25,11 @@ using System;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Common;
+using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 using static Google.Cloud.Spanner.V1.SessionPool;
+using static Google.Cloud.Spanner.V1.TransactionOptions;
 using Transaction = System.Transactions.Transaction;
 
 namespace Google.Cloud.Spanner.Data
@@ -53,7 +55,11 @@ namespace Google.Cloud.Spanner.Data
 
         // The SessionPool to use to allocate sessions. This is obtained from the SessionPoolManager,
         // and released when the connection is closed/disposed.
-        private SessionPool _sessionPool;
+        //private SessionPool _sessionPool;
+
+        // A managed (or multiplex) session which will be used as the underlying session for
+        // any transaction executed through this connection
+        private ManagedSession _managedSession;
 
         private ConnectionState _state = ConnectionState.Closed;
 
@@ -337,8 +343,10 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
+        private Task<ManagedSession> _managedSessionCreationTask;
+
         /// <summary>
-        /// Opens the connection, which involves acquiring a SessionPool,
+        /// Opens the connection, which involves acquiring a ManagedSession,
         /// and potentially enlists the connection in the current transaction.
         /// </summary>
         /// <param name="transactionEnlister">Enlistment delegate; may be null.</param>
@@ -351,6 +359,7 @@ namespace Google.Cloud.Spanner.Data
                 async () =>
                 {
                     ConnectionState previousState;
+                    bool waitingOnConnection = false;
                     lock (_sync)
                     {
                         previousState = _state;
@@ -361,7 +370,18 @@ namespace Google.Cloud.Spanner.Data
 
                         if (previousState == ConnectionState.Connecting)
                         {
-                            throw new InvalidOperationException("The SpannerConnection is already being opened.");
+                            if (_managedSessionCreationTask != null)
+                            {
+                                waitingOnConnection = true;
+                            }
+                            else
+                            {
+                                throw new InvalidOperationException("The SpannerConnection is already being opened but no creation task was found.");
+                            }
+                        }
+                        else
+                        {
+                            _managedSessionCreationTask = Builder.AcquireManagedSessionAsync();
                         }
 
                         _state = ConnectionState.Connecting;
@@ -369,7 +389,7 @@ namespace Google.Cloud.Spanner.Data
                     OnStateChange(new StateChangeEventArgs(previousState, ConnectionState.Connecting));
                     try
                     {
-                        _sessionPool = await Builder.AcquireSessionPoolAsync().ConfigureAwait(false);
+                        _managedSession = await _managedSessionCreationTask.ConfigureAwait(false);
                     }
                     finally
                     {
@@ -377,11 +397,15 @@ namespace Google.Cloud.Spanner.Data
                         // but it's not clear whether or not that's a problem.
                         lock (_sync)
                         {
-                            _state = _sessionPool != null ? ConnectionState.Open : ConnectionState.Broken;
+                            _state = _managedSession != null ? ConnectionState.Open : ConnectionState.Broken;
                         }
                         if (IsOpen)
                         {
-                            transactionEnlister?.Invoke();
+                            if (!waitingOnConnection)
+                            {
+                                // First thread which opened the connection should enlist the transaction
+                                transactionEnlister?.Invoke();
+                            }
                         }
                         OnStateChange(new StateChangeEventArgs(ConnectionState.Connecting, _state));
                     }
@@ -498,7 +522,7 @@ namespace Google.Cloud.Spanner.Data
         /// Begins a new Spanner transaction synchronously. This method hides <see cref="DbConnection.BeginTransaction()"/>, but behaves
         /// the same way, just with a more specific return type.
         /// </summary>
-        public new SpannerTransaction BeginTransaction() => (SpannerTransaction)base.BeginTransaction();
+        public new SpannerTransaction BeginTransaction() => (SpannerTransaction) base.BeginTransaction();
 
         /// <summary>
         /// Begins a new read/write transaction.
@@ -580,20 +604,12 @@ namespace Google.Cloud.Spanner.Data
                 {
                     await OpenAsync(cancellationToken).ConfigureAwait(false);
 
-                    PooledSession session;
-                    SpannerTransactionCreationOptions effectiveCreationOptions;
-                    if (transactionCreationOptions.TransactionId is null)
-                    {
-                        session = await AcquireSessionAsync(transactionCreationOptions, cancellationToken, out effectiveCreationOptions).ConfigureAwait(false);
-                    }
-                    else
-                    {
-                        SessionName sessionName = SessionName.Parse(transactionCreationOptions.TransactionId.Session);
-                        ByteString transactionIdBytes = ByteString.FromBase64(transactionCreationOptions.TransactionId.Id);
-                        session = _sessionPool.CreateDetachedSession(sessionName, transactionIdBytes, TransactionOptions.ModeOneofCase.ReadOnly);
-                        effectiveCreationOptions = transactionCreationOptions;
-                    }
-                    return new SpannerTransaction(this, session, effectiveCreationOptions, transactionOptions, isRetriable: false);
+                    SpannerTransactionCreationOptions effectiveCreationOptions = transactionCreationOptions;
+                    ManagedTransaction transaction = transactionCreationOptions.TransactionId is null ?
+                                                     await AcquireManagedTransaction(transactionCreationOptions, out effectiveCreationOptions).ConfigureAwait(false) :
+                                                     await _managedSession.CreateManagedTransactionWithMode(ByteString.FromBase64(effectiveCreationOptions.TransactionId.Id), ModeOneofCase.ReadOnly).ConfigureAwait(false);
+
+                    return new SpannerTransaction(this, transaction, effectiveCreationOptions, transactionOptions, isRetriable: false);
                 }, "SpannerConnection.BeginTransactionAsync", Logger);
         }
 
@@ -998,33 +1014,81 @@ namespace Google.Cloud.Spanner.Data
         /// </remarks>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
         /// <returns>A task which will complete when the session pool has reached its minimum size.</returns>
+        // TODO: Deprecate this method
         public async Task WhenSessionPoolReady(CancellationToken cancellationToken = default)
         {
             var sessionPoolSegmentKey = GetSessionPoolSegmentKey(nameof(WhenSessionPoolReady));
             await OpenAsync(cancellationToken).ConfigureAwait(false);
-            await _sessionPool.WhenPoolReady(sessionPoolSegmentKey, cancellationToken).ConfigureAwait(false);
+            //await _sessionPool.WhenPoolReady(sessionPoolSegmentKey, cancellationToken).ConfigureAwait(false);
         }
 
-        internal Task<PooledSession> AcquireSessionAsync(SpannerTransactionCreationOptions creationOptions, CancellationToken cancellationToken, out SpannerTransactionCreationOptions effectiveCreationOptions)
+        // TODO: Deprecate this method
+        //internal Task<PooledSession> AcquireSessionAsync(SpannerTransactionCreationOptions creationOptions, CancellationToken cancellationToken, out SpannerTransactionCreationOptions effectiveCreationOptions)
+        //{
+        //    SessionPool pool;
+        //    DatabaseName databaseName;
+        //    effectiveCreationOptions = MaybeWithConnectionDefaults(creationOptions);
+
+        //    lock (_sync)
+        //    {
+        //        AssertOpen("acquire session.");
+        //        pool = _sessionPool;
+        //        databaseName = Builder.DatabaseName;
+        //    }
+        //    if (databaseName is null)
+        //    {
+        //        throw new InvalidOperationException("Unable to acquire session on connection with no database name");
+        //    }
+        //    var sessionPoolSegmentKey = GetSessionPoolSegmentKey(nameof(AcquireSessionAsync));
+        //    return effectiveCreationOptions?.IsDetached == true ?
+        //        pool.AcquireDetachedSessionAsync(sessionPoolSegmentKey, effectiveCreationOptions?.GetTransactionOptions(), effectiveCreationOptions?.IsSingleUse == true, cancellationToken) :
+        //        pool.AcquireSessionAsync(sessionPoolSegmentKey, effectiveCreationOptions?.GetTransactionOptions(), effectiveCreationOptions?.IsSingleUse == true, cancellationToken);
+        //}
+
+        //internal Task<ManagedTransaction> AcquireManagedTransactionWithMode(ByteString transactionId, ModeOneofCase transactionMode)
+        //{
+        //    TransactionOptions BuildTransactionOptions() => transactionMode switch
+        //    {
+        //        ModeOneofCase.None => new TransactionOptions(),
+        //        ModeOneofCase.PartitionedDml => new TransactionOptions { PartitionedDml = new() },
+        //        ModeOneofCase.ReadWrite => new TransactionOptions { ReadWrite = new() },
+        //        ModeOneofCase.ReadOnly => new TransactionOptions() { ReadOnly = new() },
+        //        _ => throw new ArgumentException(nameof(transactionMode), $"Unknown {typeof(ModeOneofCase).FullName}: {transactionMode}")
+        //    };
+
+        //    return _managedSession.CreateManagedTransactionWithSpannerTransaction(transactionId, BuildTransactionOptions(), false); purva
+        //}
+
+        // Purva: Should this be public to mimic the SessionPool.AcquireSession ?
+        internal Task<ManagedTransaction> AcquireManagedTransaction(SpannerTransactionCreationOptions creationOptions, out SpannerTransactionCreationOptions effectiveCreationOptions)
         {
-            SessionPool pool;
-            DatabaseName databaseName;
-            effectiveCreationOptions = MaybeWithConnectionDefaults(creationOptions);
+            ManagedSession session;
 
             lock (_sync)
             {
                 AssertOpen("acquire session.");
-                pool = _sessionPool;
-                databaseName = Builder.DatabaseName;
+                session = _managedSession;
             }
-            if (databaseName is null)
+
+            if (Builder.DatabaseName is null)
             {
-                throw new InvalidOperationException("Unable to acquire session on connection with no database name");
+                // Ideally we should never reach here as the DatabaseName is essential to create the ManagedSession itself.
+                throw new InvalidOperationException("Unable to acquire a transaction on connection with no database name");
             }
-            var sessionPoolSegmentKey = GetSessionPoolSegmentKey(nameof(AcquireSessionAsync));
-            return effectiveCreationOptions?.IsDetached == true ?
-                pool.AcquireDetachedSessionAsync(sessionPoolSegmentKey, effectiveCreationOptions?.GetTransactionOptions(), effectiveCreationOptions?.IsSingleUse == true, cancellationToken) :
-                pool.AcquireSessionAsync(sessionPoolSegmentKey, effectiveCreationOptions?.GetTransactionOptions(), effectiveCreationOptions?.IsSingleUse == true, cancellationToken);
+
+            ByteString transactionIdBytes = null;
+            effectiveCreationOptions = MaybeWithConnectionDefaults(creationOptions);
+
+            if (effectiveCreationOptions?.TransactionId is not null)
+            {
+                // If we already have a transaction, we need to create a ManagedTransaction object around this transactionId.
+
+                transactionIdBytes = ByteString.FromBase64(effectiveCreationOptions.TransactionId.Id);
+                return _managedSession.CreateManagedTransactionWithSpannerTransaction(transactionIdBytes, effectiveCreationOptions.GetTransactionOptions(), effectiveCreationOptions?.IsSingleUse == true);
+            }
+
+            return _managedSession.CreateManagedTransactionWithOptions(effectiveCreationOptions?.GetTransactionOptions(), effectiveCreationOptions?.IsSingleUse == true);
+            //return new ManagedTransaction(_managedSession, transactionIdBytes, effectiveCreationOptions?.GetTransactionOptions(), effectiveCreationOptions?.IsSingleUse == true, null);
         }
 
         private SpannerTransactionCreationOptions MaybeWithConnectionDefaults(SpannerTransactionCreationOptions transactionCreationOptions)
@@ -1052,11 +1116,12 @@ namespace Google.Cloud.Spanner.Data
         /// </remarks>
         /// <param name="cancellationToken">An optional token for canceling the returned task. This does not cancel the shutdown itself.</param>
         /// <returns>A task which will complete when the session pool has finished shutting down.</returns>
+        // TODO: Deprecate this method
         public async Task ShutdownSessionPoolAsync(CancellationToken cancellationToken = default)
         {
             var sessionPoolSegmentKey = GetSessionPoolSegmentKey(nameof(ShutdownSessionPoolAsync));
             await OpenAsync(cancellationToken).ConfigureAwait(false);
-            await _sessionPool.ShutdownPoolAsync(sessionPoolSegmentKey, cancellationToken).ConfigureAwait(false);
+            //await _sessionPool.ShutdownPoolAsync(sessionPoolSegmentKey, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -1065,6 +1130,7 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <returns>The session pool statistics, or <c>null</c> if there is no current session pool
         /// associated with the <see cref="SessionPoolSegmentKey"/>.</returns>
+        // TODO: Deprecate this method
         public SessionPool.SessionPoolSegmentStatistics GetSessionPoolSegmentStatistics()
         {
             var sessionPoolSegmentKey = GetSessionPoolSegmentKey(nameof(GetSessionPoolSegmentStatistics));
@@ -1099,7 +1165,7 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override void Close()
         {
-            SessionPool sessionPool;
+            //SessionPool sessionPool;
 
             ConnectionState oldState;
             lock (_sync)
@@ -1109,20 +1175,21 @@ namespace Google.Cloud.Spanner.Data
                     return;
                 }
 
+                // We do not need any special cleanup for Multiplex Sessions
                 oldState = _state;
-                sessionPool = _sessionPool;
+                //sessionPool = _sessionPool;
 
-                _sessionPool = null;
+                //_sessionPool = null;
                 _state = ConnectionState.Closed;
             }
 
-            if (sessionPool != null)
-            {
-                // Note: if we're in an implicit transaction using TransactionScope, this will "release" the session pool
-                // back to the session pool manager before we're really done with it, but that's okay - it will just report
-                // inaccurate connection counts temporarily. This is an inherent problem with implicit transactions.
-                Builder.SessionPoolManager.Release(sessionPool);
-            }
+            //if (sessionPool != null)
+            //{
+            //    // Note: if we're in an implicit transaction using TransactionScope, this will "release" the session pool
+            //    // back to the session pool manager before we're really done with it, but that's okay - it will just report
+            //    // inaccurate connection counts temporarily. This is an inherent problem with implicit transactions.
+            //    Builder.SessionPoolManager.Release(sessionPool);
+            //}
 
             if (oldState != _state)
             {

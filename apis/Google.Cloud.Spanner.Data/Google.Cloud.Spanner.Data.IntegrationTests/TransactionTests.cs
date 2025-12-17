@@ -60,7 +60,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             cmd.Parameters.Add("k", SpannerDbType.String, _key);
                             cmd.Transaction = transaction;
                             var fetched = await cmd.ExecuteScalarAsync().ConfigureAwait(false);
-                            current = fetched is DBNull ? 0L : (long)fetched;
+                            current = fetched is DBNull ? 0L : (long) fetched;
                         }
                         using (var cmd = connection.CreateUpdateCommand(_fixture.TableName))
                         {
@@ -84,50 +84,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     spannerException = ex;
                 }
             }
-        }
-
-        [Fact]
-        public async Task Commit_ReturnsToPool()
-        {
-            using var connection = new SpannerConnection(_fixture.ConnectionString);
-            await connection.OpenAsync();
-
-            using var transaction = await connection.BeginTransactionAsync();
-            using var command = connection.CreateSelectCommand($"SELECT Int64Value FROM {_fixture.TableName} WHERE K=@k");
-            command.Parameters.Add("k", SpannerDbType.String, _key);
-            command.Transaction = transaction;
-
-            var value = await command.ExecuteScalarAsync();
-
-            transaction.Commit();
-
-            var poolStatistics = connection.GetSessionPoolSegmentStatistics();
-
-            // Because the session is eagerly returned to the pool after a commit, there shouldn't
-            // be any active sessions even before we dispose of the transaction explicitly.
-            Assert.Equal(0, poolStatistics.ActiveSessionCount);
-        }
-
-        [Fact]
-        public async Task Rollback_ReturnsToPool()
-        {
-            using var connection = new SpannerConnection(_fixture.ConnectionString);
-            await connection.OpenAsync();
-
-            using var transaction = await connection.BeginTransactionAsync();
-            using var command = connection.CreateSelectCommand($"SELECT Int64Value FROM {_fixture.TableName} WHERE K=@k");
-            command.Parameters.Add("k", SpannerDbType.String, _key);
-            command.Transaction = transaction;
-
-            var value = await command.ExecuteScalarAsync();
-
-            transaction.Rollback();
-
-            var poolStatistics = connection.GetSessionPoolSegmentStatistics();
-
-            // Because the session is eagerly returned to the pool after a rollback, there shouldn't
-            // be any active sessions even before we dispose of the transaction explicitly.
-            Assert.Equal(0, poolStatistics.ActiveSessionCount);
         }
 
         [Fact]
@@ -521,7 +477,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 await connection.OpenAsync();
                 var cmd = CreateSelectAllCommandForKey(connection);
                 cmd.EphemeralTransactionCreationOptions = SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(TimestampBound.OfReadTimestamp(_oldestEntry.Timestamp));
-                using (var reader = (SpannerDataReader)(await cmd.ExecuteReaderAsync()))
+                using (var reader = (SpannerDataReader) (await cmd.ExecuteReaderAsync()))
                 {
                     Assert.Null(reader.GetReadTimestamp());
                     if (await reader.ReadAsync())
@@ -541,7 +497,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 var cmd = CreateSelectAllCommandForKey(connection);
                 cmd.EphemeralTransactionCreationOptions = SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(
                     TimestampBound.OfReadTimestamp(_oldestEntry.Timestamp).WithReturnReadTimestamp(true));
-                using (var reader = (SpannerDataReader)(await cmd.ExecuteReaderAsync()))
+                using (var reader = (SpannerDataReader) (await cmd.ExecuteReaderAsync()))
                 {
                     Assert.Equal(WKT::Timestamp.FromDateTime(_oldestEntry.Timestamp), reader.GetReadTimestamp());
                     if (await reader.ReadAsync())

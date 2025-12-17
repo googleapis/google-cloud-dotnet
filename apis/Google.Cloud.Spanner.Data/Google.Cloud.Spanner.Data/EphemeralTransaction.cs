@@ -47,7 +47,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 transaction.TransactionOptions.CommitTimeout ??= timeoutSeconds;
 
-                return await ((ISpannerTransaction)transaction)
+                return await ((ISpannerTransaction) transaction)
                     .ExecuteDmlAsync(request, cancellationToken, timeoutSeconds)
                     .ConfigureAwait(false);
             }
@@ -101,7 +101,7 @@ namespace Google.Cloud.Spanner.Data
                     {
                         try
                         {
-                            return await ((ISpannerTransaction)transaction)
+                            return await ((ISpannerTransaction) transaction)
                                 .ExecuteDmlAsync(request, cancellationToken, timeoutSeconds)
                                 .ConfigureAwait(false);
 
@@ -129,7 +129,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 transaction.TransactionOptions.CommitTimeout ??= timeoutSeconds;
 
-                return await ((ISpannerTransaction)transaction)
+                return await ((ISpannerTransaction) transaction)
                     .ExecuteBatchDmlAsync(request, cancellationToken, timeoutSeconds)
                     .ConfigureAwait(false);
             }
@@ -157,7 +157,7 @@ namespace Google.Cloud.Spanner.Data
                 // until you commit or rollback.
                 transaction.TransactionOptions.CommitTimeout ??= timeoutSeconds;
 
-                return await ((ISpannerTransaction)transaction)
+                return await ((ISpannerTransaction) transaction)
                     .ExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds)
                     .ConfigureAwait(false);
             }
@@ -167,17 +167,17 @@ namespace Google.Cloud.Spanner.Data
         {
             GaxPreconditions.CheckState(_creationOptions is null || _creationOptions.TimestampBound is not null,
                 "Only timestamp bound transactions may be used to execute read and query statements through an ephemeral transaction.");
-         
+
             return ExecuteHelper.WithErrorTranslationAndProfiling(Impl, "EphemeralTransaction.ExecuteReadOrQuery", _connection.Logger);
 
             async Task<ReliableStreamReader> Impl()
             {
-                PooledSession session = await _connection.AcquireSessionAsync(_creationOptions, cancellationToken, out _).ConfigureAwait(false);
+                ManagedTransaction transaction = await _connection.AcquireManagedTransaction(_creationOptions, out _).ConfigureAwait(false);
                 var callSettings = _connection.CreateCallSettings(
                     request.GetCallSettings,
                     cancellationToken);
-                var reader = request.ExecuteReadOrQueryStreamReader(session, callSettings);
-                reader.StreamClosed += delegate { session.ReleaseToPool(forceDelete: false); };
+                var reader = request.ExecuteReadOrQueryStreamReader(transaction, callSettings);
+
                 return reader;
             }
         }
