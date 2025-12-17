@@ -73,20 +73,23 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "cnNpc3RlbnREaXNrU3BlYxIRCglkaXNrX3R5cGUYASABKAkSFAoMZGlza19z",
             "aXplX2diGAIgASgDIkwKCE5mc01vdW50EhMKBnNlcnZlchgBIAEoCUID4EEC",
             "EhEKBHBhdGgYAiABKAlCA+BBAhIYCgttb3VudF9wb2ludBgDIAEoCUID4EEC",
-            "Iv4BChVBdXRvc2NhbGluZ01ldHJpY1NwZWMSGAoLbWV0cmljX25hbWUYASAB",
-            "KAlCA+BBAhIOCgZ0YXJnZXQYAiABKAUSewoZbW9uaXRvcmVkX3Jlc291cmNl",
-            "X2xhYmVscxgDIAMoCzJTLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0",
-            "YTEuQXV0b3NjYWxpbmdNZXRyaWNTcGVjLk1vbml0b3JlZFJlc291cmNlTGFi",
-            "ZWxzRW50cnlCA+BBARo+ChxNb25pdG9yZWRSZXNvdXJjZUxhYmVsc0VudHJ5",
-            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiLgoQU2hpZWxkZWRW",
-            "bUNvbmZpZxIaChJlbmFibGVfc2VjdXJlX2Jvb3QYASABKAgiRAoJRmxleFN0",
-            "YXJ0EjcKFG1heF9ydW50aW1lX2R1cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnBy",
-            "b3RvYnVmLkR1cmF0aW9uQuwBCiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjFiZXRhMUIVTWFjaGluZVJlc291cmNlc1Byb3RvUAFaQ2Nsb3VkLmdv",
-            "b2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxhdGZvcm1w",
-            "YjthaXBsYXRmb3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMUJl",
-            "dGExygIfR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoCIkdvb2ds",
-            "ZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
+            "InYKC0x1c3RyZU1vdW50EhgKC2luc3RhbmNlX2lwGAEgASgJQgPgQQISGgoN",
+            "dm9sdW1lX2hhbmRsZRgCIAEoCUID4EECEhcKCmZpbGVzeXN0ZW0YAyABKAlC",
+            "A+BBAhIYCgttb3VudF9wb2ludBgEIAEoCUID4EECIv4BChVBdXRvc2NhbGlu",
+            "Z01ldHJpY1NwZWMSGAoLbWV0cmljX25hbWUYASABKAlCA+BBAhIOCgZ0YXJn",
+            "ZXQYAiABKAUSewoZbW9uaXRvcmVkX3Jlc291cmNlX2xhYmVscxgDIAMoCzJT",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuQXV0b3NjYWxpbmdN",
+            "ZXRyaWNTcGVjLk1vbml0b3JlZFJlc291cmNlTGFiZWxzRW50cnlCA+BBARo+",
+            "ChxNb25pdG9yZWRSZXNvdXJjZUxhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRIN",
+            "CgV2YWx1ZRgCIAEoCToCOAEiLgoQU2hpZWxkZWRWbUNvbmZpZxIaChJlbmFi",
+            "bGVfc2VjdXJlX2Jvb3QYASABKAgiRAoJRmxleFN0YXJ0EjcKFG1heF9ydW50",
+            "aW1lX2R1cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
+            "QuwBCiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMUIVTWFj",
+            "aGluZVJlc291cmNlc1Byb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28vYWlw",
+            "bGF0Zm9ybS9hcGl2MWJldGExL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKq",
+            "Ah9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMUJldGExygIfR29vZ2xlXENs",
+            "b3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoCIkdvb2dsZTo6Q2xvdWQ6OkFJUGxh",
+            "dGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.AcceleratorTypeReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ReservationAffinityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -99,6 +102,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DiskSpec), global::Google.Cloud.AIPlatform.V1Beta1.DiskSpec.Parser, new[]{ "BootDiskType", "BootDiskSizeGb" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PersistentDiskSpec), global::Google.Cloud.AIPlatform.V1Beta1.PersistentDiskSpec.Parser, new[]{ "DiskType", "DiskSizeGb" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.NfsMount), global::Google.Cloud.AIPlatform.V1Beta1.NfsMount.Parser, new[]{ "Server", "Path", "MountPoint" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.LustreMount), global::Google.Cloud.AIPlatform.V1Beta1.LustreMount.Parser, new[]{ "InstanceIp", "VolumeHandle", "Filesystem", "MountPoint" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.AutoscalingMetricSpec), global::Google.Cloud.AIPlatform.V1Beta1.AutoscalingMetricSpec.Parser, new[]{ "MetricName", "Target", "MonitoredResourceLabels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ShieldedVmConfig), global::Google.Cloud.AIPlatform.V1Beta1.ShieldedVmConfig.Parser, new[]{ "EnableSecureBoot" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.FlexStart), global::Google.Cloud.AIPlatform.V1Beta1.FlexStart.Parser, new[]{ "MaxRuntimeDuration" }, null, null, null, null)
@@ -3348,6 +3352,323 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
   }
 
   /// <summary>
+  /// Represents a mount configuration for Lustre file system.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class LustreMount : pb::IMessage<LustreMount>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<LustreMount> _parser = new pb::MessageParser<LustreMount>(() => new LustreMount());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<LustreMount> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LustreMount() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LustreMount(LustreMount other) : this() {
+      instanceIp_ = other.instanceIp_;
+      volumeHandle_ = other.volumeHandle_;
+      filesystem_ = other.filesystem_;
+      mountPoint_ = other.mountPoint_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LustreMount Clone() {
+      return new LustreMount(this);
+    }
+
+    /// <summary>Field number for the "instance_ip" field.</summary>
+    public const int InstanceIpFieldNumber = 1;
+    private string instanceIp_ = "";
+    /// <summary>
+    /// Required. IP address of the Lustre instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string InstanceIp {
+      get { return instanceIp_; }
+      set {
+        instanceIp_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "volume_handle" field.</summary>
+    public const int VolumeHandleFieldNumber = 2;
+    private string volumeHandle_ = "";
+    /// <summary>
+    /// Required. The unique identifier of the Lustre volume.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VolumeHandle {
+      get { return volumeHandle_; }
+      set {
+        volumeHandle_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "filesystem" field.</summary>
+    public const int FilesystemFieldNumber = 3;
+    private string filesystem_ = "";
+    /// <summary>
+    /// Required. The name of the Lustre filesystem.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Filesystem {
+      get { return filesystem_; }
+      set {
+        filesystem_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "mount_point" field.</summary>
+    public const int MountPointFieldNumber = 4;
+    private string mountPoint_ = "";
+    /// <summary>
+    /// Required. Destination mount path. The Lustre file system will be mounted
+    /// for the user under /mnt/lustre/&lt;mount_point>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MountPoint {
+      get { return mountPoint_; }
+      set {
+        mountPoint_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as LustreMount);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(LustreMount other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (InstanceIp != other.InstanceIp) return false;
+      if (VolumeHandle != other.VolumeHandle) return false;
+      if (Filesystem != other.Filesystem) return false;
+      if (MountPoint != other.MountPoint) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (InstanceIp.Length != 0) hash ^= InstanceIp.GetHashCode();
+      if (VolumeHandle.Length != 0) hash ^= VolumeHandle.GetHashCode();
+      if (Filesystem.Length != 0) hash ^= Filesystem.GetHashCode();
+      if (MountPoint.Length != 0) hash ^= MountPoint.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (InstanceIp.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(InstanceIp);
+      }
+      if (VolumeHandle.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(VolumeHandle);
+      }
+      if (Filesystem.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Filesystem);
+      }
+      if (MountPoint.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(MountPoint);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (InstanceIp.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(InstanceIp);
+      }
+      if (VolumeHandle.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(VolumeHandle);
+      }
+      if (Filesystem.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Filesystem);
+      }
+      if (MountPoint.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(MountPoint);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (InstanceIp.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(InstanceIp);
+      }
+      if (VolumeHandle.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VolumeHandle);
+      }
+      if (Filesystem.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filesystem);
+      }
+      if (MountPoint.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MountPoint);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(LustreMount other) {
+      if (other == null) {
+        return;
+      }
+      if (other.InstanceIp.Length != 0) {
+        InstanceIp = other.InstanceIp;
+      }
+      if (other.VolumeHandle.Length != 0) {
+        VolumeHandle = other.VolumeHandle;
+      }
+      if (other.Filesystem.Length != 0) {
+        Filesystem = other.Filesystem;
+      }
+      if (other.MountPoint.Length != 0) {
+        MountPoint = other.MountPoint;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            InstanceIp = input.ReadString();
+            break;
+          }
+          case 18: {
+            VolumeHandle = input.ReadString();
+            break;
+          }
+          case 26: {
+            Filesystem = input.ReadString();
+            break;
+          }
+          case 34: {
+            MountPoint = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            InstanceIp = input.ReadString();
+            break;
+          }
+          case 18: {
+            VolumeHandle = input.ReadString();
+            break;
+          }
+          case 26: {
+            Filesystem = input.ReadString();
+            break;
+          }
+          case 34: {
+            MountPoint = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// The metric specification that defines the target resource utilization
   /// (CPU utilization, accelerator's duty cycle, and so on) for calculating the
   /// desired replica count.
@@ -3367,7 +3688,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3645,7 +3966,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3848,7 +4169,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
