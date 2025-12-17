@@ -48,6 +48,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         internal const string Instance = "dummy-instance";
         internal const string Database = "dummy-database";
         private static readonly string s_retryInfoMetadataKey = RetryInfo.Descriptor.FullName + "-bin";
+        internal static readonly ByteString s_transactionId = ByteString.CopyFromUtf8("transaction");
 
         /// <summary>
         /// Creates a mock SpannerClient configured with settings that include a fake clock

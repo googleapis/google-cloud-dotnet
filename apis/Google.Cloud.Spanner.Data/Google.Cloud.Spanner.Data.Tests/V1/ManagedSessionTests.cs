@@ -53,7 +53,7 @@ public class ManagedSessionTests
         Assert.True(multiplexSession.SessionHasExpired());
     }
 
-    private SpannerClient CreateFakeClient()
+    internal static SpannerClient CreateFakeClient()
     {
         SpannerClient fakeClient = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
         fakeClient.SetupMultiplexSessionCreationAsync();
