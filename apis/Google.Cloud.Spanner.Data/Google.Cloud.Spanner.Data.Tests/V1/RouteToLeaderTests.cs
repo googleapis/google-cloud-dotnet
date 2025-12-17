@@ -122,20 +122,20 @@ public class RouteToLeaderTests
 
     public static TheoryData<Func<ManagedSession, Task>> ManagedTransactionRoutesToLeader => new TheoryData<Func<ManagedSession, Task>>
     {
-        { async managedSession => await (await managedSession.CreateManagedTransactionWithSpannerTransaction(s_transactionId, s_partitionedDml, false)).ExecuteSqlAsync(new ExecuteSqlRequest(), callSettings: null) },
-        { async managedSession => await (await managedSession.CreateManagedTransactionWithSpannerTransaction(s_transactionId, s_readWrite, false)).ExecuteSqlAsync(new ExecuteSqlRequest(), callSettings: null) },
-        { async managedSession => await (await managedSession.CreateManagedTransactionWithSpannerTransaction(s_transactionId, s_partitionedDml, false)).ReadStreamReaderAsync(new ReadRequest(), callSettings: null).NextAsync(default) },
-        { async managedSession => await (await managedSession.CreateManagedTransactionWithSpannerTransaction(s_transactionId, s_readWrite, false)).ReadStreamReaderAsync(new ReadRequest(), callSettings: null).NextAsync(default) },
-        { async managedSession => await (await managedSession.CreateManagedTransactionWithSpannerTransaction(s_transactionId, s_partitionedDml, false)).ExecuteSqlStreamReaderAsync(new ExecuteSqlRequest(), callSettings: null).NextAsync(default) },
-        { async managedSession => await (await managedSession.CreateManagedTransactionWithSpannerTransaction(s_transactionId, s_readWrite, false)).ExecuteSqlStreamReaderAsync(new ExecuteSqlRequest(), callSettings: null).NextAsync(default) },
-        { async managedSession => await (await managedSession.CreateManagedTransactionWithSpannerTransaction(s_transactionId, s_readWrite, false)).ExecuteSqlStreamReaderAsync(new ExecuteSqlRequest(), callSettings: null).NextAsync(default) },
+        { async managedSession => await (await managedSession.CreateManagedTransaction(s_transactionId, s_partitionedDml, false)).ExecuteSqlAsync(new ExecuteSqlRequest(), callSettings: null) },
+        { async managedSession => await (await managedSession.CreateManagedTransaction(s_transactionId, s_readWrite, false)).ExecuteSqlAsync(new ExecuteSqlRequest(), callSettings: null) },
+        { async managedSession => await (await managedSession.CreateManagedTransaction(s_transactionId, s_partitionedDml, false)).ReadStreamReaderAsync(new ReadRequest(), callSettings: null).NextAsync(default) },
+        { async managedSession => await (await managedSession.CreateManagedTransaction(s_transactionId, s_readWrite, false)).ReadStreamReaderAsync(new ReadRequest(), callSettings: null).NextAsync(default) },
+        { async managedSession => await (await managedSession.CreateManagedTransaction(s_transactionId, s_partitionedDml, false)).ExecuteSqlStreamReaderAsync(new ExecuteSqlRequest(), callSettings: null).NextAsync(default) },
+        { async managedSession => await (await managedSession.CreateManagedTransaction(s_transactionId, s_readWrite, false)).ExecuteSqlStreamReaderAsync(new ExecuteSqlRequest(), callSettings: null).NextAsync(default) },
+        { async managedSession => await (await managedSession.CreateManagedTransaction(s_transactionId, s_readWrite, false)).ExecuteSqlStreamReaderAsync(new ExecuteSqlRequest(), callSettings: null).NextAsync(default) },
     };
 
     public static TheoryData<Func<ManagedSession, Task>> ManagedTransactionDoesNotRouteToLeader => new TheoryData<Func<ManagedSession, Task>>
     {
-        { async managedSession => await (await managedSession.CreateManagedTransactionWithSpannerTransaction(s_transactionId, s_readOnly, false)).ExecuteSqlAsync(new ExecuteSqlRequest(), callSettings: null) },
-        { async managedSession => await (await managedSession.CreateManagedTransactionWithSpannerTransaction(s_transactionId, s_readOnly, false)).ReadStreamReaderAsync(new ReadRequest(), callSettings: null).NextAsync(default) },
-        { async managedSession => await (await managedSession.CreateManagedTransactionWithSpannerTransaction(s_transactionId, s_readOnly, false)).ExecuteSqlStreamReaderAsync(new ExecuteSqlRequest(), callSettings: null).NextAsync(default) },
+        { async managedSession => await (await managedSession.CreateManagedTransaction(s_transactionId, s_readOnly, false)).ExecuteSqlAsync(new ExecuteSqlRequest(), callSettings: null) },
+        { async managedSession => await (await managedSession.CreateManagedTransaction(s_transactionId, s_readOnly, false)).ReadStreamReaderAsync(new ReadRequest(), callSettings: null).NextAsync(default) },
+        { async managedSession => await (await managedSession.CreateManagedTransaction(s_transactionId, s_readOnly, false)).ExecuteSqlStreamReaderAsync(new ExecuteSqlRequest(), callSettings: null).NextAsync(default) },
     };
 
     [Theory]

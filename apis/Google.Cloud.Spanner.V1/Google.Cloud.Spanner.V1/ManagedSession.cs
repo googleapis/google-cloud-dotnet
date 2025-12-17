@@ -27,19 +27,24 @@ using static Google.Cloud.Spanner.V1.TransactionOptions;
 namespace Google.Cloud.Spanner.V1;
 
 /// <summary>
-/// TODO: Add summary for mux sessions
+/// This class helps manage Spanner multiplex session creation and lifecycle.
+/// A <see cref="ManagedSession"/> should only be created through a <see cref="SessionBuilder"/>.
+/// It provides factory methods to create <see cref="ManagedTransaction"/> which will be created using the current underlying session in this ManagedSession.
+/// A check to see if the underlying session needs to be refreshed or created will be done everytime a method to create a ManagedTransaction is called.
+/// The class will do a soft, non-blocking refresh if the underlying session is greater than 7 days but less than 28 days old from its creation.
+/// A hard, blocking refresh is done if the session is greater than 28 days old from its creation. 
 /// </summary>
 public class ManagedSession
 {
+    private const double HardRefreshIntervalInDays = 28.0;
+    private const double SoftRefreshIntervalInDays = 7.0;
+
     private readonly Logger _logger;
     private readonly CreateSessionRequest _createSessionRequestTemplate;
     private Task _sessionCreationTask;
     private readonly object _sessionCreationTaskLock = new object();
 
-    internal Session _session;
-
-    private const double HardRefreshIntervalInDays = 28.0;
-    private const double SoftRefreshIntervalInDays = 7.0;
+    private Session _session;
 
     private readonly IClock _clock;
 
@@ -48,15 +53,13 @@ public class ManagedSession
     /// </summary>
     internal SpannerClient Client { get; }
 
-    internal Task<Session> CreateSessionTask { get; }
-
     /// <summary>
     /// The name of the session. This is never null.
     /// </summary>
     internal SessionName SessionName => Session.SessionName;
 
     /// <summary>
-    /// The Spanner session resource associated to this pooled session.
+    /// The Spanner session resource associated to this ManagedSession.
     /// Won't be null.
     /// </summary>
     internal Session Session
@@ -87,8 +90,9 @@ public class ManagedSession
     /// <param name="dbName"></param>
     /// <param name="dbRole"></param>
     /// <param name="options"></param>
-    public ManagedSession(SpannerClient client, DatabaseName dbName, string dbRole, ManagedSessionOptions options)
+    internal ManagedSession(SpannerClient client, DatabaseName dbName, string dbRole, ManagedSessionOptions options)
     {
+        GaxPreconditions.CheckNotNull(dbName, nameof(dbName));
         Client = GaxPreconditions.CheckNotNull(client, nameof(client));
         Options = options ?? new ManagedSessionOptions();
         _logger = client.Settings.Logger; // Just to avoid fetching it all the time
@@ -112,26 +116,26 @@ public class ManagedSession
     /// <summary>
     /// Returns a ManagedTransaction for the same ManagedSession as this with the given <paramref name="transactionOptions"/>.
     /// </summary>
-    public async Task<ManagedTransaction> CreateManagedTransactionWithOptions(TransactionOptions transactionOptions, bool singleUseTransaction)
+    public async Task<ManagedTransaction> CreateManagedTransaction(TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken = default)
     {
-        await MaybeRefreshWithTimePeriodCheck().ConfigureAwait(false);
+        await CreateOrRefreshSessionsAsync(cancellationToken).ConfigureAwait(false);
         return new ManagedTransaction(this, transactionId: null, transactionOptions, singleUseTransaction, readTimestamp: null);
     }
 
     /// <summary>
     /// Returns a ManagedTransaction for the same ManagedSession as this one with the given transaction related values.
     /// </summary>
-    public async Task<ManagedTransaction> CreateManagedTransactionWithSpannerTransaction(ByteString transactionId, TransactionOptions transactionOptions, bool singleUseTransaction, Timestamp readTimestamp = null)
+    public async Task<ManagedTransaction> CreateManagedTransaction(ByteString transactionId, TransactionOptions transactionOptions, bool singleUseTransaction, Timestamp readTimestamp = null, CancellationToken cancellationToken = default)
     {
         GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));
-        await MaybeRefreshWithTimePeriodCheck().ConfigureAwait(false);
+        await CreateOrRefreshSessionsAsync(cancellationToken).ConfigureAwait(false);
         return new ManagedTransaction(this, transactionId, transactionOptions, singleUseTransaction, readTimestamp);
     }
 
     /// <summary>
     /// Returns a ManagedTransaction for the same ManagedSession as this one with the given transaction mode.
     /// </summary>
-    public async Task<ManagedTransaction> CreateManagedTransactionWithMode(ByteString transactionId, ModeOneofCase transactionMode, Timestamp readTimestamp = null)
+    public async Task<ManagedTransaction> CreateManagedTransaction(ByteString transactionId, ModeOneofCase transactionMode, Timestamp readTimestamp = null)
     {
         TransactionOptions BuildTransactionOptions() => transactionMode switch
         {
@@ -142,42 +146,7 @@ public class ManagedSession
             _ => throw new ArgumentException(nameof(transactionMode), $"Unknown {typeof(ModeOneofCase).FullName}: {transactionMode}")
         };
 
-        return await CreateManagedTransactionWithSpannerTransaction(transactionId, BuildTransactionOptions(), false, readTimestamp).ConfigureAwait(false);
-    }
-
-    private async Task<bool> UpdateMuxSession(bool needsRefresh, double intervalInDays)
-    {
-        Session oldSession = _session;
-        await CreateOrRefreshSessionsAsync(default).ConfigureAwait(false);
-
-        return _session != oldSession;
-    }
-
-    internal async Task MaybeRefreshWithTimePeriodCheck()
-    {
-        if (SessionHasExpired(HardRefreshIntervalInDays))
-        {
-            // If the session has expired on a client RPC request call, or has exceeded the 28 day Mux session refresh guidance
-            // No request can proceed without us having a new Session to work with
-            // Block on refreshing and getting a new session
-            bool sessionIsRefreshed = await UpdateMuxSession(true, HardRefreshIntervalInDays).ConfigureAwait(false);
-
-            if (!sessionIsRefreshed)
-            {
-                throw new Exception("Unable to refresh multiplex session, and the old session has expired or is 28 days past refresh");
-            }
-
-            _logger.Info($"Refreshed session since it was expired or past 28 days refresh period. New session {SessionName}");
-        }
-
-        if (SessionHasExpired(SoftRefreshIntervalInDays))
-        {
-            // The Mux sessions have a lifespan of 28 days. We check if we need a session refresh in every request needing the session
-            // If the timespan between a request needing a session and the session creation time is greater than 7 days, we proactively refresh the mux session
-            // The request can safely use the older session since it is still valid while we do this refresh to fetch the new session.
-            // Hence fire and forget the session refresh.
-            _ = Task.Run(() => UpdateMuxSession(true, SoftRefreshIntervalInDays));
-        }
+        return await CreateManagedTransaction(transactionId, BuildTransactionOptions(), false, readTimestamp).ConfigureAwait(false);
     }
 
     // internal for testing
@@ -218,7 +187,7 @@ public class ManagedSession
                     return;
                 }
 
-                // Hard refresh or initial session creation
+                // Hard refresh or initial session creation,
                 Task currentCreationTask = TriggerRefresh(HardRefreshIntervalInDays);
 
                 // 2b. Block the current caller on the task (Hard Refresh requirement)
@@ -317,12 +286,13 @@ public class ManagedSession
         public ManagedSessionOptions Options { get; set; }
 
         /// <summary>
-        /// The database for this managed session
+        /// The <see cref="DatabaseName"/> for this managed session.
+        /// This is a required field and will be used when creating the underlying Spanner session.
         /// </summary>
         public DatabaseName DatabaseName { get; set; }
 
         /// <summary>
-        /// The database role of the managed session
+        /// The database role of the managed session. This will be used when creating the underlying Spanner session.
         /// </summary>
         public string DatabaseRole { get; set; }
 

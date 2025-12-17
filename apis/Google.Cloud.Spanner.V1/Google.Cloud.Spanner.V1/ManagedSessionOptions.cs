@@ -21,13 +21,15 @@ namespace Google.Cloud.Spanner.V1;
 /// </summary>
 public class ManagedSessionOptions
 {
-    private TimeSpan _timeout = TimeSpan.FromSeconds(60);
+    private const double DefaultTimeoutSeconds = 60.0;
+    private TimeSpan _timeout;
 
     /// <summary>
     /// Constructs a new <see cref="ManagedSessionOptions"/> with default values.
     /// </summary>
     public ManagedSessionOptions()
     {
+        _timeout = TimeSpan.FromSeconds(DefaultTimeoutSeconds);
     }
 
     /// <summary>
