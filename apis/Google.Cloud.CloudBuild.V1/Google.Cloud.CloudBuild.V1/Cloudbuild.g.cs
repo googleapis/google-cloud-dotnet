@@ -1019,7 +1019,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     private string name_ = "";
     /// <summary>
     /// Identifier. Format:
-    /// `projects/{project}/locations/{location}/defaultServiceAccount
+    /// `projects/{project}/locations/{location}/defaultServiceAccount`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
