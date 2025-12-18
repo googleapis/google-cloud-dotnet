@@ -9357,6 +9357,8 @@ namespace Google.Cloud.PubSub.V1 {
     /// resource. For example:
     ///   "123/environment": "production",
     ///   "123/costCenter": "marketing"
+    /// See https://docs.cloud.google.com/pubsub/docs/tags for more information on
+    /// using tags with Pub/Sub resources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13550,6 +13552,8 @@ namespace Google.Cloud.PubSub.V1 {
     /// resource. For example:
     ///   "123/environment": "production",
     ///   "123/costCenter": "marketing"
+    /// See https://docs.cloud.google.com/pubsub/docs/tags for more information on
+    /// using tags with Pub/Sub resources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -22375,6 +22379,8 @@ namespace Google.Cloud.PubSub.V1 {
     /// resource. For example:
     ///   "123/environment": "production",
     ///   "123/costCenter": "marketing"
+    /// See https://docs.cloud.google.com/pubsub/docs/tags for more information on
+    /// using tags with Pub/Sub resources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
