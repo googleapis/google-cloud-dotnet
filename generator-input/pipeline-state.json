@@ -4785,7 +4785,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-12-09T11:29:42.796464234Z",
-            "lastGeneratedCommit": "fe58211356a91f4140ed51893703910db05ade91",
+            "lastGeneratedCommit": "6d6acd2e993c45a7a45fc6374d6c2fc987af1f77",
             "lastReleasedCommit": "fe58211356a91f4140ed51893703910db05ade91",
             "apiPaths": [
                 "google/cloud/maintenance/api/v1"
