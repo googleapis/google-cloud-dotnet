@@ -49,7 +49,7 @@ namespace Google.Cloud.Spanner.Data
         /// is specified on construction.
         /// </summary>
         public static SessionPoolManager Default { get; } =
-            new SessionPoolManager(new SessionPoolOptions(), CreateDefaultSpannerSettings(), Logger.DefaultLogger, CreateClientAsync);
+            new SessionPoolManager(new ManagedSessionOptions(), CreateDefaultSpannerSettings(), Logger.DefaultLogger, CreateClientAsync);
 
         private readonly Func<SpannerClientCreationOptions, SpannerSettings, Task<SpannerClient>> _clientFactory;
 

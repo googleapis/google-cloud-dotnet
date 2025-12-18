@@ -61,12 +61,19 @@ public class ManagedSessionTests
         return fakeClient;
     }
 
-    internal async Task<ManagedSession> FetchTestMultiplexSessionAsync(SpannerClient client = null)
+    internal static DatabaseName FetchTestDatabaseName()
     {
         if (!DatabaseName.TryParse(TestDatabase, out var databaseName))
         {
             throw new Exception($"Unable to parse string to DatabaseName {TestDatabase}");
         }
+
+        return databaseName;
+    }
+
+    internal async Task<ManagedSession> FetchTestMultiplexSessionAsync(SpannerClient client = null)
+    {
+        var databaseName = FetchTestDatabaseName();
 
         if (client == null)
         {

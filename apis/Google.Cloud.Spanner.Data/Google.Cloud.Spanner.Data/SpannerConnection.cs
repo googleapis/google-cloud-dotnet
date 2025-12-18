@@ -607,7 +607,7 @@ namespace Google.Cloud.Spanner.Data
                     SpannerTransactionCreationOptions effectiveCreationOptions = transactionCreationOptions;
                     ManagedTransaction transaction = transactionCreationOptions.TransactionId is null ?
                                                      await AcquireManagedTransaction(transactionCreationOptions, out effectiveCreationOptions).ConfigureAwait(false) :
-                                                     await _managedSession.CreateManagedTransactionWithMode(ByteString.FromBase64(effectiveCreationOptions.TransactionId.Id), ModeOneofCase.ReadOnly).ConfigureAwait(false);
+                                                     await _managedSession.CreateManagedTransaction(ByteString.FromBase64(effectiveCreationOptions.TransactionId.Id), ModeOneofCase.ReadOnly).ConfigureAwait(false);
 
                     return new SpannerTransaction(this, transaction, effectiveCreationOptions, transactionOptions, isRetriable: false);
                 }, "SpannerConnection.BeginTransactionAsync", Logger);
@@ -1084,10 +1084,10 @@ namespace Google.Cloud.Spanner.Data
                 // If we already have a transaction, we need to create a ManagedTransaction object around this transactionId.
 
                 transactionIdBytes = ByteString.FromBase64(effectiveCreationOptions.TransactionId.Id);
-                return _managedSession.CreateManagedTransactionWithSpannerTransaction(transactionIdBytes, effectiveCreationOptions.GetTransactionOptions(), effectiveCreationOptions?.IsSingleUse == true);
+                return _managedSession.CreateManagedTransaction(transactionIdBytes, effectiveCreationOptions.GetTransactionOptions(), effectiveCreationOptions?.IsSingleUse == true);
             }
 
-            return _managedSession.CreateManagedTransactionWithOptions(effectiveCreationOptions?.GetTransactionOptions(), effectiveCreationOptions?.IsSingleUse == true);
+            return _managedSession.CreateManagedTransaction(effectiveCreationOptions?.GetTransactionOptions(), effectiveCreationOptions?.IsSingleUse == true);
             //return new ManagedTransaction(_managedSession, transactionIdBytes, effectiveCreationOptions?.GetTransactionOptions(), effectiveCreationOptions?.IsSingleUse == true, null);
         }
 

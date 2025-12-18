@@ -53,7 +53,8 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var connection = new SpannerConnection();
             SpannerClient fakeClient = ManagedSessionTests.CreateFakeClient();
-            ManagedSession fakeManagedSession = new ManagedSession(fakeClient, null, null, null);
+            DatabaseName dbName = ManagedSessionTests.FetchTestDatabaseName();
+            ManagedSession fakeManagedSession = new ManagedSession(fakeClient, dbName, null, null);
             ManagedTransaction managedTransaction = new ManagedTransaction(fakeManagedSession, null, null, false, null);
 
             var transaction = new SpannerTransaction(connection, managedTransaction, SpannerTransactionCreationOptions.ReadWrite, transactionOptions: null, isRetriable: false);
