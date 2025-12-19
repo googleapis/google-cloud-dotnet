@@ -53,15 +53,17 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZGlza19zaXplX2diGAIgASgFIj0KElBlcnNpc3RlbnREaXNrU3BlYxIRCglk",
             "aXNrX3R5cGUYASABKAkSFAoMZGlza19zaXplX2diGAIgASgDIkwKCE5mc01v",
             "dW50EhMKBnNlcnZlchgBIAEoCUID4EECEhEKBHBhdGgYAiABKAlCA+BBAhIY",
-            "Cgttb3VudF9wb2ludBgDIAEoCUID4EECIkEKFUF1dG9zY2FsaW5nTWV0cmlj",
-            "U3BlYxIYCgttZXRyaWNfbmFtZRgBIAEoCUID4EECEg4KBnRhcmdldBgCIAEo",
-            "BSIuChBTaGllbGRlZFZtQ29uZmlnEhoKEmVuYWJsZV9zZWN1cmVfYm9vdBgB",
-            "IAEoCELTAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhVNYWNo",
-            "aW5lUmVzb3VyY2VzUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBs",
-            "YXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29n",
-            "bGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRm",
-            "b3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3Rv",
-            "Mw=="));
+            "Cgttb3VudF9wb2ludBgDIAEoCUID4EECInYKC0x1c3RyZU1vdW50EhgKC2lu",
+            "c3RhbmNlX2lwGAEgASgJQgPgQQISGgoNdm9sdW1lX2hhbmRsZRgCIAEoCUID",
+            "4EECEhcKCmZpbGVzeXN0ZW0YAyABKAlCA+BBAhIYCgttb3VudF9wb2ludBgE",
+            "IAEoCUID4EECIkEKFUF1dG9zY2FsaW5nTWV0cmljU3BlYxIYCgttZXRyaWNf",
+            "bmFtZRgBIAEoCUID4EECEg4KBnRhcmdldBgCIAEoBSIuChBTaGllbGRlZFZt",
+            "Q29uZmlnEhoKEmVuYWJsZV9zZWN1cmVfYm9vdBgBIAEoCELTAQoeY29tLmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhVNYWNoaW5lUmVzb3VyY2VzUHJv",
+            "dG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2Fp",
+            "cGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0",
+            "Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xl",
+            "OjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.AcceleratorTypeReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ReservationAffinityReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -73,6 +75,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DiskSpec), global::Google.Cloud.AIPlatform.V1.DiskSpec.Parser, new[]{ "BootDiskType", "BootDiskSizeGb" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PersistentDiskSpec), global::Google.Cloud.AIPlatform.V1.PersistentDiskSpec.Parser, new[]{ "DiskType", "DiskSizeGb" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.NfsMount), global::Google.Cloud.AIPlatform.V1.NfsMount.Parser, new[]{ "Server", "Path", "MountPoint" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.LustreMount), global::Google.Cloud.AIPlatform.V1.LustreMount.Parser, new[]{ "InstanceIp", "VolumeHandle", "Filesystem", "MountPoint" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.AutoscalingMetricSpec), global::Google.Cloud.AIPlatform.V1.AutoscalingMetricSpec.Parser, new[]{ "MetricName", "Target" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ShieldedVmConfig), global::Google.Cloud.AIPlatform.V1.ShieldedVmConfig.Parser, new[]{ "EnableSecureBoot" }, null, null, null, null)
           }));
@@ -516,8 +519,8 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// A description of resources that are dedicated to a DeployedModel, and
-  /// that need a higher degree of manual configuration.
+  /// A description of resources that are dedicated to a DeployedModel or
+  /// DeployedIndex, and that need a higher degree of manual configuration.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DedicatedResources : pb::IMessage<DedicatedResources>
@@ -573,8 +576,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int MachineSpecFieldNumber = 1;
     private global::Google.Cloud.AIPlatform.V1.MachineSpec machineSpec_;
     /// <summary>
-    /// Required. Immutable. The specification of a single machine used by the
-    /// prediction.
+    /// Required. Immutable. The specification of a single machine being used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -589,13 +591,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int MinReplicaCountFieldNumber = 2;
     private int minReplicaCount_;
     /// <summary>
-    /// Required. Immutable. The minimum number of machine replicas this
-    /// DeployedModel will be always deployed on. This value must be greater than
-    /// or equal to 1.
+    /// Required. Immutable. The minimum number of machine replicas that will be
+    /// always deployed on. This value must be greater than or equal to 1.
     ///
-    /// If traffic against the DeployedModel increases, it may dynamically be
-    /// deployed onto more replicas, and as traffic decreases, some of these extra
-    /// replicas may be freed.
+    /// If traffic increases, it may dynamically be deployed onto more replicas,
+    /// and as traffic decreases, some of these extra replicas may be freed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -610,13 +610,12 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int MaxReplicaCountFieldNumber = 3;
     private int maxReplicaCount_;
     /// <summary>
-    /// Immutable. The maximum number of replicas this DeployedModel may be
-    /// deployed on when the traffic against it increases. If the requested value
-    /// is too large, the deployment will error, but if deployment succeeds then
-    /// the ability to scale the model to that many replicas is guaranteed (barring
-    /// service outages). If traffic against the DeployedModel increases beyond
-    /// what its replicas at maximum may handle, a portion of the traffic will be
-    /// dropped. If this value is not provided, will use
+    /// Immutable. The maximum number of replicas that may be deployed on when the
+    /// traffic against it increases. If the requested value is too large, the
+    /// deployment will error, but if deployment succeeds then the ability to scale
+    /// to that many replicas is guaranteed (barring service outages). If traffic
+    /// increases beyond what its replicas at maximum may handle, a portion of the
+    /// traffic will be dropped. If this value is not provided, will use
     /// [min_replica_count][google.cloud.aiplatform.v1.DedicatedResources.min_replica_count]
     /// as the default value.
     ///
@@ -639,8 +638,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private int requiredReplicaCount_;
     /// <summary>
     /// Optional. Number of required available replicas for the deployment to
-    /// succeed. This field is only needed when partial model deployment/mutation
-    /// is desired. If set, the model deploy/mutate operation will succeed once
+    /// succeed. This field is only needed when partial deployment/mutation is
+    /// desired. If set, the deploy/mutate operation will succeed once
     /// available_replica_count reaches required_replica_count, and the rest of
     /// the replicas will be retried. If not set, the default
     /// required_replica_count will be min_replica_count.
@@ -1013,9 +1012,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int MinReplicaCountFieldNumber = 1;
     private int minReplicaCount_;
     /// <summary>
-    /// Immutable. The minimum number of replicas this DeployedModel will be always
-    /// deployed on. If traffic against it increases, it may dynamically be
-    /// deployed onto more replicas up to
+    /// Immutable. The minimum number of replicas that will be always deployed on.
+    /// If traffic against it increases, it may dynamically be deployed onto more
+    /// replicas up to
     /// [max_replica_count][google.cloud.aiplatform.v1.AutomaticResources.max_replica_count],
     /// and as traffic decreases, some of these extra replicas may be freed. If the
     /// requested value is too large, the deployment will error.
@@ -1033,15 +1032,14 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int MaxReplicaCountFieldNumber = 2;
     private int maxReplicaCount_;
     /// <summary>
-    /// Immutable. The maximum number of replicas this DeployedModel may be
-    /// deployed on when the traffic against it increases. If the requested value
-    /// is too large, the deployment will error, but if deployment succeeds then
-    /// the ability to scale the model to that many replicas is guaranteed (barring
-    /// service outages). If traffic against the DeployedModel increases beyond
-    /// what its replicas at maximum may handle, a portion of the traffic will be
-    /// dropped. If this value is not provided, a no upper bound for scaling under
-    /// heavy traffic will be assume, though Vertex AI may be unable to scale
-    /// beyond certain replica number.
+    /// Immutable. The maximum number of replicas that may be deployed on when the
+    /// traffic against it increases. If the requested value is too large, the
+    /// deployment will error, but if deployment succeeds then the ability to scale
+    /// to that many replicas is guaranteed (barring service outages). If traffic
+    /// increases beyond what its replicas at maximum may handle, a portion of the
+    /// traffic will be dropped. If this value is not provided, a no upper bound
+    /// for scaling under heavy traffic will be assume, though Vertex AI may be
+    /// unable to scale beyond certain replica number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1749,9 +1747,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int BootDiskTypeFieldNumber = 1;
     private string bootDiskType_ = "";
     /// <summary>
-    /// Type of the boot disk (default is "pd-ssd").
-    /// Valid values: "pd-ssd" (Persistent Disk Solid State Drive) or
-    /// "pd-standard" (Persistent Disk Hard Disk Drive).
+    /// Type of the boot disk. For non-A3U machines, the default value is
+    /// "pd-ssd", for A3U machines, the default value is "hyperdisk-balanced".
+    /// Valid values: "pd-ssd" (Persistent Disk Solid State Drive),
+    /// "pd-standard" (Persistent Disk Hard Disk Drive) or "hyperdisk-balanced".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2455,6 +2454,323 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
+  /// Represents a mount configuration for Lustre file system.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class LustreMount : pb::IMessage<LustreMount>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<LustreMount> _parser = new pb::MessageParser<LustreMount>(() => new LustreMount());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<LustreMount> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LustreMount() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LustreMount(LustreMount other) : this() {
+      instanceIp_ = other.instanceIp_;
+      volumeHandle_ = other.volumeHandle_;
+      filesystem_ = other.filesystem_;
+      mountPoint_ = other.mountPoint_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LustreMount Clone() {
+      return new LustreMount(this);
+    }
+
+    /// <summary>Field number for the "instance_ip" field.</summary>
+    public const int InstanceIpFieldNumber = 1;
+    private string instanceIp_ = "";
+    /// <summary>
+    /// Required. IP address of the Lustre instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string InstanceIp {
+      get { return instanceIp_; }
+      set {
+        instanceIp_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "volume_handle" field.</summary>
+    public const int VolumeHandleFieldNumber = 2;
+    private string volumeHandle_ = "";
+    /// <summary>
+    /// Required. The unique identifier of the Lustre volume.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VolumeHandle {
+      get { return volumeHandle_; }
+      set {
+        volumeHandle_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "filesystem" field.</summary>
+    public const int FilesystemFieldNumber = 3;
+    private string filesystem_ = "";
+    /// <summary>
+    /// Required. The name of the Lustre filesystem.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Filesystem {
+      get { return filesystem_; }
+      set {
+        filesystem_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "mount_point" field.</summary>
+    public const int MountPointFieldNumber = 4;
+    private string mountPoint_ = "";
+    /// <summary>
+    /// Required. Destination mount path. The Lustre file system will be mounted
+    /// for the user under /mnt/lustre/&lt;mount_point>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MountPoint {
+      get { return mountPoint_; }
+      set {
+        mountPoint_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as LustreMount);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(LustreMount other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (InstanceIp != other.InstanceIp) return false;
+      if (VolumeHandle != other.VolumeHandle) return false;
+      if (Filesystem != other.Filesystem) return false;
+      if (MountPoint != other.MountPoint) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (InstanceIp.Length != 0) hash ^= InstanceIp.GetHashCode();
+      if (VolumeHandle.Length != 0) hash ^= VolumeHandle.GetHashCode();
+      if (Filesystem.Length != 0) hash ^= Filesystem.GetHashCode();
+      if (MountPoint.Length != 0) hash ^= MountPoint.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (InstanceIp.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(InstanceIp);
+      }
+      if (VolumeHandle.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(VolumeHandle);
+      }
+      if (Filesystem.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Filesystem);
+      }
+      if (MountPoint.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(MountPoint);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (InstanceIp.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(InstanceIp);
+      }
+      if (VolumeHandle.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(VolumeHandle);
+      }
+      if (Filesystem.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Filesystem);
+      }
+      if (MountPoint.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(MountPoint);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (InstanceIp.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(InstanceIp);
+      }
+      if (VolumeHandle.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VolumeHandle);
+      }
+      if (Filesystem.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filesystem);
+      }
+      if (MountPoint.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MountPoint);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(LustreMount other) {
+      if (other == null) {
+        return;
+      }
+      if (other.InstanceIp.Length != 0) {
+        InstanceIp = other.InstanceIp;
+      }
+      if (other.VolumeHandle.Length != 0) {
+        VolumeHandle = other.VolumeHandle;
+      }
+      if (other.Filesystem.Length != 0) {
+        Filesystem = other.Filesystem;
+      }
+      if (other.MountPoint.Length != 0) {
+        MountPoint = other.MountPoint;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            InstanceIp = input.ReadString();
+            break;
+          }
+          case 18: {
+            VolumeHandle = input.ReadString();
+            break;
+          }
+          case 26: {
+            Filesystem = input.ReadString();
+            break;
+          }
+          case 34: {
+            MountPoint = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            InstanceIp = input.ReadString();
+            break;
+          }
+          case 18: {
+            VolumeHandle = input.ReadString();
+            break;
+          }
+          case 26: {
+            Filesystem = input.ReadString();
+            break;
+          }
+          case 34: {
+            MountPoint = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// The metric specification that defines the target resource utilization
   /// (CPU utilization, accelerator's duty cycle, and so on) for calculating the
   /// desired replica count.
@@ -2474,7 +2790,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2515,6 +2831,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// * For Online Prediction:
     /// * `aiplatform.googleapis.com/prediction/online/accelerator/duty_cycle`
     /// * `aiplatform.googleapis.com/prediction/online/cpu/utilization`
+    /// * `aiplatform.googleapis.com/prediction/online/request_count`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2720,7 +3037,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
