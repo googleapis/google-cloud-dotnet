@@ -75,41 +75,43 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Z2xlYXBpcy5jb20vQ29udGV4dBJBCg5leHBlcmltZW50X3J1bhgSIAEoCUIp",
             "4EEB+kEjCiFhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0NvbnRleHQSNwoG",
             "bW9kZWxzGBQgAygJQifgQQH6QSEKH2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5j",
-            "b20vTW9kZWwihgMKDldvcmtlclBvb2xTcGVjEkMKDmNvbnRhaW5lcl9zcGVj",
+            "b20vTW9kZWwiywMKDldvcmtlclBvb2xTcGVjEkMKDmNvbnRhaW5lcl9zcGVj",
             "GAYgASgLMikuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQ29udGFpbmVy",
             "U3BlY0gAEkwKE3B5dGhvbl9wYWNrYWdlX3NwZWMYByABKAsyLS5nb29nbGUu",
             "Y2xvdWQuYWlwbGF0Zm9ybS52MS5QeXRob25QYWNrYWdlU3BlY0gAEkUKDG1h",
             "Y2hpbmVfc3BlYxgBIAEoCzInLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
             "Lk1hY2hpbmVTcGVjQgbgQQHgQQUSGgoNcmVwbGljYV9jb3VudBgCIAEoA0ID",
             "4EEBEj0KCm5mc19tb3VudHMYBCADKAsyJC5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MS5OZnNNb3VudEID4EEBEjcKCWRpc2tfc3BlYxgFIAEoCzIkLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRpc2tTcGVjQgYKBHRhc2sidwoN",
-            "Q29udGFpbmVyU3BlYxIWCglpbWFnZV91cmkYASABKAlCA+BBAhIPCgdjb21t",
-            "YW5kGAIgAygJEgwKBGFyZ3MYAyADKAkSLwoDZW52GAQgAygLMiIuZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjEuRW52VmFyIqoBChFQeXRob25QYWNrYWdl",
-            "U3BlYxIfChJleGVjdXRvcl9pbWFnZV91cmkYASABKAlCA+BBAhIZCgxwYWNr",
-            "YWdlX3VyaXMYAiADKAlCA+BBAhIaCg1weXRob25fbW9kdWxlGAMgASgJQgPg",
-            "QQISDAoEYXJncxgEIAMoCRIvCgNlbnYYBSADKAsyIi5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MS5FbnZWYXIi8wIKClNjaGVkdWxpbmcSKgoHdGltZW91",
-            "dBgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIlCh1yZXN0YXJ0",
-            "X2pvYl9vbl93b3JrZXJfcmVzdGFydBgDIAEoCBJGCghzdHJhdGVneRgEIAEo",
-            "DjIvLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlNjaGVkdWxpbmcuU3Ry",
-            "YXRlZ3lCA+BBARIcCg9kaXNhYmxlX3JldHJpZXMYBSABKAhCA+BBARI5ChFt",
-            "YXhfd2FpdF9kdXJhdGlvbhgGIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
-            "dGlvbkID4EEBInEKCFN0cmF0ZWd5EhgKFFNUUkFURUdZX1VOU1BFQ0lGSUVE",
-            "EAASEQoJT05fREVNQU5EEAEaAggBEhAKCExPV19DT1NUEAIaAggBEgwKCFNU",
-            "QU5EQVJEEAMSCAoEU1BPVBAEEg4KCkZMRVhfU1RBUlQQBkLMAQoeY29tLmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQg5DdXN0b21Kb2JQcm90b1ABWj5j",
-            "bG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9y",
-            "bXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYx",
-            "ygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3Vk",
-            "OjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "Zm9ybS52MS5OZnNNb3VudEID4EEBEkMKDWx1c3RyZV9tb3VudHMYCSADKAsy",
+            "Jy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5MdXN0cmVNb3VudEID4EEB",
+            "EjcKCWRpc2tfc3BlYxgFIAEoCzIkLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxLkRpc2tTcGVjQgYKBHRhc2sidwoNQ29udGFpbmVyU3BlYxIWCglpbWFn",
+            "ZV91cmkYASABKAlCA+BBAhIPCgdjb21tYW5kGAIgAygJEgwKBGFyZ3MYAyAD",
+            "KAkSLwoDZW52GAQgAygLMiIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
+            "RW52VmFyIqoBChFQeXRob25QYWNrYWdlU3BlYxIfChJleGVjdXRvcl9pbWFn",
+            "ZV91cmkYASABKAlCA+BBAhIZCgxwYWNrYWdlX3VyaXMYAiADKAlCA+BBAhIa",
+            "Cg1weXRob25fbW9kdWxlGAMgASgJQgPgQQISDAoEYXJncxgEIAMoCRIvCgNl",
+            "bnYYBSADKAsyIi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FbnZWYXIi",
+            "8wIKClNjaGVkdWxpbmcSKgoHdGltZW91dBgBIAEoCzIZLmdvb2dsZS5wcm90",
+            "b2J1Zi5EdXJhdGlvbhIlCh1yZXN0YXJ0X2pvYl9vbl93b3JrZXJfcmVzdGFy",
+            "dBgDIAEoCBJGCghzdHJhdGVneRgEIAEoDjIvLmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxLlNjaGVkdWxpbmcuU3RyYXRlZ3lCA+BBARIcCg9kaXNhYmxl",
+            "X3JldHJpZXMYBSABKAhCA+BBARI5ChFtYXhfd2FpdF9kdXJhdGlvbhgGIAEo",
+            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBInEKCFN0cmF0ZWd5",
+            "EhgKFFNUUkFURUdZX1VOU1BFQ0lGSUVEEAASEQoJT05fREVNQU5EEAEaAggB",
+            "EhAKCExPV19DT1NUEAIaAggBEgwKCFNUQU5EQVJEEAMSCAoEU1BPVBAEEg4K",
+            "CkZMRVhfU1RBUlQQBkLMAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxQg5DdXN0b21Kb2JQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2Fp",
+            "cGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdv",
+            "b2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxh",
+            "dGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.JobStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ServiceNetworkingReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.CustomJob), global::Google.Cloud.AIPlatform.V1.CustomJob.Parser, new[]{ "Name", "DisplayName", "JobSpec", "State", "CreateTime", "StartTime", "EndTime", "UpdateTime", "Error", "Labels", "EncryptionSpec", "WebAccessUris", "SatisfiesPzs", "SatisfiesPzi" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.CustomJobSpec), global::Google.Cloud.AIPlatform.V1.CustomJobSpec.Parser, new[]{ "PersistentResourceId", "WorkerPoolSpecs", "Scheduling", "ServiceAccount", "Network", "ReservedIpRanges", "PscInterfaceConfig", "BaseOutputDirectory", "ProtectedArtifactLocationId", "Tensorboard", "EnableWebAccess", "EnableDashboardAccess", "Experiment", "ExperimentRun", "Models" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.WorkerPoolSpec), global::Google.Cloud.AIPlatform.V1.WorkerPoolSpec.Parser, new[]{ "ContainerSpec", "PythonPackageSpec", "MachineSpec", "ReplicaCount", "NfsMounts", "DiskSpec" }, new[]{ "Task" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.WorkerPoolSpec), global::Google.Cloud.AIPlatform.V1.WorkerPoolSpec.Parser, new[]{ "ContainerSpec", "PythonPackageSpec", "MachineSpec", "ReplicaCount", "NfsMounts", "LustreMounts", "DiskSpec" }, new[]{ "Task" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ContainerSpec), global::Google.Cloud.AIPlatform.V1.ContainerSpec.Parser, new[]{ "ImageUri", "Command", "Args", "Env" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PythonPackageSpec), global::Google.Cloud.AIPlatform.V1.PythonPackageSpec.Parser, new[]{ "ExecutorImageUri", "PackageUris", "PythonModule", "Args", "Env" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Scheduling), global::Google.Cloud.AIPlatform.V1.Scheduling.Parser, new[]{ "Timeout", "RestartJobOnWorkerRestart", "Strategy", "DisableRetries", "MaxWaitDuration" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Scheduling.Types.Strategy) }, null, null)
@@ -1786,6 +1788,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       machineSpec_ = other.machineSpec_ != null ? other.machineSpec_.Clone() : null;
       replicaCount_ = other.replicaCount_;
       nfsMounts_ = other.nfsMounts_.Clone();
+      lustreMounts_ = other.lustreMounts_.Clone();
       diskSpec_ = other.diskSpec_ != null ? other.diskSpec_.Clone() : null;
       switch (other.TaskCase) {
         case TaskOneofCase.ContainerSpec:
@@ -1879,6 +1882,20 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return nfsMounts_; }
     }
 
+    /// <summary>Field number for the "lustre_mounts" field.</summary>
+    public const int LustreMountsFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1.LustreMount> _repeated_lustreMounts_codec
+        = pb::FieldCodec.ForMessage(74, global::Google.Cloud.AIPlatform.V1.LustreMount.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.LustreMount> lustreMounts_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.LustreMount>();
+    /// <summary>
+    /// Optional. List of Lustre mounts.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.LustreMount> LustreMounts {
+      get { return lustreMounts_; }
+    }
+
     /// <summary>Field number for the "disk_spec" field.</summary>
     public const int DiskSpecFieldNumber = 5;
     private global::Google.Cloud.AIPlatform.V1.DiskSpec diskSpec_;
@@ -1935,6 +1952,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(MachineSpec, other.MachineSpec)) return false;
       if (ReplicaCount != other.ReplicaCount) return false;
       if(!nfsMounts_.Equals(other.nfsMounts_)) return false;
+      if(!lustreMounts_.Equals(other.lustreMounts_)) return false;
       if (!object.Equals(DiskSpec, other.DiskSpec)) return false;
       if (TaskCase != other.TaskCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1949,6 +1967,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (machineSpec_ != null) hash ^= MachineSpec.GetHashCode();
       if (ReplicaCount != 0L) hash ^= ReplicaCount.GetHashCode();
       hash ^= nfsMounts_.GetHashCode();
+      hash ^= lustreMounts_.GetHashCode();
       if (diskSpec_ != null) hash ^= DiskSpec.GetHashCode();
       hash ^= (int) taskCase_;
       if (_unknownFields != null) {
@@ -1990,6 +2009,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(PythonPackageSpec);
       }
+      lustreMounts_.WriteTo(output, _repeated_lustreMounts_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2021,6 +2041,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(PythonPackageSpec);
       }
+      lustreMounts_.WriteTo(ref output, _repeated_lustreMounts_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2044,6 +2065,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(ReplicaCount);
       }
       size += nfsMounts_.CalculateSize(_repeated_nfsMounts_codec);
+      size += lustreMounts_.CalculateSize(_repeated_lustreMounts_codec);
       if (diskSpec_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DiskSpec);
       }
@@ -2069,6 +2091,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         ReplicaCount = other.ReplicaCount;
       }
       nfsMounts_.Add(other.nfsMounts_);
+      lustreMounts_.Add(other.lustreMounts_);
       if (other.diskSpec_ != null) {
         if (diskSpec_ == null) {
           DiskSpec = new global::Google.Cloud.AIPlatform.V1.DiskSpec();
@@ -2145,6 +2168,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             PythonPackageSpec = subBuilder;
             break;
           }
+          case 74: {
+            lustreMounts_.AddEntriesFrom(input, _repeated_lustreMounts_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2198,6 +2225,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
             input.ReadMessage(subBuilder);
             PythonPackageSpec = subBuilder;
+            break;
+          }
+          case 74: {
+            lustreMounts_.AddEntriesFrom(ref input, _repeated_lustreMounts_codec);
             break;
           }
         }
