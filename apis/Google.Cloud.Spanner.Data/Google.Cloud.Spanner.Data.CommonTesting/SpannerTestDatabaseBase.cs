@@ -179,7 +179,7 @@ public abstract class SpannerTestDatabaseBase
     public SpannerConnection GetConnection(Logger logger, bool logCommitStats = false) =>
         new SpannerConnection(new SpannerConnectionStringBuilder(ConnectionString)
         {
-            SessionPoolManager = SessionPoolManager.Create(new V1.SessionPoolOptions(), logger),
+            SessionPoolManager = SessionPoolManager.Create(new V1.ManagedSessionOptions(), logger),
             LogCommitStats = logCommitStats
         });
 

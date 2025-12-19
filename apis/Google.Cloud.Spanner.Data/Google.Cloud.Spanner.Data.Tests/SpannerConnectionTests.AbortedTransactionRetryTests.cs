@@ -233,12 +233,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             private SpannerConnection BuildSpannerConnection(SpannerClient spannerClient)
             {
-                var sessionPoolOptions = new SessionPoolOptions
-                {
-                    MaintenanceLoopDelay = TimeSpan.Zero
-                };
-
-                var sessionPoolManager = new SessionPoolManager(sessionPoolOptions, spannerClient.Settings, spannerClient.Settings.Logger, (_o, _s) => Task.FromResult(spannerClient));
+                var sessionPoolManager = new SessionPoolManager(new ManagedSessionOptions(), spannerClient.Settings, spannerClient.Settings.Logger, (_o, _s) => Task.FromResult(spannerClient));
                 sessionPoolManager.SpannerSettings.Scheduler = spannerClient.Settings.Scheduler;
                 sessionPoolManager.SpannerSettings.Clock = spannerClient.Settings.Clock;
 

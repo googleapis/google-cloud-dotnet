@@ -44,7 +44,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void ConnectionString_SetterMaintainsChannelCredentialsAndSessionPoolManager()
         {
             var channelCredentials = new FakeCredential().ToChannelCredentials();
-            var sessionPoolManager = new SessionPoolManager(new SessionPoolOptions(), SpannerSettings.GetDefault(), Logger.DefaultLogger, (o, s) => throw new InvalidOperationException());
+            var sessionPoolManager = new SessionPoolManager(new ManagedSessionOptions(), SpannerSettings.GetDefault(), Logger.DefaultLogger, (o, s) => throw new InvalidOperationException());
 
             var builder = new SpannerConnectionStringBuilder("Data Source=projects/project_id/instances/instance_id; ClrToSpannerTypeDefaultMappings=DecimalToNumeric", channelCredentials)
             {

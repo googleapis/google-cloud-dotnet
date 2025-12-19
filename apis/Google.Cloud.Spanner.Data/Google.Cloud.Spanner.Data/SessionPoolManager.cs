@@ -60,8 +60,8 @@ namespace Google.Cloud.Spanner.Data
 
         // Dictionary to store the sessions managed by this manager
         // Each session is keyed by a complex key, as each (multiplex) session is unique to a combination of client options and unique segment key
-        private readonly ConcurrentDictionary<(SpannerClientCreationOptions, SessionPoolSegmentKey), Task<ManagedSession>> _targetedSessions =
-            new ConcurrentDictionary<(SpannerClientCreationOptions options, SessionPoolSegmentKey segmentKey), Task<ManagedSession>>();
+        private readonly ConcurrentDictionary<(SpannerClientCreationOptions, SessionPoolSegmentKey), Lazy<Task<ManagedSession>>> _targetedSessions =
+            new ConcurrentDictionary<(SpannerClientCreationOptions options, SessionPoolSegmentKey segmentKey), Lazy<Task<ManagedSession>>> ();
 
         /// <summary>
         /// The session pool options used for every <see cref="SessionPool"/> created by this session pool manager.
@@ -164,7 +164,12 @@ namespace Google.Cloud.Spanner.Data
             SessionPoolSegmentKey segmentKey = SessionPoolSegmentKey.Create(dbName).WithDatabaseRole(dbRole);
             GaxPreconditions.CheckNotNull(options, nameof(options));
 
-            return _targetedSessions.GetOrAdd((options, segmentKey), _ => CreateMultiplexSessionAsync());
+            // To work around nuances of how value factory execution works in a concurrent dictionary
+            // We need to wrap the call to CreateMultiplexSessionAsync() in a LazyTask
+            // to avoid concurrent threads spinning off multiple executions of CreateMultiplexSessionAsync()
+            var lazyManagedSessionTask = _targetedSessions.GetOrAdd((options, segmentKey), _ => new Lazy<Task<ManagedSession>>(CreateMultiplexSessionAsync, LazyThreadSafetyMode.ExecutionAndPublication));
+
+            return lazyManagedSessionTask.Value;
 
             async Task<ManagedSession> CreateMultiplexSessionAsync()
             {

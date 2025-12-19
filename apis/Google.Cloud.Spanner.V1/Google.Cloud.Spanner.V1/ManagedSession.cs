@@ -162,7 +162,7 @@ public class ManagedSession
         return false;
     }
 
-    private async Task CreateOrRefreshSessionsAsync(CancellationToken cancellationToken, bool needsRefresh = false)
+    private async Task CreateOrRefreshSessionsAsync(CancellationToken cancellationToken)
     {
         try
         {
