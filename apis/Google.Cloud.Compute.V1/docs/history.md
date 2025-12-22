@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.21.0, released 2025-12-22
+
+### New features
+
+- [DIREGAPIC] Update v1 API definitions to revision 20251202
+
 ## Version 3.20.0, released 2025-12-09
 
 ### New features
