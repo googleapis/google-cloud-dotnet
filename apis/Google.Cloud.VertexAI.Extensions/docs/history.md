@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta03, released 2025-12-22
+
+### New features
+
+- Update to M.E.AI.Abstractions 10.1.1
+
 ## Version 1.0.0-beta02, released 2025-12-15
 
 ### Bug fixes
