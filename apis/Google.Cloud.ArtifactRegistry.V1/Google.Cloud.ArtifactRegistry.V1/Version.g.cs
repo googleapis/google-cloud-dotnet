@@ -27,52 +27,54 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             "CjFnb29nbGUvZGV2dG9vbHMvYXJ0aWZhY3RyZWdpc3RyeS92MS92ZXJzaW9u",
             "LnByb3RvEiNnb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MRof",
             "Z29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9y",
-            "ZXNvdXJjZS5wcm90bxotZ29vZ2xlL2RldnRvb2xzL2FydGlmYWN0cmVnaXN0",
-            "cnkvdjEvdGFnLnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5w",
-            "cm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xlL3By",
-            "b3RvYnVmL3RpbWVzdGFtcC5wcm90byKkBAoHVmVyc2lvbhIMCgRuYW1lGAEg",
-            "ASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEi8KC2NyZWF0ZV90aW1lGAUgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgt1cGRhdGVfdGltZRgG",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASPgoMcmVsYXRlZF90",
-            "YWdzGAcgAygLMiguZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnku",
-            "djEuVGFnEi4KCG1ldGFkYXRhGAggASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0",
-            "cnVjdEID4EEDElcKC2Fubm90YXRpb25zGAkgAygLMj0uZ29vZ2xlLmRldnRv",
-            "b2xzLmFydGlmYWN0cmVnaXN0cnkudjEuVmVyc2lvbi5Bbm5vdGF0aW9uc0Vu",
-            "dHJ5QgPgQQEaMgoQQW5ub3RhdGlvbnNFbnRyeRILCgNrZXkYASABKAkSDQoF",
-            "dmFsdWUYAiABKAk6AjgBOpYB6kGSAQonYXJ0aWZhY3RyZWdpc3RyeS5nb29n",
-            "bGVhcGlzLmNvbS9WZXJzaW9uEmdwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
-            "b25zL3tsb2NhdGlvbn0vcmVwb3NpdG9yaWVzL3tyZXBvc2l0b3J5fS9wYWNr",
-            "YWdlcy97cGFja2FnZX0vdmVyc2lvbnMve3ZlcnNpb259IrgBChNMaXN0VmVy",
-            "c2lvbnNSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIRCglwYWdlX3NpemUYAiAB",
-            "KAUSEgoKcGFnZV90b2tlbhgDIAEoCRI+CgR2aWV3GAQgASgOMjAuZ29vZ2xl",
-            "LmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjEuVmVyc2lvblZpZXcSFQoI",
-            "b3JkZXJfYnkYBSABKAlCA+BBARITCgZmaWx0ZXIYBiABKAlCA+BBASJvChRM",
-            "aXN0VmVyc2lvbnNSZXNwb25zZRI+Cgh2ZXJzaW9ucxgBIAMoCzIsLmdvb2ds",
-            "ZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYxLlZlcnNpb24SFwoPbmV4",
-            "dF9wYWdlX3Rva2VuGAIgASgJImEKEUdldFZlcnNpb25SZXF1ZXN0EgwKBG5h",
-            "bWUYASABKAkSPgoEdmlldxgCIAEoDjIwLmdvb2dsZS5kZXZ0b29scy5hcnRp",
-            "ZmFjdHJlZ2lzdHJ5LnYxLlZlcnNpb25WaWV3IjMKFERlbGV0ZVZlcnNpb25S",
-            "ZXF1ZXN0EgwKBG5hbWUYASABKAkSDQoFZm9yY2UYAiABKAgisQEKGkJhdGNo",
-            "RGVsZXRlVmVyc2lvbnNSZXF1ZXN0EjwKBnBhcmVudBgBIAEoCUIs+kEpEidh",
-            "cnRpZmFjdHJlZ2lzdHJ5Lmdvb2dsZWFwaXMuY29tL1ZlcnNpb24SPgoFbmFt",
-            "ZXMYAiADKAlCL+BBAvpBKQonYXJ0aWZhY3RyZWdpc3RyeS5nb29nbGVhcGlz",
-            "LmNvbS9WZXJzaW9uEhUKDXZhbGlkYXRlX29ubHkYAyABKAgiNgobQmF0Y2hE",
-            "ZWxldGVWZXJzaW9uc01ldGFkYXRhEhcKD2ZhaWxlZF92ZXJzaW9ucxgCIAMo",
-            "CSKLAQoUVXBkYXRlVmVyc2lvblJlcXVlc3QSQgoHdmVyc2lvbhgBIAEoCzIs",
-            "Lmdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYxLlZlcnNpb25C",
-            "A+BBAhIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5G",
-            "aWVsZE1hc2sqQAoLVmVyc2lvblZpZXcSHAoYVkVSU0lPTl9WSUVXX1VOU1BF",
-            "Q0lGSUVEEAASCQoFQkFTSUMQARIICgRGVUxMEAJC9wEKJ2NvbS5nb29nbGUu",
-            "ZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MUIMVmVyc2lvblByb3RvUAFa",
-            "UGNsb3VkLmdvb2dsZS5jb20vZ28vYXJ0aWZhY3RyZWdpc3RyeS9hcGl2MS9h",
-            "cnRpZmFjdHJlZ2lzdHJ5cGI7YXJ0aWZhY3RyZWdpc3RyeXBiqgIgR29vZ2xl",
-            "LkNsb3VkLkFydGlmYWN0UmVnaXN0cnkuVjHKAiBHb29nbGVcQ2xvdWRcQXJ0",
-            "aWZhY3RSZWdpc3RyeVxWMeoCI0dvb2dsZTo6Q2xvdWQ6OkFydGlmYWN0UmVn",
-            "aXN0cnk6OlYxYgZwcm90bzM="));
+            "ZXNvdXJjZS5wcm90bxouZ29vZ2xlL2RldnRvb2xzL2FydGlmYWN0cmVnaXN0",
+            "cnkvdjEvZmlsZS5wcm90bxotZ29vZ2xlL2RldnRvb2xzL2FydGlmYWN0cmVn",
+            "aXN0cnkvdjEvdGFnLnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFz",
+            "ay5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xl",
+            "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLqBAoHVmVyc2lvbhIMCgRuYW1l",
+            "GAEgASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEi8KC2NyZWF0ZV90aW1lGAUg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgt1cGRhdGVfdGlt",
+            "ZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASPgoMcmVsYXRl",
+            "ZF90YWdzGAcgAygLMiguZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0",
+            "cnkudjEuVGFnEi4KCG1ldGFkYXRhGAggASgLMhcuZ29vZ2xlLnByb3RvYnVm",
+            "LlN0cnVjdEID4EEDElcKC2Fubm90YXRpb25zGAkgAygLMj0uZ29vZ2xlLmRl",
+            "dnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjEuVmVyc2lvbi5Bbm5vdGF0aW9u",
+            "c0VudHJ5QgPgQQESRAoMZmluZ2VycHJpbnRzGAogAygLMikuZ29vZ2xlLmRl",
+            "dnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjEuSGFzaEID4EEDGjIKEEFubm90",
+            "YXRpb25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqW",
+            "AepBkgEKJ2FydGlmYWN0cmVnaXN0cnkuZ29vZ2xlYXBpcy5jb20vVmVyc2lv",
+            "bhJncHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3Jl",
+            "cG9zaXRvcmllcy97cmVwb3NpdG9yeX0vcGFja2FnZXMve3BhY2thZ2V9L3Zl",
+            "cnNpb25zL3t2ZXJzaW9ufSK4AQoTTGlzdFZlcnNpb25zUmVxdWVzdBIOCgZw",
+            "YXJlbnQYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4Y",
+            "AyABKAkSPgoEdmlldxgEIAEoDjIwLmdvb2dsZS5kZXZ0b29scy5hcnRpZmFj",
+            "dHJlZ2lzdHJ5LnYxLlZlcnNpb25WaWV3EhUKCG9yZGVyX2J5GAUgASgJQgPg",
+            "QQESEwoGZmlsdGVyGAYgASgJQgPgQQEibwoUTGlzdFZlcnNpb25zUmVzcG9u",
+            "c2USPgoIdmVyc2lvbnMYASADKAsyLC5nb29nbGUuZGV2dG9vbHMuYXJ0aWZh",
+            "Y3RyZWdpc3RyeS52MS5WZXJzaW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
+            "CSJhChFHZXRWZXJzaW9uUmVxdWVzdBIMCgRuYW1lGAEgASgJEj4KBHZpZXcY",
+            "AiABKA4yMC5nb29nbGUuZGV2dG9vbHMuYXJ0aWZhY3RyZWdpc3RyeS52MS5W",
+            "ZXJzaW9uVmlldyIzChREZWxldGVWZXJzaW9uUmVxdWVzdBIMCgRuYW1lGAEg",
+            "ASgJEg0KBWZvcmNlGAIgASgIIrEBChpCYXRjaERlbGV0ZVZlcnNpb25zUmVx",
+            "dWVzdBI8CgZwYXJlbnQYASABKAlCLPpBKRInYXJ0aWZhY3RyZWdpc3RyeS5n",
+            "b29nbGVhcGlzLmNvbS9WZXJzaW9uEj4KBW5hbWVzGAIgAygJQi/gQQL6QSkK",
+            "J2FydGlmYWN0cmVnaXN0cnkuZ29vZ2xlYXBpcy5jb20vVmVyc2lvbhIVCg12",
+            "YWxpZGF0ZV9vbmx5GAMgASgIIjYKG0JhdGNoRGVsZXRlVmVyc2lvbnNNZXRh",
+            "ZGF0YRIXCg9mYWlsZWRfdmVyc2lvbnMYAiADKAkiiwEKFFVwZGF0ZVZlcnNp",
+            "b25SZXF1ZXN0EkIKB3ZlcnNpb24YASABKAsyLC5nb29nbGUuZGV2dG9vbHMu",
+            "YXJ0aWZhY3RyZWdpc3RyeS52MS5WZXJzaW9uQgPgQQISLwoLdXBkYXRlX21h",
+            "c2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrKkAKC1ZlcnNp",
+            "b25WaWV3EhwKGFZFUlNJT05fVklFV19VTlNQRUNJRklFRBAAEgkKBUJBU0lD",
+            "EAESCAoERlVMTBACQvcBCidjb20uZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0",
+            "cmVnaXN0cnkudjFCDFZlcnNpb25Qcm90b1ABWlBjbG91ZC5nb29nbGUuY29t",
+            "L2dvL2FydGlmYWN0cmVnaXN0cnkvYXBpdjEvYXJ0aWZhY3RyZWdpc3RyeXBi",
+            "O2FydGlmYWN0cmVnaXN0cnlwYqoCIEdvb2dsZS5DbG91ZC5BcnRpZmFjdFJl",
+            "Z2lzdHJ5LlYxygIgR29vZ2xlXENsb3VkXEFydGlmYWN0UmVnaXN0cnlcVjHq",
+            "AiNHb29nbGU6OkNsb3VkOjpBcnRpZmFjdFJlZ2lzdHJ5OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.ArtifactRegistry.V1.TagReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.ArtifactRegistry.V1.FileReflection.Descriptor, global::Google.Cloud.ArtifactRegistry.V1.TagReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.ArtifactRegistry.V1.VersionView), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.Version), global::Google.Cloud.ArtifactRegistry.V1.Version.Parser, new[]{ "Name", "Description", "CreateTime", "UpdateTime", "RelatedTags", "Metadata", "Annotations" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.Version), global::Google.Cloud.ArtifactRegistry.V1.Version.Parser, new[]{ "Name", "Description", "CreateTime", "UpdateTime", "RelatedTags", "Metadata", "Annotations", "Fingerprints" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.ListVersionsRequest), global::Google.Cloud.ArtifactRegistry.V1.ListVersionsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "View", "OrderBy", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.ListVersionsResponse), global::Google.Cloud.ArtifactRegistry.V1.ListVersionsResponse.Parser, new[]{ "Versions", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1.GetVersionRequest), global::Google.Cloud.ArtifactRegistry.V1.GetVersionRequest.Parser, new[]{ "Name", "View" }, null, null, null, null),
@@ -156,6 +158,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       relatedTags_ = other.relatedTags_.Clone();
       metadata_ = other.metadata_ != null ? other.metadata_.Clone() : null;
       annotations_ = other.annotations_.Clone();
+      fingerprints_ = other.fingerprints_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -276,6 +279,22 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       get { return annotations_; }
     }
 
+    /// <summary>Field number for the "fingerprints" field.</summary>
+    public const int FingerprintsFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::Google.Cloud.ArtifactRegistry.V1.Hash> _repeated_fingerprints_codec
+        = pb::FieldCodec.ForMessage(82, global::Google.Cloud.ArtifactRegistry.V1.Hash.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.ArtifactRegistry.V1.Hash> fingerprints_ = new pbc::RepeatedField<global::Google.Cloud.ArtifactRegistry.V1.Hash>();
+    /// <summary>
+    /// Output only. Immutable reference for the version, calculated based on the
+    /// version's content. Currently we only support dirsum_sha256 hash algorithm.
+    /// Additional hash algorithms may be added in the future.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.ArtifactRegistry.V1.Hash> Fingerprints {
+      get { return fingerprints_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -298,6 +317,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       if(!relatedTags_.Equals(other.relatedTags_)) return false;
       if (!object.Equals(Metadata, other.Metadata)) return false;
       if (!Annotations.Equals(other.Annotations)) return false;
+      if(!fingerprints_.Equals(other.fingerprints_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -312,6 +332,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       hash ^= relatedTags_.GetHashCode();
       if (metadata_ != null) hash ^= Metadata.GetHashCode();
       hash ^= Annotations.GetHashCode();
+      hash ^= fingerprints_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -352,6 +373,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         output.WriteMessage(Metadata);
       }
       annotations_.WriteTo(output, _map_annotations_codec);
+      fingerprints_.WriteTo(output, _repeated_fingerprints_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -384,6 +406,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         output.WriteMessage(Metadata);
       }
       annotations_.WriteTo(ref output, _map_annotations_codec);
+      fingerprints_.WriteTo(ref output, _repeated_fingerprints_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -411,6 +434,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Metadata);
       }
       size += annotations_.CalculateSize(_map_annotations_codec);
+      size += fingerprints_.CalculateSize(_repeated_fingerprints_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -449,6 +473,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         Metadata.MergeFrom(other.Metadata);
       }
       annotations_.MergeFrom(other.annotations_);
+      fingerprints_.Add(other.fingerprints_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -501,6 +526,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
             annotations_.AddEntriesFrom(input, _map_annotations_codec);
             break;
           }
+          case 82: {
+            fingerprints_.AddEntriesFrom(input, _repeated_fingerprints_codec);
+            break;
+          }
         }
       }
     #endif
@@ -551,6 +580,10 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
           }
           case 74: {
             annotations_.AddEntriesFrom(ref input, _map_annotations_codec);
+            break;
+          }
+          case 82: {
+            fingerprints_.AddEntriesFrom(ref input, _repeated_fingerprints_codec);
             break;
           }
         }
