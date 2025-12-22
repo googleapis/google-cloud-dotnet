@@ -93,12 +93,12 @@
         },
         {
             "id": "Google.Apps.Chat.V1",
-            "currentVersion": "1.0.0-beta19",
+            "currentVersion": "1.0.0-beta20",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-03T18:27:28.065987146Z",
+            "releaseTimestamp": "2025-12-22T14:05:48.537477268Z",
             "lastGeneratedCommit": "1a9d00bed77e6db82ff67764ffe14e3b5209f5cd",
-            "lastReleasedCommit": "98fef441cef53480961d4e174164def1834a290c",
+            "lastReleasedCommit": "1a9d00bed77e6db82ff67764ffe14e3b5209f5cd",
             "apiPaths": [
                 "google/chat/v1"
             ],
