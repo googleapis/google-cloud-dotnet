@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.14.0, released 2025-12-22
+
+### New features
+
+- Add Fingerprint to Artifact Registry Version resource
+
+### Documentation improvements
+
+- Update the description of ExportArtifact
+
 ## Version 2.13.0, released 2025-12-03
 
 ### New features
