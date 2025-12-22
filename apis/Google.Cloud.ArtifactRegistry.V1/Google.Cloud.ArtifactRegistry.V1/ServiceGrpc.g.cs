@@ -1248,7 +1248,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
       }
 
       /// <summary>
-      /// Exports an artifact.
+      /// Exports an artifact to a Cloud Storage bucket.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -3709,7 +3709,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteAttachment, null, options, request);
       }
       /// <summary>
-      /// Exports an artifact.
+      /// Exports an artifact to a Cloud Storage bucket.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3722,7 +3722,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         return ExportArtifact(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Exports an artifact.
+      /// Exports an artifact to a Cloud Storage bucket.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3733,7 +3733,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ExportArtifact, null, options, request);
       }
       /// <summary>
-      /// Exports an artifact.
+      /// Exports an artifact to a Cloud Storage bucket.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3746,7 +3746,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
         return ExportArtifactAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Exports an artifact.
+      /// Exports an artifact to a Cloud Storage bucket.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
