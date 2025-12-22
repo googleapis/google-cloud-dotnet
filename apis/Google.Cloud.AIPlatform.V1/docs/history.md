@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.60.0, released 2025-12-22
+
+### New features
+
+- Add Lustre support to the Vertex Training Custom Job API
+
+### Documentation improvements
+
+- Update comments for machine resources and autoscaling
+
 ## Version 3.59.0, released 2025-12-12
 
 ### New features
