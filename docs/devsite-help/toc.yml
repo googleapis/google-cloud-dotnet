@@ -28,6 +28,10 @@
     href: long-running-operations.md
   - name: Pagination (page streaming)
     href: page-streaming.md
+  - name: Update masks
+    href: update-masks.md
+  - name: Retries
+    href: retries.md
   - name: Resource names and IDs
     href: resource-names.md
   - name: API layers
@@ -36,6 +40,8 @@
     href: call-settings.md
   - name: Streaming RPCs
     href: grpc-streaming.md
+  - name: OCC for IAM
+    href: occ-for-iam.md
   - name: Resource clean-up
     href: cleanup.md
   - name: Versioning
