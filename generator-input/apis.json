@@ -510,6 +510,25 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.ApiRegistry.V1Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud API Registry",
+      "productUrl": "https://docs.cloud.google.com/api-registry/docs/overview",
+      "description": "",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Location": "2.4.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/apiregistry/v1beta",
+      "includeCommonResourcesProto": true,
+      "shortName": "cloudapiregistry",
+      "serviceConfigFile": "cloudapiregistry_v1beta.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.ApigeeConnect.V1",
       "version": "2.5.0",
       "type": "grpc",
