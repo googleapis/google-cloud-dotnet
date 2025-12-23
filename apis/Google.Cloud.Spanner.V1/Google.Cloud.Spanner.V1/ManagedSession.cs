@@ -154,7 +154,10 @@ public class ManagedSession
     {
         DateTime currentTime = _clock.GetCurrentDateTimeUtc();
         DateTime? sessionCreateTime = _session?.CreateTime.ToDateTime(); // Inherent conversion into UTC DateTime
-        if (_session == null || _session.Expired || currentTime - sessionCreateTime >= TimeSpan.FromDays(intervalInDays))
+        if (_session == null
+            || _session.Expired
+            || !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("SPANNER_EMULATOR_HOST"))
+            || currentTime - sessionCreateTime >= TimeSpan.FromDays(intervalInDays))
         {
             return true;
         }
